@@ -1,0 +1,32 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="schematics" audience="compute" href="/docs/schematics?topic=schematics-getting-started" path="schematics"}
+IBM Cloud Schematics
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    schematics_overview.md
+    schematics_planning.md
+    schematics_integration.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    setup-cli.md
+    schematics_creating.md
+    schematics_deploying.md
+    schematics_managing.md
+    schematics_auditing.md
+    schematics_destroying.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
+    schematics_reference.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    faqs.md
+    schematics_rellinks.md
+    {: .navgroup-end}
