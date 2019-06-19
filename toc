@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="schematics" audience="compute" href="/docs/schematics?topic=schematics-getting-started" path="schematics"}
+{: .toc subcollection="schematics" category="compute" audience="compute" href="/docs/schematics?topic=schematics-getting-started" path="schematics"}
 IBM Cloud Schematics
 
     {: .navgroup id="learn"}
@@ -21,8 +21,9 @@ IBM Cloud Schematics
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
     schematics_reference.md
+    [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
+    [Terraform documentation](https://www.terraform.io/docs/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
