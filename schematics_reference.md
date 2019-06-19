@@ -44,12 +44,12 @@ View a list of commands that you can run.
  </thead>
  <tbody>
  <tr>
- <td>[ibmcloud terraform workspace new](#workspace-new)</td>
- <td>[ibmcloud terraform workspace delete](#workspace-delete)</td>
- <td>[ibmcloud terraform workspace list](#workspace-list)</td>
- <td>[ibmcloud terraform workspace show](#workspace-show)</td>
- <td>[ibmcloud terraform workspace update](#workspace-update)</td>
- <td>[ibmcloud terraform workspace statefile](#workspace-statefile)</td>
+ <td>[`ibmcloud terraform workspace new`](#workspace-new)</td>
+ <td>[`ibmcloud terraform workspace delete`](#workspace-delete)</td>
+ <td>[`ibmcloud terraform workspace list`](#workspace-list)</td>
+ <td>[`ibmcloud terraform workspace show`](#workspace-show)</td>
+ <td>[`ibmcloud terraform workspace update`](#workspace-update)</td>
+ <td>[`ibmcloud terraform workspace statefile`](#workspace-statefile)</td>
  </tr>
 </tbody></table>
 
@@ -60,9 +60,9 @@ View a list of commands that you can run.
   <th colspan="5">Updating your resources</th>
   </thead>
   <tbody>
-  <td>[ibmcloud terraform action apply](#action-apply)</td>
-  <td>[ibmcloud terraform action destroy](#action-destroy)</td>
-  <td>[ibmcloud terraform action plan](#action-plan)</td>
+  <td>[`ibmcloud terraform action apply`](#action-apply)</td>
+  <td>[`ibmcloud terraform action destroy`](#action-destroy)</td>
+  <td>[`ibmcloud terraform action plan`](#action-plan)</td>
   </tr></tbody></table>
 
   <table id="audit_workspace" summary="Auditing activities that ran against your workspace with ibmcloud terraform activity commands.">
@@ -72,9 +72,9 @@ View a list of commands that you can run.
    <th colspan="5">Auditing your environment</th>
    </thead>
    <tbody>
-   <td>[ibmcloud terraform logs show-all](#activity-list)</td>
-   <td>[ibmcloud terraform logs activity-log](#activity-log)</td>
-   <td>[ibmcloud terraform logs activity show](#activity-show)</td>
+   <td>[`ibmcloud terraform logs show-all`](#log-show-all)</td>
+   <td>[`ibmcloud terraform logs activity log`](#activity-log)</td>
+   <td>[`ibmcloud terraform logs activity show`](#activity-show)</td>
    </tr></tbody></table>
    
 ## Workspace commands
@@ -442,7 +442,7 @@ ibmcloud terraform action plan --id 123456 --file configuration.json --json
 ## Activity commands
 {: #activity-commands}
 
-### `ibmcloud terraform activity list`
+### `ibmcloud terraform logs show-all`
 {: #activity-list}
 
 List the Terraform activities that ran against a workspace.
@@ -475,7 +475,7 @@ ibmcloud terraform activity list --id 123456 --limit 20 --offset 50 --json
 ```
 {: pre}
 
-### `ibmcloud terraform activity log`
+### `ibmcloud terraform logs activity log`
 {: #activity-log}
 
 View detailed activity logs for actions that ran against a workspace.
@@ -502,7 +502,7 @@ ibmcloud terraform activity log --id 987654321
 ```
 {: pre}
 
-### `ibmcloud terraform activity show`
+### `ibmcloud terraform logs activity show`
 {: #activity-show}
 
 Retrieve details about a specific activity that ran against a workspace.
