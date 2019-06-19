@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2019
 lastupdated: "2019-06-19"
 
-keywords: schematics, automation, terraform
+keywords: Schematics, automation, Terraform
 
 subcollection: schematics
 
@@ -45,11 +45,11 @@ View a list of commands that you can run.
  <tbody>
  <tr>
  <td>[ibmcloud terraform workspace new](#workspace-new)</td>
- <td>[ibmcoud terraform workspace delete](#workspace-delete)</td>
- <td>[ibmcoud terraform workspace list](#workspace-list)</td>
- <td>[ibmcoud terraform workspace show](#workspace-show)</td>
- <td>[ibmcoud terraform workspace update](#workspace-update)</td>
- <td>[ibmcoud terraform workspace statefile](#workspace-statefile)</td>
+ <td>[ibmcloud terraform workspace delete](#workspace-delete)</td>
+ <td>[ibmcloud terraform workspace list](#workspace-list)</td>
+ <td>[ibmcloud terraform workspace show](#workspace-show)</td>
+ <td>[ibmcloud terraform workspace update](#workspace-update)</td>
+ <td>[ibmcloud terraform workspace statefile](#workspace-statefile)</td>
  </tr>
 </tbody></table>
 
@@ -80,7 +80,7 @@ View a list of commands that you can run.
 ## Workspace commands
 {: #schematics-workspace-commands}
 
-### ibmcloud terraform workspace new
+### `ibmcloud terraform workspace new`
 {: #workspace-new}
 
 Create a workspace in {{site.data.keyword.bplong_notm}} from your configuration. When you create a workspace, a workspace ID is returned.
@@ -147,7 +147,7 @@ ibmcloud terraform workspace new --file configuration.json
 ```
 {: pre}
 
-### ibmcloud terraform workspace delete
+### `ibmcloud terraform workspace delete`
 {: #workspace-delete}
 
 Remove your workspace configuration from {{site.data.keyword.bplong_notm}}. Use this command only if you have a workspace that does not include any running {{site.data.keyword.cloud_notm}} resources. If you delete a workspace that has running {{site.data.keyword.cloud_notm}} resources, you cannot manage your resources with {{site.data.keyword.bplong_notm}} anymore. Instead, you must manually manage each resource separately from the {{site.data.keyword.cloud_notm}} console. 
@@ -175,7 +175,7 @@ ibmcloud terraform workspace delete --id 123456
 ```
 {: pre}
 
-### ibmcloud terraform workspace list
+### `ibmcloud terraform workspace list`
 {: #workspace-list}
 
 List all workspaces in your {{site.data.keyword.cloud_notm}} account.
@@ -190,7 +190,7 @@ ibmcloud terraform workspace list [--limit VALUE] [--offset VALUE] [--json]
 
 <dl>
 <dt>`--limit VALUE`, `-l VALUE`</dt>
-<dd>Optional. The maximum number of workspace that you want to see in your CLI return. </dd>
+<dd>Optional. The maximum number of workspaces that you want to see in your CLI return. </dd>
 <dt>`--offset VALUE`, `-m VALUE`</dt>
 <dd>Optional. The offset in the list of workspaces.</dd>
 <dt>--json, -j</dt>
@@ -204,7 +204,7 @@ ibmcloud terraform workspace list --limit 3 --offset 4 --json
 ```
 {: pre}
 
-### ibmcloud terraform workspace show
+### `ibmcloud terraform workspace show`
 {: #workspace-show}
 
 Retrieve the details of an existing workspace.
@@ -233,7 +233,7 @@ ibmcloud terraform workspace show --id 123456 --json
 ```
 {: pre}
 
-### ibmcloud terraform workspace update
+### `ibmcloud terraform workspace update`
 {: #workspace-update}
 
 Update the details for an existing workspace, such as the workspace name or source control URL. To update the number of resources that are allocated in the workspace, see [`ibmcloud terraform action plan`](#action-plan).
@@ -303,7 +303,7 @@ ibmcloud terraform workspace --id 123456 --file configuration.json --json
 {: pre}
 
 
-### ibmcloud terraform workspace statefile
+### `ibmcloud terraform workspace statefile`
 {: #workspace-statefile}
 
 List all {{site.data.keyword.cloud_notm}} resources that you created in your workspace, including the state of each resource. You can also use this command to list the Terraform `tfstate` file. 
@@ -337,7 +337,7 @@ ibmcloud terraform workspace statefile --id 123456 --json
 ## Action commands
 {: #action-commands}
 
-### ibmcloud terraform action apply
+### `ibmcloud terraform action apply`
 {: #action-apply}
 
 Deploy your workspace configuration. The `apply` command scans and executes the Terraform configurations that are stored in your source control repository.
@@ -367,7 +367,7 @@ ibmcloud terraform action apply --id 123456 --json
 ```
 {: pre}
 
-### ibmcloud terraform action destroy
+### `ibmcloud terraform action destroy`
 {: #action-destroy}
 
 Remove your workspace and all {{site.data.keyword.cloud_notm}} resources, even if these resources are currently running. Typically, you use this action to remove temporary workspaces, such as workspaces that you created for testing or quality assurance purposes. 
@@ -402,10 +402,10 @@ ibmcloud terraform action destroy --id 123456 --force --json
 ```
 {: pre}
 
-### ibmcloud terraform action plan
+### `ibmcloud terraform action plan`
 {: #action-plan}
 
-Scan the Terraform configuration files in your source control repository and compare this configuration against the {{site.data.keyword.cloud_notm}} resouces that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added or removed to achieve the state that is described in your configuration file.   
+Scan the Terraform configuration files in your source control repository and compare this configuration against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added or removed to achieve the state that is described in your configuration file.   
 {: shortdesc}
 
 ```
@@ -442,7 +442,7 @@ ibmcloud terraform action plan --id 123456 --file configuration.json --json
 ## Activity commands
 {: #activity-commands}
 
-### ibmcloud terraform activity list
+### `ibmcloud terraform activity list`
 {: #activity-list}
 
 List the Terraform activities that ran against a workspace.
@@ -475,7 +475,7 @@ ibmcloud terraform activity list --id 123456 --limit 20 --offset 50 --json
 ```
 {: pre}
 
-### ibmcloud terraform activity log
+### `ibmcloud terraform activity log`
 {: #activity-log}
 
 View detailed activity logs for actions that ran against a workspace.
@@ -502,7 +502,7 @@ ibmcloud terraform activity log --id 987654321
 ```
 {: pre}
 
-### ibmcloud terraform activity show
+### `ibmcloud terraform activity show`
 {: #activity-show}
 
 Retrieve details about a specific activity that ran against a workspace.
