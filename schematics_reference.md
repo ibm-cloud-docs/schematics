@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-19"
 
 keywords: schematics, automation, terraform
 
@@ -91,7 +91,7 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--file FILE_NAME`, `-f FILE_NAME`</dt>
@@ -139,7 +139,7 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
 <dd>Optional. Print the CLI output in JSON format.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform workspace new --file configuration.json
 ```
@@ -156,7 +156,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -165,7 +165,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 <dd>Optional. Force the deletion of a workspace without CLI prompts.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform workspace delete --id 123456
 ```
@@ -181,7 +181,7 @@ ibmcloud terraform workspace list [--limit VALUE] [--offset VALUE] [--json]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--limit VALUE`, `-l VALUE`</dt>
@@ -192,7 +192,7 @@ ibmcloud terraform workspace list [--limit VALUE] [--offset VALUE] [--json]
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform workspace list --limit 3 --offset 4 --json
 ```
@@ -209,7 +209,7 @@ ibmcloud terraform workspace show --id WORKSPACE_ID [--json]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -218,7 +218,7 @@ ibmcloud terraform workspace show --id WORKSPACE_ID [--json]
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform workspace show --id 123456 --json
 ```
@@ -235,7 +235,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 ```
 {: pre}
 
-**Command options** 
+#### Command options
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -284,7 +284,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform workspace --id 123456 --file configuration.json --json
 ```
@@ -302,7 +302,7 @@ ibmcloud terraform workspace statefile --id WORKSPACE_ID [--json] [--wide]
 ```
 {: pre}
 
-**Command parameters**
+#### Command parameters
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -313,7 +313,7 @@ ibmcloud terraform workspace statefile --id WORKSPACE_ID [--json] [--wide]
 <dd>Optional. Prints the wide format without cutting string values.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform workspace statefile --id 123456 --json
 ```
@@ -332,7 +332,7 @@ ibmcloud terraform action apply --id WORKSPACE_ID [--force] [--json]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -343,7 +343,7 @@ ibmcloud terraform action apply --id WORKSPACE_ID [--force] [--json]
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform action apply --id 123456 --json
 ```
@@ -363,7 +363,7 @@ ibmcloud terraform action destroy --id WORKSPACE_ID [--force] [--json]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -375,7 +375,7 @@ ibmcloud terraform action destroy --id WORKSPACE_ID [--force] [--json]
 </dl>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform action destroy --id 123456 --force --json
 ```
@@ -392,7 +392,7 @@ ibmcloud terraform action plan --id WORKSPACE_ID [--file FILE_NAME] [--json]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
 <dd>Required. The unique identifier of the workspace. To retrieve the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>
@@ -408,7 +408,7 @@ ibmcloud terraform action plan --id WORKSPACE_ID [--file FILE_NAME] [--json]
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform action plan --id 123456 --file configuration.json --json
 ```
@@ -428,7 +428,7 @@ ibmcloud terraform activity list --id WORKSPACE_ID [--limit VALUE] [--offset VAL
 ```
 {: codeblock}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -441,7 +441,7 @@ ibmcloud terraform activity list --id WORKSPACE_ID [--limit VALUE] [--offset VAL
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform activity list --id 123456 --limit 20 --offset 50 --json
 ```
@@ -458,14 +458,14 @@ ibmcloud terraform activity log --id ACTIVITY_ID
 ```
 {: pre}
 
-**Command options** 
+#### Command options
 
 <dl>
 <dt>`--id ACTIVITY_ID`, `-i ACTIVITY_ID`</dt>
 <dd>Required. The ID of the activity for which you want to retrieve the logs. To find the ID of an activity, run <code>ibmcloud terraform activity list --id WORKSPACE_ID</code>. </dd>
 </dl>
 
-**Example**
+#### Example
 ```
 ibmcloud terraform activity log --id 987654321
 ```
@@ -482,7 +482,7 @@ ibmcloud terraform activity show --id ACTIVITY_ID [--json]
 ```
 {: pre}
 
-**Command options**
+#### Command options
 
 <dl>
 <dt>`--id ACTIVITY_ID`, `-i ACTIVITY_ID`</dt>
@@ -490,3 +490,10 @@ ibmcloud terraform activity show --id ACTIVITY_ID [--json]
 <dt>`--json`, `-j`</dt>
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
+
+#### Example
+
+```
+ibmcloud terraform activity show --id 987654 --json
+```
+{: pre}
