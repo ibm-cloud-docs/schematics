@@ -65,7 +65,7 @@ View a list of commands that you can run.
   <td>[ibmcloud terraform action plan](#action-plan)</td>
   </tr></tbody></table>
 
-  <table id="audit_environment" summary="Auditing activities that ran against your workspace with ibmcloud terraform activity commands.">
+  <table id="audit_workspace" summary="Auditing activities that ran against your workspace with ibmcloud terraform activity commands.">
   <caption>Table 3. Available commands to audit the activities in your workspace. 
   </caption>
    <thead>
@@ -92,6 +92,7 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
 {: pre}
 
 #### Command options
+{: #workspace-new-options}
 
 <dl>
 <dt>`--file FILE_NAME`, `-f FILE_NAME`</dt>
@@ -140,6 +141,7 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
 </dl>
 
 #### Example
+{: #workspace-new-example}
 ```
 ibmcloud terraform workspace new --file configuration.json
 ```
@@ -157,6 +159,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 {: pre}
 
 #### Command options
+{: #workspace-delete-options}
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -166,6 +169,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 </dl>
 
 #### Example
+{: #workspace-delete-example}
 ```
 ibmcloud terraform workspace delete --id 123456
 ```
@@ -182,6 +186,7 @@ ibmcloud terraform workspace list [--limit VALUE] [--offset VALUE] [--json]
 {: pre}
 
 #### Command options
+{: #workspace-list-options}
 
 <dl>
 <dt>`--limit VALUE`, `-l VALUE`</dt>
@@ -193,6 +198,7 @@ ibmcloud terraform workspace list [--limit VALUE] [--offset VALUE] [--json]
 </dl>
 
 #### Example
+{: #workspace-list-example}
 ```
 ibmcloud terraform workspace list --limit 3 --offset 4 --json
 ```
@@ -210,6 +216,7 @@ ibmcloud terraform workspace show --id WORKSPACE_ID [--json]
 {: pre}
 
 #### Command options
+{: #workspace-show-options}
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -219,6 +226,8 @@ ibmcloud terraform workspace show --id WORKSPACE_ID [--json]
 </dl>
 
 #### Example
+{: #workspace-show-example}
+
 ```
 ibmcloud terraform workspace show --id 123456 --json
 ```
@@ -236,6 +245,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 {: pre}
 
 #### Command options
+{: #workspace-update-options}
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -285,6 +295,8 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 </dl>
 
 #### Example
+{: #workspace-update-example}
+
 ```
 ibmcloud terraform workspace --id 123456 --file configuration.json --json
 ```
@@ -302,7 +314,8 @@ ibmcloud terraform workspace statefile --id WORKSPACE_ID [--json] [--wide]
 ```
 {: pre}
 
-#### Command parameters
+#### Command options
+{: #workspace-statefile-options}
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -314,6 +327,8 @@ ibmcloud terraform workspace statefile --id WORKSPACE_ID [--json] [--wide]
 </dl>
 
 #### Example
+{: #workspace-statefile-example}
+
 ```
 ibmcloud terraform workspace statefile --id 123456 --json
 ```
@@ -333,6 +348,7 @@ ibmcloud terraform action apply --id WORKSPACE_ID [--force] [--json]
 {: pre}
 
 #### Command options
+{: #action-apply-options}
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -344,6 +360,8 @@ ibmcloud terraform action apply --id WORKSPACE_ID [--force] [--json]
 </dl>
 
 #### Example
+{: #action-apply-example}
+
 ```
 ibmcloud terraform action apply --id 123456 --json
 ```
@@ -364,6 +382,7 @@ ibmcloud terraform action destroy --id WORKSPACE_ID [--force] [--json]
 {: pre}
 
 #### Command options
+{: #action-destroy-options}
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -376,6 +395,8 @@ ibmcloud terraform action destroy --id WORKSPACE_ID [--force] [--json]
 </dl>
 
 #### Example
+{: #action-destroy-example}
+
 ```
 ibmcloud terraform action destroy --id 123456 --force --json
 ```
@@ -393,6 +414,8 @@ ibmcloud terraform action plan --id WORKSPACE_ID [--file FILE_NAME] [--json]
 {: pre}
 
 #### Command options
+{: #action-plan-options}
+
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
 <dd>Required. The unique identifier of the workspace. To retrieve the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>
@@ -409,6 +432,8 @@ ibmcloud terraform action plan --id WORKSPACE_ID [--file FILE_NAME] [--json]
 </dl>
 
 #### Example
+{: #action-plan-example}
+
 ```
 ibmcloud terraform action plan --id 123456 --file configuration.json --json
 ```
@@ -426,9 +451,10 @@ List the Terraform activities that ran against a workspace.
 ```
 ibmcloud terraform activity list --id WORKSPACE_ID [--limit VALUE] [--offset VALUE] [--json]
 ```
-{: codeblock}
+{: pre}
 
 #### Command options
+{: #activity-list-options}
 
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
@@ -442,6 +468,8 @@ ibmcloud terraform activity list --id WORKSPACE_ID [--limit VALUE] [--offset VAL
 </dl>
 
 #### Example
+{: #activity-list-example}
+
 ```
 ibmcloud terraform activity list --id 123456 --limit 20 --offset 50 --json
 ```
@@ -459,6 +487,7 @@ ibmcloud terraform activity log --id ACTIVITY_ID
 {: pre}
 
 #### Command options
+{: #activity-log-options}
 
 <dl>
 <dt>`--id ACTIVITY_ID`, `-i ACTIVITY_ID`</dt>
@@ -466,6 +495,8 @@ ibmcloud terraform activity log --id ACTIVITY_ID
 </dl>
 
 #### Example
+{: #activity-log-example}
+
 ```
 ibmcloud terraform activity log --id 987654321
 ```
@@ -483,6 +514,7 @@ ibmcloud terraform activity show --id ACTIVITY_ID [--json]
 {: pre}
 
 #### Command options
+{: #activity-show-options}
 
 <dl>
 <dt>`--id ACTIVITY_ID`, `-i ACTIVITY_ID`</dt>
@@ -492,6 +524,7 @@ ibmcloud terraform activity show --id ACTIVITY_ID [--json]
 </dl>
 
 #### Example
+{: #activity-show-example}
 
 ```
 ibmcloud terraform activity show --id 987654 --json
