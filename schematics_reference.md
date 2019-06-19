@@ -164,7 +164,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 <dl>
 <dt>`--id WORKSPACE_ID`, `-i WORKSPACE_ID`</dt>
 <dd>Required. The unique identifier of the workspace. To retrieve your workspace ID, run <code>ibmcloud terraform workspace list</code>. </dd>
-<dt>--force, -f</dt>
+<dt>`--force`, `-f`</dt>
 <dd>Optional. Force the deletion of a workspace without CLI prompts.</dd>
 </dl>
 
@@ -193,7 +193,7 @@ ibmcloud terraform workspace list [--limit VALUE] [--offset VALUE] [--json]
 <dd>Optional. The maximum number of workspaces that you want to see in your CLI return. </dd>
 <dt>`--offset VALUE`, `-m VALUE`</dt>
 <dd>Optional. The offset in the list of workspaces.</dd>
-<dt>--json, -j</dt>
+<dt>`--json`, `-j`</dt>
 <dd>Optional. Return the CLI output in JSON format.</dd>
 </dl>
 
