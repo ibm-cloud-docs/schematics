@@ -29,5 +29,4 @@ IBM Cloud Schematics
     {: .navgroup id="help"}
     ts_index.md
     faqs.md
-    schematics_rellinks.md
     {: .navgroup-end}
