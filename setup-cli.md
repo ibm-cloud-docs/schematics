@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-19"
 
-keywords: schematics, automation, terraform
+keywords: Schematics, automation, Terraform
 
 subcollection: schematics
 
@@ -45,7 +45,7 @@ Install the required CLIs to automate the provisioning of {{site.data.keyword.cl
     ```
     {: pre}
 
-    If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your CLI output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
+    If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your CLI output to retrieve your one-time passcode. You know that you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
     {: tip}
     
 3.  Install the {{site.data.keyword.bplong_notm}} CLI plug-in. 
