@@ -47,6 +47,8 @@ View a list of commands that you can run.
  <td>[`ibmcloud terraform workspace new`](#workspace-new)</td>
  <td>[`ibmcloud terraform workspace delete`](#workspace-delete)</td>
  <td>[`ibmcloud terraform workspace list`](#workspace-list)</td>
+ </tr>
+ <tr>
  <td>[`ibmcloud terraform workspace show`](#workspace-show)</td>
  <td>[`ibmcloud terraform workspace update`](#workspace-update)</td>
  <td>[`ibmcloud terraform workspace statefile`](#workspace-statefile)</td>
