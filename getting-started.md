@@ -29,12 +29,7 @@ subcollection: schematics
 Enable Infrastructure as Code (IaC) with {{site.data.keyword.cloud_notm}} Schematics, and start templatizing, provisioning, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using Terraform configuration files. 
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} Schematics delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment. [Terraform ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/) is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
-
-**What resources do I provision as part of this tutorial?** </br>
 In this getting started tutorial, you provision a virtual server in a VPC in {{site.data.keyword.cloud_notm}} with {{site.data.keyword.cloud_notm}} Schematics by using the IBM-provided template `<name>`. 
-
-To provision an {{site.data.keyword.cloud_notm}} resource with {{site.data.keyword.cloud_notm}} Schematics:
 
 1. From the [{{site.data.keyword.cloud_notm}} catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog?category=devops), select **Schematics**. 
 2. Click **Browse templates**. 
