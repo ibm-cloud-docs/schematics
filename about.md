@@ -29,20 +29,18 @@ subcollection: schematics
 {{site.data.keyword.cloud_notm}} Schematics delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). 
 {: shortdesc}
 
-## Service architecture
+## How it works
 {: #schematics-architecture}
 
-[Terraform ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/) is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
+Review how {{site.data.keyword.cloud_notm}} Schematics provisions and manages your {{site.data.keyword.cloud_notm}} resources. 
+{: shortdesc}
 
-**How is {{site.data.keyword.cloud_notm}} Schematics different from Terraform?** </br>
-With {{site.data.keyword.cloud_notm}} Schematics, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that contains a set of Terraform configuration files which as a whole build a Schematics template. The Schematics templates can be provided by IBM, or you can create your own Schematics template from an existing GitHub repository. 
+<img src="images/schematics_flow.png" alt="Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.cloud_notm}} Schematics" width="800" style="width: 800px; border-style: none"/>
 
-Workspaces allow for the separation of concerns for cloud resources. Each environment is isolated from the other so that they can operate independently. For example, you might use three different workspaces for your test, staging, and prod environment. Each workspace can be managed separately so that you can test out your changes in your staging workspace without changing your production resouces. {{site.data.keyword.cloud_notm}} Schematics is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management to manage and control who can apply the Terraform configuration in your {{site.data.keyword.cloud_notm}} account. 
-
-For more information, see [About {{site.data.keyword.cloud_notm}} Schematics](/docs/schematics?topic=schematics-about). 
-
-**I am not familiar with Terraform, can I still use {{site.data.keyword.cloud_notm}} Schematics?** </br>
-Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined Terraform templates that you can choose from. Simply select the template that you want from the {{site.data.keyword.cloud_notm}} console and fill out the variables to customize your {{site.data.keyword.cloud_notm}} resource. Then, create a workspace in {{site.data.keyword.cloud_notm}} Schematics from this template and watch {{site.data.keyword.cloud_notm}} Schematics provision the resourcs for you. 
+1. Codify your {{site.data.keyword.cloud_notm}} resources. Use Terraform high scripting language (HCL) or JSON format to specify the {{site.data.keyword.cloud_notm}} resources that you want to provision in your {{site.data.keyword.cloud_notm}} environment. If you are not familiar with Terraform, you can select one of the pre-defined IBM templates to provision the resource that you want. All Terraform configuration files must be stored in a GitHub repository to ensure source control and enable collaboration, review, and auditing in your organization. 
+2. Create your workspace. An {{site.data.keyword.cloud_notm}} Schematics workspace is connected to one GitHub repository only and helps to organize resources that belong to one {{site.data.keyword.cloud_notm}} environment. For example, use workspaces to separate your test, staging, and production environment. With {{site.data.keyword.cloud_notm}} Identity and Access Management, you can control who has access to your resources and can provision or manage these resources in your {{site.data.keyword.cloud_notm}} account. 
+3. Create an execution plan. {{site.data.keyword.cloud_notm}} Schematics uses the `terraform` command to parse the configuration files that are associated with your GitHub repository, and create a summary of actions that need to be performed to achieve the state that is described in your configuration files. You can review the plan and any validation errors by reviewing the logs.  
+4. Provision your resources. To create or remove resources from your {{site.data.keyword.cloud_notm}} environment, {{site.data.keyword.cloud_notm}} Schematics uses the `terraform apply` command. This command calls the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, which is aware of the API for each resource to provision, configure, or remove the resource. 
 
 ## Benefits
 {: #schematics-benefits}
@@ -62,3 +60,15 @@ Review the capabilities that {{site.data.keyword.cloud_notm}} Schematics provide
 | Get {{site.data.keyword.cloud_notm}} help and support | {{site.data.keyword.cloud_notm}} Schematics is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue with using {{site.data.keyword.cloud_notm}} Schematics, [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support). |
 
 ## IBM Cloud Schematics vs. Terraform
+
+[Terraform ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/) is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
+
+**How is {{site.data.keyword.cloud_notm}} Schematics different from Terraform?** </br>
+With {{site.data.keyword.cloud_notm}} Schematics, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that contains a set of Terraform configuration files which as a whole build a Schematics template. The Schematics templates can be provided by IBM, or you can create your own Schematics template from an existing GitHub repository. 
+
+Workspaces allow for the separation of concerns for cloud resources. Each environment is isolated from the other so that they can operate independently. For example, you might use three different workspaces for your test, staging, and prod environment. Each workspace can be managed separately so that you can test out your changes in your staging workspace without changing your production resouces. {{site.data.keyword.cloud_notm}} Schematics is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management to manage and control who can apply the Terraform configuration in your {{site.data.keyword.cloud_notm}} account. 
+
+For more information, see [About {{site.data.keyword.cloud_notm}} Schematics](/docs/schematics?topic=schematics-about). 
+
+**I am not familiar with Terraform, can I still use {{site.data.keyword.cloud_notm}} Schematics?** </br>
+Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined Terraform templates that you can choose from. Simply select the template that you want from the {{site.data.keyword.cloud_notm}} console and fill out the variables to customize your {{site.data.keyword.cloud_notm}} resource. Then, create a workspace in {{site.data.keyword.cloud_notm}} Schematics from this template and watch {{site.data.keyword.cloud_notm}} Schematics provision the resourcs for you. 
