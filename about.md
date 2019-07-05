@@ -72,7 +72,10 @@ Review the capabilities that {{site.data.keyword.cloud_notm}} Schematics provide
 ## Key terms
 {: #schematics-terms}
 
+{{site.data.keyword.cloud_notm}} Schematics uses Terraform as the underlying tool to enable Infrastructure as Code (IaC) so that you can define and deploy your resources with simple text files. 
+{:shortdesc}
 
+Learn the basics about Terraform and {{site.data.keyword.cloud_notm}} Schematics by reviewing the following terms.
 
 <dl>
   <dt>Resources</dt>
