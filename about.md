@@ -47,6 +47,18 @@ Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined T
 ## Benefits
 {: #schematics-benefits}
 
+## Reasons to use {{site.data.keyword.bpshort}}
+{: #reasons}
+
+You might want to use codified infrastructure in the following scenarios:
+{:shortdesc}
+
+| Scenario     | Reasons    |
+| :------------- | :------------- |
+| You want to re-create and reuse your infrastructure. | You can use {{site.data.keyword.bpshort}} for infrastructure management. With {{site.data.keyword.bpshort}}, you can provision, modify, and destroy your resources programmatically. When you codify and configure resources, you can build up a library of resources that can be reused again and again to net the same results.|
+| You want transparency as to how your infrastructure is set up. | {{site.data.keyword.bpshort}} works with configurations in source control, which enables collaboration, review, and gives you an audit trail to see how and when changes were made. You can also view your changes if you need to roll back to a previous configuration. |
+| You want to simplify the execution of environmental changes. | {{site.data.keyword.bpshort}} follows the declarative model that provides a single source of truth. When you plan a change to your environment, you state the outcome you want. |
+| You already use a configuration management (CM) tool, but you want a more automated way to set up your environments. | {{site.data.keyword.bpshort}} can work along with CM tools. Environments that are deployed with {{site.data.keyword.bpshort}} are high-level abstractions that can create infrastructure resources. You can then use CM tools to install and configure software on the resources that {{site.data.keyword.bpshort}} provisioned.  
 
 
 ## IBM Cloud Schematics vs. Terraform
