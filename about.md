@@ -47,18 +47,18 @@ Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined T
 ## Benefits
 {: #schematics-benefits}
 
-## Reasons to use {{site.data.keyword.bpshort}}
-{: #reasons}
+Review the capabilities that {{site.data.keyword.cloud_notm}} Schematics provides to templatize and organize your  {{site.data.keyword.cloud_notm}} resources. 
+{: shortdesc}
 
-You might want to use codified infrastructure in the following scenarios:
-{:shortdesc}
-
-| Scenario     | Reasons    |
+| Benefit    | Description   |
 | :------------- | :------------- |
-| You want to re-create and reuse your infrastructure. | You can use {{site.data.keyword.bpshort}} for infrastructure management. With {{site.data.keyword.bpshort}}, you can provision, modify, and destroy your resources programmatically. When you codify and configure resources, you can build up a library of resources that can be reused again and again to net the same results.|
-| You want transparency as to how your infrastructure is set up. | {{site.data.keyword.bpshort}} works with configurations in source control, which enables collaboration, review, and gives you an audit trail to see how and when changes were made. You can also view your changes if you need to roll back to a previous configuration. |
-| You want to simplify the execution of environmental changes. | {{site.data.keyword.bpshort}} follows the declarative model that provides a single source of truth. When you plan a change to your environment, you state the outcome you want. |
-| You already use a configuration management (CM) tool, but you want a more automated way to set up your environments. | {{site.data.keyword.bpshort}} can work along with CM tools. Environments that are deployed with {{site.data.keyword.bpshort}} are high-level abstractions that can create infrastructure resources. You can then use CM tools to install and configure software on the resources that {{site.data.keyword.bpshort}} provisioned.  
-
+| Enable Infrastructure as Code (IaC) | Use Terraform configuration files to model, codify, and configure the {{site.data.keyword.cloud_notm}} resources that you want, and build your own resource library that you can replicate or re-create across environments. If you want to change your environment, you state the outcome that you want and let {{site.data.keyword.cloud_notm}} Schematics determine the actions that must be performed to get to the described state. |
+| Use native Terraform capabilities | Build your Terraform configuration files in HCL or JSON format and provision your specified resources with {{site.data.keyword.cloud_notm}} Schematics. {{site.data.keyword.cloud_notm}} Schematics supports all {{site.data.keyword.cloud_notm}} resources that are provided by the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/) with the advantage that you don't have to install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. Simply use the built-in Terraform capabilities in the {{site.data.keyword.cloud_notm}} console to connect {{site.data.keyword.cloud_notm}} Schematics to the GitHub repository that hosts your files, create a provisioning plan, and watch {site.data.keyword.cloud_notm}} Schematics spin up your resources.  |
+| One language to describe resources | Every {{site.data.keyword.cloud_notm}} resources comes with a CLI or API that you can use to provision and work with the resource. By using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, you don't need to learn each CLI or API to automate the provisioning of your resources. Instead, you use the Terraform language to model your resources. |
+| Organize {{site.data.keyword.cloud_notm}} resources in workspaces | With {{site.data.keyword.cloud_notm}} Schematics, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that contains a set of Terraform configuration files. Use workspaces to distinguish between your test, staging, and prod environment, and to change resource configurations without affecting resources in other environments.  |
+| Control access to your {{site.data.keyword.cloud_notm}} resources with Identity and Access Management | Assign permissions to your users to control who can provision and manage resources in your {{site.data.keyword.cloud_notm}} account. |
+| Leverage GitHub for version control | Every workspace is connected to a repository in GitHub so that you can keep your Terraform configuration files in source control and enable collaboration, review, and auditing of changes. You can also roll back to a previous version of your configuration file and let {{site.data.keyword.cloud_notm}} Schematics deploy the change to your {{site.data.keyword.cloud_notm}} environment. |
+| Combine with other configuration management tools | Use {{site.data.keyword.cloud_notm}} Schematics to provision your {{site.data.keyword.cloud_notm}} resources, and install or configure additional software by using other configuration tools, like for example Ansible, Chef, or Puppet.  
+| Get {{site.data.keyword.cloud_notm}} help and support | {{site.data.keyword.cloud_notm}} Schematics is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue with using {{site.data.keyword.cloud_notm}} Schematics, [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support). |
 
 ## IBM Cloud Schematics vs. Terraform
