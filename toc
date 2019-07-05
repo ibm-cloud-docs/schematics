@@ -6,7 +6,7 @@ IBM Cloud Schematics
 
     {: .navgroup id="learn"}
     getting-started.md
-    schematics_overview.md
+    about.md
     schematics_planning.md
     schematics_integration.md
     {: .navgroup-end}
