@@ -25,7 +25,8 @@ subcollection: schematics
 # Getting help and support
 {: #schematics-help}
 
-If you have problems or questions when you use {{site.data.keyword.cloud_notm}} Schematics, you can check {{site.data.keyword.cloud_notm}}, or get help by searching for information or by asking questions through a forum. You can also open a support ticket.
+If you have problems or questions when you use {{site.data.keyword.cloud_notm}} Schematics, you can get help by searching for information, asking questions through a forum, or opening an {{site.data.keyword.cloud_notm}} support case.
+(: shortdesc}
 
 You can review the forums to see whether other users ran into the same problem. When you use forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
   * If you have technical questions about {{site.data.keyword.cloud_notm}} Schematics, post your question on [Stack Overflow ![External link icon](../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/search?q=ibm-cloud-infrastructure+terraform){:new_window} and tag your question with `ibm-cloud-schematics`.
