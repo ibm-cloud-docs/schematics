@@ -8,7 +8,6 @@ IBM Cloud Schematics
     getting-started.md
     about.md
     schematics_planning.md
-    schematics_integration.md
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
