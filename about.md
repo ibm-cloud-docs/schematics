@@ -29,6 +29,9 @@ subcollection: schematics
 {{site.data.keyword.cloud_notm}} Schematics delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). 
 {: shortdesc}
 
+## Service architecture
+{: #schematics-architecture}
+
 [Terraform ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/) is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
 
 **How is {{site.data.keyword.cloud_notm}} Schematics different from Terraform?** </br>
@@ -40,3 +43,10 @@ For more information, see [About {{site.data.keyword.cloud_notm}} Schematics](/d
 
 **I am not familiar with Terraform, can I still use {{site.data.keyword.cloud_notm}} Schematics?** </br>
 Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined Terraform templates that you can choose from. Simply select the template that you want from the {{site.data.keyword.cloud_notm}} console and fill out the variables to customize your {{site.data.keyword.cloud_notm}} resource. Then, create a workspace in {{site.data.keyword.cloud_notm}} Schematics from this template and watch {{site.data.keyword.cloud_notm}} Schematics provision the resourcs for you. 
+
+## Benefits
+{: #schematics-benefits}
+
+
+
+## IBM Cloud Schematics vs. Terraform
