@@ -33,6 +33,12 @@ With {{site.data.keyword.bplong}}, you can deploy your latest code changes direc
 
 You can create an environment from a template or bring your own Terraform configuration.
 
+Use caution when managing critical resources
+Terraform is idempotent, which means that it erases and replaces the resource when you apply changes. As such, use caution when you create resources in Schematics that contain irreplaceable data, like databases. If you do choose to put these kinds of resources into Schematics, be sure to always use plan to confirm changes. Running plans show you how resources might be replaced or deleted. Inspect plan logs thoroughly before you apply the changes. For more information about plan and apply logs, see Deployment logs and annotations.
+
+Verify limits for services before you deploy resources
+Before you deploy a resource, check whether you can create the resource without reaching the service limit for your IBM account. If the service limit is reached, the resource will not be deployed until you increase your service quota or destroy other resources from that service. Run bx resource quotas to see all resource quota definitions for your account.
+
 ### With the console
 {: #gui}
 
