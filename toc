@@ -16,9 +16,6 @@ IBM Cloud Schematics
     schematics_planning.md
     schematics_creating.md
     schematics_deploying.md
-    schematics_managing.md
-    schematics_auditing.md
-    schematics_destroying.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
