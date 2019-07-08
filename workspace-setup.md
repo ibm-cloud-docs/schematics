@@ -36,16 +36,22 @@ Plan out the organizational structure of your workspaces so that they match the 
 
 Similar to splitting up a huge monolith app into smaller microservices, 
 
-**How many workspaces do I need?** </br>
-When you set up your workspaces, you want to make sure that your workspaces match the organizational structure of your microservices and the permissions that you want to assign to each component. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and each environment such as development, staging, and prod. Separate workspaces for each microservice component and environment allows you to separately develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
+### How many workspaces do I need?
+When you set up your workspaces, you want to make sure that your workspaces match the organizational structure of your microservices and the permissions that you want to assign to each component.
+{: shortdesc}
+
+For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and each environment such as development, staging, and prod. Separate workspaces for each microservice component and environment allows you to separately develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
 
 Do not use one workspace to manage an entire staging or production environment. When you deploy all of your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 {: important}
 
 Review the following image to see the number of workspaces in {{site.data.keyword.cloud_notm}} Schematics for an app that consists of three microservices. 
 
-
 <img src="images/workspace-structure.png" alt="Workspace structure for {{site.data.keyword.cloud_notm}} Schematics" width="800" style="width: 800px; border-style: none"/>
+
+For more informa
+
+### How do I structure my GitHub repository to map my workspaces?
 
 - Workspace is a collection of everything TF needs to run: TF config file, variable values, state data to keep track of operations between runs
 - Workspaces should match your organizational permissions structure > one workspace for each environment of a given infrastructure (TF configurations * environments = number of workspaces)
@@ -59,14 +65,17 @@ Review the following image to see the number of workspaces in {{site.data.keywor
 - Plan and create teams
 - Assign permissions
 
+### Reusing common configs
+
+### How do I control access to my workspaces? 
+To control access to a w
 
 Before you create environments, it can be helpful to plan out the organizational structure of your environments and learn how to use Schematics as part of your continuous delivery pipeline.
 
-Group environments by microservice
 
 
 Within each microservice, create different environments for development, testing, and production landscapes by reusing common configurations
-When you separate your environments, you isolate resources so that development or testing changes do not impact a production environment. If you want to control who can change a certain environment, you can control write access by deploying environments into different accounts. Otherwise, you can create all three environments in the same account.
+If you want to control who can change a certain environment, you can control write access by deploying environments into different accounts. Otherwise, you can create all three environments in the same account.
 
 Figure 1. User access with environments in a single account
 
@@ -85,11 +94,7 @@ Figure 3. Reusing common configurations in multiple environments
 Collaborate in version control
 Because you treat your infrastructure as code with Terraform, a version control system is imperative as part of the deployment development process. Version control allows you to revert to previous configurations, audit changes to configurations, and share code with multiple teams. Version control also allows you to use a master branch that serves as the single source of truth for your infrastructure. Team members can then plan changes in branches before they merge those changes into the master branch.
 
-Use caution when managing critical resources
-Terraform is idempotent, which means that it erases and replaces the resource when you apply changes. As such, use caution when you create resources in Schematics that contain irreplaceable data, like databases. If you do choose to put these kinds of resources into Schematics, be sure to always use plan to confirm changes. Running plans show you how resources might be replaced or deleted. Inspect plan logs thoroughly before you apply the changes. For more information about plan and apply logs, see Deployment logs and annotations.
 
-Verify limits for services before you deploy resources
-Before you deploy a resource, check whether you can create the resource without reaching the service limit for your IBM account. If the service limit is reached, the resource will not be deployed until you increase your service quota or destroy other resources from that service. Run bx resource quotas to see all resource quota definitions for your account.
 
 Writing configurations
 If you bring your own Terraform configuration to Schematics, the following recommendations can help you better write configurations that are well-structured, reusable, and comprehensive. For more information about configuration anatomy, see Creating a configuration.
