@@ -115,19 +115,6 @@ If the resource you are defining supports tags, use them to label your resource.
 
 If the resource you are defining supports notes, use them to add comments to the resource. Notes can help other contributors understand the purpose of the resource, how it interacts with other resources in the environment, or other related considerations.
 
-Updating and managing
-The following recommendations can help you use Schematics to safely manage and update your resources. For more information about how to update resources, see Managing resources in your environment.
-
-Use only Schematics to change a deployed environment
-When you deploy an environment with Schematics, always use the Schematics GUI, CLI, or API to change the environment. Schematics manages the statefiles that are used to compare previous configurations to new configurations when you change your resources. If you do not use Schematics, changes you make can lead to mismatches within the Terraform files. These mismatches cause errors in your deployments. For more information about state, see the Terraform state documentation External link icon.
-
-Run plan to check for errors and preview changes to your environment before you run apply
-When you run plan, Schematics extracts the variables in your environment details and the latest version of your Terraform configuration from source control. The plan output displays how the configuration compares to what is deployed according to your Terraform state file. The output allows you to see how your changes might affect resources already running before you commit those changes.
-
-Running plan becomes especially important when you work with configurations that teams contribute to collaboratively under version control. The plan helps you see whether the configuration file you are using might have changed since your last plan.
-
-Use API calls to audit changes to environments
-Version control systems provide you with a way to audit changes to configurations. However, if you want to audit changes that are made to an environment, you can use the Schematics REST API External link icon. The call GET /v1/environments/{id}/activities retrieves a list of all activities that occurred in a specified environment, and the call GET /v1/environments/{id}/activities/{activity_id} lists details for a specific activity that ran against an environment.
 
 
 ## Deciding on your Schematics template
