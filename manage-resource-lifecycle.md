@@ -132,7 +132,99 @@ After you publish code changes to your Terraform configuration in your source co
 ## Reviewing workspace changes
 {: #review-logs}
 
+You can view the change history of Terraform configurations in your source control repository, like you would with any other codebase. To monitor resource deployments to your environments, or to view logs of previous deployments, you can view audit logs with the {{site.data.keyword.bpshort}} GUI, CLI, and API.
+{:shortdesc}
 
+### With the console
+{: #auditing-gui}
+
+You can look at the environment status indicators for a quick glance at which environments are actively running resources.
+
+To inspect resource or deployment details:
+
+1. In the <a href="https://console.bluemix.net/schematics" target="_blank">{{site.data.keyword.bpshort}} dashboard</a>, select **Environments** from the left navigation menu.
+
+2. Select the row of the environment to access the environment details page.
+
+3. You can inspect the following:
+  * Historical logs of previous plans and deployments can be found in the **Recent Activity** section. For more information about logs, see [deployment logs and annotations](schematics_logs.html).
+  * The **Resources** tab shows which resources are actively running in your environment.
+
+### With the CLI
+{: #auditing-cli}
+
+1. Retrieve your environment ID.
+
+  ```
+  bx schematics environment list
+  ```
+  {: codeblock}
+
+2. Retrieve the activity IDs for your environment. Activity IDs are assigned to plan, apply, destroy, and delete actions. The following command lists all of the activities that ran against your environment.
+
+  ```
+  bx schematics activity list --id ENVIRONMENT_ID
+  ```
+  {: codeblock}
+
+3. Retrieve data about a specific activity, such as who changed an environment and when.
+
+  ```
+  bx schematics activity show --id ACTIVITY_ID
+  ```
+  {: codeblock}
+
+4. Optional: To view a detailed log, such as plan or apply output, run the `log` command.
+
+  ```
+  bx schematics activity log --id ACTIVITY_ID
+  ```
+  {: codeblock}
+
+### With the API
+{: #auditing-api}
+
+1. Retrieve your environment ID.
+
+  ```
+  curl -X GET \
+    https://us-south.schematics.bluemix.net/v1/environments \
+    -H 'accept: application/json' \
+    -H 'authorization: bearer <OAuth_token>'
+  ```
+  {: codeblock}
+
+  The response body contains all environments in your {{site.data.keyword.cloud_notm}} account. Locate the `id` value of the specific environment that you want to audit.
+
+2. Retrieve the activity IDs for the actions run against your environment.
+
+  ```
+  curl -X GET \
+    https://us-south.schematics.bluemix.net/v1/environments/<environment_ID>/activities \
+    -H 'accept: application/json' \
+    -H 'authorization: bearer <OAuth_token>'
+  ```
+  {: codeblock}
+
+3. Retrieve a specific activity for an environment.
+
+  ```
+  curl -X GET \
+    https://us-south.schematics.bluemix.net/v1/environments/<environment_ID>/activities/<activity_ID> \
+    -H 'accept: application/json' \
+    -H 'authorization: bearer <OAuth_token>'
+  ```
+  {: codeblock}
+
+4. Inspect a detailed log of the Terraform output.
+
+  ```
+  curl -X GET \
+    https://us-south.schematics.bluemix.net/v1/environments/<environment_ID>/activities/<activity_ID>/log \
+    -H 'accept: text/html' \
+    -H 'authorization: bearer <OAuth_token>'
+  ```
+  {: codeblock}
   
   
 ## Removing your resources
