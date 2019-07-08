@@ -45,7 +45,7 @@ Do not use one workspace to manage an entire staging or production environment. 
 Review the following image to see the number of workspaces in {{site.data.keyword.cloud_notm}} Schematics for an app that consists of three microservices. 
 
 
-
+<img src="images/workspace-structure.png" alt="Workspace structure for {{site.data.keyword.cloud_notm}} Schematics" width="800" style="width: 800px; border-style: none"/>
 
 - Workspace is a collection of everything TF needs to run: TF config file, variable values, state data to keep track of operations between runs
 - Workspaces should match your organizational permissions structure > one workspace for each environment of a given infrastructure (TF configurations * environments = number of workspaces)
