@@ -110,6 +110,11 @@ If the resource you are defining supports notes, use them to add comments to the
 ## Creating your workspace 
 {: #create-workspace}
 
+1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview). 
+2. Click **Create workspace**. 
+3. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
+4. Enter a name for your workspace. Make sure that you include the microservices component and the environment in your name. For more information about how to structure your workspaces, see [How many workspaces do I need?](#plan-number-of-workspaces).
+5. 
 
 
 
