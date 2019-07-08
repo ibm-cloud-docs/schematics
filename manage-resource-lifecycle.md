@@ -32,7 +32,7 @@ subcollection: schematics
 Deploying changes to your environment is a lightweight process. To change which resources are allocated, you code changes to your Terraform configuration in declarative syntax, meaning you state only the outcome you want. With {{site.data.keyword.bpshort}}, you can preview your changes before deployment.
 
 
-## With the console
+### With the console
 {: #gui}
 
 If you prefer a graphical view to manage the resources in your environments, you can use the {{site.data.keyword.bpshort}} dashboard.
@@ -49,7 +49,7 @@ After you publish code changes to your Terraform configuration in your source co
 4. Click **Apply** to deploy updates.
 
 
-## With the CLI
+### With the CLI
 {: #cli}
 
 You can programmatically update resources in your environments with the {{site.data.keyword.bpshort}} CLI.
@@ -81,7 +81,7 @@ After you publish code changes to your Terraform configuration in your source co
   {: codeblock}
 
 
-## With the API
+### With the API
 {: #api}
 
 You can programmatically manage resources in your environments with the {{site.data.keyword.bpshort}} API.
@@ -129,8 +129,88 @@ After you publish code changes to your Terraform configuration in your source co
   ```
   {: codeblock}
   
+## Reviewing workspace changes
+{: #review-logs}
+
+
+  
   
 ## Removing your resources
 {: #destroy-resources}
 
+You can use {{site.data.keyword.bplong}} to destroy your resources. When you destroy your resources, you are tearing down your environment and all associated resources.  
+{:shortdesc}
 
+**Warning**: When you destroy resources, the action cannot be reversed. Destroying resources isn't recommended for production environments, but might be useful for temporary environments such as testing or QA.
+
+Before you destroy your resources, consider the following guidelines:
+* Ensure that traffic is not directed to your resources.
+* Ensure that any data you might need is backed up.
+
+
+### With the console
+{: #gui}
+
+You can use the {{site.data.keyword.bpshort}} dashboard to spin up and tear down temporary environments.
+{:shortdesc}
+
+1. In the **{{site.data.keyword.bpshort}}** dashboard, select the **Environments** tab.
+
+2. Click the row of the specific environment that you want to remove.
+
+3. In the options menu, select **Destroy resources** or **Delete environment**. Both the delete and destroy actions are not reversible. To determine which option to select, consider whether you have active resources.
+  * Select **Destroy resources** if you want to stop and remove your active resources. It is recommended that you inspect the resources list before you run a destructive action.
+  * Select **Delete environment** if you want to remove the environment from the {{site.data.keyword.bpshort}} service. You can typically delete the environment if it is not deployed and does not have active resources. If you delete an environment with active resources, you can no longer use the {{site.data.keyword.bpshort}} service to track or deploy changes to your environment. The active resources need to be managed individually from their service dashboards.
+
+  Follow the on-screen prompts to confirm your choice.
+
+
+### With the CLI
+{: #cli}
+
+You can use the {{site.data.keyword.bpshort}} CLI to spin up and tear down temporary environments.
+{:shortdesc}
+
+1. Run the `destroy` command to tear down your environment and resources.
+
+  ```
+  bx schematics action destroy --id ENVIRONMENT_ID
+  ```
+  {: codeblock}
+
+  You can run `bx schematics environment list` if you need to retrieve your environment ID.
+
+2. Optional: Run the `delete` command if you want to remove environment metadata from the service.
+
+  ```
+  bx schematics environment delete --id ENVIRONMENT_ID
+  ```
+  {: codeblock}
+
+
+### With the API
+{: #api}
+
+You can use the {{site.data.keyword.bpshort}} API to spin up and tear down temporary environments.
+{:shortdesc}
+
+1. Run the `PUT v1/environments/<environment_ID>/destroy` call to destroy your resources.
+
+  ```
+  curl -X PUT \
+    https://us-south.schematics.bluemix.net/v1/environments/<environment_ID>/destroy \
+    -H 'accept: application/json' \
+    -H 'authorization: bearer <OAuth_token>' \
+    -H 'content-type: application/json'
+  ```
+  {: codeblock}
+
+2. Optional: Run the `DELETE v1/environments/<environment_ID>` call if you want to remove environment metadata from the {{site.data.keyword.bpshort}} service.
+
+  ```
+  curl -X DELETE \
+    https://us-south.schematics.bluemix.net/v1/environments/<environment_ID> \
+    -H 'accept: text/plain' \
+    -H 'authorization: bearer <OAuth_token>'
+  ```
+  {: codeblock}
