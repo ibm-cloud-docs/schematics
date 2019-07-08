@@ -37,6 +37,8 @@ Plan out the organizational structure of your workspaces so that they match the 
 Similar to splitting up a huge monolith app into smaller microservices, 
 
 ### How many workspaces do I need?
+{: #plan-number-of-workspaces}
+
 When you set up your workspaces, you want to make sure that your workspaces match the organizational structure of your microservices and the permissions that you want to assign to each component.
 {: shortdesc}
 
@@ -52,6 +54,37 @@ Review the following image to see the number of workspaces in {{site.data.keywor
 For more informa
 
 ### How do I structure my GitHub repository to map my workspaces?
+{: #plan-github-structure}
+
+Review the following table to find a list of options for how to structure your GitHub repository to map the different workspace environments. 
+{: shortdesc}
+
+| Option | Description | 
+| ------- | ---------------------------- | 
+| One GitHub repo, use variables to distinguish between environments | Create one GitHub repository where you store the Terraform configuration files that make up your microservice component. Make your Terraform configuration files as general as possible so that you can reuse the same configuration across your workspace environments. To configure the specifics of your development, staging, and production environment, use workspace variables. This setup is useful if you have one team that manages the lifecycle of the microservice component and where your environment configurations do not differ drastically. |
+| One GitHub repo, use branches to distinguish between environments | Create one GitHub repository for your microservice component, and use different GitHub branches to store the Terraform configuration files for each of your environments. With this setup, you have a clear distinction between your environments and more control over who can access and change a particular configuration. Make sure to set up a process for how changes in one configuration file are populated across branches to avoid that you have different configurations in each environment. |
+| One GitHub repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid that you have different configurations in each environment. |
+| Use one GitHub repo per environment | Use one GitHub repository for each of your environment. With this setup, you have a 1:1 relationship between your workspace and GitHub repository. While this setup allows you to apply separate permissions for each of your environments, you must make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
+
+For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html). 
+
+### Reusing common configs
+
+### How many teams should manage a workspace?
+
+### How do I control access to my workspaces? 
+{: #plan-workspace-access}
+
+{{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to your workspace](#manage-workspace-access). 
+
+
+
+
+
+
+
+
+
 
 - Workspace is a collection of everything TF needs to run: TF config file, variable values, state data to keep track of operations between runs
 - Workspaces should match your organizational permissions structure > one workspace for each environment of a given infrastructure (TF configurations * environments = number of workspaces)
@@ -60,15 +93,7 @@ For more informa
 - Name the workspace component-environment
 *  provision infrastructure with Terraform, without conflicts and with clear understanding of their access permissions.
 * Expert users within an organization can produce standardized infrastructure templates, and beginner users can consume those to follow infrastructure best practices for the organization.
-- Design the workspace structure https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html)
-- Create the workspace
 - Plan and create teams
-- Assign permissions
-
-### Reusing common configs
-
-### How do I control access to my workspaces? 
-To control access to a w
 
 Before you create environments, it can be helpful to plan out the organizational structure of your environments and learn how to use Schematics as part of your continuous delivery pipeline.
 
@@ -76,14 +101,6 @@ Before you create environments, it can be helpful to plan out the organizational
 
 Within each microservice, create different environments for development, testing, and production landscapes by reusing common configurations
 If you want to control who can change a certain environment, you can control write access by deploying environments into different accounts. Otherwise, you can create all three environments in the same account.
-
-Figure 1. User access with environments in a single account
-
-Figure 1. User access with environments in a single account
-
-Figure 2. User access with environments in multiple accounts
-
-Figure 2. User access with environments in multiple accounts
 
 To replicate the same architecture in each environment, reuse common configurations or templates. Because you treat your infrastructure as code with Terraform, you can spin up the same resources in each environment as part of your regular continuous integration/continuous delivery pipeline. For example, you can spin up a temporary QA environment that looks like production and tear it down when you're done with testing.
 
@@ -148,3 +165,4 @@ Version control systems provide you with a way to audit changes to configuration
 from the UI, CLI, API
 
 ## Managing access to your workspace
+{: #manage-workspace-access}
