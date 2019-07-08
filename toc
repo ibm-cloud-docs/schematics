@@ -7,11 +7,13 @@ IBM Cloud Schematics
     {: .navgroup id="learn"}
     getting-started.md
     about.md
-    schematics_planning.md
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
     setup-cli.md
+    workspace-setup.md
+    manage-resource-lifecycle.md
+    schematics_planning.md
     schematics_creating.md
     schematics_deploying.md
     schematics_managing.md
