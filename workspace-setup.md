@@ -25,11 +25,21 @@ subcollection: schematics
 # Setting up your workspace
 {: #workspace-setup}
 
-An {{site.data.keyword.cloud_notm}} Schematics workspace is a collection of all the files that Schematics needs to successfully provision your {{site.data.keyword.cloud_notm}} resources by using Terraform. 
+An {{site.data.keyword.cloud_notm}} Schematics workspace is a collection of all the files that Schematics needs to successfully provision your {{site.data.keyword.cloud_notm}} resources by using Terraform. Find the Schematics template to use as the base configuration for your workspace, and structure your workspaces to map the environments in your organization. 
 {: shortdesc} 
 
+## Deciding on your Schematics template
+{: #find-template}
+
+
+- Workspace is a collection of everything TF needs to run: TF config file, variable values, state data to keep track of operations between runs
+
+### Using an IBM pre-defined template
+
+### Importing your own templates
+
 ## Designing your workspace structure
-{: #plan-workspace}
+{: #structure-workspace}
 
 Plan out the organizational structure of your workspaces so that they match the mircoservice and permission structure of your organization. 
 {: shortdesc}
@@ -69,6 +79,8 @@ For more information about how to structure your GitHub repository, see [Reposit
 ### Reusing common configs
 To replicate the same architecture in each environment, reuse common configurations or templates. Because you treat your infrastructure as code with Terraform, you can spin up the same resources in each environment as part of your regular continuous integration/continuous delivery pipeline. For example, you can spin up a temporary QA environment that looks like production and tear it down when you're done with testing.
 
+Expert users within an organization can produce standardized infrastructure templates, and beginner users can consume those to follow infrastructure best practices for the organization.
+
 
 ### How many teams should manage a workspace?
 
@@ -76,26 +88,6 @@ To replicate the same architecture in each environment, reuse common configurati
 {: #plan-workspace-access}
 
 {{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to your workspace](#manage-workspace-access). 
-
-
-
-
-
-
-
-
-
-
-- Workspace is a collection of everything TF needs to run: TF config file, variable values, state data to keep track of operations between runs
-
-
-*  provision infrastructure with Terraform, without conflicts and with clear understanding of their access permissions.
-* Expert users within an organization can produce standardized infrastructure templates, and beginner users can consume those to follow infrastructure best practices for the organization.
-- Plan and create teams
-
-Before you create environments, it can be helpful to plan out the organizational structure of your environments and learn how to use Schematics as part of your continuous delivery pipeline.
-
-
 
 
 
@@ -115,15 +107,13 @@ If the resource you are defining supports tags, use them to label your resource.
 
 If the resource you are defining supports notes, use them to add comments to the resource. Notes can help other contributors understand the purpose of the resource, how it interacts with other resources in the environment, or other related considerations.
 
-
-
-## Deciding on your Schematics template
-
-
-
 ## Creating your workspace 
+{: #create-workspace}
 
-from the UI, CLI, API
+
+
+
+from the UI,API
 
 ## Managing access to your workspace
 {: #manage-workspace-access}
