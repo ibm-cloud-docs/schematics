@@ -143,8 +143,5 @@ Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics A
      {: codeblock}
      
 2. Create your workspace. 
-   ```
-   ```
-   {: codeblock}
-    
+
 3. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
