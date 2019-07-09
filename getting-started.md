@@ -149,7 +149,7 @@ To create a configuration file for your VPC resources:
        <td>A variable declaration for the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. You enter the value for your variable when you create your workspace in {{site.data.keyword.cloud_notm}} Schematics.</td>
      </tr>
      <tr>
-       <td><code>variable.ibmcloud_api_key</code><td>
+       <td><code>variable.ibmcloud_api_key</code></td>
        <td>A variable declaration for the {{site.data.keyword.cloud_notm}} API key that you created earlier. You enter the value for your variable when you create your workspace in {{site.data.keyword.cloud_notm}} Schematics. </td>
      </tr>
      <tr>
