@@ -310,4 +310,8 @@ To provision your resources:
 ## What's next? 
 {: #whats-next}
 
-
+After you provisioned your resources in {{site.data.keyword.cloud_notm}}, choose between the following options: 
+- Learn more about [{{site.data.keyword.cloud_notm}} Schematics](/docs/schematics?topic=schematics-about-schematics) and the benefits of using the service. 
+- Review tips and tricks for how to [structure your Terraform configuration file](/docs/schematics?topic=schematics-configuration).
+- Set up a [GitHub repository and workspace structure](/docs/schematics?topic=schematics-workspace-setup) for your microservices. 
+- Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/). 
