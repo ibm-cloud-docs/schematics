@@ -109,38 +109,38 @@ Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics A
 
 1. Create an {{site.data.keyword.cloud_notm}} Identity and Access Management **access token**. 
 
-   - **Example request for user name and password**: 
-     ```
-     curl -X POST \
-       https://iam.bluemix.net/identity/token \
-       -H 'Accept: */*' \
-       -H 'Authorization: Basic Yng6Yng=' \
-       -H 'Content-Type: application/x-www-form-urlencoded' \
-       -d 'response_type=cloud_iam%20uaa&username=<username>&uaa_client_id=cf&uaa_client_secret=&password=<password>&grant_type=password'
-     ```
-     {: codeblock}
+   **Example request for user name and password**: 
+   ```
+   curl -X POST \
+     https://iam.bluemix.net/identity/token \
+     -H 'Accept: */*' \
+     -H 'Authorization: Basic Yng6Yng=' \
+     -H 'Content-Type: application/x-www-form-urlencoded' \
+     -d 'response_type=cloud_iam%20uaa&username=<username>&uaa_client_id=cf&uaa_client_secret=&password=<password>&grant_type=password'
+   ```
+   {: codeblock}
    
-   - **Example request for user name and passcode**: 
-     ```
-     curl -X POST \
-       https://iam.bluemix.net/identity/token \
-       -H 'Accept: */*' \
-       -H 'Authorization: Basic Yng6Yng=' \
-       -H 'Content-Type: application/x-www-form-urlencoded' \
-       -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Apasscode&response_type=cloud_iam%20uaa&passcode=<passcode>&uaa_client_id=cf&uaa_client_secret='
-     ```
-     {: codeblock}
+   **Example request for user name and passcode**: 
+   ```
+   curl -X POST \
+     https://iam.bluemix.net/identity/token \
+     -H 'Accept: */*' \
+     -H 'Authorization: Basic Yng6Yng=' \
+     -H 'Content-Type: application/x-www-form-urlencoded' \
+     -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Apasscode&response_type=cloud_iam%20uaa&passcode=<passcode>&uaa_client_id=cf&uaa_client_secret='
+   ```
+   {: codeblock}
    
-   - **Example request for user name and {{site.data.keyword.cloud_notm}} API key**: 
-     ```
-     curl -X POST \
-       https://iam.bluemix.net/identity/token \
-       -H 'Accept: */*' \
-       -H 'Authorization: Basic Yng6Yng=' \
-       -H 'Content-Type: application/x-www-form-urlencoded' \
-       -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey=<api_key>&uaa_client_id=cf&uaa_client_secret='
-     ```
-     {: codeblock}
+   **Example request for user name and {{site.data.keyword.cloud_notm}} API key**: 
+   ```
+   curl -X POST \
+     https://iam.bluemix.net/identity/token \
+     -H 'Accept: */*' \
+     -H 'Authorization: Basic Yng6Yng=' \
+     -H 'Content-Type: application/x-www-form-urlencoded' \
+     -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey=<api_key>&uaa_client_id=cf&uaa_client_secret='
+   ```
+   {: codeblock}
      
 2. Create your workspace. 
 
