@@ -25,24 +25,22 @@ subcollection: schematics
 # Setting up your workspace
 {: #workspace-setup}
 
-An {{site.data.keyword.cloud_notm}} Schematics workspace is a collection of all the files that Schematics needs to successfully provision your {{site.data.keyword.cloud_notm}} resources by using Terraform. Find the Schematics template to use as the base configuration for your workspace, and structure your workspaces to map the environments in your organization. 
+An {{site.data.keyword.cloud_notm}} Schematics workspace is a collection of all the files that Schematics needs to successfully provision your {{site.data.keyword.cloud_notm}} resources by using Terraform. Before you create your workspace, make sure that you design the organizational structure of your GitHub repository and workspaces so that you can replicate and manage your configurations across multipe environments. 
 {: shortdesc} 
 
-## Designing your workspace structure
+## Designing your workspace and GitHub repository structure
 {: #structure-workspace}
 
-Plan out the organizational structure of your workspaces so that they match the mircoservice and permission structure of your organization. 
+Plan out the organizational structure of your workspaces and GitHub repository so that they match the mircoservice and permission structure of your organization. 
 {: shortdesc}
-
-Similar to splitting up a huge monolith app into smaller microservices, 
 
 ### How many workspaces do I need?
 {: #plan-number-of-workspaces}
 
-When you set up your workspaces, you want to make sure that your workspaces match the organizational structure of your microservices and the permissions that you want to assign to each component.
+To find out how many workspaces you need in {{site.data.keyword.cloud_notm}} Schematics, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
 {: shortdesc}
 
-For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and each environment such as development, staging, and prod. Separate workspaces for each microservice component and environment allows you to separately develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
+As a rule of thumb, consider creating separate workspaces for each of your microservice and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and development, staging, and production environment. Separate workspaces for each microservice component and environment allows you to separately develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
 
 Review the following image to see the number of workspaces in {{site.data.keyword.cloud_notm}} Schematics for an app that consists of three microservices. 
 
@@ -69,19 +67,18 @@ Review the following table to find a list of options for how to structure your G
 
 For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html). 
 
-### Reusing common configs
-To replicate the same architecture in each environment, reuse common configurations or templates. Because you treat your infrastructure as code with Terraform, you can spin up the same resources in each environment as part of your regular continuous integration/continuous delivery pipeline. For example, you can spin up a temporary QA environment that looks like production and tear it down when you're done with testing.
+### How can I reuse configuration files across environments and workspaces? 
+{: #plan-reuse}
 
-Expert users within an organization can produce standardized infrastructure templates, and beginner users can consume those to follow infrastructure best practices for the organization.
+Try to minimize the number of Terraform configuration files that you need to manage by creating standardized resource templates and using variables to customize the template to your needs. 
+{: shortdesc}
 
-
-### How many teams should manage a workspace?
+With standardized resource templates, you can ensure that development best practices are followed within your organization and that all Terraform configuration files have the same structure. Knowing the structure of a Terraform configuration file makes it easier for your developers to understand a file, declare variables, contribute to the code, and troubleshoot the errors. 
 
 ### How do I control access to my workspaces? 
 {: #plan-workspace-access}
 
 {{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to your workspace](#manage-workspace-access). 
-
 
 ## Creating your workspace 
 {: #create-workspace}
