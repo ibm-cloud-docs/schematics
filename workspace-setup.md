@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-09"
 
 keywords: Schematics, automation, Terraform
 
@@ -27,16 +27,6 @@ subcollection: schematics
 
 An {{site.data.keyword.cloud_notm}} Schematics workspace is a collection of all the files that Schematics needs to successfully provision your {{site.data.keyword.cloud_notm}} resources by using Terraform. Find the Schematics template to use as the base configuration for your workspace, and structure your workspaces to map the environments in your organization. 
 {: shortdesc} 
-
-## Deciding on your Schematics template
-{: #find-template}
-
-
-- Workspace is a collection of everything TF needs to run: TF config file, variable values, state data to keep track of operations between runs
-
-### Using an IBM pre-defined template
-
-### Importing your own templates
 
 ## Designing your workspace structure
 {: #structure-workspace}
@@ -64,6 +54,9 @@ Do not use one workspace to manage an entire staging or production environment. 
 ### How do I structure my GitHub repository to map my workspaces?
 {: #plan-github-structure}
 
+Structure your GitHub repository so that you have one repository for all your Terraform configuration files that build your microservice, and use variables, branches, or directories to differentiate between your development, staging, and production environment. 
+{: shortdesc}
+
 Review the following table to find a list of options for how to structure your GitHub repository to map the different workspace environments. 
 {: shortdesc}
 
@@ -90,35 +83,71 @@ Expert users within an organization can produce standardized infrastructure temp
 {{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to your workspace](#manage-workspace-access). 
 
 
-
-
-
-
-
-
-Collaborate in version control
-Because you treat your infrastructure as code with Terraform, a version control system is imperative as part of the deployment development process. Version control allows you to revert to previous configurations, audit changes to configurations, and share code with multiple teams. Version control also allows you to use a master branch that serves as the single source of truth for your infrastructure. Team members can then plan changes in branches before they merge those changes into the master branch.
-
-
-
-
-Use tags and notes to provide information about your resources
-If the resource you are defining supports tags, use them to label your resource. Labels can help you organize your resources according to dimensions like which environment the resource is in. Currently, tags are managed locally and are not stored on the IBM Cloud service endpoint.
-
-If the resource you are defining supports notes, use them to add comments to the resource. Notes can help other contributors understand the purpose of the resource, how it interacts with other resources in the environment, or other related considerations.
-
 ## Creating your workspace 
 {: #create-workspace}
 
+### With the console
+{: #create-workspace-console}
+
+Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics console. 
+{: shortdesc}
+
 1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview). 
 2. Click **Create workspace**. 
-3. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
-4. Enter a name for your workspace. Make sure that you include the microservices component and the environment in your name. For more information about how to structure your workspaces, see [How many workspaces do I need?](#plan-number-of-workspaces).
-5. 
+3. Configure your workspace. 
+   1. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
+   2. Enter a name for your workspace. Make sure that you include the microservices component and the environment in your name. For more information about how to structure your workspaces, see [How many workspaces do I need?](#plan-number-of-workspaces).
+   3. Optional: Enter tags for your workspace. You can use the tags later to find your workspaces more easily. 
+   4. Select a resource group and a region for your workspace. All resources that you create in your workspace are provisioned in the selected resource group and region. 
+   5. Optional: Enter a description for your workspace.
+   6. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
+5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
+### With the API
+{: #create-workspace-api}
 
+Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics API. 
+{: shortdesc}
 
-from the UI,API
+1. Create an {{site.data.keyword.cloud_notm}} Identity and Access Management **access token**. 
 
-## Managing access to your workspace
-{: #manage-workspace-access}
+   - **Example request for user name and password**: 
+     ```
+     curl -X POST \
+       https://iam.bluemix.net/identity/token \
+       -H 'Accept: */*' \
+       -H 'Authorization: Basic Yng6Yng=' \
+       -H 'Content-Type: application/x-www-form-urlencoded' \
+       -d 'response_type=cloud_iam%20uaa&username=<username>&uaa_client_id=cf&uaa_client_secret=&password=<password>&grant_type=password'
+     ```
+     {: codeblock}
+   
+   - **Example request for user name and passcode**: 
+     ```
+     curl -X POST \
+       https://iam.bluemix.net/identity/token \
+       -H 'Accept: */*' \
+       -H 'Authorization: Basic Yng6Yng=' \
+       -H 'Content-Type: application/x-www-form-urlencoded' \
+       -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Apasscode&response_type=cloud_iam%20uaa&passcode=<passcode>&uaa_client_id=cf&uaa_client_secret='
+     ```
+     {: codeblock}
+   
+   - **Example request for user name and {{site.data.keyword.cloud_notm}} API key**: 
+     ```
+     curl -X POST \
+       https://iam.bluemix.net/identity/token \
+       -H 'Accept: */*' \
+       -H 'Authorization: Basic Yng6Yng=' \
+       -H 'Content-Type: application/x-www-form-urlencoded' \
+       -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey=<api_key>&uaa_client_id=cf&uaa_client_secret='
+     ```
+     {: codeblock}
+     
+2. Create your workspace. 
+   ```
+   ```
+   {: codeblock}
+    
+3. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
