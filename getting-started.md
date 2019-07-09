@@ -30,7 +30,7 @@ Enable Infrastructure as Code (IaC) with {{site.data.keyword.cloud_notm}} Schema
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} Schematics is available as a beta to test out Terraform-as-a-Service capabilities in {{site.data.keyword.cloud_notm}} and might be unstable or change frequently. {{site.data.keyword.cloud_notm}} beta services also might not provide the same level of performance or compatibility that generally available services provide, and are not intended for use in a production environment.
-{: #preview}
+{: preview}
 
 ## Create your Terraform configuration file
 {: #create-config}
