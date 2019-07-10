@@ -26,8 +26,15 @@ subcollection: schematics
 {: #manage-lifecycle}
 
 **Do I use {{site.data.keyword.cloud_notm}} Schematics or the resource dashboard to manage the resource?**</br>
+With {{site.data.keyword.cloud_notm}} Schematics, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to provision and manage a set of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work it. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC), you use the {{site.data.keyword.cloud_notm}} console, API, or CLI to stop, reboot, and power on your virtual server instance. To remove the virtual server instance, you use {{site.data.keyword.cloud_notm}} Schematics. 
 
-**What happens if I manually added, modified, or removed a resource?** </br>
+**What happens if I manually added, or removed a resource from the serice dashboard?** </br>
+When you provision resources with {{site.data.keyword.cloud_notm}} Schematics, the state of your resources is stored in a local {{site.data.keyword.cloud_notm}} Schematics state file. This state file is the single source of truth for {{site.data.keyword.cloud_notm}} Schematics to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without using {{site.data.keyword.cloud_notm}} Schematics, this resource is not stored in the {{site.data.keyword.cloud_notm}} Schematics state file, and as a consequence cannot be managed with {{site.data.keyword.cloud_notm}} Schematics. 
+
+When you manually remove a resource that you provisioned with {{site.data.keyword.cloud_notm}} Schematics, the state file is not updated automatically and becomes out of sync. Even if you create a new execution plan, {{site.data.keyword.cloud_notm}} Schematics checks your Terraform configuration file against the state that is stored in the state file. Because your state file still includes the resource that you manually removed, the resource cannot be re-added with {{site.data.keyword.cloud_notm}} Schematics. 
+
+To keep your {{site.data.keyword.cloud_notm}} Schematics state file and the {{site.data.keyword.cloud_notm}} resources in your account in sync, use {{site.data.keyword.cloud_notm}} Schematics only to provision, or remove your resources. 
+{: important}
 
 **What should I know before I start managing my resources with {{site.data.keyword.cloud_notm}} Schematic?** </br>
 you can only create and modify, not remove during the beta
@@ -75,33 +82,66 @@ After you publish code changes to your Terraform configuration in your source co
 ## Reviewing resource and deployment details
 {: #review-logs}
 
-You can view the change history of Terraform configurations in your source control repository, like you would with any other codebase. To monitor resource deployments to your environments, or to view logs of previous deployments, you can view audit logs with the {{site.data.keyword.bpshort}} GUI, CLI, and API.
+View the details of the {{site.data.keyword.cloud_notm}} Schematics deployments and the {{site.data.keyword.cloud_notm}} resources that you currently manage with {{site.data.keyword.cloud_notm}} Schematics by using the Schematics console or API.
 {:shortdesc}
-
-You can look at the environment status indicators for a quick glance at which environments are actively running resources.
-
-To inspect resource or deployment details:
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces), select the workspace that you want to inspect.
 2. From the workspace details page, review the logs of previous Terraform execution plans and the plans that you applied in your environment in the **Recent Activity** section. 
 3. To review the state of the {{site.data.keyword.cloud_notm}} resources that you created with this workspace, select the **Resources** tab of the workspace details page. 
+4. To review who made a change to your Terraform configuration files, go to the source repository in GitHub that is linked to your workspace, and use the built-in capabilities such as the commit history and pull requests to review changes. 
   
 ## Removing your resources
 {: #destroy-resources}
 
-If you do not need your {{site.data.keyword.cloud_notm}} resources anymore, you can remove the resources by removing the workspace that manages these resources. 
+To remove an {{site.data.keyword.cloud_notm}} that you provisioned with {{site.data.keyword.cloud_notm}} Schematics, you can either remove the code, or comment out the resource in the Terraform configuration file. 
 {:shortdesc}
 
-**What happens if I deleted resources manually?** </br>
+**How should I remove resources with {{site.data.keyword.cloud_notm}} Schematics?** </br>
+During the {{site.data.keyword.cloud_notm}} Schematics beta, you cannot use the console or API to instruct {{site.data.keyword.cloud_notm}} Schematics to remove all of the resources that you provisioned with {{site.data.keyword.cloud_notm}} Schematics. However, because {{site.data.keyword.cloud_notm}} Schematics executes the actions that are required to achieve the state that you describe in your Terraform configuration file, you can either remove the infrastructure code from your file, or comment out the resources that you want to remove. 
 
-**Can I remove my resources without removing the workspace?** </br>
+**What happens if I choose to delete my resource with the resource dashboard?** </br>
+When you manually remove a resource that you provisioned with {{site.data.keyword.cloud_notm}} Schematics, the state file is not updated automatically and becomes out of sync. Even if you create a new execution plan, {{site.data.keyword.cloud_notm}} Schematics checks your Terraform configuration file against the state that is stored in the state file. Because your state file still includes the resource that you manually removed, the resource cannot be re-added with {{site.data.keyword.cloud_notm}} Schematics and remain orphaned. 
 
-Removing a workspace, removes all of the {{site.data.keyword.cloud_notm}} resources that are specified in the Terraform configuration files that your workspace points to. This action cannot be undone. Make sure that you backed up data before you remove workspaces. To avoid unexpected results, do not remove an entire production workspace. Instead, remove resources one at a time by removing the configuration from your Terraform files and verify the execution plan before you proceed with the removal.  
+**Are my resources removed when I remove the workspace** </br>
+No. Removing the workspace from {{site.data.keyword.cloud_notm}} Schematics does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you remove the workspace before you removed your resources, you must manually remove all of your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard. 
+
+Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sure that you backed up your data before you remove a resource. If you chooes to remove the infrastructure code, or comment out the resource in your Terraform configuration file, make sure to thoroughly review the log file of your execution plan to verify that all your resources are included in the removal.    
 {: important}
 
 To remove your resources: 
 
-1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces), find the workspace that you want to remove. 
-2. From the actions menu, click **Delete**. 
-3. Confirm the deletion of your workspace by clicking **Delete**. After you remove your workspace, {{site.data.keyword.cloud_notm}} Schematics automatically starts removing all of the {{site.data.keyword.cloud_notm}} resources that are specified in the Terraform configuration files that your workspace points to. 
+1. Open the Terraform configuration file in your source repository in GitHub. 
+2. Either remove the infrastructure code from the file, or comment out the resources that you want to remove by adding `#` to the beginning of each line. 
+
+   Example for commenting out a resource: 
+   ```
+   ...
+   #resource ibm_is_instance "vsi1" {
+   #  name    = "${local.BASENAME}-vsi2"
+   #  vpc     = "${ibm_is_vpc.vpc.id}"
+   #  zone    = "${local.ZONE}"
+   #  keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
+   #  image   = "${data.ibm_is_image.ubuntu.id}"
+   #  profile = "cc1-2x4"
+
+   #  primary_network_interface = {
+   #    subnet          = "${ibm_is_subnet.subnet1.id}"
+   #    security_groups = ["${ibm_is_security_group.sg1.id}"]
+   #  }
+   #}
+   ```
+   {: codeblock}
+
+3. Commit the change to your Terraform configuration file. 
+4. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform configuration file that you just changed. 
+5. Click **Retrieve latest configuration** to get the latest version of your Terraform configuration files from the linked GitHub source repository. 
+6. Click **Run new plan** to create a Terraform execution plan. 
+7. From the **Recent activity** section, review the log files of your execution plan. This log files provide a summary of all the resources that {{site.data.keyword.cloud_notm}} Schematics is about to remove. 
+8. Click **Apply plan** to remove the {{site.data.keyword.cloud_notm}} resources from your account. 
+9. Review the log files to ensure that no errors occured during the deletion process. 
+10. From the workspace details page, select the **Resources** tab and verify that your resources are removed. 
+11. Optional: After you removed all your resources, remove your workspace. 
+    1. Open the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces) and find the workspace that you want to remove. 
+    2. From the actions menu, click **Delete**. 
+    3. Confirm the deletion of your workspace by clicking **Delete**. 
 
