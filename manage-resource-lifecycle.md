@@ -30,6 +30,7 @@ subcollection: schematics
 **What happens if I manually added, modified, or removed a resource?** </br>
 
 **What should I know before I start managing my resources with {{site.data.keyword.cloud_notm}} Schematic?** </br>
+you can only create and modify, not remove during the beta
 
 ## Deploying your resources
 {: #deploy-resources}
