@@ -25,19 +25,19 @@ subcollection: schematics
 # Managing the lifecycle of your resources
 {: #manage-lifecycle}
 
-**Do I use {{site.data.keyword.cloud_notm}} Schematics or the resource dashboard to manage the resource?**</br>
-With {{site.data.keyword.cloud_notm}} Schematics, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to provision and manage a set of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work it. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC), you use the {{site.data.keyword.cloud_notm}} console, API, or CLI to stop, reboot, and power on your virtual server instance. To remove the virtual server instance, you use {{site.data.keyword.cloud_notm}} Schematics. 
+Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by making changes to your Terraform configuration files and using {{site.data.keyword.cloud_notm}} Schematics to apply the configuration in your {{site.data.keyword.cloud_notm}} account. 
+{: shortdesc}
 
-**What happens if I manually added, or removed a resource from the serice dashboard?** </br>
+**When do I use {{site.data.keyword.cloud_notm}} Schematics vs. the individual resource dashboards?**</br>
+With {{site.data.keyword.cloud_notm}} Schematics, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to provision and manage a set of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.cloud_notm}} Schematics, you use the VPC console, API, or CLI to stop, reboot, and power on your virtual server instance. To remove the virtual server instance, you use {{site.data.keyword.cloud_notm}} Schematics. 
+
+**What happens if I manually added, or removed a resource from the service dashboard directly?** </br>
 When you provision resources with {{site.data.keyword.cloud_notm}} Schematics, the state of your resources is stored in a local {{site.data.keyword.cloud_notm}} Schematics state file. This state file is the single source of truth for {{site.data.keyword.cloud_notm}} Schematics to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without using {{site.data.keyword.cloud_notm}} Schematics, this resource is not stored in the {{site.data.keyword.cloud_notm}} Schematics state file, and as a consequence cannot be managed with {{site.data.keyword.cloud_notm}} Schematics. 
 
 When you manually remove a resource that you provisioned with {{site.data.keyword.cloud_notm}} Schematics, the state file is not updated automatically and becomes out of sync. Even if you create a new execution plan, {{site.data.keyword.cloud_notm}} Schematics checks your Terraform configuration file against the state that is stored in the state file. Because your state file still includes the resource that you manually removed, the resource cannot be re-added with {{site.data.keyword.cloud_notm}} Schematics. 
 
 To keep your {{site.data.keyword.cloud_notm}} Schematics state file and the {{site.data.keyword.cloud_notm}} resources in your account in sync, use {{site.data.keyword.cloud_notm}} Schematics only to provision, or remove your resources. 
 {: important}
-
-**What should I know before I start managing my resources with {{site.data.keyword.cloud_notm}} Schematic?** </br>
-you can only create and modify, not remove during the beta
 
 ## Deploying your resources
 {: #deploy-resources}
@@ -63,20 +63,25 @@ Before you begin, [create a workspace from your GitHub repository](/docs/schemat
 
 Deploying changes to your environment is a lightweight process. To change which resources are allocated, you code changes to your Terraform configuration in declarative syntax, meaning you state only the outcome you want. With {{site.data.keyword.bpshort}}, you can preview your changes before deployment.
 
+**What changes can I make to my resources?** </br>
+You can choose to add, modify, or remove infrastructure code in your Terraform configuration files in GitHub, or update variable values from the workspace dashboard in {{site.data.keyword.cloud_notm}} Schematics.  
 
-**When I change my configuration file in GitHub, is my change reflected in the Schematics execution plan?** </br>
-If you make changes to the configuration files in GitHub, these changes are not available automatically when you create an execution plan in {{site.data.keyword.cloud_notm}} Schematics. To pull 
+Depending on how you change the configuration of existing resources, {{site.data.keyword.cloud_notm}} Schematics might not be able to update your resource. Instead, {{site.data.keyword.cloud_notm}} Schematics might decide that in order to apply the change, the resource must be destroyed, and a new resource must be created. If your resource must be destroyed, make sure that you do not interrupt a working environment, or destroy data. 
+{: note}
 
-After you publish code changes to your Terraform configuration in your source control repository, or modify variables in the GUI, complete the following steps to deploy updates to your environment:
+**When I change my configuration file in GitHub, is my change automatically availabe in the next execution plan?** </br>
+If you make changes to the configuration files in GitHub, these changes are not available automatically when you create an execution plan in {{site.data.keyword.cloud_notm}} Schematics. To pull the latest changes from your GitHub repository, make sure that you click **Retrieve latest configuration** from the workspace details page before your create your execution plan.
 
-1. In the **{{site.data.keyword.bpshort}}** dashboard, select **Environments**.
+To update your resources: 
 
-2. Click the row of the specific environment that you want to update.
-
-3. Click **Plan** and inspect your plan log for errors.
-
-4. Click **Apply** to deploy updates.
-
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform configuration file that you just changed. 
+2. Click **Retrieve latest configuration** to get the latest version of your Terraform configuration files from the linked GitHub source repository. 
+3. If you added, or removed variables in your Terraform configuration files, or if you want to change the variable values that you set when you created the workspace, open the **Variables** tab from the workspace details page, and enter or change the variable values. 
+4. From the **Details** tab of the workspace details page, click **Run new plan** to create a Terraform execution plan. 
+5. From the **Recent activity** section, review the log files of your execution plan. This log file provide a summary of all the resources that {{site.data.keyword.cloud_notm}} Schematics is about to modify. {{site.data.keyword.cloud_notm}} Schematics might not be able to modify some of your resources, and suggest to remove and re-create the resource.
+6. Click **Apply plan** to apply the new Terraform configuration. Depending on the changes that you made, it might take a few minutes or up to a few hours for the configuration to be applied.   
+7. Review the log files to ensure that no errors occured during the modification process. 
+8. From the workspace details page, select the **Resources** tab and verify that your resources show the updated configuration. 
 
 
 ## Reviewing resource and deployment details
