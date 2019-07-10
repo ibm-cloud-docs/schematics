@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-07-10"
 
 keywords: Schematics, automation, Terraform
 
@@ -145,3 +145,9 @@ Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics A
 2. Create your workspace. 
 
 3. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
+
+
+## Managing access to your workspaces
+{: #manage-workspace-access}
+
+placeholder for IAM
