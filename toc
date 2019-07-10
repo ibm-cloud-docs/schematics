@@ -13,7 +13,6 @@ IBM Cloud Schematics
     schematics_creating.md
     workspace-setup.md
     manage-resource-lifecycle.md
-    schematics_planning.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
