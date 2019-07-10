@@ -23,5 +23,4 @@ IBM Cloud Schematics
 
     {: .navgroup id="help"}
     ts_index.md
-    faqs.md
     {: .navgroup-end}
