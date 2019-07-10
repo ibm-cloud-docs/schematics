@@ -23,7 +23,7 @@ subcollection: schematics
 {:preview: .preview}
 
 # Creating a Terraform configuration
-{: #configuration}
+{: #create-tf-config}
 
 
 To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can install and use to provision the resources.  
@@ -119,81 +119,68 @@ To configure your `provider` block:
 ## Adding {{site.data.keyword.cloud_notm}} resources to your Terraform configuration file
 {: #configure-resources}
 
+Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resource that you want to manage with Terraform or {{site.data.keyword.cloud_notm}} Schematics. 
+{: shortdesc}
+
+**What resources can I provision with Terraform and {{site.data.keyword.cloud_notm}} Schematics?** </br>
+You can provision all resources that are specified by the {{site.data.keyword.cloud_notm}} Provider plug-in. Review the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/) to find information about how to configure each resource. 
+
+### Referencing resources in other resource blocks
+{: #reference-resource-info}
+
+Review the options that you have to reference existing resources in other resource blocks of your Terraform configuration file. 
+{: shortdesc}
+
+The [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/) describes two types of data, data sources and resources. 
+
+- **Resource definitions**: You use resource definitions to find the syntax for configuring your {{site.data.keyword.cloud_notm}} resources. Every resource definition includes an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is exported after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file.  </br>
+
+  Example infrastructure code: 
+  ```
+  resource ibm_is_vpc "vpc" {
+    name = "myvpc"
+  }
+
+  resource ibm_is_security_group "sg1" {
+    name = "mysecuritygroup"
+    vpc  = "${ibm_is_vpc.vpc.id}"
+  }
+
+  ```
+  {: codeblock}
+
+- **Data sources**: You can also use data sources to retrieve information about an existing {{site.data.keyword.cloud_notm}} resource. Review the **Argument reference** section in the {{site.data.keyword.cloud_notm}} Provider plug-in reference to see what input parameters you must provide to retrieve an existing resource. Then, review the **Attributes reference** section to find an overview of parameters that are made available to you and that you can reference in your `resource` blocks. Use this option if you want to access the details of a resource that is configured in another Terraform configuration file. 
+  
+  Example infrastructure code: 
+  ```
+  data ibm_is_image "ubuntu" {
+    name = "ubuntu-18.04-amd64"
+  }
+  
+  resource ibm_is_instance "vsi1" {
+    name    = "$mysi"
+    vpc     = "${ibm_is_vpc.vpc.id}"
+    zone    = "us-south1"
+    keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
+    image   = "${data.ibm_is_image.ubuntu.id}"
+    profile = "cc1-2x4"
+
+    primary_network_interface = {
+      subnet          = "${ibm_is_subnet.subnet1.id}"
+      security_groups = ["${ibm_is_security_group.sg1.id}"]
+    }
+  }
+  ```
+  {: codeblock}
 
 
 
-
-## Example
-{: #example}
-
-<img src="images/config_clusters.png" width="400" alt="The following configuration file deploys a lite cluster with one worker node." style="width:400px; border-style: none"/>
-
-_Figure 1. Use a Terraform configuration to deploy a lite cluster with one worker node._
-
-The following configuration can be used to provision a single Kubernetes cluster with one worker node in the {{site.data.keyword.containershort}}. To use the configuration, save the code in a source control repository (GitHub or GitLab) with the Terraform file extension `.tf` .
-
-```
-provider "ibm" {
-  platform_api_key    = "${var.platform_api_key}"
-}
-
-resource "ibm_container_cluster" "test_cluster" {
-  name         = "test"
-  datacenter   = "${var.datacenter}"
-  org_guid     = "${var.org_guid}"
-  space_guid   = "${var.space_guid}"
-  account_guid = "${var.account_guid}"
-  machine_type = "free"
-
-  workers = [{
-    name   = "worker1"
-    action = "add"
-  }]
-}
-
-variable "platform_api_key" {
-  type        = "string"
-  description = "Your platform API key. You can run bx iam api-key-create <key name> to create a key."
-}
-
-variable "datacenter" {
-  type        = "string"
-  description = "The data center that you want to deploy your Kubernetes cluster in."
-}
-
-variable "org_guid" {
-  type        = "string"
-  description = "Your {{site.data.keyword.cloud_notm}} org GUID. Run bx iam org <org name> --guid to get the value."
-}
-
-variable "space_guid" {
-  type        = "string"
-  description = "Your {{site.data.keyword.cloud_notm}} space GUID. Run bx iam space <space name> --guid to get the value."
-}
-
-variable "account_guid" {
-  type        = "string"
-  description = "Your {{site.data.keyword.cloud_notm}} account GUID. Run bx iam accounts to get the value."
-}
-```
-{:codeblock}
-
-
-
-
-
-
-## Resources
-{: #resources}
-
-The `resource` block defines a component of your infrastructure. A single Kubernetes cluster is used in the example, but you can use Terraform to provision resources collectively. For more information about which resources are available, see the <a href="https://ibm-cloud.github.io/tf-ibm-docs/">{{site.data.keyword.cloud_notm}} provider for Terraform <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>.
+for the resource that you create. After your resource is created, When you provision the resource, you can then retrieve information about your resource resource can be referenced 
 
 ```
 resource "ibm_container_cluster" "test_cluster" {
   name         = "test"
   datacenter   = "${var.datacenter}"
-  org_guid     = "${var.org_guid}"
-  space_guid   = "${var.space_guid}"
   account_guid = "${var.account_guid}"
   machine_type = "free"
 
@@ -473,4 +460,63 @@ If the resource you are defining supports notes, use them to add comments to the
 
 
 As you start describing your infrastructure-as-code, it is critical to treat files you create as regular code, thus storing them in a source control management system. Overtime this will bring good properties such as using the source control review workflow to validate changes before applying them, adding a continuous integration pipeline to automatically deploy infrastructure changes.
+
+
+## Example
+{: #example}
+
+<img src="images/config_clusters.png" width="400" alt="The following configuration file deploys a lite cluster with one worker node." style="width:400px; border-style: none"/>
+
+_Figure 1. Use a Terraform configuration to deploy a lite cluster with one worker node._
+
+The following configuration can be used to provision a single Kubernetes cluster with one worker node in the {{site.data.keyword.containershort}}. To use the configuration, save the code in a source control repository (GitHub or GitLab) with the Terraform file extension `.tf` .
+
+```
+provider "ibm" {
+  platform_api_key    = "${var.platform_api_key}"
+}
+
+resource "ibm_container_cluster" "test_cluster" {
+  name         = "test"
+  datacenter   = "${var.datacenter}"
+  org_guid     = "${var.org_guid}"
+  space_guid   = "${var.space_guid}"
+  account_guid = "${var.account_guid}"
+  machine_type = "free"
+
+  workers = [{
+    name   = "worker1"
+    action = "add"
+  }]
+}
+
+variable "platform_api_key" {
+  type        = "string"
+  description = "Your platform API key. You can run bx iam api-key-create <key name> to create a key."
+}
+
+variable "datacenter" {
+  type        = "string"
+  description = "The data center that you want to deploy your Kubernetes cluster in."
+}
+
+variable "org_guid" {
+  type        = "string"
+  description = "Your {{site.data.keyword.cloud_notm}} org GUID. Run bx iam org <org name> --guid to get the value."
+}
+
+variable "space_guid" {
+  type        = "string"
+  description = "Your {{site.data.keyword.cloud_notm}} space GUID. Run bx iam space <space name> --guid to get the value."
+}
+
+variable "account_guid" {
+  type        = "string"
+  description = "Your {{site.data.keyword.cloud_notm}} account GUID. Run bx iam accounts to get the value."
+}
+```
+{:codeblock}
+
+
+
 
