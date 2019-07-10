@@ -25,17 +25,102 @@ subcollection: schematics
 # Creating a Terraform configuration
 {: #configuration}
 
-<div class="p"><div class="note attention"><span class="attentiontitle">Attention: This service is deprecated.</span> All instances of this service are deprecated. Existing instances can be used until they are no longer supported on 01 May 2018. For more information, see the [deprecation announcement blog](https://www.ibm.com/blogs/bluemix/2018/03/retirement-ibm-cloud-schematics/). For migration information, see [Migrating to the {{site.data.keyword.Bluemix_notm}} Terraform Provider](index.html#migrating).</div>
-</div>
 
-{:deprecated}
+To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can install and use to provision the resources.  
 
-When you create a Terraform configuration, you are codifying the cloud resources that make up your environment.
-{:shortdesc}
+The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform is IBM's plug-in for Terraform. The plug-in is aware of the {{site.data.keyword.cloud_notm}} resources that you can provision with Terraform and {{site.data.keyword.cloud_notm}} Schematics, and the syntax that you must use in your Terraform configuration files to describe them. When you create a Terraform configuration file, you must include all the pieces that are required by the plug-in, and assemble them in the right order so that your file can be interpreted by the plug-in. 
 
+## Basics 
+
+
+
+**What do I specify in the Terraform configuration files?** </br>
 When you work with {{site.data.keyword.bpshort}}, you write Terraform configurations for your environment in declarative syntax. You state how you want your environment to look, such as scaling an [{{site.data.keyword.containershort}}](../../containers/container_index.html) cluster to have 10 worker nodes in production. The service compares your configuration to the number of worker nodes that Terraform previously created and adds or removes worker nodes as necessary.
 
-Configurations can be written in HashiCorp Configuration Language (HCL) or JSON syntax. See the <a href="https://www.terraform.io/docs/configuration/index.html">Terraform configuration docs <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for HCL syntax and guidelines on how to write configurations.
+Blocks are containers for other content and usually represent the configuration of some kind of object, like a resource. Blocks have a block type, can have zero or more labels, and have a body that contains any number of arguments and nested blocks. Most of Terraform's features are controlled by top-level blocks in a configuration file.
+Arguments assign a value to a name. They appear within blocks.
+Expressions represent a value, either literally or by referencing and combining other values. They appear as values for arguments, or within other expressions.
+
+**What language do I use to develop my infrastructure code?** </br>
+Terraform supports HashiCorp Configuration Language (HCL) or JSON syntax.  See the <a href="https://www.terraform.io/docs/configuration/index.html">Terraform configuration docs <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for HCL syntax and guidelines on how to write configurations.
+
+**Where do I store my Terraform configuration files?** </br>
+
+## Configuring IBM as your cloud provider 
+{: #configure-provider}
+
+Specify the cloud provider that you want to use to provision your resources by using the `provider` block. 
+{: shortdesc}
+
+The `provider` block includes information about what cloud provider you want to use, and the credentials and input variables the cloud provider plug-in requires to authenticate and authorize with the cloud provider back-end. 
+
+**What options do I have to configure the `provider` block?** </br>
+You can choose between the following options to configure the `provider` block: 
+- Create a separate `provider.tf` file. The information in this file is loaded by Terraform and {{site.data.keyword.cloud_notm}} Schematics, and applied to all Terraform configuration files that exist in the same directory. This approach is useful if you split out your infrastructure code across multiple files. 
+- Add a `provider` block to your Terraform configuration file. You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
+
+**What credentials and input variables do I need to configure the {{site.data.keyword.cloud_notm}} Provider plug-in?**
+The credentials that you need depend on the type of resource that you want to provision. For example, to provision classic infrastructure resources, you must provide your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key. To provision VPC infrastructure, you need an {{site.data.keyword.cloud_notm}} API key. For more information about what credentials you need for a specific IBM Cloud resource, see [Retrieving required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials).
+
+To configure your `provider` block: 
+
+1. [Retrieve the required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials). 
+2. Create a `provider.tf` file with the following code, or add the following code to your existing Terraform configuration file. In the following example, you declare the input variables that are required by the {{site.data.keyword.cloud_notm}} plug-in to provision your resources, and reference these input variables in the `provider` block. If you use {{site.data.keyword.cloud_notm}} Schematics, these variables are automatically loaded into your workspace when you create the workspace, and you can add the values for your variables by using the {{site.data.keyword.cloud_notm}} Schematics console. If you use the Terraform CLI directly, use a local `terraform.tfvars` file to store the values for these variables on your local machine. 
+   ```
+   variable "ibmcloud_api_key" { 
+     type        = "string"
+     description = "Enter your {{site.data.keyword.cloud_notm}} API key."
+   }
+   
+   variable "softlayer_username" {
+     type        = "string"
+     description = "Enter your {{site.data.keyword.cloud_notm}} classic infrastructure user name."
+   }
+   
+   variable "softlayer_api_key" {
+     type        = "string"
+     description = "Enter your {{site.data.keyword.cloud_notm}} classic infrastructure API key."
+   }
+   
+   provider "ibm" {
+   ibmcloud_api_key    = "${var.ibmcloud_api_key}"
+   generation = 1
+   softlayer_username = "${var.softlayer_username}"
+   softlayer_api_key  = "${var.softlayer_api_key}"
+   }
+   ```
+   {: codeblock}
+   
+   <table>
+   <caption>Understanding the configuration file components</caption>
+   <thead>
+   <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the configuration file components</th>
+   </thead>
+   <tbody>
+   <tr>
+   <td><code>provider.ibmcloud_api_key</code></td>
+   <td>Reference the {{site.data.keyword.cloud_notm}} API key variable. The API key is required to provision {{site.data.keyword.cloud_notm}} platform and VPC infrastructure resources. You can remove this credential if you want to provision classic infrastructure resources only.  </td>
+   </tr>
+   <tr>
+   <td><code>provider.generation</code></td>
+   <td>Enter <strong>1</strong> to configure the {{site.data.keyword.cloud_notm}} provider plug-in to provision your VPC resources on {{site.data.keyword.cloud_notm}} classic infrastructure (VPC on Classic). You can remove this parameter if you want to provision only classic infrastructure resources that are not in a VPC. </td>
+   </tr>
+   <tr>
+   <td><code>provider.softlayer_username</code></td>
+   <td>Reference the {{site.data.keyword.cloud_notm}} classic infrastructure user name variable. This user name is required to provision {{site.data.keyword.cloud_notm}} classic infrastructure resources. You can remove this credential if you want to provision {{site.data.keyword.cloud_notm}} platform or VPC infrastructure resources only. </td>
+   </tr>
+   <tr>
+   <td><code>provider.softlayer_api_key</code></td>
+   <td>Reference the {{site.data.keyword.cloud_notm}} classic infrastructure API key variable. This API key is required to provision {{site.data.keyword.cloud_notm}} classic infrastructure resources. You can remove this credential if you want to provision {{site.data.keyword.cloud_notm}} platform or VPC infrastructure resources only.   </td>
+   </tr>
+   </tbody>
+   </table>
+
+## Adding {{site.data.keyword.cloud_notm}} resources to your Terraform configuration file
+{: #configure-resources}
+
+
+
 
 
 ## Example
@@ -93,30 +178,10 @@ variable "account_guid" {
 ```
 {:codeblock}
 
-## Provider
-{: #provider}
 
-The `provider` block identifies which cloud provider you want to use with Terraform. You can set the provider to work with {{site.data.keyword.cloud_notm}} resources by providing your platform API key.
 
-In the following sample, the value for the platform API key is obscured as a variable so that you don't check it into source control. The `${var.platform_api_key}` code acts as a placeholder, which is later defined in the `variable "platform_api_key"` block. You can then pass the value for the platform API key when you deploy resources to your environment.
 
-```
-provider "ibm" {
-  platform_api_key = "${var.platform_api_key}"
-}
-```
-{:screen}
 
-To provision {{site.data.keyword.cloud_notm}} infrastructure (SoftLayer) resources, you can add the `infrastructure_username` and `infrastructure_api_key` attributes to the provider block.
-
-```
-provider "ibm" {
-  platform_api_key = "${var.platform_api_key}"
-  infrastructure_username = "${var.infrastructure_username}"
-  infrastructure_api_key = "${var.infrastructure_api_key}"
-}
-```
-{:codeblock}
 
 ## Resources
 {: #resources}
@@ -207,21 +272,6 @@ In addition to strings, you can pass lists and maps in the `type` argument.
 
   You can then call the variable with the syntax `${var.map_name[key]}`. For the example, calling `${var.workers["worker1]}` would return "HTTP server".
 
-### Custom variables
-{: #variables_custom}
-
-In addition to the variables available for each resource, the following table describes custom variables and values that you can use in the {{site.data.keyword.bpshort}} service.
-
-| Variable | Value | Description |
-| :------------- | :------------- | :------------- |
-| `SCHEMATICSGITTOKEN` | Your Git personal access token. | This variable is required for {{site.data.keyword.bpshort}} to scan GitHub and GitLab Enterprise repositories or a private repository. |
-| User defined | `$SCHEMATICS.SSHKEYPUBLIC` | Returns an environment-specific public SSH key that is created by {{site.data.keyword.bpshort}}. For example, if you wanted to create an SSH key pair to run code on a VM and copy files to a VM. {{site.data.keyword.bpshort}} can create the key pair with this variable and `$SCHEMATICS.SSHKEYPRIVATE`. |
-| User defined | `$SCHEMATICS.SSHKEYPRIVATE` | Returns an environment-specific private SSH key that is created by {{site.data.keyword.bpshort}}. This value is always encrypted and not shown in the activity log. |
-| User defined |`$SCHEMATICS.USER` | Returns the name of the user who requests the Terraform action. |
-| User defined | `$SCHEMATICS.ENV` | Returns the name of the environment. |
-| User defined | `$SCHEMATICS.ENVID` | Returns the unique ID assigned to the environment. |
-
-_Table 1. Custom variables and values for {{site.data.keyword.bpshort}}._
 
 ### Advanced variable attributes in the {{site.data.keyword.bpshort}} GUI
 {: #variables_advanced}
