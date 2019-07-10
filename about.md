@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-07-10"
 
 keywords: schematics, automation, terraform
 
@@ -38,6 +38,8 @@ subcollection: schematics
 
 **How is {{site.data.keyword.cloud_notm}} Schematics different from Terraform?** </br>
 With {{site.data.keyword.cloud_notm}} Schematics, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that contains a set of Terraform configuration files which build a Schematics template. IBM provides pre-defined Schematics templates that you can customize to your needs, but you also can create your own Schematics template from an existing GitHub repository. Workspaces allow for the separation of concerns for cloud resources and can be individually managed with {{site.data.keyword.cloud_notm}} Identity and Access Management. To use {{site.data.keyword.cloud_notm}} Schematics, you don't need to install the Terraform CLI or {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. 
+
+**Should I manage all of mu resources with {{site.data.keyword.cloud_notm}} Schematics?** </br>
 
 **I am not familiar with Terraform, can I still use {{site.data.keyword.cloud_notm}} Schematics?** </br>
 Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined Terraform templates that you can choose from. Simply select the template that you want from the {{site.data.keyword.cloud_notm}} console and fill out the variables to customize your {{site.data.keyword.cloud_notm}} resource. Then, create a workspace in {{site.data.keyword.cloud_notm}} Schematics from this template and watch {{site.data.keyword.cloud_notm}} Schematics provision the resourcs for you. 
