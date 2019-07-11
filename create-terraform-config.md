@@ -25,27 +25,14 @@ subcollection: schematics
 # Creating a Terraform configuration
 {: #create-tf-config}
 
+Create well-structured Terraform configuration files that are reusable, and easy to understand 
+
+
 an help you better write configurations that are well-structured, reusable, and comprehensive.
 
 
-To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can install and use to provision the resources.  
-
-The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform is IBM's plug-in for Terraform. The plug-in is aware of the {{site.data.keyword.cloud_notm}} resources that you can provision with Terraform and {{site.data.keyword.cloud_notm}} Schematics, and the syntax that you must use in your Terraform configuration files to describe them. When you create a Terraform configuration file, you must include all the pieces that are required by the plug-in, and assemble them in the right order so that your file can be interpreted by the plug-in. 
-
-## Understanding the basics
-{: #basic-config-info}
-
-
 **How is a Terraform configuration structured?** </br>
-A Terraform configuration consists of one or more Terraform files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. 
-
-
-**What do I specify in the Terraform configuration files?** </br>
-When you work with {{site.data.keyword.bpshort}}, you write Terraform configurations for your environment in declarative syntax. You state how you want your environment to look, such as scaling an [{{site.data.keyword.containershort}}](../../containers/container_index.html) cluster to have 10 worker nodes in production. The service compares your configuration to the number of worker nodes that Terraform previously created and adds or removes worker nodes as necessary.
-
-Blocks are containers for other content and usually represent the configuration of some kind of object, like a resource. Blocks have a block type, can have zero or more labels, and have a body that contains any number of arguments and nested blocks. Most of Terraform's features are controlled by top-level blocks in a configuration file.
-Arguments assign a value to a name. They appear within blocks.
-Expressions represent a value, either literally or by referencing and combining other values. They appear as values for arguments, or within other expressions.
+A Terraform configuration consists of one or more Terraform files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [variables](#configure-variables) to hold your credentials and dynamic configuration settings, or specify [output values](#configure-output-values) to share information between Terraform runs. 
 
 **What language do I use to develop my infrastructure code?** </br>
 You can write your Terraform configuration by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/docs/configuration/index.html).  
@@ -55,11 +42,7 @@ A Terraform configuration is infrastructure code that you must treat as regular 
 
 The following image shows an example of how your Terraform configuration files could looke like in a GitHub repository. 
 
-
-
-**Where should I store credentials, such as my user name and API key?** </br>
-Use input variables to pass credentials instead of embedding credentials in configurations
-Because configurations are reusable, do not embed your personal credentials into configurations. Instead, use input variables to pass credentials into configurations. When you use the GUI to pass these variable values, you can mask these sensitive values from other users in the organization by clicking the eye icon.
+<img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 
 ## Configuring IBM as your cloud provider 
 {: #configure-provider}
@@ -137,7 +120,7 @@ To configure your `provider` block:
 Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resource that you want to manage with Terraform or {{site.data.keyword.cloud_notm}} Schematics. 
 {: shortdesc}
 
-You can provision all resources that are defined in the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/). 
+To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/). 
 
 Example infrastructure code for provisioning a VPC: 
 ```
@@ -247,4 +230,5 @@ resource "ibm_container_cluster" "test_cluster" {
 See the <a href="https://www.terraform.io/docs/configuration/variables.html">Terraform docs <img src="../../icons/launch-glyph.svg" alt="External link icon"></a> for more information about variable configuration
 
 ## Using output values to provide resource information to other workspaces
+{: #configure-output-values}
 
