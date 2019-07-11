@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-10"
+lastupdated: "2019-07-11"
 
 keywords: Schematics, automation, Terraform
 
@@ -83,10 +83,7 @@ With standardized resource templates, you can ensure that development best pract
 ## Creating your workspace 
 {: #create-workspace}
 
-### With the console
-{: #create-workspace-console}
-
-Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics console. 
+Create your workspace that points to the GitHub repository that hosts your Terraform configuration files by using the {{site.data.keyword.cloud_notm}} Schematics console. 
 {: shortdesc}
 
 1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview). 
@@ -100,51 +97,6 @@ Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics c
    6. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
-
-### With the API
-{: #create-workspace-api}
-
-Create your workspace by using the {{site.data.keyword.cloud_notm}} Schematics API. 
-{: shortdesc}
-
-1. Create an {{site.data.keyword.cloud_notm}} Identity and Access Management **access token**. 
-
-   **Example request for user name and password**: 
-   ```
-   curl -X POST \
-     https://iam.bluemix.net/identity/token \
-     -H 'Accept: */*' \
-     -H 'Authorization: Basic Yng6Yng=' \
-     -H 'Content-Type: application/x-www-form-urlencoded' \
-     -d 'response_type=cloud_iam%20uaa&username=<username>&uaa_client_id=cf&uaa_client_secret=&password=<password>&grant_type=password'
-   ```
-   {: codeblock}
-   
-   **Example request for user name and passcode**: 
-   ```
-   curl -X POST \
-     https://iam.bluemix.net/identity/token \
-     -H 'Accept: */*' \
-     -H 'Authorization: Basic Yng6Yng=' \
-     -H 'Content-Type: application/x-www-form-urlencoded' \
-     -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Apasscode&response_type=cloud_iam%20uaa&passcode=<passcode>&uaa_client_id=cf&uaa_client_secret='
-   ```
-   {: codeblock}
-   
-   **Example request for user name and {{site.data.keyword.cloud_notm}} API key**: 
-   ```
-   curl -X POST \
-     https://iam.bluemix.net/identity/token \
-     -H 'Accept: */*' \
-     -H 'Authorization: Basic Yng6Yng=' \
-     -H 'Content-Type: application/x-www-form-urlencoded' \
-     -d 'grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&response_type=cloud_iam%20uaa&apikey=<api_key>&uaa_client_id=cf&uaa_client_secret='
-   ```
-   {: codeblock}
-     
-2. Create your workspace. 
-
-3. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
 
 
 ## Managing access to your workspaces
