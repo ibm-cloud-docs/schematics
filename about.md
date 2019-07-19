@@ -42,7 +42,7 @@ With {{site.data.keyword.cloud_notm}} Schematics, you can organize your {{site.d
 **Should I manage all of mu resources with {{site.data.keyword.cloud_notm}} Schematics?** </br>
 
 **I am not familiar with Terraform, can I still use {{site.data.keyword.cloud_notm}} Schematics?** </br>
-Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined Terraform templates that you can choose from. Simply select the template that you want from the {{site.data.keyword.cloud_notm}} console and fill out the variables to customize your {{site.data.keyword.cloud_notm}} resource. Then, create a workspace in {{site.data.keyword.cloud_notm}} Schematics from this template and watch {{site.data.keyword.cloud_notm}} Schematics provision the resourcs for you. 
+Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined Terraform templates that you can choose from. Simply select the template that you want from the {{site.data.keyword.cloud_notm}} console and fill out the variables to customize your {{site.data.keyword.cloud_notm}} resource. Then, create a workspace in {{site.data.keyword.cloud_notm}} Schematics from this template and watch {{site.data.keyword.cloud_notm}} Schematics provision the resources for you. 
 
 ## How it works
 {: #schematics-architecture}
