@@ -112,27 +112,27 @@ To assign user access for a resource group, you can use the default resource gro
 
 
 To manage access:
-1. Click Manage > Access (IAM) > Users.
+1. Click **Manage** > **Access (IAM)** > **Users**.
     
-2. Click Invite Users to invite users to the account.
+2. Click **Invite Users** to invite users to the account.
 
 3. Enter the email address for the user.
 
 4. Assign permissions to the service instance or a resource group. To assign user permissions to the service instance:
       
-      a. In Assign access to, select Resource.
+      a. In **Assign access to**, select **Resource**.
       
-      b. In Services, select Schematics.
+      b. In **Services**, select **Schematics**.
   
   To assign user permission for a resource group:
       
-      a. In Assign access to, select Resource group.
+      a. In **Assign access to**, select **Resource group**.
       
       b. Select the resource group.
       
       c. Select a role.
       
-      d. In Services, select Schematics.
+      d. In **Services**, select **Schematics**.
 
 5. Assign user access roles.
 <table summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two.">
