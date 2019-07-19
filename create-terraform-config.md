@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-11"
+lastupdated: "2019-07-19"
 
 keywords: schematics, automation, terraform
 
@@ -38,7 +38,7 @@ A Terraform configuration consists of one or more Terraform files that declare t
 You can write your Terraform configuration by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/docs/configuration/index.html).  
 
 **Where do I store my Terraform configuration files?** </br>
-A Terraform configuration is infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or Gitlab repository. Version control allows you to revert to previous configurations, audit changes to configurations, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply your configuration changes in {{site.data.keyword.cloud_notm}}. 
+A Terraform configuration is infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. Version control allows you to revert to previous configurations, audit changes to configurations, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply your configuration changes in {{site.data.keyword.cloud_notm}}. 
 
 The following image shows an example of how your Terraform configuration files could looke like in a GitHub repository. 
 
