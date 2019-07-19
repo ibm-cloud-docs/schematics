@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-11"
+lastupdated: "2019-07-19"
 
 keywords: Schematics, automation, Terraform
 
@@ -21,6 +21,7 @@ subcollection: schematics
 {:deprecated: .deprecated}
 {:download: .download}
 {:preview: .preview}
+{:external: target="_blank" .external}
 
 # Setting up your workspace
 {: #workspace-setup}
@@ -65,7 +66,7 @@ Review the following table to find a list of options for how to structure your G
 | One GitHub repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid that you have different configurations in each environment. |
 | Use one GitHub repo per environment | Use one GitHub repository for each of your environment. With this setup, you have a 1:1 relationship between your workspace and GitHub repository. While this setup allows you to apply separate permissions for each of your environments, you must make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
 
-For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html). 
+For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html){: external}. 
 
 ### How can I reuse configuration files across environments and workspaces? 
 {: #plan-reuse}
@@ -86,7 +87,7 @@ With standardized resource templates, you can ensure that development best pract
 Create your workspace that points to the GitHub repository that hosts your Terraform configuration files by using the {{site.data.keyword.cloud_notm}} Schematics console. 
 {: shortdesc}
 
-1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview). 
+1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create workspace**. 
 3. Configure your workspace. 
    1. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
@@ -102,4 +103,68 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 ## Managing access to your workspaces
 {: #manage-workspace-access}
 
-placeholder for IAM
+In {{site.data.keyword.cloud_notm}} IAM, you can assign user access roles to the service instance or resource groups.
+{: shortdesc}
+
+To assign user access for the service instance, first create a workspace in the IBM Cloud account you want to be the service owner.
+
+To assign user access for a resource group, you can use the default resource group, which was created automatically when the account was created, or you can create your own resource group. If you do not specify a resource group when you create the resource, resource instances (workspaces) belong to the default resource group. To add a resource group in your account, see [Best practices for setting up your account](/docs/account?topic=account-account_setup) and [Setting up your resource groups](/docs/resources?topic=resources-bp_resourcegroups#setuprgs).
+
+
+To manage access:
+1. Click Manage > Access (IAM) > Users.
+    
+2. Click Invite Users to invite users to the account.
+
+3. Enter the email address for the user.
+
+4. Assign permissions to the service instance or a resource group. To assign user permissions to the service instance:
+      
+      a. In Assign access to, select Resource.
+      
+      b. In Services, select Schematics.
+  
+  To assign user permission for a resource group:
+      
+      a. In Assign access to, select Resource group.
+      
+      b. Select the resource group.
+      
+      c. Select a role.
+      
+      d. In Services, select Schematics.
+
+5. Assign user access roles.
+<table summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two.">
+<caption>User permissions by access role</caption>
+  <thead>
+  <th>Access role</th>
+  <th>Permissions</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Manager</td>
+      <td><ul>
+          <li>Create workspace</li>
+          <li>Update workspace</li>
+          <li>Delete workspace</li>
+          <li>View workspace</li>
+          </ul></td>
+    </tr>
+    <tr>
+      <td>Writer</td>
+      <td><ul>
+          <li>Update workspace</li>
+          <li>View workspace</li>
+          </ul></td>
+    </tr>
+    <tr>
+      <td>Reader</td>
+      <td><ul>
+          <li>View workspace</li>
+          </ul></td>
+    </tr>
+  </tbody>
+  </table>
+
+Next, depending on the permissions you assigned, the user that you added can start [creating Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config) or working with [Terraform resources](https://www.terraform.io/docs/index.html){: external}.
