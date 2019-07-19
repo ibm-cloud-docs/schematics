@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-10"
+lastupdated: "2019-07-19"
 
 keywords: schematics, automation, terraform
 
@@ -89,7 +89,7 @@ Learn the basics about Terraform and {{site.data.keyword.cloud_notm}} Schematics
 
 <dl>
   <dt>Terraform configuration file</dt>
-  <dd>A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON syntax, and must be stored in a GitHub or GitLab repository to be accessible by {{site.data.keyword.cloud_notm}} Schematics.<br>For more information about how to write configuration files, see [creating a configuration](schematics_creating.html). </p></dd>
+  <dd>A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON syntax, and must be stored in a GitHub or GitLab repository to be accessible by {{site.data.keyword.cloud_notm}} Schematics.<br>For more information about how to write configuration files, see [creating a configuration](/docs/schematics?topic=schematics-create-tf-config). </p></dd>
 </dl>
 
 <dl>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-07-19"
 
 keywords: schematics, automation, terraform
 
@@ -62,7 +62,7 @@ To create a configuration file for your VPC resources:
 1. Make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 2. [Create an {{site.data.keyword.cloud_notm}} API key](/docs/iam?topic=iam-classic_keys) to provision the VPC virtual server instance. 
 3. [Generate an SSH key](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys). The SSH key is required to provision the VPC virtual server instance and you can use the SSH key to access your instance via SSH. After you created your SSH key, make sure to [upload this SSH key to your {{site.data.keyword.cloud_notm}} account](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console). 
-4. Create your Terraform configuration file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-configuration). 
+4. Create your Terraform configuration file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
    ```
    variable "ssh_key" {}
    variable "ibmcloud_api_key" {}
@@ -312,6 +312,6 @@ To provision your resources:
 
 After you provisioned your resources in {{site.data.keyword.cloud_notm}}, choose between the following options: 
 - Learn more about [{{site.data.keyword.cloud_notm}} Schematics](/docs/schematics?topic=schematics-about-schematics) and the benefits of using the service. 
-- Review tips and tricks for how to [structure your Terraform configuration file](/docs/schematics?topic=schematics-configuration).
+- Review tips and tricks for how to [structure your Terraform configuration file](/docs/schematics?topic=schematics-create-tf-config).
 - Set up a [GitHub repository and workspace structure](/docs/schematics?topic=schematics-workspace-setup) for your microservices. 
 - Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/). 
