@@ -21,6 +21,7 @@ subcollection: schematics
 {:deprecated: .deprecated}
 {:download: .download}
 {:preview: .preview}
+{:external: target="_blank" .external}
 
 # Setting up the CLI 
 {: #setup-cli}

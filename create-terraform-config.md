@@ -21,6 +21,7 @@ subcollection: schematics
 {:deprecated: .deprecated}
 {:download: .download}
 {:preview: .preview}
+{:external: target="_blank" .external}
 
 # Creating a Terraform configuration
 {: #create-tf-config}

@@ -22,6 +22,7 @@ subcollection: schematics
 {:deprecated: .deprecated}
 {:download: .download}
 {:preview: .preview}
+{:external: target="_blank" .external}
 
 # Getting started with IBM Cloud Schematics (beta)
 {: #getting-started}
