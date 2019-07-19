@@ -22,6 +22,8 @@ subcollection: schematics
 {:deprecated: .deprecated}
 {:download: .download}
 {:preview: .preview}
+{:external: target="_blank" .external}
+
 
 # About IBM Cloud Schematics
 {: #about-schematics}
@@ -32,14 +34,14 @@ subcollection: schematics
 {{site.data.keyword.cloud_notm}} Schematics is available as a beta to test out Terraform-as-a-Service capabilities in {{site.data.keyword.cloud_notm}} and might be unstable or change frequently. {{site.data.keyword.cloud_notm}} beta services also might not provide the same level of performance or compatibility that generally available services provide, and are not intended for use in a production environment. 
 {: preview}
 
-[Terraform ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/) is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
+[Terraform](https://www.terraform.io/){: external} is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
 
-**What is Infrastructure as Code?** </br>
+
 
 **How is {{site.data.keyword.cloud_notm}} Schematics different from Terraform?** </br>
 With {{site.data.keyword.cloud_notm}} Schematics, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that contains a set of Terraform configuration files which build a Schematics template. IBM provides pre-defined Schematics templates that you can customize to your needs, but you also can create your own Schematics template from an existing GitHub repository. Workspaces allow for the separation of concerns for cloud resources and can be individually managed with {{site.data.keyword.cloud_notm}} Identity and Access Management. To use {{site.data.keyword.cloud_notm}} Schematics, you don't need to install the Terraform CLI or {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. 
 
-**Should I manage all of mu resources with {{site.data.keyword.cloud_notm}} Schematics?** </br>
+
 
 **I am not familiar with Terraform, can I still use {{site.data.keyword.cloud_notm}} Schematics?** </br>
 Yes. {{site.data.keyword.cloud_notm}} Schematics provides a set of pre-defined Terraform templates that you can choose from. Simply select the template that you want from the {{site.data.keyword.cloud_notm}} console and fill out the variables to customize your {{site.data.keyword.cloud_notm}} resource. Then, create a workspace in {{site.data.keyword.cloud_notm}} Schematics from this template and watch {{site.data.keyword.cloud_notm}} Schematics provision the resources for you. 
@@ -66,7 +68,7 @@ Review the capabilities that {{site.data.keyword.cloud_notm}} Schematics provide
 | Benefit    | Description   |
 | :------------- | :------------- |
 | Enable Infrastructure as Code (IaC) | Use Terraform configuration files to model, codify, and configure the {{site.data.keyword.cloud_notm}} resources that you want, and build your own resource library that you can replicate or re-create across environments. If you want to change your environment, you state the outcome that you want and let {{site.data.keyword.cloud_notm}} Schematics determine the actions that must be performed to get to the described state. |
-| Use native Terraform capabilities | Build your Terraform configuration files in HashiCorp Configuration Language (HCL) or JSON format and provision your specified resources with {{site.data.keyword.cloud_notm}} Schematics. {{site.data.keyword.cloud_notm}} Schematics supports all {{site.data.keyword.cloud_notm}} resources that are provided by the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/) with the advantage that you don't have to install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. Simply use the built-in Terraform capabilities in the {{site.data.keyword.cloud_notm}} console to connect {{site.data.keyword.cloud_notm}} Schematics to the GitHub repository that hosts your files, create a provisioning plan, and watch {{site.data.keyword.cloud_notm}} Schematics spin up your resources.  |
+| Use native Terraform capabilities | Build your Terraform configuration files in HashiCorp Configuration Language (HCL) or JSON format and provision your specified resources with {{site.data.keyword.cloud_notm}} Schematics. {{site.data.keyword.cloud_notm}} Schematics supports all {{site.data.keyword.cloud_notm}} resources that are provided by the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/){: external} with the advantage that you don't have to install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. Simply use the built-in Terraform capabilities in the {{site.data.keyword.cloud_notm}} console to connect {{site.data.keyword.cloud_notm}} Schematics to the GitHub repository that hosts your files, create a provisioning plan, and watch {{site.data.keyword.cloud_notm}} Schematics spin up your resources.  |
 | One language to describe resources | Every {{site.data.keyword.cloud_notm}} resources comes with a CLI or API that you can use to provision and work with the resource. By using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, you don't need to learn each CLI or API to automate the provisioning of your resources. Instead, you use the Terraform language to model all your resources. |
 | Organize {{site.data.keyword.cloud_notm}} resources in workspaces | With {{site.data.keyword.cloud_notm}} Schematics, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that contains a set of Terraform configuration files. Use workspaces to distinguish between your test, staging, and prod environment, and to change resource configurations without affecting resources in other environments.  |
 | Control access to your {{site.data.keyword.cloud_notm}} resources | Assign platform and services access permissions to your users in {{site.data.keyword.cloud_notm}} Identity and Access Management to control who can provision and manage resources in your {{site.data.keyword.cloud_notm}} account. |
@@ -84,7 +86,7 @@ Learn the basics about Terraform and {{site.data.keyword.cloud_notm}} Schematics
 
 <dl>
   <dt>Resources</dt>
-  <dd>Resources are {{site.data.keyword.cloud_notm}} Platform-as-a-Service, Infrastructure-as-a-Service, and Functions-as-a-Service components that you can provision and manage in {{site.data.keyword.cloud_notm}} with {{site.data.keyword.cloud_notm}} Schematics. Resources are specified and configured by using Terraform configuration files. The resources that are supported in {{site.data.keyword.cloud_notm}} Schematics is determined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in provides the syntax to describe a supported resource, and understands the APIs of each supported {{site.data.keyword.cloud_notm}} resource and available configuration parameters. <br>To find a list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/){:new_window}.</p></dd>
+  <dd>Resources are {{site.data.keyword.cloud_notm}} Platform-as-a-Service, Infrastructure-as-a-Service, and Functions-as-a-Service components that you can provision and manage in {{site.data.keyword.cloud_notm}} with {{site.data.keyword.cloud_notm}} Schematics. Resources are specified and configured by using Terraform configuration files. The resources that are supported in {{site.data.keyword.cloud_notm}} Schematics is determined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in provides the syntax to describe a supported resource, and understands the APIs of each supported {{site.data.keyword.cloud_notm}} resource and available configuration parameters. <br>To find a list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}.</p></dd>
 </dl>
 
 <dl>
@@ -111,7 +113,7 @@ Learn the basics about Terraform and {{site.data.keyword.cloud_notm}} Schematics
 
 <dl>
   <dt>{{site.data.keyword.cloud_notm}} Provider plug-in</dt>
-  <dd>To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider and must provide a CLI plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is IBM's CLI plug-in for Terraform. {{site.data.keyword.cloud_notm}} Schematics uses the plug-in to provision your {{site.data.keyword.cloud_notm}} resources. To find a list of supported {{site.data.keyword.cloud_notm}} resources and how to describe them, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/){:new_window}.</p>
+  <dd>To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider and must provide a CLI plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is IBM's CLI plug-in for Terraform. {{site.data.keyword.cloud_notm}} Schematics uses the plug-in to provision your {{site.data.keyword.cloud_notm}} resources. To find a list of supported {{site.data.keyword.cloud_notm}} resources and how to describe them, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}.</p>
   </dd>
 </dl>
 

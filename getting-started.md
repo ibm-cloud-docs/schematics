@@ -40,7 +40,7 @@ Create a Terraform configuration file that specifies the {{site.data.keyword.clo
 
 In this getting started tutorial, you create a Terraform configuration file to deploy a virtual server instance in a Virtual Private Cloud (VPC). You can use any other Terraform configuration file as part of this tutorial, but make sure that your file is stored in the `master` branch of a public GitHub repository. 
 
-A virtual server instances in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances](https://cloud.ibm.com/vpc/provision/vs) before you proceed.
+A virtual server instances in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances](https://cloud.ibm.com/vpc/provision/vs){: external} before you proceed.
 {: important}
 
 **What is a Virtual Private Cloud (VPC) and what resources do I need?** </br> 
@@ -55,7 +55,7 @@ A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so
 The credentials that you need depend on the type of resource that you want to provision. To create a virtual server instance in a VPC, you must have an {{site.data.keyword.cloud_notm}} API key and an SSH key to connect to your virtual server instance.  For more information about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Retrieving required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials).
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
-{{site.data.keyword.cloud_notm}} Schematics supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/).
+{{site.data.keyword.cloud_notm}} Schematics supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}.
 
 To create a configuration file for your VPC resources: 
 
@@ -186,7 +186,7 @@ To create a configuration file for your VPC resources:
      </tr>
       <tr>
        <td><code>resource.ibm_is_security_group_rule.direction</code></td>
-       <td>Specify if the security group rule is applied to incoming or outgoing network traffic. Choose <strong>ingress</strong> to specify a rule for incoming network traffice, and <strong>egress</strong> to specify a rule for outgoing network traffic. </td>
+       <td>Specify if the security group rule is applied to incoming or outgoing network traffic. Choose <strong>ingress</strong> to specify a rule for incoming network traffic, and <strong>egress</strong> to specify a rule for outgoing network traffic. </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_security_group_rule.remote</code></td>
@@ -277,7 +277,7 @@ Create a workspace in {{site.data.keyword.cloud_notm}} Schematics that points to
 
 Before you begin, make sure that you have a [Terraform configuration file in a public GitHub repository](#create-config) that you can use in for your workspace. 
 
-1. From the [{{site.data.keyword.cloud_notm}} catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog?category=devops), select **Schematics**. 
+1. From the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog?category=devops){: external}, select **Schematics**. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
    1. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
@@ -296,7 +296,7 @@ Use {{site.data.keyword.cloud_notm}} Schematics to run the infrastructure code i
 {: shortdesc}
 
 Before you begin: 
-- Set up your workspace in {{site.data.keyword.cloud_notm}} Schematics](#setup-workspace). 
+- Set up your workspace in [{{site.data.keyword.cloud_notm}} Schematics](#setup-workspace). 
 - If you use the sample Terraform configuration file in this tutorial, make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 
 To provision your resources: 
@@ -304,7 +304,7 @@ To provision your resources:
 1. From the workspace details page, click **Run new plan** to create a Terraform execution plan. This plan equals the output of the `terraform plan` command. You can review the status of your plan in the **Recent activtity** section of your workspace details page. 
 2. Review the log files of your execution plan. This plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform configuration files. If you have syntax errors in your configuration files, you can review the error message in the log file. 
 3. Apply your Terraform configuration by clicking **Apply plan**. This action equals the `terraform apply` command. {{site.data.keyword.cloud_notm}} Schematics starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision, this process might take a few minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. 
-4. After your resources are provisioned, review the log file to ensure that no errors occured during the provisioning, modification, or deletion process. 
+4. After your resources are provisioned, review the log file to ensure that no errors occurred during the provisioning, modification, or deletion process. 
 5. From the workspace details page, select the **Resources** tab to find a summary of {{site.data.keyword.cloud_notm}} resources that are available in your {{site.data.keyword.cloud_notm}} account. 
 
 ## What's next? 
@@ -314,4 +314,4 @@ After you provisioned your resources in {{site.data.keyword.cloud_notm}}, choose
 - Learn more about [{{site.data.keyword.cloud_notm}} Schematics](/docs/schematics?topic=schematics-about-schematics) and the benefits of using the service. 
 - Review tips and tricks for how to [structure your Terraform configuration file](/docs/schematics?topic=schematics-create-tf-config).
 - Set up a [GitHub repository and workspace structure](/docs/schematics?topic=schematics-workspace-setup) for your microservices. 
-- Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/). 
+- Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}. 

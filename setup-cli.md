@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-19"
+lastupdated: "2019-07-19"
 
 keywords: Schematics, automation, Terraform
 
@@ -31,7 +31,7 @@ subcollection: schematics
 Install the required CLIs to automate the provisioning of {{site.data.keyword.cloud_notm}} resources across environments. 
 {:shortdesc}
 
-1.  Install the [{{site.data.keyword.cloud_notm}} CLI ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli?topic=cloud-cli-getting-started#idt-prereq). This installation includes:
+1.  Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#idt-prereq). This installation includes:
     -   {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
     -   Several CLI plug-ins, such as for {{site.data.keyword.containerlong_notm}} (`ibmcloud ks`), {{site.data.keyword.registryshort_notm}} plug-in (`ibmcloud cr`), and {{site.data.keyword.cloud_notm}} Functions (`ibmcloud fn`)
     -   Other CLIs, such as Helm (`helm`), Docker (`docker`), Kubernetes (`kubectl`) Git (`git`), and Homebrew (`brew`)
