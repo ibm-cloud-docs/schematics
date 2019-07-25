@@ -17,7 +17,7 @@ IBM Cloud Schematics
 
     {: .navgroup id="reference"}
     [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
-    [IBM Cloud Schematics API](http://169.61.232.245:30004/swagger-api/)
+    [IBM Cloud Schematics API](https://schematics.cloud.ibm.com/swagger-api/#/)
     [Terraform documentation](https://www.terraform.io/docs/index.html)
     {: .navgroup-end}
 
