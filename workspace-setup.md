@@ -37,6 +37,7 @@ Schematics is designed to be used by teams. Within the team is one service owner
 A service owner must have a paid {{site.data.keyword.cloud_notm}} account. Charges are incurred by creating resources, which can be done only in the service owner account, not in the accounts of the users. Service owners can allow access to their resources to other users. When given permission, service users can provision existing resources whether they have a paid or free {{site.data.keyword.cloud_notm}} account.
 
 **Before you begin**
+
 The service owner must [create a workspace](#create-workspace) in their IBM Cloud account.
 
 
@@ -168,6 +169,7 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 {: shortdesc}
 
 **Before you begin**
+
 To create a workspace, you must be a service owner and you must have [Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config) in your repository.
 
 To create a workspace:
