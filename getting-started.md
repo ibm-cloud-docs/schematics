@@ -261,8 +261,11 @@ To create a configuration file for your VPC resources:
 Create a workspace in {{site.data.keyword.cloud_notm}} Schematics that points to the GitHub repository that hosts your Terraform configuration file. 
 {: shortdesc}
 
-Before you begin, make sure that you have a [Terraform configuration file in a public GitHub repository](#create-config) that you can use in for your workspace. 
+**Before you begin** 
+- Make sure that you have a [Terraform configuration file in a public GitHub repository](#create-config) that you can use in for your workspace.
+- [Set the user permissions](/docs/schematics?topic=schematics-workspace-setup) for your service.
 
+To create a workspace:
 1. From the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog?category=devops){: external}, select **Schematics**. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
