@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-19"
+lastupdated: "2019-07-25"
 
 keywords: schematics, automation, terraform
 
@@ -53,7 +53,7 @@ A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so
 - 1 floating IP address that you use to access your VPC virtual server instance over the public network
 
 **What credentials do I need to provision a virtual server in a VPC?**</br>
-The credentials that you need depend on the type of resource that you want to provision. To create a virtual server instance in a VPC, you must have an {{site.data.keyword.cloud_notm}} API key and an SSH key to connect to your virtual server instance.  For more information about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Retrieving required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials).
+The credentials that you need depend on the type of resource that you want to provision. To create a virtual server instance in a VPC, you must have an SSH key to connect to your virtual server instance.  For more information about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Retrieving required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials).
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
 {{site.data.keyword.cloud_notm}} Schematics supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}.
@@ -61,17 +61,10 @@ The credentials that you need depend on the type of resource that you want to pr
 To create a configuration file for your VPC resources: 
 
 1. Make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
-2. [Create an {{site.data.keyword.cloud_notm}} API key](/docs/iam?topic=iam-classic_keys) to provision the VPC virtual server instance. 
-3. [Generate an SSH key](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys). The SSH key is required to provision the VPC virtual server instance and you can use the SSH key to access your instance via SSH. After you created your SSH key, make sure to [upload this SSH key to your {{site.data.keyword.cloud_notm}} account](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console). 
-4. Create your Terraform configuration file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
+2. [Generate an SSH key](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys). The SSH key is required to provision the VPC virtual server instance and you can use the SSH key to access your instance via SSH. After you created your SSH key, make sure to [upload this SSH key to your {{site.data.keyword.cloud_notm}} account](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console). 
+3. Create your Terraform configuration file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
    ```
    variable "ssh_key" {}
-   variable "ibmcloud_api_key" {}
-   
-   provider "ibm" {
-     ibmcloud_api_key   = "${var.ibmcloud_api_key}"
-     generation         = 1
-   }
 
    locals {
         BASENAME = "<name>" 
@@ -148,14 +141,6 @@ To create a configuration file for your VPC resources:
      <tr>
        <td><code>variable.ssh_key</code></td>
        <td>A variable declaration for the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. You enter the value for your variable when you create your workspace in {{site.data.keyword.cloud_notm}} Schematics.</td>
-     </tr>
-     <tr>
-       <td><code>variable.ibmcloud_api_key</code></td>
-       <td>A variable declaration for the {{site.data.keyword.cloud_notm}} API key that you created earlier. You enter the value for your variable when you create your workspace in {{site.data.keyword.cloud_notm}} Schematics. </td>
-     </tr>
-     <tr>
-       <td><code>provider.ibmcloud_api_key</code></td>
-       <td>Use the <code>ibmcloud_api_key</code> variable to reference the {{site.data.keyword.cloud_notm}} API key that you created earlier. This API key is used to determine your permissions to create the VPC infrastructure resources in this configuration file. </td>
      </tr>
      <tr>
        <td><code>provider.generation</code></td>
@@ -268,7 +253,7 @@ To create a configuration file for your VPC resources:
    </tbody>
    </table>
 
-5. Store this configuration file in the `master` branch of a public GitHub repository. During the beta, only public GitHub repositories are supported in {{site.data.keyword.cloud_notm}} Schematics. 
+4. Store this configuration file in the `master` branch of a public GitHub repository. During the beta, only public GitHub repositories are supported in {{site.data.keyword.cloud_notm}} Schematics. 
 
 ## Setting up your workspace
 {: #setup-workspace}

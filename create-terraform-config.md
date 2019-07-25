@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-19"
+lastupdated: "2019-07-25"
 
 keywords: schematics, automation, terraform
 
@@ -59,14 +59,9 @@ You can choose between the following options to configure the `provider` block:
 
 To configure your `provider` block: 
 
-1. [Retrieve the required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials). The credentials that you need depend on the type of resource that you want to provision. For example, to provision classic infrastructure resources, you must provide your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key. To provision VPC infrastructure, you need an {{site.data.keyword.cloud_notm}} API key. 
+1. [Retrieve the required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials). The credentials that you need depend on the type of resource that you want to provision. For example, to provision classic infrastructure resources, you must provide your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key. 
 2. Create a `provider.tf` file with the following code, or add the following code to your existing Terraform configuration file. In the following example, you declare the input variables that are required by the {{site.data.keyword.cloud_notm}} Provider plug-in to provision your resources, and reference these input variables in the `provider` block. If you use {{site.data.keyword.cloud_notm}} Schematics, these variables are automatically loaded into your workspace when you create the workspace, and you can add the values for your variables by using the {{site.data.keyword.cloud_notm}} Schematics console. If you use the Terraform CLI directly, use a local `terraform.tfvars` file to store the values for these variables on your local machine. 
    ```
-   variable "ibmcloud_api_key" { 
-     type        = "string"
-     description = "Enter your {{site.data.keyword.cloud_notm}} API key."
-   }
-   
    variable "softlayer_username" {
      type        = "string"
      description = "Enter your {{site.data.keyword.cloud_notm}} classic infrastructure user name."
@@ -78,7 +73,6 @@ To configure your `provider` block:
    }
    
    provider "ibm" {
-     ibmcloud_api_key    = "${var.ibmcloud_api_key}"
      generation = 1
      softlayer_username = "${var.softlayer_username}"
      softlayer_api_key  = "${var.softlayer_api_key}"
@@ -92,10 +86,6 @@ To configure your `provider` block:
    <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the configuration file components</th>
    </thead>
    <tbody>
-   <tr>
-   <td><code>provider.ibmcloud_api_key</code></td>
-   <td>Reference the {{site.data.keyword.cloud_notm}} API key variable. The API key is required to provision {{site.data.keyword.cloud_notm}} platform and VPC infrastructure resources. You can remove this credential if you want to provision classic infrastructure resources only.  </td>
-   </tr>
    <tr>
    <td><code>provider.generation</code></td>
    <td>Enter <strong>1</strong> to configure the {{site.data.keyword.cloud_notm}} provider plug-in to provision your VPC resources on {{site.data.keyword.cloud_notm}} classic infrastructure (VPC on Classic). You can remove this parameter if you want to provision only classic infrastructure resources that are not in a VPC. </td>
