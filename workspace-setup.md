@@ -101,7 +101,7 @@ To manage access from the service owner's account:
   </tbody>
   </table>
 
-Next, depending on the permissions you assigned, the user that you added can start [creating Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config) or working with [Terraform resources](https://www.terraform.io/docs/index.html){: external}.
+Next, depending on the permissions you assigned, the user that you added can start working with [Terraform resources](https://www.terraform.io/docs/index.html){: external}.
 
 
 ## Setting up workspaces
@@ -159,7 +159,7 @@ With standardized resource templates, you can ensure that development best pract
 #### How do I control access to my workspaces? 
 {: #plan-workspace-access}
 
-{{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to resources](#manage-workspace-access). 
+{{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to resources](#manage-access). 
 
 ### Creating your workspace 
 {: #create-workspace}
@@ -168,7 +168,7 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 {: shortdesc}
 
 **Before you begin**
-To create a workspace, you must be a service owner.
+To create a workspace, you must be a service owner and you must have [Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config) in your repository.
 
 To create a workspace:
 1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview){: external}. 
@@ -177,9 +177,9 @@ To create a workspace:
    1. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
    2. Enter a name for your workspace. Make sure that you include the microservices component and the environment in your name. For more information about how to structure your workspaces, see [How many workspaces do I need?](#plan-number-of-workspaces).
    3. Optional: Enter tags for your workspace. You can use the tags later to find your workspaces more easily. 
-   4. Select a resource group and a region for your workspace. All resources that you create in your workspace are provisioned in the selected resource group and region. 
-   5. Optional: Enter a description for your workspace.
-   6. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+   
+   4. Optional: Enter a description for your workspace.
+   5. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
