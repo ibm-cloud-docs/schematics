@@ -31,14 +31,11 @@ subcollection: schematics
 ## Managing access
 {: #manage-access}
 
-Schematics is designed to be used by teams. Within the team is one service owner and many service users. Each have their own service instance, but their capapbilities are defined by whether they are a service owner or user, what kind of account they have, and what their user role is designated as within IAM.
+Schematics is designed to be used by teams. Within the team is one service owner and many service users. Each have their own service instance, but their capabilities are defined by whether they are a service owner or user, what kind of account they have, and what their user role is designated as within IAM.
 {: shortdesc}
 
 A service owner must have a paid {{site.data.keyword.cloud_notm}} account. Charges are incurred by creating resources, which can be done only in the service owner account, not in the accounts of the users. Service owners can allow access to their resources to other users. When given permission, service users can provision existing resources whether they have a paid or free {{site.data.keyword.cloud_notm}} account.
 
-**Before you begin**
-
-The service owner must [create a workspace](#create-workspace) in their IBM Cloud account.
 
 
 To manage access from the service owner's account:
