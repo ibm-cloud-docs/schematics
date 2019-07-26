@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-25"
+lastupdated: "2019-07-26"
 
 keywords: schematics, automation, terraform
 
@@ -263,7 +263,7 @@ Create a workspace in {{site.data.keyword.cloud_notm}} Schematics that points to
 
 **Before you begin** 
 - Make sure that you have a [Terraform configuration file in a public GitHub repository](#create-config) that you can use in for your workspace.
-- [Set the user permissions](/docs/schematics?topic=schematics-workspace-setup) for your service.
+- [Set the user permissions](/docs/schematics?topic=schematics-access) for your service.
 
 To create a workspace:
 1. From the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog?category=devops){: external}, select **Schematics**. 
