@@ -121,15 +121,15 @@ In addition to setting IAM permissions for the users of your account from the UI
 
 Example resource group access for a resource:
 ```
-data “ibm_resource_group” “group” {
- name = “default”
+data "ibm_resource_group” "group” {
+ name = "default”
 }
-resource “ibm_database” “test_acc” {
- resource_group_id = “${data.ibm_resource_group.group.id}”
- name              = “demo-postgres”
- service           = “databases-for-postgresql”
- plan              = “standard”
- location          = “eu-gb”
+resource "ibm_database” "test_acc” {
+ resource_group_id = "${data.ibm_resource_group.group.id}”
+ name              = "demo-postgres”
+ service           = "databases-for-postgresql”
+ plan              = "standard”
+ location          = "eu-gb”
 ```
 {: codeblock}
 

@@ -107,13 +107,13 @@ To create a configuration file for your VPC resources:
      name = "${var.ssh_key}"
    }
 
-   data “ibm_resource_group” “group” {
-     name = “default”
+   data "ibm_resource_group” "group” {
+     name = "default”
    }
 
    resource ibm_is_instance "vsi1" {
      name    = "${local.BASENAME}-vsi1"
-     resource_group_id = “${data.ibm_resource_group.group.id}”
+     resource_group_id = "${data.ibm_resource_group.group.id}”
      vpc     = "${ibm_is_vpc.vpc.id}"
      zone    = "${local.ZONE}"
      keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
@@ -128,7 +128,7 @@ To create a configuration file for your VPC resources:
 
    resource ibm_is_floating_ip "fip1" {
      name   = "${local.BASENAME}-fip1"
-     resource_group_id = “${data.ibm_resource_group.group.id}”
+     resource_group_id = "${data.ibm_resource_group.group.id}”
      target = "${ibm_is_instance.vsi1.primary_network_interface.0.id}"
    }
 
