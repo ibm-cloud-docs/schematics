@@ -269,11 +269,11 @@ To create a workspace:
 1. From the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog?category=devops){: external}, select **Schematics**. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
-   2. Enter a descriptive name for your workspace. To find your workspace more easily after you create it, make sure to include the microservice component and the environment in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
-   3. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
+   1. Enter a descriptive name for your workspace. To find your workspace more easily after you create it, make sure to include the microservice component and the environment in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
+   2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
+   3. Optional: Enter a description for your workspace.
+   4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
    
-   4. Optional: Enter a description for your workspace.
    5. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}.
 

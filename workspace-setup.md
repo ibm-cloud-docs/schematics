@@ -95,11 +95,11 @@ To create a workspace:
 1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create workspace**. 
 3. Configure your workspace. 
-   1. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
-   2. Enter a name for your workspace. Make sure that you include the microservices component and the environment in your name. For more information about how to structure your workspaces, see [How many workspaces do I need?](#plan-number-of-workspaces).
-   3. Optional: Enter tags for your workspace. You can use the tags later to find your workspaces more easily. 
+   1. Enter a name for your workspace. Make sure that you include the microservices component and the environment in your name. For more information about how to structure your workspaces, see [How many workspaces do I need?](#plan-number-of-workspaces).
+   2. Optional: Enter tags for your workspace. You can use the tags later to find your workspaces more easily. 
    
-   4. Optional: Enter a description for your workspace.
+   3. Optional: Enter a description for your workspace.
+   4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
    5. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
