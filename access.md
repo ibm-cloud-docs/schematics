@@ -51,7 +51,7 @@ Service owners can assign the following roles to other users.
     <tr>
       <td>Service owner</td>
       <td>Paid</td>
-      <td>Manager</td>
+      <td>Any</td>
       <td><ul>
           <li>Create workspace</li>
           <li>Update workspace</li>
@@ -61,7 +61,18 @@ Service owners can assign the following roles to other users.
     </tr>
     <tr>
       <td>Service user</td>
-      <td>Paid or free</td>
+      <td>Paid</td>
+      <td>Manager</td>
+      <td><ul>
+          <li>Create workspace</li>
+          <li>Update workspace</li>
+          <li>Delete workspace</li>
+          <li>View workspace</li>
+          </ul></td>
+    </tr>
+     <tr>
+      <td>Service user</td>
+      <td>Free</td>
       <td>Manager</td>
       <td><ul>
           <li>Update workspace</li>
