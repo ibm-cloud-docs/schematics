@@ -23,7 +23,7 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Creating a Terraform configuration
+# Creating Terraform configurations
 {: #create-tf-config}
 
 Learn how to create Terraform configuration files that are well-structured, reusable, and comprehensive.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-19"
+lastupdated: "2019-07-26"
 
 keywords: Schematics, automation, Terraform
 
@@ -23,7 +23,7 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Managing the lifecycle of your resources
+# Managing resource lifecycles
 {: #manage-lifecycle}
 
 Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by making changes to your Terraform configuration files and using {{site.data.keyword.cloud_notm}} Schematics to apply the configuration in your {{site.data.keyword.cloud_notm}} account. 
