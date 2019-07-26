@@ -100,7 +100,8 @@ To create a workspace:
    
    3. Optional: Enter a description for your workspace.
    4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
-   5. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics parses through your files to find variable declarations. 
+   6. Enter values for the input variables that were found. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 

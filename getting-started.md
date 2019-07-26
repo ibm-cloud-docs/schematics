@@ -107,8 +107,13 @@ To create a configuration file for your VPC resources:
      name = "${var.ssh_key}"
    }
 
+   data “ibm_resource_group” “group” {
+     name = “default”
+   }
+
    resource ibm_is_instance "vsi1" {
      name    = "${local.BASENAME}-vsi1"
+     resource_group_id = “${data.ibm_resource_group.group.id}”
      vpc     = "${ibm_is_vpc.vpc.id}"
      zone    = "${local.ZONE}"
      keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
@@ -123,6 +128,7 @@ To create a configuration file for your VPC resources:
 
    resource ibm_is_floating_ip "fip1" {
      name   = "${local.BASENAME}-fip1"
+     resource_group_id = “${data.ibm_resource_group.group.id}”
      target = "${ibm_is_instance.vsi1.primary_network_interface.0.id}"
    }
 
@@ -206,6 +212,10 @@ To create a configuration file for your VPC resources:
        <td><code>data.ibm_is_ssh_key.name</code></td>
        <td>Enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. You use this Terraform resource to retrieve the ID of your SSH key when you specify the VPC virtual server instance. </td>
      </tr>
+      <tr>
+       <td><code>data.ibm_resource_group.name</code></td>
+       <td>Enter the name of the resource group in your {{site.data.keyword.cloud_notm}} account to provide access to. You must add the resource group to every resource in addition to [setting IAM user permissions](/docs/schematics?topic=schematics-access) in the UI or CLI.</td>
+     </tr>
      <tr>
        <td><code>resource.ibm_is_instance.name</code></td>
        <td>Enter the name of the VPC virtual server instance that you want to create. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is `test`, the name of your VPC virtual server instance is set to `test-vsi1`.  </td>
@@ -274,7 +284,8 @@ To create a workspace:
    3. Optional: Enter a description for your workspace.
    4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
    
-   5. Enter the values for your variables. When you enter the GitHub repository URL that hosts your Terraform configuration files, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics parses through your files to find variable declarations. 
+   6. Enter values for the input variables that were found.
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}.
 
 
