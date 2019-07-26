@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-25"
+lastupdated: "2019-07-26"
 
 keywords: schematics, automation, terraform
 
@@ -26,11 +26,8 @@ subcollection: schematics
 # Creating a Terraform configuration
 {: #create-tf-config}
 
-Create well-structured Terraform configuration files that are reusable, and easy to understand 
-
-
-an help you better write configurations that are well-structured, reusable, and comprehensive.
-
+Learn how to create Terraform configuration files that are well-structured, reusable, and comprehensive.
+{: shortdesc}
 
 **How is a Terraform configuration structured?** </br>
 A Terraform configuration consists of one or more Terraform files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [variables](#configure-variables) to hold your credentials and dynamic configuration settings, or specify [output values](#configure-output-values) to share information between Terraform runs. 
