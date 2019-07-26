@@ -79,7 +79,7 @@ With standardized resource templates, you can ensure that development best pract
 ### How do I control access to my workspaces? 
 {: #plan-workspace-access}
 
-{{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to resources](#manage-access). 
+{{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to resources](/docs/schematics?topic=schematics-access). 
 
 ## Creating workspaces
 {: #create-workspace}
