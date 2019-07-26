@@ -26,13 +26,13 @@ subcollection: schematics
 # Setting up workspaces
 {: #workspace-setup}
 
-An {{site.data.keyword.cloud_notm}} Schematics workspace is a collection of all the files that Schematics needs to successfully provision your {{site.data.keyword.cloud_notm}} resources by using Terraform. Before you create your workspace, make sure that you design the organizational structure of your GitHub repository and workspaces so that you can replicate and manage your configurations across multipe environments. 
+An {{site.data.keyword.cloud_notm}} Schematics workspace is a collection of all the files that Schematics needs to successfully provision your {{site.data.keyword.cloud_notm}} resources by using Terraform. Before you create your workspace, make sure that you design the organizational structure of your GitHub repository and workspaces so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
 ## Designing your workspace and GitHub repository structure
 {: #structure-workspace}
 
-Plan out the organizational structure of your workspaces and GitHub repository so that they match the mircoservice and permission structure of your organization. 
+Plan out the organizational structure of your workspaces and GitHub repository so that they match the microservice and permission structure of your organization. 
 {: shortdesc}
 
 ### How many workspaces do I need?
