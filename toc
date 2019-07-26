@@ -10,6 +10,7 @@ IBM Cloud Schematics
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
+    access.md
     create-terraform-config.md
     workspace-setup.md
     manage-resource-lifecycle.md
