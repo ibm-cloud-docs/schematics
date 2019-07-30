@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-26"
+lastupdated: "2019-07-30"
 
 keywords: schematics, automation, terraform
 
@@ -27,31 +27,44 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Schematics is designed to be used by teams. Within the team is one *service owner* and many *service users*. Each have their own service instance, but their capabilities are defined by whether they are a service owner or user, what kind of account they have, and what their user role is designated as within IAM.
+Use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to grant permissions to {{site.data.keyword.cloud_notm}} Schematics and the {{site.data.keyword.cloud_notm}} resources that you want to provision. 
 {: shortdesc}
 
-A service owner must have a paid {{site.data.keyword.cloud_notm}} account. Charges are incurred by creating resources, which can be done only in the service owner account, not in the accounts of the users. Service owners can allow access to their resources to other users. When given permission, service users can provision existing resources whether they have a paid or free {{site.data.keyword.cloud_notm}} account.
+{{site.data.keyword.cloud_notm}} Schematics is designed to be used by teams that are set up by an {{site.data.keyword.cloud_notm}} account owner or an authorized account administrator. To simplify the process of assigning access to your users, consider creating an IAM access group that includes the permissions to {{site.data.keyword.cloud_notm}} Schematics and the resources that you want to work with. 
 
+The following image shows how {{site.data.keyword.cloud_notm}} account owners can set up access to {{site.data.keyword.cloud_notm}} Schematics and other {{site.data.keyword.cloud_notm}} resources. 
 
-## User roles
+<img src="images/schematics-user-flow.png" alt="Assigning access to {{site.data.keyword.cloud_notm}} Schematics" width="800" style="width: 800px; border-style: none"/>
+
+## Overview of Schematics service access roles and required permissions
 {: #access-roles}
 
-Service owners can assign the following roles to other users.
-{: shortdesc}
+Grant access to {{site.data.keyword.cloud_notm}} Schematics by assigning {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) service access roles to your users. 
+{: shortdsec}
+
+**Who must grant access to {{site.data.keyword.cloud_notm}} Schematics?** </br>
+As the account owner or an authorized account administrator you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.cloud_notm}} Schematics workspace. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups). 
+
+**If I have access to {{site.data.keyword.cloud_notm}} Schematics, can I automatically provision {{site.data.keyword.cloud_notm}} resources?** </br>
+No. If you are assigned an {{site.data.keyword.cloud_notm}} Schematics service access role, you can view, create, update, or delete workspaces in {{site.data.keyword.cloud_notm}} Schematics. To provision the {{site.data.keyword.cloud_notm}} resources that you defined in your Terraform configuration files, you must be assigned the IAM platform or service access role that is required to provision the individual resource. For example, to provision an {{site.data.keyword.containerlong_notm}} cluster, you must have the **Administrator** platform role and the **Manager** service access role for {{site.data.keyword.containerlong_notm}}. Refer to the [documentation](https://cloud.ibm.com/docs/home/alldocs) for your resource to determine the access policies that you need to provision and work with your resource. 
+
+**What else is required to enable users to provision {{site.data.keyword.cloud_notm}} resources?** </br>
+To successfully provision {{site.data.keyword.cloud_notm}} resources, users must have access to a paid {{site.data.keyword.cloud_notm}} account. Charges incur when you create the resources in the {{site.data.keyword.cloud_notm}} account, which is started by clicking the **Apply plan** button from the {{site.data.keyword.cloud_notm}} Schematics console. 
+
+Review the pricing information and account limiations for each {{site.data.keyword.cloud_notm}} resource that you want to provision before you create the resources. 
+{: tip}
 
 <table summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two.">
 <caption>User permissions by service user type, account type, and access role</caption>
   <thead>
-  <th>Service user type</th>
-  <th>{{site.data.keyword.cloud_notm}} account type</th>
-  <th>Access role</th>
+    <th>User type</th>
+  <th>IAM service access role</th>
   <th>Permissions</th>
   </thead>
   <tbody>
     <tr>
-      <td>Service owner</td>
-      <td>Paid</td>
-      <td>Any</td>
+      <td>Account owner</td>
+      <td>N/A</td>
       <td><ul>
           <li>Create workspace</li>
           <li>Update workspace</li>
@@ -60,8 +73,7 @@ Service owners can assign the following roles to other users.
           </ul></td>
     </tr>
     <tr>
-      <td>Service user</td>
-      <td>Paid</td>
+      <td>Schematics user</td>
       <td>Manager</td>
       <td><ul>
           <li>Create workspace</li>
@@ -70,18 +82,8 @@ Service owners can assign the following roles to other users.
           <li>View workspace</li>
           </ul></td>
     </tr>
-     <tr>
-      <td>Service user</td>
-      <td>Free</td>
-      <td>Manager</td>
-      <td><ul>
-          <li>Update workspace</li>
-          <li>View workspace</li>
-          </ul></td>
-    </tr>
     <tr>
-      <td>Service user</td>
-      <td>Paid or free</td>
+      <td>Schematics user</td>
       <td>Writer</td>
       <td><ul>
           <li>Update workspace</li>
@@ -89,8 +91,7 @@ Service owners can assign the following roles to other users.
           </ul></td>
     </tr>
     <tr>
-      <td>Service user</td>
-      <td>Paid or free</td>
+      <td>Schematics user</td>
       <td>Reader</td>
       <td><ul>
           <li>View workspace</li>
@@ -100,46 +101,39 @@ Service owners can assign the following roles to other users.
   </table>
 
 
-## Setting up access to your service
+## Setting up access for your users
 {: #access-setup}
 
-Service owners must set up an access group and invite users to the service and the group.
+As the {{site.data.keyword.cloud_notm}} account owner or authorized account administrator, create an IAM access group for your users and assign access policies to {{site.data.keyword.cloud_notm}} Schematics and the resources that you want your users to work with.  
 {: shortdesc}
 
-1. [Invite users to the IBM Cloud account](/docs/iam?topic=iam-iamuserinv).
+1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv).
 
 2. [Create a resource group](/docs/resources?topic=resources-rgs#create_rgs).
 
-3. [Create an access group and assign policies for the Schematics service](/docs/iam?topic=iam-groups).
+3. [Create an access group and assign policies to {{site.data.keyword.cloud_notm}} Schematics](/docs/iam?topic=iam-groups).
 
-    a. Click **Manage** > **Access (IAM)** > **Access groups**.
+   1. From the menu bar, click **Manage** > **Access (IAM)** > **Access groups**.
+   2. Click **Create**. 
+   3. Enter a name, and optionally, a description for your IAM access group. 
+   4. Select the **Access policies** tab. 
+   5. Click **Assign access**.
+   6. Click **Assign access to resources**.
+   7. From the **Services** drop-down list, select **Schematics**.
+   8. In the **Assign service access role** section, select the IAM service access role that you want to assign to your IAM access group. Do not select an IAM platform role. IAM platform roles are not supported during the {{site.data.keyword.cloud_notm}} Schematics beta. 
+   9. Click **Assign**. 
 
-    b. Click **Access policies**.
+4. [Assign your IAM access group permissions to [work with the resource group](/docs/iam?topic=iam-groups) that you created earlier.
+   1. In the **Access policies** tab, click **Assign access** again.
+   2. Click **Assign access within a resource group**.
+   3. From the **Resource group** drop-down list, select the resource group that you created.
+   4. In **Assign access to a resource group**, select an access role.
+   5. From the **Resources** drop-down list, select **Schematics**.
+   6. In the **Assign service access role** section, select the same IAM service access role that you assigned in the previous step. 
+   7. Click **Assign**.
+   
+5. Review the [documentation](https://cloud.ibm.com/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} resources that you want to create, and assign the appropriate IAM access policy to your IAM access group. 
 
-    c. Click **Assign access**.
+6. [Invite users to the access group](/docs/iam?topic=iam-groups#create_ag).
 
-    d. Click **Assign access to resources**.
-
-    e. Select **Schematics**.
-
-    f. In the **Service access** section, select **Manager**, **Writer**,and **Reader**, or the combination of Schematics roles to give your access group.
-
-4. [For the resource group that you created, assign access to resources within the service owner's account.](/docs/iam?topic=iam-groups).
-
-    a. In the **Access polcies** tab, click **Assign access** again.
-
-    b. Click **Assign access** within a resource group.
-
-    c. Select the resource group that you created.
-
-    d. In **Assign access to a resource group**, select an access role.
-
-    e. For the **Service**, select **Schematics**.
-
-    d. In the **Service access** section, select the Schematics roles to map to the access role.
-
-    e. Click **Assign**.
-
-5. [Invite users to the access group](/docs/iam?topic=iam-groups#create_ag).
-
-Next, you can [create Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config) and [create a workspace](/docs/schematics?topic=schematics-workspace-setup). Then, depending on the permissions that are assigned, the user that you added can start working with [Terraform resources](https://www.terraform.io/docs/index.html){: external}.
+Next, you can [create Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config), [create a workspace](/docs/schematics?topic=schematics-workspace-setup), and start [provisioning {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) in your account.
