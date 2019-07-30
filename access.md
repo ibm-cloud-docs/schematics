@@ -70,6 +70,7 @@ Review the pricing information and account limiations for each {{site.data.keywo
           <li>Update workspace</li>
           <li>Delete workspace</li>
           <li>View workspace</li>
+        <li>Freeze and unfreeze workspace</li>
           </ul></td>
     </tr>
     <tr>
@@ -80,6 +81,7 @@ Review the pricing information and account limiations for each {{site.data.keywo
           <li>Update workspace</li>
           <li>Delete workspace</li>
           <li>View workspace</li>
+        <li>Freeze and unfreeze workspace</li>
           </ul></td>
     </tr>
     <tr>
