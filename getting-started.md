@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-26"
+lastupdated: "2019-07-30"
 
 keywords: schematics, automation, terraform
 
@@ -62,14 +62,18 @@ To create a configuration file for your VPC resources:
 
 1. Make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 2. [Generate an SSH key](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys). The SSH key is required to provision the VPC virtual server instance and you can use the SSH key to access your instance via SSH. After you created your SSH key, make sure to [upload this SSH key to your {{site.data.keyword.cloud_notm}} account](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console). 
-3. Create your Terraform configuration file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
+3. Create your Terraform configuration `vpc.tf` file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
    ```
    variable "ssh_key" {}
 
+   provider "ibm" {
+     generation = 1
+   }
+
    locals {
-        BASENAME = "<name>" 
-        ZONE     = "us-south-1"
-      }
+     BASENAME = "nadine" 
+     ZONE     = "us-south-1"
+   }
 
    resource ibm_is_vpc "vpc" {
      name = "${local.BASENAME}-vpc"
@@ -107,13 +111,13 @@ To create a configuration file for your VPC resources:
      name = "${var.ssh_key}"
    }
 
-   data "ibm_resource_group” "group” {
-     name = "default”
+   data ibm_resource_group "group" {
+     name = "default"
    }
 
    resource ibm_is_instance "vsi1" {
      name    = "${local.BASENAME}-vsi1"
-     resource_group_id = "${data.ibm_resource_group.group.id}”
+     resource_group_id = "${data.ibm_resource_group.group.id}"
      vpc     = "${ibm_is_vpc.vpc.id}"
      zone    = "${local.ZONE}"
      keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
@@ -128,7 +132,7 @@ To create a configuration file for your VPC resources:
 
    resource ibm_is_floating_ip "fip1" {
      name   = "${local.BASENAME}-fip1"
-     resource_group_id = "${data.ibm_resource_group.group.id}”
+     resource_group_id = "${data.ibm_resource_group.group.id}"
      target = "${ibm_is_instance.vsi1.primary_network_interface.0.id}"
    }
 
@@ -214,11 +218,15 @@ To create a configuration file for your VPC resources:
      </tr>
       <tr>
        <td><code>data.ibm_resource_group.name</code></td>
-       <td>Enter the name of the resource group in your {{site.data.keyword.cloud_notm}} account to provide access to. You must add the resource group to every resource in addition to [setting IAM user permissions](/docs/schematics?topic=schematics-access) in the UI or CLI.</td>
+       <td>Enter the name of the resource group in your {{site.data.keyword.cloud_notm}} account that you want to use for your resources. Make sure that you have the right [permissions to provision {{site.data.keyword.cloud_notm}} resources in a resource group](/docs/schematics?topic=schematics-access). </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_instance.name</code></td>
        <td>Enter the name of the VPC virtual server instance that you want to create. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is `test`, the name of your VPC virtual server instance is set to `test-vsi1`.  </td>
+     </tr>
+     <tr>
+       <td><code>resource.ibm_is_instance.resource_group_id</code></td>
+       <td>Enter the ID of the resource group that you want to use for your VPC virtual server instance. In this example, you retrieve the ID from the <code>ibm_resource_group</code> data source of this configuration file. Terraform uses the name of the resource group that you define in your data source object to look up information about the resource group in your {{site.data.keyword.cloud_notm}} account. </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_instance.vpc</code></td>
@@ -245,12 +253,16 @@ To create a configuration file for your VPC resources:
        <td>Enter the ID of the subnet that you want to use for your VPC virtual server instance. In this example, you use the <code>ibm_is_subnet</code> resource in this configuration file to retrieve the ID of the subnet.   </td>
      </tr>
      <tr>
-       <td><code>resource.ibm_is_instance.</code></br><code><primary_network_interface.security_groups</code></td>
+       <td><code>resource.ibm_is_instance.</code></br><code>primary_network_interface.security_groups</code></td>
        <td>Enter the ID of the security group that you want to apply to your VPC virtual server instance. In this example, you use the <code>ibm_is_security_group</code> resource in this configuration file to retrieve the ID of the security group.   </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_floating_ip.name</code></td>
        <td>Enter a name for your floating IP resource. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is `test`, the name of your floating IP resource is set to `test-fip1`.   </td>
+     </tr>
+     <tr>
+       <td><code>resource.ibm_is_floating_ip.resource_group_id</code></td>
+       <td>Enter the ID of the resource group that you want to use for your floating IP address. In this example, you retrieve the ID from the <code>ibm_resource_group</code> data source of this configuration file. Terraform uses the name of the resource group that you define in your data source object to look up information about the resource group in your {{site.data.keyword.cloud_notm}} account.   </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_floating_ip.target</code></td>
@@ -263,7 +275,7 @@ To create a configuration file for your VPC resources:
    </tbody>
    </table>
 
-4. Store this configuration file in the `master` branch of a public GitHub repository. During the beta, only public GitHub repositories are supported in {{site.data.keyword.cloud_notm}} Schematics. 
+4. Store this configuration file in the `master` branch of a public GitHub repository and name it `vpc.tf`. During the beta, only public GitHub repositories are supported in {{site.data.keyword.cloud_notm}} Schematics. 
 
 ## Setting up your workspace
 {: #setup-workspace}
@@ -272,21 +284,21 @@ Create a workspace in {{site.data.keyword.cloud_notm}} Schematics that points to
 {: shortdesc}
 
 **Before you begin** 
-- Make sure that you have a [Terraform configuration file in a public GitHub repository](#create-config) that you can use in for your workspace.
-- [Set the user permissions](/docs/schematics?topic=schematics-access) for your service.
+- Make sure that you have a [Terraform configuration file in a public GitHub repository](#create-config) that you can use for your workspace.
+- Make sure that you are [assigned the correct permissions](/docs/schematics?topic=schematics-access) in {{site.data.keyword.cloud_notm}} Identity and Access Management to create the workspace and deploy resources. 
 
-To create a workspace:
-1. From the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog?category=devops){: external}, select **Schematics**. 
+**To create a workspace**: 
+1. From the {{site.data.keyword.cloud_notm}} menu, select [**Schematics**](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Enter a descriptive name for your workspace. To find your workspace more easily after you create it, make sure to include the microservice component and the environment in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
+   1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
    2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
    3. Optional: Enter a description for your workspace.
    4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
    
-   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics parses through your files to find variable declarations. 
-   6. Enter values for the input variables that were found.
-4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}.
+   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+   6. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. 
+4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 
 
 ## Provision your {{site.data.keyword.cloud_notm}} resources
@@ -295,14 +307,12 @@ To create a workspace:
 Use {{site.data.keyword.cloud_notm}} Schematics to run the infrastructure code in your Terraform configuration files, and to provision your {{site.data.keyword.cloud_notm}} resources. 
 {: shortdesc}
 
-Before you begin: 
-- Set up your workspace in [{{site.data.keyword.cloud_notm}} Schematics](#setup-workspace). 
-- If you use the sample Terraform configuration file in this tutorial, make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
+Before you begin, set up your workspace in [{{site.data.keyword.cloud_notm}} Schematics](#setup-workspace). 
 
-To provision your resources: 
+**To provision your resources**: 
 
-1. From the workspace details page, click **Run new plan** to create a Terraform execution plan. This plan equals the output of the `terraform plan` command. You can review the status of your plan in the **Recent activtity** section of your workspace details page. 
-2. Review the log files of your execution plan. This plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform configuration files. If you have syntax errors in your configuration files, you can review the error message in the log file. 
+1. From the workspace details page, click **Generate plan** to create a Terraform execution plan. This plan equals the output of the `terraform plan` command. You can review the status of your plan in the **Recent activtity** section of your workspace details page. 
+2. Click **View log** to review the log files of your execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform configuration files. If you have syntax errors in your configuration files, you can review the error message in the log file. 
 3. Apply your Terraform configuration by clicking **Apply plan**. This action equals the `terraform apply` command. {{site.data.keyword.cloud_notm}} Schematics starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision, this process might take a few minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. 
 4. After your resources are provisioned, review the log file to ensure that no errors occurred during the provisioning, modification, or deletion process. 
 5. From the workspace details page, select the **Resources** tab to find a summary of {{site.data.keyword.cloud_notm}} resources that are available in your {{site.data.keyword.cloud_notm}} account. 
