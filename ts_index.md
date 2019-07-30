@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-19"
+lastupdated: "2019-07-30"
 
 keywords: schematics, automation, terraform
 
@@ -27,7 +27,7 @@ subcollection: schematics
 {: #schematics-help}
 
 If you have problems or questions when you use {{site.data.keyword.cloud_notm}} Schematics, you can get help by searching for information, asking questions through a forum, or opening an {{site.data.keyword.cloud_notm}} support case.
-(: shortdesc}
+{: shortdesc}
 
 You can review the forums to see whether other users ran into the same problem. When you use forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloud_notm}} development teams.
   * If you have technical questions about {{site.data.keyword.cloud_notm}} Schematics, post your question on [Stack Overflow](https://stackoverflow.com/search?q=ibm-cloud-infrastructure+terraform){: external}
