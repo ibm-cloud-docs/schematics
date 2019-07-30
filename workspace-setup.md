@@ -62,9 +62,10 @@ Review the following table to find a list of options for how to structure your G
 | Option | Description | 
 | ------- | ---------------------------- | 
 | One GitHub repo, use variables to distinguish between environments | Create one GitHub repository where you store the Terraform configuration files that make up your microservice component. Make your Terraform configuration files as general as possible so that you can reuse the same configuration across your environments. To configure the specifics of your development, staging, and production environment, use input variables in your configuration files. Input variables are automatically loaded into {{site.data.keyword.cloud_notm}} Schematics when you create your workspace. Customize your workspace by entering values for your variables that are specific to the environment. This setup is useful if you have one team that manages the lifecycle of the microservice component and where the configuration of your environments does not differ drastically. |
-
 | One GitHub repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid that you have different configurations in each environment. |
 | Use one GitHub repo per environment | Use one GitHub repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and GitHub repository. While this setup allows you to apply separate permissions for each of your GitHub repositories, you must make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
+
+
 
 For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html){: external}. 
 
