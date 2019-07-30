@@ -125,7 +125,7 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
    8. In the **Assign service access role** section, select the IAM service access role that you want to assign to your IAM access group. Do not select an IAM platform role. IAM platform roles are not supported during the {{site.data.keyword.cloud_notm}} Schematics beta. 
    9. Click **Assign**. 
 
-4. [Assign your IAM access group permissions to [work with the resource group](/docs/iam?topic=iam-groups) that you created earlier.
+4. Assign your IAM access group permissions to [work with the resource group](/docs/iam?topic=iam-groups) that you created earlier.
    1. In the **Access policies** tab, click **Assign access** again.
    2. Click **Assign access within a resource group**.
    3. From the **Resource group** drop-down list, select the resource group that you created.
