@@ -179,7 +179,7 @@ resource ibm_container_cluster "test_cluster" {
   datacenter   = "${var.datacenter}"
 }
 ```
-{:screen}
+{: codeblock}
 
 See the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external} for more information about variable configuration
 
