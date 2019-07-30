@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-26"
+lastupdated: "2019-07-30"
 
 keywords: Schematics, automation, Terraform
 
@@ -41,7 +41,7 @@ Plan out the organizational structure of your workspaces and GitHub repository s
 To find out how many workspaces you need in {{site.data.keyword.cloud_notm}} Schematics, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
 {: shortdesc}
 
-As a rule of thumb, consider creating separate workspaces for each of your microservice and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and development, staging, and production environment. Separate workspaces for each microservice component and environment allows you to separately develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
+As a rule of thumb, consider creating separate workspaces for each of your microservices and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and development, staging, and production environment. Separate workspaces for each microservice component and environment allows you to separately develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
 
 Review the following image to see the number of workspaces in {{site.data.keyword.cloud_notm}} Schematics for an app that consists of three microservices. 
 
@@ -53,7 +53,7 @@ Do not use one workspace to manage an entire staging or production environment. 
 ### How do I structure my GitHub repository to map my workspaces?
 {: #plan-github-structure}
 
-Structure your GitHub repository so that you have one repository for all your Terraform configuration files that build your microservice, and use variables, branches, or directories to differentiate between your development, staging, and production environment. 
+Structure your GitHub repository so that you have one repository for all your Terraform configuration files that build your microservice, and use variables, or directories to differentiate between your development, staging, and production environment. 
 {: shortdesc}
 
 Review the following table to find a list of options for how to structure your GitHub repository to map the different workspace environments. 
@@ -61,10 +61,10 @@ Review the following table to find a list of options for how to structure your G
 
 | Option | Description | 
 | ------- | ---------------------------- | 
-| One GitHub repo, use variables to distinguish between environments | Create one GitHub repository where you store the Terraform configuration files that make up your microservice component. Make your Terraform configuration files as general as possible so that you can reuse the same configuration across your workspace environments. To configure the specifics of your development, staging, and production environment, use workspace variables. This setup is useful if you have one team that manages the lifecycle of the microservice component and where your environment configurations do not differ drastically. |
-| One GitHub repo, use branches to distinguish between environments | Create one GitHub repository for your microservice component, and use different GitHub branches to store the Terraform configuration files for each of your environments. With this setup, you have a clear distinction between your environments and more control over who can access and change a particular configuration. Make sure to set up a process for how changes in one configuration file are populated across branches to avoid that you have different configurations in each environment. |
+| One GitHub repo, use variables to distinguish between environments | Create one GitHub repository where you store the Terraform configuration files that make up your microservice component. Make your Terraform configuration files as general as possible so that you can reuse the same configuration across your environments. To configure the specifics of your development, staging, and production environment, use input variables in your configuration files. Input variables are automatically loaded into {{site.data.keyword.cloud_notm}} Schematics when you create your workspace. Customize your workspace by entering values for your variables that are specific to the environment. This setup is useful if you have one team that manages the lifecycle of the microservice component and where the configuration of your environments does not differ drastically. |
+
 | One GitHub repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid that you have different configurations in each environment. |
-| Use one GitHub repo per environment | Use one GitHub repository for each of your environment. With this setup, you have a 1:1 relationship between your workspace and GitHub repository. While this setup allows you to apply separate permissions for each of your environments, you must make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
+| Use one GitHub repo per environment | Use one GitHub repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and GitHub repository. While this setup allows you to apply separate permissions for each of your GitHub repositories, you must make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
 
 For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html){: external}. 
 
@@ -79,7 +79,7 @@ With standardized resource templates, you can ensure that development best pract
 ### How do I control access to my workspaces? 
 {: #plan-workspace-access}
 
-{{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing access to resources](/docs/schematics?topic=schematics-access). 
+{{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing user access](/docs/schematics?topic=schematics-access). 
 
 ## Creating workspaces
 {: #create-workspace}
@@ -88,20 +88,20 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 {: shortdesc}
 
 **Before you begin**
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a GitHub or GitLab repository. 
+- Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-To create a workspace, you must be a service owner and you must have [Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config) in your repository.
-
-To create a workspace:
-1. Open the {{site.data.keyword.cloud_notm}} Schematics [catalog page](https://cloud.ibm.com/schematics/overview){: external}. 
-2. Click **Create workspace**. 
+**To create a workspace**:
+1. From the {{site.data.keyword.cloud_notm}} menu, select [**Schematics**](https://cloud.ibm.com/schematics/overview){: external}. 
+2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Enter a name for your workspace. Make sure that you include the microservices component and the environment in your name. For more information about how to structure your workspaces, see [How many workspaces do I need?](#plan-number-of-workspaces).
-   2. Optional: Enter tags for your workspace. You can use the tags later to find your workspaces more easily. 
-   
+   1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
+   2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
    3. Optional: Enter a description for your workspace.
    4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
-   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics parses through your files to find variable declarations. 
-   6. Enter values for the input variables that were found. 
+   
+   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+   6. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
