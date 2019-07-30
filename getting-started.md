@@ -72,7 +72,7 @@ To create a configuration file for your VPC resources:
 
    locals {
      BASENAME = "nadine" 
-     ZONE     = "us-south-1"
+     ZONE     = "us-east-1"
    }
 
    resource ibm_is_vpc "vpc" {
@@ -112,12 +112,12 @@ To create a configuration file for your VPC resources:
    }
 
    data ibm_resource_group "group" {
-     name = "default"
+     name = "Default"
    }
 
    resource ibm_is_instance "vsi1" {
      name    = "${local.BASENAME}-vsi1"
-     resource_group_id = "${data.ibm_resource_group.group.id}"
+     resource_group = "${data.ibm_resource_group.group.id}"
      vpc     = "${ibm_is_vpc.vpc.id}"
      zone    = "${local.ZONE}"
      keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
@@ -132,7 +132,6 @@ To create a configuration file for your VPC resources:
 
    resource ibm_is_floating_ip "fip1" {
      name   = "${local.BASENAME}-fip1"
-     resource_group_id = "${data.ibm_resource_group.group.id}"
      target = "${ibm_is_instance.vsi1.primary_network_interface.0.id}"
    }
 
@@ -225,7 +224,7 @@ To create a configuration file for your VPC resources:
        <td>Enter the name of the VPC virtual server instance that you want to create. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is `test`, the name of your VPC virtual server instance is set to `test-vsi1`.  </td>
      </tr>
      <tr>
-       <td><code>resource.ibm_is_instance.resource_group_id</code></td>
+       <td><code>resource.ibm_is_instance.resource_group</code></td>
        <td>Enter the ID of the resource group that you want to use for your VPC virtual server instance. In this example, you retrieve the ID from the <code>ibm_resource_group</code> data source of this configuration file. Terraform uses the name of the resource group that you define in your data source object to look up information about the resource group in your {{site.data.keyword.cloud_notm}} account. </td>
      </tr>
      <tr>
@@ -259,10 +258,6 @@ To create a configuration file for your VPC resources:
      <tr>
        <td><code>resource.ibm_is_floating_ip.name</code></td>
        <td>Enter a name for your floating IP resource. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is `test`, the name of your floating IP resource is set to `test-fip1`.   </td>
-     </tr>
-     <tr>
-       <td><code>resource.ibm_is_floating_ip.resource_group_id</code></td>
-       <td>Enter the ID of the resource group that you want to use for your floating IP address. In this example, you retrieve the ID from the <code>ibm_resource_group</code> data source of this configuration file. Terraform uses the name of the resource group that you define in your data source object to look up information about the resource group in your {{site.data.keyword.cloud_notm}} account.   </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_floating_ip.target</code></td>
