@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-26"
+lastupdated: "2019-07-30"
 
 keywords: schematics, automation, terraform
 
@@ -30,7 +30,7 @@ Learn how to create Terraform configuration files that are well-structured, reus
 {: shortdesc}
 
 **How is a Terraform configuration structured?** </br>
-A Terraform configuration consists of one or more Terraform files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [variables](#configure-variables) to hold your credentials and dynamic configuration settings, or specify output values to share information between Terraform runs. 
+A Terraform configuration consists of one or more Terraform files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
 **What language do I use to develop my infrastructure code?** </br>
 You can write your Terraform configuration by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
@@ -48,7 +48,7 @@ The following image shows an example of how your Terraform configuration files c
 Specify the cloud provider that you want to use to provision your resources in the `provider` block of your Terraform configuration file. 
 {: shortdesc}
 
-The `provider` block includes all the credentials and input variables the cloud provider plug-in requires to authenticate and authorize with the cloud provider back-end. 
+The `provider` block includes all the input variables the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources. 
 
 You can choose between the following options to configure the `provider` block: 
 - **Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.cloud_notm}} Schematics, and applied to all Terraform configuration files that exist in the same directory. This approach is useful if you split out your infrastructure code across multiple files. 
@@ -56,52 +56,19 @@ You can choose between the following options to configure the `provider` block:
 
 To configure your `provider` block: 
 
-1. [Retrieve the required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials). The credentials that you need depend on the type of resource that you want to provision. For example, to provision classic infrastructure resources, you must provide your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key. 
-2. Create a `provider.tf` file with the following code, or add the following code to your existing Terraform configuration file. In the following example, you declare the input variables that are required by the {{site.data.keyword.cloud_notm}} Provider plug-in to provision your resources, and reference these input variables in the `provider` block. If you use {{site.data.keyword.cloud_notm}} Schematics, these variables are automatically loaded into your workspace when you create the workspace, and you can add the values for your variables by using the {{site.data.keyword.cloud_notm}} Schematics console. If you use the Terraform CLI directly, use a local `terraform.tfvars` file to store the values for these variables on your local machine. 
+1. Review the resources that you want to provision. If you want to provision Virtual Private Cloud (VPC) infrastructure resources, you must define the `generation` parameter in your provider block. If you do not want to provision VPC infrastructure resources, the `provider` block is empty. 
+2. Create a `provider.tf` file with the following code, or add the following code to your existing Terraform configuration file. In the following example, you declare IBM as your cloud provider and instruct the {{site.data.keyword.cloud_notm}} Provider plug-in to provision VPC infrastructure resources on {{site.data.keyword.cloud_notm}} Classic infrastructure by setting `generation = 1`. 
    ```
-   variable "softlayer_username" {
-     type        = "string"
-     description = "Enter your {{site.data.keyword.cloud_notm}} classic infrastructure user name."
-   }
-   
-   variable "softlayer_api_key" {
-     type        = "string"
-     description = "Enter your {{site.data.keyword.cloud_notm}} classic infrastructure API key."
-   }
-   
    provider "ibm" {
      generation = 1
-     softlayer_username = "${var.softlayer_username}"
-     softlayer_api_key  = "${var.softlayer_api_key}"
    }
    ```
    {: codeblock}
-   
-   <table>
-   <caption>Understanding the configuration file components</caption>
-   <thead>
-   <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the configuration file components</th>
-   </thead>
-   <tbody>
-   <tr>
-   <td><code>provider.generation</code></td>
-   <td>Enter <strong>1</strong> to configure the {{site.data.keyword.cloud_notm}} provider plug-in to provision your VPC resources on {{site.data.keyword.cloud_notm}} classic infrastructure (VPC on Classic). You can remove this parameter if you want to provision only classic infrastructure resources that are not in a VPC. </td>
-   </tr>
-   <tr>
-   <td><code>provider.softlayer_username</code></td>
-   <td>Reference the {{site.data.keyword.cloud_notm}} classic infrastructure user name variable. This user name is required to provision {{site.data.keyword.cloud_notm}} classic infrastructure resources. You can remove this credential if you want to provision {{site.data.keyword.cloud_notm}} platform or VPC infrastructure resources only. </td>
-   </tr>
-   <tr>
-   <td><code>provider.softlayer_api_key</code></td>
-   <td>Reference the {{site.data.keyword.cloud_notm}} classic infrastructure API key variable. This API key is required to provision {{site.data.keyword.cloud_notm}} classic infrastructure resources. You can remove this credential if you want to provision {{site.data.keyword.cloud_notm}} platform or VPC infrastructure resources only.   </td>
-   </tr>
-   </tbody>
-   </table>
 
 ## Adding {{site.data.keyword.cloud_notm}} resources to your Terraform configuration file
 {: #configure-resources}
 
-Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resource that you want to manage with Terraform or {{site.data.keyword.cloud_notm}} Schematics. 
+Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources that you want to manage with {{site.data.keyword.cloud_notm}} Schematics. 
 {: shortdesc}
 
 To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}. 
@@ -114,24 +81,7 @@ resource ibm_is_vpc "vpc" {
 ```
 {: codeblock}
 
-## Adding IAM resource groups to a resource
-{: #configure-resources}
 
-In addition to setting IAM permissions for the users of your account from the UI or CLI, you must also provide access to resource groups by adding them to your configuration file. You must specify the resource groups in every resource you want to give them access to.
-
-Example resource group access for a resource:
-```
-data "ibm_resource_group” "group” {
- name = "default”
-}
-resource "ibm_database” "test_acc” {
- resource_group_id = "${data.ibm_resource_group.group.id}”
- name              = "demo-postgres”
- service           = "databases-for-postgresql”
- plan              = "standard”
- location          = "eu-gb”
-```
-{: codeblock}
 
 ### Referencing resources in other resource blocks
 {: #reference-resource-info}
@@ -181,31 +131,31 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
   {: codeblock}
 
 
-## Using input variables to store credentials and dynamic resource settings
+## Using input variables customize resources
 {: #configure-variables}
 
-### Deciding where to store variables
-Use a dedicated file to store output declarations, and if your configuration is highly modularized, a dedicated file to store variable declarations
-It is common practice to use a dedicated file, often called outputs.tf, to store your output variable declarations. It is common practice to also use a dedicated file to store variable declarations, especially if your configuration is simple and your components are highly modularized. For example, the NGINX Auto Scale Group template External link icon is fairly modularized, and declares variables in output.tf and variables.tf files. But for more complex configurations, store your variable declarations with the resource file that calls it so that it's easier for anyone who reads your configuration to map the variables to the resources.
+You can use `variable` blocks to templatize your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center. 
+{: shortdesc}
 
-### Declaring variables in a configuration file
+**Where do I store my variable declarations?** </br>
+You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.cloud_notm}} Schematics automatically parses through your Terraform configuration files to find variable declarations. 
 
-You can use `variable` blocks to identify dynamic values. For example, if you want to use a configuration to deploy Kubernetes clusters in multiple data centers, you can create one configuration to use as a template. You can then turn any values that would vary by deployments into variable blocks.
+Example variable declaration without details: 
+```
+variable "datacenter" {}
+```
+{: codeblock}
 
-Provide a default value to make a variable optional
-You can use the default parameter to set a default value for a variable. However, providing a default value automatically makes the variable optional. If no default value is provided, then the variable is required.
-
-Example variable without a default:
+Example variable declaration without a default value: 
 ```
 variable "datacenter" {
   type        = "string"
   description = "The data center that you want to deploy your Kubernetes cluster in."
 }
 ```
-{:codeblock}
+{: codeblock}
 
-
-Example variable with a default:
+Example variable declaration with a default value: 
 ```
 variable "datacenter" {
   type        = "string"
@@ -214,16 +164,17 @@ variable "datacenter" {
 
 }
 ```
-{:codeblock}
+{: codeblock}
 
-### Referencing variables 
+### Referencing variables
+{: #reference-variables}
 
-You can then call the variable with the syntax `${var.<variable_name>}` in other blocks. The `type` argument defines the variable as a string so that you can pass the value in a simple key-value pair.
+You can reference the value of the variable in other blocks of your Terraform configuration files by using the `"${var.<variable_name>}"` syntax. 
 
-In the following example, the Kubernetes resource block is referencing the data center variable with `${var.datacenter}`.
+Example for referencing a `datacenter` variable: 
 
 ```
-resource "ibm_container_cluster" "test_cluster" {
+resource ibm_container_cluster "test_cluster" {
   name         = "test"
   datacenter   = "${var.datacenter}"
 }
