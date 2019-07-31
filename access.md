@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-07-31"
 
 keywords: schematics, automation, terraform
 
@@ -34,7 +34,7 @@ Use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to gra
 
 The following image shows how {{site.data.keyword.cloud_notm}} account owners can set up access to {{site.data.keyword.cloud_notm}} Schematics and other {{site.data.keyword.cloud_notm}} resources. 
 
-<img src="images/schematics-user-flow.png" alt="Assigning access to {{site.data.keyword.cloud_notm}} Schematics" width="800" style="width: 800px; border-style: none"/>
+<img src="images/schematics-user-flow.png" alt="Assigning access to {{site.data.keyword.cloud_notm}} Schematics" width="900" style="width: 900px; border-style: none"/>
 
 ## Overview of Schematics service access roles and required permissions
 {: #access-roles}
