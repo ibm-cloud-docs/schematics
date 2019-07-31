@@ -1,15 +1,7 @@
 # Source files for customer-facing documentation
 
-Internal-only documentation: https://test.cloud.ibm.com/docs/schematics?topic=schematics-getting-started
+Documentation: https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started
 
-Customer-facing documentation: https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started
-
-
-
-
-## Who to contact
-
-The content owner for this repository is `nspies`. You can open content issues here or leave your feedback in the `#schematics` channel in Slack.
 
 ## How to open issues
 
