@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-07-31"
 
 keywords: schematics, automation, terraform
 
@@ -72,7 +72,7 @@ To create a configuration file for your VPC resources:
 
    locals {
      BASENAME = "nadine" 
-     ZONE     = "us-east-1"
+     ZONE     = "us-south-1"
    }
 
    resource ibm_is_vpc "vpc" {
