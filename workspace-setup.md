@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-07-31"
 
 keywords: Schematics, automation, Terraform
 
@@ -106,3 +106,32 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
+## Locking and unlocking workspaces 
+{: #lock-workspace}
+
+As the {{site.data.keyword.cloud_notm}} account owner or an {{site.data.keyword.cloud_notm}} Schematics user who is assigned the **Manager** IAM service access role for Schematics, you can lock a workspace so that you cannot create a Terraform execution plan or run your infrastructure code to provision or configure your resources. 
+{: shortdesc}
+
+Before you begin, make sure that you are assigned the [**Manager** IAM service access role](/docs/schematics?topic=schematics-access) for {{site.data.keyword.cloud_notm}} Schematics. 
+
+**To lock a workspace**: 
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to lock. 
+2. In the **State** section on the workspace details page, set the toggle to **Frozen**. The user ID and a timestamp are automatically logged. After you locked a workspace, no user can generate a Terraform execution plan or apply the plan in {{site.data.keyword.cloud_notm}}. 
+
+**To unlock a workspace**: 
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to unlock. 
+2. In the **State** section on the workspace details page, set the toggle to **Unfrozen**. The user ID and a timestamp are automatically logged. After you unlocked a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
+
+
+## Overview of workspace states
+{: #workspace-states}
+
+The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. 
+{: shortdesc}
+
+| State | Description | 
+| ------- | ---------------------------- | 
+| Active | After you successfully ran your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics by applying your Terraform execution plan, the state of your workspace changes to **Active**. 
+| Failed | If errors occur during the creation of the Terraform execution plan or when you instruct {{site.data.keyword.cloud_notm}} Schematics to run your infrastructure code, your workspace state is set to **Failed**. |
+| Inactive | Every workspace that you create is set up with an **Inactive** state by default. This state indicates that no {{site.data.keyword.cloud_notm}} resources are provisioned with {{site.data.keyword.cloud_notm}} Schematics yet. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
+| In progress | When you instruct {{site.data.keyword.cloud_notm}} Schematics to run your infrastructure code by applying your Terraform execution plan, the state of our workspace changes to **In progress**. 
