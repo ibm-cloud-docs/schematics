@@ -106,21 +106,21 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
-## Locking and unlocking workspaces 
+## Freezing and unfreezing workspaces 
 {: #lock-workspace}
 
-As the {{site.data.keyword.cloud_notm}} account owner or an {{site.data.keyword.cloud_notm}} Schematics user who is assigned the **Manager** IAM service access role for Schematics, you can lock a workspace so that you cannot create a Terraform execution plan or run your infrastructure code to provision or configure your resources. 
+As the {{site.data.keyword.cloud_notm}} account owner or an {{site.data.keyword.cloud_notm}} Schematics user who is assigned the **Manager** IAM service access role for Schematics, you can lock a workspace (freeze) so that you cannot create a Terraform execution plan or run your infrastructure code to provision or configure your resources. 
 {: shortdesc}
 
 Before you begin, make sure that you are assigned the [**Manager** IAM service access role](/docs/schematics?topic=schematics-access) for {{site.data.keyword.cloud_notm}} Schematics. 
 
-**To lock a workspace**: 
+**To freeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to lock. 
-2. In the **State** section on the workspace details page, set the toggle to **Frozen**. The user ID and a timestamp are automatically logged. After you locked a workspace, no user can generate a Terraform execution plan or apply the plan in {{site.data.keyword.cloud_notm}}. 
+2. In the **State** section on the workspace details page, set the toggle to **Frozen**. The user ID and a timestamp are automatically logged. After you freeze a workspace, no user can generate a Terraform execution plan or apply the plan in {{site.data.keyword.cloud_notm}}. 
 
-**To unlock a workspace**: 
+**To unfreeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to unlock. 
-2. In the **State** section on the workspace details page, set the toggle to **Unfrozen**. The user ID and a timestamp are automatically logged. After you unlocked a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
+2. In the **State** section on the workspace details page, set the toggle to **Unfrozen**. The user ID and a timestamp are automatically logged. After you unfreeze a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
 
 
 ## Overview of workspace states
