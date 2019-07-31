@@ -17,6 +17,7 @@ IBM Cloud Schematics
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
     [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
     [IBM Cloud Schematics API](https://schematics.cloud.ibm.com/swagger-api/#/)
     [Terraform documentation](https://www.terraform.io/docs/index.html)
