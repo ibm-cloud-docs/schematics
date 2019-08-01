@@ -42,6 +42,9 @@ The following image shows an example of how your Terraform configuration files c
 
 <img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 
+**What should I do with my `terraform.tfvars` file?** </br>
+The `terraform.tfvars` file is a local variables file that you use to store sensitive information, such as your {{site.data.keyword.cloud_notm}} API key or classic infrastructure user name when you use native Terraform. This file must be present on your local machine so that Terraform can load the values for your credentials when you initialize the Terraform CLI. With {{site.data.keyword.cloud_notm}} Schematics, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](#configure-variables) in the Terraform configuration files, and enter the values for your variables in the {{site.data.keyword.cloud_notm}} Schematics console when you create a workspace. 
+
 ## Configuring IBM as your cloud provider 
 {: #configure-provider}
 
