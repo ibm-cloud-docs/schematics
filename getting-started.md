@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-31"
+lastupdated: "2019-08-01"
 
 keywords: schematics, automation, terraform
 
@@ -30,7 +30,7 @@ subcollection: schematics
 Enable Infrastructure as Code (IaC) with {{site.data.keyword.cloud_notm}} Schematics, and start templatizing, provisioning, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using Terraform configuration files. 
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} Schematics is available as a beta to test out Terraform-as-a-Service capabilities in {{site.data.keyword.cloud_notm}} and might be unstable or change frequently. {{site.data.keyword.cloud_notm}} beta services also might not provide the same level of performance or compatibility that generally available services provide, and are not intended for use in a production environment.
+{{site.data.keyword.cloud_notm}} Schematics is available as a beta for a limited userbase to test out Terraform-as-a-Service capabilities in {{site.data.keyword.cloud_notm}}, and might be unstable or change frequently. {{site.data.keyword.cloud_notm}} beta services also might not provide the same level of performance or compatibility that generally available services provide, and are not intended for use in a production environment. If you want to try out the {{site.data.keyword.cloud_notm}} Schematics beta, [create an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-getting-customer-support) to get whitelisted for this feature. 
 {: preview}
 
 ## Create your Terraform configuration file
