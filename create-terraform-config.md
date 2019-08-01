@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-08-01"
 
 keywords: schematics, automation, terraform
 
@@ -56,11 +56,34 @@ You can choose between the following options to configure the `provider` block:
 
 To configure your `provider` block: 
 
-1. Review the resources that you want to provision. If you want to provision Virtual Private Cloud (VPC) infrastructure resources, you must define the `generation` parameter in your provider block. If you do not want to provision VPC infrastructure resources, the `provider` block is empty. 
-2. Create a `provider.tf` file with the following code, or add the following code to your existing Terraform configuration file. In the following example, you declare IBM as your cloud provider and instruct the {{site.data.keyword.cloud_notm}} Provider plug-in to provision VPC infrastructure resources on {{site.data.keyword.cloud_notm}} Classic infrastructure by setting `generation = 1`. 
+1. Review what credentials and information you must [provide in the `provider` block](/docs/terraform?topic=terraform-setup_cli#configure_provider) to work with your resources. {{site.data.keyword.cloud_notm}} Schematics automatically retrieves the {{site.data.keyword.cloud_notm}} API key for you so you do not have to include this information in your `provider` block.
+2. Create a `provider.tf` file. Use the example that matches the type of resource that you want to provision. 
+
+   Example for VPC infrastructure resources: 
    ```
    provider "ibm" {
      generation = 1
+   }
+   ```
+   {: codeblock}
+   
+   Example for classic infrastructure resources: 
+   ```
+   variable "softlayer_username" {}
+   variable "softlayer_api_key" {}
+
+   provider "ibm" {
+     region = "<region_name>"
+     softlayer_username = "${var.softlayer_username}"
+     softlayer_api_key  = "${var.softlayer_api_key}"
+   }
+   ```
+   {: codeblock}
+   
+   Example for all other resources:
+   ```
+   provider "ibm" {
+     region = "<region_name>"
    }
    ```
    {: codeblock}
