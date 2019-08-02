@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-01"
+lastupdated: "2019-08-02"
 
 keywords: schematics, automation, terraform
 
@@ -41,12 +41,12 @@ Create a Terraform configuration file that specifies the {{site.data.keyword.clo
 
 In this getting started tutorial, you create a Terraform configuration file to deploy a virtual server instance in a Virtual Private Cloud (VPC). You can use any other Terraform configuration file as part of this tutorial, but make sure that your file is stored in the `master` branch of a public GitHub repository. 
 
-A virtual server instances in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances](https://cloud.ibm.com/vpc/provision/vs){: external} before you proceed.
+A virtual server instance in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances](https://cloud.ibm.com/vpc/provision/vs){: external} before you proceed.
 {: important}
 
 **What is a Virtual Private Cloud (VPC) and what resources do I need?** </br> 
-A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. To provision a virtual server in a VPC, you must set up the following infrastructure resources: 
-- 1 VPC where you provision your VPC virtual server instance
+With a VPC, you can create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. To provision a virtual server in a VPC, you must set up the following infrastructure resources: 
+- 1 VPC, in which you provision your VPC virtual server instance
 - 1 security group and a rule for this security group to allow SSH connection to your virtual server instance
 - 1 subnet to enable networking in your VPC
 - 1 VPC virtual server instance 
@@ -306,7 +306,7 @@ Before you begin, set up your workspace in [{{site.data.keyword.cloud_notm}} Sch
 
 **To provision your resources**: 
 
-1. From the workspace details page, click **Generate plan** to create a Terraform execution plan. This plan equals the output of the `terraform plan` command. You can review the status of your plan in the **Recent activtity** section of your workspace details page. 
+1. From the workspace details page, click **Generate plan** to create a Terraform execution plan. This plan equals the output of the `terraform plan` command. You can review the status of your plan in the **Recent activity** section of your workspace details page. 
 2. Click **View log** to review the log files of your execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform configuration files. If you have syntax errors in your configuration files, you can review the error message in the log file. 
 3. Apply your Terraform configuration by clicking **Apply plan**. This action equals the `terraform apply` command. {{site.data.keyword.cloud_notm}} Schematics starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision, this process might take a few minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. 
 4. After your resources are provisioned, review the log file to ensure that no errors occurred during the provisioning, modification, or deletion process. 
