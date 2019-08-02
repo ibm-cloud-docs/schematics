@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-31"
+lastupdated: "2019-08-02"
 
 keywords: Schematics, automation, Terraform
 
@@ -41,7 +41,7 @@ Plan out the organizational structure of your workspaces and GitHub repository s
 To find out how many workspaces you need in {{site.data.keyword.cloud_notm}} Schematics, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
 {: shortdesc}
 
-As a rule of thumb, consider creating separate workspaces for each of your microservices and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and development, staging, and production environment. Separate workspaces for each microservice component and environment allows you to separately develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
+As a rule of thumb, consider creating separate workspaces for each of your microservices and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and development, staging, and production environment. With separate workspaces for each microservice component and environment, you can develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices. 
 
 Review the following image to see the number of workspaces in {{site.data.keyword.cloud_notm}} Schematics for an app that consists of three microservices. 
 
@@ -63,7 +63,7 @@ Review the following table to find a list of options for how to structure your G
 | ------- | ---------------------------- | 
 | One GitHub repo, use variables to distinguish between environments | Create one GitHub repository where you store the Terraform configuration files that make up your microservice component. Make your Terraform configuration files as general as possible so that you can reuse the same configuration across your environments. To configure the specifics of your development, staging, and production environment, use input variables in your configuration files. Input variables are automatically loaded into {{site.data.keyword.cloud_notm}} Schematics when you create your workspace. Customize your workspace by entering values for your variables that are specific to the environment. This setup is useful if you have one team that manages the lifecycle of the microservice component and where the configuration of your environments does not differ drastically. |
 | One GitHub repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid that you have different configurations in each environment. |
-| Use one GitHub repo per environment | Use one GitHub repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and GitHub repository. While this setup allows you to apply separate permissions for each of your GitHub repositories, you must make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
+| Use one GitHub repo per environment | Use one GitHub repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and GitHub repository and you can apply separate permissions for each of your GitHub repositories. Make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
 
 
 
@@ -72,7 +72,7 @@ For more information about how to structure your GitHub repository, see [Reposit
 ### How can I reuse configuration files across environments and workspaces? 
 {: #plan-reuse}
 
-Try to minimize the number of Terraform configuration files that you need to manage by creating standardized resource templates and using variables to customize the template to your needs. 
+Try to minimize the number of Terraform configuration files that you need to manage by creating standardized resource templates and by using variables to customize the template to your needs. 
 {: shortdesc}
 
 With standardized resource templates, you can ensure that development best practices are followed within your organization and that all Terraform configuration files have the same structure. Knowing the structure of a Terraform configuration file makes it easier for your developers to understand a file, declare variables, contribute to the code, and troubleshoot the errors. 
