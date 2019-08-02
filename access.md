@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-31"
+lastupdated: "2019-08-02"
 
 keywords: schematics, automation, terraform
 
@@ -51,7 +51,7 @@ No. If you are assigned an {{site.data.keyword.cloud_notm}} Schematics service a
 **What else is required to enable users to provision {{site.data.keyword.cloud_notm}} resources?** </br>
 To successfully provision {{site.data.keyword.cloud_notm}} resources, users must have access to a paid {{site.data.keyword.cloud_notm}} account. Charges incur when you create the resources in the {{site.data.keyword.cloud_notm}} account, which is started by clicking the **Apply plan** button from the {{site.data.keyword.cloud_notm}} Schematics console. 
 
-Review the pricing information and account limiations for each {{site.data.keyword.cloud_notm}} resource that you want to provision before you create the resources. 
+Review the pricing information and account limitations for each {{site.data.keyword.cloud_notm}} resource that you want to provision before you create the resources. 
 {: tip}
 
 <table summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two.">

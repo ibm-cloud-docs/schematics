@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-01"
+lastupdated: "2019-08-02"
 
 keywords: schematics, automation, terraform
 
@@ -36,13 +36,13 @@ A Terraform configuration consists of one or more Terraform files that declare t
 You can write your Terraform configuration by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
 
 **Where do I store my Terraform configuration files?** </br>
-A Terraform configuration is infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. Version control allows you to revert to previous configurations, audit changes to configurations, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply your configuration changes in {{site.data.keyword.cloud_notm}}. 
+A Terraform configuration is infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous configurations, audit changes to configurations, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply your configuration changes in {{site.data.keyword.cloud_notm}}. 
 
 The following image shows an example of how your Terraform configuration files could look like in a GitHub repository. 
 
 <img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 
-**What should I do with my `terraform.tfvars` file?** </br>
+**What do I do with my `terraform.tfvars` file?** </br>
 The `terraform.tfvars` file is a local variables file that you use to store sensitive information, such as your {{site.data.keyword.cloud_notm}} API key or classic infrastructure user name when you use native Terraform. This file must be present on your local machine so that Terraform can load the values for your credentials when you initialize the Terraform CLI. With {{site.data.keyword.cloud_notm}} Schematics, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](#configure-variables) in the Terraform configuration files, and enter the values for your variables in the {{site.data.keyword.cloud_notm}} Schematics console when you create a workspace. 
 
 ## Configuring IBM as your cloud provider 
@@ -59,7 +59,7 @@ You can choose between the following options to configure the `provider` block:
 
 To configure your `provider` block: 
 
-1. Review what credentials and information you must [provide in the `provider` block](/docs/terraform?topic=terraform-setup_cli#configure_provider) to work with your resources. {{site.data.keyword.cloud_notm}} Schematics automatically retrieves the {{site.data.keyword.cloud_notm}} API key for you so you do not have to include this information in your `provider` block.
+1. Review what credentials and information you must [provide in the `provider` block](/docs/terraform?topic=terraform-setup_cli#configure_provider) to work with your resources. {{site.data.keyword.cloud_notm}} Schematics automatically retrieves the {{site.data.keyword.cloud_notm}} API key so you do not have to include this information in your `provider` block.
 2. Create a `provider.tf` file. Use the example that matches the type of resource that you want to provision. 
 
    Example for VPC infrastructure resources: 
@@ -117,7 +117,7 @@ Review the options that you have to reference existing resources in other resour
 
 The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two types of objects, data sources and resources. You can use both objects to reference resources in other resource blocks.  
 
-- **Resources**: To create a resource, you use the resource definitions in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. The resource definitions includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file.  </br>
+- **Resources**: To create a resource, you use the resource definitions in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file.  </br>
 
   Example infrastructure code: 
   ```
@@ -207,7 +207,7 @@ resource ibm_container_cluster "test_cluster" {
 ```
 {: codeblock}
 
-See the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external} for more information about variable configuration
+For more information about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external}.
 
 
 
