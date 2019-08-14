@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-02"
+lastupdated: "2019-08-14"
 
 keywords: schematics, automation, terraform
 
@@ -59,7 +59,33 @@ You can choose between the following options to configure the `provider` block:
 
 To configure your `provider` block: 
 
-1. Review what credentials and information you must [provide in the `provider` block](/docs/terraform?topic=terraform-setup_cli#configure_provider) to work with your resources. {{site.data.keyword.cloud_notm}} Schematics automatically retrieves the {{site.data.keyword.cloud_notm}} API key so you do not have to include this information in your `provider` block.
+1. Review what credentials and information you must provide in the `provider` block to work with your resources. For some resources, {{site.data.keyword.cloud_notm}} Schematics automatically retrieves the {{site.data.keyword.cloud_notm}} API key so that you do not have to include this information in your `provider` block.
+   
+   <table>
+   <thead>
+     <th>Resource</th>
+     <th>Required input parameters</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VPC infrastructure resources</td>
+      <td>Generation of {{site.data.keyword.cloud_notm}} VPC infrastructure</td>
+    </tr>
+    <tr>
+      <td>Classic infrastructure resources</td>
+      <td><ul><li>{{site.data.keyword.cloud_notm}} classic infrastructure user name</li><li>{{site.data.keyword.cloud_notm}} classic infrastructure API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
+    </tr>
+    <tr>
+      <td>IBM Cloud Kubernetes Service resources</td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>All other resources</td>
+      <td><ul><li>{{site.data.keyword.cloud_notm}} API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
+   
 2. Create a `provider.tf` file. Use the example that matches the type of resource that you want to provision. 
 
    Example for VPC infrastructure resources: 
