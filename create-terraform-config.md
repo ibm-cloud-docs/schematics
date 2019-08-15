@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-02"
+lastupdated: "2019-08-14"
 
 keywords: schematics, automation, terraform
 
@@ -48,19 +48,45 @@ The `terraform.tfvars` file is a local variables file that you use to store sens
 ## Configuring IBM as your cloud provider 
 {: #configure-provider}
 
-Specify the cloud provider that you want to use to provision your resources in the `provider` block of your Terraform configuration file. 
+Specify the cloud provider that you want to use to provision your resources in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
 
-The `provider` block includes all the input variables the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources. 
+1. Choose how you want to configure the `provider` block. 
+   - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.cloud_notm}} Schematics, and applied to all Terraform configuration files that exist in the same directory. This approach is useful if you split out your infrastructure code across multiple files. 
+   - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
-You can choose between the following options to configure the `provider` block: 
-- **Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.cloud_notm}} Schematics, and applied to all Terraform configuration files that exist in the same directory. This approach is useful if you split out your infrastructure code across multiple files. 
-- **Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
-
-To configure your `provider` block: 
-
-1. Review what credentials and information you must [provide in the `provider` block](/docs/terraform?topic=terraform-setup_cli#configure_provider) to work with your resources. {{site.data.keyword.cloud_notm}} Schematics automatically retrieves the {{site.data.keyword.cloud_notm}} API key so you do not have to include this information in your `provider` block.
-2. Create a `provider.tf` file. Use the example that matches the type of resource that you want to provision. 
+2. Review what credentials and information you must provide in the `provider` block to work with your resources. For some resources, {{site.data.keyword.cloud_notm}} Schematics automatically retrieves the {{site.data.keyword.cloud_notm}} API key so that you do not have to include this information in your `provider` block.
+   
+   <table>
+   <thead>
+     <th>Resource</th>
+     <th>Required input parameters</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>VPC infrastructure resources</td>
+      <td>Generation of {{site.data.keyword.cloud_notm}} VPC infrastructure</td>
+    </tr>
+    <tr>
+      <td>Classic infrastructure resources</td>
+      <td><ul><li>{{site.data.keyword.cloud_notm}} classic infrastructure user name</li><li>{{site.data.keyword.cloud_notm}} classic infrastructure API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
+    </tr>
+    <tr>
+      <td>IBM Cloud Kubernetes Service resources</td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>Cloud Foundry resources</td>
+      <td><ul><li>{{site.data.keyword.cloud_notm}} API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
+    </tr>
+    <tr>
+      <td>All other resources</td>
+      <td>{{site.data.keyword.cloud_notm}} region</td>
+    </tr>
+  </tbody>
+  </table>
+   
+2. Create a `provider.tf` file or add the following code to your Terraform configuration file. 
 
    Example for VPC infrastructure resources: 
    ```
@@ -79,6 +105,24 @@ To configure your `provider` block:
      region = "<region_name>"
      softlayer_username = "${var.softlayer_username}"
      softlayer_api_key  = "${var.softlayer_api_key}"
+   }
+   ```
+   {: codeblock}
+   
+   Example for all {{site.data.keyword.containerlong_notm}} resources:
+   ```
+   provider "ibm" {
+   }
+   ```
+   {: codeblock}
+   
+   Example for Cloud Foundry resources:
+   ```
+   variable "ibmcloud_api_key" {}
+   
+   provider "ibm" {
+     ibmcloud_api_key = "${var.ibmcloud_api_key}"
+     region = "<region_name>"
    }
    ```
    {: codeblock}
