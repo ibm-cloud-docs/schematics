@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-20"
+lastupdated: "2019-08-21"
 
 keywords: schematics, automation, terraform
 
@@ -36,10 +36,10 @@ Enable Infrastructure as Code (IaC) with {{site.data.keyword.cloud_notm}} Schema
 ## Create your Terraform configuration file
 {: #create-config}
 
-Create a Terraform configuration file that specifies the {{site.data.keyword.cloud_notm}} resources that you want to provision with {{site.data.keyword.cloud_notm}} Schematics, and store the file in a public GitHub repository. 
+Create a Terraform configuration file that specifies the {{site.data.keyword.cloud_notm}} resources that you want to provision with {{site.data.keyword.cloud_notm}} Schematics, and store the file in a GitHub repository. 
 {: shortdesc}
 
-In this getting started tutorial, you create a Terraform configuration file to deploy a virtual server instance in a Virtual Private Cloud (VPC). You can use any other Terraform configuration file as part of this tutorial, but make sure that your file is stored in the `master` branch of a public GitHub repository. 
+In this getting started tutorial, you create a Terraform configuration file to deploy a virtual server instance in a Virtual Private Cloud (VPC). You can use any other Terraform configuration file as part of this tutorial, but make sure that your file is stored in the `master` branch of a GitHub repository. 
 
 A virtual server instance in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances](https://cloud.ibm.com/vpc/provision/vs){: external} before you proceed.
 {: important}
@@ -53,7 +53,7 @@ With a VPC, you can create your own space in {{site.data.keyword.cloud_notm}} so
 - 1 floating IP address that you use to access your VPC virtual server instance over the public network
 
 **What credentials do I need to provision a virtual server in a VPC?**</br>
-The credentials that you need depend on the type of resource that you want to provision. To create a virtual server instance in a VPC, you must have an SSH key to connect to your virtual server instance.  For more information about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Retrieving required credentials for your resources](/docs/terraform?topic=terraform-setup_cli#retrieve_credentials).
+The credentials that you need depend on the type of resource that you want to provision. To create a virtual server instance in a VPC, you must have an SSH key to connect to your virtual server instance.  For more information about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Configuring IBM as your cloud provider](/docs/schematics?topic=schematics-create-tf-config#configure-provider).
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
 {{site.data.keyword.cloud_notm}} Schematics supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}.
@@ -270,7 +270,7 @@ To create a configuration file for your VPC resources:
    </tbody>
    </table>
 
-4. Store this configuration file in the `master` branch of a public GitHub repository and name it `vpc.tf`. During the beta, only public GitHub repositories are supported in {{site.data.keyword.cloud_notm}} Schematics. 
+4. Store this configuration file in the `master` branch of a GitHub repository and name it `vpc.tf`. 
 
 ## Setting up your workspace
 {: #setup-workspace}
@@ -279,7 +279,7 @@ Create a workspace in {{site.data.keyword.cloud_notm}} Schematics that points to
 {: shortdesc}
 
 **Before you begin** 
-- Make sure that you have a [Terraform configuration file in a public GitHub repository](#create-config) that you can use for your workspace.
+- Make sure that you have a [Terraform configuration file in a GitHub repository](#create-config) that you can use for your workspace.
 - Make sure that you are [assigned the correct permissions](/docs/schematics?topic=schematics-access) in {{site.data.keyword.cloud_notm}} Identity and Access Management to create the workspace and deploy resources. 
 
 **To create a workspace**: 
@@ -289,10 +289,11 @@ Create a workspace in {{site.data.keyword.cloud_notm}} Schematics that points to
    1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
    2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
    3. Optional: Enter a description for your workspace.
-   4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
+   4. Enter the link to your GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
    
-   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
-   6. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. 
+   5. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform configuration files. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). 
+   6. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+   7. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 
 

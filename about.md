@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-02"
+lastupdated: "2019-08-21"
 
 keywords: schematics, automation, terraform
 
@@ -50,7 +50,7 @@ Review how {{site.data.keyword.cloud_notm}} Schematics provisions and manages yo
 
 <img src="images/schematics_flow.png" alt="Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.cloud_notm}} Schematics" width="800" style="width: 800px; border-style: none"/>
 
-1. **Codify your {{site.data.keyword.cloud_notm}} resources**. Use Terraform HashiCorp Configuration Language (HCL) or JSON format to specify the {{site.data.keyword.cloud_notm}} resources that you want to provision in your {{site.data.keyword.cloud_notm}} environment. All Terraform configuration files must be stored in a public GitHub or GitLab repository to ensure source control and enable collaboration, review, and auditing in your organization. You can save usage information in readme files to make the configuration shareable and usable by multiple teams.
+1. **Codify your {{site.data.keyword.cloud_notm}} resources**. Use Terraform HashiCorp Configuration Language (HCL) or JSON format to specify the {{site.data.keyword.cloud_notm}} resources that you want to provision in your {{site.data.keyword.cloud_notm}} environment. All Terraform configuration files must be stored in a GitHub or GitLab repository to ensure source control and enable collaboration, review, and auditing in your organization. You can save usage information in readme files to make the configuration shareable and usable by multiple teams.
 2. **Create your workspace**. An {{site.data.keyword.cloud_notm}} Schematics workspace is connected to one GitHub repository only and uses user-defined variables to configure the {{site.data.keyword.cloud_notm}} resources. Workspaces help to organize resources that belong to one {{site.data.keyword.cloud_notm}} environment. For example, use workspaces to separate your test, staging, and production environment. With {{site.data.keyword.cloud_notm}} Identity and Access Management, you can control who has access to your resources and can provision or manage these resources in your {{site.data.keyword.cloud_notm}} account. 
 3. **Create an execution plan**. {{site.data.keyword.cloud_notm}} Schematics uses the `terraform plan` command to parse the configuration files of your linked GitHub repository, and to create a summary of actions that need to be performed to achieve the state that is described in your configuration files. To determine the actions, {{site.data.keyword.cloud_notm}} Schematics takes into account the resources that are already provisioned in your {{site.data.keyword.cloud_notm}} account to give you a preview whether resources must be added, modified, or removed. You can review the plan and any validation errors by reviewing the logs.  
 4. **Provision your resources**. To create, modify, or remove resources from your {{site.data.keyword.cloud_notm}} account, {{site.data.keyword.cloud_notm}} Schematics uses the `terraform apply` command. This command calls the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, which is aware of the API for each resource to provision, configure, or remove the resource. 
