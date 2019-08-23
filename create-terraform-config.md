@@ -47,7 +47,6 @@ The `terraform.tfvars` file is a local variables file that you use to store sens
 
 **What if I have an existing `terraform.tfstate` file?** </br>
 If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. During the {{site.data.keyword.cloud_notm}} Schematics beta, `terraform.tfstate` files are not imported when you create a Schematics workspace. Because the `terraform-tfstate` file is not available to {{site.data.keyword.cloud_notm}} Schematics, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already started managing with native Terraform. 
-{: important}
 
 ## Configuring IBM as your cloud provider 
 {: #configure-provider}
