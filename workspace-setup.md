@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-08-23"
 
 keywords: Schematics, automation, Terraform
 
@@ -81,6 +81,16 @@ With standardized resource templates, you can ensure that development best pract
 {: #plan-workspace-access}
 
 {{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing user access](/docs/schematics?topic=schematics-access). 
+
+### What do I need to be aware of when I have a repository that I managed with native Terraform?
+{: #plan-terraform-migration}
+
+Because {{site.data.keyword.cloud_notm}} Schematics delivers Terraform-as-a-Service, you can import your existing Terraform configuration files into Schematics workspaces. Depending on how your Terraform configuration files and GitHub repositories are structured, you might need to make changes so that you can successfully use the {{site.data.keyword.cloud_notm}} Schematics beta service. 
+{: shortdesc}
+
+- **`provider` block declaration**: Because {{site.data.keyword.cloud_notm}} Schematics is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management, your {{site.data.keyword.cloud_notm}} API key is used to determine your permissions in Schematics and the services that you want to provision and manage with Schematics. When you specify the `provider` block in your Terraform configuration file, you don't need to provide the {{site.data.keyword.cloud_notm}} API key as Schematics automatically retrieves the API key for you. For more information, see [Configuring IBM as your cloud provider](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
+- **`terraform.tfstate` file**: If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. During the {{site.data.keyword.cloud_notm}} Schematics beta, `terraform.tfstate` files are not imported when you create a Schematics workspace. Because the `terraform-tfstate` file is not available to {{site.data.keyword.cloud_notm}} Schematics, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already started managing with native Terraform. 
+- **Terraform CLI and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.cloud_notm}} Schematics, you don't need to install the Terraform CLI or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.cloud_notm}} Schematics CLI plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
 
 ## Creating workspaces
 {: #create-workspace}
