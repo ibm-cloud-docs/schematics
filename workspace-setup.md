@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-02"
+lastupdated: "2019-08-23"
 
 keywords: Schematics, automation, Terraform
 
@@ -82,6 +82,16 @@ With standardized resource templates, you can ensure that development best pract
 
 {{site.data.keyword.cloud_notm}} Schematics is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.cloud_notm}} Schematics, see [Managing user access](/docs/schematics?topic=schematics-access). 
 
+### What do I need to be aware of when I have a repository that I managed with native Terraform?
+{: #plan-terraform-migration}
+
+Because {{site.data.keyword.cloud_notm}} Schematics delivers Terraform-as-a-Service, you can import your existing Terraform configuration files into Schematics workspaces. Depending on how your Terraform configuration files and GitHub repositories are structured, you might need to make changes so that you can successfully use the {{site.data.keyword.cloud_notm}} Schematics beta service. 
+{: shortdesc}
+
+- **`provider` block declaration**: Because {{site.data.keyword.cloud_notm}} Schematics is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management, your {{site.data.keyword.cloud_notm}} API key is used to determine your permissions in Schematics and the services that you want to provision and manage with Schematics. When you specify the `provider` block in your Terraform configuration file, you don't need to provide the {{site.data.keyword.cloud_notm}} API key as Schematics automatically retrieves the API key for you. For more information, see [Configuring IBM as your cloud provider](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
+- **`terraform.tfstate` file**: If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. During the {{site.data.keyword.cloud_notm}} Schematics beta, `terraform.tfstate` files are not imported when you create a Schematics workspace. Because the `terraform-tfstate` file is not available to {{site.data.keyword.cloud_notm}} Schematics, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already started managing with native Terraform. 
+- **Terraform CLI and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.cloud_notm}} Schematics, you don't need to install the Terraform CLI or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.cloud_notm}} Schematics CLI plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
+
 ## Creating workspaces
 {: #create-workspace}
 
@@ -99,10 +109,11 @@ Create your workspace that points to the GitHub repository that hosts your Terra
    1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
    2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
    3. Optional: Enter a description for your workspace.
-   4. Enter the link to your public GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
+   4. Enter the link to your GitHub repository. The link must point to the `master` branch in GitHub. You cannot link to other branches during the beta. 
    
-   5. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
-   6. In the **Input variables** section, enter the values for your input variables. 
+   5. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform configuration files. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). 
+   6. Click **Retrieve input variables**. {{site.data.keyword.cloud_notm}} Schematics automatically parses through your files to find variable declarations. 
+   7. In the **Input variables** section, enter the values for your input variables. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files are loaded into {{site.data.keyword.cloud_notm}} Schematics, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 

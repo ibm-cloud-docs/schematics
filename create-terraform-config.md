@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-14"
+lastupdated: "2019-08-23"
 
 keywords: schematics, automation, terraform
 
@@ -44,6 +44,9 @@ The following image shows an example of how your Terraform configuration files c
 
 **What do I do with my `terraform.tfvars` file?** </br>
 The `terraform.tfvars` file is a local variables file that you use to store sensitive information, such as your {{site.data.keyword.cloud_notm}} API key or classic infrastructure user name when you use native Terraform. This file must be present on your local machine so that Terraform can load the values for your credentials when you initialize the Terraform CLI. With {{site.data.keyword.cloud_notm}} Schematics, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](#configure-variables) in the Terraform configuration files, and enter the values for your variables in the {{site.data.keyword.cloud_notm}} Schematics console when you create a workspace. 
+
+**What if I have an existing `terraform.tfstate` file?** </br>
+If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. During the {{site.data.keyword.cloud_notm}} Schematics beta, `terraform.tfstate` files are not imported when you create a Schematics workspace. Because the `terraform-tfstate` file is not available to {{site.data.keyword.cloud_notm}} Schematics, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already started managing with native Terraform. 
 
 ## Configuring IBM as your cloud provider 
 {: #configure-provider}
