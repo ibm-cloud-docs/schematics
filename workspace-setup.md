@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-23"
+lastupdated: "2019-09-04"
 
 keywords: Schematics, automation, Terraform
 
@@ -67,7 +67,7 @@ Review the following table to find a list of options for how to structure your G
 
 
 
-For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/enterprise/workspaces/repo-structure.html){: external}. 
+For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/cloud/workspaces/repo-structure.html){: external}. 
 
 ### How can I reuse configuration files across environments and workspaces? 
 {: #plan-reuse}
