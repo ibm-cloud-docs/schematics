@@ -107,20 +107,23 @@ To remove an {{site.data.keyword.cloud_notm}} resource that you provisioned with
 {:shortdesc}
 
 **How should I remove resources with {{site.data.keyword.cloud_notm}} Schematics?** </br>
-During the {{site.data.keyword.cloud_notm}} Schematics beta, you cannot use the console or API to instruct {{site.data.keyword.cloud_notm}} Schematics to remove all of the resources that you provisioned with {{site.data.keyword.cloud_notm}} Schematics. However, because {{site.data.keyword.cloud_notm}} Schematics executes the actions that are required to achieve the state that you describe in your Terraform configuration file, you can either remove the infrastructure code from your file, or comment out the resources that you want to remove. 
+You can use the {{site.data.keyword.cloud_notm}} Schematics console or CLI to remove all of the resources that you provisioned with Schematics. To stay in sync with your Terraform template, make sure to also remove the associated infrastructure code from your Terraform template so that your resources are not re-added when you apply a new version of your Terraform template. 
 
 **What happens if I choose to delete my resource directly from the resource dashboard?** </br>
-When you manually remove a resource that you provisioned with {{site.data.keyword.cloud_notm}} Schematics, the state file is not updated automatically and becomes out of sync. Even if you create a new execution plan, {{site.data.keyword.cloud_notm}} Schematics checks your Terraform configuration file against the state that is stored in the state file. Because your state file still includes the resource that you manually removed, the resource cannot be readded with {{site.data.keyword.cloud_notm}} Schematics and remains orphaned. 
+When you manually remove a resource that you provisioned with {{site.data.keyword.cloud_notm}} Schematics, the state file is not updated automatically and becomes out of sync. When you create your next Terraform execution plan or apply a new template version, Schematics verifies that the {{site.data.keyword.cloud_notm}} resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured. If the resource is not found, the state file is updated and the Terraform execution plan is changed accordingly. 
+
+Although the state file is updated before new changes to your {{site.data.keyword.cloud_notm}} resources are applied, do not manually remove resources from the resource dashboard to avoid unexpected results. Instead, use the {{site.data.keyword.cloud_notm}} Schematics console or CLI to remove your resources, or remove the associated infrastructure code from your Terraform template. 
+{: important}
 
 **Are my resources removed when I remove the workspace** </br>
-No. Removing the workspace from {{site.data.keyword.cloud_notm}} Schematics does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you remove the workspace before you removed your resources, you must manually remove all of your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard. 
+Removing the workspace from {{site.data.keyword.cloud_notm}} Schematics does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you remove the workspace before you removed your resources, you must manually remove all of your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard. 
 
 Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sure that you backed up your data before you remove a resource. If you choose to remove the infrastructure code, or comment out the resource in your Terraform configuration file, make sure to thoroughly review the log file of your execution plan to verify that all your resources are included in the removal.    
 {: important}
 
-To remove your resources: 
+**To remove your resources by deleting the infrastructure code from you Terraform template**: 
 
-1. Open the Terraform configuration file in your source repository in GitHub. 
+1. Open the Terraform configuration file in your source repository in GitHub that includes the infrastructure code of your resource. 
 2. Either remove the infrastructure code from the file, or comment out the resources that you want to remove by adding `#` to the beginning of each line. 
 
    Example for commenting out a resource: 
@@ -143,15 +146,15 @@ To remove your resources:
    {: codeblock}
 
 3. Commit the change to your Terraform configuration file. 
-4. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that points to the Terraform configuration file that you just changed. 
-5. Click **Refresh** to get the latest version of your Terraform configuration files from the linked GitHub source repository. 
+4. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that points to the Terraform template that you just changed. 
+5. Click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. 
 6. Click **Generate plan** to create a Terraform execution plan. 
 7. From the **Recent activity** section, click **View log** to review the log files of your execution plan. The log files provide a summary of all the resources that {{site.data.keyword.cloud_notm}} Schematics is about to remove. 
 8. Click **Apply plan** to remove the {{site.data.keyword.cloud_notm}} resources from your account. 
 9. Review the log files to ensure that no errors occurred during the deletion process. 
-10. From the workspace details page, select the **Resources** tab and verify that your resources are removed. 
+10. From the navigation, select **Resources** and verify that your resources are removed. 
 11. Optional: After you removed all your resources, remove your workspace. 
     1. Open the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external} and find the workspace that you want to remove. 
-    2. From the actions menu, click **Delete**. 
+    2. From the actions menu, click **Delete workspace**. 
     3. Confirm the deletion of your workspace by clicking **Delete**. 
 
