@@ -368,7 +368,7 @@ ibmcloud terraform destroy --id WORKSPACE_ID [--force] [--json]
 
 <dl>	
  <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that points to the Terraform configuration files in your source control repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
  <dt><code>--force</code>, <code>-f</code></dt>	
 <dd>Optional. Force the execution of this command without user prompts. </dd>	
  <dt><code>--json</code>, <code>-j</code></dt>	
@@ -399,7 +399,7 @@ ibmcloud terraform plan --id WORKSPACE_ID [--json]
 
 <dl>	
 <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that points to the Terraform configuration files in your source control repository that you want to scan. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source repository that you want to scan. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
  <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Return the CLI output in JSON format.</dd>	
 </dl>	
