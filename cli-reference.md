@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-26"
+lastupdated: "2019-09-13"
 
 keywords: Schematics, schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -53,21 +53,6 @@ ibmcloud terraform help
 </br>
 **Command options:** none
 
-### `ibmcloud terraform info`
-{: #schematics-info}
-
-List detailed information about the {{site.data.keyword.cloud_notm}} Schematics CLI plug-in and the Schematics API server. 
-{: shortdesc}
-
-```
-ibmcloud terraform info
-```
-{: pre}
-
-</br>
-**Command options:** none
-
-
 ### `ibmcloud terraform version`
 {: #schematics-version}
 
@@ -88,13 +73,48 @@ ibmcloud terraform version
 Review the commands that you can use to set up and work with your {{site.data.keyword.cloud_notm}} Schematics workspace. 
 {: shortdesc}
 
+### `ibmcloud terraform workspace action`
+{: #schematics-workspace-action}
+
+Retrieve all activities for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
+{: shortdesc}
+
+When you create a Terraform execution plan, or apply your Terraform template with Schematics, a Schematics action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action from the Schematics console. You cannot retrieve the logs by using the Schematics CLI. 
+
+```
+ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--json]
+```
+{: pre}
+
+</br>
+**Command options:**
+
+<dl>
+<dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>
+<dd>Required. The unique identifier of the workspace for which you want to retrieve workspace activities. To find the ID of your workspace, run <code>ibmcloud terraform workspace list</code>.
+   </dd>
+
+<dt><code>--act-id <em>ACTION_ID</em></code></dt>
+<dd>Optional. Enter the ID of a action that you want to retrieve.  </dd>
+
+<dt><code>--json</code></dt>
+<dd>Optional. Return the CLI output in JSON format.   </dd>
+
+</dl>
+
+**Example:**
+```
+ibmcloud terraform workspace action --id 12345
+```
+{: pre}
+
 ### `ibmcloud terraform workspace delete`
 {: #schematics-workspace-delete}
 
 Delete a workspace from your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
-The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.cloud_notm}} Schematics to manage your resources anymore. 
+The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.cloud_notm}} Schematics to manage your resources after you delete the workspace. 
 {: important}
 
 ```
@@ -119,6 +139,33 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 
 ```
 ibmcloud terraform workspace delete --id 12345
+```
+{: pre}
+
+### `ibmcloud terraform workspace get`	
+{: #schematics-workspace-get}	
+
+Retrieve the details of an existing workspace, including the values of all input variables.	
+{: shortdesc}	
+
+```
+ibmcloud terraform workspace get --id WORKSPACE_ID [--json]
+```
+{: pre}
+
+**Command options:**
+ 
+<dl>	
+<dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace, for which you want to retrieve the details. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dt><code>--json</code>, <code>-j</code></dt>	
+<dd>Optional. Return the CLI output in JSON format.</dd>	
+</dl>	
+
+**Example:**
+
+```
+ibmcloud terraform workspace get --id 1234 --json
 ```
 {: pre}
 
@@ -157,7 +204,7 @@ ibmcloud terraform workspace list --json
 ### `ibmcloud terraform workspace new`	
 {: #schematics-workspace-new}	
 
-Create an {{site.data.keyword.cloud_notm}} Schematics workspace that points to your Terraform configuration file in GitHub.  
+Create an {{site.data.keyword.cloud_notm}} Schematics workspace that points to your Terraform template in GitHub.  
 {: shortdesc}	
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
@@ -222,11 +269,11 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
    </tr>
    <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
-     <td>Required. Enter the link to your GitHub repository. The link must point to the <code>master</code> branch in GitHub. You cannot link to other branches during the beta.</td>
+     <td>Required. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
    </tr>
     <tr>
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
-      <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. You cannot add variables to your workspace during the beta. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
+      <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
      </tr></tbody></table></dd>	
 <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Print the CLI output in JSON format.</dd>	
@@ -236,33 +283,6 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
 
 ```
 ibmcloud terraform workspace new --file myfile.json
-```
-{: pre}
-
-### `ibmcloud terraform workspace show`	
-{: #schematics-workspace-show}	
-
-Retrieve the details of an existing workspace.	
-{: shortdesc}	
-
-```
-ibmcloud terraform workspace show --id WORKSPACE_ID [--json]
-```
-{: pre}
-
-**Command options:**
- 
-<dl>	
-<dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace, for which you want to retrieve the details. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
-<dt><code>--json</code>, <code>-j</code></dt>	
-<dd>Optional. Return the CLI output in JSON format.</dd>	
-</dl>	
-
-**Example:**
-
-```
-ibmcloud terraform workspace show --id 1234 --json
 ```
 {: pre}
 
@@ -301,7 +321,7 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {
 ### `ibmcloud terraform apply`	
 {: #schematics-apply}	
 
-Scan and run the infrastructure code of your Terraform configuration file that your workspace points to. When you apply a Terraform configuration, your resources are provisioned or modified in {{site.data.keyword.cloud_notm}}.   
+Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, or removed in {{site.data.keyword.cloud_notm}}.   
 {: shortdesc}
 
 ```
@@ -314,7 +334,7 @@ ibmcloud terraform apply --id WORKSPACE_ID [--force] [--json]
 
 <dl>	
  <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that points to the Terraform configuration files in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
  <dt><code>--force</code>, <code>-f</code></dt>	
 <dd>Optional. Force the execution of this command without user prompts. </dd>	
  <dt><code>--json</code>, <code>-j</code></dt>	
@@ -332,7 +352,7 @@ ibmcloud terraform apply --id 1234 --json
 ### `ibmcloud terraform destroy`	
 {: #schematics-destroy}	
 
-Remove your workspace and all {{site.data.keyword.cloud_notm}} resources, even if these resources are active. 
+Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with your Schematics workspace, even if these resources are active. 
 {: shortdesc}	
 
 Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you used persistent storage, make sure that you created a backup for your data
@@ -348,7 +368,7 @@ ibmcloud terraform destroy --id WORKSPACE_ID [--force] [--json]
 
 <dl>	
  <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that points to the Terraform configuration files in your source control repository that specify the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that points to the Terraform configuration files in your source control repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
  <dt><code>--force</code>, <code>-f</code></dt>	
 <dd>Optional. Force the execution of this command without user prompts. </dd>	
  <dt><code>--json</code>, <code>-j</code></dt>	
@@ -366,7 +386,7 @@ ibmcloud terraform destroy --id 1234 --json
 ### `ibmcloud terraform plan`	
 {: #schematics-plan}	
 
-Scan the Terraform configuration files in your source control repository and compare this configuration against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added, mofified, or removed to achieve the state that is described in your configuration file.   	
+Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added, mofified, or removed to achieve the state that is described in your configuration file.   	
 {: shortdesc}	
 
 ```
