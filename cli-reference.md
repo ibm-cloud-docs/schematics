@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-13"
+lastupdated: "2019-09-17"
 
 keywords: Schematics, schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -40,7 +40,7 @@ Use these general commands to find help and version information for the {{site.d
 {: shortdesc}
 
 ### `ibmcloud terraform help`
-{: #schematics-help}
+{: #schematics-help-cmd}
 
 View the supported {{site.data.keyword.cloud_notm}} Schematics CLI commands. 
 {: shortdesc}
