@@ -58,7 +58,7 @@ Specify the cloud provider that you want to use in the `provider` block of your 
    - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory. This approach is useful if you split out your infrastructure code across multiple files. 
    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
-2. Review what credentials and information you must provide in the `provider` block to work with your resources. For some resources, {{site.data.keyword.bplong_notm}} automatically retrieves the {{site.data.keyword.cloud_notm}} IAM API key of the user that runs the infrastructure code in {{site.data.keyword.bpshort_notm}} so that you do not have to include this information in your `provider` block.
+2. Review what credentials and information you must provide in the `provider` block to work with your resources. For some resources, {{site.data.keyword.bplong_notm}} automatically retrieves the {{site.data.keyword.cloud_notm}} IAM API key of the user that runs the infrastructure code in {{site.data.keyword.bpshort}} so that you do not have to include this information in your `provider` block.
    
    <table>
    <thead>
