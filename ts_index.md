@@ -29,7 +29,7 @@ subcollection: schematics
 If you have problems or questions when you use {{site.data.keyword.bplong_notm}}, you can get help by joining the {{site.data.keyword.bpshort}} community in Slack, asking questions through a forum, or opening an {{site.data.keyword.cloud_notm}} support case.
 {: shortdesc}
 
-* Post a question in the [{{site.data.keyword.bplong_notm}} Slack ![External link icon](../icons/launch-glyph.svg "External link icon")](ibm-cloud-schematics.slack.com). If you do not have access to this Slack, [request an invitation to this Slack]() by following the steps in the getting started wizard that you see when you created a workspace from the {{site.data.keyword.cloud_notm}} console. 
+* Post a question in the [{{site.data.keyword.bplong_notm}} Slack ![External link icon](../icons/launch-glyph.svg "External link icon")](ibm-cloud-schematics.slack.com). If you do not have access to this Slack, request an invitation to this Slack by following the steps in the getting started wizard that you see when you created a workspace from the {{site.data.keyword.cloud_notm}} console. 
 * Post your question on [Stack Overflow ![External link icon](../icons/launch-glyph.svg "External link icon")](https://stackoverflow.com/search?q=ibm-cloud-infrastructure+terraform)
  and tag your question with `ibm-cloud-schematics`.
 * Subscribe to the Terraform channel on [Reddit](https://www.reddit.com/r/Terraform/){: external}.
