@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-17"
+lastupdated: "2019-09-18"
 
-keywords: Schematics, schematics cli reference, schematics commands, schematics cli, schematics reference
+keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
 subcollection: schematics
 
@@ -36,13 +36,13 @@ To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-s
 ## General commands
 {: #schematics-general-commands}
 
-Use these general commands to find help and version information for the {{site.data.keyword.cloud_notm}} Schematics CLI plug-in. 
+Use these general commands to find help and version information for the {{site.data.keyword.bplong_notm}} CLI plug-in. 
 {: shortdesc}
 
 ### `ibmcloud terraform help`
 {: #schematics-help-cmd}
 
-View the supported {{site.data.keyword.cloud_notm}} Schematics CLI commands. 
+View the supported {{site.data.keyword.bplong_notm}} CLI commands. 
 {: shortdesc}
 
 ```
@@ -56,7 +56,7 @@ ibmcloud terraform help
 ### `ibmcloud terraform version`
 {: #schematics-version}
 
-List the version of the Terraform CLI and {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform that the Schematics CLI uses. 
+List the version of the Terraform CLI and {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform that the {{site.data.keyword.bpshort}} CLI uses. 
 {: shortdesc}
 
 ```
@@ -70,7 +70,7 @@ ibmcloud terraform version
 ## Workspace commands	
 {: #schematics-workspace-commands}	
 
-Review the commands that you can use to set up and work with your {{site.data.keyword.cloud_notm}} Schematics workspace. 
+Review the commands that you can use to set up and work with your {{site.data.keyword.bplong_notm}} workspace. 
 {: shortdesc}
 
 ### `ibmcloud terraform workspace action`
@@ -79,7 +79,7 @@ Review the commands that you can use to set up and work with your {{site.data.ke
 Retrieve all activities for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
 {: shortdesc}
 
-When you create a Terraform execution plan, or apply your Terraform template with Schematics, a Schematics action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action from the Schematics console. You cannot retrieve the logs by using the Schematics CLI. 
+When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action from the {{site.data.keyword.bpshort}} console. You cannot retrieve the logs by using the {{site.data.keyword.bpshort}} CLI. 
 
 ```
 ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--json]
@@ -114,7 +114,7 @@ ibmcloud terraform workspace action --id 12345
 Delete a workspace from your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
-The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.cloud_notm}} Schematics to manage your resources after you delete the workspace. 
+The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. 
 {: important}
 
 ```
@@ -204,7 +204,7 @@ ibmcloud terraform workspace list --json
 ### `ibmcloud terraform workspace new`	
 {: #schematics-workspace-new}	
 
-Create an {{site.data.keyword.cloud_notm}} Schematics workspace that points to your Terraform template in GitHub.  
+Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub.  
 {: shortdesc}	
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
@@ -316,7 +316,7 @@ ibmcloud terraform workspace update --id 1234 --json
 ## {{site.data.keyword.cloud_notm}} resource management commands
 {: #schematics-resource-commands}
 
-Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.cloud_notm}} Schematics.
+Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bplong_notm}}.
 
 ### `ibmcloud terraform apply`	
 {: #schematics-apply}	
@@ -352,7 +352,7 @@ ibmcloud terraform apply --id 1234 --json
 ### `ibmcloud terraform destroy`	
 {: #schematics-destroy}	
 
-Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with your Schematics workspace, even if these resources are active. 
+Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with your {{site.data.keyword.bpshort}} workspace, even if these resources are active. 
 {: shortdesc}	
 
 Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you used persistent storage, make sure that you created a backup for your data
