@@ -75,5 +75,5 @@ By default, all information is encrypted in transit and at rest. To make your da
 
 To remove your personal information from {{site.data.keyword.bplong_notm}}, choose among the following options: 
 - **Delete the workspace**: When you delete your workspace, all personal information related to a workspace is permanently deleted. 
-- **Open an {{site.data.keyword.cloud_notm}} support case**: Contact IBM Support by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support). 
+- **Open an {{site.data.keyword.cloud_notm}} support case**: Contact IBM Support to remove your workspaces and personal information by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-getting-customer-support). 
 - **End your {{site.data.keyword.cloud_notm}} subscription**: A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all workspaces that are stored with IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all personal information are deleted. 
