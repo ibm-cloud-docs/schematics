@@ -9,7 +9,7 @@ keywords: schematics faqs, what is terraform, infrastructure as code, iac, schem
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"}
+{:new_window: target="_blank"} 
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
