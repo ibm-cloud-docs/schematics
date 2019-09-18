@@ -19,13 +19,15 @@ IBM Cloud Schematics
 
     {: .navgroup id="reference"}
     [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-    cli-reference.md
     [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
+    at-events.md
+    cli-reference.md
     [IBM Cloud Schematics API](https://schematics.cloud.ibm.com/swagger-api/#/)
     [Terraform documentation](https://www.terraform.io/docs/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    faqs.md
     ts_index.md
     {: .navgroup-end}
     
