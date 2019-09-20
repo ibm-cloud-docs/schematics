@@ -79,7 +79,7 @@ Review the commands that you can use to set up and work with your {{site.data.ke
 Retrieve all activities for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
 {: shortdesc}
 
-When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action from the {{site.data.keyword.bpshort}} console. You cannot retrieve the logs by using the {{site.data.keyword.bpshort}} CLI. 
+When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud terraform logs`](#schematics-logs) command.  
 
 ```
 ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--json]
@@ -383,7 +383,7 @@ ibmcloud terraform destroy --id 1234 --json
 {: pre}
 
 ### `ibmcloud terraform logs`	
-{: #schematics-plan}	
+{: #schematics-logs}	
 
 Retrieve the Terraform log files for a {{site.data.keyword.bpshort}} workspace or a specific action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
 {: shortdesc}	
