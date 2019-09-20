@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-09-20"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -382,6 +382,33 @@ ibmcloud terraform destroy --id 1234 --json
 ```
 {: pre}
 
+### `ibmcloud terraform logs`	
+{: #schematics-plan}	
+
+Retrieve the Terraform log files for a {{site.data.keyword.bpshort}} workspace or a specific action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
+{: shortdesc}	
+
+```
+ibmcloud terraform logs --id WORKSPACE_ID [--act-id ACTION_ID]
+```
+{: pre}
+
+</br>
+**Command options:**
+
+<dl>	
+<dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace for which you want to retrieve Terraform log files. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+ <dt><code>--act-id ACTION_ID</code></dt>	
+<dd>Optional. The ID of an action for which you want to retrieve Terraform logs. To find a list of action IDs, run <code>ibmcloud terraform workspace action --id WORKSPACE_ID</code>.</dd>	
+</dl>	
+
+**Example:**
+
+```
+ibmcloud terraform logs --id workspace-abcd12345yt --act-id 9876543121abc1234cdst
+```
+{: pre}
 
 ### `ibmcloud terraform plan`	
 {: #schematics-plan}	
