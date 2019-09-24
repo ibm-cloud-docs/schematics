@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-09-24"
 
 keywords: schematics, automation, terraform
 
@@ -126,7 +126,7 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
    5. Click **Assign access**.
    6. Click **Assign access to resources**.
    7. From the **Services** drop-down list, select **{{site.data.keyword.bpshort}}**.
-   8. In the **Assign service access role** section, select the IAM service access role that you want to assign to your IAM access group. Do not select an IAM platform role. IAM platform roles are not supported during the {{site.data.keyword.bplong_notm}} beta. 
+   8. In the **Assign service access role** section, select the IAM service access role that you want to assign to your IAM access group. Do not select an IAM platform role. IAM platform roles are not supported in {{site.data.keyword.bplong_notm}}. 
    9. Click **Assign**. 
 
 4. Assign your IAM access group permissions to [work with the resource group](/docs/iam?topic=iam-groups) that you created earlier.
