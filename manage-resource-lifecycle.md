@@ -167,7 +167,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 2. From the action menu, click **Destroy resources**. 
 3. Confirm the deletion by clicking **Destroy**. 
 4. Select the workspace to open the workspace details. 
-5. From the navigation, select **Activity** to review the logs for your resource deletion. Ensure that no errors occured during the deletion process. 
+5. From the navigation, select **Activity** to review the logs for your resource deletion. Ensure that no errors occurred during the deletion process. 
 6. From the navigation, select **Resources** and verify that your resources are removed. 
 7. Optional: After you removed all your resources, remove your workspace. 
    1. Open the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces) and find the workspace that you want to remove. 
