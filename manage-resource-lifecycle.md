@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-09-25"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -100,7 +100,7 @@ View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{
 3. Review the logs of previous Terraform execution plans and the plans that you applied. 
 4. From the navigation, select **Resources** to review the state of the {{site.data.keyword.cloud_notm}} resources that you created with this workspace. 
 5. To review who made a change to your Terraform template, go to the source repository in GitHub that is linked to your workspace, and use the built-in capabilities such as the commit history and pull requests to review changes.
-6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.cloudaccesstrailshort}}, see [{{site.data.keyword.at_full_notm}} events](/docs/schematics?topic=schematics-at-events). 
+6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.cloudaccesstrailshort}}, see [{{site.data.keyword.at_full_notm}} events](/docs/schematics?topic=schematics-at_events). 
   
 ## Removing your resources
 {: #destroy-resources}
