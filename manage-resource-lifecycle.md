@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-09-25"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -100,7 +100,7 @@ View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{
 3. Review the logs of previous Terraform execution plans and the plans that you applied. 
 4. From the navigation, select **Resources** to review the state of the {{site.data.keyword.cloud_notm}} resources that you created with this workspace. 
 5. To review who made a change to your Terraform template, go to the source repository in GitHub that is linked to your workspace, and use the built-in capabilities such as the commit history and pull requests to review changes.
-6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.cloudaccesstrailshort}}, see [{{site.data.keyword.at_full_notm}} events](/docs/schematics?topic=schematics-at-events). 
+6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.cloudaccesstrailshort}}, see [{{site.data.keyword.at_full_notm}} events](/docs/schematics?topic=schematics-at_events). 
   
 ## Removing your resources
 {: #destroy-resources}
@@ -167,7 +167,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 2. From the action menu, click **Destroy resources**. 
 3. Confirm the deletion by clicking **Destroy**. 
 4. Select the workspace to open the workspace details. 
-5. From the navigation, select **Activity** to review the logs for your resource deletion. Ensure that no errors occured during the deletion process. 
+5. From the navigation, select **Activity** to review the logs for your resource deletion. Ensure that no errors occurred during the deletion process. 
 6. From the navigation, select **Resources** and verify that your resources are removed. 
 7. Optional: After you removed all your resources, remove your workspace. 
    1. Open the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces) and find the workspace that you want to remove. 

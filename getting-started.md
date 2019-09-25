@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-09-25"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -52,7 +52,7 @@ With a VPC, you can create your own space in {{site.data.keyword.cloud_notm}} so
 **What credentials do I need to provision a virtual server in a VPC?**</br>
 The credentials that you need depend on the type of resource that you want to provision. To create a virtual server instance in a VPC, make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 
-To connect to your virtual server instace, you must have an SSH key. You set up the SSH key as part of this tutorial. 
+To connect to your virtual server instance, you must have an SSH key. You set up the SSH key as part of this tutorial. 
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
 {{site.data.keyword.bplong_notm}} supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/).
