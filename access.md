@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-24"
+lastupdated: "2019-09-26"
 
 keywords: schematics, automation, terraform
 
@@ -47,7 +47,7 @@ Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keywo
 As the account owner or an authorized account administrator you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} workspace. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups). 
 
 **If I have access to {{site.data.keyword.bplong_notm}}, can I automatically provision {{site.data.keyword.cloud_notm}} resources?** </br>
-No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces in {{site.data.keyword.bplong_notm}}. To provision the {{site.data.keyword.cloud_notm}} resources that you defined in your Terraform template, you must be assigned the IAM platform or service access role that is required to provision the individual resource. For example, to provision an {{site.data.keyword.containerlong_notm}} cluster, you must have the **Administrator** platform role and the **Manager** service access role for {{site.data.keyword.containerlong_notm}}. Refer to the [documentation](https://cloud.ibm.com/docs/home/alldocs) for your resource to determine the access policies that you need to provision and work with your resource. 
+No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces in {{site.data.keyword.bplong_notm}}. To provision the {{site.data.keyword.cloud_notm}} resources that you defined in your Terraform template, you must be assigned the IAM platform or service access role that is required to provision the individual resource. For example, to provision an {{site.data.keyword.containerlong_notm}} cluster, you must have the **Administrator** platform role and the **Manager** service access role for {{site.data.keyword.containerlong_notm}}. Refer to the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to provision and work with your resource. 
 
 **What else is required to enable users to provision {{site.data.keyword.cloud_notm}} resources?** </br>
 To successfully provision {{site.data.keyword.cloud_notm}} resources, users must have access to a paid {{site.data.keyword.cloud_notm}} account. Charges incur when you create the resources in the {{site.data.keyword.cloud_notm}} account, which is initiated by clicking the **Apply plan** button from the {{site.data.keyword.bplong_notm}} console, or running the `ibmcloud terraform apply` command. 
@@ -138,6 +138,6 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
    6. In the **Assign service access role** section, select the same IAM service access role that you assigned in the previous step. 
    7. Click **Assign**.
    
-5. Review the [documentation](https://cloud.ibm.com/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} resources that you want to create, and assign the appropriate IAM access policy to your IAM access group. 
+5. Review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} resources that you want to create, and assign the appropriate IAM access policy to your IAM access group. 
 
 Next, you can [create Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config), [create a workspace](/docs/schematics?topic=schematics-workspace-setup), and start [provisioning {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) in your account.
