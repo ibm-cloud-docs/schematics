@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-25"
+lastupdated: "2019-10-03"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -86,7 +86,7 @@ To create a configuration file for your VPC resources:
    # allow all incoming network traffic on port 22
    resource "ibm_is_security_group_rule" "ingress_ssh_all" {
      group     = "${ibm_is_security_group.sg1.id}"
-     direction = "ingress"
+     direction = "inbound"
      remote    = "0.0.0.0/0"                       
 
      tcp = {
@@ -180,7 +180,7 @@ To create a configuration file for your VPC resources:
      </tr>
       <tr>
        <td><code>resource.ibm_is_security_group_rule.direction</code></td>
-       <td>Specify if the security group rule is applied to incoming or outgoing network traffic. Choose <strong>ingress</strong> to specify a rule for incoming network traffic, and <strong>egress</strong> to specify a rule for outgoing network traffic. </td>
+       <td>Specify if the security group rule is applied to incoming or outgoing network traffic. Choose <strong>inbound</strong> to specify a rule for incoming network traffic, and <strong>outbound</strong> to specify a rule for outgoing network traffic. </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_security_group_rule.remote</code></td>
