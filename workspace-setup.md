@@ -105,7 +105,7 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 1. From the {{site.data.keyword.cloud_notm}} menu, select [**{{site.data.keyword.bpshort}}**](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
+   1. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
    2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
    3. Optional: Enter a description for your workspace.
    4. Enter the link to your GitHub repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
