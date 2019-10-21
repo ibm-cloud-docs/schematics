@@ -27,3 +27,9 @@ subcollection: schematics
 # Limitations
 {: #schematics-limitations}
 
+
+AT events in US SOUTH only
+Data residency in US SOUTH/ US EAST only
+No import of terraform.tfstate files
+No support of local terraform.variables files
+No support for output.tf files
