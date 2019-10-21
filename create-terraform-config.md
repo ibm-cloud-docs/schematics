@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-10-21"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -48,17 +48,28 @@ The `terraform.tfvars` file is a local variables file that you use to store sens
 **What if I have an existing `terraform.tfstate` file?** </br>
 If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. These `terraform.tfstate` files are not imported when you create a {{site.data.keyword.bpshort}} workspace. Because the `terraform.tfstate` file is not available to {{site.data.keyword.bplong_notm}}, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already provisioned and started managing with native Terraform. 
 
-## Configuring IBM as your cloud provider 
+## Configuring the `provider` block 
 {: #configure-provider}
 
-Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources.
+Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
+
+**Do I need to provide the {{site.data.keyword.cloud_notm}} API key?** </br>
+The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform, receive the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform, you must provide the {{site.data.keyword.cloud_notm}} API key at all times. In {{site.data.keyword.bpshort}}, the API key is automatically retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the API key is not retrieved for Cloud Foundry and classic infrastructure resources and must be provided in the `provider` block. 
+
+**Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?** </br>
+If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}.  
+
+**Can I provide an API key for a service ID?** </br>
+You can provide an API key for a service ID for all IAM-enabled services, including VPC infrastructure resources. You cannot use a service ID for classic infrastructure or Cloud Foundry resources. 
+
+To configure the `provider` block: 
 
 1. Choose how you want to configure the `provider` block. 
    - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory. This approach is useful if you split out your infrastructure code across multiple files. 
    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
-2. Review what credentials and information you must provide in the `provider` block to work with your resources. For some resources, {{site.data.keyword.bplong_notm}} automatically retrieves the {{site.data.keyword.cloud_notm}} IAM API key of the user that runs the infrastructure code in {{site.data.keyword.bpshort}} so that you do not have to include this information in your `provider` block.
+2. Review what credentials and information you must provide in the `provider` block to work with your resources. 
    
    <table>
    <thead>
@@ -83,7 +94,7 @@ Specify the cloud provider that you want to use in the `provider` block of your 
       <td><ul><li>{{site.data.keyword.cloud_notm}} API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
     </tr>
     <tr>
-      <td>All other resources</td>
+      <td>All other IAM-enabled resources</td>
       <td>{{site.data.keyword.cloud_notm}} region</td>
     </tr>
   </tbody>
