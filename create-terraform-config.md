@@ -33,11 +33,8 @@ A Terraform template consists of one or more Terraform configuration files that 
 
 You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
 
-**What do I do with my `terraform.tfvars` file?** </br>
-The `terraform.tfvars` file is a local variables file that you use to store sensitive information, such as your {{site.data.keyword.cloud_notm}} API key or classic infrastructure user name when you use native Terraform. This file must be present on your local machine so that Terraform can load the values for your credentials when you initialize the Terraform CLI. With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](#configure-variables) in the Terraform configuration files, and enter the values for your variables when you create a workspace. You can later change the values of your variables by updating the variables from your workspace details page. 
-
-**What if I have an existing `terraform.tfstate` file?** </br>
-If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. These `terraform.tfstate` files are not imported when you create a {{site.data.keyword.bpshort}} workspace. Because the `terraform.tfstate` file is not available to {{site.data.keyword.bplong_notm}}, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already provisioned and started managing with native Terraform. 
+Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limiatations](/docs/schematics?topic=schematics-schematics-limitations). 
+{: tip}
 
 ## Configuring the `provider` block 
 {: #configure-provider}
