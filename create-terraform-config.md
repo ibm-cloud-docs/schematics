@@ -23,24 +23,15 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Creating Terraform configuration files
+# Creating Terraform templates
 {: #create-tf-config}
 
-Learn how to create Terraform configuration files that are well-structured, reusable, and comprehensive.
+Learn how to create Terraform templates that are well-structured, reusable, and comprehensive.
 {: shortdesc}
 
-**How is a Terraform template structured?** </br>
 A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
-**What language do I use to develop my infrastructure code?** </br>
 You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
-
-**Where do I store my Terraform configuration files?** </br>
-Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply infrastructure code changes in {{site.data.keyword.cloud_notm}}. 
-
-The following image shows an example of how your Terraform template could look like in a GitHub repository. 
-
-<img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 
 **What do I do with my `terraform.tfvars` file?** </br>
 The `terraform.tfvars` file is a local variables file that you use to store sensitive information, such as your {{site.data.keyword.cloud_notm}} API key or classic infrastructure user name when you use native Terraform. This file must be present on your local machine so that Terraform can load the values for your credentials when you initialize the Terraform CLI. With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](#configure-variables) in the Terraform configuration files, and enter the values for your variables when you create a workspace. You can later change the values of your variables by updating the variables from your workspace details page. 
@@ -149,7 +140,7 @@ To configure the `provider` block:
    ```
    {: codeblock}
 
-## Adding {{site.data.keyword.cloud_notm}} resources to your Terraform configuration file
+## Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block
 {: #configure-resources}
 
 Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources that you want to manage with {{site.data.keyword.bplong_notm}}. 
@@ -215,7 +206,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
   {: codeblock}
 
 
-## Using input variables to customize resources
+## Using `variable` blocks to customize resources
 {: #configure-variables}
 
 You can use `variable` blocks to templatize your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center. 
@@ -268,4 +259,14 @@ resource ibm_container_cluster "test_cluster" {
 For more information about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external}.
 
 
+
+## Storing your Terraform templates
+{: #store-template}
+
+Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply infrastructure code changes in {{site.data.keyword.cloud_notm}}. 
+{: shortdesc}
+
+The following image shows an example of how your Terraform template could look like in a GitHub repository. 
+
+<img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 
