@@ -24,6 +24,7 @@ IBM Cloud Schematics
     cli-reference.md
     [IBM Cloud Schematics API](https://schematics.cloud.ibm.com/swagger-api/#/)
     [Terraform documentation](https://www.terraform.io/docs/index.html)
+    limitations.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

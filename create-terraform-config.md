@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-10-22"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -23,42 +23,41 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Creating Terraform configuration files
+# Creating Terraform templates
 {: #create-tf-config}
 
-Learn how to create Terraform configuration files that are well-structured, reusable, and comprehensive.
+Learn how to create Terraform templates that are well-structured, reusable, and comprehensive.
 {: shortdesc}
 
-**How is a Terraform template structured?** </br>
 A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
-**What language do I use to develop my infrastructure code?** </br>
 You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
 
-**Where do I store my Terraform configuration files?** </br>
-Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply infrastructure code changes in {{site.data.keyword.cloud_notm}}. 
+Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limiatations](/docs/schematics?topic=schematics-schematics-limitations). 
+{: tip}
 
-The following image shows an example of how your Terraform template could look like in a GitHub repository. 
-
-<img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
-
-**What do I do with my `terraform.tfvars` file?** </br>
-The `terraform.tfvars` file is a local variables file that you use to store sensitive information, such as your {{site.data.keyword.cloud_notm}} API key or classic infrastructure user name when you use native Terraform. This file must be present on your local machine so that Terraform can load the values for your credentials when you initialize the Terraform CLI. With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](#configure-variables) in the Terraform configuration files, and enter the values for your variables when you create a workspace. You can later change the values of your variables by updating the variables from your workspace details page. 
-
-**What if I have an existing `terraform.tfstate` file?** </br>
-If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. These `terraform.tfstate` files are not imported when you create a {{site.data.keyword.bpshort}} workspace. Because the `terraform.tfstate` file is not available to {{site.data.keyword.bplong_notm}}, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already provisioned and started managing with native Terraform. 
-
-## Configuring IBM as your cloud provider 
+## Configuring the `provider` block 
 {: #configure-provider}
 
-Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources.
+Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
+
+**Do I need to provide the {{site.data.keyword.cloud_notm}} API key?** </br>
+The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform, receive the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform, you must provide the {{site.data.keyword.cloud_notm}} API key at all times. In {{site.data.keyword.bpshort}}, the API key is automatically retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the API key is not retrieved for Cloud Foundry and classic infrastructure resources and must be provided in the `provider` block. 
+
+**Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?** </br>
+If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}.  
+
+**Can I provide an API key for a service ID?** </br>
+You can provide an API key for a service ID for all IAM-enabled services, including VPC infrastructure resources. You cannot use a service ID for classic infrastructure or Cloud Foundry resources. 
+
+To configure the `provider` block: 
 
 1. Choose how you want to configure the `provider` block. 
    - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory. This approach is useful if you split out your infrastructure code across multiple files. 
    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
-2. Review what credentials and information you must provide in the `provider` block to work with your resources. For some resources, {{site.data.keyword.bplong_notm}} automatically retrieves the {{site.data.keyword.cloud_notm}} IAM API key of the user that runs the infrastructure code in {{site.data.keyword.bpshort}} so that you do not have to include this information in your `provider` block.
+2. Review what credentials and information you must provide in the `provider` block to work with your resources. 
    
    <table>
    <thead>
@@ -83,7 +82,7 @@ Specify the cloud provider that you want to use in the `provider` block of your 
       <td><ul><li>{{site.data.keyword.cloud_notm}} API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
     </tr>
     <tr>
-      <td>All other resources</td>
+      <td>All other IAM-enabled resources</td>
       <td>{{site.data.keyword.cloud_notm}} region</td>
     </tr>
   </tbody>
@@ -138,7 +137,7 @@ Specify the cloud provider that you want to use in the `provider` block of your 
    ```
    {: codeblock}
 
-## Adding {{site.data.keyword.cloud_notm}} resources to your Terraform configuration file
+## Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block
 {: #configure-resources}
 
 Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources that you want to manage with {{site.data.keyword.bplong_notm}}. 
@@ -204,7 +203,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
   {: codeblock}
 
 
-## Using input variables to customize resources
+## Using `variable` blocks to customize resources
 {: #configure-variables}
 
 You can use `variable` blocks to templatize your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center. 
@@ -212,6 +211,9 @@ You can use `variable` blocks to templatize your infrastructure code. For exampl
 
 **Where do I store my variable declarations?** </br>
 You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations. 
+
+**Is there a character limit for input variables?** </br>
+Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
 
 Example variable declaration without details: 
 ```
@@ -257,4 +259,14 @@ resource ibm_container_cluster "test_cluster" {
 For more information about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external}.
 
 
+
+## Storing your Terraform templates
+{: #store-template}
+
+Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply infrastructure code changes in {{site.data.keyword.cloud_notm}}. 
+{: shortdesc}
+
+The following image shows an example of how your Terraform template could look like in a GitHub repository. 
+
+<img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 

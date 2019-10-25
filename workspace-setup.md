@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-10-21"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -87,7 +87,7 @@ With standardized resource templates, you can ensure that development best pract
 Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can import your existing Terraform templates into {{site.data.keyword.bpshort}} workspaces. Depending on how your Terraform templates and GitHub repositories are structured, you might need to make changes so that you can successfully use {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
-- **`provider` block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management, your {{site.data.keyword.cloud_notm}} API key is used to determine your permissions in {{site.data.keyword.bpshort}} and the services that you want to provision and manage with {{site.data.keyword.bpshort}}. When you specify the `provider` block in your Terraform configuration file, you don't need to provide the {{site.data.keyword.cloud_notm}} API key as {{site.data.keyword.bpshort}} automatically retrieves the API key for you. For more information, see [Configuring IBM as your cloud provider](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
+- **`provider` block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management, your {{site.data.keyword.cloud_notm}} API key is automatically retrieved for all IAM-enabled resources and you don't have to provide this information in the `provider` block. However, the API key is not retrieved for classic infrastructure and Cloud Foundry resources. For more information, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
 - **`terraform.tfstate` file**: If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. {{site.data.keyword.bplong_notm}} does not support importing an existing `terraform.tfstate` file. Because the `terraform-tfstate` file is not available to {{site.data.keyword.bplong_notm}}, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already started managing with native Terraform. 
 - **Terraform CLI and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform CLI or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
 
@@ -105,7 +105,7 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 1. From the {{site.data.keyword.cloud_notm}} menu, select [**{{site.data.keyword.bpshort}}**](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
+   1. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
    2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
    3. Optional: Enter a description for your workspace.
    4. Enter the link to your GitHub repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
