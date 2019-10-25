@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-21"
+lastupdated: "2019-10-25"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -80,7 +80,7 @@ Before you start using {{site.data.keyword.bpshort}}, make sure to understand th
 By default, all [information that {{site.data.keyword.bpshort}} retrieves](/docs/schematics?topic=schematics-faqs#data-residency) is encrypted in transit and at rest. To make your data highly available, all data is stored in the US South region and replicated to the US East region. You cannot choose the region where your data is stored. 
 {: shortdesc}
 
-Make sure that your data can reside in these regions before you start using Schematics.
+When you select a zone that is located outside your country, keep in mind that you might require legal authorization before data can be physically stored in a foreign country.
 {: important}
 
 ### How can I access {{site.data.keyword.bpshort}} events?
