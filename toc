@@ -7,6 +7,8 @@ IBM Cloud Schematics
     {: .navgroup id="learn"}
     getting-started.md
     about.md
+    responsibilities.md
+    ha-dr.md
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
