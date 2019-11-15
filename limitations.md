@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-25"
+lastupdated: "2019-11-15"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -60,13 +60,13 @@ If you used native Terraform before to provision and manage {{site.data.keyword.
 
 These `terraform.tfstate` files are not imported when you create a {{site.data.keyword.bpshort}} workspace. Because the `terraform.tfstate` file is not available to {{site.data.keyword.bplong_notm}}, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already provisioned and started managing with native Terraform. 
 
-### Can I use an `output.tf` file? 
+### Can I define output values? 
 {: #terraform-output}
 
-In a `output.tf` file, you can include the information that you want to retrieve about your resources after the Terraform template is applied in your {{site.data.keyword.cloud_notm}} environment. 
+In native Terraform, you can use output values to make information about your {{site.data.keyword.cloud_notm}} resources available after the template is applied in your {{site.data.keyword.cloud_notm}} environment. You can retrieve these values by using the `terraform output` command. 
 {: shortdesc}
 
-In native Terraform, you can access the information that you defined in the `output.tf` file by using the `terraform output` command. This command is not supported in {{site.data.keyword.bpshort}}. 
+{{site.data.keyword.bplong_notm}} does not support the `terraform output` command and you cannot retrieve output values from the console, UI, or API. However, if you define output values in your Terraform configuration files, you can see these output values if you parse the Terraform logs for your latest apply action. 
 
 ## Data storage and residency
 {: #limitation-data-residency}
