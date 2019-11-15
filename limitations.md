@@ -63,10 +63,10 @@ These `terraform.tfstate` files are not imported when you create a {{site.data.k
 ### Can I define output values? 
 {: #terraform-output}
 
-In native Terraform, you can use output values to make information about your {{site.data.keyword.cloud_notm}} resources available after the template is applied in your {{site.data.keyword.cloud_notm}} environment. You can retrieve these values by using the `terraform output` command. 
+In native Terraform, you can use output values to make information about your Terraform template available after the template is applied in your {{site.data.keyword.cloud_notm}} environment. You can retrieve these values by using the `terraform output` command. 
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} does not support the `terraform output` command and you cannot retrieve output values from the console, UI, or API. However, if you define output values in your Terraform configuration files, you can see these output values if you parse the Terraform logs for your latest apply action. 
+{{site.data.keyword.bplong_notm}} does not support the `terraform output` command and you cannot retrieve output values from the console, UI, or API. However, if you define output values in your Terraform configuration files, you can see these output values if you inspect your Terraform logs. 
 
 ## Data storage and residency
 {: #limitation-data-residency}
