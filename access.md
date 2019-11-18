@@ -60,16 +60,16 @@ The following table shows the user permissions that are granted in {{site.data.k
 
 | Action | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| View workspace | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| View workspace activities | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| View workspace logs | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| Create workspace | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| Update workspace | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| Delete workspace | | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| Freeze and unfreeze workspace | | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| Create Terraform execution plan | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| Apply a Terraform template | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
-| Destroy workspace resources | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| View workspace | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| View workspace activities | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| View workspace logs | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| Create workspace | | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| Update workspace | | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| Delete workspace | | | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| Freeze and unfreeze workspace | | | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| Create Terraform execution plan | | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| Apply a Terraform template | | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
+| Destroy workspace resources | | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | ![Checkmark icon](images/checkmark.png) | 
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions by service user type, account type, and access role" caption-side="top"}
