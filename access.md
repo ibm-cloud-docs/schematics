@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-26"
+lastupdated: "2019-11-18"
 
 keywords: schematics, automation, terraform
 
@@ -58,53 +58,22 @@ Review the pricing information and account limitations for each {{site.data.keyw
 **What can I do in {{site.data.keyword.bpshort}} with a specific IAM service access role?** </br>
 The following table shows the user permissions that are granted in {{site.data.keyword.bplong_notm}} when you assign an IAM service access role to your users.  
 
-<table summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two.">
-<caption>User permissions by service user type, account type, and access role</caption>
-  <thead>
-    <th>User type</th>
-  <th>IAM service access role</th>
-  <th>Permissions</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Account owner</td>
-      <td>N/A</td>
-      <td><ul>
-          <li>Create workspace</li>
-          <li>Update workspace</li>
-          <li>Delete workspace</li>
-          <li>View workspace</li>
-        <li>Freeze and unfreeze workspace</li>
-          </ul></td>
-    </tr>
-    <tr>
-      <td>{{site.data.keyword.bpshort}} user</td>
-      <td>Manager</td>
-      <td><ul>
-          <li>Create workspace</li>
-          <li>Update workspace</li>
-          <li>Delete workspace</li>
-          <li>View workspace</li>
-        <li>Freeze and unfreeze workspace</li>
-          </ul></td>
-    </tr>
-    <tr>
-      <td>{{site.data.keyword.bpshort}} user</td>
-      <td>Writer</td>
-      <td><ul>
-          <li>Update workspace</li>
-          <li>View workspace</li>
-          </ul></td>
-    </tr>
-    <tr>
-      <td>{{site.data.keyword.bpshort}} user</td>
-      <td>Reader</td>
-      <td><ul>
-          <li>View workspace</li>
-          </ul></td>
-    </tr>
-  </tbody>
-  </table>
+| Action | Reader | Writer | Manager | Account owner |
+|-----|-----|-----|-----|--------|
+| View workspace | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| View workspace activities | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| View workspace logs | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| Create workspace | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| Update workspace | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| Delete workspace | | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| Freeze and unfreeze workspace | | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| Create Terraform execution plan | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| Apply a Terraform template | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+| Destroy workspace resources | | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | ![Checkmark icon](images/checkmark-icon.svg) | 
+{: row-headers}
+{: class="comparison-table"}
+{: caption="User permissions by service user type, account type, and access role" caption-side="top"}
+{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 
 ## Setting up access for your users
