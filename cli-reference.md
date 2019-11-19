@@ -223,8 +223,7 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
 <br>	
 <br>Example JSON:	
 <pre class="codeblock">	
-<code>	
-{
+<code>{	
   "name": "&lt;workspace_name&gt;",
   "type": [
     "terraform-v1.0"
