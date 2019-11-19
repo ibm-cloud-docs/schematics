@@ -311,8 +311,8 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "workspace_status": {
-    "frozen": <true_or_false>, 
-    "locked": <true_or_false>
+    "frozen": &lt;true_or_false&gt;, 
+    "locked": &lt;true_or_false&gt;
   },
   "template_data": [
     {
