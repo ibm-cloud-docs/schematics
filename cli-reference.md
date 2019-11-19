@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-25"
+lastupdated: "2019-11-19"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -300,6 +300,63 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 **Command options:**
 
 <dl>	
+  <dt><code>--file <em>FILE_NAME</em></code></dt>
+  <dd>Required. The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. 	
+<br>	
+<br>Example JSON:	
+<pre class="codeblock">	
+<code>	
+{
+  "name": "&lt;workspace_name&gt;",
+  "description": "&lt;workspace_description&gt;",
+  "tags": [],
+  "workspace_status": {
+    "frozen": <true_or_false>, 
+    "locked": <true_or_false>
+  },
+  "template_data": [
+    {
+      "variablestore": [
+        {
+          "name": "&lt;variable_name1&gt;",
+          "value": "&lt;variable_value1&gt;"
+        },
+        {
+          "name": "&lt;variable_name2&gt;",
+          "value": "&lt;variable_value2&gt;"
+        }
+      ]
+    }
+  ],
+  "githubtoken": "&lt;github_personal_access_token&gt;"
+}
+</code></pre>
+<table>
+   <caption>JSON file component description</caption>
+   <thead>
+   <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the JSON file components</th>
+   </thead>
+   <tbody>
+   <tr>
+   <td><code>name</code></td>
+   <td>Optional. Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change. </td>
+   </tr>
+   <tr>
+   <td><code>description</code></td>
+   <td>Optional. Enter a description for your workspace. </td>
+   </tr>
+   <tr>
+   <td><code>tags</code></td>
+   <td>Optional. Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily. </td>
+   </tr>
+   <tr>
+   <td><code>workspace_status</code></td>
+   <td>Optional. Freeze, unfreeze, lock, or unlock a workspace. If a workspace is frozen or locked, changes to the workspace are disabled.  </td>
+   </tr>
+    <tr>
+      <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
+      <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
+     </tr></tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
   <dt><code>--json</code>, <code>-j</code></dt>	
@@ -309,7 +366,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 **Example:**
 
 ```
-ibmcloud terraform workspace update --id 1234 --json
+ibmcloud terraform workspace update --id 1234 --file myfile.json --json
 ```
 {: pre}
 
