@@ -220,7 +220,6 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
 <dl>	
  <dt><code>--file <em>FILE_NAME</em></code>, <code>-f <em>FILE_NAME</em></code></dt>	
 <dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
-<br>	
 <br>Example JSON:	
 <pre class="codeblock">	
 <code>{	
@@ -301,7 +300,6 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 <dl>	
   <dt><code>--file <em>FILE_NAME</em></code></dt>
   <dd>Required. The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. 	
-<br>	
 <br>Example JSON:	
 <pre class="codeblock">	
 <code>{
