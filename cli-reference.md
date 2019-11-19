@@ -304,8 +304,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 <br>	
 <br>Example JSON:	
 <pre class="codeblock">	
-<code>	
-{
+<code>{
   "name": "&lt;workspace_name&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
