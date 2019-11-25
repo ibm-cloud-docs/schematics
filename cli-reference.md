@@ -369,7 +369,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
    </tr>  
     <tr>
    <td><code>template_repo.release</code></td>
-   <td>Optional. Enter the the GitHub or GitLab release that points to your Terraform configuration files.  </td>
+   <td>Optional. Enter the GitHub or GitLab release that points to your Terraform configuration files.  </td>
    </tr>
     <tr>
       <td><code>template_data.variablestore.name </br>template_data.variablestore.value</code></td>
