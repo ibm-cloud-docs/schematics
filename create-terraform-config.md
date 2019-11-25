@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-22"
+lastupdated: "2019-11-25"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -33,7 +33,7 @@ A Terraform template consists of one or more Terraform configuration files that 
 
 You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
 
-Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limiatations](/docs/schematics?topic=schematics-schematics-limitations). 
+Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limitations](/docs/schematics?topic=schematics-schematics-limitations). 
 {: tip}
 
 ## Configuring the `provider` block 
