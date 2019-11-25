@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-19"
+lastupdated: "2019-11-25"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -306,12 +306,18 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
   "name": "&lt;workspace_name&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
+  "resource_group": "&lt;resource_group&gt;",
   "workspace_status": {
-    "frozen": &lt;true_or_false&gt;, 
-    "locked": &lt;true_or_false&gt;
+    "frozen": &lt;true_or_false&gt;
+  },
+  "template_repo": { 
+    "url": "&lt;source_repo_url&gt;", 
+    "branch" : "&lt;branch&gt;",
+    "release": "&lt;release&gt;"
   },
   "template_data": [
     {
+      "folder": "&lt;gh_folder&gt;",
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -345,12 +351,28 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
    <td><code>tags</code></td>
    <td>Optional. Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily. </td>
    </tr>
+     <tr>
+   <td><code>resource_group</code></td>
+   <td>Optional. Enter the resource group where you want to provision your workspace. </td>
+   </tr>
    <tr>
    <td><code>workspace_status</code></td>
-   <td>Optional. Freeze, unfreeze, lock, or unlock a workspace. If a workspace is frozen or locked, changes to the workspace are disabled.  </td>
+   <td>Optional. Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.  </td>
+   </tr>
+   <tr>
+   <td><code>template_repo.url</code></td>
+   <td>Optional. Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.  </td>
+   </tr>
+     <tr>
+   <td><code>template_repo.branch</code></td>
+   <td>Optional. Enter the the GitHub or GitLab branch where your Terraform configuration files are stored.  </td>
+   </tr>  
+    <tr>
+   <td><code>template_repo.release</code></td>
+   <td>Optional. Enter the the GitHub or GitLab release that points to your Terraform configuration files.  </td>
    </tr>
     <tr>
-      <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
+      <td><code>template_data.variablestore.name </br>template_data.variablestore.value</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
      </tr></tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
