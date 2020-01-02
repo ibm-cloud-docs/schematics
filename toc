@@ -24,7 +24,7 @@ IBM Cloud Schematics
     [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
     at-events.md
     cli-reference.md
-    [IBM Cloud Schematics API](https://schematics.cloud.ibm.com/swagger-api/#/)
+    [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     [Terraform documentation](https://www.terraform.io/docs/index.html)
     limitations.md
     {: .navgroup-end}
