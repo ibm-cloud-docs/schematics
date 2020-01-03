@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-10-03"
+  years: 2017, 2020
+lastupdated: "2020-01-03"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -64,6 +64,7 @@ To create a configuration file for your VPC resources:
 3. Create your Terraform configuration `vpc.tf` file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
    ```
    variable "ssh_key" {}
+   variable "resource_group" {}
 
    provider "ibm" {
      generation = 1
@@ -111,7 +112,7 @@ To create a configuration file for your VPC resources:
    }
 
    data ibm_resource_group "group" {
-     name = "default"
+     name = "${var.resource_group}"
    }
 
    resource ibm_is_instance "vsi1" {
@@ -149,6 +150,10 @@ To create a configuration file for your VPC resources:
      <tr>
        <td><code>variable.ssh_key</code></td>
        <td>A variable declaration for the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. You enter the value for your variable when you create your workspace in {{site.data.keyword.bplong_notm}}.</td>
+     </tr>
+     <tr>
+       <td><code>variable.resource_group</code></td>
+       <td>A variable declaration for the name of the resource group that you want to use for your VPC resources.</td>
      </tr>
      <tr>
        <td><code>provider.generation</code></td>
@@ -212,11 +217,11 @@ To create a configuration file for your VPC resources:
      </tr>
      <tr>
        <td><code>data.ibm_is_ssh_key.name</code></td>
-       <td>Enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. In this example, you reference a variable for the SSH key name so that you don't have to enter the SSH key name into your Terraform configuration file directly. You can enter the values for all variable declarations when you create your workspace in {{site.data.keyword.bpshort}}. The <code>data.ibm.is.ssh_key</code> Terraform resource is used to retrieve the ID of an existing SSH key so that you can use this ID when you create your VPC virtual server instance. </td>
+       <td>Enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. In this example, you reference a variable for the SSH key name so that you don't have to enter the SSH key name into your Terraform configuration file directly. You can enter the values for all variable declarations when you create your workspace in {{site.data.keyword.bpshort}}. The <code>data.ibm_is_ssh_key</code> Terraform resource is used to retrieve the ID of an existing SSH key so that you can use this ID when you create your VPC virtual server instance. </td>
      </tr>
-      <tr>
+     <tr>
        <td><code>data.ibm_resource_group.name</code></td>
-       <td>Enter the name of the resource group in your {{site.data.keyword.cloud_notm}} account that you want to use for your resources. Make sure that you have the right [permissions to provision {{site.data.keyword.cloud_notm}} resources in a resource group](/docs/schematics?topic=schematics-access). </td>
+       <td>Enter the name of the resource group that you want to use for your VPC resources. In this example, you retrieve the name from the resource group variable <code>data.ibm_resource_group</code>. Make sure that you have the right [permissions to provision {{site.data.keyword.cloud_notm}} resources in a resource group](/docs/schematics?topic=schematics-access).</td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_instance.name</code></td>
