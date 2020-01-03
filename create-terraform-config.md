@@ -94,6 +94,7 @@ To configure the `provider` block:
    ```
    provider "ibm" {
      generation = 1
+     region = "<region_name>"
    }
    ```
    {: codeblock}
