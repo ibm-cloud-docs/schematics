@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-25"
+  years: 2017, 2020
+lastupdated: "2020-01-03"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -67,7 +67,7 @@ To configure the `provider` block:
   <tbody>
     <tr>
       <td>VPC infrastructure resources</td>
-      <td>Generation of {{site.data.keyword.cloud_notm}} VPC infrastructure</td>
+      <td><ul><li>Generation of {{site.data.keyword.cloud_notm}} VPC infrastructure</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
     </tr>
     <tr>
       <td>Classic infrastructure resources</td>
@@ -94,6 +94,7 @@ To configure the `provider` block:
    ```
    provider "ibm" {
      generation = 1
+     region = "<region_name>"
    }
    ```
    {: codeblock}

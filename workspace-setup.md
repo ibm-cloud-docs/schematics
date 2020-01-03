@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-10-21"
+  years: 2017, 2020
+lastupdated: "2020-01-03"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -106,16 +106,17 @@ Create your workspace that points to the GitHub repository that hosts your Terra
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
    1. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
-   2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other. 
-   3. Optional: Enter a description for your workspace.
-   4. Enter the link to your GitHub repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
+   2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other.
+   3. Select the resource group where you want to create the workspace.
+   4. Optional: Enter a description for your workspace.
+   5. Enter the link to your GitHub repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
       - Example for `master` branch: `https://github.com/myorg/myrepo`
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
       - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
    
-   5. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). 
-   6. Click **Retrieve input variables**. {{site.data.keyword.bplong_notm}} automatically parses through your template to find variable declarations. 
-   7. In the **Input variables** section, enter the values for your input variables. 
+   6. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). 
+   7. Click **Retrieve input variables**. {{site.data.keyword.bplong_notm}} automatically parses through your template to find variable declarations. 
+   8. In the **Input variables** section, enter the values for your input variables. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files of your template are loaded into {{site.data.keyword.bplong_notm}}, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 5. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
@@ -129,11 +130,13 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 
 **To freeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to freeze. 
-2. In the **State** section on the workspace details page, set the toggle to **Frozen** to disable changes to your workspace. The ID of the user who freezes the workspace and a timestamp are automatically logged. After you freeze a workspace, no user can generate a Terraform execution plan or apply the plan in {{site.data.keyword.cloud_notm}}. 
+2. Select the **Settings** tab. 
+3. In the **State** section on the workspace settings page, set the toggle to **Frozen** to disable changes to your workspace. The ID of the user who freezes the workspace and a timestamp are automatically logged. After you freeze a workspace, no user can generate a Terraform execution plan or apply the plan in {{site.data.keyword.cloud_notm}}. 
 
 **To unfreeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to unfreeze. 
-2. In the **State** section on the workspace details page, set the toggle to **Unfrozen**. The ID of the user who unfreezes the workspace and a timestamp are automatically logged. After you unfreeze a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
+2. Select the **Settings** tab. 
+3. In the **State** section on the workspace settings page, set the toggle to **Unfrozen**. The ID of the user who unfreezes the workspace and a timestamp are automatically logged. After you unfreeze a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
 
 
 ## Overview of workspace status

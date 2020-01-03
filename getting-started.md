@@ -36,23 +36,29 @@ Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, and 
 Create a Terraform configuration file that specifies the {{site.data.keyword.cloud_notm}} resources that you want to provision with {{site.data.keyword.bplong_notm}}, and store the file in a GitHub repository to build your Terraform template. 
 {: shortdesc}
 
-In this getting started tutorial, you create a Terraform template with one Terraform configuration file that deploys a virtual server instance in a [Virtual Private Cloud (VPC)](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started). You can use an existing Terraform template as part of this tutorial, but make sure that this template is stored in a GitHub or GitLab repository. 
+In this getting started tutorial, you create a Terraform template with one Terraform configuration file that deploys a Gen 1 virtual server instance in a [Virtual Private Cloud (VPC)](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started). If you use the Terraform template in this tutorial, make sure that you store this template in a GitHub or GitLab repository. 
 
-A virtual server instance in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/vpc/provision/vs)before you proceed.
+A virtual server instance in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/vpc/provision/vs) before you proceed.
 {: important}
 
 **What is a Virtual Private Cloud (VPC) and what resources do I need?** </br> 
-With a VPC, you can create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. To provision a virtual server in a VPC, you must set up the following infrastructure resources: 
+With a VPC, you can create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. To provision a Gen 1 virtual server in a VPC, you must set up the following infrastructure resources: 
 - 1 VPC, in which you provision your VPC virtual server instance
 - 1 security group and a rule for this security group to allow SSH connections to your virtual server instance
 - 1 subnet to enable networking in your VPC
 - 1 VPC virtual server instance 
 - 1 floating IP address that you use to access your VPC virtual server instance over the public network
 
-**What credentials do I need to provision a virtual server in a VPC?**</br>
-The credentials that you need depend on the type of resource that you want to provision. To create a virtual server instance in a VPC, make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
+All VPC resources must be provisioned to the same VPC zone to function properly. 
+{: note}
+
+**What do I need to provision a virtual server in a VPC?**</br>
+To create a virtual server instance in a VPC, make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 
 To connect to your virtual server instance, you must have an SSH key. You set up the SSH key as part of this tutorial. 
+
+This tutorial includes VPC commands that you can run to retrieve input values for your Terraform template. To run these commands, you must install the [VPC CLI plug-in](/docs/vpc?topic=vpc-set-up-environment#cli-prerequisites-setup). 
+{: tip}
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
 {{site.data.keyword.bplong_notm}} supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/).
@@ -60,14 +66,15 @@ To connect to your virtual server instance, you must have an SSH key. You set up
 To create a configuration file for your VPC resources: 
 
 1. Make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
-2. [Generate an SSH key](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys). The SSH key is required to provision the VPC virtual server instance and you can use the SSH key to access your instance via SSH. After you created your SSH key, make sure to [upload this SSH key to your {{site.data.keyword.cloud_notm}} account](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console). 
-3. Create your Terraform configuration `vpc.tf` file that includes all the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
+2. [Generate an SSH key](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys). The SSH key is required to provision the VPC virtual server instance and you can use the SSH key to access your instance via SSH. After you created your SSH key, make sure to [upload this SSH key to your {{site.data.keyword.cloud_notm}} account](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console) in the VPC zone and resource group where you want to create your VPC and virtual server instance. 
+3. Create your Terraform configuration `vpc.tf` file that includes all of the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
    ```
    variable "ssh_key" {}
    variable "resource_group" {}
 
    provider "ibm" {
      generation = 1
+     region = "us-south"
    }
 
    locals {
@@ -158,6 +165,10 @@ To create a configuration file for your VPC resources:
      <tr>
        <td><code>provider.generation</code></td>
        <td>Enter <strong>1</strong> to provision VPC on Classic infrastructure resources. </td>
+     </tr>
+     <tr>
+       <td><code>provider.region</code></td>
+       <td>Enter the VPC region where you want to create your VPC infrastructure resources. Make sure to use the same region that you used when you uploaded your SSH key. To find a list of supported VPC regions, run <code>ibmcloud is regions</code>. </td>
      </tr>
    <tr>
    <td><code>locals.BASENAME</code></td>
@@ -292,15 +303,16 @@ Create a workspace in {{site.data.keyword.bplong_notm}} that points to the GitHu
 3. Configure your workspace. 
    1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
    2. Optional: Enter tags for your workspace. You can use the tags later to find your workspaces more easily. 
-   3. Optional: Enter a description for your workspace.
-   4. Enter the link to your GitHub repository. The link can point to the `master` branch, other branches, or subdirectories.
+   3. Select the resource group where you want to create the workspace.
+   4. Optional: Enter a description for your workspace.
+   5. Enter the link to your GitHub repository. The link can point to the `master` branch, other branches, or subdirectories.
       - Example for `master` branch: https://github.com/myorg/myrepo
       - Example for other branches: https://github.com/myorg/myrepo/tree/mybranch
       - Example for subdirectory: https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
    
-   5. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line ![External link icon](../icons/launch-glyph.svg "External link icon")](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). 
-   6. Click **Retrieve input variables**. {{site.data.keyword.bplong_notm}} automatically parses through your template to find variable declarations. 
-   7. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. 
+   6. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line ![External link icon](../icons/launch-glyph.svg "External link icon")](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). 
+   7. Click **Retrieve input variables**. {{site.data.keyword.bplong_notm}} automatically parses through your template to find variable declarations. 
+   8. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account and the name of the resource group where you want to create your resources. 
 4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files of your template are loaded into {{site.data.keyword.bplong_notm}}, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
 
 
@@ -314,9 +326,9 @@ Before you begin, set up your workspace in [{{site.data.keyword.bplong_notm}}](#
 
 **To provision your resources**: 
 
-1. From the workspace details page, click **Generate plan** to create a Terraform execution plan. This action equals the `terraform plan` command. After you click the button, the workspace **Activity** page is opened.  
-2. Click **View log** to review the log files of your Terraform execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your configuration files, you can review the error message in the log file. 
-3. Go back to the workspace details page and apply your Terraform template by clicking **Apply plan**. This action equals the `terraform apply` command. After you click the button, the workspace **Activity** page opens and {{site.data.keyword.bplong_notm}} starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision, this process might take a few minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. 
+1. From the workspace **Activity** page, click **Generate plan** to create a Terraform execution plan. This action equals the `terraform plan` command. 
+2. In the **Recent activity** section, click **View log** to review the log files of your Terraform execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your configuration files, you can review the error message in the log file. 
+3. Apply your Terraform template by clicking **Apply plan**. This action equals the `terraform apply` command. After you click the button, {{site.data.keyword.bplong_notm}} starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision, this process might take a few minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. 
 4. Review the log file to ensure that no errors occurred during the provisioning, modification, or deletion process. 
 5. From the menu, select **Resources** to find a summary of {{site.data.keyword.cloud_notm}} resources that are available in your {{site.data.keyword.cloud_notm}} account. Use the link to the resource dashboard to see more details about the individual resource.
 
