@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-03"
+lastupdated: "2020-01-10"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -22,6 +22,8 @@ subcollection: schematics
 {:download: .download}
 {:preview: .preview}
 {:external: target="_blank" .external}
+{:support: data-reuse='support'}
+{:help: data-hd-content-type='help'}
 
 # Creating Terraform templates
 {: #create-tf-config}
@@ -38,6 +40,8 @@ Before you start creating your Terraform template, make sure to review the [{{si
 
 ## Configuring the `provider` block 
 {: #configure-provider}
+{: help}
+{: support}
 
 Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
