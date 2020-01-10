@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-01-10"
 
 keywords: schematics, automation, terraform
 
@@ -23,6 +23,8 @@ subcollection: schematics
 {:download: .download}
 {:preview: .preview}
 {:external: target="_blank" .external}
+{:support: data-reuse='support'}
+{:help: data-hd-content-type='help'}
 
 # Managing user access
 {: #access}
@@ -39,6 +41,8 @@ The following image shows how {{site.data.keyword.cloud_notm}} account owners ca
 
 ## Overview of {{site.data.keyword.bpshort}} service access roles and required permissions
 {: #access-roles}
+{: help}
+{: support}
 
 Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) service access roles to your users. 
 {: shortdsec}
