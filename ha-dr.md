@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2019
-lastupdated: "2019-11-12"
+  years: 2019, 2020
+lastupdated: "2020-01-10"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -22,9 +22,13 @@ subcollection: schematics
 {:deprecated: .deprecated}
 {:download: .download}
 {:preview: .preview}
+{:support: data-reuse='support'}
+{:help: data-hd-content-type='help'}
 
 # High availability
 {: #high-availability}
+{: help}
+{: support}
 
 Understand the high availability features of the {{site.data.keyword.cloud_notm}} resources that you want to provision with {{site.data.keyword.bplong_notm}} and design your resources to meet the availability requirements that your business and customers need. 
 {: shortdesc}
