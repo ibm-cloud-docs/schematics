@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-12"
+  years: 2017, 2020
+lastupdated: "2020-01-10"
 
 keywords: schematics reponsibilities, schematics high availability, schematics backup, schematics disaster recovery, schematics security, schematics ibm vs user
 subcollection: schematics
@@ -22,9 +22,13 @@ subcollection: schematics
 {:download: .download}
 {:preview: .preview}
 {:external: target="_blank" .external}
+{:help: data-hd-content-type='help'}
+{:support: data-reuse='support'}
 
 # Your responsibilities by using {{site.data.keyword.bplong_notm}}
 {: #responsibilities}
+{: help}
+{: support}
 
 Learn about the responsibilities that you have when you use {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}

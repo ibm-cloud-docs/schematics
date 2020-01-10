@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-09-18"
+  years: 2017, 2020
+lastupdated: "2020-01-10"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -23,6 +23,8 @@ subcollection: schematics
 {:download: .download}
 {:preview: .preview}
 {:external: target="_blank" .external}
+{:support: data-reuse='support'}
+{:help: data-hd-content-type='help'}
 
 
 # About {{site.data.keyword.bplong_notm}}
@@ -42,6 +44,8 @@ Yes. {{site.data.keyword.bplong_notm}} provides a set of pre-defined Terraform t
 
 ## How it works
 {: #schematics-architecture}
+{: help}
+{: support}
 
 Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.data.keyword.cloud_notm}} resources. 
 {: shortdesc}
