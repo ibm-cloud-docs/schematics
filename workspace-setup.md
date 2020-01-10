@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-03"
+lastupdated: "2020-01-10"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -22,6 +22,8 @@ subcollection: schematics
 {:download: .download}
 {:preview: .preview}
 {:external: target="_blank" .external}
+{:support: data-reuse='support'}
+{:help: data-hd-content-type='help'}
 
 # Setting up workspaces
 {: #workspace-setup}
@@ -31,6 +33,8 @@ With {{site.data.keyword.bplong_notm}} workspaces, you can organize your Terrafo
 
 ## Designing your workspace and GitHub repository structure
 {: #structure-workspace}
+{: help}
+{: support}
 
 Plan out the organizational structure of your workspaces and GitHub repositories so that they match the microservice and permission structure of your organization. 
 {: shortdesc}
