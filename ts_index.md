@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-09-25"
+  years: 2017, 2020
+lastupdated: "2020-01-10"
 
 keywords: schematics help, schematics support, schematics troubleshooting, schematics errors, schematics slack
 
@@ -22,9 +22,13 @@ subcollection: schematics
 {:download: .download}
 {:preview: .preview}
 {:external: target="_blank" .external}
+{:support: data-reuse='support'}
+{:help: data-hd-content-type='help'}
 
 # Getting help and support
 {: #schematics-help}
+{: help}
+{: support}
 
 If you have problems or questions when you use {{site.data.keyword.bplong_notm}}, you can get help by joining the {{site.data.keyword.bpshort}} community in Slack, asking questions through a forum, or opening an {{site.data.keyword.cloud_notm}} support case.
 {: shortdesc}
