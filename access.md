@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-10"
+lastupdated: "2020-01-22"
 
 keywords: schematics, automation, terraform
 
@@ -32,8 +32,15 @@ subcollection: schematics
 Use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to grant permissions to {{site.data.keyword.bplong_notm}} and the {{site.data.keyword.cloud_notm}} resources that you want to provision. 
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} is designed to be used by teams that are set up by an {{site.data.keyword.cloud_notm}} account owner or an authorized account administrator. To simplify the process of assigning access to your users, consider creating an IAM access group that includes the permissions to {{site.data.keyword.bplong_notm}} and the resources that you want your users to work with. 
+
+
+
+To bundle and organize all resources that belong to a specific team, you can leverage {{site.data.keyword.cloud_notm}} resource groups.  With a resource group, you can organize multiple {{site.data.keyword.cloud_notm}} services and resources in one group.  You can assign access to all resources within a resource group by using IAM access policies. 
+
+
+be used by teams that are set up by an {{site.data.keyword.cloud_notm}} account owner or an authorized account administrator. To simplify the process of assigning access to your users, consider creating an IAM access group that includes the permissions to {{site.data.keyword.bplong_notm}} and the resources that you want your users to work with. 
 {: tip}
+
 
 The following image shows how {{site.data.keyword.cloud_notm}} account owners can set up access to {{site.data.keyword.bplong_notm}} and other {{site.data.keyword.cloud_notm}} resources. 
 
