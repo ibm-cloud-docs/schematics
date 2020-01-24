@@ -94,29 +94,10 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv).
 
-2. [Create a resource group](/docs/resources?topic=resources-rgs#create_rgs).
+2. Define your teams and [create an IAM access group](/docs/iam?topic=iam-groups#create_ag) for each team. 
 
-3. [Create an access group and assign policies to {{site.data.keyword.bplong_notm}}](/docs/iam?topic=iam-groups).
+3. [Create a resource group](/docs/resources?topic=resources-rgs#create_rgs) for each of your teams so that you can organize access to their {{site.data.keyword.cloud_notm}} services in your account and bundle them under one common view and billing process. 
 
-   1. From the menu bar, click **Manage** > **Access (IAM)** > **Access groups**.
-   2. Click **Create**. 
-   3. Enter a name, and optionally, a description for your IAM access group. 
-   4. Select the **Access policies** tab. 
-   5. Click **Assign access**.
-   6. Click **Assign access to resources**.
-   7. From the **Services** drop-down list, select **{{site.data.keyword.bpshort}}**.
-   8. In the **Assign service access role** section, select the IAM service access role that you want to assign to your IAM access group. Do not select an IAM platform role. IAM platform roles are not supported in {{site.data.keyword.bplong_notm}}. 
-   9. Click **Assign**. 
-
-4. Assign your IAM access group permissions to [work with the resource group](/docs/iam?topic=iam-groups) that you created earlier.
-   1. In the **Access policies** tab, click **Assign access** again.
-   2. Click **Assign access within a resource group**.
-   3. From the **Resource group** drop-down list, select the resource group that you created.
-   4. In **Assign access to a resource group**, select an access role.
-   5. From the **Resources** drop-down list, select **{{site.data.keyword.bpshort}}**.
-   6. In the **Assign service access role** section, select the same IAM service access role that you assigned in the previous step. 
-   7. Click **Assign**.
-   
-5. Review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} resources that you want to create, and assign the appropriate IAM access policy to your IAM access group. 
+3. [Assign access to your IAM access group](/docs/iam?topic=iam-groups#access_ag). Make sure to scope the access of your group to the resource group that you created for this team. If your team must have access to multiple resource groups, for example you want them to have **Administrator** and **Manager** permissions on all resources in resource group A, but only **Viewer** access for the resources in resource group B, you can create multiple access policies to achieve that. For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team provisions and manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy. 
 
 Next, you can [create Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config), [create a workspace](/docs/schematics?topic=schematics-workspace-setup), and start [provisioning {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) in your account.
