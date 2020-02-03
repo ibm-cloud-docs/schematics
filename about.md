@@ -60,6 +60,9 @@ Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.
 ## Service architecture and data encryption process
 {: #architecture-encryption}
 
+The following image shows the main {{site.data.keyword.bplong_notm}} components, how they interact with each other, and what type of encryption is applied to your data. 
+{: shortdesc}
+
 <img src="images/schematics_architecture.png" alt="{{site.data.keyword.bplong_notm}} architecture and data encryption process" width="800" style="width: 800px; border-style: none"/>
 
 1. A user sends a request to create an {{site.data.keyword.bplong_notm}} workspace to the {{site.data.keyword.bpshort}} API server.
