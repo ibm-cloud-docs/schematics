@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-03"
+lastupdated: "2020-02-04"
 
 keywords: schematics, automation, terraform
 
@@ -77,6 +77,7 @@ The following table shows the user permissions that are granted in {{site.data.k
 | Update workspace | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | Delete workspace | | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | Freeze and unfreeze workspace | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
+| View the `readme` of a template| ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg)|![Checkmark icon](images/checkmark.svg)|![Checkmark icon](images/checkmark.svg)| 
 | Create Terraform execution plan | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | Apply a Terraform template | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | Destroy workspace resources | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
