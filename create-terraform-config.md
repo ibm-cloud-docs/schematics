@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-10"
+lastupdated: "2020-02-06"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -105,13 +105,13 @@ To configure the `provider` block:
    
    Example for classic infrastructure resources: 
    ```
-   variable "softlayer_username" {}
-   variable "softlayer_api_key" {}
+   variable "iaas_classic_username" {}
+   variable "iaas_classic_api_key" {}
 
    provider "ibm" {
      region = "<region_name>"
-     softlayer_username = "${var.softlayer_username}"
-     softlayer_api_key  = "${var.softlayer_api_key}"
+     iaas_classic_username = "${var.iaas_classic_username}"
+     iaas_classic_api_key  = "${var.iaas_classic_api_key}"
    }
    ```
    {: codeblock}
