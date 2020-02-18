@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-07"
+lastupdated: "2020-02-18"
 
 keywords: schematics, automation, terraform
 
@@ -90,7 +90,7 @@ The following table shows the user permissions that are granted in {{site.data.k
 | View workspace | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | View workspace activities | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | View workspace logs | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| Create workspace | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
+| Create workspace | | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | Update workspace | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | Delete workspace | | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
 | Freeze and unfreeze workspace | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
