@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-03"
+lastupdated: "2020-02-21"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -145,6 +145,10 @@ To create a configuration file for your VPC resources:
    output sshcommand {
      value = "ssh root@${ibm_is_floating_ip.fip1.address}"
    }
+   
+   output vpc_id {
+    value = "${ibm_is_vpc.vpc.id}"
+   }
    ```
    {: codeblock}
    
@@ -282,6 +286,10 @@ To create a configuration file for your VPC resources:
        <td><code>output.ssh_command.value</code></td>
        <td>Build the SSH command that you need to run to connect to your VPC virtual server instance. In this example, you use the <code>ibm_is_floating_ip</code> resource to retrieve the floating IP address that is assigned to your VPC virtual server instance.  </td>
      </tr>
+     <tr>
+  <td><code>output.vpc_id.value</code></td>
+  <td>Show the ID of the VPC that you create. In this example, you use the <code>ibm_is_vpc</code> data source to retrieve this value.</td>
+  </tr>
    </tbody>
    </table>
 
