@@ -17,6 +17,7 @@ IBM Cloud Schematics
     create-terraform-config.md
     workspace-setup.md
     manage-resource-lifecycle.md
+    remotestate.md
     private-endpoint.md
     {: .navgroup-end}
 
