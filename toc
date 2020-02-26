@@ -1,8 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="schematics" category="compute" audience="compute" href="/docs/schematics?topic=schematics-getting-started" path="schematics"}
-IBM Cloud Schematics
+{: .toc subcollection="schematics" category="compute,dev_ops" audience="compute" href="/docs/schematics?topic=schematics-getting-started" path="schematics"}
+Schematics
 
     {: .navgroup id="learn"}
     getting-started.md
