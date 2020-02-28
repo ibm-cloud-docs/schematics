@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-15"
+  years: 2017, 2020
+lastupdated: "2020-02-24"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -67,6 +67,13 @@ In native Terraform, you can use output values to make information about your Te
 {: shortdesc}
 
 {{site.data.keyword.bplong_notm}} does not support the `terraform output` command and you cannot retrieve output values from the console, UI, or API. However, if you define output values in your Terraform configuration files, you can see these output values if you inspect your Terraform logs. 
+
+### Is Terraform remote state supported in {{site.data.keyword.bpshort}}?
+{: #remote-state}
+
+You can access workspace state information from other workspaces by using the {{site.data.keyword.bpshort}} `ibm_schematics_output` data source that works similar to the `remote_state` data source in native Terraform. When you use the `remote_state` Terraform data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly.
+
+For more information about how to use this data source, see [Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state). 
 
 ## Data storage and residency
 {: #limitation-data-residency}
