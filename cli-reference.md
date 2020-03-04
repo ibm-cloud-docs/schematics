@@ -235,7 +235,7 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
   "template_data": [
     {
       "folder": ".",
-      "type": "terraform-v1.0",
+      "type": "terraform_v0.11",
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -269,6 +269,10 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
    <td><code>&lt;github_source_repo_url&gt;</code></td>
      <td>Required. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
    </tr>
+     <tr>
+       <td><code>template_data.type</code></td>
+       <td>The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and <code>terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+     </tr>
     <tr>
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
@@ -318,6 +322,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
   "template_data": [
     {
       "folder": "&lt;gh_folder&gt;",
+      "type": "terraform_v11",
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -371,6 +376,10 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
    <td><code>template_repo.release</code></td>
    <td>Optional. Enter the GitHub or GitLab release that points to your Terraform configuration files.  </td>
    </tr>
+     <tr>
+       <td><code>template_data.type</code></td>
+       <td>The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and <code>terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+     </tr>
     <tr>
       <td><code>template_data.variablestore.name </br>template_data.variablestore.value</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>

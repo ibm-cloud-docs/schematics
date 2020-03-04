@@ -101,6 +101,9 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 Create your workspace that points to the GitHub repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc}
 
+All workspaces that you create with the console run your Terraform configuration files with the Terraform version 0.11. If you want to create a workspace that uses Terraform version 0.12, you must create the workspace with the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics#create-a-workspace). 
+{: note}
+
 **Before you begin**
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a GitHub or GitLab repository. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
