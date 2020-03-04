@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-04"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -142,7 +142,32 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 2. Select the **Settings** tab. 
 3. In the **State** section on the workspace settings page, set the toggle to **Unfrozen**. The ID of the user who unfreezes the workspace and a timestamp are automatically logged. After you unfreeze a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
 
-
+## Setting up a continuous delivery toolchain for your workspace
+{: #continuous-delivery}
+  
+Connect your source repository to a continuous delivery pipeline in {{site.data.keyword.cloud_notm}} to automatically generate a Terraform execution plan and run your Terraform code in {{site.data.keyword.cloud_notm}} whenever you update your Terraform configuration files. 
+{: shortdesc}
+  
+1. If you do not have a {{site.data.keyword.contdelivery_short}} service instance in your account yet, create one.
+   1. From the {{site.data.keyword.cloud_notm}} catalog, open the [{{site.data.keyword.contdelivery_short}} service](https://cloud.ibm.com/catalog/services/continuous-delivery).
+   2. Select the {{site.data.keyword.cloud_notm}} region where you want to create the service.
+   3. Select a pricing plan.
+   4. Enter a name for your service instance, select a resource group, and enter any tags that you want to associate with your service instance.
+   5. Click **Create** to create the service instance in your account.  
+2. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select a workspace. 
+3. Select the **Settings** tab. 
+4. In the **Summary** section, click **Enable continuous delivery**. 
+5. Configure your toolchain. 
+   1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
+   2. Select the type of source repository where your Terraform configuration files are stored. For example: GitHub. 
+   3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are prepopulated based on your workspace configuration.
+   4. Optional: Choose if you want to enable GitHub issues and code change tracking for your toolchain. 
+6. Select the **Delivery Pipeline** icon to configure your Delivery Pipeline. 
+   1. Verify that the workspace ID that is displayed to you is correct.
+   2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
+7. Click **Create** to finish the setup of your toolchain. You see an overview of tools that were configured for your toolchain. 
+8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
+9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. 
    
 ## Overview of workspace status
 {: #workspace-states}
