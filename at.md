@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2019
-lastupdated: "2019-09-18"
+  years: 2019, 2020
+lastupdated: "2020-03-05"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
