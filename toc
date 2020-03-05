@@ -12,7 +12,7 @@ Schematics
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
-    access.md
+    iam.md
     setup-cli.md
     create-terraform-config.md
     workspace-setup.md
