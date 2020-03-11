@@ -51,7 +51,7 @@ ibmcloud terraform help
 {: pre}
 
 </br>
-**Command options:** none
+**Command options:** none 
 
 ### `ibmcloud terraform version`
 {: #schematics-version}
