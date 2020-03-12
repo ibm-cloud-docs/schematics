@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-11"
+lastupdated: "2020-03-12"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -211,7 +211,7 @@ To create a workspace, you must specify your workspace settings in a JSON file. 
 {: note}
 
 ```
-ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
+ibmcloud terraform workspace new --file FILE_PATH [--json]
 ```
 {: pre}
  
@@ -277,8 +277,7 @@ ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--j
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
      </tr></tbody></table></dd>	
-<dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
-<dd>Optional. The relative path to an existing Terraform statefile on your local machine. To download a Terraform statefile, use the [`ibmcloud terraform state pull`](#state-pull) command. </dd>
+<dt><code>--state <em>STATE_FILE_CONTENT</em></code></dt>
 <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Print the CLI output in JSON format.</dd>	
 </dl>	
@@ -530,70 +529,6 @@ ibmcloud terraform plan --id WORKSPACE_ID [--json]
 
 ```
 ibmcloud terraform plan --id 1234 --json
-```
-{: pre}
-
-## Terraform statefile commands
-{: #statefile-cmds}
-
-Review the commands that you can use to work with the Terraform statefile (`terraform.tfstate`) for a workspace.
-{: shortdesc}
-
-You can import an existing Terraform statefile during the creation of your workspace. For more information, see the [`ibmcloud workspace new`](#schematics-workspace-new) command. 
-{: note}
-
-### `ibmcloud terraform state list`
-{: #state-list}
-
-Show the content of the Terraform statefile (`terraform.tfstate`) for a workspace.  
-{: shortdesc}	
-
-```
-ibmcloud terraform state list --id WORKSPACE_ID
-```
-{: pre}
-
-</br>
-**Command options:**
-
-<dl>	
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace for which you want to show the Terraform statefile content. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
-</dl>	
-
-**Example:**
-
-```
-ibmcloud terraform state list --id 1234
-```
-{: pre}
-
-### `ibmcloud terraform state pull`
-{: #state-pull}
-
-Download the Terraform statefile (`terraform.tfstate`) for a workspace to our local machine.  
-{: shortdesc}	
-
-```
-ibmcloud terraform state pull --id WORKSPACE_ID --template TEMPLATE_ID
-```
-{: pre}
-
-</br>
-**Command options:**
-
-<dl>	
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace for which you want to download the Terraform statefile to your local machine. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
-
-<dt><code>--template <em>TEMPLATE_ID</em></code></dt>
-<dd>Required. The unique identifier of the Terraform template that you used. </dd>
-</dl>	
-
-**Example:**
-
-```
-ibmcloud terraform state pull --id 1234 --template 9876
 ```
 {: pre}
 
