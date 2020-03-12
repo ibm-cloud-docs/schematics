@@ -104,7 +104,7 @@ ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--js
 
 **Example:**
 ```
-ibmcloud terraform workspace action --id 12345
+ibmcloud terraform workspace action --id myworkspace-a1aa1a1a-a11a-11
 ```
 {: pre}
 
@@ -138,7 +138,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 **Example:**
 
 ```
-ibmcloud terraform workspace delete --id workspace1234 
+ibmcloud terraform workspace delete --id myworkspace-a1aa1a1a-a11a-11 
 ```
 {: pre}
 
@@ -165,7 +165,7 @@ ibmcloud terraform workspace get --id WORKSPACE_ID [--json]
 **Example:**
 
 ```
-ibmcloud terraform workspace get --id 1234 --json
+ibmcloud terraform workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
 
@@ -394,7 +394,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 **Example:**
 
 ```
-ibmcloud terraform workspace update --id 1234 --file myfile.json --json
+ibmcloud terraform workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myfile.json --json
 ```
 {: pre}
 
@@ -433,7 +433,7 @@ ibmcloud terraform apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json
 **Example:**
 
 ```
-ibmcloud terraform apply --id 1234 --json --target ibm_is_instance.vm1
+ibmcloud terraform apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1
 ```
 {: pre}
 
@@ -471,7 +471,7 @@ ibmcloud terraform destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--js
 **Example:**
 
 ```
-ibmcloud terraform destroy --id 1234 --json --target ibm_is_vpc.myvpc
+ibmcloud terraform destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_vpc.myvpc
 ```
 {: pre}
 
@@ -499,7 +499,7 @@ ibmcloud terraform logs --id WORKSPACE_ID [--act-id ACTION_ID]
 **Example:**
 
 ```
-ibmcloud terraform logs --id workspace-abcd12345yt --act-id 9876543121abc1234cdst
+ibmcloud terraform logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc1234cdst
 ```
 {: pre}
 
@@ -527,7 +527,7 @@ ibmcloud terraform plan --id WORKSPACE_ID [--json]
 **Example:**
 
 ```
-ibmcloud terraform plan --id 1234 --json
+ibmcloud terraform plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
 
