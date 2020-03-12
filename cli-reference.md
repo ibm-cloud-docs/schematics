@@ -277,7 +277,6 @@ ibmcloud terraform workspace new --file FILE_PATH [--json]
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
      </tr></tbody></table></dd>	
-<dt><code>--state <em>STATE_FILE_CONTENT</em></code></dt>
 <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Print the CLI output in JSON format.</dd>	
 </dl>	
