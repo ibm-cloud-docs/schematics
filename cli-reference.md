@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-12"
+lastupdated: "2020-03-13"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -409,6 +409,9 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {
 Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, or removed in {{site.data.keyword.cloud_notm}}.   
 {: shortdesc}
 
+While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you cannot make any changes to your workspace.
+{: note}
+
 ```
 ibmcloud terraform apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
 ```
@@ -508,6 +511,9 @@ ibmcloud terraform logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc
 
 Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your configuration file.   	
 {: shortdesc}	
+
+During the creation of the Terraform execution plan, you cannot make any changes to your workspace. 
+{: note}
 
 ```
 ibmcloud terraform plan --id WORKSPACE_ID [--json]
