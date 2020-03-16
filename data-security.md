@@ -1,4 +1,4 @@
-
+ 
 
 ## How is my information encrypted?
 The following image shows the main {{site.data.keyword.bplong_notm}} components, how they interact with each other, and what type of encryption is applied to your personal information. 
