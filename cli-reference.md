@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-03-17"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -235,7 +235,7 @@ ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--j
   "template_data": [
     {
       "folder": ".",
-      "type": "&lt;terraform_version&gt;",
+      "type": "terraform-v1.0",
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -261,10 +261,6 @@ ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--j
    <td><code>&lt;workspace_name&gt;</code></td>
    <td>Required. Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). </td>
    </tr>
-     <tr>
-       <td><code>&lt;terraform_version&gt;</code></td>
-       <td>Optional. The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and <code>terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-     </tr>
    <tr>
    <td><code>&lt;workspace_description&gt;</code></td>
    <td>Optional. Enter a description for your workspace. </td>
@@ -325,7 +321,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
   "template_data": [
     {
       "folder": "&lt;gh_folder&gt;",
-      "type": "terraform_v0.12",
+      "type": "terraform-v1.0",
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -351,10 +347,6 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
    <td><code>name</code></td>
    <td>Optional. Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change. </td>
    </tr>
-     <tr>
-       <td><code>type</code> and <code>template_date.type</code></td>
-       <td>Optional. The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and <code>terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-     </tr>
    <tr>
    <td><code>description</code></td>
    <td>Optional. Enter a description for your workspace. </td>
