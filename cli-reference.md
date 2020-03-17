@@ -225,7 +225,7 @@ ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--j
 <code>{	
   "name": "&lt;workspace_name&gt;",
   "type": [
-    "&lt;terraform_version&gt;"
+    "terraform-v1.0"
   ],
   "description": "&lt;workspace_description&gt;",
   "tags": [],
@@ -306,7 +306,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 <pre class="codeblock">	
 <code>{
   "name": "&lt;workspace_name&gt;",
-  "type": "&lt;terraform_version&gt;"
+  "type": "terraform-v1.0"
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "resource_group": "&lt;resource_group&gt;",
