@@ -100,3 +100,11 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
    ```
    {: pre}
    
+
+## Overview of private service endpoints in {{site.data.keyword.bpshort}}
+{: #private-cse}
+
+The following private service endpoints are available for {{site.data.keyword.bpshort}}. 
+{: shortdesc}
+
+- `https://private-us.schematics.cloud.ibm.com`

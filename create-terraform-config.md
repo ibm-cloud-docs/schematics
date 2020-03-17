@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-03-13"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -92,7 +92,7 @@ To configure the `provider` block:
   </tbody>
   </table>
    
-2. Create a `provider.tf` file or add the following code to your Terraform configuration file. 
+2. Create a `provider.tf` file or add the following code to your Terraform configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/terraform?topic=terraform-provider-reference#provider-parameter-ov).
 
    Example for VPC infrastructure resources: 
    ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-04"
+lastupdated: "2020-03-17"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -51,7 +51,7 @@ ibmcloud terraform help
 {: pre}
 
 </br>
-**Command options:** none
+**Command options:** none 
 
 ### `ibmcloud terraform version`
 {: #schematics-version}
@@ -104,7 +104,7 @@ ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--js
 
 **Example:**
 ```
-ibmcloud terraform workspace action --id 12345
+ibmcloud terraform workspace action --id myworkspace-a1aa1a1a-a11a-11
 ```
 {: pre}
 
@@ -138,7 +138,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 **Example:**
 
 ```
-ibmcloud terraform workspace delete --id workspace1234 
+ibmcloud terraform workspace delete --id myworkspace-a1aa1a1a-a11a-11 
 ```
 {: pre}
 
@@ -165,7 +165,7 @@ ibmcloud terraform workspace get --id WORKSPACE_ID [--json]
 **Example:**
 
 ```
-ibmcloud terraform workspace get --id 1234 --json
+ibmcloud terraform workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
 
@@ -211,14 +211,14 @@ To create a workspace, you must specify your workspace settings in a JSON file. 
 {: note}
 
 ```
-ibmcloud terraform workspace new --file FILE_NAME [--json]
+ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
 ```
 {: pre}
  
 **Command options:**
 
 <dl>	
- <dt><code>--file <em>FILE_NAME</em></code>, <code>-f <em>FILE_NAME</em></code></dt>	
+ <dt><code>--file <em>FILE_PATH</em></code>, <code>-f <em>FILE_PATH</em></code></dt>	
 <dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
 <br>Example JSON:	
 <pre class="codeblock">	
@@ -272,7 +272,9 @@ ibmcloud terraform workspace new --file FILE_NAME [--json]
     <tr>
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
-     </tr></tbody></table></dd>	
+     </tr></tbody></table></dd>
+<dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
+<dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your CLI output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
 <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Print the CLI output in JSON format.</dd>	
 </dl>	
@@ -304,6 +306,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 <pre class="codeblock">	
 <code>{
   "name": "&lt;workspace_name&gt;",
+  "type": "terraform-v1.0"
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "resource_group": "&lt;resource_group&gt;",
@@ -318,6 +321,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
   "template_data": [
     {
       "folder": "&lt;gh_folder&gt;",
+      "type": "terraform-v1.0",
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -384,7 +388,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 **Example:**
 
 ```
-ibmcloud terraform workspace update --id 1234 --file myfile.json --json
+ibmcloud terraform workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myfile.json --json
 ```
 {: pre}
 
@@ -398,6 +402,9 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {
 
 Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, or removed in {{site.data.keyword.cloud_notm}}.   
 {: shortdesc}
+
+While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you cannot make any changes to your workspace.
+{: note}
 
 ```
 ibmcloud terraform apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
@@ -423,7 +430,7 @@ ibmcloud terraform apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json
 **Example:**
 
 ```
-ibmcloud terraform apply --id 1234 --json --target ibm_is_instance.vm1
+ibmcloud terraform apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1
 ```
 {: pre}
 
@@ -461,7 +468,7 @@ ibmcloud terraform destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--js
 **Example:**
 
 ```
-ibmcloud terraform destroy --id 1234 --json --target ibm_is_vpc.myvpc
+ibmcloud terraform destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_vpc.myvpc
 ```
 {: pre}
 
@@ -489,7 +496,7 @@ ibmcloud terraform logs --id WORKSPACE_ID [--act-id ACTION_ID]
 **Example:**
 
 ```
-ibmcloud terraform logs --id workspace-abcd12345yt --act-id 9876543121abc1234cdst
+ibmcloud terraform logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc1234cdst
 ```
 {: pre}
 
@@ -498,6 +505,9 @@ ibmcloud terraform logs --id workspace-abcd12345yt --act-id 9876543121abc1234cds
 
 Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your configuration file.   	
 {: shortdesc}	
+
+During the creation of the Terraform execution plan, you cannot make any changes to your workspace. 
+{: note}
 
 ```
 ibmcloud terraform plan --id WORKSPACE_ID [--json]
@@ -517,7 +527,74 @@ ibmcloud terraform plan --id WORKSPACE_ID [--json]
 **Example:**
 
 ```
-ibmcloud terraform plan --id 1234 --json
+ibmcloud terraform plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
+
+## Terraform statefile commands
+{: #statefile-cmds}
+
+Review the commands that you can use to work with the Terraform statefile (`terraform.tfstate`) for a workspace.
+{: shortdesc}
+
+You can import an existing Terraform statefile during the creation of your workspace. For more information, see the [`ibmcloud workspace new`](#schematics-workspace-new) command. 
+{: note}
+
+### `ibmcloud terraform state list`
+{: #state-list}
+
+List the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform statefile (`terraform.tfstate`).  
+{: shortdesc}	
+
+```
+ibmcloud terraform state list --id WORKSPACE_ID
+```
+{: pre}
+
+</br>
+**Command options:**
+
+<dl>	
+<dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+</dl>	
+
+**Example:**
+
+```
+ibmcloud terraform state list --id myworkspace-a1aa1a1a-a11a-11  
+```
+{: pre}
+
+### `ibmcloud terraform state pull`
+{: #state-pull}
+
+Show the content of the Terraform statefile (`terraform.tfstate`) for a specific Terraform template in your workspace.  
+{: shortdesc}	
+
+```
+ibmcloud terraform state pull --id WORKSPACE_ID --template TEMPLATE_ID
+```
+{: pre}
+
+</br>
+**Command options:**
+
+<dl>	
+<dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace that stores the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+
+<dt><code>--template <em>TEMPLATE_ID</em></code></dt>
+<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud terraform workspace get --id &ltworkspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
+</dl>	
+
+**Example:**
+
+```
+ibmcloud terraform state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
+```
+{: pre}
+
+
+
 

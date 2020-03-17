@@ -12,7 +12,7 @@ Schematics
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
-    access.md
+    iam.md
     setup-cli.md
     create-terraform-config.md
     workspace-setup.md
@@ -24,7 +24,7 @@ Schematics
     {: .navgroup id="reference"}
     [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
     [IBM Cloud provider for Terraform](https://ibm-cloud.github.io/tf-ibm-docs/)
-    at-events.md
+    at.md
     cli-reference.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     [Terraform documentation](https://www.terraform.io/docs/index.html)
