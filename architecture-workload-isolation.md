@@ -58,7 +58,7 @@ Review how your workloads are isolated in {{site.data.keyword.bplong_notm}}.
 ### How are my API requests to the service isolated from other API requests? 
 All API requests to the {{site.data.keyword.bpshort}} API server are queued in Messages for RabbitMQ. RabbitMQ forwards these requests to the {{site.data.keyword.bpshort}} engine that processes these requests. At any given time, a maximum of n API requests are processed by the Schematics engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload. For every API request from a {{site.data.keyword.bpshort}} tenant, the {{site.data.keyword.bpshort}} engine creates a dedicated job that runs to completion and that is then removed when the API request is fully processed. The {{site.data.keyword.bpshort}} jobs are not shared between tenants or reused later.
 
-### How is my information in Cloudant and {{site.data.keyword.cos_full_notm}} isolated from other tenant data? </br>
+### How is my information in Cloudant and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?
 {{site.data.keyword.bpshort}} does not store any personal information, but stores sensitive technical information for a workspace as described in [What information is stored in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#pi-data). All data that is stored in Cloudant and IBM Cloud Object Storage is encrypted in transit and at rest by using the encryption mechanism that are described in the [service architecture](#architecture). 
 
 ### How are my workloads isolated from other tenants? 
