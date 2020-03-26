@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-24"
+lastupdated: "2020-03-26"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -50,11 +50,11 @@ Similar to the `remote_state` data source, you can only access information that 
    ```
    ...
    output sshcommand {
-     value = "ssh root@${ibm_is_floating_ip.fip1.address}"
+     value = "ssh root@ibm_is_floating_ip.fip1.address"
    }
    
    output vpc_id {
-    value = "${ibm_is_vpc.vpc.id}"
+    value = ibm_is_vpc.vpc.id
    }
    ```
    {: screen}
@@ -80,19 +80,19 @@ Similar to the `remote_state` data source, you can only access information that 
    ```
    data "ibm_schematics_output" "vpc" {
      workspace_id = "<schematics_workspace_ID>"
-     template_id  = "${data.ibm_schematics_workspace.vpc.template_id.0}"
+     template_id  = data.ibm_schematics_workspace.vpc.template_id.0
    }
 
    output "output_vars" {
-     value = "${data.ibm_schematics_output.vpc.output_values}"
+     value = data.ibm_schematics_output.vpc.output_values
    }
 
    output "ssh_command" {
-     value = "${data.ibm_schematics_output.vpc.output_values.sshcommand}"
+     value = data.ibm_schematics_output.vpc.output_values.sshcommand
    }
 
    output "vpc_id" {
-     value = "${data.ibm_schematics_output.vpc.output_values.vpc_id}"
+     value = data.ibm_schematics_output.vpc.output_values.vpc_id
    }
    ```
    {: codeblock}
@@ -109,7 +109,7 @@ Similar to the `remote_state` data source, you can only access information that 
      </tr>
      <tr>
        <td><code>data.ibm_schematics_output.template_id</code></td>
-       <td>Enter <code>"${data.ibm_schematics_workspace.vpc.template_id.0}"</code> to reference the Terraform template of your workspace.</td>
+       <td>Enter <code>data.ibm_schematics_workspace.vpc.template_id.0</code> to reference the Terraform template of your workspace.</td>
      </tr>
      <tr>
        <td><code>output.output_vars.value</code></td>
@@ -117,7 +117,7 @@ Similar to the `remote_state` data source, you can only access information that 
      </tr>
      <tr>
        <td><code>output.sshcomand.value</code> and <code>output.vpc_id.value</code></td>
-       <td>You can access a specific value in the <code>output_values</code> list by adding the ID of the output value to your <code>ibm_schematics_output</code> data source. For example, to access the <code>vpc_id</code>, simply use <code>${data.ibm_schematics_output.vpc.output_values.vpc_id}</code>. </td>
+       <td>You can access a specific value in the <code>output_values</code> list by adding the ID of the output value to your <code>ibm_schematics_output</code> data source. For example, to access the <code>vpc_id</code>, simply use <code>data.ibm_schematics_output.vpc.output_values.vpc_id</code>. </td>
      </tr>
   </tbody>
   </table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-13"
+lastupdated: "2020-03-26"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -135,15 +135,15 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
    ...
    #resource ibm_is_instance "vsi1" {
    #  name    = "${local.BASENAME}-vsi2"
-   #  vpc     = "${ibm_is_vpc.vpc.id}"
+   #  vpc     = ibm_is_vpc.vpc.id
    #  zone    = "${local.ZONE}"
-   #  keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
-   #  image   = "${data.ibm_is_image.ubuntu.id}"
+   #  keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
+   #  image   = data.ibm_is_image.ubuntu.id
    #  profile = "cc1-2x4"
 
-   #  primary_network_interface = {
-   #    subnet          = "${ibm_is_subnet.subnet1.id}"
-   #    security_groups = ["${ibm_is_security_group.sg1.id}"]
+   #  primary_network_interface {
+   #    subnet          = ibm_is_subnet.subnet1.id
+   #    security_groups = [ibm_is_security_group.sg1.id]
    #  }
    #}
    ```
