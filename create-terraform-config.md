@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-13"
+lastupdated: "2020-03-26"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -110,8 +110,8 @@ To configure the `provider` block:
 
    provider "ibm" {
      region = "<region_name>"
-     iaas_classic_username = "${var.iaas_classic_username}"
-     iaas_classic_api_key  = "${var.iaas_classic_api_key}"
+     iaas_classic_username = var.iaas_classic_username
+     iaas_classic_api_key  = var.iaas_classic_api_key
    }
    ```
    {: codeblock}
@@ -128,7 +128,7 @@ To configure the `provider` block:
    variable "ibmcloud_api_key" {}
    
    provider "ibm" {
-     ibmcloud_api_key = "${var.ibmcloud_api_key}"
+     ibmcloud_api_key = var.ibmcloud_api_key
      region = "<region_name>"
    }
    ```
@@ -178,7 +178,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
   resource ibm_is_security_group "sg1" {
     name = "mysecuritygroup"
-    vpc  = "${ibm_is_vpc.vpc.id}"
+    vpc  = ibm_is_vpc.vpc.id
   }
   ```
   {: codeblock}
@@ -193,15 +193,15 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
   
   resource ibm_is_instance "vsi1" {
     name    = "$mysi"
-    vpc     = "${ibm_is_vpc.vpc.id}"
+    vpc     = ibm_is_vpc.vpc.id
     zone    = "us-south1"
-    keys    = ["${data.ibm_is_ssh_key.ssh_key_id.id}"]
-    image   = "${data.ibm_is_image.ubuntu.id}"
+    keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
+    image   = data.ibm_is_image.ubuntu.id
     profile = "cc1-2x4"
 
-    primary_network_interface = {
-      subnet          = "${ibm_is_subnet.subnet1.id}"
-      security_groups = ["${ibm_is_security_group.sg1.id}"]
+    primary_network_interface {
+      subnet          = ibm_is_subnet.subnet1.id
+      security_groups = [ibm_is_security_group.sg1.id]
     }
   }
   ```
@@ -256,7 +256,7 @@ Example for referencing a `datacenter` variable:
 ```
 resource ibm_container_cluster "test_cluster" {
   name         = "test"
-  datacenter   = "${var.datacenter}"
+  datacenter   = var.datacenter
 }
 ```
 {: codeblock}
