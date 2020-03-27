@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-03-27"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -33,34 +33,37 @@ Refer to these commands when you want to automate the provisioning of {{site.dat
 To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli). 	
 {: tip}
 
+As of 27 March 2020, the {{site.data.keyword.bpshort}} command syntax changed from `ibmcloud terraform` to `ibmcloud schematics`. You can continue to use `ibmcloud terraform` commands, but note that these commands might become unsupported in future CLI versions. 
+{: important}
+
 ## General commands
 {: #schematics-general-commands}
 
 Use these general commands to find help and version information for the {{site.data.keyword.bplong_notm}} CLI plug-in. 
 {: shortdesc}
 
-### `ibmcloud terraform help`
+### `ibmcloud schematics help`
 {: #schematics-help-cmd}
 
 View the supported {{site.data.keyword.bplong_notm}} CLI commands. 
 {: shortdesc}
 
 ```
-ibmcloud terraform help
+ibmcloud schematics help
 ```
 {: pre}
 
 </br>
 **Command options:** none 
 
-### `ibmcloud terraform version`
+### `ibmcloud schematics version`
 {: #schematics-version}
 
 List the version of the Terraform CLI and {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform that the {{site.data.keyword.bpshort}} CLI uses. 
 {: shortdesc}
 
 ```
-ibmcloud terraform version
+ibmcloud schematics version
 ```
 {: pre}
 
@@ -73,16 +76,16 @@ ibmcloud terraform version
 Review the commands that you can use to set up and work with your {{site.data.keyword.bplong_notm}} workspace. 
 {: shortdesc}
 
-### `ibmcloud terraform workspace action`
+### `ibmcloud schematics workspace action`
 {: #schematics-workspace-action}
 
 Retrieve all activities for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
 {: shortdesc}
 
-When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud terraform logs`](#schematics-logs) command.  
+When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud schematics logs`](#schematics-logs) command.  
 
 ```
-ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--json]
+ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--json]
 ```
 {: pre}
 
@@ -91,7 +94,7 @@ ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--js
 
 <dl>
 <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to retrieve workspace activities. To find the ID of your workspace, run <code>ibmcloud terraform workspace list</code>.
+<dd>Required. The unique identifier of the workspace for which you want to retrieve workspace activities. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
    </dd>
 
 <dt><code>--act-id <em>ACTION_ID</em></code></dt>
@@ -104,11 +107,11 @@ ibmcloud terraform workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--js
 
 **Example:**
 ```
-ibmcloud terraform workspace action --id myworkspace-a1aa1a1a-a11a-11
+ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 ```
 {: pre}
 
-### `ibmcloud terraform workspace delete`
+### `ibmcloud schematics workspace delete`
 {: #schematics-workspace-delete}
 
 Delete a workspace from your {{site.data.keyword.cloud_notm}} account. 
@@ -118,7 +121,7 @@ The deletion of your workspace does not remove any {{site.data.keyword.cloud_not
 {: important}
 
 ```
-ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
+ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
 ```
 {: pre}
 
@@ -127,7 +130,7 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 
 <dl>
 <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace that you want to remove. To find the ID of your workspace, run <code>ibmcloud terraform workspace list</code>.
+<dd>Required. The unique identifier of the workspace that you want to remove. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
    </dd>
 
 <dt><code>--force</code>, <code>-f</code></dt>
@@ -138,18 +141,18 @@ ibmcloud terraform workspace delete --id WORKSPACE_ID [--force]
 **Example:**
 
 ```
-ibmcloud terraform workspace delete --id myworkspace-a1aa1a1a-a11a-11 
+ibmcloud schematics workspace delete --id myworkspace-a1aa1a1a-a11a-11 
 ```
 {: pre}
 
-### `ibmcloud terraform workspace get`	
+### `ibmcloud schematics workspace get`	
 {: #schematics-workspace-get}	
 
 Retrieve the details of an existing workspace, including the values of all input variables.	
 {: shortdesc}	
 
 ```
-ibmcloud terraform workspace get --id WORKSPACE_ID [--json]
+ibmcloud schematics workspace get --id WORKSPACE_ID [--json]
 ```
 {: pre}
 
@@ -157,7 +160,7 @@ ibmcloud terraform workspace get --id WORKSPACE_ID [--json]
  
 <dl>	
 <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace, for which you want to retrieve the details. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace, for which you want to retrieve the details. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
 <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Return the CLI output in JSON format.</dd>	
 </dl>	
@@ -165,17 +168,17 @@ ibmcloud terraform workspace get --id WORKSPACE_ID [--json]
 **Example:**
 
 ```
-ibmcloud terraform workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
+ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
 
-### `ibmcloud terraform workspace list`	
+### `ibmcloud schematics workspace list`	
 {: #schematics-workspace-list}	
 
 List the workspaces in your {{site.data.keyword.cloud_notm}} account and optionally, show the details for your workspace.	
 
 ```
-ibmcloudd terraform workspace list [--limit LIMIT] [--offset OFFSET] [--json]
+ibmcloudd schematics workspace list [--limit LIMIT] [--offset OFFSET] [--json]
 ```
 {: pre}
 
@@ -197,11 +200,11 @@ ibmcloudd terraform workspace list [--limit LIMIT] [--offset OFFSET] [--json]
 **Example:** 
 
 ```
-ibmcloud terraform workspace list --json
+ibmcloud schematics workspace list --json
 ```
 {: pre}
 
-### `ibmcloud terraform workspace new`	
+### `ibmcloud schematics workspace new`	
 {: #schematics-workspace-new}	
 
 Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub.  
@@ -211,7 +214,7 @@ To create a workspace, you must specify your workspace settings in a JSON file. 
 {: note}
 
 ```
-ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
+ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
 ```
 {: pre}
  
@@ -286,18 +289,18 @@ ibmcloud terraform workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--j
 **Example:**
 
 ```
-ibmcloud terraform workspace new --file myfile.json
+ibmcloud schematics workspace new --file myfile.json
 ```
 {: pre}
 
-### `ibmcloud terraform workspace update`	
+### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
 
-Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud terraform plan`](#schematics-plan) command.	
+Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.	
 {: shortdesc}	
 
 ```
-ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
+ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 ```
 {: pre}
 
@@ -388,7 +391,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
      </tr></tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
   <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Return the CLI output in JSON format.</dd>	
 </dl>	
@@ -396,7 +399,7 @@ ibmcloud terraform workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 **Example:**
 
 ```
-ibmcloud terraform workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myfile.json --json
+ibmcloud schematics workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myfile.json --json
 ```
 {: pre}
 
@@ -405,7 +408,7 @@ ibmcloud terraform workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myf
 
 Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bplong_notm}}.
 
-### `ibmcloud terraform apply`	
+### `ibmcloud schematics apply`	
 {: #schematics-apply}	
 
 Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, or removed in {{site.data.keyword.cloud_notm}}.   
@@ -415,7 +418,7 @@ While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you ca
 {: note}
 
 ```
-ibmcloud terraform apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
+ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
 ```
 {: pre}
 
@@ -424,7 +427,7 @@ ibmcloud terraform apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json
 
 <dl>	
  <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--force</code>, <code>-f</code></dt>	
 <dd>Optional. Force the execution of this command without user prompts. </dd>	
  <dt><code>--json</code>, <code>-j</code></dt>	
@@ -438,12 +441,12 @@ ibmcloud terraform apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json
 **Example:**
 
 ```
-ibmcloud terraform apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1
+ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1
 ```
 {: pre}
 
 
-### `ibmcloud terraform destroy`	
+### `ibmcloud schematics destroy`	
 {: #schematics-destroy}	
 
 Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with your {{site.data.keyword.bpshort}} workspace, even if these resources are active. 
@@ -453,7 +456,7 @@ Use this command with caution. After you run the command, you cannot reverse the
 {: important} 	
 
 ```
-ibmcloud terraform destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
+ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
 ```
 {: pre}
 
@@ -462,7 +465,7 @@ ibmcloud terraform destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--js
 
 <dl>	
  <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--force</code>, <code>-f</code></dt>	
 <dd>Optional. Force the execution of this command without user prompts. </dd>	
  <dt><code>--json</code>, <code>-j</code></dt>	
@@ -476,18 +479,18 @@ ibmcloud terraform destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--js
 **Example:**
 
 ```
-ibmcloud terraform destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_vpc.myvpc
+ibmcloud schematics destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_vpc.myvpc
 ```
 {: pre}
 
-### `ibmcloud terraform logs`	
+### `ibmcloud schematics logs`	
 {: #schematics-logs}	
 
 Retrieve the Terraform log files for a {{site.data.keyword.bpshort}} workspace or a specific action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
 {: shortdesc}	
 
 ```
-ibmcloud terraform logs --id WORKSPACE_ID [--act-id ACTION_ID]
+ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
 ```
 {: pre}
 
@@ -496,19 +499,19 @@ ibmcloud terraform logs --id WORKSPACE_ID [--act-id ACTION_ID]
 
 <dl>	
 <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace for which you want to retrieve Terraform log files. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace for which you want to retrieve Terraform log files. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--act-id ACTION_ID</code></dt>	
-<dd>Optional. The ID of an action for which you want to retrieve Terraform logs. To find a list of action IDs, run <code>ibmcloud terraform workspace action --id WORKSPACE_ID</code>.</dd>	
+<dd>Optional. The ID of an action for which you want to retrieve Terraform logs. To find a list of action IDs, run <code>ibmcloud schematics workspace action --id WORKSPACE_ID</code>.</dd>	
 </dl>	
 
 **Example:**
 
 ```
-ibmcloud terraform logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc1234cdst
+ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc1234cdst
 ```
 {: pre}
 
-### `ibmcloud terraform plan`	
+### `ibmcloud schematics plan`	
 {: #schematics-plan}	
 
 Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your configuration file.   	
@@ -518,7 +521,7 @@ During the creation of the Terraform execution plan, you cannot make any changes
 {: note}
 
 ```
-ibmcloud terraform plan --id WORKSPACE_ID [--json]
+ibmcloud schematics plan --id WORKSPACE_ID [--json]
 ```
 {: pre}
 
@@ -527,7 +530,7 @@ ibmcloud terraform plan --id WORKSPACE_ID [--json]
 
 <dl>	
 <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source repository that you want to scan. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that points to the Terraform template in your source repository that you want to scan. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Return the CLI output in JSON format.</dd>	
 </dl>	
@@ -535,7 +538,7 @@ ibmcloud terraform plan --id WORKSPACE_ID [--json]
 **Example:**
 
 ```
-ibmcloud terraform plan --id myworkspace-a1aa1a1a-a11a-11 --json
+ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
 
@@ -555,7 +558,7 @@ List the {{site.data.keyword.cloud_notm}} resources that are documented in your 
 {: shortdesc}	
 
 ```
-ibmcloud terraform state list --id WORKSPACE_ID
+ibmcloud schematics state list --id WORKSPACE_ID
 ```
 {: pre}
 
@@ -564,24 +567,24 @@ ibmcloud terraform state list --id WORKSPACE_ID
 
 <dl>	
 <dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
 </dl>	
 
 **Example:**
 
 ```
-ibmcloud terraform state list --id myworkspace-a1aa1a1a-a11a-11  
+ibmcloud schematics state list --id myworkspace-a1aa1a1a-a11a-11  
 ```
 {: pre}
 
-### `ibmcloud terraform state pull`
+### `ibmcloud schematics state pull`
 {: #state-pull}
 
 Show the content of the Terraform statefile (`terraform.tfstate`) for a specific Terraform template in your workspace.  
 {: shortdesc}	
 
 ```
-ibmcloud terraform state pull --id WORKSPACE_ID --template TEMPLATE_ID
+ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 ```
 {: pre}
 
@@ -590,16 +593,16 @@ ibmcloud terraform state pull --id WORKSPACE_ID --template TEMPLATE_ID
 
 <dl>	
 <dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that stores the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud terraform workspace list</code>.</dd>	
+<dd>Required. The unique identifier of the workspace that stores the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
 
 <dt><code>--template <em>TEMPLATE_ID</em></code></dt>
-<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud terraform workspace get --id &ltworkspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
+<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &ltworkspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
 </dl>	
 
 **Example:**
 
 ```
-ibmcloud terraform state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
+ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
 ```
 {: pre}
 
