@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-27"
+lastupdated: "2020-03-31"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -33,7 +33,7 @@ Refer to these commands when you want to automate the provisioning of {{site.dat
 To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli). 	
 {: tip}
 
-As of 27 March 2020, the {{site.data.keyword.bpshort}} command syntax changed from `ibmcloud terraform` to `ibmcloud schematics`. You can continue to use `ibmcloud terraform` commands, but note that these commands might become unsupported in future CLI versions. 
+As of 31 March 2020, the {{site.data.keyword.bpshort}} command syntax changed from `ibmcloud terraform` to `ibmcloud schematics`. You can continue to use `ibmcloud terraform` commands as an alias, but note that this alias might become unsupported in future CLI versions. 
 {: important}
 
 ## General commands
