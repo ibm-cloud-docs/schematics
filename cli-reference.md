@@ -418,7 +418,7 @@ While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you ca
 {: note}
 
 ```
-ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
+ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--var-file TFVARS_FILE_PATH] [--force] [--json]
 ```
 {: pre}
 
@@ -433,15 +433,18 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--force] [--jso
  <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Return the CLI output in JSON format.</dd>	
   
-<dt><code>--target <em>RESOURCE</em></code></dt>
+<dt><code>--target <em>RESOURCE</em></code>, <code>-t <em>RESOURCE</em></code></dt>
 <dd>Optional. Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources that are defined in your configuration file remain uncreated or unupdated. To target the creation of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for creation. For more information about how to use the Terraform target feature, see [Resource targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting). </dd>
+
+<dt><code>--var-file <em>TFVARS_FILE_PATH</em></code>, <code>--vf <em>TFVARS_FILE_PATH</em></code></dt>
+<dd>Optional. The file path to the <code>terraform.tfvars</code> file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format <code>&lt;key&gt;=&lt;value&gt;</code>. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple <code>tfvars</code> files, specify <code>--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2</code>.</dd>
 
 </dl>	
 
 **Example:**
 
 ```
-ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1
+ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1 --var-file ./terraform.tfvars
 ```
 {: pre}
 
