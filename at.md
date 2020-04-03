@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-03-06"
+lastupdated: "2020-03-31"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -41,6 +41,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | Action             | Description      | 
 |:-------------------|:-----------------|
 | `schematics.workspace.create` | A {{site.data.keyword.bpshort}} workspace is created or failed to create. | 
+| `schematics.workspace.read`| A {{site.data.keyword.bpshort}} workspace is viewed by a user.|
 | `schematics.workspace.update`| A {{site.data.keyword.bpshort}} workspace updated successfully or failed to update.|
 | `schematics.workspace.delete` | A {{site.data.keyword.bpshort}} workspace was deleted or failed to delete. | 
 | `schematics.workspace.plan` | A Terraform execution plan was created for a workspace. | 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-31"
 
 keywords: schematics, automation, terraform
 
@@ -46,7 +46,7 @@ The following information is stored with IBM when you create and use a {{site.da
 ## Where is my information stored?
 {: #pi-location}
 
-By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one region and replicated to another region in the same geography. Make sure that your data can reside in these regions before you start using {{site.data.keyword.bpshort}}. 
+By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one region and replicated to another region in the same geography. Make sure that your data can be stored in these regions before you start using {{site.data.keyword.bpshort}}. 
 
 |Data is stored in|Data is replicated to|
 |------|--------|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-31"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -56,9 +56,9 @@ Review how your workloads are isolated in {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
 
 ### How are my API requests to the service isolated from other API requests? 
-All API requests to the {{site.data.keyword.bpshort}} API server are queued in Messages for RabbitMQ. RabbitMQ forwards these requests to the {{site.data.keyword.bpshort}} engine that processes these requests. At any given time, a maximum of n API requests are processed by the Schematics engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload. For every API request from a {{site.data.keyword.bpshort}} tenant, the {{site.data.keyword.bpshort}} engine creates a dedicated job that runs to completion and that is then removed when the API request is fully processed. The {{site.data.keyword.bpshort}} jobs are not shared between tenants or reused later.
+All API requests to the {{site.data.keyword.bpshort}} API server are queued in Messages for RabbitMQ. RabbitMQ forwards these requests to the {{site.data.keyword.bpshort}} engine that processes these requests. At any given time, a maximum of n API requests are processed by the Schematics engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload. For every API request from a {{site.data.keyword.bpshort}} tenant, the {{site.data.keyword.bpshort}} engine creates a dedicated job that runs to completion and is then removed when the API request is fully processed. The {{site.data.keyword.bpshort}} jobs are not shared between tenants or reused later.
 
-### How is my information in Cloudant and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?
+### How is my information in {{site.data.keyword.cloudant}} and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?
 {{site.data.keyword.bpshort}} does not store any personal information, but stores sensitive technical information for a workspace as described in [What information is stored in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#pi-data). All data that is stored in Cloudant and IBM Cloud Object Storage is encrypted in transit and at rest by using the encryption mechanism that are described in the [service architecture](#architecture). 
 
 ### How are my workloads isolated from other tenants? 
@@ -82,8 +82,8 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |Identity and Access Management (IAM)| To authenticate requests to the service and authorize user actions, {{site.data.keyword.bpshort}} implements service access roles in Identity and Access Management (IAM). For more information about required IAM permissions to work with the service, see [Managing user access](/docs/schematics?topic=schematics-access).|Public|
 |Internet Services (CIS)|This service is used to provide the global load balancer and firewall for {{site.data.keyword.bplong_notm}}|Public|
 |Key Protect|{{site.data.keyword.bpshort}} uses root keys in Key Protect to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit.|Private|
-|Kubernetes Service|The {{site.data.keyword.bplong_notm}} service control plane runs in a {{site.data.keyword.containerlong_notm}} cluster and leverages the built-in security, high availability, and self-healing capabilities of the service. If a {{site.data.keyword.bplong_notm}} user creates a workspace or provisions {{site.data.keyword.cloud_notm}} resources, these resources are provisioned into the user account outside the {{site.data.keyword.bpshort}} cluster.|Public|
+|Kubernetes Service|The {{site.data.keyword.bplong_notm}} service control plane runs in an {{site.data.keyword.containerlong_notm}} cluster and leverages the built-in security, high availability, and self-healing capabilities of the service. If an {{site.data.keyword.bplong_notm}} user creates a workspace or provisions {{site.data.keyword.cloud_notm}} resources, these resources are provisioned into the user account outside the {{site.data.keyword.bpshort}} cluster.|Public|
 |{{site.data.keyword.loganalysisshort}} with LogDNA|{{site.data.keyword.bpshort}} sends service logs to {{site.data.keyword.loganalysisfull_notm}}. These logs are monitored and analyzed by the {{site.data.keyword.bpshort}} service team to detect service issues and malicious activities.|Private|
 |Messages for RabbitMQ|RabbitMQ is used to queue incoming API requests, and to process these requests asynchronously.|Private|
 |{{site.data.keyword.mon_short}}|{{site.data.keyword.bpshort}} sends service metrics to {{site.data.keyword.mon_full_notm}}. These metrics are monitored by the {{site.data.keyword.bpshort}} service team to identify capacity and performance issues.|Private|
-|Object Storage (COS)|This service is used to store workspace transactional data, such as the Terraform state file, logs, and user provided data. All data is encrypted by using [Server-Side Encryption with Key Protect](/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp) in transit and at rest.|Private|
+|Object Storage (COS)|This service is used to store workspace transactional data, such as the Terraform state file, logs, and user-provided data. All data is encrypted by using [Server-Side Encryption with Key Protect](/docs/services/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp) in transit and at rest.|Private|
