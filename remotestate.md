@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-07"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -78,6 +78,10 @@ Similar to the `remote_state` data source, you can only access information that 
    
 3. Create another Terraform configuration file that is named `remotestate.tf` to access the output parameters of the `vpc.tf` file by using the `ibm_schematics_output` data source. Make sure to store this configuration file in a GitHub or GitLab repository.
    ```
+   data "ibm_schematics_workspace" "vpc" {
+     workspace_id = "<schematics_workspace_ID>"
+   }
+   
    data "ibm_schematics_output" "vpc" {
      workspace_id = "<schematics_workspace_ID>"
      template_id  = data.ibm_schematics_workspace.vpc.template_id.0
@@ -103,6 +107,10 @@ Similar to the `remote_state` data source, you can only access information that 
    <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the configuration file components</th>
    </thead>
    <tbody>
+     <tr>
+       <td><code>data.ibm_schematics_workspace.workspace_id</code></td>
+       <td>Enter the ID of the VPC workspace where you defined the output values that you want to access. You need this data source to retrieve the template ID of the workspace in the <code>ibm_schematics_output</code> data source. </td>
+     </tr>
      <tr>
        <td><code>data.ibm_schematics_output.workspace_id</code></td>
        <td>Enter the ID of the VPC workspace where you defined the output values that you want to access.</td>
