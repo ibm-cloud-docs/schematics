@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-04-20"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -274,7 +274,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
    </tr>
    <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
-     <td>Required. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
+     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. </td>
    </tr>
     <tr>
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
@@ -389,7 +389,11 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
     <tr>
       <td><code>template_data.variablestore.name </br>template_data.variablestore.value</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
-     </tr></tbody></table></dd>	
+     </tr>
+     <tr>
+   <td><code>&lt;github_source_repo_url&gt;</code></td>
+     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
+   </tr></tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
   <dt><code>--json</code>, <code>-j</code></dt>	
@@ -413,6 +417,9 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {
 
 Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, or removed in {{site.data.keyword.cloud_notm}}.   
 {: shortdesc}
+
+Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} apply action. 
+{: note}
 
 While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you cannot make any changes to your workspace.
 {: note}
@@ -457,6 +464,9 @@ Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with 
 
 Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you used persistent storage, make sure that you created a backup for your data
 {: important} 	
+
+Your workspace must be in an **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} destroy action. 
+{: note}
 
 ```
 ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--json]
@@ -519,6 +529,9 @@ ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121ab
 
 Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your configuration file.   	
 {: shortdesc}	
+
+Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} plan action. 
+{: note}
 
 During the creation of the Terraform execution plan, you cannot make any changes to your workspace. 
 {: note}
