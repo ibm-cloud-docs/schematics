@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-20"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -306,23 +306,24 @@ Create a workspace in {{site.data.keyword.bplong_notm}} that points to the GitHu
 - Make sure that you are [assigned the correct permissions](/docs/schematics?topic=schematics-access) in {{site.data.keyword.cloud_notm}} Identity and Access Management to create the workspace and deploy resources. 
 
 **To create a workspace**: 
-1. From the {{site.data.keyword.cloud_notm}} menu, select [**{{site.data.keyword.bpshort}}** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/overview). 
+1. From the {{site.data.keyword.cloud_notm}} menu, select [**{{site.data.keyword.bpshort}}**](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Enter a descriptive name for your workspace. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
-   2. Optional: Enter tags for your workspace. You can use the tags later to find your workspaces more easily. 
+   1. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
+   2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other.
    3. Select the resource group where you want to create the workspace.
    4. Optional: Enter a description for your workspace.
-   5. Enter the link to your GitHub repository. The link can point to the `master` branch, other branches, or subdirectories.
-      - Example for `master` branch: https://github.com/myorg/myrepo
-      - Example for other branches: https://github.com/myorg/myrepo/tree/mybranch
-      - Example for subdirectory: https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
-   
-   6. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line ![External link icon](../icons/launch-glyph.svg "External link icon")](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line). 
-   7. Click **Retrieve input variables**. {{site.data.keyword.bplong_notm}} automatically parses through your template to find variable declarations. 
-   8. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account and the name of the resource group where you want to create your resources. 
-4. Click **Create** to create your workspace. When you create the workspace, all Terraform configuration files of your template are loaded into {{site.data.keyword.bplong_notm}}, but your resources are not yet deployed to {{site.data.keyword.cloud_notm}}. 
-
+4. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
+5. Connect your workspace to the GitHub or GitLab source repository where your Terraform configuration files are stored.
+   1. On the workspace **Settings** page, enter the link to your GitHub or GitLab repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
+      - Example for `master` branch: `https://github.com/myorg/myrepo`
+      - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
+      - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
+   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
+   3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
+   4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
+   5. In the **Input variables** section, enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account and the name of the resource group where you want to create your resources. 
+   6. Click **Save changes**. 
 
 ## Provision your {{site.data.keyword.cloud_notm}} resources
 {: #provision-resources}
@@ -334,8 +335,8 @@ Before you begin, set up your workspace in [{{site.data.keyword.bplong_notm}}](#
 
 **To provision your resources**: 
 
-1. From the workspace **Activity** page, click **Generate plan** to create a Terraform execution plan. This action equals the `terraform plan` command. 
-2. In the **Recent activity** section, click **View log** to review the log files of your Terraform execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your configuration files, you can review the error message in the log file. 
+1. From the workspace **Settings** page, click **Generate plan** to create a Terraform execution plan. This action equals the `terraform plan` command. The **Activity** page opens.
+2. Click **View log** to review the log files of your Terraform execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your configuration files, you can review the error message in the log file. 
 3. Apply your Terraform template by clicking **Apply plan**. This action equals the `terraform apply` command. After you click the button, {{site.data.keyword.bplong_notm}} starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision, this process might take a few minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. 
 4. Review the log file to ensure that no errors occurred during the provisioning, modification, or deletion process. 
 5. From the menu, select **Resources** to find a summary of {{site.data.keyword.cloud_notm}} resources that are available in your {{site.data.keyword.cloud_notm}} account. Use the link to the resource dashboard to see more details about the individual resource.
