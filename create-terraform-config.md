@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-20"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -61,36 +61,7 @@ To configure the `provider` block:
    - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory. This approach is useful if you split out your infrastructure code across multiple files. 
    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
-2. Review what credentials and information you must provide in the `provider` block to work with your resources. 
-   
-   <table>
-   <thead>
-     <th>Resource</th>
-     <th>Required input parameters</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>VPC infrastructure resources</td>
-      <td><ul><li>Generation of {{site.data.keyword.cloud_notm}} VPC infrastructure</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
-    </tr>
-    <tr>
-      <td>Classic infrastructure resources</td>
-      <td><ul><li>{{site.data.keyword.cloud_notm}} classic infrastructure user name</li><li>{{site.data.keyword.cloud_notm}} classic infrastructure API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
-    </tr>
-    <tr>
-      <td>IBM Cloud Kubernetes Service resources</td>
-      <td>n/a</td>
-    </tr>
-    <tr>
-      <td>Cloud Foundry resources</td>
-      <td><ul><li>{{site.data.keyword.cloud_notm}} API key</li><li>{{site.data.keyword.cloud_notm}} region</li></ul></td>
-    </tr>
-    <tr>
-      <td>All other IAM-enabled resources</td>
-      <td>{{site.data.keyword.cloud_notm}} region</td>
-    </tr>
-  </tbody>
-  </table>
+2. Review what [credentials and information you must provide in the `provider` block to work with your resources](/docs/terraform?topic=terraform-provider-reference#required-parameters. {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
    
 2. Create a `provider.tf` file or add the following code to your Terraform configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/terraform?topic=terraform-provider-reference#provider-parameter-ov).
 
@@ -119,17 +90,6 @@ To configure the `provider` block:
    Example for all {{site.data.keyword.containerlong_notm}} resources:
    ```
    provider "ibm" {
-   }
-   ```
-   {: codeblock}
-   
-   Example for Cloud Foundry resources:
-   ```
-   variable "ibmcloud_api_key" {}
-   
-   provider "ibm" {
-     ibmcloud_api_key = var.ibmcloud_api_key
-     region = "<region_name>"
    }
    ```
    {: codeblock}
@@ -241,7 +201,6 @@ variable "datacenter" {
   type        = "string"
   description = "The data center that you want to deploy your Kubernetes cluster in."
   default = "dal10"
-
 }
 ```
 {: codeblock}
