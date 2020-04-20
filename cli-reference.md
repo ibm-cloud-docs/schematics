@@ -274,7 +274,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
    </tr>
    <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
-     <td>Required. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
+     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. </td>
    </tr>
     <tr>
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
@@ -389,7 +389,11 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
     <tr>
       <td><code>template_data.variablestore.name </br>template_data.variablestore.value</code></td>
       <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
-     </tr></tbody></table></dd>	
+     </tr>
+     <tr>
+   <td><code>&lt;github_source_repo_url&gt;</code></td>
+     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
+   </tr></tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
   <dt><code>--json</code>, <code>-j</code></dt>	
