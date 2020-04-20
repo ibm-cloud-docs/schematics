@@ -113,7 +113,7 @@ Create your workspace that points to the GitHub repository that hosts your Terra
    2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other.
    3. Select the resource group where you want to create the workspace.
    4. Optional: Enter a description for your workspace.
-4. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
+   5. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
 5. Connect your workspace to the GitHub or GitLab source repository where your Terraform configuration files are stored.
    1. On the workspace **Settings** page, enter the link to your GitHub or GitLab repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
       - Example for `master` branch: `https://github.com/myorg/myrepo`
