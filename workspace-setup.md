@@ -114,7 +114,7 @@ Create your workspace that points to the GitHub repository that hosts your Terra
    3. Select the resource group where you want to create the workspace.
    4. Optional: Enter a description for your workspace.
    5. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
-5. Connect your workspace to the GitHub or GitLab source repository where your Terraform configuration files are stored.
+4. Connect your workspace to the GitHub or GitLab source repository where your Terraform configuration files are stored.
    1. On the workspace **Settings** page, enter the link to your GitHub or GitLab repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
       - Example for `master` branch: `https://github.com/myorg/myrepo`
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
@@ -123,8 +123,8 @@ Create your workspace that points to the GitHub repository that hosts your Terra
    3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
    4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
    5. If you specified input variables, enter the values that you want to use, and click **Save changes**. 
-6. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
-7. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
+5. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
+6. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
 ## Freezing and unfreezing workspaces 
 {: #lock-workspace}
