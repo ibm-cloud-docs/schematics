@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-04-22"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -178,7 +178,7 @@ ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 List the workspaces in your {{site.data.keyword.cloud_notm}} account and optionally, show the details for your workspace.	
 
 ```
-ibmcloudd schematics workspace list [--limit LIMIT] [--offset OFFSET] [--json]
+ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--json]
 ```
 {: pre}
 
