@@ -9,6 +9,7 @@ Schematics
     about.md
     responsibilities.md
     ha-dr.md
+    whats-new.md
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
