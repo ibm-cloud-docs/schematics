@@ -293,6 +293,32 @@ ibmcloud schematics workspace new --file myfile.json
 ```
 {: pre}
 
+
+### `ibmcloud schematics workspace output`
+{: #schematics-workspace-output}
+
+Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
+{: shortdesc}
+
+```
+ibmcloud schematics workspace output --id WORKSPACE_ID
+```
+{: pre}
+
+**Command options:**
+<dl>	
+ <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
+  </dl>
+  
+**Example:**
+
+```
+ibmcloud schematics workspace output --id myworkspace3_2-31cf7130-d0c4-4d
+```
+{: pre}
+
+
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
 
@@ -530,7 +556,7 @@ ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121ab
 Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The CLI output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your configuration file.   	
 {: shortdesc}	
 
-Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} plan action. 
+Your workspace must be in an **Inactive**, **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} plan action. 
 {: note}
 
 During the creation of the Terraform execution plan, you cannot make any changes to your workspace. 
@@ -558,6 +584,7 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
 
+
 ## Terraform statefile commands
 {: #statefile-cmds}
 
@@ -567,7 +594,33 @@ Review the commands that you can use to work with the Terraform statefile (`terr
 You can import an existing Terraform statefile during the creation of your workspace. For more information, see the [`ibmcloud workspace new`](#schematics-workspace-new) command. 
 {: note}
 
-### `ibmcloud terraform state list`
+### `ibmcloud schematics refresh`
+{: #schematics-refresh}
+
+Perform a Schematics refresh action against your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. If differences are found, the Terraform statefile is updated accordingly. 
+{: shortdesc}
+
+```
+ibmcloud schematics refresh --id WORKSPACE_ID [--json]
+```
+{: pre}
+
+</br>
+**Command options:**
+
+<dl>	
+<dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace that you want to refresh. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
+</dl>	
+
+**Example:**
+
+```
+ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11 
+```
+{: pre}
+
+### `ibmcloud schematics state list`
 {: #state-list}
 
 List the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform statefile (`terraform.tfstate`).  
