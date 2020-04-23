@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-23"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -89,6 +89,8 @@ To update your resources:
 7. Click **Apply plan** to apply the new Terraform template version. Depending on the changes that you made, it might take a few minutes or up to a few hours for the template to be applied. Note that during this time, you cannot make changes to your workspace.
 8. Review the log files to ensure that no errors occurred during the modification process. 
 9. From the navigation, select **Resources** and verify that your resources show the updated configuration. 
+
+
 
 
 ## Reviewing resource and deployment details
