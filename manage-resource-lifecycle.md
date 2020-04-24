@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-24"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -89,6 +89,112 @@ To update your resources:
 7. Click **Apply plan** to apply the new Terraform template version. Depending on the changes that you made, it might take a few minutes or up to a few hours for the template to be applied. Note that during this time, you cannot make changes to your workspace.
 8. Review the log files to ensure that no errors occurred during the modification process. 
 9. From the navigation, select **Resources** and verify that your resources show the updated configuration. 
+
+## Managing drift between your cloud environment and your Terraform configuration
+{: #drift-report}
+
+Use Terraform-native capabilities to determine the differences between the infrastructure and platform services that you provisioned in {{site.data.keyword.cloud_notm}} and the resources that you specified in your Terraform configuration files. 
+{: shortdesc}
+
+Managing deviations between the real-world state of your cloud environment and your infrastructure code, also referred to as `drift`, is a key challenge when implementing infrastructure as code. Deviations can happen for many reasons, such as: 
+
+- You added, updated, or removed resources in your Terraform configuration file without running your infrastructure code.
+- You manually added, updated, or removed {{site.data.keyword.cloud_notm}} without using Terraform.
+- You used other automation tools, such as scripts to manipulate the state of your {{site.data.keyword.cloud_notm}} resources.
+
+**Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?**</br>
+After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by running a {{site.data.keyword.bpshort}} apply action, the state of resources is stored in a Terraform statefile (`terraform.tfstate`). {{site.data.keyword.bpshort}} uses this statefile as the single source of truth to determine what resources exist in your account. The statefile maps the resources that you specified in your Terraform configuration file to the {{site.data.keyword.cloud_notm}} resource that you provisioned.
+
+**How can I compare the desired state of my cloud resources against the actual state of my resources?** </br>
+To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files and the resources that exist in your {{site.data.keyword.cloud_notm}} account, you can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
+
+**What deviations cannot be detected?**</br>
+A Terraform execution plan is based on the Terraform statefile that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces,  by using automation tools such as Ansible or Chef, or that you added without using {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
+
+**To view deviations between the resources in your {{site.data.keyword.cloud_notm}} account and your Terraform configuration**: 
+
+1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace where you want to inspect deviations between the resources that are provisioned in your account and the resources that you defined in your Terraform configuration file. 
+2. Select the **Settings** tab.
+3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. 
+4. Review the values of your input variables and make sure that you want to create the deviation report with the values that you see. 
+5. Click **Generate plan** to create a Terraform execution plan. Note that during this time, you cannot make changes to your workspace. During the creation of the Terraform execution plan, Terraform compares the desired state that you described in your Terraform configuration files with the actual state of your cloud resources. If changes are found, Terraform analyzes what actions need to be performed to get your actual cloud resources to the desired state. 
+6. Click **View log** to review the log files of your execution plan. The log file provides a summary of all the resources that {{site.data.keyword.bplong_notm}} identified to achieve the desired state. These actions can include adding, modifying, or removing resources. 
+
+   Example Terraform execution plan output: 
+   ```
+   2020/01/10 21:27:42 -----  Terraform PLAN  -----
+   ...
+   2020/01/10 21:27:49 Terraform plan | 
+   2020/01/10 21:27:49 Terraform plan | ------------------------------------------------------------------------
+   2020/01/10 21:27:50 Terraform plan | 
+   2020/01/10 21:27:50 Terraform plan | An execution plan has been generated and is shown below.
+   2020/01/10 21:27:50 Terraform plan | Resource actions are indicated with the following symbols:
+   2020/01/10 21:27:50 Terraform plan |   + create
+   2020/01/10 21:27:50 Terraform plan | -/+ destroy and then create replacement
+   2020/01/10 21:27:50 Terraform plan | 
+   2020/01/10 21:27:50 Terraform plan | Terraform will perform the following actions:
+   2020/01/10 21:27:50 Terraform plan | 
+   2020/01/10 21:27:50 Terraform plan | + ibm_database.test_acc
+   2020/01/10 21:27:50 Terraform plan |       id:                               <computed>
+   2020/01/10 21:27:50 Terraform plan |       adminpassword:                    <sensitive>
+   2020/01/10 21:27:50 Terraform plan |       adminuser:                        <computed>
+   2020/01/10 21:27:50 Terraform plan |       connectionstrings.#:              <computed>
+   2020/01/10 21:27:50 Terraform plan |       groups.#:                         <computed>
+   2020/01/10 21:27:50 Terraform plan |       location:                         "us-south"
+   2020/01/10 21:27:50 Terraform plan |       members_cpu_allocation_count:     <computed>
+   2020/01/10 21:27:50 Terraform plan |       members_disk_allocation_mb:       "20480"
+   2020/01/10 21:27:50 Terraform plan |       members_memory_allocation_mb:     "3072"
+   2020/01/10 21:27:50 Terraform plan |       name:                             "demo-postgres"
+   2020/01/10 21:27:50 Terraform plan |       plan:                             "standard"
+   2020/01/10 21:27:50 Terraform plan |       resource_controller_url:          <computed>
+   2020/01/10 21:27:50 Terraform plan |       resource_crn:                     <computed>
+   2020/01/10 21:27:50 Terraform plan |       resource_group_id:                "1e9b3e987aff4e32a541fe36b289347d"
+   2020/01/10 21:27:50 Terraform plan |       resource_group_name:              <computed>
+   2020/01/10 21:27:50 Terraform plan |       resource_name:                    <computed>
+   2020/01/10 21:27:50 Terraform plan |       resource_status:                  <computed>
+   2020/01/10 21:27:50 Terraform plan |       service:                          "databases-for-postgresql"
+   2020/01/10 21:27:50 Terraform plan |       service_endpoints:                "public"
+   2020/01/10 21:27:50 Terraform plan |       status:                           <computed>
+   2020/01/10 21:27:50 Terraform plan |       tags.#:                           "2"
+   2020/01/10 21:27:50 Terraform plan |       tags.1852302624:                  "tag2"
+   2020/01/10 21:27:50 Terraform plan |       tags.4151227546:                  "tag1"
+   2020/01/10 21:27:50 Terraform plan |       users.#:                          "1"
+   2020/01/10 21:27:50 Terraform plan |       users.3114612762.name:            "user123"
+   2020/01/10 21:27:50 Terraform plan |       users.3114612762.password:        <sensitive>
+   2020/01/10 21:27:50 Terraform plan |       version:                          <computed>
+   2020/01/10 21:27:50 Terraform plan |       whitelist.#:                      "2"
+   2020/01/10 21:27:50 Terraform plan |       whitelist.1413716549.address:     "172.16.2.0/24"
+   2020/01/10 21:27:50 Terraform plan |       whitelist.1413716549.description: "subnet2"
+   2020/01/10 21:27:50 Terraform plan |       whitelist.3438994501.address:     "172.16.1.0/24"
+   2020/01/10 21:27:50 Terraform plan |       whitelist.3438994501.description: "subnet1"
+   2020/01/10 21:27:50 Terraform plan | 
+   2020/01/10 21:27:50 Terraform plan | -/+ ibm_is_lb_pool_member.lb1-pool-member1 (new resource required)
+   2020/01/10 21:27:50 Terraform plan |       id:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c/r006-4b9b871a-b835-4cdc-9a87-e9423a6d7a12" => <computed> (forces new resource)
+   2020/01/10 21:27:50 Terraform plan |       health:                           "ok" => <computed>
+   2020/01/10 21:27:50 Terraform plan |       href:                             "https://us-south.iaas.cloud.ibm.com/v1/load_balancers/r006-11cb7734-e05c-405b-9e35-20e05bc2766f/pools/r006-d917d290-071a-4da1-a995-91262ea89f2c/members/r006-4b9b871a-b835-4cdc-9a87-e9423a6d7a12" => <computed>
+   2020/01/10 21:27:50 Terraform plan |       lb:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f"
+   2020/01/10 21:27:50 Terraform plan |       pool:                             "r006-d917d290-071a-4da1-a995-91262ea89f2c" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c" (forces new resource)
+   2020/01/10 21:27:50 Terraform plan |       port:                             "80" => "80"
+   2020/01/10 21:27:50 Terraform plan |       provisioning_status:              "active" => <computed>
+   2020/01/10 21:27:50 Terraform plan |       target_address:                   "172.16.1.4" => "172.16.1.4"
+   2020/01/10 21:27:50 Terraform plan |       weight:                           "50" => <computed>
+   2020/01/10 21:27:50 Terraform plan | 
+   2020/01/10 21:27:50 Terraform plan | -/+ ibm_is_lb_pool_member.lb1-pool-member2 (new resource required)
+   2020/01/10 21:27:50 Terraform plan |       id:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c/r006-5418feb7-2169-47c3-8c71-66a86fec6d9a" => <computed> (forces new resource)
+   2020/01/10 21:27:50 Terraform plan |       health:                           "ok" => <computed>
+   2020/01/10 21:27:50 Terraform plan |       href:                             "https://us-south.iaas.cloud.ibm.com/v1/load_balancers/r006-11cb7734-e05c-405b-9e35-20e05bc2766f/pools/r006-d917d290-071a-4da1-a995-91262ea89f2c/members/r006-5418feb7-2169-47c3-8c71-66a86fec6d9a" => <computed>
+   2020/01/10 21:27:50 Terraform plan |       lb:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f"
+   2020/01/10 21:27:50 Terraform plan |       pool:                             "r006-d917d290-071a-4da1-a995-91262ea89f2c" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c" (forces new resource)
+   2020/01/10 21:27:50 Terraform plan |       port:                             "80" => "80"
+   2020/01/10 21:27:50 Terraform plan |       provisioning_status:              "active" => <computed>
+   2020/01/10 21:27:50 Terraform plan |       target_address:                   "172.16.2.4" => "172.16.2.4"
+   2020/01/10 21:27:50 Terraform plan |       weight:                           "50" => <computed>
+   2020/01/10 21:27:50 Terraform plan | Plan: 3 to add, 0 to change, 2 to destroy.
+   2020/01/10 21:27:50 Command finished successfully.
+   ```
+   {: screen}
+   
+7. Optional: Apply the changes in your cloud environment by clicking **Apply plan**. 
 
 
 ## Reviewing resource and deployment details
