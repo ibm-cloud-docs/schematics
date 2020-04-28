@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-09-18"
+  years: 2017, 2020
+lastupdated: "2020-04-28"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI
 
@@ -74,31 +74,31 @@ Install the required CLIs to automate the provisioning of {{site.data.keyword.cl
    ```
    {: screen}
     
-5. Verify that you can use the {{site.data.keyword.bplong_notm}} CLI plug-in by listing all supported commands. The command prefix to work with the {{site.data.keyword.bpshort}} CLI plug-in is `ibmcloud terraform`. 
+5. Verify that you can use the {{site.data.keyword.bplong_notm}} CLI plug-in by listing all supported commands. The command prefix to work with the {{site.data.keyword.bpshort}} CLI plug-in is `ibmcloud schematics`. 
    ```
-   ibmcloud terraform help
+   ibmcloud schematics help
    ```
    {: pre}
     
    Example output: 
    ```
    NAME:
-   ibmcloud terraform - IBM Cloud Terraform plug-in
+     ibmcloud schematics - IBM Cloud Schematics plug-in
 
    USAGE:
-   ibmcloud terraform command [arguments...] [command options]
+     ibmcloud schematics command [arguments...] [command options]
 
    COMMANDS:
-   ---------------------------------------------------------------------------------------------------------------------------    -----------------------------------------------------------------------------------------------------------------
+     apply       Apply a plan to an workspace to deploy the latest version of your configuration.
+     destroy     Destroy resources in an existing workspace. This action cannot be reversed.
+     logs        Show details about actions that ran against an workspace.
+     plan        Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
+     state       Advanced state management
+     version     Report version information about the IBM Cloud Terraform CLI.
+     workspace   Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
+     help, h     Show help
 
-   apply       Apply a plan to an workspace to deploy the latest version of your configuration.
-   destroy     Destroy resources in an existing workspace. This action cannot be reversed.
-   plan        Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
-   version     Report version information about the IBM Cloud Terraform CLI.
-   workspace   Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
-   help, h     Show help
-
-   Enter 'ibmcloud terraform help [command]' for more information about a command.
+   Enter 'ibmcloud schematics help [command]' for more information about a command.
    ```
    {: screen}
    
