@@ -76,8 +76,12 @@ To configure the `provider` block:
    
    Example for classic infrastructure resources: 
    ```
-   variable "iaas_classic_username" {}
-   variable "iaas_classic_api_key" {}
+   variable "iaas_classic_username" {
+      type = "string"
+   }
+   variable "iaas_classic_api_key" {
+      type = "string"
+   }
 
    provider "ibm" {
      region = "<region_name>"
