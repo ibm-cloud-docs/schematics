@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-24"
+lastupdated: "2020-05-04"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -51,22 +51,6 @@ The `terraform.tfvars` file is a local variables file that you use to store sens
 {: shortdesc}
 
 With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables) in the Terraform configuration files, and enter the values for your variables when you create a workspace. You can later change the values of your variables by updating the variables from your workspace details page. 
-
-### Can I import an existing `terraform.tfstate` file?
-{: #terraformtfstate}
-
-If you used native Terraform before to provision and manage {{site.data.keyword.cloud_notm}} resources, you might have a `terraform.tfstate` file in your GitHub repository that stores the current state of your Terraform-deployed {{site.data.keyword.cloud_notm}} resources. 
-{: shortdesc}
-
-These `terraform.tfstate` files are not imported when you create a {{site.data.keyword.bpshort}} workspace. Because the `terraform.tfstate` file is not available to {{site.data.keyword.bplong_notm}}, you cannot use the service to manage {{site.data.keyword.cloud_notm}} resources that you already provisioned and started managing with native Terraform. 
-
-### Can I define output values? 
-{: #terraform-output}
-
-In native Terraform, you can use output values to make information about your Terraform template available after the template is applied in your {{site.data.keyword.cloud_notm}} environment. You can retrieve these values by using the `terraform output` command. 
-{: shortdesc}
-
-{{site.data.keyword.bplong_notm}} does not support the `terraform output` command and you cannot retrieve output values from the console, UI, or API. However, if you define output values in your Terraform configuration files, you can see these output values if you inspect your Terraform logs. 
 
 ### Is Terraform remote state supported in {{site.data.keyword.bpshort}}?
 {: #remote-state}

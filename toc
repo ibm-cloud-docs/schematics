@@ -30,7 +30,7 @@ Schematics
 
     {: .navgroup id="reference"}
     [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-    [IBM Cloud provider for Terraform](/terraform/terraform-quick-links) 
+    [IBM Cloud provider for Terraform](/terraform/terraform-index-of-terraform-resources-and-data-sources) 
     cli-reference.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     [Terraform documentation](https://www.terraform.io/docs/index.html)

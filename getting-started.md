@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-05-04"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -69,8 +69,13 @@ To create a configuration file for your VPC resources:
 2. [Generate an SSH key](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-ssh-keys). The SSH key is required to provision the VPC virtual server instance and you can use the SSH key to access your instance via SSH. After you created your SSH key, make sure to [upload this SSH key to your {{site.data.keyword.cloud_notm}} account](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-managing-ssh-keys#managing-ssh-keys-with-ibm-cloud-console) in the VPC zone and resource group where you want to create your VPC and virtual server instance. 
 3. Create your Terraform configuration `vpc.tf` file that includes all of the VPC infrastructure resources that you need to successfully run a virtual server instance in a VPC. For more information about how to structure a Terraform configuration file, see [Creating a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config). 
    ```
-   variable "ssh_key" {}
-   variable "resource_group" {}
+   variable "ssh_key" {
+     type = "string"
+   }
+   
+   variable "resource_group" {
+     type = "string"
+   }
 
    provider "ibm" {
      generation = 1

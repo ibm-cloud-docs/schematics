@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-05-04"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -76,8 +76,12 @@ To configure the `provider` block:
    
    Example for classic infrastructure resources: 
    ```
-   variable "iaas_classic_username" {}
-   variable "iaas_classic_api_key" {}
+   variable "iaas_classic_username" {
+      type = "string"
+   }
+   variable "iaas_classic_api_key" {
+      type = "string"
+   }
 
    provider "ibm" {
      region = "<region_name>"
@@ -177,14 +181,11 @@ You can use `variable` blocks to templatize your infrastructure code. For exampl
 **Where do I store my variable declarations?** </br>
 You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations. 
 
+**What information do I need to include in my variable declaration?** </br>
+When you declare an input variable, you must provide a name for your variable and the data type, such as `string` or `integer`, that the variable uses. You can optionally add a description and a default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. 
+
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
-
-Example variable declaration without details: 
-```
-variable "datacenter" {}
-```
-{: codeblock}
 
 Example variable declaration without a default value: 
 ```
