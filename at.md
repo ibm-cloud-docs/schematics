@@ -48,11 +48,13 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | `schematics.workspace.destroy` | {{site.data.keyword.cloud_notm}} resources are deleted successfully or failed to delete.|
 {: caption="Table 1. Overview of {{site.data.keyword.bpshort}} actions that generate {{site.data.keyword.cloudaccesstrailshort}} events" caption-side="top"}
 
-When you create, delete, or update a workspace, the following events are also created and available in {{site.data.keyword.at_full_notm}}. All events are created by a {{site.data.keyword.bpshort}}-owned service ID.
+</br>
+**Important**: 
+When you create, delete, or update a workspace, the following events are also created by a {{site.data.keyword.bpshort}}-owned service ID and sent to {{site.data.keyword.at_full_notm}}.  
 * An event with the action `schematics.instance.create` when a workspace is created.
 * An event with the action `schematics.instance.update` when a workspace is modified.
 * An event with the action `schematics.instance.delete` when a workspace is deleted.
-{: important}
+
 
 
 ## Viewing events
