@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-05-04"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -242,11 +242,13 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
-          "value": "&lt;variable_value1&gt;"
+          "value": "&lt;variable_value1&gt;",
+          "type": "&lt;variable_type1&gt;"
         },
         {
           "name": "&lt;variable_name2&gt;",
-          "value": "&lt;variable_value2&gt;"
+          "value": "&lt;variable_value2&gt;",
+          "type": "&lt;variable_type2&gt;"
         }
       ]
     }
@@ -277,8 +279,8 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
      <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. </td>
    </tr>
     <tr>
-      <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt;</code></td>
-      <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
+      <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt; </br>&lt;variable_type1&gt;</code></td>
+      <td>Optional. Enter the name, value, and data type for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
      </tr></tbody></table></dd>
 <dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
 <dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your CLI output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
@@ -358,11 +360,13 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
-          "value": "&lt;variable_value1&gt;"
+          "value": "&lt;variable_value1&gt;",
+          "type": "&lt;variable_type1&gt;"
         },
         {
           "name": "&lt;variable_name2&gt;",
-          "value": "&lt;variable_value2&gt;"
+          "value": "&lt;variable_value2&gt;",
+          "type": "&lt;variable_type2&gt;"
         }
       ]
     }
@@ -413,8 +417,8 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
    <td>Optional. Enter the GitHub or GitLab release that points to your Terraform configuration files.  </td>
    </tr>
     <tr>
-      <td><code>template_data.variablestore.name </br>template_data.variablestore.value</code></td>
-      <td>Optional. Enter the name and value for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
+      <td><code>template_data.variablestore.name </br>template_data.variablestore.value </br>template_data.variablestore.type </code></td>
+      <td>Optional. Enter the name, value, and data type for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). </td>
      </tr>
      <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
