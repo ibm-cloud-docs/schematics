@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-05-27"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -70,7 +70,7 @@ Review the following table to find a list of options for how to structure your G
 | One GitHub repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid having different configurations in each environment. |
 | Use one GitHub repo per environment | Use one GitHub repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and GitHub repository and you can apply separate permissions for each of your GitHub repositories. Make sure that your team can manage multiple GitHub repositories and keep them in sync. | 
 
-For more information about how to structure your GitHub repository, see [Repository Structure](https://www.terraform.io/docs/cloud/workspaces/repo-structure.html){: external}. 
+For more information about how to structure your GitHub repository, see [Terraform Configurations in Terraform Cloud Workspaces](https://www.terraform.io/docs/cloud/workspaces/configurations.html){: external}. 
 
 ### How can I reuse configuration files across environments and workspaces? 
 {: #plan-reuse}
@@ -119,7 +119,7 @@ Create your workspace that points to the GitHub repository that hosts your Terra
       - Example for `master` branch: `https://github.com/myorg/myrepo`
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
       - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
-   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
+   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
    3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
    4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
    5. If you specified input variables, enter the values that you want to use, and click **Save changes**. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-10"
+lastupdated: "2020-05-27"
 
 keywords: schematics reponsibilities, schematics high availability, schematics backup, schematics disaster recovery, schematics security, schematics ibm vs user
 subcollection: schematics
@@ -52,7 +52,7 @@ Learn about the responsibilities that you have when you use {{site.data.keyword.
 <li>Understand the {{site.data.keyword.cloud_notm}} resource offerings that are used in your templates, including availability, pricing, limitations and the tools to set up security, high availability, and logging and monitoring.</li>
 <li>Design and provision your resources in a way that achieves high availability and resiliency, such as [multizone clusters](/docs/containers?topic=containers-ha_clusters#multizone) or [multi-region VPCs](/docs/vpc-on-classic?topic=solution-tutorials-vpc-multi-region). </li>
 <li>Use the provided tools to [provision](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources), [modify](/docs/schematics?topic=schematics-manage-lifecycle#update-resources), or [delete](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources) your {{site.data.keyword.cloud_notm}} resources.</li>
-  <li>Set up logging and monitoring for your resources to track resource activity and monitor the resource health, such as with [{{site.data.keyword.la_full_notm}}](/docs/services/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started) and [{{site.data.keyword.mon_full_notm}}](/docs/services/Monitoring-with-Sysdig?topic=Sysdig-about). </li></ul></td>
+  <li>Set up logging and monitoring for your resources to track resource activity and monitor the resource health, such as with [{{site.data.keyword.la_full_notm}}](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started) and [{{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started). </li></ul></td>
 </tr>
 <tr>
 <td>Security</td>

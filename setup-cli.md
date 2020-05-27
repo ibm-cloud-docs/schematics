@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-28"
+lastupdated: "2020-05-27"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI
 
@@ -36,12 +36,12 @@ Use the {{site.data.keyword.bplong_notm}} CLI plug-in to create and manage your 
 Install the required CLIs to automate the provisioning of {{site.data.keyword.cloud_notm}} resources across environments. 
 {:shortdesc}
 
-1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started#idt-prereq). This installation includes: 
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started). This installation includes: 
    -   {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
    -   Several CLI plug-ins, such as for {{site.data.keyword.containerlong_notm}} (`ibmcloud ks`), {{site.data.keyword.registryshort_notm}} (`ibmcloud cr`), and {{site.data.keyword.cloud_notm}} Functions (`ibmcloud fn`)
    -   Other CLIs, such as Helm (`helm`), Docker (`docker`), Kubernetes (`kubectl`), Git (`git`), and Homebrew (`brew`)
 
-   Plan to use the CLI often? Try [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux/MacOS only)](/docs/cli/reference/ibmcloud?topic=cloud-cli-shell-autocomplete#shell-autocomplete-linux).
+   Plan to use the CLI often? Try [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux/MacOS only)](/docs/cli?topic=cli-shell-autocomplete#shell-autocomplete-linux).
    {: tip}
 
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your {{site.data.keyword.cloud_notm}} credentials when prompted.
@@ -108,7 +108,7 @@ Install the required CLIs to automate the provisioning of {{site.data.keyword.cl
 Update the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bplong_notm}} CLI plug-in periodically to get access to new features. 
 {: shortdesc}
 
-1.  Update the {{site.data.keyword.cloud_notm}} CLI. Download the [latest version ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/cli?topic=cloud-cli-getting-started) and run the installer.
+1.  [Update the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#update-ibmcloud-cli). 
 
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your {{site.data.keyword.cloud_notm}} credentials when prompted.
 
