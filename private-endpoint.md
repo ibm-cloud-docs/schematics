@@ -46,7 +46,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
 
 1. Enable your {{site.data.keyword.cloud_notm}} account for [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf){: external}.
 
-   When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud){: external}.
+   When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-vrf-service-endpoint){: external}.
 
    Enabling VRF permanently alters networking for your account. Be sure that you understand the impact to your account and resources. After you enable VRF, you cannot disable VRF again.
    {: important}
