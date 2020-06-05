@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-02"
+lastupdated: "2020-06-05"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -162,8 +162,11 @@ To create a configuration file for your VPC resources:
    
    <table>
    <caption>Understanding the configuration file components</caption>
+   <col style="width:30%">
+	 <col style="width:70%">
    <thead>
-   <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the configuration file components</th>
+     <th>Parameter</th>
+     <th>Description</th>
    </thead>
    <tbody>
      <tr>
