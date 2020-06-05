@@ -260,8 +260,8 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 </code></pre>
   <table>
    <caption>JSON file component description</caption>
-   <col style="width:35%">
-	 <col style="width:65%">
+   <col style="width:30%">
+	 <col style="width:70%">
    <thead>
      <th>Parameter</th>
      <th>Description</th>
@@ -383,6 +383,8 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 </code></pre>
 <table>
    <caption>JSON file component description</caption>
+   <col style="width:30%">
+   <col style="width:70%">
    <thead>
    <th>Parameter</th>
    <th>Description</th>
