@@ -260,6 +260,8 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 </code></pre>
   <table>
    <caption>JSON file component description</caption>
+   <col style="width:35%">
+	 <col style="width:65%">
    <thead>
      <th>Parameter</th>
      <th>Description</th>
