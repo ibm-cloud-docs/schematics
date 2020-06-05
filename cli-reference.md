@@ -382,7 +382,8 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 <table>
    <caption>JSON file component description</caption>
    <thead>
-   <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the JSON file components</th>
+   <th>Parameter</th>
+   <th>Description</th>
    </thead>
    <tbody>
    <tr>
