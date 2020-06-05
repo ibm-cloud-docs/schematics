@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-06-05"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -261,7 +261,8 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   <table>
    <caption>JSON file component description</caption>
    <thead>
-   <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the JSON file components</th>
+     <th>Parameter</th>
+     <th>Description</th>
    </thead>
    <tbody>
    <tr>
