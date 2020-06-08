@@ -38,6 +38,17 @@ To get started, enable [virtual routing and forwarding (VRF) and service endpoin
 To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the CLI plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
 {: note}
 
+## Overview of private service endpoints in {{site.data.keyword.bpshort}}
+{: #private-cse}
+
+The following private service endpoints are available for {{site.data.keyword.bpshort}}. 
+{: shortdesc}
+
+|Location|Private service endpoint|Description|
+|-------|--------------|---------------------|
+|US|`https://private-us.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in the US. |
+|Europe|`https://private-eu.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in Europe. |
+
 ## Step 1: Enable VRF and service endpoints for your account
 {: #private-network-prereqs}
 
@@ -101,10 +112,4 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
    {: pre}
    
 
-## Overview of private service endpoints in {{site.data.keyword.bpshort}}
-{: #private-cse}
 
-The following private service endpoints are available for {{site.data.keyword.bpshort}}. 
-{: shortdesc}
-
-- `https://private-us.schematics.cloud.ibm.com`

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-08"
 
 keywords: schematics, automation, terraform
 
@@ -46,11 +46,13 @@ The following information is stored with IBM when you create and use a {{site.da
 ## Where is my information stored?
 {: #pi-location}
 
-By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one region and replicated to another region in the same geography. Make sure that your data can be stored in these regions before you start using {{site.data.keyword.bpshort}}. 
+By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Make sure that your data can be stored in these locations before you start using {{site.data.keyword.bpshort}}. 
 
-|Data is stored in|Data is replicated to|
-|------|--------|
-| `us-south` | `us-east` | 
+|Location| API endpoint|Data is stored in|Data is replicated to|
+|------------|----------------|------|--------|
+|US|<ul><li><strong>Public</strong>: `https://us.schematics.cloud.ibm.com` </li><li><strong>Public</strong>: `https://schematics.cloud.ibm.com`</li><li><strong>Private</strong>: `https://private-us.schematics.cloud.ibm.com`</li></ul>| Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
+|Europe|<ul><li><strong>Public</strong>: `https://eu.schematics.cloud.ibm.com` </li><li><strong>Private</strong>: `https://private-eu.schematics.cloud.ibm.com`</li></ul>| Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
+
 
 ## How is my information encrypted?
 The following image shows the main {{site.data.keyword.bplong_notm}} components, how they interact with each other, and what type of encryption is applied to your data. 
@@ -65,6 +67,7 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 5. To protect customer data in transit, {{site.data.keyword.bplong_notm}} integrates with {{site.data.keyword.keymanagementserviceshort}}. {{site.data.keyword.bpshort}} uses root keys in {{site.data.keyword.keymanagementserviceshort}} to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit. 
 6. Workspace transactional data is stored in an {{site.data.keyword.cos_full_notm}} bucket and encrypted by using [Server-Side Encryption with {{site.data.keyword.keymanagementserviceshort}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp) at rest.  
 7. Workspace operational data, such as the workspace variables and Terraform template information, is stored in {{site.data.keyword.cloudant}} and encrypted at rest by using the default service encryption. For more information, see [Security](/docs/Cloudant?topic=Cloudant-security).
+
 
 ## How can I delete my information?
 {: #delete-data}

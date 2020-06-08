@@ -34,6 +34,7 @@ Schematics
     cli-reference.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     [Terraform documentation](https://www.terraform.io/docs/index.html)
+    locations.md
     limitations.md
     {: .navgroup-end}
 
