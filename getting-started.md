@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-06-08"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -320,11 +320,12 @@ Create a workspace in {{site.data.keyword.bplong_notm}} that points to the GitHu
 1. From the {{site.data.keyword.cloud_notm}} menu, select [**{{site.data.keyword.bpshort}}**](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
-   2. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other.
-   3. Select the resource group where you want to create the workspace.
-   4. Optional: Enter a description for your workspace.
-   5. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
+   1. Decide if you want to create your workspace in the US or Europe. Depending on the location that you choose, all {{site.data.keyword.bpshort}} actions run in either the US (`us-south` or `us-east`) or Europe (`eu-de` or `eu-gb`). The location is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources.  
+   2. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
+   3. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other.
+   4. Select the resource group where you want to create the workspace.
+   5. Optional: Enter a description for your workspace.
+   6. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
 4. Connect your workspace to the GitHub or GitLab source repository where your Terraform configuration files are stored.
    1. On the workspace **Settings** page, enter the link to your GitHub or GitLab repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
       - Example for `master` branch: `https://github.com/myorg/myrepo`
