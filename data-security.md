@@ -50,8 +50,8 @@ By default, all information that is stored in {{site.data.keyword.bpshort}} is e
 
 |Location| API endpoint|Data is stored in|Data is replicated to|
 |------------|----------------|------|--------|
-|US|**Public**: <ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>https://us.schematics.cloud.ibm.com</code></li><li style="margin:0px; padding:0px"><code>https://schematics.cloud.ibm.com</code></li></ul> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
-|Europe|**Public**: </br> `https://eu.schematics.cloud.ibm.com` </br> **Private**: </br> `https://private-eu.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
+|US|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br>`https://schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
+|Europe|**Public**: </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-eu.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
 
 
 ## How is my information encrypted?
