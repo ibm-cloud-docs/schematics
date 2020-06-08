@@ -36,8 +36,8 @@ You can choose to create {{site.data.keyword.bpshort}} workspaces in the US or E
 
 |Location| API endpoint|
 |------------|----------------|
-|US|**Public**: <ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>https://us.schematics.cloud.ibm.com</code></li><li style="margin:0px; padding:0px"><code>https://schematics.cloud.ibm.com</code></li></ul> **Private**: `https://private-us.schematics.cloud.ibm.com`| 
-|Europe|**Public:** `https://eu.schematics.cloud.ibm.com` </br> **Private**: `https://private-eu.schematics.cloud.ibm.com`| 
+|US|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br> `https://schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`| 
+|Europe|**Public:** </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-eu.schematics.cloud.ibm.com`| 
 
 For more information about how to use the private service endpoint, see [Using private endpoints](/docs/schematics?topic=schematics-private-endpoints). 
 {: tip}
