@@ -27,7 +27,7 @@ subcollection: schematics
 {:help: data-hd-content-type='help'}
 
 # Locations and service endpoints
-{: #locations}
+{: #locations} 
 
 Review supported locations in {{site.data.keyword.bplong_notm}} and how {{site.data.keyword.bpshort}} differentiates between the data storage location and the deployment location of your {{site.data.keyword.cloud_notm}} resources.
 
