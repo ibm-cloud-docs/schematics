@@ -100,7 +100,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
 
 Prepare your VSI or test machine by configuring your routing table for the {{site.data.keyword.cloud_notm}} private network.
 
-1. To connect to the private service endpoint, you must create a virtual server instance (VSI) first. You use this VSI to connect to the {{site.data.keyword.cloud_notm}} private network. You can create a [classic VSI](/docs/vsi?topic=virtual-servers-getting-started-tutorial) or [VPC VSI](/docs/vpc?topic=vpc-getting-started). 
+1. To connect to the private service endpoint, you must create a virtual server instance (VSI) first. You use this VSI to connect to the {{site.data.keyword.cloud_notm}} private network. You can create a [classic VSI](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) or [VPC VSI](/docs/vpc?topic=vpc-getting-started). 
 
 2. Follow the documentation for your VSI to establish a secure connection to your VSI. 
 
