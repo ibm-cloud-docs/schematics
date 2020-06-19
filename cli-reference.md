@@ -485,7 +485,7 @@ ibmcloud schematics workspace update --id myworkspace-a1aa1a1a-a11a-11 --file my
 {: pre}
 
 ### `ibmcloud schematics workspace upload`
-{:# schematics-workspace-upload}
+{: #schematics-workspace-upload}
 
 Provide your Terraform template by uploading a tape archive file (`.tar`) to your {{site.data.keyword.bpshort}} workspace.
 {: shortdesc}
