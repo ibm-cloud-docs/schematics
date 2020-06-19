@@ -268,6 +268,7 @@ Example JSON for uploading a <code>.tar</code> file later:
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
+    "url": ""
   },
   "template_data": [
     {
