@@ -366,7 +366,7 @@ ibmcloud schematics workspace output --id myworkspace3_2-31cf7130-d0c4-4d
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.	
 {: shortdesc}	
 
-If you provided your Terraform template by uploading a tape archive file (`.tar`) and you want to update your Template, you must use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command.
+If you provided your Terraform template by uploading a tape archive file (`.tar`) and you want to update your template, you must use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command.
 {: note}
 
 ```
