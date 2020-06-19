@@ -507,7 +507,7 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
  <dt><code>--file <em>PATH_TO_FILE</em></code></dt>	
 <dd>Required. Enter the relative file path on your local machine where your `.tar` file is stored. </dd>	
  <dt><code>--template <em>TEMPLATE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &ltworkspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
+<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &lt;workspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
 
 <dt><code>--output</code></dt>
 <dd>Return the CLI output in JSON format.</dd>
@@ -753,7 +753,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 <dd>Required. The unique identifier of the workspace that stores the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
 
 <dt><code>--template <em>TEMPLATE_ID</em></code></dt>
-<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &ltworkspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
+<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &lt;workspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
 </dl>	
 
 **Example:**
