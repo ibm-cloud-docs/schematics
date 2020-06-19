@@ -33,7 +33,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|-----------|
-|22 June 2020|<ul><li>You can now provide your Terraform template by uploading a tape archive file (`.tar`) from your local machine. This feature is supported from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.  </li></ul>|
+|22 June 2020|<ul><li>You can now provide your Terraform template by uploading a tape archive file (`.tar`) from your local machine. This feature is supported from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command or [`PUT /v1/workspaces/{id}/templates/{template_id}/template_repo_upload`](/apidocs/schematics#upload-a-tar-file-to-your-workspace) API.  </li></ul>|
 
 ## May 2020
 {: #may-2020}
