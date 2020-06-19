@@ -31,6 +31,9 @@ subcollection: schematics
 With {{site.data.keyword.bplong_notm}} workspaces, you can organize your Terraform templates and control who has access to run infrastructure code in your {{site.data.keyword.cloud_notm}} account. Before you create a workspace, make sure that you design the organizational structure of your GitHub repository and workspaces so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
+If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested GitHub repository structure in this documentation.  
+{: note}
+
 ## Designing your workspace and GitHub repository structure
 {: #structure-workspace}
 {: help}
@@ -100,8 +103,11 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 Create your workspace that points to the GitHub repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc} 
 
+If you do not want to connect your workspace to a GitHub repository, you can Yupload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. However, this feature is not supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
+{: tip}
+
 **Before you begin**
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a GitHub or GitLab repository. You can also upload a tape archive file (`.tar`) file to provide your termplate to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a GitHub or GitLab repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
 **To create a workspace**:
