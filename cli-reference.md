@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-10"
+lastupdated: "2020-06-19"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -207,7 +207,7 @@ ibmcloud schematics workspace list --json
 ### `ibmcloud schematics workspace new`	
 {: #schematics-workspace-new}	
 
-Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub.  
+Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository. 
 {: shortdesc}	
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
@@ -223,7 +223,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 <dl>	
  <dt><code>--file <em>FILE_PATH</em></code>, <code>-f <em>FILE_PATH</em></code></dt>	
 <dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
-<br>Example JSON:	
+<br>Example JSON for using a GitHub or GitLab repository:	
 <pre class="codeblock">	
 <code>{	
   "name": "&lt;workspace_name&gt;",
@@ -257,6 +257,39 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   ],
   "githubtoken": "&lt;github_personal_access_token&gt;"
 }
+</code></pre></br>
+Example JSON for uploading a <code>.tar</code> file later:	
+<pre class="codeblock">	
+<code>{	
+  "name": "&lt;workspace_name&gt;",
+  "type": [
+    "&lt;terraform_version&gt;"
+  ],
+  "description": "&lt;workspace_description&gt;",
+  "tags": [],
+  "template_repo": {
+  },
+  "template_data": [
+    {
+      "folder": ".",
+      "type": "&lt;terraform_version&gt;",
+      "variablestore": [
+        {
+          "name": "&lt;variable_name1&gt;",
+          "value": "&lt;variable_value1&gt;",
+          "type": "&lt;variable_type1&gt;",
+          "secure": true
+        },
+        {
+          "name": "&lt;variable_name2&gt;",
+          "value": "&lt;variable_value2&gt;",
+          "type": "&lt;variable_type2&gt;",
+          "secure": false
+        }
+      ]
+    }
+  ]
+}
 </code></pre>
   <table>
    <caption>JSON file component description</caption>
@@ -281,7 +314,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
    </tr>
    <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
-     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. </td>
+     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. If you plan to provide your Terraform template by uploading a tape archive file (`.tar`), use the [<code>ibmcloud schematics workspace upload</code>](#schematics-workspace-upload) command after you created the workspace. </td>
    </tr>
     <tr>
       <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt; </br>&lt;variable_type&gt; </br>&lt;secure&gt;</code></td>
@@ -332,8 +365,11 @@ ibmcloud schematics workspace output --id myworkspace3_2-31cf7130-d0c4-4d
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.	
 {: shortdesc}	
 
+If you provided your Terraform template by uploading a tape archive file (`.tar`) and you want to update your Template, you must use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command.
+{: note}
+
 ```
-ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
+ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
 ```
 {: pre}
 
@@ -446,6 +482,40 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--json]
 ibmcloud schematics workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myfile.json --json
 ```
 {: pre}
+
+### `ibmcloud schematics workspace upload`
+{:# schematics-workspace-upload}
+
+Provide your Terraform template by uploading a tape archive file (`.tar`) to your {{site.data.keyword.bpshort}} workspace.
+{: shortdesc}
+
+```
+ibmcloud schematics workspace upload --upload WORKSPACE_ID --file PATH_TO_FILE --template TEMPLATE_ID [--output]
+```
+{: pre}
+
+</br>
+**Command options:**
+
+<dl>	
+ <dt><code>--upload <em>WORKSPACE_ID</em></code></code></dt>	
+<dd>Required. The unique identifier of the workspace where you want to upload your tape archive file (`.tar`). To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
+ <dt><code>--file <em>PATH_TO_FILE</em></code></dt>	
+<dd>Required. Enter the relative file path on your local machine where your `.tar` file is stored. </dd>	
+ <dt><code>--template <em>TEMPLATE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &ltworkspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
+
+<dt><code>--output</code></dt>
+<dd>Return the CLI output in JSON format.</dd>
+</dl>
+
+**Example:**
+
+```
+ibmcloud schematics workspace upload --upload myworkspace-a1aa1a1a-a11a-11 --file ./mytar/vpc.tar --template 250d6e9f-d71b-4c
+```
+{: pre}
+
 
 ## {{site.data.keyword.cloud_notm}} resource management commands
 {: #schematics-resource-commands}

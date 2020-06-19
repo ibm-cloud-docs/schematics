@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-04"
+lastupdated: "2020-06-19"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -58,7 +58,7 @@ You can provide an API key for a service ID for all IAM-enabled services, includ
 To configure the `provider` block: 
 
 1. Choose how you want to configure the `provider` block. 
-   - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory. This approach is useful if you split out your infrastructure code across multiple files. 
+   - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory or tape archive file (`.tar`). This approach is useful if you split out your infrastructure code across multiple files. 
    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
 2. Review what [credentials and information you must provide in the `provider` block to work with your resources](/docs/terraform?topic=terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
@@ -112,7 +112,7 @@ To configure the `provider` block:
 Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources that you want to manage with {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
-To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform reference](https://ibm-cloud.github.io/tf-ibm-docs/){: external}. 
+To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources){: external}. 
 
 Example infrastructure code for provisioning a VPC: 
 ```
@@ -228,7 +228,7 @@ For more information about variable configurations, see the [Terraform documenta
 ## Storing your Terraform templates
 {: #store-template}
 
-Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. You can also set up your own continuous integration pipeline to automatically apply infrastructure code changes in {{site.data.keyword.cloud_notm}}. 
+Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file (`.tar`)](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your location machine instead. 
 {: shortdesc}
 
 The following image shows an example of how your Terraform template could look like in a GitHub repository. 

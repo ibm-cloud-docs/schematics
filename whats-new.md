@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-06-10"
+lastupdated: "2020-06-19"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -27,6 +27,13 @@ subcollection: schematics
 {: #new-in-schematics}
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
+
+## June 2020
+{: #june-2020}
+
+|Date|Description|
+|-----|-----------|
+|22 June 2020|<ul><li>You can now provide your Terraform template by uploading a tape archive file (`.tar`). This feature is supported from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.  </li></ul>|
 
 ## May 2020
 {: #may-2020}
