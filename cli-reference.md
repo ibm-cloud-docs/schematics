@@ -494,7 +494,7 @@ Before you begin, make sure that you [created your workspace](#schematics-worksp
 {: important}
 
 ```
-ibmcloud schematics workspace upload --upload WORKSPACE_ID --file PATH_TO_FILE --template TEMPLATE_ID [--output]
+ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --template TEMPLATE_ID [--output]
 ```
 {: pre}
 
@@ -502,7 +502,7 @@ ibmcloud schematics workspace upload --upload WORKSPACE_ID --file PATH_TO_FILE -
 **Command options:**
 
 <dl>	
- <dt><code>--upload <em>WORKSPACE_ID</em></code></code></dt>	
+ <dt><code>--id <em>WORKSPACE_ID</em></code></code></dt>	
 <dd>Required. The unique identifier of the workspace where you want to upload your tape archive file (`.tar`). To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--file <em>PATH_TO_FILE</em></code></dt>	
 <dd>Required. Enter the relative file path on your local machine where your `.tar` file is stored. </dd>	
