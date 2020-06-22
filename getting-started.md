@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-08"
+lastupdated: "2020-06-19"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -39,7 +39,10 @@ Check out the [lab and videos](https://developer.ibm.com/openlabs/vpc/catalog){:
 Create a Terraform configuration file that specifies the {{site.data.keyword.cloud_notm}} resources that you want to provision with {{site.data.keyword.bplong_notm}}, and store the file in a GitHub repository to build your Terraform template. 
 {: shortdesc}
 
-In this getting started tutorial, you create a Terraform template with one Terraform configuration file that deploys a Gen 1 virtual server instance in a [Virtual Private Cloud (VPC)](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started). If you use the Terraform template in this tutorial, make sure that you store this template in a GitHub or GitLab repository. 
+In this getting started tutorial, you create a Terraform template with one Terraform configuration file that deploys a Gen 1 virtual server instance in a [Virtual Private Cloud (VPC)](/docs/vpc-on-classic?topic=vpc-on-classic-getting-started). 
+
+When you follow the instructions in this tutorial, you store your Terraform template in GitHub to enable version control. {{site.data.keyword.bplong_notm}} also lets you upload a tape archive file (`.tar`) from your local machine to provide the Terraform template. To learn more about this feature, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.
+{: tip}
 
 A virtual server instance in a VPC incurs costs. Be sure to review the available plans for [VPC virtual server instances ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/vpc/provision/vs) before you proceed.
 {: important}
@@ -64,7 +67,7 @@ This tutorial includes VPC commands that you can run to retrieve input values fo
 {: tip}
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
-{{site.data.keyword.bplong_notm}} supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/).
+{{site.data.keyword.bplong_notm}} supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources).
 
 To create a configuration file for your VPC resources: 
 
@@ -360,5 +363,5 @@ After you provisioned your resources in {{site.data.keyword.cloud_notm}}, choose
 - Learn more about [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics) and the benefits of using the service. 
 - Review tips and tricks for how to [structure your Terraform configuration file](/docs/schematics?topic=schematics-create-tf-config).
 - Set up a [GitHub repository and workspace structure](/docs/schematics?topic=schematics-workspace-setup) for your microservices. 
-- Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference ![External link icon](../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io/tf-ibm-docs/).
+- Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources).
 - [Install the {{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-setup-cli) to automate the provisioning of your resources in {{site.data.keyword.cloud_notm}}. 

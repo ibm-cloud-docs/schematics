@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-07"
+lastupdated: "2020-06-19"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -76,7 +76,7 @@ Similar to the `remote_state` data source, you can only access information that 
         
      2. Find the workspace ID in the **ID** column of your CLI output. 
    
-3. Create another Terraform configuration file that is named `remotestate.tf` to access the output parameters of the `vpc.tf` file by using the `ibm_schematics_output` data source. Make sure to store this configuration file in a GitHub or GitLab repository.
+3. Create another Terraform configuration file that is named `remotestate.tf` to access the output parameters of the `vpc.tf` file by using the `ibm_schematics_output` data source. To allow version control of this file, make sure to store this configuration file in a GitHub or GitLab repository. 
    ```
    data "ibm_schematics_workspace" "vpc" {
      workspace_id = "<schematics_workspace_ID>"
@@ -130,7 +130,7 @@ Similar to the `remote_state` data source, you can only access information that 
   </tbody>
   </table>
   
-4. [Create a workspace that points to the `remotestate.tf` file in your GitHub or GitLab repository](/docs/schematics?topic=schematics-workspace-setup#create-workspace). 
+4. [Create a workspace that points to the `remotestate.tf` file in your GitHub or GitLab repository](/docs/schematics?topic=schematics-workspace-setup#create-workspace). If you want to upload a tape archive file (`.tar`) from your local machine instead, use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.
 
 5. [Run your Terraform code in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). When you review your logs, you can see the output values from your VPC workspace in the **Output** section. 
 

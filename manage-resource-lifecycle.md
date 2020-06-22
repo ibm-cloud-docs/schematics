@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-24"
+lastupdated: "2020-06-19"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -47,14 +47,14 @@ Run your infrastructure code to provision, or modify your {{site.data.keyword.cl
 {:shortdesc}
 
 **Before you begin**: 
-- [Create a workspace from your GitHub repository](/docs/schematics?topic=schematics-workspace-setup#create-workspace) that hosts your Terraform template. 
+- [Create a workspace from your GitHub repository or upload a tape archive file (`.tar`)](/docs/schematics?topic=schematics-workspace-setup#create-workspace) that hosts your Terraform template. 
 - Make sure that you have the required [permissions](/docs/schematics?topic=schematics-access) to deploy the resources in {{site.data.keyword.cloud_notm}}. 
 
 **To deploy your resources**: 
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform template that you want to apply. 
 2. Select the **Settings** tab.
-3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository.
+3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. Optional: Review the variables that you set for your workspace. The values of your variables are used every time that you reference the variable in your Terraform template. Make sure that your variables use the correct values.  
 5. Click **Generate plan** to create a Terraform execution plan. This action equals the `terraform plan` command. After you click this button, the workspace **Activity** page opens and {{site.data.keyword.bpshort}} starts to compare the state of the resources that you already provisioned in your {{site.data.keyword.cloud_notm}} account with the resources that you want to provision with your Terraform template. 
 6. Click **View log** to review the log files of your execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your Terraform configuration files, you can review the error message in the log file. 
@@ -82,7 +82,7 @@ To update your resources:
 
 1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform template that you updated. 
 2. Select the **Settings** tab.
-3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. 
+3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. If you added, or removed variables in your Terraform configuration files, or if you want to change the variable values that you set when you created the workspace, enter or change the variable values. 
 5. Click **Generate plan** to create a Terraform execution plan. Note that during this time, you cannot make changes to your workspace. 
 6. Click **View log** to review the log files of your execution plan. This log file provides a summary of all the resources that {{site.data.keyword.bplong_notm}} is about to modify. {{site.data.keyword.bplong_notm}} might not be able to modify some of your resources, and suggest removing and re-creating the resource.
@@ -115,7 +115,7 @@ A Terraform execution plan is based on the Terraform statefile that was created 
 
 1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace where you want to inspect deviations between the resources that are provisioned in your account and the resources that you defined in your Terraform configuration file. 
 2. Select the **Settings** tab.
-3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. 
+3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. Review the values of your input variables and make sure that you want to create the deviation report with the values that you see. 
 5. Click **Generate plan** to create a Terraform execution plan. Note that during this time, you cannot make changes to your workspace. During the creation of the Terraform execution plan, Terraform compares the desired state that you described in your Terraform configuration files with the actual state of your cloud resources. If changes are found, Terraform analyzes what actions need to be performed to get your actual cloud resources to the desired state. 
 6. Click **View log** to review the log files of your execution plan. The log file provides a summary of all the resources that {{site.data.keyword.bplong_notm}} identified to achieve the desired state. These actions can include adding, modifying, or removing resources. 
@@ -213,7 +213,7 @@ View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{
 ## Removing your resources
 {: #destroy-resources}
 
-To remove an {{site.data.keyword.cloud_notm}} resource that you provisioned with {{site.data.keyword.bplong_notm}}, you can either remove your resources with {{site.data.keyword.bpshort}}, delete your workspace, or remove the infrastructure code in the Terraform template of your GitHub source repository. 
+To remove an {{site.data.keyword.cloud_notm}} resource that you provisioned with {{site.data.keyword.bplong_notm}}, you can either remove your resources with {{site.data.keyword.bpshort}}, delete your workspace, or remove the infrastructure code in the Terraform template. 
 {:shortdesc}
 
 **How should I remove resources with {{site.data.keyword.bplong_notm}}?** </br>
@@ -233,7 +233,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 
 **To remove your resources by deleting the infrastructure code from your Terraform template**: 
 
-1. Open the Terraform configuration file in your source repository in GitHub that includes the infrastructure code of your resource. 
+1. Open the Terraform configuration file in your source repository in GitHub or on your local machine. 
 2. Either remove the infrastructure code from the file, or comment out the resources that you want to remove by adding `#` to the beginning of each line. 
 
    Example for commenting out a resource: 
@@ -258,7 +258,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 3. Commit the change to your Terraform configuration file. 
 4. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform template that you just changed. 
 5. From the navigation, select **Settings**. 
-6. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. 
+6. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 7. Click **Generate plan** to create a Terraform execution plan. The workspace **Activity** page opens. Note that during this time, you cannot make changes to your workspace.
 8. Click **View log** to review the log files of your execution plan. The log files provide a summary of all the resources that {{site.data.keyword.bplong_notm}} is about to remove. 
 9. Click **Apply plan** to remove the {{site.data.keyword.cloud_notm}} resources from your account. 
