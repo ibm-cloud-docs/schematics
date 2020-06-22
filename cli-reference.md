@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-06-22"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -505,7 +505,7 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
  <dt><code>--id <em>WORKSPACE_ID</em></code></code></dt>	
 <dd>Required. The unique identifier of the workspace where you want to upload your tape archive file (`.tar`). To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--file <em>PATH_TO_FILE</em></code></dt>	
-<dd>Required. Enter the relative file path on your local machine where your `.tar` file is stored. </dd>	
+<dd>Required. Enter the full file path on your local machine where your `.tar` file is stored. </dd>	
  <dt><code>--template <em>TEMPLATE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &lt;workspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your CLI output. </dd>
 
@@ -516,7 +516,7 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
 **Example:**
 
 ```
-ibmcloud schematics workspace upload --upload myworkspace-a1aa1a1a-a11a-11 --file ./mytar/vpc.tar --template 250d6e9f-d71b-4c
+ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /Users/myuser/Documents/mytar/vpc.tar --template 250d6e9f-d71b-4c
 ```
 {: pre}
 
