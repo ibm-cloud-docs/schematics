@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-07-09"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -502,7 +502,7 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
 **Command options:**
 
 <dl>	
- <dt><code>--id <em>WORKSPACE_ID</em></code></code></dt>	
+ <dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the workspace where you want to upload your tape archive file (`.tar`). To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--file <em>PATH_TO_FILE</em></code></dt>	
 <dd>Required. Enter the full file path on your local machine where your `.tar` file is stored. </dd>	
