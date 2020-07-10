@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-10"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -230,6 +230,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "type": [
     "&lt;terraform_version&gt;"
   ],
+  "location": "&lt;location&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
@@ -265,6 +266,7 @@ Example JSON for uploading a <code>.tar</code> file later:
   "type": [
     "&lt;terraform_version&gt;"
   ],
+  "location": "&lt;location&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
@@ -308,6 +310,10 @@ Example JSON for uploading a <code>.tar</code> file later:
      <tr>
        <td><code>&lt;terraform_version&gt;</code></td>
        <td>Optional. The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and <code>terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+     </tr>
+    <tr>
+       <td><code>&lt;location&gt;</code></td>
+       <td>Optional. Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run <code>ibmcloud target --output json</code> and look at the <em>region</em> field. To target a different region, run <code>ibmcloud target -r &lt;region&gt;</code>. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted.   </td>
      </tr>
    <tr>
    <td><code>&lt;workspace_description&gt;</code></td>
