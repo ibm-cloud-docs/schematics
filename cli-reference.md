@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-07-10"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -207,7 +207,7 @@ ibmcloud schematics workspace list --json
 ### `ibmcloud schematics workspace new`	
 {: #schematics-workspace-new}	
 
-Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the `[ibmcloud schematics workspace upload`](#schematics-workspace-upload) command to provide the template.
+Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command to provide the template.
 {: shortdesc}	
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
@@ -230,6 +230,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "type": [
     "&lt;terraform_version&gt;"
   ],
+  "location": "&lt;location&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
@@ -265,6 +266,7 @@ Example JSON for uploading a <code>.tar</code> file later:
   "type": [
     "&lt;terraform_version&gt;"
   ],
+  "location": "&lt;location&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
@@ -308,6 +310,10 @@ Example JSON for uploading a <code>.tar</code> file later:
      <tr>
        <td><code>&lt;terraform_version&gt;</code></td>
        <td>Optional. The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and <code>terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+     </tr>
+    <tr>
+       <td><code>&lt;location&gt;</code></td>
+       <td>Optional. Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run <code>ibmcloud target --output json</code> and look at the <em>region</em> field. To target a different region, run <code>ibmcloud target -r &lt;region&gt;</code>. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted.   </td>
      </tr>
    <tr>
    <td><code>&lt;workspace_description&gt;</code></td>
@@ -502,7 +508,7 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
 **Command options:**
 
 <dl>	
- <dt><code>--id <em>WORKSPACE_ID</em></code></code></dt>	
+ <dt><code>--id <em>WORKSPACE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the workspace where you want to upload your tape archive file (`.tar`). To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
  <dt><code>--file <em>PATH_TO_FILE</em></code></dt>	
 <dd>Required. Enter the full file path on your local machine where your `.tar` file is stored. </dd>	

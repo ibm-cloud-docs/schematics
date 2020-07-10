@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-07-10"
 
 keywords: schematics, automation, terraform
 
@@ -48,10 +48,14 @@ The following information is stored with IBM when you create and use a {{site.da
 
 By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Make sure that your data can be stored in these locations before you start using {{site.data.keyword.bpshort}}. 
 
-|Location| API endpoint|Data is stored in|Data is replicated to|
+|Geography/ location| API endpoint|Data is stored in|Data is replicated to|
 |------------|----------------|------|--------|
-|US|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
+|North America|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
+|Dallas|**Public**: </br>`https://us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
+|Washington|**Public**: </br>`https://us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
 |Europe|**Public**: </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-eu.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
+|Frankfurt|**Public**: </br> `https://eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
+|London|**Public**: </br> `https://eu-gb.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
 
 
 ## How is my information encrypted?

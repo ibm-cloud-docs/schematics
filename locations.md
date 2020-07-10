@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-08"
+lastupdated: "2020-07-10"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -34,10 +34,14 @@ Review supported locations in {{site.data.keyword.bplong_notm}} and how {{site.d
 ## Where can I create {{site.data.keyword.bpshort}} workspaces?
 You can choose to create {{site.data.keyword.bpshort}} workspaces in the US or Europe location by using one of the following API endpoints, or by using the **Location** drop down menu from the {{site.data.keyword.cloud_notm}} console.
 
-|Location| API endpoint|
+|Geography/ location| API endpoint|
 |------------|----------------|
-|US|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br> `https://schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`| 
+|North America|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br> `https://schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`| 
+|Dallas|**Public**: </br>`https://us-south.schematics.cloud.ibm.com` | 
+|Washington|**Public**: </br>`https://us-east.schematics.cloud.ibm.com` | 
 |Europe|**Public:** </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-eu.schematics.cloud.ibm.com`| 
+|Frankfurt|**Public:** </br> `https://eu-de.schematics.cloud.ibm.com`|
+|London|**Public:** </br>`https://eu-gb.schematics.cloud.ibm.com`|
 
 For more information about how to use the private service endpoint, see [Using private endpoints](/docs/schematics?topic=schematics-private-endpoints). 
 {: tip}
@@ -46,10 +50,14 @@ For more information about how to use the private service endpoint, see [Using p
 
 The location that you choose for your {{site.data.keyword.bpshort}} workspace determines the location where your {{site.data.keyword.bpshort}} actions, such `plan` or `apply`, run. 
 
-|Workspace location |Location to run {{site.data.keyword.bpshort}} actions|
+|Geography/ location |Location to run {{site.data.keyword.bpshort}} actions|
 |------------|----------------|
-|US|{{site.data.keyword.bpshort}} actions run in either the `us-south` or `us-east` location.|
+|North America|{{site.data.keyword.bpshort}} actions run in either the `us-south` or `us-east` location.|
+|Dallas|{{site.data.keyword.bpshort}} actions run in the `us-south` location.|
+|Washington|{{site.data.keyword.bpshort}} actions run in the `us-east` location.|
 |Europe|{{site.data.keyword.bpshort}} actions run in either the `eu-de` or `eu-gb` location.|
+|Frankfurt|{{site.data.keyword.bpshort}} actions run in the `eu-de` location.|
+|London|{{site.data.keyword.bpshort}} actions run in the `eu-gb` location.|
 
 ## Where is my data stored?
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-07-10"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -103,7 +103,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 Create your workspace that points to the GitHub repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc} 
 
-If you do not want to connect your workspace to a GitHub repository, you can Yupload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. However, this feature is not supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
+If you do not want to connect your workspace to a GitHub repository, you can upload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. However, this feature is not supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
 {: tip}
 
 **Before you begin**
@@ -114,7 +114,7 @@ If you do not want to connect your workspace to a GitHub repository, you can Yup
 1. From the {{site.data.keyword.cloud_notm}} menu, select [**{{site.data.keyword.bpshort}}**](https://cloud.ibm.com/schematics/overview){: external}. 
 2. Click **Create a workspace**. 
 3. Configure your workspace. 
-   1. Decide if you want to create your workspace in the US or Europe. Depending on the location that you choose, all {{site.data.keyword.bpshort}} actions run in either the US (`us-south` or `us-east`) or Europe (`eu-de` or `eu-gb`). The location is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. 
+   1. Decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics#create-a-workspace) instead.
    2. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
    3. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other.
    4. Select the resource group where you want to create the workspace.
@@ -129,7 +129,7 @@ If you do not want to connect your workspace to a GitHub repository, you can Yup
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
       - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
       
-   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
+   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
    3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
    4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
    5. If you specified input variables, enter the values that you want to use, and click **Save changes**. 
