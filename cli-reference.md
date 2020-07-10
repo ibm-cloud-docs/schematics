@@ -207,7 +207,7 @@ ibmcloud schematics workspace list --json
 ### `ibmcloud schematics workspace new`	
 {: #schematics-workspace-new}	
 
-Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the `[ibmcloud schematics workspace upload`](#schematics-workspace-upload) command to provide the template.
+Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command to provide the template.
 {: shortdesc}	
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
