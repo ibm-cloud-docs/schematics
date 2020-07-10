@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-10"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -27,6 +27,13 @@ subcollection: schematics
 {: #new-in-schematics}
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
+
+## July 2020
+{: #july-2020}
+
+|Date|Description|
+|-----|-----------|
+|9 July 2020|**Stop apply support**: {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource lifecycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [`DELETE /v1/workspaces/{id}/actions/{action_id}`](/apidocs/schematics#stop-a-schematics-apply-action) API. |
 
 ## June 2020
 {: #june-2020}
