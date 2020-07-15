@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-13"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -103,7 +103,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 Create your workspace that points to the GitHub repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc} 
 
-If you do not want to connect your workspace to a GitHub repository, you can upload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. However, this feature is not supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
+If you do not want to connect your workspace to a GitHub repository, you can upload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. However, this feature is supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
 {: tip}
 
 **Before you begin**

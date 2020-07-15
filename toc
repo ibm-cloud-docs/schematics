@@ -17,6 +17,7 @@ Schematics
     create-terraform-config.md
     workspace-setup.md
     manage-resource-lifecycle.md
+    allowips.md
     remotestate.md
     
     {: .topicgroup}
