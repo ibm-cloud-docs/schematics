@@ -1,10 +1,10 @@
- ---
+---
 
 copyright:
   years: 2017, 2020
 lastupdated: "2020-07-15"
 
-keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
+keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
 subcollection: schematics
 
@@ -25,6 +25,7 @@ subcollection: schematics
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:help: data-hd-content-type='help'}
+
 
 # Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall
 {: #allowed-ipaddresses}
