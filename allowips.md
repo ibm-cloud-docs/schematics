@@ -30,7 +30,7 @@ subcollection: schematics
 # Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall
 {: #allowed-ipaddresses}
 
-If you set up a custom firewall and want to access and manage {{site.ibm.keyword.cloud_notm}} services with {{site.ibm.keyword.bpshort}}, you need to open up the following IP addresses and CIDR ranges in your firewall.
+If you set up a custom firewall and want to access and manage {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.bpfull_notm}}, you need to open up the following IP addresses and CIDR ranges in your firewall.
 {: shortdesc}
 
 | Region | Zone | Public IP addresses | Private IP addresses |
