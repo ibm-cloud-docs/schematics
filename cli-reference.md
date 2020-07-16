@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-10"
+lastupdated: "2020-07-16"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -212,6 +212,8 @@ Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraf
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
 {: note}
+
+ 
 
 ```
 ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
