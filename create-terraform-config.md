@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-07-16"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -230,6 +230,8 @@ For more information about variable configurations, see the [Terraform documenta
 
 Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file (`.tar`)](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead. 
 {: shortdesc}
+
+  
 
 The following image shows an example of how your Terraform template could look like in a GitHub repository. 
 
