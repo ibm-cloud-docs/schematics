@@ -129,7 +129,9 @@ If you do not want to connect your workspace to a GitHub repository, you can upl
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
       - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
    2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).
-    
+ 
+ 
+
    3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
    4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
    5. If you specified input variables, enter the values that you want to use, and click **Save changes**. 
