@@ -52,7 +52,6 @@ The `terraform.tfvars` file is a local variables file that you use to store sens
 {: shortdesc}
 
 With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables) in the Terraform configuration files, and enter the values for your variables when you create a workspace. You can later change the values of your variables by updating the variables from your workspace details page. 
-
   
 
 ### Is Terraform remote state supported in {{site.data.keyword.bpshort}}?
