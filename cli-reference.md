@@ -219,7 +219,7 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
 {: note}
 
-Test this message to test note tag.
+Test this message it to test note tag.
 {: note}
 
 ```
