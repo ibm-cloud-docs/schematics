@@ -219,8 +219,6 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
 {: note}
 
-Test this message it to test note tag.
-{: note}
 
 ```
 ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
