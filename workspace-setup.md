@@ -174,6 +174,7 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
 5. Type the workspace name in the **Type workspace name to confirm** text box.
 6. Click the **Delete** button.
 
+
 ## Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery}
   
