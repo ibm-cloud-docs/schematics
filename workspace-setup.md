@@ -172,7 +172,7 @@ Click Resources, and validate the resources are destroyed, to delete the workspa
 2. Check the workspace box that you need to delete.
 3. Click Delete button.
 4. Check Delete workspace in the Delete workspace pop up.
-5. Type workspace in the type ``<workspace name>`` to confirm.
+5. Type the workspace name in the `type <workspace name> to confirm` text box.
 6. Click Delete.
 
 ## Setting up a continuous delivery toolchain for your workspace
