@@ -160,13 +160,13 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 3. In the **State** section on the workspace settings page, set the toggle to **Unfrozen**. The ID of the user who unfreezes the workspace and a timestamp are automatically logged. After you unfreeze a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
 
 ## Delete a workspace
-{: #del_workspace}
+{: #del-workspace}
 
-Delete your workspace that points to the GitHub repository that hosted your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
+Delete your workspace that points to the GitHub repository thats hosted your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
 
-Click Resources, and validate the resources are destroyed, to delete the workspace.
+Validate the resources before deleting the workspace.
 {: note}
 
 2. Check the workspace box that you need to delete.
