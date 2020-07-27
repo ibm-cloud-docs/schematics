@@ -162,9 +162,13 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 ## Delete a workspace
 {: #del_workspace}
 
-1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete. 
+Delete your workspace that points to the GitHub repository that hosted your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
+
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
+
 Click Resources, and validate the resources are destroyed, to delete the workspace.
 {: note}
+
 2. Check the workspace box that you need to delete.
 3. Click Delete button.
 4. Check Delete workspace in the Delete workspace pop up.
