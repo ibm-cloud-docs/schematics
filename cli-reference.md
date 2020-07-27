@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-24"
+lastupdated: "2020-07-27"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -117,8 +117,10 @@ ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 Delete a workspace from your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
+
 The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. 
 {: important}
+
 
 ```
 ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
@@ -246,12 +248,14 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
           "value": "&lt;variable_value1&gt;",
           "type": "&lt;variable_type1&gt;",
           "secure": true
+	  "description":"&ltdescription&gt"
         },
         {
           "name": "&lt;variable_name2&gt;",
           "value": "&lt;variable_value2&gt;",
           "type": "&lt;variable_type2&gt;",
           "secure": false
+	  "description":"&ltdescription&gt"
         }
       ]
     }
@@ -282,12 +286,14 @@ Example JSON for uploading a <code>.tar</code> file later:
           "value": "&lt;variable_value1&gt;",
           "type": "&lt;variable_type1&gt;",
           "secure": true
+	  "description":"&ltdescription&gt"
         },
         {
           "name": "&lt;variable_name2&gt;",
           "value": "&lt;variable_value2&gt;",
           "type": "&lt;variable_type2&gt;",
           "secure": false
+	  "description":"&ltdescription&gt"
         }
       ]
     }
