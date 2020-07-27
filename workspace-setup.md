@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-24"
+lastupdated: "2020-07-27"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -158,6 +158,16 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to unfreeze. 
 2. Select the **Settings** tab. 
 3. In the **State** section on the workspace settings page, set the toggle to **Unfrozen**. The ID of the user who unfreezes the workspace and a timestamp are automatically logged. After you unfreeze a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
+
+**To delete a workspace**
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete. 
+Click Resources, and validate the resources are destroyed, to delete the workspace.
+{: note}
+2. Check the workspace box that you need to delete.
+3. Click Delete button.
+4. Check Delete workspace in the Delete workspace pop up.
+5. Type workspace in the type ``<workspace name>`` to confirm.
+6. Click Delete.
 
 ## Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery}
