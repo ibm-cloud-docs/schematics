@@ -1,0 +1,47 @@
+{
+    "what-is-schematics": [
+        "What is IBM Cloud Schematics",
+        "describe Cloud schematics",
+        "how does Cloud Schematics work",
+        "how to use Schematics",
+        "start with Cloud Schematics",
+        "getting started with Schematics",
+        "get started with Cloud Schematics"
+    ],
+    "what-is-terraform": [
+        "What is Terraform",
+        "describe Terraform",
+        "how does Terraform work",
+        "schematics and terraform work together",
+        "how to use Schematics with Terraform",
+        "use of terraform",
+        "getting started with terraform"
+    ],
+    "what-is-iac": [
+        "What is Infrastructure as Code",
+        "what's IAC",
+        "describe IAC",
+        "what is infrastructure code", 
+        "use infrastructure code for automation",
+        "infrastructure code used for schematics"
+    ],
+    "charges": [
+        "charged for when I use Schematics",
+        "how much does schematics cost",
+        "price of schmatics",
+        "use schematics for free",
+        "pricing for schematics",
+        "how do you charge schematics",
+        "is schematics free",
+        "schematics at no cost"
+    ],
+    "ansible-playbooks": [
+        "run Ansible playbooks with Schematics",
+        "use Ansible playbook with Cloud Schematics",
+        "run Ansible actions in Schematics",
+        "how to use the Ansible provisioner",
+        "running Ansible actions for Cloud",
+        "run Ansible playbooks within Cloud", 
+        "use how to use the Ansible in schematics"
+    ]
+}
