@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-27"
+lastupdated: "2020-07-29"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -166,8 +166,9 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
 
-   Verify that you want to remove all the resources from your workspace before deleting the workspace.
+   Verify that you want to remove all the {{site.data.keyword.cloud_notm}} resource, see the [removing your resources](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources). Then, you need to validate that the resources are actually destroyed  or deselected for deleting the workspace.
    {: note}
+
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
 4. Select the **Delete workspace** option.
