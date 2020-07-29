@@ -237,4 +237,4 @@ Review the states that a workspace can have in the following table. You might no
 ## Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}}
 {: provision-tf-template}
 
-To provision the Terraform template by using the {{site.data.keyword.bpfull_notm}}. You need to Create the workspace, upload the GitHub or GitLab repository, execute the plan and analyse the {{site.data.keyword.bpfull_notm}} workspace, see the [Detailed instructions](#create-workspace) for details.
+To provision the Terraform template by using the {{site.data.keyword.bpfull_notm}}. You need to create the workspace, upload the GitHub or GitLab repository, execute the plan and analyse the {{site.data.keyword.bpfull_notm}} workspace, see the [Detailed instructions](#create-workspace) for details.
