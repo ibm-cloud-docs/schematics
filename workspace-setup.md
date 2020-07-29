@@ -234,3 +234,7 @@ Review the states that a workspace can have in the following table. You might no
 | Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was cancelled manually. |
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
 
+## Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}}
+{: provision-tf-template}
+
+To provision the Terraform template by using the {{site.data.keyword.bpfull_notm}}. You need to Create the workspace, upload the GitHub or GitLab repository, execute the plan and analyse the {{site.data.keyword.bpfull_notm}} workspace, see the [Detailed instructions](#create-workspace) for details.
