@@ -176,7 +176,7 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
        <tr>
          <td>Delete only resources</td><td>False</td><td>True</td></tr>
        <tr>
-          <td>Delete workspace and the resources provisioned by workspace></td><td>True</td><td>True</td></tr>
+          <td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
         <tr>
           <td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
         </table>
