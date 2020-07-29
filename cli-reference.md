@@ -114,7 +114,7 @@ ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics workspace delete`
 {: #schematics-workspace-delete}
 
-Delete a workspace from your {{site.data.keyword.cloud_notm}} account. The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. The table describes the delete workspace and destroy resources with various action.
+Delete a workspace from your {{site.data.keyword.cloud_notm}} account. The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. The table describes the delete workspace and destroy resources with the action.
 {: shortdesc}
 
 Decide if you want to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources with the resource list or CLI.
@@ -789,12 +789,4 @@ ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa
 ```
 {: pre}
 
-## Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}}
-{: provision-tf-template-cli}
 
-To provision the Terraform template by using the {{site.data.keyword.bpfull_notm}}. You need to 
-
-1. Install the IBM Cloud CLI and the IBM Cloud Schematics CLI plugin, see the [Install IBM Cloud and Schematics CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli).
-2. Create the IBM Cloud Schematics workspace, see the [Workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
-3. Execute the apply plan, see the [Schematics apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply).
-4. Analyse the logs and activities, see the [Schematics logs](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs).
