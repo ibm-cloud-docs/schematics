@@ -166,8 +166,20 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
 
-   Verify that you want to remove all the {{site.data.keyword.cloud_notm}} resource, see the [Removing your resources](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources). Then, you need to validate that the resources are actually deselected and destroyed before deleting the workspace.
-   {: important}
+    Decide if you want to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources with the resource list or CLI.
+    {: note}
+    <table>
+      <tr>
+        <th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
+       <tr>
+         <td>Delete workspace</td><td>True</td><td>False</td></tr>
+       <tr>
+         <td>Delete only resources</td><td>False</td><td>True</td></tr>
+       <tr>
+          <td>Delete workspace and the resources provisioned by workspace></td><td>True></td><td>True</td></tr>
+        <tr>
+          <td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True></td><td>False</td></tr>
+        </table>
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
 4. Select the **Delete workspace** option.
