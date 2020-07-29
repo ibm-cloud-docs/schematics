@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-27"
+lastupdated: "2020-07-29"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -114,13 +114,24 @@ ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics workspace delete`
 {: #schematics-workspace-delete}
 
-Delete a workspace from your {{site.data.keyword.cloud_notm}} account. 
+Delete a workspace from your {{site.data.keyword.cloud_notm}} account. The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. The table describes the delete workspace and destroy resources with the action.
 {: shortdesc}
 
+Decide if you want to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources with the resource list or CLI.
+{: note}
 
-The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. 
-{: important}
-
+<table>
+	<tr>
+		<th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
+	<tr>
+		<td>Delete workspace</td><td>True</td><td>False</td></tr>
+	<tr>
+		<td>Delete only resources</td><td>False</td><td>True</td></tr>
+	<tr>
+		<td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
+	<tr>
+		<td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
+</table> <br>
 
 ```
 ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
@@ -777,7 +788,5 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
 ```
 {: pre}
-
-
 
 
