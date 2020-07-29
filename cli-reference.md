@@ -118,20 +118,20 @@ Delete a workspace from your {{site.data.keyword.cloud_notm}} account. The delet
 {: shortdesc}
 
 Decide if you want to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources with the resource list or CLI.
-    {: note}
-    
-    <table>
-      <tr>
-        <th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
-       <tr>
-         <td>Delete workspace</td><td>True</td><td>False</td></tr>
-       <tr>
-         <td>Delete only resources</td><td>False</td><td>True</td></tr>
-       <tr>
-          <td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
-        <tr>
-          <td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
-        </table>
+{: note}
+
+<table>
+	<tr>
+		<th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
+	<tr>
+		<td>Delete workspace</td><td>True</td><td>False</td></tr>
+	<tr>
+		<td>Delete only resources</td><td>False</td><td>True</td></tr>
+	<tr>
+		<td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
+	<tr>
+		<td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
+</table> <br>
 
 ```
 ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
