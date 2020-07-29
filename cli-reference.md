@@ -789,6 +789,12 @@ ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa
 ```
 {: pre}
 
+## Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}}
+{: provision-tf-template-cli}
 
+To provision the Terraform template by using the {{site.data.keyword.bpfull_notm}}. You need to 
 
-
+Install the IBM Cloud CLI and the IBM Cloud Schematics CLI plugin, see the [Install IBM Cloud and Schematics CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli).
+Create the IBM Cloud Schematics workspace, see the [Workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+Execute Apply plan see the [Schematics apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply).
+Analysing logs and activities see the [Schematics logs](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs).
