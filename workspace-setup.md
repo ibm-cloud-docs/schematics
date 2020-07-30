@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-07-30"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -233,5 +233,3 @@ Review the states that a workspace can have in the following table. You might no
 | Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
 | Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was cancelled manually. |
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
-
-
