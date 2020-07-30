@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-07-30"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -788,5 +788,4 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
 ```
 {: pre}
-
 
