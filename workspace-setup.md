@@ -178,7 +178,7 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
        <tr>
           <td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
         <tr>
-          <td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
+          <td>Resources destroyed using CLI or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
         </table>
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
