@@ -130,7 +130,7 @@ Decide if you want to delete the workspace, any associated resources, or both. T
 	<tr>
 		<td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
 	<tr>
-		<td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
+		<td>Resources destroyed using CLI or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
 </table> <br>
 
 ```
