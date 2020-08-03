@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-30"
+lastupdated: "2020-08-03"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -359,32 +359,6 @@ Example JSON for uploading a <code>.tar</code> file later:
 ibmcloud schematics workspace new --file myfile.json
 ```
 {: pre}
-
-
-### `ibmcloud schematics workspace output`
-{: #schematics-workspace-output}
-
-Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace output --id WORKSPACE_ID
-```
-{: pre}
-
-**Command options:**
-<dl>	
- <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
-  </dl>
-  
-**Example:**
-
-```
-ibmcloud schematics workspace output --id myworkspace3_2-31cf7130-d0c4-4d
-```
-{: pre}
-
 
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
