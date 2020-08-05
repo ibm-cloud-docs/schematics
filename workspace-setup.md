@@ -137,7 +137,7 @@ If you do not want to connect your workspace to a GitHub repository, you can upl
 
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
-    5. You can create input variables. 
+    5. If you specified input variables, enter the values that you want to use. 
           
    6. Click **Save changes**.
    7. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
