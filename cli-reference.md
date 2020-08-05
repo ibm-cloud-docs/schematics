@@ -416,10 +416,22 @@ Example JSON for uploading a <code>.tar</code> file later:
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` </td>
    </tr>
     <tr>
-      <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt; </br>&lt;variable_type&gt; </br>&lt;secure&gt;</code></td>
-      <td>Optional. Enter the name, value, and data type for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong> so that all your variable values are always displayed when you retrieve your workspace details.  </td>
-      
-     </tr></tbody></table></dd>
+     <td><code>&lt;variable_name&gt;</code></td>
+     <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+     </tr>
+     <tr>
+     <td><code>&lt;variable_value&gt;</code></td>
+     <td>Optional. Enter the value for the input variable that you declared in your Terraform configuration files.</td>
+     </tr>
+      <tr>
+      <td><code>&lt;variable_type&gt;</code></td>
+      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. The data type can be `number`,`bool`,`list(<type>)`,`set()<type>`,`map(<type>)`,`object({<attribute name>=<type>,})`,`tuple([<type>])` For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
+      </tr>
+      <tr>
+      <td><code>&lt;secure&gt;</code></td>
+      <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
+      </tr>
+      </tbody></table></dd>
 <dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
 <dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your CLI output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
 <dt><code>--json</code>, <code>-j</code></dt>	
