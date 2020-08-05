@@ -255,18 +255,52 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
       "type": "&lt;terraform_version&gt;",
       "variablestore": [
         {
+	  "default": "&lt;hello&gt;",
           "name": "&lt;variable_name1&gt;",
           "value": "&lt;variable_value1&gt;",
-          "type": "&lt;variable_type1&gt;",
+          "type": "&lt;string&gt;",
           "secure": true
-	  "description":"&ltdescription&gt"
+	  "description":"&lt;description&gt;"
         },
         {
+	  "default": "&lt;false&gt;",
           "name": "&lt;variable_name2&gt;",
           "value": "&lt;variable_value2&gt;",
-          "type": "&lt;variable_type2&gt;",
+          "type": "&lt;bool&gt;",
           "secure": false
-	  "description":"&ltdescription&gt"
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;[\"blue-horizon\", \"mgm-grand\", \"madison-square-garden\"]&gt;",
+          "name": "&lt;variable_name3&gt;",
+          "value": "&lt;variable_value3&gt;",
+          "type": "&lt;list(string)&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;{name = 990,  age = 52}&gt;",
+          "name": "&lt;variable_name4&gt;",
+          "value": "&lt;variable_value4&gt;",
+          "type": "&lt;map(number)&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;[\"hello\",[\"hi\"], 34.5, false]&gt;",
+          "name": "&lt;variable_name5&gt;",
+          "value": "&lt;variable_value5&gt;",
+          "type": "&lt;tuple([string, list(string), number, bool])&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;78&gt;",
+          "name": "&lt;variable_name6&gt;",
+          "value": "&lt;variable_value6&gt;",
+          "type": "&lt;any&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
         }
       ]
     }
@@ -293,18 +327,52 @@ Example JSON for uploading a <code>.tar</code> file later:
       "type": "&lt;terraform_version&gt;",
       "variablestore": [
         {
+	  "default": "&lt;hello&gt;",
           "name": "&lt;variable_name1&gt;",
           "value": "&lt;variable_value1&gt;",
-          "type": "&lt;variable_type1&gt;",
+          "type": "&lt;string&gt;",
           "secure": true
-	  "description":"&ltdescription&gt"
+	  "description":"&lt;description&gt;"
         },
         {
+	  "default": "&lt;false&gt;",
           "name": "&lt;variable_name2&gt;",
           "value": "&lt;variable_value2&gt;",
-          "type": "&lt;variable_type2&gt;",
+          "type": "&lt;bool&gt;",
           "secure": false
-	  "description":"&ltdescription&gt"
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;[\"blue-horizon\", \"mgm-grand\", \"madison-square-garden\"]&gt;",
+          "name": "&lt;variable_name3&gt;",
+          "value": "&lt;variable_value3&gt;",
+          "type": "&lt;list(string)&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;{name = 990,  age = 52}&gt;",
+          "name": "&lt;variable_name4&gt;",
+          "value": "&lt;variable_value4&gt;",
+          "type": "&lt;map(number)&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;[\"hello\",[\"hi\"], 34.5, false]&gt;",
+          "name": "&lt;variable_name5&gt;",
+          "value": "&lt;variable_value5&gt;",
+          "type": "&lt;tuple([string, list(string), number, bool])&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "default": "&lt;78&gt;",
+          "name": "&lt;variable_name6&gt;",
+          "value": "&lt;variable_value6&gt;",
+          "type": "&lt;any&gt;",
+          "secure": false
+	  "description":"&lt;description&gt;"
         }
       ]
     }
@@ -335,6 +403,10 @@ Example JSON for uploading a <code>.tar</code> file later:
    <tr>
    <td><code>&lt;workspace_description&gt;</code></td>
    <td>Optional. Enter a description for your workspace. </td>
+   </tr>
+   <tr>
+   <td><code>&lt;default&gt;</code></td>
+   <td>Optional. Enter the default value to be initialized for the variable. </td>
    </tr>
    <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
