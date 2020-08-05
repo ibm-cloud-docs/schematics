@@ -43,4 +43,10 @@ Schematics
     faqs.md
     ts_index.md
     {: .navgroup-end}
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    faqs.md
+    ts_index.md
+    {: .navgroup-end}</staging>
 
