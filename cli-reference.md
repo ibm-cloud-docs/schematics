@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-05"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -360,31 +360,6 @@ ibmcloud schematics workspace new --file myfile.json
 ```
 {: pre}
 
-### `ibmcloud schematics  output`
-{: #schematics-output}
-
-Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
-{: shortdesc}
-
-```
-ibmcloud schematics output --id WORKSPACE_ID
-```
-{: pre}
-
-**Command options:**
-<dl>	
- <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
-  </dl>
-  
-**Example:**
-
-```
-ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
-```
-{: pre}
-
-
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
 
@@ -660,6 +635,30 @@ ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
 
 ```
 ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc1234cdst
+```
+{: pre}
+
+### `ibmcloud schematics output`
+{: #schematics-output}
+
+Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
+{: shortdesc}
+
+```
+ibmcloud schematics output --id WORKSPACE_ID
+```
+{: pre}
+
+**Command options:**
+<dl>	
+ <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
+  </dl>
+  
+**Example:**
+
+```
+ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
 ```
 {: pre}
 
