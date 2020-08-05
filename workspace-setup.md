@@ -146,10 +146,11 @@ If you do not want to connect your workspace to a GitHub repository, you can upl
       v. You can link, delink, or override workspace value by providing a custom value.
       vi. As an advanced user, you can provide a valid jsonata expression to link the workspace variable from other shared data sets or workspace as:
        - Shared data set variable 
-          ```
-          $$shared_datasets[shared_data_id='id'].shared_dataset_data[var_name='name'].override_value
+         
+              ```
+              $$shared_datasets[shared_data_id='id'].shared_dataset_data[var_name='name'].override_value
            
-           ```
+              ```
            {: pre}
            
       - Workspace variable 
