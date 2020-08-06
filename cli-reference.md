@@ -258,6 +258,14 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
     {
       "folder": ".",
       "type": "&lt;terraform_version&gt;",
+      "env_values":[
+      {
+        "VAR1":"val1"
+      },
+      {
+        "VAR2":"val2"
+      }
+      ]
       "variablestore": [
         {
 	  "name": "&lt;variable_name_x&gt;",
@@ -329,6 +337,14 @@ Example JSON for uploading a <code>.tar</code> file later:
     {
       "folder": ".",
       "type": "&lt;terraform_version&gt;",
+      "env_values":[
+      {
+        "VAR1":"val1"
+      },
+      {
+        "VAR2":"val2"
+      }
+      ]
       "variablestore": [
         {
           "name": "&lt;variable_name_x&gt;",
@@ -425,6 +441,10 @@ Example JSON for uploading a <code>.tar</code> file later:
       <td><code>&lt;secure&gt;</code></td>
       <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
       </tr>
+      <tr>
+      <td><code>&lt;val1&gt;</code></td>
+      <td>Optional. In the payload you can provide an environment variables that can execute in your workspace during plan, apply or destroy stage.</td>
+      </tr>
       </tbody></table></dd>
 <dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
 <dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your CLI output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
@@ -470,14 +490,25 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
     "frozen": &lt;true_or_false&gt;
   },
   "template_repo": { 
-    "url": "&lt;source_repo_url&gt;", 
-    "branch" : "&lt;branch&gt;",
-    "release": "&lt;release&gt;"
+    "url": "&lt;entire source_repo_url&gt;", 
+     /**Now, you can provide url with additional parameters as shown in the comment
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "&lt;master/draft&gt;",
+     "template_data_folder": “examples/ibm-vsi”,
+     "release": "v1.8.0"*/
   },
   "template_data": [
     {
-      "folder": "&lt;gh_folder&gt;",
+      "folder": ".",
       "type": "&lt;terraform_version&gt;",
+      "env_values":[
+      {
+        "VAR1":"val1"
+      },
+      {
+        "VAR2":"val2"
+      }
+      ]
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -538,18 +569,38 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
    <td><code>template_repo.branch</code></td>
    <td>Optional. Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  </td>
    </tr>  
+   <tr>
+   <td><code>template_repo.datafolder</code></td>
+   <td>Optional. Enter the GitHub or GitLab folder that points to your Terraform configuration files.  </td>
+   </tr>
     <tr>
    <td><code>template_repo.release</code></td>
    <td>Optional. Enter the GitHub or GitLab release that points to your Terraform configuration files.  </td>
    </tr>
-    <tr>
-      <td><code>template_data.variablestore.name </br>template_data.variablestore.value </br>template_data.variablestore.type  </br>template_data.variablestore.secure</code></td>
-      <td>Optional. Enter the name, value, and data type for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong> so that all your variable values are always displayed when you retrieve your workspace details. </td>
-     </tr>
      <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
      <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
-   </tr></tbody></table></dd>	
+     <tr>
+     <td><code>&lt;template_data.variablestore.name&gt;</code></td>
+     <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+     </tr>
+     <tr>
+     <td><code>&lt;template_data.variablestore.value&gt;</code></td>
+     <td>Optional. Enter the value for the input variable that you declared in your Terraform configuration files.</td>
+     </tr>
+      <tr>
+      <td><code>&lt;template_data.variablestore.type&gt;</code></td>
+      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. <br>`Terraform v0.11` supports <strong>string</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html){: external}. <br>'Terraform v0.12` support complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the comples data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints){: external}.<br>For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
+      </tr>
+      <tr>
+      <td><code>&lt;template_data.variablestore.secure&gt;</code></td>
+      <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
+      </tr>
+      <tr>
+      <td><code>&lt;env_values.val1&gt;</code></td>
+      <td>Optional. In the payload you can provide an environment variables that can execute in your workspace during plan, apply or destroy stage.</td>
+      </tr>	
+   </tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
   <dt><code>--json</code>, <code>-j</code></dt>	
