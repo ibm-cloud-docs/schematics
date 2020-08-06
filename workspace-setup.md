@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-05"
+lastupdated: "2020-08-06"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -172,7 +172,7 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
     {: note}
     <table>
       <tr>
-        <th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
+        <th>Action</th><th>Delete workspace</th><th>Delete all associated resources</th></tr>
        <tr>
          <td>Delete workspace</td><td>True</td><td>False</td></tr>
        <tr>
