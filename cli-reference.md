@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-05"
+lastupdated: "2020-08-06"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -255,49 +255,43 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
       "type": "&lt;terraform_version&gt;",
       "variablestore": [
         {
-	  "default": "&lt;hello&gt;",
-          "name": "&lt;variable_name1&gt;",
-          "value": "&lt;variable_value1&gt;",
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;string&gt;",
           "secure": true
 	  "description":"&lt;description&gt;"
         },
         {
-	  "default": "&lt;false&gt;",
-          "name": "&lt;variable_name2&gt;",
-          "value": "&lt;variable_value2&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;bool&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;[\"blue-horizon\", \"mgm-grand\", \"madison-square-garden\"]&gt;",
-          "name": "&lt;variable_name3&gt;",
-          "value": "&lt;variable_value3&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;list(string)&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;{name = 990,  age = 52}&gt;",
-          "name": "&lt;variable_name4&gt;",
-          "value": "&lt;variable_value4&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;map(number)&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;[\"hello\",[\"hi\"], 34.5, false]&gt;",
-          "name": "&lt;variable_name5&gt;",
-          "value": "&lt;variable_value5&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;tuple([string, list(string), number, bool])&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;78&gt;",
-          "name": "&lt;variable_name6&gt;",
-          "value": "&lt;variable_value6&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;any&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
@@ -319,7 +313,7 @@ Example JSON for uploading a <code>.tar</code> file later:
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
-    "url": ""
+    "url": "" 
   },
   "template_data": [
     {
@@ -327,49 +321,43 @@ Example JSON for uploading a <code>.tar</code> file later:
       "type": "&lt;terraform_version&gt;",
       "variablestore": [
         {
-	  "default": "&lt;hello&gt;",
-          "name": "&lt;variable_name1&gt;",
-          "value": "&lt;variable_value1&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;string&gt;",
           "secure": true
 	  "description":"&lt;description&gt;"
         },
         {
-	  "default": "&lt;false&gt;",
-          "name": "&lt;variable_name2&gt;",
-          "value": "&lt;variable_value2&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;bool&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;[\"blue-horizon\", \"mgm-grand\", \"madison-square-garden\"]&gt;",
-          "name": "&lt;variable_name3&gt;",
-          "value": "&lt;variable_value3&gt;",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;list(string)&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;{name = 990,  age = 52}&gt;",
-          "name": "&lt;variable_name4&gt;",
-          "value": "&lt;variable_value4&gt;",
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;map(number)&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;[\"hello\",[\"hi\"], 34.5, false]&gt;",
-          "name": "&lt;variable_name5&gt;",
-          "value": "&lt;variable_value5&gt;",
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;tuple([string, list(string), number, bool])&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
-	  "default": "&lt;78&gt;",
-          "name": "&lt;variable_name6&gt;",
-          "value": "&lt;variable_value6&gt;",
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "&lt;any&gt;",
           "secure": false
 	  "description":"&lt;description&gt;"
@@ -405,10 +393,6 @@ Example JSON for uploading a <code>.tar</code> file later:
    <td>Optional. Enter a description for your workspace. </td>
    </tr>
    <tr>
-   <td><code>&lt;default&gt;</code></td>
-   <td>Optional. Enter the default value to be initialized for the variable. </td>
-   </tr>
-   <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
      <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. If you plan to provide your Terraform template by uploading a tape archive file (`.tar`), leave the URL empty, and use the [<code>ibmcloud schematics workspace upload</code>](#schematics-workspace-upload) command after you created the workspace. <br>Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The blocked extension files having more than 500 KB in size, and any invalid image is considered as vulnerable files while cloning.
 -	Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
@@ -425,7 +409,7 @@ Example JSON for uploading a <code>.tar</code> file later:
      </tr>
       <tr>
       <td><code>&lt;variable_type&gt;</code></td>
-      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. The data type can be <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
+      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. <br>`Terraform v0.11` supports <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong> data type. <br>'Terraform v0.12` support complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the comples data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints){: external}.<br>For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
       </tr>
       <tr>
       <td><code>&lt;secure&gt;</code></td>
