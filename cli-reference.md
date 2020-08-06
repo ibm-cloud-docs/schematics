@@ -122,7 +122,7 @@ Decide if you want to delete the workspace, any associated resources, or both. T
 
 <table>
 	<tr>
-		<th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
+		<th>Action</th><th>Delete workspace</th><th>Delete all associated resources</th></tr>
 	<tr>
 		<td>Delete workspace</td><td>True</td><td>False</td></tr>
 	<tr>
