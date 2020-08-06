@@ -247,7 +247,12 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
-    "url": "&lt;github_source_repo_url&gt;"
+    "url": "&lt; entire github_source_repo_url&gt;"
+    /**Now, you can provide url with additional parameters as shown in the comment
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "&lt;master/draft&gt;",
+     "template_data_folder": “examples/ibm-vsi”,
+     "release": "v1.8.0"*/
   },
   "template_data": [
     {
@@ -313,7 +318,12 @@ Example JSON for uploading a <code>.tar</code> file later:
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
-    "url": "" 
+     "url": "&lt; entire github_source_repo_url&gt;"
+    /**Now, you can provide url with additional parameters as shown in the comment
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "&lt;master/draft&gt;",
+     "template_data_folder": “examples/ibm-vsi”,
+     "release": "v1.8.0"*/
   },
   "template_data": [
     {
