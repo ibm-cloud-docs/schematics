@@ -248,11 +248,11 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "tags": [],
   "template_repo": {
     "url": "&lt; entire github_source_repo_url&gt;"
-    /**Now, you can provide url with additional parameters as shown in the comment
+    &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "&lt;master/draft&gt;",
-     "template_data_folder": “examples/ibm-vsi”,
-     "release": "v1.8.0"*/
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0" &#42;&#47;
   },
   "template_data": [
     {
@@ -260,52 +260,52 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
       "type": "&lt;terraform_version&gt;",
       "env_values":[
       {
-        "VAR1":"val1"
+        "VAR1":"&lt;val1&gt;"
       },
       {
-        "VAR2":"val2"
+        "VAR2":"&lt;val2&gt;"
       }
       ]
       "variablestore": [
         {
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;string&gt;",
+          "type": "string",
           "secure": true
 	  "description":"&lt;description&gt;"
         },
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;bool&gt;",
+          "type": "bool",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;list(string)&gt;",
+          "type": "list(string);",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;map(number)&gt;",
+          "type": "map(number)",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;tuple([string, list(string), number, bool])&gt;",
+          "type": "tuple([string, list(string), number, bool])",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;any&gt;",
+          "type": "any",
           "secure": false
 	  "description":"&lt;description&gt;"
         }
@@ -327,11 +327,11 @@ Example JSON for uploading a <code>.tar</code> file later:
   "tags": [],
   "template_repo": {
      "url": "&lt; entire github_source_repo_url&gt;"
-    /**Now, you can provide url with additional parameters as shown in the comment
+   &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "&lt;master/draft&gt;",
+     "branch": "master",
      "template_data_folder": “examples/ibm-vsi”,
-     "release": "v1.8.0"*/
+     "release": "v1.8.0" &#47;&#42;
   },
   "template_data": [
     {
@@ -339,52 +339,52 @@ Example JSON for uploading a <code>.tar</code> file later:
       "type": "&lt;terraform_version&gt;",
       "env_values":[
       {
-        "VAR1":"val1"
+        "VAR1":"&lt;val1&gt;"
       },
       {
-        "VAR2":"val2"
+        "VAR2":"&lt;val2&gt;"
       }
       ]
       "variablestore": [
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;string&gt;",
+          "type": "string",
           "secure": true
 	  "description":"&lt;description&gt;"
         },
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;bool&gt;",
+          "type": "bool",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;list(string)&gt;",
+          "type": "list(string)",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;map(number)&gt;",
+          "type": "map(number)",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;tuple([string, list(string), number, bool])&gt;",
+          "type": "tuple([string, list(string), number, bool])",
           "secure": false
 	  "description":"&lt;description&gt;"
         },
 	{
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
-          "type": "&lt;any&gt;",
+          "type": "any",
           "secure": false
 	  "description":"&lt;description&gt;"
         }
@@ -435,7 +435,7 @@ Example JSON for uploading a <code>.tar</code> file later:
      </tr>
       <tr>
       <td><code>&lt;variable_type&gt;</code></td>
-      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. <br>`Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html){: external}. <br>'Terraform v0.12` support complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the comples data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints){: external}.<br>For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
+      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. <br>`Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html){: external}. <br> 'Terraform v0.12`  support complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints){: external}.<br>For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
       </tr>
       <tr>
       <td><code>&lt;secure&gt;</code></td>
@@ -491,11 +491,11 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
   },
   "template_repo": { 
     "url": "&lt;entire source_repo_url&gt;", 
-     /**Now, you can provide url with additional parameters as shown in the comment
+     &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "&lt;master/draft&gt;",
+     "branch": "master",
      "template_data_folder": “examples/ibm-vsi”,
-     "release": "v1.8.0"*/
+     "release": "v1.8.0" &#47;&#42;
   },
   "template_data": [
     {
@@ -503,10 +503,10 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
       "type": "&lt;terraform_version&gt;",
       "env_values":[
       {
-        "VAR1":"val1"
+        "VAR1":"&lt;val1&gt;"
       },
       {
-        "VAR2":"val2"
+        "VAR2":"&lt;val2&gt;"
       }
       ]
       "variablestore": [
@@ -590,7 +590,7 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
      </tr>
       <tr>
       <td><code>&lt;template_data.variablestore.type&gt;</code></td>
-      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. <br>`Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html){: external}. <br>'Terraform v0.12` support complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the comples data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints){: external}.<br>For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
+      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. <br>`Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html){: external}. <br>'Terraform v0.12` support complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints){: external}.<br>For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.</td>
       </tr>
       <tr>
       <td><code>&lt;template_data.variablestore.secure&gt;</code></td>
