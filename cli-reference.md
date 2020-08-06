@@ -247,7 +247,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
-    "url": "&lt; entire github_source_repo_url&gt;"
+    "url": "&lt;github_source_repo_url&gt;"
     &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
@@ -271,42 +271,42 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "string",
-          "secure": true
+          "secure": true,
 	  "description":"&lt;description&gt;"
         },
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "bool",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "list(string);",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "map(number)",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "tuple([string, list(string), number, bool])",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "any",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         }
       ]
@@ -326,7 +326,7 @@ Example JSON for uploading a <code>.tar</code> file later:
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
-     "url": "&lt; entire github_source_repo_url&gt;"
+     "url": "&lt;github_source_repo_url&gt;"
    &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master",
@@ -350,42 +350,42 @@ Example JSON for uploading a <code>.tar</code> file later:
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "string",
-          "secure": true
+          "secure": true,
 	  "description":"&lt;description&gt;"
         },
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "bool",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "list(string)",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "map(number)",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "tuple([string, list(string), number, bool])",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         },
 	{
 	  "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "any",
-          "secure": false
+          "secure": false,
 	  "description":"&lt;description&gt;"
         }
       ]
@@ -490,7 +490,7 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
     "frozen": &lt;true_or_false&gt;
   },
   "template_repo": { 
-    "url": "&lt;entire source_repo_url&gt;", 
+    "url": "&lt;source_repo_url&gt;", 
      &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master",
