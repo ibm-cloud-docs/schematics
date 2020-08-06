@@ -443,7 +443,7 @@ Example JSON for uploading a <code>.tar</code> file later:
       </tr>
       <tr>
       <td><code>&lt;val1&gt;</code></td>
-      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also they are encrypted and stored in cos.</td>
+      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in cos.</td>
       </tr>
       </tbody></table></dd>
 <dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
@@ -598,7 +598,7 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
       </tr>
       <tr>
       <td><code>&lt;env_values.val1&gt;</code></td>
-      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also they are encrypted and stored in cos.</td>
+      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in cos.</td>
       </tr>	
    </tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
