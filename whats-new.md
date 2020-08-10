@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-08-10"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -27,6 +27,13 @@ subcollection: schematics
 {: #new-in-schematics}
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
+
+## August 2020
+{: #august-2020}
+
+|Date|Description|
+|-----|-----------|
+|14 August 2020|<ul><li>**Support for multiple Terraform provider**: {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource lifecycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [`DELETE /v1/workspaces/{id}/actions/{action_id}`](/apidocs/schematics#stop-a-schematics-apply-action) API. </li><li>**New {{site.data.keyword.bpshort}} locations**: You can now create {{site.data.keyword.bpshort}} workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region from the CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)</li></ul> |
 
 ## July 2020
 {: #july-2020}
