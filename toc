@@ -12,6 +12,10 @@ Schematics
     whats-new.md
     {: .navgroup-end}
     
+    {: .navgroup id="tutorials"}
+    tutorials/provisioning-tf.md
+    {: .navgroup-end}
+    
     {: .navgroup id="howto"}
     setup-cli.md
     create-terraform-config.md
