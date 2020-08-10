@@ -76,7 +76,6 @@ With {{site.data.keyword.bplong_notm}}, you can run Ansible playbooks or Ansible
 
 Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions `1.9.0`, `1.8.1`, `1.8.0`, `1.7.1`, `1.7.0`. You need to add Terraform provider block in the right provider version. By default the provider executes latest version `1.9.0`. For more information, about the provider configuration, see [Provider configuration](https://www.terraform.io/docs/configuration/providers.html).
 
-**Example**
 Example for a multiple provider configuration:
 
 ```
