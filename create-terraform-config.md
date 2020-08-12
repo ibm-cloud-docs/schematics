@@ -199,22 +199,22 @@ When you declare an input variable, you must provide a name for your variable an
  ```
  {: codeblock}
   
-**Can I see how to declare complex variables in `variables.tf` file?**
+**Can I see how to declare complex variables in a file?**
 
-Yes, when you declare the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
+Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
 
 | Type | Example |
 | ----- | ----- |
 | number | 4.56 |
-| string | us-south |
+| string | "us-south" |
 | bool | false|
 | map(string) | {key1 = "value1", key2 = "value2"} |
 | set(string) | ["hello", "world"] |
 | map(number) | {internal = 8080, external = 2020} |
 | list(string) | ["us-south", "eu-gb"] |
 | list |["value", 30] |
-| list(list(string)) | [[us-south, us-east][eu-gb,eu-de]] |
-| list(object({internal = number external = number protocol = string })) | [{internal = 8300 external = 8300 protocol = "tcp"}, {internal = 8301 external = 8301 protocol = "ldp"}] |
+| list(list(string)) | [["us-south", "us-east"]["eu-gb","eu-de"]] |
+| list(object({internal = number external = number protocol = string })) | [{internal = 8300 external = 8300 protocol = "tcp"}, {internal = 8301 external = 8301 protocol = "ldp"}] | <br>
   
   
 **Is there a character limit for input variables?** </br>
