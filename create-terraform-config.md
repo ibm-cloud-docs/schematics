@@ -182,10 +182,9 @@ You can use `variable` blocks to templatize your infrastructure code. For exampl
 You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations. 
 
 **What information do I need to include in my variable declaration?** </br>
-When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally add a description and a default balue for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
+When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally add a description and a default balue for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.<br>
 `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
-`Terraform v0.12`  supports complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).<br>
-If you are using api, then the value field must contain escaped string for the variable store, as shown in the example.
+`Terraform v0.12`  supports complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. <br> For more information about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints). If you are using api, then the value field must contain escaped string for the variable store, as shown in the example.
 
 **Example**
 ```
@@ -200,8 +199,6 @@ If you are using api, then the value field must contain escaped string for the v
  ```
  {: codeblock}
   
-For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables)
-
 **Can I see how to declare complex variables in `variables.tf` file?**
 
 Yes, when you declare the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
