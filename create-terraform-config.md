@@ -205,98 +205,8 @@ If you are using `API` or `CLI`, then the `value` field must contain escaped str
 
 Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
 
-| Type | Example |
-| ----- | ----- |
-| number | 4.56 |
-| string | "us-south" |
-| bool | false|
-| map(string) | {key1 = "value1", key2 = "value2"} |
-| set(string) | ["hello", "world"] |
-| map(number) | {internal = 8080, external = 2020} |
-| list(string) | ["us-south", "eu-gb"] |
-| list |["value", 30] |
-| list(list(string)) | [["us-south", "us-east"]["eu-gb","eu-de"]] |
-| list(object({internal = number external = number protocol = string})) | <pre class="codeblock">	
-<code>[{internal = 8300 external = 8300 protocol = "tcp"}, {internal = 8301 external = 8301 protocol = "ldp"}]</code></pre> | <br>
-
-<pre class="codeblock">	
-<code>
-list(object({
-    internal = number
-    external = number
-    protocol = string
-  })) 	[
-    {
-      internal = 8300
-      external = 8300
-      protocol = "tcp"
-    },
-    {
-      internal = 8301
-      external = 8301
-      protocol = "ldp"
-    }
-  ]
-list(object({
-    internal = number
-    external = number
-    protocol = string
-    details = object({
-      name = string
-      num = number
-      vals = list(string)
-      other = map(object(
-        {
-          name = string
-          val = number
-        }
-      ))
-    })
-  })) 	[
-    {
-      internal = 8300
-      external = 8300
-      protocol = "tcp"
-      extrakey = "joke"
-      details = {
-        name = "execute"
-        num = 3
-        vals = ["ls -la", "echo that was the list", "ls -lrt",]
-        other = {
-          random = {
-            name = "whatever"
-            val = 6
-          },
-        }
-      }
-    },
-    {
-      internal = 8301
-      external = 8301
-      protocol = "tcp"
-      details = {
-        name = "execute"
-        num = 3
-        vals = ["ls -la", "echo that was the list", "ls -lrt"]
-        other = {
-          first = {
-            name = "what"
-            val = 1
-          }
-          second = {
-            name = "how"
-            val = 2
-          }
-        }
-      }
-    }
-  ]
-</code></pre>
-
-## Examples
-  
-  <table>
-    <thead>
+ <table>
+   <thead>
     <th style="width:180px">Type</th>
     <th style="width:150px">Example</th>
   </thead>
@@ -336,11 +246,11 @@ list(object({
      <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
-      [us-south, us-east]<br>
-      [<br>
-         eu-gb,<br>
-         eu-de<br>
-       ]<br>
+             [us-south, us-east]<br>
+             [<br>
+               eu-gb,<br>
+               eu-de<br>
+             ]<br>
  ]</li></ul></td>
     </tr>
     <tr>
