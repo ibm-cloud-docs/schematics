@@ -245,13 +245,13 @@ Yes, when you declare and assign the value to the variables, you can view the to
     </tr>
      <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
-             [us-south, us-east]<br>
-             [<br>
-               eu-gb,<br>
-               eu-de<br>
-             ]<br>
- ]</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br
+                                                        [us-south, us-east]<br>
+                                                        [<br>
+                                                          "eu-gb",<br>
+                                                           "eu-de"<br>
+                                                        ]<br>
+                                                      ]</li></ul></td>
     </tr>
     <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(object({<br>
