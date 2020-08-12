@@ -215,19 +215,12 @@ Yes, when you declare the variables, you can view the tool tip in the UI. The ta
 | map(number) | {internal = 8080, external = 2020} |
 | list(string) | ["us-south", "eu-gb"] |
 | list |["value", 30] |
-| list(list(string)) | [
-      [us-south, us-east]
-      [
-         eu-gb,
-         eu-de
-       ]
- ] |
- | list(object({
+| list(list(string)) | [[us-south, us-east][eu-gb,eu-de]] |
+| list(object({
     internal = number
     external = number
     protocol = string
-  })) | [
-    {
+  })) | [{
       internal = 8300
       external = 8300
       protocol = "tcp"
