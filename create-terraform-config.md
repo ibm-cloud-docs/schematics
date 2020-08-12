@@ -186,7 +186,6 @@ When you declare an input variable, you must provide a name for your variable an
 `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
 `Terraform v0.12`  supports complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).<br>
 If you are using api, then the value field must contain escaped string for the variable store, as shown in the example.
-{: note}
 ```
 "variablestore": [
                 {
@@ -198,6 +197,7 @@ If you are using api, then the value field must contain escaped string for the v
       ]
  ```
  {: codeblock}
+ {: note}
  
 For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables)
 
