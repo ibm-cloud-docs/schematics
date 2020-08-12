@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-24"
+lastupdated: "2020-08-12"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -182,7 +182,61 @@ You can use `variable` blocks to templatize your infrastructure code. For exampl
 You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations. 
 
 **What information do I need to include in my variable declaration?** </br>
-When you declare an input variable, you must provide a name for your variable and the data type, such as `string` or `integer`, that the variable uses. You can optionally add a description and a default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. 
+When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally add a description and a default balue for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `hcl` format for complex variables.
+`Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
+`Terraform v0.12`  supports complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).<br>
+If you are using api, then the value field must contain escaped string for the variable store, as shown in the example.
+{: note}
+```
+"variablestore": [
+                {
+                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+                    "description": "",
+                    "name": "docker_ports",
+                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+                },
+      ]
+ ```
+ {: codeblock}
+ 
+For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables)
+
+**Can I see how to declare complex variables in `variables.tf` file?**
+
+Yes, when you declare the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
+
+| Type | Example |
+| number | 4.56 |
+| string | us-south |
+| bool | false|
+| map(string) | {key1 = "value1", key2 = "value2"} |
+| set(string) | ["hello", "world"] |
+| map(number) | {internal = 8080, external = 2020} |
+| list(string) | ["us-south", "eu-gb"] |
+| list |["value", 30] |
+| list(list(string)) |  	[
+      [us-south, us-east]
+      [
+         eu-gb,
+         eu-de
+       ]
+ ] |
+ | list(object({
+    internal = number
+    external = number
+    protocol = string
+  })) | [
+    {
+      internal = 8300
+      external = 8300
+      protocol = "tcp"
+    },
+    {
+      internal = 8301
+      external = 8301
+      protocol = "ldp"
+    }
+  ] |
 
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
