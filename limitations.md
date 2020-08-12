@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-10"
+lastupdated: "2020-08-12"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -64,8 +64,7 @@ You can access workspace state information from other workspaces by using the {{
 
 For more information about how to use this data source, see [Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state). 
 
-### Can I run local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}}?
+### Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?
 {: #local-remote-exec}
 
-You can use `local-exec` and `remote-exec` provisioners to run commands on the resources by using {{site.data.keyword.bplong_notm}} workspace. However, the {{site.data.keyword.bplong_notm}} will timeout automatically after `30 minutes` and apply will fail. You need to ensure the `exec` provisioners completes within 30 minutes.
-
+The time out is set for `local-exec` and `remote-exec` provisioners by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state will fail. 
