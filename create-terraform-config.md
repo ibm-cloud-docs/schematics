@@ -206,6 +206,7 @@ For more information about how to declare variables in a configuration file, see
 Yes, when you declare the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
 
 | Type | Example |
+| ----- | ----- |
 | number | 4.56 |
 | string | us-south |
 | bool | false|
