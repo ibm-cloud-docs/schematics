@@ -292,6 +292,36 @@ list(object({
     }
   ]
 </code></pre>
+
+## Examples
+  
+  <table>
+    <thead>
+    <th style="width:180px">Type</th>
+    <th style="width:150px">Example</th>
+  </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">list(object({
+    internal = number
+    external = number
+    protocol = string
+  }))</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[
+    {
+      internal = 8300
+      external = 8300
+      protocol = "tcp"
+    },
+    {
+      internal = 8301
+      external = 8301
+      protocol = "ldp"
+    }
+  ]</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
   
   
 **Is there a character limit for input variables?** </br>
