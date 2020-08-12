@@ -216,7 +216,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
 | list(string) | ["us-south", "eu-gb"] |
 | list |["value", 30] |
 | list(list(string)) | [["us-south", "us-east"]["eu-gb","eu-de"]] |
-| list(object({internal = number external = number protocol = string })) | [{internal = 8300 external = 8300 protocol = "tcp"}, {internal = 8301 external = 8301 protocol = "ldp"}] | <br>
+| list(object({internal = number external = number protocol = string})) | [{internal = 8300 external = 8300 protocol = "tcp"}, {internal = 8301 external = 8301 protocol = "ldp"}] | <br>
   
   
 **Is there a character limit for input variables?** </br>
