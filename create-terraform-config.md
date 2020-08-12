@@ -246,11 +246,11 @@ Yes, when you declare and assign the value to the variables, you can view the to
      <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br
-                                                        [us-south, us-east]<br>
-                                                        [<br>
-                                                          "eu-gb",<br>
-                                                           "eu-de"<br>
-                                                        ]<br>
+                                                     &#32   [us-south, us-east]<br>
+                                                     &#32&#32 [<br>
+                                                      &#32&#32&#32   "eu-gb",<br>
+                                                      &#32&#32&#32    "eu-de"<br>
+                                                      &#32&#32 ]<br>
                                                       ]</li></ul></td>
     </tr>
     <tr>
