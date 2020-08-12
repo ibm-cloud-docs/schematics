@@ -237,6 +237,7 @@ Yes, when you declare the variables, you can view the tool tip in the UI. The ta
       protocol = "ldp"
     }
   ] |
+  
 
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
