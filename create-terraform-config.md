@@ -217,6 +217,80 @@ Yes, when you declare and assign the value to the variables, you can view the to
 | list |["value", 30] |
 | list(list(string)) | [["us-south", "us-east"]["eu-gb","eu-de"]] |
 | list(object({internal = number external = number protocol = string})) | [{internal = 8300 external = 8300 protocol = "tcp"}, {internal = 8301 external = 8301 protocol = "ldp"}] | <br>
+
+<pre class="codeblock">	
+<code>
+list(object({
+    internal = number
+    external = number
+    protocol = string
+  })) 	[
+    {
+      internal = 8300
+      external = 8300
+      protocol = "tcp"
+    },
+    {
+      internal = 8301
+      external = 8301
+      protocol = "ldp"
+    }
+  ]
+list(object({
+    internal = number
+    external = number
+    protocol = string
+    details = object({
+      name = string
+      num = number
+      vals = list(string)
+      other = map(object(
+        {
+          name = string
+          val = number
+        }
+      ))
+    })
+  })) 	[
+    {
+      internal = 8300
+      external = 8300
+      protocol = "tcp"
+      extrakey = "joke"
+      details = {
+        name = "execute"
+        num = 3
+        vals = ["ls -la", "echo that was the list", "ls -lrt",]
+        other = {
+          random = {
+            name = "whatever"
+            val = 6
+          },
+        }
+      }
+    },
+    {
+      internal = 8301
+      external = 8301
+      protocol = "tcp"
+      details = {
+        name = "execute"
+        num = 3
+        vals = ["ls -la", "echo that was the list", "ls -lrt"]
+        other = {
+          first = {
+            name = "what"
+            val = 1
+          }
+          second = {
+            name = "how"
+            val = 2
+          }
+        }
+      }
+    }
+  ]
+</code></pre>
   
   
 **Is there a character limit for input variables?** </br>
