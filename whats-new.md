@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-08-10"
+lastupdated: "2020-08-12"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -33,7 +33,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|-----------|
-|14 August 2020|<ul><li>**Support for multiple Terraform provider**: {{site.data.keyword.bplong_notm}} now supports multiple Terraform provider versions `1.9.0`, `1.8.1`, `1.8.0`, `1.7.1`, `1.7.0`. You need to add Terraform provider block in the right provider version. By default the provider executes latest version `1.9.0`. For more information, see [Multiple Terraform Provider](/docs/schematics?topic=schematics-faqs#provider-versions).</li><li>**Support for complex variables**: You can now create complex variables types supported by Terraform v0.12 in {{site.data.keyword.bplong_notm}}. For more information on complex variable, see [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).</li><li>**Local-exec and remote-exec provisioners**: You can use `local-exec` and `remote-exec` provisioners to run commands on the resources by using {{site.data.keyword.bplong_notm}} workspace. However, the {{site.data.keyword.bplong_notm}} will timeout automatically after `30 minutes` and apply will fail. You need to ensure the `exec` provisioners completes within 30 minutes.</li><li>**Bit bucket repos is used as a template repo source**: {{site.data.keyword.bplong_notm}} supports public bit bucket repo as a template repo source. <br> Private bit bucket repo needs a workaround. You can upload the `tar` file and download the file from the repo. Then, upload the `tar` the files in the {{site.data.keyword.bplong_notm}} workspace.</li>|
+|14 August 2020|<ul><li>**Support for multiple Terraform provider**: {{site.data.keyword.bplong_notm}} now supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.9.0`. Current version is `1.10` and previous four versions such as `1.9.0`, `1.8.1`, `1.8.0`, `1.7.1` are supported. For more information, about the provider configuration, see [Multiple Terraform Provider](/docs/schematics?topic=schematics-faqs#provider-versions).</li><li>**Support for complex variables**: You can now create complex variables types supported by Terraform v0.12 in {{site.data.keyword.bplong_notm}}. For more information on complex variable, see [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).</li><li>**Time out set for local-exec and remote-exec provisioners**: If you run local-exec or remote-exec provisioners, ensure execution completes within 30 minutes. Otherwise execution times out automatically. </li><li>**Bit bucket repos is used as a template repo source**: {{site.data.keyword.bplong_notm}} supports bit bucket repo as a template repo source. <br> Private bit bucket repo needs a workaround. You can upload the `tar` file and download the file from the repo. Then, you need to tar the files and upload in the {{site.data.keyword.bplong_notm}} workspace.</li>|
 
 ## July 2020
 {: #july-2020}
