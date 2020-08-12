@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-10"
+lastupdated: "2020-08-12"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -74,7 +74,7 @@ With {{site.data.keyword.bplong_notm}}, you can run Ansible playbooks or Ansible
 {: faq}
 {: support}
 
-Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions `1.9.0`, `1.8.1`, `1.8.0`, `1.7.1`, `1.7.0`. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.9.0`. For more information, about the provider configuration, see [Provider configuration](https://www.terraform.io/docs/configuration/providers.html).
+Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions `1.9.0`, `1.8.1`, `1.8.0`, `1.7.1`. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.9.0`. Current version is `1.10` and previous four versions are supported. For more information, about the provider configuration, see [Provider configuration](https://www.terraform.io/docs/configuration/providers.html).
 
 Example for a multiple provider configuration:
 
@@ -82,11 +82,10 @@ Example for a multiple provider configuration:
 terraform{
   required_providers{
    ibm = ">= 1.6" // Error !! version unavailable.
-   ibm = ">= 1.7.0" // Execute against 1.9.
+   ibm = ">= 1.7.0" // Execute against latest version
    ibm = ">= 1.8.0" // Execute against 1.8.0.
    ibm = ">= 1.9.0" // Execute against 1.9.0
-   ibm = ">= 1.9.1" // Error !! version yet to be provided.
- }
+  }
 }
 
 ```
