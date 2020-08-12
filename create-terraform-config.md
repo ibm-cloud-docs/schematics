@@ -216,20 +216,20 @@ Yes, when you declare the variables, you can view the tool tip in the UI. The ta
 | list(string) | ["us-south", "eu-gb"] |
 | list |["value", 30] |
 | list(list(string)) | [[us-south, us-east][eu-gb,eu-de]] |
-| list(object({<br>
-    internal = number<br>
-    external = number<br>
-    protocol = string<br>
-  })) | [{<br>
-      internal = 8300<br>
-      external = 8300<br>
-      protocol = "tcp"<br>
+| ```list(object({
+    internal = number
+    external = number
+    protocol = string
+  }))``` {: pre} | ``` [{
+      internal = 8300
+      external = 8300
+      protocol = "tcp"
     },
-    {<br>
-      internal = 8301<br>
-      external = 8301<br>
-      protocol = "ldp"<br>
-    }] |
+    {
+      internal = 8301
+      external = 8301
+      protocol = "ldp"
+    }]``` {: pre} |
   
 
 **Is there a character limit for input variables?** </br>
