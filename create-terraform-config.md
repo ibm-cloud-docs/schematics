@@ -302,22 +302,22 @@ list(object({
   </thead>
   <tbody>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">list(object({
-    internal = number
-    external = number
-    protocol = string
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(object({<br>
+    internal = number<br>
+    external = number<br>
+    protocol = string<br>
   }))</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[
-    {
-      internal = 8300
-      external = 8300
-      protocol = "tcp"
-    },
-    {
-      internal = 8301
-      external = 8301
-      protocol = "ldp"
-    }
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
+    {<br>
+      internal = 8300<br>
+      external = 8300<br>
+      protocol = "tcp"<br>
+    },<br>
+    {<br>
+      internal = 8301<br>
+      external = 8301<br>
+      protocol = "ldp"<br>
+    }<br>
   ]</li></ul></td>
     </tr>
   </tbody>
