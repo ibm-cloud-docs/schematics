@@ -301,6 +301,48 @@ list(object({
     <th style="width:150px">Example</th>
   </thead>
   <tbody>
+   <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
+    </tr>
+   <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
+    </tr>
+     <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
+      [us-south, us-east]<br>
+      [<br>
+         eu-gb,<br>
+         eu-de<br>
+       ]<br>
+ ]</li></ul></td>
+    </tr>
     <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(object({<br>
     internal = number<br>
