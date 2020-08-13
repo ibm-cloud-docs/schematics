@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-12"
+lastupdated: "2020-08-13"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -429,13 +429,13 @@ Example JSON for uploading a <code>.tar</code> file later:
      <td><code>&lt;variable_name&gt;</code></td>
      <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
      </tr>
-     <tr>
-     <td><code>&lt;variable_value&gt;</code></td>
-     <td>Optional. Enter the value for the input variable that you declared in your Terraform configuration files.</td>
-     </tr>
       <tr>
       <td><code>&lt;variable_type&gt;</code></td>
-      <td>Optional. Enter the data type for the input variable that you declared in your Terraform configuration files. <br>`{{site.data.keyword.bplong.fullnotm}} accepts the value as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.<br> Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports complex data type such as <strong>bool</strong>, <strong>list(`type`)</strong>, <strong>map(`type`)</strong>, <strong>number</strong>, <strong>object({`attribute name`=`type`,..})</strong>, <strong>set(`type`)</strong>, <strong>tuple([`type`])</strong>. For more information about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).<br>For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example, if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, so that all your variable values are always displayed when you retrieve your workspace details.<br> If you are using `API` or `CLI`, then the `value` field must contain escaped string for the variable store, as shown in the example.<br><pre class="codeblock">	
+      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).</td>
+      </tr>
+      <tr>
+     <td><code>&lt;variable_value&gt;</code></td>
+     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variables), as shown in the example.<br><pre class="codeblock">	
 <code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
@@ -444,7 +444,7 @@ Example JSON for uploading a <code>.tar</code> file later:
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
                 },
       ]</code></pre></td>
-      </tr>
+     </tr>
       <tr>
       <td><code>&lt;secure&gt;</code></td>
       <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
