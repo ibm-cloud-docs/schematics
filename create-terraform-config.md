@@ -186,7 +186,7 @@ When you declare an input variable, you must provide a name for your variable an
 - `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
 - `Terraform v0.12` additionally supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints). <br>
 
-## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables. `
+## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}
 
 After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
@@ -213,8 +213,8 @@ Yes, when you declare and assign the value to the variables, you can view the to
 
  <table>
    <thead>
-    <th style="width:180px">Type</th>
-    <th style="width:150px">Example</th>
+    <th style="width:80px">Type</th>
+    <th style="width:100px">Example</th>
   </thead>
   <tbody>
    <tr>
