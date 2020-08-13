@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-12"
+lastupdated: "2020-08-13"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -182,11 +182,17 @@ You can use `variable` blocks to templatize your infrastructure code. For exampl
 You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations. 
 
 **What information do I need to include in my variable declaration?** </br>
-When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.<br>
-`Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
-`Terraform v0.12` additionally supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints). <br>
+When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
+- `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
+- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints). <br>
 
-If you are using `API` or `CLI`, then the `value` field must contain escaped string for the variable store, as shown in the example.
+## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables. `
+{: #declare-variable}
+
+After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
+- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} > Schematics > Workspace> settings page.**
+- For `CLI`, you can refer how to create or update the values for the complex data type [](https://test.cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
+- For `API` you can see [Create or update the values](/apidocs/schematics#createworkspace) in the field `template_data` > `variablestore`. Then the `value` field must contain escaped string for the variable store, as shown in the example.
 
 **Example**
 ```
@@ -245,31 +251,31 @@ Yes, when you declare and assign the value to the variables, you can view the to
     </tr>
      <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br
-                                                    &#09; [us-south, us-east]<br>
-                                                     &#09;&#09; [<br>
-                                                     &#09;&#09;   "eu-gb",<br>
-                                                      &#09;&#09;    "eu-de"<br>
-                                                     &#09;&#09; ]<br>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;[us-south, us-east],<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;[<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"eu-gb",<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"eu-de"<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;]<br>
                                                       ]</li></ul></td>
     </tr>
     <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(object({<br>
-    internal = number<br>
-    external = number<br>
-    protocol = string<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;internal = number<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;external = number<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;protocol = string<br>
   }))</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
-    {<br>
-      internal = 8300<br>
-      external = 8300<br>
-      protocol = "tcp"<br>
-    },<br>
-    {<br>
-      internal = 8301<br>
-      external = 8301<br>
-      protocol = "ldp"<br>
-    }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal = 8300<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external = 8300<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protocol = "tcp"<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal = 8301<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external = 8301<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protocol = "ldp"<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
   ]</li></ul></td>
     </tr>
   </tbody>
