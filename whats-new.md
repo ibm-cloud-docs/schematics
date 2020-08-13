@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-08-12"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -27,6 +27,13 @@ subcollection: schematics
 {: #new-in-schematics}
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
+
+## August 2020
+{: #august-2020}
+
+|Date|Description|
+|-----|-----------|
+|14 August 2020|<ul><li>**Support for multiple Terraform provider**: {{site.data.keyword.bplong_notm}} now supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.10.0`, and previous four versions such as `1.9.0`, `1.8.1`, `1.8.0`, `1.7.1` are supported. For more information, about the provider configuration, see [Multiple Terraform Provider](/docs/schematics?topic=schematics-faqs#provider-versions).</li><li>**Support for complex data types**: {{site.data.keyword.bplong_notm}} now supports complex data types of Terraform v0.12. For more information, about declaring complex data types, see [Configuring variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables).</li><li>**Time out set for local-exec and remote-exec provisioners**: If you run local-exec or remote-exec provisioners, make sure the execution completes within 30 minutes. Otherwise execution times out automatically. </li><li>**Bit bucket is used as a template repo source**: {{site.data.keyword.bplong_notm}} supports public bit bucket repo as a template repo source. Private bit bucket repo needs a workaround. Download the files from the repo, then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.</li>|
 
 ## July 2020
 {: #july-2020}

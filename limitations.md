@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-24"
+lastupdated: "2020-08-12"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -45,7 +45,6 @@ The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with t
 For more information about how to configure the `provider` block, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
 
 ### Can I use my local `terraform.tfvars` file?
-
 {: #terraformtfvars}
 
 The `terraform.tfvars` file is a local variables file that you use to store sensitive information, such as your {{site.data.keyword.cloud_notm}} API key or classic infrastructure user name when you use native Terraform. This file must be present on your local machine so that Terraform can load the values for your credentials when you initialize the Terraform CLI. 
@@ -64,3 +63,8 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 You can access workspace state information from other workspaces by using the {{site.data.keyword.bpshort}} `ibm_schematics_output` data source that works similar to the `remote_state` data source in native Terraform. When you use the `remote_state` Terraform data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly.
 
 For more information about how to use this data source, see [Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state). 
+
+### Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?
+{: #local-remote-exec}
+
+The time out is set for `local-exec` and `remote-exec` provisioners by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state will fail. 

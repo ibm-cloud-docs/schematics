@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-10"
+lastupdated: "2020-08-07"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -24,7 +24,7 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Getting started with {{site.data.keyword.bplong_notm}}
+# Getting started with {{site.data.keyword.bplong_notm}} and Terraform
 {: #getting-started}
 
 Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, and start templatizing, provisioning, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using Terraform configuration files. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-24"
+lastupdated: "2020-08-13"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -171,7 +171,6 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
   ```
   {: codeblock}
 
-
 ## Using `variable` blocks to customize resources
 {: #configure-variables}
 
@@ -182,7 +181,9 @@ You can use `variable` blocks to templatize your infrastructure code. For exampl
 You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations. 
 
 **What information do I need to include in my variable declaration?** </br>
-When you declare an input variable, you must provide a name for your variable and the data type, such as `string` or `integer`, that the variable uses. You can optionally add a description and a default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. 
+When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
+- `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
+- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints). <br>
 
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
@@ -221,10 +222,105 @@ resource ibm_container_cluster "test_cluster" {
 ```
 {: codeblock}
 
-For more information about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external}.
+For more information, about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external}.
 
 
 
+## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
+{: #declare-variable}
+
+After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
+- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} > Schematics > Workspace> settings page.**
+- For `CLI`, you can refer how to create or update the values for the complex data type [](https://test.cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
+- For `API` you can see [Create or update the values](/apidocs/schematics#createworkspace) in the field `template_data` > `variablestore`. Then the `value` field must contain escaped string for the variable store, as shown in the example.
+
+**Example**
+```
+"variablestore": [
+                {
+                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+                    "description": "",
+                    "name": "docker_ports",
+                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+                },
+      ]
+ ```
+ {: codeblock}
+  
+**Can I see how to declare complex variables in a file?**
+
+Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
+
+ <table>
+   <thead>
+    <th style="width:80px">Type</th>
+    <th style="width:100px">Example</th>
+  </thead>
+  <tbody>
+   <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
+    </tr>
+   <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
+    </tr>
+     <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;[us-south, us-east],<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;[<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"eu-gb",<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"eu-de"<br>
+                                                     &nbsp;&nbsp;&nbsp;&nbsp;]<br>
+                                                      ]</li></ul></td>
+    </tr>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(object({<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;internal = number<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;external = number<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;protocol = string<br>
+  }))</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal = 8300<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external = 8300<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protocol = "tcp"<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal = 8301<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external = 8301<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protocol = "ldp"<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+  ]</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
+  
 ## Storing your Terraform templates
 {: #store-template}
 

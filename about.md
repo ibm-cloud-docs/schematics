@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-08-07"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -28,7 +28,7 @@ subcollection: schematics
 
 
 # About {{site.data.keyword.bplong_notm}}
-{: #about-schematics}
+{: #about-schematics} 
 
 {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
 {: shortdesc}
@@ -113,6 +113,13 @@ Learn the basics about Terraform and {{site.data.keyword.bplong_notm}} by review
   <dd>To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider must provide a CLI plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is IBM's CLI plug-in for Terraform. {{site.data.keyword.bplong_notm}} uses the plug-in to provision your {{site.data.keyword.cloud_notm}} resources. To find a list of supported {{site.data.keyword.cloud_notm}} resources and how to describe them, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources).</p>
   </dd>
 </dl>
+
+
+
+
+
+
+
 
 
 

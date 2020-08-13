@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-08-13"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -137,9 +137,11 @@ If you do not want to connect your workspace to a GitHub repository, you can upl
 
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
-    5. If you specified input variables, enter the values that you want to use, and click **Save changes**. 
-5. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
-6. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
+    5. You can manually enter the values.
+          
+   6. Click **Save changes**.
+   7. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
+   8. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
 ## Freezing and unfreezing workspaces 
 {: #lock-workspace}
@@ -170,7 +172,7 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
     {: note}
     <table>
       <tr>
-        <th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
+        <th>Action</th><th>Delete workspace</th><th>Delete all associated resources</th></tr>
        <tr>
          <td>Delete workspace</td><td>True</td><td>False</td></tr>
        <tr>
@@ -178,7 +180,7 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
        <tr>
           <td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
         <tr>
-          <td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
+          <td>Resources destroyed using CLI or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
         </table>
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
@@ -233,5 +235,3 @@ Review the states that a workspace can have in the following table. You might no
 | Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
 | Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was cancelled manually. |
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
-
-

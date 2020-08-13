@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-08-13"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -122,7 +122,7 @@ Decide if you want to delete the workspace, any associated resources, or both. T
 
 <table>
 	<tr>
-		<th>Action</th><th>Delete workspace</th><th>Destroy resources</th></tr>
+		<th>Action</th><th>Delete workspace</th><th>Delete all associated resources</th></tr>
 	<tr>
 		<td>Delete workspace</td><td>True</td><td>False</td></tr>
 	<tr>
@@ -130,7 +130,7 @@ Decide if you want to delete the workspace, any associated resources, or both. T
 	<tr>
 		<td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
 	<tr>
-		<td>Resources destroyed using CLI or resource list), and want to delete workspace</td><td>True</td><td>False</td></tr>
+		<td>Resources destroyed using CLI or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
 </table> <br>
 
 ```
@@ -248,25 +248,66 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "tags": [],
   "template_repo": {
     "url": "&lt;github_source_repo_url&gt;"
+    &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0" &#42;&#47;
   },
   "template_data": [
     {
       "folder": ".",
       "type": "&lt;terraform_version&gt;",
+      "env_values":[
+      {
+        "VAR1":"&lt;val1&gt;"
+      },
+      {
+        "VAR2":"&lt;val2&gt;"
+      }
+      ]
       "variablestore": [
         {
-          "name": "&lt;variable_name1&gt;",
-          "value": "&lt;variable_value1&gt;",
-          "type": "&lt;variable_type1&gt;",
-          "secure": true
-	  "description":"&ltdescription&gt"
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "string",
+          "secure": true,
+	  "description":"&lt;description&gt;"
         },
         {
-          "name": "&lt;variable_name2&gt;",
-          "value": "&lt;variable_value2&gt;",
-          "type": "&lt;variable_type2&gt;",
-          "secure": false
-	  "description":"&ltdescription&gt"
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "bool",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "list(string);",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "map(number)",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "tuple([string, list(string), number, bool])",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "any",
+          "secure": false,
+	  "description":"&lt;description&gt;"
         }
       ]
     }
@@ -285,26 +326,67 @@ Example JSON for uploading a <code>.tar</code> file later:
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
-    "url": ""
+     "url": "&lt;github_source_repo_url&gt;"
+   &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master",
+     "template_data_folder": “examples/ibm-vsi”,
+     "release": "v1.8.0" &#47;&#42;
   },
   "template_data": [
     {
       "folder": ".",
       "type": "&lt;terraform_version&gt;",
+      "env_values":[
+      {
+        "VAR1":"&lt;val1&gt;"
+      },
+      {
+        "VAR2":"&lt;val2&gt;"
+      }
+      ]
       "variablestore": [
         {
-          "name": "&lt;variable_name1&gt;",
-          "value": "&lt;variable_value1&gt;",
-          "type": "&lt;variable_type1&gt;",
-          "secure": true
-	  "description":"&ltdescription&gt"
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "string",
+          "secure": true,
+	  "description":"&lt;description&gt;"
         },
         {
-          "name": "&lt;variable_name2&gt;",
-          "value": "&lt;variable_value2&gt;",
-          "type": "&lt;variable_type2&gt;",
-          "secure": false
-	  "description":"&ltdescription&gt"
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "bool",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "list(string)",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "map(number)",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "tuple([string, list(string), number, bool])",
+          "secure": false,
+	  "description":"&lt;description&gt;"
+        },
+	{
+	  "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
+          "type": "any",
+          "secure": false,
+	  "description":"&lt;description&gt;"
         }
       ]
     }
@@ -344,9 +426,34 @@ Example JSON for uploading a <code>.tar</code> file later:
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` </td>
    </tr>
     <tr>
-      <td><code>&lt;variable_name&gt; </br> &lt;variable_value&gt; </br>&lt;variable_type&gt; </br>&lt;secure&gt;</code></td>
-      <td>Optional. Enter the name, value, and data type for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details later, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong> so that all your variable values are always displayed when you retrieve your workspace details.  </td>
-     </tr></tbody></table></dd>
+     <td><code>&lt;variable_name&gt;</code></td>
+     <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+     </tr>
+      <tr>
+      <td><code>&lt;variable_type&gt;</code></td>
+      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).</td>
+      </tr>
+      <tr>
+     <td><code>&lt;variable_value&gt;</code></td>
+     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variables). <br> **Example**<br><pre class="codeblock">	
+<code>"variablestore": [
+                {
+                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+                    "description": "",
+                    "name": "docker_ports",
+                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+                },
+      ]</code></pre></td>
+     </tr>
+      <tr>
+      <td><code>&lt;secure&gt;</code></td>
+      <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
+      </tr>
+      <tr>
+      <td><code>&lt;val1&gt;</code></td>
+      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in cos.</td>
+      </tr>
+      </tbody></table></dd>
 <dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
 <dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your CLI output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
 <dt><code>--json</code>, <code>-j</code></dt>	
@@ -359,32 +466,6 @@ Example JSON for uploading a <code>.tar</code> file later:
 ibmcloud schematics workspace new --file myfile.json
 ```
 {: pre}
-
-
-### `ibmcloud schematics workspace output`
-{: #schematics-workspace-output}
-
-Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace output --id WORKSPACE_ID
-```
-{: pre}
-
-**Command options:**
-<dl>	
- <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
-  </dl>
-  
-**Example:**
-
-```
-ibmcloud schematics workspace output --id myworkspace3_2-31cf7130-d0c4-4d
-```
-{: pre}
-
 
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
@@ -418,13 +499,24 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
   },
   "template_repo": { 
     "url": "&lt;source_repo_url&gt;", 
-    "branch" : "&lt;branch&gt;",
-    "release": "&lt;release&gt;"
+     &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master",
+     "template_data_folder": “examples/ibm-vsi”,
+     "release": "v1.8.0" &#47;&#42;
   },
   "template_data": [
     {
-      "folder": "&lt;gh_folder&gt;",
+      "folder": ".",
       "type": "&lt;terraform_version&gt;",
+      "env_values":[
+      {
+        "VAR1":"&lt;val1&gt;"
+      },
+      {
+        "VAR2":"&lt;val2&gt;"
+      }
+      ]
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -485,18 +577,46 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
    <td><code>template_repo.branch</code></td>
    <td>Optional. Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  </td>
    </tr>  
+   <tr>
+   <td><code>template_repo.datafolder</code></td>
+   <td>Optional. Enter the GitHub or GitLab folder that points to your Terraform configuration files.  </td>
+   </tr>
     <tr>
    <td><code>template_repo.release</code></td>
    <td>Optional. Enter the GitHub or GitLab release that points to your Terraform configuration files.  </td>
    </tr>
-    <tr>
-      <td><code>template_data.variablestore.name </br>template_data.variablestore.value </br>template_data.variablestore.type  </br>template_data.variablestore.secure</code></td>
-      <td>Optional. Enter the name, value, and data type for the input variables that you declared in your Terraform configuration files. All variables that you enter in this section must be already declared in your Terraform configuration files. For more information about how to declare variables in a configuration file, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables). To suppress the variable value in the console or CLI when you list your workspace details, for example if you want to hide the value of an API key that you provided to {{site.data.keyword.bpshort}}, set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong> so that all your variable values are always displayed when you retrieve your workspace details. </td>
-     </tr>
      <tr>
    <td><code>&lt;github_source_repo_url&gt;</code></td>
      <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
-   </tr></tbody></table></dd>	
+     <tr>
+     <td><code>&lt;template_data.variablestore.name&gt;</code></td>
+     <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+     </tr>
+      <tr>
+      <td><code>&lt;template_data.variablestore.type&gt;</code></td>
+      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).</td>
+      </tr>
+      <tr>
+     <td><code>&lt;template_data.variablestore.value&gt;</code></td>
+     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variables), as shown in the example.<br><pre class="codeblock">	
+<code>"variablestore": [
+                {
+                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+                    "description": "",
+                    "name": "docker_ports",
+                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+                },
+      ]</code></pre></td>
+     </tr>
+      <tr>
+      <td><code>&lt;template_data.variablestore.secure&gt;</code></td>
+      <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
+      </tr>
+      <tr>
+      <td><code>&lt;env_values.val1&gt;</code></td>
+      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in cos.</td>
+      </tr>	
+   </tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
 <dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
   <dt><code>--json</code>, <code>-j</code></dt>	
@@ -664,6 +784,30 @@ ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121ab
 ```
 {: pre}
 
+### `ibmcloud schematics output`
+{: #schematics-output}
+
+Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
+{: shortdesc}
+
+```
+ibmcloud schematics output --id WORKSPACE_ID
+```
+{: pre}
+
+**Command options:**
+<dl>	
+ <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
+<dd>Required. The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
+  </dl>
+  
+**Example:**
+
+```
+ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
+```
+{: pre}
+
 ### `ibmcloud schematics plan`	
 {: #schematics-plan}	
 
@@ -788,5 +932,4 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
 ```
 {: pre}
-
 
