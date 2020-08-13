@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-12"
+lastupdated: "2020-08-13"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -84,7 +84,7 @@ terraform{
    ibm = ">= 1.6" // Error !! version unavailable.
    ibm = ">= 1.7.0" // Execute against latest version
    ibm = "== 1.8.0" // Executes v1.8.0.
-   ibm = ">= 1.9.0" // Executes v1.9.0, also executes against latest version, currently, it is v1.10.0, in future it can be higher version.
+   ibm = ">= 1.9.0" // Executes against latest version, currently, it is v1.10.0, in future it can be higher version.
   }
 }
 
