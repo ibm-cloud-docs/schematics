@@ -137,29 +137,7 @@ If you do not want to connect your workspace to a GitHub repository, you can upl
 
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
-    5. You can manually enter the values or you can  apply the variable created by shared data set. For more information about the shared data set, see [Using shared data set](/docs/schematics?topic=schematics-shared-dataset#using-shared-data).
-      Following are the shared data set feature that you can apply to your workspace or cluster workspaces.
-      1. You can fetch the list of shared data sets in the workspace that belongs to the user's account, resource group and the current location setting. The API matches the workspace variable name with the shared data set variable names, aliases, and returns with the matching variables.  For more information to create a shared data set, see [Creating shared data set](/docs/schematics?topic=schematics-abt-shared-dataset#create-shared-data).
-      2. You can automatically match variable names and link the shared data set ui-metadata to the workspace variables. For more information to update a shared date set, see [Update share data set](/docs/schematics?topic=schematics-abt-shared-dataset#update-shared-data).
-      3. You can select alternate shared data set values for the variables from any shared data sets.
-      4. All the related variable values are modified when you switch the shared data set name.
-      5. You can link, delink, or override workspace value by providing a custom value.
-      6. As an advanced user, you can provide a valid jsonata expression to link the workspace variable from other shared data sets or workspace as:
-       - Shared data set variable 
-         
-          ```
-           $$shared_datasets[shared_data_id='id'].shared_dataset_data[var_name='name'].override_value
-           
-          ```
-           {: pre}
-           
-      - Workspace variable 
-   
-          ```
-          $$workspaces[id='id].template_data[id='id].variablestore[name='name'].value
-          ```
-          {: pre}
-      vii. You can view the names of linked shared data sets, recently edited shared data set and not been consumed. Also you can see the active and inactive shared data sets.
+    5. You can manually enter the values.
           
    6. Click **Save changes**.
    7. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
