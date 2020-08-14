@@ -424,7 +424,7 @@ Example JSON for uploading a <code>.tar</code> file later:
 -	Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
 -	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` <br> 
-You can use public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace.  Private bit bucket repository source needs a workaround. You need to download the files from the repositor. Then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.</td>
+You can use public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace.  Private bit bucket repository source needs a workaround in the {{site.data.keyword.bplong_notm}}. You need to download the files from the repository. Then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.</td>
    </tr>
     <tr>
      <td><code>&lt;variable_name&gt;</code></td>
