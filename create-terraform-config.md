@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-13"
+lastupdated: "2020-08-17"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -230,9 +230,9 @@ For more information, about variable configurations, see the [Terraform document
 {: #declare-variable}
 
 After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
-- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} > Schematics > Workspace> settings page.**
+- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; settings page.**
 - For `CLI`, you can refer how to create or update the values for the complex data type [](https://test.cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
-- For `API` you can see [Create or update the values](/apidocs/schematics#createworkspace) in the field `template_data` > `variablestore`. Then the `value` field must contain escaped string for the variable store, as shown in the example.
+- For `API` you can see [Create or update the values](/apidocs/schematics#createworkspace) in the field **template_data** &gt;  **variablestore**. Then the `value` field must contain escaped string for the variable store, as shown in the example.
 
 **Example**
 ```
