@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-14"
+lastupdated: "2020-08-17"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -436,7 +436,7 @@ You can use public bit bucket template repository source in the {{site.data.keyw
       </tr>
       <tr>
      <td><code>&lt;variable_value&gt;</code></td>
-     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variables). <br> **Example**<br><pre class="codeblock">	
+     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). <br> **Example**<br><pre class="codeblock">	
 <code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
@@ -599,7 +599,7 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
       </tr>
       <tr>
      <td><code>&lt;template_data.variablestore.value&gt;</code></td>
-     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variables), as shown in the example.<br><pre class="codeblock">	
+     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable), as shown in the example.<br><pre class="codeblock">	
 <code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-05"
+lastupdated: "2020-08-17"
 
 keywords: schematics, automation, terraform
 
@@ -52,7 +52,7 @@ For example, let's say you have a team A that is responsible to manage an {{site
 No. You can create different resource groups for your {{site.data.keyword.bplong_notm}} workspaces and {{site.data.keyword.cloud_notm}} resources. 
 
 **What is the benefit of using IAM access group?** </br>
-To minimize the number of IAM access policies that you need to assign to individual users, you can create an [IAM access group](/docs/iam?topic=iam-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
+To minimize the number of IAM access policies that you need to assign to individual users, you can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
 
 The following image shows how you can leverage IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account. 
 
@@ -71,7 +71,7 @@ Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keywo
 {: shortdsec}
 
 **Who must grant access to {{site.data.keyword.bplong_notm}}?** </br>
-As the account owner or an authorized account administrator you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} workspace. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/iam?topic=iam-groups). 
+As the account owner or an authorized account administrator you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} workspace. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups). 
 
 **If I have access to {{site.data.keyword.bplong_notm}}, can I automatically provision {{site.data.keyword.cloud_notm}} resources?** </br>
 No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces in {{site.data.keyword.bplong_notm}}. To provision the {{site.data.keyword.cloud_notm}} resources that you defined in your Terraform template, you must be assigned the IAM platform or service access role that is required to provision the individual resource. For example, to provision an {{site.data.keyword.containerlong_notm}} cluster, you must have the **Administrator** platform role and the **Manager** service access role for {{site.data.keyword.containerlong_notm}}. Refer to the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to provision and work with your resource. 
@@ -110,11 +110,11 @@ The following table shows the user permissions that are granted in {{site.data.k
 As the {{site.data.keyword.cloud_notm}} account owner or authorized account administrator, create an IAM access group for your users and assign service access policies to {{site.data.keyword.bplong_notm}} and the resources that you want your users to work with.  
 {: shortdesc}
 
-1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv).
+1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-iamuserinv).
 
 2. Define your teams and [create an IAM access group](/docs/iam?topic=iam-groups#create_ag) for each team. 
 
-3. [Create a resource group](/docs/resources?topic=resources-rgs#create_rgs) for each of your teams so that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bplong_notm}} workspaces separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
+3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each of your teams so that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bplong_notm}} workspaces separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
 
 4. [Assign access to your IAM access group](/docs/iam?topic=iam-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
    - Make sure to scope access of your group to the resource group that you created for this team. 
