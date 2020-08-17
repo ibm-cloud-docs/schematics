@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-14"
+lastupdated: "2020-08-17"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -133,8 +133,8 @@ If you do not want to connect your workspace to a GitHub repository, you can upl
       Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The blocked extension files having more than 500 KB in size, and any invalid image is considered as vulnerable files while cloning.
       -	Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
       -	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
-      -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
-      You can use public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace.  Private bit bucket repository source needs a workaround in the {{site.data.keyword.bplong_notm}}. You need to download the files from the repository. Then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.
+      -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` <br>
+     You can use public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace.  Private bit bucket repository source needs a workaround in the {{site.data.keyword.bplong_notm}}. You need to download the files from the repository. Then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
     5. You can manually enter the values.
