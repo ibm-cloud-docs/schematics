@@ -231,7 +231,7 @@ For more information, about variable configurations, see the [Terraform document
 
 After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
 - For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; settings page.**
-- For `CLI`, you can refer how to create or update the values for the complex data type [](https://test.cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
+- For `CLI`, you can refer how to create or update the values for the complex data type [](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
 - For `API` you can see [Create or update the values](/apidocs/schematics#createworkspace) in the field **template_data** &gt;  **variablestore**. Then the `value` field must contain escaped string for the variable store, as shown in the example.
 
 **Example**
