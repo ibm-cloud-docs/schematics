@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-08-18"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -238,86 +238,93 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 <dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
 <br>Example JSON for using a GitHub or GitLab repository:	
 <pre class="codeblock">	
-<code>{	
-  "name": "&lt;workspace_name&gt;",
+<code>
+{
+  "name": "<workspace_name>",
   "type": [
-    "&lt;terraform_version&gt;"
+    "<terraform_version>"
   ],
-  "location": "&lt;location&gt;",
-  "description": "&lt;workspace_description&gt;",
+  "location": "<location>",
+  "description": "<workspace_description>",
   "tags": [],
   "template_repo": {
-    "url": "&lt;github_source_repo_url&gt;"
-    &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
-     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master;",
-     "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" &#42;&#47;
+    "url": "<github_source_repo_url>"
   },
   "template_data": [
     {
       "folder": ".",
-      "type": "&lt;terraform_version&gt;",
+      "type": "<terraform_version>",
       "env_values":[
       {
-        "VAR1":"&lt;val1&gt;"
+        "VAR1":"<val1>"
       },
       {
-        "VAR2":"&lt;val2&gt;"
+        "VAR2":"<val2>"
       }
-      ]
+      ],
       "variablestore": [
         {
-	  "name": "&lt;variable_name_x&gt;",
-          "value": "&lt;variable_value_x&gt;",
+          "name": "<variable_name_x>",
+          "value": "<variable_value_x>",
           "type": "string",
           "secure": true,
-	  "description":"&lt;description&gt;"
+          "description":"<description>"
         },
         {
-          "name": "&lt;variable_name_x&gt;",
-          "value": "&lt;variable_value_x&gt;",
+          "name": "<variable_name_x>",
+          "value": "<variable_value_x>",
           "type": "bool",
           "secure": false,
-	  "description":"&lt;description&gt;"
+          "description":"<description>"
         },
-	{
-          "name": "&lt;variable_name_x&gt;",
-          "value": "&lt;variable_value_x&gt;",
+    {
+          "name": "<variable_name_x>",
+          "value": "<variable_value_x>",
           "type": "list(string);",
           "secure": false,
-	  "description":"&lt;description&gt;"
+         "description":"<description>"
         },
-	{
-          "name": "&lt;variable_name_x&gt;",
-          "value": "&lt;variable_value_x&gt;",
+    {
+          "name": "<variable_name_x>",
+          "value": "<variable_value_x>",
           "type": "map(number)",
           "secure": false,
-	  "description":"&lt;description&gt;"
+          "description":"<description>"
         },
-	{
-          "name": "&lt;variable_name_x&gt;",
-          "value": "&lt;variable_value_x&gt;",
+    {
+          "name": "<variable_name_x>",
+          "value": "<variable_value_x>",
           "type": "tuple([string, list(string), number, bool])",
           "secure": false,
-	  "description":"&lt;description&gt;"
+         "description":"<description>"
         },
-	{
-          "name": "&lt;variable_name_x&gt;",
-          "value": "&lt;variable_value_x&gt;",
+    {
+          "name": "<variable_name_x>",
+          "value": "<variable_value_x>",
           "type": "any",
           "secure": false,
-	  "description":"&lt;description&gt;"
+          "description":"<description>"
         }
       ]
     }
   ],
-  "githubtoken": "&lt;github_personal_access_token&gt;"
+  "githubtoken": "<github_personal_access_token>"
 }
+
+Now, in template_repo, you can provide `url` in additional parameters as shown in the block.
+```
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0" 
+ ```
+ {: note}
+  
 </code></pre></br>
 Example JSON for uploading a <code>.tar</code> file later:	
 <pre class="codeblock">	
-<code>{	
+<code>
+{	
   "name": "&lt;workspace_name&gt;",
   "type": [
     "&lt;terraform_version&gt;"
@@ -327,12 +334,7 @@ Example JSON for uploading a <code>.tar</code> file later:
   "tags": [],
   "template_repo": {
      "url": "&lt;github_source_repo_url&gt;"
-   &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
-     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master",
-     "template_data_folder": “examples/ibm-vsi”,
-     "release": "v1.8.0" &#47;&#42;
-  },
+   },
   "template_data": [
     {
       "folder": ".",
@@ -344,49 +346,49 @@ Example JSON for uploading a <code>.tar</code> file later:
       {
         "VAR2":"&lt;val2&gt;"
       }
-      ]
+      ],
       "variablestore": [
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "string",
           "secure": true,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "bool",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
+      	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "list(string)",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
-	  "name": "&lt;variable_name_x&gt;",
+	      {
+	        "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "map(number)",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
-	  "name": "&lt;variable_name_x&gt;",
+	      {
+	       "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "tuple([string, list(string), number, bool])",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
-	  "name": "&lt;variable_name_x&gt;",
+	      {
+	        "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "any",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         }
       ]
     }
