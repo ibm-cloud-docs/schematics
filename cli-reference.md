@@ -240,75 +240,75 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 <pre class="codeblock">	
 <code>
 {
-  "name": "<workspace_name>",
+  "name": "&lt;workspace_nam&gt;>",
   "type": [
-    "<terraform_version>"
+    "&lt;terraform_version&gt;"
   ],
-  "location": "<location>",
-  "description": "<workspace_description>",
+  "location": "&lt;location&gt;",
+  "description": "&lt;workspace_description&gt;",
   "tags": [],
   "template_repo": {
-    "url": "<github_source_repo_url>"
+    "url": "&lt;github_source_repo_url&gt;"
   },
   "template_data": [
     {
       "folder": ".",
-      "type": "<terraform_version>",
+      "type": "&lt;terraform_version&gt;",
       "env_values":[
       {
-        "VAR1":"<val1>"
+        "VAR1":"&lt;val1&gt;"
       },
       {
-        "VAR2":"<val2>"
+        "VAR2":"&lt;val2&gt;"
       }
       ],
       "variablestore": [
         {
-          "name": "<variable_name_x>",
-          "value": "<variable_value_x>",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "string",
           "secure": true,
-          "description":"<description>"
+          "description":"&lt;description&gt;"
         },
         {
-          "name": "<variable_name_x>",
-          "value": "<variable_value_x>",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "bool",
           "secure": false,
-          "description":"<description>"
+          "description":"&lt;description&gt;"
         },
     {
-          "name": "<variable_name_x>",
-          "value": "<variable_value_x>",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "list(string);",
           "secure": false,
-         "description":"<description>"
+         "description":"&lt;description&gt;"
         },
     {
-          "name": "<variable_name_x>",
-          "value": "<variable_value_x>",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "map(number)",
           "secure": false,
-          "description":"<description>"
+          "description":"&lt;description&gt;"
         },
     {
-          "name": "<variable_name_x>",
-          "value": "<variable_value_x>",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "tuple([string, list(string), number, bool])",
           "secure": false,
-         "description":"<description>"
+         "description":"&lt;description&gt;"
         },
     {
-          "name": "<variable_name_x>",
-          "value": "<variable_value_x>",
+          "name": "&lt;variable_name_x&gt;",
+          "value": "&lt;variable_value_x&gt;",
           "type": "any",
           "secure": false,
-          "description":"<description>"
+          "description":"&lt;description&gt;"
         }
       ]
     }
   ],
-  "githubtoken": "<github_personal_access_token>"
+  "githubtoken": "&lt;github_personal_access_token&gt;"
 }
 
 Now, in template_repo, you can provide `url` in additional parameters as shown in the block.
