@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-08-18"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -238,8 +238,8 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 <dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
 <br>Example JSON for using a GitHub or GitLab repository:	
 <pre class="codeblock">	
-<code>{	
-  "name": "&lt;workspace_name&gt;",
+<code>{
+  "name": "&lt;workspace_nam&gt;>",
   "type": [
     "&lt;terraform_version&gt;"
   ],
@@ -248,11 +248,6 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "tags": [],
   "template_repo": {
     "url": "&lt;github_source_repo_url&gt;"
-    &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
-     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master;",
-     "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" &#42;&#47;
   },
   "template_data": [
     {
@@ -265,49 +260,49 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
       {
         "VAR2":"&lt;val2&gt;"
       }
-      ]
+      ],
       "variablestore": [
         {
-	  "name": "&lt;variable_name_x&gt;",
+          "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "string",
           "secure": true,
-	  "description":"&lt;description&gt;"
+          "description":"&lt;description&gt;"
         },
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "bool",
           "secure": false,
-	  "description":"&lt;description&gt;"
+          "description":"&lt;description&gt;"
         },
-	{
+    {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "list(string);",
           "secure": false,
-	  "description":"&lt;description&gt;"
+         "description":"&lt;description&gt;"
         },
-	{
+    {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "map(number)",
           "secure": false,
-	  "description":"&lt;description&gt;"
+          "description":"&lt;description&gt;"
         },
-	{
+    {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "tuple([string, list(string), number, bool])",
           "secure": false,
-	  "description":"&lt;description&gt;"
+         "description":"&lt;description&gt;"
         },
-	{
+    {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "any",
           "secure": false,
-	  "description":"&lt;description&gt;"
+          "description":"&lt;description&gt;"
         }
       ]
     }
@@ -315,6 +310,15 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   "githubtoken": "&lt;github_personal_access_token&gt;"
 }
 </code></pre></br>
+
+Now, in template_repo, you can also provide `url` with additional parameters as shown in the block.
+  <pre class="codeblock">	
+  <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0" </code></pre>
+{: note}
+
 Example JSON for uploading a <code>.tar</code> file later:	
 <pre class="codeblock">	
 <code>{	
@@ -327,12 +331,7 @@ Example JSON for uploading a <code>.tar</code> file later:
   "tags": [],
   "template_repo": {
      "url": "&lt;github_source_repo_url&gt;"
-   &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
-     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master",
-     "template_data_folder": “examples/ibm-vsi”,
-     "release": "v1.8.0" &#47;&#42;
-  },
+   },
   "template_data": [
     {
       "folder": ".",
@@ -344,49 +343,49 @@ Example JSON for uploading a <code>.tar</code> file later:
       {
         "VAR2":"&lt;val2&gt;"
       }
-      ]
+      ],
       "variablestore": [
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "string",
           "secure": true,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
         {
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "bool",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
+      	{
           "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "list(string)",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
-	  "name": "&lt;variable_name_x&gt;",
+	      {
+	        "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "map(number)",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
-	  "name": "&lt;variable_name_x&gt;",
+	      {
+	       "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "tuple([string, list(string), number, bool])",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         },
-	{
-	  "name": "&lt;variable_name_x&gt;",
+	      {
+	        "name": "&lt;variable_name_x&gt;",
           "value": "&lt;variable_value_x&gt;",
           "type": "any",
           "secure": false,
-	  "description":"&lt;description&gt;"
+	        "description":"&lt;description&gt;"
         }
       ]
     }
@@ -491,20 +490,15 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
 <pre class="codeblock">	
 <code>{
   "name": "&lt;workspace_name&gt;",
-  "type": "&lt;terraform_version&gt;"
+  "type": "&lt;terraform_version&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "resource_group": "&lt;resource_group&gt;",
   "workspace_status": {
-    "frozen": &lt;true_or_false&gt;
+    "frozen": "&lt;true_or_false&gt;"
   },
   "template_repo": { 
-    "url": "&lt;source_repo_url&gt;", 
-     &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
-     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master",
-     "template_data_folder": “examples/ibm-vsi”,
-     "release": "v1.8.0" &#47;&#42;
+    "url": "&lt;source_repo_url&gt;"
   },
   "template_data": [
     {
@@ -517,7 +511,7 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
       {
         "VAR2":"&lt;val2&gt;"
       }
-      ]
+      ],
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -537,6 +531,15 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
   "githubtoken": "&lt;github_personal_access_token&gt;"
 }
 </code></pre>
+
+Now, in template_repo, you can also update `url` with additional parameters as shown in the block.
+  <pre class="codeblock">	
+  <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0" </code></pre>
+{: note}
+ 
 <table>
    <caption>JSON file component description</caption>
    <col style="width:30%">
