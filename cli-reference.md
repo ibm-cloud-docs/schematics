@@ -312,13 +312,14 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 </code></pre></br>
 
 Now, in template_repo, you can provide `url` with additional parameters as shown in the block.
-```
+  <pre class="codeblock">	
+  <code>
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
      "release": "v1.8.0" 
- ```
- {: note}
+  </code></pre>
+{: note}
 
 Example JSON for uploading a <code>.tar</code> file later:	
 <pre class="codeblock">	
@@ -534,13 +535,14 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
 </code></pre>
 
 Now, in template_repo, you can update `url` with additional parameters as shown in the block.
-```
+  <pre class="codeblock">	
+  <code>
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
      "release": "v1.8.0" 
- ```
- {: note}
+  </code></pre>
+{: note}
  
 <table>
    <caption>JSON file component description</caption>
