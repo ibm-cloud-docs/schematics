@@ -309,8 +309,9 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
   ],
   "githubtoken": "&lt;github_personal_access_token&gt;"
 }
+</code></pre></br>
 
-Now, in template_repo, you can provide `url` in additional parameters as shown in the block.
+Now, in template_repo, you can provide `url` with additional parameters as shown in the block.
 ```
      "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
@@ -318,8 +319,7 @@ Now, in template_repo, you can provide `url` in additional parameters as shown i
      "release": "v1.8.0" 
  ```
  {: note}
-  
-</code></pre></br>
+
 Example JSON for uploading a <code>.tar</code> file later:	
 <pre class="codeblock">	
 <code>{	
@@ -491,20 +491,15 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
 <pre class="codeblock">	
 <code>{
   "name": "&lt;workspace_name&gt;",
-  "type": "&lt;terraform_version&gt;"
+  "type": "&lt;terraform_version&gt;",
   "description": "&lt;workspace_description&gt;",
   "tags": [],
   "resource_group": "&lt;resource_group&gt;",
   "workspace_status": {
-    "frozen": &lt;true_or_false&gt;
+    "frozen": "&lt;true_or_false&gt;"
   },
   "template_repo": { 
-    "url": "&lt;source_repo_url&gt;", 
-     &#47;&#42;&#42; Now, you can provide url with additional parameters as shown in the comment
-     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master",
-     "template_data_folder": “examples/ibm-vsi”,
-     "release": "v1.8.0" &#47;&#42;
+    "url": "&lt;source_repo_url&gt;"
   },
   "template_data": [
     {
@@ -517,7 +512,7 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
       {
         "VAR2":"&lt;val2&gt;"
       }
-      ]
+      ],
       "variablestore": [
         {
           "name": "&lt;variable_name1&gt;",
@@ -537,6 +532,16 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
   "githubtoken": "&lt;github_personal_access_token&gt;"
 }
 </code></pre>
+
+Now, in template_repo, you can update `url` with additional parameters as shown in the block.
+```
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0" 
+ ```
+ {: note}
+ 
 <table>
    <caption>JSON file component description</caption>
    <col style="width:30%">
