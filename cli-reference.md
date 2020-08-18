@@ -316,8 +316,7 @@ Now, in template_repo, you can also provide `url` with additional parameters as 
   <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" 
-  </code></pre>
+     "release": "v1.8.0" </code></pre>
 {: note}
 
 Example JSON for uploading a <code>.tar</code> file later:	
@@ -538,8 +537,7 @@ Now, in template_repo, you can also update `url` with additional parameters as s
   <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" 
-  </code></pre>
+     "release": "v1.8.0" </code></pre>
 {: note}
  
 <table>
