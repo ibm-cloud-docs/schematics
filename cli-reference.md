@@ -238,8 +238,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 <dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
 <br>Example JSON for using a GitHub or GitLab repository:	
 <pre class="codeblock">	
-<code>
-{
+<code>{
   "name": "&lt;workspace_nam&gt;>",
   "type": [
     "&lt;terraform_version&gt;"
@@ -323,8 +322,7 @@ Now, in template_repo, you can provide `url` in additional parameters as shown i
 </code></pre></br>
 Example JSON for uploading a <code>.tar</code> file later:	
 <pre class="codeblock">	
-<code>
-{	
+<code>{	
   "name": "&lt;workspace_name&gt;",
   "type": [
     "&lt;terraform_version&gt;"
