@@ -37,6 +37,7 @@ Schematics
     [Terraform documentation](https://www.terraform.io/docs/index.html)
     locations.md
     limitations.md
+    license-notices.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
