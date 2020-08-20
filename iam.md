@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-08-20"
 
 keywords: schematics, automation, terraform
 
@@ -112,11 +112,11 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-iamuserinv).
 
-2. Define your teams and [create an IAM access group](/docs/iam?topic=iam-groups#create_ag) for each team. 
+2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups#create_ag) for each team. 
 
 3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each of your teams so that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bplong_notm}} workspaces separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
 
-4. [Assign access to your IAM access group](/docs/iam?topic=iam-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
+4. [Assign access to your IAM access group](/docs/account?topic=account-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
    - Make sure to scope access of your group to the resource group that you created for this team. 
    - If your team must have access to multiple resource groups, for example you want them to have **Administrator** and **Manager** permissions on all resources in resource group A, but only **Viewer** access for the resources in resource group B, you can create multiple access policies to achieve that.
    - The resource group of the {{site.data.keyword.bpshort}} workspace can be different from the resource group where your {{site.data.keyword.cloud_notm}} resources are provisioned.
