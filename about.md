@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-07"
+lastupdated: "2020-08-21"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -71,7 +71,7 @@ Review the capabilities that {{site.data.keyword.bplong_notm}} provides to templ
 | Organize {{site.data.keyword.cloud_notm}} resources in workspaces | With {{site.data.keyword.bplong_notm}}, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that stores a Terraform template. You can also provide the template by uploading a `.tar` file from your local machine. Use workspaces to distinguish between your test, staging, and prod environment, and to change resource configurations without affecting resources in other environments.  |
 | Control access to your {{site.data.keyword.cloud_notm}} resources | Assign platform and services access permissions to your users in {{site.data.keyword.cloud_notm}} Identity and Access Management to control who can provision and manage resources in your {{site.data.keyword.cloud_notm}} account. |
 | Leverage GitHub for version control | If you connect your workspace to a repository in GitHub, you can keep your Terraform template in source control and enable collaboration, review, and auditing of changes. You can also roll back to a previous version of your template and let {{site.data.keyword.bplong_notm}} deploy the change to your {{site.data.keyword.cloud_notm}} environment. |  
-| Get {{site.data.keyword.cloud_notm}} help and support | {{site.data.keyword.bplong_notm}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue with using {{site.data.keyword.bplong_notm}}, [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support). |
+| Get {{site.data.keyword.cloud_notm}} help and support | {{site.data.keyword.bplong_notm}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue with using {{site.data.keyword.bplong_notm}}, [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-getting-customer-support). |
 
 ## Key terms
 {: #schematics-terms}
