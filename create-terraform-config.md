@@ -338,7 +338,8 @@ The following image shows an example of how your Terraform template could look l
 <img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 
 The directory structure of the Terraform template in the GitHub repository looks like listed in the table with the last edited time.
-|File|Description|
+
+| File | Description |
 |----|-----|
 | README.md | Create README.md |
 | main.tf | Create main.tf |
