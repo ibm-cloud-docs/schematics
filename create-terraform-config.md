@@ -58,7 +58,7 @@ You can provide an API key for a service ID for all IAM-enabled services, includ
 To configure the `provider` block: 
 
 1. Choose how you want to configure the `provider` block. 
-   - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory or tape archive file (`.tar`). This approach is useful if you split out your infrastructure code across multiple files. 
+   - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory or tape archive file `.tar`. This approach is useful if you split out your infrastructure code across multiple files. 
    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
 2. Review what [credentials and information you must provide in the `provider` block to work with your resources](/docs/terraform?topic=terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
@@ -211,6 +211,7 @@ variable "datacenter" {
 {: #reference-variables}
 
 You can reference the value of the variable in other blocks of your Terraform configuration files by using the `"${var.<variable_name>}"` syntax. 
+{: shortdesc}
 
 Example for referencing a `datacenter` variable: 
 
@@ -324,7 +325,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
 ## Storing your Terraform templates
 {: #store-template}
 
-Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file (`.tar`)](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead. 
+Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file or `.tar`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead. 
 {: shortdesc}
 
 Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The blocked extension files having more than 500 KB in size, and any invalid image is considered as vulnerable files while cloning.
@@ -335,4 +336,13 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 The following image shows an example of how your Terraform template could look like in a GitHub repository. 
 
 <img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
+
+The directory structure of the Terraform template in the GitHub repository looks like listed in the table with the last edited time.
+|File|Description|
+|----|-----|
+| README.md | Create README.md |
+| main.tf | Create main.tf |
+| output.tf | Create output.tf |
+| provider.tf | Create provider.tf |
+| variables.tf | Create variables.tf |
 
