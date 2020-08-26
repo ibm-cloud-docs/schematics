@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-21"
+lastupdated: "2020-08-26"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -333,6 +333,9 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 -	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
 
+The following image shows an example of how your Terraform template could look like in a GitHub repository. 
+
+<img src="images/gh-repo-structure.png" alt="Sample GitHub setup for a Terraform configuration" width="800" style="width: 800px; border-style: none"/>
 
 The directory structure of the Terraform template in the GitHub repository looks like listed in the table with the last updated time.
 
