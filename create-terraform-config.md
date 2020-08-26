@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-21"
+lastupdated: "2020-08-26"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -334,7 +334,7 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
 
 
-The directory structure of the Terraform template in the GitHub repository looks like listed in the table with the last updated time.
+The directory structure of the Terraform template in the GitHub repository is listed in the table with the latest updated time.
 
 | File | Description |
 |----|-----|
