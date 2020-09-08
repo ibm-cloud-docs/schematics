@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-09-08"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -27,7 +27,7 @@ subcollection: schematics
 # Getting started with {{site.data.keyword.bplong_notm}} and Terraform
 {: #getting-started}
 
-Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, and start templatizing, provisioning, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using Terraform configuration files. 
+Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, and start provisioning templates, and manage {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using Terraform configuration files. 
 {: shortdesc}
 
 Check out the [lab and videos](/docs/vpc?topic=vpc-getting-started){: external} to see how you can provision a VPC cluster with {{site.data.keyword.bpshort}}, and to learn more about Infrastructure as Code and Terraform.
