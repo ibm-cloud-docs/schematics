@@ -122,7 +122,7 @@ The URL to the license is https://creativecommons.org/licenses/by/3.0/legalcode.
 The Program includes some or all of the following works licensed under the Creative Commons. <br>
 The URL to the license is https://creativecommons.org/licenses/by/4.0/legalcode. 
 
-SWAGGER PETSTORE [go-openapi/validate](https://github.com/go-openapi/validate/releases/tag/v0.19.8)
+`SWAGGER PETSTORE` [go-openapi/validate](https://github.com/go-openapi/validate/releases/tag/v0.19.8)
 
 ## Creative Commons Attribution Share Alike 1.0 Generic
 {: #CC-BY-SA-1.0}
