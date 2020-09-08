@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-10"
+lastupdated: "2020-09-08"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -113,7 +113,7 @@ Managing deviations between the real-world state of your cloud environment and y
 **Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?**</br>
 After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by running a {{site.data.keyword.bpshort}} apply action, the state of resources is stored in a Terraform statefile (`terraform.tfstate`). {{site.data.keyword.bpshort}} uses this statefile as the single source of truth to determine what resources exist in your account. The statefile maps the resources that you specified in your Terraform configuration file to the {{site.data.keyword.cloud_notm}} resource that you provisioned.
 
-**How can I compare the desired state of my cloud resources against the actual state of my resources?** </br>
+**How can I compare the required state of my cloud resources against the actual state of my resources?** </br>
 To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files and the resources that exist in your {{site.data.keyword.cloud_notm}} account, you can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
 
 **What deviations cannot be detected?**</br>
@@ -125,7 +125,7 @@ A Terraform execution plan is based on the Terraform statefile that was created 
 2. Select the **Settings** tab.
 3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. Review the values of your input variables and make sure that you want to create the deviation report with the values that you see. 
-5. Click **Generate plan** to create a Terraform execution plan. Note that during this time, you cannot make changes to your workspace. During the creation of the Terraform execution plan, Terraform compares the desired state that you described in your Terraform configuration files with the actual state of your cloud resources. If changes are found, Terraform analyzes what actions need to be performed to get your actual cloud resources to the desired state. 
+5. Click **Generate plan** to create a Terraform execution plan. Note that during this time, you cannot make changes to your workspace. During the creation of the Terraform execution plan, Terraform compares the required state that you described in your Terraform configuration files with the actual state of your cloud resources. If changes are found, Terraform analyzes what actions need to be performed to get your actual cloud resources to the required state. 
 6. Click **View log** to review the log files of your execution plan. The log file provides a summary of all the resources that {{site.data.keyword.bplong_notm}} identified to achieve the desired state. These actions can include adding, modifying, or removing resources. 
 
    Example Terraform execution plan output: 
