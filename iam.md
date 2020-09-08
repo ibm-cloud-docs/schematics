@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-20"
+lastupdated: "2020-09-08"
 
 keywords: schematics, automation, terraform
 
@@ -87,17 +87,17 @@ The following table shows the user permissions that are granted in {{site.data.k
 
 | Action | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| View workspace | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| View workspace activities | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| View workspace logs | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| Create workspace | | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| Update workspace | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| Delete workspace | | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| Freeze and unfreeze workspace | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| View the `readme` of a template| ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg)|![Checkmark icon](images/checkmark.svg)|![Checkmark icon](images/checkmark.svg)| 
-| Create Terraform execution plan | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| Apply a Terraform template | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
-| Destroy workspace resources | | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | ![Checkmark icon](images/checkmark.svg) | 
+| View workspace | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| View workspace activities | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| View workspace logs | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| Create workspace | | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| Update workspace | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| Delete workspace | | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| Freeze and unfreeze workspace | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| View the `readme` of a template| ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg)|![checkmark icon](images/checkmark.svg)|![checkmark icon](images/checkmark.svg)| 
+| Create Terraform execution plan | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| Apply a Terraform template | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| Destroy workspace resources | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions by service user type, account type, and access role" caption-side="top"}
