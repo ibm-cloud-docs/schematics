@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-24"
+lastupdated: "2020-09-08"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -67,4 +67,4 @@ For more information about how to use this data source, see [Managing cross-work
 ### Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?
 {: #local-remote-exec}
 
-The time out is set for `local-exec` and `remote-exec` provisioners by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state will fail. 
+The time out is set for `local-exec` and `remote-exec` users by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state will fail. 

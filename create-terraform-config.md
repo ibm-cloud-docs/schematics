@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-26"
+lastupdated: "2020-09-08"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -183,7 +183,7 @@ You can decide to declare your variables within the same Terraform configuration
 **What information do I need to include in my variable declaration?** </br>
 When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
 - `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
-- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints). <br>
+- `Terraform v0.12` additionally supports bool, number and complex data types such as list&#40;type&#41;, map&#40;type&#41;, object({attribute name=type,..}), set&#40;type&#41;, tuple&#40;[type]&#41;. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints). <br>
 
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
@@ -250,7 +250,7 @@ After creating the workspace, you can provide the values, for {{site.data.keywor
   
 **Can I see how to declare complex variables in a file?**
 
-Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be delcared in the variablestore.
+Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be declared in the variable store.
 
  <table>
    <thead>
@@ -271,19 +271,19 @@ Yes, when you declare and assign the value to the variables, you can view the to
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map&#40;string&#41;</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">set&#40;string&#41;</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map&#40;number&#41;</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list&#40;string&#41;</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
     </tr>
     <tr>
@@ -291,7 +291,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
     </tr>
      <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list&#40;list&#40;string&#41;&#41;</li></ul></td>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
                                                      &nbsp;&nbsp;&nbsp;&nbsp;[us-south, us-east],<br>
                                                      &nbsp;&nbsp;&nbsp;&nbsp;[<br>
