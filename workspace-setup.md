@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-17"
+lastupdated: "2020-09-08"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -103,11 +103,11 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 Create your workspace that points to the GitHub repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc} 
 
-If you do not want to connect your workspace to a GitHub repository, you can upload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. However, this feature is supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
+If you do not want to connect your workspace to a GitHub repository, you can upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. However, this feature is supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
 {: tip}
 
 **Before you begin**
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a GitHub or GitLab repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your termplate to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a GitHub or GitLab repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
 **To create a workspace**:
@@ -207,7 +207,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 5. Configure your toolchain. 
    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
    2. Select the type of source repository where your Terraform configuration files are stored. For example: GitHub. 
-   3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are prepopulated based on your workspace configuration.
+   3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are pre-populated based on your workspace configuration.
    4. Optional: Choose if you want to enable GitHub issues and code change tracking for your toolchain. 
 6. Select the **Delivery Pipeline** icon to configure your Delivery Pipeline. 
    1. Verify that the workspace ID that is displayed to you is correct.
@@ -233,5 +233,5 @@ Review the states that a workspace can have in the following table. You might no
 | Inactive | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply actions to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
 | In progress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **In progress**. |
 | Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
-| Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was cancelled manually. |
+| Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was canceled manually. |
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
