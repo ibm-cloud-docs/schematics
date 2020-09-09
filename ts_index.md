@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-21"
+lastupdated: "2020-09-09"
 
 keywords: schematics help, schematics support, schematics troubleshooting, schematics errors, schematics slack
 
@@ -38,4 +38,4 @@ If you have problems or questions when you use {{site.data.keyword.bplong_notm}}
  and tag your question with `ibm-cloud-schematics`.
 * Subscribe to the Terraform channel on [Reddit](https://www.reddit.com/r/Terraform/){: external}.
 * Get help from the open source community by searching for information on the internet or by asking questions in forums and on websites that support these tools.
-* You can also contact IBM Support by opening a case. To learn about opening an IBM support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-getting-customer-support). 
+* You can also contact IBM Support by opening a case. To learn about opening an IBM support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-using-avatar). 
