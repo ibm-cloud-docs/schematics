@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-09-09"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI
 
@@ -30,7 +30,7 @@ Use the {{site.data.keyword.bplong_notm}} CLI plug-in to create and manage your 
 {: shortdesc}
 
 
-## Installing the IBM Cloud CLI and the {{site.data.keyword.bplong_notm}} CLI plugin
+## Installing the IBM Cloud CLI and the {{site.data.keyword.bplong_notm}} CLI plug-in
 {: #install-schematics-cli}
 
 Install the required CLIs to automate the provisioning of {{site.data.keyword.cloud_notm}} resources across environments. 
