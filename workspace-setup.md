@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-08"
+lastupdated: "2020-09-10"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -134,7 +134,7 @@ If you do not want to connect your workspace to a GitHub repository, you can upl
       -	Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
       -	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
       -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` <br>
-     You can use public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace.  Private bit bucket repository source needs a workaround in the {{site.data.keyword.bplong_notm}}. You need to download the files from the repository. Then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.
+     You can use private and public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace. You need to use the URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`.
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
     5. You can manually enter the values.

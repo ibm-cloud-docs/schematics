@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-08"
+lastupdated: "2020-09-10"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -271,19 +271,19 @@ Yes, when you declare and assign the value to the variables, you can view the to
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">map&#40;string&#41;</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">set&#40;string&#41;</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">map&#40;number&#41;</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list&#40;string&#41;</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
     </tr>
     <tr>
@@ -291,33 +291,38 @@ Yes, when you declare and assign the value to the variables, you can view the to
       <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
     </tr>
      <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list&#40;list&#40;string&#41;&#41;</li></ul></td>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;[us-south, us-east],<br>
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;[<br>
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"eu-gb",<br>
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"eu-de"<br>
-                                                     &nbsp;&nbsp;&nbsp;&nbsp;]<br>
-                                                      ]</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+    {
+        internal = 8300
+        external = 8300
+        protocol = "tcp"
+    },
+    {
+        internal = 8301
+        external = 8301
+        protocol = "ldp"
+    }
+]</code></pre></p></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(object({<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;internal = number<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;external = number<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;protocol = string<br>
-  }))</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">[<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal = 8300<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external = 8300<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protocol = "tcp"<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;},<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;{<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;internal = 8301<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external = 8301<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protocol = "ldp"<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-  ]</li></ul></td>
+  <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>list(object({
+    internal = number
+    external = number
+    protocol = string
+}))</code></pre></p></li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+    {
+        internal = 8300
+        external = 8300
+        protocol = "tcp"
+    },
+    {
+        internal = 8301
+        external = 8301
+        protocol = "ldp"
+    }
+]</code></pre></p></li></ul></td>
     </tr>
   </tbody>
   </table>
