@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-09-10"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -517,14 +517,16 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
           "name": "&lt;variable_name1&gt;",
           "value": "&lt;variable_value1&gt;",
           "type": "&lt;variable_type1&gt;",
-          "secure": true
+          "secure": true,
+	  "use_default": true
         },
         {
           "name": "&lt;variable_name2&gt;",
           "value": "&lt;variable_value2&gt;",
           "type": "&lt;variable_type2&gt;",
-          "secure": false
-        }
+          "secure": false,
+	  "use_default": true
+	  }
       ]
     }
   ],
@@ -602,19 +604,24 @@ Now, in template_repo, you can also update `url` with additional parameters as s
       </tr>
       <tr>
      <td><code>&lt;template_data.variablestore.value&gt;</code></td>
-     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable), as shown in the example.<br><pre class="codeblock">	
+     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You can override the default values of `.tfvars` by setting `use_default` parameter as `true`. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable), as shown in the example.<br><pre class="codeblock">	
 <code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",
                     "name": "docker_ports",
-                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
+		    "use_default":true
                 },
       ]</code></pre></td>
      </tr>
       <tr>
       <td><code>&lt;template_data.variablestore.secure&gt;</code></td>
       <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
+      </tr>
+      <tr>
+      <td><code>&lt;template_data.variablestore.use_default&gt;</code></td>
+      <td>Optional. Set the <code>use_default</code> parameter to <strong>true</strong> to override the default `.tfvars` parameter. By default, this parameter is set to <strong>false</strong>.</td>
       </tr>
       <tr>
       <td><code>&lt;env_values.val1&gt;</code></td>
