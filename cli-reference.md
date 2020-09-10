@@ -423,7 +423,7 @@ Example JSON for uploading a <code>.tar</code> file later:
 -	Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
 -	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
 -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` <br> 
-You can use private and public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace. All you need to provide is URL in this format. `https://bitbucket.org/[your_user_name]/[repo_name]/src/[branch_name]/[folder_name]` and for URL with branch you need to provide in this format `https://bitbucket.org/[your_user_name]/[repo_name]/src/[branch_name]`</td>
+You can use private and public bit bucket template repository source in the {{site.data.keyword.bplong_notm}} workspace.  All you need to provide the URL in this format `https://bitbucket.org/[your_user_name]/[repo_name]/src/[branch_name]/[folder_name]` and for URL with branch you need to provide in this format `https://bitbucket.org/[your_user_name]/[repo_name]/src/[branch_name]`.</td>
    </tr>
     <tr>
      <td><code>&lt;variable_name&gt;</code></td>
