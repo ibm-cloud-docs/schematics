@@ -259,40 +259,40 @@ Yes, when you declare and assign the value to the variables, you can view the to
   </thead>
   <tbody>
    <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>number</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>4.56</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
     </tr>
    <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>string</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>example value</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>bool</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>false</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>map(string)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>{key1 = "value1", key2 = "value2"}</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>set(string)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>["hello", "he"]</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>map(number)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>{internal = 8080, external = 2020}</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>list(string)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>["us-south", "eu-gb"]</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>list</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>["value", 30]</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
     </tr>
      <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li>list(list(string))</li></ul></td>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">,li><p><pre class="codeblock"><code>[
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300
@@ -306,12 +306,12 @@ Yes, when you declare and assign the value to the variables, you can view the to
 ]</code></pre></p></ul></td>
     </tr>
     <tr>
-  <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li><p><pre class="codeblock"><code>list(object({
+  <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>list(object({
     internal = number
     external = number
     protocol = string
 }))</code></pre></p></li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li><p><pre class="codeblock"><code>[
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300
