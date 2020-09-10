@@ -518,14 +518,13 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
           "value": "&lt;variable_value1&gt;",
           "type": "&lt;variable_type1&gt;",
           "secure": true,
-	  "use_default": true
-        },
+	  "use_default": true        },
         {
           "name": "&lt;variable_name2&gt;",
           "value": "&lt;variable_value2&gt;",
           "type": "&lt;variable_type2&gt;",
           "secure": false,
-	  "use_default": true 
+	  "use_default": true
 	  }
       ]
     }
