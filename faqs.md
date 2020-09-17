@@ -96,7 +96,7 @@ terraform{
 {: faq}
 {: support}
 
-Before you create Schematics workspace, you need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, refer, [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer the following sample error message and the solution for the authentication error.
+Before you create Schematics workspace, you need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer the following sample error message and the solution for the authentication error.
 
 **Error message**
 
@@ -104,9 +104,21 @@ Before you create Schematics workspace, you need to create the IAM access token 
 Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
 ```
 **Solution**
+1. You need to create access_token and refresh_token.
 
-```
-export IBMCLOUD_API_KEY=<ibmcloud-api_key>
-curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urnibmparams:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY"  -u bx:bx 
-```
+   ```
+   export IBMCLOUD_API_KEY=<ibmcloud-api_key>
+   curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
+   ```
+2. Export the access_token and refresh_token obtained in step 1 as environment variables as ACCESS_TOKEN and REFRESH_TOKEN respectively.
 
+   ```
+   export ACCESS_TOKEN=<access_token>
+   export REFRESH_TOKEN=<refresh_token>
+   ```
+3. Create workspace
+
+   ```
+   curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
+   ```
+   
