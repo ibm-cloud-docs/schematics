@@ -100,9 +100,9 @@ Before you create Schematics workspace, you need to create the IAM access token 
 
 **Error message**
 
-```
-Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
-```
+  ```
+  Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
+  ```
 **Solution**
 1. You need to create access_token and refresh_token.
 
