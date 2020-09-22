@@ -89,7 +89,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
 
       Account ID:                   a111aaaa1aa1aaaaaaaaaaaa1a1aa111   
       Currently Targeted Account:   true   
-      Linked Softlayer Account:     1001234
+      Linked Softlayer Account:     000000
       VRF Enabled:                  true  
       Service Endpoint Enabled:     true
       ```
