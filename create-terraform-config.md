@@ -225,8 +225,6 @@ resource ibm_container_cluster "test_cluster" {
 
 For more information, about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/configuration/variables.html){: external}.
 
-
-
 ## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}
 

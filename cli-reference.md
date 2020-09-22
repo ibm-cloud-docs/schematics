@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-22"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
 
@@ -319,7 +319,8 @@ Now, in template_repo, you can also provide `url` with additional parameters as 
      "release": "v1.8.0" </code></pre>
 {: note}
 
-Example JSON for uploading a <code>.tar</code> file later:	
+Example JSON for uploading a `.tar` file later:
+
 <pre class="codeblock">	
 <code>{	
   "name": "&lt;workspace_name&gt;",
