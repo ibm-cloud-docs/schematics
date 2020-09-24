@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-23"
+lastupdated: "2020-09-24"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
-subcollection: terraform
+subcollection: schematics
 
 content-type: tutorial
 services: provisioning, vpc-generation2-cluster
