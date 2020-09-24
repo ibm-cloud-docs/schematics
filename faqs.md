@@ -91,12 +91,22 @@ terraform{
 ```
 {: pre}
 
+## How do I generate tokens by using the IAM API with bx:bx identify?
+{: #createworkspace-generate-tokens}
+{: faq}
+{: support}
+
+
+
+
 ## How do I overcome the authentication error when Schematics workspace is created by using API?
 {: #createworkspace-authentication-error}
 {: faq}
 {: support}
 
 You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer the following sample error message and the solution for the authentication error.
+
+The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a 'default token'. You can use the `refresh token` to get a new IAM access token if that token is expired. When using the default client (no basic authorization header) as described in this documentation, this refresh_token cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token.
 
 **Error message**
 
