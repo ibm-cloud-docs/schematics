@@ -6,12 +6,16 @@
         "how to use Schematics",
         "start with Cloud Schematics",
         "getting started with Schematics",
+		"tell me about Schematics",
         "get started with Cloud Schematics"
     ],
     "what-is-terraform": [
         "What is Terraform",
+		"what's terraform",
         "describe Terraform",
         "how does Terraform work",
+		"tell me about terraform",
+		"can I use teraform and schematics together",
         "schematics and terraform work together",
         "how to use Schematics with Terraform",
         "use of terraform",
@@ -21,7 +25,11 @@
         "What is Infrastructure as Code",
         "what's IAC",
         "describe IAC",
+		"Infrastructure as Code",
+		"Infrastructure as Code in schematics",
         "what is infrastructure code", 
+		"use IAC for automation",
+		"IAC used for schematics",
         "use infrastructure code for automation",
         "infrastructure code used for schematics"
     ],
@@ -30,7 +38,10 @@
         "how much does schematics cost",
         "price of schmatics",
         "use schematics for free",
+		"price for Cloud Schematics",
         "pricing for schematics",
+		"use Schematics for free",
+		"costs of Schematics",
         "how do you charge schematics",
         "is schematics free",
         "schematics at no cost"
@@ -40,8 +51,25 @@
         "use Ansible playbook with Cloud Schematics",
         "run Ansible actions in Schematics",
         "how to use the Ansible provisioner",
+		"use of Ansible provisioner",
+		"Ansible in schematics",
+		"want to run Ansible actions in Cloud",
         "running Ansible actions for Cloud",
         "run Ansible playbooks within Cloud", 
-        "use how to use the Ansible in schematics"
+        "how to use the Ansible in schematics"
+	],	
+	"provider-versions": [
+		"Schematics supports multiple Terraform provider versions",
+		"what is the supported terraform versions",
+		"how to add Terraform provider block",
+		"add a Terraform provider block",
+		"versions of Terraform supported in Schematics",
+		"a multiple provider configuration for schematics",
+		"what is the provider latest version for Scematics",
+		"are multiple Terraform provider version supported",
+		"what is supported terraform version",
+		"multiple provider configuration in schematics"
+
+
     ]
 }
