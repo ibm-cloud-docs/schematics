@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-24"
+lastupdated: "2020-09-25"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -106,7 +106,7 @@ completion-time: 60m
 ## Description
 {: #provisioning-desc}
 
-In this tutorial, you can learn the procedure to provision the Terraform templates by using the {{site.data.keyword.bplong_notm}} workspace. {{site.data.keyword.containerfull_notm}} supports following clusters.
+In this tutorial, you can learn the procedure to provision the Terraform templates by using the {{site.data.keyword.bplong_notm}} workspace. {{site.data.keyword.containerfull_notm}} supports following clusters. Testing content update from visual code.
 - [cluster-stand alone-workers](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/cluster-standalone-workers){: external}
 - [cluster-worker-pool-zone](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/cluster-worker-pool-zone){: external}
 - [roks-on-vpc-gen2](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/roks-on-vpc-gen2){: external}
