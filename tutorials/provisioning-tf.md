@@ -162,7 +162,7 @@ The following prerequisites need to be met for the tutorial.
 
 - If you do not have {{site.data.keyword.cloud_notm}} account, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go]. For more information about managing {{site.data.keyword.cloud_notm} account, refer [Managing IBM Cloud account](https://cloud.ibm.com/registration).
 - Install the IBM Cloud CLI and the Schematics CLI plug-in. For more information about CLI setup, see [Schematics CLI setup](/docs/schematics?topic=schematics-setup-cli).
-- Make sure that you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer [Schematic access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
+- Make sure that you are assigned the required permissions in Identity and Access Management to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer [Schematic access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
 - Follow the instructions to make sure that you are assigned the required permissions in Identity and Access Management to create clusters. For more information about container cluster, refer [Containers clusters](/docs/containers?topic=containers-clusters#cluster_prepare).
 
 ## Accessing and reviewing your Terraform template
@@ -253,10 +253,10 @@ You can edit the payload values for the variable as stated in the table:
 | `type` | Terraform v0.12 |
 | `githubtoken` | Specify your GitHub token. |
 
-2. Create the workspace by using the json file from command line interface.
+2. Create the workspace by using the JSON file from command line interface.
 
    ```
-   ibmcloud schematics workspace new --file <fully qualified path of cluster_payload.json file>
+   ibmcloud schematics workspace new --file <fully qualified path of cluster_payload.JSON file>
    ```
    {: pre}
 
@@ -383,9 +383,12 @@ During the creation of the Terraform execution plan, you are not allowed to make
    
    You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
   {: note}
+ 
+   
   
    
 ## What's next?
 {: #tut_what's next}
 
 Great job! You successfully provisioned a VPC Generation 2 cluster by using {{site.data.keyword.bplong_notm}}. You can now learn how to configure the cluster parameters to attach the key management services and load balancer. For more information, about key management services and {{site.data.keyword.cloud_notm}} Kubernetes worker pool, see [Key Management services](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#ks_kms_enable) and [{{site.data.keyword.cloud_notm}} Kubernetes worker pool](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#cs_alb_create).
+

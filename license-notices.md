@@ -110,11 +110,11 @@ The following notices are included in this document:
 The Program includes some or all of the following works licensed under the Creative Commons. <br>
 The URL to the license is https://creativecommons.org/licenses/by/3.0/legalcode. 
 
- - GO GOPHER [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
- - THE LOGO AND MASCOT [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
- - H2DEMO [golang/x/net](https://github.com/golang/net/commit/d3edc9973b7eb1fb302b0ff2c62357091cea9a30)
- - DIR.TMPL [golang/x/tools](https://github.com/golang/tools/commit/de023d59a5d12fe28f29c985eb1f744aae7e7d73)
- - H2.DEMO/TMPL.GO [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate/archive/v0.1.0.zip)
+ - `GO GOPHER` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
+ - `THE LOGO AND MASCOT` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
+ - `H2DEMO` [golang/x/net](https://github.com/golang/net/commit/d3edc9973b7eb1fb302b0ff2c62357091cea9a30)
+ - `DIR.TMPL` [golang/x/tools](https://github.com/golang/tools/commit/de023d59a5d12fe28f29c985eb1f744aae7e7d73)
+ - `H2.DEMO`/`TMPL.GO` [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate/archive/v0.1.0.zip)
 
 ## Creative Commons Attribution 4.0
 {: #CC-BY-4.0}
