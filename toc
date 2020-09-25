@@ -11,6 +11,10 @@ Schematics
     ha-dr.md
     whats-new.md
     {: .navgroup-end}
+
+    {: .navgroup id="tutorial"}
+    tutorials/provisioning-tf.md
+    {: .navgroup-end}
     
     {: .navgroup id="howto"}
     setup-cli.md
