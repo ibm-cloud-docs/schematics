@@ -119,7 +119,7 @@ The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apik
    export IBMCLOUD_API_KEY=<ibmcloud-api_key>
    curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
    ```
-2. Export the access_token and refresh_token obtained in step 1 as environment variables for ACCESS_TOKEN and REFRESH_TOKEN respectively.
+2. Export the access_token and refresh_token obtained in step 1 as environment variables for ACCESS_TOKEN and REFRESH_TOKEN.
 
    ```
    export ACCESS_TOKEN=<access_token>
