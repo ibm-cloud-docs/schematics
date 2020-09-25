@@ -106,7 +106,7 @@ completion-time: 60m
 ## Description
 {: #provisioning-desc}
 
-In this tutorial, you can learn the procedure to provision the Terraform templates by using the {{site.data.keyword.bplong_notm}} workspace. {{site.data.keyword.containerfull_notm}} supports following clusters. Testing content update from visual code.
+In this tutorial, you can learn the procedure to provision the Terraform templates by using the {{site.data.keyword.bplong_notm}} workspace. {{site.data.keyword.containerfull_notm}} supports following clusters.
 - [cluster-stand alone-workers](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/cluster-standalone-workers){: external}
 - [cluster-worker-pool-zone](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/cluster-worker-pool-zone){: external}
 - [roks-on-vpc-gen2](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/roks-on-vpc-gen2){: external}
