@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-22"
+lastupdated: "2020-09-25"
 
 keywords: schematics, automation, terraform
 
@@ -52,7 +52,7 @@ For example, you have a team A that is responsible to manage an {{site.data.keyw
 No. You can create different resource groups for your {{site.data.keyword.bplong_notm}} workspaces and {{site.data.keyword.cloud_notm}} resources. 
 
 **What is the benefit of using IAM access group?** <br>
-To minimize the number of IAM access policies you need to assign an individual users. you can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
+To minimize the number of IAM access policies you need to assign an individual user. You can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
 
 The following image shows how you can leverage IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account. 
 
@@ -87,17 +87,17 @@ The following table shows the user permissions that are granted in {{site.data.k
 
 | Action | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| View workspace | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| View workspace activities | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| View workspace logs | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| Create workspace | | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| Update workspace | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| Delete workspace | | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| Freeze and unfreeze workspace | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| View the `readme` of a template| ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg)|![checkmark icon](images/checkmark.svg)|![checkmark icon](images/checkmark.svg)| 
-| Create Terraform execution plan | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| Apply a Terraform template | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
-| Destroy workspace resources | | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | ![checkmark icon](images/checkmark.svg) | 
+| View workspace | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| View workspace activities | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| View workspace logs | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Create workspace | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Update workspace | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Delete workspace | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Freeze and unfreeze workspace | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| View the `readme` of a template| ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)| 
+| Create Terraform execution plan | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Apply a Terraform template | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Destroy workspace resources | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions by service user type, account type, and access role" caption-side="top"}
