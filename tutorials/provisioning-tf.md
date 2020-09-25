@@ -383,12 +383,9 @@ During the creation of the Terraform execution plan, you are not allowed to make
    
    You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
   {: note}
- 
-   
   
    
 ## What's next?
 {: #tut_what's next}
 
 Great job! You successfully provisioned a VPC Generation 2 cluster by using {{site.data.keyword.bplong_notm}}. You can now learn how to configure the cluster parameters to attach the key management services and load balancer. For more information, about key management services and {{site.data.keyword.cloud_notm}} Kubernetes worker pool, see [Key Management services](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#ks_kms_enable) and [{{site.data.keyword.cloud_notm}} Kubernetes worker pool](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#cs_alb_create).
-
