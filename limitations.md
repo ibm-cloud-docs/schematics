@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-08"
+lastupdated: "2020-09-25"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -68,3 +68,11 @@ For more information about how to use this data source, see [Managing cross-work
 {: #local-remote-exec}
 
 The time out is set for `local-exec` and `remote-exec` users by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state will fail. 
+
+## What is the use of refresh token header?
+{: #refresh-token}
+
+If the destoryresource flag is set to `true`, refresh token header configuration is required to delete all the IBM Cloud resources, and the Schematics workspace. Following are the uses of refresh token header:
+- If the token is expired, you can use `refresh token` to get a new [IAM access token](#createworkspace-generate-tokens). 
+- The `refresh_token` parameter cannot be used to retrieve a new IAM access token. 
+- When the IAM access token is about to expire, use the [API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key){: external} to create a new access token.

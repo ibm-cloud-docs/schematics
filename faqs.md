@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-24"
+lastupdated: "2020-09-25"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -97,15 +97,6 @@ terraform{
 {: support}
 
 To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` and execute `curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx`. For more information, about creating IAM access token and API Docs, see [IAM access token](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key). <br> You can set the environment values  `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
-
-## What are the limitations of refresh token?
-{: #refresh-tokens}
-{: faq}
-{: support}
-
-- If the token is expired, you can use `refresh token` to get a new [IAM access token](#createworkspace-generate-tokens). 
-- The `refresh_token` parameter cannot be used to retrieve a new IAM access token. 
-- When the IAM access token is about to expire, use the [API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key){: external} to create a new access token.
 
 ## How do I overcome the authentication error when Schematics workspace is created by using API?
 {: #createworkspace-authentication-error}
