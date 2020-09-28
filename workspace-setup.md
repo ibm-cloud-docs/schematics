@@ -235,7 +235,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ### Planning and Applying  action
 {: #plan-apply-action-state}
 
-<img src="images/applyplan.png" alt="Plan and apply action state"  width="800" style="width: 800px; border-style: none"/>
+<img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/>
 
 ### Destroying action
 {: #destroy-action-state}
