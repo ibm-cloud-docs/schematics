@@ -219,7 +219,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 ## Workspace states overview
 {: #workspace-states}
 
-The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. 
+The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. The diagram represents the state and action of the workspace.
 {: shortdesc}
 
 ### Creating workspace state
