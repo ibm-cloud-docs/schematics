@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-09-28"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -216,11 +216,36 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
 9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. 
    
-## Overview of workspace states
+## Workspace states overview
 {: #workspace-states}
 
-The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. 
+The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. The diagram represents the state and action of the workspace.
 {: shortdesc}
+
+### Creating workspace state
+{: #create-workspace-state}
+
+<img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/>
+
+### Deleting workspace state
+{: #delete-workspace-state}
+
+<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800" style="width: 800px; border-style: none"/>
+
+### Planning and Applying  action
+{: #plan-apply-action-state}
+
+<img src="images/applyplan.png" alt="Plan and apply action state"  width="800" style="width: 800px; border-style: none"/>
+
+### Destroying action
+{: #destroy-action-state}
+
+<img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/>
+
+### Deleting and destroying action
+{: #delete-destroy-action-state}
+
+<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/>
 
 Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API. 
 
