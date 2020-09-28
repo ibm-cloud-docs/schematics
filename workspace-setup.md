@@ -245,7 +245,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ### Deleting and destroying action
 {: #delete-destroy-action-state}
 
-<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  style="height:150px; border-style: none"/>
+<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/>
 
 Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API. 
 
