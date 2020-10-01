@@ -230,22 +230,22 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ### Deleting workspace state
 {: #delete-workspace-state}
 
-<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="200" style="width: 200px; border-style: none"/>
+<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="400" style="width: 400px; border-style: none"/>
 
 ### Planning and Applying  action
 {: #plan-apply-action-state}
 
-<img src="images/applyplan.png" alt="Plan and apply action state" width="200" style="width: 200px; border-style: none"/>
+<img src="images/applyplan.png" alt="Plan and apply action state" width="400" style="width: 400px; border-style: none"/>
 
 ### Destroying action
 {: #destroy-action-state}
 
-<img src="images/destroyworkspace.png" alt="Destroy action state"  width="200" style="width: 200px; border-style: none"/>
+<img src="images/destroyworkspace.png" alt="Destroy action state"  width="400" style="width: 400px; border-style: none"/>
 
 ### Deleting and destroying action
 {: #delete-destroy-action-state}
 
-<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="200" style="width: 200px; border-style: none"/>
+<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="400" style="width: 400px; border-style: none"/>
 
 Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API. 
 
