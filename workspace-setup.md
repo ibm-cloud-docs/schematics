@@ -225,7 +225,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ### Creating workspace state
 {: #create-workspace-state}
 
-<img src="images/createworkspace.png" alt="Create workspace state"  width="200" style="width: 200px; border-style: none"/>
+<img src="images/createworkspace.png" alt="Create workspace state"  width="400" style="width: 400px; border-style: none"/>
 
 ### Deleting workspace state
 {: #delete-workspace-state}
