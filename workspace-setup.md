@@ -214,10 +214,28 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
    2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
 7. Click **Create** to finish the setup of your toolchain. You see an overview of tools that were configured for your toolchain. 
 8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
-9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. 
-   
-## Workspace states overview
-{: #workspace-states}
+9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors.
+
+## Workspace state and its importance
+{: #states-importance}
+
+Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API.
+{: shortdesc} 
+
+| State | Description | 
+| ------- | ---------------------------- | 
+| Active | After you successfully ran your infrastructure code with {{site.data.keyword.bplong_notm}} by applying your Terraform execution plan, the state of your workspace changes to **Active**. |
+| Connecting | {{site.data.keyword.bpshort}} tries to connect to the template in your source repo. If successfully connected, the template is downloaded and metadata, such as input parameters, is extracted. After the template is downloaded, the state of the workspace changes to **Scanning**. |
+| Draft | The workspace is created without a reference to a GitHub or GitLab repository.   |
+| Failed | If errors occur during the execution of your infrastructure code in {{site.data.keyword.bplong_notm}}, your workspace state is set to **Failed**. To troubleshoot errors, open the logs on the workspace **Activity** page. |
+| Inactive | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply actions to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
+| In progress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **In progress**. |
+| Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
+| Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was canceled manually. |
+| Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
+
+## Workspace state flow diagram
+{: #workspace-state-diagram}
 
 The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. The diagram represents the state and action of the workspace.
 {: shortdesc}
@@ -225,9 +243,12 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ### Creating workspace state
 {: #create-workspace-state}
 
+The state diagram of the create workspace: The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.
+{: shortdesc}
 
-
-<img src="images/createworkspace.png" alt="Create workspace state"  width="600" style="width: 600px; border-style: none"/>
+| Workspace / Action | Diagram | Description |
+|----------------|-----------|-------------|
+|Create workspace|<img src="images/createworkspace.png" alt="Create workspace state"  width="400" style="width: 400px; border-style: none"/>|The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.|
 
 ### Deleting workspace state
 {: #delete-workspace-state}
@@ -249,16 +270,4 @@ The state of a workspace indicates if you have successfully created a Terraform 
 
 <img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="400" style="width: 400px; border-style: none"/>
 
-Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API. 
 
-| State | Description | 
-| ------- | ---------------------------- | 
-| Active | After you successfully ran your infrastructure code with {{site.data.keyword.bplong_notm}} by applying your Terraform execution plan, the state of your workspace changes to **Active**. |
-| Connecting | {{site.data.keyword.bpshort}} tries to connect to the template in your source repo. If successfully connected, the template is downloaded and metadata, such as input parameters, is extracted. After the template is downloaded, the state of the workspace changes to **Scanning**. |
-| Draft | The workspace is created without a reference to a GitHub or GitLab repository.   |
-| Failed | If errors occur during the execution of your infrastructure code in {{site.data.keyword.bplong_notm}}, your workspace state is set to **Failed**. To troubleshoot errors, open the logs on the workspace **Activity** page. |
-| Inactive | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply actions to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
-| In progress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **In progress**. |
-| Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
-| Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was canceled manually. |
-| Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
