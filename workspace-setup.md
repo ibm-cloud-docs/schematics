@@ -234,10 +234,10 @@ Review the states that a workspace can have in the following table. You might no
 | Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was canceled manually. |
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
 
-## Workspace state flow diagram
+## Workspace state diagram
 {: #workspace-state-diagram}
 
-The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. The diagram represents the state and action of the workspace.
+The state of a workspace indicates if you have successfully created a Terraform execution plan and applied to provision your resources in the {{site.data.keyword.cloud_notm}} account. The table represents the state and action of the workspace.
 {: shortdesc}
 
 ### Creating workspace state
