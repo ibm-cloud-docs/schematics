@@ -240,34 +240,10 @@ Review the states that a workspace can have in the following table. You might no
 The state of a workspace indicates if you have successfully created a Terraform execution plan and applied to provision your resources in the {{site.data.keyword.cloud_notm}} account. The table represents the state and action of the workspace.
 {: shortdesc}
 
-### Creating workspace state
-{: #create-workspace-state}
-
-The state diagram of the create workspace: The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.
-{: shortdesc}
-
-| Workspace / Action | Diagram | Description |
+| Workspace / Action | State diagram | Description |
 |----------------|-----------|-------------|
-|Create workspace|<img src="images/createworkspace.png" alt="Create workspace state"  width="400" style="width: 400px; border-style: none"/>|The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.|
-
-### Deleting workspace state
-{: #delete-workspace-state}
-
-<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="600" style="width: 600px; border-style: none"/>
-
-### Planning and Applying  action
-{: #plan-apply-action-state}
-
-<img src="images/applyplan.png" alt="Plan and apply action state" width="400" style="width: 400px; border-style: none"/>
-
-### Destroying action
-{: #destroy-action-state}
-
-<img src="images/destroyworkspace.png" alt="Destroy action state"  width="400" style="width: 400px; border-style: none"/>
-
-### Deleting and destroying action
-{: #delete-destroy-action-state}
-
-<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="400" style="width: 400px; border-style: none"/>
-
-
+|Create workspace|<img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/>|The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.|
+|Delete workspace|<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="600" style="width: 600px; border-style: none"/>|The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.|
+|Plan and apply action|<img src="images/applyplan.png" alt="Plan and apply action state" width="400" style="width: 400px; border-style: none"/>|The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.|
+|Destroy action|<img src="images/destroyworkspace.png" alt="Destroy action state"  width="400" style="width: 400px; border-style: none"/>|The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.|
+|Delete and destroy action|<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="400" style="width: 400px; border-style: none"/>|The workspace is created without a reference to  GitHub or GitLab to the draft state. From the draft state you can connect to template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state you can maintain atleast one resource in the state file to be in active state and then, can destory all the resources and to make your workspace in an inactive state. The pictorial view of the process flow is depicted in the diagram.|
