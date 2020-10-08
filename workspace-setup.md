@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-06"
+lastupdated: "2020-10-08"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -225,12 +225,14 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ### Creating workspace state
 {: #create-workspace-state}
 
-<img src="images/createworkspace.png" alt="Create workspace state"  width="500" style="width: 500px; border-style: none"/>
+
+
+<img src="images/createworkspace.png" alt="Create workspace state"  width="600" style="width: 600px; border-style: none"/>
 
 ### Deleting workspace state
 {: #delete-workspace-state}
 
-<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="400" style="width: 400px; border-style: none"/>
+<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="600" style="width: 600px; border-style: none"/>
 
 ### Planning and Applying  action
 {: #plan-apply-action-state}
