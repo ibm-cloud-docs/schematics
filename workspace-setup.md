@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-06"
+lastupdated: "2020-10-11"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -214,40 +214,13 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
    2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
 7. Click **Create** to finish the setup of your toolchain. You see an overview of tools that were configured for your toolchain. 
 8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
-9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. 
-   
-## Workspace states overview
-{: #workspace-states}
+9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors.
 
-The state of a workspace indicates if you have successfully created a Terraform execution plan and applied the plan to provision your resources in your {{site.data.keyword.cloud_notm}} account. The diagram represents the state and action of the workspace.
-{: shortdesc}
+## Workspace state and its importance
+{: #states-importance}
 
-### Creating workspace state
-{: #create-workspace-state}
-
-<img src="images/createworkspace.png" alt="Create workspace state"  width="500" style="width: 500px; border-style: none"/>
-
-### Deleting workspace state
-{: #delete-workspace-state}
-
-<img src="images/deleteworkspace.png" alt="Delete workspace state"  width="400" style="width: 400px; border-style: none"/>
-
-### Planning and Applying  action
-{: #plan-apply-action-state}
-
-<img src="images/applyplan.png" alt="Plan and apply action state" width="400" style="width: 400px; border-style: none"/>
-
-### Destroying action
-{: #destroy-action-state}
-
-<img src="images/destroyworkspace.png" alt="Destroy action state"  width="400" style="width: 400px; border-style: none"/>
-
-### Deleting and destroying action
-{: #delete-destroy-action-state}
-
-<img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="400" style="width: 400px; border-style: none"/>
-
-Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API. 
+Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API.
+{: shortdesc} 
 
 | State | Description | 
 | ------- | ---------------------------- | 
@@ -260,3 +233,44 @@ Review the states that a workspace can have in the following table. You might no
 | Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
 | Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy action was canceled manually. |
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
+
+## Workspace state diagram
+{: #workspace-state-diagram}
+
+The state of a workspace indicates if you have successfully created a Terraform execution plan and applied to provision your resources in the {{site.data.keyword.cloud_notm}} account. The table represents the state and action of the workspace.
+{: shortdesc}
+
+<table>
+   <thead>
+    <th style="width:60px">Workspace / Action</th>
+    <th style="width:250px">State diagram</th>
+    <th style="width:180px">Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Create workspace</code></td>
+      <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
+      <td>The workspace is created without a reference to GitHub or GitLab to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state, you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, it can destroy all the resources to make your workspace in an inactive state.</td>
+   </tr>
+     <tr>
+      <td><code>Delete workspace</code></td>
+      <td><img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800" style="width: 800px; border-style: none"/></td>
+      <td>The delete workspace performs when your workspace is in inactive, active or failed state. From these state, you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach inactive state or template process may fail and reach failed state. If you delete at least one resource, the plan and apply action executes to destroy the resource from the active state.</td>
+   </tr>
+    <tr>
+      <td><code>Plan and apply action</code></td>
+      <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
+      <td>The plan action performs when your workspace is in inactive, active or failed states. From these state, you can connect to the infrastructure template in your source repository. From connecting state, the template is processed and executes apply action to move the workspace successfully to the active state. When the apply action fails, connecting state returns failed state.</td>
+   </tr>
+    <tr>
+      <td><code>Destroy action</code></td>
+      <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
+      <td>The destroy action performs when your workspace is in inactive, active or failed state. From these state, the destroy action connects to processes the template from your source respository and returns destroy success based on your template configuration.</td>
+   </tr>
+    <tr>
+      <td><code>Delete and destroy action</code></td>
+      <td><img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
+      <td>The delete and destroy action performs when your workspace is in active, inactive and failed state. The inactive state is the final state. the destroy action connects to your repository and processes the template to return success or failure status.</td>
+   </tr>
+  </tbody>
+  </table>

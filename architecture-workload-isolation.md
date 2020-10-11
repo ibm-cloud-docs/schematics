@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-19"
+lastupdated: "2020-10-11"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -64,15 +64,15 @@ All API requests to the {{site.data.keyword.bpshort}} API server are queued in M
 ### How are my workloads isolated from other tenants? 
 When you use {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} resources, these resources are created in your personal {{site.data.keyword.cloud_notm}} account. You are responsible to manage these resources and to keep them up-to-date to avoid security vulnerabilities or downtime for your workloads. {{site.data.keyword.cloud_notm}} resources are provisioned, updated, and deleted as defined in the Terraform template and requested by the user. Because all resources are created in your personal account, resources are not shared with or reused by other {{site.data.keyword.cloud_notm}} tenants. 
 
-## Dependencies to other services
+## Dependencies on other services
 {: #dependencies}
 
 Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.keyword.bpshort}} connects to these services. 
 
 |Service name|Description|Private/ public endpoint|
 |---------|--------------------|---------------|
-|{{site.data.keyword.at_short}}|{{site.data.keyword.bpshort}} integrates with {{site.data.keyword.cloudaccesstrailshort}} to forward workspace audit events to the {{site.data.keyword.cloudaccesstrailshort}} service instance that is set up and owned by the {{site.data.keyword.bpshort}} user. For more information, see [{{site.data.keyword.at_short}} events](/docs/schematics?topic=schematics-at_events). Additionally, the {{site.data.keyword.bpshort}} service team uses {{site.data.keyword.cloudaccesstrailshort}} to monitor service-internal audit events.|Private|
-|Business Support Service for {{site.data.keyword.cloud_notm}} (BSS)| The BSS component is used to access information about the {{site.data.keyword.cloud_notm}} account, service subscription, service usage, and billing.|Public|
+|{{site.data.keyword.at_short}}|{{site.data.keyword.bpshort}} integrates with {{site.data.keyword.at_full_notm}} to forward workspace audit events to the {{site.data.keyword.at_full_notm}} service instance that is set up and owned by the {{site.data.keyword.bpshort}} user. For more information, see [{{site.data.keyword.at_short}} events](/docs/schematics?topic=schematics-at_events). Additionally, the {{site.data.keyword.bpshort}} service team uses {{site.data.keyword.at_full_notm}} to monitor service-internal audit events.|Private|
+|Business Support Service (BSS) for {{site.data.keyword.cloud_notm}} | The BSS component is used to access information about the {{site.data.keyword.cloud_notm}} account, service subscription, service usage, and billing.|Public|
 |Certificate Manager|This service is used to store and manage the TLS certificates for the {{site.data.keyword.bpshort}} domains.|Public|
 |Cloudant|Cloudant is used to store workspace operational data, such as the workspace variables, workspace metadata, and Terraform template information. All data is encrypted at rest by using the default service encryption.|Public|
 |{{site.data.keyword.cloud_notm}} Command Line (CLI)|When {{site.data.keyword.bpshort}} runs CLI commands, the service connects to the service API endpoint over the public service endpoint.|Public|
@@ -83,7 +83,7 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |Internet Services (CIS)|This service is used to provide the global load balancer and firewall for {{site.data.keyword.bplong_notm}}|Public|
 |Key Protect|{{site.data.keyword.bpshort}} uses root keys in Key Protect to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit.|Private|
 |Kubernetes Service|The {{site.data.keyword.bplong_notm}} service control plane runs in an {{site.data.keyword.containerlong_notm}} cluster and leverages the built-in security, high availability, and self-healing capabilities of the service. If an {{site.data.keyword.bplong_notm}} user creates a workspace or provisions {{site.data.keyword.cloud_notm}} resources, these resources are provisioned into the user account outside the {{site.data.keyword.bpshort}} cluster.|Public|
-|{{site.data.keyword.loganalysisshort}} with LogDNA|{{site.data.keyword.bpshort}} sends service logs to {{site.data.keyword.loganalysisfull_notm}}. These logs are monitored and analyzed by the {{site.data.keyword.bpshort}} service team to detect service issues and malicious activities.|Private|
+|{{site.data.keyword.la_full_notm}} with LogDNA|{{site.data.keyword.bpshort}} sends service logs to {{site.data.keyword.loganalysisfull_notm}}. These logs are monitored and analyzed by the {{site.data.keyword.bpshort}} service team to detect service issues and malicious activities.|Private|
 |Messages for RabbitMQ|RabbitMQ is used to queue incoming API requests, and to process these requests asynchronously.|Private|
 |{{site.data.keyword.mon_short}}|{{site.data.keyword.bpshort}} sends service metrics to {{site.data.keyword.mon_full_notm}}. These metrics are monitored by the {{site.data.keyword.bpshort}} service team to identify capacity and performance issues.|Private|
 |Object Storage (COS)|This service is used to store workspace transactional data, such as the Terraform state file, logs, and user-provided data. All data is encrypted by using [Server-Side Encryption with Key Protect](/docs/cloud-object-storage?topic=cloud-object-storage-encryption#encryption-kp) in transit and at rest.|Private|
