@@ -200,6 +200,11 @@ When you add a repository to the {{site.data.keyword.bplong_notm}} for the first
 | Plan generated | The resources are checked and reports `to add`, `to change`, and `to delete` resources count of your workspace plan generation. |
 | Plan applied | The resources are checked and reports `added`, `changed`, and `deleted` resources count of your workspace plan applied state.|
 
+## Creating a deploy to {{site.data.keyword.bplong_notm}}
+{: #create-deploy-to-schematics}
+
+{{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git-sourced repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/terraform?topic=terraform-create_deploy_to_schematics).
+
 ## Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery}
   
