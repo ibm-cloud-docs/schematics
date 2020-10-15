@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-11"
+lastupdated: "2020-10-15"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -188,6 +188,17 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
 5. Type the workspace name in the **Type workspace name to confirm** text box.
 6. Click the **Delete** button.
 
+## Files and resources for your workspace action
+{: #files-resources}
+
+When you add a repository to the {{site.data.keyword.bplong_notm}} for the first time. The Terraform back engine performs the vulnerability check of the resources and files you have added. This checks returns the  resources that are `added`, `changed`, and `deleted`. It also return the files that are `scanned` and `discarded`. The actions with the resource and file information are described in the table.
+
+| Workspace or action | Description |
+|-------|---------|
+| Workspace created | Vulnerability check is not performed.|
+| Workspace updated | Files are checked and reports the status with the number of files scanned and discarded.|
+| Plan generated | The resources are checked and reports `to add`, `to change`, and `to delete` resources count of your workspace plan generation. |
+| Plan applied | The resources are checked and reports `added`, `changed`, and `deleted` resources count of your workspace plan applied state.|
 
 ## Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery}
@@ -248,29 +259,31 @@ The state of a workspace indicates if you have successfully created a Terraform 
   </thead>
   <tbody>
     <tr>
-      <td><code>Create workspace</code></td>
+      <td><code>Create or update workspace</code></td>
       <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The workspace is created without a reference to GitHub or GitLab to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template process may fail and reach failed state. From inactive state, you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, it can destroy all the resources to make your workspace in an inactive state.</td>
+      <td>The workspace is created without a reference to GitHub or GitLab to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, you can destroy all the resources to make your workspace in an inactive state.
+ </td>
    </tr>
      <tr>
       <td><code>Delete workspace</code></td>
       <td><img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The delete workspace performs when your workspace is in inactive, active or failed state. From these state, you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach inactive state or template process may fail and reach failed state. If you delete at least one resource, the plan and apply action executes to destroy the resource from the active state.</td>
+      <td>When you perform delete workspace on an inactive, active or failed state. From these state, the template is parsed successfully to reach an inactive state or template parsed can fail and reach failed state. If you delete at least one resource, the plan and apply action executes to destroy the resource from the active state.</td>
    </tr>
     <tr>
       <td><code>Plan and apply action</code></td>
       <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
-      <td>The plan action performs when your workspace is in inactive, active or failed states. From these state, you can connect to the infrastructure template in your source repository. From connecting state, the template is processed and executes apply action to move the workspace successfully to the active state. When the apply action fails, connecting state returns failed state.</td>
+      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in inprogress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains atleast one resource, your workspace is in an inactive state, on failure workspace is in failed state.
+      </td>
    </tr>
     <tr>
       <td><code>Destroy action</code></td>
       <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The destroy action performs when your workspace is in inactive, active or failed state. From these state, the destroy action connects to processes the template from your source respository and returns destroy success based on your template configuration.</td>
+      <td>The destroy action performs when your workspace is in an inactive, active or failed state. From these state, the destroy action connects to parse the template from your source respository and workspace gets into inprogress unlocked state. From inprogress state if you destroy, resource reaches failed state.</td>
    </tr>
     <tr>
       <td><code>Delete and destroy action</code></td>
       <td><img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The delete and destroy action performs when your workspace is in active, inactive and failed state. The inactive state is the final state. the destroy action connects to your repository and processes the template to return success or failure status.</td>
+      <td>When you perform delete and destroy action from active, inactive and failed state. The delete action will delete the workspace from all these state, but the resource is still in active state. Destroy will destroy the resources, and moves your workspace in active state. Whenever your apply, plan destroy the workspace, it reaches inprogress locked state. Based on success and failure, the workspace is unlocked. </td>
    </tr>
   </tbody>
   </table>
