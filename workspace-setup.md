@@ -191,7 +191,11 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
 ## Files and resources for your workspace action
 {: #files-resources}
 
-When you add a repository to the {{site.data.keyword.bplong_notm}} for the first time. The Terraform back engine performs the vulnerability check of the resources and files you have added. This checks returns the  resources that are `added`, `changed`, and `deleted`. It also return the files that are `scanned` and `discarded`. The actions with the resource and file information are described in the table.
+When you add a repository to the {{site.data.keyword.bplong_notm}} for the first time. The Terraform back engine performs the vulnerability check of the resources and files you have added. This check returns the  resources that are `added`, `changed`, and `deleted`. It also returns
+ - The total number of files scanned in the repository as `scanned` and
+ - The total number of files that are vulnerable, such as unsupported file extensions as `discarded`. 
+The actions with the resource and file information are described in the table.
+{: shortdesc}
 
 | Workspace or action | Description |
 |-------|---------|
