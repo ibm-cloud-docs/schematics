@@ -272,7 +272,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
   </thead>
   <tbody>
     <tr>
-      <td><code>Create or update workspace</code></td>
+      <td><code>Create workspace</code></td>
       <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
       <td>The workspace is created without a reference to GitHub or GitLab to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, you can destroy all the resources to make your workspace in an inactive state.
  </td>
