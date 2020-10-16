@@ -266,8 +266,8 @@ The state of a workspace indicates if you have successfully created a Terraform 
 
 <table>
    <thead>
-    <th style="width:60px">Workspace / Action</th>
-    <th style="width:250px">State diagram</th>
+    <th style="width:50px">Workspace / Action</th>
+    <th style="width:200px">State diagram</th>
     <th style="width:180px">Description</th>
   </thead>
   <tbody>
