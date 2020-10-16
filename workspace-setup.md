@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-15"
+lastupdated: "2020-10-16"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -191,16 +191,20 @@ Delete your workspace that points to the GitHub repository thats hosted your Ter
 ## Files and resources for your workspace action
 {: #files-resources}
 
-When you add a repository to the {{site.data.keyword.bplong_notm}} for the first time. The Terraform back engine performs the vulnerability check of the resources and files you have added. This check returns the  resources that are `added`, `changed`, and `deleted`. It also returns
- - The total number of files scanned in the repository as `scanned` and
- - The total number of files that are vulnerable, such as unsupported file extensions as `discarded`. 
+When you add a repository to the {{site.data.keyword.bplong_notm}} for the first time. The Schematics engine performs the vulnerability check of the files you have added. This check returns the scanned, discarded files.
+- The total number of files scanned in the repository is named as `scanned`.
+- The total number of files that are vulnerable, such as unsupported file extensions is named as `discarded`.
+You can find the details of the files in the logs of the `create` or `update` action.
+
+Terraform actions like `plan`, `apply` and `destroy` creates the resources overview such as `added`, `changed`, and `deleted` on the console.
+
 The actions with the resource and file information are described in the table.
 {: shortdesc}
 
 | Workspace or action | Description |
 |-------|---------|
-| Workspace created | Vulnerability check is not performed.|
-| Workspace updated | Files are checked and reports the status with the number of files scanned and discarded.|
+| Workspace created without repository | Vulnerability check is not performed.|
+| Workspace created or updated with repository | Files are checked and reports the status with the number of files scanned and discarded.|
 | Plan generated | The resources are checked and reports `to add`, `to change`, and `to delete` resources count of your workspace plan generation. |
 | Plan applied | The resources are checked and reports `added`, `changed`, and `deleted` resources count of your workspace plan applied state.|
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-15"
+lastupdated: "2020-10-16"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -28,7 +28,12 @@ subcollection: schematics
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
 
+## October 2020
+{: #october-2020}
 
+|Date|Description|
+|-----|---------|
+|16 October 2020 |<ul><li>**Monitoring by using Sysdig**: {{site.data.keyword.bplong_notm}} now supports monitoring Schematics services by using {{site.data.keyword.cloud_notm}} monitoring with Sysdig. For more information, about the monitoring Schematics workspaces, see [Monitoring Schematics instances](/docs/schematics?topic=schematics-monitoring-instances).</li><li>**Files and resources for your workspace actions**: {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository. For more information, about files and resources, see [Files and resources](/docs/schematics?topic=schematics-workspace-setup#files-resources).</li><li>**Creating a deploy to {{site.data.keyword.bplong_notm}} link**: {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git-sourced repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics).</li></ul> |
 
 ## September 2020
 {: #september-2020}
