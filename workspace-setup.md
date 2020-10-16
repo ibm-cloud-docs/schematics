@@ -300,3 +300,4 @@ The state of a workspace indicates if you have successfully created a Terraform 
    </tr>
   </tbody>
   </table>
+  
