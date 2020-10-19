@@ -136,8 +136,11 @@ The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apik
 
 How do I rectify 'Failed to clone git repository, couldn’t find remote ref “refs/heads/master” (most likely invalid branch name is passed)'?
 
-Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ ` after 1st October 2020, will see this error message. 
+Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ ` repository, after 1st October 2020, can see this error message. 
 
 Solution:
-If the repository is created after 1st October 2020, you need to specify main branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
+If the repository is created after 1st October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
+
+https://github.com/guruprasad0110/tf_cloudless_sleepy_13/
+If the repository is created after 1st October 2020, you need to specify the main branch as https://github.com/username/reponame/tree/main` for instance,  ``https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main``. Usage of the branch as `https://github.com/username/reponame`.  `For instance, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ ` repository, after 1st October 2020,  we see this error message. (edited) 
 

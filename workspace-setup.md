@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-10-19"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -211,7 +211,7 @@ The actions with the resource and file information are described in the table.
 ## Creating a deploy to {{site.data.keyword.bplong_notm}}
 {: #create-deploy-to-schematics}
 
-{{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git-sourced repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/terraform?topic=terraform-create_deploy_to_schematics).
+{{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/terraform?topic=terraform-create_deploy_to_schematics).
 
 ## Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery}
@@ -285,18 +285,18 @@ The state of a workspace indicates if you have successfully created a Terraform 
     <tr>
       <td><code>Plan and apply action</code></td>
       <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
-      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in inprogress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains atleast one resource, your workspace is in an inactive state, on failure workspace is in failed state.
+      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in in progress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state.
       </td>
    </tr>
     <tr>
       <td><code>Destroy action</code></td>
       <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The destroy action performs when your workspace is in an inactive, active or failed state. From these state, the destroy action connects to parse the template from your source respository and workspace gets into inprogress unlocked state. From inprogress state if you destroy, resource reaches failed state.</td>
+      <td>The destroy action performs when your workspace is in an inactive, active or failed state. From these state, the destroy action connects to parse the template from your source repository and workspace gets into in progress unlocked state. From   state if you destroy, resource reaches failed state.</td>
    </tr>
     <tr>
       <td><code>Delete and destroy action</code></td>
       <td><img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>When you perform delete and destroy action from active, inactive and failed state. The delete action will delete the workspace from all these state, but the resource is still in active state. Destroy will destroy the resources, and moves your workspace in active state. Whenever your apply, plan destroy the workspace, it reaches inprogress locked state. Based on success and failure, the workspace is unlocked. </td>
+      <td>When you perform delete and destroy action from active, inactive and failed state. The delete action will delete the workspace from all these state, but the resource is still in active state. Destroy will destroy the resources, and moves your workspace in active state. Whenever your apply, plan destroy the workspace, it reaches in progress locked state. Based on success and failure, the workspace is unlocked. </td>
    </tr>
   </tbody>
   </table>
