@@ -141,6 +141,3 @@ Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ `
 Solution:
 If the repository is created after 1st October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
 
-https://github.com/guruprasad0110/tf_cloudless_sleepy_13/
-If the repository is created after 1st October 2020, you need to specify the main branch as https://github.com/username/reponame/tree/main` for instance,  ``https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main``. Usage of the branch as `https://github.com/username/reponame`.  `For instance, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ ` repository, after 1st October 2020,  we see this error message. (edited) 
-
