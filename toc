@@ -19,6 +19,7 @@ Schematics
     {: .navgroup id="howto"}
     setup-cli.md
     create-terraform-config.md
+    monitoring-instances.md
     workspace-setup.md
     manage-resource-lifecycle.md
     allowips.md
