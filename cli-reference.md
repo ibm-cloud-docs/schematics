@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-22"
+lastupdated: "2020-10-29"
 
-keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
+keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
 subcollection: schematics
 
