@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-25"
+lastupdated: "2020-10-29"
 
-keywords: schematics cli reference, schematics commands, schematics cli, schematics reference
+keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
 subcollection: schematics
 
@@ -315,7 +315,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 }
 </code></pre></br>
 
-Now, in template_repo, you can also provide `url` with additional parameters as shown in the block.
+Now, in template_repo, you can also provide `url` with more parameters as shown in the block.
   <pre class="codeblock">	
   <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
@@ -540,7 +540,7 @@ ibmcloud schematics workspace update --file FILE_NAME --id WORKSPACE_ID [--json]
 }
 </code></pre>
 
-Now, in template_repo, you can also update `url` with additional parameters as shown in the block.
+Now, in template_repo, you can also update `url` with more parameters as shown in the block.
   <pre class="codeblock">	
   <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
