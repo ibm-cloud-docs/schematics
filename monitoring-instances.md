@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-15"
+lastupdated: "2020-10-30"
 
 keywords: monitoring schematics services, schematics monitoring by using sysdig, monitoring
 
@@ -30,7 +30,7 @@ subcollection: schematics
 # Monitoring Schematics services by using {{site.data.keyword.mon_full_notm}}
 {: #monitoring-instances}
 
-[{{site.data.keyword.mon_full_notm}}](https://cloud.ibm.com/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started) is a third-party cloud native, and container-intelligence management system that you can include as part of your IBM Cloud Schematics. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
+[{{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started) is a third-party cloud native, and container-intelligence management system that you can include as part of your IBM Cloud Schematics. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {: shortdesc}
 
 
@@ -82,7 +82,7 @@ Complete the following steps to create your custom dashboard:
 3. Click `Create Custom Dashboard` to view the create dashboard from template popup.
 4. Provide the name of the dashboard, and click `Create and Open`.
 5. Click `Dashboards` icon, to view your dashboard.
-   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer [Deleting a dashboards](https://cloud.ibm.com/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_delete).
+   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer [Deleting a dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_delete).
    {: note}
 
 ## {{site.data.keyword.bplong_notm}} metrics details
@@ -94,7 +94,7 @@ Schematics supports three metrics that you can use to configure in your dashboar
 | --------| -------- | -------- | ------- |
 | [ibm_schematics_workspace_actions_count](#wkspace-actions-count) | yes | no | yes |
 | [ibm_schematics_workspace_count](#wkspace-actions-count) | yes | no | yes |
-| [ibm_schematics_workspace_vulnerability_count](#wkspace-managed-count) | yes | no | yes |
+| [ibm_schematics_workspace_vulnerability_count](#wkspace-vulnerability-count) | yes | no | yes |
 
 ### ibm_schematics_workspace_count
 {: #wkspace-count}
