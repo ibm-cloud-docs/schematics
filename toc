@@ -14,7 +14,6 @@ Schematics
 
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
-    tutorials/automate-continuous-deployment.md
     {: .navgroup-end}
     
     {: .navgroup id="howto"}
