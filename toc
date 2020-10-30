@@ -12,7 +12,7 @@ Schematics
     whats-new.md
     {: .navgroup-end}
 
-    {: .navgroup id="tutorials"}
+    {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
     tutorials/automate-continuous-deployment.md
     {: .navgroup-end}
