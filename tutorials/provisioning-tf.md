@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-25"
+lastupdated: "2020-10-30"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -49,6 +49,7 @@ completion-time: 60m
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
 {:objectc data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
@@ -311,7 +312,7 @@ You can edit the payload values for the variable as stated in the table:
 
 Create a Schematics execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
 
-Your workspace must be in an `Active` state to perform a Schematics plan action. For more information on the workspace state, refer [Workspace states](/docs/schematics?topic=schematics-workspace-setup#workspace-states).
+Your workspace must be in an `Active` state to perform a Schematics plan action. For more information on the workspace state, refer [Workspace states](/docs/schematics?topic=schematics-workspace-setup#states-importance).
 {: note}
 
 During the creation of the Terraform execution plan, you are not allowed to make any changes to your workspace.

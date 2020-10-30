@@ -44,6 +44,7 @@ subcollection: satellite
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
 {:objectc data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
@@ -130,7 +131,7 @@ The URL to the license is https://creativecommons.org/licenses/by/4.0/legalcode.
 The Program includes some or all of the following works licensed under the Creative Commons. <br>
 The URL to the license is https://creativecommons.org/licenses/by-sa/1.0/legalcode. 
 
-RUSSIAN TEXT [protoc-gen-validate](https://codeload.github.com/envoyproxy/protoc-gen-validate/zip/v0.1.0.)
+RUSSIAN TEXT [protoc-gen-validate](https://codeload.github.com/envoyproxy/protoc-gen-validate/zip/v0.1.0)
 
 ## Creative Commons Attributions Share Alike 2.0 Generic
 {: #CC-BY-SA-2.0}
