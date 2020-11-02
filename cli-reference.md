@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-29"
+lastupdated: "2020-11-02"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -243,7 +243,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 <br>Example JSON for using a GitHub or GitLab repository:	
 <pre class="codeblock">	
 <code>{
-  "name": "&lt;workspace_nam&gt;>",
+  "name": "&lt;workspace_name&gt;>",
   "type": [
     "&lt;terraform_version&gt;"
   ],

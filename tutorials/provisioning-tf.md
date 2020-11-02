@@ -10,7 +10,7 @@ subcollection: schematics
 
 content-type: tutorial
 services: provisioning, vpc-generation2-cluster
-account-pan:
+account-plan:
 completion-time: 60m
 
 ---
