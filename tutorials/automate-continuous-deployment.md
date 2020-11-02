@@ -10,7 +10,7 @@ subcollection: schematics
 
 content-type: tutorial
 services: automation, continuous-deployment
-account-pan:
+account-plan:
 completion-time: 60m
 
 ---
