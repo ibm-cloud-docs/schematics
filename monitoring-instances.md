@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-30"
+lastupdated: "2020-11-02"
 
 keywords: monitoring schematics services, schematics monitoring by using sysdig, monitoring
 
@@ -82,7 +82,7 @@ Complete the following steps to create your custom dashboard:
 3. Click `Create Custom Dashboard` to view the create dashboard from template popup.
 4. Provide the name of the dashboard, and click `Create and Open`.
 5. Click `Dashboards` icon, to view your dashboard.
-   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer [Deleting a dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-dashboards#dashboards_delete).
+   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer [Deleting a dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove).
    {: note}
 
 ## {{site.data.keyword.bplong_notm}} metrics details
@@ -100,7 +100,7 @@ Schematics supports three metrics that you can use to configure in your dashboar
 {: #wkspace-count}
 
 The number of workspaces state and actions count are stated in the table.
-{: #shortdesc}
+{: shortdesc}
 
 | Metadata | Description |
 | ------- | -------- |
@@ -124,7 +124,7 @@ For the Schematics instance, following five different time series counts or char
 {: #wkspace-actions-count}
 
 The number of workspace actions count are stated in the table.
-{: #shortdesc}
+{: shortdesc}
 
 | Metadata | Description |
 | ------- | -------- |
