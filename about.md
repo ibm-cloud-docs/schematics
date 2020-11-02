@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-11-02"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -25,7 +25,6 @@ subcollection: schematics
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
 {:help: data-hd-content-type='help'}
-
 
 # About {{site.data.keyword.bplong_notm}}
 {: #about-schematics} 

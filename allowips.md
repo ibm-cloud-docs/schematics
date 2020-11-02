@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-15"
+lastupdated: "2020-11-02"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -30,12 +30,29 @@ subcollection: schematics
 # Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall
 {: #allowed-ipaddresses}
 
-If you set up a custom firewall and want to access and manage {{site.data.keyword.cloud_notm}} services with {{site.data.keyword.bpfull_notm}}, you need to open up the following IP addresses and CIDR ranges in your firewall.
+By default, all IP addresses can be used to log in to the {{site.data.keyword.cloud_notm}} console and access your Schematic workspace. In the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) console, you can generate a firewall [by creating an allowlist by specifying which IP addresses have access](/docs/account?topic=account-ips), and all other IP addresses are restricted. If you use an IAM firewall, you must add the CIDRs of the {{site.data.keyword.bplong_notm}} for the zones in the region where your cluster is located to the allowlist. You must allow these CIDRs ranges, so that {{site.data.keyword.bplong_notm}} Service to manage the {{site.data.keyword.bplong_notm}} resources.
 {: shortdesc}
+
+**Before you begin**
+
+The following steps require you to change the IAM allowlist for the user whose credentials are used for the cluster's region and resource group infrastructure permissions. If you are the credentials owner, you can change your own IAM allowlist settings. If you are not the credentials owner, but you are assigned the Editor or Administrator IBM Cloud IAM platform role for the User Management service, you can update the restricted IP addresses for the credentials owner.
+
+1. Log in to the [IBM Cloud console](https://cloud.ibm.com/login){: external}.
+2. From the menu bar, click `Manage > Access (IAM)`, and select Users.
+3. Select your user name.
+4. From the User details page, go to the IP address restrictions section.
+5. For Classic infrastructure, enter the CIDRs of the zones in the region where your cluster is located.
+
+   You must allow all of the zones within the region that your resource is in.
+   {: note}
 
 | Region | Zone | Public IP addresses | Private IP addresses |
 | ------------ | ------------ | ---------- | -------- |
 | EU Central | fra02 </br> fra04 </br> fra05 | `158.177.218.64/28` </br> `161.156.139.192/28` </br> `149.81.103.128/28` | `10.134.126.192/26` </br> `10.75.127.192/26` </br> `10.123.141.128/26` |
 | UK South | lon04 </br> lon04 </br> lon05 </br> lon06 | `158.175.115.176/28` </br> `158.175.138.48/28` </br> `141.125.75.80/28` </br> `158.176.121.128/28` | `10.45.115.64/26` </br> `10.45.229.0/26` </br> `10.72.195.192/26` </br> `10.196.55.64/26` |
-| US East | wdc04 </br> wdc06 </br> wdc07 | `169.55.115.16/28` </br> `169.63.133.32/28` </br> `169.62.60.224/28` | `10.148.29.64/26` </br> `10.190.109.0/26` </br> `10.188.197.128/26` |
-| US South | dal10 </br> dal12 </br> dal13 | `169.46.20.240/28` </br> `169.48.193.160/28` </br> `52.117.217.128/28` | `10.177.217.64/26` </br> `10.185.151.192/26` </br> `10.220.47.192/26` |
+| US East | wdc04 </br> wdc06 </br> wdc07 | `169.45.235.176/28` </br> `169.61.99.176/28` </br> `169.62.1.224/28` | `169.63.150.144/28` </br> `169.63.173.208/28` |
+| US South | dal10 </br> dal12 </br> dal13 | `169.47.104.160/28` </br> `169.60.172.144/28` </br> `169.63.254.64/28` |
+
+If desired the `US South` and `US East` ranges can be collapsed down to two security group rules: [`169.44.0.0/14`, `169.60.0.0/14`]. For more information about creating security group rules, refer [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
+{: note}
+
