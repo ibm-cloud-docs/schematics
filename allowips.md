@@ -53,5 +53,5 @@ The following steps require you to change the IAM allowlist for the user whose c
 | US East | wdc04 </br> wdc06 </br> wdc07 | `169.45.235.176/28` </br> `169.61.99.176/28` </br> `169.62.1.224/28` <br> `169.63.150.144/28` </br> `169.63.173.208/28` |
 | US South | dal10 </br> dal12 </br> dal13 | `169.47.104.160/28` </br> `169.60.172.144/28` </br> `169.63.254.64/28` |
 
-If desired the `US South` and `US East` ranges can be collapsed down to two security group rules: [`169.44.0.0/14`, `169.60.0.0/14`]. For more information about creating security group rules, refer [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
+If desired ranges can be collapsed down as security group rules. For example, `US South` and `US East` to two security group rules: [`169.44.0.0/14`, `169.60.0.0/14`]. For more information about creating security group rules, refer [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
 {: note}
