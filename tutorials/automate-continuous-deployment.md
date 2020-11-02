@@ -9,7 +9,7 @@ keywords: automate continuous deployment using Schematics, automate continuous d
 subcollection: schematics
 
 content-type: tutorial
-services: automation, continuous-deployment
+services: schematics, continuous-deployment
 account-plan:
 completion-time: 60m
 
@@ -99,7 +99,7 @@ completion-time: 60m
 # Automate continuous deployment by using {{site.data.keyword.bpfull_notm}} and DevOps toolchain
 {: #automate-continuous-deployment}
 {: toc-content-type="tutorial"}
-{: toc-services="automation, continuous-deployment"}
+{: toc-services="schematics, continuous-deployment"}
 {: toc-completion-time="60m"}
 
 ## Description
