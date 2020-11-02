@@ -55,4 +55,3 @@ The following steps require you to change the IAM allowlist for the user whose c
 
 If desired the `US South` and `US East` ranges can be collapsed down to two security group rules: [`169.44.0.0/14`, `169.60.0.0/14`]. For more information about creating security group rules, refer [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
 {: note}
-
