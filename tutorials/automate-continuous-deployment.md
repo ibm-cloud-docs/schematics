@@ -97,13 +97,13 @@ completion-time: 60m
 
 
 # Automate continuous deployment by using {{site.data.keyword.bpfull_notm}} and DevOps toolchain
-{: #automate-continuous-deployment}
+{: #schematics-continuous-deployment}
 {: toc-content-type="tutorial"}
 {: toc-services="schematics, continuous-deployment"}
 {: toc-completion-time="60m"}
 
 ## Description
-{: #automate-desc}
+{: #schematics-desc}
 
 In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full_notm}} in the Schematics workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
 The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud_notm}} Activity Tracker and {{site.data.keyword.cloud_notm}} monitoring with Sysdig. 
@@ -114,7 +114,7 @@ As per your resource usage, the cost is incurred. For more information, about th
    
 
 ## Objectives
-{: #automate-obj}
+{: #schematics-obj}
 
 In this tutorial, you can:
 - Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the IBM resource instance, and IBM resource group.
@@ -123,17 +123,17 @@ In this tutorial, you can:
 - Review the {{site.data.keyword.cloud_notm}} resources that you create.
 
 ## Time required
-{: #automate-timereq}
+{: #schematics-timereq}
 
 1 hour
 
 ## Audience
-{: #automate-tut-audience}
+{: #schematics-tut-audience}
 
 This tutorial is intended for developer and system administrators who want to learn how to use Terraform templates to create and automate the continuous deployment of resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
 
 ## Prerequisites
-{: #automate-prereq}
+{: #schematics-prereq}
 
 **Knowing about {{site.data.keyword.bplong_notm}}**
 {: #about-schematics}
@@ -209,7 +209,7 @@ Configure the variables as described in the table to authenticate the api keys a
   {: note}
 
 ## Automating and analyzing the continuous deployment process
-{: #automate-continuous-deployment}
+{: #schematics-continuous-deployment}
 {: step}
 
 The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the Schematics workspace. Complete the following steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
