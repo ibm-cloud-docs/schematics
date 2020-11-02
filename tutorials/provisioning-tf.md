@@ -96,7 +96,6 @@ completion-time: 60m
 {:video: .video}
 
 
-
 # Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}}
 {: #provisioning-terraform-template}
 {: toc-content-type="tutorial"}
