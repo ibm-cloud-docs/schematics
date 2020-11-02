@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-30"
+lastupdated: "2020-11-02"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -102,7 +102,6 @@ completion-time: 60m
 {: toc-content-type="tutorial"}
 {: toc-services="provisioning, vpc-generation2-cluster"}
 {: toc-completion-time="60m"}
-
 
 ## Description
 {: #provisioning-desc}
