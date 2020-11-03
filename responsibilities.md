@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-08"
+lastupdated: "2020-11-03"
 
 keywords: schematics reponsibilities, schematics high availability, schematics backup, schematics disaster recovery, schematics security, schematics ibm vs user
 subcollection: schematics
@@ -25,7 +25,7 @@ subcollection: schematics
 {:help: data-hd-content-type='help'}
 {:support: data-reuse='support'}
 
-# Your responsibilities by using {{site.data.keyword.bplong_notm}}
+# User responsibilities by using {{site.data.keyword.bplong_notm}}
 {: #responsibilities}
 {: help}
 {: support}
@@ -46,7 +46,7 @@ Learn about the responsibilities that you have when you use {{site.data.keyword.
 <li>Provide a suite of tools to automate resource provisioning and resource management in {{site.data.keyword.cloud_notm}}, such as the {{site.data.keyword.bplong_notm}} console, CLI, and API. </li>
 <li>Provide and maintain sample Terraform templates.</li>
   <li>Create, update, and manage the Terraform statefile (`terraform.tfstate`) to determine the required actions to achieve the required state that is described in your Terraform template. </li>
-</ul></br><strong>Your responsibility</strong>
+</ul></br><strong>User responsibility</strong>
 <ul><li>Create your own Terraform templates or use one of the provided sample templates to configure the resources that you want. </li>
 <li>Design the source repository structure, and set up and manage the source repository for your Terraform template.</li>
 <li>Understand the {{site.data.keyword.cloud_notm}} resource offerings that are used in your templates, including availability, pricing, limitations and the tools to set up security, high availability, and logging and monitoring.</li>
@@ -64,7 +64,7 @@ Learn about the responsibilities that you have when you use {{site.data.keyword.
 <li>Provide access to {{site.data.keyword.bpshort}} log information for resource-related actions.</li>
 <li>Track workspace activities and automatically send events to {{site.data.keyword.at_full_notm}}. </li>
 <li>Encrypt workspace data in transit and at rest. </li>
-</ul></br><strong>Your responsibility: </strong>
+</ul></br><strong>User responsibility: </strong>
 <ul>
 <li>Use Identity and Access Management (IAM) to control access to a {{site.data.keyword.bpshort}} workspace and related {{site.data.keyword.cloud_notm}} resources.</li>
 <li>Secure the source repository for your Terraform template, including access control, security settings, collaboration, and version control. </li>
@@ -78,7 +78,7 @@ Learn about the responsibilities that you have when you use {{site.data.keyword.
 <li>Back up workspace data across {{site.data.keyword.cloud_notm}} regions.  </li>
   <li>Recover workspace data from the replicated region within 24 hours. </li>
   <li>Recover operational {{site.data.keyword.bplong_notm}} components.</li>
-</ul></br><strong>Your responsibility: </strong>
+</ul></br><strong>User responsibility: </strong>
 <ul>
 <li>Design and provision your resources in a way that achieves high availability and resiliency, such as [multizone clusters](/docs/containers?topic=containers-ha_clusters#multizone) or [multi-region VPCs](/docs/vpc-on-classic?topic=solution-tutorials-vpc-multi-region#vpc-multi-region). </li>
   <li>Set up a backup and recovery strategy for your resources and your workload data. </li></ul>
