@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-11-03"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -159,7 +159,7 @@ This tutorial is intended for developer and system administrators who want to le
 The following prerequisites need to be met for the tutorial.
 {: shortdesc}
 
-- If you do not have {{site.data.keyword.cloud_notm}} account, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go]. For more information about managing {{site.data.keyword.cloud_notm} account, refer [Managing IBM Cloud account](https://cloud.ibm.com/registration).
+- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer [Managing IBM Cloud account](https://cloud.ibm.com/registration).
 - Install the IBM Cloud CLI and the Schematics CLI plug-in. For more information about CLI setup, see [Schematics CLI setup](/docs/schematics?topic=schematics-setup-cli).
 - Make sure that you are assigned the required permissions in Identity and Access Management to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer [Schematic access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
 - Follow the instructions to make sure that you are assigned the required permissions in Identity and Access Management to create clusters. For more information about container cluster, refer [Containers clusters](/docs/containers?topic=containers-clusters#cluster_prepare).
@@ -251,6 +251,7 @@ You can edit the payload values for the variable as stated in the table:
 | `name` | Specify your unique name. |
 | `type` | Terraform v0.12 |
 | `githubtoken` | Specify your GitHub token. |
+| `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
 
 2. Create the workspace by using the JSON file from command line interface.
 

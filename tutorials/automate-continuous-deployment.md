@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-11-03"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous  deployment of resources
 
@@ -153,7 +153,7 @@ Schematics provides option to enable the continuous delivery of your infrastruct
 Complete the following prerequisites for the tutorial:
 {: shortdesc}
 
-- If you do not have {{site.data.keyword.cloud_notm}} account, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go]. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer [Managing IBM Cloud account](https://cloud.ibm.com/registration).
+- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer [Managing IBM Cloud account](https://cloud.ibm.com/registration).
 - Install the IBM Cloud CLI and the Schematics CLI plug-in. For more information, about CLI setup, see [Schematics CLI setup](/docs/schematics?topic=schematics-setup-cli).
 - Ensure you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer [Schematic access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
 - Follow the instructions to ensure you are assigned the required permissions in Identity and Access Management to create resources. For more information, about create Cloud Object Storage, refer [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-provision).
