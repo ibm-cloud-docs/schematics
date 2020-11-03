@@ -130,7 +130,7 @@ The diagram and the table depicts the user flow of using the Terraform templates
   You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
   {: note} 
 
-  As per your resource usage the cost is incurred. For more information about the VPC pricing, refer [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
+  As per your resource usage the cost is incurred. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
   {: important}
    
 
@@ -159,10 +159,10 @@ This tutorial is intended for developer and system administrators who want to le
 The following prerequisites need to be met for the tutorial.
 {: shortdesc}
 
-- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer [Managing IBM Cloud account](https://cloud.ibm.com/registration).
+- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer to [Managing IBM Cloud account](https://cloud.ibm.com/registration).
 - Install the IBM Cloud CLI and the Schematics CLI plug-in. For more information about CLI setup, see [Schematics CLI setup](/docs/schematics?topic=schematics-setup-cli).
-- Make sure that you are assigned the required permissions in Identity and Access Management to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer [Schematic access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
-- Follow the instructions to make sure that you are assigned the required permissions in Identity and Access Management to create clusters. For more information about container cluster, refer [Containers clusters](/docs/containers?topic=containers-clusters#cluster_prepare).
+- Make sure that you are assigned the required permissions in Identity and Access Management to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer to [Schematic access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
+- Follow the instructions to make sure that you are assigned the required permissions in Identity and Access Management to create clusters. For more information about container cluster, refer to [Containers clusters](/docs/containers?topic=containers-clusters#cluster_prepare).
 
 ## Accessing and reviewing your Terraform template
 {: #access-review-template}
@@ -182,7 +182,7 @@ Follow the steps to identify the correct Terraform templates:
 {: #create-tut-wks}
 {: step}
 
-1. Specify your Schematics workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer [{{site.data.keyword.bplong_notm}} workspace new ](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
+1. Specify your Schematics workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to [{{site.data.keyword.bplong_notm}} workspace new ](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 
 **Example of the cluster_payload.json**
 
@@ -251,7 +251,7 @@ You can edit the payload values for the variable as stated in the table:
 | `name` | Specify your unique name. |
 | `type` | Terraform v0.12 |
 | `githubtoken` | Specify your GitHub token. |
-| `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
+| `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
 
 2. Create the workspace by using the JSON file from command line interface.
 
@@ -260,7 +260,7 @@ You can edit the payload values for the variable as stated in the table:
    ```
    {: pre}
 
-   For more information to create workspace, refer [CLI commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
+   For more information to create workspace, refer to [CLI commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
    {: note}
 
     **Sample example output**
@@ -311,7 +311,7 @@ You can edit the payload values for the variable as stated in the table:
 
 Create a Schematics execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
 
-Your workspace must be in an `Active` state to perform a Schematics plan action. For more information on the workspace state, refer [Workspace states](/docs/schematics?topic=schematics-workspace-setup#states-importance).
+Your workspace must be in an `Active` state to perform a Schematics plan action. For more information on the workspace state, refer to [Workspace states](/docs/schematics?topic=schematics-workspace-setup#states-importance).
 {: note}
 
 During the creation of the Terraform execution plan, you are not allowed to make any changes to your workspace.
