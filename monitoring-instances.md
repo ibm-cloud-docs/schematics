@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-11-03"
 
 keywords: monitoring schematics services, schematics monitoring by using sysdig, monitoring
 
@@ -45,7 +45,7 @@ Complete the following steps to view your services instances:
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
-3. From your instance, click **View Sysdig** icon to view your workspace and action that you created. **Note** If you want more about information to create a service instance, refer [Create service instance](#create-instance).
+3. From your instance, click **View Sysdig** icon to view your workspace and action that you created. **Note** If you want more about information to create a service instance, refer to [Create service instance](#create-instance).
 4. Click `Dashboards` icon, and expand `IBM` to view `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
    View `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
    View `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
@@ -66,7 +66,7 @@ Complete the following steps to create your services instance:
 5. Create one instance of Sysdig by using `Lite plan`.
 6. Click on `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
 7. Click `View Sysdig` icon, to view your workspace and action that you created.
-   You can monitor the status of your workspaces state and action through Sysdig counts and charts. For more information, to monitor the status, refer [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer [Creating custom dashboard](#create-dashboard).
+   You can monitor the status of your workspaces state and action through Sysdig counts and charts. For more information, to monitor the status, refer to [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
    {: note}
 
 ## Creating custom dashboard
@@ -82,7 +82,7 @@ Complete the following steps to create your custom dashboard:
 3. Click `Create Custom Dashboard` to view the create dashboard from template popup.
 4. Provide the name of the dashboard, and click `Create and Open`.
 5. Click `Dashboards` icon, to view your dashboard.
-   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer [Deleting a dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove).
+   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer to [Deleting a dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove).
    {: note}
 
 ## {{site.data.keyword.bplong_notm}} metrics details
