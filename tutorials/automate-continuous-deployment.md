@@ -103,7 +103,7 @@ completion-time: 60m
 {: toc-completion-time="60m"}
 
 ## Description
-{: #schematics-desc}
+{: #schematicsa-desc}
 
 In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full_notm}} in the Schematics workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
 The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud_notm}} Activity Tracker and {{site.data.keyword.cloud_notm}} monitoring with Sysdig. 
@@ -114,7 +114,7 @@ As per your resource usage, the cost is incurred. For more information, about th
    
 
 ## Objectives
-{: #schematics-obj}
+{: #schematicsb-obj}
 
 In this tutorial, you can:
 - Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the IBM resource instance, and IBM resource group.
@@ -123,17 +123,17 @@ In this tutorial, you can:
 - Review the {{site.data.keyword.cloud_notm}} resources that you create.
 
 ## Time required
-{: #schematics-timereq}
+{: #schematicsc-timereq}
 
 1 hour
 
 ## Audience
-{: #schematics-tut-audience}
+{: #schematicsd-tut-audience}
 
 This tutorial is intended for developer and system administrators who want to learn how to use Terraform templates to create and automate the continuous deployment of resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
 
 ## Prerequisites
-{: #schematics-prereq}
+{: #schematicse-prereq}
 
 **About {{site.data.keyword.bplong_notm}}**
 
@@ -206,7 +206,7 @@ Configure the variables as described in the table to authenticate the api keys a
   {: note}
 
 ## Automating and analyzing the continuous deployment process
-{: #schematics-continuous-deployment}
+{: #schematicsg-continuous-deployment}
 {: step}
 
 The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the Schematics workspace. Complete the following steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
@@ -234,6 +234,6 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 2. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
 
 ## What's next?
-{: #automate_what's next}
+{: #automateh_what's next}
 
 Congratulations! You successfully created the {{site.data.keyword.bplong_notm}} workspace and automated the end to end deployment by using the DevOps toolchain. You can now learn how to set up a continuous delivery pipeline for an IBM cluster. For more information, refer to [Setting up a continuous delivery pipeline for an IBM cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
