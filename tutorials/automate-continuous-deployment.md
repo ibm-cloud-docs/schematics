@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-03"
+lastupdated: "2020-11-04"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous  deployment of resources
 
@@ -10,7 +10,7 @@ subcollection: schematics
 
 content-type: tutorial
 services: schematics, continuous-deployment
-account-plan:
+account-plan: lite
 completion-time: 60m
 
 ---
@@ -107,7 +107,7 @@ completion-time: 60m
 
 In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full_notm}} in the Schematics workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
 The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud_notm}} Activity Tracker and {{site.data.keyword.cloud_notm}} monitoring with Sysdig. 
-{: shordesc}
+{: shortdesc}
 
 As per your resource usage, the cost is incurred. For more information, about the pricing, refer to [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to [Schematics help](/docs/schematics?topic=schematics-schematics-help).
 {: important}
