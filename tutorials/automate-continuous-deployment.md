@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2020
 lastupdated: "2020-11-04"
 
-keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous  deployment of resources
+keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
 subcollection: schematics
 
@@ -135,15 +135,13 @@ This tutorial is intended for developer and system administrators who want to le
 ## Prerequisites
 {: #schematics-prereq}
 
-**Knowing about {{site.data.keyword.bplong_notm}}**
-{: #about-schematics}
+**About {{site.data.keyword.bplong_notm}}**
 
 [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started) is an {{site.data.keyword.cloud_notm}} automation tool. It provides simplified provisioning, orchestrating Infrastructure as  Code (IaC), templates, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using various resources tools such as Terraform, Helm, etc.
 IaC helps you codify your cloud environment to automate the provisioning, speeds deployment and managing your resources. The infrastructure is treated the same way as your app code, so that you can automate the DevOps core practices such as version control, testing, continuous integration and deployment.
 {: shortdesc}
 
-**Knowing about DevOps toolchain**
-{: #about-toolchain}
+**About DevOps toolchain**
 
 A DevOps toolchain is a set of tools that automates the tasks of developing and deploying your app. A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 
@@ -151,7 +149,6 @@ For the information, about the importance of using an {{site.data.keyword.cloud_
 Schematics provides option to enable the continuous delivery of your infrastructure configurations as well with {{site.data.keyword.cloud_notm}} toolchain.
 
 Complete the following prerequisites for the tutorial:
-{: shortdesc}
 
 - If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer to [Managing IBM Cloud account](https://cloud.ibm.com/registration).
 - Install the IBM Cloud CLI and the Schematics CLI plug-in. For more information, about CLI setup, see [Schematics CLI setup](/docs/schematics?topic=schematics-setup-cli).
@@ -197,10 +194,10 @@ Configure the variables as described in the table to authenticate the api keys a
 
 |Name|Value|
 |-----|-----|
-|iaas_classic_username|Enter the username to access IBM Cloud classic infrastructure. |
-|iaas_classic_api_key|Enter the API key to access IBM Cloud classic infrastructure. For more information, to create an API key, refer to [Classic infrastructure API keys](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).|
-|ibm cloud_api_key|Enter your IBM Cloud API Key, for more information on API key, refer to [IBM Cloud API key](https://cloud.ibm.com/iam#/apikeys(https://cloud.ibm.com/iam#/apikeys).|
-|resource_group_name| Keep as default.|
+|`iaas_classic_username`|Enter the username to access IBM Cloud classic infrastructure. |
+|`iaas_classic_api_key`|Enter the API key to access IBM Cloud classic infrastructure. For more information, to create an API key, refer to [Classic infrastructure API keys](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).|
+|`ibmcloud_api_key`|Enter your IBM Cloud API Key, for more information on API key, refer to [IBM Cloud API key](https://cloud.ibm.com/iam#/apikeys(https://cloud.ibm.com/iam#/apikeys).|
+|`resource_group_name`| Keep as default.|
 
 1. On the variable page, click `Enable continuous delivery` hyperlink option to view Schematics Infrastructure as Code (IaC) Toolchain page.
 2. Click `Delivery Pipeline Required` tab.
