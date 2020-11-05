@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-04"
+lastupdated: "2020-11-05"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -128,7 +128,7 @@ In this tutorial, you can:
 1 hour
 
 ## Audience
-{: #schematics-tut-audience}
+{: #schematicsd-tut-audience}
 
 This tutorial is intended for developer and system administrators who want to learn how to use Terraform templates to create and automate the continuous deployment of resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
 
@@ -224,8 +224,7 @@ The `Enable continuous delivery` option has the capability of automating the dif
 9. Observe that the `TEST` stage is passed successfully.
 10. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your workspace by the continuous delivery toolchain.
 
-### Analyzing the deployment
-{: #analyze-deployment}
+**Analyzing the deployment**
 
 Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace.
 {: shortdesc}
@@ -234,6 +233,6 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 2. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
 
 ## What's next?
-{: #automate_what's next}
+{: #automate-what's next}
 
 Congratulations! You successfully created the {{site.data.keyword.bplong_notm}} workspace and automated the end to end deployment by using the DevOps toolchain. You can now learn how to set up a continuous delivery pipeline for an IBM cluster. For more information, refer to [Setting up a continuous delivery pipeline for an IBM cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
