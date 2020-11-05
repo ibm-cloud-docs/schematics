@@ -97,7 +97,7 @@ completion-time: 60m
 
 
 # Automate continuous deployment by using {{site.data.keyword.bpfull_notm}} and DevOps toolchain
-{: #schematics-continuous-deployment}
+{: #workspace-continuous-deployment}
 {: toc-content-type="tutorial"}
 {: toc-services="schematics, continuous-deployment"}
 {: toc-completion-time="60m"}
@@ -205,8 +205,8 @@ Configure the variables as described in the table to authenticate the api keys a
   The GitHub Server type parameter expects the authorization, you can provide GitHub credentials and confirm the authorization.
   {: note}
 
-## Automating and analyzing the continuous deployment process
-{: #schematics-continuous-deployment}
+## Automating the continuous deployment process
+{: #continuous-deployment}
 {: step}
 
 The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the Schematics workspace. Complete the following steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
@@ -224,7 +224,9 @@ The `Enable continuous delivery` option has the capability of automating the dif
 9. Observe that the `TEST` stage is passed successfully.
 10. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your workspace by the continuous delivery toolchain.
 
-**Analyzing the deployment**
+## Analyzing the continuous deployment process
+{: #analyze-deployment}
+{: step}
 
 Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace.
 {: shortdesc}
