@@ -97,7 +97,7 @@ completion-time: 60m
 
 
 # Automate continuous deployment by using {{site.data.keyword.bpfull_notm}} and DevOps toolchain
-{: #schematics-continuous-deployment}
+{: #workspace-continuous-deployment}
 {: toc-content-type="tutorial"}
 {: toc-services="schematics, continuous-deployment"}
 {: toc-completion-time="60m"}
