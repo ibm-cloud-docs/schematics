@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-04"
+lastupdated: "2020-11-05"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -224,8 +224,7 @@ The `Enable continuous delivery` option has the capability of automating the dif
 9. Observe that the `TEST` stage is passed successfully.
 10. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your workspace by the continuous delivery toolchain.
 
-### Analyzing the deployment
-{: #analyze-deployment}
+**Analyzing the deployment**
 
 Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace.
 {: shortdesc}
