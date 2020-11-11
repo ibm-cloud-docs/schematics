@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-03"
+lastupdated: "2020-11-11"
 
 keywords: monitoring schematics services, schematics monitoring by using sysdig, monitoring
 
@@ -79,7 +79,7 @@ Complete the following steps to create your custom dashboard:
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
-3. Click `Create Custom Dashboard` to view the create dashboard from template popup.
+3. Click `Create Custom Dashboard` to view the create dashboard from template pop-up.
 4. Provide the name of the dashboard, and click `Create and Open`.
 5. Click `Dashboards` icon, to view your dashboard.
    Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer to [Deleting a dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove).
