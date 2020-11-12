@@ -51,7 +51,7 @@ Complete the following steps to view your services instances:
    View `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
    {: note}
 
-## Launching monitoring by using Schematics
+## Launching monitor by using Schematics
 {: #monitor-using-schematics}
 
 You can launch monitoring instance view by using Schematics. For more information, refer to [Launching monitoring UI](/docs/schematics?topic=schematics-monitoring-integration#monitoring-ui)
