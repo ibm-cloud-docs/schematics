@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-11"
+lastupdated: "2020-11-12"
 
 keywords: monitoring schematics services, schematics monitoring by using sysdig, monitoring
 
@@ -50,6 +50,11 @@ Complete the following steps to view your services instances:
    View `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
    View `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
    {: note}
+
+## Launching monitoring by using Schematics
+{: #monitor-using-schematics}
+
+You can launch monitoring instance view by using Schematics. For more information, refer to [Launching monitoring UI](/docs/schematics?topic=schematics-monitoring-integration#monitoring-ui)
 
 ## Creating service instance
 {: #create-instance}
