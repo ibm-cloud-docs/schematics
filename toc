@@ -21,6 +21,7 @@ Schematics
     setup-cli.md
     create-terraform-config.md
     monitoring-instances.md
+    integration-service.md
     workspace-setup.md
     manage-resource-lifecycle.md
     allowips.md
