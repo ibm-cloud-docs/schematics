@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-11-17"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -69,7 +69,8 @@ ibmcloud schematics version
 
 </br>
 **Command options:** none
-   	
+
+
 ## Workspace commands	
 {: #schematics-workspace-commands}	
 
@@ -861,6 +862,7 @@ ibmcloud schematics plan --id WORKSPACE_ID [--json]
 ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
+
 
 
 ## Terraform statefile commands
