@@ -866,7 +866,7 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 
 
 ## kms commands
-{: kms-command}
+{: kms-commands}
 
 {{site.data.keyword.bplong_notm}} supports commands related to Key Management Services (KMS) to enable encryption of keys in the location, list KMS instances and available customer root keys. 
 
