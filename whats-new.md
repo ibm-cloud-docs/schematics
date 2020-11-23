@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-11-11"
+lastupdated: "2020-11-20"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -34,6 +34,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 |Date|Description|
 |-----|---------|
 |16 October 2020 |<ul><li>**Monitoring by using Sysdig**: {{site.data.keyword.bplong_notm}} now supports monitoring Schematics services by using {{site.data.keyword.cloud_notm}} monitoring with Sysdig. For more information, about the monitoring Schematics workspaces, see [Monitoring Schematics instances](/docs/schematics?topic=schematics-monitoring-instances).</li><li>**Files and resources for your workspace actions**: {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository. For more information, about files and resources, see [Files and resources](/docs/schematics?topic=schematics-workspace-setup#files-resources).</li><li>**Creating a deploy to {{site.data.keyword.bplong_notm}} link**: {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository so that other people can experiment to create workspace by using Schematics without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics).</li></ul> |
+{: caption="What's new in October" caption-side="top"}
 
 ## September 2020
 {: #september-2020}
@@ -41,6 +42,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 |Date|Description|
 |-----|-----------|
 |11 September 2020|<ul><li>**Bit bucket supports private repository**: {{site.data.keyword.bplong_notm}} supports private bit bucket repository as a template repository source. All you need to use the URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`.</li><li>**Support to override the default variable**: {{site.data.keyword.bplong_notm}} now supports to override the Terraform default variable store value. For more information, about configuring to override the variable, see [Workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).</li></ul> |
+{: caption="What's new in September" caption-side="top"}
 
 ## August 2020
 {: #august-2020}
