@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-22"
+lastupdated: "2020-11-24"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -884,7 +884,7 @@ You can list the KMS instances by using the options described in the table.
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--location` or `-l` | Required | Set the Schematics location name, such as `us`, `eu`, `ap`. |
-| `--scheme` or `-s` | Optional | Specify the encryption scheme, such as `KYOK`, `BYOK`. |
+| `--scheme` or `-s` | Required | Specify the encryption scheme, such as `KYOK`, `BYOK`. |
 | `--output` or `-o` | Optional | The output supported only in JSON format. |
 {: caption="Schematics kms list flags" caption-side="top"}
 
@@ -903,11 +903,11 @@ You can enable the KMS instances by using the options described in the table.
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--location` or `-l` | Required | Set the Schematics location name, such as `us`, `eu`, `ap`. |
-| `--scheme` or `-s` | Optional | Specify the encryption scheme, such as `KYOK`, `BYOK`. |
-| `--instance-id` or `-I` | Optional | Specify the KMS instance ID. |
-| `--primary_crk` or `-pk`| Optional | Specify the primary customer root key (CRK) in your KMS instance. |
+| `--scheme` or `-s` | Required | Specify the encryption scheme, such as `KYOK`, `BYOK`. |
+| `--instance-id` or `-I` | Required | Specify the KMS instance ID. |
+| `--primary_crk` or `-pk`| Required | Specify the primary customer root key (CRK) in your KMS instance. |
 | `--secondary_crk` or `-sk`| Optional | Specify the secondary customer root key (CRK) in your KMS instance. |
-| `--output` or `-o` | Optional | The output supported only in JSON format. |
+| `--output` or `-o` | Required | The output supported only in JSON format. |
 {: caption="Schematics kms enable flags" caption-side="top"}
 
 ### `ibmcloud schematics kms instances info`
