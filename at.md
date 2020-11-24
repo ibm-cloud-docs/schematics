@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-10-11"
+lastupdated: "2020-11-24"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -41,21 +41,21 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 |:-------------------|:-----------------|
 | `schematics.workspace.create` | A {{site.data.keyword.bpshort}} workspace is created or failed to create. | 
 | `schematics.workspace.read`| A {{site.data.keyword.bpshort}} workspace is viewed by a user.|
-| `schematics.workspace.update`| A {{site.data.keyword.bpshort}} workspace updated successfully or failed to update.|
+| `schematics.workspace.update`| A {{site.data.keyword.bpshort}} workspace is updated successfully or failed to update.|
 | `schematics.workspace.delete` | A {{site.data.keyword.bpshort}} workspace was deleted or failed to delete. | 
 | `schematics.workspace.plan` | A Terraform execution plan was created for a workspace. | 
 | `schematics.workspace.apply` | A Terraform execution plan was applied in {{site.data.keyword.cloud_notm}} or failed to apply.|
 | `schematics.workspace.destroy` | {{site.data.keyword.cloud_notm}} resources are deleted successfully or failed to delete.|
+| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the Schematics API request is being sent to {{site.data.keyword.cos_full_notm}} in order to complete the user’s action.|
 {: caption="Table 1. Overview of {{site.data.keyword.bpshort}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
 </br>
-**Important**: 
+**Important**
+
 When you create, delete, or update a workspace, the following events are also created by a {{site.data.keyword.bpshort}}-owned service ID and sent to {{site.data.keyword.at_full_notm}}.  
 * An event with the action `schematics.instance.create` when a workspace is created.
 * An event with the action `schematics.instance.update` when a workspace is modified.
 * An event with the action `schematics.instance.delete` when a workspace is deleted.
-
-
 
 ## Viewing events
 {: #at_ui}

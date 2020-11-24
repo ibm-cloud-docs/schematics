@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-22"
+lastupdated: "2020-11-24"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -864,68 +864,6 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 {: pre}
 
 
-
-## kms commands
-{: kms-commands}
-
-{{site.data.keyword.bplong_notm}} supports commands related to Key Management Services (KMS) to enable encryption of keys in the location, list KMS instances and available customer root keys. 
-
-### `ibmcloud schematics kms instances list`
-{: #schematics-kms-list}
-
-Lists the KMS instances of your {{site.data.keyword.cloud_notm}} account.
-
-```
-ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME [--output json]
-```
-
-You can list the KMS instances by using the options described in the table.
-
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------ | 
-| `--location` or `-l` | Required | Set the Schematics location name, such as `us`, `eu`, `ap`. |
-| `--scheme` or `-s` | Optional | Specify the encryption scheme, such as `KYOK`, `BYOK`. |
-| `--output` or `-o` | Optional | The output supported only in JSON format. |
-{: caption="Schematics kms list flags" caption-side="top"}
-
-### `ibmcloud schematics kms instances enable`
-{: #schematics-kms-enable}
-
-Enable KMS to encrypt your data in the specific location.
-
-
-```
-ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHEME --group RESOURCE_GROUP --primary_name PRIMARY_KMS_NAME --primary_crn PRIMARY_KEY_CRN --primary_endpoint PRIMARY_KMSPRIVATEENDPOINT --secondary_name SECONDARY_KMS_NAME --secondary_crn SECONDARY_KEY_CRN --secondary_endpoint SECONDARY_KMSPRIVATEENDPOINT [--output][--json]
-```
-
-You can enable the KMS instances by using the options described in the table.
-
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------ | 
-| `--location` or `-l` | Required | Set the Schematics location name, such as `us`, `eu`, `ap`. |
-| `--scheme` or `-s` | Optional | Specify the encryption scheme, such as `KYOK`, `BYOK`. |
-| `--instance-id` or `-I` | Optional | Specify the KMS instance ID. |
-| `--primary_crk` or `-pk`| Optional | Specify the primary customer root key (CRK) in your KMS instance. |
-| `--secondary_crk` or `-sk`| Optional | Specify the secondary customer root key (CRK) in your KMS instance. |
-| `--output` or `-o` | Optional | The output supported only in JSON format. |
-{: caption="Schematics kms enable flags" caption-side="top"}
-
-### `ibmcloud schematics kms instances info`
-{: #schematics-kms-enable}
-
-Provides the {{site.data.keyword.bplong_notm}} KMS instance information.
-
-```
-ibmcloud schematics kms info --location LOCATION_NAME [--output]
-```
-
-You can enable the KMS instances by using the options described in the table.
-
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------ | 
-| `--location` or `-l` | Required | Set the Schematics location name, such as `us`, `eu`, `ap`. |
-| `--output` or `-o` | Optional | The output supported only in JSON format. |
-{: caption="Schematics kms info flags" caption-side="top"}
 
 ## Terraform statefile commands
 {: #statefile-cmds}
