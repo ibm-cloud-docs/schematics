@@ -46,7 +46,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | `schematics.workspace.plan` | A Terraform execution plan was created for a workspace. | 
 | `schematics.workspace.apply` | A Terraform execution plan was applied in {{site.data.keyword.cloud_notm}} or failed to apply.|
 | `schematics.workspace.destroy` | {{site.data.keyword.cloud_notm}} resources are deleted successfully or failed to delete.|
-| `schematics.credentials.ready-to-use` |  Triggered if user credentials to Cloud Object Storage are passed on a different service to complete the user's action.| 
+| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the Schematics API request is being sent to {{site.data.keyword.cos_full_notm}} in order to complete the user’s action.|
 {: caption="Table 1. Overview of {{site.data.keyword.bpshort}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
 </br>
