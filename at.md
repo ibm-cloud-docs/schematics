@@ -50,7 +50,8 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 {: caption="Table 1. Overview of {{site.data.keyword.bpshort}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
 </br>
-**Important**: 
+**Important**
+
 When you create, delete, or update a workspace, the following events are also created by a {{site.data.keyword.bpshort}}-owned service ID and sent to {{site.data.keyword.at_full_notm}}.  
 * An event with the action `schematics.instance.create` when a workspace is created.
 * An event with the action `schematics.instance.update` when a workspace is modified.
