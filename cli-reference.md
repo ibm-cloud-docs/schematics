@@ -907,7 +907,7 @@ You can enable the KMS instances by using the options described in the table.
 | `--instance-id` or `-I` | Required | Specify the KMS instance ID. |
 | `--primary_crk` or `-pk`| Required | Specify the primary customer root key (CRK) in your KMS instance. |
 | `--secondary_crk` or `-sk`| Optional | Specify the secondary customer root key (CRK) in your KMS instance. |
-| `--output` or `-o` | Required | The output supported only in JSON format. |
+| `--output` or `-o` | Optional | The output supported only in JSON format. |
 {: caption="Schematics kms enable flags" caption-side="top"}
 
 ### `ibmcloud schematics kms instances info`
