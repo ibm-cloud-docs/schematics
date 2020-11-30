@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-02"
+lastupdated: "2020-11-30"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -41,12 +41,12 @@ With {{site.data.keyword.bplong_notm}}, you can organize your {{site.data.keywor
 **I am not familiar with Terraform. Can I still use {{site.data.keyword.bplong_notm}}?** </br>
 Yes. {{site.data.keyword.bplong_notm}} provides a set of pre-defined Terraform templates that you can choose from to get started with {{site.data.keyword.bpshort}}. Simply select the template that you want and create a workspace in {{site.data.keyword.bplong_notm}} from this template. Then, create a Terraform execution plan, apply this plan, and watch {{site.data.keyword.bplong_notm}} provision the resources for you. 
 
-## How it works
+## How it works?
 {: #schematics-architecture}
 {: help}
 {: support}
 
-Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.data.keyword.cloud_notm}} resources. 
+Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.data.keyword.cloud_notm}} resources with Terraform. 
 {: shortdesc}
 
 <img src="images/schematics_flow.png" alt="Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
@@ -63,9 +63,9 @@ Review the capabilities that {{site.data.keyword.bplong_notm}} provides to templ
 {: shortdesc}
 
 | Benefit    | Description   |
-| :------------- | :------------- |
+| ------------- | ------------- |
 | Enable Infrastructure as Code (IaC) | Use Terraform templates to model, codify, and configure the {{site.data.keyword.cloud_notm}} resources that you want, and build your own resource library that you can replicate or re-create across environments. If you want to change your environment, you state the outcome that you want and let {{site.data.keyword.bplong_notm}} determine the actions that must be performed to get to the described state. |
-| Use native Terraform capabilities | Build your Terraform configuration files in HashiCorp Configuration Language (HCL) or JSON format and provision your specified resources with {{site.data.keyword.bplong_notm}}. {{site.data.keyword.bplong_notm}} supports all {{site.data.keyword.cloud_notm}} resources that are provided by the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](/docs/terraform?topic=terraform-tf-provider) with the advantage that you don't have to install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. Simply use the built-in Terraform capabilities in the {{site.data.keyword.cloud_notm}} console or CLI to connect {{site.data.keyword.bplong_notm}} to the GitHub repository that hosts your template or provide your template by uploading a `.tar` file. Then, create an execution plan, and watch {{site.data.keyword.bplong_notm}} spin up your resources.  |
+| Use native Terraform capabilities | Build your Terraform configuration files in HashiCorp Configuration Language (HCL) or JSON format and provision your specified resources with {{site.data.keyword.bplong_notm}}. {{site.data.keyword.bplong_notm}} supports all {{site.data.keyword.cloud_notm}} resources that are provided by the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](/docs/terraform?topic=terraform-setup_cli#configure_provider) with the advantage that you don't have to install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in. Simply use the built-in Terraform capabilities in the {{site.data.keyword.cloud_notm}} console or CLI to connect {{site.data.keyword.bplong_notm}} to the GitHub repository that hosts your template or provide your template by uploading a `.tar` file. Then, create an execution plan, and watch {{site.data.keyword.bplong_notm}} spin up your resources.  |
 | One language to describe resources | Every {{site.data.keyword.cloud_notm}} resource comes with a CLI or API that you can use to provision and work with the resource. By using {{site.data.keyword.bplong_notm}}, you don't need to learn each CLI or API to automate the provisioning of your resources. Instead, you use the Terraform language to model all your resources. |
 | Organize {{site.data.keyword.cloud_notm}} resources in workspaces | With {{site.data.keyword.bplong_notm}}, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace is connected to a GitHub repository that stores a Terraform template. You can also provide the template by uploading a `.tar` file from your local machine. Use workspaces to distinguish between your test, staging, and prod environment, and to change resource configurations without affecting resources in other environments.  |
 | Control access to your {{site.data.keyword.cloud_notm}} resources | Assign platform and services access permissions to your users in {{site.data.keyword.cloud_notm}} Identity and Access Management to control who can provision and manage resources in your {{site.data.keyword.cloud_notm}} account. |

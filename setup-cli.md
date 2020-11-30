@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-29"
+lastupdated: "2020-11-30"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -53,19 +53,22 @@ Install the required CLIs to automate the provisioning of {{site.data.keyword.cl
    If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your CLI output to retrieve your one-time passcode. You know that you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
    {: tip}
     
-3. Install the {{site.data.keyword.cloud_notm}} CLI plug-in for {{site.data.keyword.bpshort}}. 
+3. Install the {{site.data.keyword.cloud_notm}} CLI plug-in for {{site.data.keyword.bpshort}}.
+
    ```
    ibmcloud plugin install schematics
    ```
    {: pre}
     
-4. Verify that the {{site.data.keyword.bplong_notm}} CLI plug-in is installed successfully. The plug-in is listed as `schematics`. 
+4. Verify that the {{site.data.keyword.bplong_notm}} CLI plug-in is installed successfully. The plug-in is listed as `schematics`.
+
    ```
    ibmcloud plugin list
    ```
    {: pre}
 
    Example output:
+
    ```
    Listing installed plug-ins...
 
@@ -127,12 +130,14 @@ Update the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bplo
    {: pre}
    
    Example output: 
+
    ```
    schematics                      1.4.1        Update available
    ```
    {: screen}
    
 4. Update the {{site.data.keyword.bplong_notm}} CLI plug-in. 
+
    ```
    ibmcloud plugin update schematics
    ```
