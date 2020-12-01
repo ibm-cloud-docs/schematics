@@ -20,8 +20,6 @@ Schematics
     {: .navgroup id="howto"}
     setup-cli.md
     create-terraform-config.md
-    monitoring-instances.md
-    integration-service.md
     workspace-setup.md
     manage-resource-lifecycle.md
     allowips.md
@@ -33,7 +31,12 @@ Schematics
         architecture-workload-isolation.md
         private-endpoint.md
         data-security.md
-        at.md
+
+     {: .topicgroup}        
+    Logging and monitoring
+          monitoring-instances.md
+          at.md
+
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
