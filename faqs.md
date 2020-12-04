@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-03"
+lastupdated: "2020-12-04"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -140,4 +140,9 @@ Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ `
 
 Solution:
 If the repository is created after 1st October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
+
+## Can I migrate the  {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13?
+{: #migrate-workspace}
+
+As of now we don't have support for migrating {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13. You need to create a workspace to make use of Terraform V0.13.
 
