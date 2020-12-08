@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-12-04"
+lastupdated: "2020-12-08"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -14,6 +14,7 @@ subcollection: schematics
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
+{:beta: .beta}
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
