@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-12-04"
+lastupdated: "2020-12-09"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -24,6 +24,7 @@ subcollection: schematics
 {:faq: data-hd-content-type='faq'}
 {:external: target="_blank" .external}
 {:support: data-reuse='support'}
+
 
 # FAQs
 {: #faqs}
@@ -143,6 +144,8 @@ If the repository is created after 1st October 2020, the main branch syntax need
 
 ## Can I migrate the  {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13?
 {: #migrate-workspace}
+{: faq}
+{: support}
 
 As of now we don't have support for migrating {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13. You need to create a workspace to make use of Terraform V0.13.
 
