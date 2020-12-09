@@ -80,6 +80,7 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 ## Beta limitations
 {: #beta-limitations}
 
-During the Beta release of {{site.data.keyword.cloud_notm}}, be aware of the following limitations.
+During the Beta release of {{site.data.keyword.cloud_notm}} actions, be aware of the following limitations:
 * This service might not yet be stable and is not intended for production use. 
 * Any projects, apps, or jobs that you create during beta will not carry over to other releases'.
+
