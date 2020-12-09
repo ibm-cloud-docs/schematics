@@ -82,7 +82,6 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 
 During the Beta release of {{site.data.keyword.cloud_notm}}, be aware of the following limitations.
 
-    * This service might not yet be stable and is not for production use.
-    * After 7 days, your project and everything that the project contains will be deleted.
-
-Beta releases are not intended for production. Any projects, apps, or jobs that you create during Beta will not carry over to other releases.
+    - This service might not yet be stable and is not intended for production use. 
+    - Any projects, apps, or jobs that you create during beta will not carry over to other releases'.
+   
