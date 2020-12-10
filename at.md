@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-12-01"
+lastupdated: "2020-12-02"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -23,7 +23,7 @@ subcollection: schematics
 {:download: .download}
 {:preview: .preview}
 
-# {{site.data.keyword.at_full_notm}} events
+# Monitoring activity tracker with LogDNA events
 {: #at_events}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full_notm}} service to track how users and applications interact with {{site.data.keyword.bplong_notm}}.
