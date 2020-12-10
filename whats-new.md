@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-12-09"
+lastupdated: "2020-12-10"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -37,7 +37,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|25 November 2020 |<ul><li> **Terraform v0.13 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.13. You can now choose to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13`.  To migrate your Terraform configuration files from version 0.1x to version 0.1x, see [Migrating your Terraform configuration files](/docs/terraform?topic=terraform-migration-versioncontrol). </li></ul> |
+|25 November 2020 |<ul><li> **Terraform v0.13 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.13. You can now choose to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13`.  </li></ul> |
 {: caption="What's new in November" caption-side="top"}
 
 
