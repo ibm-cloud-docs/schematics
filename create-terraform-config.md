@@ -229,22 +229,36 @@ For more information, about variable configurations, see the [Terraform document
 {: #declare-variable}
 
 After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
-- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; settings page.**
+- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
 - For `CLI`, you can refer to create or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
-- For `API` you can see [Create or update the values](/apidocs/schematics#createworkspace) in the field **template_data** &gt;  **variable store**. Then the `value` field must contain escaped string for the variable store, as shown in the example.
+- For `API` you can see [create or update the values](/apidocs/schematics#createworkspace) in the field **template_data** &gt;  **variablestore**. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string irrespective of the type of the variable. 
 
-**Example**
-```
-"variablestore": [
+  **Example**
+
+    ```
+    "variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",
                     "name": "docker_ports",
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
                 },
+                {
+                    "name": "worker_pool_labels",
+                    "type": "map(string)",
+                    "value": "{\n        \"label-name1\": \"label-value1\",\n        \"label-name2\": \"label-value2\"\n}"
+                },
+                {
+                     "name": "docker_ports",
+                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
+                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+                    "description": ""
+                }
       ]
- ```
- {: codeblock}
+     ```
+    {: codeblock}
+
+
   
 **Can I see how to declare complex variables in a file?**
 
