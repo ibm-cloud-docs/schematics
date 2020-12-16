@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-24"
+lastupdated: "2020-12-16"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -677,10 +677,26 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
 <dd>Return the CLI output in JSON format.</dd>
 </dl>
 
-**Example:**
+**Example 1:**
 
 ```
 ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /Users/myuser/Documents/mytar/vpc.tar --template 250d6e9f-d71b-4c
+```
+{: pre}
+
+**Example 2: Upload `TAR` file to workspace by using upload `tar` command.**
+
+Step 1: Create the `TAR` file of your template repo.
+
+```
+tar -cvf workspace.tar $WORKSPACE_FOLDER
+```
+{: pre}
+
+Step 2: Upload the `TAR` file to your workspace.
+
+```
+tar -cvf template_repo.tar <$TEMPLATE_REPO_FOLDER>
 ```
 {: pre}
 
