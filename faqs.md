@@ -149,7 +149,7 @@ If the repository is created after 1st October 2020, the main branch syntax need
 
 As of now we don't have support for migrating {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13. You need to create a workspace to make use of Terraform V0.13.
 
-## Can I increase the timeout for null-exec and remote-exec?
+## Can I increase the timeout for null-exec and remote-exec resource?
 {: #timeout-null-resource}
 {: faq}
 {: support}
