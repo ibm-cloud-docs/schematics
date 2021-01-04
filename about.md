@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-12-08"
+  years: 2017, 2021
+lastupdated: "2021-01-01"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -83,7 +83,7 @@ Learn the basics about Terraform and {{site.data.keyword.bplong_notm}} by review
 
 <dl>
   <dt>Resources</dt>
-  <dd>Resources are {{site.data.keyword.cloud_notm}} Platform-as-a-Service, Infrastructure-as-a-Service, and Functions-as-a-Service components that you can provision and manage in {{site.data.keyword.cloud_notm}} with {{site.data.keyword.bplong_notm}}. Resources are specified and configured by using Terraform configuration files. The resources that are supported in {{site.data.keyword.bplong_notm}} are determined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in provides the syntax to describe a supported resource, and understands the APIs of each supported {{site.data.keyword.cloud_notm}} resource and available configuration parameters. <br>To find a list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources).</p></dd>
+  <dd>Resources are {{site.data.keyword.cloud_notm}} Platform-as-a-Service, Infrastructure-as-a-Service, and Functions-as-a-Service components that you can provision and manage in {{site.data.keyword.cloud_notm}} with {{site.data.keyword.bplong_notm}}. Resources are specified and configured by using Terraform configuration files. The resources that are supported in {{site.data.keyword.bplong_notm}} are determined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in provides the syntax to describe a supported resource, and understands the APIs of each supported {{site.data.keyword.cloud_notm}} resource and available configuration parameters. <br>To find a list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources).</p></dd>
 </dl>
 
 <dl>
@@ -110,7 +110,7 @@ Learn the basics about Terraform and {{site.data.keyword.bplong_notm}} by review
 
 <dl>
   <dt>{{site.data.keyword.cloud_notm}} Provider plug-in</dt>
-  <dd>To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider must provide a CLI plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is IBM's CLI plug-in for Terraform. {{site.data.keyword.bplong_notm}} uses the plug-in to provision your {{site.data.keyword.cloud_notm}} resources. To find a list of supported {{site.data.keyword.cloud_notm}} resources and how to describe them, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources).</p>
+  <dd>To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider must provide a CLI plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is IBM's CLI plug-in for Terraform. {{site.data.keyword.bplong_notm}} uses the plug-in to provision your {{site.data.keyword.cloud_notm}} resources. To find a list of supported {{site.data.keyword.cloud_notm}} resources and how to describe them, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources).</p>
   </dd>
 </dl>
 

@@ -112,7 +112,7 @@ To configure the `provider` block:
 Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources that you want to manage with {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
-To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources). 
+To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a CLI plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform reference](/docs/terraform?topic=terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources). 
 
 Example infrastructure code for provisioning a VPC: 
 ```
@@ -231,7 +231,7 @@ For more information, about variable configurations, see the [Terraform document
 After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
 - For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
 - For `CLI`, you can refer to create or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
-- For `API` you can see [create or update the values](/apidocs/schematics#createworkspace) in the field **template_data** &gt;  **variablestore**. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string irrespective of the type of the variable. 
+- For `API` you can see [create or update the values](/apidocs/schematics#createworkspace) in the field `template_data` &gt;  `variablestore`. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string irrespective of the type of the variable. 
 
   **Example**
 

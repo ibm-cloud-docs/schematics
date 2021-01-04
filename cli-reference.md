@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-12-17"
+  years: 2017, 2021
+lastupdated: "2021-01-01"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -685,7 +685,7 @@ ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /U
 ```
 {: pre}
 
- Create the TAR file of your template repo using the tar command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
+ Create the `TAR` file of your template repo using the `TAR` command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
  {: note}
 
 

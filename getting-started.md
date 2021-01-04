@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-17"
+  years: 2017, 2021
+lastupdated: "2021-01-01"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -67,7 +67,7 @@ This tutorial includes VPC commands that you can run to retrieve input values fo
 {: tip}
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
-{{site.data.keyword.bplong_notm}} supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources).
+{{site.data.keyword.bplong_notm}} supports all resources that are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. To find a full list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider reference](/docs/terraform?topic=terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources).
 
 To create a configuration file for your VPC resources: 
 
@@ -363,5 +363,5 @@ After you provisioned your resources in {{site.data.keyword.cloud_notm}}, choose
 - Learn more about [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics) and the benefits of using the service. 
 - Review tips and tricks for how to [structure your Terraform configuration file](/docs/schematics?topic=schematics-create-tf-config).
 - Set up a [GitHub repository and workspace structure](/docs/schematics?topic=schematics-workspace-setup) for your microservices. 
-- Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-terraform-resources-and-data-sources).
+- Explore other {{site.data.keyword.cloud_notm}} resources that you can provision by reviewing the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources).
 - [Install the {{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-setup-cli) to automate the provisioning of your resources in {{site.data.keyword.cloud_notm}}. 

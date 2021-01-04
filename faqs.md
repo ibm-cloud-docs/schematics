@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-12-09"
+  years: 2017, 2021
+lastupdated: "2021-01-01"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -148,4 +148,11 @@ If the repository is created after 1st October 2020, the main branch syntax need
 {: support}
 
 As of now we don't have support for migrating {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13. You need to create a workspace to make use of Terraform V0.13.
+
+## Can I increase the timeout for null-exec and remote-exec resource?
+{: #timeout-null-resource}
+{: faq}
+{: support}
+
+No, the null-exec (null_resources) and remote-exec resources has maximum timeout of 60 minutes. Longer jobs need to be broken into shorter blocks to provision the infrastructure faster. Otherwise the execution times out automatically after 60 minutes.
 
