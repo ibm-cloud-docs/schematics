@@ -156,51 +156,6 @@ As of now we don't have support for migrating {{site.data.keyword.bpshort}} work
 
 No, the null-exec (null_resources) and remote-exec resources has maximum timeout of 60 minutes. Longer jobs need to be broken into shorter blocks to provision the infrastructure faster. Otherwise the execution times out automatically after 60 minutes.
 
-## How can I create workspace from CLI by using Git repositories and personal access token with full permission?
-{: #create-workspace-cli-tokens}
-{: faq}
-{: support}
 
-Passing this CLI `schematics workspace new --file schematic-file.json -g xxxx` command throws an **Access token creation failed status**, as the token name not specified in the command.
 
-Solution:
-You need to check your authentication before performing the post operation through CLI. Then create a workspace by using `schematics workspace new --file schematic-file.json --github-token xxxx` CLI command.
 
-## How to pull latest code in your Workspace via command line? 
-{: #latestcode-workspace-commandline}
-{: faq}
-{: support}
-
-Solution:
-As part of updating the schematics workspace through command line need to update the required field.
-
-Whereas name is the required field to modify
-Sample json file content
-{  
-   "name":"testWorkspace"
-}
-Then run the CLI command to get update `ibmcloud schematics workspace update --id <workspace-id>  --file <update-ws.json>`
-
-## How do we overcome the unexpected impact due to the maintenance where we don’t expect downtime while updating any workspace activities? 
-{: #impact-maintenance-downtime-workspace}
-{: faq}
-{: support}
-
-Solution: 
-As a result of unexpected impact during maintenance we might face down-time which results in performing activities in schematics. So workspace ID or activity ID are considered, mark them as failed and then they can re-trigger the activity.
-
-## How do we overcome the authorization issue while creating/update a workspace or add a template to it?
-{: #authorization-workspace }
-{: faq}
-{: support}
-
-Solution:
-Initially need to check with the roles with permission while performing changes or updates on workspace. Sometimes it might throw authorization issues.
-
-## How do I identify the best possible way to synchronize a deleted resource with the terraform state?
-{: #synchronize-deleteresource-terraform }
-{: faq}
-{: support}
-
-Solution: 
-Currently in present scenario schematics does not support synchronizing a deleted resource with the terraform state yet.It is planned for the future roadmap.
