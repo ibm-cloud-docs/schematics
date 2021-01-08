@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-04"
+lastupdated: "2021-01-08"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -39,8 +39,22 @@ If you plan to store your Terraform templates on your local machine and upload t
 {: help}
 {: support}
 
-Plan out the organizational structure of your workspaces and Git repositories to match the microservice and permission structure of your organization. The  Git repositories are GitHub, GitLab or Bitbucket that  supports both private and public respositories. You can use private and public Bitbucket template repository source in the {{site.data.keyword.bplong_notm}} workspace. 
-{: shortdesc}
+Plan out the organizational structure of your workspaces and Git repositories to match the microservice and permission structure of your organization. The Git repositories are GitHub, GitLab or Bitbucket that supports both private and public respositories.
+{: shortdesc} 
+
+Now, {{site.data.keyword.bplong_notm}} workspace supports private and public Bitbucket template, `AzureURL`, and `VsURL` repository source. The format of each repositories source are:
+
+**Bitbucket**
+
+You need to use the Bitbucket URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`.
+
+**AzureURL**
+
+You need to use the `AzureURL` in this format `https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>`.
+
+**VsURL**
+
+You need to use the `VsURL` in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>`.
 
 ### How many workspaces do I need?
 {: #plan-number-of-workspaces}
@@ -134,10 +148,7 @@ If you do not want to connect your workspace to a Git repository, you can upload
       Cloning Git repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The blocked extension files having more than 500 KB in size, and any invalid image is considered as vulnerable files while cloning.
       -	Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
       -	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
-      -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` <br>
-      
-     You can use private and public bitbucket template repository source in the {{site.data.keyword.bplong_notm}} workspace. You need to use the URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`.
-
+      -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
     5. You can manually enter the values.
