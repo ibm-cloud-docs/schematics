@@ -189,41 +189,6 @@ ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 {: pre}
 
 
-### `ibmcloud schematics workspace import`
-{: #schematics-workspace-import}
-
-You can import the existing resource with an valid address from the workspace ID and import it into your Terraform state. You need to ensure one resource can be imported to only one Terraform resource address. Otherwise, you may see unwanted behavior from Terraform.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace import --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
-```
-{: pre}
-
-</br>
-
-**Command options:**
-
-<dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to import an instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
-   </dd>
-
-<dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
-
-<dt><code>--address</code></dt>
-<dd>Optional. Provide the address parameter for the command.   </dd>
-
-</dl>
-
-**Example:**
-```
-ibmcloud schematics workspace import --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
-```
-{: pre}
-
-
 
 ### `ibmcloud schematics workspace list`	
 {: #schematics-workspace-list}	
@@ -509,6 +474,8 @@ ibmcloud schematics workspace new --file myfile.json
 ```
 {: pre}
 
+
+
 ### `ibmcloud schematics refresh`
 {: #schematics-refresh}
 
@@ -562,74 +529,6 @@ ibmcloud schematics state list --id myworkspace-a1aa1a1a-a11a-11
 {: pre}
 
 
-### `ibmcloud schematics workspace taint`
-{: #schematics-workspace-taint}
-
-Manually marks an instance or resources as tainted, by forcing the resources to be recreated on the next apply. Taint modifies the state file, but not the infrastructure in your workspace. When you perform next plan the changes will show as recreated and in the next apply the change is implemented.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace taint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
-```
-{: pre}
-
-</br>
-
-**Command options:**
-
-<dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to recreate the instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
-   </dd>
-
-<dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
-
-<dt><code>--address</code></dt>
-<dd>Optional. Provide the address parameter for the command.   </dd>
-
-</dl>
-
-**Example:**
-```
-ibmcloud schematics workspace taint --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
-```
-{: pre}
-
-
-### `ibmcloud schematics workspace untaint`
-{: #schematics-workspace-untaint}
-
-Manually marks an instance or resources as untainted, by forcing the resources to be restored on the next apply. When you perform next plan the changes will show as restored and in the next apply the change is implemented.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
-```
-{: pre}
-
-</br>
-
-**Command options:**
-
-<dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to restore the instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
-   </dd>
-
-<dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
-
-<dt><code>--address</code></dt>
-<dd>Optional. Provide the address parameter for the command.   </dd>
-
-</dl>
-
-**Example:**
-```
-ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
-```
-{: pre}
 
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
@@ -1062,109 +961,6 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 
 ```
 ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
-```
-{: pre}
-
-### `ibmcloud schematics workspace state show`
-{: #schematics-workspace-show}
-
-Provides the readable output from a state or plan of a workspace as Terraform sees it. You can use to ensure the current state and planned operations are executing as expected. You can use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS>
-```
-{: pre}
-
-</br>
-**Command options:**
-
-<dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to show. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
-   </dd>
-
-<dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
-
-<dt><code>--address</code></dt>
-<dd>Optional. Provide the address parameter for the command.  </dd>
-
-</dl>
-
-**Example:**
-```
-ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
-```
-{: pre}
-
-### `ibmcloud schematics workspace state mv`
-{: #schematics-wks_statemv}
-
-Moves an instance or resources from the Terraform state. For example, if you move an instance from the state, the Schematics workspace instance will continue running, but Terrfaorm plan will no longer see that instance. You can use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS> --destination <DESTINATION>
-```
-{: pre}
-
-</br>
-**Command options:**
-
-<dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to move an instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
-   </dd>
-
-<dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to move. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
-
-<dt><code>--address</code></dt>
-<dd>Optional. Provide the source address parameter for the command.   </dd>
-
-<dt><code>--destination</code></dt>
-<dd>Optional. Provide the destination parameter for the command.   </dd>
-
-</dl>
-
-**Example:**
-```
-ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
-```
-{: pre}
-
-
-### `ibmcloud schematics workspace state rm`
-{: #schematics-wks_staterm}
-
-Removes an instance or resources from the Terraform state. For example, if you remove an instance from the state, the Schematics workspace instance will continue running, but Terrfaorm plan will no longer see that instance. You can use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
-{: shortdesc}
-
-```
-ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER> 
-```
-{: pre}
-
-</br>
-**Command options:**
-
-<dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to remove the instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
-   </dd>
-
-<dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to remove. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
-
-<dt><code>--address</code></dt>
-<dd>Optional. Provide the address parameter for the command.   </dd>
-
-</dl>
-
-**Example:**
-```
-ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
 ```
 {: pre}
 
