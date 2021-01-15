@@ -188,6 +188,43 @@ ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
 
+
+### `ibmcloud schematics workspace import`
+{: #schematics-workspace-import}
+
+You can import the existing resource with an valid address from the workspace ID and import it into your Terraform state. You need to ensure one resource can be imported to only one Terraform resource address. Otherwise, you may see unwanted behavior from Terraform.
+{: shortdesc}
+
+```
+ibmcloud schematics workspace import --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
+```
+{: pre}
+
+</br>
+
+**Command options:**
+
+<dl>
+<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
+<dd>Required. The unique identifier of the workspace for which you want to import an instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
+   </dd>
+
+<dt><code>--options <em>FLAGS</em></code></dt>
+<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+
+<dt><code>--address</code></dt>
+<dd>Optional. Provide the address parameter for the command.   </dd>
+
+</dl>
+
+**Example:**
+```
+ibmcloud schematics workspace import --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
+```
+{: pre}
+
+
+
 ### `ibmcloud schematics workspace list`	
 {: #schematics-workspace-list}	
 
@@ -532,11 +569,12 @@ Manually marks an instance or resources as tainted, by forcing the resources to 
 {: shortdesc}
 
 ```
-ic schematics workspace taint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
+ibmcloud schematics workspace taint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
 ```
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
@@ -566,11 +604,12 @@ Manually marks an instance or resources as untainted, by forcing the resources t
 {: shortdesc}
 
 ```
-ic schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
+ibmcloud schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
 ```
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
@@ -591,7 +630,6 @@ ic schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --address 
 ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
 ```
 {: pre}
-
 
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
@@ -1034,7 +1072,7 @@ Provides the readable output from a state or plan of a workspace as Terraform se
 {: shortdesc}
 
 ```
-ic schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS>
+ibmcloud schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS>
 ```
 {: pre}
 
@@ -1067,7 +1105,7 @@ Moves an instance or resources from the Terraform state. For example, if you mov
 {: shortdesc}
 
 ```
-ic schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS> --destination <DESTINATION>
+ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS> --destination <DESTINATION>
 ```
 {: pre}
 
@@ -1104,7 +1142,7 @@ Removes an instance or resources from the Terraform state. For example, if you r
 {: shortdesc}
 
 ```
-ic schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER> 
+ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER> 
 ```
 {: pre}
 
