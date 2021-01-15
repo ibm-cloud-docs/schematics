@@ -998,7 +998,6 @@ Review the commands that you can use to work with the Terraform statefile (`terr
 You can import an existing Terraform statefile during the creation of your workspace. For more information, see the [`ibmcloud workspace new`](#schematics-workspace-new) command. 
 {: note}
 
-
 ### `ibmcloud schematics state pull`
 {: #state-pull}
 
@@ -1061,14 +1060,14 @@ ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address n
 ```
 {: pre}
 
-### `ibmcloud schematics workspace state show mv`
-{: #schematics-workspace-showmv}
+### `ibmcloud schematics workspace state mv`
+{: #schematics-wks_statemv}
 
 Moves an instance or resources from the Terraform state. For example, if you move an instance from the state, the Schematics workspace instance will continue running, but Terrfaorm plan will no longer see that instance. You can use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
 {: shortdesc}
 
 ```
-ic schematics workspace state show mv --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS> --destination <DESTINATION>
+ic schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS> --destination <DESTINATION>
 ```
 {: pre}
 
@@ -1077,11 +1076,11 @@ ic schematics workspace state show mv --id <WORKSPACE_ID> --options <FLAGS> --ad
 
 <dl>
 <dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to move the instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
+<dd>Required. The unique identifier of the workspace for which you want to move an instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to move. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the source address parameter for the command.   </dd>
@@ -1093,19 +1092,19 @@ ic schematics workspace state show mv --id <WORKSPACE_ID> --options <FLAGS> --ad
 
 **Example:**
 ```
-ibmcloud schematics workspace show mv --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
+ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
 ```
 {: pre}
 
 
-### `ibmcloud schematics workspace state show rm`
-{: #schematics-workspace-showrm}
+### `ibmcloud schematics workspace state rm`
+{: #schematics-wks_staterm}
 
-Removes an instance or resources from the Terraform state. For example, if you remove or move an instance from the state, the Schematics workspace instance will continue running, but Terrfaorm plan will no longer see that instance. You can use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
+Removes an instance or resources from the Terraform state. For example, if you remove an instance from the state, the Schematics workspace instance will continue running, but Terrfaorm plan will no longer see that instance. You can use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
 {: shortdesc}
 
 ```
-ic schematics workspace state show rm --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER> --destination <PARAMETER>
+ic schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER> 
 ```
 {: pre}
 
@@ -1114,11 +1113,11 @@ ic schematics workspace state show rm --id <WORKSPACE_ID> --options <FLAGS> --ad
 
 <dl>
 <dt><code>--id <em>WORKSPACE_ID</em></code></dt>
-<dd>Required. The unique identifier of the workspace for which you want to remove or move the instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
+<dd>Required. The unique identifier of the workspace for which you want to remove the instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to remove. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.   </dd>
@@ -1127,7 +1126,7 @@ ic schematics workspace state show rm --id <WORKSPACE_ID> --options <FLAGS> --ad
 
 **Example:**
 ```
-ibmcloud schematics workspace show rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
+ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
 ```
 {: pre}
 
