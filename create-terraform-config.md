@@ -33,7 +33,7 @@ Learn how to create Terraform templates that are well-structured, reusable, and 
 
 A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
-You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
+You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format. For more information, see [Configuration language](https://www.terraform.io/docs/configuration/index.html){: external}.  
 
 Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limitations](/docs/schematics?topic=schematics-schematics-limitations). 
 {: tip}
