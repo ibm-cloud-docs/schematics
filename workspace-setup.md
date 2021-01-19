@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-08"
+lastupdated: "2021-01-19"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -39,20 +39,20 @@ If you plan to store your Terraform templates on your local machine and upload t
 {: help}
 {: support}
 
-Plan out the organizational structure of your workspaces and Git repositories to match the microservice and permission structure of your organization. The Git repositories are GitHub, GitLab or Bitbucket that supports both private and public respositories.
+Plan out the organizational structure of your workspaces and Git repositories to match the microservice and permission structure of your organization. The Git repositories are `GitHub`, `GitLab`, or `Bitbucket` that supports both private and public repositories.
 {: shortdesc} 
 
-Now, {{site.data.keyword.bplong_notm}} workspace supports private and public Bitbucket template, `AzureURL`, and `VsURL` repository source. The format of each repositories source are:
+Now, {{site.data.keyword.bplong_notm}} workspace supports private and public `Bitbucket` template, `AzureURL`, and `VsURL` repository source. The format of each repositories source are:
 
-**Bitbucket**
+`Bitbucket`
 
-You need to use the Bitbucket URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`.
+You need to use the `Bitbucket` URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`.
 
-**AzureURL**
+`AzureURL`
 
 You need to use the `AzureURL` in this format `https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>`.
 
-**VsURL**
+`VsURL`
 
 You need to use the `VsURL` in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>`.
 
@@ -121,7 +121,7 @@ If you do not want to connect your workspace to a Git repository, you can upload
 {: tip}
 
 **Before you begin**
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a GitHub or GitLab or Bitbucket repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API. 
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
 **To create a workspace**:
@@ -134,12 +134,12 @@ If you do not want to connect your workspace to a Git repository, you can upload
     4. Select the resource group where you want to create the workspace.
     5. Optional: Enter a description for your workspace.
     6. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
-4. Connect your workspace to the GitHub or GitLab or Bitbucket repository where your Terraform configuration files are stored.
+4. Connect your workspace to the `GitHub`, `GitLab`, or `Bitbucket` repository where your Terraform configuration files are stored.
 
    If you want to upload a tape archive file (`.tar`) instead of pointing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.  
    {: tip}
    
-    1. On the workspace **Settings** page, enter the link to your GitHub or GitLab or Bitbucket repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
+    1. On the workspace **Settings** page, enter the link to your `GitHub`, `GitLab`, or `Bitbucket` repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
       - Example for `master` branch: `https://github.com/myorg/myrepo`
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
       - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
@@ -264,7 +264,7 @@ Review the states that a workspace can have in the following table. You might no
 | ------- | ---------------------------- | 
 | Active | After you successfully ran your infrastructure code with {{site.data.keyword.bplong_notm}} by applying your Terraform execution plan, the state of your workspace changes to **Active**. |
 | Connecting | {{site.data.keyword.bpshort}} tries to connect to the template in your source repo. If successfully connected, the template is downloaded and metadata, such as input parameters, is extracted. After the template is downloaded, the state of the workspace changes to **Scanning**. |
-| Draft | The workspace is created without a reference to a GitHub or GitLab or Bitbucket repository.   |
+| Draft | The workspace is created without a reference to a `GitHub`, `GitLab`, or `Bitbucket` repository.   |
 | Failed | If errors occur during the execution of your infrastructure code in {{site.data.keyword.bplong_notm}}, your workspace state is set to **Failed**. To troubleshoot errors, open the logs on the workspace **Activity** page. |
 | Inactive | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply actions to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
 | In progress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **In progress**. |
@@ -288,7 +288,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
     <tr>
       <td><code>Create workspace</code></td>
       <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The workspace is created without a reference to GitHub or GitLab or Bitbucket to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, you can destroy all the resources to make your workspace in an inactive state.
+      <td>The workspace is created without a reference to `GitHub`, `GitLab`, or `Bitbucket` to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, you can destroy all the resources to make your workspace in an inactive state.
  </td>
    </tr>
      <tr>
