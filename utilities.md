@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-12-17"
+  years: 2017, 2021
+lastupdated: "2021-01-19"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -44,4 +44,3 @@ The Python modules that are applied in Ansible job are:
 - `openshift`
 - `ibm-cloud-sdk-core`
 - `ibm-vpc`
-{: shortdesc}

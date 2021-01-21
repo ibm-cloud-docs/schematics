@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-01"
+lastupdated: "2021-01-18"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -30,7 +30,7 @@ subcollection: schematics
 # About {{site.data.keyword.bplong_notm}}
 {: #about-schematics} 
 
-{{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is an Open Source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
+{{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is an Open Source software that enables predictable and consistent resource provisioning to rapidly build complex, multi-tier cloud environments.
 {: shortdesc}
 
 **What is Infrastructure as Code?** </br>
@@ -88,7 +88,7 @@ Learn the basics about Terraform and {{site.data.keyword.bplong_notm}} by review
 
 <dl>
   <dt>Terraform configuration file</dt>
-  <dd>A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON syntax, and are stored in a GitHub or GitLab repository or uploaded by using a `.tar` file.<br>For more information about how to write configuration files, see [creating Terraform configurations](/docs/schematics?topic=schematics-create-tf-config). </p></dd>
+  <dd>A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON format, and are stored in a GitHub or GitLab repository or uploaded by using a `.tar` file.<br>For more information, about how to write configuration files, see [creating Terraform configurations](/docs/schematics?topic=schematics-create-tf-config). </p></dd>
 </dl>
 
 <dl>
