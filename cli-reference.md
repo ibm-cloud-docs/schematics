@@ -1066,6 +1066,119 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 
 
 
+## Terraform commands
+{: #tf-cmds}
+
+You can run a bunch of Terraform commands and manipulate the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bplong_notm}} API or CLI. The Schematics provides one generic API `commands` for each sub-command.
+{: shortdesc}
+
+You can see the `Commands` UI support only to display the state of the workspace. The complete commands support to be released shortly.
+{: important}
+
+The table provides the summary of commands supported by the new `commands` API.
+
+|Command | Description| 
+|------|  ------|
+|`show`| Inspects Terraform state or plan.|
+|`output`| Reads an output from a Terraform state file.|
+|`import`| Imports an existing infrastructure into Terraform.|
+|`taint`|	 Mark a resource for recreation. |
+|`untaint`|Do not mark a resource as tainted.|
+|`state`|	An advanced state management command to write sub commands to remove or move `rm && mv`.|
+
+### Commands 
+{: :#cmds}
+
+The `Commands` API supports 
+- Executing the group of Terraform commands by using the JSON file for your workspace command requirements.
+- The access control `plan`, `apply`, `destroy`, or `refresh` are applicable for `Commands API`. 
+
+Select your region where the workspace is created, and use the following syntax to run the commands API.
+
+```
+ibmcloud schematics commands --id <WORKSPACE_ID> --options <FLAGS> --file <JSON file>
+```
+
+**Command options**
+
+`--id <WORKSPACE_ID>`
+  Required. The unique ID of the workspace for which you want to run the commands. To find the of your workspace, run `ibmcloud schematics workspace list`.
+
+`--options <FLAGS>`
+  Optional. The command-line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html).
+
+`--file <JSON file>`
+  Required. Contains the address of resource to be executed.
+
+  **Sample Test.JSON file**
+  
+  ```
+  {
+    "commands": [
+        {
+            "command": "state show",
+            "command_params": "data.tempxx_file.test",
+            "command_name": "Test1",
+            "command_desc": "Checking state list",
+            "command_onerror": "continue"
+        },
+        {
+            "command": "taint",
+            "command_params": "null_resourcexx.sleep",
+            "command_name": "Test2",
+            "command_desc": "Checking state list",
+            "command_onerror": "continue"
+        },
+        {
+            "command": "untaint",
+            "command_params": "null_resourcexx.sleep",
+            "command_name": "Test3",
+            "command_desc": "Checking state list",
+            "command_onerror": "continue"
+        },
+        {
+            "command": "state list",
+            "command_params": "",
+            "command_name": "Test4",
+            "command_desc": "Checking state list",
+            "command_onerror": "continue"
+        },
+        {
+            "command": "state rm",
+            "command_params": "data.tempxx_file.test",
+            "command_name": "Test5",
+            "command_desc": "Checking state list",
+            "command_onerror": "continue"
+        },
+        {
+            "command": "output",
+            "command_params": "",
+            "command_name": "Test6",
+            "command_desc": "Checking state output",
+            "command_onerror": "continue"
+        }
+    ],
+}
+  ```
+
+  The table provides the list of key parameters of the JSON file for the `Commands` API, either by CLI or the API.
+
+  | Key | Required / Optional |Description |
+  | ------ | -------- | ---------- |
+  |`command`| Required |Provide the command. Supported commands are `show`,`taint`, `untaint`, `state`, `import`, `output`.|
+  |`command_params`| Required | The address parameters for the command name for `CLI`, such as resource name, absolute path of the file name. **Note** For API, you have to send option flag and address parameter in `command_params`.|
+  |`command_name`| Optional | The name for the command block.|
+  |`command_desc`| Optional | The text to describe the command block.|
+  |`command_onError`| Optional |  Instruction to continue or break in case of error in the command. |
+  |`command_dependsOn`|Optional| Dependency on the previous commands.|
+  |`command_status`| Not required | Displays the command executed status, either `success` or `failure`|
+
+**Example**
+
+```
+ibmcloud schematics commands --id cli-sleepy-0bedc51f-c344-50 --file /<userdir>/Test.JSON
+```
+
 ## Terraform statefile commands
 {: #statefile-cmds}
 
