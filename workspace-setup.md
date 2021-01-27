@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-19"
+lastupdated: "2021-01-27"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -225,7 +225,7 @@ The actions with the resource and file information are described in the table.
 ## Creating a deploy to {{site.data.keyword.bplong_notm}}
 {: #create-deploy-to-schematics}
 
-{{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/terraform?topic=terraform-create_deploy_to_schematics).
+{{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics).
 
 ## Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery}

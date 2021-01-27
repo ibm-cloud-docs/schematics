@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-07-21"
+  years: 2017, 2021
+lastupdated: "2021-01-27"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -65,5 +65,5 @@ The location where your workspace data is stored depends on the location where y
 
 ## Where are my {{site.data.keyword.cloud_notm}} resources provisioned?
 
-The region or regions where your {{site.data.keyword.cloud_notm}} resources are provisioned depends on the region that you specify in your Terraform configuration file. You can choose to specify a region for each individual resource, or to specify a region in the `provider` block of your Terraform configuration file that is applied to all resources in your file. For more information, see [Terraform `provider` block configuration](/docs/terraform?topic=terraform-provider-reference). 
+The region or regions where your {{site.data.keyword.cloud_notm}} resources are provisioned depends on the region that you specify in your Terraform configuration file. You can choose to specify a region for each individual resource, or to specify a region in the `provider` block of your Terraform configuration file that is applied to all resources in your file. For more information, see [Terraform `provider` block configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). 
 
