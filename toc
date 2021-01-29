@@ -22,6 +22,7 @@ Schematics
     create-terraform-config.md
     workspace-setup.md
     manage-resource-lifecycle.md
+    provisioning-terraform-template.md
     migrate-tfversion.md
     allowips.md
     remotestate.md
