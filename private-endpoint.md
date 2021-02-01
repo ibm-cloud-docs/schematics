@@ -102,10 +102,7 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 
 1. To connect to the private service endpoint, you must create a virtual server instance (VSI) first. You use this VSI to connect to the {{site.data.keyword.cloud_notm}} private network. You can create a [classic VSI](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) or [VPC VSI](/docs/vpc?topic=vpc-getting-started). 
 
-2. Follow the documentation for your VSI to establish a secure connection to your VSI. 
-
-3. After you are connected to the VSI, target the private service endpoint when you send API requests to the 
-{{site.data.keyword.bpshort}} API server. The following examples shows the supported Terraform and Helm versions of the {{site.data.keyword.bpshort}} engine. 
+2. After you are connected to the VSI, target the private service endpoint when you send API requests to the {{site.data.keyword.bpshort}} API server. The following example shows the supported Terraform and Helm versions of the {{site.data.keyword.bpshort}} engine. 
    ```
    curl -X GET https://private-us.schematics.cloud.ibm.com/v1/version
    ```
@@ -136,7 +133,7 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 * A VPC Generation 2 instance and a subnet zones to bind an IP address at the same time you provision the endpoint gateway. For more information, see [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 * A VSI is created. For more information, see [creating a VSI](/docs/vpc?topic=vpc-creating-virtual-servers).
 
-## Adding virtual private endpoint gateways for {{site.data.keyword.bpshort}}
+### Adding virtual private endpoint gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
 
 Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as workspace, action, job, plan, apply, and destory for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-private-endpoints#private-cse).
