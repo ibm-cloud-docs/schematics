@@ -49,7 +49,7 @@ The following private service endpoints are available for {{site.data.keyword.bp
 |US|`https://private-us.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in the US. |
 |Europe|`https://private-eu.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in Europe. |
 
-## Step 1: Enable VRF and service endpoints for your account
+## Enable VRF and service endpoints for your account
 {: #private-network-prereqs}
 
 Enable your {{site.data.keyword.cloud_notm}} account to work with private service endpoints. 
@@ -95,7 +95,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
       ```
       {: screen}
     
-## Step 2: Connect to the {{site.data.keyword.bpshort}} private service endpoint
+### Connect to the {{site.data.keyword.bpshort}} private service endpoint
 {: #configure-private-network}
 
 Prepare your VSI or test machine by configuring your routing table for the {{site.data.keyword.cloud_notm}} private network.
@@ -112,4 +112,43 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
    {: pre}
    
 
+## Setting up virtual private endpoints gateways for {{site.data.keyword.bpshort}}
+{: #endpoint-setup}
+
+A service instance can have a private network endpoint, a public network endpoint, or both.
+
+  **Public:** A service endpoint on the IBM Cloud public network.<br>
+  **Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.<br>
+  **Both public and private:** Service endpoints that allow access over both networks.<br>
+
+After your account is enabled for VPC and connect {{site.data.keyword.bpshort}} service on the private network from Virtual Private Endpoint Gateways.
+{: shortdesc}
+
+   Virtual Private Endpoint Gateways is only supported for the VPC Generation 2.  
+   {: note}
+
+### Before you begin
+{: #endpoint-prereq}
+
+Before you begin, to access the  {{site.data.keyword.bpshort}} service through the Virtual Private Endpoint Gateways, ensure that you meet the following criteria:
+
+* Make sure that you have the required [permissions](/docs/schematics?topic=schematics-access#access-setup) to [create VPC](/docs/vpc?topic=vpc-getting-started), to create an endpoint gateway, to create or bind a reserved IP from the subnet, and [account limits for VSI creation](/docs/vpc?topic=vpc-quotas#virtual-server-instances) for concurrent instances.
+* A VPC Generation 2 instance and a subnet zones to bind an IP address at the same time you provision the endpoint gateway. For more information, see [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
+* A VSI is created. For more information, see [creating a VSI](/docs/vpc?topic=vpc-creating-virtual-servers).
+
+## Adding virtual private endpoint gateways for {{site.data.keyword.bpshort}}
+{: #endpoint-add}
+
+Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as workspace, action, job, plan, apply, and destory for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-private-endpoints#private-cse).
+{: shortdesc}
+
+ You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
+ {: important}
+
+ Follow the steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
+
+ 1. Create a {{site.data.keyword.bpshort}} workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
+ 2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](https://cloud.ibm.com/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
+ 3. Create a Virtual Private Endpoint Gateways. For more information, see [creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-creating-ui). And you can assign the listed {{site.data.keyword.bpshort}} services endpoint into Virtual Private Endpoint Gateways.
+ 4. View the created Virtual Private Endpoint Gateways associated with the {{site.data.keyword.bpshort}} services. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 
 
