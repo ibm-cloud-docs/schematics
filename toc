@@ -33,7 +33,6 @@ Schematics
         architecture-workload-isolation.md
         private-endpoint.md
         data-security.md
-        service-connection.md
 
      {: .topicgroup}        
     Logging and monitoring
