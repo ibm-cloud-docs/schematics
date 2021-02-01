@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-01-29"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -829,7 +829,7 @@ Now, in template_repo, you can also update `url` with more parameters as shown i
       </tr>
       <tr>
       <td><code>&lt;env_values.val1&gt;</code></td>
-      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in cos.</td>
+      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
       </tr>	
    </tbody></table></dd>	
   <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
