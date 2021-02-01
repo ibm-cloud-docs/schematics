@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-29"
+lastupdated: "2021-02-01"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -34,7 +34,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|29 January 2021 |<ul><li>**Virtual Private Endpoint Gateways support**: {{site.data.keyword.bplong_notm}} supports Virtual Private Endpoint Gateways for secure connection. For more information, see [Securing your connection to Schematics](/docs/schematics?topic=schematics-service-connection#endpoint-setup)</li></ul>|
+|29 January 2021 |<ul><li>**Virtual Private Endpoint Gateways support**: {{site.data.keyword.bplong_notm}} supports Virtual Private Endpoint Gateways for secure connection. For more information, see [Securing your connection to Schematics](/docs/schematics?topic=schematics-private-endpoints#endpoint-setup)</li></ul>|
 |20 January 2021 |<ul><li> **Terraform commands API support**: {{site.data.keyword.bplong_notm}} supports Terraform commands API. For more information, see [Commands API](https://cloud.ibm.com/apidocs/schematics#update-terraform-commands)</li><li>**Terraform commands CLI support**: {{site.data.keyword.bplong_notm}} supports Terraform CLI commands. For more information, see [Terraform CLI commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds).</li><li>**CLI Commands**: {{site.data.keyword.bplong_notm}} supports CLI workspace and state commands such as [import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import), [output](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-output), [show](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show), [state move](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv), [state remove](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm), [taint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint), and [untaint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).</li></ul>|
 |7 January 2021 |<ul><li>**Multiple SDK support**: {{site.data.keyword.bplong_notm}} supports `Java`, `Node`, `Python`, and `Go` SDK for the APIs. For more information, see [Schematics APIdocs](https://cloud.ibm.com/apidocs/schematics?code=go#introduction)</li></ul>|
 {: caption="What's new in January" caption-side="top"}
