@@ -33,7 +33,7 @@ subcollection: schematics
 Create and manage {{site.data.keyword.bplong_notm}} workspaces on the private network by targeting the {{site.data.keyword.bpshort}} private service endpoint.
 {: shortdesc} 
 
-To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud_notm}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/account?topic=account-service-endpoints-overview){:external}.
+To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud_notm}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
 
 To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the CLI plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
 {: note}
@@ -41,13 +41,8 @@ To connect to {{site.data.keyword.bplong_notm}} by using a private network conne
 ## Private service endpoints in {{site.data.keyword.bpshort}}
 {: #private-cse}
 
-The following private service endpoints are available for {{site.data.keyword.bpshort}}. 
+The private service endpoints are available for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
-
-|Location|Private service endpoint|Description|
-|-------|--------------|---------------------|
-|US|`https://private-us.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in the US. |
-|Europe|`https://private-eu.schematics.cloud.ibm.com`|Workspaces that are created with this endpoint and all associated data are stored in Europe. |
 
 ### Enable VRF and service endpoints for your account
 {: #private-network-prereqs}
@@ -136,7 +131,7 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 ### Adding virtual private endpoint gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
 
-Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as workspace, action, job, plan, apply, and destory for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-private-endpoints#private-cse).
+Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as workspace, action, job, plan, apply, and destory for a new instance. For more information, see [Overview of private service endpoints in Schematics](/https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
  You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.

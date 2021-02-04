@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-29"
+lastupdated: "2021-02-04"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -77,7 +77,7 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |{{site.data.keyword.cloud_notm}} Command Line (CLI)|When {{site.data.keyword.bpshort}} runs CLI commands, the service connects to the service API endpoint over the public service endpoint.|Public|
 |{{site.data.keyword.registrylong_notm}}|This service is used to store the container images that {{site.data.keyword.bpshort}} uses to run the service.|Public|
 |{{site.data.keyword.cloud_notm}} Infrastructure (IaaS)|The IaaS service is used to provision and update classic {{site.data.keyword.cloud_notm}} infrastructure resources that are used by {{site.data.keyword.bpshort}}.|Private|
-|{{site.data.keyword.cloud_notm}} Service Endpoint (CSE)|This service is used to implement the private service endpoint for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](/docs/schematics?topic=schematics-private-endpoints).|Private|
+|{{site.data.keyword.cloud_notm}} Service Endpoint (CSE)|This service is used to implement the private service endpoint for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).|Private|
 |Identity and Access Management (IAM)| To authenticate requests to the service and authorize user actions, {{site.data.keyword.bpshort}} implements service access roles in Identity and Access Management (IAM). For more information about required IAM permissions to work with the service, see [Managing user access](/docs/schematics?topic=schematics-access).|Public|
 |Internet Services (CIS)|This service is used to provide the global load balancer and firewall for {{site.data.keyword.bplong_notm}}|Public|
 |Key Protect|{{site.data.keyword.bpshort}} uses root keys in Key Protect to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit.|Private|
