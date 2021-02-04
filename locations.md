@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-27"
+lastupdated: "2021-02-04"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -34,16 +34,7 @@ Review supported locations in {{site.data.keyword.bplong_notm}} and how {{site.d
 ## Where can I create {{site.data.keyword.bpshort}} workspaces?
 You can choose to create {{site.data.keyword.bpshort}} workspaces in the US or Europe location by using one of the following API endpoints, or by using the **Location** drop-down menu from the {{site.data.keyword.cloud_notm}} console.
 
-|Geography/ location| API endpoint|
-|------------|----------------|
-|North America|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br> `https://schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com`| 
-|Dallas|**Public**: </br>`https://us-south.schematics.cloud.ibm.com` | 
-|Washington|**Public**: </br>`https://us-east.schematics.cloud.ibm.com` | 
-|Europe|**Public:** </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-eu.schematics.cloud.ibm.com`| 
-|Frankfurt|**Public:** </br> `https://eu-de.schematics.cloud.ibm.com`|
-|London|**Public:** </br>`https://eu-gb.schematics.cloud.ibm.com`|
-
-For more information about how to use the private service endpoint, see [Using private endpoints](/docs/schematics?topic=schematics-private-endpoints). 
+For more information about the private service endpoint, see [Using private endpoints](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location). 
 {: tip}
 
 ## Where do my {{site.data.keyword.bpshort}} actions run?
