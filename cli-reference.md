@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-05"
 
 keywords: schematics cli reference, schematics commands, schematics cli, schematics reference, cli
 
@@ -466,6 +466,11 @@ Example JSON for uploading a `.tar` file later:
       -	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
       -	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` </td>
    </tr>
+    <tr>
+     <td><code>&lt;env_values&gt;</code></td>
+     <td>Optional. A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key is environment variable name` and `value is value`. You can define environment variables for IBM Cloud catalog offerings that are provisioned by using a bash script.
+ files.</td>
+     </tr>
     <tr>
      <td><code>&lt;variable_name&gt;</code></td>
      <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
