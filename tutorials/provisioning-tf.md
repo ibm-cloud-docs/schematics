@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-12-01"
+  years: 2017, 2021
+lastupdated: "2021-02-09"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -93,7 +93,7 @@ completion-time: 60m
 {:unity: .ph data-hd-programlang='unity'}
 {:url: data-credential-placeholder='url'}
 {:user_ID: data-hd-keyref="user_ID"}
-{:vb.net: .ph data-hd-programlang='vb.net'}
+{:vbnet: .ph data-hd-programlang='vb.net'}
 {:video: .video}
 
 
@@ -161,7 +161,7 @@ The following prerequisites need to be met for the tutorial.
 {: shortdesc}
 
 - If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer to [Managing IBM Cloud account](https://cloud.ibm.com/registration).
-- Install the IBM Cloud CLI and the Schematics CLI plug-in. For more information about CLI setup, see [Schematics CLI setup](/docs/schematics?topic=schematics-setup-cli).
+- Install the IBM Cloud CLI and the Schematics CLI plug-in. For more information about command line setup, see [Schematics command line setup](/docs/schematics?topic=schematics-setup-cli).
 - Make sure that you are assigned the required permissions in Identity and Access Management to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer to [Schematics access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
 - Follow the instructions to make sure that you are assigned the required permissions in Identity and Access Management to create clusters. For more information about container cluster, refer to [Containers clusters](/docs/containers?topic=containers-clusters#cluster_prepare).
 
@@ -261,7 +261,7 @@ You can edit the payload values for the variable as stated in the table:
    ```
    {: pre}
 
-   For more information to create workspace, refer to [CLI commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
+   For more information to create workspace, refer to [command line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
    {: note}
 
     **Sample example output**

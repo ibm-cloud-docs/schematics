@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-09"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -47,6 +47,9 @@ Now, {{site.data.keyword.bplong_notm}} workspace supports private and public `Bi
 `Bitbucket`
 
 You need to use the `Bitbucket` URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`.
+
+If the workspace name is different from your user name then you need to provide the workspace name in this format. `https://<username>@bitbucket.org/<workspace_name>/tf_cloudless_sleepy/src/master`.
+{: note}
 
 `AzureURL`
 
@@ -109,7 +112,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 {: shortdesc}
 
 - **`provider` block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management, your {{site.data.keyword.cloud_notm}} API key is automatically retrieved for all IAM-enabled resources and you don't have to provide this information in the `provider` block. However, the API key is not retrieved for classic infrastructure and Cloud Foundry resources. For more information, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
-- **Terraform CLI and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform CLI or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
+- **Terraform command line and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform command line or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
 
 ## Creating workspaces
 {: #create-workspace}
@@ -117,7 +120,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 Create your workspace that points to the Git repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc} 
 
-If you do not want to connect your workspace to a Git repository, you can upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. However, this feature is supported only from the CLI or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.
+If you do not want to connect your workspace to a Git repository, you can upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. However, this feature is supported only from the command line or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.
 {: tip}
 
 **Before you begin**
@@ -194,7 +197,7 @@ Delete your workspace that points to the Git repository thats hosted your Terraf
        <tr>
           <td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
         <tr>
-          <td>Resources destroyed using CLI or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
+          <td>Resources destroyed using command line or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
         </table>
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
@@ -257,7 +260,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 ## Workspace state and its importance
 {: #states-importance}
 
-Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the CLI or API.
+Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the command line or API.
 {: shortdesc} 
 
 | State | Description | 

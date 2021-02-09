@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-08"
+lastupdated: "2021-02-09"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -63,7 +63,7 @@ To create a virtual server instance in a VPC, make sure that you have the [requi
 
 To connect to your virtual server instance, you must have an SSH key. You set up the SSH key as part of this tutorial. 
 
-This tutorial includes VPC commands that you can run to retrieve input values for your Terraform template. To run these commands, you must install the [VPC CLI plug-in](/docs/vpc?topic=vpc-set-up-environment#cli-prerequisites-setup). 
+This tutorial includes VPC commands that you can run to retrieve input values for your Terraform template. To run these commands, you must install the [VPC command line plug-in](/docs/vpc?topic=vpc-set-up-environment#cli-prerequisites-setup). 
 {: tip}
 
 **Where can I find an overview of other supported resources in {{site.data.keyword.cloud_notm}}?**</br>
