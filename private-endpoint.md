@@ -104,7 +104,7 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
    {: pre}
    
 
-## Virtual private endpoints (VPE) gateways for {{site.data.keyword.bpshort}}
+## Virtual private endpoints gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-setup}
 
 A service instance can have a private network endpoint, a public network endpoint, or both.
@@ -128,10 +128,10 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 * A VPC Generation 2 instance and a subnet zones to bind an IP address at the same time you provision the endpoint gateway. For more information, see [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 * A VSI is created. For more information, see [creating a VSI](/docs/vpc?topic=vpc-creating-virtual-servers).
 
-### Adding virtual private endpoint gateways for {{site.data.keyword.bpshort}}
+### Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
 
-Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as workspace, action, job, plan, apply, and destory for a new instance. For more information, see [Overview of private service endpoints in Schematics](/https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
+Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destory` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
  You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
