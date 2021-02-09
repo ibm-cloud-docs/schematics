@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-03"
+  years: 2017, 2021
+lastupdated: "2021-02-09"
 
 keywords: schematics reponsibilities, schematics high availability, schematics backup, schematics disaster recovery, schematics security, schematics ibm vs user
 subcollection: schematics
@@ -60,7 +60,7 @@ Learn about the responsibilities that you have when you use {{site.data.keyword.
 <ul>
   <li>Provide the tools to lock a workspace and disable changes for a workspace. </li>
 <li>Automatically apply security and version updates to sample templates and the templates in the {{site.data.keyword.cloud_notm}} catalog.</li>
-<li>Update operational {{site.data.keyword.bplong_notm}} components, such as the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, the Terraform CLI version, and other supported providers and provisioning engines.</li>
+<li>Update operational {{site.data.keyword.bplong_notm}} components, such as the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, the Terraform command line version, and other supported providers and provisioning engines.</li>
 <li>Provide access to {{site.data.keyword.bpshort}} log information for resource-related actions.</li>
 <li>Track workspace activities and automatically send events to {{site.data.keyword.at_full_notm}}. </li>
 <li>Encrypt workspace data in transit and at rest. </li>

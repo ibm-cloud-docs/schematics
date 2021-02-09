@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-10-11"
+  years: 2017, 2021
+lastupdated: "2021-02-09"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -30,7 +30,7 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by changin
 {: shortdesc}
 
 **When do I use {{site.data.keyword.bplong_notm}} vs. the individual resource dashboards?**</br>
-With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}, you use the VPC console, API, or CLI to stop, reboot, and power on your virtual server instance. However to remove the virtual server instance, you use {{site.data.keyword.bplong_notm}}. 
+With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}, you use the VPC console, API, or command line to stop, reboot, and power on your virtual server instance. However to remove the virtual server instance, you use {{site.data.keyword.bplong_notm}}. 
 
 **What happens if I manually added, or removed a resource from the service dashboard directly?** </br>
 When you provision resources with {{site.data.keyword.bplong_notm}}, the state of your resources is stored in a local {{site.data.keyword.bplong_notm}} state file. This state file is the single source of truth for {{site.data.keyword.bplong_notm}} to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without using {{site.data.keyword.bplong_notm}}, this resource is not stored in the {{site.data.keyword.bplong_notm}} state file, and as a consequence cannot be managed with {{site.data.keyword.bplong_notm}}. 
@@ -225,12 +225,12 @@ To remove an {{site.data.keyword.cloud_notm}} resource that you provisioned with
 {:shortdesc}
 
 **How should I remove resources with {{site.data.keyword.bplong_notm}}?** </br>
-You can use the {{site.data.keyword.bplong_notm}} console or CLI to remove all of the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in sync with your Terraform template, make sure to also remove the associated infrastructure code from your Terraform template so that your resources are not re-added when you apply a new version of your Terraform template. 
+You can use the {{site.data.keyword.bplong_notm}} console or command line to remove all of the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in sync with your Terraform template, make sure to also remove the associated infrastructure code from your Terraform template so that your resources are not re-added when you apply a new version of your Terraform template. 
 
 **What happens if I choose to delete my resource directly from the resource dashboard?** </br>
 When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create your next Terraform execution plan or apply a new template version, {{site.data.keyword.bpshort}} verifies that the {{site.data.keyword.cloud_notm}} resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured. If the resource is not found, the state file is updated and the Terraform execution plan is changed accordingly. 
 
-Although the state file is updated before new changes to your {{site.data.keyword.cloud_notm}} resources are applied, do not manually remove resources from the resource dashboard to avoid unexpected results. Instead, use the {{site.data.keyword.bplong_notm}} console or CLI to remove your resources, or remove the associated infrastructure code from your Terraform template. 
+Although the state file is updated before new changes to your {{site.data.keyword.cloud_notm}} resources are applied, do not manually remove resources from the resource dashboard to avoid unexpected results. Instead, use the {{site.data.keyword.bplong_notm}} console or command line to remove your resources, or remove the associated infrastructure code from your Terraform template. 
 {: important}
 
 **Are my resources removed when I remove the workspace** </br>

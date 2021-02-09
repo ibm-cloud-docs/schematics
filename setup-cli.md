@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-30"
+  years: 2017, 2021
+lastupdated: "2021-02-09"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -23,7 +23,7 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Setting up the CLI 
+# Setting up the command line 
 {: #setup-cli}
 
 Use the {{site.data.keyword.bplong_notm}} CLI plug-in to create and manage your {{site.data.keyword.bpshort}} workspaces, and to provision and mange your resources in {{site.data.keyword.cloud_notm}}. 
@@ -37,11 +37,11 @@ Install the required CLIs to automate the provisioning of {{site.data.keyword.cl
 {:shortdesc}
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started). This installation includes: 
-   -   {{site.data.keyword.cloud_notm}} CLI (`ibmcloud`)
-   -   Several CLI plug-ins, such as for {{site.data.keyword.containerlong_notm}} (`ibmcloud ks`), {{site.data.keyword.registryshort_notm}} (`ibmcloud cr`), and {{site.data.keyword.cloud_notm}} Functions (`ibmcloud fn`)
+   -   {{site.data.keyword.cloud_notm}} command line (`ibmcloud`)
+   -   Several command line plug-ins, such as for {{site.data.keyword.containerlong_notm}} (`ibmcloud ks`), {{site.data.keyword.registryshort_notm}} (`ibmcloud cr`), and {{site.data.keyword.cloud_notm}} Functions (`ibmcloud fn`)
    -   Other CLIs, such as Helm (`helm`), Docker (`docker`), Kubernetes (`kubectl`), Git (`git`), and Homebrew (`brew`)
 
-   Plan to use the CLI often? Try [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} CLI (Linux/MacOS only)](/docs/cli?topic=cli-shell-autocomplete#shell-autocomplete-linux).
+   Plan to use the command line often? Try [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} command line (Linux/MacOS only)](/docs/cli?topic=cli-shell-autocomplete#shell-autocomplete-linux).
    {: tip}
 
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your {{site.data.keyword.cloud_notm}} credentials when prompted.
@@ -50,7 +50,7 @@ Install the required CLIs to automate the provisioning of {{site.data.keyword.cl
    ```
    {: pre}
 
-   If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your CLI output to retrieve your one-time passcode. You know that you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
+   If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command line output to retrieve your one-time passcode. You know that you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
    {: tip}
     
 3. Install the {{site.data.keyword.cloud_notm}} CLI plug-in for {{site.data.keyword.bpshort}}.
@@ -120,10 +120,10 @@ Update the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bplo
     ```
     {: pre}
 
-     If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your CLI output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
+     If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command line output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
      {: tip}
 
-3. Check if an update is available for the {{site.data.keyword.bplong_notm}} CLI plug-in. If an update is available, you find an **Update available** notification in your CLI output. 
+3. Check if an update is available for the {{site.data.keyword.bplong_notm}} CLI plug-in. If an update is available, you find an **Update available** notification in your command line output. 
    ```
    ibmcloud plugin list | grep schematics
    ```

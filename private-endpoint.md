@@ -35,7 +35,7 @@ Create and manage {{site.data.keyword.bplong_notm}} workspaces on the private ne
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud_notm}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
 
-To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the CLI plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
+To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the command line plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
 {: note}
 
 ## Private service endpoints in {{site.data.keyword.bpshort}}
@@ -68,7 +68,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
       ```
       {: pre}
       
-      If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the CLI output to generate a one-time passcode.
+      If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the command line output to generate a one-time passcode.
       {: tip}
       
    2. Show the details of your account. 
@@ -104,7 +104,7 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
    {: pre}
    
 
-## Virtual private endpoints (VPE) gateways for {{site.data.keyword.bpshort}}
+## Virtual private endpoints gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-setup}
 
 A service instance can have a private network endpoint, a public network endpoint, or both.
@@ -128,10 +128,10 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 * A VPC Generation 2 instance and a subnet zones to bind an IP address at the same time you provision the endpoint gateway. For more information, see [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 * A VSI is created. For more information, see [creating a VSI](/docs/vpc?topic=vpc-creating-virtual-servers).
 
-### Adding virtual private endpoint gateways for {{site.data.keyword.bpshort}}
+### Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
 
-Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as workspace, action, job, plan, apply, and destory for a new instance. For more information, see [Overview of private service endpoints in Schematics](/https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
+Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destory` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
  You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
