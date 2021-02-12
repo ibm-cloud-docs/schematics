@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-12"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -80,7 +80,7 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 ## Beta limitations
 {: #beta-limitations}
 
-During the Beta release of {{site.data.keyword.bplong_notm}} actions, be aware of the following limitations:
+During the open beta release of {{site.data.keyword.bplong_notm}} actions, be aware of the following limitations:
 * This service might not yet be stable and is not intended for production use. 
 * Any projects, apps, or jobs that you create during beta will not carry over to other releases'.
 

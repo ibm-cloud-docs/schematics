@@ -29,7 +29,7 @@ subcollection: schematics
 # Deploying VSI start and stop playbook by using {{site.data.keyword.bpshort}} action
 {: #vsi-start-stop}
 
-   The beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
 This playbook demonstrates how {{site.data.keyword.cloud_notm}} VSI APIs can be used to start, stop and reboot by using Ansible.

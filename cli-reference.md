@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-02-12"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1068,6 +1068,486 @@ ibmcloud schematics plan --id WORKSPACE_ID [--json]
 ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ```
 {: pre}
+
+
+## Action commands
+{: #schematics-action-commands}
+
+   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+   {: beta}
+
+Review the command that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
+{: shortdesc}
+
+### Inventory host groups
+{: #inventory-host-grps}
+
+{{site.data.keyword.bplong_notm}} supports inventory host groups to group the applications hostname such as web server, database server, Operating System, region, or network. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `ini` file format. The `hosts.ini` file can be used in the `create` and `update` actions commands as an agrument, for example, `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>`. 
+{: shortdesc}
+
+
+If your hostname contains variables, you can provide in the `-input` argument with `key/value` as `–input key=value` in the create and update action commands.
+{: note}
+
+  **Syntax**
+   ```
+    [hostgroupname1]
+    <IPaddress1> 
+    <IPaddress2> 
+    [hostgroupname2]
+    <IPaddress1>
+   ```
+  {: codeblock}
+
+  **Example** 
+
+   ```
+    [webserverhost]
+    178.54.68.78
+    187.54.68.78
+    [dbhost]
+    174.45.86.87
+   ```
+    {: codeblock}
+
+  | Target | Description| 
+  |------|  ------|
+  |`hostgroupname1`| The application hostname. For example, Web Server host application name as `[webserverhost]`, database hostname as `[dbhost]`, in a single word. **Note** System validates and throws an error if a space is provided in the host group name.|
+  |`IPaddress`|The IP addresses of the hostname.|
+  {: caption="Inventory host group parameters" caption-side="top"}
+
+
+### `ibmcloud schematics action create`
+{: #schematics-create-action}
+
+Create an action by using {{site.data.keyword.bplong_notm}} to work with your {{site.data.keyword.bpshort}}. You can create an action by using following three methods:
+1. Payload file
+2. Interactive mode
+3. Supported flags
+{: shortdesc}
+
+**Payload file**
+
+You need to create a JSON file containing the details about the `ID`, `Name`, `Description`, `Resource Group` `user State`, and `tags` keys with the right values. Then, pass the file name with an argument `--file` to create an action.
+{: shortdesc} 
+
+**Sample JSON file**
+
+```
+{
+  "name": "<ACTION_NAME>",
+  "description": "<DESCRIPTION>",
+  "location": "<LOCATION>",
+  "resource_group": "<RESOURCE_GROUP>",
+   "source": {
+       "source_type" : "git",
+       "git" : {
+            "git_repo_url": "<YOUR_REPOSITORY>"
+       }
+  },
+  "command_parameter": "<SSH_YML_FILE>",
+  "tags": [
+    "string"
+  ],
+  "source_readme_url": "stringtype",
+  "source_type": "GitHub"
+}
+```
+{: codeblock}
+
+```
+ibmcloud schematics action create --file <FILE_NAME>
+```
+{: pre}
+
+**Example**
+
+```
+ibmcloud schematics action create --file testcreation.json
+```
+{: pre}
+
+**Interactive mode**
+
+You are prompted for the required values for the name, resource_group and location details to create an action in interactive mode. By default the action ID is created with minimal action that can be updated later by using update action CLI. You will prompt if the required fields are not present.
+{: shortdesc}
+
+```
+ibmcloud schematics action create 
+Enter name> <ACTION_NAME>
+Enter resource-group> <RESOURCE_GROUP>
+Enter location> <GEOGRAPHY>
+```
+{: pre}
+
+**Example**
+
+```
+ibmcloud schematics action create 
+Enter name> testaction1
+Enter resource-group> testrg1
+Enter location> us_south
+```
+{: pre}
+
+You will receive the output with the ID, name, resource group, and location with the user state.
+
+**Supported flags**
+
+Create an action by using the flags mentioned in the syntax. 
+{: shortdesc}
+
+
+```
+ibmcloud schematics action create --name ACTION_NAME --description DESCRIPTION --location GEOGRAPHY --resource-group RESOURCE_GROUP --template GIT_TEMPLATE_REPO --playbook-name PLAYBOOK_NAME --bastion BASTION_HOST_IP_ADDRESS --target-ini TARGET_HOSTS_FILE --credential CREDENTIAL_FILE_NAME --input INPUT_VARIABLES_LIST --input-file INPUT_VARIABLE_FILE_PATH --env ENV_VARIABLES_FILE_PATH --github-token GITHUB_ACCESS_TOKEN --output OUTPUT --file FILE_NAME [--json] [--no-prompt]
+```
+{: pre}
+
+**Example**
+
+```
+ibmcloud schematics action create --name mydemoaction1 --location us-east --resource-group Default --template https://github.com/Cloud-Schematics/lamp-simple --playbook-name site.yml --credential ~/.ssh/id_rsa --bastion 52.116.129.31 --target-file hosts.ini --input-file input.json --json
+```
+{: pre}
+
+You will receive the output with the ID, name, resource group, and location with the user state. The table describes about the support flag.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--name` or `-n` | Required | The unique name of the action. |
+| `--resource-group` or `-r` | Required | The resource group name for the Action. |
+| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us_south**, **us_east**, **eu_de**, **eu_gb**. |
+| `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
+| `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
+| `--playbook-name` or `-pn` | Optional | The name of the playbook. |
+| `--description` or `-d` | Optional | The short description of an action.|
+| `--github-token` or `-g` | Optional | The GitHub token value to access the private git repository. |
+| `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-inventory-host-grps).|
+| `--credential` or `-C` | Optional | The file path that contains credential for the resource. |
+| `--bastion` or `-b` | Optional | The resource selection query string. |
+| `--input` or `-i` | Optional | The input variables for the action. This flag can be set multiple times. **Note** The format must be as `--input foo=bar` or in JSON file. |
+| `--input-file` or `-I` | Optional | The input variables for the action. You need to provide the JSON file path that contains input variables.|
+| `--env` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
+| `--env-file` or `-E` | Optional | The environment variables for the action. Provide the JSON file path that contains input variables. |
+| `--no-prompt` | Optional | Set this flag to stop interactive command line session. That is, prompting user for an input for a field value on terminal.|
+| `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
+| `--json` or `-j` | Optional | [Deprecated] Prints the output as JSON. Use `--output` JSON instead. |
+| `--file` or `-f` | Optional | The payload file name. |
+| `--command_parameter` | Optional | The playbook name from the GitHub link that is present in the payload. |
+{: caption="Schematics action create flags" caption-side="top"}
+
+
+### `ibmcloud schematics action update`
+{: #schematics-update-action}
+
+Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. 
+{: shortdesc}
+
+```
+ibmcloud schematics action update -id ACTION_ID --name ACTION_NAME --description DESCRIPTION --location GEOGRAPHY --resource-group RESOURCE_GROUP --template GIT_TEMPLATE_REPO --bastion BASTION_HOST_IP_ADDRESS --target-file TARGET_HOSTS --input INPUT_VARIABLES_LIST --env ENV_VARIABLES_LIST --file FILE_NAME --github-token GITHUB_ACCESS_TOKEN --output OUTPUT [--no-prompt] [--json]
+```
+{: pre}
+
+You will receive the output with the ID, name, resource group, and location with the user state. The table describes the options of the update.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--id` or `-id` | Required | The action id of an action. |
+| `--name` or `-n` | Required | The unique name of the action. |
+| `--tags` or `t` | Optional | The tag list.|
+| `--description` or `-d` | Optional | The short description of an action.|
+| `--templates` or `-tr` | Optional | The ordered list of Git template repositories.|
+| `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
+| `--bastion` or `-b` | Optional | The target record for bastion host. |
+| `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-inventory-host-grps).|
+| `--credentials` or `-C` | Optional | The credentials to access target.|
+| `--inputs` or `-i` | Optional | The input variables for the action with the list of input variables=values. |
+| `--env-variables` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
+| `--github-token` or `-k` | Optional | The GitHub token value to access the private git repository. |
+| `--file` or `-f` | Optional | The payload file name. This is yet to be supported. |
+{: caption="Schematics action update flags" caption-side="top"}
+
+
+### `ibmcloud schematics action get`
+{: #schematics-get-action}
+
+Fetch the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. 
+{: shortdesc}
+
+
+```
+ibmcloud schematics action get -id ACTION_ID --profile PROFILE --output OUTPUT_VALUE [--json] [--no-prompt]
+```
+{: pre}
+
+The table describes the options of the flag.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--id` or `-id` | Required | The Id of an action that you want to fetch. |
+| `--profile` or `-p` | Optional | The level of information fetched by the get method. |
+| `--no-prompt` | Optional | Fetch this flag to stop interactive command line session, by prompting user for input a field value on terminal.
+| `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
+| `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
+{: caption="Schematics action get flags" caption-side="top"}
+
+### `ibmcloud schematics action list`
+{: #schematics-list-action}
+
+Lists the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. The table provides the details of the list options.
+{: shortdesc}
+
+
+```
+ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] --output OUTPUT [--json]
+```
+{: pre}
+
+
+| Flag | Description |
+| ----- | -------- | ------ |
+| `--limit` or `-l` | The maximum number of workspaces to list. Ignored if a negative number is set. The maximum limit is `200` and the default value is `-1`. |
+| `--offset` or `-m` | Offset in list, ignored if a negative number is set. The default value is `-1`. |
+| `--profile` or `-p` | Level of the information returned by the get method. |
+| `--json` or `-j` | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
+| `--output` or `-o` | Specify the output format, supported format is JSON. |
+{: caption="Schematics action list flags" caption-side="top"}
+
+### `ibmcloud schematics action delete`
+{: #schematics-delete-action}
+
+Delete an action from {{site.data.keyword.bplong_notm}} service. 
+{: shortdesc}
+
+
+```
+ibmcloud schematics action delete --id <ACTION_ID> [--force][--no-prompt]
+```
+{: pre}
+
+You can delete an action by using the options described in the table.
+
+| Flag | Description |
+| ----- | -------- | ------ |
+| `--id` or `-id` | ID of an action that you want to delete. |
+| `--force` or `-f` | To force the deletion without confirmation. |
+| `--no-prompt` | Set this flag to stop interactive command line session. |
+{: caption="Schematics action delete flags" caption-side="top"}
+
+## Job commands
+{: #schematics-job-commands}
+
+Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} jobs.
+{: shortdesc}
+
+### `ibmcloud schematics job create`
+{: #schematics-create-job}
+
+Create a job in {{site.data.keyword.bplong_notm}} to work with your Schematics entities such as workspace and actions by providing the right flags. You can create a job by using following three methods:
+1. Payload file
+2. Interactive mode
+3. Supported flags
+{: shortdesc}
+
+**Payload file**
+
+You need to create a JSON file containing the details about the command object, command name and command ID, resource group and the name keys with the right values. Then, pass the file name with an argument `--file` to create a job.
+{: shortdesc} 
+
+**Sample JSON file**
+
+```
+{
+  "command_object": "<COMMAND_OBJECT_TYPE>",
+  "command_object_id": "<COMMAND_OBJECT_ID>",
+  "command_name": "<COMMAND_NAME>",
+  "command_parameter": "ssh_user.yml"
+}
+```
+{: codeblock}
+
+```
+ibmcloud schematics job create --file <FILE_NAME>
+```
+{: pre}
+
+**Example**
+
+```
+ibmcloud schematics job create --file testjobcreation.json
+```
+
+**Interactive mode**
+
+You are prompted for the required values to create a job in interactive mode. By default the job ID is created with minimal action that can be updated later by using update job CLI. You get a prompt if the required fields are not present.
+{: shortdesc}
+
+
+```
+ibmcloud schematics job create
+Enter command-object> <COMMAND_OBJECT_TYPE>
+Enter command-object-id> <COMMAND_OBJECT_ID>
+Enter command-name> <COMMAND_NAME>
+```
+{: pre}
+
+**Example**
+
+```
+ibmcloud schematics action create 
+Enter command-object> action
+Enter command-object-id> us_south.ACTION.Stop_Action777.1234213
+Enter command-name> ansible_playbook_run
+```
+You will receive the output with the command object details with the user state.
+
+**Supported flags**
+
+Create a job by using the flags mentioned in the syntax. 
+{: shortdesc}
+
+Create a job in {{site.data.keyword.bplong_notm}} to work with your Schematics entities such as workspace and actions by providing the right flags.
+
+```
+ibmcloud schematics job create --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command_name COMMAND_NAME --playbook-name PLAYBOOK_NAME --command-options COMMAND_OPTIONS --input INPUT_VARIABLES_LIST --input-file INPUT_VARIABLES_FILE_PATH --env ENV_VARIABLES_LIST --env-file ENV_VARIABLES_FILE_PATH --result-format RESPONSE_OUTPUT_FORMAT --file FILE_NAME [--no-prompt]
+```
+{: pre}
+
+If the action contains the playbook name, and you provide the playbook name in the job creation, the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
+{: note}
+
+The table describes the options of the flag.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--command-object` or `-c` | Required | The name of the Schematics automation resource. Valid values are `action`. |
+| `--command-object-id` or `-cid` | Required | The ID of the Schematics automation resource on which you want to run job. |
+| `--command-name,` or `-n` | Required | The Schematics job command name. |
+| `--command-options` or `-co` | Optional | The command line options for the command.|
+| `--file` or `-f` | Optional | The payload file name. |
+| `--playbook-name` or `-pn` | Optional | The name of the playbook. |
+| `--input` or `-i` | Optional | The input variables for the action. This flag can be set multiple times. **Note** The format must be as `--input foo=bar` or in JSON file. |
+| `--input-file` or `-I` | Optional | The input variables for the action. You need to provide the JSON file path that contains input variables.|
+| `--env` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
+| `--env-file` or `-E` | Optional | The environment variables for the action. Provide the JSON file path that contains input variables. |
+| `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
+| `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
+| `--json` or `-j` | Optional | [Deprecated] Prints the output as JSON. Use `--output` JSON instead. |
+{: caption="Schematics job create flags" caption-side="top"}
+
+### `ibmcloud schematics job update`
+{: #schematics-update-job}
+
+Update a job creates a copy of the job and relaunches an existing job by updating the information of an existing {{site.data.keyword.bplong_notm}} job.
+{: shortdesc}
+
+
+```
+ibmcloud schematics job update --id JOB_ID --output OUTPUT [--json] [--no-prompt]
+```
+{: pre}
+
+The table describes the options of the flag.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--id` or `-id` | Required | The job ID that you want to relaunch. |
+| `--json` or `-j` | Optional | [Deprecated] Prints the output as JSON. Use `--output` JSON instead. |
+| `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
+| `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
+{: caption="Schematics job update flags" caption-side="top"}
+
+### `ibmcloud schematics job get`
+{: #schematics-get-job}
+
+Fetch the information of an existing {{site.data.keyword.bplong_notm}} job by using a job ID. 
+{: shortdesc}
+
+
+```
+ibmcloud schematics job get --id JOB_ID --profile PROFILE --output OUTPUT [--json] [--no-prompt]
+```
+{: pre}
+
+The table describes the options of the flag.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--id` or `-id` | Required | The job ID that you want to fetch. |
+| `--json` or `-j` | Optional | [Deprecated] Prints the output as JSON. Use `--output` JSON instead. |
+| `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
+| `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
+| `--profile` or `-p` | Optional | The level of information fetched by the get method. |
+{: caption="Schematics job get flags" caption-side="top"}
+
+### `ibmcloud schematics job list`
+{: #schematics-list-job}
+
+Lists all the existing jobs corresponding to a Schematics entities such as workspaces or actions of the account by using a job ID. 
+{: shortdesc}
+
+
+```
+ibmcloud schematics job list [--resource-type RESOURCE_TYPE] [--id RESOURCE_ID] [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] --output OUTPUT [--all] [--json] [--no-prompt]
+
+```
+{: pre}
+
+You can retrieve the jobs by using the options described in the table.
+
+| Flag | Description |
+| ----- | -------- | 
+| `--all` | Optional| Lists all the jobs including the internal jobs.|
+| `--id` | Optional | ID of the resource. |
+| `--limit` or `-l` | Optional | Maximum number of workspaces to list. Ignored if a negative number is set. The maximum limit is `200` and the default value is `-1`. |
+| `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
+| `--offset` or `-m` | Optional | Offset in list, ignored if a negative number is set. The default value is `-1`. |
+| `--profile` or `-p` | Optional | Level of the information returned by the get method. |
+| `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
+| `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
+| `--resource-type` or `-rt` | Required | Name of the resource either `workspace`, `actions`, or `controls`. |
+{: caption="Schematics job list flags" caption-side="top"}
+
+### `ibmcloud schematics job delete`
+{: #schematics-delete-job}
+
+Delete a job from {{site.data.keyword.bplong_notm}} service. 
+{: shortdesc}
+
+
+```
+ibmcloud schematics job delete --id <JOB_ID> [--force][--no-prompt]
+```
+{: pre}
+
+You can delete a job by using the options described in the table.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------- | 
+| `--id` or `-id` | Required | Job that you want to delete. |
+| `--force` or `-f` | Optional | To force the deletion without confirmation. |
+| `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
+{: caption="Schematics job delete flags" caption-side="top"}
+
+### `ibmcloud schematics job logs`
+{: #schematics-logs-job}
+
+Fetch the job logs from an {{site.data.keyword.bplong_notm}} service. 
+{: shortdesc}
+
+
+```
+ibmcloud schematics job logs --id <JOB_ID> [--no-prompt]
+```
+{: pre}
+
+You can fetch a job by using the options described in the table.
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ | 
+| `--id` or `-id` | Required | Job that you want to update or relaunch. |
+| `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
+{: caption="Schematics job logs flags" caption-side="top"}
 
 
 

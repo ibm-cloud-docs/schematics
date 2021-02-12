@@ -27,7 +27,7 @@ subcollection: schematics
 # Creating and running Ansible playbooks for {{site.data.keyword.cloud_notm}}
 {: #create-playbooks}
 
-   The beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
 Ansible playbook is a set of instructions that you can configure to run on a single target or groups of target hosts. It includes tasks, roles, policies, or steps to deploy your resources in the target hosts.You can run your {{site.data.keyword.cloud_notm}} resources in the order in which you want to execute them. For example, you can include instructions for installing more software on a virtual server, or specify resource operations, such as reloading or taking down a virtual server instance. Ansible playbooks must be stored in a GitHub or GitLab repository so that, you can run them in {{site.data.keyword.bpshort}}. For more information, to write you playbook using Ansible, refer to [Writing your playbook](https://www.ansible.com/blog/getting-started-writing-your-first-playbook){: external}.
