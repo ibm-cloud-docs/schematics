@@ -32,13 +32,15 @@ subcollection: schematics
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
- This playbook demonstrates how to provision Multitier VPC Bastion host on {{site.data.keyword.cloud_notm}}. By provisioning, you can deploy a simple web application that display the text messages, links with a list of database names.  
+ This playbook demonstrates to provision Multitier VPC Bastion host on {{site.data.keyword.cloud_notm}}. By provisioning, you can deploy a simple web application that display the text messages, links with a list of database names.  
 
 These playbooks are tested on CentOS 7.x. It is recommended you use `CentOS` or `RHEL` to test these modules. 
 {: note}
 
 ## Pre-requisite
 {: #lamp-stack-prereq}
+
+You can execute the use case by using command line or user interface by completing the provided pre-requisite.
 
 The pre-requisite for the use case are:
 * {{site.data.keyword.bplong_notm}} login.
@@ -56,7 +58,7 @@ Schematics actions use bastion hosts to allow Ansible to securely provision soft
 ## Executing the playbook by using command line
 {: #lamp-stack-execute}
 
-Following steps leads to complete the use case:
+After the pre-requisite is completed, follow these steps to complete the use case:
 
 1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file. For more information, about playbook creation refer to [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 
@@ -84,7 +86,7 @@ Following steps leads to complete the use case:
 ## Executing the playbook by using user interface
 {: #lamp-stack-executeui}
 
-Follow the steps to complete the use case:
+After the pre-requisite is completed, follow these steps to complete the use case:
 
 1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file. For more information, about playbook creation refer to [create playbook](/docs/schematics?topic=schematics-create-playbooks).
 

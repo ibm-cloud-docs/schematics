@@ -32,12 +32,12 @@ subcollection: schematics
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
-This playbook demonstrates how {{site.data.keyword.cloud_notm}} VSI APIs can be used to start, stop and reboot by using Ansible.
+This playbook demonstrates how {{site.data.keyword.cloud_notm}} VSI APIs can be used to start, stop, and reboot by using Ansible playbook.
 
 ## Pre-requisite
 {: #vsi-prereq}
 
-The pre-requisite for the use case are:
+You can execute the use case by using command line or user interface by completing the provided pre-requisite.
 
 * A VSI instance in a running or stopped state. For more information, about VSI instance, refer to [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 * VSI instance ID and instance IP. You can extract your VSI instance IP, and password from your user account.
@@ -48,7 +48,7 @@ The pre-requisite for the use case are:
 ## Executing the playbook
 {: #vsi-execute}
 
-Following steps leads to achieve the use cases:
+After the pre-requisite is completed, follow the steps to complete the use case:
 
 1. Use the GitHub repository, [Ansible playbook with the VSI related configuration to start or stop VSI](https://github.com/Cloud-Schematics/ansible-is-instance-actions), and view the `YAML` file. For more information, about playbook creation refer to [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 
