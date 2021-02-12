@@ -92,5 +92,3 @@ Schematics
     ts_index.md
 
     {: .navgroup-end}
-
-
