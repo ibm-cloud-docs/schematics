@@ -29,6 +29,10 @@ subcollection: schematics
 # Automating the application deployment by using {{site.data.keyword.bpshort}} action
 {: #iks-cluster}
 
+   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+   {: beta}
+
+
 The playbook demonstrates how to automate the deployment of a Hackathon starter web application. Hackathon starter is a boilerplate web application for `Node.js` and `Mongo` database to an {{site.data.keyword.containerlong_notm}} cluster. For more information, about Hackathon starter application, see [Hackathon starter](https://github.com/sahat/hackathon-starter/blob/master/README.md).
 {: shortdesc}
  

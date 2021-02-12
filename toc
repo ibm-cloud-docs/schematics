@@ -77,7 +77,7 @@ Schematics
     {: .topicgroup}
     Terraform
          [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-         [IBM Cloud provider for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources) 
+         [IBM Cloud provider for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources) 
          [Terraform documentation](https://www.terraform.io/docs/index.html)
 
     {: .topicgroup}
@@ -87,8 +87,10 @@ Schematics
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    faqs.md
-    error-messages.md
-    ts_index.md
+    {: .topicgroup}
+    Help
+     faqs.md
+     error-messages.md
+     ts_index.md
 
     {: .navgroup-end}
