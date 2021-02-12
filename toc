@@ -5,55 +5,91 @@
 Schematics
 
     {: .navgroup id="learn"}
-    getting-started.md
-    about.md
-    responsibilities.md
-    ha-dr.md
-    whats-new.md
-    {: .navgroup-end}
+    {: .topicgroup}
+    Getting started
+         getting-started.md
+         getting-started-ansible.md
+
+     {: .topicgroup}
+    About
+        about.md
+        provisioning-cloud-resource.md
+        ansible-operations.md
+        responsibilities.md
+        ha-dr.md
 
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
     tutorials/automate-continuous-deployment.md
     {: .navgroup-end}
-    
-    {: .navgroup id="howto"}
-    setup-cli.md
-    create-terraform-config.md
-    workspace-setup.md
-    manage-resource-lifecycle.md
-    provisioning-terraform-template.md
-    migrate-tfversion.md
-    allowips.md
-    remotestate.md
-    
-    {: .topicgroup}
-    Enhancing security for Schematics
-        iam.md
-        architecture-workload-isolation.md
-        private-endpoint.md
-        data-security.md
 
-     {: .topicgroup}        
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Provisioning and managing IBM Cloud resources with Terraform
+         create-terraform-config.md
+         workspace-setup.md
+         setup-cli.md
+         manage-resource-lifecycle.md
+         provisioning-terraform-template.md
+         migrate-tfversion.md
+         bastion-host.md
+         remotestate.md
+         private-catalog.md
+         ansible_playbooks.md
+
+    {: .topicgroup}
     Logging and monitoring
           monitoring-instances.md
           at.md
 
+    {: .topicgroup}
+    Automating cloud operations with Ansible
+         create-ansible-playbook.md
+         action-setup.md
+
+    {: .topicgroup}
+    Enhancing security for Schematics
+        iam.md
+        architecture-workload-isolation.md
+        ha-dr.md
+        manage-scc.md
+        private-endpoint.md
+        data-security.md
+        allowips.md
+
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-    [IBM Cloud provider for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources) 
     cli-reference.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
-    [Terraform documentation](https://www.terraform.io/docs/index.html)
     locations.md
     limitations.md
+    responsibilities.md
+    automating-utilities.md
     license-notices.md
+
+    {: .topicgroup}
+    Examples
+          vsi-usecase.md
+          lamp-usecase.md
+          iks-cluster-example.md
+
+    {: .topicgroup}
+    Terraform
+         [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
+         [IBM Cloud provider for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources) 
+         [Terraform documentation](https://www.terraform.io/docs/index.html)
+
+    {: .topicgroup}
+    Ansible
+         [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)  
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     faqs.md
+    error-messages.md
     ts_index.md
     {: .navgroup-end}
+
+
 
