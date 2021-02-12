@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-11"
+lastupdated: "2021-02-12"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -31,6 +31,11 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 ## February 2021
 {: #February-2021}
+
+|Date|Description|
+|-----|---------|
+|12 February 2020 |<ul><li> **Ansible open beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users and customers. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this open beta offering. For more information about limitations, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).</li></ul> |
+{: caption="What's new in February" caption-side="top"}
 
 
 ## January 2021
