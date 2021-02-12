@@ -95,10 +95,10 @@ Follow the steps to complete the use case:
    When the action is successful the job is created, you can view the settings and job option to view the  details of the execution.
   {: note}
 
-2. Access your VPC public IP to view the deployed application. For example, `https://<PUBLIC_IP>/index.php`.
+4. Access your VPC public IP to view the deployed application. For example, `https://<PUBLIC_IP>/index.php`.
 
 ## What's next?
 {: #uc_what's next}
 
-Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bplong_notm}} actions. You can now learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)?
+Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bplong_notm}} actions. You can now learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
 
