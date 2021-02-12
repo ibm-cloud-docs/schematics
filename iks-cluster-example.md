@@ -43,7 +43,7 @@ The pre-requisite for the use case are:
 * Schematics plug-in installed. For more information, refer to [installing {{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli). 
 
 
-## Executing the playbook by using command line
+### Executing the playbook by using command line
 {: #iks-execute}
 
 Follow the steps to achieve the use case:
