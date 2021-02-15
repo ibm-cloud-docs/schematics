@@ -18,7 +18,7 @@ Schematics
         responsibilities.md
         ha-dr.md
         
-        whats-new.md
+    whats-new.md
     {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
