@@ -17,6 +17,9 @@ Schematics
         ansible-operations.md
         responsibilities.md
         ha-dr.md
+        
+        whats-new.md
+    {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
