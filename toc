@@ -64,13 +64,14 @@ Schematics
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    cli-reference.md
-    [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
-    locations.md
-    limitations.md
-    responsibilities.md
-    automating-utilities.md
-    license-notices.md
+    References
+        cli-reference.md
+        [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
+        locations.md
+        limitations.md
+        responsibilities.md
+        automating-utilities.md
+        license-notices.md
 
     {: .topicgroup}
     Examples
