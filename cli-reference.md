@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-12"
+lastupdated: "2021-02-17"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -195,7 +195,7 @@ You can import the existing resource with an valid address from the workspace ID
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace import --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
+ibmcloud schematics workspace import --id <WID> --address <resource>.<resource_name> --resourceID <terraform resource id>
 ```
 {: pre}
 
@@ -204,7 +204,7 @@ ibmcloud schematics workspace import --id <WORKSPACE_ID> --options <FLAGS> --add
 **Command options:**
 
 <dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
+<dt><code>--id <em>WID</em></code></dt>
 <dd>Required. The unique identifier of the workspace for which you want to import an instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
    </dd>
 
@@ -212,13 +212,16 @@ ibmcloud schematics workspace import --id <WORKSPACE_ID> --options <FLAGS> --add
 <dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
-<dd>Optional. Provide the address parameter for the command.   </dd>
+<dd>Required. Provide the resource name you want to import. </dd>
+
+<dt><code>--resourceID</code></dt>
+<dd>Required. Provide the Terraform resource ID that you need to import in the file.   </dd>
 
 </dl>
 
 **Example:**
 ```
-ibmcloud schematics workspace import --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
+ibmcloud schematics workspace import --id <WID> --address ibm_iam_access_group.accgrp --resourceID AccessGroupId-xxxxxx-xxxx-xxx-xxx-xxxx
 ```
 {: pre}
 
@@ -1595,56 +1598,52 @@ ibmcloud schematics commands --id <WORKSPACE_ID> --options <FLAGS> --file <JSON 
 `--file <JSON file>`
   Required. Contains the address of resource to be executed.
 
-  **Sample Test.JSON file**
+  **Sample payload in Test.JSON file**
   
   ```
   {
-    "commands": [
+        "commands": [
         {
             "command": "state show",
-            "command_params": "data.tempxx_file.test",
+            "command_params": "data.template_file.test",
             "command_name": "Test1",
-            "command_desc": "Checking state list",
+            "command_desc": "Showing state",
             "command_onerror": "continue"
         },
         {
             "command": "taint",
-            "command_params": "null_resourcexx.sleep",
+            "command_params": "null_resource.sleep",
             "command_name": "Test2",
-            "command_desc": "Checking state list",
+            "command_desc": "Marking taint",
             "command_onerror": "continue"
         },
         {
             "command": "untaint",
-            "command_params": "null_resourcexx.sleep",
+            "command_params": "null_resource.sleep",
             "command_name": "Test3",
-            "command_desc": "Checking state list",
+            "command_desc": "Marking untaint",
             "command_onerror": "continue"
         },
         {
-            "command": "state list",
+            "command": "state list ",
             "command_params": "",
             "command_name": "Test4",
             "command_desc": "Checking state list",
             "command_onerror": "continue"
         },
         {
-            "command": "state rm",
-            "command_params": "data.tempxx_file.test",
+            "command": "state rm ",
+            "command_params": "data.template_file.test",
             "command_name": "Test5",
-            "command_desc": "Checking state list",
-            "command_onerror": "continue"
-        },
-        {
-            "command": "output",
-            "command_params": "",
-            "command_name": "Test6",
-            "command_desc": "Checking state output",
+            "command_desc": "Removing state",
             "command_onerror": "continue"
         }
     ],
-}
+    "operation_name": "Workspace Command",
+    "description": "Executing command"
+   }
   ```
+  {: pre}
 
   The table provides the list of key parameters of the JSON file for the `Commands` API, either by command line or the API.
 
