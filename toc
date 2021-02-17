@@ -69,6 +69,7 @@ Schematics
         [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
         locations.md
         limitations.md
+        persist-files.md
         responsibilities.md
         automating-utilities.md
         license-notices.md
