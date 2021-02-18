@@ -106,7 +106,7 @@ ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--j
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 ```
@@ -154,7 +154,7 @@ ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
 
 </dl>
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics workspace delete --id myworkspace-a1aa1a1a-a11a-11 
@@ -181,7 +181,7 @@ ibmcloud schematics workspace get --id WORKSPACE_ID [--json]
 <dd>Optional. Return the command line output in JSON format.</dd>	
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
@@ -219,7 +219,7 @@ ibmcloud schematics workspace import --id <WID> --address <resource>.<resource_n
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace import --id <WID> --address ibm_iam_access_group.accgrp --resourceID AccessGroupId-xxxxxx-xxxx-xxx-xxx-xxxx
 ```
@@ -252,7 +252,7 @@ ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--json]
 <dd>Optional. Show detailed information about a workspace in JSON format. </dd>
 </dl>
 
-**Example:** 
+**Example** 
 
 ```
 ibmcloud schematics workspace list --json
@@ -280,7 +280,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 <dl>	
  <dt><code>--file <em>FILE_PATH</em></code>, <code>-f <em>FILE_PATH</em></code></dt>	
 <dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
-<br>Example JSON for using a GitHub or GitLab repository:	
+<br>Example JSON by using a GitHub or GitLab repository:	
 <pre class="codeblock">	
 <code>{
   "name": "&lt;workspace_name&gt;>",
@@ -509,7 +509,7 @@ Example JSON for uploading a `.tar` file later:
 <dd>Optional. Print the command line output in JSON format.</dd>	
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics workspace new --file myfile.json
@@ -546,7 +546,7 @@ ibmcloud schematics workspace output --id <WORKSPACE_ID> --options <FLAGS> --nam
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace output --id myworkspace-asdff1a1a-42145-11 --name null_resource.sleep  
 ```
@@ -573,7 +573,7 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--json]
 <dd>Required. The unique identifier of the workspace that you want to refresh. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11 
@@ -599,7 +599,7 @@ ibmcloud schematics state list --id WORKSPACE_ID
 <dd>Required. The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform statefile. To find the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics state list --id myworkspace-a1aa1a1a-a11a-11  
@@ -635,7 +635,7 @@ ibmcloud schematics workspace taint --id <WORKSPACE_ID> --options <FLAGS> --addr
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace taint --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
 ```
@@ -670,7 +670,7 @@ ibmcloud schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --ad
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
 ```
@@ -846,7 +846,7 @@ Now, in template_repo, you can also update `url` with more parameters as shown i
 <dd>Optional. Return the command line output in JSON format.</dd>	
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myfile.json --json
@@ -890,7 +890,7 @@ ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /U
 ```
 {: pre}
 
- Create the `TAR` file of your template repo using the `TAR` command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
+ Create the `TAR` file of your template repo by using the `TAR` command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
  {: note}
 
 
@@ -936,7 +936,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--var-file TFVA
 
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1 --var-file ./terraform.tfvars
@@ -978,7 +978,7 @@ ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--j
 
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_vpc.myvpc
@@ -1006,7 +1006,7 @@ ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
 <dd>Optional. The ID of an action for which you want to retrieve Terraform logs. To find a list of action IDs, run <code>ibmcloud schematics workspace action --id WORKSPACE_ID</code>.</dd>	
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc1234cdst
@@ -1030,7 +1030,7 @@ ibmcloud schematics output --id WORKSPACE_ID
 <dd>Required. The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
   </dl>
   
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
@@ -1065,7 +1065,7 @@ ibmcloud schematics plan --id WORKSPACE_ID [--json]
 <dd>Optional. Return the command line output in JSON format.</dd>	
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
@@ -1694,7 +1694,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 <dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &lt;workspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your command line output. </dd>
 </dl>	
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
@@ -1730,7 +1730,7 @@ ibmcloud schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> -
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
 ```
@@ -1766,7 +1766,7 @@ ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --a
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
 ```
@@ -1800,7 +1800,7 @@ ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --a
 
 </dl>
 
-**Example:**
+**Example**
 ```
 ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
 ```

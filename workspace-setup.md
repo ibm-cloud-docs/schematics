@@ -247,7 +247,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 4. In the **Summary** section, click **Enable continuous delivery**. 
 5. Configure your toolchain. 
    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
-   2. Select the type of source repository where your Terraform configuration files are stored. For example: GitHub. 
+   2. Select the type of source repository where your Terraform configuration files are stored. For Example GitHub. 
    3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are pre-populated based on your workspace configuration.
    4. Optional: Choose if you want to enable Git issues and code change tracking for your toolchain. 
 6. Select the **Delivery Pipeline** icon to configure your Delivery Pipeline. 

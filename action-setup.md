@@ -65,7 +65,7 @@ To create an action:
        Your action can point to one playbook at a time. If you want to run multiple playbooks, create a separate action for each playbook.
        {: note}
 
-   4. Click **Retrieve playbooks**. {{site.data.keyword.bpshort}} connects to your repository and retrieves a list of executable playbooks from the repository.
+   4. Click **Retrieve playbooks**. {{site.data.keyword.bpshort}} connects to your repository and retrieves a list of executed playbooks from the repository.
    5. Select the Ansible playbook that you want to run. 
    6. Choose if you want to run your Ansible playbook (**Run Job**) or if you want to preview a summary of all the steps that Ansible wants to run without executing these steps in your cloud environment (**Check**). 
    7. Select the detail level for your Ansible logs from the **Verbosity** drop down list. The logs are shown when you run the playbook in {{site.data.keyword.bpshort}}. For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level.

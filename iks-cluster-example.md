@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-02-18"
 
-keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example using ansible playbook
+keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
 subcollection: schematics
 
@@ -26,46 +26,46 @@ subcollection: schematics
 {:external: target="_blank" .external}
 
 
-# Automating the application deployment by using {{site.data.keyword.bpshort}} action
+# Automating the application deployment by using {{site.data.keyword.bpshort}}
 {: #iks-cluster}
 
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
 
-The playbook demonstrates how to automate the deployment of a Hackathon starter web application. Hackathon starter is a boilerplate web application for `Node.js` and `Mongo` database to an {{site.data.keyword.containerlong_notm}} cluster. For more information, about Hackathon starter application, see [Hackathon starter](https://github.com/sahat/hackathon-starter/blob/master/README.md).
+The playbook demonstrates how to automate the deployment of a hackathon starter web application. Hackathon starter is a boilerplate web application for `Node.js` and `Mongo` database to an {{site.data.keyword.containerlong_notm}} cluster. For more information, about hackathon starter application development, refer to [Hackathon starter readme document](https://github.com/sahat/hackathon-starter/blob/master/README.md).
 {: shortdesc}
  
-## Pre-requisites
+## prerequisites
 {: #iks-prereq}
 
-You can execute the use case by using command line or user interface by completing the provided pre-requisite.
+You can execute the use case by using command line or user interface by completing the provided prerequisite.
 
-The pre-requisite for the use case are:
+The prerequisites for the use case are:
 
 * {{site.data.keyword.bplong_notm}} login.
 * Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
 * Running state of an {{site.data.keyword.containerlong_notm}} instance. For more information, see [Getting started with {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started). Create a cluster configuration provisioned with classic infrastructure, opting for Single zone availability and enabling single worker node with single zone. For any support that you need, reach out the [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
-* Schematics plug-in installed. For more information, refer to [installing {{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli). 
+* Schematics plug-in installed, for more information, refer to [installing {{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli). 
 
 
 ### Executing the playbook by using command line
 {: #iks-execute}
 
-After the pre-requisite is completed, follow these steps to complete the use case:
+After the prerequisite is completed, follow these steps to complete the use case:
 
-1. Use the GitHub repository, [Hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file. For more information, about playbook creation refer to [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
+1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 
-2. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. The example contains the command to create an action. For more information, see [create {{site.data.keyword.bplong_notm}} action by using CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
+2. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. The example contains the command to create an action. For more information, see [create {{site.data.keyword.bplong_notm}} action by using command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
 
-  **Example:**
+  **Example**
 
     ```
     ibmcloud schematics action create -f action.json
     ```
     {: pre}
 
- **action.json file:**
+ **action.json file**
 
     ```
     {
@@ -100,7 +100,7 @@ After the pre-requisite is completed, follow these steps to complete the use cas
 
 3. Create a job file `job.json` to run the action and following with adding `job` definition to it. Edit the `Action ID` from step 1 and run job.json.
 
- **Example:**
+ **Example**
   
     ```
     ibmcloud schematics job create -f job.json
@@ -108,7 +108,7 @@ After the pre-requisite is completed, follow these steps to complete the use cas
     ```
      {: pre}
 
-  **job.json file:**
+  **job.json file**
 
     ```
     {
@@ -135,7 +135,7 @@ After the pre-requisite is completed, follow these steps to complete the use cas
     ```
      {: pre}
 
-   **Example:** 
+   **Example** 
     
     ```
       my-MacBook-Pro bin % kubectl get svc 
@@ -151,9 +151,9 @@ After the pre-requisite is completed, follow these steps to complete the use cas
 ### Executing playbook by using user interface
 {: #iks-ui-execute}
 
-After the pre-requisite is completed, follow these steps to complete the use case:
+After the prerequisite is completed, follow these steps to complete the use case:
 
-1. Use the GitHub repository, [Hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file. For more information, about playbook creation refer to [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
+1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 
 2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information, about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
 
@@ -167,5 +167,5 @@ After the pre-requisite is completed, follow these steps to complete the use cas
 ## What's next?
 {: #uc_what's next}
 
-Great job! You successfully deployed into Hackathon starter by using {{site.data.keyword.bplong_notm}} actions. You can now learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)?
+Great job! You successfully deployed into hackathon starter by using {{site.data.keyword.bplong_notm}} actions. You can now learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)?
 

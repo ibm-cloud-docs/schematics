@@ -214,7 +214,7 @@ The `Enable continuous delivery` option has the capability of automating the dif
 
 1. Provide the IBM Cloud API Key in the `Tool Integrations panel`. Click `Create` to view the Toolchains page.
 2. Click `Deliver Pipeline` pane to view Schematics Pipeline | Delivery Pipeline page. 
-  Observe the UPDATE is in STAGE RUNNING state, without using the button click.
+  Observe the UPDATE is in STAGE RUNNING state, without the button click.
   {: note}
 3. During the update stage process, from the example of ibm-cos-bucket repository observe the `main.tf` file configuration with the cos_instance name and bucket_name. These details are updated in the Schematics workspace after the APPLY stage is passed.
 4. Once the `UPDATE` stage is completed, PLAN stage is in running state.

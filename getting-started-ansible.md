@@ -31,7 +31,7 @@ subcollection: schematics
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
-Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, by running Ansible playbooks against your inventory of {{site.data.keyword.cloud_notm}} resources. Use Ansible to install software packages, and application code on VSIs. Or use it to perform post provisioning configuration of {{site.data.keyword.cloud_notm}} resources, deployed using {{site.data.keyword.bplong_notm}} and Terraform. 
+Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, by running Ansible playbooks against your inventory of {{site.data.keyword.cloud_notm}} resources. Use Ansible to install software packages, and application code on VSIs. Or use it to perform post provisioning configuration of {{site.data.keyword.cloud_notm}} resources, deployed by using {{site.data.keyword.bplong_notm}} and Terraform. 
 
 ## What is Ansible?
 {: #about-ansible}
@@ -60,7 +60,7 @@ Ansible and Schematics are complementary solutions, each addressing a key area o
 The functions of the Schematics action in {{site.data.keyword.cloud_notm}} are:
 
  - Describes the input configuration for your Ansible playbook.
- - You can use the Schematics action definition to deploy multi-tier apps, set up firewall rules. 
+ - You can use the Schematics action definition to deploy multitier apps, set up firewall rules. 
  - You need to only specify the tasks that you want to run and let {{site.data.keyword.bpshort}} securely connect and complete the tasks on your {{site.data.keyword.cloud_notm}} resources.
  - Runs the playbook in a repeatable, reliable and consistent manner.
 

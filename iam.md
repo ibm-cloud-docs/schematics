@@ -51,7 +51,7 @@ For example, you have a team A that is responsible to manage an {{site.data.keyw
 **Do my workspace and {{site.data.keyword.cloud_notm}} resources need to be in the same resource group?**<br>
 No. You can create different resource groups for your {{site.data.keyword.bplong_notm}} workspaces and {{site.data.keyword.cloud_notm}} resources. 
 
-**What is the benefit of using IAM access group?** <br>
+**What is the benefit by using IAM access group?** <br>
 To minimize the number of IAM access policies you need to assign an individual user. You can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
 
 The following image shows how you can leverage IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account. 
