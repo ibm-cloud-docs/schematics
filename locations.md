@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-18"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -34,7 +34,7 @@ Review supported locations in {{site.data.keyword.bplong_notm}} and how {{site.d
 ## Where can I create {{site.data.keyword.bpshort}} workspaces?
 You can choose to create {{site.data.keyword.bpshort}} workspaces in the US or Europe location by using one of the following API endpoints, or by using the **Location** drop-down menu from the {{site.data.keyword.cloud_notm}} console.
 
-For more information about the private service endpoint, see [Using private endpoints](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location). 
+For more information about the private service endpoint, see [Using private endpoints](/docs/schematics?topic=schematics-secure-data#pi-location). 
 {: tip}
 
 ## Where do my {{site.data.keyword.bpshort}} actions run?

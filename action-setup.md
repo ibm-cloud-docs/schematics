@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-12"
+lastupdated: "2021-02-18"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -27,7 +27,7 @@ subcollection: schematics
 # Setting up {{site.data.keyword.bpshort}} actions
 {: #action-setup}
 
-   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
 With {{site.data.keyword.bplong_notm}} actions, you can specify the Ansible playbook that you want to run against one or more {{site.data.keyword.cloud_notm}} resources. An Ansible playbook is a configuration file that includes all the tasks, roles, policies, or steps that you want to run and the order in which you want to execute them. 
@@ -59,7 +59,7 @@ To create an action:
       - Example for master branch: https://github.com/myorg/myrepo
       - Example for other branches: https://github.com/myorg/myrepo/tree/mybranch
       - Example for subdirectory: https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
-   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token){: external}.
+   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token){: external}.
    3. Select the Ansible version that your playbook is written in.
        
        Your action can point to one playbook at a time. If you want to run multiple playbooks, create a separate action for each playbook.
@@ -75,7 +75,7 @@ To create an action:
 4. Choose your {{site.data.keyword.cloud_notm}} resource inventory. 
    1. Enter the host or the IP address where you want to run your Ansible playbook in the  **Bastion host IP** field. 
    2. Enter the {{site.data.keyword.cloud_notm}} resource inventory hostnames or the IP addresses by using a `,` or `comma` separator in the **IBM cloud inventory IP addresses**. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to.
-   3. Enter your webserver host, Operating System, region, network, or the database host name with the IP addressed in the **{{site.data.keyword.cloud_notm}} inventory host groups** as shown in the example. For more information, about an inventory host group syntax, refer to [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-inventory-host-grps).
+   3. Enter your web server host, Operating System, region, network, or the database host name with the IP addressed in the **{{site.data.keyword.cloud_notm}} inventory host groups** as shown in the example. For more information, about an inventory host group syntax, refer to [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).
 
       **Example** 
 

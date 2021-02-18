@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-12"
+lastupdated: "2021-02-18"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -52,5 +52,5 @@ Schematics functions are build on UBI-8 and the runtimes that come with the UBI-
 To avoid the installation of these tools, you can also use the [Cloud Shell](https://cloud.ibm.com/shell) from the IBM Cloud console.
 {: tip}
 
-For more information, about to use these tools in multiple Operating System, refer to [Solution tutorials](https://cloud.ibm.com/docs/solution-tutorials?topic=solution-tutorials-tutorials).
+For more information, about to use these tools in multiple Operating System, refer to [Solution tutorials](/docs/solution-tutorials?topic=solution-tutorials-tutorials).
 {: important}

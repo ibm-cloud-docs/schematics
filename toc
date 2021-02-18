@@ -64,13 +64,15 @@ Schematics
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    cli-reference.md
-    [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
-    locations.md
-    limitations.md
-    responsibilities.md
-    automating-utilities.md
-    license-notices.md
+    References
+        cli-reference.md
+        [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
+        locations.md
+        limitations.md
+        persist-files.md
+        responsibilities.md
+        automating-utilities.md
+        license-notices.md
 
     {: .topicgroup}
     Examples
@@ -81,7 +83,7 @@ Schematics
     {: .topicgroup}
     Terraform
          [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-         [IBM Cloud provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources){: external}
+         [IBM Cloud provider for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources){: external}
          [Terraform documentation](https://www.terraform.io/docs/index.html)
 
     {: .topicgroup}

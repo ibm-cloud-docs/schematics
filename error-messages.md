@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-12"
+lastupdated: "2021-02-18"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -119,7 +119,7 @@ While processing the create, delete, update action, the {{site.data.keyword.bpsh
 The Schematics jobs displays a list of jobs and their state as successful, or failed, or active (running) job.
 
 #### Message
-{: #state-msg}
+{: #state-jobmsg}
 
 - Job processing error.
 - Unable to delete the job. Job current status: {{.Status}}
@@ -127,7 +127,7 @@ The Schematics jobs displays a list of jobs and their state as successful, or fa
 - Playbook not selected to create a Job. Please select a playbook name.
 
 #### Resolve
-{: #state-resolve}
+{: #state-jobresolve}
 
 - Check the input configuration and settings.
 - Check the job configuration timeout, if the job timeout is reached 60 minutes, the status is updated and error is returned.

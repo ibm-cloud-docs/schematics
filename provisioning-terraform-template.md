@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-02-18"
 
 keywords: schematics, automation, terraform
 
@@ -202,7 +202,7 @@ Status          DRAFT
 
 Template Variables for: examples-e82a61a6-695c-44
 Name          Value
-sample_var    THIS IS IBM CLOUD TERRAFORM CLI DEMO
+sample_var    THIS IS AN IBM CLOUD TERRAFORM CLI DEMO
 sleepy_time   10195
 
 OK

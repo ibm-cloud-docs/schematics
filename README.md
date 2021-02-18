@@ -1,6 +1,6 @@
 # Source files for customer-facing documentation
 
-Documentation: https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started
+Documentation: /docs/schematics?topic=schematics-getting-started
 
 
 ## How to open issues
