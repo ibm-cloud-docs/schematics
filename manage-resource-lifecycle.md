@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-02-18"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -33,7 +33,7 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by changin
 With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}, you use the VPC console, API, or command line to stop, reboot, and power on your virtual server instance. However to remove the virtual server instance, you use {{site.data.keyword.bplong_notm}}. 
 
 **What happens if I manually added, or removed a resource from the service dashboard directly?** </br>
-When you provision resources with {{site.data.keyword.bplong_notm}}, the state of your resources is stored in a local {{site.data.keyword.bplong_notm}} state file. This state file is the single source of truth for {{site.data.keyword.bplong_notm}} to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without using {{site.data.keyword.bplong_notm}}, this resource is not stored in the {{site.data.keyword.bplong_notm}} state file, and as a consequence cannot be managed with {{site.data.keyword.bplong_notm}}. 
+When you provision resources with {{site.data.keyword.bplong_notm}}, the state of your resources is stored in a local {{site.data.keyword.bplong_notm}} state file. This state file is the single source of truth for {{site.data.keyword.bplong_notm}} to determine what resources are provisioned in your {{site.data.keyword.cloud_notm}} account. If you manually add a resource without {{site.data.keyword.bplong_notm}}, this resource is not stored in the {{site.data.keyword.bplong_notm}} state file, and as a consequence cannot be managed with {{site.data.keyword.bplong_notm}}. 
 
 When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create your next Terraform execution plan or apply a new template version, {{site.data.keyword.bpshort}} verifies that the {{site.data.keyword.cloud_notm}} resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured in your state file. If the resource is not found, the state file is updated and the Terraform execution plan is changed accordingly. 
 
@@ -107,7 +107,7 @@ Use Terraform-native capabilities to determine the differences between the infra
 Managing deviations between the real-world state of your cloud environment and your infrastructure code, also referred to as `drift`, is a key challenge when implementing infrastructure as code. Deviations can happen for many reasons, such as: 
 
 - You added, updated, or removed resources in your Terraform configuration file without running your infrastructure code.
-- You manually added, updated, or removed {{site.data.keyword.cloud_notm}} without using Terraform.
+- You manually added, updated, or removed {{site.data.keyword.cloud_notm}} without Terraform.
 - You used other automation tools, such as scripts to manipulate the state of your {{site.data.keyword.cloud_notm}} resources.
 
 **Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?**</br>
@@ -117,7 +117,7 @@ After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by
 To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files and the resources that exist in your {{site.data.keyword.cloud_notm}} account, you can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
 
 **What deviations cannot be detected?**</br>
-A Terraform execution plan is based on the Terraform statefile that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces,  by using automation tools such as Ansible or Chef, or that you added without using {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
+A Terraform execution plan is based on the Terraform statefile that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces,  by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
 
 **To view deviations between the resources in your {{site.data.keyword.cloud_notm}} account and your Terraform configuration**: 
 

@@ -108,7 +108,7 @@ This completes the end to end flow to provision the Terraform template by using 
 To provision a Terraform template using Schematics CLI, you need perform the given steps: 
 {: shortdesc}
 
-### Pre-requisites
+### prerequisites
 {: prov-prereq}
 
 1. Install {{site.data.keyword.cloud_notm}} command line and Schematics plug-ins, refer to [Setting up the command line and Schematics](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) for details.
@@ -135,7 +135,7 @@ Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraf
 To create a workspace, you must specify your workspace settings in a JSON file. Then provide the relative path to a JSON file on your local machine that is used to configure your workspace. Refer to[Schematics-workspace-new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) for details.
 {: note}
 
-Example JSON for using a GitHub or GitLab repository:
+Example JSON by using a GitHub or GitLab repository:
 <pre class="codeblock">
 <code>{
   "name": "&lt;workspace_name&gt;",
@@ -181,7 +181,7 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
 ```
 {: pre}
 
-**Example:**
+**Example**
 
 ```
 ibmcloud schematics workspace new --file myfile.json

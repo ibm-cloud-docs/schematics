@@ -46,7 +46,7 @@ The following information is stored with IBM when you create and use a {{site.da
 ## Where is my information stored?
 {: #pi-location}
 
-By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Make sure that your data can be stored in these locations before you start using {{site.data.keyword.bpshort}}. 
+By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Make sure that your data can be stored in these locations before you start {{site.data.keyword.bpshort}}. 
 
 |Geography/ location| API endpoint|Data is stored in|Data is replicated to|
 |------------|----------------|------|--------|

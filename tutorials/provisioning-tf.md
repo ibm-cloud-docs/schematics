@@ -114,7 +114,7 @@ In this tutorial, you can learn the procedure to provision the Terraform templat
 - [vpc-gen2-cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external}
 {: shordesc}
 
-As part of this tutorial, you are using an {{site.data.keyword.containerfull_notm}} VPC Generation 2 cluster. The `vpc-gen2-cluster` example uses the `ibm_is_vpc`, `ibm_is_subnet`,`ibm_resource_group`, `ibm_resource_instance`, `ibm_container_vpc_cluster`, `ibm_container_vpc_worker_pool`, and `ibm_container_bind_service`.You can configure the default worker pool, multiple zones, and subnets that are provided in the example as per your business scenario. However, as part of this tutorial, you can use the required values wherever possible. <br>
+As part of this tutorial, you will use {{site.data.keyword.containerfull_notm}} VPC Generation 2 cluster. The `vpc-gen2-cluster` example uses the `ibm_is_vpc`, `ibm_is_subnet`,`ibm_resource_group`, `ibm_resource_instance`, `ibm_container_vpc_cluster`, `ibm_container_vpc_worker_pool`, and `ibm_container_bind_service`.You can configure the default worker pool, multiple zones, and subnets that are provided in the example as per your business scenario. However, as part of this tutorial, you can use the required values wherever possible. <br>
 The diagram and the table depicts the user flow of using the Terraform templates in the {{site.data.keyword.bplong_notm}}.
 
   <img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>

@@ -38,20 +38,20 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} service.
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). For more information, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics).
+{{site.data.keyword.bplong_notm}} deliver Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). For more information, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics).
 
 ## What is Terraform? 
 {: #what-is-terraform}
 {: faq}
 {: support}
 
-Terraform is an open-source software that enables predictable and consistent provisioning of cloud platform and infrastructure resources by using a high-level scripting language. You can use Terraform to automate your {{site.data.keyword.cloud_notm}} resource provisioning, rapidly build complex, multi-tier cloud environments, and enable Infrastructure as Code (IaC).
+Terraform is an open-source software that enables predictable and consistent provisioning of cloud platform and infrastructure resources by using a high-level scripting language. You can use Terraform to automate your {{site.data.keyword.cloud_notm}} resource provisioning, rapidly build complex, multitier cloud environments, and enable Infrastructure as Code (IaC).
 
 ## What is Infrastructure as Code?
 {: #what-is-iac}
 {: faq}
 
-Infrastructure as Code (IaC) helps you codify your cloud environment so that you can automate the provisioning and management of your resources in the cloud. Rather than manually provisioning and configuring infrastructure resources or using scripts to adjust your cloud environment, you use a high-level scripting language to specify your resource and its configuration. Then, you use tools like Terraform to provision the resource in the cloud by leveraging its API. Your infrastructure code is treated the same way as your app code so that you can apply DevOps core practices such as version control, testing, and continuous monitoring.
+Infrastructure as Code (IaC) helps you codify your cloud environment so that you can automate the provisioning and management of your resources in the cloud. Rather than manually provisioning and configuring infrastructure resources or by using scripts to adjust your cloud environment, you use a high-level scripting language to specify your resource and its configuration. Then, you use tools like Terraform to provision the resource in the cloud by leveraging its API. Your infrastructure code is treated the same way as your app code so that you can apply DevOps core practices such as version control, testing, and continuous monitoring.
 
 ## What am I charged for when I use {{site.data.keyword.bpshort}}?
 {: #charges}
@@ -106,7 +106,7 @@ To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` and
 
 You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer to the following sample error message and the solution for the authentication error.
 
-The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a 'default token'. You can use the `refresh token` to get a new IAM access token if that token is expired. When using the default client (no basic authorization header) as described in this documentation, this refresh_token cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token.
+The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a 'default token'. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation, this refresh_token cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token.
 
 **Error message**
 

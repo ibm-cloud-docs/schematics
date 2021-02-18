@@ -26,31 +26,31 @@ subcollection: schematics
 {:external: target="_blank" .external}
 
 
-# Provisioning LAMP stack by using {{site.data.keyword.bpshort}} action
+# Provisioning LAMP stack by using {{site.data.keyword.bpshort}} 
 {: #provisioning-lamp-stack}
 
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
- This playbook demonstrates to provision Multitier VPC Bastion host on {{site.data.keyword.cloud_notm}}. By provisioning, you can deploy a simple web application that display the text messages, links with a list of database names.  
+ This playbook demonstrates to provision multitier VPC Bastion host on {{site.data.keyword.cloud_notm}}. By provisioning, you can deploy a simple web application that display the text messages, links with a list of database names.  
 
 These playbooks are tested on CentOS 7.x. It is recommended you use `CentOS` or `RHEL` to test these modules. 
 {: note}
 
-## Pre-requisite
+## prerequisite
 {: #lamp-stack-prereq}
 
-You can execute the use case by using command line or user interface by completing the provided pre-requisite.
+You can execute the use case by using command line or user interface by completing the provided prerequisite.
 
-The pre-requisite for the use case are:
+The prerequisites for the use case are:
 * {{site.data.keyword.bplong_notm}} login.
 * Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
 * [SSH Key on {{site.data.keyword.cloud_notm}}](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
-* [Multitier VPC Bastion Host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host).
+* [multitier VPC Bastion Host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host).
 
 **What is bastion host?**
 
-Bastion host is an VSI instance that is provisioned with a public IP address and can be accessed via SSH. Once set up, the bastion host acts as a jump server allowing secure connection to instances provisioned without a public IP address. For more information, to securely access remote instances with a bastion host, refer to [Securely access remote instances with a bastion host](/docs/solution-tutorials?topic=solution-tutorials-vpc-secure-management-bastion-server).
+Bastion host is a VSI instance that is provisioned with a public IP address and can be accessed through SSH. Once set up, the bastion host acts as a jump server to allow secure connection to instances provisioned without a public IP address. For more information, to securely access remote instances with a bastion host, refer to [Securely access remote instances with a bastion host](/docs/solution-tutorials?topic=solution-tutorials-vpc-secure-management-bastion-server).
 
 Schematics actions use bastion hosts to allow Ansible to securely provision software and applications on target VSIs.
 
@@ -58,11 +58,11 @@ Schematics actions use bastion hosts to allow Ansible to securely provision soft
 ## Executing the playbook by using command line
 {: #lamp-stack-execute}
 
-After the pre-requisite is completed, follow these steps to complete the use case:
+After the prerequisite is completed, follow these steps to complete the use case:
 
-1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file. For more information, about playbook creation refer to [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
+1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 
-2. Create a {{site.data.keyword.bpshort}} action by using the `playbook` and `YAML` file. The example contains the command to create an action. For more information, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action). And see [create {{site.data.keyword.bplong_notm}} action by using CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action)
+2. Create a {{site.data.keyword.bpshort}} action by using the `playbook` and `YAML` file. The example contains the command to create an action. For more information, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action). And see [create {{site.data.keyword.bplong_notm}} action by using command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
 
   **Example**
 
@@ -80,15 +80,15 @@ After the pre-requisite is completed, follow these steps to complete the use cas
   ```
   {: pre}
 
-4. You can run `curl http://<PUBLIC_IP/index.php` after logging into the machine where you have deployed LAMP. You can see a simple test page and a list of databases retrieved from the database server.
+4. You can run `curl http://<PUBLIC_IP/index.php` after logging in to the deployed machine. You can see a simple test page and a list of databases that are retrieved from the database server.
 
 
 ## Executing the playbook by using user interface
 {: #lamp-stack-executeui}
 
-After the pre-requisite is completed, follow these steps to complete the use case:
+After the prerequisite is completed, follow these steps to complete the use case:
 
-1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file. For more information, about playbook creation refer to [create playbook](/docs/schematics?topic=schematics-create-playbooks).
+1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks).
 
 2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information,  about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
 

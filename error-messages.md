@@ -82,7 +82,7 @@ The Schematics action instance and resources are overloaded or down for maintena
 - Check the action logs. For more information, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
 - Wait for few minutes and retry your action processing.
 - Check you have the required permissions such as [IAM access or key](/docs/schematics?topic=schematics-action-setup).
-- Check the firewall IPs are enabled.
+- Check the firewall IP are enabled.
 - Check if your [{{site.data.keyword.cloud_notm}} environment notification](/docs/get-support?topic=get-support-viewing-notifications){: external} is in maintenance.
 
 
