@@ -49,7 +49,7 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 
 {{site.data.keyword.bpshort}} action reads the playbook and executes the configured task and targeted hosts by using IBM Cloud Schematics. Following steps to be followed to run the Ansible playbook in {{site.data.keyword.bplong_notm}}.
 
-1. Create a Schematics action by using [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/schematics/overview){: external} account or through CLI. 
+1. Create a Schematics action by using [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/schematics/overview){: external} account or through command line. 
 
 
 
@@ -59,6 +59,6 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 
 3. Verify your progress in the Ansible logs by using a `get` request to the logs. For more information, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 
-For the beta release, you can run the playbook only through CLI. For more information, about the command line commands, refer to [Action commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands), and [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands).
+For the beta release, you can run the playbook only through command line. For more information, about the command line commands, refer to [Action commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands), and [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands).
 {: important}
 
