@@ -39,9 +39,10 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 
 2. Download the required services from the GitHub repository that you need to configure. For example, [IKS configured template](https://github.com/ibm-cloud-architecture/iks_vpc_lab/tree/master/03-iks_cluster){: external} from the GitHub repository.
 
-3. Create {{site.data.keyword.bplong_notm}} workspace. For more information, refer to [workspace setup](/docs/schematics?topic=schematics-workspace-setup).
+3. Create an IAM access token for your {{site.data.keyword.cloud_notm}} Account. To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` For more information, about creating IAM access token, refer to [IAM access token](/apidocs/iam-identity-token-api#gettoken-apikey-delegatedrefreshtoken) and [Create API key](/docs/account?topic=account-userapikey#create_user_key). You can set the environment values by exporting the access token. Command to export `IC_IAM_TOKEN` is `export ACCESS_TOKEN=<access_token>`  and export `IC_IAM_REFRESH_TOKEN` is `export REFRESH_TOKEN=<refresh_token>`.
 
-4. Export environment variable to access `IC_IAM_TOKEN` and `IC_IAM_REFRESH_TOKEN`. For more information, about environment variable, refer to [Environment variables](/docs/key-protect?topic=key-protect-retrieve-access-token){: external}.
+4. Create {{site.data.keyword.bplong_notm}} workspace. For more information, about workspace create, refer to [workspace setup](/docs/schematics?topic=schematics-workspace-setup).
+
 
 ## Running Ansible playbooks for {{site.data.keyword.cloud_notm}}
 {: #run-ansible-playbook}
