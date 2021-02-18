@@ -9,6 +9,7 @@ keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi
 subcollection: schematics
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -24,7 +25,6 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
----
 
 # Deploying VSI start and stop playbook by using {{site.data.keyword.bpshort}} action
 {: #vsi-start-stop}

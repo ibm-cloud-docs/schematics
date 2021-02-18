@@ -9,6 +9,7 @@ keywords: ansible playbook, ansible playbook example, iks cluster with ansible p
 subcollection: schematics
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -24,7 +25,6 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
----
 
 # Automating the application deployment by using {{site.data.keyword.bpshort}} action
 {: #iks-cluster}
