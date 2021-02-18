@@ -9,6 +9,7 @@ keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using A
 subcollection: schematics
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -24,7 +25,6 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
----
 
 # Provisioning LAMP stack by using {{site.data.keyword.bpshort}} action
 {: #provisioning-lamp-stack}

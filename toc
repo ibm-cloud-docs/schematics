@@ -51,6 +51,13 @@ Schematics
          action-setup.md
 
     {: .topicgroup}
+    Examples
+          vsi-usecase.md
+          lamp-usecase.md
+          iks-cluster-example.md
+
+
+    {: .topicgroup}
     Enhancing security for Schematics
         iam.md
         architecture-workload-isolation.md
@@ -64,21 +71,14 @@ Schematics
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    References
-        cli-reference.md
-        [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
-        locations.md
-        limitations.md
-        persist-files.md
-        responsibilities.md
-        automating-utilities.md
-        license-notices.md
-
-    {: .topicgroup}
-    Examples
-          vsi-usecase.md
-          lamp-usecase.md
-          iks-cluster-example.md
+    cli-reference.md
+    [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
+    locations.md
+    limitations.md
+    persist-files.md
+    responsibilities.md
+    automating-utilities.md
+    license-notices.md
 
     {: .topicgroup}
     Terraform
@@ -94,9 +94,8 @@ Schematics
 
     {: .navgroup id="help"}
     {: .topicgroup}
-    Help
-        faqs.md
-        error-messages.md
-        ts_index.md
+    faqs.md
+    error-messages.md
+    ts_index.md
 
     {: .navgroup-end}
