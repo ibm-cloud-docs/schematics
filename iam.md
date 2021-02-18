@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-25"
+  years: 2017, 2021
+lastupdated: "2021-02-18"
 
 keywords: schematics, automation, terraform
 
@@ -136,7 +136,7 @@ As of 6 February 2019, {{site.data.keyword.bplong_notm}} uses resource groups to
 
 If you use {{site.data.keyword.bplong_notm}} before 6 February 2020. You are granted permissions to the service through, Identity and Access Management (IAM). Because {{site.data.keyword.bpshort}} did not support scoping a service policy to a resource group, all service policies were scoped to the {{site.data.keyword.cloud_notm}} account by default. With the introduction of resource group-level policies, existing account-level policies must be removed and replaced with resource group-level policies to ensure proper access management to {{site.data.keyword.bpshort}} workspaces. 
 
-1. Follow the steps in [Setting up access for your users](#access-setup).  
+1. The steps in [Setting up access for your users](#access-setup).  
 
 2. Remove any existing account-level permissions to {{site.data.keyword.bplong_notm}} from your users and IAM access groups. 
   

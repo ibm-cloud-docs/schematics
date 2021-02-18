@@ -137,7 +137,7 @@ Now, you can securely connect the Virtual Private Endpoint Gateways to access {{
  You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
  {: important}
 
- Follow the steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
+ The steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
 
  1. Create a {{site.data.keyword.bpshort}} workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
  2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](https://cloud.ibm.com/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).

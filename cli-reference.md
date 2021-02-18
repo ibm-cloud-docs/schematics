@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-17"
+lastupdated: "2021-02-18"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -209,7 +209,7 @@ ibmcloud schematics workspace import --id <WID> --address <resource>.<resource_n
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Required. Provide the resource name you want to import. </dd>
@@ -480,7 +480,7 @@ Example JSON for uploading a `.tar` file later:
      </tr>
       <tr>
       <td><code>&lt;variable_type&gt;</code></td>
-      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).</td>
+      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/language/values/variables.html#type-constraints).</td>
       </tr>
       <tr>
      <td><code>&lt;variable_value&gt;</code></td>
@@ -539,7 +539,7 @@ ibmcloud schematics workspace output --id <WORKSPACE_ID> --options <FLAGS> --nam
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
 
 <dt><code>--name</code></dt>
 <dd>Optional. Provide the name of the parameter to print.   </dd>
@@ -628,7 +628,7 @@ ibmcloud schematics workspace taint --id <WORKSPACE_ID> --options <FLAGS> --addr
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.   </dd>
@@ -663,7 +663,7 @@ ibmcloud schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --ad
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.   </dd>
@@ -812,7 +812,7 @@ Now, in template_repo, you can also update `url` with more parameters as shown i
      </tr>
       <tr>
       <td><code>&lt;template_data.variablestore.type&gt;</code></td>
-      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/configuration/variables.html#type-constraints).</td>
+      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/language/values/variables.html#type-constraints).</td>
       </tr>
       <tr>
      <td><code>&lt;template_data.variablestore.value&gt;</code></td>
@@ -1076,8 +1076,8 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ## Action commands
 {: #schematics-action-commands}
 
-   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
-   {: beta}
+  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+  {: beta}
 
 Review the command that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
 {: shortdesc}
@@ -1085,7 +1085,7 @@ Review the command that you want to create, update, list, delete and work with y
 ### Inventory host groups
 {: #inventory-host-grps}
 
-{{site.data.keyword.bplong_notm}} supports inventory host groups to group the applications hostname such as web server, database server, Operating System, region, or network. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `ini` file format. The `hosts.ini` file can be used in the `create` and `update` actions commands as an agrument, for example, `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>`. 
+{{site.data.keyword.bplong_notm}} supports inventory host groups to group the applications hostname such as web server, database server, Operating System, region, or network. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `ini` file format. The `hosts.ini` file can be used in the `create` and `update` actions commands as an argument, for example, `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>`. 
 {: shortdesc}
 
 
@@ -1593,7 +1593,7 @@ ibmcloud schematics commands --id <WORKSPACE_ID> --options <FLAGS> --file <JSON 
   Required. The unique ID of the workspace for which you want to run the commands. To find the of your workspace, run `ibmcloud schematics workspace list`.
 
 `--options <FLAGS>`
-  Optional. The command-line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html).
+  Optional. The command-line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html).
 
 `--file <JSON file>`
   Required. Contains the address of resource to be executed.
@@ -1723,7 +1723,7 @@ ibmcloud schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> -
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.  </dd>
@@ -1756,7 +1756,7 @@ ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --a
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to move. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to move. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the source address parameter for the command.   </dd>
@@ -1793,7 +1793,7 @@ ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --a
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to remove. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to remove. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.   </dd>

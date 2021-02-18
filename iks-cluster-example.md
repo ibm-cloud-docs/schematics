@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-12"
+lastupdated: "2021-02-18"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example using ansible playbook
 
@@ -29,7 +29,7 @@ subcollection: schematics
 # Automating the application deployment by using {{site.data.keyword.bpshort}} action
 {: #iks-cluster}
 
-   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users.Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
 
@@ -45,7 +45,7 @@ The pre-requisite for the use case are:
 
 * {{site.data.keyword.bplong_notm}} login.
 * Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
-* Running state of a {{site.data.keyword.containerlong_notm}} instance. For more information, see [Getting started with {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started). Create a cluster configuration provisioned with classic infrastructure, opting for Single zone availability and enabling single worker node with single zone. For any support that you need, reach out the [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
+* Running state of an {{site.data.keyword.containerlong_notm}} instance. For more information, see [Getting started with {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started). Create a cluster configuration provisioned with classic infrastructure, opting for Single zone availability and enabling single worker node with single zone. For any support that you need, reach out the [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
 * Schematics plug-in installed. For more information, refer to [installing {{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli). 
 
 
@@ -98,7 +98,7 @@ After the pre-requisite is completed, follow these steps to complete the use cas
     ```
      {: codeblock}
 
-3. Create a job file `job.json` to run the action and following with adding ‘job’ definition to it. Edit the ‘Action ID’ from step 1 and run job.json.
+3. Create a job file `job.json` to run the action and following with adding `job` definition to it. Edit the `Action ID` from step 1 and run job.json.
 
  **Example:**
   
@@ -126,7 +126,7 @@ After the pre-requisite is completed, follow these steps to complete the use cas
     ```
      {: pre}  
 
-5. Execute the kubectl commands in command line to check the status of the nodes, running pods, and finally `run svc` command to view the external IP address of your service.
+5. Execute the `kubectl` commands in command line to check the status of the nodes, running pods, and finally `run svc` command to view the external IP address of your service.
 
     ```
       kubectl get nodes -o wide
