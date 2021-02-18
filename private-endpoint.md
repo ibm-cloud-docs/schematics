@@ -33,7 +33,7 @@ subcollection: schematics
 Create and manage {{site.data.keyword.bplong_notm}} workspaces on the private network by targeting the {{site.data.keyword.bpshort}} private service endpoint.
 {: shortdesc} 
 
-To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud_notm}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
+To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud_notm}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/schematics?topic=schematics-secure-data#pi-location).
 
 To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the command line plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
 {: note}
@@ -41,7 +41,7 @@ To connect to {{site.data.keyword.bplong_notm}} by using a private network conne
 ## Private service endpoints in {{site.data.keyword.bpshort}}
 {: #private-cse}
 
-The private service endpoints are available for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
+The private service endpoints are available for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
 ### Enable VRF and service endpoints for your account
@@ -131,7 +131,7 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 ### Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
 
-Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destory` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/https://cloud.ibm.com/docs/schematics?topic=schematics-secure-data#pi-location).
+Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destory` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
  You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
@@ -140,7 +140,7 @@ Now, you can securely connect the Virtual Private Endpoint Gateways to access {{
  The steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
 
  1. Create a {{site.data.keyword.bpshort}} workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
- 2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](https://cloud.ibm.com/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
+ 2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
  3. Create a Virtual Private Endpoint Gateways. For more information, see [creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-creating-ui). And you can assign the listed {{site.data.keyword.bpshort}} services endpoint into Virtual Private Endpoint Gateways.
  4. View the created Virtual Private Endpoint Gateways associated with the {{site.data.keyword.bpshort}} services. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 
 

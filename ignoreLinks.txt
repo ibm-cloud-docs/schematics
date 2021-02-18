@@ -1,1 +1,1 @@
-https://schematics.cloud.ibm.com/swagger-api/#/
+https://cloud.ibm.com/schematics/overview/swagger-api/#/

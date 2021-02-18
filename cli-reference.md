@@ -929,7 +929,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--var-file TFVA
 <dd>Optional. Return the command line output in JSON format.</dd>	
   
 <dt><code>--target <em>RESOURCE</em></code>, <code>-t <em>RESOURCE</em></code></dt>
-<dd>Optional. Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources that are defined in your configuration file remain uncreated or unupdated. To target the creation of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for creation. For more information about how to use the Terraform target feature, see [Resource targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting). </dd>
+<dd>Optional. Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources that are defined in your configuration file remain uncreated or unupdated. To target the creation of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for creation. For more information about how to use the Terraform target feature, see [Resource targeting](https://www.terraform.io/docs/cli/commands/plan.html#resource-targeting). </dd>
 
 <dt><code>--var-file <em>TFVARS_FILE_PATH</em></code>, <code>--vf <em>TFVARS_FILE_PATH</em></code></dt>
 <dd>Optional. The file path to the <code>terraform.tfvars</code> file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format <code>&lt;key&gt;=&lt;value&gt;</code>. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple <code>tfvars</code> files, specify <code>--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2</code>.</dd>
@@ -974,7 +974,7 @@ ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--j
 <dd>Optional. Return the command line output in JSON format.</dd>	
 
 <dt><code>--target <em>RESOURCE</em></code></dt>
-<dd>Optional. Target the deletion of a specific resource by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources in your workspace remain unchanged. To target the deletion of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for deletion. Also, if the targeted resource can only be deleted if dependent resources are deleted, such as a VPC can only be deleted if the attached subnet is deleted, then all dependent resources are targeted for deletion as well. For more information about how to use the Terraform target feature, see [Resource targeting](https://www.terraform.io/docs/commands/plan.html#resource-targeting). </dd>
+<dd>Optional. Target the deletion of a specific resource by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources in your workspace remain unchanged. To target the deletion of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for deletion. Also, if the targeted resource can only be deleted if dependent resources are deleted, such as a VPC can only be deleted if the attached subnet is deleted, then all dependent resources are targeted for deletion as well. For more information about how to use the Terraform target feature, see [Resource targeting](https://www.terraform.io/docs/cli/commands/plan.html#resource-targeting). </dd>
 
 </dl>	
 
@@ -1014,7 +1014,7 @@ ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121ab
 {: pre}
 
 ### `ibmcloud schematics output`
-{: #schematics-output}
+{: #schematics-output2}
 
 Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
 {: shortdesc}
@@ -1225,7 +1225,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--playbook-name` or `-pn` | Optional | The name of the playbook. |
 | `--description` or `-d` | Optional | The short description of an action.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private git repository. |
-| `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-inventory-host-grps).|
+| `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).|
 | `--credential` or `-C` | Optional | The file path that contains credential for the resource. |
 | `--bastion` or `-b` | Optional | The resource selection query string. |
 | `--input` or `-i` | Optional | The input variables for the action. This flag can be set multiple times. **Note** The format must be as `--input foo=bar` or in JSON file. |
@@ -1262,7 +1262,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--templates` or `-tr` | Optional | The ordered list of Git template repositories.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
 | `--bastion` or `-b` | Optional | The target record for bastion host. |
-| `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-inventory-host-grps).|
+| `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).|
 | `--credentials` or `-C` | Optional | The credentials to access target.|
 | `--inputs` or `-i` | Optional | The input variables for the action with the list of input variables=values. |
 | `--env-variables` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |

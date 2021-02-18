@@ -61,7 +61,7 @@ After the pre-requisite is completed, the steps to complete the use case:
   ```
   {: pre}
  
-   You can provide an optional [GitHub token](https://github.ibm.com/settings/tokens){: external}.
+   You can provide an optional [GitHub token](https://github.com/settings/tokens){: external}.
    {: note}
 
 3. Run a {{site.data.keyword.bpshort}} job by using the action ID that is created during action creation. The example contains the command to run a job. For more information, refer to [run Ansible playbook](/docs/schematics?topic=schematics-create-playbooks#run-ansible-playbook).
