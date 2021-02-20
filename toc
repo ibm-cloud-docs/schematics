@@ -70,7 +70,6 @@ Schematics
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
     cli-reference.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     locations.md
@@ -93,7 +92,6 @@ Schematics
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    {: .topicgroup}
     faqs.md
     error-messages.md
     ts_index.md

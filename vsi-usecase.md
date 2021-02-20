@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-20"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -57,7 +57,7 @@ After the prerequisite is completed, the steps to complete the use case:
   **Example**
 
   ```
-  ibmcloud schematics action create -n <action-name> -r Default -l us_east --tr https://github.com/Cloud-Schematics/ansible-is-instance-actions --pn <playbook-name> --input instance_ip=<ip-appdress> --input bearer_token="<bearer-token>" --json
+  ibmcloud schematics action create -n <action-name> -r Default -l us-east --tr https://github.com/Cloud-Schematics/ansible-is-instance-actions --pn <playbook-name> --input instance_ip=<ip-appdress> --input bearer_token="<bearer-token>" --json
   ```
   {: pre}
  
