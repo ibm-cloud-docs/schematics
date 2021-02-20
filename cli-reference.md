@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-20"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1189,7 +1189,7 @@ Enter location> <GEOGRAPHY>
 ibmcloud schematics action create 
 Enter name> testaction1
 Enter resource-group> testrg1
-Enter location> us_south
+Enter location> us-south
 ```
 {: pre}
 
@@ -1219,7 +1219,7 @@ You will receive the output with the ID, name, resource group, and location with
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of the action. |
 | `--resource-group` or `-r` | Required | The resource group name for the Action. |
-| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us_south**, **us_east**, **eu_de**, **eu_gb**. |
+| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
 | `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
 | `--playbook-name` or `-pn` | Optional | The name of the playbook. |
@@ -1399,7 +1399,7 @@ Enter command-name> <COMMAND_NAME>
 ```
 ibmcloud schematics action create 
 Enter command-object> action
-Enter command-object-id> us_south.ACTION.Stop_Action777.1234213
+Enter command-object-id> us-south.ACTION.Stop_Action777.1234213
 Enter command-name> ansible_playbook_run
 ```
 You will receive the output with the command object details with the user state.
