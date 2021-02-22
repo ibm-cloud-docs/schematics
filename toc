@@ -65,7 +65,7 @@ Schematics
         private-endpoint.md
         data-security.md
         allowips.md
-
+        
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -80,13 +80,14 @@ Schematics
     {: .topicgroup}
     Terraform
          [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-         [IBM Cloud provider for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources){: external}
+         [IBM Cloud provider for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources) 
          [Terraform documentation](https://www.terraform.io/docs/index.html)
 
     {: .topicgroup}
     Ansible
          [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)
-    {: .navgroup-end}
+     
+     {: .navgroup-end}
 
     {: .navgroup id="help"}
     faqs.md
