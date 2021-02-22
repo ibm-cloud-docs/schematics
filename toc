@@ -86,12 +86,10 @@ Schematics
     {: .topicgroup}
     Ansible
          [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)
-
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     faqs.md
     error-messages.md
     ts_index.md
-
     {: .navgroup-end}
