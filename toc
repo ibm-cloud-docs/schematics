@@ -65,7 +65,7 @@ Schematics
         private-endpoint.md
         data-security.md
         allowips.md
-        
+
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
