@@ -65,7 +65,6 @@ Schematics
         private-endpoint.md
         data-security.md
         allowips.md
-
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -86,7 +85,6 @@ Schematics
     {: .topicgroup}
     Ansible
          [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)
-     
      {: .navgroup-end}
 
     {: .navgroup id="help"}
