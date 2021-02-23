@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-23"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -69,6 +69,26 @@ The functions of the Schematics action in {{site.data.keyword.cloud_notm}} are:
  - How you point your action to the Ansible playbook in your GitHub repository?
  - It defines your resource inventory where you want to run your playbook.
  - It runs your Ansible playbook in {{site.data.keyword.bpshort}}.
+
+
+## How do {{site.data.keyword.bplong_notm}} support Ansible Galaxy?
+{: #ansible-galaxy}
+
+Ansible Galaxy is a tool to retrieve the Ansible roles from the requirements file and invoke your Ansible playbook to setup the configured resources. This is used to streamline your automation tasks, even the fresh system administrator can start automating by using Ansible.
+
+{{site.data.keyword.bplong_notm}} supports `/roles` to specify the requirements to process in through `requirements.yaml` or `requirements.yml` file. The requirements file uses the Ansible Galaxy repository to execute the process and invokes your Ansible playbook from the Git repository to execute the configured resources.
+
+For more information, about the sample Git repository that installs kubectl on virtual machine by using Ansible Galaxy role, refer to [Ansible playbook by using Ansible Galaxy](https://github.com/Cloud-Schematics/ansible-kubectl). Following is the directory structure of the Git repository supporting Ansible Galaxy.
+{: shortdesc}
+
+```
+   ├── kubectl.yaml
+   ├── README.md
+   ├── roles
+      └── requirements.yaml or requirements.yml
+```
+{: screen}
+
 
 
 
