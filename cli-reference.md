@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-20"
+lastupdated: "2021-02-23"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1805,4 +1805,5 @@ ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --a
 ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
 ```
 {: pre}
+
 
