@@ -124,7 +124,7 @@ After your account is enabled for VPC and connect {{site.data.keyword.bpshort}} 
 
 Before you begin, to access the  {{site.data.keyword.bpshort}} service through the Virtual Private Endpoint Gateways, ensure that you meet the following criteria:
 
-* Make sure that you have the required [permissions](/docs/schematics?topic=schematics-access#access-setup) to [create VPC](/docs/vpc?topic=vpc-getting-started), to create an endpoint gateway, to create or bind a reserved IP from the subnet, and [account limits for VSI creation](/docs/vpc?topic=vpc-quotas#virtual-server-instances) for concurrent instances.
+* Make sure that you have the required [permissions](/docs/schematics?topic=schematics-access#access-setup) to [create VPC](/docs/vpc?topic=vpc-getting-started), to create an endpoint gateway, to create or bind a reserved IP from the subnet, and [account limits for VSI creation](https://cloud.ibm.com/docs/vpc?topic=vpc-quotas#virtual-server-instances) for concurrent instances.
 * A VPC Generation 2 instance and a subnet zones to bind an IP address at the same time you provision the endpoint gateway. For more information, see [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 * A VSI is created. For more information, see [creating a VSI](/docs/vpc?topic=vpc-creating-virtual-servers).
 

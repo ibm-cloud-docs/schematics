@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-23"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -38,7 +38,7 @@ Schematics functions are build on UBI-8 and the runtimes that come with the UBI-
 |Utilities | Description | 
 |---------|----------|
 | `Python 3` | Schematics uses [Python 3](/docs/cli?topic=cli-enable-existing-python) and higher version to analyze and organize the data, and to automate DevOps. | 
-| `Python 3 - pip` |Standard package manager for Python. Allows you to install and manage modules that are not part of the [Python standard library](/docs/ai-openscale-icp?topic=ai-openscale-icp-crt-ov#in-pyc). For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
+| `Python 3 - pip` |Standard package manager for Python. Allows you to install and manage modules that are not part of the [Python standard library](https://docs.python.org/3/library/){: external}. For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
 | `OpenShift client` |A [service built docker containers](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_oc) that are orchestrated and managed by Kubernetes on a foundation of Red Hat Enterprise Linux.| 
 | `Ansible 2.9.7`| Schematics uses [Ansible v2.9.7](/docs/cloud-pak-multicloud-management?topic=cloud-pak-multicloud-management-ansible-getting-started) and higher. |
 | `Terraform v11 and v12`|   Automates your resource provisioning. [Terraform v11, v12, and v13](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to use the modules and resource in Schematics workspace. Actions support Terraform v11 and v12. |
