@@ -149,10 +149,10 @@ If you do not want to connect your workspace to a Git repository, you can upload
     2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
  
       Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The files having more than 500 KB in size, invalid image extension, and the blocked extension files are considered as vulnerable files when cloning. **Note** The allowed and image extensions are supported to download for cloning, whereas the blocked extension is deleted after downloading.
-             - Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
+             - Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`, `.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
              - Blocked extension: `.php5`,`.pht`,`.phtml`,`.shtml`,`.asa`,`.asax`,`.swf`,`.xap`,`.tfstate`,`.tfstate.backup`,`.exe`
              - Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
-             - Allowed {{site.data.keyword.bpshort}} action extensions:  `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
+             - Allowed {{site.data.keyword.bpshort}} action extensions:  `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`, `.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
 
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.

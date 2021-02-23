@@ -71,7 +71,7 @@ The functions of the Schematics action in {{site.data.keyword.cloud_notm}} are:
  - It runs your Ansible playbook in {{site.data.keyword.bpshort}}.
 
 
-## How do {{site.data.keyword.bplong_notm}} support Ansible Galaxy?
+## How do {{site.data.keyword.bpshort}} support Ansible Galaxy?
 {: #ansible-galaxy}
 
 Ansible Galaxy is a tool to retrieve the Ansible roles from the requirements file and invoke your Ansible playbook to setup the configured resources. This is used to streamline your automation tasks, even the fresh system administrator can start automating by using Ansible.
