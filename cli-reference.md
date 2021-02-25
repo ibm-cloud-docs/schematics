@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -903,7 +903,7 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {
 ### `ibmcloud schematics apply`	
 {: #schematics-apply}	
 
-Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, or removed in {{site.data.keyword.cloud_notm}}.
+Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, [persisted](/docs/schematics?topic=schematics-persist-files), or removed in {{site.data.keyword.cloud_notm}}.
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}
 
@@ -1041,7 +1041,7 @@ ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
 ### `ibmcloud schematics plan`	
 {: #schematics-plan}	
 
-Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The command line output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your configuration file.
+Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The command line output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, [persisted](/docs/schematics?topic=schematics-persist-files), or removed to achieve the state that is described in your configuration file.
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}	
 

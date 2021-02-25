@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -173,7 +173,7 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 **To freeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to freeze. 
 2. Select the **Settings** tab. 
-3. In the **State** section on the workspace settings page, set the toggle to **Frozen** to disable changes to your workspace. The ID of the user who freezes the workspace and a timestamp are automatically logged. After you freeze a workspace, no user can generate a Terraform execution plan or apply the plan in {{site.data.keyword.cloud_notm}}. 
+3. In the **State** section on the workspace settings page, set the toggle to **Frozen** to disable changes to your workspace. The ID of the user who freezes the workspace and a timestamp are automatically logged. After you freeze a workspace, no user can generate a Terraform execution plan, or apply the plan in {{site.data.keyword.cloud_notm}}. 
 
 **To unfreeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to unfreeze. 
@@ -293,7 +293,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
     <tr>
       <td><code>Create workspace</code></td>
       <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The workspace is created without a reference to `GitHub`, `GitLab`, or `Bitbucket` to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, you can destroy all the resources to make your workspace in an inactive state.
+      <td>The workspace is created without a reference to `GitHub`, `GitLab`, or `Bitbucket` to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-persist-files) the files for subsequent activities. Then, you can destroy all the resources to make your workspace in an inactive state.
  </td>
    </tr>
      <tr>
@@ -304,7 +304,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
     <tr>
       <td><code>Plan and apply action</code></td>
       <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
-      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in in progress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state.
+      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in in progress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state. Also the state and the files are  [persisted](/docs/schematics?topic=schematics-persist-files) for the subsequent activities.
       </td>
    </tr>
     <tr>
