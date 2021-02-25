@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -59,7 +59,6 @@ The steps to frame your migration journey to support the latest Terraform versio
           #
           # For more information, see the provider source documentation:
           #
-          # https://www.terraform.io/docs/language/providers/configuration.html#provider-source
         }
       }
       required_version = ">= 0.13"
@@ -81,7 +80,7 @@ The steps to frame your migration journey to support the latest Terraform versio
 
 Along with the given steps, you need to ensure these steps are followed:
 
-1. Download state file from existing workspace using the [POSTMAN](/docs/schematics#get-workspace-template-state) URL to access the Terraform statefile or through local workspace environment. For more information, refer to [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#statefile-cmds).
+1. Download state file from workspace to access the Terraform statefile or through local workspace environment. For more information, refer to [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#statefile-cmds).
 2. Delete an [existing workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete). You should not destroy the resources.
 3. Migrate the configuration files and state file to higher version of Terraform, refer to [step 1 till step 5](#migrate-steps).
 4. Create a workspace with the migrated configuration file and the state file for the migration to be successful.

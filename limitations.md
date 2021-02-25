@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -51,12 +51,6 @@ The `terraform.tfvars` file is a local variables file that you use to store sens
 {: shortdesc}
 
 With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars` file. Instead, you [declare your variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables) in the Terraform configuration files, and enter the values for your variables when you create a workspace. You can later change the values of your variables by updating the variables from your workspace details page. 
-
-Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The files having more than 500 KB in size, invalid image extension, and the blocked extension files are considered as vulnerable files when cloning. **Note** The allowed and image extensions are supported to download for cloning, whereas the blocked extension is deleted after downloading.
-- Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`,`.pub`, `.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
-- Blocked extension: `.php5`,`.pht`,`.phtml`,`.shtml`,`.asa`,`.asax`,`.swf`,`.xap`,`.tfstate`,`.tfstate.backup`,`.exe`
-- Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
-- Allowed {{site.data.keyword.bpshort}} action extensions:  `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`, `.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
 
 ### Is Terraform remote state supported in {{site.data.keyword.bpshort}}?
 {: #tf-remote-state}

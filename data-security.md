@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-25"
 
-keywords: schematics, automation, terraform
+keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
 subcollection: schematics
 
@@ -26,16 +26,32 @@ subcollection: schematics
 {:support: data-reuse='support'}
 {:help: data-hd-content-type='help'}
 
-# Securing your data
+# Securing your data in {{site.data.keyword.bpshort}}
 {: #secure-data}
 
 Review what data is stored and encrypted when you use {{site.data.keyword.bplong_notm}}, and how you can delete any personal data. 
 {: shortdesc}
 
-## What information is stored in {{site.data.keyword.bpshort}}?
+To ensure that you can securely manage your data when you use {{site.data.keyword.bpshort}}, it is important to know exactly what data is stored and encrypted and how you can delete any stored data. Data encryption by using customer-managed keys is supported by using Key Protect and Hyper Protect Crypto Services with {{site.data.keyword.bpshort}}.
+{: shortdesc}
+
+## How your data is stored and encrypted in {{site.data.keyword.bpshort}}?
+{: #data-storage}
+
+All data, user inputs and the data generated at runtime during execution of automation code, are stored in IBM Cloud Object Storage. This data is encrypted at rest. It supports following encryption options:
+
+1. Envelope encryption with schematics owned keys
+   Each data object is encrypted by using a unique [data encryption key (DEK)](#x4791827){: term}, which is further wrapped by using a single root key to encrypt all the data according to the [geographical location](docs/schematics?topic=schematics-secure-data#pi-location).
+   {: note}
+2. Bring your own key (BYOK) by integrating with Key Protect.
+3. Keep your own key (KYOK) by integrating with Hyper Proctect Crypto Services (HPCS).
+
+
+
+## What informations are stored in {{site.data.keyword.bpshort}}?
 {: #pi-data}
 
-The following information is stored with IBM when you create and use a {{site.data.keyword.bpshort}} workspace: 
+The following informations are stored with {{site.data.keyword.IBM_notm}} when you create and use a {{site.data.keyword.bpshort}} workspace: 
 - Workspace details
 - Workspace variables
 - Terraform configuration files that your workspace points to
@@ -46,7 +62,8 @@ The following information is stored with IBM when you create and use a {{site.da
 ## Where is my information stored?
 {: #pi-location}
 
-By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Make sure that your data can be stored in these locations before you start {{site.data.keyword.bpshort}}. 
+By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Make sure that your data can be stored in these locations before you start {{site.data.keyword.bpshort}}.
+{: shortdesc} 
 
 |Geography/ location| API endpoint|Data is stored in|Data is replicated to|
 |------------|----------------|------|--------|

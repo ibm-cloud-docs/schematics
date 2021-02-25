@@ -33,7 +33,7 @@ Learn how to create Terraform templates that are well-structured, reusable, and 
 
 A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
-You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format. For more information, see [Configuration language](https://www.terraform.io/docs/language/index.html){: external}.  
+You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format.  
 
 Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limitations](/docs/schematics?topic=schematics-schematics-limitations). 
 {: tip}
@@ -182,8 +182,8 @@ You can decide to declare your variables within the same Terraform configuration
 
 **What information do I need to include in my variable declaration?** </br>
 When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
-- `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
-- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/language/values/variables.html#type-constraints). <br>
+- `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. <br>
+- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type]). <br>
 
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
@@ -223,7 +223,6 @@ resource ibm_container_cluster "test_cluster" {
 ```
 {: codeblock}
 
-For more information, about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/language/values/variables.html){: external}.
 
 ## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}
@@ -342,14 +341,8 @@ Yes, when you declare and assign the value to the variables, you can view the to
 ## Storing your Terraform templates
 {: #store-template}
 
-Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file or `.tar`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead. 
+Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file or `.tar`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead. If you want to clone see [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
 {: shortdesc}
-
-  Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The files having more than 500 KB in size, invalid image extension, and the blocked extension files are considered as vulnerable files when cloning. **Note** The allowed and image extensions are supported to download for cloning, whereas the blocked extension is deleted after downloading.
-  - Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`,`.pub`, `.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
-  - Blocked extension: `.php5`,`.pht`,`.phtml`,`.shtml`,`.asa`,`.asax`,`.swf`,`.xap`,`.tfstate`,`.tfstate.backup`,`.exe`
-  - Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
-  - Allowed {{site.data.keyword.bpshort}} action extensions:  `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`, `.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
 
 The directory structure of the Terraform template in the GitHub repository is listed in the table with the latest updated time.
 

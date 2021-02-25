@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -28,7 +28,7 @@ subcollection: schematics
 # Getting started with {{site.data.keyword.bplong_notm}} and Ansible 
 {: #getting-started-ansible}
 
-   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
+   The closed beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
 Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, by running Ansible playbooks against your inventory of {{site.data.keyword.cloud_notm}} resources. Use Ansible to install software packages, and application code on VSIs. Or use it to perform post provisioning configuration of {{site.data.keyword.cloud_notm}} resources, deployed by using {{site.data.keyword.bplong_notm}} and Terraform. 
@@ -78,7 +78,7 @@ Ansible Galaxy is a tool to retrieve the Ansible roles from the requirements fil
 
 {{site.data.keyword.bplong_notm}} supports `/roles` to specify the requirements to process in through `requirements.yaml` or `requirements.yml` file. The requirements file uses the Ansible Galaxy repository to execute the process and invokes your Ansible playbook from the Git repository to execute the configured resources.
 
-For more information, about the sample Git repository that installs kubectl on virtual machine by using Ansible Galaxy role, refer to [Ansible playbook by using Ansible Galaxy](https://github.com/Cloud-Schematics/ansible-kubectl). Following is the directory structure of the Git repository supporting Ansible Galaxy.
+For more information, about the sample Git repository that installs `kubectl` on virtual machine by using Ansible Galaxy role, refer to [Ansible playbook by using Ansible Galaxy](https://github.com/Cloud-Schematics/ansible-kubectl). Following is the directory structure of the Git repository supporting Ansible Galaxy.
 {: shortdesc}
 
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -38,7 +38,7 @@ As you manage your {{site.data.keyword.cloud_notm}} resources with {{site.data.k
 When you use the `remote_state` data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bplong_notm}} backend and can access workspace information directly. 
 
 **What do I need to do to access resource information in other workspaces?** </br>
-Similar to the `remote_state` data source, you can only access information that you configured as output values in your Terraform template. For example, let's say you have a workspace that you used to provision a VPC. To access the VPC ID, you must define the ID as an output variable in your Terraform configuration file. Then, you use [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external} to access the VPC ID in other workspaces. 
+Similar to the `remote_state` data source, you can only access information that you configured as output values in your Terraform template. For example, let's say you have a workspace that you used to provision a VPC. To access the VPC ID, you must define the ID as an output variable in your Terraform configuration file.
 
 **To use the `ibm_schematics_output` data source**:
 
@@ -59,7 +59,7 @@ Similar to the `remote_state` data source, you can only access information that 
    ```
    {: screen}
    
-   In this example, two output values are defined, the `sshcommand` to access the virtual server instance in your VPC and the `vpc_id`. For more information about how to define output values, see [Output values](https://www.terraform.io/docs/language/values/outputs.html){: external}.
+   In this example, two output values are defined, the `sshcommand` to access the virtual server instance in your VPC and the `vpc_id`.
    
 2. Retrieve the ID of the VPC workspace that you created. 
    - **From the console**: 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -59,7 +59,7 @@ You need to use the `AzureURL` in this format `https://azure.com/<your_user_name
 
 You need to use the `VsURL` in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>`.
 
-### How many workspaces do I need?
+## How many workspaces do I need?
 {: #plan-number-of-workspaces}
 
 To find out how many workspaces you need in {{site.data.keyword.bplong_notm}}, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
@@ -74,7 +74,7 @@ Review the following image to see the number of workspaces in {{site.data.keywor
 Do not use one workspace to manage an entire staging or production environment. When you deploy all of your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 {: important}
 
-### How do I structure my Git repository to map my workspaces?
+## How do I structure my Git repository to map my workspaces?
 {: #plan-github-structure}
 
 Structure your Git repository so that you have one repository for all your Terraform configuration files that build your microservice, and use input variables in {{site.data.keyword.bpshort}}, or GitHub branches or directories to differentiate between your development, staging, and production environment. 
@@ -90,9 +90,7 @@ Review the following table to find a list of options for how to structure your G
 | One Git repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid having different configurations in each environment. |
 | Use one Git repo per environment | Use one Git repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and Git repository and you can apply separate permissions for each of your Git repositories. Make sure that your team can manage multiple Git repositories and keep them in sync. | 
 
-For more information about how to structure your GitHub repository, see [Terraform Configurations in Terraform Cloud Workspaces](https://www.terraform.io/docs/cloud/workspaces/configurations.html){: external}. 
-
-### How can I reuse configuration files across environments and workspaces? 
+## How can I reuse configuration files across environments and workspaces?
 {: #plan-reuse}
 
 Try to minimize the number of Terraform configuration files that you need to manage by creating standardized resource templates and by using variables to customize the template to your needs. 
@@ -100,12 +98,12 @@ Try to minimize the number of Terraform configuration files that you need to man
 
 With standardized resource templates, you can ensure that development best practices are followed within your organization and that all Terraform configuration files have the same structure. Knowing the structure of a Terraform configuration file makes it easier for your developers to understand a file, declare variables, contribute to the code, and troubleshoot the errors. 
 
-### How do I control access to my workspaces? 
+## How do I control access to my workspaces? 
 {: #plan-workspace-access}
 
 {{site.data.keyword.bplong_notm}} is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.bplong_notm}}, see [Managing user access](/docs/schematics?topic=schematics-access). 
 
-### What do I need to be aware of when I have a repository that I managed with native Terraform?
+## What do I need to be aware of when I have a repository that I managed with native Terraform?
 {: #plan-terraform-migration}
 
 Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can import your existing Terraform templates into {{site.data.keyword.bpshort}} workspaces. Depending on how your Terraform templates and Git repositories are structured, you might need to make changes so that you can successfully use {{site.data.keyword.bplong_notm}}. 
@@ -146,14 +144,7 @@ If you do not want to connect your workspace to a Git repository, you can upload
       - Example for `master` branch: `https://github.com/myorg/myrepo`
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
       - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
-    2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
- 
-      Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The files having more than 500 KB in size, invalid image extension, and the blocked extension files are considered as vulnerable files when cloning. **Note** The allowed and image extensions are supported to download for cloning, whereas the blocked extension is deleted after downloading.
-             - Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`, `.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
-             - Blocked extension: `.php5`,`.pht`,`.phtml`,`.shtml`,`.asa`,`.asax`,`.swf`,`.xap`,`.tfstate`,`.tfstate.backup`,`.exe`
-             - Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
-             - Allowed {{site.data.keyword.bpshort}} action extensions:  `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`, `.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
-
+    2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
     5. You can manually enter the values.
@@ -173,7 +164,7 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 **To freeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to freeze. 
 2. Select the **Settings** tab. 
-3. In the **State** section on the workspace settings page, set the toggle to **Frozen** to disable changes to your workspace. The ID of the user who freezes the workspace and a timestamp are automatically logged. After you freeze a workspace, no user can generate a Terraform execution plan or apply the plan in {{site.data.keyword.cloud_notm}}. 
+3. In the **State** section on the workspace settings page, set the toggle to **Frozen** to disable changes to your workspace. The ID of the user who freezes the workspace and a timestamp are automatically logged. After you freeze a workspace, no user can generate a Terraform execution plan, or apply the plan in {{site.data.keyword.cloud_notm}}. 
 
 **To unfreeze a workspace**: 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to unfreeze. 
@@ -293,7 +284,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
     <tr>
       <td><code>Create workspace</code></td>
       <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The workspace is created without a reference to `GitHub`, `GitLab`, or `Bitbucket` to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. Then, you can destroy all the resources to make your workspace in an inactive state.
+      <td>The workspace is created without a reference to `GitHub`, `GitLab`, or `Bitbucket` to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-persist-files) the files for subsequent activities. Then, you can destroy all the resources to make your workspace in an inactive state.
  </td>
    </tr>
      <tr>
@@ -304,7 +295,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
     <tr>
       <td><code>Plan and apply action</code></td>
       <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
-      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in in progress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state.
+      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in in progress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state. Also the state and the files are  [persisted](/docs/schematics?topic=schematics-persist-files) for the subsequent activities.
       </td>
    </tr>
     <tr>
