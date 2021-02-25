@@ -59,7 +59,7 @@ You need to use the `AzureURL` in this format `https://azure.com/<your_user_name
 
 You need to use the `VsURL` in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>`.
 
-### How many workspaces do I need?
+## How many workspaces do I need?
 {: #plan-number-of-workspaces}
 
 To find out how many workspaces you need in {{site.data.keyword.bplong_notm}}, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
@@ -74,7 +74,7 @@ Review the following image to see the number of workspaces in {{site.data.keywor
 Do not use one workspace to manage an entire staging or production environment. When you deploy all of your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 {: important}
 
-### How do I structure my Git repository to map my workspaces?
+## How do I structure my Git repository to map my workspaces?
 {: #plan-github-structure}
 
 Structure your Git repository so that you have one repository for all your Terraform configuration files that build your microservice, and use input variables in {{site.data.keyword.bpshort}}, or GitHub branches or directories to differentiate between your development, staging, and production environment. 
@@ -90,7 +90,7 @@ Review the following table to find a list of options for how to structure your G
 | One Git repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid having different configurations in each environment. |
 | Use one Git repo per environment | Use one Git repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and Git repository and you can apply separate permissions for each of your Git repositories. Make sure that your team can manage multiple Git repositories and keep them in sync. | 
 
-### How can I reuse configuration files across environments and workspaces?
+## How can I reuse configuration files across environments and workspaces?
 {: #plan-reuse}
 
 Try to minimize the number of Terraform configuration files that you need to manage by creating standardized resource templates and by using variables to customize the template to your needs. 
@@ -98,12 +98,12 @@ Try to minimize the number of Terraform configuration files that you need to man
 
 With standardized resource templates, you can ensure that development best practices are followed within your organization and that all Terraform configuration files have the same structure. Knowing the structure of a Terraform configuration file makes it easier for your developers to understand a file, declare variables, contribute to the code, and troubleshoot the errors. 
 
-### How do I control access to my workspaces? 
+## How do I control access to my workspaces? 
 {: #plan-workspace-access}
 
 {{site.data.keyword.bplong_notm}} is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.bplong_notm}}, see [Managing user access](/docs/schematics?topic=schematics-access). 
 
-### What do I need to be aware of when I have a repository that I managed with native Terraform?
+## What do I need to be aware of when I have a repository that I managed with native Terraform?
 {: #plan-terraform-migration}
 
 Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can import your existing Terraform templates into {{site.data.keyword.bpshort}} workspaces. Depending on how your Terraform templates and Git repositories are structured, you might need to make changes so that you can successfully use {{site.data.keyword.bplong_notm}}. 
