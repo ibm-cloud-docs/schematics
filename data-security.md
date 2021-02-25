@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-02-25"
 
-keywords: schematics, automation, terraform
+keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
 subcollection: schematics
 

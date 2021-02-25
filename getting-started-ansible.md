@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-23"
+lastupdated: "2021-02-25"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -78,7 +78,7 @@ Ansible Galaxy is a tool to retrieve the Ansible roles from the requirements fil
 
 {{site.data.keyword.bplong_notm}} supports `/roles` to specify the requirements to process in through `requirements.yaml` or `requirements.yml` file. The requirements file uses the Ansible Galaxy repository to execute the process and invokes your Ansible playbook from the Git repository to execute the configured resources.
 
-For more information, about the sample Git repository that installs kubectl on virtual machine by using Ansible Galaxy role, refer to [Ansible playbook by using Ansible Galaxy](https://github.com/Cloud-Schematics/ansible-kubectl). Following is the directory structure of the Git repository supporting Ansible Galaxy.
+For more information, about the sample Git repository that installs `kubectl` on virtual machine by using Ansible Galaxy role, refer to [Ansible playbook by using Ansible Galaxy](https://github.com/Cloud-Schematics/ansible-kubectl). Following is the directory structure of the Git repository supporting Ansible Galaxy.
 {: shortdesc}
 
 ```
