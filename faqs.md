@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-25"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -156,6 +156,16 @@ As of now we don't have support for migrating {{site.data.keyword.bpshort}} work
 
 No, the null-exec (null_resources) and remote-exec resources has maximum timeout of 60 minutes. Longer jobs need to be broken into shorter blocks to provision the infrastructure faster. Otherwise the execution times out automatically after 60 minutes.
 
+## When cloning the Git repository, what are the file extensions supported in {{site.data.keyword.bpshort}}?
+{: #clone-file-extension}
+{: faq}
+{: support}
+
+{{site.data.keyword.bpshort}} only downloads the `allowed` extensions for cloning. The file consists of 500 KB or more in size, and `disallowed` extensions are considered as vulnerable files. **Note** The allowed image extensions are not checked for the size limit. The blocked and vulnerable files are removed after cloning.
+- Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`,`.pub`, `.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
+- Blocked extension: `.php5`,`.pht`,`.phtml`,`.shtml`,`.asa`,`.asax`,`.swf`,`.xap`,`.tfstate`,`.tfstate.backup`,`.exe`
+- Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
+- Allowed {{site.data.keyword.bpshort}} action extensions:  `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`, `.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
 
 
 
