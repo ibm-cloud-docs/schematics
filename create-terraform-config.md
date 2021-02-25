@@ -33,7 +33,7 @@ Learn how to create Terraform templates that are well-structured, reusable, and 
 
 A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
-You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format. For more information, see [Configuration language](https://www.terraform.io/docs/language/index.html){: external}.  
+You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format.  
 
 Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limitations](/docs/schematics?topic=schematics-schematics-limitations). 
 {: tip}
@@ -182,8 +182,8 @@ You can decide to declare your variables within the same Terraform configuration
 
 **What information do I need to include in my variable declaration?** </br>
 When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
-- `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br>
-- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/language/values/variables.html#type-constraints). <br>
+- `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. <br>
+- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type]). <br>
 
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
@@ -223,7 +223,6 @@ resource ibm_container_cluster "test_cluster" {
 ```
 {: codeblock}
 
-For more information, about variable configurations, see the [Terraform documentation](https://www.terraform.io/docs/language/values/variables.html){: external}.
 
 ## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}

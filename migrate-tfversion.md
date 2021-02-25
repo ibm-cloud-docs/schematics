@@ -59,7 +59,6 @@ The steps to frame your migration journey to support the latest Terraform versio
           #
           # For more information, see the provider source documentation:
           #
-          # https://www.terraform.io/docs/language/providers/configuration.html#provider-source
         }
       }
       required_version = ">= 0.13"

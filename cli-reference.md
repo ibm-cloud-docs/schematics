@@ -209,7 +209,7 @@ ibmcloud schematics workspace import --id <WID> --address <resource>.<resource_n
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to import. </dd>
 
 <dt><code>--address</code></dt>
 <dd>Required. Provide the resource name you want to import. </dd>
@@ -477,7 +477,7 @@ Example JSON for uploading a `.tar` file later:
      </tr>
       <tr>
       <td><code>&lt;variable_type&gt;</code></td>
-      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/language/values/variables.html#type-constraints).</td>
+      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. </td>
       </tr>
       <tr>
      <td><code>&lt;variable_value&gt;</code></td>
@@ -536,7 +536,7 @@ ibmcloud schematics workspace output --id <WORKSPACE_ID> --options <FLAGS> --nam
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to import. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to import. </dd>
 
 <dt><code>--name</code></dt>
 <dd>Optional. Provide the name of the parameter to print.   </dd>
@@ -625,7 +625,7 @@ ibmcloud schematics workspace taint --id <WORKSPACE_ID> --options <FLAGS> --addr
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to show. </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.   </dd>
@@ -660,7 +660,7 @@ ibmcloud schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --ad
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to show. </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.   </dd>
@@ -809,7 +809,7 @@ Now, in template_repo, you can also update `url` with more parameters as shown i
      </tr>
       <tr>
       <td><code>&lt;template_data.variablestore.type&gt;</code></td>
-      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. For more information, about the syntax, see [Configuring input variables](https://www.terraform.io/docs/configuration-0-11/variables.html). <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. For more information, about the syntax to use the complex data type, see [Configuring variables](https://www.terraform.io/docs/language/values/variables.html#type-constraints).</td>
+      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type.  <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
       </tr>
       <tr>
      <td><code>&lt;template_data.variablestore.value&gt;</code></td>
@@ -926,7 +926,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--var-file TFVA
 <dd>Optional. Return the command line output in JSON format.</dd>	
   
 <dt><code>--target <em>RESOURCE</em></code>, <code>-t <em>RESOURCE</em></code></dt>
-<dd>Optional. Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources that are defined in your configuration file remain uncreated or unupdated. To target the creation of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for creation. For more information about how to use the Terraform target feature, see [Resource targeting](https://www.terraform.io/docs/cli/commands/plan.html#resource-targeting). </dd>
+<dd>Optional. Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources that are defined in your configuration file remain uncreated or unupdated. To target the creation of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for creation. </dd>
 
 <dt><code>--var-file <em>TFVARS_FILE_PATH</em></code>, <code>--vf <em>TFVARS_FILE_PATH</em></code></dt>
 <dd>Optional. The file path to the <code>terraform.tfvars</code> file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format <code>&lt;key&gt;=&lt;value&gt;</code>. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple <code>tfvars</code> files, specify <code>--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2</code>.</dd>
@@ -971,7 +971,7 @@ ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--j
 <dd>Optional. Return the command line output in JSON format.</dd>	
 
 <dt><code>--target <em>RESOURCE</em></code></dt>
-<dd>Optional. Target the deletion of a specific resource by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources in your workspace remain unchanged. To target the deletion of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for deletion. Also, if the targeted resource can only be deleted if dependent resources are deleted, such as a VPC can only be deleted if the attached subnet is deleted, then all dependent resources are targeted for deletion as well. For more information about how to use the Terraform target feature, see [Resource targeting](https://www.terraform.io/docs/cli/commands/plan.html#resource-targeting). </dd>
+<dd>Optional. Target the deletion of a specific resource by entering the Terraform resource address, such as <code>ibm_is_instance.vm1</code>. All other resources in your workspace remain unchanged. To target the deletion of multiple resources, use the following syntax: <code>--target &lt;resource1&gt; --target &lt;resource2&gt; </code>. If the targeted resource specifies the <code>count</code> attribute and no index is specified in the resource address, such as <code>ibm_is_instance.vm1[1]</code>, all instances that share the same resource name are targeted for deletion. Also, if the targeted resource can only be deleted if dependent resources are deleted, such as a VPC can only be deleted if the attached subnet is deleted, then all dependent resources are targeted for deletion as well. </dd>
 
 </dl>	
 
@@ -1590,7 +1590,7 @@ ibmcloud schematics commands --id <WORKSPACE_ID> --options <FLAGS> --file <JSON 
   Required. The unique ID of the workspace for which you want to run the commands. To find the of your workspace, run `ibmcloud schematics workspace list`.
 
 `--options <FLAGS>`
-  Optional. The command-line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html).
+  Optional. The command-line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**.
 
 `--file <JSON file>`
   Required. Contains the address of resource to be executed.
@@ -1720,7 +1720,7 @@ ibmcloud schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> -
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to show. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to show. </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.  </dd>
@@ -1753,7 +1753,7 @@ ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --a
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to move. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to move. </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the source address parameter for the command.   </dd>
@@ -1790,7 +1790,7 @@ ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --a
    </dd>
 
 <dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to remove. For more information, about the flags, refer [Command option flags](https://www.terraform.io/docs/cli/commands/untaint.html) </dd>
+<dd>Optional. Enter the option flag that you want to remove. </dd>
 
 <dt><code>--address</code></dt>
 <dd>Optional. Provide the address parameter for the command.   </dd>
