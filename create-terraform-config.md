@@ -342,14 +342,8 @@ Yes, when you declare and assign the value to the variables, you can view the to
 ## Storing your Terraform templates
 {: #store-template}
 
-Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file or `.tar`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead. 
+Your Terraform configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file or `.tar`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead. If you want to clone see [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
 {: shortdesc}
-
-{{site.data.keyword.bpshort}} only downloads the `allowed` extensions. The files consists of 500 KB or more in size, and `disallowed` extensions are considered as vulnerable files. **Note** The allowed image extensions are not checked for the size limit. The blocked and vulnerable files are removed after cloning.
-  - Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`,`.pub`, `.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
-  - Blocked extension: `.php5`,`.pht`,`.phtml`,`.shtml`,`.asa`,`.asax`,`.swf`,`.xap`,`.tfstate`,`.tfstate.backup`,`.exe`
-  - Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
-  - Allowed {{site.data.keyword.bpshort}} action extensions:  `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`, `.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
 
 The directory structure of the Terraform template in the GitHub repository is listed in the table with the latest updated time.
 
