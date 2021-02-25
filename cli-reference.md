@@ -24,7 +24,7 @@ subcollection: schematics
 {:external: target="_blank" .external}
 
 
-# Command line reference	
+# {{site.data.keyword.bplong_notm}} CLI	
 {: #schematics-cli-reference}	
 
 Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud_notm}} resources. 	
