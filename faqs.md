@@ -156,7 +156,7 @@ As of now we don't have support for migrating {{site.data.keyword.bpshort}} work
 
 No, the null-exec (null_resources) and remote-exec resources has maximum timeout of 60 minutes. Longer jobs need to be broken into shorter blocks to provision the infrastructure faster. Otherwise the execution times out automatically after 60 minutes.
 
-## How does {{site.data.keyword.bpshort_notm}} decide to remove the files from my Terraform or Ansible templates?
+## How does {{site.data.keyword.bpshort}} decide to remove the files from my Terraform or Ansible templates?
 {: #clone-file-extension}
 {: faq}
 {: support}
