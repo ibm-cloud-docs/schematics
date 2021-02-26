@@ -168,13 +168,13 @@ While creating Schematics Workspace or Action, you notice the {{site.data.keywor
 **Solution**
 
 While creating Schematics Workspace or Action - it takes a copy of the Terraform or Ansible template, from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort_notm}} analyses the files and marks as potentially vulnerable (or not), under the following conditions:
-- The allowed file extension and not marked as vulnerable are `.tf, .tfvars, .md, .yaml ,.sh, .txt, .yml, .html, .gitignore, .tf.json, license, .js, .pub, .service, _rsa, .py, .json, .tpl, .cfg, .ps1, .j2, .zip, .conf, .crt,.key, .der, .jacl, .properties, .cer, .pem`
-  The allowed extension list is continously monitored and updated in every release. You can raise an [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a new file extension to the list.
+- The allowed file extension and not marked as vulnerable are `.tf, .tfvars, .md, .yaml ,.sh, .txt, .yml, .html, .gitignore, .tf.json, license, .js, .pub, .service, _rsa, .py, .json, .tpl, .cfg, .ps1, .j2, .zip, .conf, .crt,.key, .der, .jacl, .properties, .cer, .pem`.
 - The blocked extensions `.tfstate, .tfstate.backup, .exe, .php5, .pht, .phtml, .shtml, .asa, .asax, .swf, .xap.` are potentially vulnerable and are removed from the template in the secure location.
-- Any files with 500 KB or more in size are considered as potentially vulnerable, and removed from the template in the secure location. 
-  
-  This file-size limit does not apply for the `allowed image file extensions`.
-  {: note}
+- The allowed image extension are `.tif .tiff .gif .png .bmp .jpg .jpeg`. 
+- Any files with 500 KB or more in size are considered as potentially vulnerable, and removed from the template in the secure location. This file size limit does not apply for the `allowed image file extensions`.
+
+The allowed extension list is continously monitored and updated in every release. You can raise an [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a new file extension to the list.
+{: note}
 
 
 
