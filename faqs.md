@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-02-26"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -156,16 +156,25 @@ As of now we don't have support for migrating {{site.data.keyword.bpshort}} work
 
 No, the null-exec (null_resources) and remote-exec resources has maximum timeout of 60 minutes. Longer jobs need to be broken into shorter blocks to provision the infrastructure faster. Otherwise the execution times out automatically after 60 minutes.
 
-## What are the file extensions supported in {{site.data.keyword.bpshort}} to clone?
+## How does {{site.data.keyword.bpshort_notm}} decide to remove the files from my Terraform or Ansible templates?
 {: #clone-file-extension}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} only downloads the `allowed` extensions for cloning. The file consists of 500 KB or more in size, and `disallowed` extensions are considered as vulnerable files. **Note** The allowed image extensions are not checked for the size limit. The blocked and vulnerable files are removed after cloning.
-- Allowed extension: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`,`.tf.json`,`license`,`.js`,`.pub`, `.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.jacl`,`.properties`,`.cer`,`.pem`
-- Blocked extension: `.php5`,`.pht`,`.phtml`,`.shtml`,`.asa`,`.asax`,`.swf`,`.xap`,`.tfstate`,`.tfstate.backup`,`.exe`
-- Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
-- Allowed {{site.data.keyword.bpshort}} action extensions: `.tf`,`.tfvars`,`.md`,`.yaml`,`.sh`,`.txt`,`.yml`,`.html`,`.gitignore`, `.tf.json`,`license`,`.js`,`.pub`,`.service`,`_rsa`,`.py`,`.json`,`.tpl`,`.cfg`,`.ps1`,`.j2`,`.zip`,`.conf`,`.crt`,`.key`,`.der`,`.cer`,`.pem`
+**Issue**
+
+While creating Schematics Workspace or Action, you notice the {{site.data.keyword.bpshort}} is marking some files as vulnerable, and is removing the file from the template.
+
+**Solution**
+
+While creating Schematics Workspace or Action - it takes a copy of the Terraform or Ansible template, from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort_notm}} analyses the files and marks as potentially vulnerable (or not), under the following conditions:
+- The allowed file extension and not marked as vulnerable are `.tf, .tfvars, .md, .yaml ,.sh, .txt, .yml, .html, .gitignore, .tf.json, license, .js, .pub, .service, _rsa, .py, .json, .tpl, .cfg, .ps1, .j2, .zip, .conf, .crt,.key, .der, .jacl, .properties, .cer, .pem`
+  The allowed extension list is continously monitored and updated in every release. You can raise an [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a new file extension to the list.
+- The blocked extensions `.tfstate, .tfstate.backup, .exe, .php5, .pht, .phtml, .shtml, .asa, .asax, .swf, .xap.` are potentially vulnerable and are removed from the template in the secure location.
+- Any files with 500 KB or more in size are considered as potentially vulnerable, and removed from the template in the secure location. 
+  
+  This file-size limit does not apply for the `allowed image file extensions`.
+  {: note}
 
 
 
