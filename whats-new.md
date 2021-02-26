@@ -30,7 +30,7 @@ subcollection: schematics
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
 
 
-|12 February 2020 |<ul><li> **Ansible open beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The closed beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).</li> </ul> |
+|12 February 2020 |<ul><li> **Ansible open beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).</li> </ul> |
 {: caption="What's new in February" caption-side="top"}
 
 
