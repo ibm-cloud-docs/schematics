@@ -60,7 +60,6 @@ Schematics
     Enhancing security for Schematics
         iam.md
         architecture-workload-isolation.md
-        ha-dr.md
         manage-scc.md
         private-endpoint.md
         data-security.md
