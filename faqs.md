@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-01"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -75,22 +75,25 @@ With {{site.data.keyword.bplong_notm}}, you can run Ansible playbooks or {{site.
 {: faq}
 {: support}
 
-Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version is `1.10.0`, and previous four versions such as `1.9.0`, `1.8.1`, `1.8.0`, `1.7.1` are supported.
+Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported.
+
 
 Example for a multiple provider configuration:
 
 ```
 terraform{
   required_providers{
-   ibm = ">= 1.6" // Error !! version unavailable.
-   ibm = ">= 1.7.0" // Execute against latest version
-   ibm = "== 1.8.0" // Executes v1.8.0.
-   ibm = ">= 1.9.0" // Executes against latest version, currently, it is v1.10.0, in future it can be higher version.
+   ibm = ">= 1.21.0" // Error !! version unavailable.
+   ibm = ">= 1.20.0" // Execute against latest version.
+   ibm = "== 1.20.1" // Executes version v1.20.1. 
   }
 }
 
 ```
 {: pre}
+
+Currently, version 1.21.0 is released, in future it can be higher version. For more information, about provider version, refer to [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+{: note}
 
 ## How do I generate IAM access token, if client id `bx` is used?
 {: #createworkspace-generate-tokens}
@@ -163,17 +166,18 @@ No, the null-exec (null_resources) and remote-exec resources has maximum timeout
 
 **Issue**
 
-While creating Schematics Workspace or Action, you notice the {{site.data.keyword.bpshort}} is marking some files as vulnerable, and is removing the file from the template.
+While creating the {{site.data.keyword.bpshort}} workspace or action you notice the {{site.data.keyword.bpshort}} is marking some files as vulnerable, and is removing the file from the template.
 
 **Solution**
 
-While creating Schematics Workspace or Action - it takes a copy of the Terraform or Ansible template, from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort_notm}} analyses the files and marks as potentially vulnerable (or not), under the following conditions:
-- The allowed file extension and not marked as vulnerable are `.tf, .tfvars, .md, .yaml ,.sh, .txt, .yml, .html, .gitignore, .tf.json, license, .js, .pub, .service, _rsa, .py, .json, .tpl, .cfg, .ps1, .j2, .zip, .conf, .crt,.key, .der, .jacl, .properties, .cer, .pem`.
-- The blocked extensions `.tfstate, .tfstate.backup, .exe, .php5, .pht, .phtml, .shtml, .asa, .asax, .swf, .xap.` are potentially vulnerable and are removed from the template in the secure location.
-- The allowed image extension are `.tif .tiff .gif .png .bmp .jpg .jpeg`.
-- Any files with 500 KB or more in size are considered as potentially vulnerable, and removed from the template in the secure location. This file size limit does not apply for the `allowed image file extensions`.
+While creating {{site.data.keyword.bpshort}} workspace or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
 
-The allowed extension list is continously monitored and updated in every release. You can raise an [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a new file extension to the list.
+- The allowed file extension are `.tf, .tfvars, .md, .yaml ,.sh, .txt, .yml, .html, .gitignore, .tf.json, license, .js, .pub, .service, _rsa, .py, .json, .tpl, .cfg, .ps1, .j2, .zip, .conf, .crt,.key, .der, .jacl, .properties, .cer, .pem`.
+- The allowed image extension are `.tif .tiff .gif .png .bmp .jpg .jpeg`.
+- The files that are removed are `.tfstate, .tfstate.backup, .exe, .php5, .pht, .phtml, .shtml, .asa, .asax, .swf, .xap`.
+- All files that are larger than 500 KB in size are removed. This file size limit does not apply for the allowed image files.
+
+The allowed extension list is continuosly monitored and updated in every release. You can raise an [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a new file extension to the list.
 {: note}
 
 ## How can you save user-defined files generated by the Terraform modules and use them across multiple Terraform plan, apply, destroy, refresh, or import commands?
@@ -183,7 +187,7 @@ The allowed extension list is continously monitored and updated in every release
 
 {{site.data.keyword.bplong_notm}} already persists and securely manages the state file generated by the Terraform engine in a {{site.data.keyword.bpshort}} workspace. {{site.data.keyword.bpshort}} periodically saves the state file in the secured location. Further the state file is automatically restored before running the {{site.data.keyword.bpshort}} job or Terraform plan, apply, destroy, refresh, or import commands.
 
-In the same way {{site.data.keyword.bplong_notm}} supports the ability to persist user-defined files, that are generated by the Terraform template or modules. {{site.data.keyword.bpshort}} expects the user-defined Terraform template or modules to generate and place the files in a pre-defined location. {{site.data.keyword.bpshort}} will automatically save and restore the state file, before and after running the {{site.data.keyword.bpshort}} jobs or Terraform command.
+In the same way {{site.data.keyword.bplong_notm}} supports the ability to persist user-defined files, that are generated by the Terraform template or modules. {{site.data.keyword.bpshort}} expects the user-defined Terraform template or modules to generate and place the files in a pre-defined location. {{site.data.keyword.bpshort}} will automatically save and restore them, before and after running the {{site.data.keyword.bpshort}} jobs or Terraform command.
 
 Your files must be placed in the `/tmp/.schematics` folder and the size limit is set to `10 MB`. {{site.data.keyword.bpshort}} backups and restores all the files in the `/tmp/.schematics` folder.
 

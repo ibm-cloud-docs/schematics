@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-01"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -42,10 +42,10 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 All data, user inputs and the data generated at runtime during execution of automation code, are stored in IBM Cloud Object Storage. This data is encrypted at rest. It supports following encryption options:
 
 1. Envelope encryption with schematics owned keys
-   Each data object is encrypted by using a unique [data encryption key (DEK)](#x4791827){: term}, which is further wrapped by using a single root key to encrypt all the data according to the [geographical location](/docs/schematics?topic=schematics-secure-data#pi-location).
+   Each data object is encrypted by using a unique [data encryption key (DEK)]{}, which is further wrapped by using a single root key to encrypt all the data according to the [geographical location](/docs/schematics?topic=schematics-secure-data#pi-location).
    {: note}
 2. Bring your own key (BYOK) by integrating with Key Protect.
-3. Keep your own key (KYOK) by integrating with Hyper Proctect Crypto Services (HPCS).
+3. Keep your own key (KYOK) by integrating with Hyper Protect Crypto Services (HPCS).
 
 
 
