@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-02"
 
 keywords: bastion host, schematics actions, vsi using ssh, bastion host vpc
 
@@ -44,7 +44,7 @@ It is the user’s responsibility to deploy the right configured bastion host an
 ## Deploying VPC by using bastion host
 {: #deploying-in-bastion-host}
 
-To use {{site.data.keyword.bpshort}} actions, the bastion host must be deployed on the user’s private cloud network in a VPC and configure to allow Schematics access to the target VSIs. To secure and protect the connection the `VPC Security Groups` and `Network ACLs` are configured to allow {{site.data.keyword.bplong_notm}} access to the bastion host and VSIs, all other IP traffic accesses are denied.
+To use {{site.data.keyword.bpshort}} actions, the bastion host must be deployed on the user’s private cloud network in a VPC and configure to allow Schematics access to the target VSIs. To secure and protect the connection the `VPC Security Groups` and `Network ACLs` are configured. This configuration allows  access to the bastion host and VSIs in the {{site.data.keyword.bpshort}}. All other IP traffic that are not configured receives access denied.
 
 The user of {{site.data.keyword.bpshort}} actions is responsible for the network configuration to avoid unintended access to use VSIs.
 {: note}

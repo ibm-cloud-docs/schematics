@@ -468,7 +468,7 @@ Example JSON for uploading a `.tar` file later:
    </tr>
     <tr>
      <td><code>&lt;env_values&gt;</code></td>
-     <td>Optional. A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key is environment variable name` and `value is value`. You can define environment variables for IBM Cloud catalog offerings that are provisioned by using a bash script.
+     <td>Optional. A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key = variable name` and `value = value`. You can define environment variables for IBM Cloud catalog offerings that are provisioned by using a bash script.
  files.</td>
      </tr>
     <tr>
@@ -1261,7 +1261,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--bastion` or `-b` | Optional | The target record for bastion host. |
 | `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).|
 | `--credentials` or `-C` | Optional | The credentials to access target.|
-| `--inputs` or `-i` | Optional | The input variables for the action with the list of input variables=values. |
+| `--inputs` or `-i` | Optional | The list of input variables for the action.|
 | `--env-variables` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
 | `--github-token` or `-k` | Optional | The GitHub token value to access the private git repository. |
 | `--file` or `-f` | Optional | The payload file name. This is yet to be supported. |
@@ -1587,7 +1587,7 @@ ibmcloud schematics commands --id <WORKSPACE_ID> --options <FLAGS> --file <JSON 
 **Command options**
 
 `--id <WORKSPACE_ID>`
-  Required. The unique ID of the workspace for which you want to run the commands. To find the of your workspace, run `ibmcloud schematics workspace list`.
+  Required. The unique ID of the workspace for which you want to run the commands. To find the ID of your workspace, run `ibmcloud schematics workspace list`.
 
 `--options <FLAGS>`
   Optional. The command-line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**.
