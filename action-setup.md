@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-02"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -74,7 +74,7 @@ To create an action:
    10. Click **Next**. 
 4. Choose your {{site.data.keyword.cloud_notm}} resource inventory. 
    1. Enter the host or the IP address where you want to run your Ansible playbook in the  **Bastion host IP** field. 
-   2. Enter the {{site.data.keyword.cloud_notm}} resource inventory hostnames or the IP addresses by using a `,` or `comma` separator in the **IBM cloud inventory IP addresses**. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to.
+   2. Enter the {{site.data.keyword.cloud_notm}} resource inventory hostnames or the IP addresses by using a `comma` separator in the **IBM Cloud inventory IP addresses**. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to.
    3. Enter your web server host, Operating System, region, network, or the database host name with the IP addressed in the **{{site.data.keyword.cloud_notm}} inventory host groups** as shown in the example. For more information, about an inventory host group syntax, refer to [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).
 
       **Example** 
@@ -106,7 +106,7 @@ To create an action:
 ## Editing a {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
 {: #editing-ansible-actions}
 
-You can edit a {{site.data.keyword.bpshort}} action by clicking the `edit` icon from the `Settings` page. Once the edit is completed, you can relaunch an action, by clicking `Launch action` button. 
+You can edit a {{site.data.keyword.bpshort}} action by clicking the `edit` icon from the `Settings` page. Once the edit is completed, you can relaunch an action, by using  `Launch action` button. 
 
 ## Deleting a {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
 {: #delete-ansible-actions}
