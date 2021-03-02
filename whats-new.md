@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-01"
+lastupdated: "2021-03-02"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -35,7 +35,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|25 February 2020 |<ul><li> **{{site.data.keyword.bpshort}} supports the ability to persist the user-defined file**: {{site.data.keyword.bplong_notm}} supports the ability to persist the user-defined file for running the subsequent Terraform commands. For more information, see [persist user-defined files in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-faqs#persist-file).</li><li> **Allowed file extensions in {{site.data.keyword.bpshort}}**: Allowed and blocked file extensions support during cloning. For more information, see [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension).</li><li> **{{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation**: {{site.data.keyword.bplong_notm}} [command line plug-in to install] (/docs/cli?topic=schematics-cli-plugin-schematics-cli-reference), and [view command line commands](/docs/cli?topic=cli-install-devtools-manually#idt-install-schematics-cli-plugin) in the CLI documentation.</li></ul> |
+|25 February 2020 |<ul><li> **{{site.data.keyword.bpshort}} supports the ability to persist the user-defined file**: {{site.data.keyword.bplong_notm}} supports the ability to persist the user-defined file for running the subsequent Terraform commands. For more information, see [persist user-defined files in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-faqs#persist-file).</li><li> **Allowed file extensions in {{site.data.keyword.bpshort}}**: Allowed and blocked file extensions support during cloning. For more information, see [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension).</li><li> **{{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation**: {{site.data.keyword.bplong_notm}} [command line plug-in to install](/docs/cli?topic=schematics-cli-plugin-schematics-cli-reference), and [view command line commands](/docs/cli?topic=schematics-cli-plugin-schematics-cli-reference) in the CLI documentation.</li></ul> |
 |12 February 2020 |<ul><li> **Ansible open beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).. For more information, about the closed beta of Ansible action, see [IBM Cloud Terraform Provider Updates and Closed Beta of Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics) blog,</li> </ul> |
 {: caption="What's new in February" caption-side="top"}
 

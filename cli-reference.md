@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-02"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1574,7 +1574,7 @@ The table provides the summary of commands supported by the new `commands` API.
 ### Commands 
 {: :#cmds}
 
-The `Commands` API supports 
+The `Commands` API supports: 
 - Executing the group of Terraform commands by using the JSON file for your workspace command requirements.
 - The access control `plan`, `apply`, `destroy`, or `refresh` are applicable for `Commands API`. 
 

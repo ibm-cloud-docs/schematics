@@ -13,7 +13,6 @@ Schematics
      {: .topicgroup}
     About
         about.md
-        provisioning-cloud-resource.md
         ansible-operations.md
         responsibilities.md
         ha-dr.md
@@ -33,12 +32,9 @@ Schematics
          workspace-setup.md
          setup-cli.md
          manage-resource-lifecycle.md
-         provisioning-terraform-template.md
          migrate-tfversion.md
-         bastion-host.md
          remotestate.md
          private-catalog.md
-         ansible_playbooks.md
 
     {: .topicgroup}
     Logging and monitoring
@@ -49,12 +45,16 @@ Schematics
     Automating cloud operations with Ansible
          create-ansible-playbook.md
          action-setup.md
+         bastion-host.md
+         ansible_playbooks.md
+         autodeploy-template.md
 
     {: .topicgroup}
     Examples
           vsi-usecase.md
           lamp-usecase.md
           iks-cluster-example.md
+          autodeploy-actionsamples.md
 
     {: .topicgroup}
     Enhancing security for Schematics
@@ -71,7 +71,6 @@ Schematics
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     locations.md
     limitations.md
-    responsibilities.md
     automating-utilities.md
     license-notices.md
 
