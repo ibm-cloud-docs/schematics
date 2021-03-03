@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-03"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -31,7 +31,7 @@ subcollection: schematics
 When Schematics actions or workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. Schematics provides resolution to handle such errors and help you get the expected behavior, output.
 {: shortdesc}
 
-This is not the complete list of error messages. Some messages are created by other systems, such as IAM to {{site.data.keyword.bpshort}} action to the user.
+This is not the complete list of error messages. Some messages are created by other systems, such as IAM authentication errors messages to the Schematics action.
 {: note}
 
 ## Action error messages
