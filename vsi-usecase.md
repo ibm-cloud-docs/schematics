@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-03"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -79,8 +79,8 @@ After the prerequisite is completed, the steps to complete the use case:
 
     ```
     ibmcloud schematics job list   
-    Enter resource-type> actions
-    Enter id> <provide your ID>
+    Enter <resource-type> actions
+    Enter <id> <provide your ID>
     
     ```
 

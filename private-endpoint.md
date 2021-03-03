@@ -99,7 +99,7 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 
 2. After you are connected to the VSI, target the private service endpoint when you send API requests to the {{site.data.keyword.bpshort}} API server. The following example shows the supported Terraform and Helm versions of the {{site.data.keyword.bpshort}} engine. 
    ```
-   curl -X GET https://private-us.schematics.cloud.ibm.com/v1/version
+   curl -X GET https://private-us-south.schematics.cloud.ibm.com/v1/version
    ```
    {: pre}
    
@@ -107,14 +107,13 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 ## Virtual private endpoints gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-setup}
 
-A service instance can have a private network endpoint, a public network endpoint, or both.
+A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect Schematics service on the private network from Virtual Private Endpoint Gateways.
+{: shortdesc}
 
   **Public:** A service endpoint on the IBM Cloud public network.<br>
   **Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.<br>
   **Both public and private:** Service endpoints that allow access over both networks.<br>
 
-After your account is enabled for VPC and connect {{site.data.keyword.bpshort}} service on the private network from Virtual Private Endpoint Gateways.
-{: shortdesc}
 
    Virtual Private Endpoint Gateways is only supported for the VPC Generation 2.  
    {: note}
