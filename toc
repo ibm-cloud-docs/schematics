@@ -68,6 +68,7 @@ Schematics
 
     {: .navgroup id="reference"}
     cli-reference.md
+    schematics-sdk.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     locations.md
     limitations.md
