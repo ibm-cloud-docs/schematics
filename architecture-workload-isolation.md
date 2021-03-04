@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-04"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -80,7 +80,7 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |{{site.data.keyword.cloud_notm}} Service Endpoint (CSE)|This service is used to implement the private service endpoint for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](/docs/schematics?topic=schematics-secure-data#pi-location).|Private|
 |Identity and Access Management (IAM)| To authenticate requests to the service and authorize user actions, {{site.data.keyword.bpshort}} implements service access roles in Identity and Access Management (IAM). For more information about required IAM permissions to work with the service, see [Managing user access](/docs/schematics?topic=schematics-access).|Public|
 |Internet Services (CIS)|This service is used to provide the global load balancer and firewall for {{site.data.keyword.bplong_notm}}|Public|
-|Key Protect|{{site.data.keyword.bpshort}} uses root keys in Key Protect to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit.|Private|
+|Key Protect|{{site.data.keyword.bpshort}} uses root keys in {{site.data.keyword.keymanagementserviceshort}}to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit.|Private|
 |Kubernetes Service|The {{site.data.keyword.bplong_notm}} service control plane runs in an {{site.data.keyword.containerlong_notm}} cluster and leverages the built-in security, high availability, and self-healing capabilities of the service. If an {{site.data.keyword.bplong_notm}} user creates a workspace or provisions {{site.data.keyword.cloud_notm}} resources, these resources are provisioned into the user account outside the {{site.data.keyword.bpshort}} cluster.|Public|
 |{{site.data.keyword.la_full_notm}} {{site.data.keyword.bpshort}} sends service logs to {{site.data.keyword.loganalysisfull_notm}}. These logs are monitored and analyzed by the {{site.data.keyword.bpshort}} service team to detect service issues and malicious activities.|Private|
 |Messages for RabbitMQ|RabbitMQ is used to queue incoming API requests, and to process these requests asynchronously.|Private|

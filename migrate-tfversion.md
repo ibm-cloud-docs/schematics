@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-03"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -40,7 +40,7 @@ The driver to migrate might come from business factors such as cost reduction, o
 The steps to frame your migration journey to support the latest Terraform version in the {{site.data.keyword.bpshort}} workspace.
 {: shortdesc}
 
-1. Provision the resources with Terraform apply for Terraform v0.12, so that your state file is generated.
+1. Provision the resources with Terraform apply command for Terraform v0.12, so that your state file is generated.
 2. Move Terraform v0.12 to Terraform v0.13.
 3. Upgrade your repository with Terraform v0.13. This generates a `versions.tf` file. You need to edit by uncommenting the source parameter in the `versions.tf` file as shown in the code block.
 
