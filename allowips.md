@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-11"
+  years: 2017, 2021
+lastupdated: "2021-03-08"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -35,7 +35,7 @@ By default, all IP addresses can be used to log in to the {{site.data.keyword.cl
 
 **Before you begin**
 
-The following steps require you to change the IAM allowlist for the user whose credentials are used for the cluster's region and resource group infrastructure permissions. If you are the credentials owner, you can change your own IAM allowlist settings. If you are not the credentials owner, but you are assigned the Editor or Administrator IBM Cloud IAM platform role for the User Management service, you can update the restricted IP addresses for the credentials owner.
+You can use these steps to change the IAM allowlist for the user whose credentials are used for the cluster's region and resource group infrastructure permissions. If you are the credentials owner, you can change your own IAM allowlist settings. If you are not the credentials owner, but you are assigned the Editor or Administrator IBM Cloud IAM platform role for the User Management service, you can update the restricted IP addresses for the credentials owner.
 
 1. Log in to the [IBM Cloud console](https://cloud.ibm.com/login){: external}.
 2. From the menu bar, click `Manage > Access (IAM)`, and select Users.

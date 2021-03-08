@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-03"
+lastupdated: "2021-03-08"
 
 keywords: schematics, automation, terraform
 
@@ -41,7 +41,7 @@ subcollection: schematics
 ## Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}} UI
 {: ui-provisioning}
 
-To provision Terraform template, perform the following steps:
+To provision Terraform template, perform these steps:
 
 ### Creating the {{site.data.keyword.bpfull_notm}} workspace
 {: create-wks}

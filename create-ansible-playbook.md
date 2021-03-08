@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-08"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -47,7 +47,7 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 ## Running Ansible playbooks for {{site.data.keyword.cloud_notm}}
 {: #run-ansible-playbook}
 
-{{site.data.keyword.bpshort}} action reads the playbook and executes the configured task and targeted hosts by using IBM Cloud Schematics. Following steps to be followed to run the Ansible playbook in {{site.data.keyword.bplong_notm}}.
+{{site.data.keyword.bpshort}} action reads the playbook and executes the configured task and targeted hosts by using IBM Cloud Schematics. Follow these steps to run the Ansible playbook in {{site.data.keyword.bplong_notm}}.
 
 1. Create a Schematics action by using [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/schematics/overview){: external} account or through command line. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-02"
+lastupdated: "2021-03-08"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -71,24 +71,10 @@ To create an action:
    7. Select the detail level for your Ansible logs from the **Verbosity** drop down list. The logs are shown when you run the playbook in {{site.data.keyword.bpshort}}. For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level.
    8. Enter the tags for the Ansible tasks or roles that you do not want to include when you run your playbook in the **Skip Ansible tags** field. Tags are often used in complex playbooks to identify {{site.data.keyword.bpshort}} actions, policies or steps that must be executed together. When you enter a tag, {{site.data.keyword.bpshort}} scans your playbook for these tags and excludes all parts of the playbook that are marked with this tag. To enter multiple tags, separate them with a comma (`,`). 
    9. Choose if you want to enable privilege escalation. This feature allows you to use a different user than the one who logs in to the {{site.data.keyword.cloud_notm}} resource where you want to run the playbook. For more information, see [Understanding Privilege Escalation](https://docs.ansible.com/ansible/2.5/user_guide/become.html){: external}. 
-   10. Click **Next**. 
-4. Choose your {{site.data.keyword.cloud_notm}} resource inventory. 
-   1. Enter the host or the IP address where you want to run your Ansible playbook in the  **Bastion host IP** field. 
-   2. Enter the {{site.data.keyword.cloud_notm}} resource inventory hostnames or the IP addresses by using a `comma` separator in the **IBM Cloud inventory IP addresses**. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to.
-   3. Enter your web server host, Operating System, region, network, or the database host name with the IP addressed in the **{{site.data.keyword.cloud_notm}} inventory host groups** as shown in the example. For more information, about an inventory host group syntax, refer to [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).
-
-      **Example** 
-
-       ```
-        [webserverhost]
-        178.54.68.78
-        [dbhost]
-        174.45.86.87
-       ```
-       {: codeblock}
+   10. Click **Next**.
 
    4. Select the host credentials to be as a proxy between an SSH client and the Ansible inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key**. This setup adds an layer of security to your {{site.data.keyword.cloud_notm}} resources and minimized the surface of potential vulnerabilities.
-   5. Select Check or clear in the **Use the same key for {{site.data.keyword.cloud_notm}} resource inventory and Bastion host** field. In case unchecked the field, you need to enter a SSH key in the **bastion host SSH key** field.
+   5. Select Check or clear in the **Use the same key for {{site.data.keyword.cloud_notm}} resource inventory and Bastion host** field. You need to enter a SSH key in the **bastion host SSH key**, if the field is unchecked.
    6. Click **Next**.
 
    As a temporary feature in the beta release, enter the target IP addresses and SSH keys for creating an action. 
@@ -96,7 +82,8 @@ To create an action:
 
 5. Define your variables.
    1. You can create an optional extra command line fields for your playbook by entering the input values with the key and value pairs. to make a secret value for your variable, you can select the sensitive option.
-   2. Wait for the playbook, resource inventory and variables to process for few minutes and click **Launch action** to land into the Jobs page.
+   2. Wait for the playbook, resource inventory and variables to process for a minute. The processing time is determined on the resource inventory.
+   3. Click **Launch action** to land into the Jobs page.
 
       Before your launch action, you can also observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by the asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
       {: note}

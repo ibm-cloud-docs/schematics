@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -347,7 +347,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the IBM Cloud resources that are specified in the template are created in your IBM Cloud account. 
 
-    This process takes few minutes to complete. During this process, you cannot make any changes to your workspace. 
+    This process takes a minute to complete. During this process, you cannot make any changes to your workspace. 
     {: important}
 
     ```
