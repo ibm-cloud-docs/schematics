@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-25"
+lastupdated: "2021-03-08"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -32,7 +32,7 @@ subcollection: schematics
 You can access information about the resources that you manage in a workspace from other workspaces in your account by using the `ibm_schematics_output` data source.
 {: shortdesc}
 
-As you manage your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}}, you can access resource information across workspaces. The `remote_state` data source is not supported in {{site.data.keyword.bpshort}}. Instead, you can use the `ibm_schematics_output` data source to access the information. 
+As you manage your {{site.data.keyword.cloud}} resources with {{site.data.keyword.bplong_notm}}, you can access resource information across workspaces. The `remote_state` data source is not supported in {{site.data.keyword.bpshort}}. Instead, you can use the `ibm_schematics_output` data source to access the information. 
 
 **How is the `ibm_schematics_output` data source different from the `remote_state` data source?** </br>
 When you use the `remote_state` data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bplong_notm}} backend and can access workspace information directly. 

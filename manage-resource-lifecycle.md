@@ -26,7 +26,7 @@ subcollection: schematics
 # Managing resource lifecycle
 {: #manage-lifecycle}
 
-Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by changing the infrastructure code in your Terraform template and by using {{site.data.keyword.bplong_notm}} to apply the template in your {{site.data.keyword.cloud_notm}} account. 
+Deploy, modify, and remove {{site.data.keyword.cloud}} resources by changing the infrastructure code in your Terraform template and by using {{site.data.keyword.bplong_notm}} to apply the template in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
 **When do I use {{site.data.keyword.bplong_notm}} vs. the individual resource dashboards?**</br>

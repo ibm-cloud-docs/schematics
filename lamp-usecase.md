@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-08"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -92,7 +92,7 @@ After the prerequisite is completed, follow these steps to complete the use case
 
 2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information,  about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
 
-3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud_notm}} resource inventory, Bastion host public IP, {{site.data.keyword.cloud_notm}} inventory host groups, and SSH key. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
+3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud}} resource inventory, Bastion host public IP, {{site.data.keyword.cloud_notm}} inventory host groups, and SSH key. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
 
    When the action is successful the job is created, you can view the settings and job option to view the  details of the execution.
   {: note}

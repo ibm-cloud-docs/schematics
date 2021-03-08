@@ -31,7 +31,7 @@ subcollection: schematics
 Learn how to create Terraform templates that are well-structured, reusable, and comprehensive.
 {: shortdesc}
 
-A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
+A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
 You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format.  
 
@@ -43,7 +43,7 @@ Before you start creating your Terraform template, make sure to review the [{{si
 {: help}
 {: support}
 
-Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform requires to provision your resources.
+Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
 
 **Do I need to provide the {{site.data.keyword.cloud_notm}} API key?** </br>

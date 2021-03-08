@@ -142,7 +142,7 @@ In this tutorial, you can:
 - Explore an IBM provided Terraform template to create a VPC generation 2 cluster. This binds an {{site.data.keyword.cos_full_notm}} service instance and a specified resource group ID with default worker node and a given zone and subnets.
 - Learn how to create an {{site.data.keyword.bplong_notm}} workspace.
 - Create a Terraform execution plan and apply your Terraform template in {{site.data.keyword.cloud_notm}}.
-- Review the {{site.data.keyword.cloud_notm}} resources that you create.
+- Review the {{site.data.keyword.cloud}} resources that you create.
 
 ## Time required
 {: #provisioning-timereq}

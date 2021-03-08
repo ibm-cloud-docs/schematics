@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -29,7 +29,7 @@ subcollection: schematics
 # Locations and service endpoints
 {: #locations} 
 
-Review supported locations in {{site.data.keyword.bplong_notm}} and how {{site.data.keyword.bpshort}} differentiates between the data storage location and the deployment location of your {{site.data.keyword.cloud_notm}} resources.
+Review supported locations in {{site.data.keyword.bplong_notm}} and how {{site.data.keyword.bpshort}} differentiates between the data storage location and the deployment location of your {{site.data.keyword.cloud}} resources.
 
 ## Where can I create {{site.data.keyword.bpshort}} workspaces?
 You can choose to create {{site.data.keyword.bpshort}} workspaces in the US or Europe location by using one of the following API endpoints, or by using the **Location** drop-down menu from the {{site.data.keyword.cloud_notm}} console.

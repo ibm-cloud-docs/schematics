@@ -30,7 +30,7 @@ subcollection: schematics
 # Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall
 {: #allowed-ipaddresses}
 
-By default, all IP addresses can be used to log in to the {{site.data.keyword.cloud_notm}} console and access your Schematics workspace. In the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) console, you can generate a firewall [by creating an allowlist by specifying which IP addresses have access](/docs/account?topic=account-ips), and all other IP addresses are restricted. If you use an IAM firewall, you must add the CIDRs of the {{site.data.keyword.bplong_notm}} for the zones in the region where your cluster is located to the allowlist. You must allow these CIDRs ranges, so that {{site.data.keyword.bplong_notm}} Service to manage the {{site.data.keyword.bplong_notm}} resources.
+By default, all IP addresses can be used to log in to the {{site.data.keyword.cloud}} console and access your Schematics workspace. In the {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) console, you can generate a firewall [by creating an allowlist by specifying which IP addresses have access](/docs/account?topic=account-ips), and all other IP addresses are restricted. If you use an IAM firewall, you must add the CIDRs of the {{site.data.keyword.bplong_notm}} for the zones in the region where your cluster is located to the allowlist. You must allow these CIDRs ranges, so that {{site.data.keyword.bplong_notm}} Service to manage the {{site.data.keyword.bplong_notm}} resources.
 {: shortdesc}
 
 **Before you begin**

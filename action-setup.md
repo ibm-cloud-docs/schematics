@@ -30,7 +30,7 @@ subcollection: schematics
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
-With {{site.data.keyword.bplong_notm}} actions, you can specify the Ansible playbook that you want to run against one or more {{site.data.keyword.cloud_notm}} resources. An Ansible playbook is a configuration file that includes all the tasks, roles, policies, or steps that you want to run and the order in which you want to execute them. 
+With {{site.data.keyword.bplong_notm}} actions, you can specify the Ansible playbook that you want to run against one or more {{site.data.keyword.cloud}} resources. An Ansible playbook is a configuration file that includes all the tasks, roles, policies, or steps that you want to run and the order in which you want to execute them. 
 {: shortdesc}
 
 ## Creating and running {{site.data.keyword.bpshort}} action
@@ -77,7 +77,7 @@ To create an action:
    5. Select Check or clear in the **Use the same key for {{site.data.keyword.cloud_notm}} resource inventory and Bastion host** field. You need to enter a SSH key in the **bastion host SSH key**, if the field is unchecked.
    6. Click **Next**.
 
-   As a temporary feature in the beta release, enter the target IP addresses and SSH keys for creating an action. 
+   In the closed beta release, enter the target IP addresses and SSH keys for creating an action. 
    {: note}
 
 5. Define your variables.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-08"
 
 keywords: ansible playbook, automate ansible playbook, {{site.data.keyword.cloud_notm}}
 
@@ -26,7 +26,7 @@ subcollection: schematics
 
 ---
 
-## Automating Cloud operations with Ansible
+## Automating {{site.data.keyword.cloud_notm}} operations by using {{site.data.keyword.bpshort}} action
 {: #ansible-how-it-works}
 {: help}
 {: support}
@@ -34,7 +34,7 @@ subcollection: schematics
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
-With {{site.data.keyword.bplong_notm}}, you can automate the provisioning, management, and operation of your {{site.data.keyword.cloud_notm}} infrastructure, service, and application stack across cloud environments by leveraging open source technologies, such as [Terraform](https://www.terraform.io/){: external} and [Red Hat Ansible](https://www.ansible.com/){: external}.  
+With {{site.data.keyword.bplong_notm}}, you can automate the provisioning, management, and operation of your {{site.data.keyword.cloud}} infrastructure, service, and application stack across cloud environments by leveraging open source technologies, such as [Terraform](https://www.terraform.io/){: external} and [Red Hat Ansible](https://www.ansible.com/){: external}.  
 {: shortdesc}
 
 Review how {{site.data.keyword.bplong_notm}} automates cloud operations for your {{site.data.keyword.cloud_notm}} resources with Ansible. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-08"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -28,7 +28,7 @@ subcollection: schematics
 # Setting up workspaces
 {: #workspace-setup}
 
-With {{site.data.keyword.bplong_notm}} workspaces, you can organize your Terraform templates and control who has access to run infrastructure code in your {{site.data.keyword.cloud_notm}} account. Before you create a workspace, make sure that you design the organizational structure of your Git repository and workspaces so that you can replicate and manage your configurations across multiple environments. 
+With {{site.data.keyword.bplong_notm}} workspaces, you can organize your Terraform templates and control who has access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you design the organizational structure of your Git repository and workspaces so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
 If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested Git repository structure in this documentation.  

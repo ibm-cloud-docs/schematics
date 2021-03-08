@@ -29,7 +29,7 @@ subcollection: schematics
 # Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}}
 {: #provision-terraform-template}
 
-[{{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-about-schematics) enables Infrastructure as a Code(IaC) to code the {{site.data.keyword.cloud_notm}} resources with Terraform and use {{site.data.keyword.bpfull_notm}} workspace to automate the provisioning and management of your resources.
+[{{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-about-schematics) enables Infrastructure as a Code(IaC) to code the {{site.data.keyword.cloud}} resources with Terraform and use {{site.data.keyword.bpfull_notm}} workspace to automate the provisioning and management of your resources.
 {: shortdesc}
 
 [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about) enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources by using a high-level scripting language. You can use Terraform to automate your {{site.data.keyword.cloud_notm}} resource provisioning and enable Infrastructure as a code (IaC)

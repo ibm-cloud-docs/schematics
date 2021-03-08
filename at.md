@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-03-08"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -43,7 +43,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | `schematics.shareddatas.create` | A {{site.data.keyword.bpshort}} shared data set was created or failed to create. |
 | `schematics.shareddatas.delete` | A {{site.data.keyword.bpshort}} shared data set was deleted or failed to delete. |
 | `schematics.shareddatas.update` | A {{site.data.keyword.bpshort}} shared data set was updated or failed to updated. |
-| `schematics.workspace.apply` | A Terraform execution plan was applied in {{site.data.keyword.cloud_notm}} or failed to apply.|
+| `schematics.workspace.apply` | A Terraform execution plan was applied in {{site.data.keyword.cloud}} or failed to apply.|
 | `schematics.workspace.create` | A {{site.data.keyword.bpshort}} workspace is created or failed to create. | 
 | `schematics.workspace.delete` | A {{site.data.keyword.bpshort}} workspace was deleted or failed to delete. |
 | `schematics.workspace.destroy` | {{site.data.keyword.cloud_notm}} resources are deleted successfully or failed to delete.|

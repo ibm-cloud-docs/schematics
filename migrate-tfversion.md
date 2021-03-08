@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-03"
+lastupdated: "2021-03-08"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -73,7 +73,7 @@ The steps to frame your migration journey to support the latest Terraform versio
   ```
   {: pre}
 
-5. Run Terraform plan and apply commands. For more information, refer [provisioning {{site.data.keyword.cloud_notm}} commands](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
+5. Run Terraform plan and apply commands. For more information, refer [provisioning {{site.data.keyword.cloud}} commands](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
 
 ### Additional steps
 {: #additional-steps}

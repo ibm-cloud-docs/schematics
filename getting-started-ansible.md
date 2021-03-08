@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-08"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -31,7 +31,7 @@ subcollection: schematics
    The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
    {: beta}
 
-Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, by running Ansible playbooks against your inventory of {{site.data.keyword.cloud_notm}} resources. Use Ansible to install software packages, and application code on VSIs. Or use it to perform post provisioning configuration of {{site.data.keyword.cloud_notm}} resources, deployed by using {{site.data.keyword.bplong_notm}} and Terraform. 
+Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, by running Ansible playbooks against your inventory of {{site.data.keyword.cloud}} resources. Use Ansible to install software packages, and application code on VSIs. Or use it to perform post provisioning configuration of {{site.data.keyword.cloud_notm}} resources, deployed by using {{site.data.keyword.bplong_notm}} and Terraform. 
 
 ## What is Ansible?
 {: #about-ansible}
