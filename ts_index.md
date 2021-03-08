@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: schematics help, schematics support, schematics troubleshooting, schematics errors, schematics slack
 
@@ -30,7 +30,7 @@ subcollection: schematics
 {: help}
 {: support}
 
-If you have problems or questions when you use {{site.data.keyword.bplong_notm}}, you can get help by joining the {{site.data.keyword.bpshort}} community in Slack, asking questions through a forum, or opening an {{site.data.keyword.cloud_notm}} support case.
+If you have problems or questions when you use {{site.data.keyword.bplong_notm}}, you can get help by joining the {{site.data.keyword.bpshort}} community in Slack, asking questions through a forum, or opening an {{site.data.keyword.cloud}} support case.
 {: shortdesc}
 
 * Post a question in the [{{site.data.keyword.bplong_notm}} Slack](https://ibm-cloud-schematics.slack.com){: external}. If you do not have access to this Slack, [request an invitation to this Slack](https://cloud.ibm.com/schematics/slack){: external}. 

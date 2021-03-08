@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -30,7 +30,7 @@ subcollection: schematics
 {: help}
 {: support}
 
-Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.data.keyword.cloud_notm}} infrastructure and platform resources with Terraform. 
+Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.data.keyword.cloud}} infrastructure and platform resources with Terraform. 
 {: shortdesc}
 
 <img src="images/schematics_flow.png" alt="Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>

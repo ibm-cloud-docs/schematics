@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-02"
+lastupdated: "2021-03-08"
 
 keywords: bastion host, schematics actions, vsi using ssh, bastion host vpc
 
@@ -29,7 +29,7 @@ subcollection: schematics
 {: #configure-ssh-access}
 
 Bastion host is an instance that is provisioned with a public IP address and can be accessed through SSH. Once configured, the bastion host acts as a jump server to allow secure connection to instances provisioned without a public IP address.
-You can perform software installation and configuration tasks on {{site.data.keyword.cloud_notm}} VSIs for VPC, {{site.data.keyword.bpshort}} actions connect to the target VSIs by using SSH. The SSH traffic traverses over the public network from {{site.data.keyword.bplong_notm}} to the target VSIs. It is not possible to route the connection from {{site.data.keyword.bplong_notm}} to a user’s VSIs through the {{site.data.keyword.cloud_notm}} Private network.
+You can perform software installation and configuration tasks on {{site.data.keyword.cloud}} VSIs for VPC, {{site.data.keyword.bpshort}} actions connect to the target VSIs by using SSH. The SSH traffic traverses over the public network from {{site.data.keyword.bplong_notm}} to the target VSIs. It is not possible to route the connection from {{site.data.keyword.bplong_notm}} to a user’s VSIs through the {{site.data.keyword.cloud_notm}} Private network.
 {: shortdesc}
 
 ## Architecture

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-02"
+lastupdated: "2021-03-08"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -27,7 +27,7 @@ subcollection: schematics
 # {{site.data.keyword.bplong_notm}} CLI	
 {: #schematics-cli-reference}	
 
-Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud_notm}} resources. 	
+Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud}} resources. 	
 {: shortdesc}	
 
 To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli). 	

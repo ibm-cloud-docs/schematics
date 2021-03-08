@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -142,7 +142,7 @@ In this tutorial, you can:
 - Explore an IBM provided Terraform template to create a VPC generation 2 cluster. This binds an {{site.data.keyword.cos_full_notm}} service instance and a specified resource group ID with default worker node and a given zone and subnets.
 - Learn how to create an {{site.data.keyword.bplong_notm}} workspace.
 - Create a Terraform execution plan and apply your Terraform template in {{site.data.keyword.cloud_notm}}.
-- Review the {{site.data.keyword.cloud_notm}} resources that you create.
+- Review the {{site.data.keyword.cloud}} resources that you create.
 
 ## Time required
 {: #provisioning-timereq}
@@ -347,7 +347,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the IBM Cloud resources that are specified in the template are created in your IBM Cloud account. 
 
-    This process takes few minutes to complete. During this process, you cannot make any changes to your workspace. 
+    This process takes a minute to complete. During this process, you cannot make any changes to your workspace. 
     {: important}
 
     ```

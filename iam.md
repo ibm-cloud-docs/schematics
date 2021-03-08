@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: schematics, automation, terraform
 
@@ -29,7 +29,7 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to grant permissions to {{site.data.keyword.bplong_notm}} and the {{site.data.keyword.cloud_notm}} resources that you want to provision. 
+Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to grant permissions to {{site.data.keyword.bplong_notm}} and the {{site.data.keyword.cloud_notm}} resources that you want to provision. 
 {: shortdesc}
   
 As of 6 February 2019, {{site.data.keyword.bplong_notm}} uses resource groups to organize permissions to workspaces. The previous account-level permissions to workspaces are deprecated and must be migrated to use resource groups. For more information about this change and how to migrate your permissions, see [Migrating to resource group permissions](#rg-permissions). 

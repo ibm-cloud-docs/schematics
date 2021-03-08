@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -107,7 +107,7 @@ completion-time: 60m
 {: #schematics-desc}
 
 In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full_notm}} in the Schematics workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
-The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud_notm}} Activity Tracker and {{site.data.keyword.cloud_notm}} monitoring with Sysdig. 
+The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker and {{site.data.keyword.cloud_notm}} monitoring with Sysdig. 
 {: shortdesc}
 
 As per your resource usage, the cost is incurred. For more information, about the pricing, refer to [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to [Schematics help](/docs/schematics?topic=schematics-schematics-help).
@@ -160,7 +160,7 @@ Complete the following prerequisites for the tutorial:
 {: #access-automate-template}
 {: step}
 
-Complete the following steps to access the {{site.data.keyword.cloud_notm}} and the Terraform templates from the GitHub:
+Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terraform templates from the GitHub:
 {: shortdesc}
 
 1. If you do not have one, create an [IBM Cloud Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
@@ -174,7 +174,7 @@ Complete the following steps to access the {{site.data.keyword.cloud_notm}} and 
 {: #create-workspace}
 {: step}
 
-Complete the following steps to create the {{site.data.keyword.bplong_notm}} and the Terraform template URL.
+Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Terraform template URL.
 {: shortdesc}
 
 1. Click `Navigation Menu > Schematics > Create a Schematics workspace` from the {{site.data.keyword.cloud_notm}} page.
@@ -210,7 +210,7 @@ Configure the variables as described in the table to authenticate the api keys a
 {: #continuous-deployment}
 {: step}
 
-The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the Schematics workspace. Complete the following steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
+The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the Schematics workspace. Complete these steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
 
 1. Provide the IBM Cloud API Key in the `Tool Integrations panel`. Click `Create` to view the Toolchains page.
 2. Click `Deliver Pipeline` pane to view Schematics Pipeline | Delivery Pipeline page. 

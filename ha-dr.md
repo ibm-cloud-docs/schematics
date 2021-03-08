@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-27"
+lastupdated: "2021-03-08"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -30,7 +30,7 @@ subcollection: schematics
 {: help}
 {: support}
 
-Understand the high availability features of the {{site.data.keyword.cloud_notm}} resources that you want to provision with {{site.data.keyword.bplong_notm}} and design your resources to meet the availability requirements that your business and customers need. 
+Understand the high availability features of the {{site.data.keyword.cloud}} resources that you want to provision with {{site.data.keyword.bplong_notm}} and design your resources to meet the availability requirements that your business and customers need. 
 {: shortdesc}
 
 High availability is a core discipline in an IT infrastructure to keep your resources healthy and your app workloads up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failure in an IT infrastructure. For example, you can prepare for the failure of one system by adding redundancy and setting up failover mechanisms.

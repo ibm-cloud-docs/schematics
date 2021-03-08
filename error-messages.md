@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-03"
+lastupdated: "2021-03-08"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -74,13 +74,13 @@ The Schematics action instance and resources are overloaded or down for maintena
 #### Message
 {: #svc-msg}
 
-- Internal Service Error occurred during {{.Method}} request, Please wait a few minutes and try again. If you still encounter this problem contact the IBM Cloud support.
+- Internal Service Error occurred during {{.Method}} request, Please wait a minute and try again. If you still encounter this problem contact the [{{site.data.keyword.cloud}} support](/docs/get-support?topic=get-support-using-avatar).
 
 #### Resolve
 {: #svc-resolve}
 
-- Check the action logs. For more information, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
-- Wait for few minutes and retry your action processing.
+- Check the user jobs and all jobs logs. For more information, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
+- Wait for a minute and check your configuration and execute the action again.
 - Check you have the required permissions such as [IAM access or key](/docs/schematics?topic=schematics-action-setup).
 - Check the firewall IP are enabled.
 - Check if your [{{site.data.keyword.cloud_notm}} environment notification](/docs/get-support?topic=get-support-viewing-notifications){: external} is in maintenance.
@@ -97,7 +97,7 @@ While processing the create, delete, update action, the {{site.data.keyword.bpsh
 - Action is ready, Job cannot be executed. Check the Job status.
 - Action is in queue. Wait until the action completes.
 - Action is in queue. Wait until the action completes update.
-- Action failed to complete. Please wait few minutes and try again.
+- Action failed to complete. Please wait for a minute and try again.
 - Action is ready for execution.
 - Action is ready for execution. The configuration and settings cannot be edited.
 - Action is in draft. Please add a Git repository.

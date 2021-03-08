@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-08"
 
 keywords: monitoring schematics services, schematics monitoring by using sysdig, monitoring
 
@@ -41,7 +41,7 @@ subcollection: schematics
 You can monitor your services instance in the {{site.data.keyword.cloud_notm}} console.
 {: shortdesc}
 
-Complete the following steps to view your services instances:
+Complete these steps to view your services instances:
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
@@ -60,7 +60,7 @@ Complete the following steps to view your services instances:
 You can create your services instance in the {{site.data.keyword.cloud_notm}} console.
 {: shortdesc}
 
-Complete the following steps to create your services instance:
+Complete these steps to create your services instance:
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
@@ -78,7 +78,7 @@ Complete the following steps to create your services instance:
 You can create your custom dashboard in the {{site.data.keyword.cloud_notm}} console.
 {: shortdesc}
 
-Complete the following steps to create your custom dashboard:
+Complete these steps to create your custom dashboard:
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
