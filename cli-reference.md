@@ -1740,7 +1740,7 @@ Moves an instance or resources from the Terraform state. For example, if you mov
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS> --destination <DESTINATION>
+ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --source <SOURCE>  --destination <DESTINATION> 
 ```
 {: pre}
 
@@ -1748,24 +1748,22 @@ ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --options <FLAGS> --a
 **Command options:**
 
 <dl>
-<dt><code>--id <em>WORKSPACE_ID</em></code></dt>
+<dt><code>--id or -i<em>WORKSPACE_ID</em></code></dt>
 <dd>Required. The unique identifier of the workspace for which you want to move an instance or resource. To find the ID of your workspace, run <code>ibmcloud schematics workspace list</code>.
    </dd>
 
-<dt><code>--options <em>FLAGS</em></code></dt>
-<dd>Optional. Enter the option flag that you want to move. </dd>
+<dt><code>--source or -s<em>SOURCE</em></code></dt>
+<dd>Optional. Enter the source address of an item to move. </dd>
 
-<dt><code>--address</code></dt>
-<dd>Optional. Provide the source address parameter for the command.   </dd>
 
-<dt><code>--destination</code></dt>
+<dt><code>--destination or -d</code></dt>
 <dd>Optional. Provide the destination parameter for the command.   </dd>
 
 </dl>
 
 **Example**
 ```
-ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
+ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 -s testsourceresource -d null_resource.sleep 
 ```
 {: pre}
 

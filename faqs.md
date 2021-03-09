@@ -150,7 +150,9 @@ If the repository is created after 1st October 2020, the main branch syntax need
 {: faq}
 {: support}
 
-As of now we don't have support for migrating {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13. You need to create a workspace to make use of Terraform V0.13.
+Current {{site.data.keyword.bplong_notm}} do not support for migrating {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13. You need to create a workspace to make use of Terraform V0.13.
+
+For more information, about migrating Terraform existing version to higher version, refer to [Terraform version migration](/docs/schematics?topic=schematics-faqs#migrate-terraform-v11).
 
 ## Can I increase the timeout for null-exec and remote-exec resource?
 {: #timeout-null-resource}
@@ -196,11 +198,14 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 
 Follow these steps to migrate Terraform v0.11 to Terraform v0.12 in {{site.data.keyword.bpshort}} 
 - Export the Terraform state file, from the {{site.data.keyword.bpshort}} workspace by using the [ibmcloud schematics state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
-- Follow the steps described by [Hashicorp](https://www.terraform.io/upgrade-guides/0-12.html){: external} to upgrade your Terraform configuration `.tf` file and Terraform state file for Terraform v0.12. **Note** Use your own machine or laptop to perform these operations.
+- Follow the steps described by [Hashicorp](https://www.terraform.io/upgrade-guides/index.html){: external} to upgrade from `Terraform v0.11 to v0.12`, `Terraform v0.12 to v0.13` or higher. Upgrade your Terraform configuration `.tf` file and Terraform state file as per the latest Terraform version requirement. **Note** Use your own machine or laptop to perform these operations.
 - Upload the upgraded Terraform configuration `.tf ` file, to an existing or a new Git repository.
 - Create the {{site.data.keyword.bpshort}} workspace with the upgraded Terraform configuration `.tf` file in the Git repository and the upgraded state file by using the [ibmcloud schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 - Run the {{site.data.keyword.bpshort}} workspace [refresh](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the newly created workspace is able to connect and work with the existing {{site.data.keyword.cloud_notm}} resources.
 - Delete the old {{site.data.keyword.bpshort}} workspace without destroying the {{site.data.keyword.cloud_notm}} resources.
+
+**Disclaimer** You need to be an expert user to upgrade the Terraform version or need to take a [support](/docs/get-support?topic=get-support-using-avatar) of an experts to perform these steps.
+{: note}
 
 
 
