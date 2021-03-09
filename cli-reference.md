@@ -54,6 +54,7 @@ ibmcloud schematics help
 {: pre}
 
 </br>
+
 **Command options:** none 
 
 ### `ibmcloud schematics version`
@@ -62,13 +63,33 @@ ibmcloud schematics help
 List the version of the Terraform command line and {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform that the {{site.data.keyword.bpshort}} command line uses. 
 {: shortdesc}
 
+**Syntax**
+
+```
+ibmcloud schematics version [--output] <OUTPUT> [--json] <JSON_FILE>
+```
+{: pre}
+
+**Example**
+
 ```
 ibmcloud schematics version
 ```
 {: pre}
 
 </br>
-**Command options:** none
+
+**Command options:** 
+
+<dl>
+<dt><code>--json <em>JSON</em></code>, <code>-j<em>JSON</em></code></dt>
+<dd>Deprecated. Prints the output in the JSON format.</code>.
+   </dd>
+
+<dt><code>--output <em>OUTPUT</em></code>, <code>-o<em>OUTPUT</em></code></dt>
+<dd>Optional. Specify the output format. Currently only `JSON` file format is supported.  </dd>
+
+</dl>
 
 
 ## Workspace commands	
@@ -91,6 +112,7 @@ ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--j
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
@@ -142,6 +164,7 @@ ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
@@ -238,6 +261,7 @@ ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--json]
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
@@ -563,6 +587,7 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--json]
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>	
@@ -589,6 +614,7 @@ ibmcloud schematics state list --id WORKSPACE_ID
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>	
@@ -865,6 +891,7 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>	
@@ -915,6 +942,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--var-file TFVA
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>	
@@ -960,6 +988,7 @@ ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE] [--force] [--j
 {: pre}
 
 </br>
+
 **Command options:** 
 
 <dl>	
@@ -994,6 +1023,7 @@ ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>	
@@ -1053,6 +1083,7 @@ ibmcloud schematics plan --id WORKSPACE_ID [--json]
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>	
@@ -1681,6 +1712,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>	
@@ -1712,6 +1744,7 @@ ibmcloud schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> -
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
@@ -1745,6 +1778,7 @@ ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --source <SOURCE>  --
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
@@ -1780,6 +1814,7 @@ ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --a
 {: pre}
 
 </br>
+
 **Command options:**
 
 <dl>
