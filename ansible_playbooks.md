@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-09"
 
 keywords: schematics, automation, terraform provider, terraform, ansible code, ansible
 
@@ -48,7 +48,7 @@ You can run Ansible playbook against a {{site.data.keyword.vsi_is_short}} instan
 ```
    ├── site.yaml
    ├── roles    
-      └── requirments.yaml        
+      └── requirements.yaml        
          └── tasks                
          └── main.yml
    ```

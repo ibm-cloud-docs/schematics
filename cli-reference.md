@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-09"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1285,7 +1285,7 @@ The table describes the options of the flag.
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
 | `--id` or `-id` | Required | The Id of an action that you want to fetch. |
-| `--profile` or `-p` | Optional | The level of information fetched by the get method. |
+| `--profile` or `-p` | Optional | The level of information fetched by the get method. Supported values are `detailed`, and `summary`. The default value is `summary`. |
 | `--no-prompt` | Optional | Fetch this flag to stop interactive command line session, by prompting user for input a field value on terminal.
 | `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
@@ -1308,7 +1308,7 @@ ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PRO
 | ----- | -------- | ------ |
 | `--limit` or `-l` | The maximum number of workspaces to list. Ignored if a negative number is set. The maximum limit is `200` and the default value is `-1`. |
 | `--offset` or `-m` | Offset in list, ignored if a negative number is set. The default value is `-1`. |
-| `--profile` or `-p` | Level of the information returned by the get method. |
+| `--profile` or `-p` | Level of the information returned by the get method. Supported values are `ids`, and `summary`. The default value is `summary`.|
 | `--json` or `-j` | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
 | `--output` or `-o` | Specify the output format, supported format is JSON. |
 {: caption="Schematics action list flags" caption-side="top"}
@@ -1477,7 +1477,7 @@ The table describes the options of the flag.
 | `--json` or `-j` | Optional | [Deprecated] Prints the output as JSON. Use `--output` JSON instead. |
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
 | `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
-| `--profile` or `-p` | Optional | The level of information fetched by the get method. |
+| `--profile` or `-p` | Optional | The level of information fetched by the get method. Supported values are `detailed`, and `summary`. The default value is `summary`.|
 {: caption="Schematics job get flags" caption-side="top"}
 
 ### `ibmcloud schematics job list`
@@ -1502,7 +1502,7 @@ You can retrieve the jobs by using the options described in the table.
 | `--limit` or `-l` | Optional | Maximum number of workspaces to list. Ignored if a negative number is set. The maximum limit is `200` and the default value is `-1`. |
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
 | `--offset` or `-m` | Optional | Offset in list, ignored if a negative number is set. The default value is `-1`. |
-| `--profile` or `-p` | Optional | Level of the information returned by the get method. |
+| `--profile` or `-p` | Optional | Level of the information returned by the get method. Supported values are `ids`, and `summary`. The default value is `summary`. |
 | `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
 | `--resource-type` or `-rt` | Required | Name of the resource either `workspace`, `actions`, or `controls`. |
