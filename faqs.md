@@ -204,7 +204,7 @@ Follow these steps to migrate Terraform v0.11 to Terraform v0.12 in {{site.data.
 - Run the {{site.data.keyword.bpshort}} workspace [refresh](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the newly created workspace is able to connect and work with the existing {{site.data.keyword.cloud_notm}} resources.
 - Delete the old {{site.data.keyword.bpshort}} workspace without destroying the {{site.data.keyword.cloud_notm}} resources.
 
-**Disclaimer** You need to be an expert user to upgrade the Terraform version or need to take a [support](/docs/get-support?topic=get-support-using-avatar) from an experts to perform these steps.
+You need to be an expert user to upgrade the Terraform version or need to take a [support](/docs/get-support?topic=get-support-using-avatar) from an experts to perform these steps.
 {: note}
 
 
