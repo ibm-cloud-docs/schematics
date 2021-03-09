@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-09"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -88,6 +88,7 @@ For more information, about the sample Git repository that installs `kubectl` on
       └── requirements.yaml or requirements.yml
 ```
 {: screen}
+
 
 
 
