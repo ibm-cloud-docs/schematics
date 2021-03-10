@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-09"
+lastupdated: "2021-03-10"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -145,14 +145,6 @@ Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ `
 Solution:
 If the repository is created after 1st October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
 
-## Can I migrate the  {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13?
-{: #migrate-workspace}
-{: faq}
-{: support}
-
-Current {{site.data.keyword.bplong_notm}} do not support for migrating {{site.data.keyword.bpshort}} workspace created from Terraform V0.12 to Terraform V0.13. You need to create a workspace to make use of Terraform V0.13.
-
-For more information, about migrating Terraform existing version to higher version, refer to [Terraform version migration](/docs/schematics?topic=schematics-faqs#migrate-terraform-v11).
 
 ## Can I increase the timeout for null-exec and remote-exec resource?
 {: #timeout-null-resource}
@@ -193,10 +185,12 @@ In the same way {{site.data.keyword.bplong_notm}} supports the ability to persis
 
 Your files must be placed in the `/tmp/.schematics` folder and the size limit is set to `10 MB`. {{site.data.keyword.bpshort}} backups and restores all the files in the `/tmp/.schematics` folder.
 
-## How to migrate Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}?
+## How to upgrade the Terraform versions in {{site.data.keyword.bpshort}}?
 {: #migrate-terraform-v11}
+{: faq}
+{: support}
 
-Follow these steps to migrate Terraform v0.11 to Terraform v0.12 in {{site.data.keyword.bpshort}} 
+You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
 - Export the Terraform state file, from the {{site.data.keyword.bpshort}} workspace by using the [ibmcloud schematics state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
 - Follow the steps described by [Hashicorp](https://www.terraform.io/upgrade-guides/index.html){: external} to upgrade from `Terraform v0.11 to v0.12`, `Terraform v0.12 to v0.13` or higher. Upgrade your Terraform configuration `.tf` file and Terraform state file as per the latest Terraform version requirement. **Note** Use your own machine or laptop to perform these operations.
 - Upload the upgraded Terraform configuration `.tf ` file, to an existing or a new Git repository.
@@ -204,8 +198,9 @@ Follow these steps to migrate Terraform v0.11 to Terraform v0.12 in {{site.data.
 - Run the {{site.data.keyword.bpshort}} workspace [refresh](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the newly created workspace is able to connect and work with the existing {{site.data.keyword.cloud_notm}} resources.
 - Delete the old {{site.data.keyword.bpshort}} workspace without destroying the {{site.data.keyword.cloud_notm}} resources.
 
-You need to be an expert user to upgrade the Terraform version or need to take a [support](/docs/get-support?topic=get-support-using-avatar) from an experts to perform these steps.
+You need to be an expert user to upgrade the Terraform version to perform these steps.
 {: note}
+
 
 
 

@@ -30,6 +30,7 @@ Schematics
     Provisioning and managing IBM Cloud resources with Terraform
          create-terraform-config.md
          workspace-setup.md
+         workspace-setupv2.md
          setup-cli.md
          manage-resource-lifecycle.md
          migrate-tfversion.md
