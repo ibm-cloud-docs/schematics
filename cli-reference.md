@@ -218,7 +218,7 @@ You can import the existing resource with an valid address from the workspace ID
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace import --id <WID> --address <resource>.<resource_name> --resourceID <terraform resource id>
+ibmcloud schematics workspace import --id WID --address resource.resource_name --resourceID terraform_resource_id
 ```
 {: pre}
 
@@ -244,7 +244,7 @@ ibmcloud schematics workspace import --id <WID> --address <resource>.<resource_n
 
 **Example**
 ```
-ibmcloud schematics workspace import --id <WID> --address ibm_iam_access_group.accgrp --resourceID AccessGroupId-xxxxxx-xxxx-xxx-xxx-xxxx
+ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.accgrp --resourceID AccessGroupId-xxxxxx-xxxx-xxx-xxx-xxxx
 ```
 {: pre}
 
@@ -546,7 +546,7 @@ Displays all the instance or resource output of the workspace. You can provide o
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace output --id <WORKSPACE_ID> --options <FLAGS> --name <PARAMETER>
+ibmcloud schematics workspace output --id WORKSPACE_ID [--options FLAGS] [--name PARAMETER]
 ```
 {: pre}
 
@@ -637,7 +637,7 @@ Manually marks an instance or resources as tainted, by forcing the resources to 
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace taint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
+ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER]
 ```
 {: pre}
 
@@ -672,7 +672,7 @@ Manually marks an instance or resources as untainted, by forcing the resources t
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace untaint --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER>
+ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER]
 ```
 {: pre}
 
@@ -903,7 +903,7 @@ ibmcloud schematics workspace upload --id WORKSPACE_ID --file PATH_TO_FILE --tem
 <dd>Required. The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run <code>ibmcloud schematics workspace get --id &lt;workspace_ID&gt;</code> and find the template ID in the <strong>Template Variables for:</strong> field of your command line output. </dd>
 
 <dt><code>--output</code></dt>
-<dd>Return the command line output in JSON format.</dd>
+<dd>Optional. Return the command line output in JSON format.</dd>
 </dl>
 
 **Example 1:**
@@ -1230,7 +1230,7 @@ Create an action by using the flags mentioned in the syntax.
 
 
 ```
-ibmcloud schematics action create --name ACTION_NAME --description DESCRIPTION --location GEOGRAPHY --resource-group RESOURCE_GROUP --template GIT_TEMPLATE_REPO --playbook-name PLAYBOOK_NAME --bastion BASTION_HOST_IP_ADDRESS --target-ini TARGET_HOSTS_FILE --credential CREDENTIAL_FILE_NAME --input INPUT_VARIABLES_LIST --input-file INPUT_VARIABLE_FILE_PATH --env ENV_VARIABLES_FILE_PATH --github-token GITHUB_ACCESS_TOKEN --output OUTPUT --file FILE_NAME [--json] [--no-prompt]
+ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--bastion BASTION_HOST_IP_ADDRESS] [--target-ini TARGET_HOSTS_FILE] [--credential CREDENTIAL_FILE_NAME] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLE_FILE_PATH] [--env ENV_VARIABLES_FILE_PATH] [--github-token GITHUB_ACCESS_TOKEN] [--output OUTPUT] [--file FILE_NAME] [--json] [--no-prompt]
 ```
 {: pre}
 
@@ -1246,7 +1246,7 @@ You will receive the output with the ID, name, resource group, and location with
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of the action. |
-| `--resource-group` or `-r` | Required | The resource group name for the Action. |
+| `--resource-group` or `-r` | Required | The resource group name for an action. |
 | `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
 | `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
@@ -1275,7 +1275,7 @@ Update the information of an existing {{site.data.keyword.bplong_notm}} action b
 {: shortdesc}
 
 ```
-ibmcloud schematics action update -id ACTION_ID --name ACTION_NAME --description DESCRIPTION --location GEOGRAPHY --resource-group RESOURCE_GROUP --template GIT_TEMPLATE_REPO --bastion BASTION_HOST_IP_ADDRESS --target-file TARGET_HOSTS --input INPUT_VARIABLES_LIST --env ENV_VARIABLES_LIST --file FILE_NAME --github-token GITHUB_ACCESS_TOKEN --output OUTPUT [--no-prompt] [--json]
+ibmcloud schematics action update -id ACTION_ID --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--bastion BASTION_HOST_IP_ADDRESS] [--target-file TARGET_HOSTS] [--input INPUT_VARIABLES_LIST] [--env ENV_VARIABLES_LIST] [--file FILE_NAME] [--github-token GITHUB_ACCESS_TOKEN] [--output OUTPUT] [--no-prompt] [--json]
 ```
 {: pre}
 
@@ -1285,7 +1285,9 @@ You will receive the output with the ID, name, resource group, and location with
 | ----- | -------- | ------ |
 | `--id` or `-id` | Required | The action id of an action. |
 | `--name` or `-n` | Required | The unique name of the action. |
+| `--resource-group` or `-r` | Required | The resource group name for an action. |
 | `--tags` or `t` | Optional | The tag list.|
+| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
 | `--description` or `-d` | Optional | The short description of an action.|
 | `--templates` or `-tr` | Optional | The ordered list of Git template repositories.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
@@ -1307,7 +1309,7 @@ Fetch the information of an existing {{site.data.keyword.bplong_notm}} action by
 
 
 ```
-ibmcloud schematics action get -id ACTION_ID [--profile] [PROFILE] [--output] [OUTPUT_VALUE] [--json] [--no-prompt]
+ibmcloud schematics action get -id ACTION_ID [--profile PROFILE] [--output OUTPUT_VALUE] [--json] [--no-prompt]
 ```
 {: pre}
 
@@ -1353,7 +1355,7 @@ Delete an action from {{site.data.keyword.bplong_notm}} service.
 
 
 ```
-ibmcloud schematics action delete --id <ACTION_ID> [--force][--no-prompt]
+ibmcloud schematics action delete --id ACTION_ID [--force][--no-prompt]
 ```
 {: pre}
 
@@ -1399,7 +1401,7 @@ You need to create a JSON file containing the details about the command object, 
 {: codeblock}
 
 ```
-ibmcloud schematics job create --file <FILE_NAME>
+ibmcloud schematics job create --file FILE_NAME
 ```
 {: pre}
 
@@ -1441,7 +1443,7 @@ Create a job by using the flags mentioned in the syntax.
 Create a job in {{site.data.keyword.bplong_notm}} to work with your Schematics entities such as workspace and actions by providing the right flags.
 
 ```
-ibmcloud schematics job create --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command_name COMMAND_NAME --playbook-name PLAYBOOK_NAME --command-options COMMAND_OPTIONS --input INPUT_VARIABLES_LIST --input-file INPUT_VARIABLES_FILE_PATH --env ENV_VARIABLES_LIST --env-file ENV_VARIABLES_FILE_PATH --result-format RESPONSE_OUTPUT_FORMAT --file FILE_NAME [--no-prompt]
+ibmcloud schematics job create --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command_name COMMAND_NAME --playbook-name PLAYBOOK_NAME [--command-options COMMAND_OPTIONS] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--result-format RESPONSE_OUTPUT_FORMAT] [--file FILE_NAME] [--no-prompt]
 ```
 {: pre}
 
@@ -1475,7 +1477,7 @@ Update a job creates a copy of the job and relaunches an existing job by updatin
 
 
 ```
-ibmcloud schematics job update --id JOB_ID --output OUTPUT [--json] [--no-prompt]
+ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--json] [--no-prompt]
 ```
 {: pre}
 
@@ -1497,7 +1499,7 @@ Fetch the information of an existing {{site.data.keyword.bplong_notm}} job by us
 
 
 ```
-ibmcloud schematics job get --id JOB_ID [--profile] [PROFILE] [--output] [OUTPUT] [--json] [--no-prompt]
+ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [--json] [--no-prompt]
 ```
 {: pre}
 
@@ -1520,7 +1522,7 @@ Lists all the existing jobs corresponding to a Schematics entities such as works
 
 
 ```
-ibmcloud schematics job list [--resource-type RESOURCE_TYPE] [--id RESOURCE_ID] [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] --output OUTPUT [--all] [--json] [--no-prompt]
+ibmcloud schematics job list [--resource-type RESOURCE_TYPE] [--id RESOURCE_ID] [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--json] [--no-prompt]
 
 ```
 {: pre}
@@ -1529,7 +1531,7 @@ You can retrieve the jobs by using the options described in the table.
 
 | Flag | Description |
 | ----- | -------- | 
-| `--all` | Optional| Lists all the jobs including the internal jobs.|
+| `--all` | Optional | Lists all the jobs including the internal jobs.|
 | `--id` | Optional | ID of the resource. |
 | `--limit` or `-l` | Optional | Maximum number of workspaces to list. Ignored if a negative number is set. The maximum limit is `200` and the default value is `-1`. |
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
@@ -1548,7 +1550,7 @@ Delete a job from {{site.data.keyword.bplong_notm}} service.
 
 
 ```
-ibmcloud schematics job delete --id <JOB_ID> [--force][--no-prompt]
+ibmcloud schematics job delete --id JOB_ID [--force][--no-prompt]
 ```
 {: pre}
 
@@ -1569,7 +1571,7 @@ Fetch the job logs from an {{site.data.keyword.bplong_notm}} service.
 
 
 ```
-ibmcloud schematics job logs --id <JOB_ID> [--no-prompt]
+ibmcloud schematics job logs --id JOB_ID [--no-prompt]
 ```
 {: pre}
 
@@ -1613,7 +1615,7 @@ The `Commands` API supports:
 Select your region where the workspace is created, and use the following syntax to run the commands API.
 
 ```
-ibmcloud schematics commands --id <WORKSPACE_ID> --options <FLAGS> --file <JSON file>
+ibmcloud schematics commands --id WORKSPACE_ID [--options FLAGS] [--file JSON file]
 ```
 
 **Command options**
@@ -1740,7 +1742,7 @@ Provides the readable output from a state or plan of a workspace as Terraform se
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state show --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETERS>
+ibmcloud schematics workspace state show --id WORKSPACE_ID [--options FLAGS] [--address PARAMETERS]
 ```
 {: pre}
 
@@ -1774,7 +1776,7 @@ Moves an instance or resources from the Terraform state. For example, if you mov
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state mv --id <WORKSPACE_ID> --source <SOURCE>  --destination <DESTINATION> 
+ibmcloud schematics workspace state mv --id WORKSPACE_ID [--source SOURCE]  [--destination DESTINATION] 
 ```
 {: pre}
 
@@ -1810,7 +1812,7 @@ Removes an instance or resources from the Terraform state. For example, if you r
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state rm --id <WORKSPACE_ID> --options <FLAGS> --address <PARAMETER> 
+ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER] 
 ```
 {: pre}
 
