@@ -1539,7 +1539,7 @@ You can retrieve the jobs by using the options described in the table.
 | `--profile` or `-p` | Optional | Level of the information returned by the get method. Supported values are `ids`, and `summary`. The default value is `summary`. |
 | `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
-| `--resource-type` or `-rt` | Required | Name of the resource either `workspace`, `actions`, or `controls`. |
+| `--resource-type` or `-rt` | Required | Name of the resource either `workspace`, or `action`.  |
 {: caption="Schematics job list flags" caption-side="top"}
 
 ### `ibmcloud schematics job delete`
