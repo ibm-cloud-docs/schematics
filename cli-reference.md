@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-09"
+lastupdated: "2021-03-10"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1307,9 +1307,10 @@ Fetch the information of an existing {{site.data.keyword.bplong_notm}} action by
 
 
 ```
-ibmcloud schematics action get -id ACTION_ID --profile PROFILE --output OUTPUT_VALUE [--json] [--no-prompt]
+ibmcloud schematics action get -id ACTION_ID [--profile] [PROFILE] [--output] [OUTPUT_VALUE] [--json] [--no-prompt]
 ```
 {: pre}
+
 
 The table describes the options of the flag.
 
@@ -1496,7 +1497,7 @@ Fetch the information of an existing {{site.data.keyword.bplong_notm}} job by us
 
 
 ```
-ibmcloud schematics job get --id JOB_ID --profile PROFILE --output OUTPUT [--json] [--no-prompt]
+ibmcloud schematics job get --id JOB_ID [--profile] [PROFILE] [--output] [OUTPUT] [--json] [--no-prompt]
 ```
 {: pre}
 
