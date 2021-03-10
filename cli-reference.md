@@ -66,7 +66,7 @@ List the version of the Terraform command line and {{site.data.keyword.cloud_not
 **Syntax**
 
 ```
-ibmcloud schematics version [--output] <OUTPUT> [--json] <JSON_FILE>
+ibmcloud schematics version [--output OUTPUT] [--json JSON_FILE]
 ```
 {: pre}
 
@@ -82,11 +82,11 @@ ibmcloud schematics version
 **Command options:** 
 
 <dl>
-<dt><code>--json <em>JSON</em></code>, <code>-j<em>JSON</em></code></dt>
+<dt><code>--json <em>JSON</em></code>, <code>-j <em>JSON</em></code></dt>
 <dd>Deprecated. Prints the output in the JSON format.</code>.
    </dd>
 
-<dt><code>--output <em>OUTPUT</em></code>, <code>-o<em>OUTPUT</em></code></dt>
+<dt><code>--output <em>OUTPUT</em></code>, <code>-o <em>OUTPUT</em></code></dt>
 <dd>Optional. Specify the output format. Currently only `JSON` file format is supported.  </dd>
 
 </dl>
