@@ -185,7 +185,7 @@ In the same way {{site.data.keyword.bplong_notm}} supports the ability to persis
 
 Your files must be placed in the `/tmp/.schematics` folder and the size limit is set to `10 MB`. {{site.data.keyword.bpshort}} backups and restores all the files in the `/tmp/.schematics` folder.
 
-## How to upgrade the Terraform versions in Schematics?
+## How to upgrade the Terraform versions in {{site.data.keyword.bpshort}}?
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
@@ -200,6 +200,7 @@ You can follow these steps to upgrade Terraform v0.11 to Terraform higher versio
 
 You need to be an expert user to upgrade the Terraform version to perform these steps.
 {: note}
+
 
 
 
