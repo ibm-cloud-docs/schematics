@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-03-11"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -563,7 +563,7 @@ ibmcloud schematics workspace output --id WORKSPACE_ID [--options FLAGS] [--name
 <dd>Optional. Enter the option flag that you want to import. </dd>
 
 <dt><code>--name</code></dt>
-<dd>Optional. Provide the name of the parameter to print.   </dd>
+<dd>Optional. Specify the parameter name to print.  </dd>
 
 </dl>
 
@@ -1250,7 +1250,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
 | `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
-| `--playbook-name` or `-pn` | Optional | The name of the playbook. |
+| `--playbook-name` or `-pn` | Optional | Specify the playbook name. |
 | `--description` or `-d` | Optional | The short description of an action.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private git repository. |
 | `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).|
@@ -1459,7 +1459,7 @@ The table describes the options of the flag.
 | `--command-name,` or `-n` | Required | The Schematics job command name. |
 | `--command-options` or `-co` | Optional | The command line options for the command.|
 | `--file` or `-f` | Optional | The payload file name. |
-| `--playbook-name` or `-pn` | Optional | The name of the playbook. |
+| `--playbook-name` or `-pn` | Optional | Specify the playbook name. |
 | `--input` or `-i` | Optional | The input variables for the action. This flag can be set multiple times. **Note** The format must be as `--input foo=bar` or in JSON file. |
 | `--input-file` or `-I` | Optional | The input variables for the action. You need to provide the JSON file path that contains input variables.|
 | `--env` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
@@ -1583,6 +1583,86 @@ You can fetch a job by using the options described in the table.
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
 {: caption="Schematics job logs flags" caption-side="top"}
 
+## Enable BYOK or KYOK commands
+{: kms-commands}
+
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-encryption).
+{: shortdesc}
+
+### Prerequisites
+{: #key-prerequisites}
+
+You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#using-byok) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service. 
+
+KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
+{: note}
+
+### `ibmcloud schematics kms instance ls`
+{: #schematics-kms-list}
+
+Lists the KMS instances of your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}}or {{site.data.keyword.hscrypto}}. You can list the KMS instances by using the options described in the table.
+
+**Syntax**
+
+```
+ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME [--output json]
+```
+{: pre}
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ | 
+| `--location` or `-l` | Required | Set the Schematics location name, such as `us`, or `eu`. |
+| `--scheme` or `-s` | Required | Specify the encryption scheme, such as `KYOK`, or `BYOK`. |
+|  `--json` or `-j`| Deprecated| Prints the output as `JSON`. Use `--output` instead.|
+| `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
+{: caption="Schematics KMS list flags" caption-side="top"}
+
+### `ibmcloud schematics kms enable`
+{: #schematics-kms-enable}
+
+Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#using-byok). You can enable the KMS instances by using the options described in the table.
+
+**Syntax**
+
+```
+ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHEME --group RESOURCE_GROUP --primary_name PRIMARY_KMS_NAME --primary_crn PRIMARY_KEY_CRN --primary_endpoint PRIMARY_KMSPRIVATEENDPOINT [--secondary_name SECONDARY_KMS_NAME] [--secondary_crn SECONDARY_KEY_CRN] [--secondary_endpoint SECONDARY_KMSPRIVATEENDPOINT] [--output][--json]
+```
+{: pre}
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ | 
+| `--location` or `-l` | Required | Set the Schematics location name, such as `us`, or `eu`. |
+| `--scheme` or `-s` | Required | Specify the encryption scheme. Support values are KMS `KYOK`, `BYOK`. |
+| `--group` or `-g` | Required | Specify the resource group name.|
+| `--primary_name` or `--pn` | Required |  Specify the primary KMS name.|
+| `--primary_crn` or `--pc` | Required |  Specify the primary key CRN name.|
+| `--primary_endpoint` or `--pe` | Required |  Specify the primary KMS private endpoint.|
+| `--secondary_name` or `--sn` | Optional | Specify the secondary KMS name.|
+| `--secondary_crn` or `--sc`| Optional | Specify the secondary key CRN.|
+| `--secondary_endpoint` or `--se`|Optional | Specify the secondary KMS private endpoint.|
+|  `--json` or `-j`| Deprecated| Prints the output as `JSON`. Use `--output` instead.|
+| `--output` or `-o` | Optional | Specify the output format, supported format is JSON.|
+{: caption="Schematics KMS enable flags" caption-side="top"}
+
+### `ibmcloud schematics kms info`
+{: #schematics-kms-info}
+
+Retrieves the {{site.data.keyword.bplong_notm}} KMS instance information. You can fetch the information of the KMS instances by using the options described in the table.
+
+**Syntax**
+
+```
+ibmcloud schematics kms info --location LOCATION_NAME [--output]
+```
+{: pre}
+
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ | 
+| `--location` or `-l` | Required | Set the Schematics location name, such as `us`, and `eu`. |
+|  `--json` or `-j`| Deprecated| Prints the output as `JSON`. Use `--output` instead.|
+| `--output` or `-o` | Optional | Specify the output format, supported format is JSON.|
+{: caption="Schematics KMS information flags" caption-side="top"}
 
 
 ## Terraform commands
