@@ -1250,7 +1250,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
 | `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
-| `--playbook-name` or `-pn` | Optional | Specify the playbook name. |
+| `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`.|
 | `--description` or `-d` | Optional | The short description of an action.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private git repository. |
 | `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).|
@@ -1459,7 +1459,7 @@ The table describes the options of the flag.
 | `--command-name,` or `-n` | Required | The Schematics job command name. |
 | `--command-options` or `-co` | Optional | The command line options for the command.|
 | `--file` or `-f` | Optional | The payload file name. |
-| `--playbook-name` or `-pn` | Optional | Specify the playbook name. |
+| `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`. |
 | `--input` or `-i` | Optional | The input variables for the action. This flag can be set multiple times. **Note** The format must be as `--input foo=bar` or in JSON file. |
 | `--input-file` or `-I` | Optional | The input variables for the action. You need to provide the JSON file path that contains input variables.|
 | `--env` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
