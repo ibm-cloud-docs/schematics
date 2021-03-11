@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-11"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -178,8 +178,12 @@ Delete your workspace that points to the Git repository thats hosted your Terraf
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete. The table describes the delete workspace and destroy resources with various action.
 
-    Decide if you want to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources with the resource list or CLI.
+    If you have decided to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources outside the {{site.data.keyword.bpshort}} by using command line or from your resource source location.
     {: note}
+
+    Use the {{site.data.keyword.bpshort}} to manage the resources created in {{site.data.keyword.bpshort}}. You should not manually delete or make any changes to the resources that are created by using {{site.data.keyword.bpshort}}.
+    {: important}
+
     <table>
       <tr>
         <th>Action</th><th>Delete workspace</th><th>Delete all associated resources</th></tr>
