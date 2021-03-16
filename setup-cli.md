@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-16"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -73,7 +73,7 @@ Install the required command line to automate the provisioning of {{site.data.ke
    Listing installed plug-ins...
 
    Plugin Name         Version   Status        
-   schematics          1.4.0     
+   schematics          1.5.1     
    ```
    {: screen}
     
@@ -123,7 +123,7 @@ Update the {{site.data.keyword.cloud_notm}} command line and the {{site.data.key
      If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command line output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
      {: tip}
 
-3. Check if an update is available for the {{site.data.keyword.bplong_notm}} command line plug-in. If an update is available, you find an **Update available** notification in your command line output. 
+3. Check if an update is available for the {{site.data.keyword.bplong_notm}} command line plug-in. If an update is available, you find an **Update available** notification in your command line output. If an update is unavailable, you find a **false** notification in your command line output.
    ```
    ibmcloud plugin list | grep schematics
    ```
@@ -132,7 +132,7 @@ Update the {{site.data.keyword.cloud_notm}} command line and the {{site.data.key
    Example output: 
 
    ```
-   schematics                      1.4.1        Update available
+   schematics                      1.5.1        false
    ```
    {: screen}
    

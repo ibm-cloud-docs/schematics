@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-11"
+lastupdated: "2021-03-16"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -48,14 +48,32 @@ Use these general commands to find help and version information for the {{site.d
 View the supported {{site.data.keyword.bplong_notm}} command line commands. 
 {: shortdesc}
 
+**Syntax**
+
 ```
-ibmcloud schematics help
+ibmcloud schematics help [command]
 ```
 {: pre}
 
-</br>
+**Command options**
 
-**Command options:** none 
+<dl>
+
+<dt><code>help</code>, <code>-h</code></dt>
+<dd>Required. Lists the supported commands.</code>.
+</dd>
+
+<dt><code>command</code></dt>
+<dd>Optional. Specify the name of the command to get command details.</dd>
+
+</dl>
+
+**Example**
+
+```
+ibmcloud schematics help -version
+```
+{: pre}
 
 ### `ibmcloud schematics version`
 {: #schematics-version}
@@ -1454,7 +1472,7 @@ The table describes the options of the flag.
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--command-object` or `-c` | Required | The name of the Schematics automation resource. Valid values are `action`. |
+| `--command-object` or `-c` | Required | The name of the Schematics automation resource. Valid values are `action`, `workspace`, . |
 | `--command-object-id` or `-cid` | Required | The ID of the Schematics automation resource on which you want to run job. |
 | `--command-name,` or `-n` | Required | The Schematics job command name. |
 | `--command-options` or `-co` | Optional | The command line options for the command.|
