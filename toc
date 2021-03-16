@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="schematics" category="dev_ops" audience="compute" href="/docs/schematics?topic=schematics-getting-started" console-page="/schematics/overview" path="schematics"}
+{: .toc subcollection="schematics" category="dev_ops" audience="service" href="/docs/schematics?topic=schematics-getting-started" console-page="/schematics/overview" path="schematics"}
 Schematics
 
     {: .navgroup id="learn"}
