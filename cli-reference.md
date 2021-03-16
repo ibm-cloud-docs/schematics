@@ -1604,13 +1604,13 @@ You can fetch a job by using the options described in the table.
 ## Enable BYOK or KYOK commands
 {: kms-commands}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-encryption).
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption).
 {: shortdesc}
 
 ### Prerequisites
 {: #key-prerequisites}
 
-You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#using-byok) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service. 
+You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service.
 
 KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
 {: note}
@@ -1638,7 +1638,7 @@ ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION
 ### `ibmcloud schematics kms enable`
 {: #schematics-kms-enable}
 
-Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#using-byok). You can enable the KMS instances by using the options described in the table.
+Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption). You can enable the KMS instances by using the options described in the table.
 
 **Syntax**
 

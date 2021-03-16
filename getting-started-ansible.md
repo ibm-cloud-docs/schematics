@@ -95,7 +95,7 @@ For more information, about the sample Git repository that installs `kubectl` on
 
 Ansible collections includes playbooks, roles, modules, and plug-ins. As modules move from the core Ansible repository into collections, the module documentation move the collections pages. For more information, about Ansible collections, refer to [Collection support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#collections-support){: external}.
 
-IBM Cloud Schematics supports Ansible collections by processing the requirements through `requirements.yaml` or `requirements.yml` file. The `requirements.yaml` file is stored in the `/collections` folder in your Git repository. It’s designed to be the hub for all of your automation tasks. It logs all of your jobs, and has a browseable REST API.  Provisioning callbacks provide great support for autoscaling topologies. Collections are stored in the Ansible root folder as `ansiblecollections`.
+IBM Cloud Schematics supports Ansible collections by processing the requirements through `requirements.yaml` or `requirements.yml` file. The `requirements.yaml` file is stored in the `/collections` folder in your Git repository. It’s designed to be the hub for all of your automation tasks. It logs all of your jobs, and allows REST API calls.  Provisioning callbacks provide great support for autoscaling topologies. Collections are stored in the Ansible root folder as `ansiblecollections`.
 {: shortdesc}
 
 The sample folder structure with the collections structure in the Git repository is:
