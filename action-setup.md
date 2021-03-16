@@ -93,7 +93,7 @@ To create an action:
    2. Wait for the playbook, resource inventory, and variables to process for a minute. The processing time is determined based on the resource inventory.
    3. Click **Launch action** to land into the Jobs page.
 
-      Before your launch action, you can also observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by the asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
+      Before your launch action, you can observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by the asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
       {: note}
 
 
@@ -155,5 +155,7 @@ The following table represents the state diagram flow of the Schematic action.
    </tr>
   </tbody>
   </table>
+
+  
 
  
