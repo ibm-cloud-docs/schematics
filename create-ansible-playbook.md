@@ -35,7 +35,7 @@ Ansible playbook is a set of instructions that you can configure to run on a sin
 
 The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 
-1. Create a YAML file that contains the target host, roles, tasks, files, playbook directories, resources, and configure. For more information, about YAML syntax, refer to [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html){: external}.  Refer to [a sample yaml file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/site.yml){: external} that describes how to use Ansible playbook to deploy the Hackathon starter web application.
+1. Create a YAML file that contains all the target host, roles, tasks, files, policies, steps you want to configure and deploy your resources. For more information, about YAML syntax, refer to [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html){: external}.  Refer to [a sample yaml file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/site.yml){: external} that describes how to use Ansible playbook to deploy the Hackathon starter web application.
 
    You can also create `requirements.yaml` file and store in the [roles directory](/docs/schematics?topic=schematics-getting-started-ansible#ansible-galaxy) for setting the configuration for playbook execution. Then, create `requirements.yaml` file and store in the [collections directory](/docs/schematics?topic=schematics-getting-started-ansible#ansible-collections) for all of your automation and autoscaling topologies.
    {: note}

@@ -33,7 +33,7 @@ subcollection: schematics
 With {{site.data.keyword.bplong_notm}} actions, you can specify the Ansible playbook that you want to run against one or more {{site.data.keyword.cloud}} resources. An Ansible playbook is a configuration file that includes all the tasks, roles, policies, or steps that you want to run and the order in which you want to execute them. 
 {: shortdesc}
 
-## Creating and running {{site.data.keyword.bpshort}} action
+## Creating and running the {{site.data.keyword.bpshort}} action
 {: #create-action}
 
 Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources.  
@@ -54,7 +54,7 @@ To create an action:
    2. Optional: Enter any tags that you want to add to your action. Tags can help you find an action more easily later.
    3. Select the resource group where you want to create the action.
    4. Decide where you want to create your action. The location determines where your action runs and your action data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where the {{site.data.keyword.cloud_notm}} resources reside where you want to run your Ansible playbook.
-   5. Click **Create** to create an action. Your action is created with a `Draft` state and the action `Settings` page opens.
+   5. Click **Create** to create an action. Your action is created with a `Draft` state and can view the action `Settings` page.
 3. Import your Ansible playbook. 
    1. Enter the URL to your GitHub or GitLab repository where you store the Ansible playbook that you want to run in the **Template**. The URL can point to the master branch, any other branch, or a subdirectory. Your action can point to one playbook at a time. If you want to run multiple playbooks, create a separate action for each playbook. 
       - Example for master branch: https://github.com/myorg/myrepo
@@ -86,15 +86,11 @@ To create an action:
         174.45.86.87
        ```
        {: codeblock}      
-   4. Enter the host credentials to be as a proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This setup adds a layer of security to your {{site.data.keyword.cloud_notm}} resources and minimized the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only 1 SSH key for all virtual server instances.
+   4. Enter the host credentials to be as a proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `1 SSH key` for all virtual server instances.
    5. Click **Next**.
-
-   In the closed beta release, enter the target IP addresses and SSH keys for creating an action. 
-   {: note}
-
 5. Define your variables.
-   1. You can create an optional extra command line fields for your playbook by entering the input values with the key and value pairs. to make a secret value for your variable, you can select the sensitive option.
-   2. Wait for the playbook, resource inventory and variables to process for a minute. The processing time is determined on the resource inventory.
+   1. You can create an optional extra command line fields for your playbook by entering the input values with the key and value pairs. You can select the `sensitive` check box to protect your variable value.
+   2. Wait for the playbook, resource inventory, and variables to process for a minute. The processing time is determined based on the resource inventory.
    3. Click **Launch action** to land into the Jobs page.
 
       Before your launch action, you can also observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by the asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
@@ -102,12 +98,12 @@ To create an action:
 
 
 
-## Editing a {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
+## Editing the {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
 {: #editing-ansible-actions}
 
 You can edit a {{site.data.keyword.bpshort}} action by clicking the `edit` icon from the `Settings` page. Once the edit is completed, you can relaunch an action, by using  `Launch action` button. 
 
-## Deleting a {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
+## Deleting the {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
 {: #delete-ansible-actions}
 
 Delete a {{site.data.keyword.bpshort}} action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources.
