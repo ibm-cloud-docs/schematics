@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-11"
+lastupdated: "2021-03-16"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -48,14 +48,32 @@ Use these general commands to find help and version information for the {{site.d
 View the supported {{site.data.keyword.bplong_notm}} command line commands. 
 {: shortdesc}
 
+**Syntax**
+
 ```
-ibmcloud schematics help
+ibmcloud schematics help [command]
 ```
 {: pre}
 
-</br>
+**Command options**
 
-**Command options:** none 
+<dl>
+
+<dt><code>help</code>, <code>-h</code></dt>
+<dd>Required. Lists the supported commands.</code>.
+</dd>
+
+<dt><code>command</code></dt>
+<dd>Optional. Specify the name of the command to get command details.</dd>
+
+</dl>
+
+**Example**
+
+```
+ibmcloud schematics help -version
+```
+{: pre}
 
 ### `ibmcloud schematics version`
 {: #schematics-version}
@@ -1250,7 +1268,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
 | `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
-| `--playbook-name` or `-pn` | Optional | Specify the playbook name. |
+| `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`.|
 | `--description` or `-d` | Optional | The short description of an action.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private git repository. |
 | `--target-file` or `-tf` | Optional | The inventory hostnames of the multiple host applications such as web server, database server, Operating System, region, or network in `.ini` format. For more information, see [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).|
@@ -1454,12 +1472,12 @@ The table describes the options of the flag.
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--command-object` or `-c` | Required | The name of the Schematics automation resource. Valid values are `action`. |
+| `--command-object` or `-c` | Required | The name of the Schematics automation resource. Valid values are `action`, `workspace`, . |
 | `--command-object-id` or `-cid` | Required | The ID of the Schematics automation resource on which you want to run job. |
 | `--command-name,` or `-n` | Required | The Schematics job command name. |
 | `--command-options` or `-co` | Optional | The command line options for the command.|
 | `--file` or `-f` | Optional | The payload file name. |
-| `--playbook-name` or `-pn` | Optional | Specify the playbook name. |
+| `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`. |
 | `--input` or `-i` | Optional | The input variables for the action. This flag can be set multiple times. **Note** The format must be as `--input foo=bar` or in JSON file. |
 | `--input-file` or `-I` | Optional | The input variables for the action. You need to provide the JSON file path that contains input variables.|
 | `--env` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
@@ -1586,13 +1604,13 @@ You can fetch a job by using the options described in the table.
 ## Enable BYOK or KYOK commands
 {: kms-commands}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-encryption).
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption).
 {: shortdesc}
 
 ### Prerequisites
 {: #key-prerequisites}
 
-You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#using-byok) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service. 
+You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service.
 
 KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
 {: note}
@@ -1620,7 +1638,7 @@ ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION
 ### `ibmcloud schematics kms enable`
 {: #schematics-kms-enable}
 
-Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#using-byok). You can enable the KMS instances by using the options described in the table.
+Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption). You can enable the KMS instances by using the options described in the table.
 
 **Syntax**
 

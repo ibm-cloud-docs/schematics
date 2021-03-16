@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-16"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -35,13 +35,18 @@ Ansible playbook is a set of instructions that you can configure to run on a sin
 
 The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 
-1. Create an YAML file that contains the target host, variables, roles, tasks, files, playbook directories, services, and configure. Store the YAML file in the GitHub repository. For more information, about YAML syntax, refer to [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html){: external}.  Refer to [a sample yaml file](https://github.com/Cloud-Schematics/ansible-is-instance-actions){: external} that describes how to run the {{site.data.keyword.cloud_notm}} VSI API to run VSI actions.
+1. Create a YAML file that contains all the target host, roles, tasks, files, policies, steps you want to configure and deploy your resources. For more information, about YAML syntax, refer to [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html){: external}.  Refer to [a sample yaml file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/site.yml){: external} that describes how to use Ansible playbook to deploy the Hackathon starter web application.
 
-2. Download the required services from the GitHub repository that you need to configure. For example, [IKS configured template](https://github.com/ibm-cloud-architecture/iks_vpc_lab/tree/master/03-iks_cluster){: external} from the GitHub repository.
+   You can also create `requirements.yaml` file and store in the [roles directory](/docs/schematics?topic=schematics-getting-started-ansible#ansible-galaxy) for setting the configuration for playbook execution. Then, create `requirements.yaml` file and store in the [collections directory](/docs/schematics?topic=schematics-getting-started-ansible#ansible-collections) for all of your automation and autoscaling topologies.
+   {: note}
 
-3. Create an IAM access token for your {{site.data.keyword.cloud_notm}} Account. To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` For more information, about creating IAM access token, refer to [IAM access token](/apidocs/iam-identity-token-api#gettoken-apikey-delegatedrefreshtoken) and [Create API key](/docs/account?topic=account-userapikey#create_user_key). You can set the environment values by exporting the access token. Command to export `IC_IAM_TOKEN` is `export ACCESS_TOKEN=<access_token>`  and export `IC_IAM_REFRESH_TOKEN` is `export REFRESH_TOKEN=<refresh_token>`.
+2. Store the YAML files in your Git repository. For more information, about the location to store the yaml files, refer to [a file structure](https://github.com/Cloud-Schematics/ansible-app-deploy-iks){: external} that describes the how to structure the directories and files to deploy the application.
 
-4. Create {{site.data.keyword.bplong_notm}} workspace. For more information, about workspace create, refer to [workspace setup](/docs/schematics?topic=schematics-workspace-setup).
+3. Create an IAM access token for your {{site.data.keyword.cloud_notm}} Account. To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` from the command line to set up the enviroment variable. For more information, to create an {{site.data.keyword.cloud_notm}} API Key, refer to [create API key](/docs/account?topic=account-userapikey#create_user_key) by using UI. For more information, about creating IAM access token, refer to [IAM access token](/apidocs/iam-identity-token-api#gettoken-apikey-delegatedrefreshtoken). You can set the environment variables by exporting the access token. Command to export access_token and refresh_token through command line are:
+ - `export ACCESS_TOKEN=<access_token>`  
+ - `export REFRESH_TOKEN=<refresh_token>`
+
+4. Create {{site.data.keyword.bplong_notm}} workspace action by using your Git repository to create the environment. For more information, about workspace creation, refer to [workspace setup](/docs/schematics?topic=schematics-workspace-setup).
 
 
 ## Running Ansible playbooks for {{site.data.keyword.cloud_notm}}
@@ -53,12 +58,9 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 
 
 
-2. You can execute the Ansible job in the Schematics action. For more information, refer to [job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands).
+2. You can execute the job in the Schematics action. For more information, about command line job commands, refer to [job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands).
 
 
 
-3. Verify your progress in the Ansible logs by using a `get` request to the logs. For more information, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
-
-For the beta release, you can run the playbook only through command line. For more information, about the command line commands, refer to [Action commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands), and [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands).
-{: important}
+3. Verify your progress in the logs by using a `get` request to the logs. For more information, about command line log commands, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 

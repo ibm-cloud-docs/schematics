@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-09"
+lastupdated: "2021-03-16"
 
 keywords: schematics, automation, terraform provider, terraform, ansible code, ansible
 
@@ -43,7 +43,7 @@ You can run Ansible playbook against a {{site.data.keyword.vsi_is_short}} instan
 
 2. {{site.data.keyword.bpshort}} actions work with the default folder structure for Ansible playbooks and roles.  Roles are placed in the `/roles` folder and playbooks to be executed are placed in the root folder. The required roles are downloaded and stored in the `/roles` folder. For more information, about Ansible Galaxy support in the {{site.data.keyword.bplong_notm}}, refer to [Ansible Galaxy support](/docs/schematics?topic=schematics-getting-started-ansible#ansible-galaxy).
 
-3. Prepare the Ansible playbook files that you want to run and download the required [Ansible roles](https://galaxy.ansible.com/){: external}.  Actions allow multiple playbooks to be placed in the root folder to allow a single repository to support multiple use cases. When the Action is created, the user can select the required playbook from the list of executed playbooks in the repository to determine the runtime behavior. For more information, about how to create Ansible configuration files, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html){: external}. Download a sample [Ansible playbook with the VSI-related configuration to start or stop VSI](https://github.com/Cloud-Schematics/ansible-is-instance-actions) for reference.
+3. Prepare the Ansible playbook files that you want to run and download the required [Ansible roles](https://galaxy.ansible.com/){: external}.  Actions allow multiple playbooks to be placed in the root folder to allow a single repository to support multiple use cases. When the Action is created, the user can select the required playbook from the list of executed playbooks in the repository to determine the runtime behavior. For more information, about how to create Ansible configuration files? See the [Ansible documentation](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html){: external}. Download a sample [Ansible playbook with the VSI-related configuration to start or stop VSI](https://github.com/Cloud-Schematics/ansible-is-instance-actions) for reference.
 
 ```
    ├── site.yaml
