@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-18"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -156,6 +156,24 @@ The following table represents the state diagram flow of the Schematic action.
   </tbody>
   </table>
 
-  
+
+# Jobs
+{: #action-jobs}
+
+The Schematics action user interface provides the Jobs and Settings option. You need to click the action name to view the `Jobs` and `Settings` options. 
+
+The Jobs lists the activity stream that are performed when the action were created or updated. Jobs provides the left navigation panel for a quick access to **Adjust your settings**, **Get help from the documentation**, and **Learn more about Schematics**.
+Job are classified into:
+- **User jobs** These are the jobs that gets created with an user action. The summary of the system jobs are shown with the following status in the **User** tab.
+   - ok - Access the remote machine and perform the playbook action on it successfully. Here it displays the success count of number of systems that actions got performed.
+   - changed - Access the remote machine and perform the playbook action on it successfully. Here it displays the list of machines where changes got implied.
+   - failed - Total count of machines that were failed to apply changes.
+   - skipped - Total count of machines that were skipped because of already having playbook changes applied.
+   - unreachable - Total number of machines not able to reach out the machine to imply changes on it.
+- **System jobs** These are the jobs that get created during and action creation and action updation The **All** tab in the user interface represents System jobs. For example, `playbook run`, `playbook check`. 
+{: shortdesc}
+
+The **Settings** option allows you to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory**. Then you can click **Run action** to execute the updated action and **Check action** to validate the updated settings.
+
 
  

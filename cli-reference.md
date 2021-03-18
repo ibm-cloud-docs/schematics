@@ -91,7 +91,7 @@ ibmcloud schematics version [--output OUTPUT] [--json JSON_FILE]
 **Example**
 
 ```
-ibmcloud schematics version
+ibmcloud schematics version --output > "<Your_DIR_PATH/filename.json>"
 ```
 {: pre}
 
@@ -122,10 +122,18 @@ Review the commands that you can use to set up and work with your {{site.data.ke
 Retrieve all activities for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
 {: shortdesc}
 
-When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud schematics logs`](#schematics-logs) command.  
+When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud schematics logs`](#schematics-logs) command.
+
+**Syntax**
 
 ```
 ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--json]
+```
+{: pre}
+
+**Example**
+```
+ibmcloud schematics workspace action --id  mytestpractiseworkspace1010101 --json > /Users/sundeepmulampaka/desktop/testjson/workspact.json
 ```
 {: pre}
 
