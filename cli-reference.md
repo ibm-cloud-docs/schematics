@@ -1130,7 +1130,6 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ## Action commands
 {: #schematics-action-commands}
 
-
 Review the command that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
 {: shortdesc}
 
