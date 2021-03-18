@@ -34,7 +34,7 @@ Ansible playbook is a set of instructions that you can configure to run on a sin
 ## Planning your Ansible playbook
 {: #plan-ansible-playbook}
 
-In order to create a playbook, you need to follow these steps:
+In order to create a playbook, you need to list the following requirement.
 - The target or group of target hosts with the IP addressess to run through the Ansible playbook. 
 - Plan the tasks to provision infrastructure, deploy applications you want to perform regularly through roles. For more information, about roles and its usage, see [referencing {{site.data.keyword.bpshort}} roles in playbook](#schematics-roles).
 - Plan for a comprehensive package of automation by using multiple playbooks, roles through collections. For more information, about roles and its usage, see [referencing {{site.data.keyword.bpshort}} collections in playbook](#schematics-collections).
