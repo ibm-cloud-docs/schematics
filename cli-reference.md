@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-18"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -27,10 +27,10 @@ subcollection: schematics
 # {{site.data.keyword.bplong_notm}} CLI	
 {: #schematics-cli-reference}	
 
-Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud}} resources. 	
+Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud}} resources.
 {: shortdesc}	
 
-To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli). 	
+To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to setup {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-schematics-cli-reference#install-schematics-plugin)
 {: tip}
 
 As of 31 March 2020, the {{site.data.keyword.bpshort}} command syntax changed from `ibmcloud terraform` to `ibmcloud schematics`. You can continue to use `ibmcloud terraform` commands as an alias, but note that this alias might become unsupported in future command line versions. 
@@ -1265,7 +1265,7 @@ You will receive the output with the ID, name, resource group, and location with
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of the action. |
 | `--resource-group` or `-r` | Required | The resource group name for an action. |
-| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
+| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south/us-east/eu-de/eu-gb**. |
 | `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
 | `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`.|
@@ -1305,7 +1305,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--name` or `-n` | Required | The unique name of the action. |
 | `--resource-group` or `-r` | Required | The resource group name for an action. |
 | `--tags` or `t` | Optional | The tag list.|
-| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
+| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south/us-east/eu-de/eu-gb**. |
 | `--description` or `-d` | Optional | The short description of an action.|
 | `--templates` or `-tr` | Optional | The ordered list of Git template repositories.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
