@@ -1130,8 +1130,6 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ## Action commands
 {: #schematics-action-commands}
 
-  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
-  {: beta}
 
 Review the command that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
 {: shortdesc}
