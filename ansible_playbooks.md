@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-18"
 
 keywords: schematics, automation, terraform provider, terraform, ansible code, ansible
 
@@ -30,8 +30,6 @@ subcollection: schematics
 # Running Ansible playbook against a {{site.data.keyword.vsi_is_short}} instance
 {: #ansible}
 
-  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
-  {: beta}
 
 You can run Ansible playbook against a {{site.data.keyword.vsi_is_short}} instance that you created by using {{site.data.keyword.bpshort}} by following these steps.
 {: shortdesc}

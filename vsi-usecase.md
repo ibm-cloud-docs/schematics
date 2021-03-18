@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-18"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -29,8 +29,6 @@ subcollection: schematics
 # Deploying VSI starts and stops playbook by using {{site.data.keyword.bpshort}}
 {: #vsi-start-stop}
 
-   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
-   {: beta}
 
 This playbook demonstrates how {{site.data.keyword.cloud}} VSI APIs can be used to start, stop, and reboot by using Ansible playbook.
 

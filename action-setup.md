@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-18"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -27,8 +27,6 @@ subcollection: schematics
 # Setting up {{site.data.keyword.bpshort}} actions
 {: #action-setup}
 
-   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
-   {: beta}
 
 With {{site.data.keyword.bplong_notm}} actions, you can specify the Ansible playbook that you want to run against one or more {{site.data.keyword.cloud}} resources. An Ansible playbook is a configuration file that includes all the tasks, roles, policies, or steps that you want to run and the order in which you want to execute them. 
 {: shortdesc}
@@ -68,9 +66,9 @@ To create an action:
 
    4. Click **Retrieve playbooks**. {{site.data.keyword.bpshort}} connects to your repository and retrieves the list of executed playbooks from the repository.
    5. Select the playbook name that you want to run. 
-   6. Select the **Verbosity** for the detailed level of output Ansible need to produce as playbook exectues.  The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). The logs are shown when you run the playbook in {{site.data.keyword.bpshort}}. For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level.
+   6. Select the **Verbosity** for the detailed level of output Ansible need to produce as playbook executes.  The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). The logs are shown when you run the playbook in {{site.data.keyword.bpshort}}. For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level.
    7. Click the **Advanced options** to define your extra command line variables to the playbook. Enter the variable in `Key / Value` pair, and can check **Sensitive** option if the variable is sensitive. 
-   8. Click **Next**. {{site.data.keyword.bpshort}} verifies the yaml file and displays the settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory.
+   8. Click **Next**. {{site.data.keyword.bpshort}} verifies the YAML file and displays the settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory.
 4. Choose the {{site.data.keyword.cloud_notm}} resource inventory `Edit` icon. 
    1. Enter the host or the IP address where you want to run your Ansible playbook in the  **Bastion host IP** field. 
    2. Enter the {{site.data.keyword.cloud_notm}} resource inventory hostnames or the IP addresses by using a `comma` separator in the **IBM Cloud inventory IP addresses**. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to.
@@ -156,6 +154,24 @@ The following table represents the state diagram flow of the Schematic action.
   </tbody>
   </table>
 
-  
+
+# Jobs
+{: #action-jobs}
+
+The Schematics action user interface provides the Jobs and Settings option. You need to click the action name to view the `Jobs` and `Settings` options. 
+
+The Jobs lists the activity stream that are performed when the action were created or updated. Jobs provides the left navigation panel for a quick access to **Adjust your settings**, **Get help from the documentation**, and **Learn more about Schematics**.
+Job are classified into:
+- **User jobs** These are the jobs that gets created with an user action. The summary of the system jobs are shown with the following status in the **User** tab.
+   - ok - Access the remote machine and perform the playbook action on it successfully. Here it displays the success count of number of systems that actions got performed.
+   - changed - Access the remote machine and perform the playbook action on it successfully. Here it displays the list of machines where changes got implied.
+   - failed - Total count of machines that were failed to apply changes.
+   - skipped - Total count of machines that were skipped because of already having playbook changes applied.
+   - unreachable - Total number of machines not able to reach out the machine to imply changes on it.
+- **System jobs** These are the jobs that get created during and action creation and action updation The **All** tab in the user interface represents System jobs. For example, `playbook run`, `playbook check`. 
+{: shortdesc}
+
+The **Settings** option allows you to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory**. Then you can click **Run action** to execute the updated action and **Check action** to validate the updated settings.
+
 
  

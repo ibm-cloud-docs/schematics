@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-18"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -28,8 +28,6 @@ subcollection: schematics
 # Getting started with {{site.data.keyword.bplong_notm}} and Ansible 
 {: #getting-started-ansible}
 
-   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
-   {: beta}
 
 Enable Infrastructure as Code (IaC) with {{site.data.keyword.bplong_notm}}, by running Ansible playbooks against your inventory of {{site.data.keyword.cloud}} resources. Use Ansible to install software packages, and application code on VSIs. Or use it to perform post provisioning configuration of {{site.data.keyword.cloud_notm}} resources, deployed by using {{site.data.keyword.bplong_notm}} and Terraform. 
 
@@ -69,49 +67,6 @@ The functions of the Schematics action in {{site.data.keyword.cloud_notm}} are:
  - How you point your action to the Ansible playbook in your GitHub repository?
  - It defines your resource inventory where you want to run your playbook.
  - It runs your Ansible playbook in {{site.data.keyword.bpshort}}.
-
-
-## How do {{site.data.keyword.bpshort}} support Ansible Galaxy?
-{: #ansible-galaxy}
-
-Ansible Galaxy is a tool to retrieve the Ansible roles from the requirements file and invoke your Ansible playbook to setup the configured resources. This is used to streamline your automation tasks, even the fresh system administrator can start automating by using Ansible.
-
-{{site.data.keyword.bplong_notm}} supports `/roles` to specify the requirements to process in through `requirements.yaml` or `requirements.yml` file. The requirements file uses the Ansible Galaxy repository to execute the process and invokes your Ansible playbook from the Git repository to execute the configured resources.
-
-For more information, about the sample Git repository that installs `kubectl` on virtual machine by using Ansible Galaxy role, refer to [Ansible playbook by using Ansible Galaxy](https://github.com/Cloud-Schematics/ansible-kubectl). Following is the directory structure of the Git repository supporting Ansible Galaxy.
-{: shortdesc}
-
-```
-   ├── kubectl.yaml
-   ├── README.md
-   ├── roles
-      └── requirements.yaml or requirements.yml
-```
-{: screen}
-
-
-## How do Schematics support Ansible collections?
-{: #ansible-collections}
-
-Ansible collections includes playbooks, roles, modules, and plug-ins. As modules move from the core Ansible repository into collections, the module documentation move the collections pages. For more information, about Ansible collections, refer to [Collection support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#collections-support){: external}.
-
-IBM Cloud Schematics supports Ansible collections by processing the requirements through `requirements.yaml` or `requirements.yml` file. The `requirements.yaml` file is stored in the `/collections` folder in your Git repository. It’s designed to be the hub for all of your automation tasks. It logs all of your jobs, and allows REST API calls.  Provisioning callbacks provide great support for autoscaling topologies. Collections are stored in the Ansible root folder as `ansiblecollections`.
-{: shortdesc}
-
-The sample folder structure with the collections structure in the Git repository is:
-
-```
-   ├── site.yaml
-   |——- roles
-      └── requirements.yaml 
-   ├── collections    
-      └── requirements.yaml or requirements.yml       
-   |── tasks                
-   |── main.yml
-```
-{: screen}
-
-
 
 
 

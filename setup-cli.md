@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-18"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -26,7 +26,7 @@ subcollection: schematics
 # Setting up the command line 
 {: #setup-cli}
 
-Use the {{site.data.keyword.bplong_notm}} command line plug-in to create and manage your {{site.data.keyword.bpshort}} workspaces, and to provision and mange your resources in {{site.data.keyword.cloud_notm}}. 
+Use the {{site.data.keyword.bplong_notm}} command line plug-in to create and manage your resources in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 
@@ -52,15 +52,21 @@ Install the required command line to automate the provisioning of {{site.data.ke
 
    If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command line output to retrieve your one-time passcode. You know that you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
    {: tip}
+
+## Installing the {{site.data.keyword.bplong_notm}} command line plug-in
+{: #install-schematics-plugin}
+
+Install the {site.data.keyword.bplong_notm}} plug-in to automate the provisioning of {{site.data.keyword.cloud}} resources across environments. 
+{:shortdesc}
     
-3. Install the {{site.data.keyword.cloud_notm}} command line plug-in for {{site.data.keyword.bpshort}}.
+1. Install the {{site.data.keyword.cloud_notm}} command line plug-in for {{site.data.keyword.bpshort}}.
 
    ```
    ibmcloud plugin install schematics
    ```
    {: pre}
     
-4. Verify that the {{site.data.keyword.bplong_notm}} command line plug-in is installed successfully. The plug-in is listed as `schematics`.
+2. Verify that the {{site.data.keyword.bplong_notm}} command line plug-in is installed successfully. The plug-in is listed as `schematics`.
 
    ```
    ibmcloud plugin list
@@ -77,7 +83,7 @@ Install the required command line to automate the provisioning of {{site.data.ke
    ```
    {: screen}
     
-5. Verify that you can use the {{site.data.keyword.bplong_notm}} command line plug-in by listing all supported commands. The command prefix to work with the {{site.data.keyword.bpshort}} command line plug-in is `ibmcloud schematics`. 
+3. Verify that you can use the {{site.data.keyword.bplong_notm}} command line plug-in by listing all supported commands. The command prefix to work with the {{site.data.keyword.bpshort}} command line plug-in is `ibmcloud schematics`. 
    ```
    ibmcloud schematics help
    ```

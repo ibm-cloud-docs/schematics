@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-03-18"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -27,10 +27,10 @@ subcollection: schematics
 # {{site.data.keyword.bplong_notm}} CLI	
 {: #schematics-cli-reference}	
 
-Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud}} resources. 	
+Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud}} resources.
 {: shortdesc}	
 
-To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli). 	
+To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to setup {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-schematics-cli-reference#install-schematics-plugin)
 {: tip}
 
 As of 31 March 2020, the {{site.data.keyword.bpshort}} command syntax changed from `ibmcloud terraform` to `ibmcloud schematics`. You can continue to use `ibmcloud terraform` commands as an alias, but note that this alias might become unsupported in future command line versions. 
@@ -91,7 +91,7 @@ ibmcloud schematics version [--output OUTPUT] [--json JSON_FILE]
 **Example**
 
 ```
-ibmcloud schematics version
+ibmcloud schematics version --output > "<Your_DIR_PATH/filename.json>"
 ```
 {: pre}
 
@@ -122,10 +122,18 @@ Review the commands that you can use to set up and work with your {{site.data.ke
 Retrieve all activities for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
 {: shortdesc}
 
-When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud schematics logs`](#schematics-logs) command.  
+When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} action is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud schematics logs`](#schematics-logs) command.
+
+**Syntax**
 
 ```
 ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--json]
+```
+{: pre}
+
+**Example**
+```
+ibmcloud schematics workspace action --id  mytestpractiseworkspace1010101 --json > /Users/sundeepmulampaka/desktop/testjson/workspact.json
 ```
 {: pre}
 
@@ -1122,9 +1130,6 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ## Action commands
 {: #schematics-action-commands}
 
-  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).
-  {: beta}
-
 Review the command that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
 {: shortdesc}
 
@@ -1265,7 +1270,7 @@ You will receive the output with the ID, name, resource group, and location with
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of the action. |
 | `--resource-group` or `-r` | Required | The resource group name for an action. |
-| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
+| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south/us-east/eu-de/eu-gb**. |
 | `--template` or `-tr` | Optional | The URL to the GIT repository that can be used to clone the template.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
 | `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`.|
@@ -1305,7 +1310,7 @@ You will receive the output with the ID, name, resource group, and location with
 | `--name` or `-n` | Required | The unique name of the action. |
 | `--resource-group` or `-r` | Required | The resource group name for an action. |
 | `--tags` or `t` | Optional | The tag list.|
-| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south**, **us-east**, **eu-de**, **eu-gb**. |
+| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south/us-east/eu-de/eu-gb**. |
 | `--description` or `-d` | Optional | The short description of an action.|
 | `--templates` or `-tr` | Optional | The ordered list of Git template repositories.|
 | `--template-type` or `-tt` | Optional | The type of source of template, such as `git_hub`.|
@@ -1604,13 +1609,13 @@ You can fetch a job by using the options described in the table.
 ## Enable BYOK or KYOK commands
 {: kms-commands}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption).
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 {: shortdesc}
 
 ### Prerequisites
 {: #key-prerequisites}
 
-You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service.
+You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#data-storage) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service.
 
 KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
 {: note}
@@ -1638,7 +1643,7 @@ ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION
 ### `ibmcloud schematics kms enable`
 {: #schematics-kms-enable}
 
-Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#sensitive-data-encryption). You can enable the KMS instances by using the options described in the table.
+Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#data-storage). You can enable the KMS instances by using the options described in the table.
 
 **Syntax**
 

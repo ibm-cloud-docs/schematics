@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-18"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -58,7 +58,7 @@ Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.
 4. **Provision your resources**. To create, modify, or remove resources from your {{site.data.keyword.cloud_notm}} account, {{site.data.keyword.bplong_notm}} uses the `terraform apply` command. This command calls the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, which is aware of the API for each resource to provision, configure, or remove the resource. 
 
 ## Benefits
-{: #benefits}
+{: #schematics-benefits}
 
 Review the capabilities that {{site.data.keyword.bplong_notm}} provides to templatize and organize your  {{site.data.keyword.cloud_notm}} resources. 
 {: shortdesc}
