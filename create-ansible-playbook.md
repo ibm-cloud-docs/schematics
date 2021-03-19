@@ -92,7 +92,7 @@ Follow these steps to run the Ansible playbook in {{site.data.keyword.bplong_not
 3. Verify your progress in the logs by using user interface. For more information, about command line log commands, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 
 
-## Referencing {{site.data.keyword.bpshort}} roles in playbook
+## Referencing {{site.data.keyword.bpshort}} roles for the playbook
 {: #schematics-roles}
 
 Ansible Galaxy is a tool to retrieve the Ansible roles from the requirements file and invoke your Ansible playbook to setup the configured resources. This is used to streamline your automation tasks, even the fresh system administrator can start automating by using Ansible.
@@ -135,7 +135,7 @@ The sample `kubectl.yaml` playbook to invoke the role from your Git repository.
 {: pre}
 
 
-## Referencing {{site.data.keyword.bpshort}} collections in playbook
+## Referencing {{site.data.keyword.bpshort}} collections for the playbook
 {: #schematics-collections}
 
 Ansible collections includes playbooks, roles, modules, and plug-ins. As modules move from the core Ansible repository into collections, the module documentation move the collections pages. For more information, about Ansible collections, refer to [Collection support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#collections-support){: external}.
