@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-19"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -81,7 +81,6 @@ Follow these steps to run the Ansible playbook in {{site.data.keyword.bplong_not
 
 2. You can execute the job in the Schematics action. For more information, about command line job commands, refer to [job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands).
 
-
    **Syntax for the command line**
 
    ```
@@ -89,7 +88,7 @@ Follow these steps to run the Ansible playbook in {{site.data.keyword.bplong_not
    ```
    {: pre}
 
-3. Verify your progress in the logs by using a `get` request to the logs. For more information, about command line log commands, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
+3. Verify your progress in the logs by using user interface. For more information, about command line log commands, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 
 
 ## Referencing {{site.data.keyword.bpshort}} roles in playbook
