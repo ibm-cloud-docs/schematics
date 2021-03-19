@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-19"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1718,7 +1718,7 @@ The `Commands` API supports:
 Select your region where the workspace is created, and use the following syntax to run the commands API.
 
 ```
-ibmcloud schematics commands --id WORKSPACE_ID [--options FLAGS] [--file JSON file]
+ibmcloud schematics workspace commands --id WORKSPACE_ID [--options FLAGS] [--file JSON file]
 ```
 
 **Command options**
@@ -1794,7 +1794,7 @@ ibmcloud schematics commands --id WORKSPACE_ID [--options FLAGS] [--file JSON fi
 **Example**
 
 ```
-ibmcloud schematics commands --id cli-sleepy-0bedc51f-c344-50 --file /<userdir>/Test.JSON
+ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /<userdir>/Test.JSON
 ```
 
 ## Terraform statefile commands
@@ -1835,7 +1835,6 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
 ```
 {: pre}
-
 
 
 ### `ibmcloud schematics workspace state show`
