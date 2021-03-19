@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-19"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -34,7 +34,7 @@ Ansible playbook is a set of instructions that you can configure to run on a sin
 ## Planning your Ansible playbook
 {: #plan-ansible-playbook}
 
-In order to create a playbook, you need to follow these steps:
+In order to create a playbook, you need to list the following requirement.
 - The target or group of target hosts with the IP addressess to run through the Ansible playbook. 
 - Plan the tasks to provision infrastructure, deploy applications you want to perform regularly through roles. For more information, about roles and its usage, see [referencing {{site.data.keyword.bpshort}} roles in playbook](#schematics-roles).
 - Plan for a comprehensive package of automation by using multiple playbooks, roles through collections. For more information, about roles and its usage, see [referencing {{site.data.keyword.bpshort}} collections in playbook](#schematics-collections).
@@ -50,13 +50,14 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
    {: note}
 
 2. Store the YAML files in your Git repository. For more information, about the location to store the YAML files, refer to [a file structure](https://github.com/Cloud-Schematics/ansible-app-deploy-iks){: external} that describes the how to structure the directories and files to deploy the application.
+
 3. Create an IAM access token for your {{site.data.keyword.cloud_notm}} Account. To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` from the command line to set up the enviroment variable. For more information, to create an {{site.data.keyword.cloud_notm}} API Key, refer to [create API key](/docs/account?topic=account-userapikey#create_user_key) by using UI. For more information, about creating IAM access token, refer to [IAM access token](/apidocs/iam-identity-token-api#gettoken-apikey-delegatedrefreshtoken). You can set the environment variables by exporting the access token. Command to export access_token and refresh_token through command line are:
   ```
   export ACCESS_TOKEN=<access_token>
   export REFRESH_TOKEN=<refresh_token>
   ```
   {: pre}
-4. Create {{site.data.keyword.bplong_notm}} workspace action by using your Git repository to create the environment. For more information, about workspace creation, refer to [workspace setup](/docs/schematics?topic=schematics-workspace-setup).
+4. Create {{site.data.keyword.bplong_notm}} workspace action for your Git repository. The workspace action creates the environment for the Ansible playbook. For more information, see [workspace action creation by using command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action) or [workspace action creation by using user interface](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
 
 ### What's next?
 {: #what's-next-create} 
@@ -81,7 +82,6 @@ Follow these steps to run the Ansible playbook in {{site.data.keyword.bplong_not
 
 2. You can execute the job in the Schematics action. For more information, about command line job commands, refer to [job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands).
 
-
    **Syntax for the command line**
 
    ```
@@ -89,10 +89,10 @@ Follow these steps to run the Ansible playbook in {{site.data.keyword.bplong_not
    ```
    {: pre}
 
-3. Verify your progress in the logs by using a `get` request to the logs. For more information, about command line log commands, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
+3. Verify your progress in the logs by using user interface. For more information, about command line log commands, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 
 
-## Referencing {{site.data.keyword.bpshort}} roles in playbook
+## Referencing {{site.data.keyword.bpshort}} roles for the playbook
 {: #schematics-roles}
 
 Ansible Galaxy is a tool to retrieve the Ansible roles from the requirements file and invoke your Ansible playbook to setup the configured resources. This is used to streamline your automation tasks, even the fresh system administrator can start automating by using Ansible.
@@ -135,7 +135,7 @@ The sample `kubectl.yaml` playbook to invoke the role from your Git repository.
 {: pre}
 
 
-## Referencing {{site.data.keyword.bpshort}} collections in playbook
+## Referencing {{site.data.keyword.bpshort}} collections for the playbook
 {: #schematics-collections}
 
 Ansible collections includes playbooks, roles, modules, and plug-ins. As modules move from the core Ansible repository into collections, the module documentation move the collections pages. For more information, about Ansible collections, refer to [Collection support](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html#collections-support){: external}.

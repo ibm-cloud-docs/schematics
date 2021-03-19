@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-19"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -155,23 +155,49 @@ The following table represents the state diagram flow of the Schematic action.
   </table>
 
 
-# Jobs
+## Viewing the {{site.data.keyword.bpshort}} action jobs
 {: #action-jobs}
 
-The Schematics action user interface provides the Jobs and Settings option. You need to click the action name to view the `Jobs` and `Settings` options. 
+The {{site.data.keyword.bpshort}} action user interface provides the **Jobs** and **Settings** feature to analyze your action execution. When the create action executes, you are directed to the user job page to view the job activity messages. The list of options are displayed in the Action List pane on the left navigation pane of the window.
 
-The Jobs lists the activity stream that are performed when the action were created or updated. Jobs provides the left navigation panel for a quick access to **Adjust your settings**, **Get help from the documentation**, and **Learn more about Schematics**.
-Job are classified into:
-- **User jobs** These are the jobs that gets created with an user action. The summary of the system jobs are shown with the following status in the **User** tab.
-   - ok - Access the remote machine and perform the playbook action on it successfully. Here it displays the success count of number of systems that actions got performed.
-   - changed - Access the remote machine and perform the playbook action on it successfully. Here it displays the list of machines where changes got implied.
-   - failed - Total count of machines that were failed to apply changes.
-   - skipped - Total count of machines that were skipped because of already having playbook changes applied.
-   - unreachable - Total number of machines not able to reach out the machine to imply changes on it.
+The **Jobs** lists the activity stream that are performed when the action were created or updated. The list of options are displayed in the Action List pane on the left side of the window and on the right side of the window you can view the quick access to **Adjust your settings**, **Get help from the documentation**, and **Learn more about Schematics**.
+
+Jobs are classified into:
 - **System jobs** These are the jobs that get created during and action creation and action updation The **All** tab in the user interface represents System jobs. For example, `playbook run`, `playbook check`. 
 {: shortdesc}
+- **User jobs** These are the jobs that gets created with an user action. The summary of the system jobs are shown in the following status in the **User** tab.
 
-The **Settings** option allows you to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory**. Then you can click **Run action** to execute the updated action and **Check action** to validate the updated settings.
+|Status|Description|
+|-----|---------|
+|`ok` |Accesses the remote machine and perform the playbook action successfully. This displays the success count of, number of systems that actions got performed. |
+|`changed` | Accesses the remote machine and perform the playbook action successfully. Displays the list of machines where changes got implied.|
+|`failed` |Total count of machines that were failed to apply changes. |
+|`skipped` |Total count of machines that were skipped as the playbook changes have already applied.|
+|`unreachable` |Total number of machines not able to reach out the machine to imply changes on it. |
+{: caption="Job status" caption-side="top"}
 
+## Editing the {{site.data.keyword.bpshort}} action settings
+{: #action-settings}
 
- 
+The **Settings** option allows you to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Following are the details for the action parameters.
+
+1. **Details**
+
+   You can click the **Edit details** icon to edit the Action description, Resource group, Location and click Save.
+
+2. **Ansible action**
+
+   You can click the **Edit import** icon to edit the GitHub or GitLab repository URL, Personal access token, Playbook name, Verbosity, Advanced options to define your variables.
+
+3. **{{site.data.keyword.cloud_notm}} resource inventory**
+
+   You can click the **Edit inventory** icon to edit the Bastion host IP, {{site.data.keyword.cloud_notm}} inventory host groups, and {{site.data.keyword.cloud_notm}} resource inventory SSH key.
+
+Finally, you can click **Run action** or **Check action** to validate and reexecute your action playbook.
+
+|action|Description|
+|----|-----|
+|`Run action`|Executes the updated action configuration in a check or non check mode. Check mode is a simulation, does not generate an output for the tasks that you have conditional variables. This task will ignore errors in check mode.|
+|`check action`|Validates the configuration management playbooks that runs on a single node at a time.|
+{: caption="Action settings" caption-side="top"}
+
