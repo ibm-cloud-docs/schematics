@@ -50,13 +50,14 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
    {: note}
 
 2. Store the YAML files in your Git repository. For more information, about the location to store the YAML files, refer to [a file structure](https://github.com/Cloud-Schematics/ansible-app-deploy-iks){: external} that describes the how to structure the directories and files to deploy the application.
+
 3. Create an IAM access token for your {{site.data.keyword.cloud_notm}} Account. To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` from the command line to set up the enviroment variable. For more information, to create an {{site.data.keyword.cloud_notm}} API Key, refer to [create API key](/docs/account?topic=account-userapikey#create_user_key) by using UI. For more information, about creating IAM access token, refer to [IAM access token](/apidocs/iam-identity-token-api#gettoken-apikey-delegatedrefreshtoken). You can set the environment variables by exporting the access token. Command to export access_token and refresh_token through command line are:
   ```
   export ACCESS_TOKEN=<access_token>
   export REFRESH_TOKEN=<refresh_token>
   ```
   {: pre}
-4. Create {{site.data.keyword.bplong_notm}} workspace action by using your Git repository to create the environment. For more information, about workspace creation, refer to [workspace setup](/docs/schematics?topic=schematics-workspace-setup).
+4. Create {{site.data.keyword.bplong_notm}} workspace action for your Git repository. The workspace action creates the environment for the Ansible playbook. For more information, see [workspace action creation by using command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action) or [workspace action creation by using user interface](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
 
 ### What's next?
 {: #what's-next-create} 
