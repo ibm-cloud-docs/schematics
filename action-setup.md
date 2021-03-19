@@ -179,21 +179,21 @@ Jobs are classified into:
 ## Editing the {{site.data.keyword.bpshort}} action settings
 {: #action-settings}
 
-The **Settings** option allows you to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. 
+The **Settings** option allows you to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Following are the details for the action parameters.
 
-**Details**
+1. **Details**
 
-You can click the edit icon to edit the Action description, Resource group, Location and click Save.
+   You can click the **Edit details** icon to edit the Action description, Resource group, Location and click Save.
 
-**Ansible action**
+2. **Ansible action**
 
-You can click the edit icon to edit the GitHub or GitLab repository URL, Personal access token, Playbook name, Verbosity, Advanced options to define your variables, and click Next.
+   You can click the **Edit import** icon to edit the GitHub or GitLab repository URL, Personal access token, Playbook name, Verbosity, Advanced options to define your variables.
 
-**{{site.data.keyword.cloud_notm}} resource inventory**
+3. **{{site.data.keyword.cloud_notm}} resource inventory**
 
-You can click the edit icon to edit the Bastion host IP, {{site.data.keyword.cloud_notm}} inventory host groups, and {{site.data.keyword.cloud_notm}} resource inventory SSH key.
+   You can click the **Edit inventory** icon to edit the Bastion host IP, {{site.data.keyword.cloud_notm}} inventory host groups, and {{site.data.keyword.cloud_notm}} resource inventory SSH key.
 
-Then, you can click **Run action** or **Check action** to validate and reexecute your action playbook.
+Finally, you can click **Run action** or **Check action** to validate and reexecute your action playbook.
 
 |action|Description|
 |----|-----|
