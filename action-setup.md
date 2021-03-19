@@ -158,7 +158,7 @@ The following table represents the state diagram flow of the Schematic action.
 ## Viewing the {{site.data.keyword.bpshort}} action jobs
 {: #action-jobs}
 
-The {{site.data.keyword.bpshort}} action user interface provides the **Jobs** and **Settings** feature to analyze your action execution. When the create action executes, you are directed to the user job page to view the job activity messages. The list of options is displayed in the Action List pane on the left side of the window.
+The {{site.data.keyword.bpshort}} action user interface provides the **Jobs** and **Settings** feature to analyze your action execution. When the create action executes, you are directed to the user job page to view the job activity messages. The list of options are displayed in the Action List pane on the left navigation pane of the window.
 
 The **Jobs** lists the activity stream that are performed when the action were created or updated. The list of options are displayed in the Action List pane on the left side of the window and on the right side of the window you can view the quick access to **Adjust your settings**, **Get help from the documentation**, and **Learn more about Schematics**.
 
