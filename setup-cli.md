@@ -30,7 +30,7 @@ Use the {{site.data.keyword.bplong_notm}} command line plug-in to create and man
 {: shortdesc}
 
 
-## Installing the IBM Cloud command line and the {{site.data.keyword.bplong_notm}} command line plug-in
+## Installing the IBM Cloud command line
 {: #install-schematics-cli}
 
 Install the required command line to automate the provisioning of {{site.data.keyword.cloud}} resources across environments. 
