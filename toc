@@ -46,7 +46,6 @@ Schematics
     Automating cloud operations with Ansible
          create-ansible-playbook.md
          action-setup.md
-         bastion-host.md
          ansible_playbooks.md
          autodeploy-template.md
 
@@ -85,6 +84,7 @@ Schematics
     {: .topicgroup}
     Ansible
          [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)
+
      {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -92,3 +92,4 @@ Schematics
     error-messages.md
     ts_index.md
     {: .navgroup-end}
+       

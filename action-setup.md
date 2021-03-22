@@ -51,27 +51,28 @@ To create an action:
    1. Enter a name and an optional description for your action. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. 
    2. Optional: Enter any tags that you want to add to your action. Tags can help you find an action more easily later.
    3. Select the resource group where you want to create the action.
-   4. Decide where you want to create your action. The location determines where your action runs and your action data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where the {{site.data.keyword.cloud_notm}} resources reside where you want to run your Ansible playbook.
-   5. Click **Create** to create an action. Your action is created with a `Draft` state and can view the action `Settings` page.
+   4. Decide where you want to create your action. The location determines where your action runs and your action data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your action is created in this location. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where the {{site.data.keyword.cloud_notm}} resources reside where you want to run your Ansible playbook.
+   5. Click **Create** to create an action. Your action is created with a `Normal` state and you are directed to the `Settings` page.
 3. Import your Ansible playbook. 
-   1. Enter the URL to your GitHub or GitLab repository where you store the Ansible playbook that you want to run in the **Template**. The URL can point to the master branch, any other branch, or a subdirectory. Your action can point to one playbook at a time. If you want to run multiple playbooks, create a separate action for each playbook. 
+   1. Enter the URL to your GitHub or GitLab repository where you store the Ansible playbook that you want to run. The URL can point to the master branch, any other branch, or a subdirectory. Your action can point to one playbook at a time only. If you want to run multiple playbooks, create a separate action for each playbook. 
       - Example for master branch: https://github.com/myorg/myrepo
       - Example for other branches: https://github.com/myorg/myrepo/tree/mybranch
       - Example for subdirectory: https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
+      
+      Don't have a playbook that you can use? Try out one of our [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
+      {: tip}
+      
    2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information, refer to [creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token){: external}.
-   3. The default Ansible version is displayed. For example, **Ansible v2.9.7**.
-       
-       Your action can point to one playbook at a time. If you want to run multiple playbooks, create a separate action for each playbook.
-       {: note}
-
-   4. Click **Retrieve playbooks**. {{site.data.keyword.bpshort}} connects to your repository and retrieves the list of executed playbooks from the repository.
-   5. Select the playbook name that you want to run. 
-   6. Select the **Verbosity** for the detailed level of output Ansible need to produce as playbook executes.  The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). The logs are shown when you run the playbook in {{site.data.keyword.bpshort}}. For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level.
-   7. Click the **Advanced options** to define your extra command line variables to the playbook. Enter the variable in `Key / Value` pair, and can check **Sensitive** option if the variable is sensitive. 
-   8. Click **Next**. {{site.data.keyword.bpshort}} verifies the YAML file and displays the settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory.
-4. Choose the {{site.data.keyword.cloud_notm}} resource inventory `Edit` icon. 
-   1. Enter the host or the IP address where you want to run your Ansible playbook in the  **Bastion host IP** field. 
-   2. Enter the {{site.data.keyword.cloud_notm}} resource inventory hostnames or the IP addresses by using a `comma` separator in the **IBM Cloud inventory IP addresses**. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to.
+   3. Review the default Ansible version that is displayed. If you use your own Ansible playbook, make sure that your playbook can be run with the Ansible version that is displayed. 
+   4. Click **Retrieve playbooks**. {{site.data.keyword.bpshort}} connects to your repository, and a retrieves a list of Ansible playbooks that are found in the repository.
+   5. Select the playbook that you want to run. 
+   6. Select the **Verbosity** level that you want. The verbosity level determines how much information is written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level. You can see the logs in {{site.data.keyword.bpshort}} when you run your playbook. 
+   7. Optional: Click the **Advanced options** to define command line variables that you want to pass to the playbook. Command line variables must be entered as key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden from the users who look at your action after it is created. 
+   8. Click **Next** to create the action. {{site.data.keyword.bpshort}} verifies the YAML file and displays the action settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your Ansible playbook. 
+4. Choose the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your Ansible playbook. 
+   1. Click the edit icon. 
+   2. Enter the host or the IP address where you want to run your Ansible playbook in the  **Bastion host IP** field. 
+   3. Enter the {{site.data.keyword.cloud_notm}} resource inventory hostnames or the IP addresses by using a `comma` separator in the **IBM Cloud inventory IP addresses**. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to.
    3. Enter your web server host, Operating System, region, network, or the database host name with the IP addressed in the **{{site.data.keyword.cloud_notm}} inventory host groups** as shown in the example. For more information, about an inventory host group syntax, refer to [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps).
 
       **Example** 

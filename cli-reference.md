@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-19"
+lastupdated: "2021-03-22"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1183,7 +1183,6 @@ If your hostname contains variables, you can provide in the `-input` argument wi
 Create an action by using {{site.data.keyword.bplong_notm}} to work with your {{site.data.keyword.bpshort}}. You can create an action by using following three methods:
 1. Payload file
 2. Interactive mode
-3. Supported flags
 {: shortdesc}
 
 **Payload file**
@@ -1229,11 +1228,19 @@ ibmcloud schematics action create --file testcreation.json
 
 **Interactive mode**
 
-You are prompted for the required values for the name, resource_group and location details to create an action in interactive mode. By default the action ID is created with minimal action that can be updated later by using update action CLI. You will prompt if the required fields are not present.
+You are prompted for the required values for the name, resource_group and location details to create an action in interactive mode. By default the action ID is created with minimal action that can be updated later by using update action CLI.
 {: shortdesc}
+
+**Syntax**
 
 ```
 ibmcloud schematics action create 
+```
+{: codeblock}
+
+You are prompted to `Enter name`, `Enter resource-group`, `Enter location`. You need to enter the value to view the output with the ID, name, resource group, and location with the user state.
+
+```
 Enter name> <ACTION_NAME>
 Enter resource-group> <RESOURCE_GROUP>
 Enter location> <GEOGRAPHY>
@@ -1244,17 +1251,20 @@ Enter location> <GEOGRAPHY>
 
 ```
 ibmcloud schematics action create 
+```
+{: codeblock}
+
+```
 Enter name> testaction1
 Enter resource-group> testrg1
 Enter location> us-south
 ```
 {: pre}
 
-You will receive the output with the ID, name, resource group, and location with the user state.
 
 **Supported flags**
 
-Create an action by using the flags mentioned in the syntax. 
+Create an action by using all the flags or required flags that are mentioned in the syntax. 
 {: shortdesc}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-22"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -23,14 +23,14 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Setting up the command line 
+# Setting up the CLI 
 {: #setup-cli}
 
 Use the {{site.data.keyword.bplong_notm}} command line plug-in to create and manage your resources in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 
-## Installing the IBM Cloud command line and the {{site.data.keyword.bplong_notm}} command line plug-in
+## Installing the IBM Cloud command line
 {: #install-schematics-cli}
 
 Install the required command line to automate the provisioning of {{site.data.keyword.cloud}} resources across environments. 
