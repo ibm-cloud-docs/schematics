@@ -151,13 +151,13 @@ You can use the {{site.data.keyword.bplong_notm}} API to automate the creation, 
 
 The {{site.data.keyword.bplong_notm}} API requires header information that you must provide in your API request and that can vary depending on the API that you want to use. To determine what header information is needed for your API, see the [{{site.data.keyword.bplong_notm}} API documentation](https://cloud.ibm.com/apidocs/schematics#create-workspace){: external}.
 
-To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) token that is generated with your {{site.data.keyword.cloud_notm}} credentials and that includes the {{site.data.keyword.cloud_notm}} account ID where the cluster was created. Depending on the way you authenticate with {{site.data.keyword.cloud_notm}}, you can choose between the following options to automate the creation of your {{site.data.keyword.cloud_notm}} IAM token.
+To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) token that is generated with your {{site.data.keyword.cloud_notm}} credentials and that includes the {{site.data.keyword.cloud_notm}} account ID where the workspace was created. Depending on the way you authenticate with {{site.data.keyword.cloud_notm}}, you can choose between the following options to automate the creation of your {{site.data.keyword.cloud_notm}} IAM token.
 
 
 |{{site.data.keyword.cloud_notm}} ID|My options|
 |-----------------------------------|----------|
-|Unfederated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access clusters that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**{{site.data.keyword.cloud_notm}} username and password:** You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token.</li></ul>|
-|Federated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external} are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access clusters that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**Use a one-time passcode:** If you authenticate with {{site.data.keyword.cloud_notm}} by using a one-time passcode, you cannot fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token because the retrieval of your one-time passcode requires a manual interaction with your web browser. To fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token, you must create an {{site.data.keyword.cloud_notm}} API key instead.</ul>|
+|Unfederated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access workspacess that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**{{site.data.keyword.cloud_notm}} username and password:** You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token.</li></ul>|
+|Federated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external} are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access workspaces that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**Use a one-time passcode:** If you authenticate with {{site.data.keyword.cloud_notm}} by using a one-time passcode, you cannot fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token because the retrieval of your one-time passcode requires a manual interaction with your web browser. To fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token, you must create an {{site.data.keyword.cloud_notm}} API key instead.</ul>|
 {: caption="ID types and options" caption-side="top"}
 {: summary="ID types and options with the input parameter in column 1 and the value in column 2."}
 
@@ -274,7 +274,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
 3.  Generate a new {{site.data.keyword.cloud_notm}} IAM token that includes your {{site.data.keyword.cloud_notm}} credentials and the account ID that you want to work with.
 
-    If you use an {{site.data.keyword.cloud_notm}} API key, you must use the {{site.data.keyword.cloud_notm}} account ID the API key was created for. To access clusters in other accounts, log into this account and create an {{site.data.keyword.cloud_notm}} API key that is based on this account.
+    If you use an {{site.data.keyword.cloud_notm}} API key, you must use the {{site.data.keyword.cloud_notm}} account ID the API key was created for. To access workspaces in other accounts, log into this account and create an {{site.data.keyword.cloud_notm}} API key that is based on this account.
     {: note}
 
     ```
@@ -343,8 +343,8 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
     You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** and the refresh token in the **refresh_token** field of your API output.
 
-4.  List all classic or VPC clusters in your account. If you want to [run Kubernetes API requests against a cluster](#kube_api), make sure to note the name or ID of the cluster that you want to work with.
-  * **Classic**:
+4.  List all the workspaces in your account. 
+  * **Syntax to list all the workspaces**:
      ```
      GET https://schematics.cloud.ibm.com/v1/workspaces/ 
      ```
@@ -363,7 +363,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
      </tr>
      </tbody>
      </table>
-  * **Fetch workspace ID**:
+  * **Syntax to fetch with workspace ID**:
      ```
      GET https://schematics.cloud.ibm.com/v1/workspaces/{id}
      ```
@@ -388,7 +388,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
 5.  Review the [{{site.data.keyword.bplong_notm}} API documentation](https://cloud.ibm.com/apidocs/schematics#introduction){: external} to find a list of supported APIs.
 
-When you use the API for automation, be sure to rely on the responses from the API, not files within those responses. For example, the {{site.data.keyword.bpshort}} configuration file for your cluster context is subject to change, so do not build automation based on specific contents of this file when you use the `GET /v1/workspaces/{idOrName}/config` call.
+When you use the API for automation, be sure to rely on the responses from the API, not files within those responses. For example, the {{site.data.keyword.bpshort}} configuration file for your workspace context is subject to change, so do not build automation based on specific contents of this file when you use the `GET /v1/workspaces/{idOrName}/config` call.
 {: note}
 
 <br />
@@ -401,7 +401,7 @@ Every {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) acce
 {: shortdesc}
 
 Before you begin, make sure that you have an {{site.data.keyword.cloud_notm}} IAM refresh token or an {{site.data.keyword.cloud_notm}} API key that you can use to request a new access token.
-- **Refresh token:** Follow the instructions in [Automating the cluster creation and management process with the {{site.data.keyword.cloud_notm}} API](#cs_api).
+- **Refresh token:** Follow the instructions in [Automating the workspace creation and management process with the {{site.data.keyword.cloud_notm}} API](#cs_api).
 - **API key:** Retrieve your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/) API key as follows.
    1. From the menu bar, click **Manage** > **Access (IAM)**.
    2. Click the **Users** page and then select yourself.
