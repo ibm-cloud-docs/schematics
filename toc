@@ -23,6 +23,8 @@ Schematics
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
     tutorials/automate-continuous-deployment.md
+    [Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)
+    [Deploying multitier VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -46,7 +48,6 @@ Schematics
     Automating cloud operations with Ansible
          create-ansible-playbook.md
          action-setup.md
-         bastion-host.md
          ansible_playbooks.md
          autodeploy-template.md
 
@@ -85,6 +86,7 @@ Schematics
     {: .topicgroup}
     Ansible
          [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)
+         
      {: .navgroup-end}
 
     {: .navgroup id="help"}
