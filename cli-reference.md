@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-22"
+lastupdated: "2021-03-23"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1185,7 +1185,8 @@ Create an action by using {{site.data.keyword.bplong_notm}} to work with your {{
 2. Interactive mode
 {: shortdesc}
 
-**Payload file**
+#### Payload file
+{: #payload-file}
 
 You need to create a JSON file containing the details about the `ID`, `Name`, `Description`, `Resource Group` `user State`, and `tags` keys with the right values. Then, pass the file name with an argument `--file` to create an action.
 {: shortdesc} 
@@ -1226,7 +1227,8 @@ ibmcloud schematics action create --file testcreation.json
 ```
 {: pre}
 
-**Interactive mode**
+#### Interactive mode
+{: #interactive-mode}
 
 You are prompted for the required values for the name, resource_group and location details to create an action in interactive mode. By default the action ID is created with minimal action that can be updated later by using update action CLI.
 {: shortdesc}
@@ -1262,7 +1264,8 @@ Enter location> us-south
 {: pre}
 
 
-**Supported flags**
+#### Supported flags
+{: #supported-flags}
 
 Create an action by using all the flags or required flags that are mentioned in the syntax. 
 {: shortdesc}
