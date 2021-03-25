@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-19"
+lastupdated: "2021-03-25"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -35,7 +35,7 @@ Ansible playbook is a set of instructions that you can configure to run on a sin
 {: #plan-ansible-playbook}
 
 In order to create a playbook, you need to list the following requirement.
-- The target or group of target hosts with the IP addressess to run through the Ansible playbook. 
+- The target or group of target hosts with the IP address to run through the Ansible playbook. 
 - Plan the tasks to provision infrastructure, deploy applications you want to perform regularly through roles. For more information, about roles and its usage, see [referencing {{site.data.keyword.bpshort}} roles in playbook](#schematics-roles).
 - Plan for a comprehensive package of automation by using multiple playbooks, roles through collections. For more information, about roles and its usage, see [referencing {{site.data.keyword.bpshort}} collections in playbook](#schematics-collections).
 
@@ -115,7 +115,7 @@ The roles directory can have a sub directory such as **/roles/web/** or **/roles
 
 **Sample**
 
-The sample `requirements.yaml` file for installing kubectl on virtual machine from Ansible Galaxy role `andrewrothstein.kubectl`. 
+The sample `requirements.yaml` file for installing `kubectl` on virtual machine from Ansible Galaxy role `andrewrothstein.kubectl`. 
 
 ```
 ---
