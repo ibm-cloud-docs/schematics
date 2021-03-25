@@ -1599,7 +1599,7 @@ ibmcloud schematics job delete --id JOB_ID [--force][--no-prompt]
 You can delete a job by using the options described in the table.
 
 | Flag | Required / Optional | Description |
-| ----- | -------- | ------- | 
+| ----- | -------- | ------- |
 | `--id` or `-id` | Required | Job that you want to delete. |
 | `--force` or `-f` | Optional | To force the deletion without confirmation. |
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
