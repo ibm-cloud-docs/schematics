@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25"
+lastupdated: "2021-03-26"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1635,9 +1635,10 @@ You can use your encryption keys from key management services (KMS), {{site.data
 ### Prerequisites
 {: #key-prerequisites}
 
-Following prerequisites are followed to perform the KMS activity.
+The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
 - You should have your `KYOK`, or `BYOK`. To create a {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](https://cloud.ibm.com/docs/key-protect?topic=key-protect-create-root-keys). To create a {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-create-root-keys).
+- You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
 - You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#data-storage) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
 
