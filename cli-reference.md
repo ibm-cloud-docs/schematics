@@ -1419,86 +1419,26 @@ Review the command that you want to create, update, list, delete and to work wit
 ### `ibmcloud schematics job create`
 {: #schematics-create-job}
 
-Create a job in {{site.data.keyword.bplong_notm}} to work with your Schematics entities such as workspace and actions by providing the right flags. You can create a job by using following three methods:
-1. Payload file
-2. Interactive mode
-3. Supported flags
+Create a job in {{site.data.keyword.bplong_notm}} to work with your {{site.data.keyword.bpshort}} resources such as workspace and actions by providing the supported flags. You can create a job by using `payload file` method or `interactive mode`.
 {: shortdesc}
 
-**Payload file**
-
-You need to create a JSON file containing the details about the command object, command name and command ID, resource group and the name keys with the right values. Then, pass the file name with an argument `--file` to create a job.
-{: shortdesc} 
-
-**Sample JSON file**
-
-```
-{
-  "command_object": "<COMMAND_OBJECT_TYPE>",
-  "command_object_id": "<COMMAND_OBJECT_ID>",
-  "command_name": "<COMMAND_NAME>",
-  "command_parameter": "ssh_user.yml"
-}
-```
-{: codeblock}
-
-```
-ibmcloud schematics job create --file FILE_NAME
-```
-{: pre}
-
-**Example**
-
-```
-ibmcloud schematics job create --file testjobcreation.json
-```
-
-**Interactive mode**
-
-You are prompted for the required values to create a job in interactive mode. By default the job ID is created with minimal action that can be updated later by using update job CLI. You get a prompt if the required fields are not present.
-{: shortdesc}
-
-
-```
-ibmcloud schematics job create
-Enter command-object> <COMMAND_OBJECT_TYPE>
-Enter command-object-id> <COMMAND_OBJECT_ID>
-Enter command-name> <COMMAND_NAME>
-```
-{: pre}
-
-**Example**
-
-```
-ibmcloud schematics action create 
-Enter command-object> action
-Enter command-object-id> us-south.ACTION.Stop_Action777.1234213
-Enter command-name> ansible_playbook_run
-```
-You will receive the output with the command object details with the user state.
-
-**Supported flags**
-
-Create a job by using the flags mentioned in the syntax. 
-{: shortdesc}
-
-Create a job in {{site.data.keyword.bplong_notm}} to work with your Schematics entities such as workspace and actions by providing the right flags.
+**Syntax**
 
 ```
 ibmcloud schematics job create --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command_name COMMAND_NAME --playbook-name PLAYBOOK_NAME [--command-options COMMAND_OPTIONS] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--result-format RESPONSE_OUTPUT_FORMAT] [--file FILE_NAME] [--no-prompt]
 ```
 {: pre}
 
-If the action contains the playbook name, and you provide the playbook name in the job creation, the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
+If the action contains the playbook name, you need to add the playbook name, so that the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
 {: note}
 
-The table describes the options of the flag.
+**Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--command-object` or `-c` | Required | The name of the Schematics automation resource. Valid values are `action`, `workspace`, . |
-| `--command-object-id` or `-cid` | Required | The ID of the Schematics automation resource on which you want to run job. |
-| `--command-name,` or `-n` | Required | The Schematics job command name. |
+| `--command-object` or `-c` | Required | The name of the {{site.data.keyword.bpshort}} automation resource. Valid values are `action`, and `workspace`. |
+| `--command-object-id` or `-cid` | Required | The ID of the {{site.data.keyword.bpshort}} automation resource such as action or workspace on which you want to run job. |
+| `--command-name,` or `-n` | Required | The {{site.data.keyword.bpshort}} job command name. Valid values are `ansible_playbook_check`, and `ansible_playbook_run`.|
 | `--command-options` or `-co` | Optional | The command line options for the command.|
 | `--file` or `-f` | Optional | The payload file name. |
 | `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`. |
@@ -1511,19 +1451,68 @@ The table describes the options of the flag.
 | `--json` or `-j` | Optional | [Deprecated] Prints the output as JSON. Use `--output` JSON instead. |
 {: caption="Schematics job create flags" caption-side="top"}
 
+**Example by using payload file**
+
+You need to create a JSON file containing the details about the command object, command name and command ID, resource group and the name keys with the right values. Then, pass the file name with an argument `--file` to create a job. 
+{: shortdesc} 
+
+**Syntax and example of the sample.json file**
+
+|Syntax|Example|Command|
+|------|------|
+|{
+  "command_object": "<COMMAND_OBJECT_TYPE>",
+  "command_object_id": "<COMMAND_OBJECT_ID>",
+  "command_name": "<COMMAND_NAME>",
+  "command_parameter": "<PLAY_BOOK_NAME>"
+}| {
+  "command_object": "action",
+  "command_object_id": "us-east.ACTION.Example-11110000011",
+  "command_name": "ansible_playbook_check",
+  "command_parameter": "site.yml"
+}|ibmcloud schematics job create --file sample.json|
+
+**Example by using an interactive mode**
+
+The job create command prompts you to enter the required values to create a job in interactive mode. By default the job ID is created with minimal action that can be updated later by using update job CLI. You get a prompt if the required fields are not present.
+{: shortdesc}
+
+**Syntax to initiate the interactive mode**
+
+```
+ibmcloud schematics job create
+```
+{: pre}
+
+1. You are prompted to `Enter command-object>`. Enter `action` or `workspace` and click `Return`.
+2. You are prompted to `Enter command-object-id>`. Enter the action_ID details and click  `Return`.
+3. You are prompted to `Enter command-name>`. Enter `ansible_playbook_run`, and `ansible_playbook_check`.
+4. Click `Return` to view the output with the command object details and user state.
+
+**Example**
+
+```
+ibmcloud schematics job create 
+Enter command-object> action
+Enter command-object-id> us-south.ACTION.3333333
+Enter command-name> ansible_playbook_run
+```
+{: pre}
+
 ### `ibmcloud schematics job update`
 {: #schematics-update-job}
 
-Update a job creates a copy of the job and relaunches an existing job by updating the information of an existing {{site.data.keyword.bplong_notm}} job.
+Update or replace a job creates a copy of the job and relaunches an existing job by updating the information of an existing {{site.data.keyword.bplong_notm}} job.
 {: shortdesc}
 
+**Syntax**
 
 ```
 ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--json] [--no-prompt]
 ```
 {: pre}
 
-The table describes the options of the flag.
+**Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
@@ -1533,19 +1522,27 @@ The table describes the options of the flag.
 | `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
 {: caption="Schematics job update flags" caption-side="top"}
 
+**Example**
+
+```
+ibmcloud schematics job update --id  us-east.JOB.yourjobid1010101 
+```
+{: pre}
+
 ### `ibmcloud schematics job get`
 {: #schematics-get-job}
 
-Fetch the information of an existing {{site.data.keyword.bplong_notm}} job by using a job ID. 
+Retrieve the information of an existing {{site.data.keyword.bplong_notm}} job by using a job ID of the tasks and events for the executed playbook.
 {: shortdesc}
 
+**Syntax**
 
 ```
 ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [--json] [--no-prompt]
 ```
 {: pre}
 
-The table describes the options of the flag.
+**Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
@@ -1556,47 +1553,62 @@ The table describes the options of the flag.
 | `--profile` or `-p` | Optional | The level of information fetched by the get method. Supported values are `detailed`, and `summary`. The default value is `summary`.|
 {: caption="Schematics job get flags" caption-side="top"}
 
-### `ibmcloud schematics job list`
-{: #schematics-list-job}
-
-Lists all the existing jobs corresponding to a Schematics entities such as workspaces or actions of the account by using a job ID. 
-{: shortdesc}
-
+**Example**
 
 ```
-ibmcloud schematics job list [--resource-type RESOURCE_TYPE] [--id RESOURCE_ID] [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--json] [--no-prompt]
-
+ibmcloud schematics job get --id us-east.JOB.mydemotestsource.902f26bb --profile detailed --output testoutput.json
 ```
 {: pre}
 
-You can retrieve the jobs by using the options described in the table.
+### `ibmcloud schematics job list`
+{: #schematics-list-job}
 
-| Flag | Description |
-| ----- | -------- | 
+Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran against a target hosts through {{site.data.keyword.bpshort}} action. The job displays a list of jobs with the status as `in_progess`, `success`, or `failed`.
+{: shortdesc}
+
+**Syntax**
+
+```
+ibmcloud schematics job list [--resource-type RESOURCE_TYPE] [--id RESOURCE_ID] [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--json] [--no-prompt]
+```
+{: pre}
+
+**Command options**
+
+| Flag |  Required / Optional |Description |
+| ----- | -------| -------- | 
 | `--all` | Optional | Lists all the jobs including the internal jobs.|
 | `--id` | Optional | ID of the resource. |
 | `--limit` or `-l` | Optional | Maximum number of workspaces to list. Ignored if a negative number is set. The maximum limit is `200` and the default value is `-1`. |
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
 | `--offset` or `-m` | Optional | Offset in list, ignored if a negative number is set. The default value is `-1`. |
-| `--profile` or `-p` | Optional | Level of the information returned by the get method. Supported values are `ids`, and `summary`. The default value is `summary`. |
+| `--profile` or `-p` | Optional | Level of the information returned by the get method. Supported values are `ids`, or `summary`. The default value is `summary`. |
 | `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
 | `--resource-type` or `-rt` | Required | Name of the resource either `workspace`, or `action`.  |
 {: caption="Schematics job list flags" caption-side="top"}
 
+**Example**
+
+```
+ibmcloud schematics job list --profile ids --output testoutput.json
+```
+{: pre}
+
 ### `ibmcloud schematics job delete`
 {: #schematics-delete-job}
 
-Delete a job from {{site.data.keyword.bplong_notm}} service. 
+Delete a job to run against your {{site.data.keyword.cloud_notm}} resources. **Note** You cannot delete or stop the job activity from an ongoing execution of an action defined in the playbook. You can repeat the execution of same job, whenever you patch or update an action.
 {: shortdesc}
 
+**Syntax**
 
 ```
 ibmcloud schematics job delete --id JOB_ID [--force][--no-prompt]
 ```
 {: pre}
 
-You can delete a job by using the options described in the table.
+**Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
@@ -1605,25 +1617,40 @@ You can delete a job by using the options described in the table.
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
 {: caption="Schematics job delete flags" caption-side="top"}
 
+**Example**
+
+```
+ibmcloud schematics job delete --id us-east.JOB.yourjob_ID_1231 
+```
+{: pre}
+
 ### `ibmcloud schematics job logs`
 {: #schematics-logs-job}
 
-Fetch the job logs from an {{site.data.keyword.bplong_notm}} service. 
+Retrieve the detailed information of all the job records and events of the playbook run from your {{site.data.keyword.cloud_notm}} account. For example, if you use an API endpoint for a geography, such as North America, only jobs that are created in `us-south` or `us-east` are returned.
 {: shortdesc}
 
+**Syntax**
 
 ```
 ibmcloud schematics job logs --id JOB_ID [--no-prompt]
 ```
 {: pre}
 
-You can fetch a job by using the options described in the table.
+**Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--id` or `-id` | Required | Job that you want to update or relaunch. |
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
 {: caption="Schematics job logs flags" caption-side="top"}
+
+**Example**
+
+```
+ibmcloud schematics job logs --id us-east.JOB.yourjob_ID_1231 
+```
+{: pre}
 
 ## Enable BYOK or KYOK commands
 {: kms-commands}

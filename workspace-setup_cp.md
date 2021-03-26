@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-11"
+lastupdated: "2021-03-26"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -25,8 +25,8 @@ subcollection: schematics
 {:support: data-reuse='support'}
 {:help: data-hd-content-type='help'}
 
-# Setting up workspaces
-{: #workspace-setup}
+# Setting up workspaces cp
+{: #workspace-setup_cp}
 
 With {{site.data.keyword.bplong_notm}} workspaces, you can organize your Terraform templates and control who has access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you design the organizational structure of your Git repository and workspaces so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
@@ -35,7 +35,7 @@ If you plan to store your Terraform templates on your local machine and upload t
 {: note}
 
 ## Designing your workspace and Git repository structure
-{: #structure-workspace}
+{: #structure-workspace_cp}
 {: help}
 {: support}
 
@@ -60,7 +60,7 @@ You need to use the `AzureURL` in this format `https://azure.com/<your_user_name
 You need to use the `VsURL` in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for URL with branch you need to use in this format `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>`.
 
 ## How many workspaces do I need?
-{: #plan-number-of-workspaces}
+{: #plan-number-of-workspaces_cp}
 
 To find out how many workspaces you need in {{site.data.keyword.bplong_notm}}, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
 {: shortdesc}
@@ -75,7 +75,7 @@ Do not use one workspace to manage an entire staging or production environment. 
 {: important}
 
 ## How do I structure my Git repository to map my workspaces?
-{: #plan-github-structure}
+{: #plan-github-structure_cp}
 
 Structure your Git repository so that you have one repository for all your Terraform configuration files that build your microservice, and use input variables in {{site.data.keyword.bpshort}}, or GitHub branches or directories to differentiate between your development, staging, and production environment. 
 {: shortdesc}
@@ -91,7 +91,7 @@ Review the following table to find a list of options for how to structure your G
 | Use one Git repo per environment | Use one Git repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and Git repository and you can apply separate permissions for each of your Git repositories. Make sure that your team can manage multiple Git repositories and keep them in sync. | 
 
 ## How can I reuse configuration files across environments and workspaces?
-{: #plan-reuse}
+{: #plan-reuse_cp}
 
 Try to minimize the number of Terraform configuration files that you need to manage by creating standardized resource templates and by using variables to customize the template to your needs. 
 {: shortdesc}
@@ -99,12 +99,12 @@ Try to minimize the number of Terraform configuration files that you need to man
 With standardized resource templates, you can ensure that development best practices are followed within your organization and that all Terraform configuration files have the same structure. Knowing the structure of a Terraform configuration file makes it easier for your developers to understand a file, declare variables, contribute to the code, and troubleshoot the errors. 
 
 ## How do I control access to my workspaces? 
-{: #plan-workspace-access}
+{: #plan-workspace-access_cp}
 
 {{site.data.keyword.bplong_notm}} is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.bplong_notm}}, see [Managing user access](/docs/schematics?topic=schematics-access). 
 
 ## What do I need to be aware of when I have a repository that I managed with native Terraform?
-{: #plan-terraform-migration}
+{: #plan-terraform-migration_cp}
 
 Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can import your existing Terraform templates into {{site.data.keyword.bpshort}} workspaces. Depending on how your Terraform templates and Git repositories are structured, you might need to make changes so that you can successfully use {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
@@ -113,7 +113,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 - **Terraform command line and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform command line or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} command line plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
 
 ## Creating workspaces
-{: #create-workspace}
+{: #create-workspace_cp}
 
 Create your workspace that points to the Git repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc} 
@@ -154,7 +154,7 @@ If you do not want to connect your workspace to a Git repository, you can upload
    8. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
 ## Freezing and unfreezing workspaces 
-{: #lock-workspace}
+{: #lock-workspace_cp}
 
 As the {{site.data.keyword.cloud_notm}} account owner or an {{site.data.keyword.bplong_notm}} user who is assigned the **Manager** IAM service access role for {{site.data.keyword.bpshort}}, you can disable changes to a workspace (freeze) so that you cannot create a Terraform execution plan or run your infrastructure code to provision or modify your {{site.data.keyword.cloud_notm}} resources. 
 {: shortdesc}
@@ -172,7 +172,7 @@ Before you begin, make sure that you are assigned the [**Manager** IAM service a
 3. In the **State** section on the workspace settings page, set the toggle to **Unfrozen**. The ID of the user who unfreezes the workspace and a timestamp are automatically logged. After you unfreeze a workspace, you can generate new Terraform execution plans or run your infrastructure code by applying the plan in {{site.data.keyword.cloud_notm}}.
 
 ## Deleting a workspace
-{: #del-workspace}
+{: #del-workspace_cp}
 
 Delete your workspace that points to the Git repository thats hosted your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 
@@ -203,7 +203,7 @@ Delete your workspace that points to the Git repository thats hosted your Terraf
 6. Click the **Delete** button.
 
 ## Files and resources for your workspace action
-{: #files-resources}
+{: #files-resources_cp}
 
 When you add a repository to the {{site.data.keyword.bplong_notm}} for the first time. The Schematics engine performs the vulnerability check of the files you have added. This check returns the scanned, discarded files.
 - The total number of files scanned in the repository is named as `scanned`.
@@ -223,12 +223,12 @@ The actions with the resource and file information are described in the table.
 | Plan applied | The resources are checked and reports `added`, `changed`, and `deleted` resources count of your workspace plan applied state.|
 
 ## Creating a deploy to {{site.data.keyword.bplong_notm}}
-{: #create-deploy-to-schematics}
+{: #create-deploy-to-schematics_cp}
 
 {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics).
 
 ## Setting up a continuous delivery toolchain for your workspace
-{: #continuous-delivery}
+{: #continuous-delivery_cp}
   
 Connect your source repository to a continuous delivery pipeline in {{site.data.keyword.cloud_notm}} to automatically generate a Terraform execution plan and run your Terraform code in {{site.data.keyword.cloud_notm}} whenever you update your Terraform configuration files. 
 {: shortdesc}
@@ -255,7 +255,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors.
 
 ## Workspace state and its importance
-{: #states-importance}
+{: #states-importance_cp}
 
 Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the command line or API.
 {: shortdesc} 
@@ -273,7 +273,7 @@ Review the states that a workspace can have in the following table. You might no
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
 
 ## Workspace state diagram
-{: #workspace-state-diagram}
+{: #workspace-state-diagram_cp}
 
 The state of a workspace indicates if you have successfully created a Terraform execution plan and applied to provision your resources in the {{site.data.keyword.cloud_notm}} account. The table represents the state and action of the workspace.
 {: shortdesc}
