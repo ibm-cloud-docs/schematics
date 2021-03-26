@@ -1403,7 +1403,7 @@ ibmcloud schematics action list --profile ids
 Delete a {{site.data.keyword.bpshort}} action and specify an Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources. 
 {: shortdesc}
 
-You cannot delete or stop the job activity from an ongoing execution of an action defined in the playbook. You can repeat the execution of same job, whenever you patch the actions. For more information, about the Schematics action state, see [{{site.data.keyword.bpshort}} action state diagram](https://test.cloud.ibm.com/docs/schematics?topic=schematics-action-setup#action-state-diagram).
+You cannot delete or stop the job activity from an ongoing execution of an action defined in the playbook. You can repeat the execution of same job, whenever you patch the actions. For more information, about the Schematics action state, see [{{site.data.keyword.bpshort}} action state diagram](/docs/schematics?topic=schematics-action-setup#action-state-diagram).
 {: note}
 
 **Syntax**
@@ -1689,7 +1689,7 @@ You can use your encryption keys from key management services (KMS), {{site.data
 
 The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
-- You should have your `KYOK`, or `BYOK`. To create a {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](https://cloud.ibm.com/docs/key-protect?topic=key-protect-create-root-keys). To create a {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-create-root-keys).
+- You should have your `KYOK`, or `BYOK`. To create a {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create a {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
 - You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#data-storage) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
