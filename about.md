@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25"
+lastupdated: "2021-03-26"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -33,8 +33,7 @@ subcollection: schematics
 
 
 
-{{site.data.keyword.bplong_notm}} deliver Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is an Open Source software that enables predictable and consistent resource provisioning to rapidly build complex, multitier cloud environments.
-{: shortdesc}
+
 
 **What is Infrastructure as Code?** </br>
 Infrastructure as Code (IaC) helps you codify your cloud environment so that you can automate the provisioning and management of your resources in the cloud. Rather than manually provisioning and configuring infrastructure resources or by using scripts to adjust your cloud environment, you use a high-level scripting language to specify your resource and its configuration. Then, you use tools like Terraform to provision the resource in the cloud by leveraging its API. Your infrastructure code is treated the same way as your app code so that you can apply DevOps core practices such as version control, testing, and continuous monitoring. 
@@ -42,8 +41,7 @@ Infrastructure as Code (IaC) helps you codify your cloud environment so that you
 **How is {{site.data.keyword.bplong_notm}} different from Terraform?** </br>
 With {{site.data.keyword.bplong_notm}}, you can organize your {{site.data.keyword.cloud_notm}} resources across environments by using workspaces. Every workspace points to a set of Terraform configuration files, which build a Terraform template. You can choose to create your own Terraform template, or use one of the pre-defined templates that are provided by IBM. Workspaces allow for the separation of concerns for cloud resources and can be individually managed with {{site.data.keyword.cloud_notm}} Identity and Access Management. To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform command line or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. 
 
-**I am not familiar with Terraform. Can I still use {{site.data.keyword.bplong_notm}}?** </br>
-Yes. {{site.data.keyword.bplong_notm}} provides a set of pre-defined Terraform templates that you can choose from to get started with {{site.data.keyword.bpshort}}. Simply select the templates that you want and create a workspace in {{site.data.keyword.bplong_notm}} from this template. Then, create a Terraform execution plan, apply this plan, and watch {{site.data.keyword.bplong_notm}} provision the resources for you. 
+
 
 ## Benefits
 {: #schematics-benefits}
