@@ -110,7 +110,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 - Make sure that you have the permissions to [create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-access#access-roles). 
 - Create a VPC for Generation 2 compute infrastructure and a virtual server instance in that VPC. For more information, see [Getting started with Virtual Private Cloud (VPC)](/docs/vpc?topic=vpc-getting-started). Note the private or public IP address of your virtual server instance. 
 
-## Stopping a VPC Gen2 Virtual Server with {{site.data.keyword.bpshort}}
+## Starting and stopping a VPC Gen2 Virtual Server with {{site.data.keyword.bpshort}}
 {: #ansible-vsi}
 
 1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page, click **Create action**. 
