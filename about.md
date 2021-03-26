@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-25"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -30,6 +30,9 @@ subcollection: schematics
 # About {{site.data.keyword.bplong_notm}}
 {: #about-schematics} 
 
+
+
+
 {{site.data.keyword.bplong_notm}} deliver Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is an Open Source software that enables predictable and consistent resource provisioning to rapidly build complex, multitier cloud environments.
 {: shortdesc}
 
@@ -41,21 +44,6 @@ With {{site.data.keyword.bplong_notm}}, you can organize your {{site.data.keywor
 
 **I am not familiar with Terraform. Can I still use {{site.data.keyword.bplong_notm}}?** </br>
 Yes. {{site.data.keyword.bplong_notm}} provides a set of pre-defined Terraform templates that you can choose from to get started with {{site.data.keyword.bpshort}}. Simply select the templates that you want and create a workspace in {{site.data.keyword.bplong_notm}} from this template. Then, create a Terraform execution plan, apply this plan, and watch {{site.data.keyword.bplong_notm}} provision the resources for you. 
-
-## How it works?
-{: #schematics-architecture}
-{: help}
-{: support}
-
-Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.data.keyword.cloud_notm}} resources with Terraform. 
-{: shortdesc}
-
-<img src="images/schematics_flow.png" alt="Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
-
-1. **Codify your {{site.data.keyword.cloud_notm}} resources**. Use Terraform HashiCorp Configuration Language (HCL) or JSON format to specify the {{site.data.keyword.cloud_notm}} resources that you want to provision in your {{site.data.keyword.cloud_notm}} environment. If you are not familiar with Terraform, you can select one of the default Terraform templates that {{site.data.keyword.bplong_notm}} provides to provision the {{site.data.keyword.cloud_notm}} resources that you want. Terraform templates can be stored in a GitHub or GitLab repository to ensure source control and enable collaboration, review, and auditing in your organization. You can save usage information in `readme` files to make the template shareable and usable across multiple teams. You can also upload tape archive files (`.tar`) from your local machine to provide {{site.data.keyword.bpshort}} with your template.
-2. **Create your workspace**. You can point your {{site.data.keyword.bplong_notm}} workspace to a GitHub or GitLab repository where you store your Terraform template, or provide your template by uploading a `.tar` file. Workspaces help to organize resources that belong to one {{site.data.keyword.cloud_notm}} environment. For example, use workspaces to separate your test, staging, and production environment. With {{site.data.keyword.cloud_notm}} Identity and Access Management, you can control who has access to your resources and can provision or manage these resources in your {{site.data.keyword.cloud_notm}} account. 
-3. **Create an execution plan**. {{site.data.keyword.bplong_notm}} uses the `terraform plan` command to parse the configuration files of the provided Terraform template. To create a summary of actions that need to be performed to achieve the state that is described in your configuration files. To determine the actions, {{site.data.keyword.bplong_notm}} takes the resources that are already provisioned in your {{site.data.keyword.cloud_notm}} account to give you a preview whether resources must be added, modified, or removed. You can review the plan and any validation errors by reviewing the logs.  
-4. **Provision your resources**. To create, modify, or remove resources from your {{site.data.keyword.cloud_notm}} account, {{site.data.keyword.bplong_notm}} uses the `terraform apply` command. This command calls the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, which is aware of the API for each resource to provision, configure, or remove the resource. 
 
 ## Benefits
 {: #schematics-benefits}
@@ -72,6 +60,8 @@ Review the capabilities that {{site.data.keyword.bplong_notm}} provides to templ
 | Control access to your {{site.data.keyword.cloud_notm}} resources | Assign platform and services access permissions to your users in {{site.data.keyword.cloud_notm}} Identity and Access Management to control who can provision and manage resources in your {{site.data.keyword.cloud_notm}} account. |
 | Leverage GitHub for version control | If you connect your workspace to a repository in GitHub, you can keep your Terraform template in source control and enable collaboration, review, and auditing of changes. You can also roll back to a previous version of your template and let {{site.data.keyword.bplong_notm}} deploy the change to your {{site.data.keyword.cloud_notm}} environment. |  
 | Get {{site.data.keyword.cloud_notm}} help and support | {{site.data.keyword.bplong_notm}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue by using {{site.data.keyword.bplong_notm}}, [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-using-avatar). |
+
+
 
 ## Key terms
 {: #schematics-terms}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-23"
+lastupdated: "2021-03-26"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -596,7 +596,7 @@ ibmcloud schematics workspace output --id myworkspace-asdff1a1a-42145-11 --name 
 ### `ibmcloud schematics refresh`
 {: #schematics-refresh}
 
-Perform a {{site.data.keyword.cloud_notm}} refresh action against your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. If differences are found, the Terraform statefile is updated accordingly. 
+Perform an {{site.data.keyword.cloud_notm}} refresh action against your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. If differences are found, the Terraform statefile is updated accordingly. 
 {: shortdesc}
 
 **Syntax**
@@ -1599,7 +1599,7 @@ ibmcloud schematics job delete --id JOB_ID [--force][--no-prompt]
 You can delete a job by using the options described in the table.
 
 | Flag | Required / Optional | Description |
-| ----- | -------- | ------- | 
+| ----- | -------- | ------- |
 | `--id` or `-id` | Required | Job that you want to delete. |
 | `--force` or `-f` | Optional | To force the deletion without confirmation. |
 | `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
@@ -1631,10 +1631,16 @@ You can fetch a job by using the options described in the table.
 You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 {: shortdesc}
 
+
 ### Prerequisites
 {: #key-prerequisites}
 
-You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#data-storage) to integrate BYOK, and KYOK in {{site.data.keyword.bpshort}} service.
+The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
+
+- You should have your `KYOK`, or `BYOK`. To create a {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](https://cloud.ibm.com/docs/key-protect?topic=key-protect-create-root-keys). To create a {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-create-root-keys).
+- You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
+- You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#data-storage) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
+
 
 KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
 {: note}
@@ -1642,7 +1648,8 @@ KMS setting is a one time settings. You need to open the [support ticket](/docs/
 ### `ibmcloud schematics kms instance ls`
 {: #schematics-kms-list}
 
-Lists the KMS instances of your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}}or {{site.data.keyword.hscrypto}}. You can list the KMS instances by using the options described in the table.
+Lists all the KMS instances of your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}}or {{site.data.keyword.hscrypto}} by using your location  where keys are created and encrypted scheme such as `KYOK`, or `BYOK`. 
+{: shortdesc}
 
 **Syntax**
 
@@ -1650,6 +1657,8 @@ Lists the KMS instances of your {{site.data.keyword.cloud_notm}} account to find
 ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME [--output json]
 ```
 {: pre}
+
+**Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
@@ -1659,10 +1668,20 @@ ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
 {: caption="Schematics KMS list flags" caption-side="top"}
 
+**Example**
+
+```
+ibmcloud schematics kms instances ls -l US -s byok
+```
+{: pre}
+
 ### `ibmcloud schematics kms enable`
 {: #schematics-kms-enable}
 
-Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#data-storage). You can enable the KMS instances by using the options described in the table.
+Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#data-storage).
+
+Update the KMS settings for your location, by using your private endpoint, `CRN`, primary `CRK`, and secondary `CRK`. **Note** you can update the KMS settings only once. For example, if you use an API endpoint for a geography, such as North America, only that are created in `us-south` or `us-east` are retrieved.
+{: shortdesc}
 
 **Syntax**
 
@@ -1671,11 +1690,13 @@ ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHE
 ```
 {: pre}
 
+**Command options**
+
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--location` or `-l` | Required | Set the Schematics location name, such as `us`, or `eu`. |
 | `--scheme` or `-s` | Required | Specify the encryption scheme. Support values are KMS `KYOK`, `BYOK`. |
-| `--group` or `-g` | Required | Specify the resource group name.|
+| `--group` or `-g` | Required | Specify the resource group name. Default value is `Default`.|
 | `--primary_name` or `--pn` | Required |  Specify the primary KMS name.|
 | `--primary_crn` or `--pc` | Required |  Specify the primary key CRN name.|
 | `--primary_endpoint` or `--pe` | Required |  Specify the primary KMS private endpoint.|
@@ -1686,10 +1707,19 @@ ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHE
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON.|
 {: caption="Schematics KMS enable flags" caption-side="top"}
 
+**Example**
+
+```
+ibmcloud schematics kms enable -l US -s byok -g Default -pn Key-Protect-south -pc crn:v1:bluemix:public:kms:us-south:lalalalal -pe https://private.us-south.kms.cloud.ibm.com
+```
+{: pre}
+
+
 ### `ibmcloud schematics kms info`
 {: #schematics-kms-info}
 
-Retrieves the {{site.data.keyword.bplong_notm}} KMS instance information. You can fetch the information of the KMS instances by using the options described in the table.
+Retrieve the KMS on the API endpoint that you have your `KYOK`, or `BYOK`. For example, if you use an API endpoint for a geography, such as North America, only that are created in `us-south` or `us-east` are retrieved. **Note** you need to enable `kms instances` in your account to run `info` command line.
+{: shortdesc}
 
 **Syntax**
 
@@ -1698,6 +1728,7 @@ ibmcloud schematics kms info --location LOCATION_NAME [--output]
 ```
 {: pre}
 
+**Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
@@ -1705,6 +1736,13 @@ ibmcloud schematics kms info --location LOCATION_NAME [--output]
 |  `--json` or `-j`| Deprecated| Prints the output as `JSON`. Use `--output` instead.|
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON.|
 {: caption="Schematics KMS information flags" caption-side="top"}
+
+**Example**
+
+```
+ibmcloud schematics kms info -l US 
+```
+{: pre}
 
 
 ## Terraform commands
@@ -1716,7 +1754,7 @@ You can run a bunch of Terraform commands and manipulate the {{site.data.keyword
 You can see the `Commands` UI support only to display the state of the workspace. The complete commands support to be released shortly.
 {: important}
 
-The table provides the summary of commands supported by the new `commands` API.
+The table provides the summary of supported commands by the `commands` API.
 
 |Command | Description| 
 |------|  ------|
@@ -1730,28 +1768,26 @@ The table provides the summary of commands supported by the new `commands` API.
 ### Commands 
 {: :#cmds}
 
-The `Commands` API supports: 
-- Executing the group of Terraform commands by using the JSON file for your workspace command requirements.
-- The access control `plan`, `apply`, `destroy`, or `refresh` are applicable for `Commands API`. 
+The `Commands` API executes one or group of Terraform commands by using the JSON file for your workspace command requirements. The access control such as `plan`, `apply`, `destroy`, or `refresh` are applicable for `Commands API`. Select your region where the workspace is created, and use the following syntax to run the commands API.
 
-Select your region where the workspace is created, and use the following syntax to run the commands API.
+**Syntax**
 
 ```
-ibmcloud schematics workspace commands --id WORKSPACE_ID [--options FLAGS] [--file JSON file]
+ibmcloud schematics workspace commands --id WORKSPACE_ID [--options FLAGS] --file JSON_FILE_PATH
 ```
+{: pre}
 
 **Command options**
 
-`--id <WORKSPACE_ID>`
-  Required. The unique ID of the workspace for which you want to run the commands. To find the ID of your workspace, run `ibmcloud schematics workspace list`.
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ | 
+| `--id` or `-i` | Required | The unique ID of the workspace where you want to run the commands. To find the ID of your workspace, run `ibmcloud schematics workspace list`. |
+|  `--options` or `-o`| Optional| The command line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**.|
+| `--file` or `--f` | Required | Path to the JSON file containing the list of Terraform commands.|
+{: caption="Schematics Terraform commands flags" caption-side="top"}
 
-`--options <FLAGS>`
-  Optional. The command-line flags are all optional. Some of the option flags are **-lock=true, -state=path, -allow-missing, -backup-path**.
 
-`--file <JSON file>`
-  Required. Contains the address of resource to be executed.
-
-  **Sample payload in Test.JSON file**
+  **Sample payload of Test.JSON file**
   
   ```
   {
@@ -1798,7 +1834,8 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID [--options FLAGS] [--fi
   ```
   {: pre}
 
-  The table provides the list of key parameters of the JSON file for the `Commands` API, either by command line or the API.
+
+  The table provides the list of key parameters of the JSON file for the `Commands` API, for the command line and the API.
 
   | Key | Required / Optional |Description |
   | ------ | -------- | ---------- |
@@ -1813,8 +1850,9 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID [--options FLAGS] [--fi
 **Example**
 
 ```
-ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /<userdir>/Test.JSON
+ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /<FILE_PATH>/Test.JSON
 ```
+{: pre}
 
 ## Terraform statefile commands
 {: #statefile-cmds}
@@ -1828,8 +1866,10 @@ You can import an existing Terraform statefile during the creation of your works
 ### `ibmcloud schematics state pull`
 {: #state-pull}
 
-Show the content of the Terraform statefile (`terraform.tfstate`) for a specific Terraform template in your workspace.  
+Show the content of the Terraform statefile (`terraform.tfstate`) for a specific Terraform template of your workspace.  
 {: shortdesc}	
+
+**Syntax**
 
 ```
 ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID

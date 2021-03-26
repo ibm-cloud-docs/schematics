@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-23"
+lastupdated: "2021-03-25"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -161,7 +161,7 @@ The {{site.data.keyword.bpshort}} action user interface provides the **Jobs** an
 The **Jobs** lists the activity stream that are performed when the action were created or updated. The list of options are displayed in the Action List pane on the left side of the window and on the right side of the window you can view the quick access to **Adjust your settings**, **Get help from the documentation**, and **Learn more about Schematics**.
 
 Jobs are classified into:
-- **System jobs** These are the jobs that get created during and action creation and action updation The **All** tab in the user interface represents System jobs. For example, `playbook run`, `playbook check`. 
+- **System jobs** These jobs are created during the create and update action. The **All** tab in the user interface represents System jobs. For example, `playbook run`, `playbook check`. 
 {: shortdesc}
 - **User jobs** These are the jobs that gets created with an user action. The summary of the system jobs are shown in the following status in the **User** tab.
 

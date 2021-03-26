@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-22"
+lastupdated: "2021-03-25"
 
 keywords: schematics api, schematics command line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -123,19 +123,11 @@ You can use the version (`v2`) API to manage the {{site.data.keyword.bpshort}} r
  </tr>
  <tr>
    <td>API reference docs</td>
-   <td>[`https://cloud.ibm.com/apidocs/schematics#introduction` ![External link icon](../icons/launch-glyph.svg "External link icon")](https://schematics.cloud.ibm.com/global/swagger-global-api/#/)</td>
+   <td>[`https://cloud.ibm.com/apidocs/schematics#introduction` ![External link icon]](https://cloud.ibm.com/apidocs/schematics#introduction)</td>
  </tr>
  <tr>
    <td>API architectural style</td>
    <td>Representational state transfer (REST) that focuses on resources that you interact with through HTTP methods such as `GET`, `POST`, `PUT`, `PATCH`, and `DELETE`. Remote procedure calls (RPC) that focus on actions through only `GET` and `POST` HTTP methods.</td>
- </tr>
- <tr>
-    <td>Supported platforms</td>
-    <td>Use the {{site.data.keyword.bplong_notm}} API to manage your {{site.data.keyword.cloud_notm}} infrastructure resources, such as workspaces, actions, jobs, inventories, for **{{site.data.keyword.bpshort}}**.</td>
- </tr>
- <tr>
-   <td>`GET` responses</td>
-   <td>The `GET` method for a collection of resources (such as `GET v1/workspaces`) returns the same details for each resource in the list as a `GET` method for an individual resource (such as `GET v1/workspaces/{idOrName}`).</td>
  </tr>
 </tbody>
 </table>
@@ -156,7 +148,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
 |{{site.data.keyword.cloud_notm}} ID|My options|
 |-----------------------------------|----------|
-|Unfederated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access workspacess that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**{{site.data.keyword.cloud_notm}} username and password:** You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token.</li></ul>|
+|Unfederated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access workspaces that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**{{site.data.keyword.cloud_notm}} username and password:** You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token.</li></ul>|
 |Federated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external} are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access workspaces that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**Use a one-time passcode:** If you authenticate with {{site.data.keyword.cloud_notm}} by using a one-time passcode, you cannot fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token because the retrieval of your one-time passcode requires a manual interaction with your web browser. To fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token, you must create an {{site.data.keyword.cloud_notm}} API key instead.</ul>|
 {: caption="ID types and options" caption-side="top"}
 {: summary="ID types and options with the input parameter in column 1 and the value in column 2."}
