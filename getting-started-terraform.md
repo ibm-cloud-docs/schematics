@@ -95,7 +95,7 @@ subcollection: schematics
 # Getting started with infrastructure and cloud service deployment in {{site.data.keyword.bpshort}}
 {: #get-started-terraform}
 
-Use one of the IBM-provided templates to create an [{{site.data.keyword.cos_full}} service instance]() that you can use to persistently store your data in {{site.data.keyword.cloud_notm}}. 
+Use one of the IBM-provided templates to create an [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage) service instance that you can use to persistently store your data in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 A {{site.data.keyword.bplong_notm}} template is a set of files that define the {{site.data.keyword.cloud_notm}} resources that you want to create, update, or delete. You create a {{site.data.keyword.bpshort}} workspace that points to your template and use the built-in capabilities of the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform to provision your {{site.data.keyword.cloud_notm}} resources. For more information about the provider and how {{site.data.keyword.bpshort}} spins up your {{site.data.keyword.cloud_notm}} resources, see [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-about-schematics#how-to-workspaces). 
