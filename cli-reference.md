@@ -1145,7 +1145,6 @@ Review the command that you want to create, update, list, delete and work with y
 {{site.data.keyword.bplong_notm}} supports inventory host groups to group the applications hostname such as web server, database server, Operating System, region, or network. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `ini` file format. The `hosts.ini` file can be used in the `create` and `update` actions commands as an argument, for example, `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>`. 
 {: shortdesc}
 
-
 If your hostname contains variables, you can provide in the `-input` argument with `key/value` as `–input key=value` in the create and update action commands.
 {: note}
 
@@ -1176,6 +1175,9 @@ If your hostname contains variables, you can provide in the `-input` argument wi
   |`IPaddress`|The IP addresses of the hostname.|
   {: caption="Inventory host group parameters" caption-side="top"}
 
+You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances.
+{: note}
+
 
 ### `ibmcloud schematics action create`
 {: #schematics-create-action}
@@ -1184,6 +1186,9 @@ Create an {{site.data.keyword.bplong_notm}} action to run on a single target or 
 
 For more information, about the Schematics action state, see [Schematics action state diagram](/docs/schematics?topic=schematics-action-setup#action-state-diagram).
 {: shortdesc}
+
+You cannot update the location and region once an action is created.
+{: important}
 
 **Syntax**
 
@@ -1284,8 +1289,9 @@ ibmcloud schematics action create
 ### `ibmcloud schematics action update`
 {: #schematics-update-action}
 
-Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. 
+Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. You cannot update the location and region once an action is created.
 {: shortdesc}
+
 
 **Syntax**
 

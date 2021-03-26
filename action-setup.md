@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25"
+lastupdated: "2021-03-26"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -34,7 +34,7 @@ With {{site.data.keyword.bplong_notm}} actions, you can specify the Ansible play
 ## Creating and running the {{site.data.keyword.bpshort}} action
 {: #create-action}
 
-Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources.  
+Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources. 
 
 Before you begin: 
 
@@ -51,7 +51,7 @@ To create an action:
    1. Enter a name and an optional description for your action. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. 
    2. Optional: Enter any tags that you want to add to your action. Tags can help you find an action more easily later.
    3. Select the resource group where you want to create the action.
-   4. Decide where you want to create your action. The location determines where your action runs and your action data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your action is created in this location. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where the {{site.data.keyword.cloud_notm}} resources reside where you want to run your Ansible playbook.
+   4. Decide where you want to create your action. The location determines where your action runs and your action data is stored. You can choose between a geography, such as North America, Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. Make sure of your location, you cannot update the location and region once an action is created. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where the {{site.data.keyword.cloud_notm}} resources reside where you want to run your Ansible playbook.
    5. Click **Create** to create an action. Your action is created with a `Normal` state and you are directed to the `Settings` page.
 3. Import your Ansible playbook. 
    1. Enter the URL to your GitHub or GitLab repository where you store the Ansible playbook that you want to run. The URL can point to the master branch, any other branch, or a subdirectory. Your action can point to one playbook at a time only. If you want to run multiple playbooks, create a separate action for each playbook. 
@@ -163,7 +163,7 @@ The **Jobs** lists the activity stream that are performed when the action were c
 Jobs are classified into:
 - **System jobs** These jobs are created during the create and update action. The **All** tab in the user interface represents System jobs. For example, `playbook run`, `playbook check`. 
 {: shortdesc}
-- **User jobs** These are the jobs that gets created with an user action. The summary of the system jobs are shown in the following status in the **User** tab.
+- **User jobs** These are the jobs that gets created with an user action. The summary of the system jobs are shown in the following status in the **User** tab. In the user interface, there is no limit set to display the job logs. However, you can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
 
 |Status|Description|
 |-----|---------|

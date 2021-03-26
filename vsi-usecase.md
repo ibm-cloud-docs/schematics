@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-26"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -71,23 +71,21 @@ After the prerequisite is completed, the steps to complete the use case:
   ```
   {: pre}
 
-4. You can view the job and action list by executing the command line commands.
+4. You can view the job and actions list by executing the [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command. 
 
    **Job list Example**
 
     ```
-    ibmcloud schematics job list   
-    Enter <resource-type> actions
-    Enter <id> <provide your ID>
-    
+    ibmcloud schematics job list
     ```
+    You are prompted to `Enter <resource-type>` and `Enter <id>`. Provide the your resource type as `actions` and enter your job_ID.
 
    **Action list Example**
 
     ```
-    ibmcloud schematics action list   
-
+    ibmcloud schematics action list
     ```
+
     You can also view these jobs in an [{{site.data.keyword.cloud_notm}} user interface](https://cloud.ibm.com/schematics/actions).
 
 ## What's next?
