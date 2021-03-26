@@ -8,34 +8,54 @@ Schematics
     {: .topicgroup}
     Getting started
          getting-started.md
-         getting-started-ansible.md
+         getting-started-terraform.md
+         getting-started-ansible-new.md
+         getting-started-software.md
 
-     {: .topicgroup}
-    About
-        about.md
-        ansible-operations.md
-        responsibilities.md
-        ha-dr.md
-
+    about.md
     whats-new.md
     {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
     tutorials/automate-continuous-deployment.md
+    [Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)
+    [Deploying multitier VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Provisioning and managing IBM Cloud resources with Terraform
+    Setting up the CLI and API
+          setup-cli.md
+          setup-api.md
+
+    {: .topicgroup}
+    Terraform provider: Infrastructure deployment
          create-terraform-config.md
          workspace-setup.md
          workspace-setupv2.md
-         setup-cli.md
+         shared-data-set.md
          manage-resource-lifecycle.md
+         provisioning-terraform-template.md
          migrate-tfversion.md
          remotestate.md
          private-catalog.md
+
+         {: .topicgroup}
+         Examples
+
+    {: .topicgroup}
+    Actions: Configuration management
+         create-ansible-playbook.md
+         action-setup.md
+         autodeploy-template.md
+
+         {: .topicgroup}
+         Examples
+             vsi-usecase.md
+             lamp-usecase.md
+             iks-cluster-example.md
+             autodeploy-actionsamples.md
 
     {: .topicgroup}
     Logging and monitoring
@@ -43,23 +63,11 @@ Schematics
           at.md
 
     {: .topicgroup}
-    Automating cloud operations with Ansible
-         create-ansible-playbook.md
-         action-setup.md
-         ansible_playbooks.md
-         autodeploy-template.md
-
-    {: .topicgroup}
-    Examples
-          vsi-usecase.md
-          lamp-usecase.md
-          iks-cluster-example.md
-          autodeploy-actionsamples.md
-
-    {: .topicgroup}
     Enhancing security for Schematics
         iam.md
         architecture-workload-isolation.md
+        responsibilities.md
+        ha-dr.md
         manage-scc.md
         private-endpoint.md
         data-security.md
@@ -68,8 +76,8 @@ Schematics
 
     {: .navgroup id="reference"}
     cli-reference.md
-    schematics-sdk.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
+    schematics-sdk.md
     locations.md
     limitations.md
     automating-utilities.md
@@ -83,13 +91,11 @@ Schematics
 
     {: .topicgroup}
     Ansible
-         [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)
-
-     {: .navgroup-end}
-
+         [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)     
+    {: .navgroup-end}
+    
     {: .navgroup id="help"}
     faqs.md
     error-messages.md
-    ts_index.md
-    {: .navgroup-end}
-       
+    ts_index.md    
+    {: .navgroup-end} 
