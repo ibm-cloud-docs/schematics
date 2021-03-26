@@ -1438,7 +1438,7 @@ Review the command that you want to create, update, list, delete and to work wit
 ### `ibmcloud schematics job create`
 {: #schematics-create-job}
 
-Create a job in {{site.data.keyword.bplong_notm}} to work with your {{site.data.keyword.bpshort}} resources such as workspace and actions by providing the supported flags. You can create a job by using `payload file` method or `interactive mode`.
+Create a job in {{site.data.keyword.bplong_notm}} to run the Terraform template or Ansible playbook of your {{site.data.keyword.bpshort}} workspace or action. You can create a job by using the a payload file or the interactive mode. 
 {: shortdesc}
 
 **Syntax**
@@ -1448,34 +1448,35 @@ ibmcloud schematics job create --command-object COMMAND_OBJECT_TYPE --command-ob
 ```
 {: pre}
 
-If the action contains the playbook name, you need to add the playbook name, so that the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
-{: note}
-
 **Command options**
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--command-object` or `-c` | Required | The name of the {{site.data.keyword.bpshort}} automation resource. Valid values are `action`, and `workspace`. |
-| `--command-object-id` or `-cid` | Required | The ID of the {{site.data.keyword.bpshort}} automation resource such as action or workspace on which you want to run job. |
-| `--command-name,` or `-n` | Required | The {{site.data.keyword.bpshort}} job command name. Valid values are `ansible_playbook_check`, and `ansible_playbook_run`.|
+| `--command-object` or `-c` | Required | The name of the {{site.data.keyword.bpshort}} automation resource. Supported values are `action`, and `workspace`. |
+| `--command-object-id` or `-cid` | Required | The ID of the {{site.data.keyword.bpshort}} automation resource such as the ID of the action or workspace on which you want to run job. |
+| `--command-name,` or `-n` | Required | The command that you want to run against your workspace or action. Supported values are `ansible_playbook_check`, and `ansible_playbook_run`.|
 | `--command-options` or `-co` | Optional | The command line options for the command.|
-| `--file` or `-f` | Optional | The payload file name. |
-| `--playbook-name` or `-pn` | Optional | Specify the name of playbook to execute from your Git repository. For example, `mytestplaybook.yml`. |
-| `--input` or `-i` | Optional | The input variables for the action. This flag can be set multiple times. **Note** The format must be as `--input foo=bar` or in JSON file. |
-| `--input-file` or `-I` | Optional | The input variables for the action. You need to provide the JSON file path that contains input variables.|
-| `--env` or `-e` | Optional | The environment variables for the action. This flag can be set multiple times. **Note** The format must be as `--env-variables foo=bar`. |
-| `--env-file` or `-E` | Optional | The environment variables for the action. Provide the JSON file path that contains input variables. |
-| `--no-prompt` | Optional | Set this flag to stop interactive command line session.|
-| `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
+| `--file` or `-f` | Optional | The payload file name. To find an example payload file, see [Using the payload file]( #job-create-payload). |
+| `--playbook-name` or `-pn` | Optional | The name of the Ansible playbook that you want to run.  |
+| `--input` or `-i` | Optional | The input variables for your playbook in a key-value format, such as `--input key=value`. You can specify multiple `--input` flags with different input parameters. To provide the input parameters by using a JSON file, use the `--input-file` option.   |
+| `--input-file` or `-I` | Optional | The path to the input variables file that you want to use for your playbook. Input variables in this file must be defined in JSON format.|
+| `--env` or `-e` | Optional | The environment variables for the action in a key-value format, such `--env-variables key=value`. This flag can be set multiple times.  |
+| `--env-file` or `-E` | Optional | The path to the environment variables file that you want to use for the action. Environment variables must be defined in JSON format.|
+| `--no-prompt` | Optional | Set this flag to create the job without user prompts. |
+| `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 | `--json` or `-j` | Optional | [Deprecated] Prints the output as JSON. Use `--output` JSON instead. |
 {: caption="Schematics job create flags" caption-side="top"}
 
-**Example by using payload file**
+If the action contains the playbook name, you need to add the playbook name, so that the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
+{: note}
 
-You need to create a JSON file containing the details about the command object, command name and command ID, resource group and the name keys with the right values. Then, pass the file name with an argument `--file` to create a job. 
+#### Using the payload file
+{: #job-create-payload}
+
+You can provide a payload file to specify certain parameters for the `job create` command. Then, you pass the file name to the command by using the `--file` command option. 
 {: shortdesc} 
 
-**Syntax and example sample.json file**
+**Syntax**:
 
 ```
 {
@@ -1486,6 +1487,8 @@ You need to create a JSON file containing the details about the command object, 
 }
 ```
 {: pre}
+
+**Example**: 
 
 ```
 {
@@ -1502,22 +1505,22 @@ ibmcloud schematics job create --file sample.json
 ```
 {: pre}
 
-**Example by using an interactive mode**
 
-The job create command prompts you to enter the required values to create a job in interactive mode. By default the job ID is created with minimal action that can be updated later by using update job CLI. You get a prompt if the required fields are not present.
+#### Using the interactive mode
+{: #job-create-interactive}
+
+Instead of entering your job details by using command options or a payload file, you can use the interactive mode for the command. This mode prompts you to enter the required values to create a job in {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
-**Initiating an interactive mode**
-
-```
-ibmcloud schematics job create
-```
-{: pre}
-
-1. You are prompted to `Enter command-object>`. Enter `action` or `workspace` and click `Return`.
-2. You are prompted to `Enter command-object-id>`. Enter the action_ID details and click  `Return`.
-3. You are prompted to `Enter command-name>`. Enter `ansible_playbook_run`, and `ansible_playbook_check`.
-4. Click `Return` to view the output with the command object details and user state.
+1. Enter the command to create the job without any command options. 
+   ```
+   ibmcloud schematics job create
+   ```
+   {: pre}
+2. When prompted to `Enter command-object>`, enter `action` or `workspace` and use the return key. 
+3. When prompted to `Enter command-object-id>`, enter the action ID details and use the return key.
+4. Whem prompted to `Enter command-name>`, enter `ansible_playbook_run` or `ansible_playbook_check`, and use the return key.
+5. Review the output of the job creation. 
 
 
 ### `ibmcloud schematics job update`
