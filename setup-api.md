@@ -94,7 +94,7 @@ subcollection: schematics
 # Setting up the API
 {: #setup-api}
 
-You can use the {{site.data.keyword.bplong}} API to automate {{site.data.keyword.bphort}} capabilities in {{site.data.keyword.cloud_notm}}. To use the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli).
+You can use the {{site.data.keyword.bplong}} API to automate {{site.data.keyword.bpshort}} capabilities in {{site.data.keyword.cloud_notm}}. To use the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli).
 
 ## About the API
 {: #api_about}
