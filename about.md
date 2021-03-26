@@ -30,7 +30,7 @@ subcollection: schematics
 # About {{site.data.keyword.bplong_notm}}
 {: #about-schematics} 
 
-Learn about what {{site.data.keyword.bpshort}} is, how the service works, and the key features and benefits that you can leverage to achieve Infrastructure as Code (IaC) 
+Learn about what {{site.data.keyword.bpshort}} is, how the service works, and the key features and benefits of using the service.
 {: shortdesc}
 
 ## What is {{site.data.keyword.bpshort}}?
@@ -38,17 +38,17 @@ Learn about what {{site.data.keyword.bpshort}} is, how the service works, and th
 {: help}
 {: support}
 
-{{site.data.keyword.bplong_notm}} is a managed {{site.data.keyword.cloud_notm}} offering that provides powerful tools to automate your cloud infrastructure provisioning process, the configuration and operation management for your cloud resources, and app deployments. 
+{{site.data.keyword.bplong_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your app workloads. 
 {: shortdesc}
 
-To do so, {{site.data.keyword.bpshort}} leverages open source projects, such as Terraform, Ansible, Operators, and Helm, and delivers these capabilities to you as a managed service. Rather than installing each open source project on your machine, and learning the API or CLI, you declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and watch {{site.data.keyword.bpshort}} run these tasks for you. Your infrastructure code is treated the same way as your app code so that you can apply DevOps core practices, such as version control, testing, and continuous monitoring.
+To do so, {{site.data.keyword.bpshort}} leverages open source projects, such as Terraform, Ansible, OpenShift, Operators, and Helm, and delivers these capabilities to you as a managed service. Rather than installing each open source project on your machine, and learning the API or CLI, you declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and watch {{site.data.keyword.bpshort}} run these tasks for you. 
 
-## When should I use {{site.data.keyword.bpshort}} and how does it work?
+## How does {{site.data.keyword.bpshort}} work?
 {: #how-it-works}
 {: help}
 {: support}
 
-Choose among the following use cases to learn how {{site.data.keyword.bpshort}} automates your infrastructure, service, and app stack in {{site.data.keyword.cloud_notm}}.
+Choose among the following use cases to learn how {{site.data.keyword.bpshort}} automates your infrastructure, service, and app stacks in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 - [Infrastructure deployments with {{site.data.keyword.bpshort}} workspaces](#how-to-workspaces)
@@ -88,14 +88,14 @@ To get started with configuration management in {{site.data.keyword.bpshort}}, s
 
 [Ansible](https://www.ansible.com/){: external} is a configuration management and provisioning tool, similar to Chef and Puppet, and is designed to automate the configuration, operation, and management of cloud environements, and to deploy multi-tier app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
 
-Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys or an optional bastion host. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
+Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
 
 To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create a {{site.data.keyword.bpshort}} action that points to the Ansible playbook that you want to run. Review the following image to find detailed information about how to run Ansible playbooks with {{site.data.keyword.bpshort}} actions. 
 
 <img src="images/ansible_flow.png" alt="Configuring {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Ansible" width="700" style="width: 700px; border-style: none"/>
 
 1. **Add tasks to your playbook**: Use Ansible YAML syntax to describe the configuration tasks that you want to run on your cloud infrastructure, such as installing software or starting, stopping, and rebooting a virtual server. You add these tasks to an Ansible playbook and store the playbook in a GitHub, GitLab, or Bitbucket repository to ensure source control and enable collaboration, review, and auditing in your organization. If you are not familiar with Ansible, you can use one of the [IBM-provided playbooks](https://github.com/Cloud-Schematics){: external}, or browse the [Ansible Galaxy library](https://galaxy.ansible.com/){: external}.
-2. **Create a {{site.data.keyword.bpshort}} action**: When you create a {{site.data.keyword.bpshort}} action, you point your action to the repository that stores your Ansible playbook. Then, you select the cloud resources where you want to run the tasks that are defined in you Ansible playbook. To protect your cloud resources, you can further set up a bastion host in front of your target hosts that proxies all Ansible SSH connections to the target hosts. 
+2. **Create a {{site.data.keyword.bpshort}} action**: When you create a {{site.data.keyword.bpshort}} action, you point your action to the repository that stores your Ansible playbook. Then, you select the cloud resources where you want to run the tasks that are defined in your Ansible playbook. To protect your cloud resources, you can further set up a bastion host in front of your target hosts that proxies all Ansible SSH connections to the target hosts. 
 3. **Run your action**: When you are ready to configure your cloud resources, you can run your action. {{site.data.keyword.bpshort}} uses the built-in Ansible capabilities to connect to your target hosts via SSH, and execute the tasks that are defined in your Ansible playbook. You can monitor the progress by reviewing the logs.  
 
 </br>
@@ -113,7 +113,7 @@ To get started with software deployment in {{site.data.keyword.bpshort}}, see th
 
 <img src="images/software_flow.png" alt="Software deployments with {{site.data.keyword.bplong_notm}}" width="700" style="width: 700px; border-style: none"/>
 
-1. **Choose a template**: The [IBM software solutions catalog](https://cloud.ibm.com/catalog#software){: external} offers a wide variety of instrastructure and software templates that you can choose from. These templates help to quickly install software, such as IBM CloudPaks, IBM Websphere Application Server, or Kibana and Grafana into the target of your choice. 
+1. **Choose a template**: The [IBM software solutions catalog](https://cloud.ibm.com/catalog#software){: external} offers a wide variety of instrastructure and software templates that you can choose from. These templates help to quickly install software, such as IBM CloudPaks, IBM Websphere Application Server, or Kibana and Grafana into the target service of your choice. 
 2. **Configure your workspace and target**: When you choose one of the provided templates, you must select the target where you want to install the template. Depending on the template that you choose, the target can be an {{site.data.keyword.containerlong_notm}} cluster, a {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or VPC virtual server instance. Because {{site.data.keyword.bpshort}} is used to install the software, you must configure the workspace that is automatically created for you. 
 3. **Run the template**: When you run the template, {{site.data.keyword.bpshort}} uses the built-in Terraform, Ansible, Helm, OpenShift Operator, or CloudPak capabilities to install your software or spin up infrastructure resources. You can use your workspace to monitor the progress of your template execution. 
 
@@ -142,19 +142,19 @@ Review the benefits of using {{site.data.keyword.bpshort}}.
 |Feature|Description|
 |--------|-------------------------------|
 |Model your {{site.data.keyword.cloud_notm}} stacks| Use high-level scripting languages to declare all the resources that you want to include in your {{site.data.keyword.cloud_notm}} infrastructure, service, and app stack. Instead of learning the API or command line to work with a specific resource, you use Ansible playbooks and Terraform configuration files to specify the required state and configuration of an {{site.data.keyword.cloud_notm}} resource. Then, you use {{site.data.keyword.bpshort}} to rapidly build, configure, and replicate the resources in your cloud environments.|
-|Leverage native capabilities of integrated open source projects | Because {{site.data.keyword.bpshort}} integrates with open source projects, such as Terraform and Ansible, you can use their native capabilities to automate the provisioning, configuration, and management of your {{site.data.keyword.cloud_notm}} stacks. You do not neet to install the open source projects on your machine or learn their API and CLI. Simply point {{site.data.keyword.bpshort}} to your repository and let {{site.data.keyword.bpshort}} run the specified tasks. |
+|Leverage native capabilities of integrated open source projects | Because {{site.data.keyword.bpshort}} integrates with open source projects, such as Terraform and Ansible, you can use their native capabilities to automate the provisioning, configuration, and management of your {{site.data.keyword.cloud_notm}} stacks. You do not need to install the open source projects on your machine or learn their API and CLI. Simply point {{site.data.keyword.bpshort}} to your repository and let {{site.data.keyword.bpshort}} run the specified tasks. |
 |Automate infrastructure deployments|Create Terraform templates to codify and configure the {{site.data.keyword.cloud_notm}} resources that you want, and use {{site.data.keyword.bpshort}} workspaces to enable predictable and consistent resource provisioning and management across cloud environments. Terraform templates help you standardize your {{site.data.keyword.cloud_notm}} stacks, automate the lifecycle of the individual resource, and apply access and version control so that you can achieve resource compliance and troubleshoot issues faster. |
 |Automate config management of cloud resources and app deployments| With {{site.data.keyword.bpshort}} actions, you can use Ansible playbooks to create complex, reliable, and consistent configurations for your {{site.data.keyword.cloud_notm}} resources. Whether you want to deploy multi-tier apps, set up firewalls rules, take down virtual server instances, or lock down users, simply specify the tasks that you want to run in your playbook, and let {{site.data.keyword.bpshort}} securely connect and complete the tasks on your {{site.data.keyword.cloud_notm}} resource. |
-|Software catalog|Choose among IBM-provided software templates to easily install IBM and 3rd party software in your {{site.data.keyword.containerlong_notm}} cluster, your {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or VPC virtual server instance. Software packages are installed by using the built-in Helm and OpenShift Operator capabilities. |
+|Software catalog|Choose among IBM-provided software templates to easily install IBM and 3rd party software in your {{site.data.keyword.containerlong_notm}} cluster, your {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or VPC virtual server instance. Software packages are installed by using the built-in Terraform, Ansible, Helm, OpenShift Operator, and CloudPak capabilities. |
 |Treat your stack configuration as code| By codifying your infrastructure, service and app stacks, you can treat your Terraform templates and Ansible playbooks the same way as you treat your app code. You can author your templates and playbooks in any code editor, check them into a version control system such as GitHub, and let your team review and monitor updates before you apply these changes in your cloud environment. By applying these DevOps core practices, you can enable Infrastructure as Code (IaC) for your cloud environments.|
 |Control access to cloud environments and configurations|{{site.data.keyword.bpshort}} is fully integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) so that you can control who can access your cloud environment and app configurations, and roll out changes. |
-|Full support for integrated open source projects|{{site.data.keyword.bpshort}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform or Ansible, you can [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-using-avatar#getting-support).|
+|Full support for integrated open source projects|{{site.data.keyword.bpshort}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform or the Ansible support in {{site.data.keyword.bpshort}} actions, you can [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-using-avatar#getting-support).|
 
 
 ## {{site.data.keyword.bpshort}} terminology
 {: #terminology}
 
-Depending on the {{site.data.keyword.bpshort}} component that you use, specific key terms are used to describe the template and actions that you want to run. 
+Depending on the {{site.data.keyword.bpshort}} component that you use, specific key terms are used to describe the actions that you want to run. 
 {: shortdesc}
 
 ### Key terms for {{site.data.keyword.bpshort}} workspaces
