@@ -98,7 +98,7 @@ subcollection: schematics
 Use one of the IBM-provided templates to create an [{{site.data.keyword.cos_full}} service instance]() that you can use to persistently store your data in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
-A {{site.data.keyword.bplong_notm}} template is a set of files that define the {{site.data.keyword.cloud_notm}} resources that you want to create, update, or delete. You create a {{site.data.keyword.bpshort}} workspace that points to your template and use the built-in capabilities of the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform to provision your {{site.data.keyword.cloud_notm}} resources. For more information about the provider and how {{site.data.keyword.bpshort}} spins up your {{site.data.keyword.cloud_notm}} resources, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics). 
+A {{site.data.keyword.bplong_notm}} template is a set of files that define the {{site.data.keyword.cloud_notm}} resources that you want to create, update, or delete. You create a {{site.data.keyword.bpshort}} workspace that points to your template and use the built-in capabilities of the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform to provision your {{site.data.keyword.cloud_notm}} resources. For more information about the provider and how {{site.data.keyword.bpshort}} spins up your {{site.data.keyword.cloud_notm}} resources, see [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-about-schematics#how-to-workspaces). 
 
 ## Before you begin
 {: #prereq}
@@ -129,7 +129,7 @@ Use the IBM-provided Terraform template to provision an {{site.data.keyword.cos_
       {: tip}
       
    3. Click **Save changes** to save your variable values. 
-5. From the workspace **Settings** page, click **Generate plan**. After you click this button, the workspace **Activity** page opens and {{site.data.keyword.bpshort}} gathers the actions that need to be done to provision your Terraform template. Click **View logs** to find detailed information about the actions that {{site.data.keyword.bpshort}} identified. 
+5. From the workspace **Settings** page, click **Generate plan**. After you click this button, the workspace **Activity** page opens and {{site.data.keyword.bpshort}} gathers the actions that need to run to provision your Terraform template. Click **View logs** to find detailed information about the actions that {{site.data.keyword.bpshort}} identified. 
 6. From the workspace **Activity** page, click **Apply plan**. After you click this button, {{site.data.keyword.bpshort}} starts to provision your {{site.data.keyword.cos_full_notm}} instance as specified in your Terraform template. This process might take a few minutes to complete. Click **View logs** to see the details of the provisioning process.  
 7. Check out your {{site.data.keyword.cos_full_notm}} instance. 
    1. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources), select the instance that you created. 
