@@ -111,7 +111,11 @@ Software templates are installed by using the built-in Terraform, Ansible, Helm,
 To get started with software deployment in {{site.data.keyword.bpshort}}, see the [Getting started tutorial](/docs/schematics?topic=schematics-get-started-software). 
 {: tip}
 
+<img src="images/software_flow.png" alt="Software deployments with {{site.data.keyword.bplong_notm}}" width="700" style="width: 700px; border-style: none"/>
 
+1. **Choose a template**: The [IBM software solutions catalog](https://cloud.ibm.com/catalog#software){: external} offers a wide variety of instrastructure and software templates that you can choose from. These templates help to quickly install software, such as IBM CloudPaks, IBM Websphere Application Server, or Kibana and Grafana into the target of your choice. 
+2. **Configure your workspace and target**: When you choose one of the provided templates, you must select the target where you want to install the template. Depending on the template that you choose, the target can be an {{site.data.keyword.containerlong_notm}} cluster, a {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or VPC virtual server instance. Because {{site.data.keyword.bpshort}} is used to install the software, you must configure the workspace that is automatically created for you. 
+3. **Run the template**: When you run the template, {{site.data.keyword.bpshort}} uses the built-in Terraform, Ansible, Helm, OpenShift Operator, or CloudPak capabilities to install your software or spin up infrastructure resources. You can use your workspace to monitor the progress of your template execution. 
 
 ## What open source projects does {{site.data.keyword.bpshort}} integrate with?
 {: #open-source-ov}
