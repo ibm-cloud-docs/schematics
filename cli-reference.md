@@ -30,7 +30,7 @@ subcollection: schematics
 Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud}} resources.
 {: shortdesc}	
 
-To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to setup {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-schematics-cli-reference#install-schematics-plugin)
+To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to set up {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 {: tip}
 
 As of 31 March 2020, the {{site.data.keyword.bpshort}} command syntax changed from `ibmcloud terraform` to `ibmcloud schematics`. You can continue to use `ibmcloud terraform` commands as an alias, but note that this alias might become unsupported in future command line versions. 
