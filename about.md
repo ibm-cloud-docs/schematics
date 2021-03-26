@@ -58,7 +58,7 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 ### Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces
 {: #how-to-workspaces}
 
-{{site.data.keyword.bpshort}} workspaces deliver Terraform-as-a-Service capabilities to you so that you can automate the provisioning and management of your {{site.data.keyword.cloud_notm}} resources, and rapidly build complex, multi-tier cloud environments. 
+{{site.data.keyword.bpshort}} workspaces deliver Terraform-as-a-Service capabilities to you so that you can automate the provisioning and management of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multi-tier cloud environments. 
 {: shortdesc}
 
 To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, see the [Getting started tutorial](/docs/schematics?topic=schematics-get-started-terraform). 
@@ -66,7 +66,7 @@ To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, 
 
 [Terraform](https://www.terraform.io/){: external} is an open source project that lets you specify your desired cloud infrastructure resources and services by using a high-level scripting language. Your specification is stored in a Terraform configuration file. In order to abstract the APIs and complexity of the cloud resource provisioning and management process to the user, cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider and what APIs to call to work with a certain cloud resource. IBM's plug-in is called the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources).  
 
-To use the capabilities of the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, you create a {{site.data.keyword.bpshort}} workspace that points to the Terraform configuration files that you want to run. Review the following image to find detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} workspaces. 
+To use the capabilities of the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, you create a {{site.data.keyword.bpshort}} workspace that points to the Terraform configuration files that you want to run. The plug-in analyzes the resources that you specified and determines the order in which these resources must be provisioned, including any dependencies that must be considered. Review the following image to find detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} workspaces. 
 
 <img src="images/schematics_flow.png" alt="Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform" width="800" style="width: 800px; border-style: none"/>
 
@@ -86,7 +86,7 @@ To use the capabilities of the {{site.data.keyword.cloud_notm}} Provider plug-in
 To get started with configuration management in {{site.data.keyword.bpshort}}, see the [Getting started tutorial](/docs/schematics?topic=schematics-get-started-ansible). 
 {: tip}
 
-[Ansible](https://www.ansible.com/){: external} is a configuration management and provisioning tool, similar to Chef and Puppet, and is designed to automate the configuration and management of cloud environements, and to deploy multi-tier app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
+[Ansible](https://www.ansible.com/){: external} is a configuration management and provisioning tool, similar to Chef and Puppet, and is designed to automate the configuration, operation, and management of cloud environements, and to deploy multi-tier app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
 
 Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys or an optional bastion host. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
 
@@ -108,7 +108,8 @@ Browse the [IBM software solutions catalog](https://cloud.ibm.com/catalog#softwa
 
 Software templates are installed by using the built-in Terraform, Ansible, Helm, OpenShift Operator, and CloudPak capabilities in {{site.data.keyword.bpshort}}. When you choose to install one of the provided templates, you create a {{site.data.keyword.bpshort}} workspace and choose the target service or host where you want run the installation. You can review which of the integrated technologies in {{site.data.keyword.bpshort}} is used to install your template. 
 
-
+To get started with software deployment in {{site.data.keyword.bpshort}}, see the [Getting started tutorial](/docs/schematics?topic=schematics-get-started-software). 
+{: tip}
 
 
 
@@ -146,10 +147,38 @@ Review the benefits of using {{site.data.keyword.bpshort}}.
 |Full support for integrated open source projects|{{site.data.keyword.bpshort}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform or Ansible, you can [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-using-avatar#getting-support).|
 
 
+## {{site.data.keyword.bpshort}} terminology
+{: #terminology}
 
+Depending on the {{site.data.keyword.bpshort}} component that you use, specific key terms are used to describe the template and actions that you want to run. 
+{: shortdesc}
 
+### Key terms for {{site.data.keyword.bpshort}} workspaces
+{: #tf-terms}
 
+Because {{site.data.keyword.bpshort}} workspaces provide Terraform-as-a-Service capabilities to you, the terms that you see when you create a workspace are similar to the terminology that is used in Terraform. 
+{: shortdesc}
 
+|Term|Description|
+|----------|-----------------|
+|Resource| Resources are {{site.data.keyword.cloud_notm}} Platform-as-a-Service, Infrastructure-as-a-Service, and Functions-as-a-Service components that you can provision and manage in {{site.data.keyword.cloud_notm}} with {{site.data.keyword.bplong_notm}}. Resources are specified and configured by using Terraform configuration files. The resources that are supported in {{site.data.keyword.bplong_notm}} are determined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in provides the syntax to describe a supported resource, and understands the APIs of each supported {{site.data.keyword.cloud_notm}} resource and available configuration parameters. <br>To find a list of supported {{site.data.keyword.cloud_notm}} resources, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources).|
+|Terraform configuration file|A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON format, and are stored in a GitHub, GitLab, or Bitbucket repository or uploaded by using a `.tar` file.<br>For more information about how to write configuration files, see [creating Terraform configurations](/docs/schematics?topic=schematics-create-tf-config). |
+|Terraform template| A Terraform template includes one or a set of Terraform configuration files that combined can be used to build a specific {{site.data.keyword.cloud_notm}} solution. For example, you might have a template that creates a multizone cluster in {{site.data.keyword.containerlong_notm}}. This cluster consists of multiple {{site.data.keyword.cloud_notm}} resources in different zones, such as classic infrastructure virtual servers and VLANs. You can build your own template and import it into {{site.data.keyword.bplong_notm}} by storing all Terraform configuration files that build your template in one GitHub, GitLab, or Bitbucket repository. You can also provide your template by uploading a tape archive file (`.tar`) from your local machine or choose to use one of the [IBM-provided templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}. Templates are designed and constructed for reuse by using variables so that you can share these templates with other teams in your organization. |
+|Workspace|A workspace is used to organize your {{site.data.keyword.cloud_notm}} resources across environments. For example, use workspaces to separate your test, staging, and production environment. You can provide your Terraform template by connecting your workspace to a source repository or by uploading a tape archive file (`.tar`) from your local machine. To customize the {{site.data.keyword.cloud_notm}} resources to your needs, you specify user-defined variables in your workspace. With {{site.data.keyword.cloud_notm}} Identity and Access Management, you can control who can manage your resources and change reseource configurations in your {{site.data.keyword.cloud_notm}} account. |
+|Execution plan|A Terraform execution plan is a summary of actions that {{site.data.keyword.bplong_notm}} must perform to provision, modify, or remove the {{site.data.keyword.cloud_notm}} resources of your template. |
+|{{site.data.keyword.cloud_notm}} Provider plug-in|To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider must provide a command line plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is IBM's command line plug-in for Terraform. {{site.data.keyword.bplong_notm}} uses the plug-in to provision your {{site.data.keyword.cloud_notm}} resources. To find a list of supported {{site.data.keyword.cloud_notm}} resources and how to describe them, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources).|
+
+### Key terms for {{site.data.keyword.bpshort}} actions
+{: #ansible-terms}
+
+Because {{site.data.keyword.bpshort}} actions provide Ansible-as-a-Service capabilities to you, the terms that you see when you create an action are similar to the terminology that is used in Ansible. 
+{: shortdesc}
+
+|Term|Description|
+|----------|-----------------|
+|Ansible playbook| An Ansible playbook is a configuration `yaml` file that includes all the tasks, roles, policies, or steps that you want to run against your {{site.data.keyword.cloud_notm}} resources. The order in which you want to execute them. For example, you can include instructions for installing more software on a virtual server, or specify resource operations, such as reloading or taking down a virtual server instance. Ansible playbooks must be stored in a GitHub or GitLab repository so that you can run them in {{site.data.keyword.bpshort}}. |
+|Action|An action is used to specify how you want to run your Ansible playbook in {{site.data.keyword.bpshort}}. When you create an action, you point your action to the Ansible playbook in your GitHub or GitLab repository. Then, you define the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your playbook. You can also add environment variables and schedules to your action to customize when your playbook runs. |
+|Resource inventory|An {{site.data.keyword.cloud_notm}} resource inventory is a set of {{site.data.keyword.cloud_notm}} resources where you want to run Ansible playbook, such as a list of virtual servers. The resources can be provisioned with {{site.data.keyword.bpshort}} or you can also select existing resources that you manually created. |
 
 
 
