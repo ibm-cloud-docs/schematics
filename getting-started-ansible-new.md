@@ -123,12 +123,12 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 8. Click **Next**. 
 9. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results of this check by looking at the logs. 
 10. Click **Run action** to stop the virtual server instance. You can monitor the progress of this action by reviewing the logs on the **Jobs** page. 
-11. Verify that you virtual server instance stopped. 
+11. Verify that your virtual server instance stopped. 
     1. From the [Virtual server instances for VPC dashboard](https://cloud.ibm.com/vpc-ext/compute/vs){: external}, find your virtual server instance. 
     2. Verify that your instance shows a `Stopped` status. 
 12. Optional: Repeat the steps in this getting started tutorial and select the **start-vsi-playbook.yaml** Ansible playbook to start your virtual server instance again. 
 
-Congratulations! You the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a VPC Gen2 virtual server instance. 
+Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a VPC Gen2 virtual server instance. 
 
 ## What's next? 
 {: ansible-whats-next}
