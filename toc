@@ -84,14 +84,17 @@ Schematics
     license-notices.md
 
     {: .topicgroup}
-    Terraform
-         [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-         [IBM Cloud provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources) 
-         [Terraform documentation](https://www.terraform.io/docs/index.html)
+    Related links
+    
+        {: .topicgroup}
+        Terraform
+             [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
+             [IBM Cloud provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources) 
+             [Terraform documentation](https://www.terraform.io/docs/index.html)
 
-    {: .topicgroup}
-    Ansible
-         [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)     
+        {: .topicgroup}
+        Ansible
+             [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)     
     {: .navgroup-end}
     
     {: .navgroup id="help"}
