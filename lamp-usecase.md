@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-27"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -35,7 +35,7 @@ subcollection: schematics
 These playbooks are tested on CentOS 7.x. It is recommended you use `CentOS` or `RHEL` to test these modules. 
 {: note}
 
-## prerequisite
+## Prerequisite
 {: #lamp-stack-prereq}
 
 You can execute the use case by using command line or user interface by completing the provided prerequisite.

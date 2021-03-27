@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-03-27"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -32,7 +32,7 @@ subcollection: schematics
 
 This playbook demonstrates how {{site.data.keyword.cloud}} VSI APIs can be used to start, stop, and reboot by using Ansible playbook.
 
-## prerequisite
+## Prerequisite
 {: #vsi-prereq}
 
 You can execute the use case by using command line or user interface by completing the provided prerequisite.
@@ -78,7 +78,7 @@ After the prerequisite is completed, the steps to complete the use case:
     ```
     ibmcloud schematics job list
     ```
-    You are prompted to `Enter <resource-type>` and `Enter <id>`. Provide the your resource type as `actions` and enter your job_ID.
+    You are prompted to `Enter <resource-type>` and `Enter <id>`. Provide the resource type as `actions` and enter your job_ID.
 
    **Action list Example**
 
