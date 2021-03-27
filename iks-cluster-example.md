@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-27"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -32,10 +32,10 @@ subcollection: schematics
 The playbook demonstrates how to automate the deployment of a hackathon starter web application. Hackathon starter is a boilerplate web application for `Node.js` and `Mongo` database to an {{site.data.keyword.containerlong_notm}} cluster. For more information, about hackathon starter application development, refer to [Hackathon starter readme document](https://github.com/sahat/hackathon-starter/blob/master/README.md).
 {: shortdesc}
  
-## prerequisites
+## Prerequisites
 {: #iks-prereq}
 
-You can execute the use case by using command line or user interface by completing the provided prerequisite.
+You can execute the use case by using command line or user interface by completing these prerequisite.
 
 The prerequisites for the use case are:
 
@@ -48,7 +48,7 @@ The prerequisites for the use case are:
 ### Executing the playbook by using command line
 {: #iks-execute}
 
-After the prerequisite is completed, follow these steps to complete the use case:
+Now, you are ready to complete these steps to execute the use case:
 
 1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 

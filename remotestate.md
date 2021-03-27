@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-27"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -35,7 +35,7 @@ You can access information about the resources that you manage in a workspace fr
 As you manage your {{site.data.keyword.cloud}} resources with {{site.data.keyword.bplong_notm}}, you can access resource information across workspaces. The `remote_state` data source is not supported in {{site.data.keyword.bpshort}}. Instead, you can use the `ibm_schematics_output` data source to access the information. 
 
 **How is the `ibm_schematics_output` data source different from the `remote_state` data source?** </br>
-When you use the `remote_state` data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bplong_notm}} backend and can access workspace information directly. 
+When you use the `remote_state` data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bplong_notm}} backend and can access workspace information directly.
 
 **What do I need to do to access resource information in other workspaces?** </br>
 Similar to the `remote_state` data source, you can only access information that you configured as output values in your Terraform template. For example, let's say you have a workspace that you used to provision a VPC. To access the VPC ID, you must define the ID as an output variable in your Terraform configuration file.
@@ -62,19 +62,18 @@ Similar to the `remote_state` data source, you can only access information that 
    In this example, two output values are defined, the `sshcommand` to access the virtual server instance in your VPC and the `vpc_id`.
    
 2. Retrieve the ID of the VPC workspace that you created. 
-   - **From the console**: 
-     1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the VPC workspace. 
-     2. Select the **Settings** tab.
-     3. Find the workspace ID in the **Summary** section. 
+   **From the console**: 
+   - From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the VPC workspace.
+   - Select the **Settings** tab.
+   - Find the workspace ID in the **Summary** section. 
    
-   - **From the CLI**: 
-     1. List available workspaces in your account. 
+   **From the CLI**:
+   - List available workspaces in your account.
         ```
         ibmcloud terraform workspace list
         ```
         {: pre}
-        
-     2. Find the workspace ID in the **ID** column of your command line output. 
+   - Find the workspace ID in the **ID** column of your command line output. 
    
 3. Create another Terraform configuration file that is named `remotestate.tf` to access the output parameters of the `vpc.tf` file by using the `ibm_schematics_output` data source. To allow version control of this file, make sure to store this configuration file in a GitHub or GitLab repository. 
    ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-27"
 
 keywords: schematics, automation, terraform
 
@@ -108,7 +108,7 @@ This completes the end to end flow to provision the Terraform template by using 
 To provision a Terraform template using Schematics CLI, you need perform the given steps: 
 {: shortdesc}
 
-### prerequisites
+### Prerequisites
 {: prov-prereq}
 
 1. Install {{site.data.keyword.cloud_notm}} command line and Schematics plug-ins, refer to [Setting up the command line and Schematics](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) for details.

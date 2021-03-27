@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-27"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -35,10 +35,10 @@ subcollection: schematics
 These playbooks are tested on CentOS 7.x. It is recommended you use `CentOS` or `RHEL` to test these modules. 
 {: note}
 
-## prerequisite
+## Prerequisite
 {: #lamp-stack-prereq}
 
-You can execute the use case by using command line or user interface by completing the provided prerequisite.
+You can execute the use case by using command line or user interface by completing these prerequisite.
 
 The prerequisites for the use case are:
 * {{site.data.keyword.bplong_notm}} login.
@@ -56,7 +56,7 @@ Schematics actions use bastion hosts to allow Ansible to securely provision soft
 ## Executing the playbook by using command line
 {: #lamp-stack-execute}
 
-After the prerequisite is completed, follow these steps to complete the use case:
+Now, you are ready to complete these steps to execute the use case:
 
 1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 

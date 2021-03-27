@@ -104,7 +104,7 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
    {: pre}
    
 
-## Virtual private endpoints gateways for {{site.data.keyword.bpshort}}
+## Virtual Private Endpoints Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-setup}
 
 A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect Schematics service on the private network from Virtual Private Endpoint Gateways.

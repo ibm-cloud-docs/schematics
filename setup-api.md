@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-03-27"
 
 keywords: schematics api, schematics command line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -119,7 +119,7 @@ You can use the version (`v2`) API to manage the {{site.data.keyword.bpshort}} r
  <tbody>
  <tr>
    <td>API endpoint prefix</td>
-   <td><code>[`https://cloud.ibm.com/apidocs/schematics#api-endpoints` ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/schematics#api-endpoints)</code></td>
+   <td><code>[`https://cloud.ibm.com/apidocs/schematics#api-endpoints` ![External link icon]](https://cloud.ibm.com/apidocs/schematics#api-endpoints)</code></td>
  </tr>
  <tr>
    <td>API reference docs</td>

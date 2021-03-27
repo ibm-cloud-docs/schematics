@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-03-27"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -85,7 +85,7 @@ To create an action:
         174.45.86.87
        ```
        {: codeblock}      
-   4. Enter the host credentials to be as a proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `1 SSH key` for all virtual server instances.
+   4. Enter the host credentials to be as a proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances.
    5. Click **Next** to save the {{site.data.keyword.cloud_notm}} resource inventory details.
    6. Click **Check action** to validate the configuration and **Run action** to execute the configured actions. For more information, about Check action and Run action, refer to [{{site.data.keyword.bpshort}} action settings](/docs/schematics?topic=schematics-action-setup#action-settings).
 

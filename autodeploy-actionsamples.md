@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-03-27"
 
 keywords: action templates, schematics template, terraform template
 
@@ -99,7 +99,7 @@ subcollection: schematics
 {: #sample_actiontemplates}
 
 
-The deploy to {{site.data.keyword.cloud}} URL is an efficient way for you to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public Git repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} **Create an action** page and only need to click the **Create** button for action creation in {{site.data.keyword.bpshort}}.
+The deploy to {{site.data.keyword.cloud}} URL is an efficient way to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public Git repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} **Create an action** page and only need to click the **Create** button for action creation in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occur.
