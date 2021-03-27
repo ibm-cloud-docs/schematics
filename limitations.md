@@ -24,7 +24,7 @@ subcollection: schematics
 {:faq: data-hd-content-type='faq'}
 {:external: target="_blank" .external}
 
-# Known limitations
+# Service limitations
 {: #schematics-limitations}
 
 Review the following limitations for {{site.data.keyword.bplong_notm}}.
