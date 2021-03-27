@@ -35,9 +35,9 @@ This playbook demonstrates how {{site.data.keyword.cloud}} VSI APIs can be used 
 ## Prerequisite
 {: #vsi-prereq}
 
-You can execute the use case by using command line or user interface by completing the provided prerequisite.
+You can execute the use case by using command line or user interface by completing these prerequisite.
 
-* A VSI instance in a running or stopped state, for more information, about VSI instance, refer to [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
+* A VSI instance is in a running or stopped state, for more information, about VSI instance, refer to [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 * VSI instance ID and instance IP. You can extract your VSI instance IP, and password from your user account.
 * IAM token with access to the instance. The IAM token is optional when the action is running in the same account as of VSI.
 * The bearer token for authenticating. You can create the bearer token from command line, for more information, about access and authentication, refer to [access token](/docs/key-protect?topic=key-protect-retrieve-access-token).
@@ -46,7 +46,7 @@ You can execute the use case by using command line or user interface by completi
 ## Executing the playbook
 {: #vsi-execute}
 
-After the prerequisite is completed, the steps to complete the use case:
+Now, you are ready to complete these steps to execute the use case: 
 
 1. Use the GitHub repository, [Ansible playbook with the VSI-related configuration to start or stop VSI](https://github.com/Cloud-Schematics/ansible-is-instance-actions), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 
