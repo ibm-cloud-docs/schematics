@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-27"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -24,7 +24,7 @@ subcollection: schematics
 {:faq: data-hd-content-type='faq'}
 {:external: target="_blank" .external}
 
-# Limitations
+# Service limitations
 {: #schematics-limitations}
 
 Review the following limitations for {{site.data.keyword.bplong_notm}}.
