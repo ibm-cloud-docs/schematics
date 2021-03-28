@@ -85,7 +85,7 @@ Schematics
 
     {: .topicgroup}
     Related links
-    
+
         {: .topicgroup}
         Terraform
              [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
@@ -96,7 +96,7 @@ Schematics
         Ansible
              [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)     
     {: .navgroup-end}
-    
+
     {: .navgroup id="help"}
     faqs.md
     error-messages.md
