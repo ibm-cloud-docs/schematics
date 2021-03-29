@@ -102,10 +102,10 @@ To create an action:
    7. Click **Create host group**
 5. Click **Next** to save the {{site.data.keyword.cloud_notm}} resource inventory details.
 6. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results of this check by looking at the logs. 
-7. Click **Run action** to stop the virtual server instance. You can monitor the progress of this action by reviewing the logs on the **Jobs** page. For more information, about Check action and Run action, refer to [{{site.data.keyword.bpshort}} action settings](/docs/schematics?topic=schematics-action-setup#action-settings).
-
+7. Click **Run action** to stop the virtual server instance. You can monitor the progress of this action by reviewing the logs on the **Jobs** page. Every 30 seconds the job logs gets auto refreshed. See [about Check action and Run action](/docs/schematics?topic=schematics-action-setup#action-settings).
       Before your launch action, you can observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by an asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
-      {: note
+      {: note}
+8. Optionally, you can edit a {{site.data.keyword.bpshort}} action by clicking the `edit` icon from the **Settings** page. Once the edit is completed, you can relaunch an action, by using **Run action** button.
 
 
 
