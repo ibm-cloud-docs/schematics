@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-27"
+lastupdated: "2021-03-29"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -38,13 +38,12 @@ These playbooks are tested on CentOS 7.x. It is recommended you use `CentOS` or 
 ## Prerequisite
 {: #lamp-stack-prereq}
 
-You can execute the use case by using command line or user interface by completing these prerequisite.
+Before you can use execute the use case, you must complete the following tasks:
 
-The prerequisites for the use case are:
-* {{site.data.keyword.bplong_notm}} login.
-* Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
-* [SSH Key on {{site.data.keyword.cloud_notm}}](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
-* [multitier VPC Bastion Host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host).
+- {{site.data.keyword.bplong_notm}} login.
+- Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
+- [SSH Key on {{site.data.keyword.cloud_notm}}](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
+- [multitier VPC Bastion Host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host).
 
 **What is bastion host?**
 
@@ -52,6 +51,29 @@ Bastion host is a VSI instance that is provisioned with a public IP address and 
 
 Schematics actions use bastion hosts to allow Ansible to securely provision software and applications on target VSIs.
 
+## Executing the playbook by using user interface
+{: #lamp-stack-executeui}
+
+Now, you are ready to complete these steps to execute the use case: 
+
+1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file, for more information, about playbook creation, see [create playbook](/docs/schematics?topic=schematics-create-playbooks).
+
+2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information,  about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
+
+3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud}} resource inventory, Bastion host public IP, {{site.data.keyword.cloud_notm}} inventory host groups, and SSH key. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
+
+   When the action is successful the job is created, you can view the settings and job option to view the  details of the execution.
+  {: note}
+
+4. Access your VPC public IP to view the deployed application. For example, `https://<PUBLIC_IP>/index.php`.
+
+## What's next?
+{: #uc_what's next}
+
+Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bplong_notm}} actions. You can now
+- learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
+- Learn how to [auto deploy the playbook templates](docs/schematics?topic=schematics-sample_actiontemplates) to create action.
+- Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}} 
 
 ## Executing the playbook by using command line
 {: #lamp-stack-execute}
@@ -80,25 +102,12 @@ Now, you are ready to complete these steps to execute the use case:
 
 4. You can run `curl http://<PUBLIC_IP/index.php` after logging in to the deployed machine. You can see a simple test page and a list of databases that are retrieved from the database server.
 
-
-## Executing the playbook by using user interface
-{: #lamp-stack-executeui}
-
-After the prerequisite is completed, follow these steps to complete the use case:
-
-1. Use the GitHub repository, [Ansible playbook for the LAMP stack components](https://github.com/Cloud-Schematics/lamp-simple), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks).
-
-2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information,  about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
-
-3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud}} resource inventory, Bastion host public IP, {{site.data.keyword.cloud_notm}} inventory host groups, and SSH key. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
-
-   When the action is successful the job is created, you can view the settings and job option to view the  details of the execution.
-  {: note}
-
-4. Access your VPC public IP to view the deployed application. For example, `https://<PUBLIC_IP>/index.php`.
-
 ## What's next?
 {: #uc_what's next}
 
-Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bplong_notm}} actions. You can now learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
+Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bplong_notm}} actions. You can now 
+- learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
+- Learn how to [auto deploy the playbook templates](docs/schematics?topic=schematics-sample_actiontemplates) to create action.
+- Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}} 
+
 
