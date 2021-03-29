@@ -132,7 +132,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     <tbody>
     <tr>
     <td>Header</td>
-    <td><ul><li>Content-Type: application/x-www-form-urlencoded</li> <li>Authorization: Basic Yng6Yng=<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>
+    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>Authorization: Basic Yng6Yng=<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>
     </td>
     </tr>
     <tr>
@@ -246,7 +246,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     <tbody>
     <tr>
     <td>Header</td>
-    <td><ul><li>`Content-Type: application/x-www-form-urlencoded`</li> <li>`Authorization: Basic Yng6Yng=`<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>
+    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>`Authorization: Basic Yng6Yng=`<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>
     </td>
     </tr>
     <tr>
@@ -380,7 +380,7 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     <tbody>
     <tr>
     <td>Header</td>
-    <td><ul><li>`Content-Type: application/x-www-form-urlencoded`</li>
+    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li>
       <li>`Authorization: Basic Yng6Yng=`</br></br>**Note:** `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</li></ul></td>
     </tr>
     <tr>

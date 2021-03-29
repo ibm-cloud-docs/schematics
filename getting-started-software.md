@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-03-29"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -110,7 +110,7 @@ This getting started tutorial incurs costs. You must have an {{site.data.keyword
 Before you can use this template, you must complete the following tasks.
 
 - Make sure that you have the permissions to [create classic virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-device-access). 
-- [Create a classic API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key) and retrieve your classic infastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure. 
+- [Create a classic API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key) and retrieve your classic infrastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure. 
 - Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full}} instance](/docs/databases-for-postgresql?topic=cloud-databases-iam). 
 
 
@@ -125,7 +125,7 @@ Use one of the IBM-provided software templates to set up and configure a classic
 3. In the **Set the deployment values** section, enter the following information. 
    1. Enter a username and password that you want to use to log in to your PostgreSQL instance. The username must be between 10 and 32 characters long. 
    2. Enter the classic infrastructure username and API key that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 
-   3. Select the resource group where you want to provision your virtual server and PostregSQL instance. 
+   3. Select the resource group where you want to provision your virtual server and `PostregSQL` instance. 
 4. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
 5. Verify your virtual server and PostgreSQL setup. 
    1. From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 

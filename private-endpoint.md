@@ -130,7 +130,7 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 ### Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
 
-Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destory` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-secure-data#pi-location).
+Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destroy` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
  You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
