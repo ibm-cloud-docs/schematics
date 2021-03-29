@@ -63,14 +63,6 @@ Before you can use execute the use case, you must complete the following tasks:
 
 Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a VPC Gen2 virtual server instance. 
 
-## What's next? 
-{: ansible-whats-next}
-
-Now that you ran your first usecase of VSI operation on an {{site.data.keyword.cloud_notm}} resource, you can explore the following options:
-- Learn how to [auto deploy the playbook templates](docs/schematics?topic=schematics-sample_actiontemplates) to create action.
-- Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}}
-- learn how to [Provision LAMP stack by using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-provisioning-lamp-stack)
-
 ## Executing the playbook by using command line
 {: #vsi-execute}
 
