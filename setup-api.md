@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-27"
+lastupdated: "2021-03-29"
 
 keywords: schematics api, schematics command line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -95,55 +95,18 @@ subcollection: schematics
 {: #setup-api}
 
 You can use the {{site.data.keyword.bplong}} API to automate {{site.data.keyword.bpshort}} capabilities in {{site.data.keyword.cloud_notm}}. To use the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli).
-
-## About the API
-{: #api_about}
-
-The {{site.data.keyword.bplong_notm}} API automates the provisioning and management of {{site.data.keyword.cloud_notm}} infrastructure resources for your {{site.data.keyword.bpshort}} so that your apps have the compute, networking, and storage resources that they need to serve your users.
 {: shortdesc}
 
-The API is versioned to support the different infrastructure providers that are available for you to create workspaces, actions, jobs. For more information, see [Overview of Classic and VPC infrastructure providers](/docs/containers?topic=containers-infrastructure_providers).
-
-You can use the version (`v2`) API to manage the {{site.data.keyword.bpshort}} resources. The `v2` API is designed to avoid breaking existing functionality when possible. However, make sure that you review the following differences between the `v1` and `v2` API.
-
-
-<table summary="The rows are read from left to right, with the area of comparison in column one, API link in column two.">
-<caption>{{site.data.keyword.bplong_notm}} API versions</caption>
-<col width="20%">
-<col width="40%">
-<col width="40%">
- <thead>
- <th>Area</th>
- <th>API</th>
- </thead>
- <tbody>
- <tr>
-   <td>API endpoint prefix</td>
-   <td><code>[`https://cloud.ibm.com/apidocs/schematics#api-endpoints` ![External link icon]](https://cloud.ibm.com/apidocs/schematics#api-endpoints)</code></td>
- </tr>
- <tr>
-   <td>API reference docs</td>
-   <td>[`https://cloud.ibm.com/apidocs/schematics#introduction` ![External link icon]](https://cloud.ibm.com/apidocs/schematics#introduction)</td>
- </tr>
- <tr>
-   <td>API architectural style</td>
-   <td>Representational state transfer (REST) that focuses on resources that you interact with through HTTP methods such as `GET`, `POST`, `PUT`, `PATCH`, and `DELETE`. Remote procedure calls (RPC) that focus on actions through only `GET` and `POST` HTTP methods.</td>
- </tr>
-</tbody>
-</table>
-
-
-<br />
+To find an overview of supported {{site.data.keyword.bplong}} APIs, API endpoints, and required API header and body information, see the [{{site.data.keyword.bplong}} API documentation](/apidocs/schematics){: external}. 
+{: tip}
 
 ## Automating deployments with the API
 {: #cs_api}
 
-You can use the {{site.data.keyword.bplong_notm}} API to automate the creation, deployment, and management of your {{site.data.keyword.bpshort}} services.
+Learn how to use the {{site.data.keyword.cloud_notm}} API to retrieve an Identity and Access Management token so that you can access the {{site.data.keyword.bpshort}} API. 
 {: shortdesc}
 
-The {{site.data.keyword.bplong_notm}} API requires header information that you must provide in your API request and that can vary depending on the API that you want to use. To determine what header information is needed for your API, see the [{{site.data.keyword.bplong_notm}} API documentation](https://cloud.ibm.com/apidocs/schematics#create-workspace){: external}.
-
-To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) token that is generated with your {{site.data.keyword.cloud_notm}} credentials and that includes the {{site.data.keyword.cloud_notm}} account ID where the workspace was created. Depending on the way you authenticate with {{site.data.keyword.cloud_notm}}, you can choose between the following options to automate the creation of your {{site.data.keyword.cloud_notm}} IAM token.
+To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) token that is generated with your {{site.data.keyword.cloud_notm}} credentials. Depending on the way you authenticate with {{site.data.keyword.cloud_notm}}, you can choose between the following options to automate the creation of your {{site.data.keyword.cloud_notm}} IAM token.
 
 
 |{{site.data.keyword.cloud_notm}} ID|My options|
@@ -266,7 +229,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
 3.  Generate a new {{site.data.keyword.cloud_notm}} IAM token that includes your {{site.data.keyword.cloud_notm}} credentials and the account ID that you want to work with.
 
-    If you use an {{site.data.keyword.cloud_notm}} API key, you must use the {{site.data.keyword.cloud_notm}} account ID the API key was created for. To access workspaces in other accounts, log into this account and create an {{site.data.keyword.cloud_notm}} API key that is based on this account.
+    If you use an {{site.data.keyword.cloud_notm}} API key, you must use the {{site.data.keyword.cloud_notm}} account ID the API key was created for. To access {{site.data.keyword.bpshort}} workspaces or actions in other accounts, log into this account and create an {{site.data.keyword.cloud_notm}} API key that is based on this account.
     {: note}
 
     ```
@@ -335,8 +298,8 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
     You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** and the refresh token in the **refresh_token** field of your API output.
 
-4.  List all the workspaces in your account. 
-  * **Syntax to list all the workspaces**:
+4.  Use the {{site.data.keyword.bpshort}} API to list all the workspaces in your account. 
+  * **Syntax to list all workspaces**:
      ```
      GET https://schematics.cloud.ibm.com/v1/workspaces/ 
      ```
@@ -355,7 +318,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
      </tr>
      </tbody>
      </table>
-  * **Syntax to fetch with workspace ID**:
+  * **Syntax to retrieve information about a specific workspace**:
      ```
      GET https://schematics.cloud.ibm.com/v1/workspaces/{id}
      ```
@@ -370,18 +333,16 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
      <tbody>
      <tr>
      <td>Header</td>
-     <td>`Authorization`: Your {{site.data.keyword.cloud_notm}} IAM access token (`bearer <iam_token>`).</td>
+     <td>`Authorization: bearer &lt;iam_token&gt;`: Your {{site.data.keyword.cloud_notm}} IAM access token.</td>
      </tr>
      <tr>
      <td>Path</td>
-     <td>`id`: Provide the workspace ID.</td>
+     <td>`id: &lt;workspace_ID&gt;`: The ID of the workspace. To retrieve the workspace ID, run &lt;ibmcloud schematics workspace list&gt;</td>
      </tbody>
      </table>
 
-5.  Review the [{{site.data.keyword.bplong_notm}} API documentation](https://cloud.ibm.com/apidocs/schematics#introduction){: external} to find a list of supported APIs.
+5.  Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics#introduction){: external} to find a list of supported APIs.
 
-When you use the API for automation, be sure to rely on the responses from the API, not files within those responses. For example, the {{site.data.keyword.bpshort}} configuration file for your workspace context is subject to change, so do not build automation based on specific contents of this file when you use the `GET /v1/workspaces/{idOrName}/config` call.
-{: note}
 
 <br />
 
@@ -460,7 +421,7 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
 
     You can find your new {{site.data.keyword.cloud_notm}} IAM token in the **access_token**, and the refresh token in the **refresh_token** field of your API output.
 
-2.  Continue working with the [{{site.data.keyword.bplong_notm}} API documentation](https://cloud.ibm.com/apidocs/schematics){: external} by using the token from the previous step.
+2.  Continue working with the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics){: external} by using the token from the previous step.
 
 <br />
 
