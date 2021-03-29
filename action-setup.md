@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-03-29"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -67,7 +67,8 @@ To create an action:
    4. Click **Retrieve playbooks**. {{site.data.keyword.bpshort}} connects to your repository, and a retrieves a list of Ansible playbooks that are found in the repository.
    5. Select the playbook that you want to run. 
    6. Select the **Verbosity** level that you want. The verbosity level determines how much information is written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level. You can see the logs in {{site.data.keyword.bpshort}} when you run your playbook. 
-   7. Optional: Click the **Advanced options** to define command line variables that you want to pass to the playbook. Command line variables must be entered as key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden from the users who look at your action after it is created. 
+   7. Optional: Click the **Advanced options** to define command line variables that you want to pass to the playbook. Command line variables must be entered as key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden from the users who look at your action after it is created. For example, to provide the VSI IP address for the Ansbile operation to start and stop VSI servers, you defined the key-value as shown in the screen capture.
+   <img src="images/img_actions_variables.png" alt="Schematics action set up" width="80" style="width: 80px; border-style: none"/> 
    8. Click **Next** to save the action details. {{site.data.keyword.bpshort}} verifies the YAML file and displays the action settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your Ansible playbook. 
 4. Select the {{site.data.keyword.cloud_notm}} resources where you want to run your Ansible playbook. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to. 
    To create an inventory:
@@ -93,11 +94,12 @@ To create an action:
       {: screen}
 
    6. Click **Create host group**
- 5. Click **Next** to save the {{site.data.keyword.cloud_notm}} resource inventory details.
- 6. Click **Check action** to validate the configuration and **Run action** to execute the configured actions. For more information, about Check action and Run action, refer to [{{site.data.keyword.bpshort}} action settings](/docs/schematics?topic=schematics-action-setup#action-settings).
+5. Click **Next** to save the {{site.data.keyword.cloud_notm}} resource inventory details.
+6. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results of this check by looking at the logs. 
+7. Click **Run action** to stop the virtual server instance. You can monitor the progress of this action by reviewing the logs on the **Jobs** page. For more information, about Check action and Run action, refer to [{{site.data.keyword.bpshort}} action settings](/docs/schematics?topic=schematics-action-setup#action-settings).
 
-Before your launch action, you can observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by an asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
-{: note}
+      Before your launch action, you can observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by an asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
+      {: note
 
 
 
