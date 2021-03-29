@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25"
+lastupdated: "2021-03-29"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -62,7 +62,7 @@ The steps to create an Ansible playbook for {{site.data.keyword.cloud_notm}}.
 ### What's next?
 {: #what's-next-create} 
 
-Create an action and run your Ansible playbook with an action.
+Create an action and run your Ansible playbook.
 
 ## Running Ansible playbooks for {{site.data.keyword.cloud_notm}}
 {: #run-ansible-playbook}

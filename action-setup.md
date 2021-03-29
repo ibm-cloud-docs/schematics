@@ -68,19 +68,25 @@ To create an action:
    5. Select the playbook that you want to run. 
    6. Select the **Verbosity** level that you want. The verbosity level determines how much information is written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level. You can see the logs in {{site.data.keyword.bpshort}} when you run your playbook. 
    7. Optional: Click the **Advanced options** to define command line variables that you want to pass to the playbook. Command line variables must be entered as key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden from the users who look at your action after it is created. For example, to provide the VSI IP address for the Ansbile operation to start and stop VSI servers, you defined the key-value as shown in the screen capture.
-   <img src="images/img_actions_variables.png" alt="Schematics action set up" width="80" style="width: 80px; border-style: none"/> 
+   <img src="images/img_actions_variables.png" alt="Schematics action set up" width="700" style="width: 700px; border-style: none"/> 
    8. Click **Next** to save the action details. {{site.data.keyword.bpshort}} verifies the YAML file and displays the action settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your Ansible playbook. 
 4. Select the {{site.data.keyword.cloud_notm}} resources where you want to run your Ansible playbook. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to. 
+   To view an existing inventory:
+   1. Select your **Location**, where the inventory is created.
+   2. View your list of inventory.
+
    To create an inventory:
-   1. Select your location and click **Create inventory**.
-   2. Enter a **Inventory name** and an optional description for your inventory.
-   3. Select the **Location**. The location you select will determine which workspace are available to you.
-   4. Select the **Resource group**. The default resource group is Default.
-   5. Select **Host groups > Create host group** tab to create host group that you can run your Ansible playbook.
+   1. Select your **Location** to create an inventory.
+   2. Click **Create inventory**.
+   3. Enter a **Inventory name** and an optional description for your inventory.
+   4. Select the **Location**. The location you select will determine which workspace are available to you.
+   5. Select the **Resource group**. The default resource group is Default.
+   6. Select **Host groups > Create host group** tab to create static inventory that you can run your Ansible playbook.
        - Enter **Host group name**.
-       - Select the condition target resources variable as **Workspace**, and select the target resource value as your workspacename from the list. Optionally, you can add a **query** tag for the conditional target resource. You can also add multiple conditional target resources for your workspaces.
+       - Select the condition target resources variable as **Workspace**, and select the target resource value as your workspacename from the list. Optionally, you can add a **query** tag for the conditional target resource. You can also add multiple conditional target resources for your workspaces to execute.
        OR
-       Select **Create file** tab to define the hosts and group of hosts upon which your playbook operates and add the public SSH key. You need to enter the inventory variables by using `INI` syntax.
+       Select **Create file** tab to define the dynamic inventory for hosts and group of hosts upon which your playbook operates. You need to enter the inventory variables in `INI` syntax as shown in an example.
+   7. Add the public SSH key. *Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances.
        
       **Example**
       
@@ -93,13 +99,13 @@ To create an action:
        ```
       {: screen}
 
-   6. Click **Create host group**
+   7. Click **Create host group**
 5. Click **Next** to save the {{site.data.keyword.cloud_notm}} resource inventory details.
 6. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results of this check by looking at the logs. 
-7. Click **Run action** to stop the virtual server instance. You can monitor the progress of this action by reviewing the logs on the **Jobs** page. For more information, about Check action and Run action, refer to [{{site.data.keyword.bpshort}} action settings](/docs/schematics?topic=schematics-action-setup#action-settings).
-
+7. Click **Run action** to stop the virtual server instance. You can monitor the progress of this action by reviewing the logs on the **Jobs** page. Every 30 seconds the job logs gets auto refreshed. See [about Check action and Run action](/docs/schematics?topic=schematics-action-setup#action-settings).
       Before your launch action, you can observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by an asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
-      {: note
+      {: note}
+8. Optionally, you can edit a {{site.data.keyword.bpshort}} action by clicking the `edit` icon from the **Settings** page. Once the edit is completed, you can relaunch an action, by using **Run action** button.
 
 
 
