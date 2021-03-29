@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-27"
+lastupdated: "2021-03-29"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -44,8 +44,23 @@ The prerequisites for the use case are:
 * Running state of an {{site.data.keyword.containerlong_notm}} instance. For more information, see [Getting started with {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started). Create a cluster configuration provisioned with classic infrastructure, opting for Single zone availability and enabling single worker node with single zone. For any support that you need, reach out the [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
 * Schematics plug-in installed, for more information, refer to [installing {{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli). 
 
+## Executing playbook by using user interface
+{: #iks-ui-execute}
 
-### Executing the playbook by using command line
+After the prerequisite is completed, follow these steps to complete the use case:
+
+1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
+
+2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information, about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
+
+3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud}} resource inventory. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
+
+   When the action is successful the job is created. You can view the settings and job option of the execution details.
+  {: note}
+
+4. Access your VPC public IP to view the deployed application. For example, `https://<public-IPaddress>:30170/`. 
+
+## Executing the playbook by using command line
 {: #iks-execute}
 
 Now, you are ready to complete these steps to execute the use case:
@@ -144,21 +159,6 @@ Now, you are ready to complete these steps to execute the use case:
   
 6. Now, you can use external IP address and access the URL `https://<public-IPaddress>:30170/` to view the deployed application.
 
-### Executing playbook by using user interface
-{: #iks-ui-execute}
-
-After the prerequisite is completed, follow these steps to complete the use case:
-
-1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
-
-2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information, about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
-
-3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud}} resource inventory. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
-
-   When the action is successful the job is created. You can view the settings and job option of the execution details.
-  {: note}
-
-4. Access your VPC public IP to view the deployed application. For example, `https://<public-IPaddress>:30170/`. 
 
 ## What's next?
 {: #uc_what's next}

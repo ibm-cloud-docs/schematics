@@ -68,14 +68,6 @@ Now, you are ready to complete these steps to execute the use case:
 
 4. Access your VPC public IP to view the deployed application. For example, `https://<PUBLIC_IP>/index.php`.
 
-## What's next?
-{: #uc_what's next}
-
-Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bplong_notm}} actions. You can now
-- learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
-- Learn how to [auto deploy the playbook templates](docs/schematics?topic=schematics-sample_actiontemplates) to create action.
-- Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}} 
-
 ## Executing the playbook by using command line
 {: #lamp-stack-execute}
 
