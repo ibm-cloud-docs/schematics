@@ -7,7 +7,7 @@ Schematics
     {: .navgroup id="learn"}
     {: .topicgroup}
     Getting started
-         getting-started.md
+         getting-started-landing.md
          getting-started-terraform.md
          getting-started-ansible-new.md
          getting-started-software.md
