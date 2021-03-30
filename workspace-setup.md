@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-03-29"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -110,7 +110,7 @@ You can use the {{site.data.keyword.bplong_notm}} to delete your workspace. Whil
       <tr>
         <th>Job</th><th>Delete workspace</th><th>Destroy the associated cloud resources</th></tr>
        <tr>
-         <td>Delete workspace <br> **Note** use this option, if you have already destroyed the cloud resources, or intend to destory them later by using the command line or user interface.</td><td>True</td><td>False</td></tr>
+         <td>Delete workspace <br> **Note** use this option, if you have already destroyed the cloud resources, or intend to destroy them later by using the command line or user interface.</td><td>True</td><td>False</td></tr>
        <tr>
          <td>Destroy only resources</td><td>False</td><td>True</td></tr>
        <tr>
@@ -249,7 +249,7 @@ Review the states that a workspace can have in the following table. You might no
 | Inactive | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply job to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
 | In progress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **In progress**. |
 | Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
-| Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy job was cancelled manually. |
+| Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy job are stopped manually. |
 | Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
 
 ### Workspace state diagram and manipulative job

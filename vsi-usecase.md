@@ -110,9 +110,9 @@ Now, you are ready to complete these steps to execute the use case:
 
 
 ## What's next? 
-{: ansible-whats-next}
+{: #ansible-what-is-next}
 
 Now that you ran your operation on an {{site.data.keyword.cloud_notm}} resource, you can explore the following options:
-- Learn how to [auto deploy the playbook templates](docs/schematics?topic=schematics-sample_actiontemplates) to create action.
+- Learn how to [auto deploy the playbook templates](/docs/schematics?topic=schematics-sample_actiontemplates) to create action.
 - Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}} 
 - You can now learn how to [Provision LAMP stack by using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-provisioning-lamp-stack)

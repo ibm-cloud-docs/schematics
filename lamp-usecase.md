@@ -96,11 +96,11 @@ Now, you are ready to complete these steps to execute the use case:
 4. You can run `curl http://<PUBLIC_IP/index.php` after logging in to the deployed machine. You can see a simple test page and a list of databases that are retrieved from the database server.
 
 ## What's next?
-{: #uc_what's next}
+{: #uc_what_is_next}
 
 Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bplong_notm}} actions. You can now 
 - learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
-- Learn how to [auto deploy the playbook templates](docs/schematics?topic=schematics-sample_actiontemplates) to create action.
+- Learn how to [auto deploy the playbook templates](/docs/schematics?topic=schematics-sample_actiontemplates) to create action.
 - Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}} 
 
 

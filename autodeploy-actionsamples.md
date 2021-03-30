@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-27"
+lastupdated: "2021-03-29"
 
 keywords: action templates, schematics template, terraform template
 
@@ -111,6 +111,8 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
   3. The auto deploy link sets the create action in the {{site.data.keyword.bplong_notm}}. 
 
   4. You can use `README` file from the template to configure and run the {{site.data.keyword.bpshort}} action.
+
+
 
 
 ## VM operations on VPC template

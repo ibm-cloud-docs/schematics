@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-27"
+lastupdated: "2021-03-29"
 
 keywords: schematics, automation, terraform
 
@@ -194,7 +194,7 @@ Example output for creating the workspace.
 Creation Time   Tue Jul 28 13:00:02
 Description     terraform workspace
 Frozen          true
-Frozen By       geetha_sathyamurthy@in.ibm.com
+Frozen By       user@.ibm.com
 Frozen At       Tue Jul 28 13:00:01
 ID              test-6569f475-b61c-4a
 Name            test

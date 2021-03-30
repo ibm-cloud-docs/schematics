@@ -83,7 +83,7 @@ To create an action:
    5. Select the **Resource group**. The default resource group is Default.
    6. Select **Host groups > Create host group** tab to create static inventory that you can run your Ansible playbook.
        - Enter **Host group name**.
-       - Select the condition target resources variable as **Workspace**, and select the target resource value as your workspacename from the list. Optionally, you can add a **query** tag for the conditional target resource. You can also add multiple conditional target resources for your workspaces to execute.
+       - Select the condition target resources variable as **Workspace**, and select the target resource value as your workspace name from the list. Optionally, you can add a **query** tag for the conditional target resource. You can also add multiple conditional target resources for your workspaces to execute.
        OR
        Select **Create file** tab to define the dynamic inventory for hosts and group of hosts upon which your playbook operates. You need to enter the inventory variables in `INI` syntax as shown in an example.
    7. Add the public SSH key. *Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances.
