@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-03-30"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -76,7 +76,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|16 October 2020 |<ul><li>**Monitoring by using Sysdig**: {{site.data.keyword.bplong_notm}} now supports monitoring Schematics services by using {{site.data.keyword.cloud_notm}} monitoring with Sysdig. For more information, about the monitoring Schematics workspaces, see [Monitoring Schematics instances](/docs/schematics?topic=schematics-monitoring-instances).</li><li>**Files and resources for your workspace actions**: {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository.</li><li>**Creating a deploy to {{site.data.keyword.bplong_notm}} link**: {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository so that other people can experiment to create workspace by using Schematics without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics).</li></ul> |
+|16 October 2020 |<ul><li>**Monitoring with {{site.data.keyword.mon_full_notm}}**: {{site.data.keyword.bplong_notm}} now supports monitoring Schematics services by using {{site.data.keyword.mon_full_notm}}. For more information, about the monitoring Schematics workspaces, see [Monitoring Schematics instances](/docs/schematics?topic=schematics-monitoring-instances).</li><li>**Files and resources for your workspace actions**: {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository.</li><li>**Creating a deploy to {{site.data.keyword.bplong_notm}} link**: {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository so that other people can experiment to create workspace by using Schematics without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [Create deploy to Schematics](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics).</li></ul> |
 {: caption="What's new in October" caption-side="top"}
 
 ## September 2020
