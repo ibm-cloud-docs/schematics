@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-03-30"
 
 keywords: monitoring schematics services, schematics monitoring by using sysdig, monitoring
 
@@ -43,12 +43,11 @@ You can monitor your services instance in the {{site.data.keyword.cloud_notm}} c
 
 Complete these steps to view your services instances:
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
-2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
-3. From your instance, click **View Sysdig** icon to view your workspace and action that you created. **Note** If you want more about information to create a service instance, refer to [Create service instance](#create-instance).
-4. Click `Dashboards` icon, and expand `IBM` to view `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
-   View `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
-   View `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
+1. [Create an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started). 
+2. From the [{{site.data.keyword.cloud_notm}} monitoring dashboard](https://cloud.ibm.com/observe/monitoring){: external}, find the {{site.data.keyword.mon_full_notm}} instance that you created and click **View Sysdig**. The monitoring dashboard opens. 
+3. Click the `Dashboards` icon, and expand `IBM` to view the `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
+   - Use the `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
+   - Use the `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
    {: note}
 
 
@@ -66,10 +65,10 @@ Complete these steps to create your services instance:
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
 3. Click `Create instance` by using your plan.
 4. Select a region, for example,  `Dallas`.
-5. Create one instance of Sysdig by using `Lite plan`.
+5. Create an {{site.data.keyword.mon_full_notm}} instance by using the `Lite plan`.
 6. Click on `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
 7. Click `View Sysdig` icon, to view your workspace and action that you created.
-   You can monitor the status of your workspaces state and action through Sysdig counts and charts. For more information, to monitor the status, refer to [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
+   You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, to monitor the status, refer to [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
    {: note}
 
 ## Creating custom dashboard
