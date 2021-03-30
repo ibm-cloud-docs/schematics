@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-03-30"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1609,7 +1609,7 @@ ibmcloud schematics job list [--resource-type RESOURCE_TYPE] [--id RESOURCE_ID] 
 | `--profile` or `-p` | Optional | Level of the information returned by the get method. Supported values are `ids`, or `summary`. The default value is `summary`. |
 | `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
 | `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
-| `--resource-type` or `-rt` | Required | Name of the resource either `workspace`, or `action`.  |
+| `--resource-type` or `-rt` | Required | The name of the resource, supported value is `action`.|
 {: caption="Schematics job list flags" caption-side="top"}
 
 **Example**

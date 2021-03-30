@@ -107,7 +107,11 @@ completion-time: 60m
 {: #schematics-desc}
 
 In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full_notm}} in the Schematics workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
+<<<<<<< HEAD
+The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker and {{site.data.keyword.cloud_notm}} Monitoring. 
+=======
 The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker and {{site.data.keyword.monitoringfull_notm}}. 
+>>>>>>> 7a9888c6f46867ff7fc70ca168e4de69feb4792d
 {: shortdesc}
 
 As per your resource usage, the cost is incurred. For more information, about the pricing, refer to [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to [Schematics help](/docs/schematics?topic=schematics-schematics-help).
