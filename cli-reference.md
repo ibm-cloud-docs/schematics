@@ -1871,7 +1871,7 @@ ibmcloud schematics resource-query list --output listoutput.json
 {: pre}
 
 
-## Inventory command
+## Inventory commands
 {: #inv-commands}
 
 Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} inventory.
