@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-03-30"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -212,6 +212,6 @@ Finally, you can click **Run action** or **Check action** to validate and reexec
 |action|Description|
 |----|-----|
 |`Run action`|Executes the updated action configuration in a check or non check mode. Check mode is a simulation, does not generate an output for the tasks that you have conditional variables. This task will ignore errors in check mode.|
-|`check action`|Validates the configuration management playbooks that runs on a single node at a time.|
+|`Check action`|Validates the configuration management playbooks that runs on a single node at a time.|
 {: caption="Action settings" caption-side="top"}
 
