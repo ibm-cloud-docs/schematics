@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-03-31"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1520,7 +1520,7 @@ Instead of entering your job details by using command options or a payload file,
 2. When prompted to `Enter command-object>`, enter `action` or `workspace` and use the return key. 
 3. When prompted to `Enter command-object-id>`, enter the action ID details and use the return key.
 4. When prompted to `Enter command-name>`, enter `ansible_playbook_run` or `ansible_playbook_check`, and use the return key.
-5. Review the output of the job creation. 
+5. Review the output of the job creation.
 
 
 ### `ibmcloud schematics job update`
