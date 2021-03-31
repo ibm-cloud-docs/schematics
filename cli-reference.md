@@ -1187,7 +1187,7 @@ Create an {{site.data.keyword.bplong_notm}} action to run on a single target or 
 For more information, about the Schematics action state, see [Schematics action state diagram](/docs/schematics?topic=schematics-action-setup#action-state-diagram).
 {: shortdesc}
 
-You cannot update the location and region once an action is created.
+You cannot update the location and region once an action is created. Also, make sure your IP addresses are in the [allowlist](https://cloud.ibm.com/docs/schematics?topic=schematics-allowed-ipaddresses].
 {: important}
 
 **Syntax**
@@ -1677,7 +1677,6 @@ ibmcloud schematics job delete --id us-east.JOB.yourjob_ID_1231
 ```
 {: pre}
 
-00000
 ## Resource query commands
 {: #rq-commands}
 
