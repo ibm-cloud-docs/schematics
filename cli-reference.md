@@ -1715,7 +1715,7 @@ ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RES
 You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. 
 {: shortdesc} 
 
-**Syntax**:
+**Syntax**
 
 ```
 {
@@ -1736,7 +1736,9 @@ You can provide a payload file to specify certain parameters for the `resource_q
 ```
 {: pre}
 
-**Example**: The sample queries.json file for payload and interactive mode.
+**Example**
+
+The sample queries.json file for payload and interactive mode.
 
 ```
 {
@@ -1914,7 +1916,7 @@ You need to pass either `--inventories-ini` file path or `--resource-query` ID f
 You can provide a payload file to specify certain parameters for the `inventory create` command. Then, you pass the file name to the command by using the `--file` command option. 
 {: shortdesc} 
 
-**Syntax**:
+**Syntax**
 
 ```
 {
@@ -1930,7 +1932,9 @@ You can provide a payload file to specify certain parameters for the `inventory 
 ```
 {: pre}
 
-**Example**: 
+**Example**
+
+The sample queries.json file for payload and interactive mode.
 
 ```
 {
