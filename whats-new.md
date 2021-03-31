@@ -35,7 +35,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|29 March 2021 |<ul><li> **Terraform v0.14 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.14 now. You can now select to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13` or `0.14`. The will use Terraform version sub release version 0.14.9. Make sure that you use the syntax that is compatible with the Terraform version that you want to use.</li></ul> |
+|29 March 2021 |<ul><li> **Terraform v0.14 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.14 now. You can now select to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13` or `0.14`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use.</li></ul> |
 {: caption="What's new in March" caption-side="top"}
 
 ## February 2021
