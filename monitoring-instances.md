@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-03-31"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -52,7 +52,7 @@ Complete these steps to view your services instances:
    View `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
 =======
 1. [Create an {{site.data.keyword.mon_full_notm}} instance](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started). 
-2. From the [{{site.data.keyword.cloud_notm}} monitoring dashboard](https://cloud.ibm.com/observe/monitoring){: external}, find the {{site.data.keyword.mon_full_notm}} instance that you created and click **View Sysdig**. The monitoring dashboard opens. 
+2. From the [{{site.data.keyword.cloud_notm}} monitoring dashboard](https://cloud.ibm.com/observe/monitoring){: external}, find the {{site.data.keyword.mon_full_notm}} instance that you created and click **View Monitoring**. The monitoring dashboard opens. 
 3. Click the `Dashboards` icon, and expand `IBM` to view the `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
    - Use the `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
    - Use the `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
