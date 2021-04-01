@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-01"
 
 keywords: action templates, schematics template, terraform template
 
@@ -113,8 +113,6 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
   4. You can use `README` file from the template to configure and run the {{site.data.keyword.bpshort}} action.
 
 
-
-
 ## VM operations on VPC template
 {: #ansible-vpc}
 
@@ -128,10 +126,16 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
        <tr>
       <td><code>ansible-is-instance-actions</code></td>
       <td>Create an [Ansible virtual server instance](https://github.com/Cloud-Schematics/ansible-is-instance-actions) application that illustrates to perform start, stop, and reboot operations for {{site.data.keyword.cloud_notm}} VSI on VPC. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md).</td>
-      <td><a href="https://github.com/Cloud-Schematics/ansible-is-instance-actions"><img src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions"><img src="/images/deploytoschematics.png"></a></td>
+      <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
+<map name="viewgithubimage_map">
+  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="3,1,140,20"shape="rect">
+</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="images/deploybutton_map" alt="This image leads to create an action.">
+  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
+</map></td>
  </tr>
  </tbody>
  </table>
+
 
 ## LAMP stack template
 {: #ansible-lamp-stack}
@@ -146,10 +150,15 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
      <tr>
       <td><code>lamp-simple</code></td>
       <td>Create a [LAMP stack](https://github.com/Cloud-Schematics/lamp-simple) application that illustrates to deploy LAMP stack components on {{site.data.keyword.cloud_notm}} VSI by using {{site.data.keyword.bplong_notm}} actions through user interface. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md).</td>
-      <td><a href="https://github.com/Cloud-Schematics/lamp-simple"><img src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&url=https://github.com/Cloud-Schematics/lamp-simple"><img src="/images/deploytoschematics.png"></a></td>
+      <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
+<map name="viewgithubimage_map">
+  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="3,1,140,20"  shape="rect">
+</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="images/deploybutton_map" alt="This image leads to create an action.">
+  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&url=https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="1,3,139,20"  shape="rect"></map></td>
  </tr>
  </tbody>
  </table>
+
 
 ## {{site.data.keyword.databases-for-postgresql_full_notm}} template
 {: #ansible-databases}
@@ -164,10 +173,15 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
      <tr>
       <td><code>ansible-icd-postgres-actions</code></td>
       <td>Create an [Ansible {{site.data.keyword.cloud_notm}} database postgres actions](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions) that illustrates to perform PostgreSQL database operations by using {{site.data.keyword.bplong_notm}} actions, Ansible playbook, and roles. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions/blob/master/README.md).</td>
-      <td><a href="https://github.com/Cloud-Schematics/lamp-simple"><img src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&url=https://github.com/Cloud-Schematics/lamp-simple"><img src="/images/deploytoschematics.png"></a></td>
+      <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
+<map name="viewgithubimage_map">
+  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-icd-postgres-actions" target="_blank" coords="3,1,140,20"  shape="rect">
+</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
+  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&url=https://github.com/Cloud-Schematics/ansible-icd-postgres-actions" target="_blank" coords="1,3,139,20" shape="rect"></map></td>
  </tr>
  </tbody>
  </table>
+
 
 ## {{site.data.keyword.containerfull_notm}} deployment template
 {: #ansible-iks-deploy}
@@ -182,13 +196,17 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
        <tr>
       <td><code>ansible-app-deploy-iks</code></td>
       <td>Create an [sample IKS](https://github.com/Cloud-Schematics/ansible-app-deploy-iks) application deployment that illustrates to create `IKS Cluster` by using Ansible playbook, and roles. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/README.md).</td>
-      <td><a href="https://github.com/Cloud-Schematics/ansible-app-deploy-iks"><img src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy-iks&url=https://github.com/Cloud-Schematics/ansible-app-deploy-iks"><img src="/images/deploytoschematics.png"></a></td>
+      <td><img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
+<map name="viewgithubimage_map">
+  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-app-deploy-iks" target="_blank" coords="3,1,140,20"  shape="rect">
+</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
+  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy-iks&url=https://github.com/Cloud-Schematics/ansible-app-deploy-iks" target="_blank" coords="1,3,139,20"  shape="rect"></map></td>
  </tr>
  </tbody>
  </table>
 
 ## {{site.data.keyword.containerfull_notm}} by using Ansible Galaxy template
-{: #ansible-galaxy-iks-deploy}
+{: #ansible-kubectl}
 
 <table>
    <thead>
@@ -201,7 +219,12 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
        <tr>
       <td><code>ansible-kubectl</code></td>
       <td>Create an Ansible playbook to install [kubectl on virtual machine](https://github.com/Cloud-Schematics/ansible-kubectl) application. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md).</td>
-      <td><a href="https://github.com/Cloud-Schematics/ansible-app-deploy-iks"><img src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&url=https://github.com/Cloud-Schematics/ansible-kubectl"><img src="/images/deploytoschematics.png"></a></td>
+      <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
+<map name="viewgithubimage_map">
+  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="3,1,140,20"  shape="rect">
+</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
+  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&url=https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="1,3,139,20"  shape="rect"></map></td>
  </tr>
   </tbody>
   </table>
+
