@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-31"
+lastupdated: "2021-04-01"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -394,7 +394,6 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
       ]
     }
   ],
-  "githubtoken": "&lt;github_personal_access_token&gt;"
 }
 </code></pre></dd></br>
 
@@ -545,9 +544,15 @@ Example JSON for uploading a `.tar` file later:
       </tbody></table></dd>
 <dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
 <dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your command line output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
+<dt><code>--github-token<em>GITHUB_ACCESS_TOKEN</em></code></dt>
+<dd>Optional. Personal access tokens is used for HTTPS Git operations only.</dd>
 <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Print the command line output in JSON format.</dd>	
 </dl>	
+
+--github-token ${FUNCTIONAL_GIT_KEY}
+Once you have a token, you can enter it instead of your password when performing Git operations over HTTPS. Personal access tokens can only be used for HTTPS Git operations. If your repository uses an SSH remote URL, you will need to switch the remote from SSH to HTTPS.
+
 
 **Example**
 
