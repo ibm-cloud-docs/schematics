@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-31"
+lastupdated: "2021-04-01"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -67,7 +67,7 @@ To create an action:
    4. Click **Retrieve playbooks**. {{site.data.keyword.bpshort}} connects to your repository, and a retrieves a list of Ansible playbooks that are found in the repository.
    5. Select the playbook that you want to run. 
    6. Select the **Verbosity** level that you want. The verbosity level determines how much information is written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible executes, select a high verbosity level. You can see the logs in {{site.data.keyword.bpshort}} when you run your playbook. 
-   7. Optional: Click the **Advanced options** to define command line variables that you want to pass to the playbook. Command line variables must be entered as key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden from the users who look at your action after it is created. For example, to provide the VSI IP address for the Ansbile operation to start and stop VSI servers, you defined the key-value as shown in the screen capture.
+   7. Optional: Click the **Advanced options** to define command line variables that you want to pass to the playbook. Command line variables must be entered as key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden from the users who look at your action after it is created. For example, to provide the VSI IP address for the Ansible operation to start and stop VSI servers, you defined the key-value as shown in the screen capture.
    <img src="images/img_actions_variables.png" alt="Schematics action set up" width="800" style="width: 800px; border-style: none"/> 
    8. Click **Next** to save the action details. {{site.data.keyword.bpshort}} verifies the YAML file and displays the action settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your Ansible playbook. 
 4. Select the {{site.data.keyword.cloud_notm}} resources where you want to run your Ansible playbook. These resources are referred to as the resource inventory. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to. 
