@@ -150,7 +150,7 @@ Record the coordinates of the image to make the image clickable by using object 
 **Example**
 
 ```
-<img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="images/deploybutton_map" alt="This image leads to create an action.">
+<img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
   <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
 </map>
 ```
@@ -158,7 +158,7 @@ Record the coordinates of the image to make the image clickable by using object 
 
 **Output**
 
-</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="images/deploybutton_map" alt="This image leads to create an action.">
+</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
   <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
 </map>
 
