@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-28"
+lastupdated: "2021-04-01"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -128,7 +128,10 @@ Follow these steps to create a URL to deploy to Terraform v0.13 template example
 ## Adding an image on deployment to {{site.data.keyword.cloud_notm}} hyper link
 {: #add_an_image}
 
-You can add an image on `Deploy to {{site.data.keyword.cloud_notm}}` text by using the following syntax and example.
+You can add an image button with `Deploy to {{site.data.keyword.cloud_notm}}` text. You can use `draw.io`, or any tool to create an image. Save the image in `.png` exension. 
+
+Record the coordinates of the image to make the image clickable by using object mapping.
+{: note}  
 
 **Syntax**
 
@@ -137,15 +140,26 @@ You can add an image on `Deploy to {{site.data.keyword.cloud_notm}}` text by usi
 ```
 {: pre}
 
+```
+<img usemap="#<USEMAP_NAME>" src="images/autodeploy_button.png"><map name="<USEMAP_NAME>" alt="<ATERNATIVE_TEXT>">
+  <area alt="<ALT_TEXT>" title="<TITLE>" href="<SCHEMATICS_ACTION_UI_QUERYSTRINGS>" target="_blank" coords="" shape="rect">
+</map>
+```
+{: pre}
+
 **Example**
 
 ```
-<a href="https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy">Deploy to {{site.data.keyword.cloud_notm}}<img src="/images/deploytoschematics.png"></a>
+<img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="images/deploybutton_map" alt="This image leads to create an action.">
+  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
+</map>
 ```
 {: pre}
 
 **Output**
 
-<img src="/images/deploytoschematics.png" alt="Deploy to {{site.data.keyword.cloud_notm}}" width="200" style="width: 200px; border-style: none"/>
+</map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="images/deploybutton_map" alt="This image leads to create an action.">
+  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
+</map>
 
 To view about the sample template examples, refer [Sample action templates and deploy to {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates).
