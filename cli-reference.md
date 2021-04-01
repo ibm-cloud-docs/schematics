@@ -550,10 +550,6 @@ Example JSON for uploading a `.tar` file later:
 <dd>Optional. Print the command line output in JSON format.</dd>	
 </dl>	
 
---github-token ${FUNCTIONAL_GIT_KEY}
-Once you have a token, you can enter it instead of your password when performing Git operations over HTTPS. Personal access tokens can only be used for HTTPS Git operations. If your repository uses an SSH remote URL, you will need to switch the remote from SSH to HTTPS.
-
-
 **Example**
 
 ```
