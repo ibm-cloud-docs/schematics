@@ -110,14 +110,14 @@ Follow these steps to create a URL to deploy to Terraform v0.13 template example
   ```
   https://cloud.ibm.com/schematics/actions/create?name=<name of the action>&url=<template public Git repository example url>
   ```
-  {: pre}
+  {: codeblock}
 
   **Example**
 
   ```
   https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy
   ```
-  {: pre}
+  {: codeblock}
 
   The URL contains two parameters, first parameter is provided with the action name as `your action name` and second parameter is provided with the Git URL repository link as `https://github.com/Cloud-Schematics/ansible-app-deploy`. If you do not provide any parameters or ignore one parameter, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the create an action page.
   {: important}
@@ -136,16 +136,11 @@ Record the coordinates of the image to make the image clickable by using object 
 **Syntax**
 
 ```
-<a href="https://cloud.ibm.com/schematics/actions/create?name=<name of the action>&url=<template public Git repository example url">Deploy to {{site.data.keyword.bplong_notm}} <img src=<image location>></a>
-```
-{: pre}
-
-```
 <img usemap="#<USEMAP_NAME>" src="images/autodeploy_button.png"><map name="<USEMAP_NAME>" alt="<ATERNATIVE_TEXT>">
   <area alt="<ALT_TEXT>" title="<TITLE>" href="<SCHEMATICS_ACTION_UI_QUERYSTRINGS>" target="_blank" coords="" shape="rect">
 </map>
 ```
-{: pre}
+{: codeblock}
 
 **Example**
 
@@ -154,7 +149,7 @@ Record the coordinates of the image to make the image clickable by using object 
   <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
 </map>
 ```
-{: pre}
+{: codeblock}
 
 **Output**
 
