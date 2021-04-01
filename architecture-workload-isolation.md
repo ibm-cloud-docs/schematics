@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-04-01"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -84,9 +84,5 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |Kubernetes Service|The {{site.data.keyword.bplong_notm}} service control plane runs in an {{site.data.keyword.containerlong_notm}} cluster and leverages the built-in security, high availability, and self-healing capabilities of the service. If an {{site.data.keyword.bplong_notm}} user creates a workspace or provisions {{site.data.keyword.cloud_notm}} resources, these resources are provisioned into the user account outside the {{site.data.keyword.bpshort}} cluster.|Public|
 |{{site.data.keyword.la_full_notm}} {{site.data.keyword.bpshort}} sends service logs to {{site.data.keyword.loganalysisfull_notm}}. These logs are monitored and analyzed by the {{site.data.keyword.bpshort}} service team to detect service issues and malicious activities.|Private|
 |Messages for RabbitMQ|RabbitMQ is used to queue incoming API requests, and to process these requests asynchronously.|Private|
-<<<<<<< HEAD
-|Monitoring {{site.data.keyword.bpshort}} with Monitoring |{{site.data.keyword.bpshort}} sends service metrics to {{site.data.keyword.mon_full_notm}}. These metrics are monitored by the {{site.data.keyword.bpshort}} service team to identify capacity and performance issues.|Private|
-=======
 |Monitoring {{site.data.keyword.bpshort}} with {{site.data.keyword.mon_full_notm}} |{{site.data.keyword.bpshort}} sends service metrics to {{site.data.keyword.mon_full_notm}}. These metrics are monitored by the {{site.data.keyword.bpshort}} service team to identify capacity and performance issues.|Private|
->>>>>>> 7a9888c6f46867ff7fc70ca168e4de69feb4792d
 |Object Storage (COS)|This service is used to store workspace transactional data, such as the Terraform state file, logs, and user-provided data. All data is encrypted by using [Server-Side Encryption with Key Protect](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) in transit and at rest.|Private|
