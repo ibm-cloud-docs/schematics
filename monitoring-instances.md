@@ -43,13 +43,12 @@ You can monitor your services instance in the {{site.data.keyword.cloud_notm}} c
 
 Complete these steps to view your services instances:
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
-3. From your instance, click **View Monitoring** icon to view your workspace and action that you created. **Note** If you want more about information to create a service instance, refer to [Create service instance](#create-instance).
-4. Click `Dashboards` icon, and expand `IBM` to view `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
-   View `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
-   View `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
-   {: note}
+3. From your instance, click **View Monitoring** icon to view the workspace and action that you created. **Note** If you want more information about how to create a service instance, refer to [Create service instance](#create-instance).
+4. Click the `Dashboards` icon, and expand `IBM` to view the `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
+   - Use the `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
+   - Use the `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
 
 
 
