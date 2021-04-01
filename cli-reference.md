@@ -544,8 +544,8 @@ Example JSON for uploading a `.tar` file later:
       </tbody></table></dd>
 <dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
 <dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your command line output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
-<dt><code>--github-token<em>GITHUB_ACCESS_TOKEN</em></code></dt>
-<dd>Optional. Personal access tokens is used for HTTPS Git operations only.</dd>
+<dt><code>--github-token<em>FUNCTIONAL_GIT_KEY</em></code></dt>
+<dd>Optional. Use the functional personal access tokens for HTTPS Git operations. For example, <code>--github-token ${FUNCTIONAL_GIT_KEY}</code>.</dd>
 <dt><code>--json</code>, <code>-j</code></dt>	
 <dd>Optional. Print the command line output in JSON format.</dd>	
 </dl>	
