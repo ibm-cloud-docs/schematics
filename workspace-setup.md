@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-01"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -66,7 +66,7 @@ Create your workspace for your Terraform template by using the {{site.data.keywo
       - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
       - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
     2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
-    3. Select the Terraform v0.12, or v0.13 that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 and 0.12. 
+    3. Select the Terraform v0.12, v0.13, or v0.14 that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 till version 0.14. 
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves all the workspace input parameters.
     5. You can manually enter the workspace input parameters.
           
