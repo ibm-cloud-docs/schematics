@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-03"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -60,7 +60,7 @@ ibmcloud schematics help [command]
 <dl>
 
 <dt><code>help</code>, <code>-h</code></dt>
-<dd>Required. Lists the supported commands.</code></dd>
+<dd>Required. Lists the supported commands.</dd>
 
 <dt><code>command</code></dt>
 <dd>Optional. Specify the name of the command to fetch the command details.</dd>
@@ -92,7 +92,7 @@ ibmcloud schematics version [--output OUTPUT] [--json JSON_FILE]
 
 <dl>
 <dt><code>--json <em>JSON</em></code>, <code>-j <em>JSON</em></code></dt>
-<dd>Deprecated. Prints the output in the JSON format.</code> </dd>
+<dd>Deprecated. Prints the output in the JSON format.</dd>
 
 <dt><code>--output <em>OUTPUT</em></code>, <code>-o <em>OUTPUT</em></code></dt>
 <dd>Optional. Specify the output format. Currently only `JSON` file format is supported.  </dd>

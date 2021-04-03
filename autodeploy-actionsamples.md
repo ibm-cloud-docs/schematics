@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-03"
 
 keywords: action templates, schematics template, terraform template
 
@@ -128,7 +128,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
       <td>Create an [Ansible virtual server instance](https://github.com/Cloud-Schematics/ansible-is-instance-actions) application that illustrates to perform start, stop, and reboot operations for {{site.data.keyword.cloud_notm}} VSI on VPC. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
 <map name="viewgithubimage_map">
-  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="3,1,140,20"shape="rect">
+  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="3,1,140,20" shape="rect">
 </map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="images/deploybutton_map" alt="This image leads to create an action.">
   <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
 </map></td>
@@ -221,7 +221,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
       <td>Create an Ansible playbook to install [kubectl on virtual machine](https://github.com/Cloud-Schematics/ansible-kubectl) application. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
 <map name="viewgithubimage_map">
-  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="3,1,140,20"  shape="rect">
+  <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="3,1,140,20" shape="rect">
 </map><br><br><img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
   <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&url=https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="1,3,139,20"  shape="rect"></map></td>
  </tr>
