@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-05"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -41,7 +41,7 @@ Before you begin:
 - Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-action-setup) to create an action. The URL provided for required permission need to be edited when published.
 
-You cannot update the location and region once an action is created. Also, make sure your IP addresses are in the [allowlist](https://cloud.ibm.com/docs/schematics?topic=schematics-allowed-ipaddresses].
+You cannot update the location and region once an action is created. Also, make sure your IP addresses are in the [allowlist](https://cloud.ibm.com/docs/schematics?topic=schematics-allowed-ipaddresses).
 {: important}
 
 To create an action:

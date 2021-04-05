@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-04-05"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -46,6 +46,17 @@ All data, user inputs and the data generated at runtime during execution of auto
    {: note}
 2. Bring your own key (BYOK) by integrating with Key Protect.
 3. Keep your own key (KYOK) by integrating with {{site.data.keyword.hscrypto}} (HPCS).
+
+## 
+{: #kms-lifecyle}
+
+Key Rotate
+Key Protect offers manual and automatic key rotation and key rotation is supported by Cloud Databases deployments. When you rotate a key, schematics resources registered with that key will be encrypted with  new key version.  You are still able to access the UI and some metadata like workspace details until the rotation completes. The events are sent to Activity Tracker.
+Key Deletion/Disable
+Key Deletion is a destructive action. When the key is deleted, your data is unrecoverable.
+Deleting a key that is in use on your schematics resources will set your schematics resources(i.e workspace,acions) in the inactive state. You can still be able to access UI and some metadata like workspace details but you are not able  access any data that is contained within them.. Key deletion/destroy events are sent to the LogDNA Activity Tracker
+Key Enable/Restore
+Enable a key that is in use on your schematics resources will set your schematics resources(i.e workspace,acions) in the accessible state. You can use your schematics resources for deployment once you enable/restore the key. Key enable/restore events are sent to the LogDNA Activity Tracker
 
 
 
