@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-10"
+lastupdated: "2021-04-05"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -46,6 +46,8 @@ All data, user inputs and the data generated at runtime during execution of auto
    {: note}
 2. Bring your own key (BYOK) by integrating with Key Protect.
 3. Keep your own key (KYOK) by integrating with {{site.data.keyword.hscrypto}} (HPCS).
+
+
 
 
 
