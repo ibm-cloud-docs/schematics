@@ -30,7 +30,7 @@ Schematics
           setup-api.md
 
     {: .topicgroup}
-    Terraform provider: Infrastructure deployment
+    Workspaces: Cloud infrastructure deployment with Terraform
          create-terraform-config.md
          workspace-setup.md
          workspace-setupv2.md
@@ -45,7 +45,7 @@ Schematics
          Examples
 
     {: .topicgroup}
-    Actions: Configuration management
+    Actions: Configuration management and cloud operations with Ansible
          create-ansible-playbook.md
          action-setup.md
          autodeploy-template.md
