@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-06"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -97,9 +97,9 @@ subcollection: schematics
 Try out one of the IBM-provided software templates to quickly spin up a classic virtual server instance (VSI), and automatically configure the instance to connect to an {{site.data.keyword.databases-for-postgresql_full}} instance. 
 {: shortdesc}
 
-{{site.data.keyword.databases-for-postgresql_full_notm}} is a fully managed database offering in {{site.data.keyword.cloud_notm}} that supports storing of non-relational and relational data types. For more information about this offering, see [What is PostgreSQL?](https://www.ibm.com/cloud/learn/postgresql){: external}. 
+With {{site.data.keyword.bplong_notm}}, you can choose from a wide variety of [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can use to set up {{site.data.keyword.cloud_notm}} services, and to install IBM and 3rd party software. The templates are applied by using the built-in Terraform, Ansible, Helm, CloudPak, and Operator capabilities in {{site.data.keyword.bpshort}}.
 
-As part of this getting started tutorial, you create a {{site.data.keyword.bpshort}} workspace that points to the [VSI database](https://cloud.ibm.com/catalog/content/VSI-database#about){: external} software template. Then, you run this template and watch {{site.data.keyword.bpshort}} provision your VSI and your PostgreSQL instance. 
+As part of this getting started tutorial, you create a {{site.data.keyword.bpshort}} workspace that points to the [VSI database](https://cloud.ibm.com/catalog/content/VSI-database#about){: external} template. Then, you run this template and watch {{site.data.keyword.bpshort}} provision your VSI and your {{site.data.keyword.databases-for-postgresql_full_notm}} instance. {{site.data.keyword.databases-for-postgresql_full_notm}} is a fully managed database offering in {{site.data.keyword.cloud_notm}} that supports storing of non-relational and relational data types. For more information about this offering, see [What is PostgreSQL?](https://www.ibm.com/cloud/learn/postgresql){: external}. 
 
 This getting started tutorial incurs costs. You must have an {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription account to proceed. Make sure that you review pricing information for [classic VSIs](https://cloud.ibm.com/gen1/infrastructure/provision/vs){: external} and [PostgreSQL](https://cloud.ibm.com/catalog/services/databases-for-postgresql){: external}. 
 {: important}
@@ -141,7 +141,7 @@ Congratulations! You used the capabilities of {{site.data.keyword.bpshort}} to p
 {: #whats-next}
 
 - Explore the capabilities of [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started).
-- Browse other [software templates](https://cloud.ibm.com/catalog#software){: external} that you can install with {{site.data.keyword.bpshort}}.  
+- Browse other [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can apply with {{site.data.keyword.bpshort}}.  
 - Learn more about the [built-in capabilities in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics).  
 - Set up the {{site.data.keyword.bpshort}} [CLI](/docs/schematics?topic=schematics-setup-cli) or [API](/docs/schematics?topic=schematics-setup-api) to start automating the provisioning and management of {{site.data.keyword.cloud_notm}} resources. 
 
