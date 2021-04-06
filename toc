@@ -48,8 +48,8 @@ Schematics
     Actions: Configuration management and cloud operations with Ansible
          create-ansible-playbook.md
          action-setup.md
-         autodeploy-template.md
          autodeploy-actionsamples.md
+         autodeploy-template.md
 
     {: .topicgroup}
     Logging and monitoring
