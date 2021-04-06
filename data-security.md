@@ -94,23 +94,6 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 6. Workspace transactional data is stored in an {{site.data.keyword.cos_full_notm}} bucket and encrypted by using [Server-Side Encryption with {{site.data.keyword.keymanagementserviceshort}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) at rest.  
 7. Workspace operational data, such as the workspace variables and Terraform template information, is stored in {{site.data.keyword.cloudant}} and encrypted at rest by using the default service encryption. For more information, see [Security](/docs/Cloudant?topic=Cloudant-security).
 
-## KMS event lifecycle
-{: #kms-event-lifecyle}
-
-### Key rotate
-{: #key-rotate}
-
-Key protect offers manual and automatic key rotation. Key rotation is supported by {{site.data.keyword.databases-for}} deployments. When you rotate a key, the registered key is encrypted by using {{site.data.keyword.bpshort}} resources with a new key version. You can access the key through UI, and some metadata such as workspace details till the rotation completes. The events are sent to {{site.data.keyword.cloudaccesstraillong}}.
-
-### Key deletion or disable
-{: #key-delete}
-
-Key Deletion is a destructive action. When the key is deleted, your data is unrecoverable. Deleting a key that is in use on your {{site.data.keyword.bpshort}} resources set your {{site.data.keyword.bpshort}} workspace, or {{site.data.keyword.bpshort}} action in an inactive state. However, you can access the key through UI and some metadata such as workspace details, but, you cannot access the data contained within key. Key deletion or destroy events are sent to the {{site.data.keyword.la_full}} {{site.data.keyword.at_short}}.
-
-### Key enable or restore
-{: #key-enable}
-
-You can enable or restore a key that is in use on your {{site.data.keyword.bpshort}} resources to set your {{site.data.keyword.bpshort}} workspace, or {{site.data.keyword.bpshort}} action in the accessible state. Then, you can also use {{site.data.keyword.bpshort}} resources for deployment. Key enable or restore events are sent to the {{site.data.keyword.la_full}} {{site.data.keyword.at_short}}.
 
 
 ## How can I delete my information?
