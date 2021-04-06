@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-06"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -494,7 +494,7 @@ Example JSON for uploading a `.tar` file later:
    </tr>
      <tr>
        <td><code>&lt;terraform_version&gt;</code></td>
-       <td>Optional. The Terraform version that you want to use to run your Terraform code. Enter <code>Terraform_v0.12</code> to use Terraform version 0.12, and <code>terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+       <td>Optional.  The Terraform version that you want to use to run your Terraform code. Enter <code>Terraform_v0.12</code> to use Terraform version 0.12, and similarly terraform_v0.11, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
      </tr>
     <tr>
        <td><code>&lt;location&gt;</code></td>
