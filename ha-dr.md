@@ -35,7 +35,6 @@ Understand the high availability features of the {{site.data.keyword.cloud}} res
 
 High availability is a core discipline in an IT infrastructure to keep your resources healthy and your app workloads up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failure in an IT infrastructure. For example, you can prepare for the failure of one system by adding redundancy and setting up failover mechanisms.
 
-
 **How is {{site.data.keyword.bplong_notm}} set up to ensure high availability of the service?**<br>
 {{site.data.keyword.bpshort}} is deployed as two highly available service instances in two separate geographical locations, the US and Europe. Within each geography, the service is deployed across two multizone regions, such as `us-south` and `us-east` in the US geography, and `eu-de` and `eu-gb` for the Europe geography. This setup ensures that the service is still available, even if one region within a geography fails. Data is not shared across geographical locations. 
 

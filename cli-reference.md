@@ -779,12 +779,12 @@ Alternatively, now in template_repo block, you can also update `url` with more p
   </thead>
   <tbody>
     <tr>
-      <td><code>template_repo.branch</code></td>
- <td><code>Optional</code></td>
-  <td><code>Enter the GitHub or GitLab branch where your Terraform configuration files are stored. <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+      <td>template_repo.branch</td>
+ <td>Optional</td>
+  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0"</code></td>
+     "release": "v1.8.0"</code></pre></td>
   </tbody></thead></table>
 
 
