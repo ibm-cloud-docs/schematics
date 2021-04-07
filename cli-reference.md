@@ -771,38 +771,23 @@ Alternatively, now in template_repo block, you can also update `url` with more p
      ```
      {: codeblock}
 
-| Parameter | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `name` | Optional |  Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change.|
-| `type` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.14` to use Terraform version 0.14, `Terraform_v0.13` to use Terraform version 0.13, `Terraform_v0.12` to use Terraform version 0.12, and `Terraform_v0.11` to use Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.|
-| `description` | Optional |  Enter a description for your workspace.|
-| `tags` | Optional | Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.|
-| `resource_group` | Optional | Enter the resource group where you want to provision your workspace.|
-| `workspace_status` | Optional | Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.|
-| `template_repo.url` | Optional | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.|
-| `template_repo.branch` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored. <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+<table>
+   <thead>
+    <th style="width:50px">Workspace / Action</th>
+    <th style="width:200px">State diagram</th>
+    <th style="width:250px">Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>template_repo.branch</code></td>
+ <td><code>Optional</code></td>
+  <td><code>Enter the GitHub or GitLab branch where your Terraform configuration files are stored. <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" </code>|
-| `template_repo.datafolder` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored.|
-| `template_repo.release` | Optional | Enter the GitHub or GitLab release that points to your Terraform configuration files.|
-| `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.|
-| `template_data.variablestore.name` | Optional | Enter the name for the input variable that you declared in your Terraform configuration files.|
-| `template_data.variablestore.type` | Optional | `Terraform v0.11` supports `string`, `list`, `map` data type.  <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.|
-| `template_data.variablestore.value` | Optional | Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You can override the default values of `.tfvars` by setting `use_default` parameter as `true`. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <code>"variablestore": [
-                {
-                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
-                    "description": "",
-                    "name": "docker_ports",
-                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
-		                "use_default":true
-                }, </code>|
-| `template_data.variablestore.secure` | Optional | Set the `secure` parameter to **true**. By default, this parameter is set to **false**.|
-| `template_data.variablestore.use_default` | Optional | Set the `use_default` parameter to **true** to override the default `.tfvars` parameter. By default, this parameter is set to **false**.|
-| `env_values.val1` | Optional | In the payload you can provide an environment variables, and customized variables that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.|
-| `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.|
-| `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.|
-{: caption="JSON file component description" caption-side="top"}
+     "release": "v1.8.0"</code></td>
+  </tbody></thead></table>
+
+
 
 **Example**
 
