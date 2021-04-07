@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-07"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -114,12 +114,12 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 {: #ansible-vsi}
 
 1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page, click **Create action**. 
-2. Enter a name for your action, resource group, and the region where you want to create the action. Then, click **Create**. 
+2. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create**. 
 3. In the **Define your Action action** section, enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field. 
 4. Click **Retrieve playbooks**. 
 5. Select the **stop-vsi-playbook.yaml** playbook.
 6. Expand the **Advanced options**. 
-7. In the **Define your variables** section, enter `intance_ip` as the **key** and the public or private IP address of your VPC Gen2 virtual server as the **value**. 
+7. In the **Define your variables** section, enter `instance_ip` as the **key** and the public or private IP address of your VPC Gen2 virtual server as the **value**. 
 8. Click **Next**. 
 9. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results of this check by looking at the logs. 
 10. Click **Run action** to stop the virtual server instance. You can monitor the progress of this action by reviewing the logs on the **Jobs** page. 

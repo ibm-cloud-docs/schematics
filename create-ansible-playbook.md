@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-07"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -109,7 +109,7 @@ An [Ansible collections](https://www.ansible.com/blog/getting-started-with-ansib
 
 An [Ansible Galaxy](https://galaxy.ansible.com/){: external} hosts many reusable Ansible Collection that can be used in your Ansible playbook.
 
-{{site.data.keyword.bplong_notm}} supports Ansible collections by processing the requirements through `requirements.yaml` or `requirements.yml` file. The `requirements.yaml` file is stored in the `/collections` folder of your Git repository. It’s designed to be the comprehensive package for all of your automation by using one or more playbooks, and roles. Collections are stored in the Ansible root folder as `ansiblecollections`.
+{{site.data.keyword.bplong_notm}} supports Ansible collections by processing the requirements file. It’s designed to be a collective package for all of your automation task related to playbooks, and roles. The requirements file is stored in the `/collections` folder of your Git repository. Collections are stored in the Ansible root folder as `ansiblecollections`.
 {: shortdesc}
 
 The sample folder structure with the `collections` in the Git repository.

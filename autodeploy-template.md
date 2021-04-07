@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-07"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -98,7 +98,7 @@ subcollection: schematics
 
 You can use {{site.data.keyword.bpshort}} action to configure your {{site.data.keyword.cloud}} resources, and to perform operations on the configured resources. 
 
-Follow these steps to create a `Deploy to IBM Cloud` button from your own Git repository. If you click that button, the {{site.data.keyword.bplong_notm}} action creation page open and values, like the **Git repository** or **Action name** are pre-populated for the user.
+Have you noticed the `Deploy to IBM Cloud` button in the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates)?  It can be used to rapidly create the {{site.data.keyword.bpshort}} action pre-populated with an **Action name**, and **Repository URL** directly from the documentation page. Follow these steps to create a `Deploy to IBM Cloud` button from your own Git repository. 
 {: shortdesc}
 
 1. Create a template by using [sample Ansible Playbooks](https://github.com/Cloud-Schematics/?q=Ansible&type=&language=&sort=){: external}, and publish playbook in a Git repository.
