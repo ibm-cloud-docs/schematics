@@ -133,7 +133,7 @@ Make sure you select the correct location. After an action is created, you canno
  </table>
 
 
-## Provisioning a LAMP stack on {{site.data.keyword.vsi_is_short}}
+## Provisioning a LAMP stack on {{site.data.keyword.vsi_is_short_notm}}
 {: #ansible-lamp-stack}
 
 <table>
@@ -145,7 +145,7 @@ Make sure you select the correct location. After an action is created, you canno
   <tbody>
      <tr>
       <td><code>lamp-simple</code></td>
-      <td>Use this Ansible playbook to deploy the LAMP stack components on a set of {{site.data.keyword.vsi_is_short}} by following a simple deployment architecture. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md).</td>
+      <td>Use this Ansible playbook to deploy the LAMP stack components on a set of {{site.data.keyword.vsi_is_short_notm}} by following a simple deployment architecture. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map2">
 <map name="viewgithubimage_map2">
   <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="3,1,140,20"  shape="rect">
@@ -214,7 +214,7 @@ Make sure you select the correct location. After an action is created, you canno
   </tr>
        <tr>
       <td><code>ansible-kubectl</code></td>
-      <td>Use this Ansible playbook to deploy `kubectl` on {{site.data.keyword.vsi_is_short}} by using a role from Ansible Galaxy. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md).</td>
+      <td>Use this Ansible playbook to deploy `kubectl` on {{site.data.keyword.vsi_is_short_notm}} by using a role from Ansible Galaxy. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map5">
 <map name="viewgithubimage_map5">
   <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="3,1,140,20" shape="rect">
