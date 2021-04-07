@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-03"
+lastupdated: "2021-04-06"
 
 keywords: action templates, schematics template, terraform template
 
@@ -95,25 +95,21 @@ subcollection: schematics
 
 
 
-# Sample action templates to auto deploy to {{site.data.keyword.bplong_notm}}
+# Sample Ansible playbook templates for {{site.data.keyword.cloud_notm}}
 {: #sample_actiontemplates}
 
-
-The deploy to {{site.data.keyword.cloud}} URL is an efficient way to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public Git repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} **Create an action** page and only need to click the **Create** button for action creation in {{site.data.keyword.bpshort}}.
+You can use {{site.data.keyword.bpshort}} actions to configure your {{site.data.keyword.cloud}} resources, and to perform operations on the configured resources. Here are the sample Ansible Playbooks, that you can explore by using the `View GitHub repo` clickable link, and create the {{site.data.keyword.bpshort}} action by using `Deploy to IBM Cloud` clickable link.
 {: shortdesc}
 
-When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occur.
+The usage of the clickable links are:
+- `View GitHub repo` link opens the [Git repository](https://github.com/Cloud-Schematics) where the respective template is stored. You can review the file structure, the Ansible playbook instructions, and the `README` file that contains the steps to use the template in {{site.data.keyword.bpshort}}.
 
-  1. Your {{site.data.keyword.cloud_notm}} account is accessed. If the user does not have an active {{site.data.keyword.cloud_notm}} account, you must create a trial account or a real account.
+- `Deploy to IBM Cloud` link takes you to the **Create an action** page with the **GitHub repository URL** and the **Action name** pre-populated.  
 
-  2. You can edit the **Action name**, **Repository URL**, **Description**, **Tags**, **Resource group**, and **location**. Make sure, you select the correct location, you cannot update the location and region once an action is created.
+Make sure you select the correct location. After an action is created, you cannot update the location and region.
+{: note}
 
-  3. The auto deploy link sets the create action in the {{site.data.keyword.bplong_notm}}. 
-
-  4. You can use `README` file from the template to configure and run the {{site.data.keyword.bpshort}} action.
-
-
-## VM operations on VPC template
+## Operations for {{site.data.keyword.BluVirtServers}} on VPC
 {: #ansible-vpc}
 
 <table>
@@ -125,7 +121,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
   <tbody>
        <tr>
       <td><code>ansible-is-instance-actions</code></td>
-      <td>Create an [Ansible virtual server instance](https://github.com/Cloud-Schematics/ansible-is-instance-actions) application that illustrates to perform start, stop, and reboot operations for {{site.data.keyword.cloud_notm}} VSI on VPC. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md).</td>
+      <td>Use this Ansible playbook to perform day 2 operations such as start, stop, and reboot for {{site.data.keyword.vsi_is_short}}. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
 <map name="viewgithubimage_map">
   <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="3,1,140,20" shape="rect">
@@ -137,7 +133,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
  </table>
 
 
-## LAMP stack template
+## Provisioning a LAMP stack on {{site.data.keyword.vsi_is_short}}
 {: #ansible-lamp-stack}
 
 <table>
@@ -149,7 +145,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
   <tbody>
      <tr>
       <td><code>lamp-simple</code></td>
-      <td>Create a [LAMP stack](https://github.com/Cloud-Schematics/lamp-simple) application that illustrates to deploy LAMP stack components on {{site.data.keyword.cloud_notm}} VSI by using {{site.data.keyword.bplong_notm}} actions through user interface. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md).</td>
+      <td>Use this Ansible playbook to deploy the LAMP stack components on a set of {{site.data.keyword.vsi_is_short}} by following a simple deployment architecture. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
 <map name="viewgithubimage_map">
   <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="3,1,140,20"  shape="rect">
@@ -160,7 +156,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
  </table>
 
 
-## {{site.data.keyword.databases-for-postgresql_full_notm}} template
+## Configuring {{site.data.keyword.databases-for-postgresql_full_notm}} with WAL2JSON plugin
 {: #ansible-databases}
 
 <table>
@@ -172,7 +168,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
   <tbody>
      <tr>
       <td><code>ansible-icd-postgres-actions</code></td>
-      <td>Create an [Ansible {{site.data.keyword.cloud_notm}} database postgres actions](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions) that illustrates to perform PostgreSQL database operations by using {{site.data.keyword.bplong_notm}} actions, Ansible playbook, and roles. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions/blob/master/README.md).</td>
+      <td>Use this Ansible playbook to configure your {{site.data.keyword.databases-for-postgresql_full_notm}} instance with `WAL2JSON` plugin. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
 <map name="viewgithubimage_map">
   <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-icd-postgres-actions" target="_blank" coords="3,1,140,20"  shape="rect">
@@ -183,7 +179,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
  </table>
 
 
-## {{site.data.keyword.containerfull_notm}} deployment template
+## Automating application deployment on {{site.data.keyword.containerfull_notm}}
 {: #ansible-iks-deploy}
 
 <table>
@@ -195,7 +191,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
   <tbody>
        <tr>
       <td><code>ansible-app-deploy-iks</code></td>
-      <td>Create an [sample IKS](https://github.com/Cloud-Schematics/ansible-app-deploy-iks) application deployment that illustrates to create `IKS Cluster` by using Ansible playbook, and roles. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/README.md).</td>
+      <td>Use this Ansible playbook to deploy a sample `Node.js` applicaton on a {{site.data.keyword.containerfull}} cluster. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/README.md).</td>
       <td><img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
 <map name="viewgithubimage_map">
   <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-app-deploy-iks" target="_blank" coords="3,1,140,20"  shape="rect">
@@ -205,7 +201,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
  </tbody>
  </table>
 
-## {{site.data.keyword.containerfull_notm}} by using Ansible Galaxy template
+## Deploy kubectl on a {{site.data.keyword.BluVirtServers}}
 {: #ansible-kubectl}
 
 <table>
@@ -218,7 +214,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
   </tr>
        <tr>
       <td><code>ansible-kubectl</code></td>
-      <td>Create an Ansible playbook to install [kubectl on virtual machine](https://github.com/Cloud-Schematics/ansible-kubectl) application. To configure and run the {{site.data.keyword.bpshort}} action, see [readme file](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md).</td>
+      <td>Use this Ansible playbook to deploy `kubectl` on {{site.data.keyword.vsi_is_short}} by using a role from Ansible Galaxy. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md).</td>
       <td> <img src="images/viewgithubrepo.png" usemap="#viewgithubimage_map">
 <map name="viewgithubimage_map">
   <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="3,1,140,20" shape="rect">
@@ -227,4 +223,3 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}`, these steps occ
  </tr>
   </tbody>
   </table>
-

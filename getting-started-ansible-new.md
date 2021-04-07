@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-04-06"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -126,7 +126,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 11. Verify that your virtual server instance stopped. 
     1. From the [Virtual server instances for VPC dashboard](https://cloud.ibm.com/vpc-ext/compute/vs){: external}, find your virtual server instance. 
     2. Verify that your instance shows a `Stopped` status. 
-12. Optional: Repeat the steps in this getting started tutorial and select the **start-vsi-playbook.yaml** Ansible playbook to start your virtual server instance again. 
+12. Optional: Repeat the steps in this getting started tutorial to create another {{site.data.keyword.bpshort}} action, and select the **start-vsi-playbook.yaml** Ansible playbook to start your virtual server instance again. 
 
 Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a VPC Gen2 virtual server instance. 
 

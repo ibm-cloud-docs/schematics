@@ -48,14 +48,8 @@ Schematics
     Actions: Configuration management and cloud operations with Ansible
          create-ansible-playbook.md
          action-setup.md
+         autodeploy-actionsamples.md
          autodeploy-template.md
-
-         {: .topicgroup}
-         Examples
-             vsi-usecase.md
-             lamp-usecase.md
-             iks-cluster-example.md
-             autodeploy-actionsamples.md
 
     {: .topicgroup}
     Logging and monitoring
