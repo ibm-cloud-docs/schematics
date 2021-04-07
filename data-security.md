@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-07"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -39,13 +39,13 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## How your data is stored and encrypted in {{site.data.keyword.bpshort}}?
 {: #data-storage}
 
-All data, user inputs and the data generated at runtime during execution of automation code, are stored in IBM Cloud Object Storage. This data is encrypted at rest. It supports following encryption options:
 
-1. Envelope encryption with schematics owned keys
-   Each data object is encrypted by using a unique [data encryption key (DEK)]{}, which is further wrapped by using a single root key to encrypt all the data according to the [geographical location](/docs/schematics?topic=schematics-secure-data#pi-location).
-   {: note}
+
+All data, user inputs and the data generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted at rest by envelope encryption technique by using a root key selected for each geographical location. {{site.data.keyword.bpshort}} support encryption with the root keys by using following encryption.
+
+1. Schematics owned root key.
 2. Bring your own key (BYOK) by integrating with Key Protect.
-3. Keep your own key (KYOK) by integrating with {{site.data.keyword.hscrypto}} (HPCS).
+3. Keep your own key (KYOK) by integrating with Hyper Protect Crypto Services (HPCS)
 
 
 
@@ -54,7 +54,7 @@ All data, user inputs and the data generated at runtime during execution of auto
 ## What informations are stored in {{site.data.keyword.bpshort}}?
 {: #pi-data}
 
-The following informations are stored with {{site.data.keyword.IBM_notm}} when you create and use a {{site.data.keyword.bpshort}} workspace: 
+The following informations are stored when you create and use a {{site.data.keyword.bpshort}} workspace: 
 - Workspace details
 - Workspace variables
 - Terraform configuration files that your workspace points to
@@ -89,8 +89,8 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 1. A user sends a request to create an {{site.data.keyword.bplong_notm}} workspace to the {{site.data.keyword.bpshort}} API server.
 2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or a tape archive file (`.tar`) that you uploaded from your local machine. 
 3. All user-initiated actions, such as creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. RabbitMQ forwards requests to the {{site.data.keyword.bpshort}} engine to execute the action. 
-4. The {{site.data.keyword.bpshort}} engine starts the process for provisioning, modifying, or deleting {{site.data.keyword.cloud_notm}} resources. 
-5. To protect customer data in transit, {{site.data.keyword.bplong_notm}} integrates with {{site.data.keyword.keymanagementserviceshort}}. {{site.data.keyword.bpshort}} uses the customer owned Key Protect, {{site.data.keyword.hscrypto}}, and root keys in {{site.data.keyword.keymanagementserviceshort}} to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit. 
+4. The {{site.data.keyword.bpshort}} engine starts the process for provisioning, modifying, or deleting {{site.data.keyword.cloud_notm}} resources.
+5. To protect customer data at rest, {{site.data.keyword.bplong_notm}}integrates with {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}}. {{site.data.keyword.bpshort}} uses the customer owned {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} and {{site.data.keyword.bpshort}} owned {{site.data.keyword.keymanagementserviceshort}} to generate and encrypt data encryption keys (DEK). This DEK is used to encrypt transactional data, such as logs, or the Terraform `tf.state` file at rest.
 6. Workspace transactional data is stored in an {{site.data.keyword.cos_full_notm}} bucket and encrypted by using [Server-Side Encryption with {{site.data.keyword.keymanagementserviceshort}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) at rest.  
 7. Workspace operational data, such as the workspace variables and Terraform template information, is stored in {{site.data.keyword.cloudant}} and encrypted at rest by using the default service encryption. For more information, see [Security](/docs/Cloudant?topic=Cloudant-security).
 

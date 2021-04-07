@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-07"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -52,9 +52,9 @@ To create an action:
    2. Optional: Enter the tags that you want to add to your action. Tags can help you search an action easily.
    3. Select the resource group where you want to create an action. Default resource group is `default`.
    4. Decide where you want to create an action. The **Location** determines where your action runs and action data is stored. You can choose between a geography, such as `North America`, `Frankfurt`, or `London`. The {{site.data.keyword.bpshort}} determines the location based on availability. Make sure of your location, you cannot update the location and region once an action is created. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where the {{site.data.keyword.cloud_notm}} resources reside and where you want to run your Ansible playbook.
-   5. Click **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Settings` page.
+   5. Click the **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Settings` page.
 3. Import your Ansible playbook. 
-   1. Enter the URL of your GitHub or GitLab repository where you want your Ansible playbook to run. The URL can point to the master branch, any other branch, or a subdirectory. Your action can point to one playbook at a time only. If you want to run multiple playbooks, create a separate action for each playbook. 
+   1. Enter the **Repository URL** of your GitHub or GitLab repository where you want your Ansible playbook to run. The URL can point to the master branch, any other branch, or a subdirectory. Your action can point to one playbook at a time only. If you want to run multiple playbooks, create a separate action for each playbook. 
       - Example for master branch: https://github.com/myorg/myrepo
       - Example for other branches: https://github.com/myorg/myrepo/tree/mybranch
       - Example for subdirectory: https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
