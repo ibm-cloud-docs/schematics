@@ -281,7 +281,7 @@ ibmcloud schematics workspace list --limit 10 --offset 20 --json
 
 Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command to provide the template.
 
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
+{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The location can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}	
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
@@ -291,17 +291,30 @@ To create a workspace, you must specify your workspace settings in a JSON file. 
 
 ```
 ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
+schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--github-token GITHUB_TOKEN][--output OUTPUT][--json]
 ```
 {: pre}
  
 **Command options**
 
-<dl>	
- <dt><code>--file <em>FILE_PATH</em></code>, <code>-f <em>FILE_PATH</em></code></dt>	
-<dd>Required. The relative path to a JSON file on your local machine that is used to configure your workspace. 	
-<br>Example JSON by using a GitHub or GitLab repository:	
-<pre class="codeblock">	
-<code>{
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information, about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
+| `--state` | Optional | The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: **1.** Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command. **2.** Copy the content of the statefile from your command line output in to a file on your local machine that is named `terraform.tfstate`. **3.** Use the relative path to the file in the `--state` command parameter.|
+| `--github-token` or `-g` | Optional |  Enter the functional personal access tokens for HTTPS Git operations. For example, `--github-token ${FUNCTIONAL_GIT_KEY}`.|
+| `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
+{: caption="Schematics workspace create flags" caption-side="top"}
+
+#### Create file template in JSON format
+{: #json-file-create-template}
+
+You can create the JSON as shared in the `example.json` file for workspace creation and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is described in the table. 
+
+**example.json**
+
+```
+{
   "name": "&lt;workspace_name&gt;>",
   "type": [
     "&lt;terraform_version&gt;"
@@ -371,20 +384,13 @@ ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--
     }
   ],
 }
-</code></pre></dd></br>
+```
+{: codeblock}
 
-Now, in template_repo, you can also provide `URL` with more parameters as shown in the block.
-  <pre class="codeblock">	
-  <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master;",
-     "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" </code></pre>
-{: note}
+**Example JSON for uploading in a `.tar` file later.**
 
-Example JSON for uploading a `.tar` file later:
-
-<pre class="codeblock">	
-<code>{	
+```
+{	
   "name": "&lt;workspace_name&gt;",
   "type": [
     "&lt;terraform_version&gt;"
@@ -454,53 +460,83 @@ Example JSON for uploading a `.tar` file later:
     }
   ]
 }
-</code></pre>
-  <table>
-   <caption>JSON file component description</caption>
-   <col style="width:30%">
-	 <col style="width:70%">
+```
+{: codeblock}
+
+   <table>
+    <caption>JSON file component description</caption>
    <thead>
-     <th>Parameter</th>
-     <th>Description</th>
-   </thead>
-   <tbody>
-   <tr>
-   <td><code>&lt;workspace_name&gt;</code></td>
-   <td>Required. Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). </td>
-   </tr>
-     <tr>
-       <td><code>&lt;terraform_version&gt;</code></td>
-       <td>Optional.  The Terraform version that you want to use to run your Terraform code. Enter <code>Terraform_v0.12</code> to use Terraform version 0.12, and similarly terraform_v0.11, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-     </tr>
+    <th style="width:50px">Parameter</th>
+    <th style="width:200px">Required / Optional</th>
+    <th style="width:250px">Description</th>
+  </thead>
+  <tbody>
     <tr>
-       <td><code>&lt;location&gt;</code></td>
-       <td>Optional. Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run <code>ibmcloud target --output json</code> and look at the <em>region</em> field. To target a different region, run <code>ibmcloud target -r &lt;region&gt;</code>. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted.   </td>
-     </tr>
-   <tr>
-   <td><code>&lt;workspace_description&gt;</code></td>
-   <td>Optional. Enter a description for your workspace. </td>
+   <td>`workspace_name`</td>
+   <td>Optional</td>
+   <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
    </tr>
    <tr>
-   <td><code>&lt;github_source_repo_url&gt;</code></td>
-     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. If you plan to provide your Terraform template by uploading a tape archive file (`.tar`), leave the URL empty, and use the [<code>ibmcloud schematics workspace upload</code>](#schematics-workspace-upload) command after you created the workspace. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.</td>
+   <td>`terraform_version`</td>
+   <td>Optional</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.12` to use Terraform version 0.12, and similarly terraform_v0.11, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   </tr>
+  <tr>
+   <td>`location`</td>
+   <td>Optional</td>
+   <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run `ibmcloud target --output json` and look at the `region` field. To target a different region, run `ibmcloud target -r &lt;region&gt;`. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted.</td>
+   </tr>
+   <tr>
+   <td>`description`</td>
+   <td>Optional</td>
+   <td>Enter a description for your workspace.</td>
+   </tr>
+      <td>`template_repo.url`</td>
+   <td>Optional</td>
+   <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
    </tr>
     <tr>
-     <td><code>&lt;env_values&gt;</code></td>
-     <td>Optional. A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key = variable name` and `value = value`. You can define environment variables for IBM Cloud catalog offerings that are provisioned by using a bash script.
- files.</td>
-     </tr>
+    <td>`template_repo.branch`</td>
+ <td>Optional</td>
+  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update url with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0"</code></pre></td></tr>
     <tr>
-     <td><code>&lt;variable_name&gt;</code></td>
-     <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-     </tr>
-      <tr>
-      <td><code>&lt;variable_type&gt;</code></td>
-      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type. <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. </td>
-      </tr>
-      <tr>
-     <td><code>&lt;variable_value&gt;</code></td>
-     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). <br> **Example**<br><pre class="codeblock">	
-<code>"variablestore": [
+   <td>`template_repo.datafolder`</td>
+   <td>Optional</td>
+   <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
+   </tr>
+    <tr>
+   <td>`template_repo.release`</td>
+   <td>Optional</td>
+   <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
+   </tr>
+   <tr>
+   <td>`github_source_repo_url`</td>
+   <td>Optional</td>
+   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. If you plan to provide your Terraform template by uploading a tape archive file (`.tar`), leave the URL empty, and use the [ibmcloud schematics workspace upload](#schematics-workspace-upload) command after you created the workspace. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.</td>
+   </tr>
+  <tr>
+   <td>`env_values`</td>
+   <td>Optional</td>
+   <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key = variable name` and `value = value`. You can define environment variables for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using a bash script files.</td>
+   </tr>
+   <tr>
+   <td>`variable_name`</td>
+   <td>Optional</td>
+   <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+   </tr>
+   <tr>
+   <td>`variable_type`</td>
+   <td>Optional</td>
+   <td>`Terraform v0.11` supports `string`, `list`, `map` data type. `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
+   </tr>
+  <tr>
+   <td>`variable_value`</td>
+   <td>Optional</td>
+   <td>Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). **Example** <pre class="codeblock"><code>
+       "variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",
@@ -508,28 +544,23 @@ Example JSON for uploading a `.tar` file later:
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
                 },
       ]</code></pre></td>
-     </tr>
-      <tr>
-      <td><code>&lt;secure&gt;</code></td>
-      <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
-      </tr>
-      <tr>
-      <td><code>&lt;val1&gt;</code></td>
-      <td>Optional. In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in cos.</td>
-      </tr>
-      </tbody></table></dd>
-<dt><code>--state <em>STATE_FILE_PATH</em></code></dt>
-<dd>Optional. The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: <ol><li>Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command.</li><li>Copy the content of the statefile from your command line output in to a file on your local machine that is named <code>terraform.tfstate</code>.</li><li>Use the relative path to the file in the <code>--state</code> command parameter.</li></ol></dd>
-<dt><code>--github-token<em>FUNCTIONAL_GIT_KEY</em></code></dt>
-<dd>Optional. Use the functional personal access tokens for HTTPS Git operations. For example, <code>--github-token ${FUNCTIONAL_GIT_KEY}</code>.</dd>
-<dt><code>--json</code>, <code>-j</code></dt>	
-<dd>Optional. Print the command line output in JSON format.</dd>	
-</dl>	
+   </tr>
+   <tr>
+   <td>`secure`</td>
+   <td>Optional</td>
+   <td>Set the `secure` parameter to **true**. By default, this parameter is set to **false**.</td>
+   </tr>
+   <tr>
+   <td>`val1`</td>
+   <td>Optional</td>
+   <td>In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
+   </tr>
+  </tbody></thead></table>
 
 **Example**
 
 ```
-ibmcloud schematics workspace new --file myfile.json
+ibmcloud schematics workspace new --file example.json
 ```
 {: pre}
 
@@ -580,7 +611,7 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--output OUTPUT][--json]
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace that you want to refresh. To find the ID of a workspace, run `ibmcloud schematics workspace list`.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace that you want to refresh. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics refresh flags" caption-side="top"}
@@ -609,7 +640,7 @@ ibmcloud schematics state list --id WORKSPACE_ID
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform statefile. To find the ID of a workspace, run `ibmcloud schematics workspace list`.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform statefile. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 {: caption="Schematics state list flags" caption-side="top"}
 
 **Example**
@@ -702,7 +733,7 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--githu
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to update the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
-| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that includes the updated parameters for your workspace.|
+| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. For more information, about the sample JSON file with the details, see [JSON file update template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-update-template).|
 | `--github-token` or `-g` | Optional |  Enter the GitHub token value to access private Git repository.|
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -711,7 +742,7 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--githu
 #### Update file template in JSON format
 {: #json-file-update-template}
 
-You can create the JSON as shared in the `example.json` file for workspace update and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is shown in the table. 
+You can create the JSON as shared in the `example.json` file for workspace update and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is described in the table. 
 
 **example.json**
 
@@ -761,9 +792,6 @@ You can create the JSON as shared in the `example.json` file for workspace updat
 ```
 {: codeblock}
 
-Alternatively, now in template_repo block, you can also update `url` with more parameters as shown in the block.
-{: note}
-
 <table>
    <thead>
     <th style="width:50px">Parameter</th>
@@ -809,7 +837,7 @@ Alternatively, now in template_repo block, you can also update `url` with more p
     <tr>
     <td>`template_repo.branch`</td>
  <td>Optional</td>
-  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update url with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
      "release": "v1.8.0"</code></pre></td></tr>
