@@ -290,8 +290,7 @@ To create a workspace, you must specify your workspace settings in a JSON file. 
 **Syntax**
 
 ```
-ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
-schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--github-token GITHUB_TOKEN][--output OUTPUT][--json]
+ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--github-token GITHUB_TOKEN][--output OUTPUT][--json]
 ```
 {: pre}
  
@@ -1486,7 +1485,7 @@ You can provide a payload file to specify certain parameters for the `job create
   "command_parameter": "<PLAY_BOOK_NAME>"
 }
 ```
-{: pre}
+{: codeblock}
 
 **Example**: 
 
@@ -1498,7 +1497,7 @@ You can provide a payload file to specify certain parameters for the `job create
   "command_parameter": "site.yml"
 }
 ```
-{: pre}
+{: codeblock}
 
 ```
 ibmcloud schematics job create --file sample.json
@@ -1517,6 +1516,7 @@ Instead of entering your job details by using command options or a payload file,
    ibmcloud schematics job create
    ```
    {: pre}
+
 2. When prompted to `Enter command-object>`, enter `action` or `workspace` and use the return key. 
 3. When prompted to `Enter command-object-id>`, enter the action ID details and use the return key.
 4. When prompted to `Enter command-name>`, enter `ansible_playbook_run` or `ansible_playbook_check`, and use the return key.
@@ -1733,7 +1733,7 @@ You can provide a payload file to specify certain parameters for the `resource_q
   ]
 }
 ```
-{: pre}
+{: codeblock}
 
 **Example**
 
@@ -1756,7 +1756,7 @@ The sample queries.json file for payload and interactive mode.
   ]
 }
 ```
-{: pre}
+{: codeblock}
 
 ```
 ibmcloud schematics resource-query create --name testrq123 --type vsi --query-file queries.json
@@ -1775,6 +1775,7 @@ Instead of entering your resource query details by using command options or a pa
    ibmcloud schematics resource-query create 
    ```
    {: pre}
+
 2. You are prompted to Enter name>. Enter the name of an resource-query.
 3. You are prompted to Enter query file>. Enter the path of the configured json file. The sample `queries.json` is shown in the payload example. 
 4. Click Return to view the output with the resource-query details.
@@ -1929,7 +1930,7 @@ You can provide a payload file to specify certain parameters for the `inventory 
 }
 
 ```
-{: pre}
+{: codeblock}
 
 **Example**
 
@@ -1947,7 +1948,7 @@ The sample queries.json file for payload and interactive mode.
 
 }
 ```
-{: pre}
+{: codeblock}
 
 ```
 ibmcloud schematics inventory create --file sample.json
@@ -1966,10 +1967,10 @@ Instead of entering your inventory details by using command options or a payload
    ibmcloud schematics inventory create
    ```
    {: pre}
-2.	You are prompted to Enter name>. Enter the name of an inventory, then, click Return.
-3.	You are prompted to Enter resource-group>. Enter the resource group name, then, click Return.
-4.	You are prompted to Enter location>. Enter your location such as **us-south**, **us-east**, **eu-de**, or **eu-gb**.
-5.	Click Return to view the output with the inventory details.
+2. You are prompted to Enter name>. Enter the name of an inventory, then, click Return.
+3. You are prompted to Enter resource-group>. Enter the resource group name, then, click Return.
+4. You are prompted to Enter location>. Enter your location such as **us-south**, **us-east**, **eu-de**, or **eu-gb**.
+5. Click Return to view the output with the inventory details.
 
 
 ### `ibmcloud schematics inventory update`
@@ -2276,7 +2277,7 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
     "description": "Executing command"
    }
   ```
-  {: pre}
+  {: codeblock}
 
 
   The table provides the list of key parameters of the JSON file for the `Commands` API, for the command line and the API.
