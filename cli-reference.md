@@ -130,7 +130,7 @@ ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--o
 | `--act-id` or `-a` | Optional | Enter the ID of a action that you want to retrieve. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported.  Currently only `JSON` file format is supported. |
-{: caption="Schematics workspace create flags" caption-side="top"}
+{: caption="Schematics workspace action flags" caption-side="top"}
 
 **Example**
 ```
@@ -226,8 +226,6 @@ ibmcloud schematics workspace import --id WORKSPACE_ID --options OPTIONS --addre
 ```
 {: pre}
 
-</br>
-
 **Command options**
 
 | Flag | Required / Optional |Description |
@@ -260,20 +258,7 @@ ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] 
 ```
 {: pre}
 
-
 **Command options**
-
-<dl>
-<dt><code>--limit <em>LIMIT</em></code></dt>
-  <dd>Optional. The maximum number of workspaces that you want to list. The number must be a positive integer starting from 1. 
-   </dd>
-
-<dt><code>--offset <em>OFFSET</em></code></dt>
-<dd>Optional. The position of the workspace in the list of workspaces. For example, if you have three workspaces in your account, the command returns these workspaces as a list with three elements. To see a specific workspace in this list, you must enter the position number that the workspace has in the list. To list the first workspace in the list, enter <code>0</code>. To list the second workspace, enter <code>1</code> and so forth. Negative numbers are not supported and are ignored. </dd>
-
-<dt><code>--json</code></dt>
-<dd>Optional. Show detailed information about a workspace in JSON format. </dd>
-</dl>
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
@@ -555,12 +540,12 @@ ibmcloud schematics workspace new --file myfile.json
 Displays all the instance or resource output of the workspace. You can provide output `NAME`, to print only the value of that output. 
 {: shortdesc}
 
+**Syntax**
+
 ```
 ibmcloud schematics workspace output --id WORKSPACE_ID --options OPTIONS --name OUTPUT_NAME
 ```
 {: pre}
-
-</br>
 
 **Command options**
 
@@ -591,8 +576,6 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--output OUTPUT][--json]
 ```
 {: pre}
 
-</br>
-
 **Command options**
 
 | Flag | Required / Optional |Description |
@@ -622,8 +605,6 @@ ibmcloud schematics state list --id WORKSPACE_ID
 ```
 {: pre}
 
-</br>
-
 **Command options**
 
 | Flag | Required / Optional |Description |
@@ -651,8 +632,6 @@ Manually marks an instance or resources as tainted, by forcing the resources to 
 ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER]
 ```
 {: pre}
-
-</br>
 
 **Command options**
 
@@ -683,7 +662,6 @@ Manually marks an instance or resources as untainted, by forcing the resources t
 ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER]
 ```
 {: pre}
-
 
 **Command options**
 
@@ -730,12 +708,15 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--githu
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics workspace update flags" caption-side="top"}
 
-<dl>	
-  <dt><code>--file <em>FILE_NAME</em></code></dt>
-  <dd>Required. The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. 	
-<br>Example JSON:	
-<pre class="codeblock">	
-<code>{
+#### Update file template in JSON format
+{: #json-file-update-template}
+
+You can create the JSON as shared in the `example.json` file for workspace update and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is shown in the table. 
+
+**example.json**
+
+```
+{
   "name": "&lt;workspace_name&gt;",
   "type": "&lt;terraform_version&gt;",
   "description": "&lt;workspace_description&gt;",
@@ -777,107 +758,51 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--githu
     }
   ],
 }
-</code></pre>
+```
+{: codeblock}
 
-Now, in template_repo, you can also update `url` with more parameters as shown in the block.
-  <pre class="codeblock">	
-  <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+Alternatively, now in template_repo block, you can also update `url` with more parameters as shown in the block.
+  
+     ```
+     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" </code></pre>
-{: note}
- 
-<table>
-   <caption>JSON file component description</caption>
-   <col style="width:30%">
-   <col style="width:70%">
-   <thead>
-   <th>Parameter</th>
-   <th>Description</th>
-   </thead>
-   <tbody>
-   <tr>
-   <td><code>name</code></td>
-   <td>Optional. Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change. </td>
-   </tr>
-     <tr>
-       <td><code>type</code> and <code>template_date.type</code></td>
-       <td>Optional. The Terraform version that you want to use to run your Terraform code. Enter <code>Terraform_v0.12</code> to use Terraform version 0.12, and <code>Terraform_v0.11</code> to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-     </tr>
-   <tr>
-   <td><code>description</code></td>
-   <td>Optional. Enter a description for your workspace. </td>
-   </tr>
-   <tr>
-   <td><code>tags</code></td>
-   <td>Optional. Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily. </td>
-   </tr>
-     <tr>
-   <td><code>resource_group</code></td>
-   <td>Optional. Enter the resource group where you want to provision your workspace. </td>
-   </tr>
-   <tr>
-   <td><code>workspace_status</code></td>
-   <td>Optional. Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.  </td>
-   </tr>
-   <tr>
-   <td><code>template_repo.url</code></td>
-   <td>Optional. Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.  </td>
-   </tr>
-     <tr>
-   <td><code>template_repo.branch</code></td>
-   <td>Optional. Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  </td>
-   </tr>  
-   <tr>
-   <td><code>template_repo.datafolder</code></td>
-   <td>Optional. Enter the GitHub or GitLab folder that points to your Terraform configuration files.  </td>
-   </tr>
-    <tr>
-   <td><code>template_repo.release</code></td>
-   <td>Optional. Enter the GitHub or GitLab release that points to your Terraform configuration files.  </td>
-   </tr>
-     <tr>
-   <td><code>&lt;github_source_repo_url&gt;</code></td>
-     <td>Optional. Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. </td>
-     <tr>
-     <td><code>&lt;template_data.variablestore.name&gt;</code></td>
-     <td>Optional. Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-     </tr>
-      <tr>
-      <td><code>&lt;template_data.variablestore.type&gt;</code></td>
-      <td>Optional. `Terraform v0.11` supports `string`, `list`, `map` data type.  <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
-      </tr>
-      <tr>
-     <td><code>&lt;template_data.variablestore.value&gt;</code></td>
-     <td>Optional. Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You can override the default values of `.tfvars` by setting `use_default` parameter as `true`. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable), as shown in the example.<br><pre class="codeblock">	
-<code>"variablestore": [
+     "release": "v1.8.0" 
+     ```
+     {: codeblock}
+
+| Parameter | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `name` | Optional |  Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change.|
+| `type` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.14` to use Terraform version 0.14, `Terraform_v0.13` to use Terraform version 0.13, `Terraform_v0.12` to use Terraform version 0.12, and `Terraform_v0.11` to use Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.|
+| `description` | Optional |  Enter a description for your workspace.|
+| `tags` | Optional | Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.|
+| `resource_group` | Optional | Enter the resource group where you want to provision your workspace.|
+| `workspace_status` | Optional | Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.|
+| `template_repo.url` | Optional | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.|
+| `template_repo.branch` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored. <code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+     "branch": "master;",
+     "datafolder": “examples/ibm-vsi”,
+     "release": "v1.8.0" </code>|
+| `template_repo.datafolder` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored.|
+| `template_repo.release` | Optional | Enter the GitHub or GitLab release that points to your Terraform configuration files.|
+| `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.|
+| `template_data.variablestore.name` | Optional | Enter the name for the input variable that you declared in your Terraform configuration files.|
+| `template_data.variablestore.type` | Optional | `Terraform v0.11` supports `string`, `list`, `map` data type.  <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.|
+| `template_data.variablestore.value` | Optional | Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You can override the default values of `.tfvars` by setting `use_default` parameter as `true`. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",
                     "name": "docker_ports",
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
-		    "use_default":true
-                },
-      ]</code></pre></td>
-     </tr>
-      <tr>
-      <td><code>&lt;template_data.variablestore.secure&gt;</code></td>
-      <td>Optional. Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
-      </tr>
-      <tr>
-      <td><code>&lt;template_data.variablestore.use_default&gt;</code></td>
-      <td>Optional. Set the <code>use_default</code> parameter to <strong>true</strong> to override the default `.tfvars` parameter. By default, this parameter is set to <strong>false</strong>.</td>
-      </tr>
-      <tr>
-      <td><code>&lt;env_values.val1&gt;</code></td>
-      <td>Optional. In the payload you can provide an environment variables, and customized variables that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
-      </tr>	
-   </tbody></table></dd>	
-  <dt><code>--id <em>WORKSPACE_ID</em></code>, <code>-i <em>WORKSPACE_ID</em></code></dt>	
-<dd>Required. The unique identifier of the workspace that you want to update. To retrieve the ID of a workspace, run <code>ibmcloud schematics workspace list</code>.</dd>	
-  <dt><code>--json</code>, <code>-j</code></dt>	
-<dd>Optional. Return the command line output in JSON format.</dd>	
-</dl>	
+		                "use_default":true
+                }, </code>|
+| `template_data.variablestore.secure` | Optional | Set the `secure` parameter to **true**. By default, this parameter is set to **false**.|
+| `template_data.variablestore.use_default` | Optional | Set the `use_default` parameter to **true** to override the default `.tfvars` parameter. By default, this parameter is set to **false**.|
+| `env_values.val1` | Optional | In the payload you can provide an environment variables, and customized variables that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.|
+| `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.|
+| `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.|
+{: caption="JSON file component description" caption-side="top"}
 
 **Example**
 
