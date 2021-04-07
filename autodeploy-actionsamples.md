@@ -109,7 +109,7 @@ The usage of the clickable links are:
 Make sure you select the correct location. After an action is created, you cannot update the location and region.
 {: note}
 
-## Operations for {{site.data.keyword.BluVirtServers}} on VPC
+## Operations for {{{site.data.keyword.vsi_is_short_notm}}
 {: #ansible-vpc}
 
 <table>
