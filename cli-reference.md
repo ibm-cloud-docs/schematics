@@ -762,32 +762,120 @@ You can create the JSON as shared in the `example.json` file for workspace updat
 {: codeblock}
 
 Alternatively, now in template_repo block, you can also update `url` with more parameters as shown in the block.
-  
-     ```
-     "url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master;",
-     "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0" 
-     ```
-     {: codeblock}
+{: note}
 
 <table>
    <thead>
-    <th style="width:50px">Workspace / Action</th>
-    <th style="width:200px">State diagram</th>
+    <th style="width:50px">Parameter</th>
+    <th style="width:200px">Required / Optional</th>
     <th style="width:250px">Description</th>
   </thead>
   <tbody>
+   <tr>
+   <td>`name`</td>
+   <td>Optional</td>
+   <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change. </td>
+   </tr>
+   <tr>
+   <td>`type`</td>
+   <td>Optional</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.14` to use Terraform version 0.14, `Terraform_v0.13` to use Terraform version 0.13, `Terraform_v0.12` to use Terraform version 0.12, and `Terraform_v0.11` to use Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   </tr>
     <tr>
-      <td>template_repo.branch</td>
+   <td>`description`</td>
+   <td>Optional</td>
+   <td>Enter a description for your workspace.</td>
+   </tr>
+    <tr>
+   <td>`tags`</td>
+   <td>Optional</td>
+   <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.</td>
+   </tr>
+    <tr>
+   <td>`resource_group`</td>
+   <td>Optional </td>
+   <td>Enter the resource group where you want to provision your workspace.</td>
+   </tr>
+    <tr>
+   <td>`workspace_status` </td>
+   <td>Optional</td>
+   <td>Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.</td>
+   </tr>
+    <tr>
+   <td>`template_repo.url`</td>
+   <td>Optional</td>
+   <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
+   </tr>
+    <tr>
+    <td>`template_repo.branch`</td>
  <td>Optional</td>
   <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0"</code></pre></td>
+     "release": "v1.8.0"</code></pre></td></tr>
+    <tr>
+   <td>`template_repo.datafolder`</td>
+   <td>Optional</td>
+   <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
+   </tr>
+    <tr>
+   <td>`template_repo.release`</td>
+   <td>Optional</td>
+   <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
+   </tr>
+    <tr>
+   <td>`github_source_repo_url`</td>
+   <td>Optional</td>
+   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
+   </tr>
+    <tr>
+   <td>`template_data.variablestore.name`</td>
+   <td>Optional</td>
+   <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+   </tr>
+    <tr>
+   <td>`template_data.variablestore.type`</td>
+   <td>Optional</td>
+   <td>`Terraform v0.11` supports `string`, `list`, `map` data type.  <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
+   </tr>
+    <tr>
+   <td>`template_data.variablestore.value`</td>
+   <td>Optional</td>
+   <td>Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You can override the default values of `.tfvars` by setting `use_default` parameter as `true`. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock"><code>"variablestore": [
+                {
+                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+                    "description": "",
+                    "name": "docker_ports",
+                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
+		                "use_default":true
+                },</code></pre></td>
+   </tr>
+    <tr>
+   <td>`template_data.variablestore.secure`</td>
+   <td>Optional</td>
+   <td>Set the `secure` parameter to **true**. By default, this parameter is set to **false**.</td>
+   </tr>
+    <tr>
+   <td>`template_data.variablestore.use_default`</td>
+   <td>Optional</td>
+   <td>Set the `use_default` parameter to **true** to override the default `.tfvars` parameter. By default, this parameter is set to **false**.</td>
+   </tr>
+   <tr>
+   <td>`env_values.val1`</td>
+   <td>Optional</td>
+   <td>In the payload you can provide an environment variables, and customized variables that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
+   </tr>
+    <tr>
+   <td>`github_source_repo_url`</td>
+   <td>Optional</td>
+   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
+   </tr>
+    <tr>
+   <td>`github_source_repo_url`</td>
+   <td>Optional</td>
+   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
+   </tr>
   </tbody></thead></table>
-
-
 
 **Example**
 
