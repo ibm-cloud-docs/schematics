@@ -98,7 +98,7 @@ subcollection: schematics
 
 You can use {{site.data.keyword.bpshort}} action to configure your {{site.data.keyword.cloud}} resources, and to perform operations on the configured resources. 
 
-Have you noticed the `Deploy to IBM Cloud` clickable button in the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates)?  It can be used to rapidly create the {{site.data.keyword.bpshort}} action pre-populated with an **Action name**, and **Repository URL** directly from the documentation page. Follow these steps to create a `Deploy to IBM Cloud` clickable button for your Git repository. 
+If you notice the `Deploy to IBM Cloud` clickable button in the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates), it rapidly accessed the {{site.data.keyword.bpshort}} action and pre-populated with an **Action name**, **Repository URL** directly from the documentation page. Following steps are used to create a `Deploy to IBM Cloud` clickable button for the Git repository. 
 {: shortdesc}
 
 1. Create a template by using [sample Ansible Playbooks](https://github.com/Cloud-Schematics/?q=Ansible&type=&language=&sort=){: external}, and publish playbook in a Git repository.
