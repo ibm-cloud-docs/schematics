@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-09"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -114,7 +114,7 @@ Now, you are ready to complete these steps to execute the use case:
  **Example**
   
     ```
-    ibmcloud schematics job create -f job.json
+    ibmcloud schematics job run -f job.json
   
     ```
      {: pre}

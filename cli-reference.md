@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-08"
+lastupdated: "2021-04-09"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1213,8 +1213,8 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--credentials` or `-C` | Optional | Enter the path of a file that contains credentials to access target host.|
 | `--bastion` or `-b` | Optional | Enter the resource selection query string. |
 | `--inventory` or `-y` | Optional | Enter the inventory ID to get the target host details. |
-| `--input` or `-i` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
-|`--input-file` or `-I`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
+| `--input` or `--in` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
+|`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
 | `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables foo=bar`.|
 | `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains input variables. |
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
@@ -1317,8 +1317,8 @@ ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--descript
 | `--credentials` or `-C` | Optional | Enter the path of a file that contains credentials to access target host.|
 | `--bastion` or `-b` | Optional | Enter the resource selection query string. |
 | `--inventory` or `-y` | Optional | Enter the inventory ID to get the target host details. |
-| `--input` or `-i` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
-|`--input-file` or `-I`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
+| `--input` or `--in` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
+|`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
 | `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables foo=bar`.|
 | `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains input variables. |
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of the action to update. Currently this not supported. |
@@ -1353,7 +1353,7 @@ ibmcloud  schematics action get --id ACTION_ID [--profile PROFILE] [--output OUT
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-id` | Required | The ID of an action that you want to fetch. |
+| `--id` or `-i` | Required | The ID of an action that you want to fetch. |
 | `--profile` or `-p` | Optional | The level of information fetched by the GET method. Supported values are `detailed`, and `summary`. The default value is `summary`. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -1466,8 +1466,8 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} jobs.
 {: shortdesc}
 
-### `ibmcloud schematics job create`
-{: #schematics-create-job}
+### `ibmcloud schematics job run`
+{: #schematics-run-job}
 
 Create a job in {{site.data.keyword.bplong_notm}} to run the Terraform template or Ansible playbook of your {{site.data.keyword.bpshort}} workspace or action. You can create a job by using the a payload file or the interactive mode. 
 {: shortdesc}
@@ -1475,9 +1475,10 @@ Create a job in {{site.data.keyword.bplong_notm}} to run the Terraform template 
 **Syntax**
 
 ```
-ibmcloud schematics job create --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command-name COMMAND_NAME [--playbook-name PLAYBOOK_NAME] [--command-options COMMAND_OPTIONS] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--result-format RESPONSE_OUTPUT_FORMAT] [--file FILE_NAME ] [--no-prompt]
+ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command-name COMMAND_NAME [--playbook-name PLAYBOOK_NAME] [--command-options COMMAND_OPTIONS] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--output OUTPUT]  [--file FILE_NAME ] [--no-prompt]
 ```
 {: pre}
+
 
 **Command options**
 
@@ -1488,23 +1489,23 @@ ibmcloud schematics job create --command-object COMMAND_OBJECT_TYPE --command-ob
 | `--command-name,` or `-n` | Required | The command that you want to run against your workspace or action. Supported values are `ansible_playbook_check`, and `ansible_playbook_run`.|
 | `--playbook-name` or `-pn` | Optional | The name of an Ansible playbook that you want to run.  |
 | `--command-options` or `-co` | Optional | The command line options for the command.|
-| `--input` or `-i` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
-|`--input-file` or `-I`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
+| `--input` or `--in` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
+|`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
 | `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables foo=bar`.|
 | `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains environment variables. |
 | `--result-format` or `-f` | Optional |The result response output in JSON format.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of the new job. |
-| `--no-prompt` | Optional | Set this flag to create the job without an interactive command line session. |
-{: caption="Schematics job create flags" caption-side="top"}
+| `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
+{: caption="Schematics job run flags" caption-side="top"}
 
 If the action contains the playbook name, you need to add the playbook name, so that the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
 {: note}
 
 #### Using the payload file
-{: #job-create-payload}
+{: #job-run-payload}
 
-You can provide a payload file to specify certain parameters for the `job create` command. Then, you pass the file name to the command by using the `--file` command option. 
-{: shortdesc} 
+You can provide a payload file to specify certain parameters for the `job run` command. Then, you pass the file name to the command by using the `--file` command option.
+{: shortdesc}
 
 **Syntax**:
 
@@ -1531,7 +1532,7 @@ You can provide a payload file to specify certain parameters for the `job create
 {: codeblock}
 
 ```
-ibmcloud schematics job create --file sample.json
+ibmcloud schematics job run --file sample.json
 ```
 {: pre}
 
@@ -1544,7 +1545,7 @@ Instead of entering your job details by using command options or a payload file,
 
 1. Enter the command to create the job without any command options. 
    ```
-   ibmcloud schematics job create
+   ibmcloud schematics job run
    ```
    {: pre}
 
@@ -1557,7 +1558,7 @@ Instead of entering your job details by using command options or a payload file,
 ### `ibmcloud schematics job update`
 {: #schematics-update-job}
 
-Update or replace a job creates a copy of the job and relaunches an existing job by updating the information of an existing {{site.data.keyword.bplong_notm}} job.
+Update or replace a job run a copy of the job and relaunches an existing job by updating the information of an existing {{site.data.keyword.bplong_notm}} job.
 {: shortdesc}
 
 **Syntax**
@@ -1601,7 +1602,7 @@ ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [-
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-id` | Required | The job ID that you want to fetch. |
+| `--id` or `-i` | Required | The job ID that you want to fetch. |
 | `--profile` or `-p` | Optional | The level of information fetched by the get method. Supported values are `detailed`, and `summary`. The default value is `summary`.|
 | `--output` or `-o` | Optional | Return the command line output in JSON format.Currently only `JSON` file format is supported.|
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -1711,7 +1712,7 @@ ibmcloud schematics job delete --id us-east.JOB.yourjob_ID_1231
 ## Resource query commands
 {: #rq-commands}
 
-Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} resource queries and inventories.
+Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} resource queries and inventories. For more information, about resource queries and conditions, see [Creating resource inventories for Schematics actions](/docs/schematics?topic=schematics-inventories-setup).
 {: shortdesc}
 
 ### `ibmcloud schematics resource query create`
