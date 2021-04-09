@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-09"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -84,12 +84,12 @@ Now, you are ready to complete these steps to execute the use case:
   ```
   {: pre}
 
-3. Run a {{site.data.keyword.bpshort}} job by using the action ID that is created during action creation. The example contains the command to run a job. For more information, refer to [run job](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-job).
+3. Run a {{site.data.keyword.bpshort}} job by using the action ID that is created during action creation. The example contains the command to run a job. For more information, refer to [run job](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job).
 
  **Example**
 
   ```
- ibmcloud schematics job create -c action --cid <action-id> -n ansible_playbook_run --json
+ ibmcloud schematics job run -c action --cid <action-id> -n ansible_playbook_run --json
   ```
   {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-09"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -87,7 +87,7 @@ Now, you are ready to complete these steps to execute the use case:
   **Example**
 
   ```
-  ibmcloud schematics job create -c action --cid <job-payload> -n ansible_playbook_run --json
+  ibmcloud schematics job run -c action --cid <job-payload> -n ansible_playbook_run --json
   ```
   {: pre}
 
