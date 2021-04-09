@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-04-08"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -84,7 +84,7 @@ To create an action:
    5. Select the **Resource group**. The default resource group is `default`.
    6. Select the **Host groups > Create host group** tab to create static inventory that you can run your Ansible playbook.
        - Enter the **Host group name**.
-       - Select the condition target resources variable as **Workspace**, and select the target resource value as your workspace name from the list. Optionally, you can add a **query** tag for the conditional target resource. You can also add multiple conditional target resources for your workspaces to run.
+       - Select the condition target resources variable as **Workspace**, and select the target resource value as your workspace name from the list. Optionally, you can select a **query** tag provided during workspace creation in the conditional target resource, You can also add multiple conditional target resources for your workspaces to run.
        OR
        Select the **Create file** tab to define the dynamic inventory for hosts and group of hosts on which your playbook operates. You need to enter the inventory variables in `INI` syntax as shown in an example.
    7. Add the public SSH key. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances.
