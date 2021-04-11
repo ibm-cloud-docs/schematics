@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-04-11"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -93,72 +93,54 @@ subcollection: schematics
 
 
 
-# Creating a {{site.data.keyword.bpshort}} action URL to deploy to {{site.data.keyword.cloud_notm}}
+# Creating a button to prefill {{site.data.keyword.bpshort}} actions
 {: #auto-deploy-url}
 
-You can use {{site.data.keyword.bpshort}} action to configure your {{site.data.keyword.cloud}} resources, and to perform operations on the configured resources. 
-
-If you notice the `Deploy to IBM Cloud` clickable button in the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates), it rapidly accessed the {{site.data.keyword.bpshort}} action and pre-populated with an **Action name**, **Repository URL** directly from the documentation page. Following steps are used to create a `Deploy to IBM Cloud` clickable button for the Git repository. 
+Use the instructions on this page to create a button that opens the {{site.data.keyword.bpshort}} action create page and pre-poluates an action name and the GitHub repository URL that stores your Ansible playbook. You can use this button to create {{site.data.keyword.bpshort}} actions more quickly. 
 {: shortdesc}
 
-1. Create a template by using [sample Ansible Playbooks](https://github.com/Cloud-Schematics/?q=Ansible&type=&language=&sort=){: external}, and publish playbook in a Git repository.
-2. Copy the Git repository URL, for example, `https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy`.
-3. Use the following syntax and example to automatically deploy the {{site.data.keyword.bpshort}} action.
+For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
+{: tip}
+
+You can use {{site.data.keyword.bpshort}} action to configure your {{site.data.keyword.cloud}} resources, and to perform operations on the configured resources. 
+1. Create an Ansible playbook and publish the playbook in a GitHub repository. If you do not have a playbook, you can use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics/?q=Ansible&type=&language=&sort=){: external}.
+2. Copy the Git repository URL, such as `https://github.com/Cloud-Schematics/ansible-app-deploy`. 
+3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} action create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
 
   **Syntax**
-
   ```
-  https://cloud.ibm.com/schematics/actions/create?name=<name of the action>&url=<template Git repository example url>
+  https://cloud.ibm.com/schematics/actions/create?name=<action_name>&url=<git_repository_url>
   ```
   {: codeblock}
 
   **Example**
-
   ```
   https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy
   ```
   {: codeblock}
+  
+4. Open your web browser and enter the URL.
+5. Verify that the {{site.data.keyword.bplong_notm}} action create page opens and that the **Action name** and **Repository URL** are pre-populated.
 
- The URL contains the name of an action and the Git repository URL that you want to pre-populate on the {{site.data.keyword.bpshort}} action create page as parameters. If you do not provide both parameters, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
- {: important}
-
-4. You can also enter the example URL in the browser to view the {{site.data.keyword.bplong_notm}} action UI page with the pre-populated values for  **Action name**, and **Repository URL**.
-5. Verify the parameters in the {{site.data.keyword.bpshort}} action console. Then, click the **Create** button.
-
-## Adding an image on deployment to {{site.data.keyword.cloud_notm}} hyper link
+## Adding an image to your URL to create the auto-deploy button
 {: #add_an_image}
 
-You can add an image button with `Deploy to {{site.data.keyword.cloud_notm}}` text. You can use `draw.io`, or any tool to create an image. Save the image in `.png` exension. 
+You can add an image to your URL to create your `Deploy to {{site.data.keyword.cloud_notm}}` button.
 
-Record the coordinates of the image to make the image clickable by using object mapping.
-{: note}  
+1. Use `draw.io` or any other tool to create an image for your button. Save the image in `.png` extension.
+2. Create an image map. 
 
-**Syntax**
+   **Syntax**: 
+   ```
+   <img usemap="#<image_map_ID>" src="<path_to_image>"><map name="<image_map_name>" alt="<alt_text>"><area alt="<alt_text>" title="<button_title>" href="<schematics_action_url>" target="_blank" coords="<image_coordinates>" shape="rect"></map>
+   ```
+   {: codeblock}
+   
+   **Example**: 
+   ```
+   <img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image creates a Schematics action."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
+   ```
+   {: codeblock}
 
-The object mapping syntax to create a clickable image.
-
-```
-<img usemap="#<USEMAP_NAME>" src="images/autodeploy_button.png"><map name="<USEMAP_NAME>" alt="<ATERNATIVE_TEXT>">
-  <area alt="<ALT_TEXT>" title="<TITLE>" href="<SCHEMATICS_ACTION_UI_QUERYSTRINGS>" target="_blank" coords="" shape="rect">
-</map>
-```
-{: codeblock}
-
-**Example**
-
-The object mapping example to create a clickable image.
-
-```
-<img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
-  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
-</map>
-```
-{: codeblock}
-
-**Output**
-
-<img usemap="#deploybutton_map" src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image leads to create an action.">
-  <area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
-</map>
-
-To view the sample template examples, refer [Sample action templates and deploy to {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates).
+   For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
+{: tip}
