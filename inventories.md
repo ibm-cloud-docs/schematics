@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-11"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -98,7 +98,7 @@ subcollection: schematics
 A resource inventory defines a single {{site.data.keyword.cloud_notm}} resource or a group of resources where you want to run Ansible playbooks, modules, or roles by using {{site.data.keyword.bpshort}} actions.  
 {: shortdesc}
 
-You can specify your resource inventory by using a [static inventory file](#static-inv), or [dynamically retrieve](#dynamic-inv) your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} workspaces that you created in the past.  
+You can specify your resource inventory by using a [static inventory file](#static-inv), or [dynamically retrieve](#dynamic-inv) your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} workspaces that you created.  
 
 ## Creating static inventory files
 {: #static-inv}
@@ -155,7 +155,7 @@ Review the following limitations of static inventory files in {{site.data.keywor
 You can dynamically build your resource inventory from the {{site.data.keyword.cloud_notm}} resources that you provisioned with {{site.data.keyword.bpshort}} workspaces. 
 {: shortdesc}
 
-Dynamic resource inventories reference {{site.data.keyword.cloud_notm}} resources that you provisioned with {{site.data.keyword.bpshort}} workspaces. To retrieve the {{site.data.keyword.cloud_notm}} resources from your workspaces, you use pre-defined resource queries. You do not need to keep track of the hostnames or IP addresses that were assigned to your target resources as {{site.data.keyword.bpshort}} automatically determines these when you use this inventory in a {{site.data.keyword.bpshort}} action. 
+Dynamic resource inventories reference {{site.data.keyword.cloud_notm}} resources that you provisioned with {{site.data.keyword.bpshort}} workspaces. To retrieve the {{site.data.keyword.cloud_notm}} resources from your workspaces, you use pre-defined resource queries. You do not need to keep track of the IP addresses that were assigned to your target resources as {{site.data.keyword.bpshort}} automatically determines these when you use this inventory in a {{site.data.keyword.bpshort}} action. 
 
 1. From the [{{site.data.keyword.bpshort}} inventories dashboard](https://cloud.ibm.com/schematics/inventories){: external}, click **Create Inventory**. 
 2. Enter a name for your inventory, and select the location and resource group where you want to create the inventory. 
@@ -182,7 +182,7 @@ Dynamic resource inventories reference {{site.data.keyword.cloud_notm}} resource
 
 Review the following limitations of dynamic inventories in {{site.data.keyword.bpshort}}: 
 
-- You can choose among the [supported queries](#supported-queries} to select the target hosts that you want to include in your resource inventory only.
+- You can choose among the [supported queries](#supported-queries) to select the target hosts that you want to include in your resource inventory only.
 - {{site.data.keyword.bpshort}} retrieves the IP address of a target host and adds this IP address to the resource inventory. Hostnames cannot be added. If a public IP address is assigned to the target host, the public IP address is added to the resource inventory. If no public IP address exists, the private IP address is added to the resource inventory.
 - All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key only to authenticate with all target hosts that are included in your resource inventory.
 
