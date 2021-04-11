@@ -93,7 +93,7 @@ subcollection: schematics
 
 
 
-# Creating a button to prefill {{site.data.keyword.bpshort}} actions
+# Creating an auto-deploy button for {{site.data.keyword.bpshort}} actions
 {: #auto-deploy-url}
 
 Use the instructions on this page to create a button that opens the {{site.data.keyword.bpshort}} action create page and pre-poluates an action name and the GitHub repository URL that stores your Ansible playbook. You can use this button to create {{site.data.keyword.bpshort}} actions more quickly. 
