@@ -88,7 +88,7 @@ If you no longer need your {{site.data.keyword.bpshort}} action, you can delete 
 {: shortdesc}
 
 1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions), find the action that you want to delete.
-2. From the actions menu, click **Delete*. 
+2. From the actions menu, click **Delete**. 
 
 
 
