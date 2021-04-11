@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-11"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -27,14 +27,11 @@ subcollection: schematics
 # {{site.data.keyword.bplong_notm}} CLI	
 {: #schematics-cli-reference}	
 
-Refer to these commands when you want to automate the provisioning of {{site.data.keyword.cloud}} resources.
+Refer to these commands when you want to automate your {{site.data.keyword.bplong_short}} workspaces and actions.
 {: shortdesc}	
 
 To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to set up {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 {: tip}
-
-As of 31 March 2020, the {{site.data.keyword.bpshort}} command syntax changed from `ibmcloud terraform` to `ibmcloud schematics`. You can continue to use `ibmcloud terraform` commands as an alias, but note that this alias might become unsupported in future command line versions. 
-{: important}
 
 ## General commands
 {: #schematics-general-commands}
@@ -1137,7 +1134,7 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ## Action commands
 {: #schematics-action-commands}
 
-Review the command that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
+Review the commands that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
 {: shortdesc}
 
 ### Inventory host groups
@@ -1184,13 +1181,8 @@ You can set the proxy between a SSH client and the {{site.data.keyword.cloud_not
 ### `ibmcloud schematics action create`
 {: #schematics-create-action}
 
-Create an {{site.data.keyword.bplong_notm}} action to run on a single target or groups of target hosts, roles, policies, or steps to deploy your resources in the target hosts. You can run the {{site.data.keyword.cloud_notm}} resources the order in which you want to execute them. For sample templates, see {{site.data.keyword.cloud_notm}} Automation [templates](https://github.com/Cloud-Schematics). You can create an action by using `payload file` method or `interactive mode` by using the supported flags.
-
-For more information, about the Schematics action state, see [Schematics action state diagram](/docs/schematics?topic=schematics-action-setup#action-state-diagram).
+Create an {{site.data.keyword.bplong_notm}} action to run an Ansible playbook on a single target or a group of target hosts to perform cloud operations or install software. To try out this capability or to get started, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. You can create an action by using a payload file or the command's interactive mode.
 {: shortdesc}
-
-You cannot update the location and region once an action is created. Also, make sure your IP addresses are in the [allowlist](https://cloud.ibm.com/docs/schematics?topic=schematics-allowed-ipaddresses).
-{: important}
 
 **Syntax**
 
@@ -1204,30 +1196,29 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--name` or `-n` | Required | Enter the unique name of an action. |
+| `--name` or `-n` | Required | A unique name for the action. |
 | `--description` or `-d` | Optional | The short description for an action.|
-| `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south, us-east, eu-de,** or **eu-gb**. |
-| `--resource-group` or `-r` | Required | The resource group name for an action. |
-| `--template` or `-tr` | Optional | URL to the GIT Repository that are used to clone the template.|
-| `--playbook-name or --pn` | Optional| Name of an Ansible playbook. |
-| `--credentials` or `-C` | Optional | Enter the path of a file that contains credentials to access target host.|
-| `--bastion` or `-b` | Optional | Enter the resource selection query string. |
-| `--inventory` or `-y` | Optional | Enter the inventory ID to get the target host details. |
-| `--input` or `--in` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
-|`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
-| `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables foo=bar`.|
-| `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains input variables. |
-| `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
+| `--location,` or `-l` | Required | The geography or location where you want to create the action, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. The geography or location determines where your action runs and where your action data is stored.  For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Make sure that you can store data in this location as you cannot change the location after the action is created.|
+| `--resource-group` or `-r` | Required | The name of the resource group where you want to create the action. |
+| `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
+| `--playbook-name or --pn` | Optional| The name of the Ansible playbook. |
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`.|
+| `--bastion` or `-b` | Optional | The IP address of the bastion host.|
+| `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
+| `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file in the `--input-file` command option.|
+|`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
+| `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
+| `--env-file` or `-E`| Optional | The path to a file where you specified all environment variables for an action. Environment variables must be specified as key-value pairs in JSON format. |
+| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
-| `--file` or `-f` | Required | Path to the JSON file containing the definition of the action to update. Currently this not supported. |
-| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
-| `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
+| `--file` or `-f` | Required | The path to the JSON file containing the definition of the action that you want to create. Currently this not supported. |
+| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 {: caption="Schematics action create flags" caption-side="top"}
 
 **Example**
 
 ```
-ibmcloud schematics action create --name mydemoaction1 --location us-east --resource-group Default --template https://github.com/Cloud-Schematics/lamp-simple --playbook-name site.yml --credential ~/.ssh/id_rsa --bastion 52.116.129.31 --target-file hosts.ini --input-file input.json --json
+ibmcloud schematics action create --name start-vsi --location us-south --resource-group default --template https://github.com/Cloud-Schematics/ansible-is-instance-actions --playbook-name stop-vsi-playbook.yml --input instance_ip=172.4.5.0
 ```
 {: pre}
 
@@ -1293,7 +1284,7 @@ ibmcloud schematics action create
 ### `ibmcloud schematics action update`
 {: #schematics-update-action}
 
-Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. You cannot update the location and region once an action is created.
+Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. 
 {: shortdesc}
 
 
@@ -1308,30 +1299,30 @@ ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--descript
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The action ID of an action you want to update. |
+| `--id` or `-i` | Required | The ID of an action that you want to update. |
 | `--name` or `-n` | Required | The unique name of an action. |
 | `--description` or `-d` | Optional | The short description for an action.|
 | `--location,` or `-l` | Required | The geographic locations supported by {{site.data.keyword.bplong_notm}} service such as **us-south, us-east, eu-de,** or **eu-gb**. |
-| `--resource-group` or `-r` | Required | The resource group name for an action. |
-| `--template` or `-tr` | Optional | URL to the GIT Repository that are used to clone the template.|
-| `--credentials` or `-C` | Optional | Enter the path of a file that contains credentials to access target host.|
-| `--bastion` or `-b` | Optional | Enter the resource selection query string. |
-| `--inventory` or `-y` | Optional | Enter the inventory ID to get the target host details. |
-| `--input` or `--in` | Optional | The input variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
-|`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
-| `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables foo=bar`.|
-| `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains input variables. |
+| `--resource-group` or `-r` | Required | The name of the resource group that you want to assign to your action.  |
+| `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`.|
+| `--bastion` or `-b` | Optional | The IP address of the bastion host.|
+| `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
+| `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file in the `--input-file` command option.|
+|`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
+| `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
+| `--env-file` or `-E`| Optional | The path to a file where you specified all environment variables for an action. Environment variables must be specified as key-value pairs in JSON format. |
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of the action to update. Currently this not supported. |
-| `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
-| `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
-| `--output` or `-o` | Optional | Specify the output format, supported format is JSON. |
-| `--json` or `-j` | Optional | [Deprecated] Prints the output in JSON format. You can use `--output` flag. |
+| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. |
+| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
+| `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="Schematics action update flags" caption-side="top"}
+
 
 **Example**
 
 ```
-ibmcloud schematics action update -id us-south.workspace.101010101 --description testtesttest -l US -r default
+ibmcloud schematics action update --id us-south.workspace.101010101 --description "This is my description" 
 ```
 {: pre}
 
@@ -1345,7 +1336,7 @@ Retrieve the detailed information of an existing {{site.data.keyword.bplong_notm
 **Syntax**
 
 ```
-ibmcloud  schematics action get --id ACTION_ID [--profile PROFILE] [--output OUTPUT] [--json] [--no-prompt]
+ibmcloud schematics action get --id ACTION_ID [--profile PROFILE] [--output OUTPUT] [--json] [--no-prompt]
 ```
 {: pre}
 
@@ -1353,30 +1344,29 @@ ibmcloud  schematics action get --id ACTION_ID [--profile PROFILE] [--output OUT
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The ID of an action that you want to fetch. |
-| `--profile` or `-p` | Optional | The level of information fetched by the GET method. Supported values are `detailed`, and `summary`. The default value is `summary`. |
+| `--id` or `-i` | Required | The ID of an action that you want to retrieve. |
+| `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
-| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
-| `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
+| `--no-prompt` | Optional |Set this flag to run the command without user prompts. |
 {: caption="Schematics action get flags" caption-side="top"}
 
 **Example**
 
 ```
-ibmcloud schematics action get -id us-south.workspace.101010101 --p summary --o testoutput.json
+ibmcloud schematics action get --id us-south.workspace.101010101 -p summary 
 ```
 {: pre}
 
 ### `ibmcloud schematics action list`
 {: #schematics-list-action}
 
-Retrieves list of all {{site.data.keyword.bpshort}} actions of your accessible API endpoint. For example, if you use an API endpoint for a geography, such as `North America`, only actions that are created in `us-south` or `us-east` are retrieved.
+Retrieve a list of all {{site.data.keyword.bpshort}} actions in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
 **Syntax**
 
 ```
- schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--json]
+ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--json]
 ```
 {: pre}
 
@@ -1384,11 +1374,10 @@ Retrieves list of all {{site.data.keyword.bpshort}} actions of your accessible A
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer starting from 1, maximum is 200. The default value is `-1`. |
+| `--limit` or `-l` | Optional | The maximum number of actions that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
 | `--offset` or `-m` | Optional | The position of the action in the list of actions. For example, if you have three actions in your account, the command returns these actions as a list with three elements. To see a specific action in this list, you must enter the position number that the action has in the list. To list the first action in the list, enter `0`. To list the second action, enter `1` and so forth. Negative numbers are not supported and are ignored. |
-| `--profile` or `-p` | Optional |Level of the information returned by the get method. Supported values are `ids`, and `summary`. The default value is `summary`. The default value is `-1`.|
+| `--profile` or `-p` | Optional |The depth of information that is returned. Supported values are `ids`, and `summary`. The default value is `summary`. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
-| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics action list flags" caption-side="top"}
 
 **Example**
@@ -1401,11 +1390,8 @@ ibmcloud schematics action list --profile ids
 ### `ibmcloud schematics action delete`
 {: #schematics-delete-action}
 
-Delete a {{site.data.keyword.bpshort}} action and specify an Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources. 
+Delete a {{site.data.keyword.bpshort}} action. 
 {: shortdesc}
-
-You cannot delete or stop the job activity from an ongoing execution of an action defined in the playbook. You can repeat the execution of same job, whenever you patch the actions. For more information, about the Schematics action state, see [{{site.data.keyword.bpshort}} action state diagram](/docs/schematics?topic=schematics-action-setup#action-state-diagram).
-{: note}
 
 **Syntax**
 
@@ -1418,9 +1404,9 @@ ibmcloud schematics action delete --id ACTION_ID [--force][--no-prompt]
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | ID of an action that you want to delete. |
-| `--force` or `-f` | Optional | To force the deletion without users confirmation. |
-| `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
+| `--id` or `-i` | Required | The ID of an action that you want to delete. |
+| `--force` or `-f` | Optional | Force the deletion without user confirmation. |
+| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 {: caption="Schematics action delete flags" caption-side="top"}
 
 **Example**
@@ -1430,40 +1416,12 @@ ibmcloud schematics action delete --id us-south.workspace.101010101
 ```
 {: pre}
 
-### `ibmcloud schematics action upload`
-{: #schematics-upload-action}
 
-You can upload a tape archive file (`.tar`) from your local file system at any time to an {{site.data.keyword.bplong_notm}} action. Enter the full file path on your local machine where your `.tar` file is stored. Create the `.tar` file of your template repo by using the `TAR` command given `tar -cvf mytestactionupload.tar $TEMPLATE_REPO_FOLDER` command.
-{: shortdesc}
-
-**Syntax**
-
-```
-ibmcloud schematics action upload --id ACTION_ID --file FILE_NAME [--no-prompt] [--output OUTPUT]
-```
-{: pre}
-
-**Command options**
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--id` or `-i` | Required | ID of an action that you want to upload. |
-| `--file` or `-f` | Required | Path of the `TAR` file to upload for an action.|
-| `--no-prompt` | Optional | Set this flag to stop interactive command line session. |
-| `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
-{: caption="Schematics action upload flags" caption-side="top"}
-
-**Example**
-
-```
-ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FILE_PATH>/mytestactionupload.tar
-```
-{: pre}
 
 ## Job commands
 {: #schematics-job-commands}
 
-Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} jobs.
+Review the commands to create, update, list, and delete {{site.data.keyword.bplong_notm}} jobs.
 {: shortdesc}
 
 ### `ibmcloud schematics job run`
@@ -1588,7 +1546,7 @@ ibmcloud schematics job update --id  us-east.JOB.yourjob_ID_1231
 ### `ibmcloud schematics job get`
 {: #schematics-get-job}
 
-Retrieve the information of an existing {{site.data.keyword.bplong_notm}} job by using a job ID of the tasks and events for the executed playbook.
+Retrieve the information of an existing {{site.data.keyword.bplong_notm}} job by using a job ID.
 {: shortdesc}
 
 **Syntax**
@@ -1602,17 +1560,16 @@ ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [-
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The job ID that you want to fetch. |
-| `--profile` or `-p` | Optional | The level of information fetched by the get method. Supported values are `detailed`, and `summary`. The default value is `summary`.|
+| `--id` or `-i` | Required | The ID of the job ID that you want to retrieve. |
+| `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
 | `--output` or `-o` | Optional | Return the command line output in JSON format.Currently only `JSON` file format is supported.|
-| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
-| `--no-prompt` | Optional | Set this flag to create the job without an interactive command line session. |
+| `--no-prompt` | Optional | Set this flag to retrieve job details without an interactive command line session. |
 {: caption="Schematics job get flags" caption-side="top"}
 
 **Example**
 
 ```
-ibmcloud schematics job get --id us-east.JOB.yourjob_ID_1231 --profile detailed --output testoutput.json
+ibmcloud schematics job get --id us-east.JOB.yourjob_ID_1231 --profile detailed
 ```
 {: pre}
 
@@ -1683,8 +1640,11 @@ ibmcloud schematics job logs --id us-east.JOB.yourjob_ID_1231
 ### `ibmcloud schematics job delete`
 {: #schematics-delete-job}
 
-Delete a job to run against your {{site.data.keyword.cloud_notm}} resources. **Note** You cannot delete or stop the job activity from an ongoing execution of an action defined in the playbook. You can repeat the execution of same job, whenever you patch or update an action.
+Delete a job for a {{site.data.keyword.bpshort}} action. 
 {: shortdesc}
+
+You cannot delete or stop a running job. To make changes to your action, wait for the job to complete, then check or run your action again.  
+{: note}
 
 **Syntax**
 
@@ -1697,8 +1657,8 @@ ibmcloud schematics job delete --id JOB_ID [--force] [--no-prompt]
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
-| `--id` | Required | Job ID that you want to delete. |
-| `--force` or `-f` | Optional | To force the deletion without confirmation. |
+| `--id` | Required | The ID of the job that you want to delete. |
+| `--force` or `-f` | Optional | To force the deletion without user confirmation. |
 | `--no-prompt` | Optional | Set this flag to stop without an interactive command line session. |
 {: caption="Schematics job delete flags" caption-side="top"}
 
