@@ -99,8 +99,8 @@ Use the {{site.data.keyword.bpshort}} action job details to find a history of al
 {: shortdesc}
 
 Jobs are classified into the following categories:
-- **System jobs**: These jobs represent all {{site.data.keyword.bpshort}}-internal activities and checks, such as downloading your Ansible playbook from GitHub or verifying your playbook. You can find these jobs in the **All** tab on the **Jobs** page. 
-- **User jobs**: These jobs are created when you check or run an action. You can find a summary of all user-iniated jobs when you click on the **User** tab on the **Jobs** page. 
+- **System jobs**: These jobs represent all {{site.data.keyword.bpshort}}-internal activities and checks, such as downloading your Ansible playbook from GitHub or verifying your playbook. You can find these jobs in the **All** tab on the action's **Jobs** page. 
+- **User jobs**: These jobs are created when you check or run an action. You can find a summary of all user-initiated jobs when you click on the **User** tab on the action's **Jobs** page. 
 
 Review the following status that can be assigned to a job: 
 
