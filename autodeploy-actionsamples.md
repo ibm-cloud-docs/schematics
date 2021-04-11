@@ -102,7 +102,7 @@ Try out one of the IBM-provided Ansible playbooks to perform cloud operations on
 {: shortdesc}
 
 Use the links on this page as follows: 
-- `View GitHub repo`: Click on this link to open the [Git repository](https://github.com/Cloud-Schematics) where the template is stored. You can review the file structure, the Ansible playbook instructions, and the `README` file that contains the steps to use the template in {{site.data.keyword.bpshort}}.
+- `View GitHub repo`: Click on this link to open the Git repository where the template is stored. You can review the file structure, the Ansible playbook instructions, and the `README` file that contains the steps to use the template in {{site.data.keyword.bpshort}}.
 - `Deploy to IBM Cloud`: This link takes you to the **Create an action** page with the **GitHub repository URL** and the **Action name** pre-populated.  
 
 
