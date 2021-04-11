@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-08"
+lastupdated: "2021-04-11"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -27,34 +27,33 @@ subcollection: schematics
 # Setting up {{site.data.keyword.bpshort}} actions
 {: #action-setup}
 
+Run you Ansible playbook in {{site.data.keyword.cloud_notm}} by using {{site.data.keyword.bpshort}} actions. 
 
-An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or group of target hosts also referred to as inventory. It includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want to configure and perform managed operations on the {{site.data.keyword.cloud}} resource.
+An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. These target hosts are also referred to as inventory. It includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want to configure and perform managed operations on the {{site.data.keyword.cloud}} resource.
 {: shortdesc}
 
 ## Creating and running the {{site.data.keyword.bpshort}} action
 {: #create-action}
 
 Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources. 
+{: shortdesc}
 
-Before you begin: 
+**Before you begin**: 
 
-- Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. 
-- Make sure that you have the required permissions to create and edit an action. 
+- Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. You can also try out one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
+- Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a {{site.data.keyword.bpshort}} action. 
 
-You cannot update the location and region once an action is created. Also, make sure your IP addresses are in the [allowlist](https://cloud.ibm.com/docs/schematics?topic=schematics-allowed-ipaddresses).
-{: important}
+**To create an action**:
 
-To create an action:
-
-1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions). Then, click the **Create action** button.
+1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions), click **Create action**.
 2. Configure your action. 
    1. Enter an **Action name** and an optional **Action description** for your action. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. 
-   2. Optional: Enter the tags that you want to add to your action. Tags can help you search an action easily.
-   3. Select the resource group where you want to create an action. Default resource group is `default`.
-   4. Decide where you want to create an action. The **Location** determines where your action runs and action data is stored. You can choose between a geography, such as `North America`, `Frankfurt`, or `London`. The {{site.data.keyword.bpshort}} determines the location based on availability. Make sure of your location, you cannot update the location and region once an action is created. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where the {{site.data.keyword.cloud_notm}} resources reside and where you want to run your Ansible playbook.
+   2. Optional: Enter the tags that you want to add to your action. Tags can help you find an action more easily later.
+   3. Select the resource group where you want to create the action. 
+   4. Select the **Location** where you want to create the action. The location determines where your action runs and action data is stored. You can choose between a geography, such as `North America`, or a location, such as `Frankfurt` or `London`. If you select a geography, {{site.data.keyword.bpshort}} decides on a location within this geography based on availability. Be sure that you can store your action data in this location as you cannot change the location after the action is created. For more information, about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Note that the location of your action is independent from the location of your {{site.data.keyword.cloud_notm}} resource where you want to run your Ansible playbook.
    5. Click the **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Settings` page.
 3. Import your Ansible playbook. 
-   1. Enter the **Repository URL** of your GitHub or GitLab repository where you want your Ansible playbook to run. The URL can point to the master branch, any other branch, or a subdirectory. Your action can point to one playbook at a time only. If you want to run multiple playbooks, create a separate action for each playbook. 
+   1. Enter the **Repository URL** of your GitHub or GitLab repository where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run later. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
       - Example for master branch: https://github.com/myorg/myrepo
       - Example for other branches: https://github.com/myorg/myrepo/tree/mybranch
       - Example for subdirectory: https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
@@ -62,159 +61,58 @@ To create an action:
       Don't have a playbook that you can use? Try out one of our [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
       {: tip}
       
-   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information, refer to [creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token){: external}.
-   3. Review the default Ansible version that is displayed. If you use your own Ansible playbook, make sure that your playbook can be run with the displayed Ansible version. 
-   4. Click **Retrieve playbooks** button to connect to your repository, and retrieve the list of Ansible playbooks from your Git repository.
-   5. Select the playbook that you want to run. 
-   6. Select the **Verbosity** level. The verbosity level determines volume of information that needs to be written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible runs, select a high verbosity level. You can view the logs when your playbook runs. 
-   7. Optional: Click the **Advanced options** to define command line variables that you want to pass to the playbook. Command line variables must be entered in key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden for the users when accessed after the action is created.  For example, to provide the VSI IP address for the Ansible operation to start and stop VSI servers, you can define the key-value as shown in the screen capture.
-   <img src="images/img_actions_variables.png" alt="Schematics action set up" width="800" style="width: 800px; border-style: none"/> 
-   8. Click the **Next** button to save the action details. {{site.data.keyword.bpshort}} verifies the `YAML` file and displays the action settings page to configure the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your Ansible playbook. 
-4. Select the {{site.data.keyword.cloud_notm}} resources where you want to run your Ansible playbook. You can use an existing resource inventory, or create a new one by using the inventory selector wizard or uploading a file that includes the IP addresses or hostnames of the {{site.data.keyword.cloud_notm}} hosts that you want to connect to. 
-
-   To view an existing inventory:
-   1. Select your **Location**, where the inventory is created.
-   2. View your list of inventory.
-
-   To create an inventory:
-   1. Select your **Location** to create an inventory.
-   2. Click **Create inventory**.
-   3. Enter a **Inventory name** and an optional description for your inventory.
-   4. Select the **Location**. The location you select will determine which workspaces are available to you.
-   5. Select the **Resource group**. The default resource group is `default`.
-   6. Select the **Host groups > Create host group** tab to create static inventory that you can run your Ansible playbook.
-       - Enter the **Host group name**.
-       - Select the condition target resources variable as **Workspace**, and select the target resource value as your workspace name from the list. Optionally, you can select a **query** tag provided during workspace creation in the conditional target resource, You can also add multiple conditional target resources for your workspaces to run.
-       OR
-       Select the **Create file** tab to define the dynamic inventory for hosts and group of hosts on which your playbook operates. You need to enter the inventory variables in `INI` syntax as shown in an example.
-   7. Add the public SSH key. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances.
-       
-      **Example**
-      
-      ```
-       [webserverhost]
-       178.54.68.78
-       187.54.68.78
-       [dbhost]
-       174.45.86.87
-       ```
-      {: screen}
-
-   8. Click the **Create host group** button.
-5. Click the **Next**  button to save the {{site.data.keyword.cloud_notm}} resource inventory details.
-6. Click the **Check action** button to verify your action details. The **Jobs** page opens automatically and you can view the results in the logs. 
-7. Click the **Run action** to run an action. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. Every `30 seconds` the job logs gets auto refreshed. For more information, about editing the {{site.data.keyword.bpshort}} action settings and to rerun an action, See [Check action and Run action settings](/docs/schematics?topic=schematics-action-setup#action-settings).
-
-   Before your launch action, you can observe the log items in the `Jobs` page, that is polled by the APIs to create {{site.data.keyword.bpshort}} actions. Some of these jobs are polled by an asynchronous API calls. Every time you execute the patch action, the `JOB.new-action.ansible` job lists are created.
+   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token){: external}.
+   3. Review the default Ansible version that is used to run your playbook. This version cannot be changed. If you use your own Ansible playbook, make sure that your playbook can be run with this Ansible version. 
+   4. Click **Retrieve playbooks** to connect to your repository and retrieve all Ansible playbooks from your Git repository.
+   5. Select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook.
+   6. Select the **Verbosity** level. The verbosity level determines the depth of information that is written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible runs, select a high verbosity level. You can view the logs when your playbook runs. 
+   7. Optional: Click the **Advanced options** to define input variables that you want to pass to the playbook. Input variables must be entered in key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden for the users after the action is created. If you use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}, all input variables can be found in the `readme.md` file. 
+   8. Click **Save** to save the action details. 
+4. Configure your resource inventory. The resource inventory includes all target hosts where you want to run your Ansible playbook.
+   1. In the **IBM Cloud resource inventory** card, click the edit icon. 
+   2. If your Ansible playbook requires a bastion host, enter the IP address of your bastion host. The bastion host sits in front of your target hosts and proxies all Ansible SSH connections to the target hosts.
+   3. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information about resource inventories, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
+   4. In the **IBM Cloud resource inventory SSH key** field, enter the private SSH key that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. To use a different SSH key to connect to your bastion host, uncheck the **Use the same key for IBM Cloud resource inventory and Bastion host** option and enter your SSH key in the **Bastion host SSH key** field.
+   5. Click **Save** to save your resource inventory details.
+5. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results in the logs. This check verifies that your playbook can be executed in {{site.data.keyword.bpshort}}. If you need to change your action settings, return to the action's **Settings** page and click the edit icon. 
+6. Click **Run action** to run the action. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. Every `30 seconds` the job logs are autotomatically refreshed. 
+   
+   You cannot delete or stop a running job for your {{site.data.keyword.bpshort}} action. To make changes to your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again. 
    {: note}
 
-8. Optionally, you can edit a {{site.data.keyword.bpshort}} action by clicking the `edit` icon from the **Settings** page. Once the edit is completed, you can relaunch an action, by using **Run action** button.
 
-
-## Editing the {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
-{: #editing-ansible-actions}
-
-You can edit a {{site.data.keyword.bpshort}} action by clicking the `edit` icon from the `Settings` page. Once the edit is completed, you can relaunch an action, by using  `Launch action` button. 
-
-## Deleting the {{site.data.keyword.bpshort}} actions in {{site.data.keyword.bpshort}}
+## Deleting a {{site.data.keyword.bpshort}} action
 {: #delete-ansible-actions}
 
-Delete a {{site.data.keyword.bpshort}} action and the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources.
-1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions).
-2. Click the **Action** tab. 
-2. Select the action you want to delete, click `Actions > Delete` from the right tab. You will receive a confirmation dialog box to delete the selected action.
-
-   You cannot delete or stop the job activities from an on going execution of an action defined in the playbook. You can repeat the execution of same job, whenever you patch the actions.
-   {: note}
-
-## Schematics action state diagram
-{: #action-state-diagram}
-
-The {{site.data.keyword.bpshort}} system state indicates the results of creating and processing template. The Schematics user state is set by the administrator or the template manager.  While processing the action document, Schematics will run jobs that can be in any of the following exemplary status. The table represents the Schematics action state and description.
+If you no longer need your {{site.data.keyword.bpshort}} action, you can delete it. Deleting an action removes the Ansible playbook and your action data. However, any configurations on your target hosts that you made by using the action are not removed. 
 {: shortdesc}
 
-|State|Description|
-|------|-------|
-|Normal|Administrator publishes action to enable visibility to end users and user execution.|
-|Disabled|Disallows user execution.|
-|Locked|After configuration is in `Normal` state. Action can be locked by an administrator to stop further change.|
-|Critical| When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical.|
-{: caption="Schematics action state" caption-side="top"}
-
-The following table represents the state diagram flow of the Schematic action.
-
-<table>
-   <thead>
-    <th style="width:50px">Workspace / Action</th>
-    <th style="width:200px">State diagram</th>
-    <th style="width:250px">Description</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Create action</code></td>
-      <td><img src="images/createaction.png" alt="Create action"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>When processing the create action, the {{site.data.keyword.bpshort}} download the document and change the action into draft state. From the draft state you can connect to the infrastructure template in your source repository to see pending state. From pending state, the {{site.data.keyword.bpshort}} downloads the job to execute and reach the normal state or disable state. If the template manager sets disable to stop the usage of the user execution, the action state changes to disabled state. Or if the template execution fails, the action state changes into critical state.</td>
-   </tr>
-     <tr>
-      <td><code>Delete action</code></td>
-      <td><img src="images/deleteaction.png" alt="Delete action"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>When the action is in delete state, the {{site.data.keyword.bpshort}} will run the Job and the action state changes into pending state. From the pending state if the template deletion fails, the action state changed into critical state.</td>
-   </tr>
-    <tr>
-      <td><code>Update action</code></td>
-      <td><img src="images/updateaction.png" alt="Update action" width="800" style="width: 800px; border-style: none"/></td>
-      <td>When processing the update action, the {{site.data.keyword.bpshort}} download the document and change the action state into pending state. If the template execution is success you can see the normal state. If the template manager sets disable to stop the usage of the user execution, the action state changes to disabled state. Or if the template execution fails, the action state changes into critical state.
-      </td>
-   </tr>
-  </tbody>
-  </table>
+1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions), find the action that you want to delete.
+2. From the actions menu, click **Delete*. 
 
 
-## Viewing the {{site.data.keyword.bpshort}} action jobs
+
+## Reviewing the {{site.data.keyword.bpshort}} action job details
 {: #action-jobs}
 
-The {{site.data.keyword.bpshort}} action console provides the **Jobs** and **Settings** feature to analyze your action execution. When the create action runs, you are directed to the user job page to view the job activity messages.
+Use the {{site.data.keyword.bpshort}} action job details to find a history of all {{site.data.keyword.bpshort}}-internal activities, such as downloading your Ansible playbook or verifying your playbook, and to see the Ansible logs for the playbook that you ran on your target hosts. 
+{: shortdesc}
 
-The **Jobs** lists the activity stream that are performed when your action were created, or updated. The list of options are displayed in the Action List pane on the left side of the window and on the right side of the window you can view the quick access to **Adjust your settings**, **Get help from the documentation**, and **Learn more about Schematics**.
+Jobs are classified into the following categories:
+- **System jobs** These jobs represent all {{site.data.keyword.bpshort}}-internal activities and checks, such as downloading your Ansible playbook from GitHub or verifying your playbook. You can find these jobs in the **All** tab on the **Jobs** page. 
+- **User jobs** These jobs are created when you check or run an action. You can find a summary of all user-iniated jobs when you click on the **User** tab on the **Jobs** page. 
 
-Jobs are classified into:
-- **System jobs** These jobs are created when your action is created and updated. The **All** tab in the console represents system jobs, such as `playbook run`, `playbook check`. 
-- **User jobs** These jobs gets created for an user action. The summary of the system jobs are shown in the following status in the **User** tab.
-
-In the console, there is no limit set to display the job logs. Every `30 seconds` the job logs gets automatically refreshed. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
-{: note}
+Review the following status that can be assigned to a job: 
 
 |Status|Description|
 |-----|---------|
-|`ok` |Accesses the remote machine and perform the playbook action successfully. This displays the success count, number of systems that actions performed. |
-|`changed` | Accesses the remote machine and perform the playbook action successfully. Displays the list of machines where changes had implied.|
-|`failed` |Total count of machines that were failed to apply changes. |
-|`skipped` |Total count of machines that were skipped when the playbook changes have already applied.|
-|`unreachable` |Total number of machines not able to reach out the machine to imply changes. |
+|`ok` |The total number of target hosts where the Ansible playbook was successfully executed.  |
+|`changed` | The total number of target hosts that were accessed and changed. |
+|`failed` |The total number of target hosts where the Ansible playbook could not be successfully executed.  |
+|`skipped` |The total number of target host that were accessed but could not be updated because changes were already applied to these hosts.|
+|`unreachable` |The total number of target hosts that could not be found or reached. |
 {: caption="Job status" caption-side="top"}
 
-## Editing the {{site.data.keyword.bpshort}} action settings
-{: #action-settings}
 
-The **Settings** option allows you to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Following are the details for an action parameters.
 
-1. **Details**
-
-   You can click the **Edit details** icon to edit the Action description, Resource group, Location and click **Save**.
-
-2. **Ansible action**
-
-   You can click the **Edit import** icon to edit the GitHub or GitLab repository URL, Personal access token, Playbook name, Verbosity, Advanced options to update your variables.
-
-3. **{{site.data.keyword.cloud_notm}} resource inventory**
-
-   You can click the **Edit inventory** icon to edit the Bastion host IP, {{site.data.keyword.cloud_notm}} inventory host groups, and {{site.data.keyword.cloud_notm}} resource inventory SSH key.
-
-Finally, you can click **Run action** or **Check action** to validate and re-run your action playbook.
-
-|action|Description|
-|----|-----|
-|`Run action`|Executes the updated action configuration in a check or non check mode. Check mode is a simulation, does not generate an output for the tasks that you have conditional variables. This task ignore errors in check mode.|
-|`Check action`|Validates the configuration management playbooks that runs on a single node at a time.|
-{: caption="Action settings" caption-side="top"}
 
