@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-11"
+lastupdated: "2021-04-12"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -63,14 +63,14 @@ ibmcloud schematics help [command]
 **Example**
 
 ```
-ibmcloud schematics help -version
+ibmcloud schematics help 
 ```
 {: pre}
 
 ### `ibmcloud schematics version`
 {: #schematics-version}
 
-List the version of the Terraform command line and {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform that the {{site.data.keyword.bpshort}} command line uses. 
+List the versions of all supported open source projects in {{site.data.keyword.bpshort}}, such as the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, Ansible, Helm, and Kubernetes that are used to run {{site.data.keyword.bpshort}} actions on {{site.data.keyword.cloud_notm}} resources.
 {: shortdesc}
 
 **Syntax**
@@ -92,7 +92,7 @@ ibmcloud schematics version [--output OUTPUT] [--json JSON_FILE]
 **Example**
 
 ```
-ibmcloud schematics version --output > "<Your_DIR_PATH/filename.json>"
+ibmcloud schematics version --output json > "<filename.json>"
 ```
 {: pre}
 
@@ -1672,13 +1672,13 @@ ibmcloud schematics job delete --id us-east.JOB.yourjob_ID_1231
 ## Resource query commands
 {: #rq-commands}
 
-Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} resource queries and inventories. For more information, about resource queries and conditions, see [Creating resource inventories for Schematics actions](/docs/schematics?topic=schematics-inventories-setup).
+Dynamically build resource inventories by using resource queries. Resource queries help you to retrieve your target hosts from existing {{site.data.keyword.bplong_notm}} workspaces. For more information, about resource queries and conditions, see [Creating resource inventories for Schematics actions](/docs/schematics?topic=schematics-inventories-setup).
 {: shortdesc}
 
 ### `ibmcloud schematics resource query create`
 {: #schematics-create-rq}
 
-Create a resource query in {{site.data.keyword.bplong_notm}} to pass to {{site.data.keyword.bpshort}} action for target host groups. You can create a resource by using the a payload file or the interactive mode.
+Create a resource query in {{site.data.keyword.bplong_notm}} that you can use to build your resource inventory. You can create a resource query by using a payload file or the interactive mode.
 {: shortdesc}
 
 **Syntax**
@@ -1693,17 +1693,17 @@ ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RES
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
 | `--name` or `-n` | Required | The unique name for a resource query. |
-| `--type` or `-t` | Optional | The type of the resource query. such as `vsi`|
-|`--query-file` or `-f` | Optional | The path to the JSON file containing queries.|
-| `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
-| `--output` or `-o` | Optional | Return the command line output in JSON format.Currently only `JSON` file format is supported.|
+| `--type` or `-t` | Optional | The type of resource query that you want to create.  |
+|`--query-file` or `-f` | Optional | The path to the JSON file where you specified the resource queries. To fina a list of supported queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries). |
+| `--file` or `-f` | Optional | The path to the JSON file that specifies the details of the resource query that you want to create. |
+| `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to create the resource query without an interactive command line session. |
 {: caption="Schematics resource query create flags" caption-side="top"}
 
 #### Using the payload file
 {: #inv-create-payload}
 
-You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. 
+You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. For a list of supported resource query, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc} 
 
 **Syntax**
@@ -1729,8 +1729,6 @@ You can provide a payload file to specify certain parameters for the `resource_q
 
 **Example**
 
-The sample queries.json file for payload and interactive mode.
-
 ```
 {
    "query_type": "workspaces",
@@ -1751,7 +1749,7 @@ The sample queries.json file for payload and interactive mode.
 {: codeblock}
 
 ```
-ibmcloud schematics resource-query create --name testrq123 --type vsi --query-file queries.json
+ibmcloud schematics resource-query create --name myquery --type vsi --query-file queries.json
 ```
 {: pre}
 
@@ -1759,7 +1757,7 @@ ibmcloud schematics resource-query create --name testrq123 --type vsi --query-fi
 #### Using the interactive mode
 {: #inv-create-interactive}
 
-Instead of entering your resource query details by using command options or a payload file, you can also use the interactive mode for the command. This mode prompts you to enter the required values to create a resource query in {{site.data.keyword.bpshort}}. 
+Instead of entering your resource query details by using the command options or a payload file, you can also use the interactive mode for the command. This mode prompts you to enter the required values to create a resource query in {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
 1. Enter the command to create the resource query without any command options. 
@@ -1768,9 +1766,9 @@ Instead of entering your resource query details by using command options or a pa
    ```
    {: pre}
 
-2. You are prompted to Enter name>. Enter the name of an resource-query.
-3. You are prompted to Enter query file>. Enter the path of the configured json file. The sample `queries.json` is shown in the payload example. 
-4. Click Return to view the output with the resource-query details.
+2. Enter a name for your resource query and press the return key.
+3. Enter the path to your payload file. For a sample payload file, see [Using the payload file](#inv-create-payload). Then, press the return key.
+4. Review the details of the resource query that was created for you. 
 
 ### `ibmcloud schematics resource query update`
 {: #schematics-update-rq}
@@ -1808,7 +1806,7 @@ ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory1231
 ### `ibmcloud schematics resource query get`
 {: #schematics-get-rq}
 
-Retrieve the information of an existing {{site.data.keyword.bplong_notm}} resource query by using a resource query ID of the tasks and the events that executed.
+Retrieve the information of an existing {{site.data.keyword.bplong_notm}} resource query by using a resource query ID.
 {: shortdesc}
 
 **Syntax**
@@ -1822,10 +1820,10 @@ ibmcloud schematics resource-query get --id ID [--profile PROFILE] [--output OUT
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The inventory ID that you want to fetch. |
-| `--profile` or `-p` | Optional | The level of information fetched by the get method. Supported values are `detailed`, and `summary`. The default value is `summary`.|
-| `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
-| `--no-prompt` | Optional | Set this flag to fetch resource query without an interactive command line session. |
+| `--id` or `-i` | Required | The ID of the resource query that you want to retrieve.  |
+| `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
+| `--output` or `-o` | Optional | Specify theh output format. Only `JSON` format is supported.|
+| `--no-prompt` | Optional | Set this flag to retrieve a resource query without an interactive command line session. |
 {: caption="Schematics resource query get flags" caption-side="top"}
 
 **Example**
@@ -1838,7 +1836,7 @@ ibmcloud schematics resource-query get --id us-east.INVENTORY.inventoryid12342
 ### `ibmcloud schematics resource query list`
 {: #schematics-list-rq}
 
-Retrieve a list of all {{site.data.keyword.bpshort}} resource queries that ran against a target hosts through {{site.data.keyword.bpshort}} action. The resource query displays a list of resource queries.
+Retrieve a list of all {{site.data.keyword.bpshort}} resource queries in your account.
 {: shortdesc}
 
 **Syntax**
@@ -1852,9 +1850,9 @@ ibmcloud schematics resource-query list [--limit LIMIT] [--offset OFFSET] [--out
 
 | Flag |  Required / Optional |Description |
 | ----- | -------| -------- | 
-| `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer starting from 1, maximum is 200. The default value is `-1`. |
-| `--offset` or `-m` | Optional | The position of the resource query in the list of resource queries. For example, if you have three resource query in your account, the command returns these resource queries as a list with three elements. To see a specific resource query in this list, you must enter the position number that the resource query has in the list. To list the first resource query in the list, enter `0`. To list the second resource query, enter `1` and so forth. Negative numbers are not supported and are ignored. The default value is `-1`.|
-| `--output` or `-o` | Optional | Specify output format, only `JSON` format is supported.|
+| `--limit` or `-l` | Optional |  The maximum number of resource queries that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
+| `--offset` or `-m` | Optional | The position of the resource query in the list of resource queries. For example, if you have three resource queries in your account, the command returns these resource queries as a list with three elements. To see a specific resource query in this list, you must enter the position number that the resource query has in the list. To list the first resource query in the list, enter `0`. To list the second resource query, enter `1` and so forth. Negative numbers are not supported and are ignored. The default value is `-1`.|
+| `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 {: caption="Schematics resource query list flags" caption-side="top"}
 
 **Example**
@@ -1874,13 +1872,13 @@ Review the command that you want to create, update, list, delete and to work wit
 ### `ibmcloud schematics inventory create`
 {: #schematics-create-inv}
 
-Create an inventory in {{site.data.keyword.bplong_notm}} to pass to {{site.data.keyword.bpshort}} action for target host groups. You can create an inventory by using the a payload file or the interactive mode.
+Create a resource inventory in {{site.data.keyword.bplong_notm}} that you can reference in a {{site.data.keyword.bpshort} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
 {: shortdesc}
 
 **Syntax**
 
 ```
-ibmcloud schematics inventory create --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [[--output OUTPUT]] [--no-prompt]
+ibmcloud schematics inventory create --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -1891,13 +1889,13 @@ You need to pass either `--inventories-ini` file path or `--resource-query` ID f
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
-| `--name` or `-n` | Required | The unique name of an inventory. |
+| `--name` or `-n` | Required | The unique name of a resource inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The geographic locations supported by IBM Cloud Schematics service, such as **us-south, us-east, eu-de,** or **eu-gb**. |
-|`resource-group` or `-r`| Optional | The resource group name for an action.|
-|`--inventories-ini` or `-y` | Optional |  The file path of INI format file that contains the host details.|
-|`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs, use `--resource-query id1 --resource-query id2`.|
-| `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
+| `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as **us-south, us-east, eu-de,** or **eu-gb**. For more information about data storage in {{site.data.keyword.bpshort}}, see [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location). |
+|`resource-group` or `-r`| Optional | The name of the resource group where you want to create the action.|
+|`--inventories-ini` or `-y` | Optional |The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. For more information about how to create a static resource inventory file, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv). |
+|`--resource-query` | Optional |Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the {{site.data.keyword.cloud_notm}} resources that you created with a {{site.data.keyword.bpshort}} workspace. To create a resource query, see the `ibmcloud schematics resource-query create` [command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq). To enter multiple resource query IDs, use `--resource-query id1 --resource-query id2`.|
+| `--file` or `-f` | Optional |The path to the JSON file where you specified the resource inventory that you want to create.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 | `--no-prompt` | Optional | Set this flag to create an inventory without an interactive command line session. |
 {: caption="Schematics inventory create flags" caption-side="top"}
@@ -1926,14 +1924,12 @@ You can provide a payload file to specify certain parameters for the `inventory 
 
 **Example**
 
-The sample queries.json file for payload and interactive mode.
-
 ```
 {
-  "name": "inventory_name",
-  "description": "Short description",
+  "name": "myinventory",
+  "description": "This is the resource inventory for production",
   "location": "us-east",
-  "resource_group": "Default",
+  "resource_group": "default",
     "resource_queries": [
     "default.RESOURCEQUERY.string.df3d8a47"
   ]
@@ -1943,7 +1939,7 @@ The sample queries.json file for payload and interactive mode.
 {: codeblock}
 
 ```
-ibmcloud schematics inventory create --file sample.json
+ibmcloud schematics inventory create --file inventory.json
 ```
 {: pre}
 
@@ -1951,7 +1947,7 @@ ibmcloud schematics inventory create --file sample.json
 #### Using the interactive mode
 {: #inv-create-interactive}
 
-Instead of entering your inventory details by using command options or a payload file, you can also use the interactive mode for the command. This mode prompts you to enter the required values to create a job in {{site.data.keyword.bpshort}}. 
+Instead of entering your inventory details by using the command options or a payload file, you can also use the interactive mode for the command. This mode prompts you to enter the required values to create an inventory in {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
 1. Enter the command to create the inventory without any command options. 
@@ -1959,24 +1955,22 @@ Instead of entering your inventory details by using command options or a payload
    ibmcloud schematics inventory create
    ```
    {: pre}
-2. You are prompted to Enter name>. Enter the name of an inventory, then, click Return.
-3. You are prompted to Enter resource-group>. Enter the resource group name, then, click Return.
-4. You are prompted to Enter location>. Enter your location such as **us-south**, **us-east**, **eu-de**, or **eu-gb**.
-5. Click Return to view the output with the inventory details.
+2. Enter a name for your inventory and press the return key.
+3. Enter the resource group where you want to create the inventory and press the return key. 
+4. Enter the location where you want to create the inventory, such as **us-south**, **us-east**, **eu-de**, or **eu-gb**. Then, press the return key.
+5. Review the details of the inventory that was created. 
 
 
 ### `ibmcloud schematics inventory update`
 {: #schematics-update-inv}
 
-Update or replace a inventory creates a copy of an inventory and relaunches an existing inventory by updating the information of an existing {{site.data.keyword.bplong_notm}} inventory.
+Update or replace an existing resource inventory. 
 {: shortdesc}
 
 **Syntax**
 
 ```
-ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [[--output OUTPUT]] [--no-prompt]
-            
-
+ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -1984,7 +1978,7 @@ ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--descripti
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
-| `--id`  or `-i` | Required | Enter an inventory ID that you want to update. |
+| `--id`  or `-i` | Required | Enter the ID of a resource inventory that you want to update. |
 | `--name` or `-n` | Required | The unique name of an inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
 | `--location` or `-l` | Optional | The geographic locations supported by IBM Cloud Schematics service, such as **us-south, us-east, eu-de,** or **eu-gb**.|
@@ -2006,7 +2000,7 @@ ibmcloud schematics inventory update  --id us-east.INVENTORY.inventory12312 --na
 ### `ibmcloud schematics inventory get`
 {: #schematics-get-inv}
 
-Retrieve the information of an existing {{site.data.keyword.bplong_notm}} inventory by using a inventory ID of the tasks and events for the executed playbook.
+Retrieve detailed information of an existing {{site.data.keyword.bplong_notm}} inventory by using the inventory ID.
 {: shortdesc}
 
 **Syntax**
@@ -2020,23 +2014,23 @@ ibmcloud schematics inventory get --id ID [--profile PROFILE] [--output OUTPUT] 
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The job ID that you want to fetch. |
-| `--profile` or `-p` | Optional | The level of information fetched by the get method. Supported values are `detailed`, and `summary`. The default value is `summary`.|
+| `--id` or `-i` | Required | The ID of the resource inventory for which you want to list detailed information.  |
+| `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
-| `--no-prompt` | Optional | Set this flag to get an inventory without an interactive command line session. |
+| `--no-prompt` | Optional | Set this flag to retrieve details of an inventory without an interactive command line session. |
 {: caption="Schematics inventory get flags" caption-side="top"}
 
 **Example**
 
 ```
-ibmcloud schematics inventory get --id us-east.INVENTORY.inventoryid12342 --output invoutput.json
+ibmcloud schematics inventory get --id us-east.INVENTORY.inventoryid12342 --output json
 ```
 {: pre}
 
 ### `ibmcloud schematics inventory list`
 {: #schematics-list-inv}
 
-Retrieve a list of all {{site.data.keyword.bpshort}} inventories that ran against a target hosts through {{site.data.keyword.bpshort}} action. The inventory displays a list of inventories with the status as `in_progess`, `success`, or `failed`.
+Retrieve a list of all {{site.data.keyword.bpshort}} inventories in your account.
 {: shortdesc}
 
 **Syntax**
@@ -2050,15 +2044,15 @@ ibmcloud schematics inventory list [--limit LIMIT] [--offset OFFSET] [--output O
 
 | Flag |  Required / Optional |Description |
 | ----- | -------| -------- | 
-| `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer starting from 1, maximum is 200. The default value is `-1`. |
-| `--offset` or `-m` | Optional | The position of the inventory in the list of inventories. For example, if you have three inventory in your account, the command returns these inventories as a list with three elements. To see a specific inventory in this list, you must enter the position number that the inventory has in the list. To list the first inventory in the list, enter `0`. To list the second inventory, enter `1` and so forth. Negative numbers are not supported and are ignored. The default value is `-1`.|
+| `--limit` or `-l` | Optional |  The maximum number of inventories that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
+| `--offset` or `-m` | Optional | The position of the inventory in the list of inventories. For example, if you have three inventories in your account, the command returns these inventories as a list with three elements. To see a specific inventory in this list, you must enter the position number that the inventory has in the list. To list the first inventory in the list, enter `0`. To list the second inventory, enter `1` and so forth. Negative numbers are not supported and are ignored. The default value is `-1`.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 {: caption="Schematics job list flags" caption-side="top"}
 
 **Example**
 
 ```
-ibmcloud schematics inventory list --output listoutput.json
+ibmcloud schematics inventory list --output json
 ```
 {: pre}
 
