@@ -27,7 +27,7 @@ subcollection: schematics
 # {{site.data.keyword.bplong_notm}} CLI	
 {: #schematics-cli-reference}	
 
-Refer to these commands when you want to automate your {{site.data.keyword.bplong_short}} workspaces and actions.
+Refer to these commands when you want to automate your {{site.data.keyword.bplong_notm}} workspaces and actions.
 {: shortdesc}	
 
 To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to set up {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
