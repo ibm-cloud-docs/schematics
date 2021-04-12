@@ -1303,9 +1303,8 @@ ibmcloud schematics action update --id ACTION_ID [--name ACTION_NAME] [--descrip
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The ID of an action that you want to update. |
-| `--name` or `-n` | Required | A new unique name for your action. |
+| `--name` or `-n` | Optional | A new unique name for your action. |
 | `--description` or `-d` | Optional | The short description for an action.|
-| `--resource-group` or `-r` | Required | The name of the resource group that you want to assign to your action.  |
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`.|
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
@@ -1643,7 +1642,7 @@ ibmcloud schematics job list --resource-type action --id us-south.ACTION.interac
 ### `ibmcloud schematics job logs`
 {: #schematics-logs-job}
 
-Retrieve the detailed information of all the job records and events of the playbook run from your {{site.data.keyword.cloud_notm}} account. For example, if you use an API endpoint for a geography, such as `North America`, only jobs that are created in `us-south` or `us-east` are returned.
+Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshort}} action. 
 {: shortdesc}
 
 **Syntax**
@@ -1657,7 +1656,7 @@ ibmcloud schematics job logs --id JOB_ID [--no-prompt]
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
-| `--id` | Required | Job that you want to update or relaunch. |
+| `--id` | Required | The ID of the job for which you want to retrieve detailed logs.  |
 | `--no-prompt` | Optional | Set this flag to log without an interactive command line session. |
 {: caption="Schematics job logs flags" caption-side="top"}
 
@@ -1674,7 +1673,7 @@ ibmcloud schematics job logs --id us-east.JOB.yourjob_ID_1231
 Delete a job for a {{site.data.keyword.bpshort}} action. 
 {: shortdesc}
 
-You cannot delete or stop a running job. To make changes to your action, wait for the job to complete, then check or run your action again.  
+You cannot delete or stop a running job. To remove a job, you must wait for the job to complete.  
 {: note}
 
 **Syntax**
