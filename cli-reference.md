@@ -1738,21 +1738,21 @@ You can provide a payload file to specify certain parameters for the `resource_q
 **Syntax**
 
 ```
-{
+[{
    "query_type": "workspaces",
    "query_condition": [
    {
-     "name": "<WORKSPACE_NAME>",
+     "name": "workspace-id",
      "value": "<WORKSPACE_ID>",
      "description": "string"
    },
    {
-     "name": "<RESOURCE_NAME>",
-     "value": "<RESOURCE_ID>",
+     "name": "resource-name",
+     "value": "<RESOURCE_NAME>",
      "description": "string"
    } 
   ]
-}
+}]
 ```
 {: codeblock}
 
