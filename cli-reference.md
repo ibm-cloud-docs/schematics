@@ -1612,7 +1612,7 @@ Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran against a tar
 **Syntax**
 
 ```
-ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--json] [--no-prompt]
+ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--no-prompt]
 ```
 {: pre}
 
@@ -1620,14 +1620,13 @@ ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--l
 
 | Flag |  Required / Optional |Description |
 | ----- | -------| -------- | 
-| `--resource-type` or `-rt` | Required | The name of the resource. Supported value is `action`.|
-| `--id` or `-i` | Required | ID of the resource. |
-| `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer starting from 1, maximum is 200. The default value is `-1`. |
-| `--offset` or `-m` | Optional | The position of the job in the list of jobs from where you want to start listing your jobs. For example, if you have three jobs in your account, the command returns these jobs as a list with three elements. To retrieve all jobs, you must enter position number 0. To retrieve jobs number 2 and 3 and leave out job number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of actions. Negative numbers are not supported and are ignored. |
-| `--profile` or `-p` | Optional | Level of the information returned by the get method. Supported values are `ids`, or `summary`. The default value is `summary`. |
-| `--output` or `-o` | Optional | Return the command line output in JSON format.Currently only `JSON` file format is supported.|
-| `--all` or `-A` | Optional | Lists all the jobs including the internal jobs.|
-| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
+| `--resource-type` or `-rt` | Required | The name of the {{site.data.keyword.bpshort}} resource. Only `action` is supported.|
+| `--id` or `-i` | Required | The ID of the {{site.data.keyword.bpshort}} action for which you want to list jobs. |
+| `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
+| `--offset` or `-m` | Optional | The position of the job in the list of jobs from where you want to start listing your jobs. For example, if you have three jobs in your account, the command returns these jobs as a list with three elements. To retrieve all jobs, you must enter position number 0. To retrieve job number 2 and 3 and leave out job number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of jobs. Negative numbers are not supported and are ignored. |
+| `--profile` or `-p` | Optional | The depth of information that is returnd. Supported values are `ids` or `summary`. The default value is `summary`. |
+| `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported.|
+| `--all` or `-A` | Optional | Lists all the jobs including the {{site.data.keyword.bpshort}}-internal jobs.|
 | `--no-prompt` | Optional | Set this flag to create the job without an interactive command line session. |
 {: caption="Schematics job list flags" caption-side="top"}
 
@@ -1657,7 +1656,7 @@ ibmcloud schematics job logs --id JOB_ID [--no-prompt]
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--id` | Required | The ID of the job for which you want to retrieve detailed logs.  |
-| `--no-prompt` | Optional | Set this flag to log without an interactive command line session. |
+| `--no-prompt` | Optional | Set this flag to run the command without an interactive command line session. |
 {: caption="Schematics job logs flags" caption-side="top"}
 
 **Example**
@@ -1689,7 +1688,7 @@ ibmcloud schematics job delete --id JOB_ID [--force] [--no-prompt]
 | ----- | -------- | ------- |
 | `--id` | Required | The ID of the job that you want to delete. |
 | `--force` or `-f` | Optional | To force the deletion without user confirmation. |
-| `--no-prompt` | Optional | Set this flag to stop without an interactive command line session. |
+| `--no-prompt` | Optional | Set this flag to run the command without an interactive command line session. |
 {: caption="Schematics job delete flags" caption-side="top"}
 
 **Example**
@@ -1708,7 +1707,7 @@ Dynamically build resource inventories by using resource queries. Resource queri
 ### `ibmcloud schematics resource query create`
 {: #schematics-create-rq}
 
-Create a resource query in {{site.data.keyword.bplong_notm}} that you can use to build your resource inventory. You can create a resource query by using a payload file or the interactive mode.
+Create a resource query in {{site.data.keyword.bplong_notm}} that you can use to build your resource inventory. You can create a resource query by using a payload file or the command's interactive mode.
 {: shortdesc}
 
 **Syntax**
@@ -1723,8 +1722,8 @@ ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RES
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
 | `--name` or `-n` | Required | The unique name for a resource query. |
-| `--type` or `-t` | Optional | The type of resource query that you want to create.  |
-|`--query-file` or `-f` | Optional | The path to the JSON file where you specified the resource queries. To fina a list of supported queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries). |
+| `--type` or `-t` | Optional | The type of resource that you want to retrieve. Supported values are `vsi`.  |
+|`--query-file` or `-f` | Optional | The path to the JSON file where you specified the details of your resource query. To find a list of supported queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries). |
 | `--file` or `-f` | Optional | The path to the JSON file that specifies the details of the resource query that you want to create. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to create the resource query without an interactive command line session. |
@@ -1733,7 +1732,7 @@ ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RES
 #### Using the payload file
 {: #inv-create-payload}
 
-You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. For a list of supported resource query, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
+You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. For a list of supported resource queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc} 
 
 **Syntax**
@@ -1749,7 +1748,7 @@ You can provide a payload file to specify certain parameters for the `resource_q
    },
    {
      "name": "<RESOURCE_NAME>",
-     "value": "<RESOURCE_VALUE>",
+     "value": "<RESOURCE_ID>",
      "description": "string"
    } 
   ]
@@ -1787,7 +1786,7 @@ ibmcloud schematics resource-query create --name myquery --type vsi --query-file
 #### Using the interactive mode
 {: #inv-create-interactive}
 
-Instead of entering your resource query details by using the command options or a payload file, you can also use the interactive mode for the command. This mode prompts you to enter the required values to create a resource query in {{site.data.keyword.bpshort}}. 
+Instead of entering your resource query details by using the command options or a payload file, you can use the interactive mode for the command. This mode prompts you to enter the required values to create a resource query in {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
 1. Enter the command to create the resource query without any command options. 
