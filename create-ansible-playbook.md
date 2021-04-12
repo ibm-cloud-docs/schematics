@@ -2,66 +2,138 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-04-12"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
+
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
-{:table: .aria-labeledby="caption"} 
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
-{:preview: .preview}
 {:external: target="_blank" .external}
+{:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
+{:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
+{:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
+{:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
+{:new_window: target="_blank"}
+{:note .note}
+{:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
+{:pre: .pre}
+{:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
+{:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
+{:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
+{:support: data-reuse='support'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
+{:table: .aria-labeledby="caption"}
+{:term: .term}
+{:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 # Creating Ansible playbooks 
 {: #create-playbooks}
 
-An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or group of target hosts also referred to as inventory. It includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want to configure and perform managed operations on the {{site.data.keyword.cloud}} resource.
-
-For example, you can include instructions to install a software on a virtual server, or to perform managed operations, such as reload or take down a virtual server instance.
-
-Ansible playbooks must be stored in a GitHub or GitLab repository so that, you can run them in {{site.data.keyword.bpshort}}. For more information, about how to write your playbook by using Ansible, refer to [Writing your playbook](https://www.ansible.com/blog/getting-started-writing-your-first-playbook){: external}.
+An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can run on a single target host or a group of target hosts. These hosts are also referred to as the resource inventory. 
 {: shortdesc}
 
-## Planning your Ansible playbook
+With Ansible playbooks, you can run operations on cloud resources, such as starting or stopping a virtual server, install software packages, deploy apps, or even provision cloud resources and configure them to your needs. A playbook is written in YAML format and consists of multiple plays that each define the tasks that you want to run on your target hosts. Common automation tasks can be grouped to an Ansible module and made available so that they can be reused in other playbooks. You can also group multiple playbooks to an Ansible role. 
+
+## Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}} 
 {: #plan-ansible-playbook}
 
-You need to plan for these check list to create a playbook:
-- The target or group of target hosts where you want to run through the Ansible playbook. You can either provide a static list of IP addresses for the target hosts or dynamically fetch the IP addresses from an existing {{site.data.keyword.bpshort}} workspace.
-- Plan the tasks to provision infrastructure, deploy applications you want to perform regularly through roles. For more information, about roles and its usage, see [referencing Ansible roles in a playbook](#schematics-roles).
-- Plan for a comprehensive package of automation by using multiple playbooks, and roles by using Ansible collections. For more information, about roles and its usage, see [referencing Ansible collections in a playbook](#schematics-collections).
+To prepare your Ansible playbook for {{site.data.keyword.bpshort}}, review the following considerations. 
+{: shortdesc}
 
-## Creating your Ansible playbook
+- Your Ansible playbook must be stored in a GitHub or GitLab repository. 
+- You are limited in how you can specify the target hosts for your Ansible resource inventory. For more information, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
+- All playbooks must be compatible to run with an Ansible version that is supported in {{site.data.keyword.bpshort}}. To find supported versions, run `ibmcloud schematics version`. 
+- To try out the Ansible capabilities in {{site.data.keyword.bpshort}}, you can try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates). 
+
+## Creating an Ansible playbook
 {: #create-playbook}
 
-Follow these steps to create an Ansible playbook.
+Follow these general steps to create your Ansible playbook. For detailed information about how to structure your playbook, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html){: external} or this [blog](https://www.ansible.com/blog/getting-started-writing-your-first-playbook){: external}. 
+{: shortdesc}
 
-Create a YAML file that contains all the target host, roles, tasks, files, policies,   and steps you want to configure and deploy your resources. For more information, about YAML syntax, refer to [YAML Syntax](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html){: external}.  Refer to [a sample YAML file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/site.yml){: external} that describes how to use Ansible playbook to deploy the Hackathon starter web application.
+Want to use existing Ansible playbooks to get started? Try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or browse existing Ansible collections and roles in [Ansible Galaxy](https://galaxy.ansible.com/){: external}
+{: tip}
 
-   You can configure the tasks in `requirements.yaml` file and store in the [roles](#schematics-roles) folder for your playbook execution. You can also configure all of your automation and autoscaling topologies in the `requirements.yaml` file and store in the [collections](#schematics-collections) folder for your playbook execution.
-   {: note}
+1. [Create your resource inventory where you want to run your Ansible playbook](/docs/schematics?topic=schematics-inventories-setup). You can also use the built-in Terraform capabilities in {{site.data.keyword.bpshort}} to provision your target hosts. For more information, see [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-about-schematics#how-to-workspaces). 
 
-Store the YAML files in your Git repository. For more information, about the location to store the YAML files, review this [sample file structure](https://github.com/Cloud-Schematics/ansible-app-deploy-iks){: external} that describes the how to structure the directories and files to deploy the application.
+2. Create your Ansible playbook. Use one of the [IBM-provided playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) to get started or browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find existing roles and collections. You can then reference these [roles](#schematics-roles) and [collections](#schematics-collections) in your playbook.
 
+3. Create a repository in GitHub or GitLab, and build the Ansible playbook directory and file structure. Depending on whether or not you use Ansible roles and collections, this directory structure might vary. To find a sample structure, refer to this [sample playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/site.yml){: external}. 
+
+4. Upload your Ansible playbook, modules, roles, and collections to your GitHub repository. 
+5. [Create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-setup#create-action).
 
 
 ## Referencing Ansible roles in your playbook
 {: #schematics-roles}
 
-An [Ansible roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} is a set of instructions or automation tasks that are used to configure a host or group of hosts, deploy software or perform managed operations. Ansible roles are defined by using `YAML` files with a predefined directory structure.
-
-An [Ansible Galaxy](https://galaxy.ansible.com/){: external} is a repository of reusable Ansible roles that can be used in your Ansible playbook. The reusable Ansible roles are dynamically retrieved from Ansible Galaxy by using the requirements files before invoking your Ansible playbook to setup the configured resources. This is used to streamline your automation tasks so that even new users or administrator can start automating tasks by using Ansible.
+An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} is a set of Ansible playbooks that you want to run on your resource inventory. You can find existing roles in the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository. The reusable Ansible roles are dynamically retrieved from Ansible Galaxy by using a `requirements.yml` that must be present in. a `roles` directory in your GitHub repository. 
 
 {{site.data.keyword.bplong_notm}} supports `/roles` to specify the requirements to process in through `requirements.yaml` or `requirements.yml` file. The requirements file uses the Ansible Galaxy repository to execute the process and invokes your Ansible playbook from the Git repository to execute the configured resources.
 
