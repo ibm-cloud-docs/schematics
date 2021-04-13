@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25"
+lastupdated: "2021-04-13"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -38,14 +38,11 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} service.
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} deliver Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud}} environment, and enable Infrastructure as Code (IaC). For more information, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics).
+{{site.data.keyword.bplong_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your app workloads.
 
-## What is Terraform? 
-{: #what-is-terraform}
-{: faq}
-{: support}
+To do so, {{site.data.keyword.bpshort}} leverages open source projects, such as Terraform, Ansible, OpenShift, Operators, and Helm, and delivers these capabilities to you as a managed service. Rather than installing each open source project on your machine, and learning the API or CLI, you declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and watch {{site.data.keyword.bpshort}} run these tasks for you.
 
-Terraform is an open-source software that enables predictable and consistent provisioning of cloud platform and infrastructure resources by using a high-level scripting language. You can use Terraform to automate your {{site.data.keyword.cloud_notm}} resource provisioning, rapidly build complex, multitier cloud environments, and enable Infrastructure as Code (IaC).
+For more information about how {{site.data.keyword.bpshort}} works, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics).
 
 ## What is Infrastructure as Code?
 {: #what-is-iac}
