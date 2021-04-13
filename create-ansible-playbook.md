@@ -135,130 +135,117 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 
 An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to segregate one big Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
 
-Roles can be created by using two main paths: 
-- `main.yml`
-- `requirements.yml`
+You can [create your own roles](#main-file) or [use existing roles from Ansible Galaxy](#requirements-file). 
 
-### Specifying a role by using a `main.yml` file
+### Creating your own roles in Ansible 
 {: #main-file}
 
-Roles must be stored in a `roles` directory relative to your Ansible playbook. You can create subdirectories to specify different roles. The tasks that you want to run for each role must be stored in a `main.yml` file inside a `tasks` directory as shown in this example.
+To streamline your Ansible playbook, you can decide to separate out playbook tasks by creating roles and referencing them in your playbook.  
+{: shortdesc}
 
-**Sample role file structure**: 
+1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all of your hosts, and tasks that you want to run only on your web servers and your databases. Each group of tasks can become its own role. 
 
-```
-  ├── roles
-      └── db
-          └── tasks
-              └── main.yml
-  ├── playbook.yaml
-  ├── README.md
-```
-{: codeblock}
+2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. You can create subdirectories to specify different roles. The name of the subdirectory becomes the name of your role, such as `db`. The tasks that you want to run for each role must be stored in a `main.yml` file inside a `tasks` directory as shown in this example. 
 
-**Sample main.yml file**: 
-```
-- name: Download MySQL Community Repo
-    get_url:
-      url: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-      dest: /tmp
-    tags: db
-```
-{: codeblock}
+   **Sample role file structure**: 
 
-**Reference the role in your Ansible playbook**: 
+   ```
+    ├── roles
+        └── db
+            └── tasks
+                └── main.yml
+    ├── playbook.yaml
+    ├── README.md
+   ```
+   {: screen}
 
-```
-- name: deploy MySQL and configure the databases
-  hosts: all
-  remote_user: root
+3. Add the tasks that you want to run to a `main.yml` file. In the following example, you separate out the task to download the MySQL community repo from your main playbook and put it into a `main.yml` file. 
 
-  roles:
-    - db
-```
-{: codeblock}
+
+   **Sample main.yml file**: 
+   ```
+   - name: Download MySQL Community Repo
+     get_url:
+       url: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+       dest: /tmp
+   ```
+   {: codeblock}
+
+4. Reference the role in your Ansible playbook. 
+
+   ```
+    - name: deploy MySQL and configure the databases
+      hosts: all
+      remote_user: root
+
+     roles:
+       - db
+    ```
+   {: codeblock}
 
 For more information about other files and conditions that you can add to your role, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#role-directory-structure){: external}
 
-### Using `requirements.yml` files
+### Installing roles from Ansible Galaxy
 {: #requirements-file}
 
+You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansible.com/){: external} in your playbook. Ansible Galaxy offers pre-packaged units of work from the Ansible community that are made available as roles and collections.
 
-You can create your own roles by separating out tasks and put them into a `main.yml` file inside a `roles` directory. You can also browse existing roles in the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository.
+1. Browse the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository to find the roles that you want.
+2. Create a `requirements.yml` file where you specify all the roles that you need. For an overview of how to reference Ansible Galaxy roles, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}. In the following example, you want to use the role `andrewrothstein.kubectl` from Ansible Galaxy. 
+   ```
+   ---
+   roles:
+     - name: andrewrothstein.kubectl
+   ```
+   {: codeblock}
+   
+3. Add a `roles` folder to your GitHub repository that is relative to the playbook, and store the `requirements.yml` file in this folder as shown in this example. 
+   ```
+      ├── roles
+         └── requirements.yml
+      ├── playbook.yaml
+      ├── README.md
+   ```
+   {: screen}
 
-
-
-as seen in the following example. For more information about the role file structure, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#id2){: external}
-
-```
-   ├── roles
-      └── requirements.yaml or requirements.yml
-   ├── playbook.yaml
-   ├── README.md
-```
-{: codeblock}
-
-
-The reusable Ansible roles are dynamically retrieved from Ansible Galaxy by using a `requirements.yml` file that must be present in a `roles` directory in your GitHub repository. 
-
-{{site.data.keyword.bplong_notm}} supports `/roles` to specify the requirements to process in through `requirements.yaml` or `requirements.yml` file. The requirements file uses the Ansible Galaxy repository to execute the process and invokes your Ansible playbook from the Git repository to execute the configured resources.
-
-The sample folder structure with the `roles` in the Git repository.
-
-```
-   ├── kubectl.yaml
-   ├── README.md
-   ├── roles
-      └── requirements.yaml or requirements.yml
-```
-{: screen}
-
-The roles directory can have a sub directory such as **/roles/web/** or **/roles/db/** describing the tasks in the 'main.yaml' file.
-{: note}
-
-**Sample**
-
-For more information, about the sample Ansible playbook that uses a role from Ansible Galaxy to install `kubectl` on a virtual machine, see [ansible-kubectl](https://github.com/Cloud-Schematics/ansible-kubectl){: external}.
-
-The sample `requirements.yaml` file for installing `kubectl` on virtual machine from Ansible Galaxy role `andrewrothstein.kubectl`. 
-
-```
----
-roles:
-  - name: andrewrothstein.kubectl
-```
-{: screen}
-
-The sample `kubectl.yaml` playbook to start the role from your Git repository. 
-
-```
----
-- hosts: all
-  roles:
-    - role: andrewrothstein.kubectl
-```
-{: screen}
+4. Reference the role in your Ansible playbook. In this example, the role with the name `andrewrothstein.kubectl` is used.
+   ```
+   ---
+   - hosts: all
+     roles:
+       - role: andrewrothstein.kubectl
+   ```
+   {: codeblock}
+   
+Want to see an example? See [this IBM-provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
+{: tip}
 
 
 ## Referencing Ansible collections in your playbook
 {: #schematics-collections}
 
-An [Ansible collections](https://www.ansible.com/blog/getting-started-with-ansible-collections){: external} include playbooks, roles, modules, and plug-ins. As modules move from the core Ansible repository into collections, the module documentation move the collections pages. 
+Ansible collections group different reusable Ansible resources, such as playbooks, modules, and roles so that you can install them and use them in your playbook. Collections are stored in the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository.
 
-An [Ansible Galaxy](https://galaxy.ansible.com/){: external} hosts many reusable Ansible Collection that can be used in your Ansible playbook.
+Similar to [Ansible roles](#schematics-roles), collections require a specific folder structure in your GitHub repository. 
 
-{{site.data.keyword.bplong_notm}} supports Ansible collections by processing the requirements file. It’s designed to be a collective package for all of your automation task related to playbooks, and roles. The requirements file is stored in the `/collections` folder of your Git repository. Collections are stored in the Ansible root folder as `ansiblecollections`.
-{: shortdesc}
+1. Browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find the collection that you want to use in your playbook.
+2. Create a `requirements.yml` file where you specify the collections that you want to install from Ansible Galaxy. For more information about how to structure this file, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-collections){: external}. The following example uses the `community.kubernetes` collection.
+   ```
+   collections:
+     - name: community.kubernetes
+       version: 0.9.0
+   ```
+   {: codeblock}
+   
+3. Add a `collections` folder to your GitHub repository that is relative to your playbook, and store the `requirements.yml` file in this folder as shown in this example. 
+   ```
+   ├── collections
+         └── requirements.yml
+   ├── playbook.yaml
+   ├── README.md
+   ```
+   {: screen}
+   
+4. Reference a resource from your collection in your playbook. For more information, see the [Ansible documentation](https://docs.ansible.com/ansible/2.9/user_guide/collections_using.html#using-collections-in-a-playbook){: external}
 
-The sample folder structure with the `collections` in the Git repository.
 
-```
-   ├── site.yaml
-   |——- roles
-      └── requirements.yaml 
-   ├── collections    
-      └── requirements.yaml or requirements.yml       
-   |── tasks                
-   |── main.yml
-```
-{: screen}
