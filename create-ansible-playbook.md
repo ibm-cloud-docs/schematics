@@ -146,9 +146,7 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
 1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all of your hosts, and tasks that you want to run only on your web servers and your databases. Each group of tasks can become its own role. 
 
 2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. You can create subdirectories to specify different roles. The name of the subdirectory becomes the name of your role, such as `db`. The tasks that you want to run for each role must be stored in a `main.yml` file inside a `tasks` directory as shown in this example. 
-
-   **Sample role file structure**: 
-
+   
    ```
     ├── roles
         └── db
@@ -160,9 +158,7 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
    {: screen}
 
 3. Add the tasks that you want to run to a `main.yml` file. In the following example, you separate out the task to download the MySQL community repo from your main playbook and put it into a `main.yml` file. 
-
-
-   **Sample main.yml file**: 
+ 
    ```
    - name: Download MySQL Community Repo
      get_url:
