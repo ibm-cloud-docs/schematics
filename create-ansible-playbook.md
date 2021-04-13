@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-12"
+lastupdated: "2021-04-13"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -133,7 +133,73 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 ## Referencing Ansible roles in your playbook
 {: #schematics-roles}
 
-An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} is a set of Ansible playbooks that you want to run on your resource inventory. You can find existing roles in the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository. The reusable Ansible roles are dynamically retrieved from Ansible Galaxy by using a `requirements.yml` that must be present in. a `roles` directory in your GitHub repository. 
+An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to segregate one big Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
+
+Roles can be created by using two main paths: 
+- `main.yml`
+- `requirements.yml`
+
+### Specifying a role by using a `main.yml` file
+{: #main-file}
+
+Roles must be stored in a `roles` directory relative to your Ansible playbook. You can create subdirectories to specify different roles. The tasks that you want to run for each role must be stored in a `main.yml` file inside a `tasks` directory as shown in this example.
+
+**Sample role file structure**: 
+
+```
+  ├── roles
+      └── db
+          └── tasks
+              └── main.yml
+  ├── playbook.yaml
+  ├── README.md
+```
+{: codeblock}
+
+**Sample main.yml file**: 
+```
+- name: Download MySQL Community Repo
+    get_url:
+      url: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+      dest: /tmp
+    tags: db
+```
+{: codeblock}
+
+**Reference the role in your Ansible playbook**: 
+
+```
+- name: deploy MySQL and configure the databases
+  hosts: all
+  remote_user: root
+
+  roles:
+    - db
+```
+{: codeblock}
+
+For more information about other files and conditions that you can add to your role, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#role-directory-structure){: external}
+
+### Using `requirements.yml` files
+{: #requirements-file}
+
+
+You can create your own roles by separating out tasks and put them into a `main.yml` file inside a `roles` directory. You can also browse existing roles in the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository.
+
+
+
+as seen in the following example. For more information about the role file structure, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#id2){: external}
+
+```
+   ├── roles
+      └── requirements.yaml or requirements.yml
+   ├── playbook.yaml
+   ├── README.md
+```
+{: codeblock}
+
+
+The reusable Ansible roles are dynamically retrieved from Ansible Galaxy by using a `requirements.yml` file that must be present in a `roles` directory in your GitHub repository. 
 
 {{site.data.keyword.bplong_notm}} supports `/roles` to specify the requirements to process in through `requirements.yaml` or `requirements.yml` file. The requirements file uses the Ansible Galaxy repository to execute the process and invokes your Ansible playbook from the Git repository to execute the configured resources.
 
