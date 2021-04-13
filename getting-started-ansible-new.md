@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-11"
+lastupdated: "2021-04-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -98,9 +98,6 @@ Use one of the IBM-provided Ansible playbooks to start and stop {{site.data.keyw
 {: shortdesc}
 
 An Ansible playbook is a set of instructions that you can run on a single target host or a group of hosts. You create a {{site.data.keyword.bpshort}} action that points to your playbook and use the built-in Ansible capabilities in {{site.data.keyword.bpshort}} to run the instructions in your playbook. For more information about how {{site.data.keyword.bpshort}} runs your Ansible playbooks, see [Configuration management with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). 
-
-Ansible support in {{site.data.keyword.bplong_notm}} is currently in beta and subject to change. Do not use {{site.data.keyword.bpshort}} actions for production workloads. 
-{: beta}
 
 ## Before you begin
 {: #ansible-prereq}
