@@ -1801,38 +1801,35 @@ Instead of entering your resource query details by using the command options or 
 4. Review the details of the resource query that was created for you. 
 
 
-### `ibmcloud schematics resource query update`
-{: #schematics-update-rq}
+### `ibmcloud schematics resource query delete`
+{: #schematics-delete-resource-query}
 
-Update or replace a resource query creates a copy of an resource query and relaunches an existing resource query by updating the information of an existing {{site.data.keyword.bplong_notm}} resource query.
+Delete the resource resource query definition by using the resource query ID from the {{site.data.keyword.bplong_notm}} service. Note you can delete the location and region, resource group from where your inventory was created. Also, make sure your IP addresses are in the [allowlist](/docs/schematics?topic=schematics-allowed-ipaddresses). 
 {: shortdesc}
 
 **Syntax**
 
 ```
-ibmcloud schematics resource-query update --id ID --name RESOURCE_QUERY_NAME [--type RESOURCE_QUERY_TYPE] [--query-file QUERY_FILE_PATH] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics resource-query delete --id ID [--force] [--no-prompt]
 ```
 {: pre}
 
 **Command options**
 
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------- |
-| `--id`  or `-i` | Required | The resource query ID. |
-| `--name` or `-n` | Required | The unique name for a resource query. |
-| `--type` or `-t` | Optional | The type of the resource query. such as `vsi`|
-|`--query-file` or `-f` | Optional | The path to the JSON file containing queries.|
-| `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
-| `--output` or `-o` | Optional | Return the command line output in JSON format.Currently only `JSON` file format is supported.|
-| `--no-prompt` | Optional | Set this flag to create the resource query without an interactive command line session. |
-{: caption="Schematics resource query update flags" caption-side="top"}
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required | The ID of a resource query that you want to delete. |
+| `--force` or `-f` | Optional | Force the deletion without user confirmation. |
+| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
+{: caption="Schematics resource query delete flags" caption-side="top"}
 
 **Example**
 
 ```
-ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121
+ibmcloud schematics resource-query  delete --id us-east.INVENTORY.inventoryid12342
 ```
 {: pre}
+
 
 ### `ibmcloud schematics resource query get`
 {: #schematics-get-rq}
@@ -1890,6 +1887,40 @@ ibmcloud schematics resource-query list [--limit LIMIT] [--offset OFFSET] [--out
 
 ```
 ibmcloud schematics resource-query list --output listoutput.json
+```
+{: pre}
+
+
+### `ibmcloud schematics resource query update`
+{: #schematics-update-rq}
+
+Update or replace a resource query creates a copy of an resource query and relaunches an existing resource query by updating the information of an existing {{site.data.keyword.bplong_notm}} resource query.
+{: shortdesc}
+
+**Syntax**
+
+```
+ibmcloud schematics resource-query update --id ID --name RESOURCE_QUERY_NAME [--type RESOURCE_QUERY_TYPE] [--query-file QUERY_FILE_PATH] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+**Command options**
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------- |
+| `--id`  or `-i` | Required | The resource query ID. |
+| `--name` or `-n` | Required | The unique name for a resource query. |
+| `--type` or `-t` | Optional | The type of the resource query. such as `vsi`|
+|`--query-file` or `-f` | Optional | The path to the JSON file containing queries.|
+| `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
+| `--output` or `-o` | Optional | Return the command line output in JSON format.Currently only `JSON` file format is supported.|
+| `--no-prompt` | Optional | Set this flag to create the resource query without an interactive command line session. |
+{: caption="Schematics resource query update flags" caption-side="top"}
+
+**Example**
+
+```
+ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121
 ```
 {: pre}
 
@@ -1991,42 +2022,35 @@ Instead of entering your inventory details by using the command options or a pay
 4. Enter the location where you want to create the inventory, such as **us-south**, **us-east**, **eu-de**, or **eu-gb**. Then, press the return key.
 5. Review the details of the inventory that was created. 
 
+### `ibmcloud schematics inventory delete`
+{: #schematics-delete-inventory}
 
-### `ibmcloud schematics inventory update`
-{: #schematics-update-inv}
-
-Update or replace an existing resource inventory. 
+Delete the resource inventory definition by using the inventory ID from the {{site.data.keyword.bplong_notm}} service. Note you can delete the location and region, resource group from where your inventory was created. Also, make sure your IP addresses are in the [allowlist](/docs/schematics?topic=schematics-allowed-ipaddresses). 
 {: shortdesc}
 
 **Syntax**
 
 ```
-ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics inventory delete --id ACTION_ID [--force][--no-prompt]
 ```
 {: pre}
 
 **Command options**
 
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------- |
-| `--id`  or `-i` | Required | Enter the ID of a resource inventory that you want to update. |
-| `--name` or `-n` | Required | The unique name of an inventory. |
-| `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The geographic locations supported by IBM Cloud Schematics service, such as **us-south, us-east, eu-de,** or **eu-gb**.|
-|`resource-group` or `-r`| Optional | The resource group name for an action.|
-|`--inventories-ini` or `-y` | Optional |  File path of `INI` format file that contains the host details.|
-|`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs use `--resource-query id1 --resource-query id2`.|
-| `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
-| `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
-| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command line session. |
-{: caption="Schematics inventory update flags" caption-side="top"}
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required | The ID of an inventory that you want to delete. |
+| `--force` or `-f` | Optional | Force the deletion without user confirmation. |
+| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
+{: caption="Schematics inventory delete flags" caption-side="top"}
 
 **Example**
 
 ```
-ibmcloud schematics inventory update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121  --output OUTPUT
+ibmcloud schematics inventory delete --id us-east.INVENTORY.inventoryid12342
 ```
 {: pre}
+
 
 ### `ibmcloud schematics inventory get`
 {: #schematics-get-inv}
@@ -2087,6 +2111,42 @@ ibmcloud schematics inventory list --output json
 ```
 {: pre}
 
+
+### `ibmcloud schematics inventory update`
+{: #schematics-update-inv}
+
+Update or replace an existing resource inventory. 
+{: shortdesc}
+
+**Syntax**
+
+```
+ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+**Command options**
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------- |
+| `--id`  or `-i` | Required | Enter the ID of a resource inventory that you want to update. |
+| `--name` or `-n` | Required | The unique name of an inventory. |
+| `--description` or `-d` | Optional | The short description of an inventory. |
+| `--location` or `-l` | Optional | The geographic locations supported by IBM Cloud Schematics service, such as **us-south, us-east, eu-de,** or **eu-gb**.|
+|`resource-group` or `-r`| Optional | The resource group name for an action.|
+|`--inventories-ini` or `-y` | Optional |  File path of `INI` format file that contains the host details.|
+|`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs use `--resource-query id1 --resource-query id2`.|
+| `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
+| `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
+| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command line session. |
+{: caption="Schematics inventory update flags" caption-side="top"}
+
+**Example**
+
+```
+ibmcloud schematics inventory update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121  --output OUTPUT
+```
+{: pre}
 
 ## Enable BYOK or KYOK commands
 {: kms-commands}
