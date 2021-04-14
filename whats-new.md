@@ -35,7 +35,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|14 April 2021 |**Ansible support in {{site.data.keyword.bplong_notm}} is now generally available.** Use {{site.data.keyword.bpshort}} Actions to run your Ansible playbooks in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multi-tier app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how Schematics integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). |
+|14 April 2021 |**Ansible support in {{site.data.keyword.bplong_notm}} is now generally available:** Use {{site.data.keyword.bpshort}} Actions to run your Ansible playbooks in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multi-tier app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how Schematics integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). |
 {: caption="What's new in April" caption-side="top"}
 
 
