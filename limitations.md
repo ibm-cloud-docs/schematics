@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-27"
+lastupdated: "2021-04-14"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -72,10 +72,4 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 - The `refresh_token` parameter cannot be used to retrieve a new IAM access token. 
 - When the IAM access token is about to expire, use the [API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key){: external} to create a new access token.
 
-## Beta limitations
-{: #beta-limitations}
-
-During the open beta release of {{site.data.keyword.bplong_notm}} actions, be aware of the following limitations:
-* This service might not yet be stable and is not intended for production use. 
-* Any projects, apps, or jobs that you create during beta will not carry over to other releases.
 
