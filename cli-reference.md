@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-12"
+lastupdated: "2021-04-14"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1184,6 +1184,7 @@ You can set the proxy between a SSH client and the {{site.data.keyword.cloud_not
 Create an {{site.data.keyword.bplong_notm}} action to run an Ansible playbook on a single target host or a group of target hosts. You use Ansible playbooks to perform cloud operations or install software on cloud resources. To try out this capability or to get started, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. You can create an action by using a payload file or the command's interactive mode.
 {: shortdesc}
 
+
 **Syntax**
 
 ```
@@ -1279,7 +1280,7 @@ Instead of entering the command options or using a payload file, you can use the
 3. Enter the resource group where you want to create the action and press the return key.
 4. Enter the location where you want to create the action, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. Then, press the return key. The location determines where your action runs and where your action data is stored. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Make sure that you can store data in this location as you cannot change the location after the action is created.
 5. Enter the URL to the GitHub repository where your Ansible playbook is stored. Then, press the return key.
-6. If applicable, enter the personal access token that you want to use to access your GitHub repository. Then, press the return key.
+6. If applicable, enter the personal access token that you want to use to access your GitHub repository. Then, press the return key. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
 7. Enter the name of the Ansible playbook that you want to run and press the return key. 
 8. Review the details of the action that was created for you. 
 
@@ -1314,7 +1315,7 @@ ibmcloud schematics action update --id ACTION_ID [--name ACTION_NAME] [--descrip
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
 | `--env-file` or `-E`| Optional | The path to a file where you specified all environment variables for an action. Environment variables must be specified as key-value pairs in JSON format. |
 | `--file` or `-f` | Optional | Path to the JSON payload file containing the definition of the action to update. For more information, see [Using the payload file](#create-action-payload). Note that parameters, such as the location or resource group cannot be updated after the action is created.|
-| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. |
+| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.|
 | `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="Schematics action update flags" caption-side="top"}
@@ -1798,6 +1799,7 @@ Instead of entering your resource query details by using the command options or 
 2. Enter a name for your resource query and press the return key.
 3. Enter the path to your payload file. For a sample payload file, see [Using the payload file](#inv-create-payload). Then, press the return key.
 4. Review the details of the resource query that was created for you. 
+
 
 ### `ibmcloud schematics resource query update`
 {: #schematics-update-rq}
