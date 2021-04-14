@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-04-12"
 
 keywords: schematics, automation, terraform
 
@@ -29,38 +29,12 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use {{site.data.keyword.cloud}} Identity and Access Management (IAM) to grant permissions to {{site.data.keyword.bplong_notm}} and the {{site.data.keyword.cloud_notm}} resources that you want to provision. 
-{: shortdesc}
-  
-As of 6 February 2019, {{site.data.keyword.bplong_notm}} uses resource groups to organize permissions to workspaces. The previous account-level permissions to workspaces are deprecated and must be migrated to use resource groups. For more information about this change and how to migrate your permissions, see [Migrating to resource group permissions](#rg-permissions). 
-{: note}
-
-## Using IAM access groups and resource groups to organize access to workspaces
-{: #team-org}
-
-Learn how you can organize and simplify access to your workspaces by leveraging IAM access groups and {{site.data.keyword.cloud_notm}} resource groups. 
+Use [{{site.data.keyword.cloud}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bplong_notm}} workspaces and actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions that your users can perform. {{site.data.keyword.bplong_notm}} is used by teams that have access to resources in a specific {{site.data.keyword.cloud_notm}} resource group. 
+As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrates with {{site.data.keyword.cloud}} Identity and Access Management (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.cloud}} Identity and Access Management?](/docs/account?topic=account-iamoverview). 
 
-**What is a resource group and how does it help me organize my team?**<br>
-Assigning access to a particular {{site.data.keyword.cloud_notm}} service is a good way of allowing a user to work with a specific service in your account. However, when you build production workloads in the cloud, you most likely have multiple {{site.data.keyword.cloud_notm}} services and resources that are used by different teams. With resource groups, you can organize multiple services in your account and bundle them under one common view and billing process. To allow your team to work with these resources, you can assign IAM access policies to a resource group that allows them to view and manage the resources within a resource group. 
 
-For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but only **Reader** access to the workspaces in resource group B. 
-
-**Do my workspace and {{site.data.keyword.cloud_notm}} resources need to be in the same resource group?**<br>
-No. You can create different resource groups for your {{site.data.keyword.bplong_notm}} workspaces and {{site.data.keyword.cloud_notm}} resources. 
-
-**What is the benefit by using IAM access group?** <br>
-To minimize the number of IAM access policies you need to assign an individual user. You can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
-
-The following image shows how you can leverage IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account. 
-
-<img src="images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
-
-1. The account owner or an authorized administrator defines a team and creates an IAM access group for each team. 
-2. The IAM access group is assigned access to resources within a specific resource group. For example, access group A receives editor permissions for all resources in resource group A, but only viewer permissions for the resources in resource group B. 
-3. The account owner or an authorized administrator adds users to the IAM access group. All users automatically inherit the permissions of the IAM access group. 
 
 ## Overview of {{site.data.keyword.bpshort}} service access roles and required permissions
 {: #access-roles}
@@ -71,19 +45,15 @@ Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keywo
 {: shortdsec}
 
 **Who must grant access to {{site.data.keyword.bplong_notm}}?** <br>
-As the account owner or an authorized account administrator you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} workspace. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups). 
+As the account owner or an authorized account administrator you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups). 
 
-**If I have access to {{site.data.keyword.bplong_notm}}, can I automatically provision {{site.data.keyword.cloud_notm}} resources?** <br>
-No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces in {{site.data.keyword.bplong_notm}}. To provision the {{site.data.keyword.cloud_notm}} resources that you defined in your Terraform template, you must be assigned the IAM platform or service access role that is required to provision the individual resource. For example, to provision an {{site.data.keyword.containerlong_notm}} cluster, you must have the **Administrator** platform role and the **Manager** service access role for {{site.data.keyword.containerlong_notm}}. Refer to the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to provision and work with your resource. 
+**Is access to {{site.data.keyword.bplong_notm}} sufficient to manage {{site.data.keyword.cloud_notm}} resources?** <br>
+No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces and actions in {{site.data.keyword.bplong_notm}}. However, to manage other {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}, you must be assigned the IAM platform or service access role for the individual {{site.data.keyword.cloud_notm}} resource that you want to work with. Refer to the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to work with your resource. 
 
-**What else is required to enable users to provision {{site.data.keyword.cloud_notm}} resources?** <br>
-To successfully provision {{site.data.keyword.cloud_notm}} resources, users must have access to a paid {{site.data.keyword.cloud_notm}} account. Charges incur when you create the resources in the {{site.data.keyword.cloud_notm}} account, which is initiated by clicking the **Apply plan** button from the {{site.data.keyword.bplong_notm}} console, or running the `ibmcloud terraform apply` command. 
+### Workspace permissions
+{: #workspace-permissions}
 
-Review the pricing information and account limitations for each {{site.data.keyword.cloud_notm}} resource that you want to provision before you create the resources. 
-{: tip}
-
-**What can I do in {{site.data.keyword.bpshort}} with a specific IAM service access role?** <br>
-The following table shows the user permissions that are granted in {{site.data.keyword.bplong_notm}} when you assign an IAM service access role to your users.  
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} workspaces.
 
 | Action | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
@@ -100,7 +70,27 @@ The following table shows the user permissions that are granted in {{site.data.k
 | Destroy workspace resources | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
 {: row-headers}
 {: class="comparison-table"}
-{: caption="User permissions by service user type, account type, and access role" caption-side="top"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} workspaces" caption-side="top"}
+{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
+
+### Action permissions
+{: #action-permissions}
+
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} actions.
+
+| Action | Reader | Writer | Manager | Account owner |
+|-----|-----|-----|-----|--------|
+| View action | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| View action jobs | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| View job logs | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Create action | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Update action | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Delete action | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Run check action job | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| Run an action| | ![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)| 
+{: row-headers}
+{: class="comparison-table"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 
@@ -114,30 +104,14 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups#create_ag) for each team. 
 
-3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bplong_notm}} workspaces separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
+3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bplong_notm}} workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
 
 4. [Assign access to your IAM access group](/docs/account?topic=account-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
    - Make sure to scope access of your group to the resource group that you created for this team. 
-   - If your team have access to multiple resource groups. For example, you want them to have **Administrator** and **Manager** permissions on all resources in resource group A, but only **Viewer** access for the resources in resource group B, you can create multiple access policies to achieve.
-   - The resource group of the {{site.data.keyword.bpshort}} workspace can be different from the resource group where your {{site.data.keyword.cloud_notm}} resources are provisioned.
-   - For a team to use {{site.data.keyword.bpshort}}. You must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team provisions and manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy.  
-   
-Next, you can [create Terraform configuration files](/docs/schematics?topic=schematics-create-tf-config), [create a workspace](/docs/schematics?topic=schematics-workspace-setup), and start [provisioning {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) in your account.
+   - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but only **Viewer** access for the resources in resource group B, you must create multiple access policies. 
+   - The resource group of the {{site.data.keyword.bpshort}} workspace or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
+   - For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy.  
 
 
-## Migrating to resource group permissions
-{: #rg-permissions}
-  
-Migrate your existing {{site.data.keyword.bpshort}} account-level permissions to use resource groups. 
-{: shortdesc}
 
-As of 6 February 2019, {{site.data.keyword.bplong_notm}} uses resource groups to organize permissions to workspaces. The previous account-level permissions to workspaces are deprecated and must be migrated to use resource groups. 
-{: note}
-
-If you use {{site.data.keyword.bplong_notm}} before 6 February 2020. You are granted permissions to the service through, Identity and Access Management (IAM). Because {{site.data.keyword.bpshort}} did not support scoping a service policy to a resource group, all service policies were scoped to the {{site.data.keyword.cloud_notm}} account by default. With the introduction of resource group-level policies, existing account-level policies must be removed and replaced with resource group-level policies to ensure proper access management to {{site.data.keyword.bpshort}} workspaces. 
-
-1. The steps in [Setting up access for your users](#access-setup).  
-
-2. Remove any existing account-level permissions to {{site.data.keyword.bplong_notm}} from your users and IAM access groups. 
-  
 

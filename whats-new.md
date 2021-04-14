@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-14"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -28,6 +28,15 @@ subcollection: schematics
 {: #new-in-schematics}
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
+
+## April 2021
+{: #april-2021}
+
+|Date|Description|
+|-----|---------|
+|14 April 2021 |**Ansible support in {{site.data.keyword.bplong_notm}} is now generally available**: Use {{site.data.keyword.bpshort}} Actions to run your Ansible playbooks in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multi-tier app workloads. To get started, try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how Schematics integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). |
+{: caption="What's new in April" caption-side="top"}
+
 
 ## March 2021
 {: #march-2021}
