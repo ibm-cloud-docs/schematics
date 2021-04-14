@@ -1497,7 +1497,7 @@ If the action contains the playbook name, you need to add the playbook name, so 
 You can provide a payload file to specify certain parameters for the `job run` command. Then, you pass the file name to the command by using the `--file` command option.
 {: shortdesc}
 
-**Syntax**:
+**Syntax**
 
 ```
 {
@@ -1509,7 +1509,7 @@ You can provide a payload file to specify certain parameters for the `job run` c
 ```
 {: codeblock}
 
-**Example**: 
+**Example**
 
 ```
 {
@@ -1760,7 +1760,7 @@ You can provide a payload file to specify certain parameters for the `resource_q
 **Example**
 
 ```
-{
+[{
    "query_type": "workspaces",
    "query_condition": [
    {
@@ -1774,7 +1774,7 @@ You can provide a payload file to specify certain parameters for the `resource_q
      "description": "string"
    } 
   ]
-}
+}]
 ```
 {: codeblock}
 
