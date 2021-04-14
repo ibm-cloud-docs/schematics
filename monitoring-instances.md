@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-14"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -30,7 +30,7 @@ subcollection: schematics
 # Monitoring Schematics services by using {{site.data.keyword.mon_full_notm}}
 {: #monitoring-instances}
 
-[{{site.data.keyword.mon_full_notm}}](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-getting-started#getting-started) is a third-party cloud native, and container-intelligence management system that you can include as part of your IBM Cloud Schematics. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
+[{{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started#getting-started) is a third-party cloud native, and container-intelligence management system that you can include as part of your IBM Cloud Schematics. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {: shortdesc}
 
 
@@ -84,7 +84,7 @@ Complete these steps to create your custom dashboard:
 3. Click `Create Custom Dashboard` to view the create dashboard from template pop-up.
 4. Provide the name of the dashboard, and click `Create and Open`.
 5. Click `Dashboards` icon, to view your dashboard.
-   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer to [Deleting a dashboards](/docs/Monitoring-with-Sysdig?topic=Monitoring-with-Sysdig-remove).
+   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer to [Deleting a dashboards](/docs/monitoring?topic=monitoring-remove).
    {: note}
 
 ## {{site.data.keyword.bplong_notm}} metrics details

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-14"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -82,7 +82,7 @@ Now, you are ready to complete these steps to execute the use case:
    You can provide an optional [GitHub token](https://github.com/settings/tokens){: external}.
    {: note}
 
-3. Run a {{site.data.keyword.bpshort}} job by using the action ID that is created during action creation. The example contains the command to run a job. For more information, refer to [run Ansible playbook](/docs/schematics?topic=schematics-create-playbooks#run-ansible-playbook).
+3. Run a {{site.data.keyword.bpshort}} job by using the action ID that is created during action creation. The example contains the command to run a job. For more information, refer to [run Ansible playbook](/docs/schematics?topic=schematics-action-setup#create-action).
 
   **Example**
 
@@ -114,5 +114,5 @@ Now, you are ready to complete these steps to execute the use case:
 
 Now that you ran your operation on an {{site.data.keyword.cloud_notm}} resource, you can explore the following options:
 - Learn how to [auto deploy the playbook templates](/docs/schematics?topic=schematics-sample_actiontemplates) to create action.
-- Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}} 
-- You can now learn how to [Provision LAMP stack by using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-provisioning-lamp-stack)
+- Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}}.
+

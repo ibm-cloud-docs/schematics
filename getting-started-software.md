@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-14"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -97,7 +97,7 @@ subcollection: schematics
 Try out one of the IBM-provided software templates to quickly spin up a classic virtual server instance (VSI), and automatically configure the instance to connect to an {{site.data.keyword.databases-for-postgresql_full}} instance. 
 {: shortdesc}
 
-With {{site.data.keyword.bplong_notm}}, you can choose from a wide variety of [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can use to set up {{site.data.keyword.cloud_notm}} services, and to install IBM and 3rd party software. The templates are applied by using the built-in Terraform, Ansible, Helm, CloudPak, and Operator capabilities in {{site.data.keyword.bpshort}}.
+With {{site.data.keyword.bplong_notm}}, you can choose from a wide variety of [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can use to set up {{site.data.keyword.cloud_notm}} services, and to install IBM and 3rd party software. The templates are applied by using the built-in `Terraform`, `Ansible`, `Helm`, `CloudPak`, and `Operator` capabilities in {{site.data.keyword.bpshort}}.
 
 As part of this getting started tutorial, you create a {{site.data.keyword.bpshort}} workspace that points to the [VSI database](https://cloud.ibm.com/catalog/content/VSI-database#about){: external} template. Then, you run this template and watch {{site.data.keyword.bpshort}} provision your VSI and your {{site.data.keyword.databases-for-postgresql_full_notm}} instance. {{site.data.keyword.databases-for-postgresql_full_notm}} is a fully managed database offering in {{site.data.keyword.cloud_notm}} that supports storing of non-relational and relational data types. For more information about this offering, see [What is PostgreSQL?](https://www.ibm.com/cloud/learn/postgresql){: external}. 
 
