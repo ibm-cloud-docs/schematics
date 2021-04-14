@@ -494,7 +494,7 @@ You can create the JSON as shared in the `example.json` file for workspace creat
     <tr>
     <td>`template_repo.branch`</td>
  <td>Optional</td>
-  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update url with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
      "release": "v1.8.0"</code></pre></td></tr>
@@ -650,7 +650,7 @@ ibmcloud schematics state list --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics workspace taint`
 {: #schematics-workspace-taint}
 
-Manually marks an instance or resources as tainted, by forcing the resources to be recreated on the next apply. Taint modifies the state file, but not the infrastructure in your workspace. When you perform next plan the changes will display as recreated, and in the next apply the change is implemented.
+Manually marks an instance or resources as tainted, by forcing the resources to be re-created on the next apply. Taint modifies the state file, but not the infrastructure in your workspace. When you perform next plan the changes will display as re-created, and in the next apply the change is implemented.
 {: shortdesc}
 
 **Syntax**
@@ -664,7 +664,7 @@ ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] [--addre
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to recreate the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to show.  |
 | `--address` or `-adr` | Optional | Enter the address of the resource to mark as taint.|
 {: caption="Schematics workspace taint flags" caption-side="top"}
@@ -694,7 +694,7 @@ ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options FLAGS] [--add
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to recreate the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to show.  |
 | `--address` or `-adr` | Optional | Enter the address of the resource to mark as untaint.|
 {: caption="Schematics workspace untaint flags" caption-side="top"}
@@ -833,7 +833,7 @@ You can create the JSON as shared in the `example.json` file for workspace updat
     <tr>
     <td>`template_repo.branch`</td>
  <td>Optional</td>
-  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update url with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
+  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
      "branch": "master;",
      "datafolder": “examples/ibm-vsi”,
      "release": "v1.8.0"</code></pre></td></tr>
@@ -1144,7 +1144,7 @@ Review the commands that you want to create, update, list, delete and work with 
 
 A host group is a collection of hosts that you can run your Ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `development` workspace, or against all hosts with a `webserver` tag in your `development` workspace.  The host groups can be defined by using  **Static inventory** or **Dynamic inventory** method. 
 
-**Static inventory** allows to create the collection of hosts that you can run your ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `dev` workspace, or against all hosts with a `webserver` tag in your `dev` workspace. You can also add multiple conditional target resources for your workspaces to execute. 
+**Static inventory** allows to create the collection of hosts that you can run your Ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `dev` workspace, or against all hosts with a `webserver` tag in your `dev` workspace. You can also add multiple conditional target resources for your workspaces to execute. 
 
 **Dynamic inventory** allows to create the collection of hosts in a inventory file that defines the hosts and group of hosts upon which your playbook operates. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `INI` file format that can be used in the `create` and `update` actions commands as `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>` argument.
 
@@ -1625,9 +1625,9 @@ ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--l
 | `--id` or `-i` | Required | The ID of the {{site.data.keyword.bpshort}} action for which you want to list jobs. |
 | `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
 | `--offset` or `-m` | Optional | The position of the job in the list of jobs from where you want to start listing your jobs. For example, if you have three jobs in your account, the command returns these jobs as a list with three elements. To retrieve all jobs, you must enter position number 0. To retrieve job number 2 and 3 and leave out job number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of jobs. Negative numbers are not supported and are ignored. |
-| `--profile` or `-p` | Optional | The depth of information that is returnd. Supported values are `ids` or `summary`. The default value is `summary`. |
+| `--profile` or `-p` | Optional | The depth of information that is returned. Supported values are `ids` or `summary`. The default value is `summary`. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported.|
-| `--all` or `-A` | Optional | Lists all the jobs including the {{site.data.keyword.bpshort}}-internal jobs.|
+| `--all` or `-A` | Optional | Lists all the jobs including the {{site.data.keyword.bpshort}} internal jobs.|
 | `--no-prompt` | Optional | Set this flag to create the job without an interactive command line session. |
 {: caption="Schematics job list flags" caption-side="top"}
 
@@ -1708,7 +1708,7 @@ Dynamically build resource inventories by using resource queries. Resource queri
 ### `ibmcloud schematics resource query create`
 {: #schematics-create-rq}
 
-Create a resource query in {{site.data.keyword.bplong_notm}} that you can use to build your resource inventory. You can create a resource query by using a payload file or the command's interactive mode.
+Create a resource query in {{site.data.keyword.bplong_notm}} that you can use to build your resource inventory. You can create a resource query by using a payload file or the command's interactive mode. You can create resource conditions by using [resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc}
 
 **Syntax**
@@ -1787,7 +1787,7 @@ ibmcloud schematics resource-query create --name myquery --type vsi --query-file
 #### Using the interactive mode
 {: #inv-create-interactive}
 
-Instead of entering your resource query details by using the command options or a payload file, you can use the interactive mode for the command. This mode prompts you to enter the required values to create a resource query in {{site.data.keyword.bpshort}}. 
+Instead of entering your resource query details by using the command options or a payload file, you can use the interactive mode for the command. This mode prompts you to enter the required values to create a resource query in {{site.data.keyword.bpshort}}. You can create resource conditions by using [resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc}
 
 1. Enter the command to create the resource query without any command options. 
@@ -1850,7 +1850,7 @@ ibmcloud schematics resource-query get --id ID [--profile PROFILE] [--output OUT
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The ID of the resource query that you want to retrieve.  |
 | `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
-| `--output` or `-o` | Optional | Specify theh output format. Only `JSON` format is supported.|
+| `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 | `--no-prompt` | Optional | Set this flag to retrieve a resource query without an interactive command line session. |
 {: caption="Schematics resource query get flags" caption-side="top"}
 
@@ -1894,7 +1894,7 @@ ibmcloud schematics resource-query list --output listoutput.json
 ### `ibmcloud schematics resource query update`
 {: #schematics-update-rq}
 
-Update or replace a resource query creates a copy of an resource query and relaunches an existing resource query by updating the information of an existing {{site.data.keyword.bplong_notm}} resource query.
+Update or replace a resource query creates a copy of an resource query and relaunches an existing resource query by updating the information of an existing {{site.data.keyword.bplong_notm}} resource query. 
 {: shortdesc}
 
 **Syntax**

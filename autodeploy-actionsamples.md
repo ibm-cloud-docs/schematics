@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-11"
+lastupdated: "2021-04-14"
 
 keywords: action templates, schematics template, terraform template
 
@@ -153,7 +153,7 @@ Use the links on this page as follows:
  </table>
 
 
-## Configuring {{site.data.keyword.databases-for-postgresql_full_notm}} with WAL2JSON plugin
+## Configuring {{site.data.keyword.databases-for-postgresql_full_notm}} with WAL2JSON plug-in
 {: #ansible-databases}
 
 <table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-11"
+lastupdated: "2021-04-14"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -175,7 +175,7 @@ Dynamic resource inventories reference {{site.data.keyword.cloud_notm}} resource
 |--|--|
 |Workspace name|Select all {{site.data.keyword.cloud_notm}} resources from a specific workspace.|
 |Workspace name AND resource name|Select a specific resource from a specific workspace by using the resource name. To select multiple resources from the same workspace, you can add multiple queries of this type. |
-|Workspace name AND tag|Select a specific resoure from a specific workspace by using tags. Tags are added to the resource when you create the workspace and provision your resource. To select multiple resources with different tags from the same workspace, you can add multiple queries of this type. |
+|Workspace name AND tag|Select a specific resource from a specific workspace by using tags. Tags are added to the resource when you create the workspace and provision your resource. To select multiple resources with different tags from the same workspace, you can add multiple queries of this type. |
 
 ### Limitations
 {: #dynamic-inv-limitation}

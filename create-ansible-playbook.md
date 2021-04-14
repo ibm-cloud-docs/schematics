@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-13"
+lastupdated: "2021-04-14"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -133,7 +133,7 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 ## Referencing Ansible roles in your playbook
 {: #schematics-roles}
 
-An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to segregate one big Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
+An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to separate one big Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
 
 You can [create your own roles](#main-file) or [use existing roles from Ansible Galaxy](#requirements-file). 
 

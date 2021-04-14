@@ -73,7 +73,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|9 December 2020 |<ul><li> **Ansible beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-get-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering. For more information about limitations, see [Beta limitations](/docs/schematics?topic=schematics-schematics-limitations#beta-limitations).</li></ul> |
+|9 December 2020 |<ul><li> **Ansible beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-get-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your IBM Cloud Schematics Technical Offering Manager [Sai Vennam](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering.</li></ul> |
 {: caption="What's new in December" caption-side="top"}
 
 
