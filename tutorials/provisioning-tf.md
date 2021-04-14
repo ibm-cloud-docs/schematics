@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-31"
+lastupdated: "2021-04-14"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -97,19 +97,19 @@ completion-time: 60m
 {:video: .video}
 
 
-# Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC Gen 2 infrastructure with {{site.data.keyword.bpfull_notm}}
+# Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
 {: #provisioning-terraform-template}
 {: toc-content-type="tutorial"}
-{: toc-services="provisioning, vpc-generation2-cluster"}
+{: toc-services="provisioning, vpc-cluster"}
 {: toc-completion-time="60m"}
 
-Use one of the IBM-provided templates to create an {{site.data.keyword.containerlong}} cluster in a Virtual Private Cloud (VPC) for Generation 2 Compute. Then, you bind the cluster to an {{site.data.keyword.cos_full}} service instance. 
+Use one of the IBM-provided templates to create an {{site.data.keyword.containerlong}} cluster in a Virtual Private Cloud (VPC). Then, you bind the cluster to an {{site.data.keyword.cos_full}} service instance. 
 {: shortdesc}
 
 ## Description
 {: #provisioning-desc}
 
-In this tutorial, you use the IBM-provided [`vpc-gen2-cluster` Terraform template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create a VPC for Generation 2 compute and to provision an {{site.data.keyword.containerlong_notm}} cluster on VPC Gen2 virtual servers. Then, you add the service credentials of an {{site.data.keyword.cos_full_notm}} service instance as a Kubernetes secret in your cluster. You can change the default values in this template to spread your cluster across multiple subnets and zones. However, the steps in this tutorial use the default values that are provided in the template. 
+In this tutorial, you use the IBM-provided [`vpc-gen2-cluster` Terraform template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create a Virtual Private Cloud (VPC) and to provision an {{site.data.keyword.containerlong_notm}} cluster on {{site.data.keyword.vsi_is_short}}. Then, you add the service credentials of an {{site.data.keyword.cos_full_notm}} service instance as a Kubernetes secret in your cluster. You can change the default values in this template to spread your cluster across multiple subnets and zones. However, the steps in this tutorial use the default values that are provided in the template. 
 
 The following image shows the cloud architecture components that you provision as part of this tutorial. 
 
@@ -135,7 +135,7 @@ The following image shows the cloud architecture components that you provision a
 {: #provisioning-tut-obj}
 
 In this tutorial, you will do the following: 
-- Learn how to use an IBM-provided Terraform template to create a Virtual Private Cloud (VPC) and provision an {{site.data.keyword.containerlong_notm}} cluster that runs on generation 2 virtual server instances. 
+- Learn how to use an IBM-provided Terraform template to create a Virtual Private Cloud (VPC) and provision an {{site.data.keyword.containerlong_notm}} cluster that runs on {{site.data.keyword.vsi_is_short}}. 
 - Create an {{site.data.keyword.cos_full_notm}} service instance and bind the service to your {{site.data.keyword.containerlong_notm}} cluster. 
 - Explore how to create an {{site.data.keyword.bplong_notm}} workspace.
 - Create a Terraform execution plan and apply your Terraform template in {{site.data.keyword.cloud_notm}}.
@@ -171,7 +171,7 @@ Before you begin, complete the following prerequisities.
 Use the IBM-provided Terraform template to create and configure your {{site.data.keyword.bpshort}} workspace. 
 {: shortdesc}
 
-1. Review the [IBM-provided template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create an {{site.data.keyword.containerlong_notm}} cluster on VPC Gen 2 infrastructure. 
+1. Review the [IBM-provided template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure. 
    - **main.tf**: This file includes the Terraform code that you run in {{site.data.keyword.bpshort}}. Your Terraform code includes data sources and resources to create a VPC with subnets in two different zones, create an {{site.data.keyword.containerlong_notm}} cluster, and configure the cluster to bind an {{site.data.keyword.cos_full_notm}} service instance. 
    - **output.tf**: This file includes the content that you want to return after {{site.data.keyword.bpshort}} applied your Terraform template. In this case, you get the file path on your local machine where the cluster configuration and certificates are stored. You use these files to access your cluster later. 
    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
@@ -393,5 +393,5 @@ During the creation of the Terraform execution plan, you are not allowed to make
 ## What's next?
 {: #tut_what's next}
 
-Great job! You successfully provisioned a VPC Generation 2 cluster by using {{site.data.keyword.bplong_notm}}. You can now learn how to configure the cluster parameters to attach the key management services and load balancer. For more information, about key management services and {{site.data.keyword.cloud_notm}} Kubernetes worker pool, see [Key Management services](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#ks_kms_enable) and [{{site.data.keyword.cloud_notm}} Kubernetes worker pool](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#cs_alb_create).
+Great job! You successfully provisioned a VPC cluster by using {{site.data.keyword.bplong_notm}}. You can now learn how to configure the cluster parameters to attach the key management services and load balancer. For more information, about key management services and {{site.data.keyword.cloud_notm}} Kubernetes worker pool, see [Key Management services](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#ks_kms_enable) and [{{site.data.keyword.cloud_notm}} Kubernetes worker pool](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#cs_alb_create).
 

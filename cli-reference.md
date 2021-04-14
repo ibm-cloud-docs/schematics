@@ -1934,7 +1934,7 @@ Review the command that you want to create, update, list, delete and to work wit
 ### `ibmcloud schematics inventory create`
 {: #schematics-create-inv}
 
-Create a resource inventory in {{site.data.keyword.bplong_notm}} that you can reference in a {{site.data.keyword.bpshort} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
+Create a resource inventory in {{site.data.keyword.bplong_notm}} that you can reference in a {{site.data.keyword.bpshort}} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
 {: shortdesc}
 
 **Syntax**
