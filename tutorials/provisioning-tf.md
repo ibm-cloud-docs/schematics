@@ -154,7 +154,7 @@ This tutorial is intended for developers and system administrators who want to l
 ## Prerequisites
 {: #provisioning-tut-prereq}
 
-Before you begin, complete the following prerequsities. 
+Before you begin, complete the following prerequisites. 
 {: shortdesc}
 
 - [Create a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
