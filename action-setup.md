@@ -109,7 +109,7 @@ Review the following status that can be assigned to a job:
 |`ok` |The total number of target hosts where the Ansible playbook was successfully executed.  |
 |`changed` | The total number of target hosts that were accessed and changed. |
 |`failed` |The total number of target hosts where the Ansible playbook could not be successfully executed.  |
-|`skipped` |The total number of target host that were accessed but could not be updated because changes were already applied to these hosts.|
+|`skipped` |The total number of target host that were accessed but could not be updated because changes have already applied to these hosts.|
 |`unreachable` |The total number of target hosts that could not be found or reached. |
 {: caption="Job status" caption-side="top"}
 
