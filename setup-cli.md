@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-15"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -95,19 +95,19 @@ subcollection: schematics
 # Setting up the CLI 
 {: #setup-cli}
 
-Use the {{site.data.keyword.bplong_notm}} command line plug-in to automate the infrastructure provisioning process, the configuration of your {{site.data.keyword.cloud}} resources, and the deployment of app workloads in {{site.data.keyword.cloud}}. 
+Use the {{site.data.keyword.bplong_notm}} command-line plug-in to automate the infrastructure provisioning process, the configuration of your {{site.data.keyword.cloud}} resources, and the deployment of app workloads in {{site.data.keyword.cloud}}. 
 {: shortdesc}
 
 
-## Installing the IBM Cloud command line 
+## Installing the IBM Cloud command-line 
 {: #install-schematics-cli}
 
-Install the required command line to start using {{site.data.keyword.bplong_notm}}.  
+Install the required command-line to start using {{site.data.keyword.bplong_notm}}.  
 {:shortdesc}
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started). 
 
-   Plan to use the command line often? Try [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} command line (Linux/MacOS only)](/docs/cli?topic=cli-shell-autocomplete#shell-autocomplete-linux).
+   Plan to use the command-line often? Try [Enabling shell autocompletion for {{site.data.keyword.cloud_notm}} command-line (Linux/MacOS only)](/docs/cli?topic=cli-shell-autocomplete#shell-autocomplete-linux).
    {: tip}
 
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your {{site.data.keyword.cloud_notm}} credentials when prompted.
@@ -116,23 +116,23 @@ Install the required command line to start using {{site.data.keyword.bplong_notm
    ```
    {: pre}
 
-   If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command line output to retrieve your one-time passcode. You know that you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
+   If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command-line output to retrieve your one-time passcode. You know that you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
    {: tip}
 
-## Installing the {{site.data.keyword.bplong_notm}} command line plug-in
+## Installing the {{site.data.keyword.bplong_notm}} command-line plug-in
 {: #install-schematics-plugin}
 
 Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operations, configuration management, and infrastructure deployments in {{site.data.keyword.cloud_notm}}. 
 {:shortdesc}
     
-1. Install the {{site.data.keyword.cloud_notm}} command line plug-in for {{site.data.keyword.bpshort}}.
+1. Install the {{site.data.keyword.cloud_notm}} command-line plug-in for {{site.data.keyword.bpshort}}.
 
    ```
    ibmcloud plugin install schematics
    ```
    {: pre}
     
-2. Verify that the {{site.data.keyword.bplong_notm}} command line plug-in is installed successfully. The plug-in is listed as `schematics`.
+2. Verify that the {{site.data.keyword.bplong_notm}} command-line plug-in is installed successfully. The plug-in is listed as `schematics`.
 
    ```
    ibmcloud plugin list
@@ -149,7 +149,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
    ```
    {: screen}
     
-3. Verify that you can use the {{site.data.keyword.bpshort}} command line plug-in by listing all supported commands. The command prefix to work with the {{site.data.keyword.bpshort}} command line plug-in is `ibmcloud schematics`. 
+3. Verify that you can use the {{site.data.keyword.bpshort}} command-line plug-in by listing all supported commands. The command prefix to work with the {{site.data.keyword.bpshort}} command-line plug-in is `ibmcloud schematics`. 
    ```
    ibmcloud schematics help
    ```
@@ -187,7 +187,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
 ## Updating the CLI
 {: schematics-cli-update}
 
-Update the {{site.data.keyword.cloud_notm}} command line and the {{site.data.keyword.bpshort}} command line plug-in periodically to get access to new features. 
+Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in periodically to get access to new features. 
 {: shortdesc}
 
 1.  [Update the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli#update-ibmcloud-cli). 
@@ -199,10 +199,10 @@ Update the {{site.data.keyword.cloud_notm}} command line and the {{site.data.key
     ```
     {: pre}
 
-     If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command line output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
+     If you have a federated ID, use `ibmcloud login --sso` to log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your user name and use the provided URL in your command-line output to retrieve your one-time passcode. You know you have a federated ID when the login fails without the `--sso` and succeeds with the `--sso` option.
      {: tip}
 
-3. Check if an update is available for the {{site.data.keyword.bpshort}} command line plug-in. If an update is available, you find an **Update available** notification in your command line output. 
+3. Check if an update is available for the {{site.data.keyword.bpshort}} command-line plug-in. If an update is available, you find an **Update available** notification in your command-line output. 
    ```
    ibmcloud plugin list | grep schematics
    ```
@@ -215,7 +215,7 @@ Update the {{site.data.keyword.cloud_notm}} command line and the {{site.data.key
    ```
    {: screen}
    
-4. Update the {{site.data.keyword.bpshort}} command line plug-in. 
+4. Update the {{site.data.keyword.bpshort}} command-line plug-in. 
 
    ```
    ibmcloud plugin update schematics

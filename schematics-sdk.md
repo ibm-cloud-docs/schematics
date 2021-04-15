@@ -48,16 +48,16 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} SDKs
 {: #schematics-sdks}
 
-{{site.data.keyword.bpshort}} simplify application development by abstracting much of the complexity. {{site.data.keyword.bpshort}} SDKs are provided in multiple programming languages to assist application developers.
+{{site.data.keyword.bplong}} simplify application development by abstracting much of the complexity. {{site.data.keyword.bpshort}} SDKs are provided in multiple programming languages to assist application developers.
 
-Following are the list of {{site.data.keyword.bplong_notm}} server SDKs that are available for Node, Python, Go, and Java. For more information about installation and technical concepts, see the **README** document in the its SDK documentation.
+Following are the list of {{site.data.keyword.bplong_notm}} server SDKs that are available for Node, Python, Go, and Java. For more information, about installation and technical concepts, see readme file in the SDK documentation.
 {: shortdesc}
 
 |Server SDKs | SDK Documentation |
 |------- |   -------- |
 |[Go SDK](https://github.com/IBM/schematics-go-sdk){: external} | [Go SDK documentation](https://github.com/IBM/schematics-go-sdk/blob/main/README.md){: external} |
-|[Java SDK](https://github.com/IBM/schematics-java-sdk){: external} | [Java SDK documentation](https://github.com/IBM/schematics-java-sdk/blob/main/README.md){: external} |
-|[Node SDK](https://github.com/IBM/schematics-node-sdk){: external} |[Node SDK documentation](https://github.com/IBM/schematics-node-sdk/blob/main/README.md){: external} |
+|[{{site.data.keyword.runtime_liberty_short}} SDK](https://github.com/IBM/schematics-java-sdk){: external} | [{{site.data.keyword.runtime_liberty_short_notm}} SDK documentation](https://github.com/IBM/schematics-java-sdk/blob/main/README.md){: external} |
+|[{{site.data.keyword.runtime_nodejs_short}}](https://github.com/IBM/schematics-node-sdk){: external} |[{{site.data.keyword.runtime_nodejs_short_notm}} documentation](https://github.com/IBM/schematics-node-sdk/blob/main/README.md){: external} |
 |[Python SDK](https://github.com/IBM/schematics-python-sdk){: external} | [Python SDK documentation](https://github.com/IBM/schematics-python-sdk/blob/main/README.md){: external} |
 {:caption="Table 1. List of {{site.data.keyword.bpshort}} SDKs" caption-side="top"}
 

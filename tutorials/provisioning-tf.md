@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-04-15"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -256,14 +256,14 @@ You can edit the payload values for the variable as stated in the table:
 | `githubtoken` | Specify your GitHub token. |
 | `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
 
-2. Create the workspace by using the JSON file from command line interface.
+2. Create the workspace by using the JSON file from command-line interface.
 
    ```
    ibmcloud schematics workspace new --file <fully qualified path of cluster_payload.JSON file>
    ```
    {: pre}
 
-   For more information to create workspace, refer to [command line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
+   For more information to create workspace, refer to [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
    {: note}
 
     **Sample example output**

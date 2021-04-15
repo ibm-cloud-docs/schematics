@@ -35,7 +35,7 @@ Create and manage {{site.data.keyword.bplong_notm}} workspaces on the private ne
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} Private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/schematics?topic=schematics-secure-data#pi-location).
 
-To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the command line plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
+To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the command-line plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
 {: note}
 
 ## Private service endpoints in {{site.data.keyword.bpshort}}
@@ -68,7 +68,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
       ```
       {: pre}
       
-      If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the command line output to generate a one-time passcode.
+      If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the command-line output to generate a one-time passcode.
       {: tip}
       
    2. Show the details of your account. 
