@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-04-15"
 
 keywords: schematics command line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -970,7 +970,6 @@ While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you ca
 **Syntax**
 
 ```
-ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE] [--var-file TFVARS_FILE_PATH] [--force] [--json]
 ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE1] [--target RESOURCE2] [--var-file PATH_TO_VARIABLES_FILE] [--force] [--output OUTPUT][--json]
 ```
 {: pre}
@@ -982,7 +981,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE1] [--target RESOU
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file remain uncreated or unupdated. To target the creation of multiple resources, use the following syntax: `--target &lt;resource1&gt; --target &lt;resource2&gt;`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
-| `--var-file` or `-vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `&lt;key&gt;=&lt;value&gt;`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
+| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `&lt;key&gt;=&lt;value&gt;`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
 | `--output` or `-o` | Optional | Return the command line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -1648,7 +1647,7 @@ Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshor
 **Syntax**
 
 ```
-ibmcloud schematics job logs --id JOB_ID [--no-prompt]
+ibmcloud schematics job logs --id JOB_ID [log-prefix] [log-header] [--no-prompt]
 ```
 {: pre}
 
@@ -1656,7 +1655,9 @@ ibmcloud schematics job logs --id JOB_ID [--no-prompt]
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
-| `--id` | Required | The ID of the job for which you want to retrieve detailed logs.  |
+| `--id` or `-i` | Required | The ID of the job for which you want to retrieve detailed logs.  |
+| `--log-prefix` or `--lp` | Optional | Adds the prefix of command executed in the job logs. |
+| `--log-header` or `--lh` | Optional |  Used to convert command headers in the job logs in the {{site.data.keyword.bpshort}} format. |
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive command line session. |
 {: caption="Schematics job logs flags" caption-side="top"}
 
@@ -1687,7 +1688,7 @@ ibmcloud schematics job delete --id JOB_ID [--force] [--no-prompt]
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
-| `--id` | Required | The ID of the job that you want to delete. |
+| `--id` or `-i` | Required | The ID of the job that you want to delete. |
 | `--force` or `-f` | Optional | To force the deletion without user confirmation. |
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive command line session. |
 {: caption="Schematics job delete flags" caption-side="top"}
