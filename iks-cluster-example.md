@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-04-15"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -35,7 +35,7 @@ The playbook demonstrates how to automate the deployment of a hackathon starter 
 ## Prerequisites
 {: #iks-prereq}
 
-You can execute the use case by using command line or user interface by completing these prerequisite.
+You can execute the use case by using command-line or user interface by completing these prerequisite.
 
 The prerequisites for the use case are:
 
@@ -137,7 +137,7 @@ Now, you are ready to complete these steps to execute the use case:
     ```
      {: pre}  
 
-5. Execute the `kubectl` commands in command line to check the status of the nodes, running pods, and finally `run svc` command to view the external IP address of your service.
+5. Execute the `kubectl` commands in command-line to check the status of the nodes, running pods, and finally `run svc` command to view the external IP address of your service.
 
     ```
       kubectl get nodes -o wide

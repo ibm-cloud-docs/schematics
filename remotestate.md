@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-27"
+lastupdated: "2021-04-15"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -73,7 +73,7 @@ Similar to the `remote_state` data source, you can only access information that 
         ibmcloud terraform workspace list
         ```
         {: pre}
-   - Find the workspace ID in the **ID** column of your command line output. 
+   - Find the workspace ID in the **ID** column of your command-line output. 
    
 3. Create another Terraform configuration file that is named `remotestate.tf` to access the output parameters of the `vpc.tf` file by using the `ibm_schematics_output` data source. To allow version control of this file, make sure to store this configuration file in a GitHub or GitLab repository. 
    ```

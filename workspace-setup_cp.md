@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-04-15"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -110,7 +110,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 {: shortdesc}
 
 - **`provider` block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management, your {{site.data.keyword.cloud_notm}} API key is automatically retrieved for all IAM-enabled resources and you don't have to provide this information in the `provider` block. However, the API key is not retrieved for classic infrastructure and Cloud Foundry resources. For more information, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
-- **Terraform command line and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform command line or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} command line plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
+- **Terraform command-line and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform command-line or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli) instead. 
 
 ## Creating workspaces
 {: #create-workspace_cp}
@@ -118,7 +118,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 Create your workspace that points to the Git repository that hosts your Terraform template by using the {{site.data.keyword.bplong_notm}} console. 
 {: shortdesc} 
 
-If you do not want to connect your workspace to a Git repository, you can upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. However, this feature is supported only from the command line or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.
+If you do not want to connect your workspace to a Git repository, you can upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. However, this feature is supported only from the command-line or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.
 {: tip}
 
 **Before you begin**
@@ -178,7 +178,7 @@ Delete your workspace that points to the Git repository thats hosted your Terraf
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete. The table describes the delete workspace and destroy resources with various action.
 
-    If you have decided to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources outside the {{site.data.keyword.bpshort}} by using command line or from your resource source location.
+    If you have decided to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources outside the {{site.data.keyword.bpshort}} by using command-line or from your resource source location.
     {: note}
 
     Use the {{site.data.keyword.bpshort}} to manage the resources created in {{site.data.keyword.bpshort}}. You should not manually delete or make any changes to the resources that are created by using {{site.data.keyword.bpshort}}.
@@ -194,7 +194,7 @@ Delete your workspace that points to the Git repository thats hosted your Terraf
        <tr>
           <td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
         <tr>
-          <td>Resources destroyed using command line or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
+          <td>Resources destroyed using command-line or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
         </table>
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
@@ -257,7 +257,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 ## Workspace state and its importance
 {: #states-importance_cp}
 
-Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the command line or API.
+Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the command-line or API.
 {: shortdesc} 
 
 | State | Description | 

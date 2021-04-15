@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-04-15"
 
 keywords: schematics, automation, terraform
 
@@ -111,8 +111,8 @@ To provision a Terraform template using Schematics CLI, you need perform the giv
 ### Prerequisites
 {: prov-prereq}
 
-1. Install {{site.data.keyword.cloud_notm}} command line and Schematics plug-ins, refer to [Setting up the command line and Schematics](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) for details.
-2. Check an update is available for the {{site.data.keyword.bplong_notm}} command line plug-in. If an update is available, you find an **Update available** notification in your command line output.
+1. Install {{site.data.keyword.cloud_notm}} command-line and Schematics plug-ins, refer to [Setting up the command-line and Schematics](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) for details.
+2. Check an update is available for the {{site.data.keyword.bplong_notm}} command-line plug-in. If an update is available, you find an **Update available** notification in your command-line output.
 
    ```
    ibmcloud plugin list | grep schematics

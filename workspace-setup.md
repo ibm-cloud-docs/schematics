@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-06"
+lastupdated: "2021-04-15"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -110,13 +110,13 @@ You can use the {{site.data.keyword.bplong_notm}} to delete your workspace. Whil
       <tr>
         <th>Job</th><th>Delete workspace</th><th>Destroy the associated cloud resources</th></tr>
        <tr>
-         <td>Delete workspace <br> **Note** use this option, if you have already destroyed the cloud resources, or intend to destroy them later by using the command line or user interface.</td><td>True</td><td>False</td></tr>
+         <td>Delete workspace <br> **Note** use this option, if you have already destroyed the cloud resources, or intend to destroy them later by using the command-line or user interface.</td><td>True</td><td>False</td></tr>
        <tr>
          <td>Destroy only resources</td><td>False</td><td>True</td></tr>
        <tr>
           <td>Delete workspace and destroy the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
         <tr>
-          <td>Resources destroyed using command line or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
+          <td>Resources destroyed using command-line or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
         </table>
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
@@ -202,7 +202,7 @@ Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you c
 {: shortdesc}
 
 - **Provider block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.cloud_notm}} Identity and Access Management, your {{site.data.keyword.cloud_notm}} API key is automatically retrieved for all IAM-enabled resources and you don't have to provide this information in the `provider` block. However, the API key is not retrieved for classic infrastructure and Cloud Foundry resources. For more information, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
-- **Terraform command line and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform command line or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} command line plug-in](/docs/schematics?topic=schematics-setup-cli) instead.
+- **Terraform command-line and {{site.data.keyword.cloud_notm}} provider plug-in:** To use {{site.data.keyword.bplong_notm}}, you don't need to install the Terraform command-line or the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. If you want to automate the provisioning of resources, try out the [{{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli) instead.
 
 ### Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery}
@@ -237,7 +237,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 ### Workspace state overview
 {: #states-overview}
 
-Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the command line or API.
+Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the command-line or API.
 {: shortdesc} 
 
 | State | Description | 
