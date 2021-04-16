@@ -54,14 +54,14 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
    5. Click the **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Settings` page.
 3. Import your Ansible playbook. 
    1. Enter the **Repository URL** of your GitHub or GitLab repository where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run later. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
-      - Example for master branch: https://github.com/myorg/myrepo
-      - Example for other branches: https://github.com/myorg/myrepo/tree/mybranch
-      - Example for subdirectory: https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
+      - Example for master branch - https://github.com/myorg/myrepo
+      - Example for other branches - https://github.com/myorg/myrepo/tree/mybranch
+      - Example for subdirectory - https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
       
       Don't have a playbook that you can use? Try out one of our [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
       {: tip}
       
-   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token){: external}. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
+   2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information, about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token){: external}. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
    3. Review the default Ansible version that is used to run your playbook. This version cannot be changed. If you use your own Ansible playbook, make sure that your playbook can be run with this Ansible version. 
    4. Click **Retrieve playbooks** to connect to your repository and retrieve all Ansible playbooks from your Git repository.
    5. Select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook.
@@ -109,7 +109,7 @@ Review the following status that can be assigned to a job:
 |`ok` |The total number of target hosts where the Ansible playbook was successfully executed.  |
 |`changed` | The total number of target hosts that were accessed and changed. |
 |`failed` |The total number of target hosts where the Ansible playbook could not be successfully executed.  |
-|`skipped` |The total number of target host that were accessed but could not be updated because changes were already applied to these hosts.|
+|`skipped` |The total number of target host that were accessed but could not be updated because changes have already applied to these hosts.|
 |`unreachable` |The total number of target hosts that could not be found or reached. |
 {: caption="Job status" caption-side="top"}
 
