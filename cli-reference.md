@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-15"
+lastupdated: "2021-04-19"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1732,7 +1732,7 @@ ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RES
 {: caption="Schematics resource query create flags" caption-side="top"}
 
 #### Using the payload file
-{: #inv-create-payload}
+{: #rq-create-payload}
 
 You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. For a list of supported resource queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc} 
@@ -1786,7 +1786,7 @@ ibmcloud schematics resource-query create --name myquery --type vsi --query-file
 
 
 #### Using the interactive mode
-{: #inv-create-interactive}
+{: #rq-create-interactive}
 
 Instead of entering your resource query details by using the command options or a payload file, you can use the interactive mode for the command. This mode prompts you to enter the required values to create a resource query in {{site.data.keyword.bpshort}}. You can create resource conditions by using [resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc}
@@ -1798,7 +1798,7 @@ Instead of entering your resource query details by using the command options or 
    {: pre}
 
 2. Enter a name for your resource query and press the return key.
-3. Enter the path to your payload file. For a sample payload file, see [Using the payload file](#inv-create-payload). Then, press the return key.
+3. Enter the path to your payload file. For a sample payload file, see [Using the payload file](#rq-create-payload). Then, press the return key.
 4. Review the details of the resource query that was created for you. 
 
 
