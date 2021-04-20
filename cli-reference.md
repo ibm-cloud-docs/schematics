@@ -307,6 +307,9 @@ ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--gi
 
 You can create the JSON as shared in the `example.json` file for workspace creation and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is described in the table. 
 
+You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as "testworkspace".
+{: note}
+
 **example.json**
 
 ```
@@ -739,6 +742,9 @@ ibmcloud schematics workspace update --id WORKSPACE_ID --file FILE_NAME [--githu
 {: #json-file-update-template}
 
 You can create the JSON as shared in the `example.json` file for workspace update and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is described in the table. 
+
+You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as "testworkspace".
+{: note}
 
 **example.json**
 
@@ -1228,6 +1234,9 @@ ibmcloud schematics action create --name start-vsi --location us-south --resourc
 Create a JSON file that includes the details for the action that you want to create, such as the ID, name, and description. Then, use the `--file` command option to create your action from your payload file.
 {: shortdesc}
 
+You need to replace the `<...>` placeholders with the actual values. For example, `"<ACTION_NAME>"` as "testaction".
+{: note}
+
 **Syntax**
 
 ```
@@ -1496,6 +1505,9 @@ If the action contains the playbook name, you need to add the playbook name, so 
 You can provide a payload file to specify certain parameters for the `job run` command. Then, you pass the file name to the command by using the `--file` command option.
 {: shortdesc}
 
+You need to replace the `<...>` placeholders with the actual values. For example, `"<COMMAND_OBJECT>"` as "action".
+{: note}
+
 **Syntax**
 
 ```
@@ -1737,6 +1749,9 @@ ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RES
 You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. For a list of supported resource queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc} 
 
+You need to replace the `<...>` placeholders with the actual values. For example, `"<WORKSPACE_ID"` as "us-east.workspace.ID1231".
+{: note}
+
 **Syntax**
 
 ```
@@ -1966,8 +1981,12 @@ You need to pass either `--inventories-ini` file path or `--resource-query` ID f
 #### Using the payload file
 {: #inv-create-payload}
 
-You can provide a payload file to specify certain parameters for the `inventory create` command. Then, you pass the file name to the command by using the `--file` command option. 
-{: shortdesc} 
+You can provide a payload file to specify certain parameters for the `inventory create` command. Then, you pass the file name to the command by using the `--file` command option.
+{: shortdesc}
+
+You need to replace the `<...>` placeholders with the actual values. For example, `"<INVENTORY_NAME>"` as "myinventory".
+{: note}
+
 
 **Syntax**
 
