@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-12"
+lastupdated: "2021-04-20"
 
 keywords: schematics, automation, terraform
 
@@ -93,6 +93,20 @@ Review the following table to see what permissions you need to work with {{site.
 {: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
+### KMS permissions
+{: #kms-permissions}
+
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} key management system.
+
+| Action | Reader | Writer | Manager | Account owner |
+|-----|-----|-----|-----|--------|
+| View KMS instances | ![Check mark icon](images/checkmark.svg)| ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|
+| Read KMS settings| ![Check mark icon](images/checkmark.svg)| ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|
+| Update the KMS settings | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|
+{: row-headers}
+{: class="comparison-table"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} KMS" caption-side="top"}
+{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ## Setting up access for your users
 {: #access-setup}
