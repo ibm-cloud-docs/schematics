@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-13"
+lastupdated: "2021-04-20"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -67,7 +67,7 @@ With {{site.data.keyword.bplong_notm}}, you can run Ansible playbooks or {{site.
 - [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 - [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/){: external}
 
-## Does {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions?
+## Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?
 {: #provider-versions}
 {: faq}
 {: support}
@@ -91,6 +91,13 @@ terraform{
 
 Currently, version 1.21.0 is released, in future it can be higher version. For more information, about provider version, refer to [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
 {: note}
+
+## When are new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?
+{: #new-versions}
+{: faq}
+{: support}
+
+After new Terraform and Ansible versions are released by the community, the IBM team begins a process of hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}. 
 
 ## How do I generate IAM access token, if client id `bx` is used?
 {: #createworkspace-generate-tokens}
