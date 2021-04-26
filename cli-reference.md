@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-20"
+lastupdated: "2021-04-26"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -659,7 +659,7 @@ Manually marks an instance or resources as tainted, by forcing the resources to 
 **Syntax**
 
 ```
-ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER]
+ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] --address PARAMETER
 ```
 {: pre}
 
@@ -669,7 +669,7 @@ ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] [--addre
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to show.  |
-| `--address` or `-adr` | Optional | Enter the address of the resource to mark as taint.|
+| `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="Schematics workspace taint flags" caption-side="top"}
 
 **Example**
@@ -2457,7 +2457,7 @@ ibmcloud schematics workspace state show [--options OPTIONS] --address ADDRESS
 | ----- | -------- | ------ | 
 | `--id` or `-i` | Required | The unique ID of the workspace where you want to update. |
 | `--options` or `-o` | Optional | Enter the command-line flags. |
-| `--address` or `-adr` | Optional | Enter the address of the resource to mark as taint.|
+| `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="Schematics state pull flags" caption-side="top"}
 
 **Example**
@@ -2503,7 +2503,7 @@ Removes an instance or resources from the Terraform state. For example, if you r
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER] 
+ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] --address PARAMETER 
 ```
 {: pre}
 
@@ -2515,7 +2515,7 @@ ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] [--ad
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The unique identifier of the workspace for which you want to remove the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to remove. |
-| `--address` or `-adr` | Optional | Enter the address of the resource to mark as taint.|
+| `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="Schematics state remove flags" caption-side="top"}
 
 **Example**
