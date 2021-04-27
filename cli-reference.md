@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-20"
+lastupdated: "2021-04-27"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -554,7 +554,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
    <td>Optional</td>
    <td>In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
    </tr>
-  </tbody></thead></table>
+  </tbody></table>
 
 **Example**
 
@@ -573,7 +573,7 @@ Displays all the instance or resource output of the workspace. You can provide o
 **Syntax**
 
 ```
-ibmcloud schematics workspace output --id WORKSPACE_ID --options OPTIONS --name OUTPUT_NAME
+ibmcloud schematics workspace output --id WORKSPACE_ID [--options OPTIONS] [--name OUTPUT_NAME]
 ```
 {: pre}
 
@@ -610,10 +610,11 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--output OUTPUT][--json]
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace that you want to refresh. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace that you want to refresh and run an action against. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics refresh flags" caption-side="top"}
+
 
 **Example**
 
@@ -659,7 +660,7 @@ Manually marks an instance or resources as tainted, by forcing the resources to 
 **Syntax**
 
 ```
-ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER]
+ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] --address PARAMETER
 ```
 {: pre}
 
@@ -669,7 +670,7 @@ ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] [--addre
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to show.  |
-| `--address` or `-adr` | Optional | Enter the address of the resource to mark as taint.|
+| `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="Schematics workspace taint flags" caption-side="top"}
 
 **Example**
@@ -905,7 +906,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
    <td>Optional</td>
    <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
    </tr>
-  </tbody></thead></table>
+  </tbody></table>
 
 **Example**
 
@@ -1303,7 +1304,7 @@ Update the information of an existing {{site.data.keyword.bplong_notm}} action b
 **Syntax**
 
 ```
-ibmcloud schematics action update --id ACTION_ID [--name ACTION_NAME] [--description DESCRIPTION] [--template GIT_TEMPLATE_REPO] [--credential CREDENTIAL_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--inventory] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--file FILE_NAME ] [--github-token GITHUB_ACCESS_TOKEN] [--no-prompt] [--output OUTPUT] [--json]
+ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--github-token GITHUB_ACCESS_TOKEN] [--credential CREDENTIAL_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--inventory INVENTORY_ID] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--file FILE_NAME] [--no-prompt] [--output OUTPUT] [--json]
 ```
 {: pre}
 
@@ -1314,7 +1315,10 @@ ibmcloud schematics action update --id ACTION_ID [--name ACTION_NAME] [--descrip
 | `--id` or `-i` | Required | The ID of an action that you want to update. |
 | `--name` or `-n` | Optional | A new unique name for your action. |
 | `--description` or `-d` | Optional | The short description for an action.|
+| `--location` or `-l` | Required | Geographic locations supported by {{site.data.keyword.bplong_notm}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`.|
+| `--resource-group` or `-r` | Required | Resource-group name for an Action.|
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
+| `--playbook-name` or  `--pn` | Optional | Name of the playbook.|
 | `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`.|
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
@@ -2180,7 +2184,7 @@ You can use your encryption keys from key management services (KMS), {{site.data
 
 The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
-- You should have your `KYOK`, or `BYOK`. To create a {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
+- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
 - You need to configure [service to service authorization](/docs/schematics?topic=schematics-secure-data#data-storage) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
@@ -2457,7 +2461,7 @@ ibmcloud schematics workspace state show [--options OPTIONS] --address ADDRESS
 | ----- | -------- | ------ | 
 | `--id` or `-i` | Required | The unique ID of the workspace where you want to update. |
 | `--options` or `-o` | Optional | Enter the command-line flags. |
-| `--address` or `-adr` | Optional | Enter the address of the resource to mark as taint.|
+| `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="Schematics state pull flags" caption-side="top"}
 
 **Example**
@@ -2473,7 +2477,7 @@ Moves an instance or resources from the Terraform state. For example, if you mov
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state mv --id WORKSPACE_ID [--source SOURCE]  [--destination DESTINATION] 
+ibmcloud schematics workspace state mv --id WORKSPACE_ID --source SOURCE  --destination DESTINATION 
 ```
 {: pre}
 
@@ -2503,7 +2507,7 @@ Removes an instance or resources from the Terraform state. For example, if you r
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER] 
+ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] --address PARAMETER 
 ```
 {: pre}
 
@@ -2515,7 +2519,7 @@ ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] [--ad
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The unique identifier of the workspace for which you want to remove the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to remove. |
-| `--address` or `-adr` | Optional | Enter the address of the resource to mark as taint.|
+| `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="Schematics state remove flags" caption-side="top"}
 
 **Example**

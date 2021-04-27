@@ -84,7 +84,7 @@ Schematics
         {: .topicgroup}
         Terraform
              [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
-             [IBM Cloud provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources) 
+             [IBM Cloud provider for Terraform](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources) 
              [Terraform documentation](https://www.terraform.io/docs/index.html)
 
         {: .topicgroup}

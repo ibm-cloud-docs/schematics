@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-20"
+lastupdated: "2021-04-27"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -89,7 +89,7 @@ terraform{
 ```
 {: pre}
 
-Currently, version 1.21.0 is released, in future it can be higher version. For more information, about provider version, refer to [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+Currently, version 1.21.0 is released. For more information, about provider version, refer to [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 {: note}
 
 ## When are new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?
