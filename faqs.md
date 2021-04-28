@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-27"
+lastupdated: "2021-04-28"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -146,7 +146,7 @@ How do I rectify 'Failed to clone git repository, couldn’t find remote ref “
 
 Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ ` repository, after 1st October 2020, can see this error message. 
 
-Solution:
+Solution
 If the repository is created after 1st October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
 
 
