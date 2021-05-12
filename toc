@@ -95,7 +95,7 @@ Schematics
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    faqs.md
+    faqs.md     
     error-messages.md
     ts_index.md
     {: .navgroup-end}
