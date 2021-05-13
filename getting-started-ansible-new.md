@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-13"
+lastupdated: "2021-05-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -92,7 +92,7 @@ subcollection: schematics
 
 
 # Getting started with configuration management in {{site.data.keyword.bplong_notm}}
-{: #get-started-ansible}
+{: #getting-started-ansible}
 
 Use one of the IBM-provided Ansible playbooks to start and stop {{site.data.keyword.vsi_is_short}}. 
 {: shortdesc}
