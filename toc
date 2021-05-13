@@ -96,6 +96,11 @@ Schematics
 
     {: .navgroup id="help"}
     faqs.md
-    error-messages.md
+    
+    {: .topicgroup}
+    Troubleshooting 
+         troubleshooting/ts_apply_errors.md
+         error-messages.md
+    
     ts_index.md
     {: .navgroup-end}
