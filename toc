@@ -95,7 +95,13 @@ Schematics
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+<<<<<<< HEAD
+    faqs.md
+    error-messages.md
+    persist-files.md
+=======
     faqs.md     
     error-messages.md
+>>>>>>> 77391576731a9fa23b0f05ff57b8c2850bd78ad6
     ts_index.md
     {: .navgroup-end}
