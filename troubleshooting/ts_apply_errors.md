@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-05-17"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -174,13 +174,18 @@ Make sure that the **Viewer** permission on the resource group is assigned to yo
 {: #server-errors}
    
 {: tsSymptoms}
-When you run a {{site.data.keyword.bpshort}} apply action, the action fails with 5xx HTTP errors. 
+When you run a {{site.data.keyword.bpshort}} apply action, the action fails with 5xx HTTP errors such as in the following example: 
+
+```
+Error: Request failed with status code: 500, ServerErrorResponse: {"incidentID":"11aa11aaaa11-IAD","code":"A0002","description":"Could not connect to a backend service. Try again later.","type":"Authentication"}
+```
+{: screen}
 
 {: tsCauses}
 5xx HTTP errors indicate an issue with the {{site.data.keyword.cloud_notm}} service that you try to create, update, or delete, and usually cannot be resolved by the user. These issues can include networking errors, timeouts, or the service being temporarily unavailable. 
 
 {: tsResolve}
-Because this error does not originate within {{site.data.keyword.bpshort}}, wait a few minutes before trying to re-run the {{site.data.keyword.bpshort}} apply action again. If the apply action continues to fail, contact support by opening a support case for the service that you want to work with. For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar). 
+Because this error does not originate within {{site.data.keyword.bpshort}}, wait a few minutes before trying to re-run the {{site.data.keyword.bpshort}} apply action again. If the apply action continues to fail, note the incident ID and find more detailed logs for this incident ID in your {{site.data.keyword.loganalysislong_notm}} service instance. If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident IDFor more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar). 
 
 </br>
 
