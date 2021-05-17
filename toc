@@ -95,12 +95,12 @@ Schematics
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-<<<<<<< HEAD
-    faqs.md     
-    error-messages.md
-=======
+    faqs.md
+    
+    {: .topicgroup}
+    Troubleshooting 
+         troubleshooting/ts_apply_errors.md
          error-messages.md
     
->>>>>>> 1c97027f01aa2854ecfa4e00b0aed937ae6d2a9a
     ts_index.md
     {: .navgroup-end}
