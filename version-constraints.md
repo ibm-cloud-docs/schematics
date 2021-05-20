@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-04"
+lastupdated: "2021-05-20"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -108,7 +108,7 @@ It is good practice to declare the version that your Terraform template or Ansib
 
 Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in version v1.23.1 is packaged with the REST API provider version v1.10.0, and was tested on Terraform v0.12.
 
-To use any of the pre-defined {{site.data.keyword.bpshort}} images, you must explicitely declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](#version-constraints-terraform). Note that you cannot change the default version for the Ansible executable. You can only [specify the version of referenced Ansible roles and collections](#version-constraints-ansible).
+To use any of the pre-defined {{site.data.keyword.bpshort}} images, you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform. Note that you cannot change the default version for the Ansible executable. You can only [specify the version of referenced Ansible roles and collections](#version-constraints-ansible).
 {: important}
 
 ```
@@ -168,7 +168,7 @@ Open shift client                v3.11.0
 ## Specifying version constraints for the Terraform CLI and Terraform providers
 {: #version-constraints-terraform}
 
-You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information about how to specify version contraints, see the [Terraform documentation](https://www.terraform.io/docs/language/expressions/version-constraints.html){: external}. 
+You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information, about how to specify version contraints, see the [Terraform documentation](https://www.terraform.io/docs/language/expressions/version-constraints.html){: external}. 
 {: shortdesc}
 
 ### Version constraints for the Terraform CLI
@@ -192,7 +192,7 @@ terraform {
 ### Version constraints for Terraform providers
 {: #provider-version-contraint}
 
-To use any of the pre-defined [{{site.data.keyword.bpshort}} images](#schematics-image-ov), you must explicitely declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. 
+To use any of the pre-defined [{{site.data.keyword.bpshort}} images](#schematics-image-ov), you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. 
 
 If no {{site.data.keyword.cloud_notm}} Provider plug-in version is declared in your Terraform template, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. 
 {: note}
