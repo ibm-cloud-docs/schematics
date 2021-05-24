@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-27"
+lastupdated: "2021-05-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -660,7 +660,7 @@ Manually marks an instance or resources as tainted, by forcing the resources to 
 **Syntax**
 
 ```
-ibmcloud schematics workspace taint --id WORKSPACE_ID [--options FLAGS] --address PARAMETER
+ibmcloud schematics workspace taint --id WORKSPACE_ID [--options OPTIONS]  --address PARAMETER
 ```
 {: pre}
 
@@ -690,7 +690,7 @@ Manually marks an instance or resources as untainted, by forcing the resources t
 **Syntax**
 
 ```
-ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options FLAGS] [--address PARAMETER]
+ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options OPTIONS]  [--address PARAMETER]
 ```
 {: pre}
 
@@ -1308,6 +1308,7 @@ ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--descript
 ```
 {: pre}
 
+
 **Command options**
 
 | Flag | Required / Optional | Description |
@@ -1330,6 +1331,7 @@ ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--descript
 | `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.|
 | `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--json` or `--j` | Deprecated | Prints the output as JSON. Use `--output` JSON instead. | 
 {: caption="Schematics action update flags" caption-side="top"}
 
 
@@ -1361,6 +1363,7 @@ ibmcloud schematics action get --id ACTION_ID [--profile PROFILE] [--output OUTP
 | `--id` or `-i` | Required | The ID of an action that you want to retrieve. |
 | `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 | `--no-prompt` | Optional |Set this flag to run the command without the interactive mode. |
 {: caption="Schematics action get flags" caption-side="top"}
 
@@ -1380,7 +1383,7 @@ Retrieve a list of all {{site.data.keyword.bpshort}} actions in your {{site.data
 **Syntax**
 
 ```
-ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] 
+ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT]  [--json]
 ```
 {: pre}
 
@@ -1392,6 +1395,7 @@ ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PRO
 | `--offset` or `-m` | Optional | The position of the action in the list of actions from where you want to start listing your actions. For example, if you have three actions in your account, the command returns these actions as a list with three elements. To retrieve all actions, you must enter position number 0. To retrieve actions number 2 and 3 and leave out action number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of actions. Negative numbers are not supported and are ignored. |
 | `--profile` or `-p` | Optional |The depth of information that is returned. Supported values are `ids`, and `summary`. The default value is `summary`. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics action list flags" caption-side="top"}
 
 **Example**
@@ -1477,7 +1481,7 @@ Create a job in {{site.data.keyword.bplong_notm}} to run the Ansible playbook in
 **Syntax**
 
 ```
-ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command-name COMMAND_NAME [--playbook-name PLAYBOOK_NAME] [--command-options COMMAND_OPTIONS] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--output OUTPUT] [--file FILE_NAME ] [--no-prompt]
+ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command-name COMMAND_NAME [--playbook-name PLAYBOOK_NAME] [--command-options COMMAND_OPTIONS] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--output OUTPUT] [--file FILE_NAME ] [--no-prompt] [--json]
 ```
 {: pre}
 
@@ -1498,6 +1502,7 @@ ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-objec
 | `--result-format` or `-f` | Optional |The result response output in JSON format.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of the new job. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics job run flags" caption-side="top"}
 
 If the action contains the playbook name, you need to add the playbook name, so that the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
@@ -1569,7 +1574,7 @@ Create a job by copying the settings of an existing job, and run the job in {{si
 **Syntax**
 
 ```
-ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--no-prompt]
+ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--no-prompt] [--json]
 ```
 {: pre}
 
@@ -1580,6 +1585,7 @@ ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--no-prompt]
 | `--id` | Required | The ID of an existing job that you want to copy and run again. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to create the job without an interactive command-line session. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics job update flags" caption-side="top"}
 
 **Example**
@@ -1610,6 +1616,7 @@ ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [-
 | `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
 | `--output` or `-o` | Optional | Return the command-line output in JSON format.Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to retrieve job details without an interactive command-line session. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics job get flags" caption-side="top"}
 
 **Example**
@@ -1628,7 +1635,7 @@ Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran against a tar
 **Syntax**
 
 ```
-ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--no-prompt]
+ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--no-prompt] [--json]
 ```
 {: pre}
 
@@ -1644,6 +1651,7 @@ ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--l
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--all` or `-A` | Optional | Lists all the jobs including the {{site.data.keyword.bpshort}} internal jobs.|
 | `--no-prompt` | Optional | Set this flag to create the job without an interactive command-line session. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics job list flags" caption-side="top"}
 
 **Example**
@@ -2237,6 +2245,7 @@ ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHE
 ```
 {: pre}
 
+
 **Command options**
 
 | Flag | Required / Optional | Description |
@@ -2250,7 +2259,7 @@ ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHE
 | `--secondary_name` or `--sn` | Optional | Specify the secondary KMS name.|
 | `--secondary_crn` or `--sc`| Optional | Specify the secondary key CRN.|
 | `--secondary_endpoint` or `--se`|Optional | Specify the secondary KMS private endpoint.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format.Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--json` or `-j` | Deprecated | Prints the output in the `JSON` format. |
 {: caption="Schematics KMS enable flags" caption-side="top"}
 
@@ -2507,7 +2516,7 @@ Removes an instance or resources from the Terraform state. For example, if you r
 {: shortdesc}
 
 ```
-ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options FLAGS] --address PARAMETER 
+ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options OPTIONS] --address PARAMETER 
 ```
 {: pre}
 

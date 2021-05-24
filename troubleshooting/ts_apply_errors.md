@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-05-24"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -78,6 +78,7 @@ content-type: troubleshoot
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -155,7 +156,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
 {: #rg-not-found}
 
 {: tsSymptoms}
-When you run a {{site.data.keyword.bplong_notm}} plan or apply action, the resource group that you try to retrieve by using the `ibm_resource_group` data source cannot be found. You receive an error message similar to the following: 
+When you run an {{site.data.keyword.bplong_notm}} plan or apply action, the resource group that you try to retrieve by using the `ibm_resource_group` data source cannot be found. You receive an error message similar to the following: 
 
 ```
 Error retrieving resource group <resource-group>: ResourceGroupDoesnotExist: Given resource Group : "<resource-group>" doesn't exist
@@ -185,7 +186,7 @@ Error: Request failed with status code: 500, ServerErrorResponse: {"incidentID":
 5xx HTTP errors indicate an issue with the {{site.data.keyword.cloud_notm}} service that you try to create, update, or delete, and usually cannot be resolved by the user. These issues can include networking errors, timeouts, or the service being temporarily unavailable. 
 
 {: tsResolve}
-Because this error does not originate within {{site.data.keyword.bpshort}}, wait a few minutes before trying to re-run the {{site.data.keyword.bpshort}} apply action again. If the apply action continues to fail, note the incident ID and find more detailed logs for this incident ID in your {{site.data.keyword.loganalysislong_notm}} service instance. If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident IDFor more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar). 
+Because this error does not originate within {{site.data.keyword.bpshort}}, wait a few minutes before trying to re-run the {{site.data.keyword.bpshort}} apply action again. If the apply action continues to fail, note the incident ID and find more detailed logs for this incident ID in your {{site.data.keyword.loganalysislong_notm}} service instance. If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar). 
 
 </br>
 
