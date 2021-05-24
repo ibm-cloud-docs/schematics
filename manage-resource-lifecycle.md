@@ -23,7 +23,7 @@ subcollection: schematics
 {:preview: .preview}
 {:external: target="_blank" .external}
 
-# Managing {{site.data.keyword.cloud}} resources with {{site.data.keyword.bpshort}}
+# Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}
 {: #manage-lifecycle}
 
 Deploy, modify, and remove {{site.data.keyword.cloud}} resources by changing the infrastructure code in your Terraform template and by using {{site.data.keyword.bplong_notm}} to apply the template in your {{site.data.keyword.cloud_notm}} account. 
