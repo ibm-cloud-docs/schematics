@@ -36,7 +36,6 @@ Schematics
          workspace-setupv2.md
          shared-data-set.md
          manage-resource-lifecycle.md
-         provisioning-terraform-template.md
          migrate-tfversion.md
          remotestate.md
          private-catalog.md
