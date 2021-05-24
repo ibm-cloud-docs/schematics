@@ -40,7 +40,9 @@ If you plan to store your Terraform templates on your local machine and upload t
 Create a workspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The workspace settings can be configured to use the Terraform template that are hosted and managed in a Git repository. Your workspace is used to manage the state of the cloud resources, provisioned using the Terraform template.
 {: shortdesc} 
 
-**Before you begin**
+### Before you begin
+{: #prerequisites}
+
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
