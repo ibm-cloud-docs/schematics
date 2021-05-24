@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-20"
+lastupdated: "2021-05-24"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -28,55 +28,131 @@ subcollection: schematics
 # Setting up workspaces
 {: #workspace-setup}
 
-With {{site.data.keyword.bplong}} workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you design the organizational structure of your Git repository, and workspaces so that you can replicate and manage your configurations across multiple environments. 
+With {{site.data.keyword.bplong}} workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
 If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested Git repository structure.  
 {: note}
 
-
-## Creating workspaces
+## Creating workspaces and importing your Terraform template
 {: #create-workspace}
 
-Create workspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The workspace settings can be configured to use the Terraform template that are hosted and managed in a Git repository. Your workspace is used to manage the state of the cloud resources, provisioned using the Terraform template.
+Create a workspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The workspace settings can be configured to use the Terraform template that are hosted and managed in a Git repository. Your workspace is used to manage the state of the cloud resources, provisioned using the Terraform template.
 {: shortdesc} 
-
 
 **Before you begin**
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-**To create a workspace**:
-1. From the {{site.data.keyword.cloud_notm}} menu, select [**{{site.data.keyword.bpshort}}**](https://cloud.ibm.com/schematics/overview){: external}. 
-2. Click **Create a workspace**. 
-3. Configure your workspace.
-    1. Decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics#create-a-workspace) instead.
-    2. Enter a descriptive name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name. For more information about how to structure your workspaces, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).
-    3. Optional: Enter tags for your workspace. You can use the tags later to find workspaces that are related to each other.
-    4. Select the resource group where you want to create the workspace.
-    5. Optional: Enter a description for your workspace.
-    6. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
-4. Connect your workspace to the `GitHub`, `GitLab`, or `Bitbucket` repository where your Terraform configuration files are stored.
+### Setting up the workpace 
+{: #setup-workspace}
 
-   If you want to upload a tape archive file (`.tar`) instead of pointing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.  
-   {: tip}
+1. Open the [{{site.data.keyword.bpshort}} workspace create page](https://cloud.ibm.com/schematics/workspaces/create){: external}. 
+2. Enter a name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
+3. Optional: Enter tags for your workspace. You can use the tags later to find your workspace more easily.
+4. Select the resource group where you want to create the workspace.
+5. Decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics#create-a-workspace) instead.
+6. Optional: Enter a descriptive name for your workspace. 
+7. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
+    
+### Importing your Terraform template
+{: #import-template}
+
+If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.  
+{: tip}
    
-    1. On the workspace **Settings** page, enter the link to your `GitHub`, `GitLab`, or `Bitbucket` repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
-      - Example for `master` branch: `https://github.com/myorg/myrepo`
-      - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
-      - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
-    2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
-    3. Select the Terraform v0.12, v0.13, or v0.14 that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.11 till version 0.14. 
-    4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves all the workspace input parameters.
-    5. You can manually enter the workspace input parameters.
-          
-   6. Click **Save changes**.
-   7. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
-   8. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
+1. On the workspace **Settings** page, enter the link to your `GitHub`, `GitLab`, or `Bitbucket` repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
+   - Example for `master` branch: `https://github.com/myorg/myrepo`
+   - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
+   - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
+2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
+3. Select the Terraform version that your Terraform configuration files are written in.
+4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the Terraform configuration files from your repository, scans them for syntax errors, and retrieves all input variables that you declared in your configuration files. When all configuration files are downloaded successfully and no syntax errors are found, the workspace state changes to **Inactive**.
+   
+   After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **View logs** to find the details of the files that were scanned and discarded.
+   {: tip}
 
-When you add a repository to the {{site.data.keyword.bplong_notm}} for the first time. The {{site.data.keyword.bpshort}} engine scans the files in your template for potential vulnerabilities. This check returns the scanned, discarded files.
-* The total number of files scanned in the repository is named as scanned.
-* The total number of files that are vulnerable, such as unsupported file extensions is named as discarded. You can find the details of the files in the logs of the create or update job.
+5. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
+
+   <table>
+   <thead>
+    <th style="width:80px">Type</th>
+    <th style="width:100px">Example</th>
+   </thead>
+   <tbody>
+   <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
+    </tr>
+   <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
+    </tr>
+    <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
+    </tr>
+    <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
+    </tr>
+    <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
+    </tr>
+    <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
+    </tr>
+    <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
+    </tr>
+    <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
+    </tr>
+     <tr>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
+   <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+    {
+        internal = 8300
+        external = 8300
+        protocol = "tcp"
+    },
+    {
+        internal = 8301
+        external = 8301
+        protocol = "ldp"
+    }
+  ]</code></pre></p></ul></td>
+    </tr>
+    <tr>
+  <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>list(object({
+    internal = number
+    external = number
+    protocol = string
+  }))</code></pre></p></li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+    {
+        internal = 8300
+        external = 8300
+        protocol = "tcp"
+    },
+    {
+        internal = 8301
+        external = 8301
+        protocol = "ldp"
+    }
+  ]</code></pre></p></li></ul></td>
+    </tr>
+  </tbody>
+  </table>
+   
+### Running your Terraform template in {{site.data.keyword.cloud_notm}}
+{: #run-template}
+
+Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ## Freezing and unfreezing workspaces 
 {: #lock-workspace}
