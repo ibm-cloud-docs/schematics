@@ -46,8 +46,8 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-### Setting up the workpace 
-{: #setup-workspace}
+### Creating the workpace 
+{: #create-workspace}
 
 1. Open the [{{site.data.keyword.bpshort}} workspace create page](https://cloud.ibm.com/schematics/workspaces/create){: external}. 
 2. Enter a name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
