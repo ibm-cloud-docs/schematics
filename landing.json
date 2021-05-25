@@ -1,7 +1,7 @@
 {
-    "title": "{{site.data.keyword.bplong_notm}} docs",
+    "title": "IBM Cloud Schematics docs",
     "lastupdated": "2021-05-25",
-    "introduction": "Explore the capabilities of {{site.data.keyword.bplong_notm}}. You can get started with deploying platform services by using {{site.data.keyword.bpshort}} workspaces, and automating cloud operations with {{site.data.keyword.bpshort}} actions. Learn more about how {{site.data.keyword.bpshort}} works and the benefits of using the service. ",
+    "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
     "section_devtools": {
       "api": "/apidocs/schematics", 
       "cli": "/docs/schematics?topic=schematics-schematics-cli-reference", 
@@ -10,17 +10,17 @@
     "section_recommended": [
       {
         "title": "Deploy cloud services with workspaces",
-        "description": "Use an IBM-provided Terraform template to create an {{site.data.keyword.cos_short}} service instance to persistently store your data in {{site.data.keyword.cloud_notm}}.",
+        "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to persistently store your data in IBM Cloud.",
         "href": "/docs/schematics?topic=schematics-get-started-terraform"
       },
       {
         "title": "Automate cloud operations with actions",
-        "description": "Learn how to automatically start and stop a {{site.data.keyword.vsi_is_short}} instance with an IBM-provided Ansible playbook.",
+        "description": "Learn how to automatically start and stop a VVirtual Servers for VPC instance with an IBM-provided Ansible playbook.",
         "href": "/docs/schematics?topic=schematics-getting-started-ansible"
       },
       {
-        "title": "Learn more about {{site.data.keyword.bpshort}}",
-        "description": "Learn about how {{site.data.keyword.bpshort}} works, integrated open source technologies, and the benefits of using the service.",
+        "title": "Learn more about Schematics",
+        "description": "Learn about how Schematics works, integrated open source technologies, and the benefits of using the service.",
         "href": "/docs/schematics?topic=schematics-about-schematics"
       }
     ],
@@ -51,18 +51,18 @@
       "tiles": [
         {
           "date": "14 April 2021",
-          "title": "Ansible support in {{site.data.keyword.bplong_notm}} is now generally available",
-          "description": "Use {{site.data.keyword.bpshort}} Actions to run your Ansible playbooks in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multi-tier app workloads. To get started, see the [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions)."
+          "title": "Ansible support in IBM Cloud Schematics is now generally available",
+          "description": "Use Schematics Actions to run your Ansible playbooks in IBM Cloud, and automate the configuration, operation, and management of cloud resources, or deploy multi-tier app workloads. To get started, see the [Schematics landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how Schematics integrates Ansible in [About IBM Cloud Schematics](/docs/schematics?topic=schematics-about-schematics#how-to-actions)."
         },
         {
           "date": "29 March 2021",
           "title": "Terraform v0.14 support",
-          "description": "{{site.data.keyword.bplong_notm}} now supports Terraform v0.14. You can now select to run your infrastructure code with Terraform version 0.11 or 0.12 or 0.13 or 0.14. Make sure that you use the syntax that is compatible with the Terraform version that you want to use."
+          "description": "IBM Cloud Schematics now supports Terraform v0.14. You can now select to run your infrastructure code with Terraform version 0.11 or 0.12 or 0.13 or 0.14. Make sure that you use the syntax that is compatible with the Terraform version that you want to use."
         },
         {
           "date": "25 February 2021",
-          "title": "{{site.data.keyword.bpshort}} supports the ability to persist user-defined files",
-          "description": "{{site.data.keyword.bplong_notm}} now supports the ability to persist user-defined files for running subsequent Terraform commands. For more information, see [persist user-defined files in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-faqs#persist-file)."
+          "title": "Schematics supports the ability to persist user-defined files",
+          "description": "IBM Cloud Schematics now supports the ability to persist user-defined files for running subsequent Terraform commands. For more information, see [persist user-defined files in Schematics](/docs/schematics?topic=schematics-faqs#persist-file)."
         }
       ]
     }
