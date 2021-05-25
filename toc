@@ -99,8 +99,15 @@ Schematics
     
     {: .topicgroup}
     Troubleshooting 
-         troubleshooting/ts_apply_errors.md
-         error-messages.md
+    
+        {: .topicgroup}
+        Debugging Schematics apply errors
+             troubleshooting/apply-nullresource.md
+             troubleshooting/apply-timeout-taint.md
+             troubleshooting/apply-resource-group.md
+             troubleshooting/apply-500-errors.md
+        
+        error-messages.md
     
     ts_index.md
     {: .navgroup-end}
