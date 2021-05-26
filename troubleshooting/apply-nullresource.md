@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-25"
+lastupdated: "2021-05-26"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -95,7 +95,7 @@ content-type: troubleshoot
 
 
 
-## How can I find the root cause of why {{site.data.keyword.bpshort}} apply is failing?
+# How can I find the root cause of why {{site.data.keyword.bpshort}} apply is failing?
 {: #nullresource-errors}
    
 {: tsSymptoms}
