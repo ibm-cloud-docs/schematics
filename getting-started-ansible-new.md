@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-05-26"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -76,6 +76,7 @@ subcollection: schematics
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -114,7 +115,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 2. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create**. 
 3. In the **Define your Action action** section, enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field. 
 4. Click **Retrieve playbooks**. 
-5. Select the **stop-vsi-playbook.yaml** playbook.
+5. Select the **`stop-vsi-playbook.yaml`** playbook.
 6. Expand the **Advanced options**. 
 7. In the **Define your variables** section, enter `instance_ip` as the **key** and the public or private IP address of your virtual server as the **value**. 
 8. Click **Next**. 
@@ -123,7 +124,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 11. Verify that your virtual server instance stopped. 
     1. From the [Virtual server instances for VPC dashboard](https://cloud.ibm.com/vpc-ext/compute/vs){: external}, find your virtual server instance. 
     2. Verify that your instance shows a `Stopped` status. 
-12. Optional: Repeat the steps in this getting started tutorial to create another {{site.data.keyword.bpshort}} action, and select the **start-vsi-playbook.yaml** Ansible playbook to start your virtual server instance again. 
+12. Optional: Repeat the steps in this getting started tutorial to create another {{site.data.keyword.bpshort}} action, and select the **`start-vsi-playbook.yaml`** Ansible playbook to start your virtual server instance again. 
 
 Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a {{site.data.keyword.vsi_is_short}} instance. 
 
