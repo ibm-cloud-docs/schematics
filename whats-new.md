@@ -32,6 +32,15 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 
 
+## May 2021
+{: #may-2021}
+
+|Date|Description|
+|-----|---------|
+|26 May 2021 |<ul><li> **Version constraints support in {{site.data.keyword.bplong_notm}}:** Specifying version constaints for Terraform and Ansible. For more information, see [specifying version constraints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-version-constraints).</li><li>**Troubleshooting guide support:** Debugging {{site.data.keyword.bpshort}} apply errors. For more information, see [Why do timeout failures result in tainted IBM Cloud resources?](/docs/schematics?topic=schematics-tainted-resources) and [Why can't Schematics find your resource group?](https://test.cloud.ibm.com/docs/schematics?topic=schematics-rg-not-found) </li><li>**{{site.data.keyword.bpshort}} supports sample solutions:** Sample solutions by using Terraform templates and modules to set up the infrastructure. For more information, see [Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-sol-overview).</li></ul>|
+{: caption="What's new in May" caption-side="top"}
+
+
 
 ## April 2021
 {: #april-2021}
