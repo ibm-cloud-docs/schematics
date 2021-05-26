@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-24"
+lastupdated: "2021-05-26"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -119,49 +119,41 @@ ibmcloud schematics version
 
 Example output: 
 ```
-Template Type   version   
+Template Type   Version   
 Terraform       terraform_v0.11   
-Additional terraform Providers   version   
-Open shift client                v3.11.0   
+Additional terraform Providers   Version   
+Ansible                          v2.9.7   
+Ansible Provisioner              v2.3.3   
 IBM Cloud Provider               v0.31.0   
-Kubernetes Provider              v1.10.0a   
+Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
-Ansible                          v2.9.7   
-Ansible Provisioner              v2.3.3   
-Helm Provider                    v0.10.4a   
                                     
-Template Type   version   
+Template Type   Version   
 Terraform       terraform_v0.12   
-Additional terraform Providers   version   
+Additional terraform Providers   Version   
+IBM Cloud Provider               v1.25.0   
+Open shift client                v3.11.0   
+Provider for REST API            v1.10.0   
 Ansible                          v2.9.7   
 Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.23.1   
-Kubernetes Provider              v1.10.0a   
-Open shift client                v3.11.0   
-Helm Provider                    v0.10.4a   
-Provider for REST API            v1.10.0   
                                     
-Template Type   version   
+Template Type   Version   
 Terraform       terraform_v0.13   
-Additional terraform Providers   version   
-Helm Provider                    v0.10.4a   
-IBM Cloud Provider               v1.23.1   
-Kubernetes Provider              v1.10.0a   
+Additional terraform Providers   Version   
+Ansible                          v2.9.7   
+Ansible Provisioner              v2.3.3   
+IBM Cloud Provider               v1.25.0   
 Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
-Ansible                          v2.9.7   
-Ansible Provisioner              v2.3.3   
                                     
-Template Type   version   
+Template Type   Version   
 Terraform       terraform_v0.14   
-Additional terraform Providers   version   
-Ansible Provisioner              v2.3.3   
-Helm Provider                    v0.10.4a   
+Additional terraform Providers   Version   
 Provider for REST API            v1.10.0   
 Ansible                          v2.9.7   
-IBM Cloud Provider               v1.23.1   
-Kubernetes Provider              v1.10.0a   
-Open shift client                v3.11.0
+Ansible Provisioner              v2.3.3   
+IBM Cloud Provider               v1.25.0   
+Open shift client                v3.11.0 
 ```
 {: screen}
 
@@ -169,7 +161,7 @@ Open shift client                v3.11.0
 ## Specifying version constraints for the Terraform CLI and Terraform providers
 {: #version-constraints-terraform}
 
-You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information, about how to specify version contraints, see the [Terraform documentation](https://www.terraform.io/docs/language/expressions/version-constraints.html){: external}. 
+You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information, about how to specify version constraints, see the [Terraform documentation](https://www.terraform.io/docs/language/expressions/version-constraints.html){: external}. 
 {: shortdesc}
 
 ### Version constraints for the Terraform CLI

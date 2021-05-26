@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="schematics" category="dev_ops" audience="service" href="/docs/schematics?topic=schematics-getting-started" console-page="/schematics/overview" path="schematics"}
+{: .toc subcollection="schematics" category="dev_ops" audience="service" href="/docs/schematics" console-page="/schematics/overview" path="schematics"}
 Schematics
 
     {: .navgroup id="learn"}
@@ -36,7 +36,6 @@ Schematics
          workspace-setupv2.md
          shared-data-set.md
          manage-resource-lifecycle.md
-         provisioning-terraform-template.md
          migrate-tfversion.md
          remotestate.md
          private-catalog.md
@@ -100,8 +99,15 @@ Schematics
     
     {: .topicgroup}
     Troubleshooting 
-         troubleshooting/ts_apply_errors.md
-         error-messages.md
+    
+        {: .topicgroup}
+        Debugging Schematics apply errors
+             troubleshooting/apply-nullresource.md
+             troubleshooting/apply-timeout-taint.md
+             troubleshooting/apply-resource-group.md
+             troubleshooting/apply-500-errors.md
+        
+        error-messages.md
     
     ts_index.md
     {: .navgroup-end}

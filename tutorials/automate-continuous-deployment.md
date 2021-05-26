@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-15"
+lastupdated: "2021-05-24"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -82,6 +82,7 @@ completion-time: 60m
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -97,7 +98,7 @@ completion-time: 60m
 {:video: .video}
 
 
-# Automate continuous deployment by using {{site.data.keyword.bpfull_notm}} and DevOps toolchain
+# Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
 {: #workspace-continuous-deployment}
 {: toc-content-type="tutorial"}
 {: toc-services="schematics, continuous-deployment"}
