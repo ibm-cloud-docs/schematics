@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-15"
+lastupdated: "2021-05-26"
 
 keywords: schematics, automation, terraform
 
@@ -97,8 +97,8 @@ To provision Terraform template, perform these steps:
 ### Viewing the configured file and analyzing the logs
 {: view-confg-file}
 
-1. From the plan status panel, click **View log** link to view the Terraform provisioning process during the execution plan.
-2. From the workspace page, click **Resources** to view the configuration files.
+1. Click **View log** from the plan status panel to view the Terraform provisioning process during the execution plan.
+2. Click **Resources** from the workspace page to view the configuration files.
 
 This completes the end to end flow to provision the Terraform template by using {{site.data.keyword.bpfull_notm}} UI.
 
