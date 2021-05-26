@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-25"
+lastupdated: "2021-05-26"
 
 keywords: schematics 500 errors, schematics 5xx errors, schematics server error
 
@@ -95,7 +95,7 @@ content-type: troubleshoot
 
 
 
-## Why am I getting 5xx HTTP errors?
+# Why am I getting 5xx HTTP errors?
 {: #server-errors}
    
 {: tsSymptoms}
