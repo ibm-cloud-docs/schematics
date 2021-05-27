@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-27"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -102,14 +102,14 @@ content-type: troubleshoot
 You want to apply a Terraform template in {{site.data.keyword.cloud_notm}} that runs scripts on a target resource. To run the script, you use the Terraform `null_resource` in your configuration file. However, when you run the {{site.data.keyword.bpshort}} apply action, the action fails and you receive an error message that can include internal, timeout, connection, or input errors. 
 
 {: tsCauses}
-When {{site.data.keyword.bpshort}} tries to run your script on the target resource, a script error occured during the execution. Because {{site.data.keyword.bpshort}} cannot resolve errors that occur in user-provided scripts, the apply action is marked as `failed`. 
+When {{site.data.keyword.bpshort}} tries to run your script on the target resource, a script error occurs during the execution. Because {{site.data.keyword.bpshort}} cannot resolve errors that occur in user-provided scripts, the apply action is marked as `failed`. 
 
 {: tsResolve}
 To troubleshoot the error in the script, follow these steps: 
 
 1. From the workspace **Activity** page, select the {{site.data.keyword.bpshort}} apply action that failed.
 2. Click **View log** to see the detailed log output. 
-3. In the log file, find the last action that {{site.data.keyword.bpshort}} started before the error occured. For example in the following log output, {{site.data.keyword.bpshort}} tried to run a copy script in the `instances_module` module by using the Terraform `null_resource`.
+3. In the log file, find the last action that {{site.data.keyword.bpshort}} started before the error occurs. For example in the following log output, {{site.data.keyword.bpshort}} tried to run a copy script in the `instances_module` module by using the Terraform `null_resource`.
    ```
    2021/05/24 05:03:41 Terraform apply | module.instances_module.module.compute_remote_copy_rpms.null_resource.remote_copy[0]: Still creating... [5m0s elapsed]
    2021/05/24 05:03:41 Terraform apply | 
