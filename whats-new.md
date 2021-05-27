@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-27"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -37,7 +37,7 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 
 |Date|Description|
 |-----|---------|
-|26 May 2021 |<ul><li> **Version constraints support in {{site.data.keyword.bplong_notm}}:** Specifying version constaints for Terraform and Ansible. For more information, see [specifying version constraints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-version-constraints).</li><li>**Troubleshooting guide support:** Debugging {{site.data.keyword.bpshort}} apply errors. For more information, see [Why do timeout failures result in tainted IBM Cloud resources?](/docs/schematics?topic=schematics-tainted-resources) and [Why can't Schematics find your resource group?](https://test.cloud.ibm.com/docs/schematics?topic=schematics-rg-not-found) </li><li>**{{site.data.keyword.bpshort}} supports sample solutions:** Sample solutions by using Terraform templates and modules to set up the infrastructure. For more information, see [Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-sol-overview).</li></ul>|
+|26 May 2021 |<ul><li> **Version constraints support in {{site.data.keyword.bplong_notm}}:** Specifying version constaints for Terraform and Ansible. For more information, see [specifying version constraints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-version-constraints).</li><li>**Troubleshooting guide support:** For more information, about the debugging {{site.data.keyword.bpshort}} apply errors, see [Why do timeout failures result in tainted {{site.data.keyword.cloud_notm}} resources?](/docs/schematics?topic=schematics-tainted-resources), [Why am I getting 5xx HTTP errors?](https://cloud.ibm.com/docs/schematics?topic=schematics-server-errors), [Why can't {{site.data.keyword.bpshort}} find the resource group?](https://test.cloud.ibm.com/docs/schematics?topic=schematics-rg-not-found), and [How can I find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](https://cloud.ibm.com/docs/schematics?topic=schematics-nullresource-errors)</li><li>**{{site.data.keyword.bpshort}} supports sample solutions:** Sample solutions by using Terraform templates and modules to set up the infrastructure. For more information, see [Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-sol-overview).</li></ul>|
 {: caption="What's new in May" caption-side="top"}
 
 
