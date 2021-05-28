@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-05-28"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -108,6 +108,16 @@ It is good practice to declare the version that your Terraform template or Ansib
 {: #schematics-image-ov}
 
 Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in version v1.23.1 is packaged with the REST API provider version v1.10.0, and was tested on Terraform v0.12.
+{: shortdesc}
+
+{{site.data.keyword.bpshort}} supports the 5 most recent versions of  **IBM Cloud provider plugin for Terraform** binaries in its image.  Following are some of the constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
+
+It is recommended to use Terraform v0.13 or higher.
+{: note}
+
+* **If you are using Terraform v0.12**, you must see that your Terraform template is only using one of these 5 {{site.data.keyword.cloud_notm}} provider versions. If you specify an older version of the {{site.data.keyword.cloud_notm}} provider in the template, you see the following error `Provider ibm not available for installation.` in the logs.
+		
+* **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [Hashicorp Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud)
 
 To use any of the pre-defined {{site.data.keyword.bpshort}} images, you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform. Note that you cannot change the default version for the Ansible executable. You can only [specify the version of referenced Ansible roles and collections](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
 {: important}
@@ -187,7 +197,7 @@ terraform {
 
 To use any of the pre-defined [{{site.data.keyword.bpshort}} images](#schematics-image-ov), you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. 
 
-If no {{site.data.keyword.cloud_notm}} Provider plug-in version is declared in your Terraform template, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. 
+If {{site.data.keyword.cloud_notm}} Provider plug-in version is not declared in your Terraform template, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. 
 {: note}
 
 **Example to specify a pre-defined {{site.data.keyword.bpshort}} image**: </br>
