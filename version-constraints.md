@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-28"
+lastupdated: "2021-05-31"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -107,15 +107,16 @@ It is good practice to declare the version that your Terraform template or Ansib
 ## Overview of {{site.data.keyword.bpshort}} images and packaged Terraform providers
 {: #schematics-image-ov}
 
+
 Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in version v1.23.1 is packaged with the REST API provider version v1.10.0, and was tested on Terraform v0.12.
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} supports the 5 most recent versions of  **IBM Cloud provider plugin for Terraform** binaries in its image.  Following are some of the constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
+{{site.data.keyword.bpshort}} supports the 5 most recent versions of  **IBM Cloud provider plug-in for Terraform** binaries in its image. For more information, see [latest releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases). Following are some of the constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
 
 It is recommended to use Terraform v0.13 or higher.
 {: note}
 
-* **If you are using Terraform v0.12**, you must see that your Terraform template is only using one of these 5 {{site.data.keyword.cloud_notm}} provider versions. If you specify an older version of the {{site.data.keyword.cloud_notm}} provider in the template, you see the following error `Provider ibm not available for installation.` in the logs.
+* **If you are using Terraform v0.12**, you must use one of the [5 recent IBM Cloud provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) versions in your Terraform template. If you specify an older version of the {{site.data.keyword.cloud_notm}} provider in the template, you see the following error `Provider ibm not available for installation.` in the logs.
 		
 * **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [Hashicorp Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud)
 
@@ -127,7 +128,8 @@ ibmcloud schematics version
 ```
 {: pre}
 
-Example output: 
+**Example output**
+
 ```
 Template Type   Version   
 Terraform       terraform_v0.11   
