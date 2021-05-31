@@ -116,7 +116,7 @@ Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.
 It is recommended to use Terraform v0.13 or higher.
 {: note}
 
-* **If you are using Terraform v0.12**, you must use one of the [5 recent IBM Cloud provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) versions in your terraform template. If you specify an older version of the {{site.data.keyword.cloud_notm}} provider in the template, you see the following error `Provider ibm not available for installation.` in the logs.
+* **If you are using Terraform v0.12**, you must use one of the [5 recent IBM Cloud provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) versions in your Terraform template. If you specify an older version of the {{site.data.keyword.cloud_notm}} provider in the template, you see the following error `Provider ibm not available for installation.` in the logs.
 		
 * **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [Hashicorp Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud)
 
