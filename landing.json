@@ -1,6 +1,6 @@
 {
     "title": "IBM Cloud Schematics docs",
-    "lastupdated": "2021-05-25",
+    "lastupdated": "2021-06-02",
     "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
     "section_devtools": {
       "api": "/apidocs/schematics", 
@@ -24,9 +24,29 @@
         "href": "/docs/schematics?topic=schematics-getting-started-ansible"
       },
       {
+        "title": "Explore the IBM Cloud software catalog",
+        "description": "Try out one of the IBM-provided software templates to quickly spin up a classic virtual server instance (VSI), and automatically configure the instance to connect to an IBM Cloud Database.",
+        "href": "/docs/schematics?topic=schematics-get-started-software"
+      },
+      {
         "title": "Learn more about Schematics",
         "description": "Learn about how Schematics works, integrated open source technologies, and the benefits of using the service.",
         "href": "/docs/schematics?topic=schematics-about-schematics"
-      }
+      },
+      {
+        "title": "Set uo the Schematics CLI",
+        "description": "Install the Schematics CLI plug-in to automate Schematics actions in your IBM Cloud account.",
+        "href": "/docs/schematics?topic=schematics-setup-cli"
+      },
+      {
+        "title": "Set uo the Schematics CLI",
+        "description": "Install the Schematics CLI plug-in to automate Schematics actions in your IBM Cloud account.",
+        "href": "/docs/schematics?topic=schematics-setup-cli"
+      },
+      {
+        "title": "Specify Terraform and Ansible version constraints",
+        "description": "Use version constraints to declare the Terraform, Terraform provider, or Ansible version that you want to use in Schematics.",
+        "href": "/docs/schematics?topic=schematics-version-constraints"
+      }     
     ]
   }
