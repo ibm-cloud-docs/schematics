@@ -34,12 +34,7 @@
         "href": "/docs/schematics?topic=schematics-about-schematics"
       },
       {
-        "title": "Set uo the Schematics CLI",
-        "description": "Install the Schematics CLI plug-in to automate Schematics actions in your IBM Cloud account.",
-        "href": "/docs/schematics?topic=schematics-setup-cli"
-      },
-      {
-        "title": "Set uo the Schematics CLI",
+        "title": "Set up the Schematics CLI",
         "description": "Install the Schematics CLI plug-in to automate Schematics actions in your IBM Cloud account.",
         "href": "/docs/schematics?topic=schematics-setup-cli"
       },
