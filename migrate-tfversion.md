@@ -52,7 +52,7 @@ The upgrade requires the following steps to support the latest Terraform version
 2. Create a new {{site.data.keyword.bpshort}} workspace with the new Terraform configuration files and Terraform state file.
 3. Delete the older workspace (without destroying the resources).
 
-Here are detailed steps that you can follow to upgrade from Terraform v0.12 to v0.13
+Here are detailed steps that you can follow to upgrade.
 
 1. As a prerequisties, ensure {{site.data.keyword.bpshort}} workspace is created, plan is generated, and applied a job for your resources by using Terraform v0.12.  Ensure Terraform configuration files and Terraform state file, are in a consistent state for Terraform v0.12.
 2. Download or clone the Git respository used by your Terraform v0.12 {{site.data.keyword.bpshort}} workspace to your local machine.
