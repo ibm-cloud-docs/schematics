@@ -54,8 +54,8 @@ The upgrade requires the following steps to support the latest Terraform version
 
 Here are detailed steps that you can follow to upgrade.
 
-1. As a prerequisties, ensure {{site.data.keyword.bpshort}} workspace is created, plan is generated, and applied a job for your resources by using Terraform v0.12.  Ensure Terraform configuration files and Terraform state file, are in a consistent state for Terraform v0.12.
-2. Download or clone the Git respository used by your Terraform v0.12 {{site.data.keyword.bpshort}} workspace to your local machine.
+1. As a prerequisites, ensure {{site.data.keyword.bpshort}} workspace is created, plan is generated, and applied a job for your resources by using Terraform v0.12.  Ensure Terraform configuration files and Terraform state file, are in a consistent state for Terraform v0.12.
+2. Download or clone the Git repository used by your Terraform v0.12 {{site.data.keyword.bpshort}} workspace to your local machine.
 3. Change directory to your cloned repository and upgrade your repository to Terraform v0.13 by executing `Terraform v0.13upgrade` command. For more information, see [Upgrading to Terraform v0.13 documentation](https://www.terraform.io/upgrade-guides/0-13.html){: external}. The upgrade command generates a `versions.tf` file.
 4. Edit `versions.tf` file by uncommenting the source parameter and add `source = "IBM-Cloud/ibm"` as shown in the code block.
 
@@ -90,7 +90,7 @@ Here are detailed steps that you can follow to upgrade.
  ```
  {: pre}
 
-7. Verify the updates are made to the `terraform.tfstate` file with terraform version getting updated from `0.12` to `>= 0.13` and provider updated as `registry.terraform.io/ibm-cloud/ibm`. 
+7. Verify the updates are made to the `terraform.tfstate` file with Terraform version getting updated from `0.12` to `>= 0.13` and provider updated as `registry.terraform.io/ibm-cloud/ibm`. 
 8.	Push the upgraded version of the Terraform configuration files both `terraform.tfstate` and `version.tf` to your Git repository.
 9.	Create a {{site.data.keyword.bpshort}} workspace by using the updated Git repository.
 10. Generate a [`plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and [`apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) the plan to view your workspace with the resources are now using the Terraform v0.13.
