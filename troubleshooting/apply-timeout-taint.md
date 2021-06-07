@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-25"
+lastupdated: "2021-06-03"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -124,13 +124,13 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
    ```
    {: pre}
    
-4. Retrieve the Terraform statefile for your workspace and note the name of the resource that is tainted.
+4. Retrieve the [Terraform statefile](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) for your workspace and note the name of the resource that is tainted.
    ```
    ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
    ```
    {: pre}
    
-5. Verify that the tainted resource is successfully provisioned and in a healthy state by using the {{site.data.keyword.cloud_notm}} console, CLI, or API. For example, if you tried to provision an {{site.data.keyword.containerlong_notm}} cluster, check that the cluster is in a `Normal` state and that you can successfully connect to the cluster. 
+5. Verify that the [tainted resource](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) is successfully provisioned and in a healthy state by using the {{site.data.keyword.cloud_notm}} console, CLI, or API. For example, if you tried to provision an {{site.data.keyword.containerlong_notm}} cluster, check that the cluster is in a `Normal` state and that you can successfully connect to the cluster. 
 
 6. Untaint the resource. Enter the name of the tainted resource that you retrieved from the statefile in the `--address` parameter. For example, a cluster resource name from a statefile might look like this: `ibm_container_vpc_cluster.mycluster`. 
    ```
@@ -138,7 +138,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
    ```
    {: pre}
    
-7. Retrieve the Terraform statefile for your workspace again and verify that your resource is marked as `untainted`. 
+7. Retrieve the Terraform statefile for your workspace again and verify that your resource is marked as [`untainted`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).  
    ```
    ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
    ```

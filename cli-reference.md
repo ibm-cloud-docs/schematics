@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-24"
+lastupdated: "2021-06-03"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -626,8 +626,11 @@ ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics state list`
 {: #state-list}
 
-List the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform statefile (`terraform.tfstate`).  
+List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform statefile (`terraform.tfstate`).  
 {: shortdesc}	
+
+`Taint Status` returns **tainted** for (true) or **blank** for (false).
+{: note}
 
 **Syntax**
 
@@ -656,6 +659,9 @@ ibmcloud schematics state list --id myworkspace-a1aa1a1a-a11a-11
 
 Manually marks an instance or resources as tainted, by forcing the resources to be re-created on the next apply. Taint modifies the state file, but not the infrastructure in your workspace. When you perform next plan the changes will display as re-created, and in the next apply the change is implemented.
 {: shortdesc}
+
+You must execute [`ibmcloud schematics state list`](#state-list) command to view the tainted status of your resources. `Taint Status` returns **tainted** for (true) or **blank** for (false).
+{: note}
 
 **Syntax**
 
@@ -686,6 +692,9 @@ ibmcloud schematics workspace taint --id myworkspace-lalalalalalala-11 --address
 
 Manually marks an instance or resources as untainted, by forcing the resources to be restored on the next apply. When you perform next plan the changes will show as restored and in the next apply the change is implemented.
 {: shortdesc}
+
+You can execute [`ibmcloud schematics state list`](#state-list) command to view the tainted status of your resources. `Taint Status` returns **tainted** for (true) or **blank** for (false).
+{: note}
 
 **Syntax**
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-31"
+lastupdated: "2021-06-02"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -120,7 +120,7 @@ It is recommended to use Terraform v0.13 or higher.
 		
 * **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [Hashicorp Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud)
 
-To use any of the pre-defined {{site.data.keyword.bpshort}} images, you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform. Note that you cannot change the default version for the Ansible executable. You can only [specify the version of referenced Ansible roles and collections](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
+To use any of the pre-defined {{site.data.keyword.bpshort}} images, you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform). Note that you cannot change the default version for the Ansible executable. You can only [specify the version of referenced Ansible roles and collections](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
 {: important}
 
 ```
