@@ -52,7 +52,7 @@ Before you begin, make sure that you have the [required access](/docs/schematics
    ```
    {: codeblock}
 
-  You can retrieve the unique identifier `id` of the {{site.data.keyword.bpshort}} workspace by using data source as `ibm_schematics_workspace.schematics_workspace.id` for listing the created workspace.
+   You can retrieve the unique identifier `id` of the {{site.data.keyword.bpshort}} workspace by using data source as `ibm_schematics_workspace.schematics_workspace.id` for listing the created workspace.
 
    ```terraform
 
