@@ -58,6 +58,7 @@ Schematics
           at.md
     
     version-constraints.md
+    terraform.md
 
     {: .topicgroup}
     Enhancing security for Schematics
