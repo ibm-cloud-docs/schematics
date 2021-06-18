@@ -33,7 +33,7 @@ Before you begin, make sure that you have the [required access](/docs/schematics
 
    The {{site.data.keyword.bplong_notm}} workspace instance in the following example is named `myworkspace` and is created with the tiered pricing plan in the `us-south` region. For other supported regions, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).
 
-   The following example creates the {{site.data.keyword.bplong_notm}} workspace `schematics_workspace` in the `default` resource group in the `us-east` region. This workspace points to a Terraform template that is stored in the GitHub and that requires the Terraform version  `terraform_v0.13.5` to be executed. 
+   The following example creates the {{site.data.keyword.bplong_notm}} workspace `schematics_workspace` in the `default` resource group in the `us-east` region. This workspace points to a Terraform template `template_git_url`, and that requires the Terraform version `terraform_v0.13.5` to be executed. 
    
    ```terraform
 
@@ -42,6 +42,7 @@ Before you begin, make sure that you have the [required access](/docs/schematics
      description = "myworkspace description."
      location = "us-east"
      resource_group = "default"
+     template_git_url = "<url for the template>"
      template_type = "terraform_v0.13.5"
     }
 
