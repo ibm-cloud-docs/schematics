@@ -47,20 +47,6 @@ Before you begin, make sure that you have the [required access](/docs/schematics
 
    ```
    {: codeblock}
-<<<<<<< HEAD
-=======
-
-   You can retrieve the unique identifier `id` of the {{site.data.keyword.bpshort}} workspace by using data source as `ibm_schematics_workspace.schematics_workspace.id` to list the created workspace.
-
-   ```terraform
-
-   data "ibm_schematics_workspace" "schematics_workspace" {
-    workspace_id = "workspace_id"
-   }
-
-   ```
-   {: codeblock}
->>>>>>> e2a1cd72c1cf0a2a845ca965c2bba60b5eb4a5e2
    
 3. Initialize the Terraform CLI. 
 
