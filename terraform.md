@@ -31,9 +31,7 @@ Before you begin, make sure that you have the [required access](/docs/schematics
 1. Follow the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform) to install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.bpshort}} resources. 
 2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}. 
 
-   The {{site.data.keyword.bplong_notm}} workspace instance in the following example is named `myworkspace` and is created in the `us-east` region. For other supported regions, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).
-
-   The following example creates the {{site.data.keyword.bplong_notm}} workspace `schematics_workspace` in the `default` resource group in the `us-east` region. This workspace points to a Terraform template `template_git_url`, and that requires the Terraform version `terraform_v0.13.5` to be executed. 
+   The following example creates the {{site.data.keyword.bplong_notm}} workspace `myworkspace` in the `default` resource group in the `us-east` region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.13`. 
    
    ```terraform
    resource "ibm_schematics_workspace" "schematics_workspace" {
@@ -41,8 +39,8 @@ Before you begin, make sure that you have the [required access](/docs/schematics
      description = "myworkspace description."
      location = "us-east"
      resource_group = "default"
-     template_git_url = "<url for the template>"
-     template_type = "terraform_v0.13.5"
+     template_git_url = "<template_git_url>"
+     template_type = "terraform_v0.13"
     }
 
    ```
