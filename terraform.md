@@ -66,7 +66,7 @@ Before you begin, make sure that you have the [required access](/docs/schematics
    terraform apply
    ```
    {: pre}
-6. From the [{{site.data.keyword.bplong_notm}} resource list](/resources){: external}, select the {{site.data.keyword.bpshort}} workspace that you created and note the instance ID. 
+6. From the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}, select the {{site.data.keyword.bpshort}} workspace that you created and note the instance ID. 
 7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 
 ## What's next?
