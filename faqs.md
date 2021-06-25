@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-28"
+lastupdated: "2021-06-25"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -170,7 +170,7 @@ While creating the {{site.data.keyword.bpshort}} workspace or action you notice 
 
 While creating {{site.data.keyword.bpshort}} workspace or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
 
-- The allowed file extension are `.tf, .tfvars, .md, .yaml ,.sh, .txt, .yml, .html, .gitignore, .tf.json, license, .js, .pub, .service, _rsa, .py, .json, .tpl, .cfg, .ps1, .j2, .zip, .conf, .crt,.key, .der, .jacl, .properties, .cer, .pem`.
+- The allowed file extension are `.tf, .tfvars, .md, .yaml ,.sh, .txt, .yml, .html, .gitignore, .tf.json, license, .js, .pub, .service, _rsa, .py, .json, .tpl, .cfg, .ps1, .j2, .zip, .conf, .crt,.key, .der, .jacl, .properties, .cer, .pem, .tmpl`.
 - The allowed image extension are `.tif .tiff .gif .png .bmp .jpg .jpeg`.
 - The files that are removed are `.tfstate, .tfstate.backup, .exe, .php5, .pht, .phtml, .shtml, .asa, .asax, .swf, .xap`.
 - All files that are larger than 500 KB in size are removed. This file size limit does not apply for the allowed image files.
