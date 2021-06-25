@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-15"
+lastupdated: "2021-06-25"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -82,6 +82,7 @@ completion-time: 60m
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -165,7 +166,7 @@ Before you begin, complete the following prerequisites.
 - Make sure that you have the required permissions to create an instance of [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-manage-access) and [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-iam). 
 
 ## Creating your {{site.data.keyword.bpshort}} workspace
-{: #create-workspace}
+{: #create-wkspace-for-cluster}
 {: step}
 
 Use the IBM-provided Terraform template to create and configure your {{site.data.keyword.bpshort}} workspace. 

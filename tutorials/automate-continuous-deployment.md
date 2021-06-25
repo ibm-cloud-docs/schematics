@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-24"
+lastupdated: "2021-06-25"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -172,7 +172,7 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
    {: note}
 
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
-{: #create-workspace}
+{: #create-wkspace}
 {: step}
 
 Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Terraform template URL.
