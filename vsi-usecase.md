@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-06-25"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -50,7 +50,7 @@ Before you can use execute the use case, you must complete the following tasks:
 2. Enter a name for your action, resource group, and the region where you want to create the action. Then, click **Create**. 
 3. In the **Define your Action action** section, enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field. 
 4. Click **Retrieve playbooks**. 
-5. Select the **stop-vsi-playbook.yaml** playbook.
+5. Select the `**stop-vsi-playbook.yaml**` playbook.
 6. Expand the **Advanced options**. 
 7. In the **Define your variables** section, enter `intance_ip` as the **key** and the public or private IP address of your VPC Gen2 virtual server as the **value**. 
 8. Click **Next**. 
@@ -59,7 +59,7 @@ Before you can use execute the use case, you must complete the following tasks:
 11. Verify that your virtual server instance stopped. 
     1. From the [Virtual server instances for VPC dashboard](https://cloud.ibm.com/vpc-ext/compute/vs){: external}, find your virtual server instance. 
     2. Verify that your instance shows a `Stopped` status. 
-12. Optional: Repeat the steps in this getting started tutorial and select the **start-vsi-playbook.yaml** Ansible playbook to start your virtual server instance again. 
+12. Optional: Repeat the steps in this getting started tutorial and select the `**start-vsi-playbook.yaml**` Ansible playbook to start your virtual server instance again. 
 
 Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a VPC Gen2 virtual server instance. 
 
