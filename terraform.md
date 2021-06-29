@@ -29,7 +29,7 @@ Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Tr
 Before you begin, make sure that you have the [required access](/docs/schematics?topic=schematics-access) to create and work with {{site.data.keyword.bplong_notm}} workspace. 
 
 1. Follow the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform) to install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.bpshort}} resources. 
-2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}. 
+2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL).
 
    The following example creates the {{site.data.keyword.bplong_notm}} workspace `myworkspace` in the `default` resource group in the `us-east` region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.13`. 
    
