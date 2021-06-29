@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-06-29"
 
 keywords: ansible playbook, automate ansible playbook, {{site.data.keyword.cloud_notm}}
 
@@ -26,7 +26,7 @@ subcollection: schematics
 
 ---
 
-## Automating {{site.data.keyword.cloud_notm}} operations by using {{site.data.keyword.bpshort}} action
+## Automate {{site.data.keyword.cloud_notm}} operations by using {{site.data.keyword.bpshort}} action
 {: #ansible-how-it-works}
 {: help}
 {: support}

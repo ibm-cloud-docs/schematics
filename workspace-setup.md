@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-29"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -115,7 +115,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
 ### Creating the workspace from the console
-{: #create-workspace}
+{: #create-workspace_ui}
 
 1. Open the [{{site.data.keyword.bpshort}} workspace create page](https://cloud.ibm.com/schematics/workspaces/create){: external}. 
 2. Enter a name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
