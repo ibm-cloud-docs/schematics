@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-06-30"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -28,6 +28,14 @@ subcollection: schematics
 {: #new-in-schematics}
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
+
+## June 2021
+{: #june-2021}
+
+|Date|Description|
+|-----|---------|
+|30 June 2021 |<ul><li> **Support taint and untaint feature enhancement in {{site.data.keyword.bplong_notm}}:** You can execute `ibmcloud schematics state list` command to view the tainted status of your resources. For more information, see [about taint and untain command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) and refer to [Timeout errors with {{site.data.keyword.bplong_notm}} blog](https://www.ibm.com/cloud/blog/timeout-errors-with-ibm-cloud-schematics){: external}.</li><li>**Documentation support to deploy resources in specific region or across multiple region:** For more information, see [Deploying IBM Cloud resources in a specific region or across multiple regions {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-multi-region-deployment).</li><li>**Documentation support to create workspace by using {{site.data.keyword.bplong_notm}} resources** For more information, see [Setting up Terraform for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-terraform-setup).</li></ul>|
+{: caption="What's new in June" caption-side="top"}
 
 
 

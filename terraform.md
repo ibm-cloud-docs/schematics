@@ -41,7 +41,6 @@ Before you begin, make sure that you have the [required access](/docs/schematics
      description = "Creating workspace and provisioning cloudant database instance ."
      location = "us-east"
      resource_group = "default"
-     template_git_url = "https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway"
      template_type = "terraform_v0.13"
     }
 
