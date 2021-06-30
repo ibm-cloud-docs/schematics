@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-03"
+lastupdated: "2021-06-29"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -497,10 +497,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td>`template_repo.branch`</td>
  <td>Optional</td>
-  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master;",
-     "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0"</code></pre></td></tr>
+  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
     <tr>
    <td>`template_repo.datafolder`</td>
    <td>Optional</td>
@@ -849,10 +846,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td>`template_repo.branch`</td>
  <td>Optional</td>
-  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. <pre class="codeblock"><code>"url": "https://github.com/IBM-Cloud/terraform-provider-ibm",
-     "branch": "master;",
-     "datafolder": “examples/ibm-vsi”,
-     "release": "v1.8.0"</code></pre></td></tr>
+  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
     <tr>
    <td>`template_repo.datafolder`</td>
    <td>Optional</td>

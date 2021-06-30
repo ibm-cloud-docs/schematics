@@ -29,45 +29,63 @@ Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Tr
 Before you begin, make sure that you have the [required access](/docs/schematics?topic=schematics-access) to create and work with {{site.data.keyword.bplong_notm}} workspace. 
 
 1. Follow the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform) to install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.bpshort}} resources. 
-2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL). For more information, see the [Terraform documentation](https://www.terraform.io/docs/language/index.html){: external}. 
 
-   The {{site.data.keyword.bplong_notm}} workspace instance in the following example is named `myworkspace` and is created in the `us-east` region. For other supported regions, see [Regions and endpoints](/docs/key-protect?topic=key-protect-regions).
+2. Create a Terraform configuration file that is named `main.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL).
 
-   The following example creates the {{site.data.keyword.bplong_notm}} workspace `schematics_workspace` in the `default` resource group in the `us-east` region. This workspace points to a Terraform template `template_git_url`, and that requires the Terraform version `terraform_v0.13.5` to be executed. 
+   The following example use the `API Gateway Endpoint` and `API Gateway Endpoint Subscription` resources to create an endpoint for a given OpenAPI definition. To create a subscription it allows the user to input a single openAPI document or a directory of documents.
+   Then creates the {{site.data.keyword.bplong_notm}} workspace `testmyworkspace` in the `default` resource group in your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.13`. 
    
    ```terraform
    resource "ibm_schematics_workspace" "schematics_workspace" {
-     name = "myworkspace"
-     description = "myworkspace description."
+     name = "testmyworkspace"
+     description = "Creating workspace and provisioning cloudant database instance ."
      location = "us-east"
      resource_group = "default"
-     template_git_url = "<url for the template>"
-     template_type = "terraform_v0.13.5"
+     template_type = "terraform_v0.13"
     }
 
    ```
    {: codeblock}
    
-3. Initialize the Terraform CLI. 
+3. Export your `IC_API_KEY`, `IAAS_CLASSIC_USERNAME`, and `IAAS_CLASSIC_API_KEY` in your local machine to access the credentials to create workspace and provisioning the instance. For more information, to create these keys, see [Creating and API Keys](https://cloud.ibm.com/docs/account?topic=account-userapikey#create_user_key).
+
+   If the path environment variable for these keys are set, you can confirm your settings and ignore this step.
+   {: note}
+
+    ```
+    $ export IC_API_KEY="<Provide your API key>”
+    $ export IAAS_CLASSIC_USERNAME="<Provide your classic username>"
+    $ export IAAS_CLASSIC_API_KEY="<Provide your classic API key>"
+    ```
+    {: pre}
+
+4. Initialize the Terraform CLI. 
 
    ```
    terraform init
    ```
    {: pre}
-4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.bpshort}} workspace in your account.
+
+5. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.bpshort}} workspace in your account.
 
    ```
    terraform plan
    ```
    {: pre}
-5. Create the {{site.data.keyword.bpshort}} workspace instance and IAM access policy in {{site.data.keyword.cloud_notm}}.
+
+6. Create the {{site.data.keyword.bpshort}} workspace instance and IAM access policy in {{site.data.keyword.cloud_notm}}.
 
    ```
    terraform apply
    ```
    {: pre}
-6. From the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}, select the {{site.data.keyword.bpshort}} workspace that you created and note the instance ID. 
-7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
+
+  For more information, about troubleshooting the terraform apply command errors, see [find the root cause of why Schematics apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
+  {: note}
+
+7. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `testmyworkspace` is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
+
+8. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 
 ## What's next?
 {: #terraform-setup-next}

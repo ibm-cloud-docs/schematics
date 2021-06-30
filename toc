@@ -33,12 +33,10 @@ Schematics
     Workspaces: Cloud infrastructure deployment with Terraform
          create-terraform-config.md
          workspace-setup.md
-         workspace-setupv2.md
-         shared-data-set.md
+         
          manage-resource-lifecycle.md
          migrate-tfversion.md
          remotestate.md
-         private-catalog.md
          solutions.md
 
          {: .topicgroup}
@@ -78,7 +76,6 @@ Schematics
     schematics-sdk.md
     locations.md
     limitations.md
-    automating-utilities.md
     license-notices.md
 
     {: .topicgroup}
