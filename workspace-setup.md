@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-06-30"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -116,6 +116,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 
 ### Creating the workspace from the console
 {: #create-workspace_ui}
+{: ui}
 
 1. Open the [{{site.data.keyword.bpshort}} workspace create page](https://cloud.ibm.com/schematics/workspaces/create){: external}. 
 2. Enter a name for your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
@@ -125,10 +126,175 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 6. Optional: Enter a descriptive name for your workspace. 
 7. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
 
+  
+### Creating the workspace from the CLI
+{: #create-workspace-cli}
+{: cli}
+
+1. Create a JSON file on your local machine and add your workspace configuration. For additional configuration options when creating the workspace, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+   ```
+   {
+    "name": "<workspace_name>",
+    "type": [
+      "<terraform_version>"
+    ],
+    "location": "<location>",
+    "description": "<workspace_description>",
+    "tags": [],
+    "template_repo": {
+      "url": "<github_source_repo_url>"
+      "branch": "master"
+    },
+    "template_data": [
+      {
+        "folder": ".",
+        "type": "<terraform_version>",
+        "variablestore": [
+          {
+            "name": "<variable_name1>",
+            "value": "<variable_value1>",
+            "type": "string",
+            "secure": true
+          },
+          {
+            "name": "<variable_name2>",
+            "value": "<variable_value2>",
+            "type": "bool",
+            "secure": false
+          }    
+        ]
+      }
+    ]
+   }
+   ```
+   {: codeblock}
+   
+   <table>
+    <caption>JSON file component description</caption>
+   <thead>
+    <th style="width:50px">Parameter</th>
+    <th style="width:250px">Description</th>
+  </thead>
+  <tbody>
+    <tr>
+   <td>`workspace_name`</td>
+   <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
+   </tr>
+   <tr>
+   <td>`terraform_version`</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.11`, `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   </tr>
+   <tr>
+   <td>`location`</td>
+   <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services.</td>
+   </tr>
+   <tr>
+   <td>`description`</td>
+   <td>Enter a description for your workspace.</td>
+   </tr>
+   <td>`github_source_repo_url`</td>
+   <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command.</td>
+   </tr>
+   <tr>
+   <td>`variable_name`</td>
+   <td>Optional: Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+   </tr>
+   <tr>
+   <td>`variable_type`</td>
+   <td>Optional: Enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). </td>
+   </tr>
+  </tbody></table>
+  
+2. Create the workspace. 
+   ```
+   ibmcloud schematics workspace new --file workspace.json
+   ```
+   {: pre}
+   
+3. Verify that your workspace is created. Make sure that you workspace is in an **Inactive** state.
+   ```
+   ibmcloud schematics workspace list
+   ```
+   {: pre}
+   
+4. Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+
+### Creating the workspace from the API
+{: #create-workspace-api}
+{: api}
+
+1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
+
+2. Create the workspace. 
+   ```
+   curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_access_token>" -d '{"name": "<workspace_name>","type": ["<terraform_version>"],"location": "<location>","description": "<description>","template_repo": {"url": "<github_source_repo_url>"},"template_data": [{"folder": ".","type": "<terraform_version>","variablestore": [{"value": "<variable_value>","name": "<variable_name>","type": "<variable_type>","secure": true}]}]}'
+   ```
+   {: pre}
+   
+   <table>
+    <caption>JSON file component description</caption>
+   <thead>
+    <th style="width:50px">Parameter</th>
+    <th style="width:250px">Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>`iam_access_token`</td>
+      <td>Enter the IAM access token that you retrieved in step 1. </td>
+    </tr>
+    <tr>
+   <td>`workspace_name`</td>
+   <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
+   </tr>
+   <tr>
+   <td>`terraform_version`</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.11`, `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   </tr>
+   <tr>
+   <td>`location`</td>
+   <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services.</td>
+   </tr>
+   <tr>
+   <td>`description`</td>
+   <td>Enter a description for your workspace.</td>
+   </tr>
+   <td>`github_source_repo_url`</td>
+   <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. </td>
+   </tr>
+   <tr>
+   <td>`variable_name`</td>
+   <td>Optional: Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+   </tr>
+   <tr>
+   <td>`variable_value`</td>
+   <td>Optional: Enter the value for your input variable.  </td>
+   </tr>
+   <tr>
+   <td>`variable_type`</td>
+   <td>Optional: Enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). </td>
+   </tr>
+  </tbody></table>
+  
+3. Verify that the workspace is created successfully. 
+   ```
+   curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_access_token>"
+   ```
+   {: pre}
+   
+4. Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+
+### Creating the workspace with Terraform
+{: #create-workspace-terraform}
+{: terraform}
+
+1. Follow the steps in [Setting up Terraform for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-terraform-setup) to create your workspace with Terraform.
+
+2.Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
     
 ### Importing your Terraform template
 {: #import-template}
+{: ui}
 
 If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.  
 {: tip}
@@ -220,9 +386,11 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     </tr>
   </tbody>
   </table>
+
    
 ### Running your Terraform template in {{site.data.keyword.cloud_notm}}
 {: #run-template}
+{: ui}
 
 Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
