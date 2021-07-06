@@ -38,6 +38,7 @@ Schematics
          cross_region_deployment.md
          migrate-tfversion.md
          remotestate.md
+         private-catalog.md
          solutions.md
 
          {: .topicgroup}
