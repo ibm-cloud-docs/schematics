@@ -35,6 +35,7 @@ Schematics
          workspace-setup.md
          
          manage-resource-lifecycle.md
+         cross_region_deployment.md
          migrate-tfversion.md
          remotestate.md
          solutions.md

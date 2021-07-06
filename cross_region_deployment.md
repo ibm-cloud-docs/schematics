@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-06"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -93,7 +93,7 @@ subcollection: schematics
 {:video: .video}
 
 
-# Deploying IBM Cloud resources in a specific region or across multiple regions
+# Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions
 {: #multi-region-deployment}
 
 You can deploy your {{site.data.keyword.cloud_notm}} services in any region that is supported by the service by specifying the `region` parameter in the `provider` block of your Terraform configuration file. 

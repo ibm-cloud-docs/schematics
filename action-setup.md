@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-20"
+lastupdated: "2021-07-06"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -54,9 +54,9 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
    5. Click the **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Settings` page.
 3. Import your Ansible playbook. 
    1. Enter the **Repository URL** of your GitHub or GitLab repository where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run later. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
-      - Example for master branch - https://github.com/myorg/myrepo
-      - Example for other branches - https://github.com/myorg/myrepo/tree/mybranch
-      - Example for subdirectory - https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory
+      - Example for master branch - `https://github.com/myorg/myrepo`
+      - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
+      - Example for subdirectory - `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
       
       Don't have a playbook that you can use? Try out one of our [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
       {: tip}

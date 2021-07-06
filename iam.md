@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-20"
+lastupdated: "2021-07-06"
 
 keywords: schematics, automation, terraform
 
@@ -32,7 +32,7 @@ subcollection: schematics
 Use [{{site.data.keyword.cloud}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bplong_notm}} workspaces and actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrates with {{site.data.keyword.cloud}} Identity and Access Management (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.cloud}} Identity and Access Management?](/docs/account?topic=account-iamoverview). 
+As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, refer to [What is {{site.data.keyword.cloud}} Identity and Access Management?](/docs/account?topic=account-iamoverview)
 
 
 
@@ -57,17 +57,17 @@ Review the following table to see what permissions you need to work with {{site.
 
 | Action | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| View workspace | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| View workspace activities | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| View workspace logs | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Create workspace | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Update workspace | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Delete workspace | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Freeze and unfreeze workspace | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| View the `readme` of a template| ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)| 
-| Create Terraform execution plan | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Apply a Terraform template | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Destroy workspace resources | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
+| `View workspace` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `View workspace activities` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `View workspace logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Create workspace` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Update workspace` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Delete workspace` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Freeze and unfreeze workspace` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `View the readme of a template` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)| 
+| `Create Terraform execution plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Apply a Terraform template` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Destroy workspace resources` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} workspaces" caption-side="top"}
@@ -80,14 +80,14 @@ Review the following table to see what permissions you need to work with {{site.
 
 | Action | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| View action | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| View action jobs | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| View job logs | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Create action | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Update action | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Delete action | | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Run check action job | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | 
-| Run an action| | ![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)|![Check mark icon](images/checkmark.svg)| 
+| `View action` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `View action jobs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `View job logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Create action` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Update action` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Delete action` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Run check action job` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
+| `Run an action` | | ![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)| 
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
@@ -100,9 +100,9 @@ Review the following table to see what permissions you need to work with {{site.
 
 | Action | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| View KMS instances | ![Check mark icon](images/checkmark.svg)| ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|
-| Read KMS settings| ![Check mark icon](images/checkmark.svg)| ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|
-| Update the KMS settings | | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg) | ![Check mark icon](images/checkmark.svg)|
+| `View KMS instances` | ![Check mark icon.](images/checkmark.svg)| ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|
+| `Read KMS settings` | ![Check mark icon.](images/checkmark.svg)| ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|
+| `Update the KMS settings` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} KMS" caption-side="top"}
