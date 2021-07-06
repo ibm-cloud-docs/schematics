@@ -65,15 +65,13 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
    | template_type |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
    {: caption="Table 1. Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
 
-3. Export your `IC_API_KEY`, `IAAS_CLASSIC_USERNAME`, and `IAAS_CLASSIC_API_KEY` in your local machine to access the credentials to create workspace and provisioning the instance. For more information, to create these keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
+3. Export your `IC_API_KEY` in your local machine to access the credentials to create workspace and provisioning the instance. For more information, to create these keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
 
    If the path environment variable for these keys are set, you can confirm your settings and ignore this step.
    {: note}
 
     ```
     export IC_API_KEY="<Provide your API key>”
-    export IAAS_CLASSIC_USERNAME="<Provide your classic username>"
-    export IAAS_CLASSIC_API_KEY="<Provide your classic API key>"
     ```
     {: pre}
 
