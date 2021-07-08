@@ -104,15 +104,15 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
    The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information, about the detailed parameters to create workspace, see [ibm_schematics_workspace](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external}.
 
-| Parameter | Description |
-| -------- | --------- |
-| name | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the IBM Cloud environment where you want to deploy your resources in your name.|
-| description | The description of the workspace. |
-| location | The location where you want to create your {{site.data.keyword.bpshort}} workspace and run {{site.data.keyword.bpshort}} actions. |
-| resource_group | The ID of the resource group where you want to provision the workspace. |
-| template_git_url | The Git repository URL, where you have the configuration details to provision the resource. |
-| template_type |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
-{: caption="Table 1. Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
+   | Parameter | Description |
+   | -------- | --------- |
+   | name | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the IBM Cloud environment where you want to deploy your resources in your name.|
+   | description | The description of the workspace. |
+   | location | The location where you want to create your {{site.data.keyword.bpshort}} workspace and run {{site.data.keyword.bpshort}} actions. |
+   | resource_group | The ID of the resource group where you want to provision the workspace. |
+   | template_git_url | The Git repository URL, where you have the configuration details to provision the resource. |
+   | template_type |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
+   {: caption="Table 1. Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
 
 3. Initialize the Terraform CLI. 
 
