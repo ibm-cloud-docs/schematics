@@ -102,7 +102,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
    ```
    {: codeblock}
 
-   The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information, about the detailed parameters to create workspace, see [ibm_schematics_workspace](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external}.
+   The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information, about the detailed parameters to create workspace, see [ibm_schematics_workspace](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external} resource.
 
    | Parameter | Description |
    | -------- | --------- |
