@@ -14,6 +14,7 @@ subcollection: schematics
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
+{:table: .aria-labeledby="caption"}
 {:tip: .tip}
 
 
