@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-07-08"
 
 keywords: schematics, automation, terraform
 
@@ -216,7 +216,7 @@ Congratulations! In this tutorial, learned how to create a private catalog in {{
 ## What's next?
 {: #whats-nxt}
 
-- [Make your private catalog available to your users](/docs/account?topic=account-restrict-by-user#catalog-off-ui).
+- [Make your private catalog available to your users](/docs/account?topic=account-restrict-by-user).
 - [Assign users access to your private catalog](/docs/account?topic=account-catalog-access).
 - [Explore other settings that you can apply to your private catalog](/docs/account?topic=account-filter-account).
 
