@@ -59,7 +59,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
    **terraform.tfvars**
 
-   The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a terraform.tfvars file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
+   The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
 
    ```
    schematics_workspace_name="tf-testwks-apigwy"
@@ -127,7 +127,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
    ```
    {: pre}
 
-   If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the errof by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
+   If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the error by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
    {: note}
 
 4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.bpshort}} workspace in your account.
