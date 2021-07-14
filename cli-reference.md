@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-07-14"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -552,6 +552,8 @@ You need to replace the `<...>` placeholders with the actual values. For example
    <td>In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
    </tr>
   </tbody></table>
+
+  {{site.data.keyword.bplong_notm}} supports setting up special environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](https://test.cloud.ibm.com/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
 
 **Example**
 
