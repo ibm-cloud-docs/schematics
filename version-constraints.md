@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-02"
+lastupdated: "2021-07-14"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -131,14 +131,6 @@ ibmcloud schematics version
 **Example output**
 
 ```
-Template Type   Version   
-Terraform       terraform_v0.11   
-Additional terraform Providers   Version   
-Ansible                          v2.9.7   
-Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v0.31.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
                                     
 Template Type   Version   
 Terraform       terraform_v0.12   

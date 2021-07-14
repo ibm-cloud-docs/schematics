@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-14"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -182,7 +182,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
    </tr>
    <tr>
    <td>`terraform_version`</td>
-   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.11`, `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
    </tr>
    <tr>
    <td>`location`</td>
@@ -248,7 +248,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
    </tr>
    <tr>
    <td>`terraform_version`</td>
-   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.11`, `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
    </tr>
    <tr>
    <td>`location`</td>
