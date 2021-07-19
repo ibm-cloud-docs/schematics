@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-07-14"
+lastupdated: "2021-07-19"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -30,6 +30,15 @@ subcollection: schematics
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
 
 
+
+
+## July 2021
+{: #july-2021}
+
+|Date|Description|
+|-----|---------|
+|19 July 2021 |<ul><li> **Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}:** {{site.data.keyword.bplong_notm}} supports setting a custom value for parallelism. For more information, see [Supporting parallelism and other Terraform environment variables in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-set-parallelism).</li></ul>|
+{: caption="What's new in July" caption-side="top"}
 
 ## June 2021
 {: #june-2021}
