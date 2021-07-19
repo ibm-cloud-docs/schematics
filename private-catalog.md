@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-08"
+lastupdated: "2021-07-19"
 
 keywords: schematics, automation, terraform
 
@@ -114,7 +114,7 @@ In this tutorial, you import the IBM-provided Observability Terraform template a
 - [**{{site.data.keyword.cloudaccesstraillong_notm}}**](/docs/activity-tracker?topic=activity-tracker-getting-started): Use this service to track any activity for a service so that you can comply with regulatory audit requirements.
 
 ## Prerequisites
-{: prerequisits}
+{: #prerequisits}
 
 Before you begin, make sure that you are assigned the following permissions: 
 - [Permissions to create a private catalog](/docs/account?topic=account-create-private-catalog#prereq-create) in {{site.data.keyword.cloud_notm}}
@@ -216,7 +216,7 @@ Congratulations! In this tutorial, learned how to create a private catalog in {{
 ## What's next?
 {: #whats-nxt}
 
-- [Make your private catalog available to your users](/docs/account?topic=account-restrict-by-user).
+- [Make your private catalog available to your users](/docs/account?topic=account-restrict-by-user#prereq-restrict).
 - [Assign users access to your private catalog](/docs/account?topic=account-catalog-access).
 - [Explore other settings that you can apply to your private catalog](/docs/account?topic=account-filter-account).
 
