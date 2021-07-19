@@ -182,8 +182,7 @@ You can decide to declare your variables within the same Terraform configuration
 
 **What information do I need to include in my variable declaration?** </br>
 When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
-- `Terraform v0.11` supports <strong>string</strong>, <strong>list</strong>, <strong>map</strong> data type. <br>
-- `Terraform v0.12` additionally supports bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type]). <br>
+- `Terraform v0.12` supports <strong>string, list, map, bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type])</strong>. <br>
 
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 

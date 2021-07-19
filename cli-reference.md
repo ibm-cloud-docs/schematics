@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-29"
+lastupdated: "2021-07-19"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -478,7 +478,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
    <tr>
    <td>`terraform_version`</td>
    <td>Optional</td>
-   <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.12` to use Terraform version 0.12, and similarly terraform_v0.11, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.12` to use Terraform version 0.12, and similarly, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
    </tr>
   <tr>
    <td>`location`</td>
@@ -526,7 +526,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
    <tr>
    <td>`variable_type`</td>
    <td>Optional</td>
-   <td>`Terraform v0.11` supports `string`, `list`, `map` data type. `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
+   <td>`Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
    </tr>
   <tr>
    <td>`variable_value`</td>
@@ -552,6 +552,8 @@ You need to replace the `<...>` placeholders with the actual values. For example
    <td>In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
    </tr>
   </tbody></table>
+
+  {{site.data.keyword.bplong_notm}} supports setting up special environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
 
 **Example**
 
@@ -816,7 +818,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
    <tr>
    <td>`type`</td>
    <td>Optional</td>
-   <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.14` to use Terraform version 0.14, `Terraform_v0.13` to use Terraform version 0.13, `Terraform_v0.12` to use Terraform version 0.12, and `Terraform_v0.11` to use Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.14` to use Terraform version 0.14, `terraform_v0.13` to use Terraform version 0.13, and `terraform_v0.12` to use Terraform version 0.12. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
    </tr>
     <tr>
    <td>`description`</td>
@@ -870,7 +872,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
    <td>`template_data.variablestore.type`</td>
    <td>Optional</td>
-   <td>`Terraform v0.11` supports `string`, `list`, `map` data type.  <br> `Terraform v0.12` additionally, supports `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
+   <td>`Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
    </tr>
     <tr>
    <td>`template_data.variablestore.value`</td>

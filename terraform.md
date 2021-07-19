@@ -57,7 +57,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
    ```
    {: codeblock}
 
-   **terraform.tfvars**
+   **`terraform.tfvars`**
 
    The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
 
@@ -144,10 +144,10 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
    ```
    {: pre}
 
-  For more information, about troubleshooting the terraform apply command errors, see [find the root cause of why Schematics apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
+  For more information, about troubleshooting the `terraform apply` command errors, see [find the root cause of why Schematics apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
   {: note}
 
-6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `testmyworkspace` is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
+6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `tf-testwks-apigwy` workspace is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
 
 7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 

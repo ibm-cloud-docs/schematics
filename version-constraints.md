@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-02"
+lastupdated: "2021-07-19"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -111,7 +111,7 @@ It is good practice to declare the version that your Terraform template or Ansib
 Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in version v1.23.1 is packaged with the REST API provider version v1.10.0, and was tested on Terraform v0.12.
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} supports the 5 most recent versions of  **IBM Cloud provider plug-in for Terraform** binaries in its image. For more information, see [latest releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases). Following are some of the constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
+{{site.data.keyword.bpshort}} supports the 5 most recent versions of  **IBM Cloud provider plug-in for Terraform** binaries in its image. For more information, see [latest releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}. Following are some of the constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
 
 It is recommended to use Terraform v0.13 or higher.
 {: note}
@@ -131,14 +131,6 @@ ibmcloud schematics version
 **Example output**
 
 ```
-Template Type   Version   
-Terraform       terraform_v0.11   
-Additional terraform Providers   Version   
-Ansible                          v2.9.7   
-Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v0.31.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
                                     
 Template Type   Version   
 Terraform       terraform_v0.12   

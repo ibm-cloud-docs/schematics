@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-06"
+lastupdated: "2021-07-19"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -98,8 +98,8 @@ subcollection: schematics
 
 You can deploy your {{site.data.keyword.cloud_notm}} services in any region that is supported by the service by specifying the `region` parameter in the `provider` block of your Terraform configuration file. 
 
-The region where your service is deployed is independent from the location of your {{site.data.keyword.bpshort}} workspace. For example, if you created the workspace in `us-south`, you can use this workspace to provision services in any supported {{site.data.keyword.cloud_notm}} region, such as `us-east` or `eu-gb`. For location of your workspace determines where your workspace data is stored and where your workspace requests are run. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
-{: note}
+{{site.data.keyword.bplong_notm}} workspace need not be deployed in multi-zone region (MZR), where your services are deployed. This is because {{site.data.keyword.bplong_notm}} can execute its job from its own region and remotely access the services to provision in your region. For example, if you created the workspace in `us-south`, you can use this workspace to provision services in any supported {{site.data.keyword.cloud_notm}} region, such as `us-east` or `eu-gb`. For location of your workspace determines where your workspace data is stored and where your workspace requests are run. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+{: important}
 
 ## Deploying services in a specific region
 {: #single-region}
@@ -155,4 +155,5 @@ You can add multiple multiple provider configurations to the `provider` block to
    {: codeblock}
 
 3. Follow the [steps](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) to deploy your {{site.data.keyword.cloud_notm}} resources. 
+
 

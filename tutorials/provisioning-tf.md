@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-07-14"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -264,7 +264,7 @@ You can edit the payload values for the variable as stated in the table:
    ```
    {: pre}
 
-   For more information to create workspace, refer to [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
+   For more information, about workspace creation, refer to [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
    {: note}
 
     **Sample example output**

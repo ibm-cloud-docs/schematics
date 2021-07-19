@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-07-13"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -205,6 +205,13 @@ You can follow these steps to upgrade Terraform v0.11 to Terraform higher versio
 You need to be an expert user to upgrade the Terraform version to perform these steps.
 {: note}
 
+
+## How to overcome the downtime while updating the workspace activities? 
+{: #impact-downtime-workspace}
+{: faq}
+{: support}
+
+The unexpected impact due to maintenance may result in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity will be marked as Failed. The user can then re-execute the activity, for more information, about the workspace state see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
 
 
 
