@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-07-20"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -96,10 +96,9 @@ subcollection: schematics
 # Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions
 {: #multi-region-deployment}
 
-You can deploy your {{site.data.keyword.cloud_notm}} services in any region that is supported by the service by specifying the `region` parameter in the `provider` block of your Terraform configuration file. 
+{{site.data.keyword.bplong}} enables you to deploy resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you save and execute your {{site.data.keyword.bpshort}} `Workspaces` and `Actions` is independent of the region where your {{site.data.keyword.cloud_notm}} resources are deployed or configured.
 
-{{site.data.keyword.bplong_notm}} workspace need not be deployed in multi-zone region (MZR), where your services are deployed. This is because {{site.data.keyword.bplong_notm}} can execute its job from its own region and remotely access the services to provision in your region. For example, if you created the workspace in `us-south`, you can use this workspace to provision services in any supported {{site.data.keyword.cloud_notm}} region, such as `us-east` or `eu-gb`. For location of your workspace determines where your workspace data is stored and where your workspace requests are run. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
-{: important}
+{{site.data.keyword.bplong_notm}} executes your jobs from your selected {{site.data.keyword.bpshort}} region and remotely access the services to provision resources in the target regions determined by your Terraform templates. It is unaffected by network latency between regions. For example, If you create a workspace in `us-south`, you can use this workspace to provision services in any supported {{site.data.keyword.cloud_notm}} region, such as `us-east` or `eu-gb`. The location of your workspace determines where your workspace data is stored and where your workspace requests are run. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
 ## Deploying services in a specific region
 {: #single-region}
