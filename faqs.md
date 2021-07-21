@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-21"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -193,6 +193,10 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
+
+Depreciating Terraform v0.11 support from July 2021 in {{site.data.keyword.bplong_notm}}, since HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
+{: note}
+
 
 You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
 - Export the Terraform state file, from the {{site.data.keyword.bpshort}} workspace by using the [ibmcloud schematics state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.

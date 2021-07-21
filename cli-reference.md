@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-20"
+lastupdated: "2021-07-21"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -282,6 +282,9 @@ Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraf
 {: shortdesc}	
 
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
+{: note}
+
+Depreciating Terraform v0.11 support from July 2021 in {{site.data.keyword.bplong_notm}}, since HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
 {: note}
 
 **Syntax**
@@ -720,6 +723,9 @@ ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --addr
 
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
+
+Depreciating Terraform v0.11 support from July 2021 in {{site.data.keyword.bplong_notm}}, since HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
+{: note}
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.
 
