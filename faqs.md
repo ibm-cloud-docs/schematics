@@ -197,7 +197,6 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 Depreciating Terraform v0.11 support from July 2021 in {{site.data.keyword.bplong_notm}}, since HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
 {: note}
 
-
 You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
 - Export the Terraform state file, from the {{site.data.keyword.bpshort}} workspace by using the [ibmcloud schematics state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
 - Follow the steps described by [Hashicorp](https://www.terraform.io/upgrade-guides/index.html){: external} to upgrade from `Terraform v0.11 to v0.12`, `Terraform v0.12 to v0.13`, or higher. Upgrade your Terraform configuration `.tf` file and Terraform state file as per the latest Terraform version requirement. **Note** Use your own machine or laptop to perform these operations.
