@@ -194,7 +194,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 {: faq}
 {: support}
 
-Depreciating Terraform v0.11 support from July 2021 in {{site.data.keyword.bplong_notm}}, since HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
+{{site.data.keyword.bplong_notm}} depreciates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
 {: note}
 
 You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
