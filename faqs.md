@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-23"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -194,7 +194,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} depreciates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
+{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
 {: note}
 
 You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.

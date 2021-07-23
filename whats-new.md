@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-23"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -29,7 +29,7 @@ subcollection: schematics
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
 
-{{site.data.keyword.bplong_notm}} depreciates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
+{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
 {: note}
 
 

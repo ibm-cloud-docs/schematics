@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-21"
+lastupdated: "2021-07-23"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -105,7 +105,7 @@ If you plan to store your Terraform templates on your local machine and upload t
 ## Creating workspaces and importing your Terraform template
 {: #create-workspace}
 
-{{site.data.keyword.bplong_notm}} depreciates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has depreciated Terraform v0.11 in Terraform providers.
+{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
 {: note}
 
 Create a workspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The workspace settings can be configured to use the Terraform template that are hosted and managed in a Git repository. Your workspace is used to manage the state of the cloud resources, provisioned using the Terraform template.
