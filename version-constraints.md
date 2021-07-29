@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-07-29"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -130,34 +130,43 @@ ibmcloud schematics version
 
 **Example output**
 
-```
+``` 
                                     
 Template Type   Version   
 Terraform       terraform_v0.12   
 Additional terraform Providers   Version   
-IBM Cloud Provider               v1.25.0   
 Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
-Ansible                          v2.9.7   
+Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
+IBM Cloud Provider               v1.27.1   
                                     
 Template Type   Version   
 Terraform       terraform_v0.13   
 Additional terraform Providers   Version   
-Ansible                          v2.9.7   
-Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.25.0   
-Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
+Ansible                          v2.9.23   
+Ansible Provisioner              v2.3.3   
+IBM Cloud Provider               v1.27.1   
+Open shift client                v3.11.0   
                                     
 Template Type   Version   
 Terraform       terraform_v0.14   
 Additional terraform Providers   Version   
-Provider for REST API            v1.10.0   
-Ansible                          v2.9.7   
+Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.25.0   
-Open shift client                v3.11.0 
+IBM Cloud Provider               v1.27.1   
+Open shift client                v3.11.0   
+Provider for REST API            v1.10.0   
+                                    
+Template Type   Version   
+Terraform       terraform_v0.15   
+Additional terraform Providers   Version   
+IBM Cloud Provider               v1.27.1   
+Open shift client                v3.11.0   
+Provider for REST API            v1.10.0   
+Ansible                          v2.9.23   
+Ansible Provisioner              v2.3.3
 ```
 {: screen}
 
