@@ -14,7 +14,6 @@ Schematics
 
     about.md
     whats-new.md
-    {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
