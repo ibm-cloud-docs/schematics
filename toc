@@ -32,6 +32,7 @@ Schematics
     Workspaces: Cloud infrastructure deployment with Terraform
          create-terraform-config.md
          workspace-setup.md
+         special-env-vars.md
          manage-resource-lifecycle.md
          cross_region_deployment.md
          migrate-tfversion.md
