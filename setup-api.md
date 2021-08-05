@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-03"
+lastupdated: "2021-08-05"
 
 keywords: schematics api, schematics command line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -45,9 +45,9 @@ subcollection: schematics
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
-{:note .note}
+{: note .note}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{: objectc data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}

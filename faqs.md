@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-08-05"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -30,7 +30,7 @@ subcollection: schematics
 {: #faqs}
 
 Answers to common questions about the {{site.data.keyword.bplong_notm}} service.
-{:shortdesc}
+{: shortdesc}
 
 
 ## What is {{site.data.keyword.bplong_notm}} and how does it work? 
