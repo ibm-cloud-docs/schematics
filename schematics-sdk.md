@@ -11,9 +11,6 @@ subcollection: schematics
 ---
 
 {:new_window: target="_blank"}
-
-
-
 {:table: .aria-labeledby="caption"}
 {:deprecated: .deprecated}
 {:download: .download}
