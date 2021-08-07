@@ -136,7 +136,7 @@ Months listed below are the last day of that month.
 | Terraform v0.14 | May 2022 | July 2022 |
 | Terraform v0.15 | July 2022 | December 2022 |
 | Terraform v1.0  | March 2023 | June 2023 |
-{: caption="Deprecation timeline of Terraform provider" caption-side="top"}
+{: caption="Deprecation timeline of Terraform version" caption-side="top"}
 
 You are suppose to migrate from your current version of Terraform to the latest available version at the right time. You can view the {{site.data.keyword.bplong_notm}} workspace configuration page and select the Terraform version that your Terraform configuration files are written.
 
