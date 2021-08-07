@@ -34,6 +34,7 @@ Schematics
          workspace-setup.md
          special-env-vars.md
          manage-resource-lifecycle.md
+         deprecation-tf.md
          cross_region_deployment.md
          migrate-tfversion.md
          remotestate.md
