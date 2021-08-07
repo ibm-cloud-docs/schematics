@@ -117,8 +117,8 @@ subcollection: schematics
 {: #deprecate-steps}
 
 The deprecation of each Terraform version follow these steps:
- 1. **Restrict creation workspace** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces
- 2. **Restrict workspace execution** You cannot manage {{site.data.keyword.cloud_notm}} resources with these {{site.data.keyword.bplong_notm}} workspaces with the deprecated Terraform version. You can only read the {site.data.keyword.bplong_notm}} workspaces contents.
+1. **Restrict creation workspace** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces
+2. **Restrict workspace execution** You cannot manage {{site.data.keyword.cloud_notm}} resources with these {{site.data.keyword.bplong_notm}} workspaces with the deprecated Terraform version. You can only read the {site.data.keyword.bplong_notm}} workspaces contents.
 
 ## Deprecating timeline
 {: #deprecate-timeline}
