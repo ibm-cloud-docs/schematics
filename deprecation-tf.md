@@ -58,7 +58,10 @@ The deprecation of each Terraform version follow these steps:
 ## Deprecating timeline
 {: #deprecate-timeline}
 
-The following table lists the timeline for the deprecation of Terraform provider versions from the {{site.data.keyword.bplong_notm}} service. Months listed below are the last day of that month.
+The following table lists the timeline for the deprecation of Terraform provider versions from the {{site.data.keyword.bplong_notm}} service. 
+
+Months listed below are the last day of that month.
+{: note}
 
 | Versions | Phase 1 Restrict creation workspace (End of marketing) | Phase 2 Restrict workspace execution (End of support)|
 | ----- | ------ | ----- |
