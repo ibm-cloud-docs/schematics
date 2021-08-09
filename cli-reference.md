@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-06"
+lastupdated: "2021-08-09"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -284,8 +284,8 @@ Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraf
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
 {: note}
 
-{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
-{: note}
+Announcement: {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, about version of Terraform depreciation, see [Deprecating Terraform versions in IBM Cloud Schematics](/docs/schematics?topic=schematics-deprecate-tf-version).  v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
+{: deprecated}
 
 **Syntax**
 
@@ -724,8 +724,8 @@ ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --addr
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
 
-{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
-{: note}
+Announcement: {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, about version of Terraform depreciation, see [Deprecating Terraform versions in IBM Cloud Schematics](/docs/schematics?topic=schematics-deprecate-tf-version).  v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
+{: deprecated}
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.
 

@@ -146,7 +146,7 @@ We are announcing the timeline for the deprecation of Terraform **versions**, th
 
 
 ## User actions
-{: #working-new-version}
+{: #user-action}
 
 Follow these steps to continue working with the latest versions of Terraform in the {{site.data.keyword.bplong_notm}}.
 
