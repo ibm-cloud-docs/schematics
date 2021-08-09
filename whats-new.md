@@ -33,6 +33,14 @@ Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service 
 {: deprecated}
 
 
+## August 2021
+{: #aug-2021}
+
+|Date|Description|
+|-----|---------|
+|9 August 2021 |<ul><li>**{{site.data.keyword.bplong_notm}} deprecates older version of Terraform:** {{site.data.keyword.bplong_notm}} announces the depreciation of older version of Terraform. For more information, refer to, [Deprecating older version of Terraform {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).</li></ul> |
+{: caption="What's new in August" caption-side="top"}
+
 
 ## July 2021
 {: #july-2021}
