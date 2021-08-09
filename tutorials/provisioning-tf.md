@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-06"
+lastupdated: "2021-08-09"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -130,15 +130,16 @@ The following image shows the cloud architecture components that you provision a
 
   <img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
   
-  | Component | Description |
-  | -------- | -------- |
-  | `Region` | Region increases the availability of cluster's master node and its nodes by replicating across multiple zones of a region. |
-  | `VPC` | VPC provides you the security of a private cloud environment with the dynamic scalability of a public cloud. |
-  | `zones` | You must have one VPC subnet for each zone in your cluster. The available zones depend on the metro location that you created in the VPC. |
-  | `subnet` | VPC subnets is used to provide private IP addresses for your worker nodes and load balancer services in your cluster. You cannot change the number of IP addresses that a VPC subnet has. |
-  | `master node` | Controls and manages a set of worker nodes (workloads runtime) and resembles a cluster in Kubernetes.
-  | `cluster` |A cluster contains a control plane and one or more compute machines, or nodes. Nodes run the applications and workloads. |
-  | `worker node` | Add the zone to your worker pool. When you add a zone to a worker pool, the worker nodes that are defined in your worker pool are provisioned in the zone and considered for future workload scheduling. 
+| Component | Description |
+| -------- | -------- |
+| `Region` | Region increases the availability of cluster's master node and its nodes by replicating across multiple zones of a region. |
+| `VPC` | VPC provides you the security of a private cloud environment with the dynamic scalability of a public cloud. |
+| `zones` | You must have one VPC subnet for each zone in your cluster. The available zones depend on the metro location that you created in the VPC. |
+| `subnet` | VPC subnets is used to provide private IP addresses for your worker nodes and load balancer services in your cluster. You cannot change the number of IP addresses that a VPC subnet has. |
+| `master node` | Controls and manages a set of worker nodes (workloads runtime) and resembles a cluster in Kubernetes.
+| `cluster` |A cluster contains a control plane and one or more compute machines, or nodes. Nodes run the applications and workloads. |
+| `worker node` | Add the zone to your worker pool. When you add a zone to a worker pool, the worker nodes that are defined in your worker pool are provisioned in the zone and considered for future workload scheduling. 
+
   You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
   {: note} 
 
