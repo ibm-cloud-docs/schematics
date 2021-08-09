@@ -140,10 +140,9 @@ If you choose not to upgrade to the latest version of Terraform beyond the **res
 | Terraform v1.0  | March 2023 | June 2024 |
 {: caption="Deprecation timeline of Terraform version" caption-side="top"}
 
-You are suppose to migrate from your current version of Terraform to the latest available version at the right time. You can view the {{site.data.keyword.bplong_notm}} workspace configuration page and select the Terraform version that your Terraform configuration files are written.
+You are suppose to migrate your current version of Terraform to the latest available version at the right time. You can view the {{site.data.keyword.bplong_notm}} workspace configuration page and select the Terraform version that your Terraform configuration files are written.
 
-
-## Working with the latest version of Terraform
+## Recommendation
 {: #working-new-version}
 
 Follow these steps to continue working with the latest versions of Terraform in the {{site.data.keyword.bplong_notm}}.
