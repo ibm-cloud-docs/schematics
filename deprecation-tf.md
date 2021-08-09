@@ -117,8 +117,12 @@ subcollection: schematics
 {: #deprecate-steps}
 
 The deprecation of each Terraform version follow these steps:
-1. **Restrict creation workspace** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces
-2. **Restrict workspace execution** You cannot manage {{site.data.keyword.cloud_notm}} resources with these {{site.data.keyword.bplong_notm}} workspaces with the deprecated Terraform version. You can only read the {site.data.keyword.bplong_notm}} workspaces contents.
+  1. **Restrict creation workspace** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces
+  2. **Restrict workspace execution** You cannot manage {{site.data.keyword.cloud_notm}} resources with these {{site.data.keyword.bplong_notm}} workspaces with the deprecated Terraform version. You can only read the {site.data.keyword.bplong_notm}} workspaces contents.
+
+If you choose not to upgrade to the latest version of Terraform beyond the **restrict workspace execution** step
+  - Your IBM Cloud Schematics workspace data will continue to stay in Schematics until you **delete**.
+  - You cannot **destroy** the IBM Cloud resources, managed by the IBM Cloud Schematics workspace.
 
 ## Deprecating timeline
 {: #deprecate-timeline}
@@ -134,8 +138,8 @@ Months listed below are the last day of that month.
 | Terraform v0.12 | January 2021 | March 2022 |
 | Terraform v0.13 | March 2022 | May 2022 |
 | Terraform v0.14 | May 2022 | July 2022 |
-| Terraform v0.15 | July 2022 | December 2022 |
-| Terraform v1.0  | March 2023 | June 2023 |
+| Terraform v0.15 | July 2022 | December 2023 |
+| Terraform v1.0  | March 2023 | June 2024 |
 {: caption="Deprecation timeline of Terraform version" caption-side="top"}
 
 You are suppose to migrate from your current version of Terraform to the latest available version at the right time. You can view the {{site.data.keyword.bplong_notm}} workspace configuration page and select the Terraform version that your Terraform configuration files are written.
@@ -147,12 +151,16 @@ You are suppose to migrate from your current version of Terraform to the latest 
 
 Follow these steps to continue working with the latest versions of Terraform in the {{site.data.keyword.bplong_notm}}.
 
-1. **Identification** Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} workspaces. The {{site.data.keyword.bplong_notm}} workspace list indicates the versions of the Terraform provider that you are using. Also, individual {{site.data.keyword.bplong_notm}} workspace `settings` page in the console indicates the Terraform version for that workspace. If you are using the command line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
+1. **Identification** Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} workspaces. The {{site.data.keyword.bplong_notm}} workspace list indicates the versions of the Terraform provider that you are using. Also, individual {{site.data.keyword.bplong_notm}} workspace [settings page](/docs/schematics?topic=schematics-workspace-setup&interface=ui#import-template) in the console indicates the Terraform version for that workspace. If you are using the command line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
 
 2. **Migration** Migrate an older Terraform version to the supported versions, in case you want to deploy by using {{site.data.keyword.bplong_notm}} after the version's `end of support`. For more information, about migrating Terraform version, see [Upgrade Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps).
 
 3. **Verification** You can verify that the workspaces are properly migrated by accessing the list of Terraform version that the target version you want to access in {{site.data.keyword.bpshort}} workspace. Then run the [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the migrated Terraform version works properly.
 
-Once you are at a newer version of the Terraform provider, you can continue using {{site.data.keyword.bplong_notm}} workspaces normally. 
+Once you are at a newer version of the Terraform provider, you can continue using {{site.data.keyword.bplong_notm}} workspaces normally.
 
+Must add one note under “Deprecating Steps” stating that..
+* If the user choose not to upgrade to the latest version of terraform (beyond “Restrict workspace execution” stage)
+   > your workspace data will continue to stay in Schematics (until the user deletes it.).
+   > you cannot “destroy” the IBM Cloud resources, managed by the workspace
 
