@@ -128,7 +128,7 @@ In this tutorial, you use the IBM-provided [`vpc-gen2-cluster` Terraform templat
 
 The following image shows the cloud architecture components that you provision as part of this tutorial. 
 
-  <img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
+<img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
   
 | Component | Description |
 | -------- | -------- |
@@ -140,11 +140,11 @@ The following image shows the cloud architecture components that you provision a
 | `cluster` |A cluster contains a control plane and one or more compute machines, or nodes. Nodes run the applications and workloads. |
 | `worker node` | Add the zone to your worker pool. When you add a zone to a worker pool, the worker nodes that are defined in your worker pool are provisioned in the zone and considered for future workload scheduling. 
 
-  You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
-  {: note} 
+You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
+{: note} 
 
-  As per your resource usage the cost is incurred. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
-  {: important}
+As per your resource usage the cost is incurred. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
+{: important}
    
 
 ## Objectives
@@ -193,8 +193,6 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
    - **versions.tf**: This file includes the Terraform version that this template requires. 
 2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace. 
-   1. 
-
 
 
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
@@ -391,7 +389,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
    ```
    {: pre}
 
-   Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select ** Navigation Menu - Schematics - Workspaces - Resources ** to observe the apply state of the resources in your workspace.
+   Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select ** Navigation Menu -> Schematics -> Workspaces -> Resources ** to observe the apply state of the resources in your workspace.
    {: note}
 
 6. Command to view the logs, and analyze the state of the workspace and resources creation.
