@@ -29,7 +29,7 @@ subcollection: schematics
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
 
-{[announcment]}
+[{announcment}]
 {: deprecated}
 
 
