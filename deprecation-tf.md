@@ -129,10 +129,10 @@ If you choose not to upgrade to the latest version of Terraform beyond the **res
 ## Timeline
 {: #deprecate-timeline} 
 
-We recommend that you migrate from your current version of Terraform to the latest available version at the right time. The latest version is always the most appropriate version. You can see the latest version of the Terraform in the drop down list of the {{site.data.keyword.bplong_notm}} workspace configuration page.
+You are recommended to migrate from your current version of Terraform to the latest available version at the right time. The latest version is always the most appropriate version. You can see the latest version of the Terraform in the drop down list of the {{site.data.keyword.bplong_notm}} workspace configuration page.
 {: shortdesc}
 
-We are announcing the timeline for the deprecation of Terraform **versions**, the related **end of marketing** date and **end of support** date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution.
+We announce the timeline for the deprecation of Terraform **versions**, the related **end of marketing** date and **end of support** date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution.
 
 | Versions | Phase 1: Restrict workspace creation (End of marketing) | Phase 2: Restrict workspace execution (End of support)|
 | ----- | ------ | ----- |
