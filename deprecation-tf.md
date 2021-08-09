@@ -116,13 +116,13 @@ subcollection: schematics
 ## Steps
 {: #deprecate-steps}
 
-The deprecation of each Terraform version follow these steps:
+The deprecation of each Terraform version follows these step:
 1. **Restrict workspace creation** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces.
 
 2. **Restrict workspace execution** You can no longer manage {{site.data.keyword.cloud_notm}} resources with these {{site.data.keyword.bplong_notm}} workspaces with the deprecated Terraform version. You can only read the {{site.data.keyword.bplong_notm}} workspaces contents.
 
 If you choose not to upgrade to the latest version of Terraform beyond the **restrict workspace execution** step:
-- Your {{site.data.keyword.bplong_notm}} workspace data will continue to stay in {{site.data.keyword.short}} until you **delete**.
+- Your {{site.data.keyword.bplong_notm}} workspace data will continue to stay in {{site.data.keyword.bpshort}} until you **delete**.
 - You cannot **destroy** the {{site.data.keyword.cloud_notm}} resources, managed by the IBM {{site.data.keyword.bplong_notm}} workspace.
 
 

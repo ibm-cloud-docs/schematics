@@ -194,7 +194,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 {: faq}
 {: support}
 
-Announcement: {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, about version of Terraform depreciation, see [Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, about version of Terraform depreciation, see [Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
 {: deprecated}
 
 You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
