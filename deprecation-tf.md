@@ -141,7 +141,7 @@ We announce the timeline for the deprecation of Terraform **versions**, the rela
 | Terraform v0.13 | March 2022 | May 2022 |
 | Terraform v0.14 | May 2022 | July 2022 |
 | Terraform v0.15 | July 2022 | December 2023 |
-| Terraform v1.0  | March 2023 | June 2024 |
+| Terraform v1.0  | March 2023 | December 2024 |
 {: caption="Deprecation timeline of Terraform version" caption-side="top"}
 
 
