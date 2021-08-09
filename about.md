@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-09"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -267,12 +267,4 @@ Because {{site.data.keyword.bpshort}} actions provide Ansible-as-a-Service capab
 |Ansible playbook| An Ansible playbook is a configuration `yaml` file that includes all the tasks, roles, policies, or steps that you want to run against your {{site.data.keyword.cloud_notm}} resources. The order in which you want to execute them. For example, you can include instructions for installing more software on a virtual server, or specify resource operations, such as reloading or taking down a virtual server instance. Ansible playbooks must be stored in a GitHub or GitLab repository so that you can run them in {{site.data.keyword.bpshort}}. |
 |Action|An action is used to specify how you want to run your Ansible playbook in {{site.data.keyword.bpshort}}. When you create an action, you point your action to the Ansible playbook in your GitHub or GitLab repository. Then, you define the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your playbook. You can also add environment variables and schedules to your action to customize when your playbook runs. |
 |Resource inventory|An {{site.data.keyword.cloud_notm}} resource inventory is a set of {{site.data.keyword.cloud_notm}} resources where you want to run Ansible playbook, such as a list of virtual servers. The resources can be provisioned with {{site.data.keyword.bpshort}} or you can also select existing resources that you manually created. |
-
-
-
-
-
-
-
-
-
+{: caption="{{site.data.keyword.bpshort}} actions" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-09"
 
 keywords: schematics api, schematics command line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -122,46 +122,28 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     ```
     {: codeblock}
 
-    <table summary="Input parameters to retrieve IAM tokens with the input parameter in column 1 and the value in column 2.">
-    <caption>Input parameters to get IAM tokens.</caption>
-    <thead>
-        <th>Input parameters</th>
-        <th>Values</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Header</td>
-    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>Authorization: Basic Yng6Yng=<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>
-    </td>
-    </tr>
-    <tr>
-    <td>Body for {{site.data.keyword.cloud_notm}} username and password</td>
-    <td><ul><li>`grant_type: password`</li>
+    | Input parameters | Values |
+    | ---- | ---- |
+    | Header | <ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>Authorization: Basic Yng6Yng=<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul> |
+    | Body for {{site.data.keyword.cloud_notm}} username and password | <ul><li>`grant_type: password`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`username`: Your {{site.data.keyword.cloud_notm}} username.</li>
     <li>`password`: Your {{site.data.keyword.cloud_notm}} password.</li>
     <li>`uaa_client_id: cf`</li>
-    <li>`uaa_client_secret:`</br>**Note**: Add the `uaa_client_secret` key with no value specified.</li></ul></td>
-    </tr>
-    <tr>
-    <td>Body for {{site.data.keyword.cloud_notm}} API keys</td>
-    <td><ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li>
+    <li>`uaa_client_secret:`</br>**Note**: Add the `uaa_client_secret` key with no value specified.</li></ul> |
+    | Body for {{site.data.keyword.cloud_notm}} API keys | <ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`apikey`: Your {{site.data.keyword.cloud_notm}} API key</li>
     <li>`uaa_client_id: cf`</li>
-    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li></ul></td>
-    </tr>
-    <tr>
-    <td>Body for {{site.data.keyword.cloud_notm}} one-time passcode</td>
-      <td><ul><li>`grant_type: urn:ibm:params:oauth:grant-type:passcode`</li>
+    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li></ul> |
+    | Body for {{site.data.keyword.cloud_notm}} one-time passcode | <ul><li>`grant_type: urn:ibm:params:oauth:grant-type:passcode`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`passcode`: Your {{site.data.keyword.cloud_notm}} one-time passcode. Run `ibmcloud login --sso` and follow the instructions in your CLI output to retrieve your one-time passcode by using your web browser.</li>
     <li>`uaa_client_id: cf`</li>
-    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li></ul>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li></ul> |
+    {: caption="Input parameters to get IAM tokens." caption-side="top"}
+
+   
 
     Example output for using an API key:
 
@@ -222,7 +204,10 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
             },
             "entity": {
                 "name": "<account_name>",
-    ...
+            }
+        }
+      ]
+    }
     ```
     {: screen}
 
@@ -245,7 +230,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     <tbody>
     <tr>
     <td>Header</td>
-    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>`Authorization: Basic Yng6Yng=`<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>
+    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>`Authorization: Basic Yng6Yng=`<p><b>Note</b>: `Yng6Yng=` equals the URL-encoded authorization for the username <b>bx</b> and the password **bx**.</p></li></ul>
     </td>
     </tr>
     <tr>
@@ -255,7 +240,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     <li>`username`: Your {{site.data.keyword.cloud_notm}} username. </li>
     <li>`password`: Your {{site.data.keyword.cloud_notm}} password. </li>
     <li>`uaa_client_ID: cf`</li>
-    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li>
+    <li>`uaa_client_secret:` </br><b>Note</b>: Add the `uaa_client_secret` key with no value specified.</li>
     <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul>
     </td>
     </tr>
@@ -265,7 +250,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     <li>`response_type: cloud_iam uaa`</li>
     <li>`apikey`: Your {{site.data.keyword.cloud_notm}} API key.</li>
     <li>`uaa_client_ID: cf`</li>
-    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li>
+    <li>`uaa_client_secret:` </br><b>Note</b>: Add the `uaa_client_secret` key with no value specified.</li>
     <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul>
       </td>
     </tr>
@@ -275,7 +260,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     <li>`response_type: cloud_iam uaa`</li>
     <li>`passcode`: Your {{site.data.keyword.cloud_notm}} passcode. </li>
     <li>`uaa_client_ID: cf`</li>
-    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li>
+    <li>`uaa_client_secret:` </br><b>Note</b>: Add the `uaa_client_secret` key with no value specified.</li>
     <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul></td>
     </tr>
     </tbody>
@@ -291,14 +276,15 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
       "expires_in": 3600,
       "expiration": 1493747503
     }
-
     ```
     {: screen}
 
     You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** and the refresh token in the **refresh_token** field of your API output.
 
 4.  Use the {{site.data.keyword.bpshort}} API to list all the workspaces in your account. 
+
   * **Syntax to list all workspaces**:
+
      ```
      GET https://schematics.cloud.ibm.com/v1/workspaces/ 
      ```
@@ -317,11 +303,19 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
      </tr>
      </tbody>
      </table>
+
   * **Syntax to retrieve information about a specific workspace**:
+
      ```
      GET https://schematics.cloud.ibm.com/v1/workspaces/{id}
      ```
      {: codeblock}
+
+    | Input parameters | Values |
+    | ----- | --- |
+    | Header | `Authorization: bearer <iam_token>`: your Your {{site.data.keyword.cloud_notm}} IAM access token.|
+    | Path | `id <workspace_ID>`: The ID of the workspace. To retrieve the workspace ID, run <ibmcloud schematics workspace list> |
+    {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
      <table summary="Input parameters to work with the {{site.data.keyword.bplong_notm}} API with the input parameter in column 1 and the value in column 2.">
      <caption>Input parameters to work with the {{site.data.keyword.bplong_notm}} API.</caption>

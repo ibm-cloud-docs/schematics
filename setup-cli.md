@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-09"
 
 keywords: schematics CLI, schematics command line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -226,7 +226,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output: 
 
    ```
-   schematics                      1.5.0        Update Available
+   schematics                      1.5.9        Update Available           false
    ```
    {: screen}
    
