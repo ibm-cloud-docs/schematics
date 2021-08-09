@@ -171,21 +171,14 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     ```
     {: codeblock}
 
-    <table summary="Input parameters to get {{site.data.keyword.cloud_notm}} account ID with the input parameter in column 1 and the value in column 2.">
-    <caption>Input parameters to get an {{site.data.keyword.cloud_notm}} account ID.</caption>
-    <thead>
-  	<th>Input parameters</th>
-  	<th>Values</th>
-    </thead>
-    <tbody>
-  	<tr>
-  		<td>Headers</td>
-      <td><ul><li>`Content-Type: application/json`</li>
+   | Input parameters | Values |
+   | ---- |  ---- |
+   | Headers | <ul><li>`Content-Type: application/json`</li>
         <li>`Authorization: bearer <iam_access_token>`</li>
-        <li>`Accept: application/json`</li></ul></td>
-  	</tr>
-    </tbody>
-    </table>
+        <li>`Accept: application/json`</li></ul> |
+   {: caption="Input parameters to get an {{site.data.keyword.cloud_notm}} account ID." caption-side="top"}
+
+   
 
     Example output:
 
@@ -221,50 +214,31 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     ```
     {: codeblock}
 
-    <table summary="Input parameters to retrieve IAM tokens with the input parameter in column 1 and the value in column 2.">
-    <caption>Input parameters to get IAM tokens.</caption>
-    <thead>
-        <th>Input parameters</th>
-        <th>Values</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Header</td>
-    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>`Authorization: Basic Yng6Yng=`<p><b>Note</b>: `Yng6Yng=` equals the URL-encoded authorization for the username <b>bx</b> and the password **bx**.</p></li></ul>
-    </td>
-    </tr>
-    <tr>
-    <td>Body for {{site.data.keyword.cloud_notm}} username and password</td>
-    <td><ul><li>`grant_type: password`</li>
+    | Input parameters | Values |
+    | ---- | --- |
+    | Header | <ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>`Authorization: Basic Yng6Yng=`<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>|
+    | Body for {{site.data.keyword.cloud_notm}} username and password | <ul><li>`grant_type: password`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`username`: Your {{site.data.keyword.cloud_notm}} username. </li>
     <li>`password`: Your {{site.data.keyword.cloud_notm}} password. </li>
     <li>`uaa_client_ID: cf`</li>
-    <li>`uaa_client_secret:` </br><b>Note</b>: Add the `uaa_client_secret` key with no value specified.</li>
-    <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul>
-    </td>
-    </tr>
-    <tr>
-    <td>Body for {{site.data.keyword.cloud_notm}} API keys</td>
-    <td><ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li>
+    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li>
+    <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul> |
+    | Body for {{site.data.keyword.cloud_notm}} API keys | <ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`apikey`: Your {{site.data.keyword.cloud_notm}} API key.</li>
     <li>`uaa_client_ID: cf`</li>
-    <li>`uaa_client_secret:` </br><b>Note</b>: Add the `uaa_client_secret` key with no value specified.</li>
-    <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul>
-      </td>
-    </tr>
-    <tr>
-    <td>Body for {{site.data.keyword.cloud_notm}} one-time passcode</td>
-    <td><ul><li>`grant_type: urn:ibm:params:oauth:grant-type:passcode`</li>
+    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li>
+    <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul> |
+    | Body for {{site.data.keyword.cloud_notm}} one-time passcode | <ul><li>`grant_type: urn:ibm:params:oauth:grant-type:passcode`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`passcode`: Your {{site.data.keyword.cloud_notm}} passcode. </li>
     <li>`uaa_client_ID: cf`</li>
-    <li>`uaa_client_secret:` </br><b>Note</b>: Add the `uaa_client_secret` key with no value specified.</li>
-    <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul></td>
-    </tr>
-    </tbody>
-    </table>
+    <li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li>
+    <li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul> |
+    {: caption="Input parameters to get IAM tokens." caption-side="top"}
+
+   
 
     Example output:
 
@@ -290,19 +264,12 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
      ```
      {: codeblock}
 
-     <table summary="Input parameters to work with the {{site.data.keyword.bplong_notm}} API with the input parameter in column 1 and the value in column 2.">
-     <caption>Input parameters to work with the {{site.data.keyword.bplong_notm}} API.</caption>
-     <thead>
-     <th>Input parameters</th>
-     <th>Values</th>
-     </thead>
-     <tbody>
-     <tr>
-     <td>Header</td>
-     <td><li>`Authorization: bearer <iam_token>`</td>
-     </tr>
-     </tbody>
-     </table>
+     | Input parameters | Values |
+     | ----- |  --- |
+     | Header | <li>`Authorization: bearer <iam_token>` |
+     {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
+
+    
 
   * **Syntax to retrieve information about a specific workspace**:
 
@@ -337,9 +304,6 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 5.  Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics#introduction){: external} to find a list of supported APIs.
 
 
-<br />
-
-
 ## Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API
 {: #api_refresh}
 
@@ -364,37 +328,25 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     ```
     {: codeblock}
 
-    <table summary="Input parameters for new IAM token with the input parameter in column 1 and the value in column 2.">
-    <caption>Input parameters for a new {{site.data.keyword.cloud_notm}} IAM token</caption>
-    <thead>
-    <th>Input parameters</th>
-    <th>Values</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Header</td>
-    <td><ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li>
-      <li>`Authorization: Basic Yng6Yng=`</br></br>**Note:** `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</li></ul></td>
-    </tr>
-    <tr>
-    <td>Body when using the refresh token</td>
-    <td><ul><li>`grant_type: refresh_token`</li>
+  
+
+    | Input parameters | Values |
+    | ---- | --- |
+    | Header | <ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li>
+      <li>`Authorization: Basic Yng6Yng=`</br></br>**Note:** `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</li></ul> |
+    | Body when using the refresh token |<ul><li>`grant_type: refresh_token`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`refresh_token:` Your {{site.data.keyword.cloud_notm}} IAM refresh token. </li>
     <li>`uaa_client_ID: cf`</li>
     <li>`uaa_client_secret:`</li>
-    <li>`bss_account:` Your {{site.data.keyword.cloud_notm}} account ID. </li></ul>**Note**: Add the `uaa_client_secret` key with no value specified.</td>
-    </tr>
-    <tr>
-      <td>Body when using the {{site.data.keyword.cloud_notm}} API key</td>
-      <td><ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li>
+    <li>`bss_account:` Your {{site.data.keyword.cloud_notm}} account ID. </li></ul> <br> **Note**: Add the `uaa_client_secret` key with no value specified. |
+    | Body when using the {{site.data.keyword.cloud_notm}} API key | <ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li>
     <li>`response_type: cloud_iam uaa`</li>
     <li>`apikey:` Your {{site.data.keyword.cloud_notm}} API key. </li>
     <li>`uaa_client_ID: cf`</li>
-        <li>`uaa_client_secret:`</li></ul>**Note:** Add the `uaa_client_secret` key with no value specified.</td>
-    </tr>
-    </tbody>
-    </table>
+    <li>`uaa_client_secret:`</li></ul>  **Note:** Add the `uaa_client_secret` key with no value specified. |
+    {: caption="Input parameters for a new {{site.data.keyword.cloud_notm}} IAM token." caption-side="top"}
+
 
     Example API output:
 
@@ -415,6 +367,3 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     You can find your new {{site.data.keyword.cloud_notm}} IAM token in the **access_token**, and the refresh token in the **refresh_token** field of your API output.
 
 2.  Continue working with the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics){: external} by using the token from the previous step.
-
-<br />
-
