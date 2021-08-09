@@ -312,6 +312,8 @@ You can edit the payload values for the variable as stated in the table:
    ```
    ibmcloud schematics workspace list
    ```
+   {: pre}
+   
    **Sample example output**
   
    ```
@@ -348,7 +350,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
    OK
    ```
-   {: pre}
+   {: codeblock}
 
    The activity ID is used to retrieve the logs of the execution plan.
    {: note}
@@ -358,6 +360,8 @@ During the creation of the Terraform execution plan, you are not allowed to make
    ```
    ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-4
    ```
+   {: pre}
+
    You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace status.
      {: note}
 
@@ -397,6 +401,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
    ```
    ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-43
    ```
+   {; pre}
    
    You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
   {: note}
