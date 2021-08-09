@@ -113,7 +113,7 @@ subcollection: schematics
 {{site.data.keyword.bplong}} continues to update the service with the latest Terraform provider version support, and accordingly will be deprecating some of the older versions of Terraform providers. This announcement is to publish an ongoing plan and timeline, and prepare you to migrate to the more current versions of Terraform providers. By moving to the newer versions of Terraform, you can leverage the latest features and capabilities of the {{site.data.keyword.cloud}} service providers.
 {: shortdesc}
 
-## Deprecation Steps
+## Deprecating Steps
 {: #deprecate-steps}
 
 The deprecation of each Terraform version follow these steps:
@@ -124,12 +124,12 @@ If you choose not to upgrade to the latest version of Terraform beyond the **res
   - Your IBM Cloud Schematics workspace data will continue to stay in Schematics until you **delete**.
   - You cannot **destroy** the IBM Cloud resources, managed by the IBM Cloud Schematics workspace.
 
-## Deprecation timeline
+## Deprecating timeline
 {: #deprecate-timeline}
 
-The following table lists the timeline for the deprecation of Terraform provider versions from the {{site.data.keyword.bplong_notm}} service. The Month listed represents the last day of that Month.
+{{site.data.keyword.bplong_notm}} announces the depreciation of Terraform v0.11 from `July 2021`. The following table lists the timeline for the deprecation of Terraform provider versions from the {{site.data.keyword.bplong_notm}} service. The last day of the Month is represented for restrict workspace creation and restrict workspace execution.
 
-| Versions | Phase 1 Restrict creation workspace (End of marketing) | Phase 2 Restrict workspace execution (End of support)|
+| Versions | Phase 1 Restrict workspace creation (End of marketing) | Phase 2 Restrict workspace execution (End of support)|
 | ----- | ------ | ----- |
 | Terraform v0.11 | October 2021 | December 2021 |
 | Terraform v0.12 | January 2021 | March 2022 |
@@ -140,6 +140,7 @@ The following table lists the timeline for the deprecation of Terraform provider
 {: caption="Deprecation timeline of Terraform version" caption-side="top"}
 
 You are suppose to migrate from your current version of Terraform to the latest available version at the right time. You can view the {{site.data.keyword.bplong_notm}} workspace configuration page and select the Terraform version that your Terraform configuration files are written.
+
 
 ## Working with the latest version of Terraform
 {: #working-new-version}
