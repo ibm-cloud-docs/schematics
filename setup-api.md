@@ -161,9 +161,9 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
    {: caption="Input parameters to get an {{site.data.keyword.cloud_notm}} account ID." caption-side="top"}
 
 
-    **Example output**
+  **Example output**
 
-    ```
+  ```
     {
         "next_url": null,
         "total_results": 5,
@@ -182,8 +182,8 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
             }
           ]
     }
-    ```
-    {: screen}
+  ```
+  {: screen}
 
 3.  Generate a new {{site.data.keyword.cloud_notm}} IAM token that includes your {{site.data.keyword.cloud_notm}} credentials and the account ID that you want to work with.
 
@@ -205,7 +205,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
     **Example output**
 
-      ```
+    ```
       {
         "access_token": "<iam_token>",
         "refresh_token": "<iam_refresh_token>",
@@ -213,8 +213,8 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
         "expires_in": 3600,
         "expiration": 1493747503
       }
-      ```
-      {: screen}
+    ```
+    {: screen}
 
     You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** and the refresh token in the **refresh_token** field of your API output.
 
@@ -222,7 +222,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
     **Syntax to list all workspaces**:
     ```
-    GET https://schematics.cloud.ibm.com/v1/workspaces/ 
+     GET https://schematics.cloud.ibm.com/v1/workspaces/ 
     ```
     {: codeblock}
 
@@ -279,7 +279,6 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     | Body when using the {{site.data.keyword.cloud_notm}} API key | <ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li><li>`response_type: cloud_iam uaa`</li><li>`apikey:` Your {{site.data.keyword.cloud_notm}} API key. </li><li>`uaa_client_ID: cf`</li><li>`uaa_client_secret:`</li></ul>  **Note:** Add the `uaa_client_secret` key with no value specified. |
     {: caption="Input parameters for a new {{site.data.keyword.cloud_notm}} IAM token." caption-side="top"}
 
-
     **Example API output**
 
     ```
@@ -292,7 +291,6 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
       "expires_in": 3600,
       "expiration": 1493747503
     }
-
     ```
     {: screen}
 
