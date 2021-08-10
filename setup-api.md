@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-10"
 
 keywords: schematics api, schematics command line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -130,24 +130,23 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     | Body for {{site.data.keyword.cloud_notm}} one-time passcode | <ul><li>`grant_type:urn:ibm:params:oauth:grant-type:passcode`</li><li>`response_type: cloud_iam uaa`</li><li>`passcode`: Your {{site.data.keyword.cloud_notm}} one-time passcode. Run `ibmcloud login --sso` and follow the instructions in your CLI output to retrieve your one-time passcode by using your web browser.</li><li>`uaa_client_id: cf`</li><li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li></ul> |
     {: caption="Input parameters to get IAM tokens." caption-side="top"}
 
-   
 
-    Example output for using an API key:
+    **Example output for using an API key**
 
-    ```
-    {
-    "access_token": "<iam_access_token>",
-    "refresh_token": "<iam_refresh_token>",
-    "uaa_token": "<uaa_token>",
-    "uaa_refresh_token": "<uaa_refresh_token>",
-    "token_type": "Bearer",
-    "expires_in": 3600,
-    "expiration": 1493747503
-    "scope": "ibm openid"
-    }
+        ```
+        {
+        "access_token": "<iam_access_token>",
+        "refresh_token": "<iam_refresh_token>",
+        "uaa_token": "<uaa_token>",
+        "uaa_refresh_token": "<uaa_refresh_token>",
+        "token_type": "Bearer",
+        "expires_in": 3600,
+        "expiration": 1493747503
+        "scope": "ibm openid"
+        }
 
-    ```
-    {: screen}
+      ```
+      {: screen}
 
     You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** field of your API output. Note the {{site.data.keyword.cloud_notm}} IAM token to retrieve additional header information in the next steps.
 
@@ -163,31 +162,30 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
    | Headers | <ul><li>`Content-Type: application/json`</li><li>`Authorization: bearer <iam_access_token>`</li><li>`Accept: application/json`</li></ul> |
    {: caption="Input parameters to get an {{site.data.keyword.cloud_notm}} account ID." caption-side="top"}
 
-   
 
-    Example output:
+    **Example output**
 
-    ```
-    {
-    "next_url": null,
-    "total_results": 5,
-    "resources": [
+        ```
         {
-            "metadata": {
-                "guid": "<account_ID>",
-                "url": "/coe/v2/accounts/<account_ID>",
-                "created_at": "2020-09-29T02:49:41.842Z",
-                "updated_at": "2020-08-16T18:56:00.442Z",
-                "anonymousId": "1111a1aa1a1111a1aa11aa11111a1111"
-            },
-            "entity": {
-                "name": "<account_name>",
+        "next_url": null,
+        "total_results": 5,
+        "resources": [
+            {
+                "metadata": {
+                    "guid": "<account_ID>",
+                    "url": "/coe/v2/accounts/<account_ID>",
+                    "created_at": "2020-09-29T02:49:41.842Z",
+                    "updated_at": "2020-08-16T18:56:00.442Z",
+                    "anonymousId": "1111a1aa1a1111a1aa11aa11111a1111"
+                },
+                "entity": {
+                    "name": "<account_name>",
+                }
             }
+          ]
         }
-      ]
-    }
-    ```
-    {: screen}
+        ```
+        {: screen}
 
 3.  Generate a new {{site.data.keyword.cloud_notm}} IAM token that includes your {{site.data.keyword.cloud_notm}} credentials and the account ID that you want to work with.
 
@@ -204,24 +202,21 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     | Header | <ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>`Authorization: Basic Yng6Yng=`<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>|
     | Body for {{site.data.keyword.cloud_notm}} username and password | <ul><li>`grant_type: password`</li><li>`response_type: cloud_iam uaa`</li><li>`username`: Your {{site.data.keyword.cloud_notm}} username. </li><li>`password`: Your {{site.data.keyword.cloud_notm}} password. </li><li>`uaa_client_ID: cf`</li><li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li><li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul> |
     | Body for {{site.data.keyword.cloud_notm}} API keys | <ul><li>`grant_type: urn:ibm:params:oauth:grant-type:apikey`</li><li>`response_type: cloud_iam uaa`</li><li>`apikey`: Your {{site.data.keyword.cloud_notm}} API key.</li><li>`uaa_client_ID: cf`</li><li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li><li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul> |
-    | Body for {{site.data.keyword.cloud_notm}} one-time passcode | <ul><li>`grant_type:urn:ibm:params:oauth:grant-type:passcode`</li><li>`response_type: cloud_iam uaa`</li><li>`passcode`: Your {{site.data.keyword.cloud_notm}} passcode. </li>
-    <li>`uaa_client_ID: cf`</li><li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.</li><li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul> |
+    | Body for {{site.data.keyword.cloud_notm}} one-time passcode | <ul><li>`grant_type:urn:ibm:params:oauth:grant-type:passcode`</li><li>`response_type: cloud_iam uaa`</li><li>`passcode`: Your {{site.data.keyword.cloud_notm}} passcode. </li><li>`uaa_client_ID: cf`</li><li>`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified. </li><li>`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step.</li></ul> |
     {: caption="Input parameters to get IAM tokens." caption-side="top"}
 
-   
+    **Example output**
 
-    Example output:
-
-    ```
-    {
-      "access_token": "<iam_token>",
-      "refresh_token": "<iam_refresh_token>",
-      "token_type": "Bearer",
-      "expires_in": 3600,
-      "expiration": 1493747503
-    }
-    ```
-    {: screen}
+      ```
+      {
+        "access_token": "<iam_token>",
+        "refresh_token": "<iam_refresh_token>",
+        "token_type": "Bearer",
+        "expires_in": 3600,
+        "expiration": 1493747503
+      }
+      ```
+      {: screen}
 
     You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** and the refresh token in the **refresh_token** field of your API output.
 
@@ -229,32 +224,29 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
   * **Syntax to list all workspaces**:
 
-     ```
-     GET https://schematics.cloud.ibm.com/v1/workspaces/ 
-     ```
-     {: codeblock}
+      ```
+      GET https://schematics.cloud.ibm.com/v1/workspaces/ 
+      ```
+      {: codeblock}
 
      | Input parameters | Values |
      | ----- |  --- |
      | Header | <li>`Authorization: bearer <iam_token>` |
      {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
-    
-
   * **Syntax to retrieve information about a specific workspace**:
 
-     ```
-     GET https://schematics.cloud.ibm.com/v1/workspaces/{id}
-     ```
-     {: codeblock}
+      ```
+      GET https://schematics.cloud.ibm.com/v1/workspaces/{id}
+      ```
+      {: codeblock}
+
 
     | Input parameters | Values |
     | ----- | --- |
     | Header | `Authorization: bearer <iam_token>`: your Your {{site.data.keyword.cloud_notm}} IAM access token.|
     | Path | `id <workspace_ID>`: The ID of the workspace. To retrieve the workspace ID, run <ibmcloud schematics workspace list> |
     {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
-
-     
 
 5.  Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics#introduction){: external} to find a list of supported APIs.
 
@@ -283,7 +275,6 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     ```
     {: codeblock}
 
-  
 
     | Input parameters | Values |
     | ---- | --- |
@@ -293,7 +284,7 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     {: caption="Input parameters for a new {{site.data.keyword.cloud_notm}} IAM token." caption-side="top"}
 
 
-    Example API output:
+    **Example API output**
 
     ```
     {
@@ -308,6 +299,7 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
 
     ```
     {: screen}
+
 
     You can find your new {{site.data.keyword.cloud_notm}} IAM token in the **access_token**, and the refresh token in the **refresh_token** field of your API output.
 
