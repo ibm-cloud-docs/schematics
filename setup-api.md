@@ -113,7 +113,6 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 |Unfederated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** As an alternative to using the {{site.data.keyword.cloud_notm}} username and password, you can [use {{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external}. {{site.data.keyword.cloud_notm}} API keys are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access workspaces that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**{{site.data.keyword.cloud_notm}} username and password:** You can follow the steps in this topic to fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM access token.</li></ul>|
 |Federated ID|<ul><li>**Generate an {{site.data.keyword.cloud_notm}} API key:** [{{site.data.keyword.cloud_notm}} API keys](/docs/account?topic=account-userapikey#create_user_key){: external} are dependent on the {{site.data.keyword.cloud_notm}} account they are generated for. You cannot combine your {{site.data.keyword.cloud_notm}} API key with a different account ID in the same {{site.data.keyword.cloud_notm}} IAM token. To access workspaces that were created with an account other than the one your {{site.data.keyword.cloud_notm}} API key is based on, you must log in to the account to generate a new API key.</li><li>**Use a one-time passcode:** If you authenticate with {{site.data.keyword.cloud_notm}} by using a one-time passcode, you cannot fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token because the retrieval of your one-time passcode requires a manual interaction with your web browser. To fully automate the creation of your {{site.data.keyword.cloud_notm}} IAM token, you must create an {{site.data.keyword.cloud_notm}} API key instead.</ul>|
 {: caption="ID types and options" caption-side="top"}
-{: summary="ID types and options with the input parameter in column 1 and the value in column 2."}
 
 1.  Create your {{site.data.keyword.cloud_notm}} IAM access token. The body information that is included in your request varies based on the {{site.data.keyword.cloud_notm}} authentication method that you use.
 
@@ -164,7 +163,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
   **Example output**
 
   ```
-    {
+  {
         "next_url": null,
         "total_results": 5,
         "resources": [
@@ -181,7 +180,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
                 }
             }
           ]
-    }
+  }
   ```
   {: screen}
 
@@ -195,6 +194,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     ```
     {: codeblock}
 
+
     | Input parameters | Values |
     | ---- | --- |
     | Header | <ul><li><code>Content-Type: application/x-www-form-urlencoded</code></li> <li>`Authorization: Basic Yng6Yng=`<p>**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.</p></li></ul>|
@@ -206,13 +206,13 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     **Example output**
 
     ```
-      {
+    {
         "access_token": "<iam_token>",
         "refresh_token": "<iam_refresh_token>",
         "token_type": "Bearer",
         "expires_in": 3600,
         "expiration": 1493747503
-      }
+    }
     ```
     {: screen}
 
@@ -220,7 +220,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
 4.  Use the {{site.data.keyword.bpshort}} API to list all the workspaces in your account. 
 
-    **Syntax to list all workspaces**:
+    **Syntax to list all workspaces**
     ```
      GET https://schematics.cloud.ibm.com/v1/workspaces/ 
     ```
@@ -229,7 +229,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
      | Input parameters | Values |
      | ----- |  --- |
-     | Header | <li>`Authorization: bearer <iam_token>` |
+     | Header | <li>`Authorization: bearer <iam_token>` </li>|
      {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
     **Syntax to retrieve information about a specific workspace**:
