@@ -110,7 +110,7 @@ subcollection: schematics
 # Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bplong}} continues to update the service with the latest Terraform provider version support, and accordingly will be deprecating some of the older versions of Terraform providers. This announcement is to publish an ongoing plan and timeline for deprecating older versions, and prepare you to migrate to the latest versions of the Terraform providers. By moving to the latest versions of Terraform, you can leverage the latest features and capabilities of the {{site.data.keyword.cloud}} service providers. Though the latest version is absolutely new, version upgrade makes your **business as usual**.
+{{site.data.keyword.bplong}} continues to update the service with the latest Terraform provider version support, and accordingly will be deprecating some of the older versions of Terraform providers. This announcement is to publish an ongoing plan and timeline for deprecating older versions, and prepare you to migrate to the latest versions of the Terraform providers. By migrating to the latest versions of Terraform, you can leverage the latest features and capabilities of the {{site.data.keyword.cloud}} service providers. Though the latest version is absolutely new, version upgrade makes your **business as usual**.
 {: shortdesc}
 
 ## Phases
