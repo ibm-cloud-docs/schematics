@@ -110,7 +110,7 @@ subcollection: schematics
 # Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bplong}} continues to update the service with the latest version of Terraform provider support, and accordingly deprecates the older versions of Terraform provider. {{site.data.keyword.bpshort}} has an ongoing plan for deprecating older versions of Terraform. This guidance can enable you to be prepared to migrate to the latest versions of Terraform providers. This is a tentative timeline for the deprecation of Terraform versions.
+{{site.data.keyword.bplong}} continues to update the service with the latest version of Terraform provider support, and accordingly deprecates the older versions of Terraform provider. {{site.data.keyword.bpshort}} has an ongoing plan for deprecating older versions of Terraform that can enable you to be prepared to migrate to the latest versions of Terraform providers. This is a tentative timeline for the deprecation of Terraform versions.
 {: shortdesc}
 
 ## Phases
@@ -125,8 +125,7 @@ If you choose not to upgrade to the latest version of Terraform beyond the **res
 - Your {{site.data.keyword.bplong_notm}} workspace data will continue to stay in {{site.data.keyword.bpshort}} till you **delete**.
 - You cannot **destroy** the {{site.data.keyword.cloud_notm}} resources, managed by the IBM {{site.data.keyword.bplong_notm}} workspace.
 
-
-## `Timeline`
+## Schedule
 {: #deprecate-timeline} 
 
 You are recommended to migrate from your current version of Terraform to the latest available version at the right time. The latest version is always the most appropriate version. You can see the latest version of the Terraform in the drop down list of the {{site.data.keyword.bplong_notm}} workspace configuration page.
