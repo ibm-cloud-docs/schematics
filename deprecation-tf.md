@@ -116,12 +116,12 @@ subcollection: schematics
 ## Phases
 {: #deprecate-phase}
 
-The deprecation of each Terraform version follows these step:
+The deprecation of each Terraform version follows these phase:
 1. **Restrict workspace creation** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces.
 
 2. **Restrict workspace execution** You can no longer manage {{site.data.keyword.cloud_notm}} resources with these {{site.data.keyword.bplong_notm}} workspaces with the deprecated Terraform version. You can only read the {{site.data.keyword.bplong_notm}} workspaces contents.
 
-If you choose not to upgrade to the latest version of Terraform beyond the **restrict workspace execution** step:
+If you choose not to upgrade to the latest version of Terraform beyond the **restrict workspace execution** phase:
 - Your {{site.data.keyword.bplong_notm}} workspace data will continue to stay in {{site.data.keyword.bpshort}} till you **delete**.
 - You cannot **destroy** the {{site.data.keyword.cloud_notm}} resources, managed by the IBM {{site.data.keyword.bplong_notm}} workspace.
 
@@ -151,10 +151,10 @@ We announce the timeline for the deprecation of Terraform **versions**, the rela
 
 Follow these steps to continue working with the latest versions of Terraform in the {{site.data.keyword.bplong_notm}}.
 
-1. **Identification** Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} workspaces. The {{site.data.keyword.bplong_notm}} workspace list indicates the versions of the Terraform provider that you are using. Also, individual {{site.data.keyword.bplong_notm}} workspace [settings page](/docs/schematics?topic=schematics-workspace-setup&interface=ui#import-template) in the console indicates the Terraform version for that workspace. If you are using the command line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
+1. **Identification**: Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} workspaces. The {{site.data.keyword.bplong_notm}} workspace list indicates the versions of the Terraform provider that you are using. Also, individual {{site.data.keyword.bplong_notm}} workspace [settings page](/docs/schematics?topic=schematics-workspace-setup&interface=ui#import-template) in the console indicates the Terraform version for that workspace. If you are using the command line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
 
-2. **Migration** Migrate an older Terraform version to the supported versions, in case you want to deploy by using {{site.data.keyword.bplong_notm}} after the version's `end of support`. For more information, about migrating Terraform version, see [Upgrade Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps).
+2. **Migration**: Migrate an older Terraform version to the supported versions, in case you want to deploy by using {{site.data.keyword.bplong_notm}} after the version's `end of support`. For more information, about migrating Terraform version, see [Upgrade Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps).
 
-3. **Verification** You can verify that the workspaces are properly migrated by accessing the list of Terraform version that the target version you want to access in {{site.data.keyword.bpshort}} workspace. Then run the [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the migrated Terraform version works properly.
+3. **Verification**: You can verify that the workspaces are properly migrated by accessing the list of Terraform version that the target version you want to access in {{site.data.keyword.bpshort}} workspace. Then run the [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the migrated Terraform version works properly.
 
-Now you are at a newer version of the Terraform provider, and can continue using the {{site.data.keyword.bplong_notm}} workspaces normally.
+Now you are at a latest version of the Terraform provider, and can continue by using the {{site.data.keyword.bplong_notm}} workspaces as usual.
