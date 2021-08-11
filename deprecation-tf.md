@@ -110,7 +110,7 @@ subcollection: schematics
 # Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bplong}} continues to update the service with the latest Terraform provider version support, and accordingly will be deprecating some of the older versions of Terraform providers. This announcement is to publish an ongoing plan and timeline for deprecating older versions, and prepare you to migrate to the latest versions of the Terraform providers. By migrating to the latest versions of Terraform, you can leverage the latest features and capabilities of the {{site.data.keyword.cloud}} service providers. Though the latest version is absolutely new, version upgrade makes your **business as usual**.
+{{site.data.keyword.bplong}} continues to update the service with the latest version of Terraform provider support, and accordingly deprecates the older versions of Terraform provider. {{site.data.keyword.bpshort}} has an ongoing plan for deprecating older versions of Terraform provider, This guidance can enable you to be prepared to migrate for the latest versions of Terraform provider. This is a tentative timeline for the deprecation of Terraform versions.
 {: shortdesc}
 
 ## Phases
@@ -143,7 +143,7 @@ We announce the timeline for the deprecation of Terraform **versions**, the rela
 | Terraform v0.14 | May 2022 | July 2022 |
 | Terraform v0.15 | July 2022 | December 2023 |
 | Terraform v1.0  | March 2023 | December 2024 |
-{: caption="Initial publish of deprecation timeline, 11th August, 2021." caption-side="top"}
+{: caption="Deprecation timeline, 11th August, 2021." caption-side="top"}
 
 
 ## User actions
