@@ -31,12 +31,11 @@ Schematics
     {: .topicgroup}
     Workspaces: Cloud infrastructure deployment with Terraform
          create-terraform-config.md
-         deprecation-tf.md
-         testdep.md
          workspace-setup.md
          special-env-vars.md
          manage-resource-lifecycle.md
          cross_region_deployment.md
+         deprecation-tf.md
          migrate-tfversion.md
          remotestate.md
          private-catalog.md

@@ -126,7 +126,7 @@ If you choose not to upgrade to the latest version of Terraform beyond the **res
 - You cannot **destroy** the {{site.data.keyword.cloud_notm}} resources, managed by the IBM {{site.data.keyword.bplong_notm}} workspace.
 
 
-## Timeline
+## `Timeline`
 {: #deprecate-timeline} 
 
 You are recommended to migrate from your current version of Terraform to the latest available version at the right time. The latest version is always the most appropriate version. You can see the latest version of the Terraform in the drop down list of the {{site.data.keyword.bplong_notm}} workspace configuration page.
@@ -143,7 +143,7 @@ We announce the timeline for the deprecation of Terraform **versions**, the rela
 | Terraform v0.14 | May 2022 | July 2022 |
 | Terraform v0.15 | July 2022 | December 2023 |
 | Terraform v1.0  | March 2023 | December 2024 |
-{: caption="Deprecation timeline, 11th August, 2021." caption-side="top"}
+{: caption="Deprecation timeline as on 11th August, 2021." caption-side="top"}
 
 
 ## User actions
