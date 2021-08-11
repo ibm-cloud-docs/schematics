@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-24"
+lastupdated: "2021-08-05"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -44,7 +44,7 @@ To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.ke
 {: #deploy-resources}
 
 Run your infrastructure code to provision, or modify your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}.  
-{:shortdesc}
+{: shortdesc}
 
 **Before you begin**: 
 - [Create a workspace from your GitHub repository or upload a tape archive file (`.tar`)](/docs/schematics?topic=schematics-workspace-setup#create-workspace) that hosts your Terraform template. 
@@ -209,7 +209,7 @@ A Terraform execution plan is based on the Terraform statefile that was created 
 {: #review-logs}
 
 View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{site.data.keyword.cloud_notm}} resources that you currently manage with {{site.data.keyword.bplong_notm}}.
-{:shortdesc}
+{: shortdesc}
 
 1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace that you want to inspect.
 2. From the navigation, select **Activity** to find a summary of activities in your workspace.
@@ -222,7 +222,7 @@ View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{
 {: #destroy-resources}
 
 To remove an {{site.data.keyword.cloud_notm}} resource that you provisioned with {{site.data.keyword.bplong_notm}}, you can either remove your resources with {{site.data.keyword.bpshort}}, delete your workspace, or remove the infrastructure code in the Terraform template. 
-{:shortdesc}
+{: shortdesc}
 
 **How should I remove resources with {{site.data.keyword.bplong_notm}}?** </br>
 You can use the {{site.data.keyword.bplong_notm}} console or command-line to remove all of the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in sync with your Terraform template, make sure to also remove the associated infrastructure code from your Terraform template so that your resources are not re-added when you apply a new version of your Terraform template. 

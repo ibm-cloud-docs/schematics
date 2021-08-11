@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-08-09"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -26,13 +26,16 @@ completion-time: 60m
 {:app_url: data-hd-keyref="app_url"}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -45,20 +48,28 @@ completion-time: 60m
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
+{:node: .ph data-hd-programlang='node'}
 {:note .note}
 {:note: .note}
+{:note:.deprecated}
 {:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -76,8 +87,10 @@ completion-time: 60m
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -85,6 +98,7 @@ completion-time: 60m
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -114,22 +128,23 @@ In this tutorial, you use the IBM-provided [`vpc-gen2-cluster` Terraform templat
 
 The following image shows the cloud architecture components that you provision as part of this tutorial. 
 
-  <img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
+<img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
   
-  | Component | Description |
-  | -------- | -------- |
-  | `Region` | Region increases the availability of cluster's master node and its nodes by replicating across multiple zones of a region. |
-  | `VPC` | VPC provides you the security of a private cloud environment with the dynamic scalability of a public cloud. |
-  | `zones` | You must have one VPC subnet for each zone in your cluster. The available zones depend on the metro location that you created in the VPC. |
-  | `subnet` | VPC subnets is used to provide private IP addresses for your worker nodes and load balancer services in your cluster. You cannot change the number of IP addresses that a VPC subnet has. |
-  | `master node` | Controls and manages a set of worker nodes (workloads runtime) and resembles a cluster in Kubernetes.
-  | `cluster` |A cluster contains a control plane and one or more compute machines, or nodes. Nodes run the applications and workloads. |
-  | `worker node` | Add the zone to your worker pool. When you add a zone to a worker pool, the worker nodes that are defined in your worker pool are provisioned in the zone and considered for future workload scheduling. 
-  You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
-  {: note} 
+| Component | Description |
+| -------- | -------- |
+| `Region` | Region increases the availability of cluster's master node and its nodes by replicating across multiple zones of a region. |
+| `VPC` | VPC provides you the security of a private cloud environment with the dynamic scalability of a public cloud. |
+| `zones` | You must have one VPC subnet for each zone in your cluster. The available zones depend on the metro location that you created in the VPC. |
+| `subnet` | VPC subnets is used to provide private IP addresses for your worker nodes and load balancer services in your cluster. You cannot change the number of IP addresses that a VPC subnet has. |
+| `master node` | Controls and manages a set of worker nodes (workloads runtime) and resembles a cluster in Kubernetes.
+| `cluster` |A cluster contains a control plane and one or more compute machines, or nodes. Nodes run the applications and workloads. |
+| `worker node` | Add the zone to your worker pool. When you add a zone to a worker pool, the worker nodes that are defined in your worker pool are provisioned in the zone and considered for future workload scheduling. 
 
-  As per your resource usage the cost is incurred. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
-  {: important}
+You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
+{: note} 
+
+As per your resource usage the cost is incurred. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
+{: important}
    
 
 ## Objectives
@@ -178,8 +193,6 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
    - **versions.tf**: This file includes the Terraform version that this template requires. 
 2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace. 
-   1. 
-
 
 
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
@@ -217,7 +230,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
         },
         {
           "name": "flavor",
-          "value": "c2.2x4",
+          "value": "cx2.2x4",
           "type": "string"
         },
         {
@@ -227,7 +240,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
         },
         {
           "name": "region",
-          "value": "North America",
+          "value": "us-south",
           "type": "string"
         },
         {
@@ -281,7 +294,7 @@ You can edit the payload values for the variable as stated in the table:
    Name                    Value
    worker_pool_name        workerpool
    service_instance_name   myservice
-   flavor                  c2.2x4
+   flavor                  cx2.2x4
    cluster_name            cluster
    region                  us-south
    worker_count            1
@@ -299,6 +312,8 @@ You can edit the payload values for the variable as stated in the table:
    ```
    ibmcloud schematics workspace list
    ```
+   {: pre}
+   
    **Sample example output**
   
    ```
@@ -335,7 +350,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
    OK
    ```
-   {: pre}
+   {: codeblock}
 
    The activity ID is used to retrieve the logs of the execution plan.
    {: note}
@@ -345,6 +360,8 @@ During the creation of the Terraform execution plan, you are not allowed to make
    ```
    ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-4
    ```
+   {: pre}
+
    You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace status.
      {: note}
 
@@ -376,7 +393,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
    ```
    {: pre}
 
-   Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select ** Navigation Menu - Schematics - Workspaces - Resources ** to observe the apply state of the resources in your workspace.
+   Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select ** Navigation Menu -> Schematics -> Workspaces -> Resources ** to observe the apply state of the resources in your workspace.
    {: note}
 
 6. Command to view the logs, and analyze the state of the workspace and resources creation.
@@ -384,6 +401,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
    ```
    ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-43
    ```
+   {; pre}
    
    You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
   {: note}

@@ -14,7 +14,6 @@ Schematics
 
     about.md
     whats-new.md
-    {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
@@ -33,8 +32,10 @@ Schematics
     Workspaces: Cloud infrastructure deployment with Terraform
          create-terraform-config.md
          workspace-setup.md
+         special-env-vars.md
          manage-resource-lifecycle.md
          cross_region_deployment.md
+         deprecation-tf.md
          migrate-tfversion.md
          remotestate.md
          private-catalog.md

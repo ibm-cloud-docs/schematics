@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-23"
+lastupdated: "2021-08-09"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -284,8 +284,8 @@ Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraf
 To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
 {: note}
 
-{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
-{: note}
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{: deprecated}
 
 **Syntax**
 
@@ -724,8 +724,8 @@ ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --addr
 ### `ibmcloud schematics workspace update`	
 {: #schematics-workspace-update}	
 
-{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
-{: note}
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{: deprecated}
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.
 
@@ -1192,7 +1192,7 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
   |`IPaddress`|The IP addresses of the hostname.|
   {: caption="Inventory host group parameters" caption-side="top"}
 
-You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances.
+You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.
 {: note}
 
 ### `ibmcloud schematics action create`
@@ -1220,7 +1220,7 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--resource-group` or `-r` | Required | The name of the resource group where you want to create the action. |
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name or --pn` | Optional| The name of the Ansible playbook. |
-| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use to access your target host, such as `~/.ssh/id_rsa`.|
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use to access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.|
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file by using the `--input-file` command option.|
@@ -1331,7 +1331,7 @@ ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--descript
 | `--resource-group` or `-r` | Required | Resource-group name for an Action.|
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name` or  `--pn` | Optional | Name of the playbook.|
-| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`.|
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.|
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file in the `--input-file` command option.|

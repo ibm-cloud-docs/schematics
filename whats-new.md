@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-02"
+lastupdated: "2021-08-11"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -29,10 +29,17 @@ subcollection: schematics
 
 Learn about the latest changes to the {{site.data.keyword.bplong_notm}} service that are grouped by month.
 
-{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11 support from July 2021, as HashiCorp Configuration Language has deprecates Terraform v0.11 in Terraform providers.
-{: note}
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{: deprecated}
 
 
+## August 2021
+{: #aug-2021}
+
+|Date|Description|
+|-----|---------|
+|11 August 2021 |<ul><li>**{{site.data.keyword.bplong_notm}} deprecates older version of Terraform:** For the full `end of marketing` and `end of support` of deprecating older version of Terraform in {{site.data.keyword.bplong_notm}}, refer to, [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).</li></ul> |
+{: caption="What's new in August" caption-side="top"}
 
 ## July 2021
 {: #july-2021}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-08-06"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -84,7 +84,7 @@ Here are detailed steps that you can follow to upgrade.
 6. Execute the state replace provider command in terminal to update the Terraform version.
 
  ```
- $ terraform state replace-provider registry.terraform.io/-/ibm registry.terraform.io/ibm-cloud/ibm.
+ terraform state replace-provider registry.terraform.io/-/ibm registry.terraform.io/ibm-cloud/ibm.
  ```
  {: pre}
 
