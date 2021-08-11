@@ -113,8 +113,8 @@ subcollection: schematics
 {{site.data.keyword.bplong}} continues to update the service with the latest Terraform provider version support, and accordingly will be deprecating some of the older versions of Terraform providers. This announcement is to publish an ongoing plan and timeline, and prepare you to migrate to the more current versions of Terraform providers. By moving to the newer versions of Terraform, you can leverage the latest features and capabilities of the {{site.data.keyword.cloud}} service providers.
 {: shortdesc}
 
-## Steps
-{: #deprecate-steps}
+## Phases
+{: #deprecate-phase}
 
 The deprecation of each Terraform version follows these step:
 1. **Restrict workspace creation** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces.
@@ -156,4 +156,4 @@ Follow these steps to continue working with the latest versions of Terraform in 
 
 3. **Verification** You can verify that the workspaces are properly migrated by accessing the list of Terraform version that the target version you want to access in {{site.data.keyword.bpshort}} workspace. Then run the [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the migrated Terraform version works properly.
 
-Now you are at a newer version of the Terraform provider, you can continue using {{site.data.keyword.bplong_notm}} workspaces normally.
+Now you are at a newer version of the Terraform provider, and can continue using the {{site.data.keyword.bplong_notm}} workspaces normally.
