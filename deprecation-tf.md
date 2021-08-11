@@ -110,7 +110,7 @@ subcollection: schematics
 # Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}
 {: #deprecate-tf-version}
 
-{{site.data.keyword.bplong}} continues to update the service with the latest Terraform provider version support, and accordingly will be deprecating some of the older versions of Terraform providers. This announcement is to publish an ongoing plan and timeline, and prepare you to migrate to the more current versions of Terraform providers. By moving to the newer versions of Terraform, you can leverage the latest features and capabilities of the {{site.data.keyword.cloud}} service providers.
+{{site.data.keyword.bplong}} continues to update the service with the latest Terraform provider version support, and accordingly will be deprecating some of the older versions of Terraform providers. This announcement is to publish an ongoing plan and timeline for deprecating older versions, and prepare you to migrate to the latest versions of the Terraform providers. By moving to the latest versions of Terraform, you can leverage the latest features and capabilities of the {{site.data.keyword.cloud}} service providers. Though the latest version is absolutely new, version upgrade makes your **business as usual**.
 {: shortdesc}
 
 ## Phases
@@ -132,7 +132,8 @@ If you choose not to upgrade to the latest version of Terraform beyond the **res
 You are recommended to migrate from your current version of Terraform to the latest available version at the right time. The latest version is always the most appropriate version. You can see the latest version of the Terraform in the drop down list of the {{site.data.keyword.bplong_notm}} workspace configuration page.
 {: shortdesc}
 
-We announce the timeline for the deprecation of Terraform **versions**, the related **end of marketing** date and **end of support** date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution.
+We announce the timeline for the deprecation of Terraform **versions**, the related **end of marketing** date and **end of support** date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution. These depreciation timeline might change over time to meet your business needs. 
+
 
 | Versions | Phase 1: Restrict workspace creation (End of marketing) | Phase 2: Restrict workspace execution (End of support)|
 | ----- | ------ | ----- |
@@ -142,7 +143,7 @@ We announce the timeline for the deprecation of Terraform **versions**, the rela
 | Terraform v0.14 | May 2022 | July 2022 |
 | Terraform v0.15 | July 2022 | December 2023 |
 | Terraform v1.0  | March 2023 | December 2024 |
-{: caption="Deprecation timeline of Terraform version" caption-side="top"}
+{: caption="Initial publish of deprecation timeline, 11th August, 2021." caption-side="top"}
 
 
 ## User actions
