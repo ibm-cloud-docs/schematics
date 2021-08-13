@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-08-13"
 
 keywords: schematics, automation, terraform
 
@@ -24,15 +24,19 @@ completion-time: 30m
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -45,20 +49,26 @@ completion-time: 30m
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -76,8 +86,10 @@ completion-time: 30m
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -85,6 +97,7 @@ completion-time: 30m
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -134,48 +147,48 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 1. Download the content of the `terraform-ibm-observability` sample repository to your local machine. This repository is owned and maintained by IBM, and provides a Terraform template to create an instance of {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}}. 
 
-   If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a subfolder. 
-   {: tip}
-   
-   ```
-   git clone https://github.com/Cloud-Schematics/terraform-ibm-observability.git
-   ```
-   {: pre}
+    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a subfolder. 
+    {: tip}
+
+    ```
+    git clone https://github.com/Cloud-Schematics/terraform-ibm-observability.git
+    ```
+    {: pre}
 
 2. Change in to the `terraform-ibm-observability` directory.
-   ```
-   cd terraform-ibm-observability
-   ```
-   {: pre}
-   
+    ```
+    cd terraform-ibm-observability
+    ```
+    {: pre}
+
 3. Optional: Review the `readme.md` file and the Terraform configuration files that are stored in the `terraform` directory. 
 4. Compress your Terraform configuration files to create the `TGZ` file. The `TGZ` file is required to upload your Terraform template as a product to the private catalog. 
 
-   To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level above. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
-   {: note}
+    To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level above. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
+    {: note}
 
-   ```
-   tar -czvf observability.tgz -C terraform .
-   ```
-   {: pre}
-   
-   Example output:
-   ```
-   a .
-   a ./main.tf
-   a ./variables.tf
-   a ./version.tf
-   a ./output.tf
-   a ./provider.tf
-   ```
-   {: screen}
-   
+    ```
+    tar -czvf observability.tgz -C terraform .
+    ```
+    {: pre}
+
+    Example output:
+    ```
+    a .
+    a ./main.tf
+    a ./variables.tf
+    a ./version.tf
+    a ./output.tf
+    a ./provider.tf
+    ```
+    {: screen}
+
 5. Create or find an existing repository in GitHub to upload your `TGZ` file to.  
 6. Open the GitHub release page for your repository by appending `/releases` to your repository URL as shown in the following example. 
-   ```
-   https://github.com/<gh_org>/<gh_repo>/releases
-   ```
-   {: codeblock}
+    ```
+    https://github.com/<gh_org>/<gh_repo>/releases
+    ```
+    {: codeblock}
 
 7. Click **Draft a new release**. 
 8. Enter a tag version, a title, and an optional description for your release. Use the tagging suggestions in the GitHub UI to find a supported tag version. 
@@ -191,26 +204,26 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 1. [Create a private catalog in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-create-private-catalog#create-catalog).
 2. Import your {{site.data.keyword.bpshort}} template as a product into your private catalog.
-   1. From the **Private catalogs** page, select the private catalog that you created.
-   2. Click **Add**. 
-   3. Enter the URL to your `TGZ` file that you verified earlier. 
-   4. Click **Add**.  
+    1. From the **Private catalogs** page, select the private catalog that you created.
+    2. Click **Add**. 
+    3. Enter the URL to your `TGZ` file that you verified earlier. 
+    4. Click **Add**.  
 3. From the **Version list** of your product, select the product that you uploaded.
 4. Go to the **Configure product** tab.
-   1. In the **Configure the deployment details** section, click **Add deployment values**. The Terraform configuration files in your `TGZ` file are automatically scanned for any input variables that are defined in the template. 
-   2. Select all deployment values and click **Add deployment values**. 
-   3. Review the default values that are set for your deployment values. 
-   4. Enter values for the `activity_tracker_service_plan`, `logdna_service_plan`, `sysdig_service_plan`, and `region` variables by clicking **Edit** from the actions menu. You can optionally change any of the other default deployment variable values. 
-   5. Save your changes by clicking **Update**.
- 5. Change to the **Add license agreement** tab, and add any license that the user needs to agree to. 
- 6. Change to the **Edit readme** tab, and add or edit the readme for your product. 
- 7. Change to the **Validate product** tab. 
+    1. In the **Configure the deployment details** section, click **Add deployment values**. The Terraform configuration files in your `TGZ` file are automatically scanned for any input variables that are defined in the template. 
+    2. Select all deployment values and click **Add deployment values**. 
+    3. Review the default values that are set for your deployment values. 
+    4. Enter values for the `activity_tracker_service_plan`, `logdna_service_plan`, `sysdig_service_plan`, and `region` variables by clicking **Edit** from the actions menu. You can optionally change any of the other default deployment variable values. 
+    5. Save your changes by clicking **Update**.
+    5. Change to the **Add license agreement** tab, and add any license that the user needs to agree to. 
+    6. Change to the **Edit readme** tab, and add or edit the readme for your product. 
+    7. Change to the **Validate product** tab. 
     1. Enter a name for the {{site.data.keyword.bpshort}} workspace that you want to create for the product validation. 
     2. In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary. 
     3. Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} workspace is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
 8. From the actions menu, click **Publish to account** to make your product available to other users in your private catalog. 
 9. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
-  
+
 Congratulations! In this tutorial, learned how to create a private catalog in {{site.data.keyword.cloud_notm}} and how to upload an IBM-provided Terraform template as a product to your catalog. 
 
 ## What's next?
@@ -219,4 +232,6 @@ Congratulations! In this tutorial, learned how to create a private catalog in {{
 - [Make your private catalog available to your users](/docs/account?topic=account-restrict-by-user#prereq-restrict).
 - [Assign users access to your private catalog](/docs/account?topic=account-catalog-access).
 - [Explore other settings that you can apply to your private catalog](/docs/account?topic=account-filter-account).
+
+
 

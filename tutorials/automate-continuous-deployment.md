@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-08-13"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -24,15 +24,19 @@ completion-time: 60m
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -45,20 +49,26 @@ completion-time: 60m
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -76,8 +86,10 @@ completion-time: 60m
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -85,6 +97,7 @@ completion-time: 60m
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -113,7 +126,7 @@ The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_n
 
 As per your resource usage, the cost is incurred. For more information, about the pricing, refer to [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to [Schematics help](/docs/schematics?topic=schematics-schematics-help).
 {: important}
-   
+
 
 ## Objectives
 {: #schematics-obj}
@@ -168,8 +181,8 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 2. Log in to your [GitHub](https://github.com/) account. 
 3. Open the Terraform template to create an {{site.data.keyword.cos_full_notm}}. (https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket) 
 4. From the right corner of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
-   You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your Schematics workspace.
-   {: note}
+    You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your Schematics workspace.
+    {: note}
 
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
 {: #create-wkspace}
@@ -182,7 +195,7 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
 2. Provide a unique name for the `Workspace name` parameter and add values for the other parameters as required. The default values are maintained in this tutorial.
 3. Click `Create` to view your workspace page.
 4. Scroll to view import your Terraform template to fill the GitHub repository URL, Personal access token and Terraform version details.
-  From the import your Terraform template, click sample templates to view the sample templates. In the tutorial, [ibm-cos-bucket](https://github.com/nibhart1/toolchain_template/tree/master/ibm-cos-bucket) example repository is used.
+    From the import your Terraform template, click sample templates to view the sample templates. In the tutorial, [ibm-cos-bucket](https://github.com/nibhart1/toolchain_template/tree/master/ibm-cos-bucket) example repository is used.
 5. Copy and paste the URL in the GitHub or GitLab repository URL parameter. Optionally, You can add your Personal access token of the template from your private repository.
 6. Select Terraform version as `terraform_v0.12` from the drop-down list.
 7. Click `Save template information` to view the Variables page.
@@ -204,8 +217,8 @@ Configure the variables as described in the table to authenticate the api keys a
 1. On the variable page, click `Enable continuous delivery` hyperlink option to view Schematics Infrastructure as Code (IaC) Toolchain page.
 2. Click `Delivery Pipeline Required` tab.
 
-  The GitHub Server type parameter expects the authorization, you can provide GitHub credentials and confirm the authorization.
-  {: note}
+    The GitHub Server type parameter expects the authorization, you can provide GitHub credentials and confirm the authorization.
+    {: note}
 
 ## Automating the continuous deployment process
 {: #continuous-deployment}
@@ -215,8 +228,9 @@ The `Enable continuous delivery` option has the capability of automating the dif
 
 1. Provide the IBM Cloud API Key in the `Tool Integrations panel`. Click `Create` to view the Toolchains page.
 2. Click `Deliver Pipeline` pane to view Schematics Pipeline | Delivery Pipeline page. 
-  Observe the UPDATE is in STAGE RUNNING state, without the button click.
-  {: note}
+    Observe the UPDATE is in STAGE RUNNING state, without the button click.
+    {: note}
+
 3. During the update stage process, from the example of ibm-cos-bucket repository observe the `main.tf` file configuration with the cos_instance name and bucket_name. These details are updated in the Schematics workspace after the APPLY stage is passed.
 4. Once the `UPDATE` stage is completed, PLAN stage is in running state.
 5. Click the View logs and history to view the status of the job from the `PLAN` pane.
@@ -240,3 +254,5 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 {: #automate-what's next}
 
 Congratulations! You successfully created the {{site.data.keyword.bplong_notm}} workspace and automated the end to end deployment by using the DevOps toolchain. You can now learn how to set up a continuous delivery pipeline for an IBM cluster. For more information, refer to [Setting up a continuous delivery pipeline for an IBM cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
+
+

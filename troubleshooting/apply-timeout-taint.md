@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-13"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -20,6 +20,7 @@ content-type: troubleshoot
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
 {:c#: .ph data-hd-programlang='c#'}
@@ -53,11 +54,9 @@ content-type: troubleshoot
 {:navgroup: .navgroup}
 {:new_window: target="_blank"}
 {:node: .ph data-hd-programlang='node'}
-{:note .note}
 {:note: .note}
-{:note:.deprecated}
-{:objectc data-hd-programlang="objectc"}
 {:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
@@ -121,40 +120,42 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
 {: tsResolve}
 
 1. List the workspaces in your account and note the ID of the workspace that includes the failed resource. 
-   ```
-   ibmcloud schematics workspace list
-   ```
-   {: pre}
-   
+    ```
+    ibmcloud schematics workspace list
+    ```
+    {: pre}
+
 2. Refresh your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. This process might take a few minutes to complete.
-   ```
-   ibmcloud schematics refresh --id <workspace_ID>
-   ```
-   {: pre}
-   
+    ```
+    ibmcloud schematics refresh --id <workspace_ID>
+    ```
+    {: pre}
+
 3. Retrieve the template ID of your workspace. To template ID is shown as a string after the **Template Variables for: <template_ID>** section of your CLI output. 
-   ```
-   ibmcloud schematics workspace get --id <workspace_ID>
-   ```
-   {: pre}
-   
+    ```
+    ibmcloud schematics workspace get --id <workspace_ID>
+    ```
+    {: pre}
+
 4. Retrieve the [Terraform statefile](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) for your workspace and note the name of the resource that is tainted.
-   ```
-   ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
-   ```
-   {: pre}
-   
+    ```
+    ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
+    ```
+    {: pre}
+
 5. Verify that the [tainted resource](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) is successfully provisioned and in a healthy state by using the {{site.data.keyword.cloud_notm}} console, CLI, or API. For example, if you tried to provision an {{site.data.keyword.containerlong_notm}} cluster, check that the cluster is in a `Normal` state and that you can successfully connect to the cluster. 
 
 6. Untaint the resource. Enter the name of the tainted resource that you retrieved from the statefile in the `--address` parameter. For example, a cluster resource name from a statefile might look like this: `ibm_container_vpc_cluster.mycluster`. 
-   ```
-   ibmcloud schematics workspace untaint --id <workspace_ID> --address <resource_name>
-   ```
-   {: pre}
-   
+    ```
+    ibmcloud schematics workspace untaint --id <workspace_ID> --address <resource_name>
+    ```
+    {: pre}
+
 7. Retrieve the Terraform statefile for your workspace again and verify that your resource is marked as [`untainted`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).  
-   ```
-   ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
-   ```
-   {: pre}
-   
+    ```
+    ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
+    ```
+    {: pre}
+
+
+

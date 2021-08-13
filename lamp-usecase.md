@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-09"
+lastupdated: "2021-08-13"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -30,7 +30,7 @@ subcollection: schematics
 {: #provisioning-lamp-stack}
 
 
- This playbook demonstrates to provision multitier VPC Bastion host on {{site.data.keyword.cloud_notm}}. By provisioning, you can deploy a simple web application that display the text messages, links with a list of database names.  
+This playbook demonstrates to provision multitier VPC Bastion host on {{site.data.keyword.cloud_notm}}. By provisioning, you can deploy a simple web application that display the text messages, links with a list of database names.  
 
 These playbooks are tested on CentOS 7.x. It is recommended you use `CentOS` or `RHEL` to test these modules. 
 {: note}
@@ -63,8 +63,8 @@ Now, you are ready to complete these steps to execute the use case:
 
 3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud}} resource inventory, Bastion host public IP, {{site.data.keyword.cloud_notm}} inventory host groups, and SSH key. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
 
-   When the action is successful the job is created, you can view the settings and job option to view the  details of the execution.
-  {: note}
+    When the action is successful the job is created, you can view the settings and job option to view the  details of the execution.
+    {: note}
 
 4. Access your VPC public IP to view the deployed application. For example, `https://<PUBLIC_IP>/index.php`.
 
@@ -77,21 +77,21 @@ Now, you are ready to complete these steps to execute the use case:
 
 2. Create a {{site.data.keyword.bpshort}} action by using the `playbook` and `YAML` file. The example contains the command to create an action. For more information, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action). And see [create {{site.data.keyword.bplong_notm}} action by using command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
 
-  **Example**
+    **Example**
 
-  ```
-  ibmcloud schematics action create -n <action-name> -r Default -l us-east --bastion <bastion-ip> --bastion-credential <ssh-key-file-path> --target <target-webserver-ip-address> --target-credential <ssh-key-path> --tr https://github.com/Cloud-Schematics/lamp-simple -g <github-token> --pn site.yml --input upassword=Abc@123abc --input dbname=foodb --input dbuser=newUser --input mysql_port=3306 --input httpd_port=80 --json
-  ```
-  {: pre}
+    ```
+    ibmcloud schematics action create -n <action-name> -r Default -l us-east --bastion <bastion-ip> --bastion-credential <ssh-key-file-path> --target <target-webserver-ip-address> --target-credential <ssh-key-path> --tr https://github.com/Cloud-Schematics/lamp-simple -g <github-token> --pn site.yml --input upassword=Abc@123abc --input dbname=foodb --input dbuser=newUser --input mysql_port=3306 --input httpd_port=80 --json
+    ```
+    {: pre}
 
 3. Run a {{site.data.keyword.bpshort}} job by using the action ID that is created during action creation. The example contains the command to run a job. For more information, refer to [run job](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job).
 
- **Example**
+    **Example**
 
-  ```
- ibmcloud schematics job run -c action --cid <action-id> -n ansible_playbook_run --json
-  ```
-  {: pre}
+    ```
+    ibmcloud schematics job run -c action --cid <action-id> -n ansible_playbook_run --json
+    ```
+    {: pre}
 
 4. You can run `curl http://<PUBLIC_IP/index.php` after logging in to the deployed machine. You can see a simple test page and a list of databases that are retrieved from the database server.
 
@@ -102,5 +102,7 @@ Great job! You successfully deployed LAMP stack by using {{site.data.keyword.bpl
 - learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/).
 - Learn how to [auto deploy the playbook templates](/docs/schematics?topic=schematics-sample_actiontemplates) to create action.
 - Explore how to [create auto deploy templates](/docs/schematics?topic=schematics-auto-deploy-url) to create a {{site.data.keyword.bpshort}} 
+
+
 
 

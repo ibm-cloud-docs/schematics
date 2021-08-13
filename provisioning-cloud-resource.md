@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-08-13"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -39,4 +39,6 @@ Review how {{site.data.keyword.bplong_notm}} provisions and manages your {{site.
 2. **Create your workspace**. You can point your {{site.data.keyword.bplong_notm}} workspace to a GitHub or GitLab repository where you store your Terraform template, or provide your template by uploading a `.tar` file. Workspaces help to organize resources that belong to one {{site.data.keyword.cloud_notm}} environment. For example, use workspaces to separate your test, staging, and production environment. With {{site.data.keyword.cloud_notm}} Identity and Access Management, you can control who has access to your resources and can provision or manage these resources in your {{site.data.keyword.cloud_notm}} account. 
 3. **Create an execution plan**. {{site.data.keyword.bplong_notm}} uses the `terraform plan` command to parse the configuration files of the provided Terraform template. To create a summary of actions that need to be performed to achieve the state that is described in your configuration files. To determine the actions, {{site.data.keyword.bplong_notm}} takes the resources that are already provisioned in your {{site.data.keyword.cloud_notm}} account to give you a preview whether resources must be added, modified, or removed. You can review the plan and any validation errors by reviewing the logs.  
 4. **Provision your resources**. To create, modify, or remove resources from your {{site.data.keyword.cloud_notm}} account, {{site.data.keyword.bplong_notm}} uses the `terraform apply` command. This command calls the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, which is aware of the API for each resource to provision, configure, or remove the resource. 
+
+
 

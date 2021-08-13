@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-08-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -18,15 +18,19 @@ subcollection: schematics
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -39,20 +43,26 @@ subcollection: schematics
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -70,14 +80,18 @@ subcollection: schematics
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -123,17 +137,17 @@ Use one of the IBM-provided software templates to set up and configure a classic
 1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog. 
 2. In the **Configure your workspace** section, enter a name for your {{site.data.keyword.bpshort}} workspace and select the resource group where you want to create the workspace.
 3. In the **Set the deployment values** section, enter the following information. 
-   1. Enter a username and password that you want to use to log in to your PostgreSQL instance. The username must be between 10 and 32 characters long. 
-   2. Enter the classic infrastructure username and API key that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 
-   3. Select the resource group where you want to provision your virtual server and `PostregSQL` instance. 
+    1. Enter a username and password that you want to use to log in to your PostgreSQL instance. The username must be between 10 and 32 characters long. 
+    2. Enter the classic infrastructure username and API key that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 
+    3. Select the resource group where you want to provision your virtual server and `PostregSQL` instance. 
 4. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
 5. Verify your virtual server and PostgreSQL setup. 
-   1. From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
-   2. Click the link to see the details of your instances. 
+    1. From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
+    2. Click the link to see the details of your instances. 
 6. Optional: Remove your {{site.data.keyword.bpshort}} workspace and all related {{site.data.keyword.cloud_notm}} resources. 
-   1. From the **Actions** menu, click **Delete**. 
-   2. Select the **Delete workspace** and **Delete all associated resources** option.
-   3. Enter the name of your workspace, and click **Delete**. 
+    1. From the **Actions** menu, click **Delete**. 
+    2. Select the **Delete workspace** and **Delete all associated resources** option.
+    3. Enter the name of your workspace, and click **Delete**. 
 
 Congratulations! You used the capabilities of {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} infrastructure and database services, and automatically configured your services to allow network communication. 
 
@@ -144,5 +158,7 @@ Congratulations! You used the capabilities of {{site.data.keyword.bpshort}} to p
 - Browse other [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can apply with {{site.data.keyword.bpshort}}.  
 - Learn more about the [built-in capabilities in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics).  
 - Set up the {{site.data.keyword.bpshort}} [CLI](/docs/schematics?topic=schematics-setup-cli) or [API](/docs/schematics?topic=schematics-setup-api) to start automating the provisioning and management of {{site.data.keyword.cloud_notm}} resources. 
+
+
 
 

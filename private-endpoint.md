@@ -52,44 +52,45 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
 
 1. Enable your {{site.data.keyword.cloud_notm}} account for [virtual routing and forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf){: external}.
 
-   When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-vrf-service-endpoint){: external}.
+    When you enable VRF, a separate routing table is created for your account, and connections to and from your account's resources are routed separately on the {{site.data.keyword.cloud_notm}} network. To learn more about VRF technology, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-vrf-service-endpoint){: external}.
 
-   Enabling VRF permanently alters networking for your account. Be sure that you understand the impact to your account and resources. After you enable VRF, you cannot disable VRF again.
-   {: important}
+    Enabling VRF permanently alters networking for your account. Be sure that you understand the impact to your account and resources. After you enable VRF, you cannot disable VRF again.
+    {: important}
+
 2. Enable your {{site.data.keyword.cloud_notm}} account for [service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint){: external}.
 
-   After you enable VRF and service endpoints for your account, all existing and future {{site.data.keyword.bpshort}} workspaces become available from both the public and private service endpoints.
+    After you enable VRF and service endpoints for your account, all existing and future {{site.data.keyword.bpshort}} workspaces become available from both the public and private service endpoints.
     {: note}
-    
-3. Verify that your account is enabled for VRF and service endpoints. 
-   1. Log in to {{site.data.keyword.cloud_notm}}.
-      ```
-      ibmcloud login
-      ```
-      {: pre}
-      
-      If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the command-line output to generate a one-time passcode.
-      {: tip}
-      
-   2. Show the details of your account. 
-      ``` 
-      ibmcloud account show
-      ```
-      {: pre}
-      
-      Example output: 
-      ```
-      Retrieving account User's Account of user@email.com...
-      OK
 
-      Account ID:                   a111aaaa1aa1aaaaaaaaaaaa1a1aa111   
-      Currently Targeted Account:   true   
-      Linked Softlayer Account:     000000
-      VRF Enabled:                  true  
-      Service Endpoint Enabled:     true
-      ```
-      {: screen}
-    
+3. Verify that your account is enabled for VRF and service endpoints. 
+    1. Log in to {{site.data.keyword.cloud_notm}}.
+        ```
+        ibmcloud login
+        ```
+        {: pre}
+
+        If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the command-line output to generate a one-time passcode.
+        {: tip}
+
+    2. Show the details of your account. 
+        ``` 
+        ibmcloud account show
+        ```
+        {: pre}
+
+        Example output: 
+        ```
+        Retrieving account User's Account of user@email.com...
+        OK
+
+        Account ID:                   a111aaaa1aa1aaaaaaaaaaaa1a1aa111   
+        Currently Targeted Account:   true   
+        Linked Softlayer Account:     000000
+        VRF Enabled:                  true  
+        Service Endpoint Enabled:     true
+        ```
+        {: screen}
+
 ### Connect to the {{site.data.keyword.bpshort}} private service endpoint
 {: #configure-private-network}
 
@@ -98,11 +99,11 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 1. To connect to the private service endpoint, you must create a virtual server instance (VSI) first. You use this VSI to connect to the {{site.data.keyword.cloud_notm}} Private network. You can create a [classic VSI](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) or [VPC VSI](/docs/vpc?topic=vpc-getting-started). 
 
 2. After you are connected to the VSI, target the private service endpoint when you send API requests to the {{site.data.keyword.bpshort}} API server. The following example shows the supported Terraform and Helm versions of the {{site.data.keyword.bpshort}} engine. 
-   ```
-   curl -X GET https://private-us-south.schematics.cloud.ibm.com/v1/version
-   ```
-   {: pre}
-   
+    ```
+    curl -X GET https://private-us-south.schematics.cloud.ibm.com/v1/version
+    ```
+    {: pre}
+
 
 ## Virtual Private Endpoints Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-setup}
@@ -110,13 +111,13 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect Schematics service on the private network from Virtual Private Endpoint Gateways.
 {: shortdesc}
 
-  **Public:** A service endpoint on the IBM Cloud public network.<br>
-  **Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.<br>
-  **Both public and private:** Service endpoints that allow access over both networks.<br>
+**Public:** A service endpoint on the IBM Cloud public network.<br>
+**Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.<br>
+**Both public and private:** Service endpoints that allow access over both networks.<br>
 
 
-   Virtual Private Endpoint Gateways is only supported for the VPC Generation 2.  
-   {: note}
+Virtual Private Endpoint Gateways is only supported for the VPC Generation 2.  
+{: note}
 
 ### Before you begin
 {: #endpoint-prereq}
@@ -133,13 +134,15 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destroy` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
- You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
- {: important}
+You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.
+{: important}
 
- The steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
+The steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
 
- 1. Create a {{site.data.keyword.bpshort}} workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
- 2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
- 3. Create a Virtual Private Endpoint Gateways. For more information, see [creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-creating-ui). And you can assign the listed {{site.data.keyword.bpshort}} services endpoint into Virtual Private Endpoint Gateways.
- 4. View the created Virtual Private Endpoint Gateways associated with the {{site.data.keyword.bpshort}} services. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 
+1. Create a {{site.data.keyword.bpshort}} workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
+2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
+3. Create a Virtual Private Endpoint Gateways. For more information, see [creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-creating-ui). And you can assign the listed {{site.data.keyword.bpshort}} services endpoint into Virtual Private Endpoint Gateways.
+4. View the created Virtual Private Endpoint Gateways associated with the {{site.data.keyword.bpshort}} services. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 
+
+
 

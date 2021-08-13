@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-13"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -20,6 +20,7 @@ content-type: troubleshoot
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
 {:c#: .ph data-hd-programlang='c#'}
@@ -53,11 +54,9 @@ content-type: troubleshoot
 {:navgroup: .navgroup}
 {:new_window: target="_blank"}
 {:node: .ph data-hd-programlang='node'}
-{:note .note}
 {:note: .note}
-{:note:.deprecated}
-{:objectc data-hd-programlang="objectc"}
 {:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
@@ -124,15 +123,17 @@ To troubleshoot the error in the script, follow these steps:
 1. From the workspace **Activity** page, select the {{site.data.keyword.bpshort}} apply action that failed.
 2. Click **View log** to see the detailed log output. 
 3. In the log file, find the last action that {{site.data.keyword.bpshort}} started before the error occurs. For example in the following log output, {{site.data.keyword.bpshort}} tried to run a copy script in the `instances_module` module by using the Terraform `null_resource`.
-   ```
-   2021/05/24 05:03:41 Terraform apply | module.instances_module.module.compute_remote_copy_rpms.null_resource.remote_copy[0]: Still creating... [5m0s elapsed]
-   2021/05/24 05:03:41 Terraform apply | 
-   2021/05/24 05:03:42 Terraform apply | 
-   2021/05/24 05:03:42 Terraform apply | 
-   2021/05/24 05:03:42 Terraform apply | Error: timeout - last error: ssh: rejected: connect failed (Connection timed out)
-   ```
-   {: screen}
-  
+    ```
+    2021/05/24 05:03:41 Terraform apply | module.instances_module.module.compute_remote_copy_rpms.null_resource.remote_copy[0]: Still creating... [5m0s elapsed]
+    2021/05/24 05:03:41 Terraform apply | 
+    2021/05/24 05:03:42 Terraform apply | 
+    2021/05/24 05:03:42 Terraform apply | 
+    2021/05/24 05:03:42 Terraform apply | Error: timeout - last error: ssh: rejected: connect failed (Connection timed out)
+    ```
+    {: screen}
+
 4. Find the script that is executed in the Terraform `null_resource` and analyze where the error might come from by using the error message from the {{site.data.keyword.bpshort}} log output. 
 5. If you cannot resolve the error, contact the owner of the script to further troubleshoot the error. 
+
+
 

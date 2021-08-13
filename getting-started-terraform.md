@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-26"
+lastupdated: "2021-08-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -18,15 +18,19 @@ subcollection: schematics
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -39,20 +43,26 @@ subcollection: schematics
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -70,8 +80,10 @@ subcollection: schematics
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -79,6 +91,7 @@ subcollection: schematics
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -119,32 +132,32 @@ Use the IBM-provided Terraform template to provision an {{site.data.keyword.cos_
 1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**. 
 2. Enter a name for your workspace, the resource group, and region where you want to create the workspace. Then, click **Create**. 
 3. In the **Import your Terraform template** section, enter the following information: 
-   1. In the **GitHub, GitLab, or `Bitbucket` repository URL** field, enter the following repository URL. 
-      ```
-      https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance
-      ```
-      {: codeblock}
-      
-   2. Select `terraform_v0.12` from the **Terraform version** drop down. 
-   3. Click **Save template information** to save the information that you entered. 
+    1. In the **GitHub, GitLab, or `Bitbucket` repository URL** field, enter the following repository URL. 
+        ```
+        https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance
+        ```
+        {: codeblock}
+
+    2. Select `terraform_v0.12` from the **Terraform version** drop down. 
+    3. Click **Save template information** to save the information that you entered. 
 4. Enter your template variables. 
-   1. Enter a name for your {{site.data.keyword.cos_full_notm}} instance. 
-   2. Review the default values for the plan and the resource group name. 
-      
-      If you already have an existing {{site.data.keyword.cos_full_notm}} instance in your account, you must enter `standard` in the **plan** field. 
-      {: tip}
-      
-   3. Click **Save changes** to save your variable values. 
+    1. Enter a name for your {{site.data.keyword.cos_full_notm}} instance. 
+    2. Review the default values for the plan and the resource group name. 
+
+        If you already have an existing {{site.data.keyword.cos_full_notm}} instance in your account, you must enter `standard` in the **plan** field. 
+        {: tip}
+
+    3. Click **Save changes** to save your variable values. 
 5. From the workspace **Settings** page, click **Generate plan**. After you click this button, the workspace **Activity** page opens and {{site.data.keyword.bpshort}} gathers the actions that need to run to provision your Terraform template. Click **View logs** to find detailed information about the actions that {{site.data.keyword.bpshort}} identified. 
 6. From the workspace **Activity** page, click **Apply plan**. After you click this button, {{site.data.keyword.bpshort}} starts to provision your {{site.data.keyword.cos_full_notm}} instance as specified in your Terraform template. This process might take a few minutes to complete. Click **View logs** to see the details of the provisioning process.  
 7. Check out your {{site.data.keyword.cos_full_notm}} instance. 
-   1. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources), select the instance that you created. 
-   2. From the menu, select **Getting started** to find more information about {{site.data.keyword.cos_full_notm}} and how you can create your first bucket to start storing your data. 
-   
+    1. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources), select the instance that you created. 
+    2. From the menu, select **Getting started** to find more information about {{site.data.keyword.cos_full_notm}} and how you can create your first bucket to start storing your data. 
+
 
 Congratulations! You used the built-in Terraform capabilities of {{site.data.keyword.bpshort}} to create an {{site.data.keyword.cos_full_notm}} service instance in your {{site.data.keyword.cloud_notm}} account. 
-   
- 
+
+
 ## What's next? 
 {: #whats-next}
 
@@ -154,4 +167,6 @@ Now that you created your first {{site.data.keyword.cloud_notm}} resource with {
 - Learn how to [create your own Terraform template](/docs/schematics?topic=schematics-create-tf-config). 
 - Explore other [IBM-provided templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}.
 - Set up the {{site.data.keyword.bpshort}} [CLI](/docs/schematics?topic=schematics-setup-cli) or [API](/docs/schematics?topic=schematics-setup-api) to start automating {{site.data.keyword.cloud_notm}} resources. 
+
+
 

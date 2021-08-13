@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-13"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -24,6 +24,7 @@ completion-time: 60m
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
 {:c#: .ph data-hd-programlang='c#'}
@@ -57,11 +58,9 @@ completion-time: 60m
 {:navgroup: .navgroup}
 {:new_window: target="_blank"}
 {:node: .ph data-hd-programlang='node'}
-{:note .note}
 {:note: .note}
-{:note:.deprecated}
-{:objectc data-hd-programlang="objectc"}
 {:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
@@ -129,7 +128,7 @@ In this tutorial, you use the IBM-provided [`vpc-gen2-cluster` Terraform templat
 The following image shows the cloud architecture components that you provision as part of this tutorial. 
 
 <img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
-  
+
 | Component | Description |
 | -------- | -------- |
 | `Region` | Region increases the availability of cluster's master node and its nodes by replicating across multiple zones of a region. |
@@ -145,7 +144,7 @@ You can add worker nodes and pool to your VPC cluster by using a  `ibm_container
 
 As per your resource usage the cost is incurred. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
 {: important}
-   
+
 
 ## Objectives
 {: #provisioning-tut-obj}
@@ -188,10 +187,10 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 {: shortdesc}
 
 1. Review the [IBM-provided template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure. 
-   - **main.tf**: This file includes the Terraform code that you run in {{site.data.keyword.bpshort}}. Your Terraform code includes data sources and resources to create a VPC with subnets in two different zones, create an {{site.data.keyword.containerlong_notm}} cluster, and configure the cluster to bind an {{site.data.keyword.cos_full_notm}} service instance. 
-   - **output.tf**: This file includes the content that you want to return after {{site.data.keyword.bpshort}} applied your Terraform template. In this case, you get the file path on your local machine where the cluster configuration and certificates are stored. You use these files to access your cluster later. 
-   - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
-   - **versions.tf**: This file includes the Terraform version that this template requires. 
+    - **main.tf**: This file includes the Terraform code that you run in {{site.data.keyword.bpshort}}. Your Terraform code includes data sources and resources to create a VPC with subnets in two different zones, create an {{site.data.keyword.containerlong_notm}} cluster, and configure the cluster to bind an {{site.data.keyword.cos_full_notm}} service instance. 
+    - **output.tf**: This file includes the content that you want to return after {{site.data.keyword.bpshort}} applied your Terraform template. In this case, you get the file path on your local machine where the cluster configuration and certificates are stored. You use these files to access your cluster later. 
+    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
+    - **versions.tf**: This file includes the Terraform version that this template requires. 
 2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace. 
 
 
@@ -205,19 +204,19 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 
 ```
 {
-  "name": "mytest1_cluster",
-  "type": [
-    "terraform_v0.12"
-  ],
-  "description": "",
-  "template_repo": {
-  	"url":"https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster"
-  },
-  "template_data": [
-    {
-      "folder": ".",
-      "type": "terraform_v0.12",
-      "variablestore": [
+    "name": "mytest1_cluster",
+    "type": [
+        "terraform_v0.12"
+    ],
+    "description": "",
+    "template_repo": {
+    	"url":"https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster"
+    },
+    "template_data": [
+        {
+        "folder": ".",
+        "type": "terraform_v0.12",
+        "variablestore": [
         {
           "name": "worker_pool_name",
           "value": "workerpool",
@@ -253,10 +252,10 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
           "value": "Default",
           "type": "string"
         }
-      ]
+        ]
     }
-  ],
-  "githubtoken": "<provide your githubtoken>"
+    ],
+    "githubtoken": "<provide your githubtoken>"
 }
 ```
 {: codeblock}
@@ -272,57 +271,57 @@ You can edit the payload values for the variable as stated in the table:
 
 2. Create the workspace by using the JSON file from command-line interface.
 
-   ```
-   ibmcloud schematics workspace new --file <fully qualified path of cluster_payload.JSON file>
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics workspace new --file <fully qualified path of cluster_payload.JSON file>
+    ```
+    {: pre}
 
-   For more information, about workspace creation, refer to [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
-   {: note}
+    For more information, about workspace creation, refer to [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
+    {: note}
 
     **Sample example output**
-  
-   ```
-   Creation Time   Mon Aug 10 19:18:55
-   Description
-   Frozen          false
-   ID              mytest1_cluster-62183a6b-fbed-43
-   Name            mytest1_cluster
-   Status          DRAFT
 
-   Template Variables for: examples-d3d10ae5-76ef-47
-   Name                    Value
-   worker_pool_name        workerpool
-   service_instance_name   myservice
-   flavor                  cx2.2x4
-   cluster_name            cluster
-   region                  us-south
-   worker_count            1
-   resource_group          Default
+    ```
+    Creation Time   Mon Aug 10 19:18:55
+    Description
+    Frozen          false
+    ID              mytest1_cluster-62183a6b-fbed-43
+    Name            mytest1_cluster
+    Status          DRAFT
 
-   OK
-   ```
-   {: codeblock}
+    Template Variables for: examples-d3d10ae5-76ef-47
+    Name                    Value
+    worker_pool_name        workerpool
+    service_instance_name   myservice
+    flavor                  cx2.2x4
+    cluster_name            cluster
+    region                  us-south
+    worker_count            1
+    resource_group          Default
 
-   You can also view the new workspace `mytest1_cluster` in {{site.data.keyword.cloud_notm}} dashboard.
-   {: note}
+    OK
+    ```
+    {: codeblock}
+
+    You can also view the new workspace `mytest1_cluster` in {{site.data.keyword.cloud_notm}} dashboard.
+    {: note}
 
 3. Verify that your workspace is created by using `list` command.
 
-   ```
-   ibmcloud schematics workspace list
-   ```
-   {: pre}
-   
-   **Sample example output**
-  
-   ```
-   Name               ID                              Description     Status      Frozen
-   mytest1_cluster  mytest1_cluster-62183a6b-fbed-43                  ACTIVE       False
-   
-   OK
-   ```
-   {: preblock}
+    ```
+    ibmcloud schematics workspace list
+    ```
+    {: pre}
+
+    **Sample example output**
+
+    ```
+    Name               ID                              Description     Status      Frozen
+    mytest1_cluster  mytest1_cluster-62183a6b-fbed-43                  ACTIVE       False
+
+    OK
+    ```
+    {: preblock}
 
 ## Planning and applying the Terraform template
 {: #tut-plan-wks}
@@ -338,32 +337,32 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 1. Execute the Schematics plan command. This command gives back an activity ID. 
 
-   ```
-   ibmcloud schematics plan --id mytest1_cluster-62183a6b-fbed-43
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics plan --id mytest1_cluster-62183a6b-fbed-43
+    ```
+    {: pre}
 
-   **Sample example output**
-   
-   ```
-   Activity ID 3886e3752a0a83b04732b6666533b464
+    **Sample example output**
 
-   OK
-   ```
-   {: codeblock}
+    ```
+    Activity ID 3886e3752a0a83b04732b6666533b464
 
-   The activity ID is used to retrieve the logs of the execution plan.
-   {: note}
+    OK
+    ```
+    {: codeblock}
+
+    The activity ID is used to retrieve the logs of the execution plan.
+    {: note}
 
 2. Review the execution plan to view the {{site.data.keyword.cloud_notm}} resources. To retrieve the logs with the activity ID use the generated activity ID from step 1.
 
-   ```
-   ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-4
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-4
+    ```
+    {: pre}
 
-   You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace status.
-     {: note}
+    You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace status.
+    {: note}
 
 3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the IBM Cloud resources that are specified in the template are created in your IBM Cloud account. 
 
@@ -374,7 +373,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ibmcloud schematics apply --id <workspace_ID>
     ```
     {: pre}
-    
+
     **Sample example output**
     ```
     Do you really want to perform this action? [y/N]> y
@@ -383,34 +382,36 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
     OK
     ```
-    
+
 4. Review the logs of your workspace. See step 2 to view the logs with the workspace ID or  activity ID.
 
 5. Verify that the {{site.data.keyword.cloud_notm}} resources are successfully created in your {{site.data.keyword.cloud_notm}}.
 
-   ```
-   ibmcloud schematics workspace get --id <WORKSPACE_ID>
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics workspace get --id <WORKSPACE_ID>
+    ```
+    {: pre}
 
-   Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select ** Navigation Menu -> Schematics -> Workspaces -> Resources ** to observe the apply state of the resources in your workspace.
-   {: note}
+    Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select ** Navigation Menu -> Schematics -> Workspaces -> Resources ** to observe the apply state of the resources in your workspace.
+    {: note}
 
 6. Command to view the logs, and analyze the state of the workspace and resources creation.
 
-   ```
-   ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-43
-   ```
-   {; pre}
-   
-   You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
-  {: note}
- 
-   
-  
-   
+    ```
+    ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-43
+    ```
+    {; pre}
+
+    You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
+    {: note}
+
+    
+
+
 ## What's next?
 {: #tut_what's next}
 
 Great job! You successfully provisioned a VPC cluster by using {{site.data.keyword.bplong_notm}}. You can now learn how to configure the cluster parameters to attach the key management services and load balancer. For more information, about key management services and {{site.data.keyword.cloud_notm}} Kubernetes worker pool, see [Key Management services](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#ks_kms_enable) and [{{site.data.keyword.cloud_notm}} Kubernetes worker pool](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_alb_create).
+
+
 

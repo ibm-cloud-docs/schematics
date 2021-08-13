@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-06"
+lastupdated: "2021-08-13"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -57,11 +57,11 @@ Here are detailed steps that you can follow to upgrade.
 3. Change directory to your cloned repository and upgrade your repository to Terraform v0.13 by executing `Terraform v0.13upgrade` command. For more information, see [Upgrading to Terraform v0.13 documentation](https://www.terraform.io/upgrade-guides/0-13.html){: external}. The upgrade command generates a `versions.tf` file.
 4. Edit `versions.tf` file by uncommenting the source parameter and add `source = "IBM-Cloud/ibm"` as shown in the code block.
 
-  `versions.tf` file
+    `versions.tf` file
 
     ```
     terraform {
-      required_providers {
+        required_providers {
         ibm = {
           # TF-UPGRADE-TODO
           #
@@ -73,8 +73,8 @@ Here are detailed steps that you can follow to upgrade.
           # For more information, see the provider source documentation:
           #
         }
-      }
-      required_version = ">= 0.13"
+        }
+        required_version = ">= 0.13"
     } 
     ```
     {: codeblock}
@@ -83,13 +83,15 @@ Here are detailed steps that you can follow to upgrade.
 
 6. Execute the state replace provider command in terminal to update the Terraform version.
 
- ```
- terraform state replace-provider registry.terraform.io/-/ibm registry.terraform.io/ibm-cloud/ibm.
- ```
- {: pre}
+    ```
+    terraform state replace-provider registry.terraform.io/-/ibm registry.terraform.io/ibm-cloud/ibm.
+    ```
+    {: pre}
 
 7. Verify the updates are made to the `terraform.tfstate` file with Terraform version getting updated from `0.12` to `>= 0.13` and provider updated as `registry.terraform.io/ibm-cloud/ibm`. 
 8.	Push the upgraded version of the Terraform configuration files both `terraform.tfstate` and `version.tf` to your Git repository.
 9.	Create a {{site.data.keyword.bpshort}} workspace by using the updated Git repository.
 10. Generate a [`plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and [`apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) the plan to view your workspace with the resources are now using the Terraform v0.13.
 11. [Optionally] you can delete the {{site.data.keyword.bpshort}} workspace that points to Terraform v0.12. **Note** do not delete or destroy the resources that are used by your workspace.
+
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-13"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -60,10 +60,10 @@ Run your infrastructure code to provision, or modify your {{site.data.keyword.cl
 6. Click **View log** to review the log files of your execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your Terraform configuration files, you can review the error message in the log file. 
 7. Review available service plans and pricing information for each of the {{site.data.keyword.cloud_notm}} resources that {{site.data.keyword.bpshort}} is about to create or change. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first. 
 8. When you are ready, apply your Terraform template by clicking **Apply plan**. This action equals the `terraform apply` command. After you click the button, {{site.data.keyword.bplong_notm}} starts provisioning, modifying, or deleting your {{site.data.keyword.cloud_notm}} resources based on what actions were identified in the execution plan. Depending on the type and number of resources that you want to provision or modify, this process might take couple of minutes, or even up to hours to complete. During this time, you cannot make changes to your workspace. After all updates are applied, the state of your {{site.data.keyword.cloud_notm}} resources is stored in a Terraform state file that {{site.data.keyword.bplong_notm}} uses to determine what resources exist in your {{site.data.keyword.cloud_notm}} account. 
-   
-   If you want to stop applying your Terraform template, you can use the **Stop** button. Note that all resources that are already created are not removed. If a resource is currently provisioning, {{site.data.keyword.bpshort}} waits for the provisioning to complete, and then stops the creation, update, or deletion of any other resources in your Terraform template. 
-   {: note}
-   
+
+    If you want to stop applying your Terraform template, you can use the **Stop** button. Note that all resources that are already created are not removed. If a resource is currently provisioning, {{site.data.keyword.bpshort}} waits for the provisioning to complete, and then stops the creation, update, or deletion of any other resources in your Terraform template. 
+    {: note}
+
 9. Review the log file to ensure that no errors occurred during the provisioning, modification, or deletion process. 
 10. From the navigation, select **Resources** to find a summary of {{site.data.keyword.cloud_notm}} resources that are available in your {{site.data.keyword.cloud_notm}} account.
 
@@ -92,9 +92,9 @@ To update your resources:
 6. Click **View log** to review the log files of your execution plan. This log file provides a summary of all the resources that {{site.data.keyword.bplong_notm}} is about to modify. {{site.data.keyword.bplong_notm}} might not be able to modify some of your resources, and suggest removing and re-creating the resource.
 7. Click **Apply plan** to apply the new Terraform template version. Depending on the changes that you made, it might take couple of minutes or up to a few hours for the template to be applied. Note that during this time, you cannot make changes to your workspace.
 
-   If you want to stop applying your Terraform template, you can use the **Stop** button. Note that updates to resources that were already performed are not reverted. If a resource is currently updating, {{site.data.keyword.bpshort}} waits for the update to complete, and then stops the creation, update, or deletion of any other resources in your Terraform template. 
-   {: note}
-   
+    If you want to stop applying your Terraform template, you can use the **Stop** button. Note that updates to resources that were already performed are not reverted. If a resource is currently updating, {{site.data.keyword.bpshort}} waits for the update to complete, and then stops the creation, update, or deletion of any other resources in your Terraform template. 
+    {: note}
+
 8. Review the log files to ensure that no errors occurred during the modification process. 
 9. From the navigation, select **Resources** and verify that your resources show the updated configuration. 
 
@@ -128,80 +128,80 @@ A Terraform execution plan is based on the Terraform statefile that was created 
 5. Click **Generate plan** to create a Terraform execution plan. Note that during this time, you cannot make changes to your workspace. During the creation of the Terraform execution plan, Terraform compares the required state that you described in your Terraform configuration files with the actual state of your cloud resources. If changes are found, Terraform analyzes what actions need to be performed to get your actual cloud resources to the required state. 
 6. Click **View log** to review the log files of your execution plan. The log file provides a summary of all the resources that {{site.data.keyword.bplong_notm}} identified to achieve the state that you want. These actions can include adding, modifying, or removing resources. 
 
-   Example Terraform execution plan output: 
-   ```
-   2020/01/10 21:27:42 -----  Terraform PLAN  -----
-   ...
-   2020/01/10 21:27:49 Terraform plan | 
-   2020/01/10 21:27:49 Terraform plan | ------------------------------------------------------------------------
-   2020/01/10 21:27:50 Terraform plan | 
-   2020/01/10 21:27:50 Terraform plan | An execution plan has been generated and is shown below.
-   2020/01/10 21:27:50 Terraform plan | Resource actions are indicated with the following symbols:
-   2020/01/10 21:27:50 Terraform plan |   + create
-   2020/01/10 21:27:50 Terraform plan | -/+ destroy and then create replacement
-   2020/01/10 21:27:50 Terraform plan | 
-   2020/01/10 21:27:50 Terraform plan | Terraform will perform the following actions:
-   2020/01/10 21:27:50 Terraform plan | 
-   2020/01/10 21:27:50 Terraform plan | + ibm_database.test_acc
-   2020/01/10 21:27:50 Terraform plan |       id:                               <computed>
-   2020/01/10 21:27:50 Terraform plan |       adminpassword:                    <sensitive>
-   2020/01/10 21:27:50 Terraform plan |       adminuser:                        <computed>
-   2020/01/10 21:27:50 Terraform plan |       connectionstrings.#:              <computed>
-   2020/01/10 21:27:50 Terraform plan |       groups.#:                         <computed>
-   2020/01/10 21:27:50 Terraform plan |       location:                         "us-south"
-   2020/01/10 21:27:50 Terraform plan |       members_cpu_allocation_count:     <computed>
-   2020/01/10 21:27:50 Terraform plan |       members_disk_allocation_mb:       "20480"
-   2020/01/10 21:27:50 Terraform plan |       members_memory_allocation_mb:     "3072"
-   2020/01/10 21:27:50 Terraform plan |       name:                             "demo-postgres"
-   2020/01/10 21:27:50 Terraform plan |       plan:                             "standard"
-   2020/01/10 21:27:50 Terraform plan |       resource_controller_url:          <computed>
-   2020/01/10 21:27:50 Terraform plan |       resource_crn:                     <computed>
-   2020/01/10 21:27:50 Terraform plan |       resource_group_id:                "1e9b3e987aff4e32a541fe36b289347d"
-   2020/01/10 21:27:50 Terraform plan |       resource_group_name:              <computed>
-   2020/01/10 21:27:50 Terraform plan |       resource_name:                    <computed>
-   2020/01/10 21:27:50 Terraform plan |       resource_status:                  <computed>
-   2020/01/10 21:27:50 Terraform plan |       service:                          "databases-for-postgresql"
-   2020/01/10 21:27:50 Terraform plan |       service_endpoints:                "public"
-   2020/01/10 21:27:50 Terraform plan |       status:                           <computed>
-   2020/01/10 21:27:50 Terraform plan |       tags.#:                           "2"
-   2020/01/10 21:27:50 Terraform plan |       tags.1852302624:                  "tag2"
-   2020/01/10 21:27:50 Terraform plan |       tags.4151227546:                  "tag1"
-   2020/01/10 21:27:50 Terraform plan |       users.#:                          "1"
-   2020/01/10 21:27:50 Terraform plan |       users.3114612762.name:            "user123"
-   2020/01/10 21:27:50 Terraform plan |       users.3114612762.password:        <sensitive>
-   2020/01/10 21:27:50 Terraform plan |       version:                          <computed>
-   2020/01/10 21:27:50 Terraform plan |       whitelist.#:                      "2"
-   2020/01/10 21:27:50 Terraform plan |       whitelist.1413716549.address:     "172.16.2.0/24"
-   2020/01/10 21:27:50 Terraform plan |       whitelist.1413716549.description: "subnet2"
-   2020/01/10 21:27:50 Terraform plan |       whitelist.3438994501.address:     "172.16.1.0/24"
-   2020/01/10 21:27:50 Terraform plan |       whitelist.3438994501.description: "subnet1"
-   2020/01/10 21:27:50 Terraform plan | 
-   2020/01/10 21:27:50 Terraform plan | -/+ ibm_is_lb_pool_member.lb1-pool-member1 (new resource required)
-   2020/01/10 21:27:50 Terraform plan |       id:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c/r006-4b9b871a-b835-4cdc-9a87-e9423a6d7a12" => <computed> (forces new resource)
-   2020/01/10 21:27:50 Terraform plan |       health:                           "ok" => <computed>
-   2020/01/10 21:27:50 Terraform plan |       href:                             "https://us-south.iaas.cloud.ibm.com/v1/load_balancers/r006-11cb7734-e05c-405b-9e35-20e05bc2766f/pools/r006-d917d290-071a-4da1-a995-91262ea89f2c/members/r006-4b9b871a-b835-4cdc-9a87-e9423a6d7a12" => <computed>
-   2020/01/10 21:27:50 Terraform plan |       lb:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f"
-   2020/01/10 21:27:50 Terraform plan |       pool:                             "r006-d917d290-071a-4da1-a995-91262ea89f2c" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c" (forces new resource)
-   2020/01/10 21:27:50 Terraform plan |       port:                             "80" => "80"
-   2020/01/10 21:27:50 Terraform plan |       provisioning_status:              "active" => <computed>
-   2020/01/10 21:27:50 Terraform plan |       target_address:                   "172.16.1.4" => "172.16.1.4"
-   2020/01/10 21:27:50 Terraform plan |       weight:                           "50" => <computed>
-   2020/01/10 21:27:50 Terraform plan | 
-   2020/01/10 21:27:50 Terraform plan | -/+ ibm_is_lb_pool_member.lb1-pool-member2 (new resource required)
-   2020/01/10 21:27:50 Terraform plan |       id:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c/r006-5418feb7-2169-47c3-8c71-66a86fec6d9a" => <computed> (forces new resource)
-   2020/01/10 21:27:50 Terraform plan |       health:                           "ok" => <computed>
-   2020/01/10 21:27:50 Terraform plan |       href:                             "https://us-south.iaas.cloud.ibm.com/v1/load_balancers/r006-11cb7734-e05c-405b-9e35-20e05bc2766f/pools/r006-d917d290-071a-4da1-a995-91262ea89f2c/members/r006-5418feb7-2169-47c3-8c71-66a86fec6d9a" => <computed>
-   2020/01/10 21:27:50 Terraform plan |       lb:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f"
-   2020/01/10 21:27:50 Terraform plan |       pool:                             "r006-d917d290-071a-4da1-a995-91262ea89f2c" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c" (forces new resource)
-   2020/01/10 21:27:50 Terraform plan |       port:                             "80" => "80"
-   2020/01/10 21:27:50 Terraform plan |       provisioning_status:              "active" => <computed>
-   2020/01/10 21:27:50 Terraform plan |       target_address:                   "172.16.2.4" => "172.16.2.4"
-   2020/01/10 21:27:50 Terraform plan |       weight:                           "50" => <computed>
-   2020/01/10 21:27:50 Terraform plan | Plan: 3 to add, 0 to change, 2 to destroy.
-   2020/01/10 21:27:50 Command finished successfully.
-   ```
-   {: screen}
-   
+    Example Terraform execution plan output: 
+    ```
+    2020/01/10 21:27:42 -----  Terraform PLAN  -----
+    ...
+    2020/01/10 21:27:49 Terraform plan | 
+    2020/01/10 21:27:49 Terraform plan | ------------------------------------------------------------------------
+    2020/01/10 21:27:50 Terraform plan | 
+    2020/01/10 21:27:50 Terraform plan | An execution plan has been generated and is shown below.
+    2020/01/10 21:27:50 Terraform plan | Resource actions are indicated with the following symbols:
+    2020/01/10 21:27:50 Terraform plan |   + create
+    2020/01/10 21:27:50 Terraform plan | -/+ destroy and then create replacement
+    2020/01/10 21:27:50 Terraform plan | 
+    2020/01/10 21:27:50 Terraform plan | Terraform will perform the following actions:
+    2020/01/10 21:27:50 Terraform plan | 
+    2020/01/10 21:27:50 Terraform plan | + ibm_database.test_acc
+    2020/01/10 21:27:50 Terraform plan |       id:                               <computed>
+    2020/01/10 21:27:50 Terraform plan |       adminpassword:                    <sensitive>
+    2020/01/10 21:27:50 Terraform plan |       adminuser:                        <computed>
+    2020/01/10 21:27:50 Terraform plan |       connectionstrings.#:              <computed>
+    2020/01/10 21:27:50 Terraform plan |       groups.#:                         <computed>
+    2020/01/10 21:27:50 Terraform plan |       location:                         "us-south"
+    2020/01/10 21:27:50 Terraform plan |       members_cpu_allocation_count:     <computed>
+    2020/01/10 21:27:50 Terraform plan |       members_disk_allocation_mb:       "20480"
+    2020/01/10 21:27:50 Terraform plan |       members_memory_allocation_mb:     "3072"
+    2020/01/10 21:27:50 Terraform plan |       name:                             "demo-postgres"
+    2020/01/10 21:27:50 Terraform plan |       plan:                             "standard"
+    2020/01/10 21:27:50 Terraform plan |       resource_controller_url:          <computed>
+    2020/01/10 21:27:50 Terraform plan |       resource_crn:                     <computed>
+    2020/01/10 21:27:50 Terraform plan |       resource_group_id:                "1e9b3e987aff4e32a541fe36b289347d"
+    2020/01/10 21:27:50 Terraform plan |       resource_group_name:              <computed>
+    2020/01/10 21:27:50 Terraform plan |       resource_name:                    <computed>
+    2020/01/10 21:27:50 Terraform plan |       resource_status:                  <computed>
+    2020/01/10 21:27:50 Terraform plan |       service:                          "databases-for-postgresql"
+    2020/01/10 21:27:50 Terraform plan |       service_endpoints:                "public"
+    2020/01/10 21:27:50 Terraform plan |       status:                           <computed>
+    2020/01/10 21:27:50 Terraform plan |       tags.#:                           "2"
+    2020/01/10 21:27:50 Terraform plan |       tags.1852302624:                  "tag2"
+    2020/01/10 21:27:50 Terraform plan |       tags.4151227546:                  "tag1"
+    2020/01/10 21:27:50 Terraform plan |       users.#:                          "1"
+    2020/01/10 21:27:50 Terraform plan |       users.3114612762.name:            "user123"
+    2020/01/10 21:27:50 Terraform plan |       users.3114612762.password:        <sensitive>
+    2020/01/10 21:27:50 Terraform plan |       version:                          <computed>
+    2020/01/10 21:27:50 Terraform plan |       whitelist.#:                      "2"
+    2020/01/10 21:27:50 Terraform plan |       whitelist.1413716549.address:     "172.16.2.0/24"
+    2020/01/10 21:27:50 Terraform plan |       whitelist.1413716549.description: "subnet2"
+    2020/01/10 21:27:50 Terraform plan |       whitelist.3438994501.address:     "172.16.1.0/24"
+    2020/01/10 21:27:50 Terraform plan |       whitelist.3438994501.description: "subnet1"
+    2020/01/10 21:27:50 Terraform plan | 
+    2020/01/10 21:27:50 Terraform plan | -/+ ibm_is_lb_pool_member.lb1-pool-member1 (new resource required)
+    2020/01/10 21:27:50 Terraform plan |       id:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c/r006-4b9b871a-b835-4cdc-9a87-e9423a6d7a12" => <computed> (forces new resource)
+    2020/01/10 21:27:50 Terraform plan |       health:                           "ok" => <computed>
+    2020/01/10 21:27:50 Terraform plan |       href:                             "https://us-south.iaas.cloud.ibm.com/v1/load_balancers/r006-11cb7734-e05c-405b-9e35-20e05bc2766f/pools/r006-d917d290-071a-4da1-a995-91262ea89f2c/members/r006-4b9b871a-b835-4cdc-9a87-e9423a6d7a12" => <computed>
+    2020/01/10 21:27:50 Terraform plan |       lb:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f"
+    2020/01/10 21:27:50 Terraform plan |       pool:                             "r006-d917d290-071a-4da1-a995-91262ea89f2c" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c" (forces new resource)
+    2020/01/10 21:27:50 Terraform plan |       port:                             "80" => "80"
+    2020/01/10 21:27:50 Terraform plan |       provisioning_status:              "active" => <computed>
+    2020/01/10 21:27:50 Terraform plan |       target_address:                   "172.16.1.4" => "172.16.1.4"
+    2020/01/10 21:27:50 Terraform plan |       weight:                           "50" => <computed>
+    2020/01/10 21:27:50 Terraform plan | 
+    2020/01/10 21:27:50 Terraform plan | -/+ ibm_is_lb_pool_member.lb1-pool-member2 (new resource required)
+    2020/01/10 21:27:50 Terraform plan |       id:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c/r006-5418feb7-2169-47c3-8c71-66a86fec6d9a" => <computed> (forces new resource)
+    2020/01/10 21:27:50 Terraform plan |       health:                           "ok" => <computed>
+    2020/01/10 21:27:50 Terraform plan |       href:                             "https://us-south.iaas.cloud.ibm.com/v1/load_balancers/r006-11cb7734-e05c-405b-9e35-20e05bc2766f/pools/r006-d917d290-071a-4da1-a995-91262ea89f2c/members/r006-5418feb7-2169-47c3-8c71-66a86fec6d9a" => <computed>
+    2020/01/10 21:27:50 Terraform plan |       lb:                               "r006-11cb7734-e05c-405b-9e35-20e05bc2766f" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f"
+    2020/01/10 21:27:50 Terraform plan |       pool:                             "r006-d917d290-071a-4da1-a995-91262ea89f2c" => "r006-11cb7734-e05c-405b-9e35-20e05bc2766f/r006-d917d290-071a-4da1-a995-91262ea89f2c" (forces new resource)
+    2020/01/10 21:27:50 Terraform plan |       port:                             "80" => "80"
+    2020/01/10 21:27:50 Terraform plan |       provisioning_status:              "active" => <computed>
+    2020/01/10 21:27:50 Terraform plan |       target_address:                   "172.16.2.4" => "172.16.2.4"
+    2020/01/10 21:27:50 Terraform plan |       weight:                           "50" => <computed>
+    2020/01/10 21:27:50 Terraform plan | Plan: 3 to add, 0 to change, 2 to destroy.
+    2020/01/10 21:27:50 Command finished successfully.
+    ```
+    {: screen}
+
 7. Optional: Apply the changes in your cloud environment by clicking **Apply plan**. 
 
 
@@ -217,7 +217,7 @@ View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{
 4. From the navigation, select **Resources** to review the state of the {{site.data.keyword.cloud_notm}} resources that you created with this workspace. 
 5. To review who made a change to your Terraform template, go to the source repository in GitHub that is linked to your workspace, and use the built-in capabilities such as the commit history and pull requests to review changes.
 6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.at_full_notm}}, see [{{site.data.keyword.at_full_notm}} events](/docs/schematics?topic=schematics-at_events). 
-  
+
 ## Removing your resources
 {: #destroy-resources}
 
@@ -244,24 +244,24 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 1. Open the Terraform configuration file in your source repository in GitHub or on your local machine. 
 2. Either remove the infrastructure code from the file, or comment out the resources that you want to remove by adding `#` to the beginning of each line. 
 
-   Example for commenting out a resource: 
-   ```
-   ...
-   #resource ibm_is_instance "vsi1" {
-   #  name    = "${local.BASENAME}-vsi2"
-   #  vpc     = ibm_is_vpc.vpc.id
-   #  zone    = "${local.ZONE}"
-   #  keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
-   #  image   = data.ibm_is_image.ubuntu.id
-   #  profile = "cc1-2x4"
+    Example for commenting out a resource: 
+    ```
+    ...
+    #resource ibm_is_instance "vsi1" {
+    #  name    = "${local.BASENAME}-vsi2"
+    #  vpc     = ibm_is_vpc.vpc.id
+    #  zone    = "${local.ZONE}"
+    #  keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
+    #  image   = data.ibm_is_image.ubuntu.id
+    #  profile = "cc1-2x4"
 
-   #  primary_network_interface {
-   #    subnet          = ibm_is_subnet.subnet1.id
-   #    security_groups = [ibm_is_security_group.sg1.id]
-   #  }
-   #}
-   ```
-   {: codeblock}
+    #  primary_network_interface {
+    #    subnet          = ibm_is_subnet.subnet1.id
+    #    security_groups = [ibm_is_security_group.sg1.id]
+    #  }
+    #}
+    ```
+    {: codeblock}
 
 3. Commit the change to your Terraform configuration file. 
 4. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform template that you just changed. 
@@ -270,10 +270,10 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 7. Click **Generate plan** to create a Terraform execution plan. The workspace **Activity** page opens. Note that during this time, you cannot make changes to your workspace.
 8. Click **View log** to review the log files of your execution plan. The log files provide a summary of all the resources that {{site.data.keyword.bplong_notm}} is about to remove. 
 9. Click **Apply plan** to remove the {{site.data.keyword.cloud_notm}} resources from your account. 
-   
-   If you want to stop applying your Terraform template, you can use the **Stop** button. Note that all resources that are already removed are not re-created. If a resource is currently deleting, {{site.data.keyword.bpshort}} waits for the deletion to complete, and then stops the creation, update, or deletion of any other resources in your Terraform template. 
-   {: note}
-   
+
+    If you want to stop applying your Terraform template, you can use the **Stop** button. Note that all resources that are already removed are not re-created. If a resource is currently deleting, {{site.data.keyword.bpshort}} waits for the deletion to complete, and then stops the creation, update, or deletion of any other resources in your Terraform template. 
+    {: note}
+
 10. Review the log files to ensure that no errors occurred during the deletion process. 
 11. From the navigation, select **Resources** and verify that your resources are removed. 
 12. Optional: After you removed all your resources, remove your workspace. 
@@ -293,3 +293,5 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 6. From the navigation, select **Resources** and verify that your resources are removed. 
 
 After the deletion of your resources is complete, the {{site.data.keyword.bplong_notm}} workspace is removed. 
+
+

@@ -58,53 +58,53 @@ You can provide an API key for a service ID for all IAM-enabled services, includ
 To configure the `provider` block: 
 
 1. Choose how you want to configure the `provider` block. 
-   - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory or tape archive file `.tar`. This approach is useful if you split out your infrastructure code across multiple files. 
-   - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
+    - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory or tape archive file `.tar`. This approach is useful if you split out your infrastructure code across multiple files. 
+    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
 2. Review what [credentials and information you must provide in the `provider` block to work with your resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
-   
+
 3. Create a `provider.tf` file or add the following code to your Terraform configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov).
 
-   Example for VPC infrastructure resources: 
-   ```
-   provider "ibm" {
-     generation = 1
-     region = "<region_name>"
-   }
-   ```
-   {: codeblock}
-   
-   Example for classic infrastructure resources: 
-   ```
-   variable "iaas_classic_username" {
-      type = "string"
-   }
-   variable "iaas_classic_api_key" {
-      type = "string"
-   }
+    Example for VPC infrastructure resources: 
+    ```
+    provider "ibm" {
+        generation = 1
+        region = "<region_name>"
+    }
+    ```
+    {: codeblock}
 
-   provider "ibm" {
-     region = "<region_name>"
-     iaas_classic_username = var.iaas_classic_username
-     iaas_classic_api_key  = var.iaas_classic_api_key
-   }
-   ```
-   {: codeblock}
-   
-   Example for all {{site.data.keyword.containerlong_notm}} resources:
-   ```
-   provider "ibm" {
-   }
-   ```
-   {: codeblock}
-   
-   Example for all other resources:
-   ```
-   provider "ibm" {
-     region = "<region_name>"
-   }
-   ```
-   {: codeblock}
+    Example for classic infrastructure resources: 
+    ```
+    variable "iaas_classic_username" {
+        type = "string"
+    }
+    variable "iaas_classic_api_key" {
+        type = "string"
+    }
+
+    provider "ibm" {
+        region = "<region_name>"
+        iaas_classic_username = var.iaas_classic_username
+        iaas_classic_api_key  = var.iaas_classic_api_key
+    }
+    ```
+    {: codeblock}
+
+    Example for all {{site.data.keyword.containerlong_notm}} resources:
+    ```
+    provider "ibm" {
+    }
+    ```
+    {: codeblock}
+
+    Example for all other resources:
+    ```
+    provider "ibm" {
+        region = "<region_name>"
+    }
+    ```
+    {: codeblock}
 
 ## Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block
 {: #configure-resources}
@@ -117,7 +117,7 @@ To support a multi-cloud approach, Terraform works with multiple cloud providers
 Example infrastructure code for provisioning a VPC: 
 ```
 resource ibm_is_vpc "vpc" {
-  name = "myvpc"
+    name = "myvpc"
 }
 ```
 {: codeblock}
@@ -134,29 +134,29 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
 - **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file.  </br>
 
-  Example infrastructure code: 
-  ```
-  resource ibm_is_vpc "vpc" {
-    name = "myvpc"
-  }
+    Example infrastructure code: 
+    ```
+    resource ibm_is_vpc "vpc" {
+        name = "myvpc"
+    }
 
-  resource ibm_is_security_group "sg1" {
-    name = "mysecuritygroup"
+    resource ibm_is_security_group "sg1" {
+        name = "mysecuritygroup"
     vpc  = ibm_is_vpc.vpc.id
-  }
-  ```
-  {: codeblock}
+    }
+    ```
+    {: codeblock}
 
 - **Data sources**: You can also use the data sources from the {{site.data.keyword.cloud_notm}} Provider plug-in reference to retrieve information about an existing {{site.data.keyword.cloud_notm}} resource. Review the **Argument reference** section in the {{site.data.keyword.cloud_notm}} Provider plug-in reference to see what input parameters you must provide to retrieve an existing resource. Then, review the **Attributes reference** section to find an overview of parameters that are made available to you and that you can reference in your `resource` blocks. Use this option if you want to access the details of a resource that is configured in another Terraform configuration file. 
-  
-  Example infrastructure code: 
-  ```
-  data ibm_is_image "ubuntu" {
-    name = "ubuntu-18.04-amd64"
-  }
-  
-  resource ibm_is_instance "vsi1" {
-    name    = "$mysi"
+
+    Example infrastructure code: 
+    ```
+    data ibm_is_image "ubuntu" {
+        name = "ubuntu-18.04-amd64"
+    }
+
+    resource ibm_is_instance "vsi1" {
+        name    = "$mysi"
     vpc     = ibm_is_vpc.vpc.id
     zone    = "us-south1"
     keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
@@ -164,12 +164,12 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
     profile = "cc1-2x4"
 
     primary_network_interface {
-      subnet          = ibm_is_subnet.subnet1.id
-      security_groups = [ibm_is_security_group.sg1.id]
+        subnet          = ibm_is_subnet.subnet1.id
+        security_groups = [ibm_is_security_group.sg1.id]
     }
-  }
-  ```
-  {: codeblock}
+    }
+    ```
+    {: codeblock}
 
 ## Using `variable` blocks to customize resources
 {: #configure-variables}
@@ -190,8 +190,8 @@ Yes. If you define input variables in your Terraform configuration file, keep in
 Example variable declaration without a default value: 
 ```
 variable "datacenter" {
-  type        = "string"
-  description = "The data center that you want to deploy your Kubernetes cluster in."
+    type        = "string"
+    description = "The data center that you want to deploy your Kubernetes cluster in."
 }
 ```
 {: codeblock}
@@ -199,9 +199,9 @@ variable "datacenter" {
 Example variable declaration with a default value: 
 ```
 variable "datacenter" {
-  type        = "string"
-  description = "The data center that you want to deploy your Kubernetes cluster in."
-  default = "dal10"
+    type        = "string"
+    description = "The data center that you want to deploy your Kubernetes cluster in."
+    default = "dal10"
 }
 ```
 {: codeblock}
@@ -216,8 +216,8 @@ Example for referencing a `datacenter` variable:
 
 ```
 resource ibm_container_cluster "test_cluster" {
-  name         = "test"
-  datacenter   = var.datacenter
+    name         = "test"
+    datacenter   = var.datacenter
 }
 ```
 {: codeblock}
@@ -231,7 +231,7 @@ After creating the workspace, you can provide the values, for {{site.data.keywor
 - For `CLI`, you can refer to create or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
 - For `API` you can see [create or update the values](/apidocs/schematics#createworkspace) in the field `template_data` &gt;  `variablestore`. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string for any type of the variable. 
 
-  **Example**
+    **Example**
 
     ```
     "variablestore": [
@@ -247,62 +247,62 @@ After creating the workspace, you can provide the values, for {{site.data.keywor
                     "value": "{\n        \"label-name1\": \"label-value1\",\n        \"label-name2\": \"label-value2\"\n}"
                 },
                 {
-                     "name": "docker_ports",
+                    "name": "docker_ports",
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": ""
                 }
-      ]
-     ```
+        ]
+    ```
     {: codeblock}
 
 
-  
+
 **Can I see how to declare complex variables in a file?**
 
 Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be declared in the variable store.
 
- <table>
-   <thead>
+    <table>
+    <thead>
     <th style="width:80px">Type</th>
     <th style="width:100px">Example</th>
-  </thead>
-  <tbody>
-   <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
-    </tr>
-   <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
+    </thead>
+    <tbody>
+    <tr>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
     </tr>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
     </tr>
-     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+    <tr>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
+    </tr>
+        <tr>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300
@@ -316,12 +316,12 @@ Yes, when you declare and assign the value to the variables, you can view the to
 ]</code></pre></p></ul></td>
     </tr>
     <tr>
-  <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>list(object({
-    internal = number
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>list(object({
+        internal = number
     external = number
     protocol = string
 }))</code></pre></p></li></ul></td>
-      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+        <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300
@@ -334,9 +334,9 @@ Yes, when you declare and assign the value to the variables, you can view the to
     }
 ]</code></pre></p></li></ul></td>
     </tr>
-  </tbody>
-  </table>
-  
+    </tbody>
+    </table>
+
 ## Storing your Terraform templates
 {: #store-template}
 
@@ -352,4 +352,6 @@ The directory structure of the Terraform template in the GitHub repository is li
 | output.tf | Create output.tf |
 | provider.tf | Create provider.tf |
 | variables.tf | Create variables.tf |
+
+
 

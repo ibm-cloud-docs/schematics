@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-29"
+lastupdated: "2021-08-13"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -19,15 +19,19 @@ subcollection: schematics
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -40,20 +44,26 @@ subcollection: schematics
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -71,8 +81,10 @@ subcollection: schematics
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -80,6 +92,7 @@ subcollection: schematics
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -92,8 +105,8 @@ subcollection: schematics
 {:vbnet: .ph data-hd-programlang='vb.net'}
 {:video: .video}
 
-  
-  
+
+
 # Specifying version constraints in {{site.data.keyword.bpshort}}
 {: #version-constraints}
 
@@ -131,7 +144,7 @@ ibmcloud schematics version
 **Example output**
 
 ``` 
-                                    
+
 Template Type   Version   
 Terraform       terraform_v0.12   
 Additional terraform Providers   Version   
@@ -140,7 +153,7 @@ Provider for REST API            v1.10.0
 Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
 IBM Cloud Provider               v1.27.1   
-                                    
+
 Template Type   Version   
 Terraform       terraform_v0.13   
 Additional terraform Providers   Version   
@@ -149,7 +162,7 @@ Ansible                          v2.9.23
 Ansible Provisioner              v2.3.3   
 IBM Cloud Provider               v1.27.1   
 Open shift client                v3.11.0   
-                                    
+
 Template Type   Version   
 Terraform       terraform_v0.14   
 Additional terraform Providers   Version   
@@ -158,7 +171,7 @@ Ansible Provisioner              v2.3.3
 IBM Cloud Provider               v1.27.1   
 Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
-                                    
+
 Template Type   Version   
 Terraform       terraform_v0.15   
 Additional terraform Providers   Version   
@@ -188,8 +201,8 @@ You can only specify versions that are higher than the default `MAJOR.MINOR.PATH
 
 ```
 terraform {
-  required_providers {
-      version = ">= 0.13.4"
+    required_providers {
+        version = ">= 0.13.4"
     }
 }
 ```
@@ -209,12 +222,12 @@ The following example shows how to use the {{site.data.keyword.bpshort}} image t
 
 ```
 terraform {
-  required_providers {
-    ibm = {
-      source = "IBM-Cloud/ibm"
-      version = "v1.23.1"
+    required_providers {
+        ibm = {
+        source = "IBM-Cloud/ibm"
+        version = "v1.23.1"
     }
-  }
+    }
 ```
 {: codeblock}
 
@@ -224,16 +237,16 @@ To use a different {{site.data.keyword.cloud_notm}} Provider plug-in version, or
 
 ```
 terraform {
-  required_providers {
-    ibm = {
-      source = "IBM-Cloud/ibm"
-      version = "~> 1.12.0"
+    required_providers {
+        ibm = {
+        source = "IBM-Cloud/ibm"
+        version = "~> 1.12.0"
     }
     aws = {
-      version = ">= 2.7.0"
-      source = "hashicorp/aws"
+        version = ">= 2.7.0"
+        source = "hashicorp/aws"
     }
-  }
+    }
 ```
 {: codeblock}
 
@@ -250,4 +263,6 @@ roles:
     version: 1.1.50
 ```
 {: codeblock}
+
+
 
