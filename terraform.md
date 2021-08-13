@@ -38,75 +38,75 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
 2. Create a Terraform configuration file named `main.tf` and `terraform.tfvars` in the same folder as `versions.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL).
 
-   You can use Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API.
-   Then creates the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.12.20`. 
+    You can use Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API.
+    Then creates the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.12.20`. 
 
-   **version.tf**
+    **version.tf**
 
-   The sample `versions.tf` file to specify the provider version that you need to create the workspace.
+    The sample `versions.tf` file to specify the provider version that you need to create the workspace.
 
-   ```
-      terraform {
-      required_providers {
-         ibm = {
+    ```
+        terraform {
+        required_providers {
+            ibm = {
             source = "IBM-Cloud/ibm"
             version = "1.27.1"
             }
-      }
-   }
-   ```
-   {: codeblock}
+        }
+    }
+    ```
+    {: codeblock}
 
-   **`terraform.tfvars`**
+    **`terraform.tfvars`**
 
-   The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
+    The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
 
-   ```
-   schematics_workspace_name="tf-testwks-apigwy"
-   schematics_workspace_description="Sample workspace created with terraform with URL"
-   schematics_workspace_type="terraform_v0.12.20"
-   schematics_workspace_location="us-south"
-   schematics_workspace_resource_group="default"
-   ibmcloud_api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ```
+    schematics_workspace_name="tf-testwks-apigwy"
+    schematics_workspace_description="Sample workspace created with terraform with URL"
+    schematics_workspace_type="terraform_v0.12.20"
+    schematics_workspace_location="us-south"
+    schematics_workspace_resource_group="default"
+    ibmcloud_api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
 
-   **main.tf**
+    **main.tf**
 
-   The sample `main.tf` file to invoke the variables from `terraform.tfvars`, by using the Git URL and your {{site.data.keyword.cloud_notm}} API key to create the 
+    The sample `main.tf` file to invoke the variables from `terraform.tfvars`, by using the Git URL and your {{site.data.keyword.cloud_notm}} API key to create the 
 
-   ```terraform
-   variable "schematics_workspace_name" {}
-   variable "schematics_workspace_description" {}
-   variable "schematics_workspace_type" {}
-   variable "schematics_workspace_location" {}
-   variable "schematics_workspace_resource_group" {}
-   variable "ibmcloud_api_key" {}
+    ```terraform
+    variable "schematics_workspace_name" {}
+    variable "schematics_workspace_description" {}
+    variable "schematics_workspace_type" {}
+    variable "schematics_workspace_location" {}
+    variable "schematics_workspace_resource_group" {}
+    variable "ibmcloud_api_key" {}
 
-   resource "ibm_schematics_workspace" "schematics_workspace_instance" {
-   name = var.schematics_workspace_name
-   description = var.schematics_workspace_description
-   location = var.schematics_workspace_location
-   resource_group = var.schematics_workspace_resource_group
-   tags = ["sample"]
-   template_env_settings = [
-      { env1 = "val1" },
-      { env2 = "val2" }
-   ]
-   template_type= var.schematics_workspace_type
-   template_git_url = "https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway"
-   }
+    resource "ibm_schematics_workspace" "schematics_workspace_instance" {
+    name = var.schematics_workspace_name
+    description = var.schematics_workspace_description
+    location = var.schematics_workspace_location
+    resource_group = var.schematics_workspace_resource_group
+    tags = ["sample"]
+    template_env_settings = [
+        { env1 = "val1" },
+        { env2 = "val2" }
+    ]
+    template_type= var.schematics_workspace_type
+    template_git_url = "https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway"
+    }
 
-   provider "ibm" {
-   region           = "us-south"
-   ibmcloud_api_key = var.ibmcloud_api_key
-   }
+    provider "ibm" {
+    region           = "us-south"
+    ibmcloud_api_key = var.ibmcloud_api_key
+    }
 
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
 
-   The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information, about the detailed parameters to create workspace, see [ibm_schematics_workspace](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external} resource.
+    The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information, about the detailed parameters to create workspace, see [ibm_schematics_workspace](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external} resource.
 
 | Parameter | Description |
 | -------- | --------- |
@@ -122,30 +122,30 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
 3. Initialize the Terraform CLI. 
 
-   ```
-   terraform init
-   ```
-   {: pre}
+    ```
+    terraform init
+    ```
+    {: pre}
 
-   If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the error by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
-   {: note}
+    If the environment variable path for Terraform is not set, you can see `command not found: terraform` error. Fix the error by setting the path to your [Terraform installed directory](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
+    {: note}
 
 4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.bpshort}} workspace in your account.
 
-   ```
-   terraform plan
-   ```
-   {: pre}
+    ```
+    terraform plan
+    ```
+    {: pre}
 
 5. Create the {{site.data.keyword.bpshort}} workspace instance and IAM access policy in {{site.data.keyword.cloud_notm}}.
 
-   ```
-   terraform apply
-   ```
-   {: pre}
+    ```
+    terraform apply
+    ```
+    {: pre}
 
-  For more information, about troubleshooting the `terraform apply` command errors, see [find the root cause of why Schematics apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
-  {: note}
+    For more information, about troubleshooting the `terraform apply` command errors, see [find the root cause of why Schematics apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
+    {: note}
 
 6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `tf-testwks-apigwy` workspace is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
 
@@ -156,6 +156,8 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
 Now that you successfully created your first {{site.data.keyword.bpshort}} workspace with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks: 
 
-  - Learn how to create an [{{site.data.keyword.bplong_notm}} job](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_job){: external} resource to run your Terraform template in IBM Cloud.
-  - To run Ansible playbooks in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
-  - Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or check-out other arguments and attributes that you can use for the Terraform resources that were used in this example.
+    - Learn how to create an [{{site.data.keyword.bplong_notm}} job](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_job){: external} resource to run your Terraform template in IBM Cloud.
+    - To run Ansible playbooks in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
+    - Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or check-out other arguments and attributes that you can use for the Terraform resources that were used in this example.
+
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-08"
+lastupdated: "2021-08-13"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -43,8 +43,8 @@ You can use these steps to change the IAM allowlist for the user whose credentia
 4. From the User details page, go to the IP address restrictions section.
 5. For Classic infrastructure, enter the CIDRs of the zones in the region where your cluster is located.
 
-   You must allow all of the zones within the region that your resource is in.
-   {: note}
+    You must allow all of the zones within the region that your resource is in.
+    {: note}
 
 | Region | Zone | Public IP addresses | Private IP addresses |
 | ------------ | ------------ | ---------- | -------- |
@@ -53,5 +53,7 @@ You can use these steps to change the IAM allowlist for the user whose credentia
 | US East | wdc04 </br> wdc06 </br> wdc07 | `169.45.235.176/28` </br> `169.61.99.176/28` </br> `169.62.1.224/28` <br> `169.63.150.144/28` </br> `169.63.173.208/28` |
 | US South | dal10 </br> dal12 </br> dal13 | `169.47.104.160/28` </br> `169.60.172.144/28` </br> `169.63.254.64/28` |
 
- You can collapse down the ranges into security group rules. For example, `US-South` and `US-East` as two security group rules like `[169.44.0.0/44, 169.60.0.0/14]`. For more information, about creating security group rules, refer to [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
- {: note}
+    You can collapse down the ranges into security group rules. For example, `US-South` and `US-East` as two security group rules like `[169.44.0.0/44, 169.60.0.0/14]`. For more information, about creating security group rules, refer to [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
+    {: note}
+
+

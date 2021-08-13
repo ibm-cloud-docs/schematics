@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-13"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -293,7 +293,7 @@ To create a workspace, you must specify your workspace settings in a JSON file. 
 ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--github-token GITHUB_TOKEN][--output OUTPUT][--json]
 ```
 {: pre}
- 
+
 **Command options**
 
 | Flag | Required / Optional |Description |
@@ -317,29 +317,29 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {
-  "name": "<workspace_name>",
-  "type": [
-    "<terraform_version>"
-  ],
-  "location": "<location>",
-  "description": "<workspace_description>",
-  "tags": [],
-  "template_repo": {
-    "url": "<github_source_repo_url>"
-  },
-  "template_data": [
-    {
-      "folder": ".",
-      "type": "<terraform_version>",
-      "env_values":[
-      {
+    "name": "<workspace_name>",
+    "type": [
+        "<terraform_version>"
+    ],
+    "location": "<location>",
+    "description": "<workspace_description>",
+    "tags": [],
+    "template_repo": {
+        "url": "<github_source_repo_url>"
+    },
+    "template_data": [
+        {
+        "folder": ".",
+        "type": "<terraform_version>",
+        "env_values":[
+        {
         "VAR1":"<val1>"
-      },
-      {
+        },
+        {
         "VAR2":"<val2>"
-      }
-      ],
-      "variablestore": [
+        }
+        ],
+        "variablestore": [
         {
           "name": "<variable_name_x>",
           "value": "<variable_value_x>",
@@ -359,7 +359,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
           "value": "<variable_value_x>",
           "type": "list(string);",
           "secure": false,
-         "description":"<description>"
+            "description":"<description>"
         },
     {
           "name": "<variable_name_x>",
@@ -373,7 +373,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
           "value": "<variable_value_x>",
           "type": "tuple([string, list(string), number, bool])",
           "secure": false,
-         "description":"<description>"
+          "description":"<description>"
         },
     {
           "name": "<variable_name_x>",
@@ -382,9 +382,9 @@ You need to replace the `<...>` placeholders with the actual values. For example
           "secure": false,
           "description":"<description>"
         }
-      ]
+        ]
     }
-  ],
+    ],
 }
 ```
 {: codeblock}
@@ -393,170 +393,170 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {	
-  "name": "<workspace_name>",
-  "type": [
-    "<terraform_version>"
-  ],
-  "location": "<location>",
-  "description": "<workspace_description>",
-  "tags": [],
-  "template_repo": {
-     "url": "<github_source_repo_url>"
-   },
-  "template_data": [
-    {
-      "folder": ".",
-      "type": "<terraform_version>",
-      "env_values":[
-      {
+    "name": "<workspace_name>",
+    "type": [
+        "<terraform_version>"
+    ],
+    "location": "<location>",
+    "description": "<workspace_description>",
+    "tags": [],
+    "template_repo": {
+        "url": "<github_source_repo_url>"
+    },
+    "template_data": [
+        {
+        "folder": ".",
+        "type": "<terraform_version>",
+        "env_values":[
+        {
         "VAR1":"<val1>"
-      },
-      {
+        },
+        {
         "VAR2":"<val2>"
-      }
-      ],
-      "variablestore": [
+        }
+        ],
+        "variablestore": [
         {
           "name": "<variable_name_x>",
           "value": "<variable_value_x>",
           "type": "string",
           "secure": true,
-	        "description":"<description>"
+	      "description":"<description>"
         },
         {
           "name": "<variable_name_x>",
           "value": "<variable_value_x>",
           "type": "bool",
           "secure": false,
-	        "description":"<description>"
+	      "description":"<description>"
         },
-      	{
+        {
           "name": "<variable_name_x>",
           "value": "<variable_value_x>",
           "type": "list(string)",
           "secure": false,
-	        "description":"<description>"
+	      "description":"<description>"
         },
-	      {
-	        "name": "<variable_name_x>",
+	    {
+	      "name": "<variable_name_x>",
           "value": "<variable_value_x>",
           "type": "map(number)",
           "secure": false,
-	        "description":"<description>"
+	      "description":"<description>"
         },
-	      {
-	       "name": "<variable_name_x>",
+	    {
+	      "name": "<variable_name_x>",
           "value": "<variable_value_x>",
           "type": "tuple([string, list(string), number, bool])",
           "secure": false,
-	        "description":"<description>"
+	      "description":"<description>"
         },
-	      {
-	        "name": "<variable_name_x>",
+	    {
+	      "name": "<variable_name_x>",
           "value": "<variable_value_x>",
           "type": "any",
           "secure": false,
-	        "description":"<description>"
+	      "description":"<description>"
         }
-      ]
+        ]
     }
-  ]
+    ]
 }
 ```
 {: codeblock}
 
-   <table>
+    <table>
     <caption>JSON file component description</caption>
-   <thead>
+    <thead>
     <th style="width:50px">Parameter</th>
     <th style="width:200px">Required / Optional</th>
     <th style="width:250px">Description</th>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
+        <tr>
+    <td><code>workspace_name</code></td>
+    <td>Optional</td>
+    <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
+    </tr>
     <tr>
-   <td>`workspace_name`</td>
-   <td>Optional</td>
-   <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
-   </tr>
-   <tr>
-   <td>`terraform_version`</td>
-   <td>Optional</td>
-   <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.12` to use Terraform version 0.12, and similarly, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-   </tr>
-  <tr>
-   <td>`location`</td>
-   <td>Optional</td>
-   <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run `ibmcloud target --output json` and look at the `region` field. To target a different region, run `ibmcloud target -r <region>`. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted.</td>
-   </tr>
-   <tr>
-   <td>`description`</td>
-   <td>Optional</td>
-   <td>Enter a description for your workspace.</td>
-   </tr>
-      <td>`template_repo.url`</td>
-   <td>Optional</td>
-   <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
-   </tr>
+    <td><code>terraform_version</code></td>
+    <td>Optional</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter <code>Terraform_v0.12</code> to use Terraform version 0.12, and similarly, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    </tr>
     <tr>
-    <td>`template_repo.branch`</td>
- <td>Optional</td>
-  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
+    <td><code>location</code></td>
+    <td>Optional</td>
+    <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run <code>ibmcloud target --output json</code> and look at the <code>region</code> field. To target a different region, run <code>ibmcloud target -r <region></code>. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted.</td>
+    </tr>
     <tr>
-   <td>`template_repo.datafolder`</td>
-   <td>Optional</td>
-   <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
-   </tr>
+    <td><code>description</code></td>
+    <td>Optional</td>
+    <td>Enter a description for your workspace.</td>
+    </tr>
+        <td><code>template_repo.url</code></td>
+    <td>Optional</td>
+    <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
+    </tr>
     <tr>
-   <td>`template_repo.release`</td>
-   <td>Optional</td>
-   <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
-   </tr>
-   <tr>
-   <td>`github_source_repo_url`</td>
-   <td>Optional</td>
-   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. If you plan to provide your Terraform template by uploading a tape archive file (`.tar`), leave the URL empty, and use the [ibmcloud schematics workspace upload](#schematics-workspace-upload) command after you created the workspace. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.</td>
-   </tr>
-  <tr>
-   <td>`env_values`</td>
-   <td>Optional</td>
-   <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key = variable name` and `value = value`. You can define environment variables for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using a bash script files.</td>
-   </tr>
-   <tr>
-   <td>`variable_name`</td>
-   <td>Optional</td>
-   <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-   </tr>
-   <tr>
-   <td>`variable_type`</td>
-   <td>Optional</td>
-   <td>`Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
-   </tr>
-  <tr>
-   <td>`variable_value`</td>
-   <td>Optional</td>
-   <td>Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). **Example** <pre class="codeblock"><code>
-       "variablestore": [
+    <td><code>template_repo.branch</code></td>
+    <td>Optional</td>
+    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
+        <tr>
+    <td><code>template_repo.datafolder</code></td>
+    <td>Optional</td>
+    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
+    </tr>
+    <tr>
+    <td><code>template_repo.release</code></td>
+    <td>Optional</td>
+    <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
+    </tr>
+    <tr>
+    <td><code>github_source_repo_url</code></td>
+    <td>Optional</td>
+    <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command. If you plan to provide your Terraform template by uploading a tape archive file (<code>.tar</code>), leave the URL empty, and use the [ibmcloud schematics workspace upload](#schematics-workspace-upload) command after you created the workspace. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.</td>
+    </tr>
+    <tr>
+    <td><code>env_values</code></td>
+    <td>Optional</td>
+    <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where <code>key = variable name</code> and <code>value = value</code>. You can define environment variables for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using a bash script files.</td>
+    </tr>
+    <tr>
+    <td><code>variable_name</code></td>
+    <td>Optional</td>
+    <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+    </tr>
+    <tr>
+    <td><code>variable_type</code></td>
+    <td>Optional</td>
+    <td><code>Terraform v0.12</code> supports <code>string</code>, <code>list</code>, <code>map</code>, <code>bool</code>, <code>number</code> and complex data types such as <code>list(type)</code>, <code>map(type)</code>, <code>object({attribute name=type,..})</code>, <code>set(type)</code>, <code>tuple([type])</code>.</td>
+    </tr>
+    <tr>
+    <td><code>variable_value</code></td>
+    <td>Optional</td>
+    <td>Enter the value as a string for the primitive types such as <code>bool</code>, <code>number</code>, <code>string</code>, and <code>HCL</code> format for the complex variables, as you provide in a <code>.tfvars</code> file. You need to enter escaped string of <code>HCL</code> format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). <strong>Example</strong> <pre class="codeblock"><code>
+        "variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",
                     "name": "docker_ports",
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
                 },
-      ]</code></pre></td>
-   </tr>
-   <tr>
-   <td>`secure`</td>
-   <td>Optional</td>
-   <td>Set the `secure` parameter to **true**. By default, this parameter is set to **false**.</td>
-   </tr>
-   <tr>
-   <td>`val1`</td>
-   <td>Optional</td>
-   <td>In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
-   </tr>
-  </tbody></table>
+        ]</code></pre></td>
+    </tr>
+    <tr>
+    <td><code>secure</code></td>
+    <td>Optional</td>
+    <td>Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
+    </tr>
+    <tr>
+    <td><code>val1</code></td>
+    <td>Optional</td>
+    <td>In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
+    </tr>
+    </tbody></table>
 
-  {{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
+    {{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
 
 **Example**
 
@@ -765,30 +765,30 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {
-  "name": "<workspace_name>",
-  "type": "<terraform_version>",
-  "description": "<workspace_description>",
-  "tags": [],
-  "resource_group": "<resource_group>",
-  "workspace_status": {
-    "frozen": "<true_or_false>"
-  },
-  "template_repo": { 
-    "url": "<source_repo_url>"
-  },
-  "template_data": [
-    {
-      "folder": ".",
-      "type": "<terraform_version>",
-      "env_values":[
-      {
+    "name": "<workspace_name>",
+    "type": "<terraform_version>",
+    "description": "<workspace_description>",
+    "tags": [],
+    "resource_group": "<resource_group>",
+    "workspace_status": {
+        "frozen": "<true_or_false>"
+    },
+    "template_repo": { 
+        "url": "<source_repo_url>"
+    },
+    "template_data": [
+        {
+        "folder": ".",
+        "type": "<terraform_version>",
+        "env_values":[
+        {
         "VAR1":"<val1>"
-      },
-      {
+        },
+        {
         "VAR2":"<val2>"
-      }
-      ],
-      "variablestore": [
+        }
+        ],
+        "variablestore": [
         {
           "name": "<variable_name1>",
           "value": "<variable_value1>",
@@ -802,88 +802,88 @@ You need to replace the `<...>` placeholders with the actual values. For example
           "secure": false,
 	  "use_default": true
 	  }
-      ]
+        ]
     }
-  ],
+    ],
 }
 ```
 {: codeblock}
 
 <table>
-   <thead>
+    <thead>
     <th style="width:50px">Parameter</th>
     <th style="width:200px">Required / Optional</th>
     <th style="width:250px">Description</th>
-  </thead>
-  <tbody>
-   <tr>
-   <td>`name`</td>
-   <td>Optional</td>
-   <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change. </td>
-   </tr>
-   <tr>
-   <td>`type`</td>
-   <td>Optional</td>
-   <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.14` to use Terraform version 0.14, `terraform_v0.13` to use Terraform version 0.13, and `terraform_v0.12` to use Terraform version 0.12. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-   </tr>
+    </thead>
+    <tbody>
     <tr>
-   <td>`description`</td>
-   <td>Optional</td>
-   <td>Enter a description for your workspace.</td>
-   </tr>
+    <td><code>name</code></td>
+    <td>Optional</td>
+    <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change. </td>
+    </tr>
     <tr>
-   <td>`tags`</td>
-   <td>Optional</td>
-   <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.</td>
-   </tr>
+    <td><code>type</code></td>
+    <td>Optional</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.14</code> to use Terraform version 0.14, <code>terraform_v0.13</code> to use Terraform version 0.13, and <code>terraform_v0.12</code> to use Terraform version 0.12. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    </tr>
     <tr>
-   <td>`resource_group`</td>
-   <td>Optional </td>
-   <td>Enter the resource group where you want to provision your workspace.</td>
-   </tr>
+    <td><code>description</code></td>
+    <td>Optional</td>
+    <td>Enter a description for your workspace.</td>
+    </tr>
     <tr>
-   <td>`workspace_status` </td>
-   <td>Optional</td>
-   <td>Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.</td>
-   </tr>
+    <td><code>tags</code></td>
+    <td>Optional</td>
+    <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.</td>
+    </tr>
     <tr>
-   <td>`template_repo.url`</td>
-   <td>Optional</td>
-   <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
-   </tr>
+    <td><code>resource_group</code></td>
+    <td>Optional </td>
+    <td>Enter the resource group where you want to provision your workspace.</td>
+    </tr>
     <tr>
-    <td>`template_repo.branch`</td>
- <td>Optional</td>
-  <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
+    <td><code>workspace_status</code> </td>
+    <td>Optional</td>
+    <td>Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.</td>
+    </tr>
     <tr>
-   <td>`template_repo.datafolder`</td>
-   <td>Optional</td>
-   <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
-   </tr>
+    <td><code>template_repo.url</code></td>
+    <td>Optional</td>
+    <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
+    </tr>
     <tr>
-   <td>`template_repo.release`</td>
-   <td>Optional</td>
-   <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
-   </tr>
+    <td><code>template_repo.branch</code></td>
+    <td>Optional</td>
+    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
+        <tr>
+    <td><code>template_repo.datafolder</code></td>
+    <td>Optional</td>
+    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
+    </tr>
     <tr>
-   <td>`github_source_repo_url`</td>
-   <td>Optional</td>
-   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
-   </tr>
+    <td><code>template_repo.release</code></td>
+    <td>Optional</td>
+    <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
+    </tr>
     <tr>
-   <td>`template_data.variablestore.name`</td>
-   <td>Optional</td>
-   <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-   </tr>
+    <td><code>github_source_repo_url</code></td>
+    <td>Optional</td>
+    <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory.</td>
+    </tr>
     <tr>
-   <td>`template_data.variablestore.type`</td>
-   <td>Optional</td>
-   <td>`Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
-   </tr>
+    <td><code>template_data.variablestore.name</code></td>
+    <td>Optional</td>
+    <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+    </tr>
     <tr>
-   <td>`template_data.variablestore.value`</td>
-   <td>Optional</td>
-   <td>Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You can override the default values of `.tfvars` by setting `use_default` parameter as `true`. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock"><code>"variablestore": [
+    <td><code>template_data.variablestore.type</code></td>
+    <td>Optional</td>
+    <td><code>Terraform v0.12</code> supports <code>string</code>, <code>list</code>, <code>map</code>, <code>bool</code>, <code>number</code> and complex data types such as <code>list(type)</code>, <code>map(type)</code>, <code>object({attribute name=type,..})</code>, <code>set(type)</code>, <code>tuple([type])</code>.</td>
+    </tr>
+    <tr>
+    <td><code>template_data.variablestore.value</code></td>
+    <td>Optional</td>
+    <td>Enter the value as a string for the primitive types such as <code>bool</code>, <code>number</code>, <code>string</code>, and <code>HCL</code> format for the complex variables, as you provide in a <code>.tfvars</code> file. You can override the default values of <code>.tfvars</code> by setting <code>use_default</code> parameter as <code>true</code>. You need to enter escaped string of <code>HCL</code> format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock"><code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",
@@ -891,33 +891,33 @@ You need to replace the `<...>` placeholders with the actual values. For example
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
 		                "use_default":true
                 },</code></pre></td>
-   </tr>
+    </tr>
     <tr>
-   <td>`template_data.variablestore.secure`</td>
-   <td>Optional</td>
-   <td>Set the `secure` parameter to **true**. By default, this parameter is set to **false**.</td>
-   </tr>
+    <td><code>template_data.variablestore.secure</code></td>
+    <td>Optional</td>
+    <td>Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
+    </tr>
     <tr>
-   <td>`template_data.variablestore.use_default`</td>
-   <td>Optional</td>
-   <td>Set the `use_default` parameter to **true** to override the default `.tfvars` parameter. By default, this parameter is set to **false**.</td>
-   </tr>
-   <tr>
-   <td>`env_values.val1`</td>
-   <td>Optional</td>
-   <td>In the payload you can provide an environment variables, and customized variables that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
-   </tr>
+    <td><code>template_data.variablestore.use_default</code></td>
+    <td>Optional</td>
+    <td>Set the <code>use_default</code> parameter to <strong>true</strong> to override the default <code>.tfvars</code> parameter. By default, this parameter is set to <strong>false</strong>.</td>
+    </tr>
     <tr>
-   <td>`github_source_repo_url`</td>
-   <td>Optional</td>
-   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
-   </tr>
+    <td><code>env_values.val1</code></td>
+    <td>Optional</td>
+    <td>In the payload you can provide an environment variables, and customized variables that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
+    </tr>
     <tr>
-   <td>`github_source_repo_url`</td>
-   <td>Optional</td>
-   <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
-   </tr>
-  </tbody></table>
+    <td><code>github_source_repo_url</code></td>
+    <td>Optional</td>
+    <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory.</td>
+    </tr>
+    <tr>
+    <td><code>github_source_repo_url</code></td>
+    <td>Optional</td>
+    <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory.</td>
+    </tr>
+    </tbody></table>
 
 **Example**
 
@@ -963,8 +963,8 @@ ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /U
 ```
 {: pre}
 
- Create the `TAR` file of your template repo by using the `TAR` command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
- {: note}
+Create the `TAR` file of your template repo by using the `TAR` command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
+{: note}
 
 
 ## {{site.data.keyword.cloud_notm}} resource management commands
@@ -1102,7 +1102,7 @@ ibmcloud schematics output --id WORKSPACE_ID[--output OUTPUT][--json]
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics output flags" caption-side="top"}
-  
+
 **Example**
 
 ```
@@ -1165,32 +1165,31 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
 
 **Dynamic inventory** allows to create the collection of hosts in a inventory file that defines the hosts and group of hosts upon which your playbook operates. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `INI` file format that can be used in the `create` and `update` actions commands as `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>` argument.
 
-  **Syntax**
-   ```
+    **Syntax**
+    ```
     [hostgroupname1]
     <IPaddress1> 
     <IPaddress2> 
     [hostgroupname2]
     <IPaddress1>
-   ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
-  **Example** 
-
-   ```
+    **Example** 
+    ```
     [webserverhost]
     178.54.68.78
     187.54.68.78
     [dbhost]
     174.45.86.87
-   ```
+    ```
     {: codeblock}
 
-  | Target | Description| 
-  |------|  ------|
-  |`hostgroupname1`| The application hostname. For example, Web Server host application name as `[webserverhost]`, database hostname as `[dbhost]`, in a single word. **Note** System validates and throws an error if a space is provided in the host group name.|
-  |`IPaddress`|The IP addresses of the hostname.|
-  {: caption="Inventory host group parameters" caption-side="top"}
+    | Target | Description| 
+    |------|  ------|
+    |`hostgroupname1`| The application hostname. For example, Web Server host application name as `[webserverhost]`, database hostname as `[dbhost]`, in a single word. **Note** System validates and throws an error if a space is provided in the host group name.|
+    |`IPaddress`|The IP addresses of the hostname.|
+    {: caption="Inventory host group parameters" caption-side="top"}
 
 You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.
 {: note}
@@ -1253,22 +1252,22 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {
-  "name": "<ACTION_NAME>",
-  "description": "<DESCRIPTION>",
-  "location": "<LOCATION>",
-  "resource_group": "<RESOURCE_GROUP>",
-   "source": {
-       "source_type" : "git",
-       "git" : {
+    "name": "<ACTION_NAME>",
+    "description": "<DESCRIPTION>",
+    "location": "<LOCATION>",
+    "resource_group": "<RESOURCE_GROUP>",
+    "source": {
+        "source_type" : "git",
+        "git" : {
             "git_repo_url": "<YOUR_REPOSITORY>"
-       }
-  },
-  "command_parameter": "<PLAYBOOK_NAME>",
-  "tags": [
-    "<ACTION_TAGS>"
-  ],
-  "source_readme_url": "stringtype",
-  "source_type": "GitHub"
+        }
+    },
+    "command_parameter": "<PLAYBOOK_NAME>",
+    "tags": [
+        "<ACTION_TAGS>"
+    ],
+    "source_readme_url": "stringtype",
+    "source_type": "GitHub"
 }
 ```
 {: pre}
@@ -1292,10 +1291,11 @@ Instead of entering the command options or using a payload file, you can use the
 {: shortdesc}
 
 1. Initiate the interactive mode by running the command without command options. 
-   ```
-   ibmcloud schematics action create 
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics action create 
+    ```
+    {: pre}
+
 2. Enter a name for your action and press the return key. 
 3. Enter the resource group where you want to create the action and press the return key.
 4. Enter the location where you want to create the action, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. Then, press the return key. The location determines where your action runs and where your action data is stored. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Make sure that you can store data in this location as you cannot change the location after the action is created.
@@ -1532,10 +1532,10 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {
-  "command_object": "<COMMAND_OBJECT>",
-  "command_object_id": "<COMMAND_OBJECT_ID>",
-  "command_name": "<COMMAND_NAME>",
-  "command_parameter": "<PLAYBOOK_NAME>"
+    "command_object": "<COMMAND_OBJECT>",
+    "command_object_id": "<COMMAND_OBJECT_ID>",
+    "command_name": "<COMMAND_NAME>",
+    "command_parameter": "<PLAYBOOK_NAME>"
 }
 ```
 {: codeblock}
@@ -1544,10 +1544,10 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {
-  "command_object": "action",
-  "command_object_id": "us-east.ACTION.Example-11110000011",
-  "command_name": "ansible_playbook_check",
-  "command_parameter": "site.yml"
+    "command_object": "action",
+    "command_object_id": "us-east.ACTION.Example-11110000011",
+    "command_name": "ansible_playbook_check",
+    "command_parameter": "site.yml"
 }
 ```
 {: codeblock}
@@ -1565,10 +1565,10 @@ Instead of entering your job details by using command options or a payload file,
 {: shortdesc}
 
 1. Enter the command to create the job without any command options. 
-   ```
-   ibmcloud schematics job run
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics job run
+    ```
+    {: pre}
 
 2. When prompted to `Enter command-object>`, enter `action` and press the return key. 
 3. When prompted to `Enter command-object-id>`, enter the action ID details and press the return key.
@@ -1779,19 +1779,19 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 [{
-   "query_type": "workspaces",
-   "query_condition": [
-   {
-     "name": "workspace-id",
-     "value": "<WORKSPACE_ID>",
-     "description": "string"
-   },
-   {
-     "name": "resource-name",
-     "value": "<RESOURCE_NAME>",
-     "description": "string"
-   } 
-  ]
+    "query_type": "workspaces",
+    "query_condition": [
+    {
+        "name": "workspace-id",
+        "value": "<WORKSPACE_ID>",
+        "description": "string"
+    },
+    {
+        "name": "resource-name",
+        "value": "<RESOURCE_NAME>",
+        "description": "string"
+    } 
+    ]
 }]
 ```
 {: codeblock}
@@ -1800,19 +1800,19 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 [{
-   "query_type": "workspaces",
-   "query_condition": [
-   {
-     "name": "workspace-id",
-     "value": "us-east.workspace.ID1231",
-     "description": "string"
-   },
-   {
-     "name": "resource-name",
-     "value": "tf00vpc-pubpriv-frontend-vsi",
-     "description": "string"
-   } 
-  ]
+    "query_type": "workspaces",
+    "query_condition": [
+    {
+        "name": "workspace-id",
+        "value": "us-east.workspace.ID1231",
+        "description": "string"
+    },
+    {
+        "name": "resource-name",
+        "value": "tf00vpc-pubpriv-frontend-vsi",
+        "description": "string"
+    } 
+    ]
 }]
 ```
 {: codeblock}
@@ -1830,10 +1830,10 @@ Instead of entering your resource query details by using the command options or 
 {: shortdesc}
 
 1. Enter the command to create the resource query without any command options. 
-   ```
-   ibmcloud schematics resource-query create 
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics resource-query create 
+    ```
+    {: pre}
 
 2. Enter a name for your resource query and press the return key.
 3. Enter the path to your payload file. For a sample payload file, see [Using the payload file](#rq-create-payload). Then, press the return key.
@@ -2015,13 +2015,13 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {
-  "name": "<INVENTORY_NAME>",
-  "description": "<DESCRIPTION",
-  "location": "<GEOGRAPHY>",
-  "resource_group": "<RESOURCE_GROUP>",
-  "resource_queries": [
-  "<RESOURCE_QUERY_ID>"
-  ]
+    "name": "<INVENTORY_NAME>",
+    "description": "<DESCRIPTION",
+    "location": "<GEOGRAPHY>",
+    "resource_group": "<RESOURCE_GROUP>",
+    "resource_queries": [
+    "<RESOURCE_QUERY_ID>"
+    ]
 }
 
 ```
@@ -2031,13 +2031,13 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 ```
 {
-  "name": "myinventory",
-  "description": "This is the resource inventory for production",
-  "location": "us-east",
-  "resource_group": "default",
-    "resource_queries": [
+    "name": "myinventory",
+    "description": "This is the resource inventory for production",
+    "location": "us-east",
+    "resource_group": "default",
+        "resource_queries": [
     "default.RESOURCEQUERY.string.df3d8a47"
-  ]
+    ]
 
 }
 ```
@@ -2056,10 +2056,11 @@ Instead of entering your inventory details by using the command options or a pay
 {: shortdesc}
 
 1. Enter the command to create the inventory without any command options. 
-   ```
-   ibmcloud schematics inventory create
-   ```
-   {: pre}
+    ```
+    ibmcloud schematics inventory create
+    ```
+    {: pre}
+
 2. Enter a name for your inventory and press the return key.
 3. Enter the resource group where you want to create the inventory and press the return key. 
 4. Enter the location where you want to create the inventory, such as **us-south**, **us-east**, **eu-de**, or **eu-gb**. Then, press the return key.
@@ -2353,10 +2354,10 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
 {: caption="Schematics Terraform commands flags" caption-side="top"}
 
 
-  **Sample payload of Test.JSON file**
-  
-  ```
-  {
+    **Sample payload of Test.JSON file**
+
+    ```
+    {
         "commands": [
         {
             "command": "state show",
@@ -2396,22 +2397,22 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
     ],
     "operation_name": "Workspace Command",
     "description": "Executing command"
-   }
-  ```
-  {: codeblock}
+    }
+    ```
+    {: codeblock}
 
 
-  The table provides the list of key parameters of the JSON file for the `Commands` API, for the command-line and the API.
+    The table provides the list of key parameters of the JSON file for the `Commands` API, for the command-line and the API.
 
-  | Key | Required / Optional |Description |
-  | ------ | -------- | ---------- |
-  |`command`| Required |Provide the command. Supported commands are `show`,`taint`, `untaint`, `state`, `import`, `output`.|
-  |`command_params`| Required | The address parameters for the command name for `CLI`, such as resource name, absolute path of the file name. **Note** For API, you have to send option flag and address parameter in `command_params`.|
-  |`command_name`| Optional | The name for the command block.|
-  |`command_desc`| Optional | The text to describe the command block.|
-  |`command_onError`| Optional |  Instruction to continue or break in case of error in the command. |
-  |`command_dependsOn`|Optional| Dependency on the previous commands.|
-  |`command_status`| Not required | Displays the command executed status, either `success` or `failure`|
+    | Key | Required / Optional |Description |
+    | ------ | -------- | ---------- |
+    |`command`| Required |Provide the command. Supported commands are `show`,`taint`, `untaint`, `state`, `import`, `output`.|
+    |`command_params`| Required | The address parameters for the command name for `CLI`, such as resource name, absolute path of the file name. **Note** For API, you have to send option flag and address parameter in `command_params`.|
+    |`command_name`| Optional | The name for the command block.|
+    |`command_desc`| Optional | The text to describe the command block.|
+    |`command_onError`| Optional |  Instruction to continue or break in case of error in the command. |
+    |`command_dependsOn`|Optional| Dependency on the previous commands.|
+    |`command_status`| Not required | Displays the command executed status, either `success` or `failure`|
 
 **Example**
 
@@ -2548,5 +2549,7 @@ ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options OPTIONS] --a
 ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
 ```
 {: pre}
+
+
 
 

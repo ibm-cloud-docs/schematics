@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-24"
+lastupdated: "2021-08-13"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -19,15 +19,19 @@ subcollection: schematics
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -40,20 +44,26 @@ subcollection: schematics
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -71,8 +81,10 @@ subcollection: schematics
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -80,6 +92,7 @@ subcollection: schematics
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -107,18 +120,18 @@ For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible
 2. Copy the Git repository URL, such as `https://github.com/Cloud-Schematics/ansible-app-deploy`. 
 3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} action create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
 
-  **Syntax**
-  ```
-  https://cloud.ibm.com/schematics/actions/create?name=<action_name>&url=<git_repository_url>
-  ```
-  {: codeblock}
+    **Syntax**
+    ```
+    https://cloud.ibm.com/schematics/actions/create?name=<action_name>&url=<git_repository_url>
+    ```
+    {: codeblock}
 
-  **Example**
-  ```
-  https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy
-  ```
-  {: codeblock}
-  
+    **Example**
+    ```
+    https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy
+    ```
+    {: codeblock}
+
 4. Open your web browser and enter the URL.
 5. Verify that the {{site.data.keyword.bplong_notm}} action create page opens and that the **Action name** and **Repository URL** are pre-populated.
 
@@ -130,17 +143,19 @@ You can add an image to your URL to create your `Deploy to {{site.data.keyword.c
 1. Use `draw.io` or any other tool to create an image for your button. Save the image in `.png` extension.
 2. Create an image map. 
 
-   **Syntax**: 
-   ```
-   <img usemap="#<image_map_ID>" src="<path_to_image>"><map name="<image_map_name>" alt="<alt_text>"><area alt="<alt_text>" title="<button_title>" href="<schematics_action_url>" target="_blank" coords="<image_coordinates>" shape="rect"></map>
-   ```
-   {: codeblock}
-   
-   **Example**: 
-   ```
-   <img usemap="#deploybutton_map" alt= "Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image creates a Schematics action."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
-   ```
-   {: codeblock}
+    **Syntax**: 
+    ```
+    <img usemap="#<image_map_ID>" src="<path_to_image>"><map name="<image_map_name>" alt="<alt_text>"><area alt="<alt_text>" title="<button_title>" href="<schematics_action_url>" target="_blank" coords="<image_coordinates>" shape="rect"></map>
+    ```
+    {: codeblock}
 
-   For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
+    **Example**: 
+    ```
+    <img usemap="#deploybutton_map" alt= "Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image creates a Schematics action."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
+    ```
+    {: codeblock}
+
+    For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
 {: tip}
+
+

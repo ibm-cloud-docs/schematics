@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-13"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -79,11 +79,11 @@ Example for a multiple provider configuration:
 
 ```
 terraform{
-  required_providers{
-   ibm = ">= 1.21.0" // Error !! version unavailable.
-   ibm = ">= 1.20.0" // Execute against latest version.
-   ibm = "== 1.20.1" // Executes version v1.20.1. 
-  }
+    required_providers{
+    ibm = ">= 1.21.0" // Error !! version unavailable.
+    ibm = ">= 1.20.0" // Execute against latest version.
+    ibm = "== 1.20.1" // Executes version v1.20.1. 
+    }
 }
 
 ```
@@ -117,28 +117,28 @@ The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apik
 
 **Error message**
 
-  ```
-  Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
-  ```
+    ```
+    Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
+    ```
 **Solution**
 1. You need to create access_token and refresh_token.
 
-   ```
-   export IBMCLOUD_API_KEY=<ibmcloud-api_key>
-   curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
-   ```
+    ```
+    export IBMCLOUD_API_KEY=<ibmcloud-api_key>
+    curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
+    ```
 2. Export the access_token and refresh_token obtained in step 1 as environment variables for ACCESS_TOKEN and REFRESH_TOKEN.
 
-   ```
-   export ACCESS_TOKEN=<access_token>
-   export REFRESH_TOKEN=<refresh_token>
-   ```
+    ```
+    export ACCESS_TOKEN=<access_token>
+    export REFRESH_TOKEN=<refresh_token>
+    ```
 3. Create workspace
 
-   ```
-   curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
-   ```
-   
+    ```
+    curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
+    ```
+
 ## Template Error
 {: #template-error}
 
@@ -215,6 +215,8 @@ You need to be an expert user to upgrade the Terraform version to perform these 
 {: support}
 
 The unexpected impact due to maintenance may result in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity will be marked as Failed. The user can then re-execute the activity, for more information, about the workspace state see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+
+
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-08-13"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -134,4 +134,6 @@ The Schematics jobs displays a list of jobs and their state as successful, or fa
 
 You can also contact IBM support by opening a case or post a message in the Slack channel. To learn about opening an IBM support case, or about Slack channel, see [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
 {: note}
+
+
 

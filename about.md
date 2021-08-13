@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-09"
+lastupdated: "2021-08-13"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -19,6 +19,7 @@ subcollection: schematics
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
 {:c#: .ph data-hd-programlang='c#'}
@@ -52,11 +53,9 @@ subcollection: schematics
 {:navgroup: .navgroup}
 {:new_window: target="_blank"}
 {:node: .ph data-hd-programlang='node'}
-{:note .note}
 {:note: .note}
-{:note:.deprecated}
-{:objectc data-hd-programlang="objectc"}
 {:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
@@ -268,3 +267,4 @@ Because {{site.data.keyword.bpshort}} actions provide Ansible-as-a-Service capab
 |Action|An action is used to specify how you want to run your Ansible playbook in {{site.data.keyword.bpshort}}. When you create an action, you point your action to the Ansible playbook in your GitHub or GitLab repository. Then, you define the {{site.data.keyword.cloud_notm}} resource inventory where you want to run your playbook. You can also add environment variables and schedules to your action to customize when your playbook runs. |
 |Resource inventory|An {{site.data.keyword.cloud_notm}} resource inventory is a set of {{site.data.keyword.cloud_notm}} resources where you want to run Ansible playbook, such as a list of virtual servers. The resources can be provisioned with {{site.data.keyword.bpshort}} or you can also select existing resources that you manually created. |
 {: caption="{{site.data.keyword.bpshort}} actions" caption-side="top"}
+

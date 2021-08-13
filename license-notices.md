@@ -13,19 +13,25 @@ subcollection: satellite
 {:DomainName: data-hd-keyref="APPDomain"}
 {:DomainName: data-hd-keyref="DomainName"}
 {:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
 {:apikey: data-credential-placeholder='apikey'}
 {:app_key: data-hd-keyref="app_key"}
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -43,16 +49,21 @@ subcollection: satellite
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -70,6 +81,7 @@ subcollection: satellite
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
 {:swift: #swift .ph data-hd-programlang='swift'}
@@ -77,17 +89,20 @@ subcollection: satellite
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
 {:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
 {:unity: .ph data-hd-programlang='unity'}
 {:url: data-credential-placeholder='url'}
 {:user_ID: data-hd-keyref="user_ID"}
-{:vb.net: .ph data-hd-programlang='vb.net'}
+{:vbnet: .ph data-hd-programlang='vb.net'}
 {:video: .video}
 
 
@@ -111,11 +126,11 @@ The following notices are included in this document:
 The Program includes some or all of the following works licensed under the Creative Commons. <br>
 The URL to the license is https://creativecommons.org/licenses/by/3.0/legalcode. 
 
- - `GO GOPHER` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
- - `THE LOGO AND MASCOT` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
- - `H2DEMO` [golang/x/net](https://github.com/golang/net/commit/d3edc9973b7eb1fb302b0ff2c62357091cea9a30)
- - `DIR.TMPL` [golang/x/tools](https://github.com/golang/tools/commit/de023d59a5d12fe28f29c985eb1f744aae7e7d73)
- - `H2.DEMO`/`TMPL.GO` [protoc-gen-validate](https://codeload.github.com/envoyproxy/protoc-gen-validate/zip/v0.1.0)
+- `GO GOPHER` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
+- `THE LOGO AND MASCOT` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
+- `H2DEMO` [golang/x/net](https://github.com/golang/net/commit/d3edc9973b7eb1fb302b0ff2c62357091cea9a30)
+- `DIR.TMPL` [golang/x/tools](https://github.com/golang/tools/commit/de023d59a5d12fe28f29c985eb1f744aae7e7d73)
+- `H2.DEMO`/`TMPL.GO` [protoc-gen-validate](https://codeload.github.com/envoyproxy/protoc-gen-validate/zip/v0.1.0)
 
 ## Creative Commons Attribution 4.0
 {: #CC-BY-4.0}
@@ -163,5 +178,7 @@ VIETNAMESE TEXT [protoc-gen-validate](https://codeload.github.com/envoyproxy/pro
 The Program includes some or all of the following works licensed under the Creative Commons. <br>
 The URL to the license is https://creativecommons.org/licenses/by-sa/4.0/legalcode. 
 
- - HYDRATION [facebook/react](https://codeload.github.com/facebook/react/zip/16.8.6)
- - DATA.GO [go-openapi/runtime](https://github.com/go-openapi/runtime/releases/tag/v0.19.15)
+- HYDRATION [facebook/react](https://codeload.github.com/facebook/react/zip/16.8.6)
+- DATA.GO [go-openapi/runtime](https://github.com/go-openapi/runtime/releases/tag/v0.19.15)
+
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-24"
+lastupdated: "2021-08-13"
 
 keywords: schematics solutions, solutions 
 
@@ -19,15 +19,19 @@ subcollection: schematics
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -40,20 +44,26 @@ subcollection: schematics
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -71,8 +81,10 @@ subcollection: schematics
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -80,6 +92,7 @@ subcollection: schematics
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -213,20 +226,22 @@ Various solutions show the strengths of {{site.data.keyword.bplong}} and {{site.
 Following a curated solution through {{site.data.keyword.bplong_notm}} to create your infrastructure, manage the resources, and use powerful tools to secure, manage, and monitor your workspace and actions. 
 
 <div class=solutionBoxContainer>
-  <div class="solutionBox">
-    <a href = "https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution">
-      <div>
+    <div class="solutionBox">
+        <a href = "https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution">
+        <div>
         <p><strong><img src="images/autoscaling.png" alt="Autoscaling icon" width="50" style="width:25px; border-style: none"/>Autoscaling</strong></p>
         <p class="bx--type-caption">Autoscaling classic virtual servers on {{site.data.keyword.cloud_notm}}</p>
-      </div>
+        </div>
     </a>
-  </div>
-  <div class="solutionBox">
-    <a href = "https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution">
-      <div>
+    </div>
+    <div class="solutionBox">
+        <a href = "https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution">
+        <div>
         <p><strong><img src="images/periodic_trigger.png" alt="Periodic triggers icon" width="50" style="width:25px; border-style: none"/>Periodic triggers</strong></p>
         <p class="bx--type-caption">Automating day-2 operations based on periodic triggers</p>
-      </div>
+        </div>
     </a>
-  </div>
-  </div>
+    </div>
+    </div>
+
+

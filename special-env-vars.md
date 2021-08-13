@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-20"
+lastupdated: "2021-08-13"
 
 keywords: parallelism, schematics parallelism, environment variables, command line configuration, env vars
 
@@ -47,26 +47,26 @@ The code block is the sample payload for creating workspace with parallelism pas
 
 ```
 {
-  "name": "bb",
-  "type": [
-    "terraform_v0.12"
-  ],
-  "template_repo": {
-    "url": "url"
-  },
-  "template_data": [
-    {
-      "folder": ".",
-      "type": "terraform_v0.12",
-      "variablestore": [
+    "name": "bb",
+    "type": [
+        "terraform_v0.12"
+    ],
+    "template_repo": {
+        "url": "url"
+    },
+    "template_data": [
+        {
+        "folder": ".",
+        "type": "terraform_v0.12",
+        "variablestore": [
         {
           "value": "<val>",
           "name": "ibmcloud_api_key",
           "type": "string",
           "secure": true
         }
-      ],
-      "env_values": [
+        ],
+        "env_values": [
         {
           "TF_LOG": "debug"
         },
@@ -76,9 +76,9 @@ The code block is the sample payload for creating workspace with parallelism pas
         {
           "TF_CLI_ARGS_plan": "-parallelism=20"
         }
-      ]
+        ]
     }
-  ]
+    ]
 }
 ```
 {: codeblock}
@@ -88,18 +88,18 @@ A sample `env_values` block in the payload to update environment variable by usi
 ```
 "env_values": [
     {
-     "name": "TF_CLI_ARGS_plan",
-     "value": "-parallelism=20",
-     "secure": false,
-     "hidden": false
+        "name": "TF_CLI_ARGS_plan",
+        "value": "-parallelism=20",
+        "secure": false,
+        "hidden": false
     },
     {
-     "name": "TF_CLI_ARGS_apply",
-     "value": "-parallelism=20",
-     "secure": false,
-     "hidden": false
+        "name": "TF_CLI_ARGS_apply",
+        "value": "-parallelism=20",
+        "secure": false,
+        "hidden": false
     }
-   ]
+    ]
 ```
 {: codeblock}
 
@@ -108,7 +108,7 @@ For content catalog Terraform workspaces, you can pass a special variable `TF_PA
 A sample `tf_values` block in the create payload.
 
 ```
-   "tf_values":{
+    "tf_values":{
     "sample_var": "hello",
     "sleepy_time": "5",
     "TF_VERSION" : "0.12",
@@ -132,4 +132,6 @@ A sample `tf_values` block in the create payload.
 | `TF_IGNORE` | Output the debug messages to display ignored files and folders. This is useful when you debug large repositories with `.terraformignore` files. The default value is **trace**.| `"TF_IGNORE": "trace"`|
 | `TF_PARALLELISM` | Read parallelism environment variable in runtime action and reset the parallelism value on all the {{site.data.keyword.bplong_notm}} actions only for content catalog. `TF_PARALLELISM` is only for content catalog. |`"TF_PARALLELISM": "20"`|
 {: caption="Supported environment variables" caption-side="top"}
+
+
 

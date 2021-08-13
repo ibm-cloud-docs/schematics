@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-08-13"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -19,15 +19,19 @@ subcollection: schematics
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -40,20 +44,26 @@ subcollection: schematics
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -71,14 +81,18 @@ subcollection: schematics
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -146,38 +160,38 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
 1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all of your hosts, and tasks that you want to run only on your web servers and your databases. Each group of tasks can become its own role. 
 
 2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. You can create subdirectories to specify different roles. The name of the subdirectory becomes the name of your role, such as `db`. The tasks that you want to run for each role must be stored in a `main.yml` file inside a `tasks` directory as shown in this example. 
-   
-   ```
+
+    ```
     ├── roles
         └── db
             └── tasks
                 └── main.yml
     ├── playbook.yaml
     ├── README.md
-   ```
-   {: screen}
+    ```
+    {: screen}
 
 3. Add the tasks that you want to run to a `main.yml` file. In the following example, you separate out the task to download the MySQL community repo from your main playbook and put it into a `main.yml` file. 
- 
-   ```
-   - name: Download MySQL Community Repo
-     get_url:
-       url: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-       dest: /tmp
-   ```
-   {: codeblock}
+
+    ```
+    - name: Download MySQL Community Repo
+        get_url:
+        url: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+        dest: /tmp
+    ```
+    {: codeblock}
 
 4. Reference the role in your Ansible playbook. 
 
-   ```
+    ```
     - name: deploy MySQL and configure the databases
       hosts: all
       remote_user: root
 
-     roles:
-       - db
+      roles:
+        - db
     ```
-   {: codeblock}
+    {: codeblock}
 
 For more information about other files and conditions that you can add to your role, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#role-directory-structure){: external}
 
@@ -188,31 +202,31 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
 
 1. Browse the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository to find the roles that you want.
 2. Create a `requirements.yml` file where you specify all the roles that you need. For an overview of how to reference Ansible Galaxy roles, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}. In the following example, you want to use the role `andrewrothstein.kubectl` from Ansible Galaxy. 
-   ```
-   ---
-   roles:
-     - name: andrewrothstein.kubectl
-   ```
-   {: codeblock}
-   
+    ```
+    ---
+    roles:
+      - name: andrewrothstein.kubectl
+    ```
+    {: codeblock}
+
 3. Add a `roles` folder to your GitHub repository that is relative to the playbook, and store the `requirements.yml` file in this folder as shown in this example. 
-   ```
-      ├── roles
-         └── requirements.yml
-      ├── playbook.yaml
-      ├── README.md
-   ```
-   {: screen}
+    ```
+        ├── roles
+            └── requirements.yml
+        ├── playbook.yaml
+        ├── README.md
+    ```
+    {: screen}
 
 4. Reference the role in your Ansible playbook. In this example, the role with the name `andrewrothstein.kubectl` is used.
-   ```
-   ---
-   - hosts: all
-     roles:
-       - role: andrewrothstein.kubectl
-   ```
-   {: codeblock}
-   
+    ```
+    ---
+    - hosts: all
+      roles:
+        - role: andrewrothstein.kubectl
+    ```
+    {: codeblock}
+
 Want to see an example? See [this IBM-provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
 {: tip}
 
@@ -226,22 +240,24 @@ Similar to [Ansible roles](#schematics-roles), collections require a specific fo
 
 1. Browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find the collection that you want to use in your playbook.
 2. Create a `requirements.yml` file where you specify the collections that you want to install from Ansible Galaxy. For more information about how to structure this file, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-collections){: external}. The following example uses the `community.kubernetes` collection.
-   ```
-   collections:
-     - name: community.kubernetes
-       version: 0.9.0
-   ```
-   {: codeblock}
-   
+    ```
+    collections:
+      - name: community.kubernetes
+        version: 0.9.0
+    ```
+    {: codeblock}
+
 3. Add a `collections` folder to your GitHub repository that is relative to your playbook, and store the `requirements.yml` file in this folder as shown in this example. 
-   ```
-   ├── collections
-         └── requirements.yml
-   ├── playbook.yaml
-   ├── README.md
-   ```
-   {: screen}
-   
+    ```
+    ├── collections
+            └── requirements.yml
+    ├── playbook.yaml
+    ├── README.md
+    ```
+    {: screen}
+
 4. Reference a resource from your collection in your playbook. For more information, see the [Ansible documentation](https://docs.ansible.com/ansible/2.9/user_guide/collections_using.html#using-collections-in-a-playbook){: external}
+
+
 
 

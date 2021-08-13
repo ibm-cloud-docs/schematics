@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-14"
+lastupdated: "2021-08-13"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -47,8 +47,8 @@ Complete these steps to view your services instances:
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
 3. From your instance, click **View Monitoring** icon to view the workspace and action that you created. **Note** If you want more information about how to create a service instance, refer to [Create service instance](#create-instance).
 4. Click the `Dashboards` icon, and expand `IBM` to view the `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
-   - Use the `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
-   - Use the `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
+    - Use the `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
+    - Use the `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
 
 
 
@@ -68,8 +68,8 @@ Complete these steps to create your services instance:
 5. Create an {{site.data.keyword.mon_full_notm}} instance by using the `Lite plan`.
 6. Click on `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
 7. Click `View Sysdig` icon, to view your workspace and action that you created.
-   You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, to monitor the status, refer to [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
-   {: note}
+    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, to monitor the status, refer to [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
+    {: note}
 
 ## Creating custom dashboard
 {: #create-dashboard}
@@ -84,8 +84,8 @@ Complete these steps to create your custom dashboard:
 3. Click `Create Custom Dashboard` to view the create dashboard from template pop-up.
 4. Provide the name of the dashboard, and click `Create and Open`.
 5. Click `Dashboards` icon, to view your dashboard.
-   Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer to [Deleting a dashboards](/docs/monitoring?topic=monitoring-remove).
-   {: note}
+    Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. For more information on deleting a dashboard, refer to [Deleting a dashboards](/docs/monitoring?topic=monitoring-remove).
+    {: note}
 
 ## {{site.data.keyword.bplong_notm}} metrics details
 {: #metrics-details}
@@ -169,3 +169,5 @@ For the Schematics instance, following time series counts and charts are derived
 | Status | Query |
 | ------ | -------- |
 | Number of workspace currently managed  | avg(avg(ibm_schematics_vulnerability_count)) |
+
+

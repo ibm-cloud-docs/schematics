@@ -58,3 +58,5 @@ Following are the list of {{site.data.keyword.bplong_notm}} server SDKs that are
 |[Python SDK](https://github.com/IBM/schematics-python-sdk){: external} | [Python SDK documentation](https://github.com/IBM/schematics-python-sdk/blob/main/README.md){: external} |
 {: caption="Table 1. List of {{site.data.keyword.bpshort}} SDKs" caption-side="top"}
 
+
+

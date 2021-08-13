@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-08-13"
 
 keywords: schematics 500 errors, schematics 5xx errors, schematics server error
 
@@ -20,6 +20,7 @@ content-type: troubleshoot
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
 {:c#: .ph data-hd-programlang='c#'}
@@ -53,11 +54,9 @@ content-type: troubleshoot
 {:navgroup: .navgroup}
 {:new_window: target="_blank"}
 {:node: .ph data-hd-programlang='node'}
-{:note .note}
 {:note: .note}
-{:note:.deprecated}
-{:objectc data-hd-programlang="objectc"}
 {:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
@@ -111,7 +110,6 @@ content-type: troubleshoot
 
 # Why am I getting 5xx HTTP errors?
 {: #server-errors}
-   
 
 When you run a {{site.data.keyword.bpshort}} apply action, the action fails with 5xx HTTP errors such as in the following example: 
 {: tsSymptoms}
@@ -127,3 +125,5 @@ Error: Request failed with status code: 500, ServerErrorResponse: {"incidentID":
 
 Because this error does not originate within {{site.data.keyword.bpshort}}, wait a few minutes before trying to re-run the {{site.data.keyword.bpshort}} apply action again. If the apply action continues to fail, note the incident ID and find more detailed logs for this incident ID in your {{site.data.keyword.loganalysislong_notm}} service instance. If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
 {: tsResolve}
+
+

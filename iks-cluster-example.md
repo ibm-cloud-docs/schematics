@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-15"
+lastupdated: "2021-08-13"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -31,7 +31,7 @@ subcollection: schematics
 
 The playbook demonstrates how to automate the deployment of a hackathon starter web application. Hackathon starter is a boilerplate web application for `Node.js` and `Mongo` database to an {{site.data.keyword.containerlong_notm}} cluster. For more information, about hackathon starter application development, refer to [Hackathon starter readme document](https://github.com/sahat/hackathon-starter/blob/master/README.md).
 {: shortdesc}
- 
+
 ## Prerequisites
 {: #iks-prereq}
 
@@ -55,8 +55,8 @@ After the prerequisite is completed, follow these steps to complete the use case
 
 3. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. You need to specify the {{site.data.keyword.cloud}} resource inventory. For more information, about the steps to create the action definition, see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action).
 
-   When the action is successful the job is created. You can view the settings and job option of the execution details.
-  {: note}
+    When the action is successful the job is created. You can view the settings and job option of the execution details.
+    {: note}
 
 4. Access your VPC public IP to view the deployed application. For example, `https://<public-IPaddress>:30170/`. 
 
@@ -69,32 +69,32 @@ Now, you are ready to complete these steps to execute the use case:
 
 2. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. The example contains the command to create an action. For more information, see [create {{site.data.keyword.bplong_notm}} action by using command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
 
-  **Example**
+    **Example**
 
     ```
     ibmcloud schematics action create -f action.json
     ```
     {: pre}
 
- **action.json file**
+    **action.json file**
 
     ```
     {
-      "name": "Hackathon_Starter_Action",
-      "description": "This Action will deploy boiler plate code for Hackathon Starter",
-      "location": "us-east",
-      "resource_group": "Default",
-      "source": {
+        "name": "Hackathon_Starter_Action",
+        "description": "This Action will deploy boiler plate code for Hackathon Starter",
+        "location": "us-east",
+        "resource_group": "Default",
+        "source": {
           "source_type" : "git",
           "git" : {
                 "git_repo_url": "https://github.com/Cloud-Schematics/ansible-app-deploy-iks.git"
           }
-      },
-      "command_parameter": "site.yml",
-      "tags": [
+        },
+        "command_parameter": "site.yml",
+        "tags": [
         "string"
-      ],
-      "inputs": [
+        ],
+        "inputs": [
         {
           "name": "cluster_id",
           "value": <Your-Cluster-ID>,
@@ -103,60 +103,60 @@ Now, you are ready to complete these steps to execute the use case:
             "default_value": <Your-Default-Cluster-ID>
           }
         }
-      ],
-      "source_type": "GitHub" 
+        ],
+        "source_type": "GitHub" 
     }
     ```
-     {: codeblock}
+    {: codeblock}
 
 3. Create a job file `job.json` to run the action and following with adding `job` definition to it. Edit the `Action ID` from step 1 and run job.json.
 
- **Example**
-  
+    **Example**
+
     ```
     ibmcloud schematics job run -f job.json
-  
-    ```
-     {: pre}
 
-  **job.json file**
+    ```
+    {: pre}
+
+    **job.json file**
 
     ```
     {
-     "command_object": "action",
-     "command_object_id": <Action-ID>,
-     "command_name": "ansible_playbook_run"
+        "command_object": "action",
+        "command_object_id": <Action-ID>,
+        "command_name": "ansible_playbook_run"
     }
     ```
-     {: codeblock}
+    {: codeblock}
 
 4. Verify the job is created successfully run the following command
 
     ```
-      IBMcloud schematics job logs --id <job id>
+    IBMcloud schematics job logs --id <job id>
     ```
-     {: pre}  
+    {: pre}  
 
 5. Execute the `kubectl` commands in command-line to check the status of the nodes, running pods, and finally `run svc` command to view the external IP address of your service.
 
     ```
-      kubectl get nodes -o wide
-      kubectl get pods -o wide
-      kubectl get svc
+    kubectl get nodes -o wide
+    kubectl get pods -o wide
+    kubectl get svc
     ```
-     {: pre}
+    {: pre}
 
-   **Example** 
-    
+    **Example** 
+
     ```
-      my-MacBook-Pro bin % kubectl get svc 
-      NAME             TYPE           CLUSTER-IP       EXTERNAL-IP      PORT(S)        AGE
-      kubernetes       ClusterIP      172.21.0.1       <none>           443/TCP        14h
-      mongo            ClusterIP      172.21.182.239   <none>           27017/TCP      57m
-      webapp-service   LoadBalancer   172.21.117.114   169.47.109.178   80:30170/TCP   57m
+    my-MacBook-Pro bin % kubectl get svc 
+    NAME             TYPE           CLUSTER-IP       EXTERNAL-IP      PORT(S)        AGE
+    kubernetes       ClusterIP      172.21.0.1       <none>           443/TCP        14h
+    mongo            ClusterIP      172.21.182.239   <none>           27017/TCP      57m
+    webapp-service   LoadBalancer   172.21.117.114   169.47.109.178   80:30170/TCP   57m
     ```
-     {: screen}
-  
+    {: screen}
+
 6. Now, you can use external IP address and access the URL `https://<public-IPaddress>:30170/` to view the deployed application.
 
 
@@ -164,4 +164,6 @@ Now, you are ready to complete these steps to execute the use case:
 {: #uc_what's next}
 
 Great job! You successfully deployed into hackathon starter by using {{site.data.keyword.bplong_notm}} actions. You can now learn how to [secure VPC access with a bastion host and Terraform](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)?
+
+
 

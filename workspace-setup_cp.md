@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-08-13"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -137,21 +137,21 @@ If you do not want to connect your workspace to a Git repository, you can upload
     6. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
 4. Connect your workspace to the `GitHub`, `GitLab`, or `Bitbucket` repository where your Terraform configuration files are stored.
 
-   If you want to upload a tape archive file (`.tar`) instead of pointing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.  
-   {: tip}
-   
+    If you want to upload a tape archive file (`.tar`) instead of pointing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics#upload-template-tar) API.  
+    {: tip}
+
     1. On the workspace **Settings** page, enter the link to your `GitHub`, `GitLab`, or `Bitbucket` repository. The link can point to the `master` branch, any other branch, or a subdirectory. 
-      - Example for `master` branch: `https://github.com/myorg/myrepo`
-      - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
-      - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
+        - Example for `master` branch: `https://github.com/myorg/myrepo`
+        - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
+        - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
     2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
     3. Select the Terraform version that your Terraform configuration files are written in. {{site.data.keyword.bpshort}} supports Terraform version 0.12, 0.13, and 0.14. **Note** Terraform version 0.11 option gets deprecated shortly.
     4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the configuration files, scans them for syntax errors, and retrieves any input variables.
     5. You can manually enter the values.
           
-   6. Click **Save changes**.
-   7. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
-   8. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
+    6. Click **Save changes**.
+    7. Wait for your workspace to reach an **Inactive** state. This state is reached when {{site.data.keyword.bpshort}} successfully downloads your configuration files and no syntax errors are found. 
+    8. [Create an execution plan for your workspace](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). 
 
 ## Freezing and unfreezing workspaces 
 {: #lock-workspace_cp}
@@ -185,13 +185,13 @@ Delete your workspace that points to the Git repository thats hosted your Terraf
     {: important}
 
     <table>
-      <tr>
+        <tr>
         <th>Action</th><th>Delete workspace</th><th>Delete all associated resources</th></tr>
-       <tr>
-         <td>Delete workspace</td><td>True</td><td>False</td></tr>
-       <tr>
-         <td>Delete only resources</td><td>False</td><td>True</td></tr>
-       <tr>
+        <tr>
+            <td>Delete workspace</td><td>True</td><td>False</td></tr>
+        <tr>
+            <td>Delete only resources</td><td>False</td><td>True</td></tr>
+        <tr>
           <td>Delete workspace and the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
         <tr>
           <td>Resources destroyed using command-line or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
@@ -229,27 +229,27 @@ The actions with the resource and file information are described in the table.
 
 ## Setting up a continuous delivery toolchain for your workspace
 {: #continuous-delivery_cp}
-  
+
 Connect your source repository to a continuous delivery pipeline in {{site.data.keyword.cloud_notm}} to automatically generate a Terraform execution plan and run your Terraform code in {{site.data.keyword.cloud_notm}} whenever you update your Terraform configuration files. 
 {: shortdesc}
-  
+
 1. If you do not have a {{site.data.keyword.contdelivery_short}} service instance in your account yet, create one.
-   1. From the {{site.data.keyword.cloud_notm}} catalog, open the [{{site.data.keyword.contdelivery_short}} service](https://cloud.ibm.com/catalog/services/continuous-delivery).
-   2. Select the {{site.data.keyword.cloud_notm}} region where you want to create the service.
-   3. Select a pricing plan.
-   4. Enter a name for your service instance, select a resource group, and enter any tags that you want to associate with your service instance.
-   5. Click **Create** to create the service instance in your account.  
+    1. From the {{site.data.keyword.cloud_notm}} catalog, open the [{{site.data.keyword.contdelivery_short}} service](https://cloud.ibm.com/catalog/services/continuous-delivery).
+    2. Select the {{site.data.keyword.cloud_notm}} region where you want to create the service.
+    3. Select a pricing plan.
+    4. Enter a name for your service instance, select a resource group, and enter any tags that you want to associate with your service instance.
+    5. Click **Create** to create the service instance in your account.  
 2. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select a workspace. 
 3. Select the **Settings** tab. 
 4. In the **Summary** section, click **Enable continuous delivery**. 
 5. Configure your toolchain. 
-   1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
-   2. Select the type of source repository where your Terraform configuration files are stored. For Example GitHub. 
-   3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are pre-populated based on your workspace configuration.
-   4. Optional: Choose if you want to enable Git issues and code change tracking for your toolchain. 
+    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
+    2. Select the type of source repository where your Terraform configuration files are stored. For Example GitHub. 
+    3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are pre-populated based on your workspace configuration.
+    4. Optional: Choose if you want to enable Git issues and code change tracking for your toolchain. 
 6. Select the **Delivery Pipeline** icon to configure your Delivery Pipeline. 
-   1. Verify that the workspace ID that is displayed to you is correct.
-   2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
+    1. Verify that the workspace ID that is displayed to you is correct.
+    2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
 7. Click **Create** to finish the setup of your toolchain. You see an overview of tools that were configured for your toolchain. 
 8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
 9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors.
@@ -279,39 +279,40 @@ The state of a workspace indicates if you have successfully created a Terraform 
 {: shortdesc}
 
 <table>
-   <thead>
+    <thead>
     <th style="width:50px">Workspace / Action</th>
     <th style="width:200px">State diagram</th>
     <th style="width:250px">Description</th>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
+        <tr>
+        <td><code>Create workspace</code></td>
+        <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
+        <td>The workspace is created without a reference to <code>GitHub</code>, <code>GitLab</code>, or <code>Bitbucket</code> to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands. Then, you can destroy all the resources to make your workspace in an inactive state.
+    </td>
+    </tr>
+        <tr>
+        <td><code>Delete workspace</code></td>
+        <td><img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800" style="width: 800px; border-style: none"/></td>
+        <td>When you perform delete workspace on an inactive, active or failed state. From these state, the template is parsed successfully to reach an inactive state or template parsed can fail and reach failed state. If you delete at least one resource, the plan and apply action executes to destroy the resource from the active state.</td>
+    </tr>
     <tr>
-      <td><code>Create workspace</code></td>
-      <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The workspace is created without a reference to `GitHub`, `GitLab`, or `Bitbucket` to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply action, to move the workspace into active state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands. Then, you can destroy all the resources to make your workspace in an inactive state.
- </td>
-   </tr>
-     <tr>
-      <td><code>Delete workspace</code></td>
-      <td><img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>When you perform delete workspace on an inactive, active or failed state. From these state, the template is parsed successfully to reach an inactive state or template parsed can fail and reach failed state. If you delete at least one resource, the plan and apply action executes to destroy the resource from the active state.</td>
-   </tr>
+        <td><code>Plan and apply action</code></td>
+        <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
+        <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in in progress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands.
+        </td>
+    </tr>
     <tr>
-      <td><code>Plan and apply action</code></td>
-      <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
-      <td>When you perform the plan or apply action on active, inactive, and failed state. Your workspace is in in progress and locked state. And the action is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands.
-      </td>
-   </tr>
+        <td><code>Destroy action</code></td>
+        <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
+        <td>The destroy action performs when your workspace is in an inactive, active or failed state. From these state, the destroy action connects to parse the template from your source repository and workspace gets into in progress unlocked state. From   state if you destroy, resource reaches failed state.</td>
+    </tr>
     <tr>
-      <td><code>Destroy action</code></td>
-      <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>The destroy action performs when your workspace is in an inactive, active or failed state. From these state, the destroy action connects to parse the template from your source repository and workspace gets into in progress unlocked state. From   state if you destroy, resource reaches failed state.</td>
-   </tr>
-    <tr>
-      <td><code>Delete and destroy action</code></td>
-      <td><img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
-      <td>When you perform delete and destroy action from active, inactive and failed state. The delete action will delete the workspace from all these state, but the resource is still in active state. Destroy will destroy the resources, and moves your workspace in active state. Whenever your apply, plan destroy the workspace, it reaches in progress locked state. Based on success and failure, the workspace is unlocked. </td>
-   </tr>
-  </tbody>
-  </table>
-  
+        <td><code>Delete and destroy action</code></td>
+        <td><img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
+        <td>When you perform delete and destroy action from active, inactive and failed state. The delete action will delete the workspace from all these state, but the resource is still in active state. Destroy will destroy the resources, and moves your workspace in active state. Whenever your apply, plan destroy the workspace, it reaches in progress locked state. Based on success and failure, the workspace is unlocked. </td>
+    </tr>
+    </tbody>
+    </table>
+    
+
