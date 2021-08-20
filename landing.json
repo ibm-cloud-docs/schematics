@@ -35,7 +35,7 @@
       },
       {
         "title": "Access Terraform template from private catalogs",
-        "description": "Create Schematics workspace/action to provision the resource by using private catalogs in your IBM Cloud account.",
+        "description": "Create Schematics workspace/action to provision the resource using private catalogs in your IBM Cloud account.",
         "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-catalog-template"
       },
       {
