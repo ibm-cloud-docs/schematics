@@ -1,6 +1,6 @@
 {
     "title": "IBM Cloud Schematics docs",
-    "lastupdated": "2021-08-20",
+    "lastupdated": "2021-08-24",
     "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
     "section_devtools": {
       "api": "/apidocs/schematics", 
@@ -20,7 +20,7 @@
       },
       {
         "title": "Automate cloud operations with actions",
-        "description": "Learn how to automatically start and stop a VVirtual Servers for VPC instance with an IBM-provided Ansible playbook.",
+        "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
         "href": "/docs/schematics?topic=schematics-getting-started-ansible"
       },
       {
@@ -42,11 +42,6 @@
         "title": "Set up the Schematics CLI",
         "description": "Install the Schematics CLI plug-in to automate Schematics actions in your IBM Cloud account.",
         "href": "/docs/schematics?topic=schematics-setup-cli"
-      },
-      {
-        "title": "Specify Terraform and Ansible version constraints",
-        "description": "Use version constraints to declare the Terraform, Terraform provider, or Ansible version that you want to use in Schematics.",
-        "href": "/docs/schematics?topic=schematics-version-constraints"
-      }     
+      } 
     ]
   }
