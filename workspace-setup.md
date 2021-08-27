@@ -324,7 +324,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 3. Select the Terraform version that your Terraform configuration files are written in.
 4. Click **Save template information**. {{site.data.keyword.bplong_notm}} automatically downloads the Terraform configuration files from your repository, scans them for syntax errors, and retrieves all input variables that you declared in your configuration files. When all configuration files are downloaded successfully and no syntax errors are found, the workspace state changes to **Inactive**.
 
-    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **View logs** to find the details of the files that were scanned and discarded.
+    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **View logs** to find the details of the files that were scanned and discarded. For more information, about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](#job-logs).
     {: tip}
 
 5. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
@@ -562,7 +562,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
     2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
 7. Click **Create** to finish the setup of your toolchain. You see an overview of tools that were configured for your toolchain. 
 8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
-9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors.
+9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. For more information, about viewing logs and history, see [Reviewing the {{site.data.keyword.bpshort}} job details](#job-logs).
 
 ## Workspace states
 {: #wks-state}
@@ -629,5 +629,14 @@ The state of a workspace indicates if you have successfully created a Terraform 
 {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [automating the deployment to the Schematics](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics).
 
 
+## Reviewing the {{site.data.keyword.bpshort}} job details
+{: #job-logs}
 
+Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status.
+
+In the job log you can see a message like 
+
+- **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed. 
+
+- **Your activity is in queue. Your position in queue is x out of y**.  Here, `x` is the position of your job in the pending queue and `y` is a total pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equitably distributed to the pending jobs. In case you're running a huge number of jobs, you can view the position increase along with the total.
 
