@@ -124,7 +124,7 @@ You can find the {{site.data.keyword.cloud_notm}} IAM token in the <strong>acces
     {: codeblock}
 
     <strong>Example output for using an API key</strong>
-    <code></code>`
+    ```
         {
         "access_token": "<iam_access_token>",
         "refresh_token": "<iam_refresh_token>",
@@ -135,14 +135,14 @@ You can find the {{site.data.keyword.cloud_notm}} IAM token in the <strong>acces
         "expiration": 1493747503
         "scope": "ibm openid"
         }
-    <code></code>`
+    ```
     {: screen}
 
 2. Retrieve the ID of the {{site.data.keyword.cloud_notm}} account that you want to work with. Replace <code><iam_access_token></code> with the {{site.data.keyword.cloud_notm}} IAM token that you retrieved from the <strong>access_token</strong> field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the <strong>resources.metadata.guid</strong> field.
 
-    <code></code>`
+    <code>
     GET https://accounts.cloud.ibm.com/coe/v2/accounts
-    <code></code>`
+    </code>
     {: codeblock}
 
     | Input parameters | Values |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-08-27"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -84,7 +84,7 @@ Similar to the `remote_state` data source, you can only access information that 
 
     data "ibm_schematics_output" "vpc" {
         workspace_id = "<schematics_workspace_ID>"
-        template_id  = data.ibm_schematics_workspace.vpc.template_id.0
+        template_id = data.ibm_schematics_workspace.vpc.runtime_data.0.id
     }
 
     output "output_vars" {
@@ -117,7 +117,7 @@ Similar to the `remote_state` data source, you can only access information that 
         </tr>
         <tr>
         <td><code>data.ibm_schematics_output.template_id</code></td>
-        <td>Enter <code>data.ibm_schematics_workspace.vpc.template_id.0</code> to reference the Terraform template of your workspace.</td>
+        <td>Enter <code>data.ibm_schematics_workspace.vpc.runtime_data.0.id</code> to reference the Terraform template of your workspace.</td>
         </tr>
         <tr>
         <td><code>output.output_vars.value</code></td>

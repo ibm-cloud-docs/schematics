@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-08-27"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -63,6 +63,7 @@ subcollection: schematics
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -618,11 +619,6 @@ The state of a workspace indicates if you have successfully created a Terraform 
         <td><code>Destroy job</code></td>
         <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
         <td>The destroy job performs when your workspace is in an inactive, active or failed state. From these state, the destroy job connects to parse the template from your source repository and workspace gets into in progress unlocked state. From   state if you destroy, resource reaches failed state.</td>
-    </tr>
-    <tr>
-        <td><code>Delete and destroy job</code></td>
-        <td><img src="images/deletedestroyworkspace.png" alt="Delete and destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
-        <td>When you perform delete and destroy job from active, inactive and failed state. The delete job will delete the workspace from all these state, but the resource is still in active state. Destroy will destroy the resources, and moves your workspace in active state. Whenever your apply, plan destroy the workspace, it reaches in progress locked state. Based on success and failure, the workspace is unlocked. </td>
     </tr>
     </tbody>
     </table>
