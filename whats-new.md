@@ -38,7 +38,7 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 
 |Date|Description|
 |-----|---------|
-|27 August 2021 |<ul><li>**Workspace update command enhancement** The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bplong_notm}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.</li><li>**Destroy_resources and Deletecommand enhancement** The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bplong_notm}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.</li></ul> |
+|27 August 2021 |<ul><li>**Workspace update command enhancement** The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bplong_notm}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.</li></ul> |
 |11 August 2021 |<ul><li><strong>{{site.data.keyword.bplong_notm}} deprecates older version of Terraform:</strong> The <code>end of marketing</code> and <code>end of support</code> of deprecating older version of Terraform provider in {{site.data.keyword.bplong_notm}}, refer to, [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).</li></ul> |
 {: caption="What's new in August" caption-side="top"}
 

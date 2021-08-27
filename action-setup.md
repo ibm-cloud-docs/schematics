@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-08-27"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -112,7 +112,6 @@ Review the following status that can be assigned to a job:
 |`skipped` |The total number of target host that were accessed but could not be updated because changes have already applied to these hosts.|
 |`unreachable` |The total number of target hosts that could not be found or reached. |
 {: caption="Job status" caption-side="top"}
-
 
 
 
