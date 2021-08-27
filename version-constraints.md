@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-08-27"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -63,6 +63,7 @@ subcollection: schematics
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -143,43 +144,62 @@ ibmcloud schematics version
 
 **Example output**
 
-``` 
+```
+
+Template Type   Version
+Terraform       terraform_v0.11
+Additional terraform Providers   Version   
+IBM Cloud Provider               v0.31.0   
+Open shift client                v3.11.0   
+Provider for REST API            v1.10.0   
+Ansible                          v2.9.23   
+Ansible Provisioner              v2.3.3   
 
 Template Type   Version   
 Terraform       terraform_v0.12   
 Additional terraform Providers   Version   
+IBM Cloud Provider               v1.29.0   
 Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
 Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.27.1   
 
 Template Type   Version   
 Terraform       terraform_v0.13   
 Additional terraform Providers   Version   
+IBM Cloud Provider               v1.29.0   
+Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
 Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.27.1   
-Open shift client                v3.11.0   
 
 Template Type   Version   
 Terraform       terraform_v0.14   
 Additional terraform Providers   Version   
 Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.27.1   
+IBM Cloud Provider               v1.29.0   
 Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
 
 Template Type   Version   
 Terraform       terraform_v0.15   
 Additional terraform Providers   Version   
-IBM Cloud Provider               v1.27.1   
+Ansible                          v2.9.23   
+Ansible Provisioner              v2.3.3   
+IBM Cloud Provider               v1.29.0   
 Open shift client                v3.11.0   
 Provider for REST API            v1.10.0   
+
+Template Type   Version   
+Terraform       terraform_v1.0   
+Additional terraform Providers   Version   
 Ansible                          v2.9.23   
-Ansible Provisioner              v2.3.3
+Ansible Provisioner              v2.3.3   
+IBM Cloud Provider               v1.29.0   
+Open shift client                v3.11.0   
+Provider for REST API            v1.10.0   
+
 ```
 {: screen}
 
