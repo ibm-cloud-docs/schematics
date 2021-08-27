@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-08-27"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -1680,7 +1680,7 @@ ibmcloud schematics job list --resource-type action --id us-south.ACTION.interac
 ### `ibmcloud schematics job logs`
 {: #schematics-logs-job}
 
-Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshort}} action. 
+Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshort}} action. For more information, about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](#job-logs).
 {: shortdesc}
 
 **Syntax**
