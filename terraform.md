@@ -38,8 +38,12 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
 2. Create a Terraform configuration file named `main.tf` and `terraform.tfvars` in the same folder as `versions.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL).
 
-    You can use Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API.
-    Then creates the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.12.20`. 
+    You can use Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API. 
+
+    If you have workspace created other than `US` location, you need to set API endpoint corresponding to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information, about the {{site.data.keyword.bpshort}} workspace locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+    {: note}
+
+    Then create the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.12.20`. 
 
     **version.tf**
 
