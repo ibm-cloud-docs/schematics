@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-27"
+lastupdated: "2021-08-31"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -32,14 +32,18 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
 {: deprecated}
 
+
+
+
 ## August 2021
 {: #aug-2021}
 
 |Date|Description|
 |-----|---------|
-|27 August 2021 |<ul><li>**Workspace update command enhancement:** The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bplong_notm}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.</li><li>**Use sample Terraform templates in {{site.data.keyword.bpshort}} workspace and onboard to private catalog:** The {{site.data.keyword.bplong_notm}} supports [sample Terraform templates to deploy into {{site.data.keyword.bpshort}} workspace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-sample) and [automate {{site.data.keyword.bpshort}} action to onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).</li><li> **Terraform v1.0 support:** {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. **Note** You can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information, about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://www.terraform.io/upgrade-guides/1-0.html).</li><li>**{{site.data.keyword.bplong_notm}} support job queue logs enhancement:** For more information, about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](#job-logs).</li></ul> |
+|27 August 2021 |<ul><li>**Workspace update command enhancement:** The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bplong_notm}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.</li><li> **Terraform v1.0 support:** {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. **Note** You can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information, about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://www.terraform.io/upgrade-guides/1-0.html).</li><li>**{{site.data.keyword.bplong_notm}} support job queue logs enhancement:** For more information, about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](#job-logs).</li></ul> |
 |11 August 2021 |<ul><li>**{{site.data.keyword.bplong_notm}} deprecates older version of Terraform:** The `end of marketing` and `end of support` of deprecating older version of Terraform provider in {{site.data.keyword.bplong_notm}}, refer to, [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).</li></ul> |
 {: caption="What's new in August" caption-side="top"}
+
 
 ## July 2021
 {: #july-2021}
