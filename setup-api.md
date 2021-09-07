@@ -138,16 +138,16 @@ You can find the {{site.data.keyword.cloud_notm}} IAM token in the <strong>acces
     ```
     {: screen}
 
-2. Retrieve the ID of the {{site.data.keyword.cloud_notm}} account that you want to work with. Replace <code><iam_access_token></code> with the {{site.data.keyword.cloud_notm}} IAM token that you retrieved from the <strong>access_token</strong> field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the <strong>resources.metadata.guid</strong> field.
+2. Retrieve the ID of the {{site.data.keyword.cloud_notm}} account that you want to work with. Replace `<iam_access_token>` with the {{site.data.keyword.cloud_notm}} IAM token that you retrieved from the **access_token** field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the **resources.metadata.guid** field.
 
-    <code>
-    GET https://accounts.cloud.ibm.com/coe/v2/accounts
-    </code>
+    ```
+    GET `https://accounts.cloud.ibm.com/coe/v2/accounts`
+    ```
     {: codeblock}
 
     | Input parameters | Values |
     | ---- |  ---- |
-    | Headers | <ul><li><code>Content-Type: application/json</code></li><li><code>Authorization: bearer <iam_access_token></code></li><li><code>Accept: application/json</code></li></ul> |
+    | Headers | <ul><li>`Content-Type: application/json`</li><li>`Authorization: bearer <iam_access_token>`</li><li>`Accept: application/json`</li></ul> |
     {: caption="Input parameters to get an {{site.data.keyword.cloud_notm}} account ID." caption-side="top"}
 
 
@@ -220,7 +220,7 @@ You can find the {{site.data.keyword.cloud_notm}} IAM token in the <strong>acces
 
         | Input parameters | Values |
         | ----- |  --- |
-        | Header | <li><code>Authorization: bearer <iam_token></code> </li>|
+        | Header | `Authorization: bearer <iam_token>`|
         {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
     **Syntax to retrieve information about a specific workspace**:
@@ -236,7 +236,7 @@ You can find the {{site.data.keyword.cloud_notm}} IAM token in the <strong>acces
     | Path | `id <workspace_ID>`: The ID of the workspace. To retrieve the workspace ID, run <ibmcloud schematics workspace list> |
     {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
-5. Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics#introduction){: external} to find a list of supported APIs.
+5. Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics/schematics#introduction){: external} to find a list of supported APIs.
 
 ## Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API
 {: #api_refresh}

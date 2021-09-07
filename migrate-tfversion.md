@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-07"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -79,7 +79,7 @@ Here are detailed steps that you can follow to upgrade.
     ```
     {: codeblock}
 
-5. Download the Terraform state file from the existing {{site.data.keyword.bpshort}} workspace, by using [{{site.data.keyword.bpshort}} state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command or through [REST API call](/apidocs/schematics#get-workspace-state) documentation to your local machine. 
+5. Download the Terraform state file from the existing {{site.data.keyword.bpshort}} workspace, by using [{{site.data.keyword.bpshort}} state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command or through [REST API call](/apidocs/schematics/schematics#get-workspace-state) documentation to your local machine. 
 
 6. Execute the state replace provider command in terminal to update the Terraform version.
 
