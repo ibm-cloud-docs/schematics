@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-27"
+lastupdated: "2021-09-07"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -130,7 +130,7 @@ Now, you are ready to complete these steps to execute the use case:
     ```
     {: codeblock}
 
-4. To verify the job is created successfully run the following command. For more information, about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](#job-logs).
+4. To verify the job is created successfully run the following command. For more information, about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup&interface=ui#job-logs).
 
     ```
     IBMcloud schematics job logs --id <job id>

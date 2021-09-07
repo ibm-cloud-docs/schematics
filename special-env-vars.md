@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-07"
 
 keywords: parallelism, schematics parallelism, environment variables, command line configuration, env vars
 
@@ -83,7 +83,7 @@ The code block is the sample payload for creating workspace with parallelism pas
 ```
 {: codeblock}
 
-A sample `env_values` block in the payload to update environment variable by using variable update API. For more information, about update workspace API, see [Update workspace input variables](/apidocs/schematics#replace-workspace).
+A sample `env_values` block in the payload to update environment variable by using variable update API. For more information, about update workspace API, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace).
 
 ```
 "env_values": [
