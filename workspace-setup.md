@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-09-09"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -638,5 +638,5 @@ In the job log you can see a message such as:
 
 - **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed. 
 
-- **Your activity is in queue. Your position in queue is x out of y**.  Here, `x` is the position of your job in the pending queue and `y` is a total pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equitably distributed to the pending jobs. In case you're running a huge number of jobs, you can view the position increase along with the total.
+- **Your activity is in queue. Your position in queue is x out of the total number of pending jobs are y**.  The position of your job in the pending queue. The total is the total number of pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equitably distributed to the pending jobs. In case you are running huge number of jobs, you can see the position increase along with the total. 
 
