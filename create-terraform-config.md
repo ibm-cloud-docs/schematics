@@ -262,7 +262,8 @@ After creating the workspace, you can provide the values, for {{site.data.keywor
 
 Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be declared in the variable store.
 
-    <table>
+
+<table>
     <thead>
     <th style="width:80px">Type</th>
     <th style="width:100px">Example</th>
@@ -334,8 +335,8 @@ Yes, when you declare and assign the value to the variables, you can view the to
     }
 ]</code></pre></p></li></ul></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Storing your Terraform templates
 {: #store-template}
