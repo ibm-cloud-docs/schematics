@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-16"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -215,6 +215,7 @@ You need to be an expert user to upgrade the Terraform version to perform these 
 {: support}
 
 The unexpected impact due to maintenance may result in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity will be marked as Failed. The user can then re-execute the activity, for more information, about the workspace state see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+
 
 
 
