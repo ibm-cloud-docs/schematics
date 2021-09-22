@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-09"
+lastupdated: "2021-09-22"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -632,11 +632,10 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ## Reviewing the {{site.data.keyword.bpshort}} job details
 {: #job-logs}
 
-Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status.
+Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information, about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics)
 
 In the job log you can see a message such as: 
 
 - **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed. 
 
-- **Your activity is in queue. Your position in queue is x out of the total number of pending jobs are y**.  The position of your job in the pending queue. The total is the total number of pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equitably distributed to the pending jobs. In case you are running huge number of jobs, you can see the position increase along with the total. 
-
+- **Your job was submitted and is in queue, at position x out of y**. Here `x` is the position of your job in the pending queue and `y` is a total pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equally distributed to the pending jobs. In case you are running a huge number of jobs, you can view the position increase along with the total.
