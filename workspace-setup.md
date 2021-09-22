@@ -329,7 +329,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 
 5. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
 
-    <table>
+<table>
     <thead>
     <th style="width:80px">Type</th>
     <th style="width:100px">Example</th>
@@ -402,7 +402,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     ]</code></pre></p></li></ul></td>
         </tr>
     </tbody>
-    </table>
+</table>
 
 
 ### Running your Terraform template in {{site.data.keyword.cloud_notm}}
@@ -632,7 +632,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ## Reviewing the {{site.data.keyword.bpshort}} job details
 {: #job-logs}
 
-Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information, about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics)
+Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information, about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process&interface=ui)
 
 In the job log you can see a message such as: 
 
