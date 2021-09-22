@@ -59,6 +59,7 @@ Schematics
           monitoring-instances.md
           at.md
     
+    job-queue.md
     version-constraints.md
     terraform.md
 

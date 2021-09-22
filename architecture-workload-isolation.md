@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-22"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -26,7 +26,7 @@ subcollection: schematics
 {:support: data-reuse='support'}
 {:help: data-hd-content-type='help'}
 
-# Learning about {{site.data.keyword.bpshort}} architecture and workload isolation
+# {{site.data.keyword.bpshort}} architecture and workload isolation
 {: #compute-isolation}
 
 Learn about the {{site.data.keyword.bpshort}} service architecture, the service dependencies, and how customer workloads are isolated from each other in {{site.data.keyword.bplong_notm}}.
