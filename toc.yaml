@@ -31,6 +31,10 @@ toc:
       - tutorials/automate-continuous-deployment.md
       [Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)
       [Deploying multi-tier VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
+      links:
+      - link:
+          label: Deploying a VPC environment on IBM Cloud by using Bastion host
+          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
   - navgroup:
       id: howto
       topics:
@@ -129,10 +133,13 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
-          - troubleshooting/apply-nullresource.md
-          - troubleshooting/apply-timeout-taint.md
-          - troubleshooting/apply-resource-group.md
-          - troubleshooting/apply-500-errors.md
-      - error-messages.md
+          - topicgroup:
+              label: Debugging Schematics apply errors
+              topics:
+              - troubleshooting/apply-nullresource.md
+              - troubleshooting/apply-timeout-taint.md
+              - troubleshooting/apply-resource-group.md
+              - troubleshooting/apply-500-errors.md
+          - error-messages.md
       - ts_index.md
 
