@@ -29,12 +29,13 @@ toc:
       topics:
       - tutorials/provisioning-tf.md
       - tutorials/automate-continuous-deployment.md
-      [Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)
-      [Deploying multi-tier VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
       links:
       - link:
           label: Deploying a VPC environment on IBM Cloud by using Bastion host
           href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
+      - link:
+          label: Deploying multi-tier VPC on IBM Cloud by using Bastion host
+          href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
   - navgroup:
       id: howto
       topics:
@@ -89,29 +90,29 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - cli-reference.md
       - topicgroup:
           label: API reference
           links:
           - link:
               label: IBM Cloud Schematics API
               href: https://cloud.ibm.com/apidocs/schematics
-      - topicgroup:
-          label: Command reference
-          topics:
-          - cli-reference.md
       - schematics-sdk.md
       - locations.md
       - limitations.md
       - license-notices.md
       - topicgroup:
-          label: Terraform
-          links:
-          - link:
-              label: Sample Terraform templates
-              href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
-          - link:
-              label: IBM Cloud provider for Terraform
-              href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+          label: Related links
+          topics:
+          - topicgroup:
+              label: Terraform
+              links:
+              - link:
+                  label: Sample Terraform templates
+                  href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
+              - link:
+                 label: IBM Cloud provider for Terraform
+                 href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
           - link:
               label: Terraform documentation
               href: https://www.terraform.io/docs/index.html
