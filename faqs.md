@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-23"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -139,14 +139,17 @@ The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apik
     curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
 
-## Template Error
-{: #template-error}
+## How do I rectify 'Failed to clone git repository, couldn’t find remote ref “refs/heads/master” (most likely invalid branch name is passed)'?
+{: #template-errors}
+{: faq}
+{: support}
 
-How do I rectify 'Failed to clone git repository, couldn’t find remote ref “refs/heads/master” (most likely invalid branch name is passed)'?
+**Template error**
 
 Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ ` repository, after 1st October 2020, can see this error message. 
 
-Solution
+**Solution**
+
 If the repository is created after 1st October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
 
 
@@ -215,8 +218,4 @@ You need to be an expert user to upgrade the Terraform version to perform these 
 {: support}
 
 The unexpected impact due to maintenance may result in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity will be marked as Failed. The user can then re-execute the activity, for more information, about the workspace state see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
-
-
-
-
 

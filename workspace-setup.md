@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-09"
+lastupdated: "2021-09-22"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -329,7 +329,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 
 5. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
 
-    <table>
+<table>
     <thead>
     <th style="width:80px">Type</th>
     <th style="width:100px">Example</th>
@@ -402,7 +402,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     ]</code></pre></p></li></ul></td>
         </tr>
     </tbody>
-    </table>
+</table>
 
 
 ### Running your Terraform template in {{site.data.keyword.cloud_notm}}
@@ -580,10 +580,10 @@ Review the states that a workspace can have in the following table. You might no
 | Draft | The workspace is created without a reference to a `GitHub`, `GitLab`, or `Bitbucket` repository.   |
 | Failed | If errors occur during the execution of your infrastructure code in {{site.data.keyword.bplong_notm}}, your workspace state is set to **Failed**. To troubleshoot errors, open the logs on the workspace **Activity** page. |
 | Inactive | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply job to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
-| In progress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **In progress**. |
+| Inprogress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **Inprogress**. |
 | Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
 | Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy job are stopped manually. |
-| Template Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
+| Template_Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
 
 ### Workspace state diagram and manipulative job
 {: #workspace-state-diagram}
@@ -632,11 +632,10 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ## Reviewing the {{site.data.keyword.bpshort}} job details
 {: #job-logs}
 
-Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status.
+Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information, about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process&interface=ui)
 
 In the job log you can see a message such as: 
 
 - **Activity triggered. Waiting for the logs**. This means the job is in pending status and yet to be processed. 
 
-- **Your activity is in queue. Your position in queue is x out of the total number of pending jobs are y**.  The position of your job in the pending queue. The total is the total number of pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equitably distributed to the pending jobs. In case you are running huge number of jobs, you can see the position increase along with the total. 
-
+- **Your job was submitted and is in queue, at position x out of y**. Here `x` is the position of your job in the pending queue and `y` is a total pending jobs. The available resources in {{site.data.keyword.bpshort}} backend are equally distributed to the pending jobs. In case you are running a huge number of jobs, you can view the position increase along with the total.

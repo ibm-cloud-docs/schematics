@@ -13,6 +13,7 @@ Schematics
          getting-started-software.md
 
     about.md
+    architecture-workload-isolation.md
     whats-new.md
      {: .navgroup-end}
 
@@ -58,13 +59,13 @@ Schematics
           monitoring-instances.md
           at.md
     
+    job-queue.md
     version-constraints.md
     terraform.md
 
     {: .topicgroup}
     Enhancing security for Schematics
         iam.md
-        architecture-workload-isolation.md
         responsibilities.md
         ha-dr.md
         manage-scc.md

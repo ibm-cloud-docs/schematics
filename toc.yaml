@@ -1,0 +1,146 @@
+toc:
+  properties:
+    subcollection: schematics
+    category: dev_ops
+    audience: service
+    href: /docs/schematics
+    console-page: /schematics/overview
+    product-page: https://ibm.com/cloud/product-value
+    path: schematics
+    label: Schematics
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - topicgroup:
+          label: Getting started
+          topics:
+          - getting-started.md
+          - getting-started-terraform.md
+          - getting-started-ansible-new.md
+          - getting-started-software.md
+      - about.md
+      - architecture-workload-isolation.md
+      - whats-new.md
+  - navgroup:
+      id: tutorial
+      topics:
+      - tutorials/provisioning-tf.md
+      - tutorials/automate-continuous-deployment.md
+      links:
+      - link:
+          label: Deploying a VPC environment on IBM Cloud by using Bastion host
+          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
+      - link:
+          label: Deploying multi-tier VPC on IBM Cloud by using Bastion host
+          href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
+  - navgroup:
+      id: howto
+      topics:
+      - topicgroup:
+          label: Setting up the CLI and API
+          topics:
+          - setup-cli.md
+          - setup-api.md
+      - topicgroup:
+          label: Workspaces - Cloud infrastructure deployment with Terraform
+          topics:
+          - create-terraform-config.md
+          - workspace-setup.md
+          - special-env-vars.md
+          - manage-resource-lifecycle.md
+          - cross_region_deployment.md
+          - deprecation-tf.md
+          - migrate-tfversion.md
+          - remotestate.md
+          - private-catalog.md
+          - solutions.md
+      - topicgroup:
+          label: Actions - Configuration management and cloud operations with Ansible
+          topics:
+          - create-ansible-playbook.md
+          - action-setup.md
+          - inventories.md
+          - autodeploy-actionsamples.md
+          - autodeploy-template.md
+      - topicgroup:
+          label: Logging and monitoring
+          topics:
+          - monitoring-instances.md
+          - at.md
+
+      - job-queue.md
+      - version-constraints.md
+      - terraform.md
+      - topicgroup:
+          label: Enhancing security for Schematics
+          topics:
+          - iam.md
+          - responsibilities.md
+          - ha-dr.md
+          - manage-scc.md
+          - private-endpoint.md
+          - data-security.md
+          - allowips.md
+
+#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
+#  Links to your command line reference docs should be included in the Reference navigation group.
+  - navgroup:
+      id: reference
+      topics:
+      - cli-reference.md
+      - topicgroup:
+          label: API reference
+          links:
+          - link:
+              label: IBM Cloud Schematics API
+              href: https://cloud.ibm.com/apidocs/schematics
+      - schematics-sdk.md
+      - locations.md
+      - limitations.md
+      - license-notices.md
+      - topicgroup:
+          label: Related links
+          topics:
+          - topicgroup:
+              label: Terraform
+              links:
+              - link:
+                  label: Sample Terraform templates
+                  href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
+              - link:
+                 label: IBM Cloud provider for Terraform
+                 href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+          - link:
+              label: Terraform documentation
+              href: https://www.terraform.io/docs/index.html
+      - topicgroup:
+          label: Ansible
+          links:
+          - link:
+              label: Ansible documentation
+              href: https://docs.ansible.com/ansible/latest/index.html
+  - navgroup:
+      id: help
+      topics:
+      - faqs.md
+      - topicgroup:
+          label: FAQs
+          topics:
+          - topic-7.md
+          - topic-8.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - topicgroup:
+              label: Debugging Schematics apply errors
+              topics:
+              - troubleshooting/apply-nullresource.md
+              - troubleshooting/apply-timeout-taint.md
+              - troubleshooting/apply-resource-group.md
+              - troubleshooting/apply-500-errors.md
+          - error-messages.md
+      - ts_index.md
+
