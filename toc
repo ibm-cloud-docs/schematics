@@ -101,7 +101,7 @@ Schematics
     
     {: .topicgroup}
     Troubleshooting 
-    
+
         {: .topicgroup}
         Debugging Schematics apply errors
              troubleshooting/apply-nullresource.md
