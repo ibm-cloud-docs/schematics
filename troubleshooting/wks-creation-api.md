@@ -19,13 +19,14 @@ content-type: troubleshoot
 {: #wks-create-api}
 
 You attempted to create the {{site.data.keyword.bpshort}} workspace through API by using following CURL command.
+{: tsSymptoms}
 
 ```
 curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: Bearer scfQ" -d '{"name":"test_api","type": ["terraform_v0.12"],"location": "eu-de","description": "via api","resource_group": "5e1f06f5b2b24a319f6cd5be86f531dd","tags": [],"template_repo": {"url": "https://github.ibm.com/Rise-with-SAP/iac-hec-sap"},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": []}]}'
 ```
-{: tsSymptoms}
 
 Following error is displayed when you execute the {{site.dta.keyword.bpshort}} workspace create API.
+{: tsCauses}
 
 ```
 {
@@ -36,9 +37,12 @@ Following error is displayed when you execute the {{site.dta.keyword.bpshort}} w
 "statuscode": 400
 }
 ```
-{: tsCauses}
 
-Verify the payload location and the URL endpoint used to create the {{site.data.keyword.bpshort}} workspace are identical. For example, 
+
+Verify the payload location and the URL endpoint used to create the {{site.data.keyword.bpshort}} workspace are identical.
+{: tsResolve}
+
+**For example**
+
 - For creating workspace in US: Use  **location** as **us-east** or **us-south** in the payload with the URL as `https://schematics.cloud.ibm.com/v1/workspaces`
 - For workspace in the EU: Use **location** as **eu-de** or **eu-gb** in the payload with the URL as `https://eu.schematics.cloud.ibm.com/v1/workspaces`
-{: tsResolve}
