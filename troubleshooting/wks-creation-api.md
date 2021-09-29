@@ -18,12 +18,13 @@ content-type: troubleshoot
 # Why do {{site.data.keyword.bpshort}} workspace create through API fails?
 {: #wks-create-api}
 
-You attempted to create the {{site.data.keyword.bpshort}} workspace through API by using following CURL command.
+When you attempt to create the {{site.data.keyword.bpshort}} workspace through API by using following CURL command.
 {: tsSymptoms}
 
 ```
 curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: Bearer scfQ" -d '{"name":"test_api","type": ["terraform_v0.12"],"location": "eu-de","description": "via api","resource_group": "5e1f06f5b2b24a319f6cd5be86f531dd","tags": [],"template_repo": {"url": "https://github.ibm.com/Rise-with-SAP/iac-hec-sap"},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": []}]}'
 ```
+{: screen}
 
 Following error is displayed when you execute the {{site.dta.keyword.bpshort}} workspace create API.
 {: tsCauses}
@@ -37,9 +38,10 @@ Following error is displayed when you execute the {{site.dta.keyword.bpshort}} w
 "statuscode": 400
 }
 ```
+{: screen}
 
 
-Verify the payload location and the URL endpoint used to create the {{site.data.keyword.bpshort}} workspace are identical.
+Verify the payload `location` and the `URL endpoint` used to create the {{site.data.keyword.bpshort}} workspace are identical.
 {: tsResolve}
 
 **For example**
