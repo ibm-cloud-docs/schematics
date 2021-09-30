@@ -36,6 +36,9 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 
 
 
+
+
+
 ## August 2021
 {: #aug-2021}
 
