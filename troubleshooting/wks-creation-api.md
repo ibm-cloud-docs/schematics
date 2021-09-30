@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-29"
+lastupdated: "2021-09-30"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -18,7 +18,7 @@ content-type: troubleshoot
 # Why do {{site.data.keyword.bpshort}} workspace create through API fails?
 {: #wks-create-api}
 
-When you attempt to create the {{site.data.keyword.bpshort}} workspace through API by using following CURL command.
+The {{site.data.keyword.bpshort}} create workspace fails when you attempt to create through API by using following CURL command.
 {: tsSymptoms}
 
 ```
@@ -26,7 +26,7 @@ curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Aut
 ```
 {: screen}
 
-Following error is displayed when you execute the {{site.dta.keyword.bpshort}} workspace create API.
+Getting following `bad request` error.
 {: tsCauses}
 
 ```
@@ -41,10 +41,10 @@ Following error is displayed when you execute the {{site.dta.keyword.bpshort}} w
 {: screen}
 
 
-Verify the payload `location` and the `URL endpoint` used to create the {{site.data.keyword.bpshort}} workspace are identical.
+Verify the payload contains that `location` and the `url` are  pointing to the same region.
 {: tsResolve}
 
 **For example**
 
-- For creating workspace in US: Use  **location** as **us-east** or **us-south** in the payload with the URL as `https://schematics.cloud.ibm.com/v1/workspaces`
-- For workspace in the EU: Use **location** as **eu-de** or **eu-gb** in the payload with the URL as `https://eu.schematics.cloud.ibm.com/v1/workspaces`
+- For creating workspace in `US` region: Use  `location` as **us-east** or **us-south** and `url` as **https://schematics.cloud.ibm.com/v1/workspaces** or **https://us.schematics.cloud.ibm.com/v1/workspaces**. By default https://schematics.cloud.ibm.com/v1/workspaces points to https://schematics.cloud.ibm.com/v1/workspaces endpoint.
+- For workspace in the `EU` region: Use `location` as **eu-de** or **eu-gb** and `url` as **https://eu.schematics.cloud.ibm.com/v1/workspaces** endpoint.
