@@ -26,8 +26,10 @@ curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Aut
 ```
 {: screen}
 
-Getting following `bad request` error.
+
+When {{site.data.keyword.bpshort}} executes the CURL command, an error states {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the workspace create is marked with `Bad request` message. 
 {: tsCauses}
+
 
 ```
 {
@@ -41,10 +43,11 @@ Getting following `bad request` error.
 {: screen}
 
 
-Verify the payload contains that `location` and the `url` are  pointing to the same region.
+Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region.
 {: tsResolve}
 
 **For example**
 
 - For creating workspace in `US` region: Use  `location` as **us-east** or **us-south** and `url` as **https://schematics.cloud.ibm.com/v1/workspaces** or **https://us.schematics.cloud.ibm.com/v1/workspaces**. By default https://schematics.cloud.ibm.com/v1/workspaces points to https://schematics.cloud.ibm.com/v1/workspaces endpoint.
 - For workspace in the `EU` region: Use `location` as **eu-de** or **eu-gb** and `url` as **https://eu.schematics.cloud.ibm.com/v1/workspaces** endpoint.
+

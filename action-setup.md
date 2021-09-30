@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-27"
+lastupdated: "2021-09-30"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -27,7 +27,7 @@ subcollection: schematics
 # Setting up {{site.data.keyword.bpshort}} actions
 {: #action-setup}
 
-Run you Ansible playbook in {{site.data.keyword.cloud_notm}} by using {{site.data.keyword.bpshort}} actions. 
+Run your Ansible playbook in {{site.data.keyword.cloud_notm}} by using {{site.data.keyword.bpshort}} actions. 
 
 An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. These target hosts are also referred to as inventory. It includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want to configure and perform managed operations on the {{site.data.keyword.cloud}} resource.
 {: shortdesc}
@@ -42,6 +42,9 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 
 - Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. You can also try out one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a {{site.data.keyword.bpshort}} action. 
+
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace and actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+{: note}
 
 **To create an action**:
 
