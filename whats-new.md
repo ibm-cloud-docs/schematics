@@ -34,6 +34,16 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 
 
 
+## September 2021
+{: #sept30-2021}
+
+|Date|Description|
+|-----|---------|
+|30 September 2021 |<ul><li>**Inventory target feature support in {{site.data.keyword.bpshort}} action API:** The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`winrm`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](https://cloud.ibm.com/apidocs/schematics/schematics#update-action) action APIs.</li><li>**Bastion host enhancement in {{site.data.keyword.bpshort}} action API:** The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action APIs if the `inventory connection type` is set to **winrm**.</li><li>**{{site.data.keyword.bpshort}} action API enhancement to support bastion host connection with non-root user:** The {{site.data.keyword.bpshort}} action API now supports bastion host connection with non-root user and the `ssh` in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action APIs.</li><li>**{{site.data.keyword.bplong_notm}} job queue process:** For more information, about job queue process, see [Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process) and [FAQ](/docs/schematics?topic=schematics-faqs&interface=ui#job-queue-faq).</li><li>**{{site.data.keyword.bpshort}} action APIs enhances the credentials parameter:** You can now access the inventory username through the credentials parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action APIs.</li><li>**{{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API:** You can now download the sub-folders from the GIT repositories through {{site.data.keyword.bpshort}}. For more information, see [How can I download sub-folders from the GIT respositories through Schematics?](/docs/schematics?topic=schematics-faqs#compact-faq).</li><li>**Importance of location and URL endpoint in workspace creation:** [Why do {{site.data.keyword.bpshort}} workspace create through API fails?](/docs/schematics?topic=schematics-wks-create-api).</li></ul> |
+{: caption="What's new in September" caption-side="top"}
+
+
+
 
 
 
