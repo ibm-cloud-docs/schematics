@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-29"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -32,6 +32,9 @@ subcollection: schematics
 
 [{{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started#getting-started) is a third-party cloud native, and container-intelligence management system that you can include as part of your IBM Cloud Schematics. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {: shortdesc}
+
+You need to create Sysdig monitor in `us-south` and `eu-de` region to view the {{site.data.keyword.bpshort}} metrics.
+{: note}
 
 
 
@@ -68,7 +71,8 @@ Complete these steps to create your services instance:
 5. Create an {{site.data.keyword.mon_full_notm}} instance by using the `Lite plan`.
 6. Click on `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
 7. Click `View Sysdig` icon, to view your workspace and action that you created.
-    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, to monitor the status, refer to [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
+    
+    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, about monitoring the status, refer to [Monitoring workspace](#launch-dashboard). If you want to create custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
     {: note}
 
 ## Creating custom dashboard

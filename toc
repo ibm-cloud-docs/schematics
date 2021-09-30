@@ -101,14 +101,18 @@ Schematics
     
     {: .topicgroup}
     Troubleshooting 
-    
+
         {: .topicgroup}
         Debugging Schematics apply errors
              troubleshooting/apply-nullresource.md
              troubleshooting/apply-timeout-taint.md
              troubleshooting/apply-resource-group.md
              troubleshooting/apply-500-errors.md
-        
+
+        {: .topicgroup}
+        Debugging Schematics create errors
+             troubleshooting/wks-creation-api.md
+
         error-messages.md
     
     ts_index.md

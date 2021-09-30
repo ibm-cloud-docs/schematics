@@ -5,7 +5,7 @@ toc:
     audience: service
     href: /docs/schematics
     console-page: /schematics/overview
-    product-page: https://ibm.com/cloud/product-value
+    product-page: http://cloud.ibm.com/schematics
     path: schematics
     label: Schematics
 
@@ -141,6 +141,9 @@ toc:
               - troubleshooting/apply-timeout-taint.md
               - troubleshooting/apply-resource-group.md
               - troubleshooting/apply-500-errors.md
+          - topicgroup:
+              label: Debugging Schematics create errors
+              topics:
+              - troubleshooting/wks-creation-api.md
           - error-messages.md
       - ts_index.md
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-09-30"
 
 keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
 
@@ -281,7 +281,7 @@ Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraf
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The location can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}	
 
-To create a workspace, you must specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. 
+To create a workspace, you can specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. Also ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace and actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -601,6 +601,7 @@ ibmcloud schematics workspace output --id myworkspace-asdff1a1a-42145-11 --name 
 Perform an {{site.data.keyword.cloud_notm}} refresh action against your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. If differences are found, the Terraform statefile is updated accordingly. 
 {: shortdesc}
 
+
 **Syntax**
 
 ```
@@ -729,7 +730,7 @@ ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --addr
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.
 
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The region can be **us-east, us-south, eu-gb**, or **eu-de** region. You need to wait before calling the command again.
+{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The region can be **us-east, us-south, eu-gb**, or **eu-de** region. You need to wait before calling the command again. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace and actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}	
 
 If you provided your Terraform template by uploading a tape archive file (`.tar`) and you want to update your template, you must use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command.
@@ -1204,6 +1205,8 @@ You can set the proxy between a SSH client and the {{site.data.keyword.cloud_not
 Create an {{site.data.keyword.bplong_notm}} action to run an Ansible playbook on a single target host or a group of target hosts. You use Ansible playbooks to perform cloud operations or install software on cloud resources. To try out this capability or to get started, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. You can create an action by using a payload file or the command's interactive mode.
 {: shortdesc}
 
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace and actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+{: note}
 
 **Syntax**
 
@@ -1211,7 +1214,6 @@ Create an {{site.data.keyword.bplong_notm}} action to run an Ansible playbook on
 ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--credential CREDENTIAL_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--inventory INVENTORY_ID] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--github-token GITHUB_ACCESS_TOKEN] [--output OUTPUT] [--file FILE_NAME ] [--json] [--no-prompt]
 ```
 {: pre}
-
 
 **Command options**
 
@@ -1235,6 +1237,8 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--file` or `-f` | Required | The path to the JSON payload file containing the definition of the action that you want to create. For more information, see [Using a payload file](#create-action-payload). |
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive mode. |
 {: caption="Schematics action create flags" caption-side="top"}
+
+
 
 **Example**
 
@@ -1312,9 +1316,8 @@ Instead of entering the command options or using a payload file, you can use the
 ### `ibmcloud schematics action update`
 {: #schematics-update-action}
 
-Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. 
+Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace and actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
-
 
 **Syntax**
 

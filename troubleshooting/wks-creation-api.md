@@ -1,0 +1,53 @@
+---
+
+copyright:
+  years: 2017, 2021
+lastupdated: "2021-09-30"
+
+keywords: schematics, schematics workspace create, schematics workspace create
+
+subcollection: schematics
+content-type: troubleshoot
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+
+
+# Why do {{site.data.keyword.bpshort}} workspace create through API fails?
+{: #wks-create-api}
+
+The {{site.data.keyword.bpshort}} create workspace fails when you attempt to create through API by using following CURL command.
+{: tsSymptoms}
+
+```
+curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: Bearer scfQ" -d '{"name":"test_api","type": ["terraform_v0.12"],"location": "eu-de","description": "via api","resource_group": "5e1f06f5b2b24a319f6cd5be86f531dd","tags": [],"template_repo": {"url": "https://github.ibm.com/Rise-with-SAP/iac-hec-sap"},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": []}]}'
+```
+{: screen}
+
+
+When {{site.data.keyword.bpshort}} executes the CURL command, an error states {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the workspace create is marked with `Bad request` message. 
+{: tsCauses}
+
+
+```
+{
+"requestid": "3b57ed5d-8610-4a86-9864-8d8197b80336",
+"timestamp": "2021-09-22T14:49:04.565693526Z",
+"messageid": "M1008",
+"message": "Bad request. Check that the information you entered in the payload is complete and formatted correctly in JSON.",
+"statuscode": 400
+}
+```
+{: screen}
+
+
+Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region.
+{: tsResolve}
+
+**For example**
+
+- For creating workspace in `US` region: Use  `location` as **us-east** or **us-south** and `url` as **https://schematics.cloud.ibm.com/v1/workspaces** or **https://us.schematics.cloud.ibm.com/v1/workspaces**. By default https://schematics.cloud.ibm.com/v1/workspaces points to https://schematics.cloud.ibm.com/v1/workspaces endpoint.
+- For workspace in the `EU` region: Use `location` as **eu-de** or **eu-gb** and `url` as **https://eu.schematics.cloud.ibm.com/v1/workspaces** endpoint.
+
