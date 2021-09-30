@@ -50,13 +50,13 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     The sample `versions.tf` file to specify the provider version that you need to create the workspace.
 
     ```
-        terraform {
-        required_providers {
-            ibm = {
-            source = "IBM-Cloud/ibm"
-            version = "1.27.1"
-            }
+    terraform {
+      required_providers {
+        ibm = {
+        source = "IBM-Cloud/ibm"
+        version = "1.27.1"
         }
+      }
     }
     ```
     {: codeblock}
@@ -160,8 +160,8 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
 Now that you successfully created your first {{site.data.keyword.bpshort}} workspace with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks: 
 
-    - Learn how to create an [{{site.data.keyword.bplong_notm}} job](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_job){: external} resource to run your Terraform template in IBM Cloud.
-    - To run Ansible playbooks in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
-    - Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or check-out other arguments and attributes that you can use for the Terraform resources that were used in this example.
+- Learn how to create an [{{site.data.keyword.bplong_notm}} job](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_job){: external} resource to run your Terraform template in IBM Cloud.
+- To run Ansible playbooks in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
+- Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or check-out other arguments and attributes that you can use for the Terraform resources that were used in this example.
 
 
