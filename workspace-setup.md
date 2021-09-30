@@ -485,15 +485,15 @@ Review the states that a workspace can have in the following table. You might no
 
 | State | Description | 
 | ------- | ---------------------------- | 
-| Active | After you successfully ran your infrastructure code with {{site.data.keyword.bplong_notm}} by applying your Terraform execution plan, the state of your workspace changes to **Active**. |
-| Connecting | {{site.data.keyword.bpshort}} tries to connect to the template in your source repo. If successfully connected, the template is downloaded and metadata, such as input parameters, is extracted. After the template is downloaded, the state of the workspace changes to **Scanning**. |
-| Draft | The workspace is created without a reference to a `GitHub`, `GitLab`, or `Bitbucket` repository.   |
-| Failed | If errors occur during the execution of your infrastructure code in {{site.data.keyword.bplong_notm}}, your workspace state is set to **Failed**. To troubleshoot errors, open the logs on the workspace **Activity** page. |
-| Inactive | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply job to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
-| Inprogress | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to **Inprogress**. |
-| Scanning | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
-| Stopped | The {{site.data.keyword.bpshort}} plan, apply, or destroy job are stopped manually. |
-| Template_Error | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
+| `Active` | After you successfully ran your infrastructure code with {{site.data.keyword.bplong_notm}} by applying your Terraform execution plan, the state of your workspace changes to **Active**. |
+| `Connecting` | {{site.data.keyword.bpshort}} tries to connect to the template in your source repo. If successfully connected, the template is downloaded and metadata, such as input parameters, is extracted. After the template is downloaded, the state of the workspace changes to **Scanning**. |
+| `Draft` | The workspace is created without a reference to a `GitHub`, `GitLab`, or `Bitbucket` repository.   |
+| `Failed` | If errors occur during the execution of your infrastructure code in {{site.data.keyword.bplong_notm}}, your workspace state is set to **Failed**. To troubleshoot errors, open the logs on the workspace **Activity** page. |
+| `Inactive` | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply job to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
+| `Inprogress` | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to `Inprogress`. |
+| `Scanning` | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
+| `Stopped` | The {{site.data.keyword.bpshort}} plan, apply, or destroy job are stopped manually. |
+| `Template_Error` | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
 
 ### Workspace state diagram and manipulative job
 {: #workspace-state-diagram}
@@ -542,7 +542,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ## Reviewing the {{site.data.keyword.bpshort}} job details
 {: #job-logs}
 
-Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information, about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process&interface=ui)
+Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information, about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](https://test.cloud.ibm.com/docs/schematics?topic=schematics-job-queue-process&interface=ui#about-job-queue)
 
 In the job log you can see a message such as: 
 

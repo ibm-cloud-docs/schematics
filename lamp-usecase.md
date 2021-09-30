@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-09-30"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -41,7 +41,7 @@ These playbooks are tested on CentOS 7.x. It is recommended you use `CentOS` or 
 Before you can use execute the use case, you must complete the following tasks:
 
 - [{{site.data.keyword.bplong_notm}}](https://cloud.ibm.com/schematics) login.
-- Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
+- Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management#ac-roles-permissions).
 - [SSH Key on {{site.data.keyword.cloud_notm}}](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
 - Create a VPC for Generation 2 compute infrastructure and a virtual server instance in that VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs)
 - [multitier VPC Bastion Host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host).

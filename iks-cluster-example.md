@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-09-30"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -40,7 +40,7 @@ You can execute the use case by using command-line or user interface by completi
 The prerequisites for the use case are:
 
 * {{site.data.keyword.bplong_notm}} login.
-* Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management).
+* Roles and permissions for service access, see [Managing service access role](/docs/app-configuration?topic=app-configuration-ac-service-access-management#ac-roles-permissions).
 * Running state of an {{site.data.keyword.containerlong_notm}} instance. For more information, see [Getting started with {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started). Create a cluster configuration provisioned with classic infrastructure, opting for Single zone availability and enabling single worker node with single zone. For any support that you need, reach out the [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
 * Schematics plug-in installed, for more information, refer to [installing {{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli). 
 
