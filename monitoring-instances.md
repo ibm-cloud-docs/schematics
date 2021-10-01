@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-29"
+lastupdated: "2021-10-01"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -33,7 +33,7 @@ subcollection: schematics
 [{{site.data.keyword.mon_full_notm}}](/docs/monitoring?topic=monitoring-getting-started#getting-started) is a third-party cloud native, and container-intelligence management system that you can include as part of your IBM Cloud Schematics. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {: shortdesc}
 
-You need to create Sysdig monitor in `us-south` and `eu-de` region to view the {{site.data.keyword.bpshort}} metrics.
+You need to create Sysdig monitor in `us-south` region to view the {{site.data.keyword.bpshort}} metrics that relates to workspaces, actions, or an environment that you create in `US` region. And create Sysdig monitor in `eu-de` region to view the {{site.data.keyword.bpshort}} metrics that relates to workspaces, actions, or an environment that you create in `EU` region.
 {: note}
 
 
