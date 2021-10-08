@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-30"
+lastupdated: "2021-10-08"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -54,8 +54,8 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     2. Optional: Enter the tags that you want to add to your action. Tags can help you find an action more easily later.
     3. Select the resource group where you want to create the action. 
     4. Select the **Location** where you want to create the action. The location determines where your action runs and action data are stored. You can choose between a geography, such as `North America`, or a location, such as `Frankfurt` or `London`. If you select a geography, {{site.data.keyword.bpshort}} decides on a location within this geography based on availability. Be sure that you can store your action data in this location as you cannot change the location after the action is created. For more information, about where your data is stored? see [where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Note that the location of your action is independent from the location of your {{site.data.keyword.cloud_notm}} resource where you want to run your Ansible playbook.
-    5. Click the **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Settings` page.
-3. Import your Ansible playbook. 
+    5. Click the **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Details` section.
+3. In the **Ansible playbook** section, click **Edit icon** to import your Ansible playbook. 
     1. Enter the **Repository URL** of your GitHub or GitLab repository where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run later. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
         - Example for master branch - `https://github.com/myorg/myrepo`
         - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
@@ -64,7 +64,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         Don't have a playbook that you can use? Try out one of our [sample playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
         {: tip}
 
-    2. If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information, about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
+    2. Optional: If you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate with your GitHub repository to access your Ansible playbook. For more information, about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.
     3. Review the default Ansible version that is used to run your playbook. This version cannot be changed. If you use your own Ansible playbook, make sure that your playbook can be run with this Ansible version. 
     4. Click **Retrieve playbooks** to connect to your repository and retrieve all Ansible playbooks from your Git repository.
     5. Select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook.
@@ -72,7 +72,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     7. Optional: Click the **Advanced options** to define input variables that you want to pass to the playbook. Input variables must be entered in key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden for the users after the action is created. If you use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}, all input variables can be found in the `readme.md` file. 
     8. Click **Save** to save the action details. 
 4. Configure your resource inventory. The resource inventory includes all target hosts where you want to run your Ansible playbook.
-    1. In the **IBM Cloud resource inventory** card, click the edit icon. 
+    1. In the **IBM Cloud resource inventory** section, click the **Edit icon**. 
     2. If your Ansible playbook requires a bastion host, enter the IP address of your bastion host. The bastion host sits in front of your target hosts and proxies all Ansible SSH connections to the target hosts.
     3. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information about resource inventories, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
     4. In the **IBM Cloud resource inventory SSH key** field, enter the private SSH key that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for IBM Cloud resource inventory and Bastion host** option and enter your SSH key in the **Bastion host SSH key** field.
