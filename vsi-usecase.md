@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-10-08"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -47,8 +47,8 @@ Before you can use execute the use case, you must complete the following tasks:
 {: #ansible-vsi-usecase}
 
 1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page, click **Create action**. 
-2. Enter a name for your action, resource group, and the region where you want to create the action. Then, click **Create**. 
-3. In the **Define your Action action** section, enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field. 
+2. Enter a name for your action, resource group, and the region where you want to create the action. Then, click **Create** to view the **Details** section.
+3. In the **Ansible playbook** section, click **Edit icon** enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field. 
 4. Click **Retrieve playbooks**. 
 5. Select the `**stop-vsi-playbook.yaml**` playbook.
 6. Expand the **Advanced options**. 
