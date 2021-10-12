@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-12"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -104,7 +104,7 @@ Dynamic resource inventories reference {{site.data.keyword.cloud_notm}} resource
 Review the following limitations of dynamic inventories in {{site.data.keyword.bpshort}}: 
 
 - You can choose among the [supported queries](#supported-queries) to select the target virtual server instances that you want to include in your resource inventory only.
-- {{site.data.keyword.bpshort}} retrieves the IP address of a target host and adds this IP address to the resource inventory. Hostnames cannot be added. If a public IP address is assigned to the target host, the public IP address is added to the resource inventory. If no public IP address exists, the private IP address is added to the resource inventory.
+- {{site.data.keyword.bpshort}} retrieves the IP address of a target virtual server instances and adds this IP address to the resource inventory. Hostnames cannot be added, if a public IP address is assigned to the target virtual server instance, the public IP address is added to the resource inventory. If no public IP address exists, the private IP address is added to the resource inventory.
 - All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key only to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.
 
 
