@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-11"
+lastupdated: "2021-10-18"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -48,9 +48,10 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 1. Open the [{{site.data.keyword.bpshort}} workspace create page](https://cloud.ibm.com/schematics/workspaces/create){: external}. 
 2. Specify your template URL in the `GitHub, GitLab or Bitbucket repository URL` that hosts your Terraform configuration files.
    - Optional: Enter the Personal access token to authenticate your private Git repositories.
+   - Check **Download entire repo** option for downloading the entire repositories along with the subfolders. By default, this option is `checked`. If the option is `unchecked`, only the absolute directory path specified in the GitHub URL is downloaded to provision the resource.
    - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**.
    - Click **Next**.
-3. In the Workspace details section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
+3. In the **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
    - Optional: Enter tags for your workspace. You can use the tags later to find your workspace more easily.
    - Select the `Resource group` where you want to create the workspace.
    - Select the `Location`. **Note** decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
