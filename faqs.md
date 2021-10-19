@@ -239,4 +239,3 @@ IBM Cloud Schematics queues all the users jobs into a single queue. Depending on
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 
 Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [create workspace template data](/apidocs/schematics/schematics#create-workspace).
-
