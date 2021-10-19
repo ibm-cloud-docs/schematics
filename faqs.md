@@ -234,9 +234,9 @@ IBM Cloud Schematics queues all the users jobs into a single queue. Depending on
 {: faq}
 {: support}
 
-Schematics introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the sub-folder from the GIT respositories. If the compact flag is set to **true** you can download and save sub-folder recursively else you will continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the sub-folder from the GIT respositories. If the compact flag is set to **true** you can download and save sub-folder recursively else you will continue to download and save the full repository on workspace creation.
 
-You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the template_repo.url field is passed. On update, if this field is not passed, but url is passed, the download will be compact.
+You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 
 Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [create workspace template data](/apidocs/schematics/schematics#create-workspace).
 
