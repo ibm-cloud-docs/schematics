@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-22"
+lastupdated: "2021-10-21"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -74,7 +74,7 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |Business Support Service (BSS) for {{site.data.keyword.cloud_notm}} | The BSS component is used to access information about the {{site.data.keyword.cloud_notm}} account, service subscription, service usage, and billing.|Public|
 |Certificate Manager|This service is used to store and manage the TLS certificates for the {{site.data.keyword.bpshort}} domains.|Public|
 |Cloudant|Cloudant is used to store workspace operational data, such as the workspace variables, workspace metadata, and Terraform template information. All data is encrypted at rest by using the default service encryption.|Public|
-|{{site.data.keyword.cloud_notm}} Command Line |When {{site.data.keyword.bpshort}} runs command-line commands, the service connects to the service API endpoint over the public service endpoint.|Public|
+|{{site.data.keyword.cloud_notm}} command-line |When {{site.data.keyword.bpshort}} runs command-line commands, the service connects to the service API endpoint over the public service endpoint.|Public|
 |{{site.data.keyword.registrylong_notm}}|This service is used to store the container images that {{site.data.keyword.bpshort}} uses to run the service.|Public|
 |{{site.data.keyword.cloud_notm}} Infrastructure (IaaS)|The IaaS service is used to provision and update classic {{site.data.keyword.cloud_notm}} infrastructure resources that are used by {{site.data.keyword.bpshort}}.|Private|
 |{{site.data.keyword.cloud_notm}} Service Endpoint (CSE)|This service is used to implement the private service endpoint for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](/docs/schematics?topic=schematics-secure-data#pi-location).|Private|

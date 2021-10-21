@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-10-21"
 
-keywords: parallelism, schematics parallelism, environment variables, command line configuration, env vars
+keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
 subcollection: schematics
 

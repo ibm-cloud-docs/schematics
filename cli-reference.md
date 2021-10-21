@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-10-21"
 
-keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
+keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
 subcollection: schematics
 
@@ -1196,7 +1196,7 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
     |`IPaddress`|The IP addresses of the hostname.|
     {: caption="Inventory host group parameters" caption-side="top"}
 
-You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.
+You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.
 {: note}
 
 ### `ibmcloud schematics action create`
@@ -1225,7 +1225,7 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--resource-group` or `-r` | Required | The name of the resource group where you want to create the action. |
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name or --pn` | Optional| The name of the Ansible playbook. |
-| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use to access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.|
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use to access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.|
 | `--credential-json` or `--cj` | Optional | Provide path of JSON file that contains credential JSON payload to access the target host. |
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--bastion-credential-json` or `--bj` | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
@@ -1345,7 +1345,7 @@ ibmcloud schematics action update --id ACTION_ID --name ACTION_NAME [--descripti
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name` or  `--pn` | Optional | Name of the playbook.|
 | `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.|
-| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.|
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.|
 | `--credential-json` or `--cj` | Optional | Provide path of JSON file that contains credential JSON payload to access the target host. |
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--bastion-credential-json` or `--bj` | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
@@ -2302,7 +2302,7 @@ ibmcloud schematics kms enable -l US -s byok -g Default -pn Key-Protect-south -p
 ### `ibmcloud schematics kms info`
 {: #schematics-kms-info}
 
-Retrieve the KMS on the API endpoint that you have your `KYOK`, or `BYOK`. For example, if you use an API endpoint for a geography, such as `North America`, only that are created in `us-south` or `us-east` are retrieved. **Note** you need to enable `kms instances` in your account to run `info` command line.
+Retrieve the KMS on the API endpoint that you have your `KYOK`, or `BYOK`. For example, if you use an API endpoint for a geography, such as `North America`, only that are created in `us-south` or `us-east` are retrieved. **Note** you need to enable `kms instances` in your account to run `info` command-line.
 {: shortdesc}
 
 **Syntax**
