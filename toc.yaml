@@ -94,7 +94,11 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - cli-reference.md
+      - topicgroup:
+         label: CLI reference
+         topics:
+          - cli-reference.md
+          - cli-version-release.md
       - topicgroup:
           label: API reference
           links:
