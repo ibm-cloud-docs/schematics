@@ -33,7 +33,7 @@ Refer to these commands when you want to automate your {{site.data.keyword.bplon
 To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to set up {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 {: tip}
 
-Be sure to keep your CLI up-to-date so that you can use all of the available commands and their options. For more information, about the latest command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-setup-cli).
+Be sure to keep your CLI up-to-date so that you can use all of the available commands and their options. For more information, about the latest command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
 {: important}
 
 ## General commands
