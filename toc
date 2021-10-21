@@ -75,7 +75,10 @@ Schematics
      {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    cli-reference.md
+    {: .topicgroup}
+    CLI reference
+        cli-reference.md
+        cli-version-release.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
     schematics-sdk.md
     locations.md

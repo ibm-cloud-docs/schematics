@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-21"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -41,7 +41,7 @@ Before you can use execute the use case, you must complete the following tasks:
 - Make sure that you have the permissions to [create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-access#access-roles). 
 - Schematics plug-in installed, for more information, refer to [installing {{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli).
 - IAM token with access to the instance. The IAM token is optional when the action is running in the same account as of VSI.
-- The bearer token for authenticating. You can create the bearer token from command line, for more information, about access and authentication, refer to [access token](/docs/key-protect?topic=key-protect-retrieve-access-token).
+- The bearer token for authenticating. You can create the bearer token from command-line, for more information, about access and authentication, refer to [access token](/docs/key-protect?topic=key-protect-retrieve-access-token).
 
 ## Executing the a VPC Gen2 Virtual Server playbook by using user interface
 {: #ansible-vsi-usecase}
@@ -63,14 +63,14 @@ Before you can use execute the use case, you must complete the following tasks:
 
 Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a VPC Gen2 virtual server instance. 
 
-## Executing the playbook by using command line
+## Executing the playbook by using command-line
 {: #vsi-execute}
 
 Now, you are ready to complete these steps to execute the use case: 
 
 1. Use the GitHub repository, [Ansible playbook with the VSI-related configuration to start or stop VSI](https://github.com/Cloud-Schematics/ansible-is-instance-actions), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
 
-2. Create a {{site.data.keyword.bpshort}} action by using the `playbook` and `YAML` file. The example contains the command to create an action. see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action). And see [create {{site.data.keyword.bplong_notm}} action by using command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
+2. Create a {{site.data.keyword.bpshort}} action by using the `playbook` and `YAML` file. The example contains the command to create an action. see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action). And see [create {{site.data.keyword.bplong_notm}} action by using command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
 
     **Example**
 

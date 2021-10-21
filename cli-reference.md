@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-30"
+lastupdated: "2021-10-21"
 
-keywords: schematics command-line reference, schematics commands, schematics command line, schematics reference, command line
+keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
 subcollection: schematics
 
@@ -32,6 +32,9 @@ Refer to these commands when you want to automate your {{site.data.keyword.bplon
 
 To install the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli) and to set up {{site.data.keyword.bplong_notm}} plug-in, see [{{site.data.keyword.bpshort}} plug-in installation](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 {: tip}
+
+Be sure to keep your CLI up-to-date so that you can use all of the available commands and their options. For more information, about the latest command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
+{: important}
 
 ## General commands
 {: #schematics-general-commands}
@@ -1196,7 +1199,7 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
     |`IPaddress`|The IP addresses of the hostname.|
     {: caption="Inventory host group parameters" caption-side="top"}
 
-You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.
+You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.
 {: note}
 
 ### `ibmcloud schematics action create`
@@ -1211,7 +1214,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 **Syntax**
 
 ```
-ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--credential CREDENTIAL_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--inventory INVENTORY_ID] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--github-token GITHUB_ACCESS_TOKEN] [--output OUTPUT] [--file FILE_NAME ] [--json] [--no-prompt]
+ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--credential CREDENTIAL_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--inventory INVENTORY_ID] [—-inventory-connection-type INVENTORY_CONNECTION_TYPE] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--github-token GITHUB_ACCESS_TOKEN] [--output OUTPUT] [--file FILE_NAME ] [--json] [--no-prompt]
 ```
 {: pre}
 
@@ -1225,20 +1228,21 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--resource-group` or `-r` | Required | The name of the resource group where you want to create the action. |
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name or --pn` | Optional| The name of the Ansible playbook. |
-| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use to access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.|
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use to access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.|
+| `--credential-json` or `--cj` | Optional | Provide path of JSON file that contains credential JSON payload to access the target host. |
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
+| `--bastion-credential-json` or `--bj` | Optional | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
+| `--inventory-connection-type` or `--it` | Optional | Type of inventory connection. Supported values are  `ssh`, or `winrm`.|
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file by using the `--input-file` command option.|
 |`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
 | `--env-file` or `-E`| Optional | The path to a file where you specified all environment variables for an action. Environment variables must be specified as key-value pairs in JSON format. |
-| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. |
+| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.|
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--file` or `-f` | Required | The path to the JSON payload file containing the definition of the action that you want to create. For more information, see [Using a payload file](#create-action-payload). |
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive mode. |
 {: caption="Schematics action create flags" caption-side="top"}
-
-
 
 **Example**
 
@@ -1264,6 +1268,8 @@ You need to replace the `<...>` placeholders with the actual values. For example
     "description": "<DESCRIPTION>",
     "location": "<LOCATION>",
     "resource_group": "<RESOURCE_GROUP>",
+    “bastion_connection_type”: “ssh”,
+    “inventory_connection_type”: “winrm”,
     "source": {
         "source_type" : "git",
         "git" : {
@@ -1271,6 +1277,10 @@ You need to replace the `<...>` placeholders with the actual values. For example
         }
     },
     "command_parameter": "<PLAYBOOK_NAME>",
+    “b  astion”: {},
+    “bastion_credentials”: {
+	    “metadata”: {}
+    },
     "tags": [
         "<ACTION_TAGS>"
     ],
@@ -1278,7 +1288,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     "source_type": "GitHub"
 }
 ```
-{: pre}
+{: codeblock}
 
 ```
 ibmcloud schematics action create --file <FILE_NAME>
@@ -1322,11 +1332,10 @@ Update the information of an existing {{site.data.keyword.bplong_notm}} action b
 **Syntax**
 
 ```
-ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--github-token GITHUB_ACCESS_TOKEN] [--credential CREDENTIAL_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--inventory INVENTORY_ID] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--file FILE_NAME] [--no-prompt] [--output OUTPUT] [--json]
+ibmcloud schematics action update --id ACTION_ID --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--github-token GITHUB_ACCESS_TOKEN] [--credential CREDENTIAL_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--inventory INVENTORY_ID] [--inventory-connection-type INVENTORY_CONNECTION_TYPE] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--file FILE_NAME] [--no-prompt] [--output OUTPUT] [--json]
 ```
 {: pre}
-
-
+ 
 **Command options**
 
 | Flag | Required / Optional | Description |
@@ -1338,15 +1347,18 @@ ibmcloud  schematics action update --id ACTION_ID --name ACTION_NAME [--descript
 | `--resource-group` or `-r` | Required | Resource-group name for an Action.|
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
 | `--playbook-name` or  `--pn` | Optional | Name of the playbook.|
-| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command line or API calls.|
+| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.|
+| `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.|
+| `--credential-json` or `--cj` | Optional | Provide path of JSON file that contains credential JSON payload to access the target host. |
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
+| `--bastion-credential-json` or `--bj` | Optional | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
+| `--inventory-connection-type` or `--it`| Optional | Type of inventory connection. Supported values are `ssh`, or `winrm`.|
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file in the `--input-file` command option.|
 |`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
 | `--env-file` or `-E`| Optional | The path to a file where you specified all environment variables for an action. Environment variables must be specified as key-value pairs in JSON format. |
 | `--file` or `-f` | Optional | Path to the JSON payload file containing the definition of the action to update. For more information, see [Using the payload file](#create-action-payload). Note that parameters, such as the location or resource group cannot be updated after the action is created.|
-| `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.|
 | `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `--j` | Deprecated | Prints the output as JSON. Use `--output` JSON instead. | 
@@ -2293,7 +2305,7 @@ ibmcloud schematics kms enable -l US -s byok -g Default -pn Key-Protect-south -p
 ### `ibmcloud schematics kms info`
 {: #schematics-kms-info}
 
-Retrieve the KMS on the API endpoint that you have your `KYOK`, or `BYOK`. For example, if you use an API endpoint for a geography, such as `North America`, only that are created in `us-south` or `us-east` are retrieved. **Note** you need to enable `kms instances` in your account to run `info` command line.
+Retrieve the KMS on the API endpoint that you have your `KYOK`, or `BYOK`. For example, if you use an API endpoint for a geography, such as `North America`, only that are created in `us-south` or `us-east` are retrieved. **Note** you need to enable `kms instances` in your account to run `info` command-line.
 {: shortdesc}
 
 **Syntax**

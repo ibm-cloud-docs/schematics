@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-01"
+lastupdated: "2021-10-21"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -33,6 +33,14 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 {: deprecated}
 
 
+## October 2021
+{: #oct30-2021}
+
+|Date|Description|
+|-----|---------|
+|22 October 2021 |<ul><li>**Support `winrm` in command-line:** The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`winrm`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.</li><li>**Documentation lists the Command-line version change log history:** The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).</li></ul> |
+{: caption="What's new in October" caption-side="top"}
+
 
 
 
@@ -61,7 +69,7 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 
 |Date|Description|
 |-----|---------|
-|30 July 2021 |<ul><li>**{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11:** {{site.data.keyword.bplong_notm}} deprecates the support of Terraform v0.11 from July 2021. As HashiCorp Configuration Language deprecated Terraform v0.11 in Terraform providers.</li><li> **Terraform v0.15 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.15 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14` or `0.15`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. **Note** Terraform v0.15 provides you to remote state data sources, cross-compatible between the Terraform v0.14.x and higher version to easily move between Terraform versions. Also, you can experience a unified console experience across all support platforms, and provides provider-based sensitivity and sensitive functions. For more information, about Terraform v0.15 availability from HashiCorp Language, see [Terraform v0.15 general availability](https://www.hashicorp.com/blog/announcing-hashicorp-terraform-0-15-general-availability).</li><li> **Ansible v2.9.23 API and command line support:** Ansible v2.9.23 and Ansible provisioner v2.3.3 are supported in the {{site.data.keyword.bplong_notm}} Action.</li></ul> |
+|30 July 2021 |<ul><li>**{{site.data.keyword.bplong_notm}} deprecates Terraform v0.11:** {{site.data.keyword.bplong_notm}} deprecates the support of Terraform v0.11 from July 2021. As HashiCorp Configuration Language deprecated Terraform v0.11 in Terraform providers.</li><li> **Terraform v0.15 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.15 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14` or `0.15`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. **Note** Terraform v0.15 provides you to remote state data sources, cross-compatible between the Terraform v0.14.x and higher version to easily move between Terraform versions. Also, you can experience a unified console experience across all support platforms, and provides provider-based sensitivity and sensitive functions. For more information, about Terraform v0.15 availability from HashiCorp Language, see [Terraform v0.15 general availability](https://www.hashicorp.com/blog/announcing-hashicorp-terraform-0-15-general-availability).</li><li> **Ansible v2.9.23 API and command-line support:** Ansible v2.9.23 and Ansible provisioner v2.3.3 are supported in the {{site.data.keyword.bplong_notm}} Action.</li></ul> |
 |19 July 2021 |<ul><li> **Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}:** {{site.data.keyword.bplong_notm}} supports setting a custom value for parallelism. For more information, see [Supporting parallelism and other Terraform environment variables in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-set-parallelism).</li></ul>|
 {: caption="What's new in July" caption-side="top"}
 

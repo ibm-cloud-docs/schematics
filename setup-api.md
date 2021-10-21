@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-08-10"
 
-keywords: schematics api, schematics command line, schematics commands, terraform commands, terraform API, setting up schematics api, api
+keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
 subcollection: schematics
 
