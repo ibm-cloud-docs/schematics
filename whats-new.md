@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-21"
+lastupdated: "2021-10-23"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -33,13 +33,6 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 {: deprecated}
 
 
-## October 2021
-{: #oct30-2021}
-
-|Date|Description|
-|-----|---------|
-|22 October 2021 |<ul><li>**Support `winrm` in command-line:** The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`winrm`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.</li><li>**Documentation lists the Command-line version change log history:** The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).</li></ul> |
-{: caption="What's new in October" caption-side="top"}
 
 
 
