@@ -134,7 +134,7 @@ toc:
       id: help
       topics:
       - faqs.md
-      - release-notes.md
+      - whats-new.md
       - topicgroup:
           label: FAQs
           topics:
