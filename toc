@@ -14,7 +14,7 @@ Schematics
 
     about.md
     architecture-workload-isolation.md
-    whats-new.md
+    release-notes.md
      {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
@@ -101,6 +101,7 @@ Schematics
 
     {: .navgroup id="help"}
     faqs.md
+    whats-new.md
     
     {: .topicgroup}
     Troubleshooting 
