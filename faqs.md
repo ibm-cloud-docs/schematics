@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-19"
+lastupdated: "2021-10-26"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -239,3 +239,13 @@ IBM Cloud Schematics queues all the users jobs into a single queue. Depending on
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 
 Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [create workspace template data](/apidocs/schematics/schematics#create-workspace).
+
+## Why is my success Action job execution shows DEPRECATION WARNING message?
+{: #deprecation-warn-faq}
+{: faq}
+{: support}
+
+To avoid the DEPRECATION WARNING message, in the Action settings page you can set the input variables 
+`ansible_python_interpreter = auto` as shown in the screen capture.
+
+<img src="images/advanced_inputvariable.png" alt="Configuring input variable to silence warning message" width="700" style="width: 700px; border-style: none"/>
