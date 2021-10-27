@@ -36,7 +36,7 @@ Onboarding Terraform templates to private catalog
 :   For onboarding multiple Terraform templates into {{site.data.keyword.cloud_notm}} private catalog, see [Onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).
 
 Sample templates to deploy into {{site.data.keyword.cloud_notm}}
-:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-sample) to provision different IBM Cloud services using {{site.data.keyword.bpshort}} workspaces.
+:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different IBM Cloud services using {{site.data.keyword.bpshort}} workspaces.
 
 Support `winrm` in command-line
 :   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`winrm`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
