@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-26"
+lastupdated: "2021-10-27"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -245,7 +245,7 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 {: faq}
 {: support}
 
-To avoid the DEPRECATION WARNING message, in the Action settings page you can set the input variables 
+To avoid the DEPRECATION WARNING message during Action job execution, in the Action settings page you can set the input variables 
 `ansible_python_interpreter = auto` as shown in the screen capture.
 
 <img src="images/advanced_inputvariable.png" alt="Configuring input variable to silence warning message" width="700" style="width: 700px; border-style: none"/>
