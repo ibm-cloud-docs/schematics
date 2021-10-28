@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-10-28"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -48,5 +48,5 @@ Verify your CURL or the payload contains that the `location` and the `url` are p
 
 **For example**
 
-- For creating workspace in `US` region: Use  `location` as **us-east** or **us-south** and `url` as **https://us-south.schematics.cloud.ibm.com/** or **https://us-east.schematics.cloud.ibm.com/**. By default **https://cloud.ibm.com/schematics/workspaces** points to **https://us-south.schematics.cloud.ibm.com** endpoint.
+- For creating workspace in `US` region: Use  `location` as **us-east** or **us-south** and `url` as **https://us-south.schematics.cloud.ibm.com/** or **https://us-east.schematics.cloud.ibm.com/**. By default **https://cloud.ibm.com/schematics/workspaces** points to **https://schematics.cloud.ibm.com/v1/workspaces** endpoint.
 - For workspace in the `EU` region: Use `location` as **eu-de** or **eu-gb** and `url` as **https://eu-de.schematics.cloud.ibm.com** and **https://eu-gb.schematics.cloud.ibm.com** endpoint.
