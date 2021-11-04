@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-04"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -27,6 +27,8 @@ subcollection: schematics
 {:help: data-hd-content-type='help'}
 
 ---
+
+
 # Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}
 {: #monitoring-instances}
 

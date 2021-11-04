@@ -2,14 +2,14 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-04"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
 subcollection: schematics
 
 content-type: tutorial
-services: provisioning, vpc-generation2-cluster
+services: schematics, containers, key-protect
 account-plan:
 completion-time: 60m
 
@@ -21,7 +21,7 @@ completion-time: 60m
 # Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
 {: #provisioning-terraform-template}
 {: toc-content-type="tutorial"}
-{: toc-services="provisioning, vpc-cluster"}
+{: toc-services="schematics, containers, key-protect"}
 {: toc-completion-time="60m"}
 
 Use one of the IBM-provided templates to create an {{site.data.keyword.containerlong}} cluster in a Virtual Private Cloud (VPC). Then, you bind the cluster to an {{site.data.keyword.cos_full}} service instance. 
