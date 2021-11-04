@@ -17,7 +17,6 @@ completion-time: 60m
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
 {: #provisioning-terraform-template}
 {: toc-content-type="tutorial"}
