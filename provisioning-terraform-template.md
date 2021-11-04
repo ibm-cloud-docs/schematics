@@ -53,20 +53,20 @@ To provision Terraform template, perform these steps:
 
 7. Provide the values for the variables as described in the table.
     <table>
-	<tr>
-		<th>Name</th><th style="width:150px">Value</th>
-	</tr>
-	<tr>
-        <td><code>iaas_classic_api_key</code></td>
-        <td>Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information for how to create an API key and retrieve it, refer to [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys).</td></tr>
-	<tr><td><code>iaas_classic_username</code></td><td>Enter the username to access {{site.data.keyword.cloud_notm}} classic infrastructure. To get the details including the username of a classic infrastructure API key after you create it, go to Manage > Access (IAM) > Users, then select the user's name.</td></tr>
-        <tr>
-        <td><code>ibm cloud_api_key</code></td>
-        <td>Enter your {{site.data.keyword.cloud_notm}} API Key, refer to [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys) for details.</td></tr>
-        <tr>
-        <td><code>resource_group_name</code></td>
-        <td>The default value is <strong>Default</strong>.</td>
-        </tr>
+    <tr>
+    <th>Name</th><th>Value</th>
+    </tr>
+    <tr>
+    <td><code>iaas_classic_api_key</code></td>
+    <td>Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information for how to create an API key and retrieve it, refer to [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys).</td></tr>
+    <tr><td><code>iaas_classic_username</code></td><td>Enter the username to access {{site.data.keyword.cloud_notm}} classic infrastructure. To get the details including the username of a classic infrastructure API key after you create it, go to Manage > Access (IAM) > Users, then select the user's name.</td></tr>
+    <tr>
+    <td><code>ibm cloud_api_key</code></td>
+    <td>Enter your {{site.data.keyword.cloud_notm}} API Key, refer to [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys) for details.</td></tr>
+    <tr>
+    <td><code>resource_group_name</code></td>
+    <td>The default value is <strong>Default</strong>.</td>
+    </tr>
     </table>
 8. Click **Save Changes**.
 
@@ -102,14 +102,14 @@ To provision a Terraform template using Schematics CLI, you need perform the giv
 1. Install {{site.data.keyword.cloud_notm}} command-line and Schematics plug-ins, refer to [Setting up the command-line and Schematics](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) for details.
 2. Check an update is available for the {{site.data.keyword.bplong_notm}} command-line plug-in. If an update is available, you find an **Update available** notification in your command-line output.
 
-    ```
+    ```sh
     ibmcloud plugin list | grep schematics
     ```
     {: pre}
 
     Example output:
 
-    ```
+    ```sh
     schematics                      1.4.1        Update available
     ```
     {: screen}
@@ -124,8 +124,8 @@ To create a workspace, you must specify your workspace settings in a JSON file. 
 {: note}
 
 Example JSON by using a GitHub or GitLab repository:
-<pre class="codeblock">
-<code>{
+```json
+{
     "name": "&lt;workspace_name&gt;",
     "type": [
         "&lt;terraform_version&gt;"
@@ -160,25 +160,25 @@ Example JSON by using a GitHub or GitLab repository:
     ],
     "githubtoken": "&lt;github_personal_access_token&gt;"
 }
-</code></pre>
+```
+{: codeblock}
 
 **Syntax**
 
-```
+```sh
 ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
 ```
 {: pre}
 
 **Example**
 
-```
+```sh
 ibmcloud schematics workspace new --file myfile.json
 ```
 {: pre}
 
 Example output for creating the workspace.
-<pre class="codeblock">
-<code>
+```text
 Creation Time   Tue Jul 28 13:00:02
 Description     terraform workspace
 Frozen          true
@@ -194,7 +194,8 @@ sample_var    THIS IS AN IBM CLOUD TERRAFORM CLI DEMO
 sleepy_time   10195
 
 OK
-</code></pre>
+```
+{: screen}
 
 ### Executing Plan and Apply
 {: cli-plan-apply}
@@ -213,7 +214,7 @@ Execute the apply command to view the activity details of your workspace.
 
 **Syntax:**
 
-```
+```sh
 ibmcloud schematics apply --id <WORK_SPACE_ID>
 ```
 {: pre}
@@ -223,7 +224,7 @@ ibmcloud schematics apply --id <WORK_SPACE_ID>
 
 Retrieve the Terraform log file for your workspace to troubleshoot provisioning issues if any.
 
-```
+```sh
 ibmcloud schematics logs --id <WORK_SPACE_ID>
 ```
 {: pre}
@@ -238,7 +239,7 @@ The state files are generated only after the plan and apply commands are success
 
 **Syntax:**
 
-```
+```sh
 ibmcloud schematics state list --id <WORK_SPACE_ID>
 ```
 {: pre}
@@ -247,7 +248,7 @@ To show the content of the Terraform state file for a specific Terraform templat
 
 **Syntax:**
 
-```
+```sh
 ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>
 ```
 {: pre}
@@ -256,7 +257,7 @@ To retrieve a list of Terraform output values. You define output values in your 
 
 **Syntax:**
 
-```
+```sh
 ibmcloud schematics  output --id WORKSPACE_ID
 ```
 {: pre}
