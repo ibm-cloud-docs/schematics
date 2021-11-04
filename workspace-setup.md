@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-04"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Setting up workspaces
 {: #workspace-setup}

@@ -12,7 +12,6 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}
 {: #deprecate-tf-version}
 

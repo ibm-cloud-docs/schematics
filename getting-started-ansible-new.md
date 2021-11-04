@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-11-04"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -10,7 +10,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Getting started with configuration management in {{site.data.keyword.bplong_notm}}
 {: #getting-started-ansible}
@@ -38,6 +37,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 5. Select the **`stop-vsi-playbook.yaml`** playbook. 
    The [floating IP address](/docs/vpc?topic=vpc-using-instance-vnics#editing-network-interfaces) of the VSI is available to set your input variable.
    {: note}
+   
 6. Expand the **Advanced options**. 
 7. In the **Define your variables** section, enter `instance_ip` as the **key** and the floating IP address of your virtual server instance as the **value**. 
 8. Click **Save**. 

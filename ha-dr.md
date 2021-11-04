@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-11-04"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -10,20 +10,7 @@ subcollection: schematics
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:support: data-reuse='support'}
-{:help: data-hd-content-type='help'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}
 {: #high-availability}

@@ -2,26 +2,15 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-21"
+lastupdated: "2021-11-04"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"} 
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:external: target="_blank" .external}
+
+{{site.data.keyword.attribute-definition-list}}
 
 
 # {{site.data.keyword.bplong_notm}} CLI	

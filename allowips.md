@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-11-04"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -10,21 +10,7 @@ subcollection: schematics
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
-{:help: data-hd-content-type='help'}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall

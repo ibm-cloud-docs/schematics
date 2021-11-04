@@ -9,20 +9,7 @@ subcollection: schematics
 
 ---
 
-{:external: target="_blank" .external}
-{:note: .note}
-{:term: .term}
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:screen: .screen}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Managing security and compliance with {{site.data.keyword.bpshort}}

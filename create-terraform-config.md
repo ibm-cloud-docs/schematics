@@ -9,21 +9,8 @@ keywords: terraform template guidelines, terraform config file guidelines, sampl
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
-{:help: data-hd-content-type='help'}
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating Terraform templates
 {: #create-tf-config}
