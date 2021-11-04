@@ -252,45 +252,45 @@ Yes, when you declare and assign the value to the variables, you can view the to
 
 <table>
     <thead>
-    <th style="width:80px">Type</th>
-    <th style="width:100px">Example</th>
+    <th>Type</th>
+    <th>Example</th>
     </thead>
     <tbody>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
+    <td><ul>number</li></ul></td>
+        <td><ul>4.56</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
+    <td><ul>string</li></ul></td>
+        <td><ul>example value</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
+    <td><ul>bool</li></ul></td>
+        <td><ul>false</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
+    <td><ul>map(string)</li></ul></td>
+        <td><ul>{key1 = "value1", key2 = "value2"}</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
+    <td><ul>set(string)</li></ul></td>
+        <td><ul>["hello", "he"]</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
+    <td><ul>map(number)</li></ul></td>
+        <td><ul>{internal = 8080, external = 2020}</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
+    <td><ul>list(string)</li></ul></td>
+        <td><ul>["us-south", "eu-gb"]</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
+    <td><ul>list</li></ul></td>
+        <td><ul>["value", 30]</li></ul></td>
     </tr>
         <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+    <td><ul>list(list(string))</li></ul></td>
+    <td><ul><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300
@@ -304,12 +304,12 @@ Yes, when you declare and assign the value to the variables, you can view the to
 ]</code></pre></p></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>list(object({
+    <td><ul><p><pre class="codeblock"><code>list(object({
         internal = number
     external = number
     protocol = string
 }))</code></pre></p></li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+        <td><ul><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300

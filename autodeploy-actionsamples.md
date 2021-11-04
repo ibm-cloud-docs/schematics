@@ -31,9 +31,9 @@ Use the links on this page as follows:
 
 <table>
     <thead>
-    <th style="width:60px">Name</th>
-    <th style="width:250px">Description</th>
-    <th style="width:150px">Access</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Access</th>
     </thead>
     <tbody>
         <tr>
@@ -55,9 +55,9 @@ Use the links on this page as follows:
 
 <table>
     <thead>
-    <th style="width:60px">Name</th>
-    <th style="width:250px">Description</th>
-    <th style="width:150px">Access</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Access</th>
     </thead>
     <tbody>
         <tr>
@@ -78,9 +78,9 @@ Use the links on this page as follows:
 
 <table>
     <thead>
-    <th style="width:60px">Name</th>
-    <th style="width:250px">Description</th>
-    <th style="width:150px">Access</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Access</th>
     </thead>
     <tbody>
         <tr>
@@ -101,9 +101,9 @@ Use the links on this page as follows:
 
 <table>
     <thead>
-    <th style="width:60px">Name</th>
-    <th style="width:250px">Description</th>
-    <th style="width:150px">Access</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Access</th>
     </thead>
     <tbody>
         <tr>
@@ -123,9 +123,9 @@ Use the links on this page as follows:
 
 <table>
     <thead>
-    <th style="width:60px">Name</th>
-    <th style="width:250px">Description</th>
-    <th style="width:150px">Access</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Access</th>
     </thead>
     <tbody>
     </tr>

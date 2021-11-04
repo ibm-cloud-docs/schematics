@@ -54,7 +54,7 @@ To provision Terraform template, perform these steps:
 7. Provide the values for the variables as described in the table.
     <table>
 	<tr>
-		<th style="width:75px">Name</th><th style="width:150px">Value</th>
+		<th>Name</th><th style="width:150px">Value</th>
 	</tr>
 	<tr>
         <td><code>iaas_classic_api_key</code></td>

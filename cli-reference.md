@@ -460,9 +460,9 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <table>
     <caption>JSON file component description</caption>
     <thead>
-    <th style="width:50px">Parameter</th>
-    <th style="width:200px">Required / Optional</th>
-    <th style="width:250px">Description</th>
+    <th>Parameter</th>
+    <th>Required / Optional</th>
+    <th>Description</th>
     </thead>
     <tbody>
         <tr>
@@ -808,9 +808,9 @@ You need to replace the `<...>` placeholders with the actual values. For example
 
 <table>
     <thead>
-    <th style="width:50px">Parameter</th>
-    <th style="width:200px">Required / Optional</th>
-    <th style="width:250px">Description</th>
+    <th>Parameter</th>
+    <th>Required / Optional</th>
+    <th>Description</th>
     </thead>
     <tbody>
     <tr>
