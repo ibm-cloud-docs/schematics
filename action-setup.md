@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-08"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -17,7 +17,7 @@ subcollection: schematics
 
 Run your Ansible playbook in {{site.data.keyword.cloud_notm}} by using {{site.data.keyword.bpshort}} actions. 
 
-An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. These target hosts are also referred to as inventory. It includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want to configure and perform managed operations on the {{site.data.keyword.cloud}} resource.
+An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. These target hosts are also referred to as inventory. Ansible playbook includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want them to run to perform managed operations on the {{site.data.keyword.cloud}} resource.
 {: shortdesc}
 
 ## Creating and running the {{site.data.keyword.bpshort}} action

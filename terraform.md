@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-08"
 
 subcollection: schematics
 
@@ -72,6 +72,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     **main.tf**
 
     Review the following sample `main.tf` file. This file invokes the variables from the `terraform.tfvars` file by using the Git URL, then creates a {{site.data.keyword.bpshort}} workspace by using your {{site.data.keyword.cloud_notm}} API key.
+    
 
     ```sh
     variable "schematics_workspace_name" {}
