@@ -2,29 +2,15 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-11-04"
 
 keywords: ansible playbook, automate ansible playbook, {{site.data.keyword.cloud_notm}}
 
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:beta: .beta}
-{:table: .aria-labeledby="caption"} 
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:external: target="_blank" .external}
 
----
+{{site.data.keyword.attribute-definition-list}}
 
 ## Automate {{site.data.keyword.cloud_notm}} operations by using {{site.data.keyword.bpshort}} action
 {: #ansible-how-it-works}

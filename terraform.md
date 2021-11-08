@@ -1,21 +1,14 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-05-19"
+  years: 2017, 2021
+lastupdated: "2021-11-08"
 
 subcollection: schematics
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Setting up Terraform for {{site.data.keyword.bplong_notm}} 
@@ -36,20 +29,20 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
 1. Follow the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform) to install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.bpshort}} resources. 
 
-2. Create a Terraform configuration file named `main.tf` and `terraform.tfvars` in the same folder as `versions.tf`. In this file, you add the configuration to create a {{site.data.keyword.bpshort}} workspace by using HashiCorp Configuration Language (HCL).
+2. Create the Terraform configuration files named `main.tf`, `terraform.tfvars`, and `versions.tf`.
 
-    You can use Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API. 
+    You can use the Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API. 
 
-    If you have workspace created other than `US` location, you need to set API endpoint corresponding to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information, about the {{site.data.keyword.bpshort}} workspace locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+    If you have a workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information, about the {{site.data.keyword.bpshort}} workspace locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
     {: note}
 
     Then create the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.12.20`. 
 
-    **version.tf**
+    **versions.tf**
 
     The sample `versions.tf` file to specify the provider version that you need to create the workspace.
 
-    ```
+    ```sh
     terraform {
       required_providers {
         ibm = {
@@ -61,11 +54,11 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     ```
     {: codeblock}
 
-    **`terraform.tfvars`**
+    **terraform.tfvars**
 
     The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
 
-    ```
+    ```sh
     schematics_workspace_name="tf-testwks-apigwy"
     schematics_workspace_description="Sample workspace created with terraform with URL"
     schematics_workspace_type="terraform_v0.12.20"
@@ -78,9 +71,10 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
     **main.tf**
 
-    The sample `main.tf` file to invoke the variables from `terraform.tfvars`, by using the Git URL and your {{site.data.keyword.cloud_notm}} API key to create the 
+    Review the following sample `main.tf` file. This file invokes the variables from the `terraform.tfvars` file by using the Git URL, then creates a {{site.data.keyword.bpshort}} workspace by using your {{site.data.keyword.cloud_notm}} API key.
+    
 
-    ```terraform
+    ```sh
     variable "schematics_workspace_name" {}
     variable "schematics_workspace_description" {}
     variable "schematics_workspace_type" {}
@@ -112,21 +106,21 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
     The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information, about the detailed parameters to create workspace, see [ibm_schematics_workspace](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external} resource.
 
-| Parameter | Description |
-| -------- | --------- |
-| description | The description of the workspace. |
-| location | The location where you want to create your {{site.data.keyword.bpshort}} workspace and run {{site.data.keyword.bpshort}} actions. |
-| resource_group | The ID of the resource group where you want to provision the workspace. |
-| name | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the IBM Cloud environment where you want to deploy your resources in your name.|
-| tags | A list of tags that are associated with the workspace. |
-| template_env_settings | A list of environment variables that you want to apply during the execution of a Terraform action. |
-| template_git_url | The Git repository URL, where you have the configuration details to provision the resource. |
-| template_type |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
-{: caption="Table 1. Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
+    | Parameter | Description |
+    | -------- | --------- |
+    | description | The description of the workspace. |
+    | location | The location where you want to create your {{site.data.keyword.bpshort}} workspace and run {{site.data.keyword.bpshort}} actions. |
+    | resource_group | The ID of the resource group where you want to provision the workspace. |
+    | name | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the IBM Cloud environment where you want to deploy your resources in your name.|
+    | tags | A list of tags that are associated with the workspace. |
+    | template_env_settings | A list of environment variables that you want to apply during the execution of a Terraform action. |
+    | template_git_url | The Git repository URL, where you have the configuration details to provision the resource. |
+    | template_type |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
+    {: caption="Table 1. Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
 
 3. Initialize the Terraform CLI. 
 
-    ```
+    ```sh
     terraform init
     ```
     {: pre}
@@ -136,14 +130,14 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
 4. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.bpshort}} workspace in your account.
 
-    ```
+    ```sh
     terraform plan
     ```
     {: pre}
 
 5. Create the {{site.data.keyword.bpshort}} workspace instance and IAM access policy in {{site.data.keyword.cloud_notm}}.
 
-    ```
+    ```sh
     terraform apply
     ```
     {: pre}

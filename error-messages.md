@@ -2,27 +2,15 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-13"
+lastupdated: "2021-11-04"
 
 keywords: error message, message id, ansible error code, schematics error code
 
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"} 
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:beta: .beta}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:external: target="_blank" .external}
+
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Troubleshooting errors

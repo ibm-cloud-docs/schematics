@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-04"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -11,7 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Setting up workspaces
 {: #workspace-setup}
@@ -105,8 +104,8 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     <table>
     <caption>JSON file component description</caption>
     <thead>
-    <th style="width:50px">Parameter</th>
-    <th style="width:250px">Description</th>
+    <th>Parameter</th>
+    <th>Description</th>
     </thead>
     <tbody>
         <tr>
@@ -167,8 +166,8 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     <table>
     <caption>JSON file component description</caption>
     <thead>
-    <th style="width:50px">Parameter</th>
-    <th style="width:250px">Description</th>
+    <th>Parameter</th>
+    <th>Description</th>
     </thead>
     <tbody>
         <tr>
@@ -247,45 +246,45 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 
 <table>
     <thead>
-    <th style="width:80px">Type</th>
-    <th style="width:100px">Example</th>
+    <th>Type</th>
+    <th>Example</th>
     </thead>
     <tbody>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">number</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">4.56</li></ul></td>
+    <td><ul>number</li></ul></td>
+        <td><ul>4.56</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">string</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">example value</li></ul></td>
+    <td><ul>string</li></ul></td>
+        <td><ul>example value</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">bool</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">false</li></ul></td>
+    <td><ul>bool</li></ul></td>
+        <td><ul>false</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(string)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">{key1 = "value1", key2 = "value2"}</li></ul></td>
+    <td><ul>map(string)</li></ul></td>
+        <td><ul>{key1 = "value1", key2 = "value2"}</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">set(string)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["hello", "he"]</li></ul></td>
+    <td><ul>set(string)</li></ul></td>
+        <td><ul>["hello", "he"]</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">map(number)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">{internal = 8080, external = 2020}</li></ul></td>
+    <td><ul>map(number)</li></ul></td>
+        <td><ul>{internal = 8080, external = 2020}</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(string)</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["us-south", "eu-gb"]</li></ul></td>
+    <td><ul>list(string)</li></ul></td>
+        <td><ul>["us-south", "eu-gb"]</li></ul></td>
     </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list</li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px">["value", 30]</li></ul></td>
+    <td><ul>list</li></ul></td>
+        <td><ul>["value", 30]</li></ul></td>
     </tr>
         <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px">list(list(string))</li></ul></td>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+    <td><ul>list(list(string))</li></ul></td>
+    <td><ul><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300
@@ -299,12 +298,12 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     ]</code></pre></p></ul></td>
         </tr>
     <tr>
-    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>list(object({
+    <td><ul><p><pre class="codeblock"><code>list(object({
         internal = number
     external = number
     protocol = string
     }))</code></pre></p></li></ul></td>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px"><p><pre class="codeblock"><code>[
+        <td><ul><p><pre class="codeblock"><code>[
     {
         internal = 8300
         external = 8300
@@ -407,7 +406,7 @@ As a rule of thumb, consider creating separate workspaces for each of your micro
 
 Review the following image to see the number of workspaces in {{site.data.keyword.bplong_notm}} for an app that consists of three microservices.
 
-<img src="images/workspace-structure.png" alt="Workspace structure for {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
+<img src="images/workspace-structure.png" alt="Workspace structure for {{site.data.keyword.bplong_notm}}" width="800"/>
 
 Do not use one workspace to manage an entire staging or production environment. When you deploy all of your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 {: important}
@@ -509,31 +508,31 @@ The state of a workspace indicates if you have successfully created a Terraform 
 
 <table>
     <thead>
-    <th style="width:50px">Workspace / Job</th>
-    <th style="width:200px">State diagram</th>
-    <th style="width:250px">Description</th>
+    <th>Workspace / Job</th>
+    <th>State diagram</th>
+    <th>Description</th>
     </thead>
     <tbody>
         <tr>
         <td><code>Create workspace</code></td>
-        <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800" style="width: 800px; border-style: none"/></td>
+        <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800"/></td>
         <td>The workspace is created without a reference to <code>GitHub</code>, <code>GitLab</code>, or <code>Bitbucket</code> to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply job, to move the workspace into active state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands. Then, you can destroy all the resources to make your workspace in an inactive state.
     </td>
     </tr>
         <tr>
         <td><code>Delete workspace</code></td>
-        <td><img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800" style="width: 800px; border-style: none"/></td>
+        <td><img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800"/></td>
         <td>When you perform delete workspace on an inactive, active or failed state. From these state, the template is parsed successfully to reach an inactive state or template parsed can fail and reach failed state. If you delete at least one resource, the plan and apply job executes to destroy the resource from the active state.</td>
     </tr>
     <tr>
         <td><code>Plan and apply job</code></td>
-        <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800" style="width: 800px; border-style: none"/></td>
+        <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800"/></td>
         <td>When you perform the plan or apply job on active, inactive, and failed state. Your workspace is in in progress and locked state. And the job is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands.
         </td>
     </tr>
     <tr>
         <td><code>Destroy job</code></td>
-        <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800" style="width: 800px; border-style: none"/></td>
+        <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800"/></td>
         <td>The destroy job performs when your workspace is in an inactive, active or failed state. From these state, the destroy job connects to parse the template from your source repository and workspace gets into in progress unlocked state. From   state if you destroy, resource reaches failed state.</td>
     </tr>
     </tbody>

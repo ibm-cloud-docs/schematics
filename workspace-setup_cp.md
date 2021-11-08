@@ -2,28 +2,15 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-04"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
-{:help: data-hd-content-type='help'}
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Setting up workspaces cp
 {: #workspace-setup_cp}
@@ -280,9 +267,9 @@ The state of a workspace indicates if you have successfully created a Terraform 
 
 <table>
     <thead>
-    <th style="width:50px">Workspace / Action</th>
-    <th style="width:200px">State diagram</th>
-    <th style="width:250px">Description</th>
+    <th>Workspace / Action</th>
+    <th>State diagram</th>
+    <th>Description</th>
     </thead>
     <tbody>
         <tr>

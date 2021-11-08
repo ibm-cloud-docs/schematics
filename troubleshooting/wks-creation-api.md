@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-28"
+lastupdated: "2021-11-04"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -12,7 +12,6 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Why do {{site.data.keyword.bpshort}} workspace create through API fails?

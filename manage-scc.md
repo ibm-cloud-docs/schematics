@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2020
-lastupdated: "2020-10-20"
+  years: 2017, 2021
+lastupdated: "2021-11-05"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics,
 
@@ -9,20 +9,7 @@ subcollection: schematics
 
 ---
 
-{:external: target="_blank" .external}
-{:note: .note}
-{:term: .term}
-{:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:screen: .screen}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Managing security and compliance with {{site.data.keyword.bpshort}}

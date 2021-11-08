@@ -2,28 +2,15 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-04"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
 subcollection: schematics
 
 ---
-{:new_window: target="_blank"} 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
-{:download: .download}
-{:preview: .preview}
-{:faq: data-hd-content-type='faq'}
-{:external: target="_blank" .external}
-{:support: data-reuse='support'}
+
+{{site.data.keyword.attribute-definition-list}}
 
 
 # FAQs
