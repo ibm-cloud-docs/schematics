@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-08"
+lastupdated: "2021-11-09"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -15,10 +15,8 @@ subcollection: schematics
 # Creating Ansible playbooks 
 {: #create-playbooks}
 
-An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can run on a single target host or a group of target hosts. These hosts are also referred to as the resource inventory. 
+Ansible playbooks helps to run operations on cloud resources, such as starting or stopping a virtual server, install software packages, deploy apps, or even provision cloud resources and configure them to your needs. A playbook is written in YAML format and consists of multiple plays that each define the tasks that you want to run on your target hosts. Common automation tasks can be grouped to an Ansible module and made available so that they can be reused in other playbooks. You can also group multiple playbooks to an Ansible role.
 {: shortdesc}
-
-With Ansible playbooks, you can run operations on cloud resources, such as starting or stopping a virtual server, install software packages, deploy apps, or even provision cloud resources and configure them to your needs. A playbook is written in YAML format and consists of multiple plays that each define the tasks that you want to run on your target hosts. Common automation tasks can be grouped to an Ansible module and made available so that they can be reused in other playbooks. You can also group multiple playbooks to an Ansible role. 
 
 ## Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}} 
 {: #plan-ansible-playbook}
@@ -28,8 +26,8 @@ To prepare your Ansible playbook for {{site.data.keyword.bpshort}}, review the f
 
 - Your Ansible playbook must be stored in a GitHub or GitLab repository. 
 - You are limited in how you can specify the target hosts for your Ansible resource inventory. For more information, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
-- All playbooks must be compatible to run with an Ansible version that is supported in {{site.data.keyword.bpshort}}. To find supported versions, run `ibmcloud schematics version`. 
-- To try out the Ansible capabilities in {{site.data.keyword.bpshort}}, you can try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates). 
+- All playbooks must be compatible to run with an Ansible version that is supported in {{site.data.keyword.bpshort}}. To find supported versions run [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version) command. 
+- Optionally, to explore Ansible playbook capabilities in {{site.data.keyword.bpshort}}. You can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
 
 ## Creating an Ansible playbook
 {: #create-playbook}

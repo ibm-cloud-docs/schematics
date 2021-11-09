@@ -26,7 +26,7 @@ Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook t
 ### Prerequisities
 {: #action-setup-prereq}
 
-- Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. You can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
+- Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. Or you can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create the {{site.data.keyword.bpshort}} action. 
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace and actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
