@@ -1,6 +1,7 @@
 ---
 
-copyright: years: 2017, 2021
+copyright:
+  years: 2017, 2021
 lastupdated: "2021-11-09"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
