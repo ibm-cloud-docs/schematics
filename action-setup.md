@@ -75,6 +75,15 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To make changes to your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again. 
     {: note}
 
+## Editing the {{site.data.keyword.bpshort}} action settings
+{: #action-settings}
+
+The **Settings** option allows to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Finally, you click  **Check action** and **Run action** to validate and rerun your action playbook. 
+
+You can monitor the progress of an action by reviewing the logs on the **Jobs** page. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
+
+In the console, there is no limit set to display the job logs. Every `30 seconds` the job logs gets automatically refreshed. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
+{: note}
 
 ## Deleting a {{site.data.keyword.bpshort}} action
 {: #delete-ansible-actions}
@@ -108,14 +117,3 @@ Review the following status that can be assigned to a job:
 |`skipped` |The total number of target host that were accessed but could not be updated because changes have already applied to these hosts.|
 |`unreachable` |The total number of target hosts that could not be found or reached. |
 {: caption="Job status" caption-side="top"}
-
-
-## Editing the {{site.data.keyword.bpshort}} action settings
-{: #action-settings}
-
-The **Settings** option allows to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Finally, you click  **Check action** and **Run action** to validate and rerun your action playbook. 
-
-You can monitor the progress of an action by reviewing the logs on the **Jobs** page. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
-
-In the console, there is no limit set to display the job logs. Every `30 seconds` the job logs gets automatically refreshed. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
-{: note}
