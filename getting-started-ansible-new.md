@@ -17,7 +17,7 @@ subcollection: schematics
 Use one of the IBM provided Ansible playbooks to start and stop {{site.data.keyword.vsi_is_short}}. 
 {: shortdesc}
 
-An Ansible playbook is a set of instructions that you can run on a single target host or a group of hosts. You create a {{site.data.keyword.bpshort}} action that points to your playbook and use the built-in Ansible capabilities in {{site.data.keyword.bpshort}} to run the instructions in your playbook. For more information about how {{site.data.keyword.bpshort}} runs your Ansible playbooks, see [Configuration management with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). 
+An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target host or a group of hosts. You create a {{site.data.keyword.bpshort}} action that points to your playbook and use the built-in Ansible capabilities in {{site.data.keyword.bpshort}} to run the instructions in your playbook. For more information about how {{site.data.keyword.bpshort}} runs your Ansible playbooks, see [Configuration management with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). 
 
 ## Before you begin
 {: #ansible-prereq}

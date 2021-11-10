@@ -15,7 +15,7 @@ subcollection: schematics
 # Setting up {{site.data.keyword.bpshort}} actions
 {: #action-setup}
 
-An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. These target hosts are also referred to as inventory. Ansible playbook includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want them to run to perform managed operations on the {{site.data.keyword.cloud}} resource.
+An [Ansible playbook](/docs/schematics?topic=schematics-getting-started-ansible) is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. You can run your automation tasks in the order in which you want them to run to perform managed operations on the {{site.data.keyword.cloud}} resource.
 {: shortdesc}
 
 ## Creating and running the {{site.data.keyword.bpshort}} action
