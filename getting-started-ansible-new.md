@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-09"
+lastupdated: "2021-11-10"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -14,7 +14,7 @@ subcollection: schematics
 # Getting started with configuration management in {{site.data.keyword.bplong_notm}}
 {: #getting-started-ansible}
 
-Use one of the IBM-provided Ansible playbooks to start and stop {{site.data.keyword.vsi_is_short}}. 
+Use one of the IBM provided Ansible playbooks to start and stop {{site.data.keyword.vsi_is_short}}. 
 {: shortdesc}
 
 An Ansible playbook is a set of instructions that you can run on a single target host or a group of hosts. You create a {{site.data.keyword.bpshort}} action that points to your playbook and use the built-in Ansible capabilities in {{site.data.keyword.bpshort}} to run the instructions in your playbook. For more information about how {{site.data.keyword.bpshort}} runs your Ansible playbooks, see [Configuration management with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). 
@@ -30,7 +30,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 ## Starting and stopping {{site.data.keyword.vsi_is_short}}
 {: #ansible-vsi}
 
-1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page, click **Create action**. 
+1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page. Click **Create action**. 
 2. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create** to view the **Details** section.
 3. In the **Ansible playbook** section, click **Edit icon** enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field. 
 4. Click **Retrieve playbooks**. 
