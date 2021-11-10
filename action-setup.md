@@ -106,7 +106,7 @@ Action state indicates the result of creating and processing an action that can 
 | Disabled | Disallows user execution. |
 | Locked | After configuration is in `Normal` state. Action can be locked by an administrator to stop further change. |
 | Critical | When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical. |
-{: caption="action state" caption-side="top"}
+{: caption="Action state" caption-side="top"}
 
 ### state diagram flow
 {: #state-diagram-flow}
