@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-10"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -47,7 +47,7 @@ The functions of the Schematics action in {{site.data.keyword.cloud_notm}} are:
 
 - Describes the input configuration for your Ansible playbook.
 - You can use the Schematics action definition to deploy multitier apps, set up firewall rules. 
-- You need to only specify the tasks that you want to run and let {{site.data.keyword.bpshort}} securely connect and complete the tasks on your {{site.data.keyword.cloud_notm}} resources.
+- You need to specify the tasks that you want to run and let {{site.data.keyword.bpshort}} securely connect and complete the tasks on your {{site.data.keyword.cloud_notm}} resources.
 - Runs the playbook in a repeatable, reliable and consistent manner.
 
 {{site.data.keyword.bpshort}} actions specifies:

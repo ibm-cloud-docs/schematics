@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-09"
+lastupdated: "2021-11-10"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -61,7 +61,7 @@ You can [create your own roles](#main-file) or [use existing roles from Ansible 
 To streamline your Ansible playbook, you can decide to separate out playbook tasks by creating roles and referencing them in your playbook.  
 {: shortdesc}
 
-1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all of your hosts, and tasks that you want to run only on your web servers and your databases. Each group of tasks can become its own role. 
+1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all of your hosts, and tasks that you want to run on your web servers and your databases. Each group of tasks can become its own role. 
 
 2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. The roles directory can have a subdirectory such as  **/roles/db/** describing the tasks in the `main.yml` file.
     ```
