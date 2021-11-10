@@ -110,7 +110,8 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
     ```
     {: codeblock}
 
-3. Add a `roles` folder to your GitHub repository that is relative to the playbook, and store the `requirements.yml` file in this folder as shown in this example. 
+3. Add a `roles` folder to your GitHub repository that is relative to the playbook, and store the `requirements.yml` file in this folder as shown in this example.
+
     ```
         ├── roles
             └── requirements.yml
@@ -120,15 +121,15 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
     {: screen}
 
 4. Reference the role in your Ansible playbook. In this example, the role with the name `andrewrothstein.kubectl` is used.
+    
     ```
-    ---
     - hosts: all
       roles:
         - role: andrewrothstein.kubectl
     ```
     {: codeblock}
 
-Want to see an example? See [this IBM-provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
+For more information, about Ansible playbook examples, see [IBM provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
 {: tip}
 
 

@@ -108,7 +108,7 @@ Action state indicates the result of creating and processing an action that can 
 | Critical | When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical. |
 {: caption="Action state" caption-side="top"}
 
-### state diagram flow
+### State diagram flow
 {: #state-diagram-flow}
 
 The following table represents the Actions state workflow.
@@ -123,7 +123,7 @@ The following table represents the Actions state workflow.
 ## Reviewing the {{site.data.keyword.bpshort}} action job details
 {: #action-jobs}
 
-Use the {{site.data.keyword.bpshort}} action job details to find a history of all {{site.data.keyword.bpshort}}-internal activities, such as downloading your Ansible playbook or verifying your playbook, and to see the Ansible logs for the playbook that you ran on your target hosts. 
+Use the {{site.data.keyword.bpshort}} action job details to find a history of all {{site.data.keyword.bpshort}} internal activities, such as downloading your Ansible playbook or verifying your playbook, and to see the Ansible logs for the playbook that you ran on your target hosts. 
 {: shortdesc}
 
 Jobs are classified into the following categories:
