@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-10"
 
 keywords: schematics, automation, terraform
 
@@ -17,16 +17,16 @@ completion-time: 30m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Importing Schematics templates into the IBM Cloud catalog
+# Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
 {: #private-catalog}
 {: toc-content-type="tutorial"}
 {: toc-services="schematics"}
 {: toc-completion-time="30m"}
 
-Create your own private content catalog in {{site.data.keyword.cloud}} and import your Terraform templates as products to make them available to your users. With a private catalog, you can limit the services that you want your users to see and the service settings that they can adjust. This way, you have more control over the type of service that is provisioned in your account and that naming conventions for services and service components are followed in your organization. 
+Understand how to [Create your private catalog](/docs/account?topic=account-restrict-by-user&interface=ui), [manage your private catalog](/docs/account?topic=account-filter-account&interface=ui), [assign access to the private catalog](/docs/account?topic=account-catalog-access&interface=ui) in {{site.data.keyword.cloud}}. And import your Terraform templates as products to make them available to your users. With a private catalog, you can limit the services that you want your users to see and the service settings that they can adjust. This way, you have more control over the type of service that is provisioned in your account and that naming conventions for services and service components are followed in your organization. 
 {: shortdesc}
 
-In this tutorial, you import the IBM-provided Observability Terraform template as a product to your private catalog to help users create the following {{site.data.keyword.cloud_notm}} services at once: 
+In this tutorial, you import the IBM provided Observability Terraform template as a product to your private catalog to help users create the following {{site.data.keyword.cloud_notm}} services at once: 
 
 - [**{{site.data.keyword.loganalysislong_notm}}**](/docs/log-analysis?topic=log-analysis-getting-started#getting-started): Use this service to add logging capabilities to other {{site.data.keyword.cloud_notm}} services, and to manage system and app logs.
 - [**{{site.data.keyword.monitoringlong_notm}}**](/docs/monitoring?topic=monitoring-getting-started#getting-started): Use this service to gain operational visibility into the performance and health of your apps, services, and platforms.
@@ -41,10 +41,9 @@ Before you begin, make sure that you are assigned the following permissions:
 - [Permissions to create an {{site.data.keyword.loganalysislong_notm}} instance](/docs/log-analysis?topic=log-analysis-iam#platform)
 - [Permissions to create an {{site.data.keyword.monitoringlong_notm}} instance](/docs/monitoring?topic=monitoring-iam#iam_platform)
 - [Permissions to create an {{site.data.keyword.cloudaccesstraillong_notm}} instance](/docs/activity-tracker?topic=activity-tracker-iam#platform)
-- Write access to a GitHub repository on `github.com`. This repository is needed to upload the Terraform template that you want to add as a product to your private catalog.  
+- Write access to a GitHub repository on `github.com`. This repository is needed to upload the Terraform template that you want to add as a product to your private catalog.
 
-
-## Prepare your Terraform template for the private content catalog
+## Prepare your Terraform template for the private catalog
 {: #prepare-tf-templates}
 {: step}
 
@@ -104,7 +103,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 12. Enter the link in your browser to verify that the `TGZ` file is automatically downloaded to your local machine. 
 13. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the subfolder. 
 
-## Create a private content catalog and add your Terraform template as a product
+## Create a private catalog and add your Terraform template as a product
 {: #create-private-catalog}
 {: step}
 
