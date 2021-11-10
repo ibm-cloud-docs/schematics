@@ -54,8 +54,7 @@ Review the following sample `hosts.ini` file to see the structure of the static 
     [datacenters]
     172.15.4.0
     ```
-   {: codeblock}
-
+    {: codeblock}
 
 ### Limitations
 {: #inv-file-limitation}
