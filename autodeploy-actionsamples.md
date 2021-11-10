@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-10"
 
 keywords: action templates, schematics template, terraform template
 
@@ -14,11 +14,10 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-
 # Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions
 {: #sample_actiontemplates}
 
-Try out one of the IBM-provided Ansible playbooks to perform cloud operations on target hosts or to get started with {{site.data.keyword.bplong_notm}} actions.
+Explore one of the IBM provided Ansible playbooks to perform cloud operations on target hosts or to get started with {{site.data.keyword.bplong_notm}} actions.
 {: shortdesc}
 
 Use the links on this page as follows: 
@@ -29,8 +28,8 @@ Use the links on this page as follows:
 ## Running cloud operations on {{site.data.keyword.vsi_is_short}}
 {: #ansible-vpc}
 
-<table>
-    <thead>
+ <table>
+  <thead>
     <th>Name</th>
     <th>Description</th>
     <th>Access</th>
@@ -38,7 +37,7 @@ Use the links on this page as follows:
     <tbody>
         <tr>
         <td><code>ansible-is-instance-actions</code></td>
-        <td>Use this Ansible playbook to perform day 2 operations such as start, stop, and reboot for {{site.data.keyword.vsi_is_full}}. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md).</td>
+        <td>Use this Ansible playbook to perform day 2 operations such as start, stop, and reboot for {{site.data.keyword.vsi_is_full}}. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md) template file. </td>
         <td> <img src="images/viewgithubrepo.png" alt="View GitHub repository" usemap="#viewgithubimage_map1">
 <map name="viewgithubimage_map1">
     <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="3,1,140,20" shape="rect">
@@ -62,7 +61,7 @@ Use the links on this page as follows:
     <tbody>
         <tr>
         <td><code>lamp-simple</code></td>
-        <td>Use this Ansible playbook to deploy the LAMP stack components on {{site.data.keyword.vsi_is_short}} by following a simple deployment architecture. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md).</td>
+        <td>Use this Ansible playbook to deploy the LAMP stack components on {{site.data.keyword.vsi_is_short}} by following a simple deployment architecture. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md) template file. </td>
         <td> <img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map2">
 <map name="viewgithubimage_map2">
     <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="3,1,140,20"  shape="rect">
@@ -85,7 +84,7 @@ Use the links on this page as follows:
     <tbody>
         <tr>
         <td><code>ansible-icd-postgres-actions</code></td>
-        <td>Use this Ansible playbook to configure the WAL2JSON plug-in on your {{site.data.keyword.databases-for-postgresql_full_notm}} service instance. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions/blob/master/README.md).</td>
+        <td>Use this Ansible playbook to configure the WAL2JSON plug-in on your {{site.data.keyword.databases-for-postgresql_full_notm}} service instance. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions/blob/master/README.md) template file.</td>
         <td> <img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map3">
 <map name="viewgithubimage_map3">
     <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-icd-postgres-actions" target="_blank" coords="3,1,140,20"  shape="rect">
@@ -108,7 +107,7 @@ Use the links on this page as follows:
     <tbody>
         <tr>
         <td><code>ansible-app-deploy-iks</code></td>
-        <td>Use this Ansible playbook to deploy Hackathon Starter on an {{site.data.keyword.containerfull}} cluster. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/README.md).</td>
+        <td>Use this Ansible playbook to deploy Hackathon Starter on an {{site.data.keyword.containerfull}} cluster. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/README.md) template file.</td>
         <td><img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map4">
 <map name="viewgithubimage_map4">
     <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-app-deploy-iks" target="_blank" coords="3,1,140,20"  shape="rect">
@@ -131,7 +130,7 @@ Use the links on this page as follows:
     </tr>
         <tr>
         <td><code>ansible-kubectl</code></td>
-        <td>Use this Ansible playbook to install the Kubernetes CLI <code>kubectl</code> on {{site.data.keyword.vsi_is_short}} by using a role from Ansible Galaxy. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see the template [README file](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md).</td>
+        <td>Use this Ansible playbook to install the Kubernetes CLI <code>kubectl</code> on {{site.data.keyword.vsi_is_short}} by using a role from Ansible Galaxy. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md) template file. </td>
         <td> <img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map5">
 <map name="viewgithubimage_map5">
     <area alt="View GitHub repo" title="View GitHub repo" href="https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="3,1,140,20" shape="rect">

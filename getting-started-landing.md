@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-10"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Getting started with {{site.data.keyword.bplong_notm}}
 {: #getting-started-landing}
 
-Use the powerful tools of {{site.data.keyword.bplong}} to build and spin up your {{site.data.keyword.cloud_notm}} environment, automate cloud resource operations, install software, and run multi-tier apps on your cloud resources. {{site.data.keyword.bplong_notm}} manages only the resources that are listed in [{{site.data.keyword.cloud_notm}} Terraform Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs?){: external}). 
+Use the powerful tools of {{site.data.keyword.bplong}} to build and spin up your {{site.data.keyword.cloud_notm}} environment, automate cloud resource operations, install software, and run multi-tier apps on your cloud resources. {{site.data.keyword.bplong_notm}} manages the resources that are listed in [{{site.data.keyword.cloud_notm}} Terraform Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs?){: external}). 
 {: shortdesc}
 
 Review the following use cases to see how you can get started with {{site.data.keyword.bplong_notm}}. 

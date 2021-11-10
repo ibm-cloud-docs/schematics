@@ -1,7 +1,8 @@
 ---
 
-copyright: years: 2017, 2021
-lastupdated: "2021-11-09"
+copyright:
+  years: 2017, 2021
+lastupdated: "2021-11-10"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -14,7 +15,7 @@ subcollection: schematics
 # Setting up {{site.data.keyword.bpshort}} actions
 {: #action-setup}
 
-An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. These target hosts are also referred to as inventory. Ansible playbook includes tasks, roles, policies, or steps to deploy your resources in the target hosts. You can run your automation tasks in the order in which you want them to run to perform managed operations on the {{site.data.keyword.cloud}} resource.
+An [Ansible playbook](/docs/schematics?topic=schematics-getting-started-ansible) is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. You can run your automation tasks in the order in which you want them to run to perform managed operations on the {{site.data.keyword.cloud}} resource.
 {: shortdesc}
 
 ## Creating and running the {{site.data.keyword.bpshort}} action
@@ -74,6 +75,15 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To make changes to your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again. 
     {: note}
 
+## Editing the {{site.data.keyword.bpshort}} action settings
+{: #action-settings}
+
+The **Settings** option allows to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Finally, you click  **Check action** and **Run action** to validate and rerun your action playbook. 
+
+You can monitor the progress of an action by reviewing the logs on the **Jobs** page. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
+
+In the console, there is no limit set to display the job logs. Every `30 seconds` the job logs gets automatically refreshed. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
+{: note}
 
 ## Deleting a {{site.data.keyword.bpshort}} action
 {: #delete-ansible-actions}
@@ -84,12 +94,36 @@ If you no longer need your {{site.data.keyword.bpshort}} action, you can delete 
 1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions), find the action that you want to delete.
 2. From the actions menu, click **Delete**. 
 
+## Action state
+{: #action-state-diagram}
 
+Action state indicates the result of creating and processing an action that can be known to the Schematics system state. The table represents the {{site.data.keyword.bpshort}} action state and its description.
+{: shortdesc}
+
+|State|Description|
+|------|-------|
+| Normal | Administrator publishes action to enable visibility to the users execution. |
+| Disabled | Disallows user execution. |
+| Locked | After configuration is in `Normal` state. Action can be locked by an administrator to stop further change. |
+| Critical | When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical. |
+{: caption="Action state" caption-side="top"}
+
+### State diagram flow
+{: #state-diagram-flow}
+
+The following table represents the Actions state workflow.
+
+| Action | State diagram | Description |
+| ---- | ---- | ---- |
+| **Create** | ![Create action](images/createaction.png "Create action state diagram") | When the user creates an action, initially the state of an action is in `Draft` state. If user provides the template during create or after create, then action goes to `Pending` state. If the template processing is success, action goes to `Normal` state. If the template manager sets disable to stop the usage, then action goes to `Disable` state. If there is an error in template processing, action goes to `Critical` state. |
+| **Delete**| ![Delete action](images/deleteaction.png "Delete action state diagram") | When the user selects to delete an existing action, initially action goes into `Pending` state. If the template deletion fails action goes to `Critical` state.|
+| **Update** | ![Update action](images/updateaction.png "Update action state diagram")| When the user clicks an existing action to update the template repository, immediately action goes to `pending` state. If the template processing is success, action goes to the `Normal` state. If the user tries to set the template repository to disable, action goes to the `Disabled` state. Finally, if the template processing fails, action goes to `Critical` state.|
+{: caption="Action state workflow" caption-side="top"}
 
 ## Reviewing the {{site.data.keyword.bpshort}} action job details
 {: #action-jobs}
 
-Use the {{site.data.keyword.bpshort}} action job details to find a history of all {{site.data.keyword.bpshort}}-internal activities, such as downloading your Ansible playbook or verifying your playbook, and to see the Ansible logs for the playbook that you ran on your target hosts. 
+Use the {{site.data.keyword.bpshort}} action job details to find a history of all {{site.data.keyword.bpshort}} internal activities, such as downloading your Ansible playbook or verifying your playbook, and to see the Ansible logs for the playbook that you ran on your target hosts. 
 {: shortdesc}
 
 Jobs are classified into the following categories:
@@ -106,14 +140,3 @@ Review the following status that can be assigned to a job:
 |`skipped` |The total number of target host that were accessed but could not be updated because changes have already applied to these hosts.|
 |`unreachable` |The total number of target hosts that could not be found or reached. |
 {: caption="Job status" caption-side="top"}
-
-
-## Editing the {{site.data.keyword.bpshort}} action settings
-{: #action-settings}
-
-The **Settings** option allows to edit the action **Details**, **Ansible action**, and an **{{site.data.keyword.cloud_notm}} resource inventory** parameters. Then, you can click `Save` button to save the edited configuration. Finally, you click  **Check action** and **Run action** to validate and rerun your action playbook. 
-
-You can monitor the progress of an action by reviewing the logs on the **Jobs** page. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
-
-In the console, there is no limit set to display the job logs. Every `30 seconds` the job logs gets automatically refreshed. You can use [ibmcloud schematics job list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
-{: note}
