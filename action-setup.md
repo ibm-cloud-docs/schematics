@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-09"
+lastupdated: "2021-11-10"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -84,6 +84,7 @@ If you no longer need your {{site.data.keyword.bpshort}} action, you can delete 
 
 1. From the [{{site.data.keyword.bpshort}} actions dashboard](https://cloud.ibm.com/schematics/actions), find the action that you want to delete.
 2. From the actions menu, click **Delete**. 
+
 
 
 
