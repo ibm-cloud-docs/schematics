@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-11"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -102,10 +102,11 @@ Action state indicates the result of creating and processing an action that can 
 
 |State|Description|
 |------|-------|
-| Normal | Administrator publishes action to enable visibility to the users execution. |
+| Critical | When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical. |
 | Disabled | Disallows user execution. |
 | Locked | After configuration is in `Normal` state. Action can be locked by an administrator to stop further change. |
-| Critical | When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical. |
+| Normal | Administrator publishes action to enable visibility to the users execution. |
+| Pending | When the user provides the template during create, update, or delete, your action goes into `Pending` state. |
 {: caption="Action state" caption-side="top"}
 
 ### State diagram flow
