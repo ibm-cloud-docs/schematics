@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-12"
 
 keywords: getting started with ansible, ansible tutorial, schematics ansible how to, run playbooks with schematics
 
@@ -61,7 +61,7 @@ The functions of the Schematics action in {{site.data.keyword.cloud_notm}} are:
 ## Creating and running Ansible playbooks for IBM Cloud
 {: #ansible-playbook}
 
-To create and run Ansible playbook by using {{site.data.keyword.bplong_notm}}, refer to [create and run Ansible playbook](/docs/schematics?topic=schematics-create-playbooks).
+To create and run Ansible playbook by using {{site.data.keyword.bplong_notm}}, refer to [create and run Ansible playbook](/docs/schematics?topic=schematics-create-playbook).
 
 
 

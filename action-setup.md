@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-12"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -102,10 +102,11 @@ Action state indicates the result of creating and processing an action that can 
 
 |State|Description|
 |------|-------|
-| Normal | Administrator publishes action to enable visibility to the users execution. |
+| Critical | When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical. |
 | Disabled | Disallows user execution. |
 | Locked | After configuration is in `Normal` state. Action can be locked by an administrator to stop further change. |
-| Critical | When the template is unable to download the repository, or the repository name is invalid, the template fails and changes the action state as critical. |
+| Normal | Administrator publishes action to enable visibility to the users execution. |
+| Pending | When the user provides the template during create, update, or delete, your action goes into `Pending` state. |
 {: caption="Action state" caption-side="top"}
 
 ### State diagram flow
@@ -116,8 +117,8 @@ The following table represents the Actions state workflow.
 | Action | State diagram | Description |
 | ---- | ---- | ---- |
 | **Create** | ![Create action](images/createaction.png "Create action state diagram") | When the user creates an action, initially the state of an action is in `Draft` state. If user provides the template during create or after create, then action goes to `Pending` state. If the template processing is success, action goes to `Normal` state. If the template manager sets disable to stop the usage, then action goes to `Disable` state. If there is an error in template processing, action goes to `Critical` state. |
-| **Delete**| ![Delete action](images/deleteaction.png "Delete action state diagram") | When the user selects to delete an existing action, initially action goes into `Pending` state. If the template deletion fails action goes to `Critical` state.|
-| **Update** | ![Update action](images/updateaction.png "Update action state diagram")| When the user clicks an existing action to update the template repository, immediately action goes to `pending` state. If the template processing is success, action goes to the `Normal` state. If the user tries to set the template repository to disable, action goes to the `Disabled` state. Finally, if the template processing fails, action goes to `Critical` state.|
+| **Delete**| ![Delete action](images/deleteaction.png "Delete action state diagram")| When the user selects to delete an existing action, initially action goes into `Pending` state. If the template deletion fails action goes to `Critical` state.|
+| **Update** | ![Update action](images/updateaction.png "Update action state diagram") | When the user clicks an existing action to update the template repository, immediately action goes to `pending` state. If the template processing is success, action goes to the `Normal` state. If the user tries to set the template repository to disable, action goes to the `Disabled` state. Finally, if the template processing fails, action goes to `Critical` state.|
 {: caption="Action state workflow" caption-side="top"}
 
 ## Reviewing the {{site.data.keyword.bpshort}} action job details

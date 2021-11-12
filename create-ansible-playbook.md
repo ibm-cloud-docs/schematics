@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-12"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -12,27 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating Ansible playbooks 
-{: #create-playbooks}
-
-Ansible playbooks helps to run operations on cloud resources, such as starting or stopping a virtual server, install software packages, deploy apps, or even provision cloud resources and configure them to your needs. A playbook is written in YAML format and consists of multiple plays that each define the tasks that you want to run on your target hosts. Common automation tasks can be grouped to an Ansible module and made available so that they can be reused in other playbooks. You can also group multiple playbooks to an Ansible role.
-{: shortdesc}
-
-## Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}} 
-{: #plan-ansible-playbook}
-
-To prepare your Ansible playbook for {{site.data.keyword.bpshort}}, review the following considerations. 
-{: shortdesc}
-
-- Your Ansible playbook must be stored in a GitHub or GitLab repository. 
-- You are limited in how you can specify the target hosts for your Ansible resource inventory. For more information, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
-- All playbooks must be compatible to run with an Ansible version that is supported in {{site.data.keyword.bpshort}}. To find supported versions run [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version) command. 
-- Optionally, to explore Ansible playbook capabilities in {{site.data.keyword.bpshort}}. You can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
-
-## Creating an Ansible playbook
+# Creating an Ansible playbook
 {: #create-playbook}
-
-Follow these general steps to create your Ansible playbook. For detailed information about how to structure your playbook, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html){: external} or this [blog](https://www.ansible.com/blog/getting-started-writing-your-first-playbook){: external}. 
+ 
+Follow these [prerequisites](#plan-ansible-playbook) and general steps to create your Ansible playbook. For detailed information about how to structure your playbook, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html){: external} or this [blog](https://www.ansible.com/blog/getting-started-writing-your-first-playbook){: external}. 
 {: shortdesc}
 
 Want to use existing Ansible playbooks to get started? Try out one of the [IBM-provided Ansible playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) or browse existing Ansible collections and roles in [Ansible Galaxy](https://galaxy.ansible.com/){: external}
@@ -160,6 +143,15 @@ Similar to [Ansible roles](#schematics-roles), collections require a specific fo
 
 4. Reference a resource from your collection in your playbook. For more information, see the [Ansible documentation](https://docs.ansible.com/ansible/2.9/user_guide/collections_using.html#using-collections-in-a-playbook){: external}
 
+## Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}} 
+{: #plan-ansible-playbook}
 
+To prepare your Ansible playbook for {{site.data.keyword.bpshort}}, review the following considerations. 
+{: shortdesc}
+
+- Your Ansible playbook must be stored in a GitHub or GitLab repository. 
+- You are limited in how you can specify the target hosts for your Ansible resource inventory. For more information, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
+- All playbooks must be compatible to run with an Ansible version that is supported in {{site.data.keyword.bpshort}}. To find supported versions run [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version) command. 
+- Optionally, to explore Ansible playbook capabilities in {{site.data.keyword.bpshort}}. You can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}.
 
 

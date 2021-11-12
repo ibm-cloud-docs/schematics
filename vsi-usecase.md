@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-12"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -55,7 +55,7 @@ Congratulations! You used the built-in Ansible capabilities of {{site.data.keywo
 
 Now, you are ready to complete these steps to execute the use case: 
 
-1. Use the GitHub repository, [Ansible playbook with the VSI-related configuration to start or stop VSI](https://github.com/Cloud-Schematics/ansible-is-instance-actions), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
+1. Use the GitHub repository, [Ansible playbook with the VSI-related configuration to start or stop VSI](https://github.com/Cloud-Schematics/ansible-is-instance-actions), and view the `YAML` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbook).
 
 2. Create a {{site.data.keyword.bpshort}} action by using the `playbook` and `YAML` file. The example contains the command to create an action. see [create {{site.data.keyword.bplong_notm}} action by using UI](/docs/schematics?topic=schematics-action-setup#create-action). And see [create {{site.data.keyword.bplong_notm}} action by using command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
 
