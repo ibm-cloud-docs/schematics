@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-12"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -180,7 +180,7 @@ terraform {
 
 {{site.data.keyword.bpshort}} currently supports the latest Ansible version v2.9.7 only. When you create a {{site.data.keyword.bpshort}} action, you must ensure that your Ansible playbooks can be run with this version. You cannot specify a specific Ansible version for your playbook. 
 
-However, if you use existing Ansible roles or collections in your playbook, you can specify the version of the role or collection that you want to run by using a `requirements.yml` file. For more information about how to reference roles and collections in your playbook, see [Referencing Ansible roles in your playbook](/docs/schematics?topic=schematics-create-playbooks#schematics-roles) and [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbooks#schematics-collections). To learn more about how to specify versions for roles and collections, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}.
+However, if you use existing Ansible roles or collections in your playbook, you can specify the version of the role or collection that you want to run by using a `requirements.yml` file. For more information about how to reference roles and collections in your playbook, see [Referencing Ansible roles in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-roles) and [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-collections). To learn more about how to specify versions for roles and collections, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}.
 
 ```
 roles:

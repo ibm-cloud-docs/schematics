@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-12"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -36,7 +36,7 @@ The prerequisites for the use case are:
 
 After the prerequisite is completed, follow these steps to complete the use case:
 
-1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
+1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbook).
 
 2. Ensure the {{site.data.keyword.containerlong_notm}} instance is in running state. For more information, about creating VPC cluster, see [Creating a VPC Generation 2 compute cluster](/docs/containers?topic=containers-getting-started#vpc-gen2-gs).
 
@@ -52,7 +52,7 @@ After the prerequisite is completed, follow these steps to complete the use case
 
 Now, you are ready to complete these steps to execute the use case:
 
-1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbooks). 
+1. Use the GitHub repository, [hackathon starter Ansible playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks), and view the `site.yaml` file, for more information, about playbook creation, see  [create playbook](/docs/schematics?topic=schematics-create-playbook). 
 
 2. Create a {{site.data.keyword.bpshort}} action file `action.json` by using the action definition. The example contains the command to create an action. For more information, see [create {{site.data.keyword.bplong_notm}} action by using command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action).
 

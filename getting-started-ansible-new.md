@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-12"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -55,6 +55,6 @@ Congratulations! You used the built-in Ansible capabilities of {{site.data.keywo
 
 Now that you ran your first operation on an {{site.data.keyword.cloud_notm}} resource, you can explore the following options:
 
-- Learn how to [create your own Ansible playbooks](/docs/schematics?topic=schematics-create-playbooks).
+- Learn how to [create your own Ansible playbooks](/docs/schematics?topic=schematics-create-playbook).
 - Explore other [IBM-provided playbooks](https://github.com/Cloud-Schematics){: external}.
 - Set up the {{site.data.keyword.bpshort}} [CLI](/docs/schematics?topic=schematics-setup-cli) or [API](/docs/schematics?topic=schematics-setup-api) to start automating the configuration of {{site.data.keyword.cloud_notm}} resources.
