@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-13"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
