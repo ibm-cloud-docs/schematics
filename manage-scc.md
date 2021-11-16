@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-16"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics,
 
@@ -29,7 +29,7 @@ With the {{site.data.keyword.compliance_short}}, you can:
 
 As a security or compliance focal, you can use the {{site.data.keyword.bplong_notm}} [goals](#x2117978){: term} to help ensure that your organization is adhering to the external and internal standards for your industry. By using the {{site.data.keyword.compliance_short}} to validate the resource configurations in your account against a [profile](#x2034950){: term}, you can identify potential issues as they arise.
 
-All of the goals for {{site.data.keyword.bplong_notm}} are added to the {{site.data.keyword.cloud}} Best Practices Controls 1.0 profile but can also be mapped to other profiles.
+all the goals for {{site.data.keyword.bplong_notm}} are added to the {{site.data.keyword.cloud}} Best Practices Controls 1.0 profile but can also be mapped to other profiles.
 {: note}
 
 To start monitoring your resources, check out [Getting started with {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-getting-started).

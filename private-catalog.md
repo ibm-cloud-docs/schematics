@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-16"
 
 keywords: schematics, automation, terraform
 
@@ -47,7 +47,7 @@ Before you begin, make sure that you are assigned the following permissions:
 {: #prepare-tf-templates}
 {: step}
 
-To upload a Terraform template to a private catalog, you must first compress all of your Terraform configuration files to a `TGZ` file, and upload this file to a GitHub repository to create a release. 
+To upload a Terraform template to a private catalog, you must first compress all your Terraform configuration files to a `TGZ` file, and upload this file to a GitHub repository to create a release. 
 {: shortdesc}
 
 1. Download the content of the `terraform-ibm-observability` sample repository to your local machine. This repository is owned and maintained by IBM, and provides a Terraform template to create an instance of {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}}. 

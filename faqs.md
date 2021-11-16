@@ -2,11 +2,13 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-13"
+lastupdated: "2021-11-16"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
 subcollection: schematics
+
+content-type: faq
 
 ---
 
