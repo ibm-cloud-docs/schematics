@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-16"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -29,7 +29,6 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 
 4. Upload your Ansible playbook, modules, roles, and collections to your GitHub repository. 
 5. [Create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-setup#create-action).
-
 
 ## Referencing Ansible roles in your playbook
 {: #schematics-roles}
