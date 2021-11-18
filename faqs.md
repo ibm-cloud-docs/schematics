@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-18"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -20,7 +20,6 @@ content-type: faq
 
 Answers to common questions about the {{site.data.keyword.bplong_notm}} service.
 {: shortdesc}
-
 
 ## What is {{site.data.keyword.bplong_notm}} and how does it work? 
 {: #what-is-schematics}
@@ -66,7 +65,7 @@ Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider vers
 
 Example for a multiple provider configuration:
 
-```
+```terraform
 terraform{
     required_providers{
     ibm = ">= 1.21.0" // Error !! version unavailable.
@@ -76,7 +75,6 @@ terraform{
 }
 
 ```
-{: pre}
 
 Currently, version 1.21.0 is released. For more information, about provider version, refer to [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 {: note}
@@ -95,36 +93,34 @@ After new Terraform and Ansible versions are released by the community, the IBM 
 
 To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` and execute `curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx`. For more information, about creating IAM access token and API Docs, see [IAM access token](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key). <br> You can set the environment values  `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
 
-## How do I overcome the authentication error when Schematics workspace is created by using API?
+## How do I overcome the authentication error when {{site.data.keyword.bpshort}} workspace is created by using API?
 {: #createworkspace-authentication-error}
 {: faq}
 {: support}
 
 You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer to the following sample error message and the solution for the authentication error.
 
-The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a 'default token'. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation, this refresh_token cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token.
-
-**Error message**
-
-    ```
+    ```text
     Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
     ```
-**Solution**
+
+The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.
+
 1. You need to create access_token and refresh_token.
 
-    ```
+    ```sh
     export IBMCLOUD_API_KEY=<ibmcloud-api_key>
     curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
     ```
-2. Export the access_token and refresh_token obtained in step 1 as environment variables for ACCESS_TOKEN and REFRESH_TOKEN.
+2. Export the `access_token` and `refresh_token` obtained in step 1 as environment variables for `ACCESS_TOKEN` and `REFRESH_TOKEN`.
 
-    ```
+    ```sh
     export ACCESS_TOKEN=<access_token>
     export REFRESH_TOKEN=<refresh_token>
     ```
 3. Create workspace
 
-    ```
+    ```sh
     curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
 
@@ -133,11 +129,7 @@ The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apik
 {: faq}
 {: support}
 
-**Template error**
-
-Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/ ` repository, after 1st October 2020, can see this error message. 
-
-**Solution**
+Usage of the branch `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/` repository, after 1st October 2020, can see this error message. 
 
 If the repository is created after 1st October 2020, the main branch syntax needs to be `https://github.com/username/reponame/tree/main`. For example, `https://github.com/guruprasad0110/tf_cloudless_sleepy_13/tree/main`
 
@@ -153,12 +145,6 @@ No, the null-exec (null_resources) and remote-exec resources has maximum timeout
 {: #clone-file-extension}
 {: faq}
 {: support}
-
-**Issue**
-
-While creating the {{site.data.keyword.bpshort}} workspace or action you notice the {{site.data.keyword.bpshort}} is marking some files as vulnerable, and is removing the file from the template.
-
-**Solution**
 
 While creating {{site.data.keyword.bpshort}} workspace or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
 
@@ -200,7 +186,6 @@ You can follow these steps to upgrade Terraform v0.11 to Terraform higher versio
 You need to be an expert user to upgrade the Terraform version to perform these steps.
 {: note}
 
-
 ## How to overcome the downtime while updating the workspace activities? 
 {: #impact-downtime-workspace}
 {: faq}
@@ -234,7 +219,7 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 {: faq}
 {: support}
 
-To avoid the DEPRECATION WARNING message during Action job execution, in the Action settings page you can set the input variables 
+To avoid the `DEPRECATION WARNING` message during Action job execution, in the Action settings page you can set the input variables 
 `ansible_python_interpreter = auto` as shown in the screen capture.
 
 <img src="images/advanced_inputvariable.png" alt="Configuring input variable to silence warning message" width="700" style="width: 700px; border-style: none"/>
