@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-16"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -27,7 +27,7 @@ You can use these steps to change the IAM allowlist for the user whose credentia
 4. From the User details page, go to the IP address restrictions section.
 5. For Classic infrastructure, enter the CIDRs of the zones in the region where your cluster is located.
 
-You must allow all of the zones within the region that your resource is in.
+You must allow all the zones within the region that your resource is in.
 {: note}
 
 | Region | Zone | Public IP addresses | Private IP addresses |

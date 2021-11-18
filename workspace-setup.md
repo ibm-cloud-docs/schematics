@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-16"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -408,7 +408,7 @@ Review the following image to see the number of workspaces in {{site.data.keywor
 
 <img src="images/workspace-structure.png" alt="Workspace structure for {{site.data.keyword.bplong_notm}}" width="800"/>
 
-Do not use one workspace to manage an entire staging or production environment. When you deploy all of your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
+Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 {: important}
 
 ### How do I structure my Git repository to map my workspaces?

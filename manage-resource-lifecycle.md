@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-16"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -214,7 +214,7 @@ To remove an {{site.data.keyword.cloud_notm}} resource that you provisioned with
 {: shortdesc}
 
 **How should I remove resources with {{site.data.keyword.bplong_notm}}?** </br>
-You can use the {{site.data.keyword.bplong_notm}} console or command-line to remove all of the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in sync with your Terraform template, make sure to also remove the associated infrastructure code from your Terraform template so that your resources are not re-added when you apply a new version of your Terraform template. 
+You can use the {{site.data.keyword.bplong_notm}} console or command-line to remove all the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in sync with your Terraform template, make sure to also remove the associated infrastructure code from your Terraform template so that your resources are not re-added when you apply a new version of your Terraform template. 
 
 **What happens if I choose to delete my resource directly from the resource dashboard?** </br>
 When you manually remove a resource that you provisioned with {{site.data.keyword.bplong_notm}}, the state file is not updated automatically and becomes out of sync. When you create your next Terraform execution plan or apply a new template version, {{site.data.keyword.bpshort}} verifies that the {{site.data.keyword.cloud_notm}} resources in the state file exist in your {{site.data.keyword.cloud_notm}} account with the state that is captured. If the resource is not found, the state file is updated and the Terraform execution plan is changed accordingly. 
@@ -223,7 +223,7 @@ Although the state file is updated before new changes to your {{site.data.keywor
 {: important}
 
 **Are my resources removed when I remove the workspace** </br>
-Removing the workspace from {{site.data.keyword.bplong_notm}} does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you remove the workspace before you removed your resources, you must manually remove all of your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard. 
+Removing the workspace from {{site.data.keyword.bplong_notm}} does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you remove the workspace before you removed your resources, you must manually remove all your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard. 
 
 Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sure that you backed up your data before you remove a resource. If you choose to remove the infrastructure code, or comment out the resource in your Terraform configuration file, make sure to thoroughly review the log file of your execution plan to verify that all your resources are included in the removal.    
 {: important}

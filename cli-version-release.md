@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-16"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # CLI version history 
 {: #cli_version-releases}
 
-Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI plug-in. Be sure to keep your CLI up-to-date so that you can use all of the available commands and their options.
+Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI plug-in. Be sure to keep your CLI up-to-date so that you can use all the available commands and their options.
 {: shortdesc}
 
 | Version | Release date | Changes |
