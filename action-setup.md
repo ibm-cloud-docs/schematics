@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-22"
+lastupdated: "2021-11-23"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -67,7 +67,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
        * Select the **Bastion host acccess is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
      - Select **WinRM** tab, to enter a HTTP protocol and use a SOAP based API for communication between the client and the server.
        * Provide the **Username** and the **Password**.
-    4. Click **Save** to save your resource inventory details.
+    4. Click **Save**.
 
     For more information, about creating inventories in for {{site.data.keyword.bpshort}} actions, see [static inventory](/docs/schematics?topic=schematics-inventories-setup#static-inv) and [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
     {: note}
