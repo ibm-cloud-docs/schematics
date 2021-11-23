@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-23"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -60,16 +60,19 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     7. Optional: Click the **Advanced options** to define input variables that you want to pass to the playbook. Input variables must be entered in key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden for the users after the action is created. If you use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}, all input variables can be found in the `readme.md` file. 
     8. Click **Save** to save the action details. 
 4. Configure your resource inventory. The resource inventory includes all target hosts where you want to run your Ansible playbook.
-    1. In the **IBM Cloud resource inventory** section, click the **Edit icon**. 
-    2. If your Ansible playbook requires a bastion host, enter the IP address of your bastion host. The bastion host sits in front of your target hosts and proxies all Ansible SSH connections to the target hosts.
-    3. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information about resource inventories, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
-    4. In the **IBM Cloud resource inventory SSH key** field, enter the private SSH key that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for IBM Cloud resource inventory and Bastion host** option and enter your SSH key in the **Bastion host SSH key** field. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
-    5. Click **Save** to save your resource inventory details.
+    1. In the **Choose your inventory** section, click the **Edit icon**. 
+    2. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information, about creating resource inventories, see [Creating static inventory files](https://cloud.ibm.com/docs/schematics?topic=schematics-inventories-setup#static-inv) or [Dynamically building resource inventories from Schematics workspaces](https://cloud.ibm.com/docs/schematics?topic=schematics-inventories-setup#dynamic-inv).
+    3. Action supports **SSH** and **WinRM** types of inventory connection tab to connect to your remote host.
+     - Select **SSH** tab, to enter the **username** and **IBM Cloud resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 
+       * Select the **Bastion host acccess is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
+     - Select **WinRM** tab, to enter a HTTP protocol and use a SOAP based API for communication between the client and the server.
+       * Provide the **Username** and the **Password**.
+    4. Click **Save**.
 
     For more information, about creating inventories in for {{site.data.keyword.bpshort}} actions, see [static inventory](/docs/schematics?topic=schematics-inventories-setup#static-inv) and [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
     {: note}
 
-5. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results in the logs. This check verifies that your playbook can be executed in {{site.data.keyword.bpshort}}. If you need to change your action settings, return to the action's **Settings** page and click the **edit icon**. 
+5. Click **Check action** to verify your action details. The **Jobs** page opens automatically and you can view the results in the logs. This check verifies that your playbook can be executed in {{site.data.keyword.bpshort}}. To change your action settings, return to the action's **Settings** page and click the **edit icon**. 
 6. Click **Run action** to run the action. You can monitor the progress of an action by reviewing the logs on the **Jobs** page. Every `30 seconds` the job logs are automatically refreshed. 
 
     You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To make changes to your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again. 
