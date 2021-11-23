@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-18"
+lastupdated: "2021-11-23"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -223,3 +223,66 @@ To avoid the `DEPRECATION WARNING` message during Action job execution, in the A
 `ansible_python_interpreter = auto` as shown in the screen capture.
 
 <img src="images/advanced_inputvariable.png" alt="Configuring input variable to silence warning message" width="700" style="width: 700px; border-style: none"/>
+
+## How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster unavailablity. Is there a way for the customer to get the workspace deleted?
+{: #clusterdeletion-warn-faq}
+{: faq}
+{: support}
+
+You need to delete the workspace and NOT destroying the resources as if there are no resource available.
+## what is the best practice to deploy a Helm chart to an existing cluster using schematics keeping credentials/secrets?
+{: #gherepo-warn-faq}
+{: faq}
+{: support}
+
+The best practice would be using IBM cloud catalog to manage the helm charts where inside the catalog you can keep the credentials and mark it as secured. For reference you can see[Catalog](https://cloud.ibm.com/catalog?search=label%3Ahelm). Deploying a Helm chart to a new target using the console can refer this [method](https://test.cloud.ibm.com/docs/account?topic=account-helm-targets&interface=ui).
+
+## How to set the release tag through the schematics? 
+{: #releasetag-warn-faq}
+{: faq}
+{: support}
+
+**Error Message**
+```
+2021/11/08 12:34:06 -----  New Action  -----
+ 2021/11/08 12:34:06 Request: RepoURL=https://github.ibm.com/wh-hp-insights/hi-cloud-automation, WorkspaceSource=Schematics, Branch=2021.10, Release=, Folder=terraform-v2/workspace-hi-qa-automation-app
+ 2021/11/08 12:34:06 Related Activity: action=UPDATE_WORKSPACE,processedBy=sandbox-6bcf8bffcd-rxbww_2478
+ 2021/11/08 12:34:06 Getting download command
+ 2021/11/08 12:34:11 Fatal, could not download repo, Failed to clone git repository, couldn't find remote ref "refs/heads/2021.10" (most likely invalid branch name is passed)
+ 2021/11/08 12:34:12 Problems found with the Repository. Please Rectify and Retry
+```
+The “Release” parameter is empty but the “Branch” was set with release tag.
+{: note}
+
+Schematics does not support release tag, as its difficult to identify if it’s a release tag or a branch from the GIT repo URL. Need to set the release tag through the schematics API.
+
+##  How do I overcome the request exceeding the 'Cluster' resource quota of '100' for the account in any region?
+{: #clusterquota-warn-faq}
+{: faq}
+{: support}
+
+**Error Message**
+```
+Error: Request failed with status code: 403, ServerErrorResponse: {"incidentID":"706efb2c-3461-4b9d-a52c-038fda3929ea,706efb2c-3461-4b9d-a52c-038fda3929ea","code":"E60b6","description":"This request exceeds the 'Cluster' resource quota of '100' for the account in this region. Your account already has '100' of the resource in the region, and the request would add '1'. Revise your request, remove any unnecessary resources, or contact IBM support to increase your quota.","type":"General"}
+```
+
+You see this quota validation error when the the 'Cluster' resource quota of '100' for the account in this region is exceded. You can consider deleting the existing resources and try performing the executing operation again.
+
+## Why I am getting 403 error instead of 404 error when providing an invalid workspace ID?
+{: #invalidwspid-warn-faq}
+{: faq}
+{: support}
+
+**Error Message**
+```
+curl -X GET https://schematics.test.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Authorization: $IAM_TOKEN"
+{"requestid":"3a3cbffe-e23a-4ccf-b764-042f7379c084","timestamp":"2021-11-11T17:00:07.169953698Z","messageid":"M1078","message":"Error while validating the location in the account. Please verify you have permission to the location in the global catalog settings.","statuscode":403}
+```
+Yes there is a change in the api which checks for the location first and if it doesn’t get proper location for the workspace it returns 403 error instead of 404 error.
+
+## While creating OpenShift or Kubernetes resources, can I tune 90 minutes time out to higher?
+{: #resourcetimeout-warn-faq}
+{: faq}
+{: support}
+
+Yes, you can increase the time out for OpenShift or Kubernetes resources. For more information, about managing or adding the time-out option for the cluster resource, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
