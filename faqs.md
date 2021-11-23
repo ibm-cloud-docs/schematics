@@ -50,7 +50,7 @@ Infrastructure as Code (IaC) helps you codify your cloud environment so that you
 {: faq}
 {: support}
 
-With {{site.data.keyword.bplong_notm}}, you can run Ansible playbooks or {{site.data.keyword.bpshort}} actions against your {{site.data.keyword.cloud_notm}} by using the Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform actions against your resources, such as shutting down a virtual server instance. For more information about how to use the Ansible provisioner, see the following blogs:
+Yes, you can run Ansible playbooks or {{site.data.keyword.bpshort}} actions against your {{site.data.keyword.cloud_notm}} by using the Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see the following blogs:
 
 - [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 - [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/){: external}
@@ -61,7 +61,6 @@ With {{site.data.keyword.bplong_notm}}, you can run Ansible playbooks or {{site.
 {: support}
 
 Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported.
-
 
 Example for a multiple provider configuration:
 
@@ -76,35 +75,39 @@ terraform{
 
 ```
 
-Currently, version 1.21.0 is released. For more information, about provider version, refer to [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+Currently, version 1.21.0 is released. For more information, about provider version, refer to, [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 {: note}
 
-## When are new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?
+## When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?
 {: #new-versions}
 {: faq}
 {: support}
 
-After new Terraform and Ansible versions are released by the community, the IBM team begins a process of hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}. 
+After new Terraform and Ansible versions are released by the community, the IBM team begins a process of hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}.
 
 ## How do I generate IAM access token, if client id `bx` is used?
 {: #createworkspace-generate-tokens}
 {: faq}
 {: support}
 
-To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` and execute `curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx`. For more information, about creating IAM access token and API Docs, see [IAM access token](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key). <br> You can set the environment values  `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
+To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` and execute 
+```sh
+curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx.
+``` 
+
+For more information, about creating IAM access token and API Docs, see [IAM access token](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key). <br> You can set the environment values  `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
 
 ## How do I overcome the authentication error when {{site.data.keyword.bpshort}} workspace is created by using API?
 {: #createworkspace-authentication-error}
 {: faq}
 {: support}
 
-You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer to the following sample error message and the solution for the authentication error.
+You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer to, the following sample error message and the solution for the authentication error.
+```text
+Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
+```
 
-    ```text
-    Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
-    ```
-
-The [IAM API](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.
+The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.
 
 1. You need to create access_token and refresh_token.
 
@@ -139,9 +142,9 @@ If the repository is created after 1st October 2020, the main branch syntax need
 {: faq}
 {: support}
 
-No, the null-exec (null_resources) and remote-exec resources has maximum timeout of 60 minutes. Longer jobs need to be broken into shorter blocks to provision the infrastructure faster. Otherwise the execution times out automatically after 60 minutes.
+No, the null-exec (null_resources) and remote-exec resources has maximum timeout of `60 minutes`. Longer jobs need to be broken into shorter blocks to provision the infrastructure faster. Otherwise the execution times out automatically after `60 minutes`.
 
-## How does {{site.data.keyword.bpshort}} decide to remove the files from my Terraform or Ansible templates?
+## How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform or Ansible templates?
 {: #clone-file-extension}
 {: faq}
 {: support}
@@ -156,7 +159,7 @@ While creating {{site.data.keyword.bpshort}} workspace or action {{site.data.key
 The allowed extension list is continuously monitored and updated in every release. You can raise an [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a new file extension to the list.
 {: note}
 
-## How can you save user-defined files generated by the Terraform modules and use them across multiple Terraform plan, apply, destroy, refresh, or import commands?
+## How can I save user-defined files generated by the Terraform modules and use them across multiple Terraform plan, apply, destroy, refresh, or import commands?
 {: #persist-file}
 {: faq}
 {: support}
@@ -167,7 +170,7 @@ In the same way {{site.data.keyword.bplong_notm}} supports the ability to persis
 
 Your files must be placed in the `/tmp/.schematics` folder and the size limit is set to `10 MB`. {{site.data.keyword.bpshort}} backups and restores all the files in the `/tmp/.schematics` folder.
 
-## How to upgrade the Terraform versions in {{site.data.keyword.bpshort}}?
+## How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}?
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
@@ -178,7 +181,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
 - Export the Terraform state file, from the {{site.data.keyword.bpshort}} workspace by using the [ibmcloud schematics state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
 - Follow the steps described by [Hashicorp](https://www.terraform.io/upgrade-guides/index.html){: external} to upgrade from `Terraform v0.11 to v0.12`, `Terraform v0.12 to v0.13`, or higher. Upgrade your Terraform configuration `.tf` file and Terraform state file as per the latest Terraform version requirement. **Note** Use your own machine or laptop to perform these operations.
-- Upload the upgraded Terraform configuration `.tf ` file, to an existing or a new Git repository.
+- Upload the upgraded Terraform configuration `.tf` file, to an existing or a new Git repository.
 - Create the {{site.data.keyword.bpshort}} workspace with the upgraded Terraform configuration `.tf` file in the Git repository and the upgraded state file by using the [ibmcloud schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 - Run the {{site.data.keyword.bpshort}} workspace [refresh](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the newly created workspace is able to connect and work with the existing {{site.data.keyword.cloud_notm}} resources.
 - Delete the old {{site.data.keyword.bpshort}} workspace without destroying the {{site.data.keyword.cloud_notm}} resources.
@@ -186,12 +189,12 @@ You can follow these steps to upgrade Terraform v0.11 to Terraform higher versio
 You need to be an expert user to upgrade the Terraform version to perform these steps.
 {: note}
 
-## How to overcome the downtime while updating the workspace activities? 
+## How do I overcome the downtime while updating the workspace activities? 
 {: #impact-downtime-workspace}
 {: faq}
 {: support}
 
-The unexpected impact due to maintenance may result in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity will be marked as Failed. The user can then re-execute the activity, for more information, about the workspace state see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity is marked as `Failed`. The user can then re-execute the activity, for more information, about the workspace state, see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
 
 
 ## Why do the jobs delay in a queue when plan is generated?
@@ -201,49 +204,111 @@ The unexpected impact due to maintenance may result in the failure of the runnin
 
 IBM Cloud Schematics queues all the users jobs into a single queue. Depending on the workload generated by the users and the time to run the jobs, the user might experience delays. For more information, about implementation of the Schematics job queue, see [Job queue status](/docs/schematics?topic=schematics-job-queue-process).
 
+## How do I pull latest code from the Workspace through command-line? 
+{: #latestcode-workspace-commandline}
+{: faq}
+{: support}
+
+Updating the {{site.data.keyword.bpshort}} workspace through command-line need the required field `name`.
+
+You need to run `ibmcloud schematics workspace update --id <workspace-id>  --file <updatefile.json>`  command. The sample `updatefile.json` contains the name field with the value.
+```json
+{
+    "name":"testWorkspace"
+}
+```
+
+## What are the development tools and utilities used in the {{site.data.keyword.bpshort}}?
+{: #schematics-tools}
+{: faq}
+{: support}
+
+{{site.data.keyword.bpshort}} functions are built by using [Universal Base Image (UBI-8)](/docs/RegistryImages?topic=RegistryImages-ibmliberty#ibmliberty_get_started) and the runtimes that come with the UBI-8 are available in Schematics workspace and actions. For more information, to use these tools in multiple Operating System, refer to, [Solution tutorials](/docs/solution-tutorials?topic=solution-tutorials-tutorials).
+
+The following table describes the utilities that are used in {{site.data.keyword.bpshort}} functions and an automation scripts:
+
+|Utilities | Description | 
+|---------|----------|
+| `Python 3` | Schematics uses [Python 3](/docs/cli?topic=cli-enable-existing-python) and higher version to analyze and organize the data, and to automate DevOps. | 
+| `Python 3 - pip` |Standard package manager for Python. Allows you to install and manage modules that are not part of the [Python standard library](https://docs.python.org/3/library/){: external}. For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
+| `OpenShift client` |A [service built docker containers](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_oc) that are orchestrated and managed by Kubernetes on a foundation of Red Hat Enterprise Linux.| 
+| `Ansible 2.9.23`| Schematics uses [Ansible v2.9.23](/docs/cloud-pak-multicloud-management?topic=cloud-pak-multicloud-management-ansible-getting-started) and higher. |
+| `Terraform v12 and v13`|   Automates your resource provisioning. [Terraform v12, and v13](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to use the modules and resource in Schematics workspace. Actions support Terraform v11 and v12. |
+| `kubectl`| A command-line interface for running commands against the [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters.|
+| `IBM Cloud CLI v.1.2.0`| The [command-line](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_cli) to interact with IBM Cloud API.|
+| `JQ 1.6`| A lightweight and flexible command-line [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq).|
+| `Helm` |A chart to define, install, and upgrade the most complex [Kubernetes application](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_helm).|
+{: caption="Utilities to create script for automation." caption-side="top"}
+
+To avoid the installation of these tools, you can also use the [Cloud Shell](https://cloud.ibm.com/shell) from the {{site.data.keyword.cloud_notm}} console.
+{: tip}
 
 
-## How can I download sub-folders from the GIT repositories through {{site.data.keyword.bpshort}}
+## How can I create workspace from command-line by using Git repositories and personal access token with full permission?
+{: #create-workspace-cli-tokens}
+{: faq}
+{: support}
+
+Using `schematics workspace new --file schematic-file.json -g xxxx` command throws an **Access token creation failed status**, as the token name not specified in the command.
+
+You need to check your [authentication](/docs/schematics?topic=schematics-setup-api#cs_api) before performing the post operation through command-line. Then create a workspace by using `schematics workspace new --file schematic-file.json --github-token xxxx` command. For more information, about workspace creation, see [ibmcloud schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+
+## How do I overcome the authorization issue when creating or updating a workspace or a template?
+{: #workspace-auth}
+{: faq}
+{: support}
+
+You see authorization issues when the roles and permission access is insufficient while performing updates on workspace. For more information, about roles and permission, see [Managing user access](/docs/schematics?topic=schematics-access).
+
+## How do I identify the best way to synchronize a deleted resource with the Terraform state?
+{: #sync-delresource-terraform}
+{: faq}
+{: support}
+
+Currently, the {{site.data.keyword.bplong_notm}} service does not support the ability to import or synchronize the {{site.data.keyword.cloud_notm}} resource state into the {{site.data.keyword.bpshort}} workspace. It is planned in the future roadmap.
+
+
+
+## How can I download sub-folders from the Git repositories through {{site.data.keyword.bpshort}}
 {: #compact-faq}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the sub-folder from the GIT repositories. If the compact flag is set to **true** you can download and save sub-folder recursively else you will continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the sub-folder from the GIT repositories. If the compact flag is set to **true** you can download and save sub-folder recursively, otherwise, you will continue to download and save the full repository on workspace creation.
 
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 
 Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [create workspace template data](/apidocs/schematics/schematics#create-workspace).
 
-## Why is my success Action job execution shows DEPRECATION WARNING message?
+## Why is my success Action job execution displays DEPRECATION WARNING message?
 {: #deprecation-warn-faq}
 {: faq}
 {: support}
 
-To avoid the `DEPRECATION WARNING` message during Action job execution, in the Action settings page you can set the input variables 
-`ansible_python_interpreter = auto` as shown in the screen capture.
+In the Action settings page you need to set the input variable as `ansible_python_interpreter = auto` as shown in the screen capture to avoid `DEPRECATION WARNING` message.
 
-<img src="images/advanced_inputvariable.png" alt="Configuring input variable to silence warning message" width="700" style="width: 700px; border-style: none"/>
+![Configuring input variable to silence warning message](images/advanced_inputvariable.png "Embedded {{site.data.keyword.bplong_notm}} service flow"){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
 
-## How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster unavailablity. Is there a way for the customer to get the workspace deleted?
+## How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster unavailablity?
 {: #clusterdeletion-warn-faq}
 {: faq}
 {: support}
 
-You need to delete the workspace and NOT destroying the resources as if there are no resource available.
-## what is the best practice to deploy a Helm chart to an existing cluster using schematics keeping credentials/secrets?
+You need to delete the workspace and NOT destroying the resources as if there are no resource available. For more information, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+
+## what is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?
 {: #gherepo-warn-faq}
 {: faq}
 {: support}
 
-The best practice would be using IBM cloud catalog to manage the helm charts where inside the catalog you can keep the credentials and mark it as secured. For reference you can see[Catalog](https://cloud.ibm.com/catalog?search=label%3Ahelm). Deploying a Helm chart to a new target using the console can refer this [method](https://test.cloud.ibm.com/docs/account?topic=account-helm-targets&interface=ui).
+The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the Helm charts where inside the catalog you can keep the credentials and mark it as secured. For more information, about managing the Helm chart in an existing cluster, refer to, [List of Catalog related to Helm](https://cloud.ibm.com/catalog?search=label%3Ahelm).
 
-## How to set the release tag through the schematics? 
+## How do I set the release tag through {{site.data.keyword.bpshort}}? 
 {: #releasetag-warn-faq}
 {: faq}
 {: support}
 
-**Error Message**
-```
+```text
 2021/11/08 12:34:06 -----  New Action  -----
  2021/11/08 12:34:06 Request: RepoURL=https://github.ibm.com/wh-hp-insights/hi-cloud-automation, WorkspaceSource=Schematics, Branch=2021.10, Release=, Folder=terraform-v2/workspace-hi-qa-automation-app
  2021/11/08 12:34:06 Related Activity: action=UPDATE_WORKSPACE,processedBy=sandbox-6bcf8bffcd-rxbww_2478
@@ -251,30 +316,28 @@ The best practice would be using IBM cloud catalog to manage the helm charts whe
  2021/11/08 12:34:11 Fatal, could not download repo, Failed to clone git repository, couldn't find remote ref "refs/heads/2021.10" (most likely invalid branch name is passed)
  2021/11/08 12:34:12 Problems found with the Repository. Please Rectify and Retry
 ```
-The “Release” parameter is empty but the “Branch” was set with release tag.
+If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: note}
 
-Schematics does not support release tag, as its difficult to identify if it’s a release tag or a branch from the GIT repo URL. Need to set the release tag through the schematics API.
+{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics_internal_v1#create-workspace).
 
 ##  How do I overcome the request exceeding the 'Cluster' resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
 {: faq}
 {: support}
 
-**Error Message**
-```
+```text
 Error: Request failed with status code: 403, ServerErrorResponse: {"incidentID":"706efb2c-3461-4b9d-a52c-038fda3929ea,706efb2c-3461-4b9d-a52c-038fda3929ea","code":"E60b6","description":"This request exceeds the 'Cluster' resource quota of '100' for the account in this region. Your account already has '100' of the resource in the region, and the request would add '1'. Revise your request, remove any unnecessary resources, or contact IBM support to increase your quota.","type":"General"}
 ```
 
-You see this quota validation error when the the 'Cluster' resource quota of '100' for the account in this region is exceded. You can consider deleting the existing resources and try performing the executing operation again.
+You see this quota validation error when the `Cluster` resource quota of `100` for the account in this region is exceeded. You can consider deleting the existing resources and try performing the executing operation again.
 
 ## Why I am getting 403 error instead of 404 error when providing an invalid workspace ID?
 {: #invalidwspid-warn-faq}
 {: faq}
 {: support}
 
-**Error Message**
-```
+```sh
 curl -X GET https://schematics.test.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Authorization: $IAM_TOKEN"
 {"requestid":"3a3cbffe-e23a-4ccf-b764-042f7379c084","timestamp":"2021-11-11T17:00:07.169953698Z","messageid":"M1078","message":"Error while validating the location in the account. Please verify you have permission to the location in the global catalog settings.","statuscode":403}
 ```
