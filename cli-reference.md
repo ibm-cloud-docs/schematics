@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1222,7 +1222,7 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--bastion-credential-json` or `--bj` | Optional | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
-| `--inventory-connection-type` or `--it` | Optional | Type of inventory connection. Supported values are  `ssh`, or `winrm`.|
+| `--inventory-connection-type` or `--it` | Optional | Type of inventory connection. Supported values are  `ssh`, or `winrm`. **Note** Currently, WinRM supports only Windows system with the public IPs and do not support Bastion host.|
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file by using the `--input-file` command option.|
 |`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
@@ -1342,7 +1342,7 @@ ibmcloud schematics action update --id ACTION_ID --name ACTION_NAME [--descripti
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
 | `--bastion-credential-json` or `--bj` | Optional | Provide path of JSON file that contains bastion credential JSON payload to access the bastion host.|
 | `--inventory` or `-y` | Optional | The ID of the resource inventory that you want to use in your action. To list existing inventories, run `ibmcloud schematics inventory list`. |
-| `--inventory-connection-type` or `--it`| Optional | Type of inventory connection. Supported values are `ssh`, or `winrm`.|
+| `--inventory-connection-type` or `--it`| Optional | Type of inventory connection. Supported values are `ssh`, or `winrm`. **Note** Currently, WinRM supports only Windows system with the public IPs and do not support Bastion host.|
 | `--input` or `--in` | Optional | The input variables for your action. Input variables must be entered as key-value pairs, such as `--input mykey=myvalue`. To specify multiple input variables, use multiple `--input` flags in your command. You can also store your input variables in a file and reference this file in the `--input-file` command option.|
 |`--input-file` or `--if`|Optional | The path to a file where you specified all your input variables. Input variables must be specified as key-value pairs in JSON format. |
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
