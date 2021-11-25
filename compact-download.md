@@ -45,6 +45,7 @@ You can also activate **compact download** through the `API or CLI` by using `co
     }]
 }
 ```
+
 ## Note
 {: #compact-note}
 
