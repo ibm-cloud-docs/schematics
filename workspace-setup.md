@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-23"
+lastupdated: "2021-11-25"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -47,7 +47,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 1. Open the [{{site.data.keyword.bpshort}} workspace create page](https://cloud.ibm.com/schematics/workspaces/create){: external}. 
 2. Specify your template URL in the `GitHub, GitLab or Bitbucket repository URL` that hosts your Terraform configuration files.
    - Optional: Enter the Personal access token to authenticate your private Git repositories.
-   - Check **Download entire repo** option to download and cache the complete repository, if unchecked, [compact](/docs/schematics?topic=schematics-faqs#compact-faq) only the specified folder and sub-folders of the Git URL.
+   - Check **Download entire repo** option to download and cache the complete repository, if unchecked, [compact](/docs/schematics?topic=schematics-compact-download) only the specified folder and sub-folders of the Git URL.
    - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**.
    - Click **Next**.
 3. In the **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.

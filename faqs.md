@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-23"
+lastupdated: "2021-11-25"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -278,7 +278,7 @@ Currently, the {{site.data.keyword.bplong_notm}} service does not support the ab
 
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 
-Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [create workspace template data](/apidocs/schematics/schematics#create-workspace).
+Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [Compact download for {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-compact-download).
 
 ## Why is my success Action job execution displays DEPRECATION WARNING message?
 {: #deprecation-warn-faq}

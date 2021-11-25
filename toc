@@ -42,6 +42,7 @@ Schematics
          remotestate.md
          private-catalog.md
          solutions.md
+         compact-download.md
 
          {: .topicgroup}
          Examples

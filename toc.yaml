@@ -61,6 +61,7 @@ toc:
           - remotestate.md
           - private-catalog.md
           - solutions.md
+          - compact-download.md
       - topicgroup:
           label: Actions - Configuration management and cloud operations with Ansible
           topics:
