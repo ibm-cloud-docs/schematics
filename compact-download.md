@@ -45,10 +45,11 @@ You can also activate **compact download** through the `API or CLI` by using `co
     }]
 }
 ```
+## Note
+{: #compact-note}
 
 - In case the **compact** field is not specified in the workspace create request payload, the default behaviour is `full repository download` or `compact : false`.
 - In case the **compact** field is absent in the workspace update request payload, the default behaviour uses the previous `compact` setting.
 - Git repository URL is mandatory in both [create](/apidocs/schematics/schematics#create-workspace), or [update](/apidocs/schematics/schematics#replace-workspace) request payload only if compact flag is set.
 - The [GET workspace](/apidocs/schematics/schematics#get-workspace) response includes the compact field, only if the **compact** download mode is enabled.
 - If the Git repository URL is the root of the repository, as stated in [template](https://github.com/Cloud-Schematics/LEMP), the compact download and full download are the exact same thing. It doesn't matter if the compact checkbox is `checked` or `unchecked`.
-{: note}

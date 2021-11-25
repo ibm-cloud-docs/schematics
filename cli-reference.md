@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-24"
+lastupdated: "2021-11-25"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -868,17 +868,42 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory.</td>
     </tr>
     <tr>
-    <td><code>template_data.variablestore.name</code></td>
+    <td><code>template_data.folder</code></td>
     <td>Optional</td>
     <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
     </tr>
     <tr>
-    <td><code>template_data.variablestore.type</code></td>
+    <td><code>template_data.type</code></td>
     <td>Optional</td>
+    <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+    </tr>
+    <tr>
+    <td><code>template_data[0].env_values[i].va11</code></td>
+    <td>Optional</td>
+    <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform job. This field must be provided as a list of key-value pairs, for example, `TF_LOG=debug`. Each entry will be a map with one entry where **key is the environment variable name and value is value**.</td>
+    </tr>
+    <tr>
+    <td><code>template_data[0].env_values[i].val2</code></td>
+    <td>Optional</td>
+    <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform job. This field must be provided as a list of key-value pairs, for example, `TF_LOG=debug`. Each entry will be a map with one entry where **key is the environment variable name and value is value**.</td>
+    </tr>
+    <tr>
+    <td><code>template_data[0].env_values_metadata</code></td>
+    <td>Optional</td>
+    <td>Environment variables metadata.</td>
+    </tr>
+    <tr>
+    <td><code>template_data[0].variablestore[i].name</code></td>
+    <td>Optional</td>
+    <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+    </tr>
+    <tr>
+    <td><code>template_data[0].variablestore[ii].type</code></td>
+    <td>Required</td>
     <td><code>Terraform v0.12</code> supports <code>string</code>, <code>list</code>, <code>map</code>, <code>bool</code>, <code>number</code> and complex data types such as <code>list(type)</code>, <code>map(type)</code>, <code>object({attribute name=type,..})</code>, <code>set(type)</code>, <code>tuple([type])</code>.</td>
     </tr>
     <tr>
-    <td><code>template_data.variablestore.value</code></td>
+    <td><code>template_data[0].variablestore[iii].value</code></td>
     <td>Optional</td>
     <td>Enter the value as a string for the primitive types such as <code>bool</code>, <code>number</code>, <code>string</code>, and <code>HCL</code> format for the complex variables, as you provide in a <code>.tfvars</code> file. You can override the default values of <code>.tfvars</code> by setting <code>use_default</code> parameter as <code>true</code>. You need to enter escaped string of <code>HCL</code> format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock"><code>"variablestore": [
                 {
@@ -890,24 +915,14 @@ You need to replace the `<...>` placeholders with the actual values. For example
                 },</code></pre></td>
     </tr>
     <tr>
-    <td><code>template_data.variablestore.secure</code></td>
+    <td><code>template_data[0].variablestore[iv].secure</code></td>
     <td>Optional</td>
     <td>Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
     </tr>
     <tr>
-    <td><code>template_data.variablestore.use_default</code></td>
+    <td><code>template_data[0].variablestore[v].use_default</code></td>
     <td>Optional</td>
     <td>Set the <code>use_default</code> parameter to <strong>true</strong> to override the default <code>.tfvars</code> parameter. By default, this parameter is set to <strong>false</strong>.</td>
-    </tr>
-    <tr>
-    <td><code>env_values.val1</code></td>
-    <td>Optional</td>
-    <td>In the payload you can provide an environment variables, and customized variables that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
-    </tr>
-    <tr>
-    <td><code>github_source_repo_url</code></td>
-    <td>Optional</td>
-    <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory.</td>
     </tr>
     <tr>
     <td><code>github_source_repo_url</code></td>
