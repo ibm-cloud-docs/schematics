@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-24"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -39,7 +39,7 @@ To troubleshoot the error in the script, follow these steps:
     {: screen}
 
 4. Find the script that is executed in the Terraform `null_resource` and analyze where the error might come from by using the error message from the {{site.data.keyword.bpshort}} log output. 
-5. If you cannot resolve the error, contact the owner of the script to further troubleshoot the error. 
+5. If you cannot resolve the error, contact the script owner to further troubleshoot the error. 
 
 
 
