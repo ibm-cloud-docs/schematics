@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-27"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -48,9 +48,9 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
     After you enable VRF and service endpoints for your account, all existing and future {{site.data.keyword.bpshort}} workspaces become available from both the public and private service endpoints.
     {: note}
 
-3. Verify that your account is enabled for VRF and service endpoints. 
+3. Verify that your account is enabled for VRF and service endpoints.
     1. Log in to {{site.data.keyword.cloud_notm}}.
-        ```
+        ```sh
         ibmcloud login
         ```
         {: pre}
@@ -58,14 +58,14 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
         If the login fails, run the `ibmcloud login --sso` command to try again. The `--sso` parameter is required when you log in with a federated ID. If this option is used, go to the link listed in the command-line output to generate a one-time passcode.
         {: tip}
 
-    2. Show the details of your account. 
-        ``` 
+    2. Show the details of your account.
+        ```sh
         ibmcloud account show
         ```
         {: pre}
 
-        Example output: 
-        ```
+        Example output:
+        ```text
         Retrieving account User's Account of user@email.com...
         OK
 
@@ -82,10 +82,10 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
 
 Prepare your VSI or test machine by configuring your routing table for the {{site.data.keyword.cloud_notm}} Private network.
 
-1. To connect to the private service endpoint, you must create a virtual server instance (VSI) first. You use this VSI to connect to the {{site.data.keyword.cloud_notm}} Private network. You can create a [classic VSI](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) or [VPC VSI](/docs/vpc?topic=vpc-getting-started). 
+1. To connect to the private service endpoint, you must create a virtual server instance (VSI) first. You use this VSI to connect to the {{site.data.keyword.cloud_notm}} Private network. You can create a [classic VSI](/docs/virtual-servers?topic=virtual-servers-getting-started-tutorial) or [VPC VSI](/docs/vpc?topic=vpc-getting-started).
 
-2. After you are connected to the VSI, target the private service endpoint when you send API requests to the {{site.data.keyword.bpshort}} API server. The following example shows the supported Terraform and Helm versions of the {{site.data.keyword.bpshort}} engine. 
-    ```
+2. After you are connected to the VSI, target the private service endpoint when you send API requests to the {{site.data.keyword.bpshort}} API server. The following example shows the supported Terraform and Helm versions of the {{site.data.keyword.bpshort}} engine.
+    ```sh
     curl -X GET https://private-us-south.schematics.cloud.ibm.com/v1/version
     ```
     {: pre}
@@ -97,12 +97,12 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect Schematics service on the private network from Virtual Private Endpoint Gateways.
 {: shortdesc}
 
-**Public:** A service endpoint on the IBM Cloud public network.<br>
-**Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.<br>
-**Both public and private:** Service endpoints that allow access over both networks.<br>
+**Public:** A service endpoint on the IBM Cloud public network.  \n
+**Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.  \n
+**Both public and private:** Service endpoints that allow access over both networks.  \n
 
 
-Virtual Private Endpoint Gateways is only supported for the VPC Generation 2.  
+Virtual Private Endpoint Gateways is only supported for the VPC Generation 2.
 {: note}
 
 ### Before you begin
@@ -129,6 +129,3 @@ The steps to add the private network endpoints for {{site.data.keyword.bpshort}}
 2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
 3. Create a Virtual Private Endpoint Gateways. For more information, see [creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-creating-ui). And you can assign the listed {{site.data.keyword.bpshort}} services endpoint into Virtual Private Endpoint Gateways.
 4. View the created Virtual Private Endpoint Gateways associated with the {{site.data.keyword.bpshort}} services. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 
-
-
-

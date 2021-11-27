@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-27"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -33,7 +33,7 @@ In this tutorial, you use the IBM-provided [`vpc-gen2-cluster` Terraform templat
 
 The following image shows the cloud architecture components that you provision as part of this tutorial. 
 
-<img src="../images/vpcgen2cluster.png" alt="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" width="800" style="width: 800px; border-style: none"/>
+![Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}](../images/vpcgen2cluster.png){: caption="Provisioning Terraform templates by using {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
 | Component | Description |
 | -------- | -------- |
@@ -43,7 +43,8 @@ The following image shows the cloud architecture components that you provision a
 | `subnet` | VPC subnets is used to provide private IP addresses for your worker nodes and load balancer services in your cluster. You cannot change the number of IP addresses that a VPC subnet has. |
 | `master node` | Controls and manages a set of worker nodes (workloads runtime) and resembles a cluster in Kubernetes.
 | `cluster` |A cluster contains a control plane and one or more compute machines, or nodes. Nodes run the applications and workloads. |
-| `worker node` | Add the zone to your worker pool. When you add a zone to a worker pool, the worker nodes that are defined in your worker pool are provisioned in the zone and considered for future workload scheduling. 
+| `worker node` | Add the zone to your worker pool. When you add a zone to a worker pool, the worker nodes that are defined in your worker pool are provisioned in the zone and considered for future workload scheduling. |
+{: caption="Cloud architecture components" caption-side="bottom"}
 
 You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
 {: note} 
@@ -104,80 +105,81 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 {: #create-tut-wks}
 {: step}
 
-1. Specify your Schematics workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to [{{site.data.keyword.bplong_notm}} workspace new ](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
+1. Specify your Schematics workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to [{{site.data.keyword.bplong_notm}} workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 
-**Example of the cluster_payload.json**
+    **Example of the cluster_payload.json:**
 
-```
-{
-    "name": "mytest1_cluster",
-    "type": [
-        "terraform_v0.12"
-    ],
-    "description": "",
-    "template_repo": {
-    	"url":"https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster"
-    },
-    "template_data": [
-        {
-        "folder": ".",
-        "type": "terraform_v0.12",
-        "variablestore": [
-        {
-          "name": "worker_pool_name",
-          "value": "workerpool",
-          "type": "string"
+    ```json
+    {
+        "name": "mytest1_cluster",
+        "type": [
+            "terraform_v0.12"
+        ],
+        "description": "",
+        "template_repo": {
+          "url":"https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster"
         },
-        {
-          "name": "service_instance_name",
-          "value": "myservice",
-          "type": "string"
-        },
-        {
-          "name": "flavor",
-          "value": "cx2.2x4",
-          "type": "string"
-        },
-        {
-          "name": "cluster_name",
-          "value": "cluster",
-          "type": "string"
-        },
-        {
-          "name": "region",
-          "value": "us-south",
-          "type": "string"
-        },
-        {
-          "name": "worker_count",
-          "value": "1",
-          "type": "string"
-        },
-        {
-          "name": "resource_group",
-          "value": "Default",
-          "type": "string"
+        "template_data": [
+            {
+            "folder": ".",
+            "type": "terraform_v0.12",
+            "variablestore": [
+            {
+              "name": "worker_pool_name",
+              "value": "workerpool",
+              "type": "string"
+            },
+            {
+              "name": "service_instance_name",
+              "value": "myservice",
+              "type": "string"
+            },
+            {
+              "name": "flavor",
+              "value": "cx2.2x4",
+              "type": "string"
+            },
+            {
+              "name": "cluster_name",
+              "value": "cluster",
+              "type": "string"
+            },
+            {
+              "name": "region",
+              "value": "us-south",
+              "type": "string"
+            },
+            {
+              "name": "worker_count",
+              "value": "1",
+              "type": "string"
+            },
+            {
+              "name": "resource_group",
+              "value": "Default",
+              "type": "string"
+            }
+            ]
         }
-        ]
+        ],
+        "githubtoken": "<provide your githubtoken>"
     }
-    ],
-    "githubtoken": "<provide your githubtoken>"
-}
-```
-{: codeblock}
+    ```
+    {: codeblock}
 
-You can edit the payload values for the variable as stated in the table:
+    You can edit the payload values for the variable as stated in the table:
 
-| Variable | Value |
-|-------|------|
-| `name` | Specify your unique name. |
-| `type` | Terraform v0.12 |
-| `githubtoken` | Specify your GitHub token. |
-| `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
+    | Variable | Value |
+    |-------|------|
+    | `name` | Specify your unique name. |
+    | `type` | Terraform v0.12 |
+    | `githubtoken` | Specify your GitHub token. |
+    | `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
+    {: caption="Payload details" caption-side="bottom"}
 
 2. Create the workspace by using the JSON file from command-line interface.
 
-    ```
+    ```sh
     ibmcloud schematics workspace new --file <fully qualified path of cluster_payload.JSON file>
     ```
     {: pre}
@@ -187,7 +189,7 @@ You can edit the payload values for the variable as stated in the table:
 
     **Sample example output**
 
-    ```
+    ```text
     Creation Time   Mon Aug 10 19:18:55
     Description
     Frozen          false
@@ -214,14 +216,14 @@ You can edit the payload values for the variable as stated in the table:
 
 3. Verify that your workspace is created by using `list` command.
 
-    ```
+    ```sh
     ibmcloud schematics workspace list
     ```
     {: pre}
 
     **Sample example output**
 
-    ```
+    ```text
     Name               ID                              Description     Status      Frozen
     mytest1_cluster  mytest1_cluster-62183a6b-fbed-43                  ACTIVE       False
 
@@ -243,14 +245,14 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 1. Execute the Schematics plan command. This command gives back an activity ID. 
 
-    ```
+    ```sh
     ibmcloud schematics plan --id mytest1_cluster-62183a6b-fbed-43
     ```
     {: pre}
 
     **Sample example output**
 
-    ```
+    ```text
     Activity ID 3886e3752a0a83b04732b6666533b464
 
     OK
@@ -262,7 +264,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 2. Review the execution plan to view the {{site.data.keyword.cloud_notm}} resources. To retrieve the logs with the activity ID use the generated activity ID from step 1.
 
-    ```
+    ```sh
     ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-4
     ```
     {: pre}
@@ -275,13 +277,13 @@ During the creation of the Terraform execution plan, you are not allowed to make
     This process takes a minute to complete. During this process, you cannot make any changes to your workspace. 
     {: important}
 
-    ```
+    ```sh
     ibmcloud schematics apply --id <workspace_ID>
     ```
     {: pre}
 
     **Sample example output**
-    ```
+    ```text
     Do you really want to perform this action? [y/N]> y
 
     Activity ID 5676e3752a0a84565667666533b4345
@@ -293,7 +295,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 5. Verify that the {{site.data.keyword.cloud_notm}} resources are successfully created in your {{site.data.keyword.cloud_notm}}.
 
-    ```
+    ```sh
     ibmcloud schematics workspace get --id <WORKSPACE_ID>
     ```
     {: pre}
@@ -303,7 +305,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
 
 6. Command to view the logs, and analyze the state of the workspace and resources creation.
 
-    ```
+    ```sh
     ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-43
     ```
     {; pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-27"
 
 keywords: ansible playbook, ansible playbook example, vsi start stop, reboot vsi on {{site.data.keyword.cloud_notm}}
 
@@ -61,7 +61,7 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Example**
 
-    ```
+    ```sh
     ibmcloud schematics action create -n <action-name> -r Default -l us-east --tr https://github.com/Cloud-Schematics/ansible-is-instance-actions --pn <playbook-name> --input instance_ip=<ip-appdress> --input bearer_token="<bearer-token>" --json
     ```
     {: pre}
@@ -73,7 +73,7 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Example**
 
-    ```
+    ```sh
     ibmcloud schematics job run -c action --cid <job-payload> -n ansible_playbook_run --json
     ```
     {: pre}
@@ -82,14 +82,14 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Job list Example**
 
-    ```
+    ```sh
     ibmcloud schematics job list
     ```
     You are prompted to `Enter <resource-type>` and `Enter <id>`. Provide the resource type as `actions` and enter your job_ID.
 
     **Action list Example**
 
-    ```
+    ```sh
     ibmcloud schematics action list
     ```
 

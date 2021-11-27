@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-24"
+lastupdated: "2021-11-27"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -29,7 +29,7 @@ To troubleshoot the error in the script, follow these steps:
 1. From the workspace **Activity** page, select the {{site.data.keyword.bpshort}} apply action that failed.
 2. Click **View log** to see the detailed log output. 
 3. In the log file, find the last action that {{site.data.keyword.bpshort}} started before the error occurs. For example in the following log output, {{site.data.keyword.bpshort}} tried to run a copy script in the `instances_module` module by using the Terraform `null_resource`.
-    ```
+    ```text
     2021/05/24 05:03:41 Terraform apply | module.instances_module.module.compute_remote_copy_rpms.null_resource.remote_copy[0]: Still creating... [5m0s elapsed]
     2021/05/24 05:03:41 Terraform apply | 
     2021/05/24 05:03:42 Terraform apply | 

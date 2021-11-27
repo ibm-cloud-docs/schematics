@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -98,6 +98,7 @@ While processing the create, delete, update action, the {{site.data.keyword.bpsh
 #### Resolve
 {: #state-resolve}
 
+
 - Check the logs. For more information, refer to [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
 
 ### Job error
@@ -118,7 +119,6 @@ The Schematics jobs displays a list of jobs and their state as successful, or fa
 
 - Check the input configuration and settings.
 - Check the job configuration timeout, if the job timeout is reached 60 minutes, the status is updated and error is returned.
-
 
 You can also contact IBM support by opening a case or post a message in the Slack channel. To learn about opening an IBM support case, or about Slack channel, see [Getting help and support](/docs/schematics?topic=schematics-schematics-help).
 {: note}

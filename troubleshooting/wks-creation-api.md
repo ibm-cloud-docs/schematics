@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -20,7 +20,7 @@ content-type: troubleshoot
 The {{site.data.keyword.bpshort}} create workspace fails when you attempt to create through API by using following CURL command.
 {: tsSymptoms}
 
-```
+```sh
 curl --request POST --url https://cloud.ibm.com/schematics/workspaces -H "Authorization: Bearer scfQ" -d '{"name":"test_api","type": ["terraform_v0.12"],"location": "eu-de","description": "via api","resource_group": "5e1f06f5b2b24a319f6cd5be86f531dd","tags": [],"template_repo": {"url": "https://github.ibm.com/Rise-with-SAP/iac-hec-sap"},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": []}]}'
 ```
 {: screen}
@@ -30,7 +30,7 @@ When {{site.data.keyword.bpshort}} executes the CURL command, an error states {{
 {: tsCauses}
 
 
-```
+```json
 {
 "requestid": "3b57ed5d-8610-4a86-9864-8d8197b80336",
 "timestamp": "2021-09-22T14:49:04.565693526Z",
@@ -45,7 +45,7 @@ When {{site.data.keyword.bpshort}} executes the CURL command, an error states {{
 Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region.
 {: tsResolve}
 
-**For example**
+**For example:**
 
 - For creating workspace in `US` region: Use  `location` as **us-east** or **us-south** and `url` as **https://us-south.schematics.cloud.ibm.com/** or **https://us-east.schematics.cloud.ibm.com/**. By default **https://cloud.ibm.com/schematics/workspaces** points to **https://schematics.cloud.ibm.com/v1/workspaces** endpoint.
 - For workspace in the `EU` region: Use `location` as **eu-de** or **eu-gb** and `url` as **https://eu-de.schematics.cloud.ibm.com** and **https://eu-gb.schematics.cloud.ibm.com** endpoint.

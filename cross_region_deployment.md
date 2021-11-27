@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-27"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -28,7 +28,7 @@ If no region is specified in the `provider` block, {{site.data.keyword.bpshort}}
 
 1. Open the `provider.tf` file or the Terraform configuration file that contains the `provider` block. 
 2. Specify the region where you want to deploy your services. Make sure that the region that you enter is supported by the service that you want to deploy with {{site.data.keyword.bpshort}}.
-    ```
+    ```terraform
     provider "ibm" {
         region = "<region_name>"
     }
@@ -46,7 +46,7 @@ You can add multiple multiple provider configurations to the `provider` block to
 {: shortdesc}
 
 1. In the `provider` block of your Terraform configuration file or the `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. If you add more provider configurations, you must include an alias so that you can reference this provider from your resource definition in the Terraform configuration file. In the following example, the default provider configuration deploys resources in `us-south` while the provider configuration with the alias `east` deploys all resources in `us-east`.
-    ```
+    ```terraform
     provider "ibm" {
         region = "us-south"
     }
@@ -59,7 +59,7 @@ You can add multiple multiple provider configurations to the `provider` block to
     {: codeblock}
 
 2. In your resource definition of your Terraform configuration file, specify the provider configuration that you want to use. If you do not specify a provider, the default provider configuration is used.
-    ```
+    ```terraform
     resource "ibm_container_cluster" "cluster" {
         provider = ibm.east
     ...
@@ -72,7 +72,3 @@ You can add multiple multiple provider configurations to the `provider` block to
     {: codeblock}
 
 3. Follow the [steps](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources) to deploy your {{site.data.keyword.cloud_notm}} resources. 
-
-
-
-

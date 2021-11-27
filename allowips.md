@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-24"
+lastupdated: "2021-11-27"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -36,8 +36,8 @@ You must allow all the zones within the region that your resource is in.
 | UK South | lon04 </br> lon04 </br> lon05 </br> lon06 | `158.175.90.16/28` </br> `158.175.138.176/28` </br> `141.125.79.160/28` </br> `158.176.134.80/28` | `10.45.190.64/26` </br> `10.45.215.128/26` </br> `10.72.173.0/26` </br> `10.196.59.0/26` |
 | US East | wdc04 </br> wdc06 </br> wdc07 | `169.45.235.176/28` </br> `169.61.99.176/28` </br> `169.62.1.224/28` <br> `169.63.150.144/28` </br> `169.63.173.208/28` |
 | US South | dal10 </br> dal12 </br> dal13 | `169.47.104.160/28` </br> `169.60.172.144/28` </br> `169.63.254.64/28` |
+{: caption=“Region and supported public and private IPs” caption-side="bottom"}
 
 You can collapse down the ranges into security group rules. For example, `US-South` and `US-East` as two security group rules like `[169.44.0.0/44, 169.60.0.0/14]`. For more information, about creating security group rules, refer to [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
 {: note}
-
 

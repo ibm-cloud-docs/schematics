@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: schematics, automation, terraform
 
@@ -25,12 +25,12 @@ subcollection: schematics
 {: shortdesc}
 
 ## Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}} UI
-{: ui-provisioning}
+{: #ui-provisioning}
 
 To provision Terraform template, perform these steps:
 
 ### Creating the {{site.data.keyword.bpfull_notm}} workspace
-{: create-wks}
+{: #create-wks}
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, click Navigation menu
@@ -40,7 +40,7 @@ To provision Terraform template, perform these steps:
 6. Click **Create** button.
 
 ### Uploading Terraform template from a GitHub repository
-{: upload-template}
+{: #upload-template}
 
 1. Login to your [GitHub](https://github.com/) account.
 2. Navigate to one of the [Terraform sample templates repository](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket) by using the sample Terraform templates.
@@ -52,27 +52,19 @@ To provision Terraform template, perform these steps:
     {: note}
 
 7. Provide the values for the variables as described in the table.
-    <table>
-    <tr>
-    <th>Name</th><th>Value</th>
-    </tr>
-    <tr>
-    <td><code>iaas_classic_api_key</code></td>
-    <td>Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information for how to create an API key and retrieve it, refer to [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys).</td></tr>
-    <tr><td><code>iaas_classic_username</code></td><td>Enter the username to access {{site.data.keyword.cloud_notm}} classic infrastructure. To get the details including the username of a classic infrastructure API key after you create it, go to Manage > Access (IAM) > Users, then select the user's name.</td></tr>
-    <tr>
-    <td><code>ibm cloud_api_key</code></td>
-    <td>Enter your {{site.data.keyword.cloud_notm}} API Key, refer to [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys) for details.</td></tr>
-    <tr>
-    <td><code>resource_group_name</code></td>
-    <td>The default value is <strong>Default</strong>.</td>
-    </tr>
-    </table>
+    |  Name | Value |
+    | -- | -- |
+    | `iaas_classic_api_key` | Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information for how to create an API key and retrieve it, refer to [Managing classic infrastructure API keys](/docs/account?topic=account-classic_keys). |
+    | `iaas_classic_username` | Enter the username to access {{site.data.keyword.cloud_notm}} classic infrastructure. To get the details including the username of a classic infrastructure API key after you create it, go to Manage > Access (IAM) > Users, then select the user's name. |
+    | `ibm cloud_api_key` | Enter your {{site.data.keyword.cloud_notm}} API Key, refer to [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys) for details. |
+    | `resource_group_name` | The default value is **Default**. |
+    {: caption="Credentials" caption-side="bottom"}
+   
 8. Click **Save Changes**.
 
 
 ### Executing the plan and apply actions
-{: execute-action}
+{: #execute-action}
 
 1. From the workspace page,  click **Apply Plan**, to create execution plan for your configuration files.
 2. Click Activity option to observe the activities performed on your workspace.
@@ -83,7 +75,7 @@ To provision Terraform template, perform these steps:
     {: note}
 
 ### Viewing the configured file and analyzing the logs
-{: view-confg-file}
+{: #view-confg-file}
 
 1. Click **View log** from the plan status panel to view the Terraform provisioning process during the execution plan.
 2. Click **Resources** from the workspace page to view the configuration files.
@@ -91,13 +83,13 @@ To provision Terraform template, perform these steps:
 This completes the end to end flow to provision the Terraform template by using {{site.data.keyword.bpfull_notm}} UI.
 
 ## Provisioning Terraform template by using {{site.data.keyword.bpfull_notm}} CLI
-{: cli-provisioning}
+{: #cli-provisioning}
 
 To provision a Terraform template using Schematics CLI, you need perform the given steps: 
 {: shortdesc}
 
 ### Prerequisites
-{: prov-prereq}
+{: #prov-prereq}
 
 1. Install {{site.data.keyword.cloud_notm}} command-line and Schematics plug-ins, refer to [Setting up the command-line and Schematics](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) for details.
 2. Check an update is available for the {{site.data.keyword.bplong_notm}} command-line plug-in. If an update is available, you find an **Update available** notification in your command-line output.
@@ -115,7 +107,7 @@ To provision a Terraform template using Schematics CLI, you need perform the giv
     {: screen}
 
 ### Creating Workspace
-{: cli_create_wks}
+{: #cli_create_wks}
 
 Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the [ibmcloud schematics workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide the template. 
 {: shortdesc}
@@ -163,14 +155,14 @@ Example JSON by using a GitHub or GitLab repository:
 ```
 {: codeblock}
 
-**Syntax**
+**Syntax:**
 
 ```sh
 ibmcloud schematics workspace new --file FILE_PATH [--state STATE_FILE_PATH] [--json]
 ```
 {: pre}
 
-**Example**
+**Example:**
 
 ```sh
 ibmcloud schematics workspace new --file myfile.json
@@ -198,14 +190,14 @@ OK
 {: screen}
 
 ### Executing Plan and Apply
-{: cli-plan-apply}
+{: #cli-plan-apply}
 
 Execute the plan command to view the activity details of your workspace.
 {: shordesc}
 
 **Syntax:**
 
-```
+```sh
 ibmcloud schematics plan --id <WORK_SPACE_ID>
 ```
 {: pre}
@@ -220,7 +212,7 @@ ibmcloud schematics apply --id <WORK_SPACE_ID>
 {: pre}
 
 ### Analyzing logs and activities
-{: cli-logs}
+{: #cli-logs}
 
 Retrieve the Terraform log file for your workspace to troubleshoot provisioning issues if any.
 
@@ -230,7 +222,7 @@ ibmcloud schematics logs --id <WORK_SPACE_ID>
 {: pre}
 
 ### Fetching state files and output values
-{: cli-output}
+{: #cli-output}
 
 Fetch the list of {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform state file for a specific Terraform template in your workspace.
 
@@ -263,6 +255,3 @@ ibmcloud schematics  output --id WORKSPACE_ID
 {: pre}
 
 This completes the end to end flow to provision the Terraform template by using {{site.data.keyword.bpfull_notm}} CLI.
-
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -27,13 +27,13 @@ For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible
 3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} action create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
 
     **Syntax**
-    ```
+    ```text
     https://cloud.ibm.com/schematics/actions/create?name=<action_name>&url=<git_repository_url>
     ```
     {: codeblock}
 
     **Example**
-    ```
+    ```text
     https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy
     ```
     {: codeblock}
@@ -50,13 +50,13 @@ You can add an image to your URL to create your `Deploy to {{site.data.keyword.c
 2. Create an image map. 
 
     **Syntax**: 
-    ```
+    ```html
     <img usemap="#<image_map_ID>" src="<path_to_image>"><map name="<image_map_name>" alt="<alt_text>"><area alt="<alt_text>" title="<button_title>" href="<schematics_action_url>" target="_blank" coords="<image_coordinates>" shape="rect"></map>
     ```
     {: codeblock}
 
     **Example**: 
-    ```
+    ```html
     <img usemap="#deploybutton_map" alt= "Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image creates a Schematics action."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
     ```
     {: codeblock}

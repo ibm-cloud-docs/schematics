@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: schematics 500 errors, schematics 5xx errors, schematics server error
 
@@ -20,7 +20,7 @@ content-type: troubleshoot
 When you run a {{site.data.keyword.bpshort}} apply action, the action fails with 5xx HTTP errors such as in the following example: 
 {: tsSymptoms}
 
-```
+```text
 Error: Request failed with status code: 500, ServerErrorResponse: {"incidentID":"11aa11aaaa11-IAD","code":"A0002","description":"Could not connect to a backend service. Try again later.","type":"Authentication"}
 ```
 {: screen}
