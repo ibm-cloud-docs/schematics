@@ -547,7 +547,6 @@ You need to replace the `<...>` placeholders with the actual values. For example
     {{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
 
 **Example:**
-
 ```sh
 ibmcloud schematics workspace new --file example.json
 ```
@@ -561,7 +560,6 @@ Displays all the instance or resource output of the workspace. You can provide o
 {: shortdesc}
 
 **Syntax:**
-
 ```sh
 ibmcloud schematics workspace output --id WORKSPACE_ID [--options OPTIONS] [--name OUTPUT_NAME]
 ```
@@ -608,7 +606,6 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--output OUTPUT][--json]
 
 
 **Example:**
-
 ```sh
 ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11 
 ```
@@ -810,120 +807,120 @@ You need to replace the `<...>` placeholders with the actual values. For example
     </thead>
     <tbody>
     <tr>
-    <td>`name`</td>
+    <td><code>name</code></td>
     <td>Optional</td>
     <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). If you update the name of the workspace, the ID of the workspace does not change. </td>
     </tr>
     <tr>
-    <td>`type`</td>
+    <td><code>type</code></td>
     <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.14` to use Terraform version 0.14, `terraform_v0.13` to use Terraform version 0.13, and `terraform_v0.12` to use Terraform version 0.12. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.14</code> to use Terraform version 0.14, <code>terraform_v0.13</code> to use Terraform version 0.13, and <code>terraform_v0.12</code> to use Terraform version 0.12. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
     </tr>
     <tr>
-    <td>`description`</td>
+    <td><code>description</code></td>
     <td>Optional</td>
     <td>Enter a description for your workspace.</td>
     </tr>
     <tr>
-    <td>`tags`</td>
+    <td><code>tags</code></td>
     <td>Optional</td>
     <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.</td>
     </tr>
     <tr>
-    <td>`resource_group`</td>
+    <td><code>resource_group</code></td>
     <td>Optional </td>
     <td>Enter the resource group where you want to provision your workspace.</td>
     </tr>
     <tr>
-    <td>`workspace_status` </td>
+    <td><code>workspace_status</code> </td>
     <td>Optional</td>
     <td>Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled.</td>
     </tr>
     <tr>
-    <td>`template_repo.url`</td>
+    <td><code>template_repo.url</code></td>
     <td>Optional</td>
     <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
     </tr>
     <tr>
-    <td>`template_repo.branch`</td>
+    <td><code>template_repo.branch</code></td>
     <td>Optional</td>
-    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  **Note** Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
+    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
         <tr>
-    <td>`template_repo.datafolder`</td>
+    <td><code>template_repo.datafolder</code></td>
     <td>Optional</td>
     <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
     </tr>
     <tr>
-    <td>`template_repo.release`</td>
+    <td><code>template_repo.release</code></td>
     <td>Optional</td>
     <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
     </tr>
     <tr>
-    <td>`github_source_repo_url`</td>
+    <td><code>github_source_repo_url</code></td>
     <td>Optional</td>
-    <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
+    <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory.</td>
     </tr>
     <tr>
-    <td>`template_data.folder`</td>
-    <td>Optional</td>
-    <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-    </tr>
-    <tr>
-    <td>`template_data.type`</td>
+    <td><code>template_data.folder</code></td>
     <td>Optional</td>
     <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
     </tr>
     <tr>
-    <td>`template_data[0].env_values[i].va11`</td>
+    <td><code>template_data.type</code></td>
+    <td>Optional</td>
+    <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
+    </tr>
+    <tr>
+    <td><code>template_data[0].env_values[i].va11</code></td>
     <td>Optional</td>
     <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform job. This field must be provided as a list of key-value pairs, for example, `TF_LOG=debug`. Each entry will be a map with one entry where **key is the environment variable name and value is value**.</td>
     </tr>
     <tr>
-    <td>`template_data[0].env_values[i].val2`</td>
+    <td><code>template_data[0].env_values[i].val2</code></td>
     <td>Optional</td>
     <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform job. This field must be provided as a list of key-value pairs, for example, `TF_LOG=debug`. Each entry will be a map with one entry where **key is the environment variable name and value is value**.</td>
     </tr>
     <tr>
-    <td>`template_data[0].env_values_metadata`</td>
+    <td><code>template_data[0].env_values_metadata</code></td>
     <td>Optional</td>
     <td>Environment variables metadata.</td>
     </tr>
     <tr>
-    <td>`template_data[0].variablestore[i].name`</td>
+    <td><code>template_data[0].variablestore[i].name</code></td>
     <td>Optional</td>
     <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
     </tr>
     <tr>
-    <td>`template_data[0].variablestore[ii].type`</td>
+    <td><code>template_data[0].variablestore[ii].type</code></td>
     <td>Required</td>
-    <td>`Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
+    <td><code>Terraform v0.12</code> supports <code>string</code>, <code>list</code>, <code>map</code>, <code>bool</code>, <code>number</code> and complex data types such as <code>list(type)</code>, <code>map(type)</code>, <code>object({attribute name=type,..})</code>, <code>set(type)</code>, <code>tuple([type])</code>.</td>
     </tr>
     <tr>
-    <td>`template_data[0].variablestore[iii].value`</td>
+    <td><code>template_data[0].variablestore[iii].value</code></td>
     <td>Optional</td>
-    <td>Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You can override the default values of `.tfvars` by setting `use_default` parameter as `true`. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock">`"variablestore": [
+    <td>Enter the value as a string for the primitive types such as <code>bool</code>, <code>number</code>, <code>string</code>, and <code>HCL</code> format for the complex variables, as you provide in a <code>.tfvars</code> file. You can override the default values of <code>.tfvars</code> by setting <code>use_default</code> parameter as <code>true</code>. You need to enter escaped string of <code>HCL</code> format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock"><code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",
                     "name": "docker_ports",
                     "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))",
 		                "use_default":true
-                },`</pre></td>
+                },</code></pre></td>
     </tr>
     <tr>
-    <td>`template_data[0].variablestore[iv].secure`</td>
+    <td><code>template_data[0].variablestore[iv].secure</code></td>
     <td>Optional</td>
-    <td>Set the `secure` parameter to **true**. By default, this parameter is set to **false**.</td>
+    <td>Set the <code>secure</code> parameter to <strong>true</strong>. By default, this parameter is set to <strong>false</strong>.</td>
     </tr>
     <tr>
-    <td>`template_data[0].variablestore[v].use_default`</td>
+    <td><code>template_data[0].variablestore[v].use_default</code></td>
     <td>Optional</td>
-    <td>Set the `use_default` parameter to **true** to override the default `.tfvars` parameter. By default, this parameter is set to **false**.</td>
+    <td>Set the <code>use_default</code> parameter to <strong>true</strong> to override the default <code>.tfvars</code> parameter. By default, this parameter is set to <strong>false</strong>.</td>
     </tr>
     <tr>
-    <td>`github_source_repo_url`</td>
+    <td><code>github_source_repo_url</code></td>
     <td>Optional</td>
-    <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory.</td>
+    <td>Enter the link to your GitHub repository. The link can point to the <code>master</code> branch, a different branch, or a subdirectory.</td>
     </tr>
     </tbody></table>
 
