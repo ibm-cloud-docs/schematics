@@ -351,15 +351,14 @@ Yes there is a change in the api which checks for the location first and if it d
 Yes, you can increase the time out for OpenShift or Kubernetes resources. For more information, about managing or adding the time-out option for the cluster resource, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
 <img src="images/advanced_inputvariable.png" alt="Configuring input variable to silence warning message" width="700" style="width: 700px; border-style: none"/>
 
-## How can I enable Terraform debug through the ibmcloud {{site.data.keyword.bpshort}} CLI?
+## How can I enable Terraform debug through the `ibmcloud schematics` command line?
 {: #terraform-debug-ibmcli}
 {: faq}
 {: support}
 
-The terraform log debug trace can be enabled by setting env var TF_LOG=debug. You can try updating your workspace with tflog env vars. Here’s a sample payload for Creating workspace with env_vars you can use in similar way.
+You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload.
 
-**Sample Payload**
-```
+```json
 {
   "name": "sample",
   "type": [
@@ -384,25 +383,14 @@ The terraform log debug trace can be enabled by setting env var TF_LOG=debug. Yo
   ]
 }
 ```
-##  Why is {{site.data.keyword.bpshort}} resource is being displayed in the account?
-
-That is the {{site.data.keyword.bpshort}} instance in your account which is provisioned under the covers when you create the first workspace in the specified region.
-```
-Error Message:
-
-(resources) ➜  resources ibmcloud resource service-instances
-Retrieving instances with type service_instance in resource group default in all locations under account User Account as user@us.ibm.com...
-OK
-Name                 Location   State    Type
-cis-master           global     active   service_instance
-schematics           eu-de      active   service_instance
-```
 
 ## How can I generate {{site.data.keyword.bpshort}} workspace import from CLI?
+{: #workspace-import-ibmcli}
+{: faq}
+{: support}
 
-To create {{site.data.keyword.bpshort}} workspace import from CLI, use `ibmcloud schematics workspace import --options value, -o value : Optional` command-line flags and if you are passing additional optional flag. For more information about how {{site.data.keyword.bpshort}} workspace import works, see [schematics-workspace-import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
-``` 
-Example:
+Use `ibmcloud schematics workspace import --options value, -o value : Optional` command and the sample syntax to import from command-line. For more information, about how {{site.data.keyword.bpshort}} workspace import works, see [{{site.data.keyword.bpshort}} workspace import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
+``` sh
 
 ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
 
@@ -410,4 +398,5 @@ or
 
 ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "--var-file=<path-to-var-file>"
 ```
+{: pre}
 
