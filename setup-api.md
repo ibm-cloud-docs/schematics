@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-27"
+lastupdated: "2021-11-29"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -39,7 +39,6 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 1. Create your {{site.data.keyword.cloud_notm}} IAM access token. The body information that is included in your request varies based on the {{site.data.keyword.cloud_notm}} authentication method that you use. [Review the parameter table](#table1)
 
    You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** field of your API output. Note the {{site.data.keyword.cloud_notm}} IAM token to retrieve additional header information in the next steps.
-
     ```sh
     POST `https://iam.cloud.ibm.com/identity/token`
     ```
@@ -62,7 +61,6 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     {: screen}
 
 2. Retrieve the ID of the {{site.data.keyword.cloud_notm}} account that you want to work with. Replace `<iam_access_token>` with the {{site.data.keyword.cloud_notm}} IAM token that you retrieved from the **access_token** field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the **resources.metadata.guid** field.
-
     ```sh
     GET https://accounts.cloud.ibm.com/coe/v2/accounts
     ```
@@ -151,7 +149,6 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     ```
     {: codeblock}
 
-
     | Input parameters | Values |
     | ----- | --- |
     | Header | `Authorization: bearer <iam_token>`: your Your {{site.data.keyword.cloud_notm}} IAM access token.|
@@ -194,7 +191,7 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
 
     **Example API output**
 
-    ```sh
+    ```text
     {
         "access_token": "<iam_token>",
         "refresh_token": "<iam_refresh_token>",

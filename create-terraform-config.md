@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-27"
+lastupdated: "2021-11-29"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -344,4 +344,4 @@ The directory structure of the Terraform template in the GitHub repository is li
 | output.tf | Create output.tf |
 | provider.tf | Create provider.tf |
 | variables.tf | Create variables.tf |
-{: caption=“Terraform template directory structure” caption-side="bottom"}
+{: caption="Terraform template directory structure" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-27"
+lastupdated: "2021-11-29"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -78,4 +78,4 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |Messages for RabbitMQ|RabbitMQ is used to queue incoming API requests, and to process these requests asynchronously.|Private|
 |Monitoring {{site.data.keyword.bpshort}} with {{site.data.keyword.mon_full_notm}} |{{site.data.keyword.bpshort}} sends service metrics to {{site.data.keyword.mon_full_notm}}. These metrics are monitored by the {{site.data.keyword.bpshort}} service team to identify capacity and performance issues.|Private|
 |Object Storage (COS)|This service is used to store workspace transactional data, such as the Terraform state file, logs, and user-provided data. All data is encrypted by using [Server-Side Encryption with Key Protect](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) in transit and at rest.|Private|
-{: caption=“Endpoints with the service details” caption-side="bottom"}
+{: caption="Endpoints with the service details" caption-side="bottom"}

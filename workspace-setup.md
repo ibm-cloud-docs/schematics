@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-27"
+lastupdated: "2021-11-29"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -186,82 +186,22 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information, about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup&interface=ui#job-logs).
     {: tip}
 
-5. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
+6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
 
-<table>
-    <thead>
-    <th>Type</th>
-    <th>Example</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td><ul>number</li></ul></td>
-        <td><ul>4.56</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>string</li></ul></td>
-        <td><ul>example value</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>bool</li></ul></td>
-        <td><ul>false</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>map(string)</li></ul></td>
-        <td><ul>{key1 = "value1", key2 = "value2"}</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>set(string)</li></ul></td>
-        <td><ul>["hello", "he"]</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>map(number)</li></ul></td>
-        <td><ul>{internal = 8080, external = 2020}</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>list(string)</li></ul></td>
-        <td><ul>["us-south", "eu-gb"]</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>list</li></ul></td>
-        <td><ul>["value", 30]</li></ul></td>
-    </tr>
-        <tr>
-    <td><ul>list(list(string))</li></ul></td>
-    <td><ul><p><pre class="codeblock">`[
-    {
-        internal = 8300
-        external = 8300
-        protocol = "tcp"
-    },
-    {
-        internal = 8301
-        external = 8301
-        protocol = "ldp"
-    }
-    ]`</pre></p></ul></td>
-        </tr>
-    <tr>
-    <td><ul><p><pre class="codeblock">`list(object({
-        internal = number
-    external = number
-    protocol = string
-    }))`</pre></p></li></ul></td>
-        <td><ul><p><pre class="codeblock">`[
-    {
-        internal = 8300
-        external = 8300
-        protocol = "tcp"
-    },
-    {
-        internal = 8301
-        external = 8301
-        protocol = "ldp"
-    }
-    ]`</pre></p></li></ul></td>
-        </tr>
-    </tbody>
-</table>
+    | Type | Example |
+    | --- | -- |
+    | number | 4.56 |
+    | string | example value |
+    | bool | false |
+    | map(string) | {key1 = "value1", key2 = "value2"} |
+    | set(string) | ["hello", "he"] |
+    | map(number) | {internal = 8080, external = 2020} |
+    | list(string) | ["us-south", "eu-gb"] |
+    | list | ["value", 30] |
+    | list(list(string)) | :[{internal = 8300 external = 8300 protocol = "tcp"},{internal = 8301 external = 8301 protocol = "ldp" } ] : list(object({internal = number external = number protocol = string})) : [{internal = 8300 external = 8300 protocol = "tcp"} {internal = 8301 external = 8301 protocol = "ldp"}]|
+    {: caption="Input variables and its sample values" caption-side="bottom"}
+
+
 
 
 ### Running your Terraform template in {{site.data.keyword.cloud_notm}}

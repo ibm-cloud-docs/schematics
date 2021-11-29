@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-27"
+lastupdated: "2021-11-29"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -66,7 +66,7 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
     {: codeblock}
 
 4. Reference the role in your Ansible playbook.
-   ```text
+   ```yaml
     - name: deploy MySQL and configure the databases
       hosts: all
       remote_user: root
@@ -85,7 +85,7 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
 
 1. Browse the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository to find the roles that you want.
 2. Create a `requirements.yml` file where you specify all the roles that you need. For an overview of how to reference Ansible Galaxy roles, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}. In the following example, you want to use the role `andrewrothstein.kubectl` from Ansible Galaxy. 
-    ```text
+    ```yaml
     ---
     roles:
       - name: andrewrothstein.kubectl
@@ -124,7 +124,7 @@ Similar to [Ansible roles](#schematics-roles), collections require a specific fo
 
 1. Browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find the collection that you want to use in your playbook.
 2. Create a `requirements.yml` file where you specify the collections that you want to install from Ansible Galaxy. For more information about how to structure this file, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-collections){: external}. The following example uses the `community.kubernetes` collection.
-    ```text
+    ```yaml
     collections:
       - name: community.kubernetes
         version: 0.9.0

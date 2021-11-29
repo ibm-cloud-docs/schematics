@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-27"
+lastupdated: "2021-11-29"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -87,7 +87,7 @@ Schematics supports three metrics that you can use to configure in your dashboar
 | [ibm_schematics_workspace_actions_count](#wkspace-actions-count) | yes | no | yes |
 | [ibm_schematics_workspace_count](#wkspace-actions-count) | yes | no | yes |
 | [ibm_schematics_workspace_vulnerability_count](#wkspace-vulnerability-count) | yes | no | yes |
-{: caption=“Metrics details” caption-side="bottom"}
+{: caption="Metrics details" caption-side="bottom"}
 
 ### ibm_schematics_workspace_count
 {: #wkspace-count}
@@ -102,7 +102,7 @@ The number of workspaces state and actions count are stated in the table.
 | `Frequency` | `60 seconds` |
 | `Unit` | `none` |
 | `Labels` | `ibm_schematics_workspace_status such as Active, Draft, Inactive, and Template Error are derived.` |
-{: caption=“Workspace state and action count” caption-side="bottom"}
+{: caption="Workspace state and action count" caption-side="bottom"}
 
 For the Schematics instance, following five different time series counts or charts are derived from `ibm_schematics_workspace_count` metric.
 
@@ -113,7 +113,7 @@ For the Schematics instance, following five different time series counts or char
 | Number of workspaces in draft state |  ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Draft”} |
 | Number of inactive workspaces | ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Inactive”} |
 | Number of workspaces deleted | ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Template Error”} |
-{: caption=“Worksapce time series count” caption-side="bottom"}
+{: caption="Worksapce time series count" caption-side="bottom"}
 
 ### ibm_schematics_workspace_actions_count
 {: #wkspace-actions-count}
@@ -128,7 +128,7 @@ The number of workspace actions count are stated in the table.
 | `Frequency` | `60 seconds` |
 | `Unit` | `none` |
 | `Labels` | `[ibm_schematics_workspace_action are apply, destroy, and plan ibm_schematics_workspace_action_status such as failure or success are supported.]` |
-{: caption=“Workspace actions count” caption-side="bottom"}
+{: caption="Workspace actions count" caption-side="bottom"}
 
 For the Schematics instance, following six different time series counts or charts are derived from `ibm_schematics_workspace_actions_count` metric.
 
@@ -140,7 +140,7 @@ For the Schematics instance, following six different time series counts or chart
 | Number of plan actions| ibm_schematics_workspace_count{ibm_schematics_workspace_action = ”Plan”} |
 | Number of successful plan actions |  ibm_schematics_workspace_count{ibm_schematics_workspace_action = ”Plan”, ibm_schematics_workspace_action_status=”success”} |
 | Number of failure plan actions |  ibm_schematics_workspace_count{ibm_schematics_workspace_action = ”Plan”, ibm_schematics_workspace_action_status=”failure”} |
-{: caption=“{{site.data.keyword.bpshort}} time series counts” caption-side="bottom"}
+{: caption="{{site.data.keyword.bpshort}} time series counts" caption-side="bottom"}
 
 You can create similar queries to fetch `apply`, `destroy`, and `plan` actions.
 {: note}
@@ -158,11 +158,11 @@ Average vulnerability count of the workspaces are stated in the table.
 | `Frequency` | `60 minutes` |
 | `Unit` | `none` |
 | `Labels` | `[ibm_schematics_vulnerability_count, such as average]`|
-{: caption=“Vulnerability count” caption-side="bottom"}
+{: caption="Vulnerability count" caption-side="bottom"}
 
 For the Schematics instance, following time series counts and charts are derived from `ibm_schematics_workspace_vulnerability_count` metric.
 
 | Status | Query |
 | ------ | -------- |
 | Number of workspace currently managed  | avg(avg(ibm_schematics_vulnerability_count)) |
-{: caption=“Vulnerabilty count of {{site.data.keyword.bpshort}} workspace” caption-side="bottom"}
+{: caption="Vulnerabilty count of {{site.data.keyword.bpshort}} workspace" caption-side="bottom"}
