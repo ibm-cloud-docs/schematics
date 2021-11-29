@@ -349,7 +349,7 @@ Yes there is a change in the api which checks for the location first and if it d
 {: support}
 
 Yes, you can increase the time out for OpenShift or Kubernetes resources. For more information, about managing or adding the time-out option for the cluster resource, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
-<img src="images/advanced_inputvariable.png" alt="Configuring input variable to silence warning message" width="700" style="width: 700px; border-style: none"/>
+![Configuring input variable to silence warning message](images/advanced_inputvariable.png){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
 
 ## How can I enable Terraform debug through the `ibmcloud schematics` command line?
 {: #terraform-debug-ibmcli}
