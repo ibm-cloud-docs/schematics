@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-27"
 
 subcollection: schematics
 
@@ -116,7 +116,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     | template_env_settings | A list of environment variables that you want to apply during the execution of a Terraform action. |
     | template_git_url | The Git repository URL, where you have the configuration details to provision the resource. |
     | template_type |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
-    {: caption="Table 1. Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
+    {: caption="Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
 
 3. Initialize the Terraform CLI. 
 

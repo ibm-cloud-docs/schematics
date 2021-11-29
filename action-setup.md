@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-24"
+lastupdated: "2021-11-27"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -63,14 +63,10 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     1. In the **Choose your inventory** section, click the **Edit icon**. 
     2. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information, about creating resource inventories, see [Creating static inventory files](https://cloud.ibm.com/docs/schematics?topic=schematics-inventories-setup#static-inv) or [Dynamically building resource inventories from Schematics workspaces](https://cloud.ibm.com/docs/schematics?topic=schematics-inventories-setup#dynamic-inv).
     3. Action supports **SSH** and **WinRM** types of inventory connection tab to connect to your remote host.
-     - Select **SSH** tab, to enter the **username** and **IBM Cloud resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 
-       * Select the **Bastion host acccess is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
-     - Select **WinRM** tab, for the communication between the client and the server.
-       * Provide the **Username** and the **Password** of your Windows system with the public IP.
-
-       Currently, WinRM supports only Windows system with the public IPs and do not support Bastion host.
-       {: note}
-       
+       - Select **SSH** tab, to enter the **username** and **IBM Cloud resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 
+         * Select the **Bastion host acccess is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
+       - Select **WinRM** tab, for the communication between the client and the server. Currently, WinRM supports only Windows system with the public IPs and do not support Bastion host.
+         * Provide the **Username** and the **Password** of your Windows system with the public IP.
     4. Click **Save**.
 
     For more information, about creating inventories in for {{site.data.keyword.bpshort}} actions, see [static inventory](/docs/schematics?topic=schematics-inventories-setup#static-inv) and [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)

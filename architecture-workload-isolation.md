@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-29"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -24,7 +24,7 @@ Learn about the {{site.data.keyword.bpshort}} service architecture, the service 
 The following image shows the main {{site.data.keyword.bplong_notm}} components, how they interact with each other, and what type of encryption is applied to your personal information. 
 {: shortdesc}
 
-<img src="images/schematics_architecture.png" alt="{{site.data.keyword.bplong_notm}} architecture and data encryption process" width="900" style="width: 900px; border-style: none"/>
+![{{site.data.keyword.bplong_notm}} architecture and data encryption process](images/schematics_architecture.png){: caption="{{site.data.keyword.bplong_notm}} architecture and data encryption process" caption-side="bottom"}
 
 1. A user sends a request to create an {{site.data.keyword.bplong_notm}} workspace to the {{site.data.keyword.bpshort}} API server.
 2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or the tape archive file (`.tar`) that you uploaded from your local machine. 
@@ -52,12 +52,13 @@ All API requests to the {{site.data.keyword.bpshort}} API server are queued in M
 
 ### How are the workloads isolated from other tenants? 
 {: #workload-tenant-isolation}
+
 When you use {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud}} resources, these resources are created in your personal {{site.data.keyword.cloud_notm}} account. You are responsible to manage these resources and to keep them up-to-date to avoid security vulnerabilities or downtime for your workloads. {{site.data.keyword.cloud_notm}} resources are provisioned, updated, and deleted as defined in the Terraform template and requested by the user. Because all resources are created in your personal account, resources are not shared with or reused by other {{site.data.keyword.cloud_notm}} tenants. 
 
 ## Dependencies on other services
 {: #dependencies}
 
-Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.keyword.bpshort}} connects to these services. 
+Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.keyword.bpshort}} connects to these services? 
 
 |Service name|Description|Private/ public endpoint|
 |---------|--------------------|---------------|
@@ -77,5 +78,4 @@ Review the services that {{site.data.keyword.bpshort}} uses and how {{site.data.
 |Messages for RabbitMQ|RabbitMQ is used to queue incoming API requests, and to process these requests asynchronously.|Private|
 |Monitoring {{site.data.keyword.bpshort}} with {{site.data.keyword.mon_full_notm}} |{{site.data.keyword.bpshort}} sends service metrics to {{site.data.keyword.mon_full_notm}}. These metrics are monitored by the {{site.data.keyword.bpshort}} service team to identify capacity and performance issues.|Private|
 |Object Storage (COS)|This service is used to store workspace transactional data, such as the Terraform state file, logs, and user-provided data. All data is encrypted by using [Server-Side Encryption with Key Protect](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) in transit and at rest.|Private|
-
-
+{: caption="Endpoints with the service details" caption-side="bottom"}

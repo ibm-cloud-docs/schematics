@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-25"
+lastupdated: "2021-11-29"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -64,7 +64,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: cli}
 
 1. Create a JSON file on your local machine and add your workspace configuration. For additional configuration options when creating the workspace, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
-    ```
+    ```json
     {
     "name": "<workspace_name>",
     "type": [
@@ -93,7 +93,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
             "value": "<variable_value2>",
             "type": "bool",
             "secure": false
-          }    
+          }
         ]
         }
     ]
@@ -101,50 +101,25 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: codeblock}
 
-    <table>
-    <caption>JSON file component description</caption>
-    <thead>
-    <th>Parameter</th>
-    <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-    <td><code>workspace_name</code></td>
-    <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
-    </tr>
-    <tr>
-    <td><code>terraform_version</code></td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and similarly <code>terraform_v0.13</code>, and <code>terraform_v0.14</code>. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-    </tr>
-    <tr>
-    <td><code>location</code></td>
-    <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services.</td>
-    </tr>
-    <tr>
-    <td><code>description</code></td>
-    <td>Enter a description for your workspace.</td>
-    </tr>
-    <td><code>github_source_repo_url</code></td>
-    <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. If you choose to create your workspace without a GitHub repository, your workspace is created with a <strong>draft</strong> state. To connect your workspace to a GitHub repository later, you must use the <code>ibmcloud schematics workspace update</code> command.</td>
-    </tr>
-    <tr>
-    <td><code>variable_name</code></td>
-    <td>Optional: Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-    </tr>
-    <tr>
-    <td><code>variable_type</code></td>
-    <td>Optional: Enter the data type of your input variable. For supported data types, see the [<code>ibmcloud schematics workspace new</code> command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). </td>
-    </tr>
-    </tbody></table>
+    | Parameter | Description |
+    | --- |  --- |
+    | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
+    | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. |
+    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
+    | `description` | Enter a description for your workspace. |
+    | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. |
+    | `variable_name` | Optional: Enter the name for the input variable that you declared in your Terraform configuration files. |
+    | `variable_type` | Optional: Enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). |
+    {: caption="JSON file component description" caption-side="bottom"}
 
 2. Create the workspace. 
-    ```
+    ```sh
     ibmcloud schematics workspace new --file workspace.json
     ```
     {: pre}
 
 3. Verify that your workspace is created. Make sure that you workspace is in an **Inactive** state.
-    ```
+    ```sh
     ibmcloud schematics workspace list
     ```
     {: pre}
@@ -158,57 +133,26 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
 
 2. Create the workspace. 
-    ```
+    ```sh
     curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_access_token>" -d '{"name": "<workspace_name>","type": ["<terraform_version>"],"location": "<location>","description": "<description>","template_repo": {"url": "<github_source_repo_url>"},"template_data": [{"folder": ".","type": "<terraform_version>","variablestore": [{"value": "<variable_value>","name": "<variable_name>","type": "<variable_type>","secure": true}]}]}'
     ```
     {: pre}
 
-    <table>
-    <caption>JSON file component description</caption>
-    <thead>
-    <th>Parameter</th>
-    <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-        <td><code>iam_access_token</code></td>
-        <td>Enter the IAM access token that you retrieved in step 1. </td>
-    </tr>
-    <tr>
-    <td><code>workspace_name</code></td>
-    <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
-    </tr>
-    <tr>
-    <td><code>terraform_version</code></td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.12</code> to use Terraform version 0.12, and similarly <code>terraform_v0.13</code>, and <code>terraform_v0.14</code>. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
-    </tr>
-    <tr>
-    <td><code>location</code></td>
-    <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services.</td>
-    </tr>
-    <tr>
-    <td><code>description</code></td>
-    <td>Enter a description for your workspace.</td>
-    </tr>
-    <td><code>github_source_repo_url</code></td>
-    <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. </td>
-    </tr>
-    <tr>
-    <td><code>variable_name</code></td>
-    <td>Optional: Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-    </tr>
-    <tr>
-    <td><code>variable_value</code></td>
-    <td>Optional: Enter the value for your input variable.  </td>
-    </tr>
-    <tr>
-    <td><code>variable_type</code></td>
-    <td>Optional: Enter the data type of your input variable. For supported data types, see the [<code>ibmcloud schematics workspace new</code> command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). </td>
-    </tr>
-    </tbody></table>
+    | Parameter | Description |
+    | -- | -- |
+    | `iam_access_token` | Enter the IAM access token that you retrieved in step 1. |
+    | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
+    | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. |
+    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
+    | `description` | Enter a description for your workspace. |
+    | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are store |
+    | `variable_name` | Optional: Enter the name for the input variable that you declared in your Terraform configuration files. |
+    | `variable_value` | Optional: Enter the value for your input variable. |
+    | `variable_type` | Optional: Enter the data type of your input variable. For supported data types, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). |
+    {: caption="JSON file component description" caption-side="bottom"}
 
 3. Verify that the workspace is created successfully. 
-    ```
+    ```sh
     curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_access_token>"
     ```
     {: pre}
@@ -242,82 +186,22 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information, about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup&interface=ui#job-logs).
     {: tip}
 
-5. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
+6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
 
-<table>
-    <thead>
-    <th>Type</th>
-    <th>Example</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td><ul>number</li></ul></td>
-        <td><ul>4.56</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>string</li></ul></td>
-        <td><ul>example value</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>bool</li></ul></td>
-        <td><ul>false</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>map(string)</li></ul></td>
-        <td><ul>{key1 = "value1", key2 = "value2"}</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>set(string)</li></ul></td>
-        <td><ul>["hello", "he"]</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>map(number)</li></ul></td>
-        <td><ul>{internal = 8080, external = 2020}</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>list(string)</li></ul></td>
-        <td><ul>["us-south", "eu-gb"]</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>list</li></ul></td>
-        <td><ul>["value", 30]</li></ul></td>
-    </tr>
-        <tr>
-    <td><ul>list(list(string))</li></ul></td>
-    <td><ul><p><pre class="codeblock"><code>[
-    {
-        internal = 8300
-        external = 8300
-        protocol = "tcp"
-    },
-    {
-        internal = 8301
-        external = 8301
-        protocol = "ldp"
-    }
-    ]</code></pre></p></ul></td>
-        </tr>
-    <tr>
-    <td><ul><p><pre class="codeblock"><code>list(object({
-        internal = number
-    external = number
-    protocol = string
-    }))</code></pre></p></li></ul></td>
-        <td><ul><p><pre class="codeblock"><code>[
-    {
-        internal = 8300
-        external = 8300
-        protocol = "tcp"
-    },
-    {
-        internal = 8301
-        external = 8301
-        protocol = "ldp"
-    }
-    ]</code></pre></p></li></ul></td>
-        </tr>
-    </tbody>
-</table>
+    | Type | Example |
+    | --- | -- |
+    | number | 4.56 |
+    | string | example value |
+    | bool | false |
+    | map(string) | {key1 = "value1", key2 = "value2"} |
+    | set(string) | ["hello", "he"] |
+    | map(number) | {internal = 8080, external = 2020} |
+    | list(string) | ["us-south", "eu-gb"] |
+    | list | ["value", 30] |
+    | list(list(string)) | :[{internal = 8300 external = 8300 protocol = "tcp"},{internal = 8301 external = 8301 protocol = "ldp" } ] : list(object({internal = number external = number protocol = string})) : [{internal = 8300 external = 8300 protocol = "tcp"} {internal = 8301 external = 8301 protocol = "ldp"}]|
+    {: caption="Input variables and its sample values" caption-side="bottom"}
+
+
 
 
 ### Running your Terraform template in {{site.data.keyword.cloud_notm}}
@@ -354,18 +238,14 @@ You can use the {{site.data.keyword.bplong_notm}} to delete your workspace. Whil
     Decide if you want to delete the workspace and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the  cloud resources, you need to manage the resources with the resource list or command-line.
     {: note}
 
-    <table>
-        <tr>
-        <th>Job</th><th>Delete workspace</th><th>Destroy the associated cloud resources</th></tr>
-        <tr>
-            <td>Delete workspace <br> <strong>Note</strong> use this option, if you have already destroyed the cloud resources, or intend to destroy them later by using the command-line or user interface.</td><td>True</td><td>False</td></tr>
-        <tr>
-            <td>Destroy only resources</td><td>False</td><td>True</td></tr>
-        <tr>
-          <td>Delete workspace and destroy the resources provisioned by workspace</td><td>True</td><td>True</td></tr>
-        <tr>
-          <td>Resources destroyed using command-line or resource list, and want to delete workspace</td><td>True</td><td>False</td></tr>
-        </table>
+    | Job | Delete workspace | Destroy the associated cloud resources |
+    | -- | -- |  -- |
+    | Delete workspace  \n **Note** use this option, if you have already destroyed the cloud resources, or intend to destroy them later by using the command-line or user interface. | True | False |
+    | Destroy only resources | False | True |
+    | Delete workspace and destroy the resources provisioned by workspace | True | True |
+    | Resources destroyed using command-line or resource list, and want to delete workspace | True | False |
+    {: caption="Delete workspace and destroy the resources" caption-side="bottom"}
+
 2. Select the workspace that you want to delete.
 3. Click **Delete** button.
 4. Select the **Delete workspace** option.
@@ -393,8 +273,9 @@ Plan out the organizational structure of your workspace to match the microservic
 |-------------|-----|
 |`GitHub`| `https://github.com/<your_user_name>/<repo_name>/tree/<branch_name>/<folder_name>`|
 |`GitLab`| `https://gitlab.com/<your_user_name>/<project_name>/tree/<branch_name>/<folder_name>` |
-|`Bitbucket`|`https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` <br> `https://<username>@bitbucket.org/<workspace_name>/tf_cloudless_sleepy/src/master` |
-|`Azure DevOps`|`https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` <br> `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`|
+|`Bitbucket`|`https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`  \n `https://<username>@bitbucket.org/<workspace_name>/tf_cloudless_sleepy/src/master` |
+|`Azure DevOps`|`https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`  \n `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`|
+{: caption="Git repositories" caption-side="bottom"}
 
 ### How many workspaces do I need?
 {: #plan-number-of-workspaces}
@@ -406,7 +287,7 @@ As a rule of thumb, consider creating separate workspaces for each of your micro
 
 Review the following image to see the number of workspaces in {{site.data.keyword.bplong_notm}} for an app that consists of three microservices.
 
-<img src="images/workspace-structure.png" alt="Workspace structure for {{site.data.keyword.bplong_notm}}" width="800"/>
+![Workspace structure for {{site.data.keyword.bplong_notm}}](images/workspace-structure.png){: caption="Figure 1. Workspace structure for {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
 Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 {: important}
@@ -426,6 +307,7 @@ Review the following table to find a list of options for how to structure your G
 |One Git repo, use branches to distinguish between environments | Create one Git repository for your microservice component, and use different Git branches to store the Terraform configuration files for each of your environments. With this setup, you have a clear distinction between your environments and more control over who can access and change a particular configuration. Make sure to set up a process for how changes in one configuration file are populated across branches to avoid that you have different configurations in each environment. |
 | One Git repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid having different configurations in each environment. |
 | Use one Git repo per environment | Use one Git repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and Git repository and you can apply separate permissions for each of your Git repositories. Make sure that your team can manage multiple Git repositories and keep them in sync. | 
+{: caption="Structure of the Git repository" caption-side="bottom"}
 
 ### How can I reuse configuration files across environments and workspaces?
 {: #plan-reuse}
@@ -486,10 +368,10 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 {: #states-overview}
 
 Review the states that a workspace can have in the following table. You might not see all states in the {{site.data.keyword.cloud_notm}} console. Some states are only visible when using the command-line or API.
-{: shortdesc} 
+{: shortdesc}
 
-| State | Description | 
-| ------- | ---------------------------- | 
+| State | Description |
+| ------- | ---------------------------- |
 | `Active` | After you successfully ran your infrastructure code with {{site.data.keyword.bplong_notm}} by applying your Terraform execution plan, the state of your workspace changes to **Active**. |
 | `Connecting` | {{site.data.keyword.bpshort}} tries to connect to the template in your source repo. If successfully connected, the template is downloaded and metadata, such as input parameters, is extracted. After the template is downloaded, the state of the workspace changes to **Scanning**. |
 | `Draft` | The workspace is created without a reference to a `GitHub`, `GitLab`, or `Bitbucket` repository.   |
@@ -499,6 +381,7 @@ Review the states that a workspace can have in the following table. You might no
 | `Scanning` | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
 | `Stopped` | The {{site.data.keyword.bpshort}} plan, apply, or destroy job are stopped manually. |
 | `Template_Error` | The {{site.data.keyword.bpshort}} template contains errors and cannot be processed.|
+{: caption="Workspace state overview" caption-side="bottom"}
 
 ### Workspace state diagram and manipulative job
 {: #workspace-state-diagram}
@@ -506,37 +389,13 @@ Review the states that a workspace can have in the following table. You might no
 The state of a workspace indicates if you have successfully created a Terraform execution plan and applied to provision your resources in the {{site.data.keyword.cloud_notm}} account. The table represents the state and the workspace job.
 {: shortdesc}
 
-<table>
-    <thead>
-    <th>Workspace / Job</th>
-    <th>State diagram</th>
-    <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-        <td><code>Create workspace</code></td>
-        <td><img src="images/createworkspace.png" alt="Create workspace state"  width="800"/></td>
-        <td>The workspace is created without a reference to <code>GitHub</code>, <code>GitLab</code>, or <code>Bitbucket</code> to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply job, to move the workspace into active state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands. Then, you can destroy all the resources to make your workspace in an inactive state.
-    </td>
-    </tr>
-        <tr>
-        <td><code>Delete workspace</code></td>
-        <td><img src="images/deleteworkspace.png" alt="Delete workspace state"  width="800"/></td>
-        <td>When you perform delete workspace on an inactive, active or failed state. From these state, the template is parsed successfully to reach an inactive state or template parsed can fail and reach failed state. If you delete at least one resource, the plan and apply job executes to destroy the resource from the active state.</td>
-    </tr>
-    <tr>
-        <td><code>Plan and apply job</code></td>
-        <td><img src="images/applyplan.png" alt="Plan and apply action state" width="800"/></td>
-        <td>When you perform the plan or apply job on active, inactive, and failed state. Your workspace is in in progress and locked state. And the job is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands.
-        </td>
-    </tr>
-    <tr>
-        <td><code>Destroy job</code></td>
-        <td><img src="images/destroyworkspace.png" alt="Destroy action state"  width="800"/></td>
-        <td>The destroy job performs when your workspace is in an inactive, active or failed state. From these state, the destroy job connects to parse the template from your source repository and workspace gets into in progress unlocked state. From   state if you destroy, resource reaches failed state.</td>
-    </tr>
-    </tbody>
-    </table>
+| Workspace | State diagram | Description |
+| -- | -- | --|
+| `Create workspace`| ![Create workspace state](images/createworkspace.png) | The workspace is created without a reference to `GitHub`, `GitLab`, or `Bitbucket` to the draft state. From the draft state you can connect to the infrastructure template in your source repository. From connecting state, the template is processed successfully to reach Inactive state (Final state) or template parsing may fail and reach failed state. From inactive state, when you do an apply, and if it results in one resource then, state enters active state and if they destroy, state enters destroy state. you can maintain at least one resource in the state file by apply job, to move the workspace into active state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands. Then, you can destroy all the resources to make your workspace in an inactive state. |
+|`Delete workspace` | ![Delete workspace state](images/deleteworkspace.png) | When you perform delete workspace on an inactive, active or failed state. From these state, the template is parsed successfully to reach an inactive state or template parsed can fail and reach failed state. If you delete at least one resource, the plan and apply job executes to destroy the resource from the active state. |
+| `Plan and apply job` | ![Plan and apply action state](images/applyplan.png) | When you perform the plan or apply job on active, inactive, and failed state. Your workspace is in in progress and locked state. And the job is performed, if it is success, your workspace is in active state, if it contains at least one resource, your workspace is in an inactive state, on failure workspace is in failed state. The {{site.data.keyword.bpshort}} [persists](/docs/schematics?topic=schematics-faqs#persist-file) the user-defined file for running the subsequent Terraform commands. |
+| `Destroy job` | ![Destroy action state](images/destroyworkspace.png) | The destroy job performs when your workspace is in an inactive, active or failed state. From these state, the destroy job connects to parse the template from your source repository and workspace gets into in progress unlocked state. From   state if you destroy, resource reaches failed state.|
+{: caption="Workspace state diagram" caption-side="bottom"}
 
 ## Creating an auto deployment to the {{site.data.keyword.bplong_notm}}
 {: #create-deploy-to-schematics}

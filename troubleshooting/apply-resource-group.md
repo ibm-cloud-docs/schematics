@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: schematics resource group not found, schematics resource group error, schematics resource group does not exist, schematics resource group doesn't exist 
 
@@ -19,7 +19,7 @@ content-type: troubleshoot
 When you run an {{site.data.keyword.bplong_notm}} plan or apply action, the resource group that you try to retrieve by using the `ibm_resource_group` data source cannot be found. You receive an error message similar to the following:
 {: tsSymptoms}
 
-```
+```text
 Error retrieving resource group <resource-group>: ResourceGroupDoesnotExist: Given resource Group : "<resource-group>" doesn't exist
 ```
 {: screen}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-27"
 
 keywords: ansible playbook, ansible playbook example, iks cluster with ansible playbook, iks cluster example by using ansible playbook
 
@@ -58,14 +58,14 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Example**
 
-    ```
+    ```sh
     ibmcloud schematics action create -f action.json
     ```
     {: pre}
 
     **action.json file**
 
-    ```
+    ```json
     {
         "name": "Hackathon_Starter_Action",
         "description": "This Action will deploy boiler plate code for Hackathon Starter",
@@ -100,7 +100,7 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Example**
 
-    ```
+    ```sh
     ibmcloud schematics job run -f job.json
 
     ```
@@ -108,7 +108,7 @@ Now, you are ready to complete these steps to execute the use case:
 
     **job.json file**
 
-    ```
+    ```json
     {
         "command_object": "action",
         "command_object_id": <Action-ID>,
@@ -119,14 +119,14 @@ Now, you are ready to complete these steps to execute the use case:
 
 4. To verify the job is created successfully run the following command. For more information, about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup&interface=ui#job-logs).
 
-    ```
-    IBMcloud schematics job logs --id <job id>
+    ```sh
+    ibmcloud schematics job logs --id <job id>
     ```
     {: pre}  
 
 5. Execute the `kubectl` commands in command-line to check the status of the nodes, running pods, and finally `run svc` command to view the external IP address of your service.
 
-    ```
+    ```sh
     kubectl get nodes -o wide
     kubectl get pods -o wide
     kubectl get svc
@@ -135,7 +135,7 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Example** 
 
-    ```
+    ```text
     my-MacBook-Pro bin % kubectl get svc 
     NAME             TYPE           CLUSTER-IP       EXTERNAL-IP      PORT(S)        AGE
     kubernetes       ClusterIP      172.21.0.1       <none>           443/TCP        14h

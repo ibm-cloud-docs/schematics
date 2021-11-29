@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-10"
+lastupdated: "2021-11-27"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -39,7 +39,7 @@ Use the IBM-provided Terraform template to provision an {{site.data.keyword.cos_
 2. Enter a name for your workspace, the resource group, and region where you want to create the workspace. Then, click **Create**. 
 3. In the **Import your Terraform template** section, enter the following information: 
     1. In the **GitHub, GitLab, or `Bitbucket` repository URL** field, enter the following repository URL. 
-        ```
+        ```sh
         https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance
         ```
         {: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-29"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -46,7 +46,7 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
 1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all your hosts, and tasks that you want to run on your web servers and your databases. Each group of tasks can become its own role. 
 
 2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. The roles directory can have a subdirectory such as  **/roles/db/** describing the tasks in the `main.yml` file.
-    ```
+    ```text
     ├── roles
         └── db
             └── tasks
@@ -57,7 +57,7 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
     {: screen}
 
 3. Add the tasks that you want to run to a `main.yml` file. In the following example, you separate out the task to download the MySQL community repo from your main playbook and put it into a `main.yml` file. 
-    ```
+    ```yaml
     - name: Download MySQL Community Repo
         get_url:
         url: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
@@ -66,7 +66,7 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
     {: codeblock}
 
 4. Reference the role in your Ansible playbook.
-   ```
+   ```yaml
     - name: deploy MySQL and configure the databases
       hosts: all
       remote_user: root
@@ -85,7 +85,7 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
 
 1. Browse the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository to find the roles that you want.
 2. Create a `requirements.yml` file where you specify all the roles that you need. For an overview of how to reference Ansible Galaxy roles, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}. In the following example, you want to use the role `andrewrothstein.kubectl` from Ansible Galaxy. 
-    ```
+    ```yaml
     ---
     roles:
       - name: andrewrothstein.kubectl
@@ -94,7 +94,7 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
 
 3. Add a `roles` folder to your GitHub repository that is relative to the playbook, and store the `requirements.yml` file in this folder as shown in this example.
 
-    ```
+    ```text
         ├── roles
             └── requirements.yml
         ├── playbook.yaml
@@ -104,7 +104,7 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
 
 4. Reference the role in your Ansible playbook. In this example, the role with the name `andrewrothstein.kubectl` is used.
     
-    ```
+    ```yaml
     - hosts: all
       roles:
         - role: andrewrothstein.kubectl
@@ -124,7 +124,7 @@ Similar to [Ansible roles](#schematics-roles), collections require a specific fo
 
 1. Browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find the collection that you want to use in your playbook.
 2. Create a `requirements.yml` file where you specify the collections that you want to install from Ansible Galaxy. For more information about how to structure this file, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-collections){: external}. The following example uses the `community.kubernetes` collection.
-    ```
+    ```yaml
     collections:
       - name: community.kubernetes
         version: 0.9.0
@@ -132,7 +132,7 @@ Similar to [Ansible roles](#schematics-roles), collections require a specific fo
     {: codeblock}
 
 3. Add a `collections` folder to your GitHub repository that is relative to your playbook, and store the `requirements.yml` file in this folder as shown in this example. 
-    ```
+    ```text
     ├── collections
             └── requirements.yml
     ├── playbook.yaml
@@ -152,5 +152,3 @@ To prepare your Ansible playbook for {{site.data.keyword.bpshort}}, review the f
 - You are limited in how you can specify the target hosts for your Ansible resource inventory. For more information, see [Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup). 
 - All playbooks must be compatible to run with an Ansible version that is supported in {{site.data.keyword.bpshort}}. To find supported versions run [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version) command. 
 - Optionally, to explore Ansible playbook capabilities in {{site.data.keyword.bpshort}}. You can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}.
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-27"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -42,14 +42,12 @@ It is recommended to use Terraform v0.13 or higher.
 To use any of the predefined {{site.data.keyword.bpshort}} images, you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform). Note that you cannot change the default version for the Ansible executable. You can only [specify the version of referenced Ansible roles and collections](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
 {: important}
 
-```
+```sh
 ibmcloud schematics version
 ```
 {: pre}
 
-**Example output**
-
-```
+```text
 
 Template Type   Version
 Terraform       terraform_v0.11
@@ -124,7 +122,7 @@ When you create a {{site.data.keyword.bpshort}} workspace and choose a Terraform
 You can only specify versions that are higher than the default `MAJOR.MINOR.PATH` version that is set in {{site.data.keyword.bpshort}}. 
 {: note}
 
-```
+```terraform
 terraform {
     required_providers {
         version = ">= 0.13.4"
@@ -145,7 +143,7 @@ If {{site.data.keyword.cloud_notm}} Provider plug-in version is not declared in 
 
 The following example shows how to use the {{site.data.keyword.bpshort}} image that was built for the {{site.data.keyword.cloud_notm}} Provider plug-in v1.23.1. This image includes specific versions for other providers, such as the REST API provider. 
 
-```
+```terraform
 terraform {
     required_providers {
         ibm = {
@@ -160,7 +158,7 @@ terraform {
 
 To use a different {{site.data.keyword.cloud_notm}} Provider plug-in version, or to pin your Terraform configuration file to a specific version of another external provider, such as AWS, Helm or Kubernetes, use the following syntax. 
 
-```
+```terraform
 terraform {
     required_providers {
         ibm = {
@@ -182,7 +180,7 @@ terraform {
 
 However, if you use existing Ansible roles or collections in your playbook, you can specify the version of the role or collection that you want to run by using a `requirements.yml` file. For more information about how to reference roles and collections in your playbook, see [Referencing Ansible roles in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-roles) and [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-collections). To learn more about how to specify versions for roles and collections, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}.
 
-```
+```yaml
 roles:
   - name: andrewrothstein.kubectl
     version: 1.1.50

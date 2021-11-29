@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-25"
+lastupdated: "2021-11-29"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -349,3 +349,54 @@ Yes there is a change in the api which checks for the location first and if it d
 {: support}
 
 Yes, you can increase the time out for OpenShift or Kubernetes resources. For more information, about managing or adding the time-out option for the cluster resource, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
+![Configuring input variable to silence warning message](images/advanced_inputvariable.png){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
+
+## How can I enable Terraform debug through the `ibmcloud schematics` command line?
+{: #terraform-debug-ibmcli}
+{: faq}
+{: support}
+
+You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload. For more information, about setting the environment variables in the payload, refer to [{{site.data.keyword.bpshort}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
+
+```json
+{
+  "name": "sample",
+  "type": [
+    "terraform_v0.12"
+  ],
+  "description": "terraform workspace",
+  "tags": [
+  ],
+  "template_repo": {
+    "url": "<your repo>"
+  },
+  "template_data": [
+    {
+      "folder": ".",
+      "type": "terraform_v0.12",
+      "env_values":[
+      {
+"TF_LOG":"debug"
+      }
+   ]
+    }
+  ]
+}
+```
+
+## How can I generate {{site.data.keyword.bpshort}} workspace import from CLI?
+{: #workspace-import-ibmcli}
+{: faq}
+{: support}
+
+Use `ibmcloud schematics workspace import --options value, -o value : Optional` command and the sample syntax to import from command-line. For more information, about how {{site.data.keyword.bpshort}} workspace import works, see [{{site.data.keyword.bpshort}} workspace import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
+``` sh
+
+ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
+
+or 
+
+ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "--var-file=<path-to-var-file>"
+```
+{: pre}
+

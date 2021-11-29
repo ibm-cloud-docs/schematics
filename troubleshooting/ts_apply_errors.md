@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -69,7 +69,6 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-</br>
 
 ## Resource group does not exist
 {: #rg-not-found}

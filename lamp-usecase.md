@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-27"
 
 keywords: ansible playbook, ansible playbook example, lamp stack, VSI by using Ansible,
 
@@ -66,7 +66,7 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Example**
 
-    ```
+    ```sh
     ibmcloud schematics action create -n <action-name> -r Default -l us-east --bastion <bastion-ip> --bastion-credential <ssh-key-file-path> --target <target-webserver-ip-address> --target-credential <ssh-key-path> --tr https://github.com/Cloud-Schematics/lamp-simple -g <github-token> --pn site.yml --input upassword=Abc@123abc --input dbname=foodb --input dbuser=newUser --input mysql_port=3306 --input httpd_port=80 --json
     ```
     {: pre}
@@ -75,7 +75,7 @@ Now, you are ready to complete these steps to execute the use case:
 
     **Example**
 
-    ```
+    ```sh
     ibmcloud schematics job run -c action --cid <action-id> -n ansible_playbook_run --json
     ```
     {: pre}

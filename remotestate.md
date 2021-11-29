@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -33,7 +33,7 @@ Similar to the `remote_state` data source, you can only access information that 
     If you already used a different Terraform configuration file in one of your workspaces, you can use this workspace for this excercise. Make sure to add output values as outlined in this example to your configuration file so that you can access your workspace information later. 
     {: tip}
 
-    ```
+    ```terraform
     ...
     output sshcommand {
         value = "ssh root@ibm_is_floating_ip.fip1.address"
@@ -55,7 +55,7 @@ Similar to the `remote_state` data source, you can only access information that 
 
     **From the CLI**:
     - List available workspaces in your account.
-        ```
+        ```sh
         ibmcloud terraform workspace list
         ```
         {: pre}
@@ -63,7 +63,7 @@ Similar to the `remote_state` data source, you can only access information that 
     - Find the workspace ID in the **ID** column of your command-line output. 
 
 3. Create another Terraform configuration file that is named `remotestate.tf` to access the output parameters of the `vpc.tf` file by using the `ibm_schematics_output` data source. To allow version control of this file, make sure to store this configuration file in a GitHub or GitLab repository. 
-    ```
+    ```terraform
     data "ibm_schematics_workspace" "vpc" {
         workspace_id = "<schematics_workspace_ID>"
     }
@@ -87,41 +87,21 @@ Similar to the `remote_state` data source, you can only access information that 
     ```
     {: codeblock}
 
-    <table>
-    <caption>Understanding the configuration file components</caption>
-    <thead>
-    <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the configuration file components</th>
-    </thead>
-    <tbody>
-        <tr>
-        <td><code>data.ibm_schematics_workspace.workspace_id</code></td>
-        <td>Enter the ID of the VPC workspace where you defined the output values that you want to access. You need this data source to retrieve the template ID of the workspace in the <code>ibm_schematics_output</code> data source. </td>
-        </tr>
-        <tr>
-        <td><code>data.ibm_schematics_output.workspace_id</code></td>
-        <td>Enter the ID of the VPC workspace where you defined the output values that you want to access.</td>
-        </tr>
-        <tr>
-        <td><code>data.ibm_schematics_output.template_id</code></td>
-        <td>Enter <code>data.ibm_schematics_workspace.vpc.runtime_data.0.id</code> to reference the Terraform template of your workspace.</td>
-        </tr>
-        <tr>
-        <td><code>output.output_vars.value</code></td>
-            <td>Use Terraform interpolation syntax to access all output values that you defined in the <code>vpc.tf</code> file by using the <code>output_values</code> output parameter of the <code>ibm_schematics_output</code> data source. The <code>output_values</code> output parameter returns all output values as a list.  </td>
-        </tr>
-        <tr>
-        <td><code>output.sshcomand.value</code> and <code>output.vpc_id.value</code></td>
-        <td>You can access a specific value in the <code>output_values</code> list by adding the ID of the output value to your <code>ibm_schematics_output</code> data source. For example, to access the <code>vpc_id</code>, simply use <code>data.ibm_schematics_output.vpc.output_values.vpc_id</code>. </td>
-        </tr>
-    </tbody>
-    </table>
+    | ![Idea icon](images/idea.png) | Understanding the configuration file components |
+    | -- | -- |
+    | `data.ibm_schematics_workspace.workspace_id` | Enter the ID of the VPC workspace where you defined the output values that you want to access. You need this data source to retrieve the template ID of the workspace in the `ibm_schematics_output` data source. |
+    | `data.ibm_schematics_output.workspace_id` | Enter the ID of the VPC workspace where you defined the output values that you want to access. |
+    | `data.ibm_schematics_output.template_id` | Enter `data.ibm_schematics_workspace.vpc.runtime_data.0.id` to reference the Terraform template of your workspace. |
+    | `output.output_vars.value` | Use Terraform interpolation syntax to access all output values that you defined in the `vpc.tf` file by using the `output_values` output parameter of the `ibm_schematics_output` data source. The `output_values` output parameter returns all output values as a list. |
+    | `output.sshcomand.value`  and `output.vpc_id.value` | You can access a specific value in the `output_values` list by adding the ID of the output value to your `ibm_schematics_output` data source. For example, to access the `vpc_id`, simply use `data.ibm_schematics_output.vpc.output_values.vpc_id`. |
+    {: caption="Configuration file components" caption-side="bottom"}
 
 4. [Create a workspace that points to the `remotestate.tf` file in your GitHub or GitLab repository](/docs/schematics?topic=schematics-workspace-setup#create-workspace). If you want to upload a tape archive file (`.tar`) from your local machine instead, use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.
 
 5. [Run your Terraform code in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). When you review your logs, you can see the output values from your VPC workspace in the **Output** section. 
 
-    Example output:
-    ```
+    **Example output**
+    ```text
     ...
     2020/02/21 19:49:30 Terraform show | Outputs:
     2020/02/21 19:49:30 Terraform show | 

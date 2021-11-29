@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-27"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -118,7 +118,7 @@ A Terraform execution plan is based on the Terraform statefile that was created 
 6. Click **View log** to review the log files of your execution plan. The log file provides a summary of all the resources that {{site.data.keyword.bplong_notm}} identified to achieve the state that you want. These actions can include adding, modifying, or removing resources. 
 
     Example Terraform execution plan output: 
-    ```
+    ```text
     2020/01/10 21:27:42 -----  Terraform PLAN  -----
     ...
     2020/01/10 21:27:49 Terraform plan | 
@@ -234,7 +234,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 2. Either remove the infrastructure code from the file, or comment out the resources that you want to remove by adding `#` to the beginning of each line. 
 
     Example for commenting out a resource: 
-    ```
+    ```terraform
     ...
     #resource ibm_is_instance "vsi1" {
     #  name    = "${local.BASENAME}-vsi2"

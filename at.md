@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-13"
+lastupdated: "2021-11-29"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -39,9 +39,9 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | `schematics.workspace.plan` | A Terraform execution plan was created for a workspace. | 
 | `schematics.workspace.read`| A {{site.data.keyword.bpshort}} workspace is viewed by a user.|
 | `schematics.workspace.update`| A {{site.data.keyword.bpshort}} workspace is updated successfully or failed to update.|
-{: caption="Table 1. Overview of {{site.data.keyword.bpshort}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
+{: caption="Overview of {{site.data.keyword.bpshort}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
 
-**Important** 
+**Important:** 
 
 When you create your first workspace, the following events are created by a Schematics owned service ID and sent to {{site.data.keyword.at_full_notm}}.
 * An event with an action `schematics.instance.create`, when a first workspace is created.

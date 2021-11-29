@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-27"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -26,25 +26,25 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
 {: tsResolve}
 
 1. List the workspaces in your account and note the ID of the workspace that includes the failed resource. 
-    ```
+    ```sh
     ibmcloud schematics workspace list
     ```
     {: pre}
 
 2. Refresh your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. This process might take a few minutes to complete.
-    ```
+    ```sh
     ibmcloud schematics refresh --id <workspace_ID>
     ```
     {: pre}
 
 3. Retrieve the template ID of your workspace. To template ID is shown as a string after the **Template Variables for: <template_ID>** section of your CLI output. 
-    ```
+    ```sh
     ibmcloud schematics workspace get --id <workspace_ID>
     ```
     {: pre}
 
 4. Retrieve the [Terraform statefile](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) for your workspace and note the name of the resource that is tainted.
-    ```
+    ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```
     {: pre}
@@ -52,13 +52,13 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
 5. Verify that the [tainted resource](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) is successfully provisioned and in a healthy state by using the {{site.data.keyword.cloud_notm}} console, CLI, or API. For example, if you tried to provision an {{site.data.keyword.containerlong_notm}} cluster, check that the cluster is in a `Normal` state and that you can successfully connect to the cluster. 
 
 6. Untaint the resource. Enter the name of the tainted resource that you retrieved from the statefile in the `--address` parameter. For example, a cluster resource name from a statefile might look like this: `ibm_container_vpc_cluster.mycluster`. 
-    ```
+    ```sh
     ibmcloud schematics workspace untaint --id <workspace_ID> --address <resource_name>
     ```
     {: pre}
 
 7. Retrieve the Terraform statefile for your workspace again and verify that your resource is marked as [`untainted`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).  
-    ```
+    ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```
     {: pre}

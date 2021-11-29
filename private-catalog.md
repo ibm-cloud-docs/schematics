@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-27"
 
 keywords: schematics, automation, terraform
 
@@ -55,13 +55,13 @@ To upload a Terraform template to a private catalog, you must first compress all
     If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a subfolder. 
     {: tip}
 
-    ```
+    ```sh
     git clone https://github.com/Cloud-Schematics/terraform-ibm-observability.git
     ```
     {: pre}
 
 2. Change in to the `terraform-ibm-observability` directory.
-    ```
+    ```sh
     cd terraform-ibm-observability
     ```
     {: pre}
@@ -72,13 +72,13 @@ To upload a Terraform template to a private catalog, you must first compress all
     To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level above. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
     {: note}
 
-    ```
+    ```sh
     tar -czvf observability.tgz -C terraform .
     ```
     {: pre}
 
     Example output:
-    ```
+    ```text
     a .
     a ./main.tf
     a ./variables.tf
@@ -90,7 +90,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 5. Create or find an existing repository in GitHub to upload your `TGZ` file to.  
 6. Open the GitHub release page for your repository by appending `/releases` to your repository URL as shown in the following example. 
-    ```
+    ```sh
     https://github.com/<gh_org>/<gh_repo>/releases
     ```
     {: codeblock}
@@ -120,16 +120,16 @@ To upload a Terraform template to a private catalog, you must first compress all
     3. Review the default values that are set for your deployment values. 
     4. Enter values for the `activity_tracker_service_plan`, `logdna_service_plan`, `sysdig_service_plan`, and `region` variables by clicking **Edit** from the actions menu. You can optionally change any of the other default deployment variable values. 
     5. Save your changes by clicking **Update**.
-    5. Change to the **Add license agreement** tab, and add any license that the user needs to agree to. 
-    6. Change to the **Edit readme** tab, and add or edit the readme for your product. 
-    7. Change to the **Validate product** tab. 
-    1. Enter a name for the {{site.data.keyword.bpshort}} workspace that you want to create for the product validation. 
-    2. In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary. 
-    3. Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} workspace is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
-8. From the actions menu, click **Publish to account** to make your product available to other users in your private catalog. 
-9. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
+    6. Change to the **Add license agreement** tab, and add any license that the user needs to agree to. 
+    7. Change to the **Edit readme** tab, and add or edit the readme for your product. 
+    8. Change to the **Validate product** tab. 
+       - Enter a name for the {{site.data.keyword.bpshort}} workspace that you want to create for the product validation. 
+       - In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary. 
+       - Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} workspace is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
+    9. From the actions menu, click **Publish to account** to make your product available to other users in your private catalog. 
+    10. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
 
-Congratulations! In this tutorial, learned how to create a private catalog in {{site.data.keyword.cloud_notm}} and how to upload an IBM-provided Terraform template as a product to your catalog. 
+Congratulations! In this tutorial, you learned how to create a private catalog in {{site.data.keyword.cloud_notm}}? and how to upload an IBM-provided Terraform template as a product to your catalog? 
 
 ## What's next?
 {: #whats-nxt}

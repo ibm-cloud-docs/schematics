@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-29"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -33,13 +33,16 @@ Before you start creating your Terraform template, make sure to review the [{{si
 Specify the cloud provider that you want to use in the `provider` block of your Terraform configuration file. The `provider` block includes all the input variables that the {{site.data.keyword.cloud}} Provider plug-in for Terraform requires to provision your resources.
 {: shortdesc}
 
-**Do I need to provide the {{site.data.keyword.cloud_notm}} API key?** </br>
+**Do I need to provide the {{site.data.keyword.cloud_notm}} API key?**
+
 The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform, receive the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform, you must provide the {{site.data.keyword.cloud_notm}} API key at all times. In {{site.data.keyword.bpshort}}, the IAM token is retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the IAM token is not retrieved for Cloud Foundry and classic infrastructure resources and the API key must be provided in the `provider` block. 
 
-**Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?** </br>
+**Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?**
+
 If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}.  
 
-**Can I provide an API key for a service ID?** </br>
+**Can I provide an API key for a service ID?**
+
 You can provide an API key for a service ID for all IAM-enabled services, including VPC infrastructure resources. You cannot use a service ID for classic infrastructure or Cloud Foundry resources. 
 
 To configure the `provider` block: 
@@ -53,7 +56,7 @@ To configure the `provider` block:
 3. Create a `provider.tf` file or add the following code to your Terraform configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov).
 
     Example for VPC infrastructure resources: 
-    ```
+    ```terraform
     provider "ibm" {
         generation = 1
         region = "<region_name>"
@@ -62,7 +65,7 @@ To configure the `provider` block:
     {: codeblock}
 
     Example for classic infrastructure resources: 
-    ```
+    ```terraform
     variable "iaas_classic_username" {
         type = "string"
     }
@@ -79,14 +82,14 @@ To configure the `provider` block:
     {: codeblock}
 
     Example for all {{site.data.keyword.containerlong_notm}} resources:
-    ```
+    ```terraform
     provider "ibm" {
     }
     ```
     {: codeblock}
 
     Example for all other resources:
-    ```
+    ```terraform
     provider "ibm" {
         region = "<region_name>"
     }
@@ -102,14 +105,12 @@ Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources t
 To support a multi-cloud approach, Terraform works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a command-line plug-in for Terraform that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources). 
 
 Example infrastructure code for provisioning a VPC: 
-```
+```terraform
 resource ibm_is_vpc "vpc" {
     name = "myvpc"
 }
 ```
 {: codeblock}
-
-
 
 ### Referencing resources in other resource blocks
 {: #reference-resource-info}
@@ -122,7 +123,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 - **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file.  </br>
 
     Example infrastructure code: 
-    ```
+    ```terraform
     resource ibm_is_vpc "vpc" {
         name = "myvpc"
     }
@@ -137,7 +138,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 - **Data sources**: You can also use the data sources from the {{site.data.keyword.cloud_notm}} Provider plug-in reference to retrieve information about an existing {{site.data.keyword.cloud_notm}} resource. Review the **Argument reference** section in the {{site.data.keyword.cloud_notm}} Provider plug-in reference to see what input parameters you must provide to retrieve an existing resource. Then, review the **Attributes reference** section to find an overview of parameters that are made available to you and that you can reference in your `resource` blocks. Use this option if you want to access the details of a resource that is configured in another Terraform configuration file. 
 
     Example infrastructure code: 
-    ```
+    ```terraform
     data ibm_is_image "ubuntu" {
         name = "ubuntu-18.04-amd64"
     }
@@ -161,21 +162,24 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 ## Using `variable` blocks to customize resources
 {: #configure-variables}
 
-You can use `variable` blocks to templatize your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center. 
+You can use `variable` blocks to templatize your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center.
 {: shortdesc}
 
-**Where do I store my variable declarations?** </br>
-You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations. 
+**Where do I store my variable declarations?**
 
-**What information do I need to include in my variable declaration?** </br>
-When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. <br> {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
-- `Terraform v0.12` supports <strong>string, list, map, bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type])</strong>. <br>
+You can decide to declare your variables within the same Terraform configuration file where you specify the resources that you want to provision, or to create a separate `variables.tf` file that includes all your variable declarations. When you create a workspace, {{site.data.keyword.bplong_notm}} automatically parses through your Terraform configuration files to find variable declarations.
 
-**Is there a character limit for input variables?** </br>
+**What information do I need to include in my variable declaration?**
+
+When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value.  \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
+- `Terraform v0.12` supports **string, list, map, bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type])**.
+
+**Is there a character limit for input variables?** 
+
 Yes. If you define input variables in your Terraform configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
 
 Example variable declaration without a default value: 
-```
+```terraform
 variable "datacenter" {
     type        = "string"
     description = "The data center that you want to deploy your Kubernetes cluster in."
@@ -184,7 +188,7 @@ variable "datacenter" {
 {: codeblock}
 
 Example variable declaration with a default value: 
-```
+```terraform
 variable "datacenter" {
     type        = "string"
     description = "The data center that you want to deploy your Kubernetes cluster in."
@@ -201,7 +205,7 @@ You can reference the value of the variable in other blocks of your Terraform co
 
 Example for referencing a `datacenter` variable: 
 
-```
+```terraform
 resource ibm_container_cluster "test_cluster" {
     name         = "test"
     datacenter   = var.datacenter
@@ -213,14 +217,14 @@ resource ibm_container_cluster "test_cluster" {
 ## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}
 
-After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. <br>
+After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. 
 - For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
 - For `CLI`, you can refer to create or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
 - For `API` you can see [create or update the values](/apidocs/schematics/schematics#createworkspace) in the field `template_data` &gt;  `variablestore`. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string for any type of the variable. 
 
     **Example**
 
-    ```
+    ```json
     "variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
@@ -340,6 +344,4 @@ The directory structure of the Terraform template in the GitHub repository is li
 | output.tf | Create output.tf |
 | provider.tf | Create provider.tf |
 | variables.tf | Create variables.tf |
-
-
-
+{: caption="Terraform template directory structure" caption-side="bottom"}

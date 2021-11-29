@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-27"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -51,7 +51,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a {{site.data.keyword.vsi_is_short}} instance. 
 
 ## What's next? 
-{: ansible-whats-next}
+{: #ansible-whats-next}
 
 Now that you ran your first operation on an {{site.data.keyword.cloud_notm}} resource, you can explore the following options:
 

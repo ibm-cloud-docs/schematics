@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-04"
+lastupdated: "2021-11-29"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -31,7 +31,7 @@ Install the required command-line to start using {{site.data.keyword.bplong_notm
     {: tip}
 
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your {{site.data.keyword.cloud_notm}} credentials when prompted.
-    ```
+    ```sh
     ibmcloud login
     ```
     {: pre}
@@ -46,22 +46,20 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
 {: shortdesc}
 
 1. Install the {{site.data.keyword.cloud_notm}} command-line plug-in for {{site.data.keyword.bpshort}}.
-
-    ```
+    ```sh
     ibmcloud plugin install schematics
     ```
     {: pre}
 
 2. Verify that the {{site.data.keyword.bplong_notm}} command-line plug-in is installed successfully. The plug-in is listed as `schematics`.
-
-    ```
+    ```sh
     ibmcloud plugin list
     ```
     {: pre}
 
     Example output:
 
-    ```
+    ```text
     Listing installed plug-ins...
 
     Plugin Name         Version   Status        
@@ -70,13 +68,13 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     {: screen}
 
 3. Verify that you can use the {{site.data.keyword.bpshort}} command-line plug-in by listing all supported commands. The command prefix to work with the {{site.data.keyword.bpshort}} command-line plug-in is `ibmcloud schematics`. 
-    ```
+    ```sh
     ibmcloud schematics help
     ```
     {: pre}
 
     Example output: 
-    ```
+    ```text
     NAME:
         ibmcloud schematics - IBM Cloud Schematics plug-in
 
@@ -105,7 +103,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     {: screen}
 
 ## Updating the CLI
-{: schematics-cli-update}
+{: #schematics-cli-update}
 
 Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in periodically to get access to new features. 
 {: shortdesc}
@@ -114,7 +112,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
 2. Log in to the {{site.data.keyword.cloud_notm}} CLI. Enter your {{site.data.keyword.cloud_notm}} credentials when prompted.
 
-    ```
+    ```sh
     ibmcloud login
     ```
     {: pre}
@@ -123,21 +121,20 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     {: tip}
 
 3. Check if an update is available for the {{site.data.keyword.bpshort}} command-line plug-in. If an update is available, you find an **Update available** notification in your command-line output. 
-    ```
+    ```sh
     ibmcloud plugin list | grep schematics
     ```
     {: pre}
 
     Example output: 
 
-    ```
+    ```text
     schematics                      1.5.9        Update Available           false
     ```
     {: screen}
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in. 
-
-    ```
+    ```sh
     ibmcloud plugin update schematics
     ```
     {: pre}
