@@ -356,7 +356,7 @@ Yes, you can increase the time out for OpenShift or Kubernetes resources. For mo
 {: faq}
 {: support}
 
-You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload.
+You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload. For more information, about setting the environment variables in the payload, refer to [{{site.data.keyword.bpshort}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
 
 ```json
 {
