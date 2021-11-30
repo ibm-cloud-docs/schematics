@@ -31,14 +31,19 @@ Follow the steps to configure the {{site.data.keyword.bpshort}} resource based o
 
 4. Click **Update** in Filter by Location page.
 5. Use the **Preview** table to confirm your selections, and click **Update**.
-6. In settings page, click **Update** to restrict the access to read, create, or update in the location.
-
-For more information, refer to [Managing catalog settings](/docs/account?topic=account-filter-account&interface=ui).
-
-Let's take an example - When the account owner restricts `us-east` location for an user in the catalog settings. If the user creates workspaces and provisions the resources in North America region, where North America comprises of `us-east` and `us-south`. In this case, the user can see his resources are provisioned only in `us-south` as `us-east` location visibility is restricted to the user.
+6. In settings page, click **Update** to restrict the access to read, create, or update in the location. For more information,  about global catalog settings, see [Managing catalog settings](/docs/account?topic=account-filter-account&interface=ui).
 
 Account owner can edit the location in {{site.data.keyword.cloud}} catalog settings only after `30 minutes`. As the catalog settings created once are valid for `30 minutes`.
 {: important}
+
+**Example:**
+
+- When the account owner restricts `us-east` location for the user in the catalog settings. 
+- If that user creates workspaces and provisions the resources in `North America` region, where North America comprises of `us-east` and `us-south`. 
+- In this case, the user can see his resources are provisioned only in `us-south` but not in `us-east` region. 
+- The reason is that the location visibility is restricted to the user by the account owner.
+
+
 
 
 
