@@ -35,7 +35,7 @@ Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in you
 :   To create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
 
 Support `WinRM` in user interface
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} actions.
+:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
 : You can now, manage the catalog settings for Schematics resources based on the location. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
