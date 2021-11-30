@@ -38,7 +38,7 @@ Support `WinRM` in user interface
 :   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
-: You can now, manage the catalog settings for Schematics resources based on the location. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
+: You can now, manage the catalog settings for Schematics resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 About `compact` download
 :   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for Schematics workspace](/docs/schematics?topic=schematics-compact-download&interface=ui).
