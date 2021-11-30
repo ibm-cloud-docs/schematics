@@ -43,6 +43,8 @@ About `compact` download
 About {{site.data.keyword.bpshort}} Job files
 :   You can download the latest state-file of a workspace by using the existing API and CLI. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
+Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
+: You can now, manage the catalog settings for Schematics resources based on the location. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 ## October 2021
 {: #release-oct-2021}
