@@ -412,3 +412,9 @@ ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --ad
 
 Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
+## How can I rectify the 403 Error while validating the location in the account. Please verify you have permission to the location in the global catalog settings.
+{: #global-setting-location}
+{: faq}
+{: support}
+
+
