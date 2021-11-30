@@ -44,7 +44,7 @@ About `compact` download
 :   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for Schematics workspace](/docs/schematics?topic=schematics-compact-download&interface=ui).
 
 About {{site.data.keyword.bpshort}} Job files
-:   You can download the latest state-file of a workspace by using the existing API and CLI. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
+:   You can now download the state-file at every job level along with the latest state-file of a workspace by using the existing API and command-line. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 ResourceQuery attribute deprecated 
 :   ResourceQuery attribute is replaced as [resource_queries](/apidocs/schematics/schematics#list-resource-query) in the API.
