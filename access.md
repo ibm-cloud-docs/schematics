@@ -13,10 +13,10 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Assigning access through Global Catalog
+# Assigning access through {{site.data.keyword.cloud_notm}} Catalog
 {: #access-ibm-cloud-catalog}
 
-## Manage location settings in global catalog
+## Manage location settings in catalog
 {: #configure-location}
 
 As the [account owner or administrator](/docs/account?topic=account-account-services#catalog-management-account-management), you can manage the settings for {{site.data.keyword.bpshort}} resource based on the location. The Account owner can restrict the location in the catalog for the invited users in the catalog. If the location is restricted for the user, then user cannot access or create new resources in the {{site.data.keyword.bpshort}} for that particular location.

@@ -38,13 +38,13 @@ Support `WinRM` in user interface
 :   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
-: You can now, manage the catalog settings for Schematics resources based on the location. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
+: You can now, manage the catalog settings for Schematics resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 About `compact` download
 :   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for Schematics workspace](/docs/schematics?topic=schematics-compact-download&interface=ui).
 
 About {{site.data.keyword.bpshort}} Job files
-:   You can download the latest state-file of a workspace by using the existing API and CLI. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
+:   You can now download the state-file at every job level along with the latest state-file of a workspace by using the existing API and command-line. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 ResourceQuery attribute deprecated 
 :   ResourceQuery attribute is replaced as [resource_queries](/apidocs/schematics/schematics#list-resource-query) in the API.
