@@ -63,6 +63,7 @@ toc:
           - solutions.md
           - compact-download.md
           - job-download-file.md
+          - access.md
       - topicgroup:
           label: Actions - Configuration management and cloud operations with Ansible
           topics:

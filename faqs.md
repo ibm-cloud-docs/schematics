@@ -417,4 +417,4 @@ Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more info
 {: faq}
 {: support}
 
-You can verify the location permission to create or view provided in the catalog settings for your account. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
+You can verify the location access to create or view the resource in the catalog settings for your account. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).

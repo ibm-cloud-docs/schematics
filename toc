@@ -44,6 +44,7 @@ Schematics
          solutions.md
          compact-download.md
          job-download-file.md
+         access.md
 
          {: .topicgroup}
          Examples
