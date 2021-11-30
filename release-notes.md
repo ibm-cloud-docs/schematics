@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-30"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,6 +20,28 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
+
+## November 2021
+{: #release-nov-2021}
+
+Review the release notes for November 2021.
+{: shortdesc}
+
+### 30 November 2021
+{: #30nov2021}
+{: release-note}
+
+Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
+:   To create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
+
+Support `WinRM` in user interface
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} actions.
+
+About `compact` download
+:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for Schematics workspace](/docs/schematics?topic=schematics-compact-download&interface=ui).
+
+About {{site.data.keyword.bpshort}} Job files
+:   You can download the latest state-file of a workspace by using the existing API and CLI. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 
 ## October 2021
@@ -43,3 +65,4 @@ Support `WinRM` in command-line
 
 Documentation lists the Command-line version change log history
 :   The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).
+

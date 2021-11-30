@@ -118,7 +118,7 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 ## Manage access tag in your account 
 {: #access-tag}
 
-You can now centrally manage access to the {{site.data.keyword.bpshort}} workspaces in your account at scale. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
+You can now centrally manage access tags to the {{site.data.keyword.bpshort}} workspaces in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
 
 - To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create). 
 - To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} workspaces](https://cloud.ibm.com/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
