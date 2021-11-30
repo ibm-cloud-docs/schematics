@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-29"
+lastupdated: "2021-11-30"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -267,7 +267,12 @@ You see authorization issues when the roles and permission access is insufficien
 
 Currently, the {{site.data.keyword.bplong_notm}} service does not support the ability to import or synchronize the {{site.data.keyword.cloud_notm}} resource state into the {{site.data.keyword.bpshort}} workspace. It is planned in the future roadmap.
 
+## How can I access the {{site.data.keyword.bpshort}} services for test ID?
+{: #global-catalog-faq}
+{: faq}
+{: support}
 
+The test IDs are considered as a valid IBM IDs to perform the global catalog or resource controller related API calls. If you are unable to access, please do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
 ## How can I download sub-folders from the Git repositories through {{site.data.keyword.bpshort}}
 {: #compact-faq}
@@ -400,3 +405,16 @@ ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --ad
 ```
 {: pre}
 
+## Can I download the {{site.data.keyword.bpshort}} Job files?
+{: #download-jobfile}
+{: faq}
+{: support}
+
+Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
+
+## How can I rectify the 403 Error while validating the location in the account. Please verify you have permission to the location in the global catalog settings?
+{: #global-setting-location}
+{: faq}
+{: support}
+
+You can verify the location access to create or view the resource in the catalog settings for your account. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-27"
+lastupdated: "2021-11-30"
 
 keywords: schematics, automation, terraform
 
@@ -113,6 +113,18 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
     - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies. 
     - The resource group of the {{site.data.keyword.bpshort}} workspace or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
     - For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy.  
+
+
+## Manage access tag in your account 
+{: #access-tag}
+
+You can now centrally manage access tags to the {{site.data.keyword.bpshort}} workspace in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
+
+- To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create). 
+- To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} workspaces](https://cloud.ibm.com/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
+
+For more information, about managing access tags, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
+
 
 
 
