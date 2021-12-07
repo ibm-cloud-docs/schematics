@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-30"
+lastupdated: "2021-12-07"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -321,6 +321,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
  2021/11/08 12:34:11 Fatal, could not download repo, Failed to clone git repository, couldn't find remote ref "refs/heads/2021.10" (most likely invalid branch name is passed)
  2021/11/08 12:34:12 Problems found with the Repository. Please Rectify and Retry
 ```
+
 If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: note}
 
@@ -354,7 +355,7 @@ Yes there is a change in the api which checks for the location first and if it d
 {: support}
 
 Yes, you can increase the time out for OpenShift or Kubernetes resources. For more information, about managing or adding the time-out option for the cluster resource, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
-![Configuring input variable to silence warning message](images/advanced_inputvariable.png){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
+
 
 ## How can I enable Terraform debug through the `ibmcloud schematics` command line?
 {: #terraform-debug-ibmcli}
@@ -418,3 +419,4 @@ Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more info
 {: support}
 
 You can verify the location access to create or view the resource in the catalog settings for your account. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
+
