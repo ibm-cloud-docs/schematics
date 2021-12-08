@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-12-01"
+lastupdated: "2021-12-07"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -14,6 +14,7 @@ subcollection: schematics
 
 # Release notes
 {: #rel-notes}
+
 
 Use the release notes to learn about the latest changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
