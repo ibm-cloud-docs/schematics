@@ -449,6 +449,7 @@ You can verify the location access to create or view the resource in the catalog
          {
            "TF_LOG": "debug"
          },
+   ]    
  ```
 
 ## How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?
