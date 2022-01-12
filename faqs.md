@@ -396,6 +396,7 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
 {: support}
 
 Use `ibmcloud schematics workspace import --options value, -o value : Optional` command and the sample syntax to import from command-line. For more information, about how {{site.data.keyword.bpshort}} workspace import works, see [{{site.data.keyword.bpshort}} workspace import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
+
 ``` sh
 
 ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
