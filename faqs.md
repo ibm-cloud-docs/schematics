@@ -492,3 +492,4 @@ You can edit one variable at a time from {{site.data.keyword.bpshort}} console. 
 
  Yes, you can use {{site.data.keyword.openwhisk_short}} to perform the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution) GitHub repository.
  
+ 
