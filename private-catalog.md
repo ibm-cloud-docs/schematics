@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-27"
+  years: 2017, 2022
+lastupdated: "2022-01-12"
 
 keywords: schematics, automation, terraform
 
@@ -107,7 +107,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 {: #create-private-catalog}
 {: step}
 
-1. [Create a private catalog in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-create-private-catalog&interface=ui#create-catalog).
+1. [Create a private catalog in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-catalog-access&interface=ui).
 2. Import your {{site.data.keyword.bpshort}} template as a product into your private catalog.
     1. From the **Private catalogs** page, select the private catalog that you created.
     2. Click **Add**. 

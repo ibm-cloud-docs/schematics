@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-27"
+  years: 2017, 2022
+lastupdated: "2022-01-12"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -26,7 +26,7 @@ Now {{site.data.keyword.bplong}} supports setting a custom value for parallelism
 ## Usage
 {: #parelleism-usage}
 
-You can pass Terraform command-line arguments `TF_CLI_ARGS` as an environment variables with the specific name such as `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bplong_notm}} workspace for a customized experience. Terraform reads these environment variables and apply parallelism at runtime. For more information, about Terraform command-line arguments, see [TF_CLI_ARGS and TF_CLI_ARGS_name](https://www.terraform.io/docs/cli/config/environment-variables.html#tf_cli_args-and-tf_cli_args_name){: external}. 
+You can pass Terraform command-line arguments `TF_CLI_ARGS` as an environment variables with the specific name such as `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bplong_notm}} workspace for a customized experience. Terraform reads these environment variables and apply parallelism at runtime. For more information, about Terraform command-line arguments, see [TF_CLI_ARGS and TF_CLI_ARGS_name](https://www.terraform.io/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}. 
 
 ### Example using parallelism
 {: #parallelism-example}
@@ -108,7 +108,7 @@ A sample `tf_values` block in the create payload.
 ## List of environment variables
 {: #list-special-env-vars}
 
-{{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information, about special environment variables, see [Environment variables](https://www.terraform.io/docs/cli/config/environment-variables.html). 
+{{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information, about special environment variables, see [Environment variables](https://www.terraform.io/cli/config/environment-variables). 
 
 | Variable | Description | Usage |
 | ----  | ----- | ----- |

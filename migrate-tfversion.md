@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-29"
+  years: 2017, 2022
+lastupdated: "2022-01-12"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -22,7 +22,7 @@ The driver to migrate might come from business factors such as cost reduction, o
 ## Upgrade Terraform version in {{site.data.keyword.bpshort}} workspace
 {: #migrate-steps}
 
-Upgrading the {{site.data.keyword.bpshort}} workspace to use the latest version of the Terraform, may be required to leverage the latest features in Terraform. You must carefully review the [Terraform upgrade guide](https://www.terraform.io/upgrade-guides/index.html) before attempting to upgrade to the next version. 
+Upgrading the {{site.data.keyword.bpshort}} workspace to use the latest version of the Terraform, may be required to leverage the latest features in Terraform. You must carefully review the [Terraform upgrade guide](https://www.terraform.io/language/upgrade-guides) before attempting to upgrade to the next version. 
 
 The upgrade requires the following steps to support the latest Terraform version in the {{site.data.keyword.bpshort}} workspace.
 
@@ -39,7 +39,7 @@ Here are detailed steps that you can follow to upgrade.
 
 1. As a prerequisites, ensure {{site.data.keyword.bpshort}} workspace is created, plan is generated, and applied a job for your resources by using Terraform v0.12.  Ensure Terraform configuration files and Terraform state file, are in a consistent state for Terraform v0.12.
 2. Download or clone the Git repository used by your Terraform v0.12 {{site.data.keyword.bpshort}} workspace to your local machine.
-3. Change directory to your cloned repository and upgrade your repository to Terraform v0.13 by executing `Terraform v0.13upgrade` command. For more information, see [Upgrading to Terraform v0.13 documentation](https://www.terraform.io/upgrade-guides/0-13.html){: external}. The upgrade command generates a `versions.tf` file.
+3. Change directory to your cloned repository and upgrade your repository to Terraform v0.13 by executing `Terraform v0.13upgrade` command. For more information, see [Upgrading to Terraform v0.13 documentation](https://www.terraform.io/language/upgrade-guides/0-13){: external}. The upgrade command generates a `versions.tf` file.
 4. Edit `versions.tf` file by uncommenting the source parameter and add `source = "IBM-Cloud/ibm"` as shown in the code block.
 
     `versions.tf` file
