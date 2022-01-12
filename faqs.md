@@ -474,7 +474,7 @@ You can verify the location access to create or view the resource in the catalog
     2021/12/06 10:15:49 Terraform apply | 
     2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
     2021/12/06 10:15:50 Could not execute action
-  ```
+   ```
 
 WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
 
