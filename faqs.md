@@ -457,23 +457,23 @@ You can verify the location access to create or view the resource in the catalog
  {: support}
 
   ```text
-  Error: 2021/12/06 10:15:49 Terraform apply | Error: Error running command 'ANSIBLE_FORCE_COLOR=true ansible-playbook ansible.yml --inventory-file='inventory.yml' --extra-vars='{"ansible_connection":"winrm","ansible_password":"password","ansible_user":"administrator","ansible_winrm_server_cert_validation":"ignore"}' --forks=15 --user='root' --ssh-extra-args='-p 22 -o ConnectTimeout=120 -o ConnectionAttempts=3 -o StrictHostKeyChecking=no'': exit status 2. Output: 
-    2021/12/06 10:15:49 Terraform apply | PLAY [Please wait and have a coffee! The show is about to begin....] ***********
-    2021/12/06 10:15:49 Terraform apply | 
-    2021/12/06 10:15:49 Terraform apply | TASK [Gathering Facts] *********************************************************
-    2021/12/06 10:15:49 Terraform apply | fatal: [161.156.161.7]: FAILED! => {"msg": "winrm or requests is not installed: No module named 'winrm'"}
-    2021/12/06 10:15:49 Terraform apply | 
-    2021/12/06 10:15:49 Terraform apply | PLAY RECAP *********************************************************************
-    2021/12/06 10:15:49 Terraform apply | 161.156.161.7              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
-    2021/12/06 10:15:49 Terraform apply | 
-    2021/12/06 10:15:49 Terraform apply | 
-    2021/12/06 10:15:49 Terraform apply | 
-    2021/12/06 10:15:49 Terraform apply |   with null_resource.schematics_for_windows,
-    2021/12/06 10:15:49 Terraform apply |   on schematics.tf line 2, in resource "null_resource" "schematics_for_windows":
-    2021/12/06 10:15:49 Terraform apply |    2:   provisioner "ansible" {
-    2021/12/06 10:15:49 Terraform apply | 
-    2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
-    2021/12/06 10:15:50 Could not execute action
+  Error: 2021/12/06 10:15:49 Terraform apply | Error: Error running command 'ANSIBLE_FORCE_COLOR=true ansible-playbook ansible.yml --inventory-file='inventory.yml' --extra-vars='{"ansible_connection":"winrm","ansible_password":"password","ansible_user":"administrator","ansible_winrm_server_cert_validation":"ignore"}' --forks=15 --user='root' --ssh-extra-args='-p 22 -o ConnectTimeout=120 -o ConnectionAttempts=3 -o StrictHostKeyChecking=no'': exit status 2. Output:
+  2021/12/06 10:15:49 Terraform apply | PLAY [Please wait and have a coffee! The show is about to begin....] ***********
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply | TASK [Gathering Facts] *********************************************************
+  2021/12/06 10:15:49 Terraform apply | fatal: [161.156.161.7]: FAILED! => {"msg": "winrm or requests is not installed: No module named 'winrm'"}
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply | PLAY RECAP *********************************************************************
+  2021/12/06 10:15:49 Terraform apply | 161.156.161.7              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply |   with null_resource.schematics_for_windows,
+  2021/12/06 10:15:49 Terraform apply |   on schematics.tf line 2, in resource "null_resource" "schematics_for_windows":
+  2021/12/06 10:15:49 Terraform apply |    2:   provisioner "ansible" {
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
+  2021/12/06 10:15:50 Could not execute action
    ```
 
 WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
@@ -491,5 +491,4 @@ You can edit one variable at a time from {{site.data.keyword.bpshort}} console. 
  {: support}
 
  Yes, you can use {{site.data.keyword.openwhisk_short}} to perform the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution) GitHub repository.
- 
  
