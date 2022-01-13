@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-12"
+lastupdated: "2022-01-13"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -327,7 +327,7 @@ If the `Release` parameter is empty and the `Branch` was set with release tag.
 
 {{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics_internal_v1#create-workspace).
 
-##  How do I overcome the request exceeding the 'Cluster' resource quota of '100' for the account in any region?
+##  How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
 {: faq}
 {: support}
@@ -457,8 +457,8 @@ You can verify the location access to create or view the resource in the catalog
  {: faq}
  {: support}
 
-  ```text
-  Error: 2021/12/06 10:15:49 Terraform apply | Error: Error running command 'ANSIBLE_FORCE_COLOR=true ansible-playbook ansible.yml --inventory-file='inventory.yml' --extra-vars='{"ansible_connection":"winrm","ansible_password":"password","ansible_user":"administrator","ansible_winrm_server_cert_validation":"ignore"}' --forks=15 --user='root' --ssh-extra-args='-p 22 -o ConnectTimeout=120 -o ConnectionAttempts=3 -o StrictHostKeyChecking=no'': exit status 2. Output:
+ ```text
+ Error: 2021/12/06 10:15:49 Terraform apply | Error: Error running command 'ANSIBLE_FORCE_COLOR=true ansible-playbook ansible.yml --inventory-file='inventory.yml' --extra-vars='{"ansible_connection":"winrm","ansible_password":"password","ansible_user":"administrator","ansible_winrm_server_cert_validation":"ignore"}' --forks=15 --user='root' --ssh-extra-args='-p 22 -o ConnectTimeout=120 -o ConnectionAttempts=3 -o StrictHostKeyChecking=no'': exit status 2. Output:
   2021/12/06 10:15:49 Terraform apply | PLAY [Please wait and have a coffee! The show is about to begin....] ***********
   2021/12/06 10:15:49 Terraform apply |
   2021/12/06 10:15:49 Terraform apply | TASK [Gathering Facts] *********************************************************
@@ -475,7 +475,7 @@ You can verify the location access to create or view the resource in the catalog
   2021/12/06 10:15:49 Terraform apply |
   2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
   2021/12/06 10:15:50 Could not execute action
-   ```
+```
 
 WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
 
@@ -491,5 +491,5 @@ You can edit one variable at a time from {{site.data.keyword.bpshort}} console. 
  {: faq}
  {: support}
 
- Yes, you can use {{site.data.keyword.openwhisk_short}} to perform the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution) GitHub repository.
+ Yes, you can use {{site.data.keyword.openwhisk_short}} to perform the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution){: external} GitHub repository.
  
