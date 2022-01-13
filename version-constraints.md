@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-27"
+  years: 2017, 2022
+lastupdated: "2022-01-12"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -110,7 +110,7 @@ Provider for REST API            v1.10.0
 ## Specifying version constraints for the Terraform CLI and Terraform providers
 {: #version-constraints-terraform}
 
-You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information, about how to specify version constraints, see the [Terraform documentation](https://www.terraform.io/docs/language/expressions/version-constraints.html){: external}. 
+You can choose to specify the Terraform CLI version and the version of any of the providers that you want to use by using Terraform version constraints. For more information, about how to specify version constraints, see the [Terraform documentation](https://www.terraform.io/language/expressions/version-constraints){: external}. 
 {: shortdesc}
 
 ### Version constraints for the Terraform CLI

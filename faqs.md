@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-07"
+  years: 2017, 2022
+lastupdated: "2022-01-13"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -180,7 +180,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 
 You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
 - Export the Terraform state file, from the {{site.data.keyword.bpshort}} workspace by using the [ibmcloud schematics state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
-- Follow the steps described by [Hashicorp](https://www.terraform.io/upgrade-guides/index.html){: external} to upgrade from `Terraform v0.11 to v0.12`, `Terraform v0.12 to v0.13`, or higher. Upgrade your Terraform configuration `.tf` file and Terraform state file as per the latest Terraform version requirement. **Note** Use your own machine or laptop to perform these operations.
+- Follow the steps described by [Hashicorp](https://www.terraform.io/language/upgrade-guides){: external} to upgrade from `Terraform v0.11 to v0.12`, `Terraform v0.12 to v0.13`, or higher. Upgrade your Terraform configuration `.tf` file and Terraform state file as per the latest Terraform version requirement. **Note** Use your own machine or laptop to perform these operations.
 - Upload the upgraded Terraform configuration `.tf` file, to an existing or a new Git repository.
 - Create the {{site.data.keyword.bpshort}} workspace with the upgraded Terraform configuration `.tf` file in the Git repository and the upgraded state file by using the [ibmcloud schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 - Run the {{site.data.keyword.bpshort}} workspace [refresh](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the newly created workspace is able to connect and work with the existing {{site.data.keyword.cloud_notm}} resources.
@@ -327,7 +327,7 @@ If the `Release` parameter is empty and the `Branch` was set with release tag.
 
 {{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics_internal_v1#create-workspace).
 
-##  How do I overcome the request exceeding the 'Cluster' resource quota of '100' for the account in any region?
+##  How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
 {: faq}
 {: support}
@@ -396,6 +396,7 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
 {: support}
 
 Use `ibmcloud schematics workspace import --options value, -o value : Optional` command and the sample syntax to import from command-line. For more information, about how {{site.data.keyword.bpshort}} workspace import works, see [{{site.data.keyword.bpshort}} workspace import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
+
 ``` sh
 
 ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
@@ -420,3 +421,75 @@ Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more info
 
 You can verify the location access to create or view the resource in the catalog settings for your account. For more information, see [Manage location settings in global catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
+##	How can I resolve the error when using {{site.data.keyword.bpshort}} to create a LogDNA instance? 
+ {: #logdnainstance-faq}
+ {: faq}
+ {: support}
+
+ You need to update or increase the timeout value by 5 minutes or 10 minutes depending upon the service as shown in the terraform block. Or you need to send **null value** to use the default values.
+
+ ```terraform
+ variable "create_timeout" 
+ {
+  type = String
+  description = "Timeout duration to create LogDNA instance in Schematics."
+  default = "15m"
+ }
+ ```
+
+## Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} workspace console without using Catalog service or {{site.data.keyword.bpshort}} command line?
+ {: #terraformcli-arguments-faq}
+ {: faq}
+ {: support}
+
+ No, you cannot set an environment variable values in the {{site.data.keyword.bpshort}} workspace console directly. Instead you can use a CURL by using the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+
+ ```json
+   "env_values": [
+         {
+           "TF_LOG": "debug"
+         },
+   ]    
+ ```
+
+## How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?
+ {: #winrm-faq}
+ {: faq}
+ {: support}
+
+ ```text
+ Error: 2021/12/06 10:15:49 Terraform apply | Error: Error running command 'ANSIBLE_FORCE_COLOR=true ansible-playbook ansible.yml --inventory-file='inventory.yml' --extra-vars='{"ansible_connection":"winrm","ansible_password":"password","ansible_user":"administrator","ansible_winrm_server_cert_validation":"ignore"}' --forks=15 --user='root' --ssh-extra-args='-p 22 -o ConnectTimeout=120 -o ConnectionAttempts=3 -o StrictHostKeyChecking=no'': exit status 2. Output:
+  2021/12/06 10:15:49 Terraform apply | PLAY [Please wait and have a coffee! The show is about to begin....] ***********
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply | TASK [Gathering Facts] *********************************************************
+  2021/12/06 10:15:49 Terraform apply | fatal: [161.156.161.7]: FAILED! => {"msg": "winrm or requests is not installed: No module named 'winrm'"}
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply | PLAY RECAP *********************************************************************
+  2021/12/06 10:15:49 Terraform apply | 161.156.161.7              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:49 Terraform apply |   with null_resource.schematics_for_windows,
+  2021/12/06 10:15:49 Terraform apply |   on schematics.tf line 2, in resource "null_resource" "schematics_for_windows":
+  2021/12/06 10:15:49 Terraform apply |    2:   provisioner "ansible" {
+  2021/12/06 10:15:49 Terraform apply |
+  2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
+  2021/12/06 10:15:50 Could not execute action
+```
+
+WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
+
+## Can I edit all the variables in the {{site.data.keyword.bpshort}} console instead of editing individually?
+ {: #edit-variables-faq}
+ {: faq}
+ {: support}
+
+You can edit one variable at a time from {{site.data.keyword.bpshort}} console. From the command line you can edit all the variables of the workspace in the JSON format by using [ibmcloud schematics workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
+
+## Can I start or stop the {{site.data.keyword.vsi_is_short}} based on tags and through scheduler or cron job?
+ {: #vm-tags-faq}
+ {: faq}
+ {: support}
+
+ Yes, you can use {{site.data.keyword.openwhisk_short}} to perform the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution){: external} GitHub repository.
+ 
