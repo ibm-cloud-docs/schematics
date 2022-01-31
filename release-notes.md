@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-07"
+  years: 2017, 2022
+lastupdated: "2022-01-31"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -21,6 +21,35 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
+
+## January 2021
+{: #release-jan-2021}
+
+Review the release notes for Janyart 2021.
+{: shortdesc}
+
+### 31 January 2021
+{: #31dec2021}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18th January 2021.
+
+Support installer for PowerLinux&trade; and System/390 Linux&trade; 
+:   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-schematics-cli-reference) Operating System.
+
+## December 2021
+{: #release-dec-2021}
+
+Review the release notes for December 2021.
+{: shortdesc}
+
+### 30 December 2021
+{: #30dec2021}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.6.2](/docs/schematics?topic=schematics-cli_version-releases) released on 2nd December 2021.
 
 ## November 2021
 {: #release-nov-2021}
