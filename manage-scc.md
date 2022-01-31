@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-16"
+  years: 2017, 2022
+lastupdated: "2022-01-31"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics,
 
