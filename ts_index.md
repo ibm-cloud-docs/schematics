@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-04"
+  years: 2017, 2022
+lastupdated: "2022-01-31"
 
 keywords: schematics help, schematics support, schematics troubleshooting, schematics errors, schematics slack
 
