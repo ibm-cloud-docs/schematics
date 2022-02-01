@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-12"
+lastupdated: "2022-02-01"
 
 keywords: schematics, automation, terraform
 
@@ -66,29 +66,40 @@ To upload a Terraform template to a private catalog, you must first compress all
     ```
     {: pre}
 
-3. Optional: Review the `readme.md` file and the Terraform configuration files that are stored in the `terraform` directory. 
+3. Optional: Review the `readme.md` file and the Terraform configuration files. 
 4. Compress your Terraform configuration files to create the `TGZ` file. The `TGZ` file is required to upload your Terraform template as a product to the private catalog. 
 
     To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level above. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
     {: note}
 
     ```sh
-    tar -czvf observability.tgz -C terraform .
+    tar czvf observability.tgz .
     ```
     {: pre}
 
     Example output:
     ```text
     a .
-    a ./main.tf
-    a ./variables.tf
-    a ./version.tf
     a ./output.tf
-    a ./provider.tf
+    a ./main.tf
+    a ./.README.md.swp
+    a ./LICENSE
+    a ./observability.png
+    a ./diagrams
+    a ./observability.tgztar: ./observability.tgz: Can't add archive to itself
+
+    a ./README.md
+    a ./.secrets.baseline
+    a ./observability.drawio
+    a ./variables.tf
+    a ./local.tf
+    a ./version.tf
+    a ./diagrams/observability.png
+    a ./diagrams/observability.drawio
     ```
     {: screen}
 
-5. Create or find an existing repository in GitHub to upload your `TGZ` file to.  
+5. Create or find an existing repository in GitHub to upload your `TGZ` file.  
 6. Open the GitHub release page for your repository by appending `/releases` to your repository URL as shown in the following example. 
     ```sh
     https://github.com/<gh_org>/<gh_repo>/releases
@@ -126,7 +137,7 @@ To upload a Terraform template to a private catalog, you must first compress all
        - Enter a name for the {{site.data.keyword.bpshort}} workspace that you want to create for the product validation. 
        - In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary. 
        - Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} workspace is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
-    9. From the actions menu, click **Publish to account** to make your product available to other users in your private catalog. 
+    9. From the **Actions** menu, click **Share** to make your product available to other users in your private catalog. 
     10. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
 
 Congratulations! In this tutorial, you learned how to create a private catalog in {{site.data.keyword.cloud_notm}}? and how to upload an IBM-provided Terraform template as a product to your catalog? 
