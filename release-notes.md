@@ -22,18 +22,18 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
 
-## January 2021
-{: #release-jan-2021}
+## January 2022
+{: #release-jan-2022}
 
-Review the release notes for Janyart 2021.
+Review the release notes for January 2022.
 {: shortdesc}
 
-### 31 January 2021
-{: #31dec2021}
+### 31 January 2022
+{: #31dec2022}
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18th January 2021.
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18th January 2022.
 
 Supports installer for PowerLinux&trade; and System/390 Linux&trade; 
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-setup-cli) Operating System.
