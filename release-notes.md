@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-01"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -35,8 +35,8 @@ Review the release notes for Janyart 2021.
 Release {{site.data.keyword.bpshort}} command-line plugin 
 :   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18th January 2021.
 
-Support installer for PowerLinux&trade; and System/390 Linux&trade; 
-:   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-schematics-cli-reference) Operating System.
+Supports installer for PowerLinux&trade; and System/390 Linux&trade; 
+:   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-setup-cli) Operating System.
 
 ## December 2021
 {: #release-dec-2021}
