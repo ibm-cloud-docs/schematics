@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-13"
+lastupdated: "2022-02-07"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -493,3 +493,69 @@ You can edit one variable at a time from {{site.data.keyword.bpshort}} console. 
 
  Yes, you can use {{site.data.keyword.openwhisk_short}} to perform the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution){: external} GitHub repository.
  
+
+## Can I set or manage keys for  `ibm_kms_key` resource when Schematics workspace imports Terraform?
+{: #kmskey-value-faq}
+{: faq}
+{: support}
+
+Yes, you can set or manage the keys by using ibm_kms_key. Here is sample code block to provision KMS keys. For more information, about provision KMS key with key policies see [ibm_kms_key]( https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key#import). 
+
+```terraform
+resource "ibm_resource_instance" "kms_instance" {
+  name     = "instance-name"
+  service  = "kms"
+  plan     = "tiered-pricing"
+  location = "us-south"
+}
+resource "ibm_kms_key" "test" {
+  instance_id  = ibm_resource_instance.kms_instance.guid
+  key_name     = "key-name"
+  standard_key = false
+  force_delete =true
+}
+resource "ibm_cos_bucket" "smart-us-south" {
+  bucket_name          = "atest-bucket"
+  resource_instance_id = "cos-instance-id"
+  region_location      = "us-south"
+  storage_class        = "smart"
+  key_protect          = ibm_kms_key.test.id
+}
+```
+
+## Can I enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running workspace list command?
+{: #traces-api-faq}
+{: faq}
+{: support}
+
+No, currently {{site.data.keyword.bpshort}} do not support this feature while executing `IBMCLOUD_TRACE=true ibmcloud schematics workspace list` command. 
+
+## How do I overcome the `Error while retrieving Schematics Instance for the given account` while trying to fetch my {{site.data.keyword.bpshort}} workspaces?
+{: #badstatus-workspace-faq}
+{: faq}
+{: support}
+
+```text
+Error:
+Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
+```
+
+You might have insufficient access for the workspaces in specified location to fetch the instance. Please do check the permission provided for your account and the locations where your instance need to be created.
+
+## How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?
+{: #gitlab-workspace-faq}
+{: faq}
+{: support}
+
+Yes, You can access the private (IBM) GitLab repository by using {{site.data.keyword.bpshort}} with required privileges.
+- In case of private (IBM) GitLab repository **git.cloud.ibm.com**, access token is not needed as the IAM token is used.
+- In case of public GitLab **gitlab.com**, `read_repository` and `read_api` access is needed to validate the given branch name for private repository.
+
+Here is a sample Terraform codeblock to configure the GitLab repository details.
+
+```terraform
+"template_repo": {
+"url": "<gitlab_source_repo_url>",
+"branch": ""
+},
+```
