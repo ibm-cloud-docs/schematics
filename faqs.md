@@ -530,7 +530,7 @@ resource "ibm_cos_bucket" "smart-us-south" {
 
 No, currently {{site.data.keyword.bpshort}} do not support this feature while executing `IBMCLOUD_TRACE=true ibmcloud schematics workspace list` command. 
 
-## How do I overcome the `Error while retrieving Schematics Instance for the given account` while trying to fetch my {{site.data.keyword.bpshort}} workspaces?
+## How do I overcome the `Error while retrieving Schematics Instance for the given account` while trying to fetch {{site.data.keyword.bpshort}} workspaces?
 {: #badstatus-workspace-faq}
 {: faq}
 {: support}
@@ -540,7 +540,7 @@ Error:
 Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
 ```
 
-You might have insufficient access for the workspaces in specified location to fetch the instance. Please do check the permission provided for your account and the locations where your instance need to be created.
+You might have insufficient access for the workspaces in specified location to fetch the instance. Please do check the permission provided for your account and the locations where your instance need to be created. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 
 ## How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?
 {: #gitlab-workspace-faq}
