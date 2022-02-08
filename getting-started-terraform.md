@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -44,7 +44,7 @@ Use the IBM-provided Terraform template to provision an {{site.data.keyword.cos_
         ```
         {: codeblock}
 
-    2. Select `terraform_v0.12` from the **Terraform version** drop down. 
+    2. Select `terraform_v0.12` from the **Terraform version** drop down. **Note** Select `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specific `terraform_v1.0` then it means users can have template that may be of `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on.
     3. Click **Save template information** to save the information that you entered. 
 4. Enter your template variables. 
     1. Enter a name for your {{site.data.keyword.cos_full_notm}} instance. 

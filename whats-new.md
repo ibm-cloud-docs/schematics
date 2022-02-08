@@ -117,7 +117,7 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 
 |Date|Description|
 |-----|---------|
-|25 November 2020 |<ul><li> **Terraform v0.13 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.13. You can now choose to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13`.  With Terraform version 0.13, the syntax for configuration files changed. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. </li></ul> |
+|25 November 2020 |<ul><li> **Terraform v0.13 support**: {{site.data.keyword.bplong_notm}} now supports Terraform v0.13. You can now choose to run your infrastructure code with Terraform version `0.11` or `0.12` or `0.13`. With Terraform version 0.13, the syntax for configuration files changed. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. </li></ul> |
 {: caption="What's new in November" caption-side="top"}
 
 ## October 2020

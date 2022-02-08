@@ -468,7 +468,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td>`terraform_version`</td>
     <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v0.12` to use Terraform version 0.12, and similarly, terraform_v0.13, terraform_v0.14. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specific `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
     </tr>
     <tr>
     <td>`location`</td>
@@ -814,7 +814,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td><code>type</code></td>
     <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter <code>terraform_v0.14</code> to use Terraform version 0.14, <code>terraform_v0.13</code> to use Terraform version 0.13, and <code>terraform_v0.12</code> to use Terraform version 0.12. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specific `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
     </tr>
     <tr>
     <td><code>description</code></td>
