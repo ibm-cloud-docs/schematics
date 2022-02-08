@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -88,7 +88,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
         ibmcloud schematics command [arguments...] [command options]
 
     COMMANDS:
-        action          Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
+        action          Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls, and pass environment-specific variables.
         apply           Apply a plan to an workspace to deploy the latest version of your configuration.
         destroy         Destroy resources in an existing workspace. This action cannot be reversed.
         job             Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.

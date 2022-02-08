@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -37,7 +37,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-2. Refresh your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. This process might take a few minutes to complete.
+2. Refresh your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform state file of your workspace. This process might take a few minutes to complete.
     ```sh
     ibmcloud schematics refresh --id <workspace_ID>
     ```
@@ -49,7 +49,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-4. Retrieve the Terraform statefile for your workspace and note the name of the resource that is [tainted](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint).
+4. Retrieve the Terraform state file for your workspace and note the name of the resource that is [tainted](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint).
     ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```
@@ -57,13 +57,13 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
 
 5. Verify that the [tainted resource](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) is successfully provisioned and in a healthy state by using the {{site.data.keyword.cloud_notm}} console, CLI, or API. For example, if you tried to provision an {{site.data.keyword.containerlong_notm}} cluster, check that the cluster is in a `Normal` state and that you can successfully connect to the cluster. 
 
-6. [Untaint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint) the resource. Enter the name of the tainted resource that you retrieved from the statefile in the `--address` parameter. For example, a cluster resource name from a statefile might look like this: `ibm_container_vpc_cluster.mycluster`. 
+6. [Untaint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint) the resource. Enter the name of the tainted resource that you retrieved from the state file in the `--address` parameter. For example, a cluster resource name from a state file might look like this: `ibm_container_vpc_cluster.mycluster`. 
     ```sh
     ibmcloud schematics workspace untaint --id <workspace_ID> --address <resource_name>
     ```
     {: pre}
 
-7. Retrieve the Terraform statefile for your workspace again and verify that your resource is marked as `untainted`. 
+7. Retrieve the Terraform state file for your workspace again and verify that your resource is marked as `untainted`. 
     ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```

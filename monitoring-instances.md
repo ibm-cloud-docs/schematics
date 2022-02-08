@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -113,7 +113,7 @@ For the Schematics instance, following five different time series counts or char
 | Number of workspaces in draft state |  ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Draft”} |
 | Number of inactive workspaces | ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Inactive”} |
 | Number of workspaces deleted | ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Template Error”} |
-{: caption="Worksapce time series count" caption-side="bottom"}
+{: caption="Workspace time series count" caption-side="bottom"}
 
 ### ibm_schematics_workspace_actions_count
 {: #wkspace-actions-count}
@@ -165,4 +165,4 @@ For the Schematics instance, following time series counts and charts are derived
 | Status | Query |
 | ------ | -------- |
 | Number of workspace currently managed  | avg(avg(ibm_schematics_vulnerability_count)) |
-{: caption="Vulnerabilty count of {{site.data.keyword.bpshort}} workspace" caption-side="bottom"}
+{: caption="Vulnerability count of {{site.data.keyword.bpshort}} workspace" caption-side="bottom"}

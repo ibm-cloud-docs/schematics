@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -30,7 +30,7 @@ Similar to the `remote_state` data source, you can only access information that 
 
 1. Follow the example in the [getting started tutorial](/docs/schematics?topic=schematics-getting-started) to create a {{site.data.keyword.bpshort}} workspace and provision a virtual server in a VPC. As you follow the instructions, review the output variables that are defined at the end of the `vpc.tf` Terraform configuration file. 
 
-    If you already used a different Terraform configuration file in one of your workspaces, you can use this workspace for this excercise. Make sure to add output values as outlined in this example to your configuration file so that you can access your workspace information later. 
+    If you already used a different Terraform configuration file in one of your workspaces, you can use this workspace for this exercise. Make sure to add output values as outlined in this example to your configuration file so that you can access your workspace information later. 
     {: tip}
 
     ```terraform

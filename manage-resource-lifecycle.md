@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -18,7 +18,7 @@ subcollection: schematics
 Deploy, modify, and remove {{site.data.keyword.cloud}} resources by changing the infrastructure code in your Terraform template and by using {{site.data.keyword.bplong_notm}} to apply the template in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
-**When do I use {{site.data.keyword.bplong_notm}} vs. the individual resource dashboards?**</br>
+**When do I use {{site.data.keyword.bplong_notm}} versus the individual resource dashboards?**</br>
 With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}, you use the VPC console, API, or command-line to stop, reboot, and power on your virtual server instance. However to remove the virtual server instance, you use {{site.data.keyword.bplong_notm}}. 
 
 **What happens if I manually added, or removed a resource from the service dashboard directly?** </br>
@@ -65,7 +65,7 @@ To update {{site.data.keyword.cloud_notm}} resources, you must first change the 
 **What changes can I make to my resources?** </br>
 You can choose to add, modify, or remove infrastructure code in your Terraform template in GitHub, or update variable values from the workspace dashboard in {{site.data.keyword.bplong_notm}}.  
 
-Depending on how you change the configuration of existing resources, {{site.data.keyword.bplong_notm}} might not be able to update your resource. Instead, {{site.data.keyword.bplong_notm}} might decide that in order to apply the change, the resource must be removed, and a new resource must be created. If your resource must be removed, make sure that you do not interrupt a working environment, or delete data. 
+Depending on how you change the configuration of existing resources, {{site.data.keyword.bplong_notm}} might not be able to update your resource. Instead, {{site.data.keyword.bplong_notm}} might decide to apply the change, the resource must be removed, and a new resource must be created. If your resource must be removed, make sure that you do not interrupt a working environment, or delete data. 
 {: note}
 
 **When I change my configuration file in GitHub, is my change automatically available in the next execution plan?** </br>
@@ -100,13 +100,13 @@ Managing deviations between the real-world state of your cloud environment and y
 - You used other automation tools, such as scripts to manipulate the state of your {{site.data.keyword.cloud_notm}} resources.
 
 **Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?**</br>
-After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by running a {{site.data.keyword.bpshort}} apply action, the state of resources is stored in a Terraform statefile (`terraform.tfstate`). {{site.data.keyword.bpshort}} uses this statefile as the single source of truth to determine what resources exist in your account. The statefile maps the resources that you specified in your Terraform configuration file to the {{site.data.keyword.cloud_notm}} resource that you provisioned.
+After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by running a {{site.data.keyword.bpshort}} apply action, the state of resources is stored in a Terraform state file (`terraform.tfstate`). {{site.data.keyword.bpshort}} uses this state file as the single source of truth to determine what resources exist in your account. The state file maps the resources that you specified in your Terraform configuration file to the {{site.data.keyword.cloud_notm}} resource that you provisioned.
 
 **How can I compare the required state of my cloud resources against the actual state of my resources?** </br>
 To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files and the resources that exist in your {{site.data.keyword.cloud_notm}} account, you can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
 
 **What deviations cannot be detected?**</br>
-A Terraform execution plan is based on the Terraform statefile that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces,  by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
+A Terraform execution plan is based on the Terraform state file that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces,  by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
 
 **To view deviations between the resources in your {{site.data.keyword.cloud_notm}} account and your Terraform configuration**: 
 

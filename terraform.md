@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 subcollection: schematics
 
@@ -42,7 +42,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
     The sample `versions.tf` file to specify the provider version that you need to create the workspace.
 
-    ```sh
+    ```terraform
     terraform {
       required_providers {
         ibm = {
@@ -58,7 +58,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
     The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
 
-    ```sh
+    ```terraform
     schematics_workspace_name="tf-testwks-apigwy"
     schematics_workspace_description="Sample workspace created with terraform with URL"
     schematics_workspace_type="terraform_v0.12.20"
@@ -74,7 +74,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     Review the following sample `main.tf` file. This file invokes the variables from the `terraform.tfvars` file by using the Git URL, then creates a {{site.data.keyword.bpshort}} workspace by using your {{site.data.keyword.cloud_notm}} API key.
     
 
-    ```sh
+    ```terraform
     variable "schematics_workspace_name" {}
     variable "schematics_workspace_description" {}
     variable "schematics_workspace_type" {}
