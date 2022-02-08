@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -34,10 +34,10 @@ All data, user inputs and the data generated at runtime during execution of auto
 
 
 
-## What informations are stored in {{site.data.keyword.bpshort}}?
+## What are the details stored in {{site.data.keyword.bpshort}}?
 {: #pi-data}
 
-The following informations are stored when you create and use a {{site.data.keyword.bpshort}} workspace: 
+The following details are stored when you create and use a {{site.data.keyword.bpshort}} workspace: 
 - Workspace details
 - Workspace variables
 - Terraform configuration files that your workspace points to

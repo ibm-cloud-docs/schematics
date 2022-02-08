@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -35,7 +35,7 @@ Specify the cloud provider that you want to use in the `provider` block of your 
 
 **Do I need to provide the {{site.data.keyword.cloud_notm}} API key?**
 
-The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform, receive the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform, you must provide the {{site.data.keyword.cloud_notm}} API key at all times. In {{site.data.keyword.bpshort}}, the IAM token is retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the IAM token is not retrieved for Cloud Foundry and classic infrastructure resources and the API key must be provided in the `provider` block. 
+The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform, receive the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform, always you must provide the {{site.data.keyword.cloud_notm}} API key. In {{site.data.keyword.bpshort}}, the IAM token is retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the IAM token is not retrieved for Cloud Foundry and classic infrastructure resources and the API key must be provided in the `provider` block. 
 
 **Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?**
 
@@ -162,7 +162,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 ## Using `variable` blocks to customize resources
 {: #configure-variables}
 
-You can use `variable` blocks to templatize your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center.
+You can use `variable` blocks to create template for your infrastructure code. For example, instead of creating multiple Terraform configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center.
 {: shortdesc}
 
 **Where do I store my variable declarations?**
@@ -171,7 +171,7 @@ You can decide to declare your variables within the same Terraform configuration
 
 **What information do I need to include in my variable declaration?**
 
-When you declare an input variable, you must provide a name for your variable and the data type as per the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value.  \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
+When you declare an input variable, you must provide a name for your variable and the data type according to the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value.  \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
 - `Terraform v0.12` supports **string, list, map, bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type])**.
 
 **Is there a character limit for input variables?** 

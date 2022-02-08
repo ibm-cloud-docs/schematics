@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -286,7 +286,7 @@ ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--gi
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information, about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
-| `--state` | Optional | The relative path to an existing Terraform statefile on your local machine. To create the Terraform statefile: **1.** Show the content of an existing Terraform statefile by using the [`ibmcloud terraform state pull`](#state-pull) command. **2.** Copy the content of the statefile from your command-line output in to a file on your local machine that is named `terraform.tfstate`. **3.** Use the relative path to the file in the `--state` command parameter.|
+| `--state` | Optional | The relative path to an existing Terraform state file on your local machine. To create the Terraform state file: **1.** Show the content of an existing Terraform state file by using the [`ibmcloud terraform state pull`](#state-pull) command. **2.** Copy the content of the state file from your command-line output in to a file on your local machine that is named `terraform.tfstate`. **3.** Use the relative path to the file in the `--state` command parameter.|
 | `--github-token` or `-g` | Optional |  Enter the functional personal access tokens for HTTPS Git operations. For example, `--github-token ${FUNCTIONAL_GIT_KEY}`.|
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -297,7 +297,7 @@ ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--gi
 
 You can create the JSON as shared in the `example.json` file for workspace creation and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is described in the table. 
 
-You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as "testworkspace".
+You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as `"testworkspace"`.
 {: note}
 
 **example.json:**
@@ -584,7 +584,7 @@ ibmcloud schematics workspace output --id myworkspace-asdff1a1a-42145-11 --name 
 ### `ibmcloud schematics refresh`
 {: #schematics-refresh}
 
-Perform an {{site.data.keyword.cloud_notm}} refresh action against your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform statefile of your workspace. If differences are found, the Terraform statefile is updated accordingly. 
+Perform an {{site.data.keyword.cloud_notm}} refresh action against your workspace. A refresh action validates the {{site.data.keyword.cloud_notm}} resources in your account against the state that is stored in the Terraform state file of your workspace. If differences are found, the Terraform state file is updated accordingly. 
 {: shortdesc}
 
 
@@ -614,7 +614,7 @@ ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics state list`
 {: #state-list}
 
-List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform statefile (`terraform.tfstate`).  
+List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform state file (`terraform.tfstate`).  
 {: shortdesc}	
 
 `Taint Status` returns **tainted** for (true) or **blank** for (false).
@@ -631,7 +631,7 @@ ibmcloud schematics state list --id WORKSPACE_ID
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform statefile. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform state file. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 {: caption="Schematics state list flags" caption-side="top"}
 
 **Example:**
@@ -748,7 +748,7 @@ ibmcloud schematics workspace update --id WORKSPACE_ID [--file FILE_NAME] [--git
 
 You can create the JSON as shared in the `example.json` file for workspace update and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is described in the table. 
 
-You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as "testworkspace".
+You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as `"testworkspace"`.
 {: note}
 
 **example.json:**
@@ -955,7 +955,7 @@ ibmcloud schematics workspace upload  --id WORKSPACE_ID --file FILE_NAME --templ
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace where you want to upload your tape archive file (`.tar`). To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--file` or `-f` | Required | Enter the full file path on your local machine where your `.tar` file is stored.|
-| `--template` or `-tid` | Required |  The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run `ibmcloud schematics workspace get --id <workspace_ID>` and find the template ID in the **Template Variables for:** field of your command-line output.|
+| `--template` or `-tid` | Required |  The unique identifier of the Terraform template for which you want to show the content of the Terraform state file. To find the ID of the template, run `ibmcloud schematics workspace get --id <workspace_ID>` and find the template ID in the **Template Variables for:** field of your command-line output.|
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="Schematics workspace upload flags" caption-side="top"}
@@ -1003,7 +1003,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE1] [--target RESOU
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
-| `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file remain uncreated or unupdated. To target the creation of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
+| `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file will not be created or updated. To target the creation of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
 | `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
@@ -1255,7 +1255,7 @@ ibmcloud schematics action create --name start-vsi --location us-south --resourc
 Create a JSON file that includes the details for the action that you want to create, such as the ID, name, and description. Then, use the `--file` command option to create your action from your payload file.
 {: shortdesc}
 
-You need to replace the `<...>` placeholders with the actual values. For example, `"<ACTION_NAME>"` as "testaction".
+You need to replace the `<...>` placeholders with the actual values. For example, `"<ACTION_NAME>"` as `"testaction"`.
 {: note}
 
 **Syntax:**
@@ -2024,7 +2024,7 @@ You need to pass either `--inventories-ini` file path or `--resource-query` ID f
 You can provide a payload file to specify certain parameters for the `inventory create` command. Then, you pass the file name to the command by using the `--file` command option.
 {: shortdesc}
 
-You need to replace the `<...>` placeholders with the actual values. For example, `"<INVENTORY_NAME>"` as "myinventory".
+You need to replace the `<...>` placeholders with the actual values. For example, `"<INVENTORY_NAME>"` as `"myinventory"`.
 {: note}
 
 
@@ -2440,19 +2440,19 @@ ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /
 ```
 {: pre}
 
-## Terraform statefile commands
-{: #statefile-cmds}
+## Terraform state file commands
+{: #state file-cmds}
 
-Review the commands that you can use to work with the Terraform statefile (`terraform.tfstate`) for a workspace.
+Review the commands that you can use to work with the Terraform state file (`terraform.tfstate`) for a workspace.
 {: shortdesc}
 
-You can import an existing Terraform statefile during the creation of your workspace. For more information, see the [`ibmcloud workspace new`](#schematics-workspace-new) command. 
+You can import an existing Terraform state file during the creation of your workspace. For more information, see the [`ibmcloud workspace new`](#schematics-workspace-new) command. 
 {: note}
 
 ### `ibmcloud schematics state pull`
 {: #state-pull}
 
-Show the content of the Terraform statefile (`terraform.tfstate`) for a specific Terraform template of your workspace.  
+Show the content of the Terraform state file (`terraform.tfstate`) for a specific Terraform template of your workspace.  
 {: shortdesc}	
 
 **Syntax:**
@@ -2469,7 +2469,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--id` or `-i` | Required | The unique ID of the workspace where you want to run the commands. |
-| `--template` or `--tid` | Required | The unique identifier of the Terraform template for which you want to show the content of the Terraform statefile. To find the ID of the template, run `ibmcloud schematics workspace get --id <workspace_ID>` and find the template ID in the **Template Variables for:** field of your command-line output. |
+| `--template` or `--tid` | Required | The unique identifier of the Terraform template for which you want to show the content of the Terraform state file. To find the ID of the template, run `ibmcloud schematics workspace get --id <workspace_ID>` and find the template ID in the **Template Variables for:** field of your command-line output. |
 {: caption="Schematics state pull flags" caption-side="top"}
 
 **Example:**

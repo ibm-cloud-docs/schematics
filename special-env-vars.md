@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-12"
+lastupdated: "2022-02-08"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -91,7 +91,7 @@ A sample `env_values` block in the payload to update environment variable by usi
 ```
 {: codeblock}
 
-For content catalog Terraform workspaces, you can pass a special variable `TF_PARALLELISM` in tf_values to set parallelism.
+For content catalog Terraform workspaces, you can pass a special variable `TF_PARALLELISM` in `tf_values` to set parallelism.
 
 A sample `tf_values` block in the create payload.
 

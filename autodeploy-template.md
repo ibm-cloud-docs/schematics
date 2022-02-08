@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Creating an auto-deploy button for {{site.data.keyword.bpshort}} actions
+# Creating an auto deploy button for {{site.data.keyword.bpshort}} actions
 {: #auto-deploy-url}
 
 Use the instructions on this page to create a button that opens the {{site.data.keyword.bpshort}} action create page and pre-populates an action name and the GitHub repository URL that stores your Ansible playbook. You can use this button to create {{site.data.keyword.bpshort}} actions more quickly. 
@@ -41,7 +41,7 @@ For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible
 4. Open your web browser and enter the URL.
 5. Verify that the {{site.data.keyword.bplong_notm}} action create page opens and that the **Action name** and **Repository URL** are pre-populated.
 
-## Adding an image to your URL to create the auto-deploy button
+## Adding an image to your URL to create the auto deploy button
 {: #add_an_image}
 
 You can add an image to your URL to create your `Deploy to {{site.data.keyword.cloud_notm}}` button.

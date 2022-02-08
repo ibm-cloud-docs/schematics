@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-08"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -49,7 +49,7 @@ The following image shows the cloud architecture components that you provision a
 You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
 {: note} 
 
-As per your resource usage the cost is incurred. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
+The costs are incurred based on your resource usage. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
 {: important}
 
 
