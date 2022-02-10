@@ -19,7 +19,7 @@ Schematics
 
     {: .navgroup id="tutorial"}
     tutorials/provisioning-tf.md
-    tutorials/automate-continuous-deployment.md
+    tutorials/automate_continuous_deployment.md
     [Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)
     [Deploying multi-tier VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
     {: .navgroup-end}
@@ -54,7 +54,7 @@ Schematics
          action-setup.md
          create-ansible-playbook.md
          inventories.md
-         autodeploy-actionsamples.md
+         autodeploy_actionsamples.md
          autodeploy-template.md
 
     {: .topicgroup}
@@ -111,14 +111,14 @@ Schematics
 
         {: .topicgroup}
         Debugging Schematics apply errors
-             troubleshooting/apply-nullresource.md
-             troubleshooting/apply-timeout-taint.md
-             troubleshooting/apply-resource-group.md
-             troubleshooting/apply-500-errors.md
+             troubleshooting/apply_nullresource.md
+             troubleshooting/apply_timeout_taint.md
+             troubleshooting/apply_resource_group.md
+             troubleshooting/apply_500_errors.md
 
         {: .topicgroup}
         Debugging Schematics create errors
-             troubleshooting/wks-creation-api.md
+             troubleshooting/wks_creation_api.md
 
         error-messages.md
     

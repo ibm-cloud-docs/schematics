@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-10"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -229,7 +229,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 
     OK
     ```
-    {: preblock}
+    {: codeblock}
 
 ## Planning and applying the Terraform template
 {: #tut-plan-wks}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-07"
+lastupdated: "2022-02-10"
 
 keywords: schematics, automation, terraform
 
@@ -52,7 +52,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 1. Download the content of the `terraform-ibm-observability` sample repository to your local machine. This repository is owned and maintained by IBM, and provides a Terraform template to create an instance of {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}}. 
 
-    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a subfolder. 
+    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a sub-folder. 
     {: tip}
 
     ```sh
@@ -112,7 +112,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 10. Click **Publish release**. 
 11. When the release is published, right-click on your `TGZ` file and copy the link to the file. 
 12. Enter the link in your browser to verify that the `TGZ` file is automatically downloaded to your local machine. 
-13. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the subfolder. 
+13. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the sub-folder. 
 
 ## Create a private catalog and add your Terraform template as a product
 {: #create-private-catalog}

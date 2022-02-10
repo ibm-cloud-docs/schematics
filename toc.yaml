@@ -32,7 +32,7 @@ toc:
       id: tutorial
       topics:
       - tutorials/provisioning-tf.md
-      - tutorials/automate-continuous-deployment.md
+      - tutorials/automate_continuous_deployment.md
       links:
       - link:
           label: Deploying a VPC environment on IBM Cloud by using Bastion host
@@ -70,8 +70,8 @@ toc:
           - action-setup.md
           - create-ansible-playbook.md
           - inventories.md
-          - autodeploy-actionsamples.md
-          - autodeploy-template.md
+          - autodeploy_actionsamples.md
+          - autodeploy_template.md
       - topicgroup:
           label: Logging and monitoring
           topics:
@@ -149,13 +149,13 @@ toc:
           - topicgroup:
               label: Debugging Schematics apply errors
               topics:
-              - troubleshooting/apply-nullresource.md
-              - troubleshooting/apply-timeout-taint.md
-              - troubleshooting/apply-resource-group.md
-              - troubleshooting/apply-500-errors.md
+              - troubleshooting/apply_nullresource.md
+              - troubleshooting/apply_timeout-taint.md
+              - troubleshooting/apply_resource_group.md
+              - troubleshooting/apply_500_errors.md
           - topicgroup:
               label: Debugging Schematics create errors
               topics:
-              - troubleshooting/wks-creation-api.md
+              - troubleshooting/wks_creation_api.md
           - error-messages.md
       - ts_index.md

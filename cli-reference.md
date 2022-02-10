@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-10"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -468,7 +468,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td>`terraform_version`</td>
     <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specific `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
     </tr>
     <tr>
     <td>`location`</td>
@@ -814,7 +814,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td><code>type</code></td>
     <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specific `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
     </tr>
     <tr>
     <td><code>description</code></td>
@@ -2371,8 +2371,7 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
 | `--file` or `--f` | Required | Path to the `JSON` file containing the list of Terraform commands.|
 {: caption="Schematics Terraform commands flags" caption-side="top"}
 
-
-    **Sample payload of Test.JSON file**
+**Sample payload of Test.JSON file**
 
     ```json
     {
@@ -2422,7 +2421,7 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
 
     The table provides the list of key parameters of the JSON file for the `Commands` API, for the command-line and the API.
 
-    | Key | Required / Optional |Description |
+    | Key | Required / Optional | Description |
     | ------ | -------- | ---------- |
     |`command`| Required |Provide the command. Supported commands are `show`,`taint`, `untaint`, `state`, `import`, `output`.|
     |`command_params`| Required | The address parameters for the command name for `CLI`, such as resource name, absolute path of the file name. **Note** For API, you have to send option flag and address parameter in `command_params`.|
