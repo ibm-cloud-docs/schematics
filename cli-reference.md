@@ -2499,7 +2499,7 @@ ibmcloud schematics workspace state show --id WORKSPACE_ID  --address ADDRESS [-
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--id` or `-i` | Required | The unique ID of the workspace to update. |
-| `--address` or `-adr` | Required | Enter the address argument of the resource to show.|
+| `--address` or `-adr` | Required | Enter the address that points to a single resource in the state to show.|
 | `--options` or `-o` | Optional | Enter the command-line flags. |
 {: caption="Schematics state pull flags" caption-side="top"}
 
