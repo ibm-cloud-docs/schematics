@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-10"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 

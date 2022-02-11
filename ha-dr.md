@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-10"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -34,7 +34,7 @@ While {{site.data.keyword.bplong_notm}} is responsible to ensure that your works
 
 Review the following image to find a general approach of how you can make your resource highly available and add resiliency to account for a site or region failure. The level of availability that is right for you depends on several factors, such as the high availability features that are available for your resource, your business requirements, the [Service Level Agreements](/docs/overview?topic=overview-slas) that you have with your customers, and the money that you need to expense. In your Terraform configuration file, you have the option to configure multiple `provider` blocks for the different regions, zones, or locations where you want to provision your resources. For more information, see [Creating multiple `provider` configurations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#multiple-providers). 
 
-Supported high availability features depend on the type of {{site.data.keyword.cloud_notm}} resource that you choose to provision with {{site.data.keyword.bplong_notm}}. Some of the high availability scenarios that are shown in this image might not be available for your resource. Make sure to review the resource documentation to find supported high availability features. 
+Supported high availability features depend on the type of {{site.data.keyword.cloud_notm}} resource that you choose to provision with {{site.data.keyword.bplong_notm}}. Some high availability scenarios that are shown in this image might not be available for your resource. Make sure to review the resource documentation to find supported high availability features. 
 {: note}
 
 ![High availability for {{site.data.keyword.cloud_notm}} resources](images/schematics-ha-roadmap.png){: caption="Figure 1. High availability for {{site.data.keyword.cloud_notm}} resources" caption-side="bottom"}

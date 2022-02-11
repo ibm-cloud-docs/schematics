@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-11"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -35,30 +35,32 @@ Before you can use this template, you must complete the following tasks.
 Use the IBM-provided Terraform template to provision an {{site.data.keyword.cos_full_notm}} instance with a {{site.data.keyword.bpshort}} workspace. 
 {: shortdesc}
 
-1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**. 
-2. Enter a name for your workspace, the resource group, and region where you want to create the workspace. Then, click **Create**. 
-3. In the **Import your Terraform template** section, enter the following information: 
-    1. In the **GitHub, GitLab, or `Bitbucket` repository URL** field, enter the following repository URL. 
-        ```sh
-        https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance
-        ```
-        {: codeblock}
+1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
+2. In **Specify template** panel. Enter GitHub, GitLab, or `Bitbucket` **Repository URL** as 
+    ```sh
+    https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance
+    ```
+    {: codeblock}
 
-    2. Select `terraform_v0.12` from the **Terraform version** drop down. **Note** Select `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specific `terraform_v1.0` then it means users can have template that may be of `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on.
-    3. Click **Save template information** to save the information that you entered. 
-4. Enter your template variables. 
-    1. Enter a name for your {{site.data.keyword.cos_full_notm}} instance. 
-    2. Review the default values for the plan and the resource group name. 
+3. Select `terraform_v0.12` from the **Terraform version** drop down.
+4. Click **Next**.
+5. In the **Workspace details** panel, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description** region where you want to create the workspace. **Note** Ensure you provide the right resource group, location.
+6. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspace successfully.
+7. In the **Variables** panel, template variables are displayed. Optionally, override the variables by referring the [readme file](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance){: external}. 
+    
+    If you already have an existing {{site.data.keyword.cos_full_notm}} instance in your account, you must enter `standard` in the **plan** field. 
+    {: tip}
 
-        If you already have an existing {{site.data.keyword.cos_full_notm}} instance in your account, you must enter `standard` in the **plan** field. 
-        {: tip}
+8. Click **Generate plan** to see the plan is generated successfully.
+9. Click **Apply plan**. This process might take a few minutes to complete. Click **Jobs** to see the details of the provisioning process.
 
-    3. Click **Save changes** to save your variable values. 
-5. From the workspace **Settings** page, click **Generate plan**. After you click this button, the workspace **Activity** page opens and {{site.data.keyword.bpshort}} gathers the actions that need to run to provision your Terraform template. Click **View logs** to find detailed information about the actions that {{site.data.keyword.bpshort}} identified. 
-6. From the workspace **Activity** page, click **Apply plan**. After you click this button, {{site.data.keyword.bpshort}} starts to provision your {{site.data.keyword.cos_full_notm}} instance as specified in your Terraform template. This process might take a few minutes to complete. Click **View logs** to see the details of the provisioning process.  
-7. Check out your {{site.data.keyword.cos_full_notm}} instance. 
-    1. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources), select the instance that you created. 
-    2. From the menu, select **Getting started** to find more information about {{site.data.keyword.cos_full_notm}} and how you can create your first bucket to start storing your data. 
+### Output
+{: #create-cos-output}
+
+Check out your {{site.data.keyword.cos_full_notm}} instance. 
+1. From the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources), select the **Storage**  to view the provisioned {{site.data.keyword.cos_full_notm}} instance.
+2. For more information, to create {{site.data.keyword.cos_full_notm}} bucket, see [create some buckets to store your data](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
+
 
 
 Congratulations! You used the built-in Terraform capabilities of {{site.data.keyword.bpshort}} to create an {{site.data.keyword.cos_full_notm}} service instance in your {{site.data.keyword.cloud_notm}} account. 

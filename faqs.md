@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-10"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -436,6 +436,7 @@ You can verify the location access to create or view the resource in the catalog
   default = "15m"
  }
  ```
+ {: codeblock}
 
 ## Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} workspace console without using Catalog service or {{site.data.keyword.bpshort}} command line?
 {: #terraformcli-arguments-faq}
@@ -499,7 +500,7 @@ You can edit one variable at a time from {{site.data.keyword.bpshort}} console. 
 {: faq}
 {: support}
 
-Yes, you can set or manage the keys by using ibm_kms_key. Here is sample code block to provision KMS keys. For more information, about provision KMS key with key policies see [ibm_kms_key]( https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key#import). 
+Yes, you can set or manage the keys by using ibm_kms_key. Here is sample codeblock to provision KMS keys. For more information, about provision KMS key with key policies see [ibm_kms_key]( https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key#import). 
 
 ```terraform
 resource "ibm_resource_instance" "kms_instance" {
@@ -551,7 +552,7 @@ Yes, You can access the private (IBM) GitLab repository by using {{site.data.key
 - In case of private (IBM) GitLab repository **git.cloud.ibm.com**, access token is not needed as the IAM token is used.
 - In case of public GitLab **gitlab.com**, `read_repository` and `read_api` access is needed to validate the given branch name for private repository.
 
-Here is a sample Terraform codeblock to configure the GitLab repository details.
+You can use the sample Terraform codeblock to configure the GitLab repository details.
 
 ```terraform
 "template_repo": {
@@ -559,3 +560,4 @@ Here is a sample Terraform codeblock to configure the GitLab repository details.
 "branch": ""
 },
 ```
+{: codeblock}
