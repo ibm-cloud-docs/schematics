@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-02-11"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2482,13 +2482,13 @@ ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa
 ### `ibmcloud schematics workspace state show`
 {: #schematics-workspace-show}
 
-Provides the readable output from a state or plan of a workspace as Terraform sees it. You can use to ensure the current state and planned operations are executing as expected. You can use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
+Provides the readable output from a state or plan of a workspace as Terraform sees it. You can use to ensure the current state and planned operations status. You need to use the workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
 {: shortdesc}
 
 **Syntax:**
 
 ```sh
-ibmcloud schematics workspace state show [--options OPTIONS] --address ADDRESS
+ibmcloud schematics workspace state show --id WORKSPACE_ID  --address ADDRESS [--options OPTIONS]
 ```
 {: pre}
 
@@ -2498,9 +2498,9 @@ ibmcloud schematics workspace state show [--options OPTIONS] --address ADDRESS
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
-| `--id` or `-i` | Required | The unique ID of the workspace where you want to update. |
+| `--id` or `-i` | Required | The unique ID of the workspace to update. |
+| `--address` or `-adr` | Required | Enter the address that points to a single resource in the state to show.|
 | `--options` or `-o` | Optional | Enter the command-line flags. |
-| `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="Schematics state pull flags" caption-side="top"}
 
 **Example:**

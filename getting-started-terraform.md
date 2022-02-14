@@ -44,7 +44,7 @@ Use the IBM-provided Terraform template to provision an {{site.data.keyword.cos_
 
 3. Select `terraform_v0.12` from the **Terraform version** drop down.
 4. Click **Next**.
-5. In the **Workspace details** panel, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description** region where you want to create the workspace. **Note** Ensure you provide the right resource group, location.
+5. In the **Workspace details** panel, enter your **Workspace name**, **Tags**, **Resource group**, **Location** where you want to create the workspace, and **Description**. **Note** Ensure you provide the right resource group, and location details.
 6. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspace successfully.
 7. In the **Variables** panel, template variables are displayed. Optionally, override the variables by referring the [readme file](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance){: external}. 
     
