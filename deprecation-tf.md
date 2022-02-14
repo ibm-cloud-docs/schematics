@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-14"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -42,7 +42,7 @@ We announce the timeline for the deprecation of Terraform **versions**, the rela
 | Versions | Phase 1: Restrict workspace creation (End of marketing) | Phase 2: Restrict workspace execution (End of support)|
 | ----- | ------ | ----- |
 | Terraform v0.11 | October 2021 | December 2021 |
-| Terraform v0.12 | January 2021 | March 2022 |
+| Terraform v0.12 | January 2022 | March 2022 |
 | Terraform v0.13 | March 2022 | May 2022 |
 | Terraform v0.14 | May 2022 | July 2022 |
 | Terraform v0.15 | July 2022 | December 2023 |
