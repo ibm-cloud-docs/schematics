@@ -31,6 +31,6 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.5.10 | 11 August 2021 | Supports Terraform v0.15. Fixed locale translations.|
 | 1.5.9 | 13 July 2021 | Fixed locale translations.|
 | 1.5.8 | 08 July 2021 | Fixed shared datasets API path. Disabled shared datasets commands.|
-| 1.5.7 | 04 June 2021 | Enhanced `ibmcloud schematics state list` command to display as tabular data with a new column `taint` status. Fixed `ibmcloud schematics job run` command with `--input` flag description. Fixed `ibmcloud schematics job run` command with `--output json` flag description. Fixed `ibmcloud schematics action update` command with `--credentials flag and the locale translations.|
+| 1.5.7 | 04 June 2021 | Enhanced `ibmcloud schematics state list` command to display as tabular data with a new column `taint` status. Fixed `ibmcloud schematics job run` command with `--input` flag description. Fixed `ibmcloud schematics job run` command with `--output json` flag description. Fixed `ibmcloud schematics action update` command with `--credentials` flag and the locale translations.|
 | 1.5.6 | 03 June 2021 | Updated `ibmcloud schematics workspace new` command to support `Terraform v0.14` and the locale translations.|
 {: caption="Command line version history" caption-side="bottom"}
