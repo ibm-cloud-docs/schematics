@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-16"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -18,12 +18,15 @@ subcollection: schematics
 Use the {{site.data.keyword.bplong_notm}} command-line plug-in to automate the infrastructure provisioning process, the configuration of your {{site.data.keyword.cloud_notm}} resources, and the deployment of app workloads in {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.bpfull}} command-line extends the support of following multiple platform architectures inline with the {{site.data.keyword.cloud}} command line interface (CLI).
 
 - Mac OS X 64-bit
+- Mac OS arm64
 - Windows&trade; 64-bit
 - Windows&trade; 32-bit
 - Linux&trade; 64-bit
+- Linux&trade; arm64
 - Linux&trade; 32-bit
 - PowerLinux&trade; 64-bit
 - System/390 Linux&trade; 64-bit
+
 
 ## Installing the IBM Cloud command-line 
 {: #install-schematics-cli}
@@ -68,8 +71,8 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     ```text
     Listing installed plug-ins...
 
-    Plugin Name         Version   Status        
-    schematics          1.5.1     
+    Plugin Name                             Version   Status             Private endpoints supported   
+    schematics                              1.7.2                        false   
     ```
     {: screen}
 
@@ -82,28 +85,29 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     Example output: 
     ```text
     NAME:
-        ibmcloud schematics - IBM Cloud Schematics plug-in
+         ibmcloud schematics - 
 
     USAGE:
         ibmcloud schematics command [arguments...] [command options]
 
     COMMANDS:
-        action          Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls, and pass environment-specific variables.
-        apply           Apply a plan to an workspace to deploy the latest version of your configuration.
-        destroy         Destroy resources in an existing workspace. This action cannot be reversed.
-        job             Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.
-        kms             listing and enabling ibmcloud schematics kms instances and root keys .
-        logs            Show details about actions that ran against an workspace.
-        output          Get all the output values from your workspace; (ex. result of terraform output command.
-        plan            Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
-        refresh         Refresh the workspace with latest version of your workspace configuration.
-        shareddataset   Create and manage shared datas. Shared datas let you define the source control pre defined variables values for Terraform configuration and pass workspace-specific variables.
-        state           Advanced state management
-        version         Report version information about the IBM Cloud Schematics CLI.
-        workspace       Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
-        help, h         Show help
+        action, ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
+        apply                Apply a plan to an workspace to deploy the latest version of your configuration.
+        destroy              Destroy resources in an existing workspace. This action cannot be reversed.
+        inventory, iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
+        job, j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.
+        kms                  listing and enabling IBM Cloud Schematics kms instances and root keys .
+        logs                 Show details about actions that ran against an workspace.
+        output               Get all the output values from your workspace; (ex. result of terraform output command
+        plan                 Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
+        refresh              Refresh the workspace with latest version of your workspace configuration.
+        resource-query, rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
+        state                Advanced state management
+        version              Report version information about the IBM Cloud Schematics CLI.
+        workspace, ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
+        help, h              Show help
 
-    Enter 'ibmcloud schematics help [command]' for more information about a command.
+        Enter `ibmcloud schematics help [command]` for more information about a command
 
     ```
     {: screen}
@@ -135,7 +139,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output: 
 
     ```text
-    schematics                      1.5.9        Update Available           false
+    schematics                      1.7.2        Update Available           false
     ```
     {: screen}
 
