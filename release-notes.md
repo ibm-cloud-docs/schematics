@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-02-16"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,30 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
 
+## February 2022
+{: #release-feb-2022}
+
+Review the release notes for February 2022.
+{: shortdesc}
+
+### 16 February 2022
+{: #16feb2022}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.2](/docs/schematics?topic=schematics-cli_version-releases) released on 16th February 2022.
+
+Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries 
+:   The {{site.data.keyword.bpshort}} supports command-line installer for [Linux&trade; arm64 and Mac OS arm64 binaries](/docs/schematics?topic=schematics-setup-cli) Operating System.
+
+### 11 February 2022
+{: #11feb2022}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.1](/docs/schematics?topic=schematics-cli_version-releases) released on 11th February 2022.
+
+
 ## January 2022
 {: #release-jan-2022}
 
@@ -29,7 +53,7 @@ Review the release notes for January 2022.
 {: shortdesc}
 
 ### 31 January 2022
-{: #31dec2022}
+{: #31jan2022}
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plugin 

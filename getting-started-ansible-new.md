@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-16"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -14,7 +14,7 @@ subcollection: schematics
 # Getting started with configuration management in {{site.data.keyword.bplong_notm}}
 {: #getting-started-ansible}
 
-Use one of the IBM provided Ansible playbooks to start and stop {{site.data.keyword.vsi_is_short}}. 
+Use one of the IBM provided Ansible playbooks to start and stop {{site.data.keyword.vsi_is_full}}. 
 {: shortdesc}
 
 An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ansible-playbook){: external} is a set of instructions or automation tasks that you can configure to run on a single target host or a group of hosts. You create a {{site.data.keyword.bpshort}} action that points to your playbook and use the built-in Ansible capabilities in {{site.data.keyword.bpshort}} to run the instructions in your playbook. For more information about how {{site.data.keyword.bpshort}} runs your Ansible playbooks, see [Configuration management with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions). 
@@ -24,7 +24,7 @@ An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ans
 
 Before you can use this Ansible playbook, you must complete the following tasks:
 
-- Make sure that you have the permissions to [create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-access#access-roles). 
+- Make sure that you have the permissions to [Create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-access#access-roles). 
 - Create an {{site.data.keyword.vpc_full}} and a {{site.data.keyword.vsi_is_short}}. For more information, see [Getting started with Virtual Private Cloud (VPC)](/docs/vpc?topic=vpc-getting-started). **Note** the **private** or **Floating IP** address of your {{site.data.keyword.vsi_is_short}}. 
 
 ## Starting and stopping {{site.data.keyword.vsi_is_short}}
@@ -47,6 +47,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
     1. From the [{{site.data.keyword.vsi_is_short}} dashboard](https://cloud.ibm.com/vpc-ext/compute/vs){: external}, find your {{site.data.keyword.vsi_is_short}}. 
     2. Verify that your instance shows a `Stopped` status. 
 12. Optional: Repeat the steps in this getting started tutorial to create another {{site.data.keyword.bpshort}} action, and select the **`start-vsi-playbook.yaml`** Ansible playbook to start your {{site.data.keyword.vsi_is_short}} again. 
+
 
 Congratulations! You used the built-in Ansible capabilities of {{site.data.keyword.bpshort}} to start and stop a {{site.data.keyword.vsi_is_short}} instance. 
 

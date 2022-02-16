@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-16"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -14,7 +14,7 @@ subcollection: schematics
 # Getting started with software deployment in {{site.data.keyword.bplong_notm}}
 {: #get-started-software}
 
-Try out one of the IBM-provided software templates to quickly spin up a classic virtual server instance (VSI), and automatically configure the instance to connect to an {{site.data.keyword.databases-for-postgresql_full}} instance. 
+Try out one of the IBM provided software templates to quickly spin up a classic Virtual Server Instance (VSI), and automatically configure the instance to connect to an {{site.data.keyword.databases-for-postgresql_full}} instance. 
 {: shortdesc}
 
 With {{site.data.keyword.bplong_notm}}, you can choose from a wide variety of [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can use to set up {{site.data.keyword.cloud_notm}} services, and to install IBM and 3rd party software. The templates are applied by using the built-in `Terraform`, `Ansible`, `Helm`, `CloudPak`, and `Operator` capabilities in {{site.data.keyword.bpshort}}.
@@ -31,17 +31,17 @@ Before you can use this template, you must complete the following tasks.
 
 - Make sure that you have the permissions to [create classic virtual servers](/docs/virtual-servers?topic=virtual-servers-managing-device-access). 
 - [Create a classic API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key) and retrieve your classic infrastructure username. This username and API key are used to verify that you have sufficient permissions to create classic infrastructure. 
-- Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full}} instance](/docs/databases-for-postgresql?topic=cloud-databases-iam). 
+- Make sure that you have the permissions to create an [{{site.data.keyword.databases-for-postgresql_full_notm}} instance](/docs/databases-for-postgresql?topic=cloud-databases-iam). 
 
 
 ## Setting up and configuring a classic VSI to run PostgreSQL with {{site.data.keyword.bpshort}}
 {: #vsi-postgres}
 
-Use one of the IBM provided software templates to set up and configure a classic virtual server instance so that you can store data in an instance of {{site.data.keyword.databases-for-postgresql_full_notm}}. 
+Use one of the IBM provided software templates to set up and configure a classic VSI so that you can store data in an instance of {{site.data.keyword.databases-for-postgresql_full_notm}}. 
 {: shortdesc}
 
 1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog. 
-2. In the **Configure your workspace** section, enter a name for your {{site.data.keyword.bpshort}} workspace and select the resource group where you want to create the workspace.
+2. In the **Configure your workspace** section, enter a name for your {{site.data.keyword.bpshort}} workspace, select the **Resource group**, and the **Location** where you want to create the workspace.
 3. In the **Set the deployment values** section, enter the following information. 
     1. Enter a username and password that you want to use to log in to your PostgreSQL instance. The username must be between 10 and 32 characters long. 
     2. Enter the classic infrastructure username and API key that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 

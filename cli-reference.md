@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-11"
+lastupdated: "2022-02-16"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -552,35 +552,6 @@ ibmcloud schematics workspace new --file example.json
 ```
 {: pre}
 
-
-### `ibmcloud schemates workspace output`
-{: #schematics-output}
-
-Displays all the instance or resource output of the workspace. You can provide output `NAME`, to print only the value of that output. 
-{: shortdesc}
-
-**Syntax:**
-```sh
-ibmcloud schematics workspace output --id WORKSPACE_ID [--options OPTIONS] [--name OUTPUT_NAME]
-```
-{: pre}
-
-**Command options:**
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to print an instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list`.|
-| `--options` or `-o` | Optional | Enter the command-line flags. |
-| `--name` or `-n` | Optional | Specify the parameter name to print. |
-{: caption="Schematics workspace output flags" caption-side="top"}
-
-**Example:**
-```sh
-ibmcloud schematics workspace output --id myworkspace-asdff1a1a-42145-11 --name null_resource.sleep  
-```
-{: pre}
-
-
 ### `ibmcloud schematics refresh`
 {: #schematics-refresh}
 
@@ -623,7 +594,7 @@ List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cl
 **Syntax:**
 
 ```sh
-ibmcloud schematics state list --id WORKSPACE_ID
+ibmcloud schematics state list --id WORKSPACE_ID  [--output json]
 ```
 {: pre}
 
@@ -632,6 +603,7 @@ ibmcloud schematics state list --id WORKSPACE_ID
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform state file. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
+| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="Schematics state list flags" caption-side="top"}
 
 **Example:**
