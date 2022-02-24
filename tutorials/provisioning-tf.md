@@ -309,7 +309,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {; pre}
 
-    You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
+    You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace jobs status.
     {: note}
 
     
