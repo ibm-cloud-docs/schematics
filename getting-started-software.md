@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-02-24"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -14,10 +14,10 @@ subcollection: schematics
 # Getting started with software deployment in {{site.data.keyword.bplong_notm}}
 {: #get-started-software}
 
-Try out one of the IBM provided software templates to quickly spin up a classic Virtual Server Instance (VSI), and automatically configure the instance to connect to an {{site.data.keyword.databases-for-postgresql_full}} instance. 
+Try out one of the {{site.data.keyword.IBM}} provided software templates to quickly spin up a classic Virtual Server Instance (VSI), and automatically configure the instance to connect to an {{site.data.keyword.databases-for-postgresql_full}} instance.
 {: shortdesc}
 
-With {{site.data.keyword.bplong_notm}}, you can choose from a wide variety of [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can use to set up {{site.data.keyword.cloud_notm}} services, and to install IBM and 3rd party software. The templates are applied by using the built-in `Terraform`, `Ansible`, `Helm`, `CloudPak`, and `Operator` capabilities in {{site.data.keyword.bpshort}}.
+With {{site.data.keyword.bplong_notm}}, you can choose from a wide variety of [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can use to set up {{site.data.keyword.cloud_notm}} services, and to install {{site.data.keyword.IBM_notm}} and 3rd party software. The templates are applied by using the built-in `Terraform`, `Ansible`, `Helm`, `CloudPak`, and `Operator` capabilities in {{site.data.keyword.bpshort}}.
 
 As part of this getting started tutorial, you create a {{site.data.keyword.bpshort}} workspace that points to the [VSI database](https://cloud.ibm.com/catalog/content/VSI-database#about){: external} template. Then, you run this template and watch {{site.data.keyword.bpshort}} provision your VSI and your {{site.data.keyword.databases-for-postgresql_full_notm}} instance. {{site.data.keyword.databases-for-postgresql_full_notm}} is a fully managed database offering in {{site.data.keyword.cloud_notm}} that supports storing of non-relational and relational data types. For more information about this offering, see [What is PostgreSQL?](https://www.ibm.com/cloud/learn/postgresql){: external}. 
 
@@ -61,10 +61,7 @@ Congratulations! You used the capabilities of {{site.data.keyword.bpshort}} to p
 {: #whats-next}
 
 - Explore the capabilities of [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started).
-- Browse other [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can apply with {{site.data.keyword.bpshort}}.  
+- Browse other [software and infrastructure templates](https://cloud.ibm.com/catalog?search=label%3Aterraform#software){: external} that you can apply with {{site.data.keyword.bpshort}}.
 - Learn more about the [built-in capabilities in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics).
+- Import your {{site.data.keyword.bpshort}} templates and create your [private {{site.data.keyword.cloud_notm}} catalog](/docs/account?topic=account-create-private-catalog).
 - Set up the {{site.data.keyword.bpshort}} [CLI](/docs/schematics?topic=schematics-setup-cli) or [API](/docs/schematics?topic=schematics-setup-api) to start automating the provisioning and management of {{site.data.keyword.cloud_notm}} resources. 
-
-
-
-

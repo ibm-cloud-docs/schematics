@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-17"
+lastupdated: "2022-02-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -62,7 +62,7 @@ ibmcloud schematics help
 ### `ibmcloud schematics version`
 {: #schematics-version}
 
-List the versions of all supported open source projects in {{site.data.keyword.bpshort}}, such as the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, Ansible, Helm, and Kubernetes that are used to run {{site.data.keyword.bpshort}} actions on {{site.data.keyword.cloud_notm}} resources.
+List the versions of all supported open source projects in {{site.data.keyword.bpshort}}, such as the {{site.data.keyword.terraform-provider_full_notm}}, Ansible, Helm, and Kubernetes that are used to run {{site.data.keyword.bpshort}} actions on {{site.data.keyword.cloud_notm}} resources.
 {: shortdesc}
 
 **Syntax:**

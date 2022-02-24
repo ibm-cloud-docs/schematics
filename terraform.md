@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-24"
 
 subcollection: schematics
 
@@ -27,7 +27,7 @@ Before you begin, make sure that you have the [required access](/docs/schematics
 
 Complete the following steps to create the {{site.data.keyword.bpshort}} workspaces by using Terraform:
 
-1. Follow the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform) to install the Terraform CLI and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.bpshort}} resources. 
+1. Follow the [Terraform on {{site.data.keyword.cloud_notm}} getting started tutorial](/docs/ibm-cloud-provider-for-terraform) to install the Terraform CLI and configure the {{site.data.keyword.terraform-provider_full_notm}}. The plug-in abstracts the {{site.data.keyword.cloud_notm}} APIs that are used to provision, update, or delete {{site.data.keyword.bpshort}} resources. 
 
 2. Create the Terraform configuration files named `main.tf`, `terraform.tfvars`, and `versions.tf`.
 
