@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-02-24"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -23,13 +23,13 @@ completion-time: 60m
 {: toc-services="schematics, containers, key-protect"}
 {: toc-completion-time="60m"}
 
-Use one of the IBM provided templates to create an {{site.data.keyword.containerlong}} cluster in a Virtual Private Cloud (VPC). Then, you bind the cluster to an {{site.data.keyword.cos_full}} service instance. 
+Use one of the {{site.data.keyword.IBM}} provided templates to create an {{site.data.keyword.containerlong}} cluster in a Virtual Private Cloud (VPC). Then, you bind the cluster to an {{site.data.keyword.cos_full}} service instance. 
 {: shortdesc}
 
 ## Description
 {: #provisioning-desc}
 
-In this tutorial, you use the IBM-provided [`vpc-gen2-cluster` Terraform template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create a Virtual Private Cloud (VPC) and to provision an {{site.data.keyword.containerlong_notm}} cluster on {{site.data.keyword.vsi_is_short}}. Then, you add the service credentials of an {{site.data.keyword.cos_full_notm}} service instance as a Kubernetes secret in your cluster. You can change the default values in this template to spread your cluster across multiple subnets and zones. However, the steps in this tutorial use the default values that are provided in the template. 
+In this tutorial, you use the {{site.data.keyword.IBM}} provided [`vpc-gen2-cluster` Terraform template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create a Virtual Private Cloud (VPC) and to provision an {{site.data.keyword.containerlong_notm}} cluster on {{site.data.keyword.vsi_is_short}}. Then, you add the service credentials of an {{site.data.keyword.cos_full_notm}} service instance as a Kubernetes secret in your cluster. You can change the default values in this template to spread your cluster across multiple subnets and zones. However, the steps in this tutorial use the default values that are provided in the template. 
 
 The following image shows the cloud architecture components that you provision as part of this tutorial. 
 
@@ -49,9 +49,8 @@ The following image shows the cloud architecture components that you provision a
 You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
 {: note} 
 
-The costs are incurred based on your resource usage. For more information about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
+The costs are incurred based on your resource usage. For more information, about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
 {: important}
-
 
 ## Objectives
 {: #provisioning-tut-obj}
@@ -81,7 +80,7 @@ Before you begin, complete the following prerequisites.
 
 - [Create a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
 - [Install the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli). 
-- Make sure that you are assigned the **Manager** service access role in Identity and Access Management (IAM) for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace. 
+- Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace. 
 - Make sure that you are assigned the required [permissions](/docs/vpc?topic=vpc-iam-getting-started) to create VPC infrastructure resources. 
 - Follow the [steps](/docs/containers?topic=containers-clusters#cluster_prepare) to get the required permissions to create an {{site.data.keyword.containerlong_notm}} cluster and to prepare your account for your cluster setup. 
 - Make sure that you have the required permissions to create an instance of [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-manage-access) and [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-iam). 

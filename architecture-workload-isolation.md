@@ -18,20 +18,21 @@ subcollection: schematics
 Learn about the {{site.data.keyword.bplong}} service architecture, the service dependencies, and how customer workloads are isolated from each other in {{site.data.keyword.bplong_notm}}?
 {: shortdesc}
 
-## Service basic architecture
-{: #basic-architecture}
+## Service architecture
+{: #architecture}
 
-{{site.data.keyword.bplong_notm}} is a shared service. On the initial use, a new service instance is automatically provisioned for each user account by using the following provisioning method.
+The following image shows the main {{site.data.keyword.bplong_notm}} components, how they interact with each other, and what type of encryption is applied to your personal information. 
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} basic architecture](images/schematics_base_architecture.png){: caption="Figure 1. Schematics architecture" caption-side="bottom"}
+![{{site.data.keyword.bplong_notm}} architecture and data encryption process](images/schematics_architecture.png){: caption="{{site.data.keyword.bplong_notm}} architecture and data encryption process" caption-side="bottom"}
 
-1. **User**. Open the {{site.data.keyword.bpshort}} user interface in the {{site.data.keyword.cloud_notm}} console with the user's {{site.data.keyword.iamshort}} credentials.
-2. **{{site.data.keyword.bpshort}} user interface**. Sends request to the {{site.data.keyword.bpshort}} API server.
-3. **API server**. Authenticates the user with {{site.data.keyword.iamshort}} credentials.
-4. **API server**. Gets the {{site.data.keyword.bpshort}} service instance for the user account from the Servicebroker.
-5. **Servicebroker**. Lookup for the user's service instance / CRN in Cloudant. If user is not found in Cloudant, Servicebroker creates a new service instance for that new user.
-6. **Servicebroker**. Registers the new service instance for the user account with the resource controller. On successful registration, you can continue to process the API request to provision the your configured resource.
+1. A user sends a request to create an {{site.data.keyword.bplong_notm}} workspace to the {{site.data.keyword.bpshort}} API server.
+2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or the tape archive file (`.tar`) that you uploaded from your local machine. 
+3. All user-initiated actions, such as creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. RabbitMQ forwards requests to the {{site.data.keyword.bpshort}} engine to execute the action. 
+4. The {{site.data.keyword.bpshort}} engine starts the process for provisioning, modifying, or deleting {{site.data.keyword.cloud}} resources. 
+5. To protect customer data in transit, {{site.data.keyword.bplong_notm}} integrates with {{site.data.keyword.keymanagementserviceshort}}. {{site.data.keyword.bpshort}} uses root keys in {{site.data.keyword.keymanagementserviceshort}} to create data encryption keys (DEK). The DEK is then used to encrypt workspace transactional data, such as logs, or the Terraform `tf.state` file in transit. 
+6. Workspace transactional data is stored in an {{site.data.keyword.cos_full_notm}} bucket and encrypted by using [Server-Side Encryption with {{site.data.keyword.keymanagementserviceshort}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) at rest.  
+7. Workspace operational data, such as the workspace variables and Terraform template information, is stored in {{site.data.keyword.cloudant}} and encrypted at rest by using the default service encryption. For more information, see [Security](/docs/Cloudant?topic=Cloudant-security).
 
 ## Workload isolation
 {: #workload-isolation}
@@ -53,3 +54,4 @@ All API requests to the {{site.data.keyword.bpshort}} API server are queued in M
 {: #workload-tenant-isolation}
 
 When you use {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud}} resources, these resources are created in your personal {{site.data.keyword.cloud_notm}} account. You are responsible to manage these resources and to keep them up-to-date to avoid security vulnerabilities or downtime for your workloads. {{site.data.keyword.cloud_notm}} resources are provisioned, updated, and deleted as defined in the Terraform template and requested by the user. Because all resources are created in your personal account, resources are not shared with or reused by other {{site.data.keyword.cloud_notm}} tenants.
+

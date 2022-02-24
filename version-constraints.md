@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-02-24"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -51,6 +51,7 @@ ibmcloud schematics version
 
 Template Type   Version
 Terraform       terraform_v0.11
+
 Additional terraform Providers   Version   
 IBM Cloud Provider               v0.31.0   
 Open shift client                v3.11.0   
@@ -60,6 +61,7 @@ Ansible Provisioner              v2.3.3
 
 Template Type   Version   
 Terraform       terraform_v0.12   
+
 Additional terraform Providers   Version   
 IBM Cloud Provider               v1.29.0   
 Open shift client                v3.11.0   
@@ -68,7 +70,8 @@ Ansible                          v2.9.23
 Ansible Provisioner              v2.3.3   
 
 Template Type   Version   
-Terraform       terraform_v0.13   
+Terraform       terraform_v0.13
+
 Additional terraform Providers   Version   
 IBM Cloud Provider               v1.29.0   
 Open shift client                v3.11.0   
@@ -77,7 +80,8 @@ Ansible                          v2.9.23
 Ansible Provisioner              v2.3.3   
 
 Template Type   Version   
-Terraform       terraform_v0.14   
+Terraform       terraform_v0.14
+
 Additional terraform Providers   Version   
 Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
@@ -86,7 +90,8 @@ Open shift client                v3.11.0
 Provider for REST API            v1.10.0   
 
 Template Type   Version   
-Terraform       terraform_v0.15   
+Terraform       terraform_v0.15
+
 Additional terraform Providers   Version   
 Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
@@ -95,7 +100,8 @@ Open shift client                v3.11.0
 Provider for REST API            v1.10.0   
 
 Template Type   Version   
-Terraform       terraform_v1.0   
+Terraform       terraform_v1.0
+
 Additional terraform Providers   Version   
 Ansible                          v2.9.23   
 Ansible Provisioner              v2.3.3   
