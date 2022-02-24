@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-24"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -25,7 +25,7 @@ Review potential errors that might occur when you run {{site.data.keyword.bpshor
 You attempted to create an {{site.data.keyword.cloud_notm}} resource that takes a long time to fully provision, such as {{site.data.keyword.messagehub}} or {{site.data.keyword.databases-for}}. When you run the {{site.data.keyword.bpshort}} apply action, the action fails due to timeouts resulting in a tainted resource.
 {: tsSymptoms}
 
-The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform sets certain timeouts when the provisioning, update, or deletion of a resource must be completed before it is considered failed. Because some resources such as {{site.data.keyword.messagehub}} or {{site.data.keyword.databases-for}} take longer to fully provision, they might exceed these timeouts. If the provisioning cannot be completed before the timeout is reached, the {{site.data.keyword.cloud_notm}} Provider plug-in marks the provisioning process as failed and taints the resource. However, the actual provisioning of the resource is not canceled and continues in the background which can result in a successfully provisioned resource after all. Because the resource is tainted, the resource is automatically deleted and re-created when you run the next {{site.data.keyword.bpshort}} apply action.
+The {{site.data.keyword.terraform-provider_full_notm}} sets certain timeouts when the provisioning, update, or deletion of a resource must be completed before it is considered failed. Because some resources such as {{site.data.keyword.messagehub}} or {{site.data.keyword.databases-for}} take longer to fully provision, they might exceed these timeouts. If the provisioning cannot be completed before the timeout is reached, the {{site.data.keyword.cloud_notm}} Provider plug-in marks the provisioning process as failed and taints the resource. However, the actual provisioning of the resource is not canceled and continues in the background which can result in a successfully provisioned resource after all. Because the resource is tainted, the resource is automatically deleted and re-created when you run the next {{site.data.keyword.bpshort}} apply action.
 {: tsCauses}
 
 To avoid that a successfully provisioned resource is deleted and re-created, you must untaint the resource.
@@ -81,7 +81,7 @@ Error retrieving resource group <resource-group>: ResourceGroupDoesnotExist: Giv
 ```
 {: screen}
 
-You do not have the required permissions in Identity and Access Management (IAM) to view the resource group. If you specified an API key in your Terraform template or in {{site.data.keyword.bpshort}}, this API key does not have the required permissions in IAM to view the resource group.
+You do not have the required permissions in {{site.data.keyword.iamshort}} to view the resource group. If you specified an API key in your Terraform template or in {{site.data.keyword.bpshort}}, this API key does not have the required permissions in IAM to view the resource group.
 {: tsCauses}
 
 Make sure that the **Viewer** permission on the resource group is assigned to you or the API key that you use. For more information, see [Adding resources to a resource group](/docs/account?topic=account-rgs#add_to_rgs).

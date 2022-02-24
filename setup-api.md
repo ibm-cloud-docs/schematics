@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-02-24"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -27,7 +27,7 @@ To find an overview of supported {{site.data.keyword.bplong}} APIs, API endpoint
 Learn how to use the {{site.data.keyword.cloud_notm}} API to retrieve an Identity and Access Management token so that you can access the {{site.data.keyword.bpshort}} API. 
 {: shortdesc}
 
-To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) token that is generated with your {{site.data.keyword.cloud_notm}} credentials. Depending on the way you authenticate with {{site.data.keyword.cloud_notm}}, you can choose between the following options to automate the creation of your {{site.data.keyword.cloud_notm}} IAM token.
+To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{site.data.keyword.iamlong}} (IAM) token that is generated with your {{site.data.keyword.cloud_notm}} credentials. Depending on the way you authenticate with {{site.data.keyword.cloud_notm}}, you can choose between the following options to automate the creation of your {{site.data.keyword.cloud_notm}} IAM token.
 
 
 |{{site.data.keyword.cloud_notm}} ID|My options|
@@ -160,7 +160,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 ## Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API
 {: #api_refresh}
 
-Every {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) access token that is issued via the API expires after one hour. You must refresh your access token regularly to assure access to the {{site.data.keyword.cloud_notm}} API. You can use the same steps to obtain a new refresh token.
+Every {{site.data.keyword.iamlong}} (IAM) access token that is issued via the API expires after one hour. You must refresh your access token regularly to assure access to the {{site.data.keyword.cloud_notm}} API. You can use the same steps to obtain a new refresh token.
 {: shortdesc}
 
 Before you begin, make sure that you have an {{site.data.keyword.cloud_notm}} IAM refresh token or an {{site.data.keyword.cloud_notm}} API key that you can use to request a new access token.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-12"
+lastupdated: "2022-02-24"
 
 keywords: schematics, automation, terraform
 
@@ -15,10 +15,10 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use [{{site.data.keyword.cloud}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bplong_notm}} workspaces and actions. 
+Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bplong_notm}} workspaces and actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, refer to [What is {{site.data.keyword.cloud_notm}} Identity and Access Management?](/docs/account?topic=account-iamoverview)
+As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, refer to [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
 
 
 
@@ -27,7 +27,7 @@ As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that y
 {: help}
 {: support}
 
-Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM) service access roles to your users. 
+Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keyword.iamlong}} (IAM) service access roles to your users. 
 {: shortdsec}
 
 **Who must grant access to {{site.data.keyword.bplong_notm}}?**
