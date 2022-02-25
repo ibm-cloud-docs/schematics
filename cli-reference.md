@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-25"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2165,7 +2165,7 @@ ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--descripti
 | `--id`  or `-i` | Required | Enter the ID of a resource inventory that you want to update. |
 | `--name` or `-n` | Required | The unique name of an inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The geographic locations supported by IBM Cloud Schematics service, such as **us-south, us-east, eu-de,** or **eu-gb**.|
+| `--location` or `-l` | Optional | The geographic locations supported by {{site.data.keyword.bplong_notm}} service, such as **us-south, us-east, eu-de,** or **eu-gb**.|
 |`resource-group` or `-r`| Optional | The resource group name for an action.|
 |`--inventories-ini` or `-y` | Optional |  File path of `INI` format file that contains the host details.|
 |`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs use `--resource-query id1 --resource-query id2`.|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-25"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -98,7 +98,7 @@ To get started with software deployment in {{site.data.keyword.bpshort}}, see th
 
 ![Software deployments with {{site.data.keyword.bplong_notm}}](images/software_flow.png){: caption="Figure 3. Software deployments with {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
-1. **Choose a template**: The [{{site.data.keyword.IBM_notm}} software solutions catalog](https://cloud.ibm.com/catalog#software){: external} offers a wide variety of infrastructure and software templates that you can choose from. These templates help to quickly install software, such as IBM Cloud Paks, {{site.data.keyword.appserver_full}}, or Kibana and Grafana into the target service of your choice. 
+1. **Choose a template**: The [{{site.data.keyword.IBM_notm}} software solutions catalog](https://cloud.ibm.com/catalog#software){: external} offers a wide variety of infrastructure and software templates that you can choose from. These templates help to quickly install software, such as {{site.data.keyword.cloud_notm}} Paks, {{site.data.keyword.appserver_full}}, or Kibana and Grafana into the target service of your choice. 
 2. **Configure your workspace and target**: When you choose one of the provided templates, you must select the target where you want to install the template. Depending on the template that you choose, the target can be an {{site.data.keyword.containerlong_notm}} cluster, a {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or {{site.data.keyword.vsi_is_short}}. Because {{site.data.keyword.bpshort}} is used to install the software, you must configure the workspace that is automatically created for you. 
 3. **Run the template**: When you run the template, {{site.data.keyword.bpshort}} uses the built-in Terraform, Ansible, Helm, OpenShift Operator, or Cloud Pak capabilities to install your software or spin up infrastructure resources. You can use your workspace to monitor the progress of your template execution. 
 

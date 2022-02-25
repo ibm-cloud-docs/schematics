@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-25"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -78,7 +78,7 @@ This tutorial is intended for developers and system administrators who want to l
 Before you begin, complete the following prerequisites. 
 {: shortdesc}
 
-- [Create a Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
+- [Create a {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
 - [Install the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli). 
 - Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace. 
 - Make sure that you are assigned the required [permissions](/docs/vpc?topic=vpc-iam-getting-started) to create VPC infrastructure resources. 
@@ -268,10 +268,10 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {: pre}
 
-    You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace status.
+    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace status.
     {: note}
 
-3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the IBM Cloud resources that are specified in the template are created in your IBM Cloud account. 
+3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the {{site.data.keyword.cloud_notm}} resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account. 
 
     This process takes a minute to complete. During this process, you cannot make any changes to your workspace. 
     {: important}
@@ -309,7 +309,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {; pre}
 
-    You can view the output from your working directory, or from the IBM Cloud dashboard plan logs to view the workspace status.
+    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace jobs status.
     {: note}
 
     

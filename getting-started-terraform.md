@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-25"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -36,21 +36,21 @@ Use the {{site.data.keyword.IBM_notm}} provided Terraform template to provision 
 {: shortdesc}
 
 1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
-2. In **Specify template** panel. Enter **GitHub, GitLab, or `Bitbucket` Repository URL** as 
-    ```sh
+2. In **Specify template** section. Enter **GitHub, GitLab, or `Bitbucket` Repository URL** as 
+    ```text
     https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance
     ```
     {: codeblock}
 
 3. Select `terraform_v01.0` from the **Terraform version** drop down.
 4. Click **Next**.
-5. In the **Workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location** where you want to create the workspace, and **Description**.
+5. In the **Workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
 
-    Ensure you provide the right resource group, and the location details.
+    Ensure you provide the right resource group, and the location where you want to create the workspace.
     {: note}
 
 6. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspace successfully.
-7. In the **Variables** panel, template variables are displayed. Optionally, override the variables by referring the [readme file](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance){: external}. 
+7. In the **Variables** section, template variables are displayed. Optionally, override the variables by referring the [readme file](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance){: external}. 
     
     If you already have an existing {{site.data.keyword.cos_full_notm}} instance in your account, you must enter `standard` in the **plan** field. 
     {: tip}
