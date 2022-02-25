@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2021-11-30"
+lastupdated: "2022-02-25"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -23,7 +23,7 @@ As the [account owner or administrator](/docs/account?topic=account-account-serv
 
 Follow the steps to configure the {{site.data.keyword.bpshort}} resource based on the location.
 
-1. In the IBM Cloud console, go to **Manage** > **Catalogs** > **Settings**. 
+1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Catalogs** > **Settings**. 
 2. Click **Edit** icon for the Location.
 3. Set one or more **Filter by Location** to customize which location you need to be restricted. 
    Schematics supports only [Locations and service endpoints](/docs/schematics?topic=schematics-locations).

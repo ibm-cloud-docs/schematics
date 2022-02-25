@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-25"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -168,7 +168,7 @@ Before you begin, make sure that you have an {{site.data.keyword.cloud_notm}} IA
 - **API key:** Retrieve your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/) API key as follows.
     1. From the menu bar, click **Manage** > **Access (IAM)**.
     2. Click the **Users** page and then select yourself.
-    3. In the **API keys** pane, click **Create an IBM Cloud API key**.
+    3. In the **API keys** pane, click **Create an {{site.data.keyword.cloud_notm}} API key**.
     4. Enter a **Name** and **Description** for your API key and click **Create**.
     5. Click **Show** to see the API key that was generated for you.
     6. Copy the API key so that you can use it to retrieve your new {{site.data.keyword.cloud_notm}} IAM access token.

@@ -268,10 +268,10 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {: pre}
 
-    You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace status.
+    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace status.
     {: note}
 
-3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the IBM Cloud resources that are specified in the template are created in your IBM Cloud account. 
+3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the {{site.data.keyword.cloud_notm}} resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account. 
 
     This process takes a minute to complete. During this process, you cannot make any changes to your workspace. 
     {: important}
@@ -309,7 +309,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {; pre}
 
-    You can view the output from your working directory, or from the IBM Cloud dashboard to view the workspace jobs status.
+    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace jobs status.
     {: note}
 
     

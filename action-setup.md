@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-25"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -43,7 +43,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     3. Select the **Resource group** where you want to create the action. 
     4. Select the **Location** where you want to create the action. The location determines where your action runs and action data are stored. You can choose between a geography, such as `North America`, or a location, such as `Frankfurt` or `London`. If you select a geography, {{site.data.keyword.bpshort}} decides on a location within this geography based on availability. Be sure that you can store your action data in this location as you cannot change the location after the action is created. For more information, see [where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). **Note** that the location of your action is independent from the location of your {{site.data.keyword.cloud_notm}} resource where you want to run your Ansible playbook.
     5. Click the **Create** to create an action. Your action is created with a `Normal` state, and you are directed to the `Details` section.
-3. In the **Ansible playbook** section, click **Edit icon** to import your Ansible playbook. 
+3. In the **Import your Ansible playbook** section, click **Edit icon** to import your Ansible playbook. 
     1. Enter the **GitHub or GitLab repository URL** where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
         - Example for master branch - `https://github.com/myorg/myrepo`
         - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
@@ -63,7 +63,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     1. In the **Choose your inventory** section, click the **Edit icon**. 
     2. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information, about creating resource inventories, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv) or [Dynamically building resource inventories from Schematics workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv).
     3. Action supports **SSH** and **WinRM** types of inventory connection tab to connect to your remote host.
-       - Select **SSH** tab, to enter the **username** and **IBM Cloud resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 
+       - Select **SSH** tab, to enter the **username** and **{{site.data.keyword.cloud_notm}} resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 
          * Select the **Bastion host access is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
        - Select **WinRM** tab, for the communication between the client and the server. Currently, WinRM supports only Windows system with the public IPs and do not support Bastion host.
          * Provide the **Username** and the **Password** of your Windows system with the public IP.

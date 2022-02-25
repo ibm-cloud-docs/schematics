@@ -58,7 +58,7 @@ This tutorial is intended for developer and system administrators who want to le
 
 **About {{site.data.keyword.bplong_notm}}:**
 
-[{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started) is an {{site.data.keyword.cloud_notm}} automation tool. It provides simplified provisioning, orchestrating Infrastructure as  Code (IaC), templates, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using various resources tools such as Terraform, Helm and so on.
+[{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started) is an {{site.data.keyword.cloud_notm}} automation tool. It provides simplified provisioning, orchestrating Infrastructure as Code (IaC), templates, and managing {{site.data.keyword.cloud_notm}} resources in your {{site.data.keyword.cloud_notm}} environment by using various resources tools such as Terraform, Helm and so on.
 IaC helps you codify your cloud environment to automate the provisioning, speeds deployment and managing your resources. The infrastructure is treated the same way as your app code, so that you can automate the DevOps core practices such as version control, testing, continuous integration and deployment.
 {: shortdesc}
 
@@ -71,7 +71,7 @@ For the information, about the importance of using an {{site.data.keyword.cloud_
 
 Complete the following prerequisites for the tutorial:
 
-- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer to [Managing IBM Cloud account](https://cloud.ibm.com/registration).
+- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer to [Managing {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
 - Install the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in. For more information, about command-line setup, see [{{site.data.keyword.bpshort}} command-line setup](/docs/schematics?topic=schematics-setup-cli).
 - Ensure you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer to [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
 - Follow the instructions to ensure you are assigned the required permissions in {{site.data.keyword.iamshort}} to create resources. For more information, about create {{site.data.keyword.cos_full_notm}}, refer to [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
@@ -183,6 +183,6 @@ Congratulations! You successfully created the {{site.data.keyword.bplong_notm}} 
 ## What's next?
 {: #automate-what's next}
 
-You can now learn how to set up a continuous delivery pipeline for an IBM cluster. For more information, refer to [Setting up a continuous delivery pipeline for an IBM cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
+You can now learn how to set up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster. For more information, refer to [Setting up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
 
 
