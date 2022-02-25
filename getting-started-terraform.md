@@ -36,7 +36,7 @@ Use the {{site.data.keyword.IBM_notm}} provided Terraform template to provision 
 {: shortdesc}
 
 1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
-2. In **Specify template** panel. Enter **GitHub, GitLab, or `Bitbucket` Repository URL** as 
+2. In **Specify template** section. Enter **GitHub, GitLab, or `Bitbucket` Repository URL** as 
     ```text
     https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance
     ```
@@ -50,7 +50,7 @@ Use the {{site.data.keyword.IBM_notm}} provided Terraform template to provision 
     {: note}
 
 6. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspace successfully.
-7. In the **Variables** panel, template variables are displayed. Optionally, override the variables by referring the [readme file](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance){: external}. 
+7. In the **Variables** section, template variables are displayed. Optionally, override the variables by referring the [readme file](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance){: external}. 
     
     If you already have an existing {{site.data.keyword.cos_full_notm}} instance in your account, you must enter `standard` in the **plan** field. 
     {: tip}
