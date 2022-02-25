@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-02-25"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -26,11 +26,12 @@ completion-time: 60m
 ## Description
 {: #schematics-desc}
 
-In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full_notm}} in the Schematics workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
-The ibm_cos_bucket example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker and {{site.data.keyword.monitoringfull_notm}}. 
+In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full}} in the {{site.data.keyword.bpshort}} workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
+
+The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker, and {{site.data.keyword.monitoringfull}}. 
 {: shortdesc}
 
-The costs are incurred based on your resource usage. For more information, about the pricing, refer to [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to [Schematics help](/docs/schematics?topic=schematics-schematics-help).
+Costs are incurred based on your resource usage. For more information, about the pricing, refer to [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
 {: important}
 
 
@@ -38,9 +39,9 @@ The costs are incurred based on your resource usage. For more information, about
 {: #schematics-obj}
 
 In this tutorial, you can:
-- Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the IBM resource instance, and IBM resource group.
+- Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the {{site.data.keyword.IBM_notm}} resource instance, and {{site.data.keyword.IBM_notm}} resource group.
 - Learn how to create an {{site.data.keyword.bplong_notm}} workspace.
-- Learn to automate continuous  deployment of a resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
+- Learn to automate continuous deployment of a resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
 - Review the {{site.data.keyword.cloud_notm}} resources that you create.
 
 ## Time required
@@ -83,10 +84,11 @@ Complete the following prerequisites for the tutorial:
 Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terraform templates from the GitHub:
 {: shortdesc}
 
-1. If you do not have one, create an [IBM Cloud Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
-2. Log in to your [GitHub](https://github.com/) account. 
-3. Open the Terraform template to create an {{site.data.keyword.cos_full_notm}}. (https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket) 
+1. If you do not have one, create an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external} account. 
+2. Log in to your [GitHub](https://github.com/){: external} account. 
+3. Open the Terraform template to [create an {{site.data.keyword.cos_full_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket){: external}.
 4. From the right corner of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
+    
     You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your Schematics workspace.
     {: note}
 
@@ -97,7 +99,7 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Terraform template URL.
 {: shortdesc}
 
-1. Click `Navigation Menu > Schematics > Create a Schematics workspace` from the {{site.data.keyword.cloud_notm}} page.
+1. Access [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/) page and Click `Navigation Menu > Schematics > Workspaces`. 2. Click **Create workspace** to view Create a Schematics workspace page.
 2. Provide a unique name for the `Workspace name` parameter and add values for the other parameters as required. The default values are maintained in this tutorial.
 3. Click `Create` to view your workspace page.
 4. Scroll to view import your Terraform template to fill the GitHub repository URL, Personal access token and Terraform version details.
