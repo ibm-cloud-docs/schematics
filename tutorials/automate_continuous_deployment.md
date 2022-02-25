@@ -24,7 +24,7 @@ completion-time: 60m
 {: toc-completion-time="60m"}
 
 ## Description
-{: #schematics-desc}
+{: #workspace-desc}
 
 In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full}} in the {{site.data.keyword.bpshort}} workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you will use `ibm_cos_bucket` Terraform template example.
 
@@ -34,9 +34,8 @@ The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full
 Costs are incurred based on your resource usage. For more information, about the pricing, refer to [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
 {: important}
 
-
 ## Objectives
-{: #schematics-obj}
+{: #workspace-obj}
 
 In this tutorial, you can:
 - Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the {{site.data.keyword.IBM_notm}} resource instance, and {{site.data.keyword.IBM_notm}} resource group.
@@ -45,17 +44,17 @@ In this tutorial, you can:
 - Review the {{site.data.keyword.cloud_notm}} resources that you create.
 
 ## Time required
-{: #schematics-timereq}
+{: #workspace-timereq}
 
 1 hour
 
 ## Audience
-{: #schematicsd-tut-audience}
+{: #workspace-tut-audience}
 
 This tutorial is intended for developer and system administrators who want to learn how to use Terraform templates to create and automate the continuous deployment of resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
 
 ## Prerequisites
-{: #schematics-prereq}
+{: #workspace-prereq}
 
 **About {{site.data.keyword.bplong_notm}}:**
 
@@ -68,14 +67,14 @@ IaC helps you codify your cloud environment to automate the provisioning, speeds
 A DevOps toolchain is a set of tools that automates the tasks of developing and deploying your app. A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 
 For the information, about the importance of using an {{site.data.keyword.cloud_notm}} toolchain and continuous delivery of your app, refer to [DevOps toolchain](/docs/apps?topic=apps-devops-toolchains).
-Schematics provides option to enable the continuous delivery of your infrastructure configurations as well with {{site.data.keyword.cloud_notm}} toolchain.
+{{site.data.keyword.bpshort}} provides option to enable the continuous delivery of your infrastructure configurations as well with {{site.data.keyword.cloud_notm}} toolchain.
 
 Complete the following prerequisites for the tutorial:
 
 - If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer to [Managing IBM Cloud account](https://cloud.ibm.com/registration).
-- Install the IBM Cloud command-line and the Schematics command-line plug-in. For more information, about command-line setup, see [Schematics command-line setup](/docs/schematics?topic=schematics-setup-cli).
-- Ensure you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer to [Schematics access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
-- Follow the instructions to ensure you are assigned the required permissions in Identity and Access Management to create resources. For more information, about create Cloud Object Storage, refer to [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
+- Install the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in. For more information, about command-line setup, see [{{site.data.keyword.bpshort}} command-line setup](/docs/schematics?topic=schematics-setup-cli).
+- Ensure you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. Refer to [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
+- Follow the instructions to ensure you are assigned the required permissions in {{site.data.keyword.iamshort}} to create resources. For more information, about create {{site.data.keyword.cos_full_notm}}, refer to [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
 
 ## Accessing the {{site.data.keyword.cloud_notm}} and GitHub
 {: #access-automate-template}
@@ -89,7 +88,7 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 3. Open the Terraform template to [create an {{site.data.keyword.cos_full_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket){: external}.
 4. From the right corner of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
     
-    You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your Schematics workspace.
+    You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your {{site.data.keyword.bpshort}} workspace.
     {: note}
 
 ## Creating your {{site.data.keyword.bplong_notm}} workspace
@@ -99,68 +98,91 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Terraform template URL.
 {: shortdesc}
 
-1. Access [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/) page and Click `Navigation Menu > Schematics > Workspaces`. 2. Click **Create workspace** to view Create a Schematics workspace page.
-2. Provide a unique name for the `Workspace name` parameter and add values for the other parameters as required. The default values are maintained in this tutorial.
-3. Click `Create` to view your workspace page.
-4. Scroll to view import your Terraform template to fill the GitHub repository URL, Personal access token and Terraform version details.
-    From the import your Terraform template, click sample templates to view the sample templates. In the tutorial, [ibm-cos-bucket](https://github.com/nibhart1/toolchain_template/tree/master/ibm-cos-bucket) example repository is used.
-5. Copy and paste the URL in the GitHub or GitLab repository URL parameter. Optionally, You can add your Personal access token of the template from your private repository.
-6. Select Terraform version as `terraform_v0.12` from the drop-down list.
-7. Click `Save template information` to view the Variables page.
+1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
+2. In **Specify template** section. Enter **GitHub, GitLab, or `Bitbucket` Repository URL** as 
+    
+    ```text
+    https://github.com/IBM-Cloud/terraform-provider-ibm/blob/master/examples/ibm-cos-bucket
+    ```
+    {: pre}
+
+3. For the private repository provide your **GitHub personal access token**. See the steps to fetch the [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+4. Select `terraform_v01.0` from the **Terraform version** drop down.
+5. Click **Next**.
+6. In the **Workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
+
+   Ensure you provide the right resource group, and the location details where you want to create the workspace.
+    {: note}
+
+7. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspace successfully.
 
 ## Configuring the variables
 {: #configure-variables}
 {: step}
 
-Configure the variables as described in the table to authenticate the api keys and user credentials and save the changes.
+Click `...` to configure the variables as described in the table to authenticate your credentials and save the changes.
 {: shortdesc}
 
 |Name|Value|
 |-----|-----|
-|`iaas_classic_username`|Enter the username to access IBM Cloud classic infrastructure. |
-|`iaas_classic_api_key`|Enter the API key to access IBM Cloud classic infrastructure. For more information, to create an API key, refer to [Classic infrastructure API keys](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).|
-|`ibmcloud_api_key`|Enter your IBM Cloud API Key, for more information on API key, refer to [IBM Cloud API key](https://cloud.ibm.com/iam#/apikeys).|
+|`iaas_classic_username`|Enter the username to access {{site.data.keyword.cloud_notm}} classic infrastructure. |
+|`iaas_classic_api_key`|Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information, to create an API key, refer to [Classic infrastructure API keys](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).|
+|`ibmcloud_api_key`|Enter your {{site.data.keyword.cloud_notm}}API Key, for more information on API key, refer to [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys).|
 |`resource_group_name`| Keep as default.|
-
-1. On the variable page, click `Enable continuous delivery` hyperlink option to view Schematics Infrastructure as Code (IaC) Toolchain page.
-2. Click `Delivery Pipeline Required` tab.
-
-    The GitHub Server type parameter expects the authorization, you can provide GitHub credentials and confirm the authorization.
-    {: note}
+{: caption="Variables" caption-side="bottom"}
 
 ## Automating the continuous deployment process
 {: #continuous-deployment}
 {: step}
 
-The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the Schematics workspace. Complete these steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
+The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the {{site.data.keyword.bpshort}} workspace. Complete these steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
 
-1. Provide the IBM Cloud API Key in the `Tool Integrations panel`. Click `Create` to view the Toolchains page.
-2. Click `Deliver Pipeline` pane to view Schematics Pipeline | Delivery Pipeline page. 
+    The GitHub Server type parameter expects the authorization, you need to provide GitHub credentials and confirm the authorization.
+    {: note}
+
+1. On the variable page, click `Enable continuous delivery` hyperlink option to view {{site.data.keyword.bpshort}} Infrastructure as Code Tekton Toolchain page.
+2. Click `Delivery Pipeline Required` tab.
+3. Enter your `{{site.data.keyword.cloud_notm}} API key`. 
+4. Click **Authorize** > **Authorize IBM-Cloud** and enter your GitHub password to get authorized.
+5. Click `Create` to view Toolchains page.
+6. Click `Deliver Pipeline` pane to view {site.data.keyword.bpshort}}-deploy Dashboard page. 
+7. Click **Run Pipeline**
+
     Observe the UPDATE is in STAGE RUNNING state, without the button click.
     {: note}
 
-3. During the update stage process, from the example of ibm-cos-bucket repository observe the `main.tf` file configuration with the cos_instance name and bucket_name. These details are updated in the Schematics workspace after the APPLY stage is passed.
-4. Once the `UPDATE` stage is completed, PLAN stage is in running state.
-5. Click the View logs and history to view the status of the job from the `PLAN` pane.
-6. Observe that the PLAN stage is passed, and APPLY stage is in running state.
-7. From the Schematics workspace check the resource name and bucket name are created successfully.
-8. Observe that the `APPLY` stage is passed and TEST stage is in Running state.
-9. Observe that the `TEST` stage is passed successfully.
-10. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your workspace by the continuous delivery toolchain.
-
-## Analyzing the continuous deployment process
+## Analyzing the pipeline execution process
 {: #analyze-deployment}
+{: step}
+
+Observe the pipeline dashboard and view the status of your workspace execution.
+{: shortdesc}
+
+1. During the update stage process, from the example of `ibm-cos-bucket` repository observe the `main.tf` file configuration with the `cos_instance` name and `bucket_name`. These details are updated in the {{site.data.keyword.bpshort}} workspace after the APPLY stage is passed.
+2. Once the `UPDATE` stage is completed, PLAN stage is in running state.
+3. Click **View logs** and history to view the status of the job from the `PLAN` pane.
+4. Observe that the PLAN stage is passed, and APPLY stage is in running state.
+5. From the {{site.data.keyword.bpshort}} workspace check the resource name and bucket name are created successfully.
+6. Observe that the `APPLY` stage is passed and TEST stage is in Running state.
+7. Observe that the `TEST` stage is passed successfully.
+8. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your workspace by the continuous delivery toolchain.
+
+## Analyzing the {{site.data.keyword.bpshort}} workspace
+{: #analyze-workspace-process}
 {: step}
 
 Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace.
 {: shortdesc}
 
-1. From the {{site.data.keyword.cloud_notm}}, select `Navigation Menu > Schematics > Workspaces > Resources` to observe the apply state of the resources in your workspace.
-2. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
+1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}.
+2. Select `Navigation Menu > Schematics > Workspaces > Resources` to observe the apply state of the resources in your workspace.
+3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
+
+Congratulations! You successfully created the {{site.data.keyword.bplong_notm}} workspace and automated the end to end deployment by using the DevOps toolchain. 
 
 ## What's next?
 {: #automate-what's next}
 
-Congratulations! You successfully created the {{site.data.keyword.bplong_notm}} workspace and automated the end to end deployment by using the DevOps toolchain. You can now learn how to set up a continuous delivery pipeline for an IBM cluster. For more information, refer to [Setting up a continuous delivery pipeline for an IBM cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
+You can now learn how to set up a continuous delivery pipeline for an IBM cluster. For more information, refer to [Setting up a continuous delivery pipeline for an IBM cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
 
 
