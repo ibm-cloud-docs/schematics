@@ -145,7 +145,7 @@ The `Enable continuous delivery` option has the capability of automating the dif
 3. Enter your `{{site.data.keyword.cloud_notm}} API key`. 
 4. Click **Authorize** > **Authorize IBM-Cloud** and enter your GitHub password to get authorized.
 5. Click `Create` to view Toolchains page.
-6. Click `Deliver Pipeline` pane to view {site.data.keyword.bpshort}}-deploy Dashboard page. 
+6. Click `Deliver Pipeline` pane to view {{site.data.keyword.bpshort}}-deploy Dashboard page. 
 7. Click **Run Pipeline**
 
     Observe the UPDATE is in STAGE RUNNING state, without the button click.
