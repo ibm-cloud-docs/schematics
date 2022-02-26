@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-26"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -27,21 +27,18 @@ Upgrading the {{site.data.keyword.bpshort}} workspace to use the latest version 
 The upgrade requires the following steps to support the latest Terraform version in the {{site.data.keyword.bpshort}} workspace.
 
 1. Upgrade the Terraform configuration files to use the newer syntax and semantics.
-2. Migrate the Terraform state file to be compatible with the newer version.
+2. Migrate the Terraform state file to be compatible with the newer version. {{site.data.keyword.bpshort}} does not support built in upgrade of the Terraform version. therefore, you must do the following:
 
-{{site.data.keyword.bpshort}} does not support built in upgrade of the Terraform version. therefore, you must do the following:
+   1. Prepare the upgraded version of Terraform configuration files and Terraform state file, in your local machine.
+   2. Create a new {{site.data.keyword.bpshort}} workspace with the new Terraform configuration files and Terraform state file.
+   3. Delete the older workspace (without destroying the resources).
 
-1. Prepare the upgraded version of Terraform configuration files and Terraform state file, in your local machine.
-2. Create a new {{site.data.keyword.bpshort}} workspace with the new Terraform configuration files and Terraform state file.
-3. Delete the older workspace (without destroying the resources).
-
-Here are detailed steps that you can follow to upgrade.
+Here are the detailed steps that you can follow to upgrade.
 
 1. As a prerequisites, ensure {{site.data.keyword.bpshort}} workspace is created, plan is generated, and applied a job for your resources by using Terraform v0.12.  Ensure Terraform configuration files and Terraform state file, are in a consistent state for Terraform v0.12.
 2. Download or clone the Git repository used by your Terraform v0.12 {{site.data.keyword.bpshort}} workspace to your local machine.
 3. Change directory to your cloned repository and upgrade your repository to Terraform v0.13 by executing `Terraform v0.13upgrade` command. For more information, see [Upgrading to Terraform v0.13 documentation](https://www.terraform.io/language/upgrade-guides/0-13){: external}. The upgrade command generates a `versions.tf` file.
 4. Edit `versions.tf` file to deselect the source parameter and add `source = "IBM-Cloud/ibm"` as shown in the code block.
-
 
     `versions.tf` file
 
@@ -77,6 +74,7 @@ Here are detailed steps that you can follow to upgrade.
 8.	Push the upgraded version of the Terraform configuration files both `terraform.tfstate` and `version.tf` to your Git repository.
 9.	Create a {{site.data.keyword.bpshort}} workspace by using the updated Git repository.
 10. Generate a [`plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and [`apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) the plan to view your workspace with the resources are now using the Terraform v0.13.
-11. [Optionally] you can delete the {{site.data.keyword.bpshort}} workspace that points to Terraform v0.12. **Note** do not delete or destroy the resources that are used by your workspace.
+11. [Optional] you can delete the {{site.data.keyword.bpshort}} workspace that points to Terraform v0.12. 
 
-
+    Do not delete or destroy the resources that are used by your workspace.
+    {: note}
