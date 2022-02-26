@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-26"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -37,7 +37,7 @@ The code block is the sample payload for creating workspace with parallelism pas
 {
     "name": "bb",
     "type": [
-        "terraform_v0.12"
+        "terraform_v1.0"
     ],
     "template_repo": {
         "url": "url"
@@ -45,7 +45,7 @@ The code block is the sample payload for creating workspace with parallelism pas
     "template_data": [
         {
         "folder": ".",
-        "type": "terraform_v0.12",
+        "type": "terraform_v1.0",
         "variablestore": [
         {
           "value": "<val>",
@@ -99,7 +99,7 @@ A sample `tf_values` block in the create payload.
     "tf_values":{
     "sample_var": "hello",
     "sleepy_time": "5",
-    "TF_VERSION" : "0.12",
+    "TF_VERSION" : "1.0",
     "TF_PARALLELISM": "20"
 }
 ```
