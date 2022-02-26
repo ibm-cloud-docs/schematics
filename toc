@@ -53,12 +53,15 @@ Schematics
     Actions: Configuration management and cloud operations with Ansible
          action-setup.md
          create-ansible-playbook.md
-         inventories.md
          autodeploy_actionsamples.md
          autodeploy-template.md
 
     {: .topicgroup}
-    Integrations: Configure logging, activity tracking, monitoring, and KMS with instance
+    Inventories: Create inventories for Ansible playbook
+         inventories.md
+
+    {: .topicgroup}
+    Integrations: Configure logging, activity tracking, monitoring, and KMS for instance
          integration-service.md
 
     {: .topicgroup}

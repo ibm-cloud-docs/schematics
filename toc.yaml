@@ -69,11 +69,14 @@ toc:
           topics:
           - action-setup.md
           - create-ansible-playbook.md
-          - inventories.md
           - autodeploy_actionsamples.md
           - autodeploy_template.md
       - topicgroup:
-          label: Integrations - Configure logging, activity tracking, monitoring, and KMS with instance
+          label: Inventories - Create inventories for Ansible playbook
+          topics:
+          - inventories.md
+      - topicgroup:
+          label: Integrations - Configure logging, activity tracking, monitoring, and KMS for instance
           topics:
           - integration-service.md
       - topicgroup:
