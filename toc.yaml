@@ -73,6 +73,10 @@ toc:
           - autodeploy_actionsamples.md
           - autodeploy_template.md
       - topicgroup:
+          label: Integrations - Configure logging, activity tracking, monitoring, and KMS with instance
+          topics:
+          - integration-service.md
+      - topicgroup:
           label: Logging and monitoring
           topics:
           - monitoring-instances.md

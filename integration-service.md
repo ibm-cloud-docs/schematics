@@ -1,0 +1,100 @@
+---
+
+copyright:
+  years: 2017, 2022
+lastupdated: "2022-02-26"
+
+keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
+
+subcollection: schematics
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+# Monitoring integration resources by using {{site.data.keyword.la_full_notm}}
+{: #monitoring-integration}
+
+{{site.data.keyword.bplong}} integrates to fully manage enterprise-grade activity tracker service instance for logging, activity tracking, monitoring, and key management. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} workspaces by connecting, configuring, and view through observability dashboards.
+{: shortdesc}
+
+## Launching logging
+{: #logging-ui}
+
+You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} workspace. Complete these steps to launch and analyze the log.
+{: shortdesc}
+
+1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
+2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
+3. Select **Integrations** in the side navigation pane.
+4. Select your location and select **Logging** in **Connect** drop down. You are redirected to the {{site.data.keyword.la_full_notm}} service form.
+5. Analyze the configuration and click **Create**.
+
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    {: important}
+
+6. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.
+{: note}
+
+## Launching activity tracker
+{: #audit-ui}
+
+Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspace instance events, access, events, and access audit log. Use the audit log to reveal usage patterns that would identify workspace misuse, and you can also take action to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cloud_notm}} Object Storage to retain your logs. Complete these steps to launch activity tracker.
+{: shortdesc}
+
+1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
+2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
+3. Select **Integrations** in the side navigation pane.
+4. Select your location and select **Activity tracking** in **Connect** drop down. You are redirected to the {{site.data.keyword.at_full_notm}} service form.
+5. Analyze the configuration and click **Create**.
+    
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    {: important}
+
+6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to track your services.
+
+
+## Launching monitoring
+{: #monitoring-ui}
+
+Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_notm}} workspace. To set up monitoring, create a Monitoring instance in a public cloud region and plan associated to the resource. The region defines where your metrics are centralized. The plan specifies the features and retention period for your metrics. Complete these steps to launch monitoring.
+{: shortdesc}
+
+1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
+2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
+3. Select **Integration** in the side navigation pane.
+4. Select your location and click **Monitoring** in **Connect** drop down. You are redirected to the {{site.data.keyword.cloud_notm}} Monitoring form.
+5. Analyze the configuration and click **Create**.
+
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    {: important}
+
+6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to monitor the hosts and events of your services.
+
+## Launching key management
+{: #key-mgt-ui}
+
+The data that you store in {{site.data.keyword.bpshort}} workspace by using the Enterprise plan is encrypted by default by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources. 
+{: shortdesc}
+
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+
+### Prerequisites
+{: #key-prerequisites}
+
+The key management system will list the instance that are created from your specific location and region. For more information, about list of prerequisites, see [key management prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites).
+
+Follow these steps to launch key management system and encrypt your keys with {{site.data.keyword.bpshort}}.
+
+1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
+3. Select **Integrations** in the side navigation pane.
+4. Select your location and click **Key management** to view the Key Management pane.
+5. Select **Service** as Key Protect, or Hyper Protect Crypto Services.
+6. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to [Create a key protect instance](/docs/key-protect?topic=key-protect-tutorial-import-keys#tutorial-import-provision-service).
+    
+    You can view your instance in the service list, when the prerequisites are met. Or you can see a message **No Keys** found.
+    {: note}
+
+7. Select your **Service** and select your **Root key** that is configured for BYOK or KYOK.
+8. Click **Update** to complete the integration of your keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources.

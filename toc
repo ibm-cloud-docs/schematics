@@ -58,6 +58,10 @@ Schematics
          autodeploy-template.md
 
     {: .topicgroup}
+    Integrations: Configure logging, activity tracking, monitoring, and KMS with instance
+         integration-service.md
+
+    {: .topicgroup}
     Logging and monitoring
           monitoring-instances.md
           at.md
