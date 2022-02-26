@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2022-02-25"
+lastupdated: "2022-02-26"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -19,7 +19,7 @@ subcollection: schematics
 ## Manage location settings in catalog
 {: #configure-location}
 
-As the [account owner or administrator](/docs/account?topic=account-account-services#catalog-management-account-management), you can manage the settings for {{site.data.keyword.bpshort}} resource based on the location. The Account owner can restrict the location in the catalog for the invited users in the catalog. If the location is restricted for the user, then user cannot access or create new resources in the {{site.data.keyword.bpshort}} for that particular location.
+An [account owner or administrator](/docs/account?topic=account-account-services#catalog-management-account-management), can manage the settings for {{site.data.keyword.bpshort}} resource based on the location. The Account owner can restrict the location in the catalog for the invited users in the catalog. If the location is restricted for the user, then user cannot access or create new resources in the {{site.data.keyword.bpshort}} for that particular location.
 
 Follow the steps to configure the {{site.data.keyword.bpshort}} resource based on the location.
 
@@ -40,8 +40,8 @@ Account owner can edit the location in {{site.data.keyword.cloud}} catalog setti
 
 - When the account owner restricts `us-east` location for the user in the catalog settings. 
 - If that user creates workspaces and provisions the resources in `North America` region, where North America comprises of `us-east` and `us-south`. 
-- In this case, the user can see his resources are provisioned only in `us-south` but not in `us-east` region. 
-- The reason is that the location visibility is restricted to the user by the account owner.
+- In this case, the user can view his resources are provisioned only in `us-south` but not in `us-east` region. 
+- The reason is that, the location visibility is restricted to the user by the account owner.
 
 
 
