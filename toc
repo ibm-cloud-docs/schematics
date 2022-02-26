@@ -61,7 +61,7 @@ Schematics
          inventories.md
 
     {: .topicgroup}
-    Integrations: Configure logging, activity tracking, monitoring, and KMS with instance
+    Integrations: Configure logging, activity tracking, monitoring, and KMS for instance
          integration-service.md
 
     {: .topicgroup}

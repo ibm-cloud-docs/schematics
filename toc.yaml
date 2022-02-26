@@ -76,7 +76,7 @@ toc:
           topics:
           - inventories.md
       - topicgroup:
-          label: Integrations - Configure logging, activity tracking, monitoring, and KMS with instance
+          label: Integrations - Configure logging, activity tracking, monitoring, and KMS for instance
           topics:
           - integration-service.md
       - topicgroup:
