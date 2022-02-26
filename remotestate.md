@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-26"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -34,7 +34,6 @@ Similar to the `remote_state` data source, you can only access information that 
     {: tip}
 
     ```terraform
-    ...
     output sshcommand {
         value = "ssh root@ibm_is_floating_ip.fip1.address"
     }
@@ -48,7 +47,8 @@ Similar to the `remote_state` data source, you can only access information that 
     In this example, two output values are defined, the `sshcommand` to access the virtual server instance in your VPC and the `vpc_id`.
 
 2. Retrieve the ID of the VPC workspace that you created. 
-    **From the console**: 
+
+    **From the console**:
     - From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the VPC workspace.
     - Select the **Settings** tab.
     - Find the workspace ID in the **Summary** section. 
@@ -96,7 +96,7 @@ Similar to the `remote_state` data source, you can only access information that 
     | `output.sshcomand.value`  and `output.vpc_id.value` | You can access a specific value in the `output_values` list by adding the ID of the output value to your `ibm_schematics_output` data source. For example, to access the `vpc_id`, simply use `data.ibm_schematics_output.vpc.output_values.vpc_id`. |
     {: caption="Configuration file components" caption-side="bottom"}
 
-4. [Create a workspace that points to the `remotestate.tf` file in your GitHub or GitLab repository](/docs/schematics?topic=schematics-workspace-setup#create-workspace). If you want to upload a tape archive file (`.tar`) from your local machine instead, use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.
+4. [Create a workspace](/docs/schematics?topic=schematics-workspace-setup#create-workspace) that points to the `remotestate.tf` file in your GitHub or GitLab repository. If you want to upload a tape archive file (`.tar`) from your local machine instead, use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command.
 
 5. [Run your Terraform code in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources). When you review your logs, you can see the output values from your VPC workspace in the **Output** section. 
 
