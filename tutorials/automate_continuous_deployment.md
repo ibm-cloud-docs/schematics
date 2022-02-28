@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-02-28"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -137,8 +137,8 @@ Click `...` to configure the variables as described in the table to authenticate
 
 The `Enable continuous delivery` option has the capability of automating the different Terraform actions to the {{site.data.keyword.bpshort}} workspace. Complete these steps to observe the automation of the end to end {{site.data.keyword.bplong_notm}} workspace deployment.
 
-    The GitHub Server type parameter expects the authorization, you need to provide GitHub credentials and confirm the authorization.
-    {: note}
+The GitHub Server type parameter expects the authorization, you need to provide GitHub credentials and confirm the authorization.
+{: note}
 
 1. On the variable page, click `Enable continuous delivery` hyperlink option to view {{site.data.keyword.bpshort}} Infrastructure as Code Tekton Toolchain page.
 2. Click `Delivery Pipeline Required` tab.

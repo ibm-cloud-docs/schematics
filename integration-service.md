@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-26"
+lastupdated: "2022-02-28"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -82,7 +82,15 @@ You can use your encryption keys from key management services (KMS), {{site.data
 ### Prerequisites
 {: #key-prerequisites}
 
-The key management system will list the instance that are created from your specific location and region. For more information, about list of prerequisites, see [key management prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites).
+The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
+
+- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
+- You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
+- You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
+
+
+KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
+{: note}
 
 Follow these steps to launch key management system and encrypt your keys with {{site.data.keyword.bpshort}}.
 
@@ -91,7 +99,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
 3. Select **Integrations** in the side navigation pane.
 4. Select your location and click **Key management** to view the Key Management pane.
 5. Select **Service** as Key Protect, or Hyper Protect Crypto Services.
-6. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to [Create a key protect instance](/docs/key-protect?topic=key-protect-tutorial-import-keys#tutorial-import-provision-service).
+6. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to [Create a key protect instance](#key-prerequisites).
     
     You can view your instance in the service list, when the prerequisites are met. Or you can see a message **No Keys** found.
     {: note}
