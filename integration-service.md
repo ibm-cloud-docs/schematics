@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-02"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -77,7 +77,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 The data that you store in {{site.data.keyword.bpshort}} workspace by using the Enterprise plan is encrypted by default by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources. 
 {: shortdesc}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage). To enable customer-managed keys, refer to [About customer-managed keys](/docs/schematics?topic=schematics-secure-data&interface=cli#about-encryption).
 
 ### Prerequisites
 {: #key-prerequisites}
@@ -86,9 +86,13 @@ The key management system will list the instance that are created from your spec
 
 - You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
-- You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
-
-
+- You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service. Follow these steps to grant service to service authorization {{site.data.keyword.keymanagementserviceshort}} access to {{site.data.keyword.bpshort}} service.
+    * In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations** > **Create**.
+    * Select a **Source Service** as **{{site.data.keyword.bpshort}}**.
+    * Select **Target Service** as **Key Protect or {{site.data.keyword.hscrypto}}**. Select the instance you want to provide authorization.
+    * Select the **Role** as **Reader**.
+    * Click **Authorize**.
+ 
 KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
 {: note}
 
@@ -106,3 +110,8 @@ Follow these steps to launch key management system and encrypt your keys with {{
 
 7. Select your **Service** and select your **Root key** that is configured for BYOK or KYOK.
 8. Click **Update** to complete the integration of your keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources.
+
+
+    For more information, see IAM authorization to create by using [CLI](/docs/account?topic=account-serviceauth#auth-cli), and [API](/docs/account?topic=account-serviceauth#create-auth).
+    {: note}
+    
