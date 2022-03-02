@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-03-02"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -62,6 +62,4 @@ You can add an image to your URL to create your `Deploy to {{site.data.keyword.c
     {: codeblock}
 
     For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
-{: tip}
-
-
+   {: tip}
