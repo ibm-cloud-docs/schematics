@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-26"
+lastupdated: "2022-03-02"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -112,7 +112,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     {
         "name": "mytest1_cluster",
         "type": [
-            "terraform_v0.12"
+            "terraform_v1.0"
         ],
         "description": "",
         "template_repo": {
@@ -121,7 +121,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
         "template_data": [
             {
             "folder": ".",
-            "type": "terraform_v0.12",
+            "type": "terraform_v1.0",
             "variablestore": [
             {
               "name": "worker_pool_name",
@@ -171,7 +171,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     | Variable | Value |
     |-------|------|
     | `name` | Specify your unique name. |
-    | `type` | Terraform v0.12 |
+    | `type` | Terraform v1.0 |
     | `githubtoken` | Specify your GitHub token. |
     | `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
     {: caption="Payload details" caption-side="bottom"}
@@ -189,7 +189,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     **Sample example output**
 
     ```text
-    Creation Time   Mon Aug 10 19:18:55
+    Creation Time   Mon Feb 10 19:18:55
     Description
     Frozen          false
     ID              mytest1_cluster-62183a6b-fbed-43
@@ -309,7 +309,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {; pre}
 
-    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace jobs status.
+    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard workspace jobs status.
     {: note}
 
     
