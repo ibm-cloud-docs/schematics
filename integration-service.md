@@ -92,7 +92,10 @@ The key management system will list the instance that are created from your spec
     * Select **Target Service** as **Key Protect or {{site.data.keyword.hscrypto}}**. Select the instance you want to provide authorization.
     * Select the **Role** as **Reader**.
     * Click **Authorize**.
- 
+
+      For more information, see IAM authorization to create by using [CLI](/docs/account?topic=account-serviceauth#auth-cli), and [API](/docs/account?topic=account-serviceauth#create-auth).
+      {: note}
+
 KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
 {: note}
 
@@ -111,7 +114,3 @@ Follow these steps to launch key management system and encrypt your keys with {{
 7. Select your **Service** and select your **Root key** that is configured for BYOK or KYOK.
 8. Click **Update** to complete the integration of your keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources.
 
-
-    For more information, see IAM authorization to create by using [CLI](/docs/account?topic=account-serviceauth#auth-cli), and [API](/docs/account?topic=account-serviceauth#create-auth).
-    {: note}
-    
