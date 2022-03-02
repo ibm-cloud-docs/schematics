@@ -100,7 +100,7 @@ KMS setting is a one time settings. You need to open the [support ticket](/docs/
 {: note}
 
 ### Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI
-{: #about-byok-ui}
+{: #integrate-byok-ui}
 
 Follow these steps to launch key management system and encrypt your keys with {{site.data.keyword.bpshort}}.
 
@@ -121,7 +121,7 @@ To enable customer-managed keys, refer to [About customer-managed keys](/docs/sc
 
 
 ### Enabling {{site.data.keyword.keymanagementservicelong_notm}}} through CLI
-{: #about-byok-cli}
+{: #integrate-byok-cli}
 
 Follow the steps to integrate root keys with {{site.data.keyword.bpshort}} to encrypt the data through command-line.
 
