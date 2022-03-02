@@ -26,7 +26,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 
 
 
-All data, user inputs and the data generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted at rest by envelope encryption technique by using a root key selected for each geographical location. {{site.data.keyword.bpshort}} support encryption with the root keys by using following encryption.
+All data, user inputs and the data generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted at rest by [envelope encryption](#x9860393){: term} technique by using a root key selected for each geographical location. The root keys are secured by FIPS 140-2 Level 3 certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. {{site.data.keyword.bpshort}} support encryption with the root keys by using following encryption.
 
 1. Schematics owned root key.
 2. Bring your own key (BYOK) by integrating with Key Protect.
@@ -47,7 +47,7 @@ Key Deletion is a destructive action. When you disable or delete a root key that
 
 
 
-When you can enable or restore a root key, the {{site.data.keyword.bpshort}} resources transactional data that are inaccessible due to disabled or deleted root key is now completely accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}.
+When you can [enable or restore a root key](/docs/schematics?topic=schematics-monitoring-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that are inaccessible due to disabled or deleted root key is now completely accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}. 
 {: shortdesc}
 
 

@@ -113,7 +113,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
     You can view your instance in the service list, when the prerequisites are met. Or you can see a message **No Keys** found.
     {: note}
 
-6. Select your **Service** and **Root key** that are configured for BYOK or KYOK.
+6. Select your **Service** and **Root key** that is configured for BYOK or KYOK.
 7. Click **Update** to complete the integration of your keys with your {{site.data.keyword.bpshort}} resource deployment.
 8. Click **Launch** icon to view your enabled keys in the **Resource list**.
 

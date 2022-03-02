@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-26"
+lastupdated: "2022-03-02"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -80,6 +80,7 @@ Before you begin, complete the following prerequisites.
 
 - [Create a {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
 - [Install the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli). 
+- Make sure you set environment variables for [`IBMCLOUD_API_KEY`](/docs/cli?topic=cli-ibmcloud_env_var).
 - Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace. 
 - Make sure that you are assigned the required [permissions](/docs/vpc?topic=vpc-iam-getting-started) to create VPC infrastructure resources. 
 - Follow the [steps](/docs/containers?topic=containers-clusters#cluster_prepare) to get the required permissions to create an {{site.data.keyword.containerlong_notm}} cluster and to prepare your account for your cluster setup. 
@@ -104,7 +105,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 {: #create-tut-wks}
 {: step}
 
-1. Specify your Schematics workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to [{{site.data.keyword.bplong_notm}} workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
+1. Specify your {{site.data.keyword.bpshort}} workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to [{{site.data.keyword.bplong_notm}} workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 
     **Example of the cluster_payload.json:**
 
@@ -112,7 +113,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     {
         "name": "mytest1_cluster",
         "type": [
-            "terraform_v0.12"
+            "terraform_v1.0"
         ],
         "description": "",
         "template_repo": {
@@ -121,7 +122,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
         "template_data": [
             {
             "folder": ".",
-            "type": "terraform_v0.12",
+            "type": "terraform_v1.0",
             "variablestore": [
             {
               "name": "worker_pool_name",
@@ -171,7 +172,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     | Variable | Value |
     |-------|------|
     | `name` | Specify your unique name. |
-    | `type` | Terraform v0.12 |
+    | `type` | Terraform v1.0 |
     | `githubtoken` | Specify your GitHub token. |
     | `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
     {: caption="Payload details" caption-side="bottom"}
@@ -189,7 +190,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     **Sample example output**
 
     ```text
-    Creation Time   Mon Aug 10 19:18:55
+    Creation Time   Mon Feb 15 19:18:55
     Description
     Frozen          false
     ID              mytest1_cluster-62183a6b-fbed-43
@@ -234,15 +235,15 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 {: #tut-plan-wks}
 {: step}
 
-Create a Schematics execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
+Create a {{site.data.keyword.bpshort}} execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
 
-Your workspace must be in an `Active` state to perform a Schematics plan action. For more information on the workspace state, refer to [Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).
+Your workspace must be in an `Active` state to perform a Schematics plan action. For more information, about the workspace state, refer to [Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).
 {: note}
 
 During the creation of the Terraform execution plan, you are not allowed to make any changes to your workspace.
 {: note}
 
-1. Execute the Schematics plan command. This command gives back an activity ID. 
+1. Execute the {{site.data.keyword.bpshort}} plan command. This command prompts for `kube_version`, run `ibmcloud ks versions` command to list the supported Kubernetes version to provision. The plan command gives back an activity ID. 
 
     ```sh
     ibmcloud schematics plan --id mytest1_cluster-62183a6b-fbed-43
@@ -271,7 +272,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace status.
     {: note}
 
-3.	Apply your Terraform template in IBM Cloud. When you apply your Terraform template, all the {{site.data.keyword.cloud_notm}} resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account. 
+3.	Apply your Terraform template in {{site.data.keyword.cloud_notm}}. When you apply your Terraform template, all the {{site.data.keyword.cloud_notm}} resources that are specified in the template are created in your {{site.data.keyword.cloud_notm}} account. 
 
     This process takes a minute to complete. During this process, you cannot make any changes to your workspace. 
     {: important}
@@ -299,7 +300,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {: pre}
 
-    Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select ** Navigation Menu -> Schematics -> Workspaces -> Resources ** to observe the apply state of the resources in your workspace.
+    Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select **Navigation Menu -> {{site.data.keyword.bpshort}} -> Workspaces -> Resources** to observe the apply state of the resources in your workspace.
     {: note}
 
 6. Command to view the logs, and analyze the state of the workspace and resources creation.
@@ -307,9 +308,9 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```sh
     ibmcloud schematics logs --id mytest1_cluster-62183a6b-fbed-43
     ```
-    {; pre}
+    {: pre}
 
-    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard to view the workspace jobs status.
+    You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard workspace jobs status.
     {: note}
 
     

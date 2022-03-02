@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-03-02"
 
 subcollection: schematics
 
@@ -36,21 +36,21 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     If you have a workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information, about the {{site.data.keyword.bpshort}} workspace locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
     {: note}
 
-    Then create the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v0.12.20`. 
+    Then create the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
 
     **versions.tf**
 
     The sample `versions.tf` file to specify the provider version that you need to create the workspace.
 
     ```terraform
-    terraform {
-      required_providers {
-        ibm = {
-        source = "IBM-Cloud/ibm"
-        version = "1.27.1"
+      terraform {
+      required_version = ">=1.0.0, <2.0"
+        required_providers {
+          ibm = {
+            source = "IBM-Cloud/ibm"
+          }
         }
       }
-    }
     ```
     {: codeblock}
 
@@ -61,7 +61,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     ```terraform
     schematics_workspace_name="tf-testwks-apigwy"
     schematics_workspace_description="Sample workspace created with terraform with URL"
-    schematics_workspace_type="terraform_v0.12.20"
+    schematics_workspace_type="terraform_v1.0"
     schematics_workspace_location="us-south"
     schematics_workspace_resource_group="default"
     ibmcloud_api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
