@@ -35,14 +35,14 @@ All data, user inputs and the data generated at runtime during execution of auto
 Key protect offers manual and automatic key rotation. When you rotate a root key, the registered key is used to re-encrypted {{site.data.keyword.bpshort}} resources with a new key version. You can access the {{site.data.keyword.bpshort}} resources metadata such as details till the rotation completes.
 {: shortdesc}
 
-#### Key deletion or disable
+### Key deletion or disable
 {: #key-delete}
 
 
 Key Deletion is a destructive action. When you disable or delete a root key that is used to encrypt your {{site.data.keyword.bpshort}} resources, you cannot access transactional data such as activity or job logs, resource list, variable store. However, you can access the metadata details. Furthermore any subsequent deployment or configuration operation through {{site.data.keyword.bpshort}} will result in failure. Key deletion or disable events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}.
 {: shortdesc}
 
-#### Key enable or restore
+### Key enable or restore
 {: #key-enable}
 
 
