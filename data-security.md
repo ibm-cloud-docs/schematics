@@ -52,7 +52,6 @@ When you can enable or restore a root key, the {{site.data.keyword.bpshort}} res
 
 
 
-
 ## What are the details stored in {{site.data.keyword.bpshort}}?
 {: #pi-data}
 
