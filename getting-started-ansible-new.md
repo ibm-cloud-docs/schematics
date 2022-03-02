@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-03-02"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -35,7 +35,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 
 1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page. Click **Create action**. 
 2. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create** to view the **Details** section.
-3. In the **Ansible playbook** section, click **Edit icon** enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field.
+3. In the **Ansible playbook** section, click **Edit icon** and enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field.
 4. Click **Retrieve playbooks**.
 5. Select the **`stop-vsi-playbook.yaml`** playbook. Refer to [floating IP address](/docs/vpc?topic=vpc-using-instance-vnics#editing-network-interfaces){: external} of the VSI to set your input variable.
 6. Expand the **Advanced options**.
