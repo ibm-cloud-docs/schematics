@@ -68,6 +68,7 @@ toc:
           label: Actions - Configuration management and cloud operations with Ansible
           topics:
           - action-setup.md
+          - ansible-roles.md
           - create-ansible-playbook.md
           - autodeploy_actionsamples.md
           - autodeploy_template.md

@@ -56,7 +56,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 
 5. Analyze the configuration and click **Create**.
     
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing Activity tracker logs, refer to [Viewing logs](docs/log-analysis?topic=log-analysis-at_events).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to track your services.
@@ -78,7 +78,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 
 5. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.cloud_notm}} Monitoring that is configured to receive platform service logs. For more information, about monitoring, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to monitor the hosts and events of your services.
