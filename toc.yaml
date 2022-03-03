@@ -5,165 +5,168 @@ toc:
     audience: service
     href: /docs/schematics
     console-page: /schematics/overview
-    product-page: http://cloud.ibm.com/schematics
+    product-page: 'http://cloud.ibm.com/schematics'
     path: schematics
     label: Schematics
-
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
-  - navgroup:
-      id: learn
-      topics:
-      - topicgroup:
-          label: Getting started
-          topics:
-          - getting-started.md
-          - getting-started-terraform.md
-          - getting-started-ansible-new.md
-          - getting-started-software.md
-      - about.md
-      - architecture-workload-isolation.md
-      - release-notes.md
-          links:
-          - link:
-              label: IBM Cloud Schematics internal_v1.0 API
-              href: https://test.cloud.ibm.com/apidocs/schematics/schematics_internal_v1
-  - navgroup:
-      id: tutorial
-      topics:
-      - tutorials/provisioning-tf.md
-      - tutorials/automate_continuous_deployment.md
-      - tutorials/private-catalog.md
-      links:
-      - link:
-          label: Deploying a VPC environment on IBM Cloud by using Bastion host
-          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
-      - link:
-          label: Deploying multi-tier VPC on IBM Cloud by using Bastion host
-          href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
-  - navgroup:
-      id: howto
-      topics:
-      - topicgroup:
-          label: Setting up the CLI and API
-          topics:
-          - setup-cli.md
-          - setup-api.md
-      - topicgroup:
-          label: Workspaces - Cloud infrastructure deployment with Terraform
-          topics:
-          - create-terraform-config.md
-          - workspace-setup.md
-          - special-env-vars.md
-          - manage-resource-lifecycle.md
-          - cross_region_deployment.md
-          - deprecation-tf.md
-          - migrate-tfversion.md
-          - remotestate.md
-          - solutions.md
-          - compact-download.md
-          - job-download-file.md
-          - access.md
-      - topicgroup:
-          label: Actions - Configuration management and cloud operations with Ansible
-          topics:
-          - action-setup.md
-          - ansible-roles.md
-          - create-ansible-playbook.md
-          - autodeploy_actionsamples.md
-          - autodeploy_template.md
-      - topicgroup:
-          label: Inventories - Create inventories for Ansible playbook
-          topics:
-          - inventories.md
-      - topicgroup:
-          label: Integrations - Configure logging, activity tracking, monitoring, and KMS for instance
-          topics:
-          - integration-service.md
-      - topicgroup:
-          label: Logging and monitoring
-          topics:
-          - monitoring-instances.md
-          - at.md
-
-      - job-queue.md
-      - version-constraints.md
-      - terraform.md
-      - topicgroup:
-          label: Enhancing security for Schematics
-          topics:
-          - iam.md
-          - responsibilities.md
-          - ha-dr.md
-          - manage-scc.md
-          - private-endpoint.md
-          - data-security.md
-          - allowips.md
-
-#  Links to your REST API docs should be included in the Reference navigation group. For details on publishing API docs, see https://test.cloud.ibm.com/docs/api-docs.
-#  Links to your command-line reference docs should be included in the Reference navigation group.
-  - navgroup:
-      id: reference
-      topics:
-      - topicgroup:
-         label: CLI reference
-         topics:
-          - cli-reference.md
-          - cli-version-release.md
-      - topicgroup:
-          label: API reference
-          links:
-          - link:
-              label: IBM Cloud Schematics API
-              href: https://cloud.ibm.com/apidocs/schematics
-      - schematics-sdk.md
-      - locations.md
-      - limitations.md
-      - license-notices.md
-      - topicgroup:
-          label: Related links
-          topics:
+    - navgroup:
+        id: learn
+        topics:
           - topicgroup:
-              label: Terraform
+              label: Getting started
+              topics:
+                - getting-started.md
+                - getting-started-terraform.md
+                - getting-started-ansible-new.md
+                - getting-started-software.md
+          - about.md
+          - architecture-workload-isolation.md
+          - release-notes.md
               links:
-              - link:
-                  label: Sample Terraform templates
-                  href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
-              - link:
-                 label: IBM Cloud provider for Terraform
-                 href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+                - link:
+                    label: IBM Cloud Schematics internal_v1.0 API
+                    href: >-
+                      https://test.cloud.ibm.com/apidocs/schematics/schematics_internal_v1
+    - navgroup:
+        id: tutorial
+        topics:
+          - tutorials/provisioning-tf.md
+          - tutorials/automate_continuous_deployment.md
+          - tutorials/private-catalog.md
+        links:
           - link:
-              label: Terraform documentation
-              href: https://www.terraform.io/docs/index.html
-      - topicgroup:
-          label: Ansible
-          links:
+              label: Deploying a VPC environment on IBM Cloud by using Bastion host
+              href: >-
+                https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
           - link:
-              label: Ansible documentation
-              href: https://docs.ansible.com/ansible/latest/index.html
-  - navgroup:
-      id: help
-      topics:
-      - faqs.md
-      - whats-new.md
-      - topicgroup:
-          label: FAQs
-          topics:
-          - topic-7.md
-          - topic-8.md
-      - topicgroup:
-          label: Troubleshooting
-          topics:
+              label: Deploying multi-tier VPC on IBM Cloud by using Bastion host
+              href: >-
+                https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
+    - navgroup:
+        id: howto
+        topics:
           - topicgroup:
-              label: Debugging Schematics apply errors
+              label: Setting up the CLI and API
               topics:
-              - troubleshooting/apply_nullresource.md
-              - troubleshooting/apply_timeout-taint.md
-              - troubleshooting/apply_resource_group.md
-              - troubleshooting/apply_500_errors.md
+                - setup-cli.md
+                - setup-api.md
           - topicgroup:
-              label: Debugging Schematics create errors
+              label: Workspaces - Cloud infrastructure deployment with Terraform
               topics:
-              - troubleshooting/wks_creation_api.md
-          - error-messages.md
-      - ts_index.md
+                - create-terraform-config.md
+                - workspace-setup.md
+                - special-env-vars.md
+                - manage-resource-lifecycle.md
+                - cross_region_deployment.md
+                - deprecation-tf.md
+                - migrate-tfversion.md
+                - remotestate.md
+                - solutions.md
+                - compact-download.md
+                - job-download-file.md
+                - access.md
+          - topicgroup:
+              label: >-
+                Actions - Configuration management and cloud operations with
+                Ansible
+              topics:
+                - action-setup.md
+                - ansible-roles.md
+                - create-ansible-playbook.md
+                - autodeploy_actionsamples.md
+                - autodeploy_template.md
+          - topicgroup:
+              label: Inventories - Create inventories for Ansible playbook
+              topics:
+                - inventories.md
+          - topicgroup:
+              label: >-
+                Integrations - Configure logging, activity tracking, monitoring,
+                and KMS for instance
+              topics:
+                - integration-service.md
+          - topicgroup:
+              label: Logging and monitoring
+              topics:
+                - monitoring-instances.md
+                - at.md
+          - job-queue.md
+          - version-constraints.md
+          - terraform.md
+          - topicgroup:
+              label: Enhancing security for Schematics
+              topics:
+                - iam.md
+                - responsibilities.md
+                - ha-dr.md
+                - manage-scc.md
+                - private-endpoint.md
+                - data-security.md
+                - allowips.md
+    - navgroup:
+        id: reference
+        topics:
+          - topicgroup:
+              label: CLI reference
+              topics:
+                - cli-reference.md
+                - cli-version-release.md
+          - topicgroup:
+              label: API reference
+              links:
+                - link:
+                    label: IBM Cloud Schematics API
+                    href: 'https://cloud.ibm.com/apidocs/schematics'
+          - schematics-sdk.md
+          - locations.md
+          - limitations.md
+          - license-notices.md
+          - topicgroup:
+              label: Related links
+              topics:
+                - topicgroup:
+                    label: Terraform
+                    links:
+                      - link:
+                          label: Sample Terraform templates
+                          href: >-
+                            https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
+                      - link:
+                          label: IBM Cloud provider for Terraform
+                          href: >-
+                            https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+                - link:
+                    label: Terraform documentation
+                    href: 'https://www.terraform.io/docs/index.html'
+          - topicgroup:
+              label: Ansible
+              links:
+                - link:
+                    label: Ansible documentation
+                    href: 'https://docs.ansible.com/ansible/latest/index.html'
+    - navgroup:
+        id: help
+        topics:
+          - faqs.md
+          - whats-new.md
+          - topicgroup:
+              label: FAQs
+              topics:
+                - topic-7.md
+                - topic-8.md
+          - topicgroup:
+              label: Troubleshooting
+              topics:
+                - topicgroup:
+                    label: Debugging Schematics apply errors
+                    topics:
+                      - troubleshooting/apply_nullresource.md
+                      - troubleshooting/apply_timeout-taint.md
+                      - troubleshooting/apply_resource_group.md
+                      - troubleshooting/apply_500_errors.md
+                - topicgroup:
+                    label: Debugging Schematics create errors
+                    topics:
+                      - troubleshooting/wks_creation_api.md
+                - error-messages.md
+          - ts_index.md
