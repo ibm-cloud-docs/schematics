@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-02"
+lastupdated: "2022-03-03"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -42,12 +42,7 @@ Review how your workloads are isolated in {{site.data.keyword.bplong_notm}}.
 ### How are API requests to the service isolated from other API requests?
 {: #workload-api-isolation}
 
-All API requests to the {{site.data.keyword.bpshort}} API server are queued in {{site.data.keyword.bpshort}} internal messages. {{site.data.keyword.bpshort}} job queue manager forwards the requests with the job ID and health check messages. At any given time, a maximum of n API requests are processed by the {{site.data.keyword.bpshort}} engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload. For every API request from a {{site.data.keyword.bpshort}} tenant, the {{site.data.keyword.bpshort}} engine creates a dedicated job that runs to completion and is then removed when the API request is fully processed. The {{site.data.keyword.bpshort}} jobs are not shared between tenants or reused later.
-
-### How is the information in {{site.data.keyword.cloudant}} and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?
-{: #workload-info-isolation}
-
-{{site.data.keyword.bpshort}} does not store any personal information, but stores sensitive technical information for a workspace as described in [What are the details stored in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#pi-data). All data that are stored in Cloudant and {{site.data.keyword.cos_full_notm}} is encrypted in transit and at rest by using the encryption mechanism [BYOK/KYOK](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands).
+All API requests to the {{site.data.keyword.bpshort}} API server are queued in {{site.data.keyword.bpshort}} internal messages. {{site.data.keyword.bpshort}} job queue manager forwards the requests with the job ID and health check messages. At any given time, a maximum of n API requests are processed by the {{site.data.keyword.bpshort}} engine. By default, n equals 20, but this number is manually adjusted by the {{site.data.keyword.bpshort}} operator based on the current API workload. 
 
 ### How are the workloads isolated from other tenants? 
 {: #workload-tenant-isolation}

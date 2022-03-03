@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-03-03"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -29,91 +29,6 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 
 4. Upload your Ansible playbook, modules, roles, and collections to your GitHub repository. 
 5. [Create a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-setup#create-action).
-
-## Referencing Ansible roles in your playbook
-{: #schematics-roles}
-
-An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to separate one big Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
-
-You can [create your own roles](#main-file) or [use existing roles from Ansible Galaxy](#requirements-file). 
-
-### Creating your own roles in Ansible 
-{: #main-file}
-
-To streamline your Ansible playbook, you can decide to separate out playbook tasks by creating roles and referencing them in your playbook.  
-{: shortdesc}
-
-1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all your hosts, and tasks that you want to run on your web servers and your databases. Each group of tasks can become its own role. 
-
-2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. The roles directory can have a subdirectory such as  **/roles/db/** describing the tasks in the `main.yml` file.
-    ```text
-    ├── roles
-        └── db
-            └── tasks
-                └── main.yml
-    ├── playbook.yaml
-    ├── README.md
-    ```
-    {: screen}
-
-3. Add the tasks that you want to run to a `main.yml` file. In the following example, you separate out the task to download the MySQL community repo from your main playbook and put it into a `main.yml` file. 
-    ```yaml
-    - name: Download MySQL Community Repo
-        get_url:
-        url: https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-        dest: /tmp
-    ```
-    {: codeblock}
-
-4. Reference the role in your Ansible playbook.
-   ```yaml
-    - name: deploy MySQL and configure the databases
-      hosts: all
-      remote_user: root
-
-      roles:
-        - db
-    ```
-    {: codeblock}
-
-For more information about other files and conditions that you can add to your role, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#role-directory-structure){: external}
-
-### Installing roles from Ansible Galaxy
-{: #requirements-file}
-
-You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansible.com/){: external} in your playbook. Ansible Galaxy offers pre-packaged units of work from the Ansible community that are made available as roles and collections.
-
-1. Browse the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository to find the roles that you want.
-2. Create a `requirements.yml` file where you specify all the roles that you need. For an overview of how to reference Ansible Galaxy roles, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#install-multiple-collections-with-a-requirements-file){: external}. In the following example, you want to use the role `andrewrothstein.kubectl` from Ansible Galaxy. 
-    ```yaml
-    ---
-    roles:
-      - name: andrewrothstein.kubectl
-    ```
-    {: codeblock}
-
-3. Add a `roles` folder to your GitHub repository that is relative to the playbook, and store the `requirements.yml` file in this folder as shown in this example.
-
-    ```text
-        ├── roles
-            └── requirements.yml
-        ├── playbook.yaml
-        ├── README.md
-    ```
-    {: screen}
-
-4. Reference the role in your Ansible playbook. In this example, the role with the name `andrewrothstein.kubectl` is used.
-    
-    ```yaml
-    - hosts: all
-      roles:
-        - role: andrewrothstein.kubectl
-    ```
-    {: codeblock}
-
-For more information, about Ansible playbook examples, see [IBM provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
-{: tip}
-
 
 ## Referencing Ansible collections in your playbook
 {: #schematics-collections}
