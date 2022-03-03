@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-03-03"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -73,6 +73,8 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
 
       roles:
         - db
+      tasks:
+        - shell: "hostname"
     ```
     {: codeblock}
 
