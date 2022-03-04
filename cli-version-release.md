@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-16"
+lastupdated: "2022-03-04"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -18,8 +18,18 @@ subcollection: schematics
 Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI plug-in. Be sure to keep your CLI up-to-date so that you can use all the available commands and their options.
 {: shortdesc}
 
+Support passing vars files to CLI Plan command
+https://github.ibm.com/blueprint/product/issues/5749
+Show commit ID in workspace get CLI command
+https://github.ibm.com/blueprint/product/issues/5581
+Bug fixes
+
+workspace state show CLI command description update
+https://github.ibm.com/blueprint/product/issues/5733
+
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.7.3 | 4 March 2022 | Supports passing `vars` files to command-line plan command, Display commit ID in Get workspace command, and updated the workspace state show description. |
 | 1.7.2 | 17 February 2022 | Supports Linux&trade; arm64 and Mac OS arm64 platform binaries. Fixes related to `stdout/stderr` stream, invalid `TF vars` file and translation are released. |
 | 1.7.1 | 11 February 2022 | Support for trace logging and added integration tests for few commands. Fixes to update `env values metadata`, panic for invalid flags, and `ibmcloud schematics workspace output command` is disabled. |
 | 1.7.0 | 12 January 2022 | Displays Terraform v11.0 deprecation message after command execution. Fix command-line alias. Remove the appearance of the duplicate strings.  Support globalized time in the log file. |

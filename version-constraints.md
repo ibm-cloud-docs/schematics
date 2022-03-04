@@ -27,7 +27,7 @@ It is good practice to declare the version that your Terraform template or Ansib
 {: #schematics-image-ov}
 
 
-Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in version v1.39.1, and was tested on Terraform v1.0 and higher.
+Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in latest version is tested on `Terraform v1.1`.
 {: shortdesc}
 
 {{site.data.keyword.bpshort}} supports the 5 most recent versions of  **{{site.data.keyword.terraform-provider_full_notm}}** binaries in its image. For more information, see [latest releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}. Following are some constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
