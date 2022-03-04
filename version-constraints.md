@@ -52,7 +52,7 @@ ibmcloud schematics version
 
 ```text
 
-emplate Type   Version
+Template Type   Version
 Terraform       terraform_v0.11
 Additional terraform Providers   Version
 Provider for REST API            v1.10.0
