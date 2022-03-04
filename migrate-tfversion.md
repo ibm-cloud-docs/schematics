@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-04"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -24,7 +24,10 @@ The driver to migrate might come from business factors such as cost reduction, o
 
 The table summarizes the recommendations to upgrade to the latest Terraform version.
 
-{{site.data.keyword.bplong_notm}} suggests to use Terraform templates of `terraform_v1.0` and higher version.
+{{site.data.keyword.bplong_notm}} suggests to use Terraform templates of `terraform_v1.0` and higher version. {{site.data.keyword.bpshort}} supports the stable release of Terraform version 1.1, through `terraform_v1.0`. The terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the latest version.
+terraform {
+  required_version = "~> 1.1"
+}
 {: note}
 
 |Current Version|	Recommendation|
