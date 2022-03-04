@@ -468,7 +468,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td>`terraform_version`</td>
     <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify.</td>
     </tr>
     <tr>
     <td>`location`</td>

@@ -29,7 +29,7 @@ https://github.ibm.com/blueprint/product/issues/5733
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.7.3 | 4 March 2022 | Supports passing `vars` files to command-line plan command, Display commit ID in Get workspace command, and updated the workspace state show description. |
+| 1.7.3 | 4 March 2022 | Supports passing `vars` files to command-line plan command, displays `commit ID` in `ibmcloud schematics workspace get` command, and edited the `ibmcloud schematics workspace state show` command description. |
 | 1.7.2 | 17 February 2022 | Supports Linux&trade; arm64 and Mac OS arm64 platform binaries. Fixes related to `stdout/stderr` stream, invalid `TF vars` file and translation are released. |
 | 1.7.1 | 11 February 2022 | Support for trace logging and added integration tests for few commands. Fixes to update `env values metadata`, panic for invalid flags, and `ibmcloud schematics workspace output command` is disabled. |
 | 1.7.0 | 12 January 2022 | Displays Terraform v11.0 deprecation message after command execution. Fix command-line alias. Remove the appearance of the duplicate strings.  Support globalized time in the log file. |

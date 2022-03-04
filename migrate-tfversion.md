@@ -22,12 +22,16 @@ The driver to migrate might come from business factors such as cost reduction, o
 ## Recommendation to upgrade Terraform version 
 {: #terraform-version-upgrade}
 
-The table summarizes the recommendations to upgrade to the latest Terraform version.
+The table summarizes the recommendations to upgrade to the latest Terraform version. {{site.data.keyword.bpshort}} also supports the stable release of `Terraform version 1.1`. The Terraform template must use the version constraint, such as `>`, `>=` or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, to automatically pick the latest provider version.
 
-{{site.data.keyword.bplong_notm}} suggests to use Terraform templates of `terraform_v1.0` and higher version. {{site.data.keyword.bpshort}} supports the stable release of `Terraform version 1.1`. The terraform template must use the version constraint, such as `>`, `>=` or `~>` for the `required_version` parameter of Terraform, to automatically pick the latest version.
+```terraform
 terraform {
 required_version = "~> 1.1"
 }
+```
+{: pre}
+
+{{site.data.keyword.bplong_notm}} suggests to use Terraform templates of `terraform_v1.0` and higher version. Also 
 {: note}
 
 |Current Version|	Recommendation|
