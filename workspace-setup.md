@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-02"
+lastupdated: "2022-03-04"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -49,6 +49,10 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
    - Optional: Enter the Personal access token to authenticate your private Git repositories.
    - Check **Download entire repo** option to download and cache the complete repository, if unchecked, [compact](/docs/schematics?topic=schematics-compact-download) only the specified folder and sub-folders of the Git URL.
    - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. **Note** You can select `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on.
+
+    {{site.data.keyword.bpshort}} supports the stable release of Terraform version 1.1, through `terraform_v1.0`.
+    {: note}
+
    - Click **Next**.
 3. In the **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
    - Optional: Enter tags for your workspace. You can use the tags later to find your workspace more easily.
