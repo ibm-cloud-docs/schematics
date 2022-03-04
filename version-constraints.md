@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-02"
+lastupdated: "2022-03-04"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -27,7 +27,7 @@ It is good practice to declare the version that your Terraform template or Ansib
 {: #schematics-image-ov}
 
 
-Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in version v1.39.1, and was tested on Terraform v1.0 and higher.
+Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in latest version is tested on `Terraform v1.1`.
 {: shortdesc}
 
 {{site.data.keyword.bpshort}} supports the 5 most recent versions of  **{{site.data.keyword.terraform-provider_full_notm}}** binaries in its image. For more information, see [latest releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}. Following are some constraints that you must follow when using the {{site.data.keyword.cloud_notm}} provider in your Terraform template. 
@@ -54,63 +54,66 @@ ibmcloud schematics version
 
 Template Type   Version
 Terraform       terraform_v0.11
+Additional terraform Providers   Version
+Provider for REST API            v1.10.0
+Ansible Provisioner              v2.3.3
+Open shift client                v3.11.0
+Ansible                          v2.9.23
+IBM Cloud Provider               v0.31.0
 
-Additional terraform Providers   Version   
-IBM Cloud Provider               v0.31.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
-Ansible                          v2.9.23   
-Ansible Provisioner              v2.3.3   
+Template Type   Version
+Terraform       terraform_v0.12
+Additional terraform Providers   Version
+Ansible                          v2.9.23
+Ansible Provisioner              v2.3.3
+Provider for REST API            v1.10.0
+IBM Cloud Provider               v1.38.2
+Open shift client                v3.11.0
 
-Template Type   Version   
-Terraform       terraform_v0.12   
-
-Additional terraform Providers   Version   
-IBM Cloud Provider               v1.29.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
-Ansible                          v2.9.23   
-Ansible Provisioner              v2.3.3   
-
-Template Type   Version   
+Template Type   Version
 Terraform       terraform_v0.13
+Additional terraform Providers   Version
+IBM Cloud Provider               v1.38.2
+Provider for REST API            v1.10.0
+Open shift client                v3.11.0
+Ansible                          v2.9.23
+Ansible Provisioner              v2.3.3
 
-Additional terraform Providers   Version   
-IBM Cloud Provider               v1.29.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
-Ansible                          v2.9.23   
-Ansible Provisioner              v2.3.3   
-
-Template Type   Version   
+Template Type   Version
 Terraform       terraform_v0.14
+Additional terraform Providers   Version
+Ansible                          v2.9.23
+Ansible Provisioner              v2.3.3
+IBM Cloud Provider               v1.38.2
+Open shift client                v3.11.0
+Provider for REST API            v1.10.0
 
-Additional terraform Providers   Version   
-Ansible                          v2.9.23   
-Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.29.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
-
-Template Type   Version   
+Template Type   Version
 Terraform       terraform_v0.15
+Additional terraform Providers   Version
+Ansible                          v2.9.23
+Ansible Provisioner              v2.3.3
+IBM Cloud Provider               v1.38.2
+Open shift client                v3.11.0
+Provider for REST API            v1.10.0
 
-Additional terraform Providers   Version   
-Ansible                          v2.9.23   
-Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.29.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
-
-Template Type   Version   
+Template Type   Version
 Terraform       terraform_v1.0
+Additional terraform Providers   Version
+Open shift client                v3.11.0
+Provider for REST API            v1.10.0
+IBM Cloud Provider               v1.38.2
+Ansible                          v2.9.23
+Ansible Provisioner              v2.3.3
 
-Additional terraform Providers   Version   
-Ansible                          v2.9.23   
-Ansible Provisioner              v2.3.3   
-IBM Cloud Provider               v1.29.0   
-Open shift client                v3.11.0   
-Provider for REST API            v1.10.0   
+Template Type   Version
+Terraform       terraform_v1.1
+Additional terraform Providers   Version
+Ansible                          v2.9.23
+Open shift client                v3.11.0
+Provider for REST API            v1.10.0
+Ansible Provisioner              v2.3.3
+IBM Cloud Provider               v1.38.2
 
 ```
 {: screen}
