@@ -48,9 +48,12 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 2. Specify your template URL in the `GitHub, GitLab or Bitbucket repository URL` that hosts your Terraform configuration files.
    - Optional: Enter the Personal access token to authenticate your private Git repositories.
    - Check **Download entire repo** option to download and cache the complete repository, if unchecked, [compact](/docs/schematics?topic=schematics-compact-download) only the specified folder and sub-folders of the Git URL.
-   - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. **Note** You can select `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.0` then it means users can have template that are of Terraform `v1.0.0`, `v1.0.1`, or `v1.0.2`, so on.
+   - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. **Note** You can select `Terraform_v1.1` to use Terraform version 1.1, `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. **Note** when you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. 
 
-    {{site.data.keyword.bpshort}} supports the stable release of Terraform version 1.1, through `terraform_v1.0`.
+    {{site.data.keyword.bpshort}} supports the stable release of Terraform version 1.1, through `terraform_v1.0`. The terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the latest version.
+     terraform {
+      required_version = "~> 1.1"
+     }
     {: note}
 
    - Click **Next**.
