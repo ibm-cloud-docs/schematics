@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-03-07"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -561,3 +561,40 @@ You can use the sample Terraform codeblock to configure the GitLab repository de
 },
 ```
 {: codeblock}
+
+## Does {{site.data.keyword.cloud_notm}} provider supports managing IAM access groups in {{site.data.keyword.bpshort}}?
+{: #manageaccessgrp-iam-faq}
+{: faq}
+{: support}
+
+Yes, {{site.data.keyword.bpshort}} supports the full {{site.data.keyword.cloud_notm}} provider resource set. For more information, about How IAM access group works? see [ibm_iam_access_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group).
+
+## Could I create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in {{site.data.keyword.cloud_notm}} target account to provision?
+{: #account-resource-faq}
+{: faq}
+{: support}
+
+Yes, you can create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in target account to provision, through command-line and API calls by using the target account service ID with authentication, appropriate cross account authorization, or API key. For more information, refer to [Managing resources in other account](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#manage-resource-account).
+
+## Could I create a worker node in an existing worker node pool?
+{: #workernode-kubernetes-faq}
+{: faq}
+{: support}
+
+Yes, you can create or add a worker node inside an existing worker node pool by using {{site.data.keyword.IBM_notm}} container worker pool resource in a Kubernetes cluster through {{site.data.keyword.bpshort}}, or Terraform by using {{site.data.keyword.IBM_notm}} container worker pool zone attachment resource. For more information, about {{site.data.keyword.IBM_notm}} container worker pool zone, refer to [ibm_container_worker_pool_zone_attachment](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment){: external}.
+
+
+## Where can I view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions?
+{: #privateip-workspace-faq}
+{: faq}
+{: support}
+
+You can view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions in [{{site.data.keyword.bpshort}} allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
+
+## Does `North America` location indicates `us-south`, `us-east`, or `both` during the {{site.data.keyword.bpshort}} workspace creation?
+{: #location-faq}
+{: faq}
+{: support}
+
+North America always indicates both `us-south` and `us-east` location during the {{site.data.keyword.bpshort}} workspace creation. For more information, refer to [Where can I create {{site.data.keyword.bpshort}} workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create-schematics-workspaces) and [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+
