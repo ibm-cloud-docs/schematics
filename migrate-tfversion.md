@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-08"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -19,7 +19,7 @@ subcollection: schematics
 The driver to migrate might come from business factors such as cost reduction, or consolidation. You also might want to migrate to be more cloud native or adopt new technologies. Regardless of the reason, migration can be as simple as migrating a Terraform version in variable file, or it can be as complex as migrating a piece of your application to a more complex environment where you need to migrate an entire template with all the underlying components.
 {: shortdesc}
 
-## Recommendation to upgrade Terraform version 
+## Upgrading the Terraform template version 
 {: #terraform-version-upgrade}
 
 The table summarizes the recommendations to upgrade to the latest Terraform version. {{site.data.keyword.bpshort}} also supports the stable release of `Terraform version 1.1`. The Terraform template must use the version constraint, such as `>`, `>=` or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, to automatically pick the latest provider version.
