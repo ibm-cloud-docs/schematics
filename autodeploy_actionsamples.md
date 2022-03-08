@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-08"
 
 keywords: action templates, schematics template, terraform template
 
@@ -39,7 +39,7 @@ Access
 
 Deploy
 :   <img usemap="#deploybutton_map1" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map1" alt="This image leads to create an action.">
-    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
+    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&repository=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
 </map>
 
 
@@ -57,7 +57,7 @@ Access
 
 Deploy
 :   <img usemap="#deploybutton_map2" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_map2" alt="This image leads to create an action.">
-    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&url=https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="1,3,139,20"  shape="rect"></map>
+    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&repository=https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="1,3,139,20"  shape="rect"></map>
 
 
 ## Configuring {{site.data.keyword.databases-for-postgresql_full_notm}} with WAL2JSON plug-in
@@ -74,7 +74,7 @@ Access
 
 Deploy
 :   <img usemap="#deploybutton_map3" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map3" alt="This image leads to create an action.">
-    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-icd-postgres-actions&url=https://github.com/Cloud-Schematics/ansible-icd-postgres-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
+    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-icd-postgres-actions&repository=https://github.com/Cloud-Schematics/ansible-icd-postgres-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
 
 
 ## Automating app deployments in {{site.data.keyword.containerfull_notm}}
@@ -91,7 +91,7 @@ Access
 
 Deploy
 :   <img usemap="#deploybutton_map4" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map4" alt="This image leads to create an action.">
-    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy-iks&url=https://github.com/Cloud-Schematics/ansible-app-deploy-iks" target="_blank" coords="1,3,139,20" shape="rect"></map>
+    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy-iks&repository=https://github.com/Cloud-Schematics/ansible-app-deploy-iks" target="_blank" coords="1,3,139,20" shape="rect"></map>
 
 
 ## Installing `kubectl` on {{site.data.keyword.vsi_is_short}}
@@ -108,5 +108,5 @@ Access
 
 Deploy
 :   <img usemap="#deploybutton_map5" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map5" alt="This image leads to create an action.">
-    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&url=https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="1,3,139,20"  shape="rect"></map>
+    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&repository=https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="1,3,139,20"  shape="rect"></map>
 
