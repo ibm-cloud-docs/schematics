@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-08"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -28,13 +28,13 @@ For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible
 
     **Syntax**
     ```text
-    https://cloud.ibm.com/schematics/actions/create?name=<action_name>&url=<git_repository_url>
+    https://cloud.ibm.com/schematics/actions/create?name=<action_name>&repository=<git_repository_url>
     ```
     {: codeblock}
 
     **Example**
     ```text
-    https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&url=https://github.com/Cloud-Schematics/ansible-app-deploy
+    https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&repository=https://github.com/Cloud-Schematics/ansible-app-deploy
     ```
     {: codeblock}
 
@@ -57,7 +57,7 @@ You can add an image to your URL to create your `Deploy to {{site.data.keyword.c
 
     **Example**: 
     ```text
-    <img usemap="#deploybutton_map" alt= "Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image creates a Schematics action."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&url=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
+    <img usemap="#deploybutton_map" alt= "Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_map" alt="This image creates a Schematics action."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&repository=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
     ```
     {: codeblock}
 
