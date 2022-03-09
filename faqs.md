@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-09"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -574,7 +574,7 @@ Yes, {{site.data.keyword.bpshort}} supports the full {{site.data.keyword.cloud_n
 {: faq}
 {: support}
 
-Yes, you can create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in target account to provision, through command-line and API calls by using the target account service ID with authentication, appropriate cross account authorization, or API key. For more information, refer to [Managing resources in other account](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#manage-resource-account).
+Yes, you can create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in target account to provision, through command-line and API calls by using the target account service ID with authentication, appropriate cross account authorization, or API key. For more information, refer to [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account).
 
 ## Could I create a worker node in an existing worker node pool?
 {: #workernode-kubernetes-faq}
