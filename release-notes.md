@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-09"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,8 +22,21 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
 
+## March 2022
+{: #release-mar-2022}
 
+Review the release notes for March 2022.
+{: shortdesc}
 
+### 4 March 2022
+{: #4mar2022}
+{: release-note}
+
+Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
+:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup&interface=ui#create-workspace_ui), [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace).
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4th March 2022.
 
 ## February 2022
 {: #release-feb-2022}
