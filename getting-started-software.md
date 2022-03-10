@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-10"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -40,20 +40,30 @@ Before you can use this template, you must complete the following tasks.
 Use one of the IBM provided software templates to set up and configure a classic VSI so that you can store data in an instance of {{site.data.keyword.databases-for-postgresql_full_notm}}. 
 {: shortdesc}
 
-1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog. 
-2. In the **Configure your workspace** section, enter a name for your {{site.data.keyword.bpshort}} workspace, select the **Resource group**, and the **Location** where you want to create the workspace.
-3. In the **Set the deployment values** section, enter the following information. 
-    1. Enter a username and password that you want to use to log in to your PostgreSQL instance. The username must be between 10 and 32 characters long. 
-    2. Enter the classic infrastructure username and API key that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 
-    3. Select the resource group where you want to provision your virtual server and `PostregSQL` instance. 
-4. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
-5. Verify your virtual server and PostgreSQL setup. 
-    1. From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
-    2. Click the link to see the details of your instances. 
-6. Optional: Remove your {{site.data.keyword.bpshort}} workspace and all related {{site.data.keyword.cloud_notm}} resources. 
-    1. From the **Actions** menu, click **Delete**. 
-    2. Select the **Delete workspace** and **Delete all associated resources** option.
-    3. Enter the name of your workspace, and click **Delete**. 
+1. Open the [**VSI database** software template](https://cloud.ibm.com/catalog/content/VSI-database){: external} from the {{site.data.keyword.cloud_notm}} catalog.  Click **Log in**, in case you haven't log in to your {{site.data.keyword.cloud_notm}} account.
+
+   Observe {{site.data.keyword.cloud_notm}} is specified in **Select your deployment target** and `Terraform Version 1.0.7` or `Terraform Version 2.0.0` is displayed in **Select a delivery method**.
+   {: note}
+
+2. In the **Configure your workspace** section, enter **Name** for your {{site.data.keyword.bpshort}} workspace, select your **Resource group**, and the **Location** where you want to create the workspace.
+3. Check **Override default Terraform version** to configure the template to support your Terraform version. 
+4. In the **Set the deployment values** section, enter the following information. 
+    - Click **Yes** toggle button to enter value for **admin-password** as `user123`, and **db-user-password** as `user123` that you want to use to log in to your PostgreSQL instance. 
+    
+      The `admin-password` and `db-user-password` must be between 10 and 32 characters long and do not support any special characters. 
+      {: note}
+
+    - Enter the **iaas_classic_username** as `<your classic_username>` that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 
+    - Select the resource group where you want to provision your virtual server and `PostregSQL` instance. 
+
+5. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
+6. Verify your virtual server and PostgreSQL setup. 
+    - From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
+    - Click the link to see the details of your instances. 
+7. Optional: Remove your {{site.data.keyword.bpshort}} workspace and all related {{site.data.keyword.cloud_notm}} resources. 
+    - From the **Actions** menu, click **Delete**. 
+    - Select the **Delete workspace** and **Delete all associated resources** option.
+    - Enter the name of your workspace, and click **Delete**. 
 
 Congratulations! You used the capabilities of {{site.data.keyword.bpshort}} to provision {{site.data.keyword.cloud_notm}} infrastructure and database services, and automatically configured your services to allow network communication. 
 
