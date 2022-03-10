@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-04"
+lastupdated: "2022-03-10"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -17,15 +17,6 @@ subcollection: schematics
 
 Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI plug-in. Be sure to keep your CLI up-to-date so that you can use all the available commands and their options.
 {: shortdesc}
-
-Support passing vars files to CLI Plan command
-https://github.ibm.com/blueprint/product/issues/5749
-Show commit ID in workspace get CLI command
-https://github.ibm.com/blueprint/product/issues/5581
-Bug fixes
-
-workspace state show CLI command description update
-https://github.ibm.com/blueprint/product/issues/5733
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
