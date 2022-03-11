@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-03-11"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -597,4 +597,11 @@ You can view the list of public and private allowed IP addresses of `us-south`, 
 {: support}
 
 North America always indicates both `us-south` and `us-east` location during the {{site.data.keyword.bpshort}} workspace creation. For more information, refer to [Where can I create {{site.data.keyword.bpshort}} workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create-schematics-workspaces) and [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+
+## What are the port used to communicate with {{site.data.keyword.bpshort}} and resources, such as VPC services?
+{: #port-faq}
+{: faq}
+{: support}
+
+{{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to [VPC: Opening required ports and IP addresses in other network firewalls](https://cloud.ibm.com/docs/containers?topic=containers-vpc-firewall). 
 
