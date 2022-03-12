@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-03-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -108,10 +108,10 @@ Support `WinRM` in user interface
 :   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
-: You can now, manage the catalog settings for Schematics resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
+: You can now, manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 About `compact` download
-:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for Schematics workspace](/docs/schematics?topic=schematics-compact-download&interface=ui).
+:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-compact-download&interface=ui).
 
 About {{site.data.keyword.bpshort}} Job files
 :   You can now download the state-file at every job level along with the latest state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).

@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2022-02-26"
+lastupdated: "2022-03-12"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -26,7 +26,7 @@ Follow the steps to configure the {{site.data.keyword.bpshort}} resource based o
 1. In the {{site.data.keyword.cloud_notm}} console, go to **Manage** > **Catalogs** > **Settings**. 
 2. Click **Edit** icon for the Location.
 3. Set one or more **Filter by Location** to customize which location you need to be restricted. 
-   Schematics supports only [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
+   {{site.data.keyword.bpshort}} supports only [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
    {: note}
 
 4. Click **Update** in Filter by Location page.

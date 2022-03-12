@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-03-12"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -94,7 +94,7 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 ## Virtual Private Endpoints Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-setup}
 
-A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect Schematics service on the private network from Virtual Private Endpoint Gateways.
+A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect {{site.data.keyword.bpshort}} service on the private network from Virtual Private Endpoint Gateways.
 {: shortdesc}
 
 **Public:** A service endpoint on the {{site.data.keyword.cloud_notm}} public network.  \n
@@ -117,7 +117,7 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 ### Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
 
-Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destroy` for a new instance. For more information, see [Overview of private service endpoints in Schematics](/docs/schematics?topic=schematics-secure-data#pi-location).
+Now, you can securely connect the Virtual Private Endpoint Gateways to access {{site.data.keyword.bpshort}} services and functions such as `workspace`, `action`, `job`, `plan`, `apply`, and `destroy` for a new instance. For more information, see [Overview of private service endpoints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
 You cannot create multiple Virtual Private Endpoint Gateways for the same {{site.data.keyword.bpshort}} instance.

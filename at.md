@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-03-12"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -28,7 +28,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the Schematics API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
+| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the {{site.data.keyword.bpshort}} API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
 | `schematics.shareddatas.create` | A {{site.data.keyword.bpshort}} shared data set was created or failed to create. |
 | `schematics.shareddatas.delete` | A {{site.data.keyword.bpshort}} shared data set was deleted or failed to delete. |
 | `schematics.shareddatas.update` | A {{site.data.keyword.bpshort}} shared data set was updated or failed to updated. |

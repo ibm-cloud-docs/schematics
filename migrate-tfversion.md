@@ -40,7 +40,7 @@ required_version = "~> 1.1"
 | `v0.12` | Use the [v0.13 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-13){: external} your configuration file. **Note** {{site.data.keyword.bpshort}} started depreciation process of `Terraform v0.12`.|
 | `v0.13` | To the latest `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, refer to, the [v0.14 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-14){: external}.|
 | `v0.14` | You can upgrade directly to the latest [`Terraform v1.0`](https://www.terraform.io/language/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, refer to, the [v0.15 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-15){: external}.|
-| `v0.15` | You can upgrade directly to the latest [`Terraform v1.0`](https://www.terraform.io/language/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compatible with Terraform v0.15.5.|
+| `v0.15` | You can upgrade directly to the latest [`Terraform v1.0`](https://www.terraform.io/language/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compatible with `Terraform v0.15.5`.|
 {: caption="List of Terraform version" caption-side="bottom"}
 
 
@@ -116,7 +116,7 @@ Make sure your Terraform template of the older version is provisioning perfectly
 
 1. From the Terraform template v0.12 repository, clone to a new GitHub repository.
 2. From the new Github working directory, run `terraform v0.13upgrade` from command-line. The upgrade command generates a `versions.tf` file.
-    Upgrade option is not support in the Schematics workspace UI.
+    Upgrade option is not support in the {{site.data.keyword.bpshort}} workspace UI.
     {: note}
 
 3. Edit `versions.tf` in the generated files just add `source = "IBM-Cloud/ibm"` in the provider block and save, as shown in the codeblock.

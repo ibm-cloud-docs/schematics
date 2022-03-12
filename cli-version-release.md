@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-03-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -26,7 +26,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.7.0 | 12 January 2022 | Displays Terraform v11.0 deprecation message after command execution. Fix command-line alias. Remove the appearance of the duplicate strings.  Support globalized time in the log file. |
 | 1.6.2 | 2 December 2021 | Support for non-English translations. Fix apply command `--var-file` and actions `--target not setting` argument. Fix pipeline vulnerability.|
 | 1.6.1 | 21 October 2021 | Supports `winrm` for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json` and `--credential-json` option value to the **create**, and **update** commands. Updated non-english translations for the command-line. Fixed duplication display of `command-object` argument in `ibmcloud schematics jobs run` interactive mode.|
-| 1.6.0 | 29 September 2021 | Support for `linux-ppc64le`, and `linux-s390x` binaries. List `Terraform v1.0` while listing workspaces and in details panel. Display `Terraform v0.11` depreciation message in Schematics workspace page. Fixed the resource query list command returns values as empty string.|
+| 1.6.0 | 29 September 2021 | Support for `linux-ppc64le`, and `linux-s390x` binaries. List `Terraform v1.0` while listing workspaces and in details panel. Display `Terraform v0.11` depreciation message in {{site.data.keyword.bpshort}} workspace page. Fixed the resource query list command returns values as empty string.|
 | 1.5.12 | 02 September 2021 | Suppress status message for `--output json` flag.|
 | 1.5.11 | 27 August 2021 | Added a new flag `--pull-latest` to existing workspace **update** command. Fixed `BNPP` issue. Fixed the locale translations.|
 | 1.5.10 | 11 August 2021 | Supports Terraform v0.15. Fixed locale translations.|

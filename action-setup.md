@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-12"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -61,7 +61,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     8. Click **Save** to save the action details. 
 4. Configure your resource inventory. The resource inventory includes all target hosts where you want to run your Ansible playbook.
     1. In the **Choose your inventory** section, click the **Edit icon**. 
-    2. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information, about creating resource inventories, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv) or [Dynamically building resource inventories from Schematics workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv).
+    2. From the resource inventory table, select an existing resource inventory. If you do not have a resource inventory yet, click **Create Inventory** to create one. For more information, about creating resource inventories, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv) or [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv).
     3. Action supports **SSH** and **WinRM** types of inventory connection tab to connect to your remote host.
        - Select **SSH** tab, to enter the **username** and **{{site.data.keyword.cloud_notm}} resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 
          * Select the **Bastion host access is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
@@ -100,7 +100,7 @@ If you no longer need your {{site.data.keyword.bpshort}} action, you can delete 
 ## Action state
 {: #action-state-diagram}
 
-Action state indicates the result of creating and processing an action that can be known to the Schematics system state. The table represents the {{site.data.keyword.bpshort}} action state and its description.
+Action state indicates the result of creating and processing an action that can be known to the {{site.data.keyword.bpshort}} system state. The table represents the {{site.data.keyword.bpshort}} action state and its description.
 {: shortdesc}
 
 |State|Description|

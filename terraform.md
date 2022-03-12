@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-02"
+lastupdated: "2022-03-12"
 
 subcollection: schematics
 
@@ -142,7 +142,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     ```
     {: pre}
 
-    For more information, about troubleshooting the `terraform apply` command errors, see [find the root cause of why Schematics apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
+    For more information, about troubleshooting the `terraform apply` command errors, see [find the root cause of why {{site.data.keyword.bpshort}} apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
     {: note}
 
 6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `tf-testwks-apigwy` workspace is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
