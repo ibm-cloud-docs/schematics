@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-11"
+lastupdated: "2022-03-12"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -604,4 +604,5 @@ North America always indicates both `us-south` and `us-east` location during the
 {: support}
 
 {{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to [VPC: Opening required ports and IP addresses in other network firewalls](https://cloud.ibm.com/docs/containers?topic=containers-vpc-firewall). 
+
 
