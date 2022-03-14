@@ -168,7 +168,7 @@ Make sure your Terraform template of the older version is provisioning perfectly
        }]
      }
     ```
-    {: pre}
+    {: codeblock}
 
 9. Run these command through command-line
    1. `ibmcloud schematics workspace new --file workspace.json --state state.json`
