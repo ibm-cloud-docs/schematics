@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-03-14"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -143,29 +143,29 @@ Make sure your Terraform template of the older version is provisioning perfectly
 6. Pull the state file from the Terraform v0.12 workspace by executing `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`
 7. Copy the content of state pull result in `state.json` file.
 8. Create/update `workspace.json` as shown in the codeblock.
-   ```json
-   {
-    "name": "gb",
-    "type": [
-        "terraform_v0.13"
-    ],
-    "description": "migration workspace",
-    "tags": [
-        "department:HR",
-        "application:compensation",
-        "environment:staging"
-    ],
-    "template_repo": {
-        "url": "https://github.com/xxxxxx/migration-testing"
-    },
-    "workspace_status" : {
-        "frozen": true
-    },
-    "template_data": [{
-        "folder": ".",
-        "type": "terraform_v0.13"
-    }]
-    }
+    ```json
+      {
+       "name": "gb",
+       "type": [
+           "terraform_v0.13"
+       ],
+       "description": "migration workspace",
+       "tags": [
+           "department:HR",
+           "application:compensation",
+           "environment:staging"
+       ],
+       "template_repo": {
+           "url": "https://github.com/xxxxxx/migration-testing"
+       },
+       "workspace_status" : {
+           "frozen": true
+       },
+       "template_data": [{
+           "folder": ".",
+           "type": "terraform_v0.13"
+       }]
+      }
     ```
    {: codeblock}
 
