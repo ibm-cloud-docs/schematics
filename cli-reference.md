@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-03-14"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -295,7 +295,7 @@ ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--gi
 #### Create file template in JSON format
 {: #json-file-create-template}
 
-You can create the JSON as shared in the `example.json` file for workspace creation and pass the file path along with the file name in `--file` flag. The description of all the parameters of example.json is described in the table. 
+You can create the JSON file as shared in the `example.json` file for workspace creation and pass the file path along with the file name in `--file` flag. The description of all the parameters of `example.json` as described in the table. 
 
 You need to replace the `<...>` placeholders with the actual values. For example, `"<workspace_name>"` as `"testworkspace"`.
 {: note}
@@ -551,6 +551,8 @@ You need to replace the `<...>` placeholders with the actual values. For example
 ibmcloud schematics workspace new --file example.json
 ```
 {: pre}
+
+
 
 ### `ibmcloud schematics refresh`
 {: #schematics-refresh}
