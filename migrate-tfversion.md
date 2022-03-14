@@ -143,8 +143,9 @@ Make sure your Terraform template of the older version is provisioning perfectly
 6. Pull the state file from the Terraform v0.12 workspace by executing `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`
 7. Copy the content of state pull result in `state.json` file.
 8. Create/update `workspace.json` as shown in the codeblock.
+
     ```json
-      {
+    {
        "name": "gb",
        "type": [
            "terraform_v0.13"
@@ -165,9 +166,9 @@ Make sure your Terraform template of the older version is provisioning perfectly
            "folder": ".",
            "type": "terraform_v0.13"
        }]
-      }
+     }
     ```
-    {: codeblock}
+    {: pre}
 
 9. Run these command through command-line
    1. `ibmcloud schematics workspace new --file workspace.json --state state.json`
