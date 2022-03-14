@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-03-14"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -15,48 +15,120 @@ subcollection: schematics
 # Auditing events
 {: #at_events}
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with {{site.data.keyword.bplong}}.
+You can use {{site.data.keyword.at_full}} to track and audit how users and applications interact with {{site.data.keyword.bplong}}.
 {: shortdesc}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, refer to [Getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
-
-## List of events
+## {{site.data.keyword.bpshort}} events
 {: #schematics-events}
+
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, refer to [Getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
 The following list of {{site.data.keyword.bpshort}} events are sent to {{site.data.keyword.at_full_notm}}.
 {: shortdesc}
 
+### Workspace events
+{: #schematics-wks-events-} 
+
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the Schematics API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
+| `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} workspace by a user.|
+| `schematics.workspace.create` | An event is generated for a request to create a {{site.data.keyword.bpshort}} workspace. |
+| `schematics.workspace.update`| An event is generated for a request to update a {{site.data.keyword.bpshort}} workspace. |
+| `schematics.workspace.delete` | An event is generated for a request to delete a {{site.data.keyword.bpshort}} workspace. |
+| `schematics.workspace.destroy` | An event is generated for a request to delete the {{site.data.keyword.cloud_notm}} resources that are provisioned through a Terraform plan and the workspace.|
+| `schematics.workspace-resources.create` | An event is generated when a Terraform execution plan is created for a workspace. |
+| `schematics.workspace-resources.delete` | An event is generated when a Terraform execution plan is applied in {{site.data.keyword.cloud_notm}} to delete resources.|
+{: caption="Workspace events" caption-side="top"}
+
+### Action events
+{: #schematics-action-events} 
+
+| Action             | Description      | 
+| -------------------| -----------------|
+| `schematics.action.create` | A {{site.data.keyword.bpshort}} action is created or failed to create. | 
+| `schematics.action.delete` | A {{site.data.keyword.bpshort}} action was deleted or failed to delete. | 
+| `schematics.action.read`| A {{site.data.keyword.bpshort}} action is viewed by a user.|
+| `schematics.action.update`| A {{site.data.keyword.bpshort}} action is updated successfully or failed to update.|
+{: caption="Action events" caption-side="top"}
+
+### Job events
+{: #schematics-job-events} 
+
+| Action             | Description      | 
+| -------------------| -----------------|
+| `schematics.job.create` | A {{site.data.keyword.bpshort}} job is created or failed to create. | 
+| `schematics.job.delete` | A {{site.data.keyword.bpshort}} job was deleted or failed to delete. | 
+| `schematics.job.read`| A {{site.data.keyword.bpshort}} job is viewed by a user.|
+| `schematics.job.update`| A {{site.data.keyword.bpshort}} job is updated successfully or failed to update.|
+{: caption="Job events" caption-side="top"}
+
+### Shareddata events
+{: #schematics-shareddata-events} 
+
+| Action             | Description      | 
+| -------------------| -----------------|
 | `schematics.shareddatas.create` | A {{site.data.keyword.bpshort}} shared data set was created or failed to create. |
 | `schematics.shareddatas.delete` | A {{site.data.keyword.bpshort}} shared data set was deleted or failed to delete. |
 | `schematics.shareddatas.update` | A {{site.data.keyword.bpshort}} shared data set was updated or failed to updated. |
-| `schematics.workspace.apply` | A Terraform execution plan was applied in {{site.data.keyword.cloud}} or failed to apply.|
-| `schematics.workspace.create` | A {{site.data.keyword.bpshort}} workspace is created or failed to create. | 
-| `schematics.workspace.delete` | A {{site.data.keyword.bpshort}} workspace was deleted or failed to delete. |
-| `schematics.workspace.destroy` | {{site.data.keyword.cloud_notm}} resources are deleted successfully or failed to delete.|
-| `schematics.workspace.plan` | A Terraform execution plan was created for a workspace. | 
-| `schematics.workspace.read`| A {{site.data.keyword.bpshort}} workspace is viewed by a user.|
-| `schematics.workspace.update`| A {{site.data.keyword.bpshort}} workspace is updated successfully or failed to update.|
-{: caption="Overview of {{site.data.keyword.bpshort}} actions that generate {{site.data.keyword.at_full_notm}} events" caption-side="top"}
+{: caption="Shareddata events" caption-side="top"}
 
-**Important:** 
+
+### Other events
+{: #schematics-otherevents} 
+
+| Action             | Description      | 
+| -------------------| -----------------|
+| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the Schematics API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
+{: caption="Other events" caption-side="top"}
+
+## Viewing events
+{: #at_ui}
+
+You can monitor the {{site.data.keyword.bpshort}} through any of the following regions only:
+- `Dallas (us-south)`
+- `Washington (us-east)`
+- `Frankfurt (eu-de)` 
+- `London (eu-gb)`
+
+You must [create an {{site.data.keyword.at_short}} instance](/docs/activity-tracker?topic=activity-tracker-provision) in `Frankfurt`, `Dallas`, or both to monitor the {{site.data.keyword.bplong_notm}} service. 
+
+| {{site.data.keyword.bplong_notm}} region | {{site.data.keyword.at_short}} region where events are available |
+|--|--|
+| `us-south` | `us-south` |
+| `us-east` | `us-south` |
+| `eu-de` | `eu-de` |
+| `eu-gb` | `eu-de` |
+{: caption="Location of events per region " caption-side="top"}
+
+Events that are generated by {{site.data.keyword.bplong_notm}} are automatically forwarded to the {{site.data.keyword.at_short}} service.
+
+To monitor the service, [launch the {{site.data.keyword.at_short}} UI](/docs/activity-tracker?topic=activity-tracker-launch) to access your events.
+
+## Analyzing events
+{: #at_analyze}
+
+### Creating a workspace
+{: #at_analyze_1}
 
 When you create your first workspace, the following events are created by a {{site.data.keyword.bpshort}} owned service ID and sent to {{site.data.keyword.at_full_notm}}.
+
+When you manage a workspace, the following events are created by the {{site.data.keyword.bpshort}} service:
 * An event with an action `schematics.instance.create`, when a first workspace is created.
 * An event with an action `schematics.instance.update`, when a workspace is modified.
 * An event with an action `schematics.instance.delete`, when a workspace is deleted.
 
-## Viewing events
-{: #at_ui}
+The `initiatorId` of the request for these actions is set to a service ID that is owned by the {{site.data.keyword.bpshort}} service.
+
+In addition, when a workspace is created, additional events are also generated:
+- Event with action `schematics.tag.attach` to report tagging of the workspace
+- Event with action `schematics.instance.create` to report the creation of the worspace instance in your account
+- Event with action `schematics.instance.update` to report updates to the workspace properties
+
+
+You can search by `target.id` to identify all events that report actions on a workspace. For example, you can use a query such as, `crn:v1:bluemix:public:schematics:eu-de:a/xxxxxx:xxxxxxx:workspace:eu-de.workspace.observability-workspace.xxxxxxxx`.
 
 Events that are generated by {{site.data.keyword.bplong_notm}} are automatically forwarded to your {{site.data.keyword.at_full_notm}} service instance based on the regions. {{site.data.keyword.bpshort}} sends events to the `us-south/eu-de` region only, you can create an instance of {{site.data.keyword.at_full_notm}} in the `us-south/eu-de` region to view event details. 
 {: shortdesc}
 
 1. Create a service instance of [{{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started) in the `us-south/eu-de` region. 
 2. [Launch the {{site.data.keyword.at_full_notm}} web console](/docs/activity-tracker?topic=activity-tracker-launch) to access your events.
-
-
-
-

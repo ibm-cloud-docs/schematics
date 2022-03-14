@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-02"
+lastupdated: "2022-03-12"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -28,7 +28,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 
 All data, user inputs and the data generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted at rest by [envelope encryption](#x9860393){: term} technique by using a root key selected for each geographical location. The root keys are secured by FIPS 140-2 Level 3 certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. {{site.data.keyword.bpshort}} support encryption with the root keys by using following encryption.
 
-1. Schematics owned root key.
+1. {{site.data.keyword.bpshort}} owned root key.
 2. Bring your own key (BYOK) by integrating with Key Protect.
 3. Keep your own key (KYOK) by integrating with Hyper Protect Crypto Services (HPCS)
 

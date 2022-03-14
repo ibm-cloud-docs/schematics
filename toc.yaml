@@ -1,6 +1,7 @@
 toc:
   properties:
     subcollection: schematics
+    service-name: schematics
     category: dev_ops
     audience: service
     href: /docs/schematics
