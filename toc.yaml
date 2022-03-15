@@ -57,6 +57,7 @@ toc:
                 - create-terraform-config.md
                 - workspace-setup.md
                 - special-env-vars.md
+                - wks-download-module-files.md
                 - manage-resource-lifecycle.md
                 - cross_region_deployment.md
                 - deprecation-tf.md

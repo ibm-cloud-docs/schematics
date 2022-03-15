@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-03"
+lastupdated: "2022-03-15"
 
 keywords: schematics ansible, schematics action, create schematics actions, run ansible playbooks
 
@@ -23,7 +23,7 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 
 1. [Create your resource inventory where you want to run your Ansible playbook](/docs/schematics?topic=schematics-inventories-setup). You can also use the built-in Terraform capabilities in {{site.data.keyword.bpshort}} to provision your target hosts. For more information, see [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-about-schematics#how-to-workspaces). 
 
-2. Create your Ansible playbook. Use one of the [IBM-provided playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) to get started or browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find existing roles and collections. You can then reference these [roles](#schematics-roles) and [collections](#schematics-collections) in your playbook.
+2. Create your Ansible playbook. Use one of the [IBM-provided playbooks](/docs/schematics?topic=schematics-sample_actiontemplates) to get started or browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find existing roles and collections. You can then reference these [roles](/docs/schematics?topic=schematics-ansible-roles-galaxy#main-file) and [collections](#schematics-collections) in your playbook.
 
 3. Create a repository in GitHub or GitLab, and build the Ansible playbook directory and file structure. Depending on whether you use Ansible roles and collections, this directory structure might vary. To find a sample structure, refer to this [sample playbook](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/site.yml){: external}. 
 
@@ -35,7 +35,7 @@ Want to use existing Ansible playbooks to get started? Try out one of the [IBM-p
 
 Ansible collections group different reusable Ansible resources, such as playbooks, modules, and roles so that you can install them and use them in your playbook. Collections are stored in the [Ansible Galaxy](https://galaxy.ansible.com/){: external} repository.
 
-Similar to [Ansible roles](#schematics-roles), collections require a specific folder structure in your GitHub repository. 
+Similar to [Ansible roles](/docs/schematics?topic=schematics-ansible-roles-galaxy#main-file), collections require a specific folder structure in your GitHub repository. 
 
 1. Browse [Ansible Galaxy](https://galaxy.ansible.com/){: external} to find the collection that you want to use in your playbook.
 2. Create a `requirements.yml` file where you specify the collections that you want to install from Ansible Galaxy. For more information about how to structure this file, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#installing-collections){: external}. The following example uses the `community.kubernetes` collection.

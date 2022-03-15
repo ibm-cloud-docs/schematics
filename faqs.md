@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-03-15"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -18,7 +18,7 @@ content-type: faq
 # FAQs
 {: #faqs}
 
-Answers to common questions about the {{site.data.keyword.bplong_notm}} service.
+Answers to common questions about the {{site.data.keyword.bplong_notm}} service are classified into following section.
 {: shortdesc}
 
 ## What is {{site.data.keyword.bplong_notm}} and how does it work? 
@@ -325,7 +325,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
 If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: note}
 
-{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics_internal_v1#create-workspace).
+{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics/schematics_internal_v1#create-workspace).
 
 ##  How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
@@ -347,7 +347,7 @@ You see this quota validation error when the `Cluster` resource quota of `100` f
 curl -X GET https://schematics.test.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Authorization: $IAM_TOKEN"
 {"requestid":"3a3cbffe-e23a-4ccf-b764-042f7379c084","timestamp":"2021-11-11T17:00:07.169953698Z","messageid":"M1078","message":"Error while validating the location in the account. Please verify you have permission to the location in the global catalog settings.","statuscode":403}
 ```
-Yes there is a change in the api which checks for the location first and if it doesn’t get proper location for the workspace it returns 403 error instead of 404 error.
+Yes there is a change in the API which checks for the location first and if it doesn’t get proper location for the workspace it returns 403 error instead of 404 error.
 
 ## While creating OpenShift or Kubernetes resources, can I tune 90 minutes time out to higher?
 {: #resourcetimeout-warn-faq}
@@ -443,7 +443,7 @@ You can verify the location access to create or view the resource in the catalog
 {: faq}
 {: support}
 
- No, you cannot set an environment variable values in the {{site.data.keyword.bpshort}} workspace console directly. Instead you can use a CURL by using the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+ No, you cannot set an environment variable values in the {{site.data.keyword.bpshort}} workspace console directly. Instead you can use a CURL by using the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 
  ```json
    "env_values": [
@@ -452,6 +452,14 @@ You can verify the location access to create or view the resource in the catalog
          },
    ]    
  ```
+ {: codeblock}
+
+## Does {{site.data.keyword.bpshort}} support to download the Terraform modules template from the private repository?
+{: #download-module-netrc-faq}
+{: faq}
+{: support}
+
+Yes, {{site.data.keyword.bpshort}} supports to download the Terraform modules template from the private repository. For more information, see [Supporting to download modules from private remote host](/docs/schematics?topic=schematics-download-modules-pvt-git).
 
 ## How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?
 {: #winrm-faq}
@@ -485,7 +493,7 @@ WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provis
 {: faq}
 {: support}
 
-You can edit one variable at a time from {{site.data.keyword.bpshort}} console. From the command line you can edit all the variables of the workspace in the JSON format by using [ibmcloud schematics workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
+You can edit one variable at a time from {{site.data.keyword.bpshort}} console. From the command line you can edit all the variables of the workspace in the JSON format by using [`ibmcloud schematics workspace update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
 
 ## Can I start or stop the {{site.data.keyword.vsi_is_short}} based on tags and through scheduler or cron job?
 {: #vm-tags-faq}
@@ -603,6 +611,6 @@ North America always indicates both `us-south` and `us-east` location during the
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to [VPC: Opening required ports and IP addresses in other network firewalls](https://cloud.ibm.com/docs/containers?topic=containers-vpc-firewall). 
+{{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall). 
 
 
