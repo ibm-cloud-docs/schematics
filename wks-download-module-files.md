@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-## Supporting to download modules from private remote host
+# Supporting to download modules from private remote host
 {: #download-modules-pvt-git}
 
 You can use the Terraform template to provision the resource by using the modules which are hosted on the private Git repository. At runtime when {{site.data.keyword.bpshort}} clones the private Git repository of your module templates, only the top level files are cloned. Also you need to pass Github token if your repository are private. Generally, if the template is referring to the module, the modules gets downloaded during `terraform init` command.  The `terraform init` parses the top level template files and then downloads the individual modules referred in top level template files. If your modules are in private Git repository, in {{site.data.keyword.cloud_notm}} catalog, or any other repository. The download fails to clone the files from all level as you do not have a way to pass the credentials to these module in the private repository.
