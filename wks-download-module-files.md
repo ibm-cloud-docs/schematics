@@ -22,7 +22,7 @@ To overcome the download failure, {{site.data.keyword.bpshort}} supports environ
 The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax. 
 {: important}
 
-**Syntax of env_values with list of `__netrc__`**
+**Syntax of env_values with list of `__netrc__`:**
 
 ```json
 "env_values":[
@@ -34,7 +34,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
 {: codeblock}
 
 
-## Example
+## Usage of private module template
 {: #netrc-example}
 
 {{site.data.keyword.bpshort}} internally creates the `.netrc` file based on the `env_values` configured in the JSON file. Here is a syntax and sample `testexample.json` example file to clone all the files to create and apply the {{site.data.keyword.bpshort}} workspace through command-line and API.
