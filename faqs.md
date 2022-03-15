@@ -459,7 +459,7 @@ You can verify the location access to create or view the resource in the catalog
 {: faq}
 {: support}
 
-Yes, for more information, refer to [Supporting to download modules from private remote host]().
+Yes, {{site.data.keyword.bpshort}} support to download the Terraform modules template from the private repository. For more information, see Supporting to download modules from private remote host.
 
 ## How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?
 {: #winrm-faq}

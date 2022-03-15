@@ -32,7 +32,7 @@ Review the release notes for March 2022.
 {: release-note}
 
 Support `__netrc__` environment values in private Git repository
-:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace). [FAQ]() for the feature.
+:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace).
 
 
 ### 4 March 2022
