@@ -18,7 +18,7 @@ content-type: faq
 # FAQs
 {: #faqs}
 
-Answers to common questions about the {{site.data.keyword.bplong_notm}} service.
+Answers to common questions about the {{site.data.keyword.bplong_notm}} service are classified into following section.
 {: shortdesc}
 
 ## What is {{site.data.keyword.bplong_notm}} and how does it work? 
@@ -452,6 +452,14 @@ You can verify the location access to create or view the resource in the catalog
          },
    ]    
  ```
+ {: codeblock}
+
+## Does {{site.data.keyword.bpshort}} support to download the Terraform modules template from the private repository?
+{: #download-module-netrc-faq}
+{: faq}
+{: support}
+
+Yes, for more information, refer to [Supporting to download modules from private remote host]().
 
 ## How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?
 {: #winrm-faq}
@@ -485,7 +493,7 @@ WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provis
 {: faq}
 {: support}
 
-You can edit one variable at a time from {{site.data.keyword.bpshort}} console. From the command line you can edit all the variables of the workspace in the JSON format by using [ibmcloud schematics workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
+You can edit one variable at a time from {{site.data.keyword.bpshort}} console. From the command line you can edit all the variables of the workspace in the JSON format by using [`ibmcloud schematics workspace update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
 
 ## Can I start or stop the {{site.data.keyword.vsi_is_short}} based on tags and through scheduler or cron job?
 {: #vm-tags-faq}
