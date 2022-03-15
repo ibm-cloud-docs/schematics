@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-03-15"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -347,7 +347,7 @@ You see this quota validation error when the `Cluster` resource quota of `100` f
 curl -X GET https://schematics.test.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Authorization: $IAM_TOKEN"
 {"requestid":"3a3cbffe-e23a-4ccf-b764-042f7379c084","timestamp":"2021-11-11T17:00:07.169953698Z","messageid":"M1078","message":"Error while validating the location in the account. Please verify you have permission to the location in the global catalog settings.","statuscode":403}
 ```
-Yes there is a change in the api which checks for the location first and if it doesn’t get proper location for the workspace it returns 403 error instead of 404 error.
+Yes there is a change in the API which checks for the location first and if it doesn’t get proper location for the workspace it returns 403 error instead of 404 error.
 
 ## While creating OpenShift or Kubernetes resources, can I tune 90 minutes time out to higher?
 {: #resourcetimeout-warn-faq}
@@ -443,7 +443,7 @@ You can verify the location access to create or view the resource in the catalog
 {: faq}
 {: support}
 
- No, you cannot set an environment variable values in the {{site.data.keyword.bpshort}} workspace console directly. Instead you can use a CURL by using the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+ No, you cannot set an environment variable values in the {{site.data.keyword.bpshort}} workspace console directly. Instead you can use a CURL by using the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 
  ```json
    "env_values": [

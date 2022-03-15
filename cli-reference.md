@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-03-15"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -551,8 +551,6 @@ You need to replace the `<...>` placeholders with the actual values. For example
 ibmcloud schematics workspace new --file example.json
 ```
 {: pre}
-
-
 
 ### `ibmcloud schematics refresh`
 {: #schematics-refresh}
