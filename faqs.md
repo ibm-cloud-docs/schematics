@@ -325,7 +325,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
 If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: note}
 
-{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics_internal_v1#create-workspace).
+{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics/schematics_internal_v1#create-workspace).
 
 ##  How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
@@ -611,6 +611,6 @@ North America always indicates both `us-south` and `us-east` location during the
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to [VPC: Opening required ports and IP addresses in other network firewalls](https://cloud.ibm.com/docs/containers?topic=containers-vpc-firewall). 
+{{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall). 
 
 

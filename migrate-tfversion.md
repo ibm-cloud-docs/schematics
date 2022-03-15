@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-03-15"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -186,4 +186,67 @@ Make sure your Terraform template of the older version is provisioning perfectly
 
 You complete the upgrade successfully. To upgrade refer to [Terraform template from v0.13 to v0.14](#upgrade-13-to14).
 
+
+## Upgrade Terraform template from v0.13 to v0.14 
+{: #upgrade-13-to14}
+
+Use the following steps to upgrade from the Terraform v0.13 to Terraform v0.14.
+{: shortdesc}
+
+Make sure your Terraform template of the older version is provisioning perfectly with out any errors before upgrading to any version.
+{: note}
+
+1. From the Terraform template v0.13 repository
+2. Pull the state file from the Terraform v0.13 workspace by executing `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`
+3. Copy the content of state pull result in `state.json` file.
+4. Create/update `workspace.json` as shown in the codeblock.
+
+    ```json
+     {
+       "name": "gb",
+       "type": [
+           "terraform_v0.14"
+       ],
+       "description": "migration workspace",
+       "tags": [
+           "department:HR",
+           "application:compensation",
+           "environment:staging"
+       ],
+       "template_repo": {
+           "url": "https://github.com/xxxxxx/migration-testing"
+       },
+       "workspace_status" : {
+           "frozen": true
+       },
+       "template_data": [{
+           "folder": ".",
+           "type": "terraform_v0.14"
+       }]
+      }
+     ```
+     {: codeblock}
+
+5. Run these command through command-line
+   1. `ibmcloud schematics workspace new --file workspace.json --state state.json`
+   2. `ibmcloud schematics workspace get --id  <workspace-id> --json`
+      Observe your workspace status reach to inactive state.
+      {: note}
+
+   3. `ibmcloud schematics plan id <workspace id>`
+   4. `ibmcloud schematics job get --id <job-id form plan> --json`
+      Observe your workspace plan is success.
+      {: note}
+   
+   5. `ibmcloud schematics apply --id <workspace id>`
+   6. `ibmcloud schematics job get --id <job-id from apply> --json`
+
+## Upgrade Terraform template from v0.14 to v1.0 
+{: #upgrade-14-to10}
+
+You can upgrade the [Terraform v0.14](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [Terraform v0.15](https://www.terraform.io/language/upgrade-guides/0-15)(: external) to Terraform v1.0, refer to [Terraform v1.0 upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
+{: shortdesc}
+
+Make sure your existing Terraform template is provisioned perfectly without any errors before upgrading to any version.
+{: note}
 
