@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-16"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -32,7 +32,7 @@ Review the release notes for March 2022.
 {: release-note}
 
 Support `__netrc__` environment values in private Git repository
-:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command-line](/docs/schematics?topic=schematics-download-modules-pvt-git) and [APIs](/apidocs/schematics/schematics#create-workspace).
 
 
 ### 4 March 2022
