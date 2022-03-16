@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-16"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -140,7 +140,7 @@ The `Enable continuous delivery` option has the capability of automating the dif
 The GitHub Server type parameter expects the authorization, you need to provide GitHub credentials and confirm the authorization.
 {: note}
 
-1. On the variable page, click `Enable continuous delivery` hyperlink option to view {{site.data.keyword.bpshort}} Infrastructure as Code Tekton Toolchain page.
+1. On the variable page, click `Enable continuous delivery` link option to view {{site.data.keyword.bpshort}} Infrastructure as Code Tekton Toolchain page.
 2. Click `Delivery Pipeline Required` tab.
 3. Enter your `{{site.data.keyword.cloud_notm}} API key`. 
 4. Click **Authorize** > **Authorize IBM-Cloud** and enter your GitHub password to get authorized.

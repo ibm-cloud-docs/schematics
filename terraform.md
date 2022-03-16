@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-03-16"
 
 subcollection: schematics
 
@@ -14,7 +14,7 @@ subcollection: schematics
 # Setting up Terraform for {{site.data.keyword.bplong_notm}} 
 {: #terraform-setup}
 
-Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.bplong}} services instances by using HashiCorp Configuration Language (HCL).
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitiered cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.bplong}} services instances by using HashiCorp Configuration Language (HCL).
 {: shortdesc}
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command-line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides predefined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
@@ -54,7 +54,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
     ```
     {: codeblock}
 
-    **terraform.tfvars**
+    **`terraform.tfvars`**
 
     The sample `terraform.tfvars` file to store sensitive information, such as credentials. For more information, see [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables). To create API keys, see [Creating and API Keys](/docs/account?topic=account-userapikey#create_user_key).
 
@@ -108,14 +108,14 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 
     | Parameter | Description |
     | -------- | --------- |
-    | description | The description of the workspace. |
-    | location | The location where you want to create your {{site.data.keyword.bpshort}} workspace and run {{site.data.keyword.bpshort}} actions. |
-    | resource_group | The ID of the resource group where you want to provision the workspace. |
-    | name | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name.|
-    | tags | A list of tags that are associated with the workspace. |
-    | template_env_settings | A list of environment variables that you want to apply during the execution of a Terraform action. |
-    | template_git_url | The Git repository URL, where you have the configuration details to provision the resource. |
-    | template_type |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
+    | `description` | The description of the workspace. |
+    | `location` | The location where you want to create your {{site.data.keyword.bpshort}} workspace and run {{site.data.keyword.bpshort}} actions. |
+    | `resource_group` | The ID of the resource group where you want to provision the workspace. |
+    | `name` | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name.|
+    | `tags` | A list of tags that are associated with the workspace. |
+    | `template_env_settings` | A list of environment variables that you want to apply during the execution of a Terraform action. |
+    | `template_git_url` | The Git repository URL, where you have the configuration details to provision the resource. |
+    | `template_type` |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
     {: caption="Supported parameters for creating {{site.data.keyword.bpshort}} workspaces with Terraform." caption-side="top"}
 
 3. Initialize the Terraform CLI. 
@@ -155,7 +155,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} workspa
 Now that you successfully created your first {{site.data.keyword.bpshort}} workspace with Terraform on {{site.data.keyword.cloud_notm}}, you can choose between the following tasks: 
 
 - Learn how to create an [{{site.data.keyword.bplong_notm}} job](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_job){: external} resource to run your Terraform template in IBM Cloud.
-- To run Ansible playbooks in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
-- Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or check-out other arguments and attributes that you can use for the Terraform resources that were used in this example.
+- To run `Ansible playbooks` in {{site.data.keyword.cloud_notm}} check out the [{{site.data.keyword.bplong_notm}} action](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} resource.
+- Explore other supported Terraform resources and data sources for [{{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action){: external} or checkout other arguments and attributes that you can use for the Terraform resources that were used in this example.
 
 

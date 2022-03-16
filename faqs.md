@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-16"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -83,7 +83,7 @@ Currently, version 1.21.0 is released. For more information, about provider vers
 {: faq}
 {: support}
 
-After new Terraform and Ansible versions are released by the community, the IBM team begins a process of hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}.
+After new Terraform and Ansible versions are released by the community, the IBM team begins hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}.
 
 ## How do I generate IAM access token, if client id `bx` is used?
 {: #createworkspace-generate-tokens}
@@ -325,7 +325,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
 If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: note}
 
-{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics/schematics_internal_v1#create-workspace).
+{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics#create-workspace).
 
 ##  How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
@@ -354,7 +354,7 @@ Yes there is a change in the API which checks for the location first and if it d
 {: faq}
 {: support}
 
-Yes, you can increase the time out for OpenShift or Kubernetes resources. For more information, about managing or adding the time-out option for the cluster resource, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
+Yes, you can increase the time out for OpenShift or Kubernetes resources. For more information, about managing or adding the time out option for the cluster resource, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
 
 
 ## How can I enable Terraform debug through the `ibmcloud schematics` command line?

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-26"
+lastupdated: "2022-03-16"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Supporting Terraform environment variables in {{site.data.keyword.bplong_notm}}
 {: #set-parallelism}
 
-Terraform uses various environment variables to customize different aspects of its behavior. These environment variables are used to increase the output verbosity for debugging or rarely used in runtime behaviours. 
+Terraform uses various environment variables to customize different aspects of its behavior. These environment variables are used to increase the output verbosity for debugging or rarely used in runtime. 
 
 Parallelism is one of the environment variable with a number flag range between `1 and 256`, the default value is `10`. Parallelism is used to fix infrastructure providers that error on concurrent operations or use during non-standard rate limiting, when you execute `terraform plan` and `terraform apply` at runtime.
 
