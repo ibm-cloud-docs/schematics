@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-03-16"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -62,7 +62,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | `schematics.job.update`| A {{site.data.keyword.bpshort}} job is updated successfully or failed to update.|
 {: caption="Job events" caption-side="top"}
 
-### Shareddata events
+### `Shareddata` events
 {: #schematics-shareddata-events} 
 
 | Action             | Description      | 
@@ -70,7 +70,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | `schematics.shareddatas.create` | A {{site.data.keyword.bpshort}} shared data set was created or failed to create. |
 | `schematics.shareddatas.delete` | A {{site.data.keyword.bpshort}} shared data set was deleted or failed to delete. |
 | `schematics.shareddatas.update` | A {{site.data.keyword.bpshort}} shared data set was updated or failed to updated. |
-{: caption="Shareddata events" caption-side="top"}
+{: caption="`Shareddata` events" caption-side="top"}
 
 
 ### Other events
@@ -121,7 +121,7 @@ The `initiatorId` of the request for these actions is set to a service ID that i
 
 In addition, when a workspace is created, additional events are also generated:
 - Event with action `schematics.tag.attach` to report tagging of the workspace
-- Event with action `schematics.instance.create` to report the creation of the worspace instance in your account
+- Event with action `schematics.instance.create` to report the creation of the workspace instance in your account
 - Event with action `schematics.instance.update` to report updates to the workspace properties
 
 

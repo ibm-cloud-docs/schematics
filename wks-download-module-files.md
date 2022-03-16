@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-16"
 
 keywords: schematics remote host files, modules, private repository, netrc, terraform runtime process
 
@@ -22,7 +22,7 @@ To overcome the download failure, {{site.data.keyword.bpshort}} supports environ
 The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax. 
 {: important}
 
-**Syntax of env_values with list of `__netrc__`:**
+**Syntax of `env_values` with list of `__netrc__`:**
 
 ```json
 "env_values":[
@@ -105,5 +105,5 @@ ibmcloud schematics workspace new --file testexample.json
 ```
 {: pre}
 
-Run `ibmcloud schematics workspace get --id WORKSPACE_ID` command to analyze the success workspace creation or use [user interface](https://cloud.ibm.com/schematics), to view all the files from the modules are cloned and used in your worspace to provision.
+Run `ibmcloud schematics workspace get --id WORKSPACE_ID` command to analyze the success workspace creation or use [user interface](https://cloud.ibm.com/schematics), to view all the files from the modules are cloned and used in your workspace to provision.
 

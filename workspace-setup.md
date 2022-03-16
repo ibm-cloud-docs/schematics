@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-03-16"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -197,15 +197,15 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 
     | Type | Example |
     | --- | -- |
-    | number | 4.56 |
-    | string | example value |
-    | bool | false |
-    | map(string) | {key1 = "value1", key2 = "value2"} |
-    | set(string) | ["hello", "he"] |
-    | map(number) | {internal = 8080, external = 2020} |
-    | list(string) | ["us-south", "eu-gb"] |
-    | list | ["value", 30] |
-    | list(list(string)) | :[{internal = 8300 external = 8300 protocol = `"tcp"`},{internal = 8301 external = 8301 protocol = `"ldp"` } ] : list(object({internal = number external = number protocol = string})) : [{internal = 8300 external = 8300 protocol = `"tcp"`} {internal = 8301 external = 8301 protocol = `"ldp"`}]|
+    | `number` | 4.56 |
+    | `string` | example value |
+    | `bool` | false |
+    | `map(string)` | {key1 = "value1", key2 = "value2"} |
+    | `set(string)` | ["hello", "he"] |
+    | `map(number)` | {internal = 8080, external = 2020} |
+    | `list(string)` | ["us-south", "eu-gb"] |
+    | `list` | ["value", 30] |
+    | `list(list(string))` | :[{internal = 8300 external = 8300 protocol = `"tcp"`},{internal = 8301 external = 8301 protocol = `"ldp"` } ] : list(object({internal = number external = number protocol = string})) : [{internal = 8300 external = 8300 protocol = `"tcp"`} {internal = 8301 external = 8301 protocol = `"ldp"`}]|
     {: caption="Input variables and its sample values" caption-side="bottom"}
 
 
@@ -311,8 +311,8 @@ Review the following table to find a list of options for how to structure your G
 | Option | Description | 
 | ------- | ---------------------------- | 
 | One Git repo, use variables to distinguish between environments | Create one Git repository where you store the Terraform configuration files that make up your microservice component. Make your Terraform configuration files as general as possible so that you can reuse the same configuration across your environments. To configure the specifics of your development, staging, and production environment, use [Terraform input variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables) in your configuration files. Input variables are automatically loaded into {{site.data.keyword.bplong_notm}} when you create your workspace. To customize your workspace, you enter the environment-specific values for your variables. This setup is useful if you have one team that manages the lifecycle of the microservice component and where the configuration of your environments does not differ drastically. |
-|One Git repo, use branches to distinguish between environments | Create one Git repository for your microservice component, and use different Git branches to store the Terraform configuration files for each of your environments. With this setup, you have a clear distinction between your environments and more control over who can access and change a particular configuration. Make sure to set up a process for how changes in one configuration file are populated across branches to avoid that you have different configurations in each environment. |
-| One Git repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up a process for how changes in one configuration file are populated across directories to avoid having different configurations in each environment. |
+|One Git repo, use branches to distinguish between environments | Create one Git repository for your microservice component, and use different Git branches to store the Terraform configuration files for each of your environments. With this setup, you have a clear distinction between your environments and more control over who can access and change a particular configuration. Make sure to set up how changes in one configuration file are populated across branches to avoid that you have different configurations in each environment. |
+| One Git repo, use directories to distinguish between environments | For organizations that prefer short-lived branches, and where configurations differ drastically across environments, consider creating directories that represent the different configurations of your environments. With this setup, all your directories listen for changes that are committed to the `master` branch. Make sure to set up how changes in one configuration file are populated across directories to avoid having different configurations in each environment. |
 | Use one Git repo per environment | Use one Git repository for each of your environments. With this setup, you have a 1:1 relationship between your workspace and Git repository and you can apply separate permissions for each of your Git repositories. Make sure that your team can manage multiple Git repositories and keep them in sync. | 
 {: caption="Structure of the Git repository" caption-side="bottom"}
 

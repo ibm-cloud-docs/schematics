@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-16"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -180,7 +180,7 @@ You can decide to declare your variables within the same Terraform configuration
 **What information do I need to include in my variable declaration?**
 
 When you declare an input variable, you must provide a name for your variable and the data type according to the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value.  \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string` and `HCL` format for complex variables.
-- `Terraform v0.12` supports **string, list, map, bool, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type])**.
+- `Terraform v0.12` supports **string, list, map, `bool`, number and complex data types such as list(type);, map(type), object({attribute name=type,..}), set(type), tuple([type])**.
 
 **Is there a character limit for input variables?** 
 
@@ -259,7 +259,7 @@ After creating the workspace, you can provide the values, for {{site.data.keywor
 
 **Can I see how to declare complex variables in a file?**
 
-Yes, when you declare and assign the value to the variables, you can view the tool tip in the UI. The table provides few examples of the complex data type that can be declared in the variable store.
+Yes, when you declare and assign the value to the variables, you can view the tooltip in the UI. The table provides few examples of the complex data type that can be declared in the variable store.
 
 
 <table>
@@ -277,7 +277,7 @@ Yes, when you declare and assign the value to the variables, you can view the to
         <td><ul>example value</li></ul></td>
     </tr>
     <tr>
-    <td><ul>bool</li></ul></td>
+    <td><ul><code>bool</code></li></ul></td>
         <td><ul>false</li></ul></td>
     </tr>
     <tr>
