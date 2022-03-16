@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-03-16"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -130,6 +130,7 @@ The following table represents the Actions state workflow.
 Use the {{site.data.keyword.bpshort}} action job details to find a history of all {{site.data.keyword.bpshort}} internal activities, such as downloading your Ansible playbook or verifying your playbook, and to see the Ansible logs for the playbook that you ran on your target hosts. 
 {: shortdesc}
 
+
 Jobs are classified into the following categories:
 - **System jobs**: These jobs represent all {{site.data.keyword.bpshort}} internal activities and checks, for example, downloading your Ansible playbook from GitHub or verifying your playbook. You can find these jobs in the **All** tab on the action's **Jobs** page. 
 - **User jobs**: These jobs are created when you check or run an action. You can find a summary of all user-initiated jobs when you click on the **User** tab on the action's **Jobs** page. 
@@ -144,3 +145,7 @@ Review the following status that can be assigned to a job:
 |`skipped` |The total number of target host that were accessed but could not be updated because changes have already applied to these hosts.|
 |`unreachable` |The total number of target hosts that could not be found or reached. |
 {: caption="Job status" caption-side="top"}
+
+When the Action job execution displays DEPRECATION WARNING message, you need to set the input variable as `ansible_python_interpreter = auto` as shown in the screen capture to avoid `DEPRECATION WARNING` message in the job.
+
+![Configuring input variable to silence warning message](images/advanced_inputvariable.png "Embedded {{site.data.keyword.bplong_notm}} service flow"){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
