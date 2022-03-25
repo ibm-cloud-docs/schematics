@@ -2,18 +2,21 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
 subcollection: schematics
+
+content-type: release-notes
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
 
 
 # Release notes
-{: #rel-notes}
+{: #schematics-relnotes}
 
 Use the release notes to learn about the latest changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
@@ -22,13 +25,13 @@ For information about releases that occurred before 22 October 2021, see [What's
 {: note}
 
 ## March 2022
-{: #release-mar-2022}
+{: #schematics-mar22}
 
 Review the release notes for March 2022.
 {: shortdesc}
 
 ### 15 March 2022
-{: #15mar2022}
+{: #schematics-mar1522}
 {: release-note}
 
 Support `__netrc__` environment values in private Git repository
@@ -36,7 +39,7 @@ Support `__netrc__` environment values in private Git repository
 
 
 ### 4 March 2022
-{: #4mar2022}
+{: #schematics-mar422}
 {: release-note}
 
 Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
@@ -46,13 +49,13 @@ Release {{site.data.keyword.bpshort}} command-line plugin
 :   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4th March 2022.
 
 ## February 2022
-{: #release-feb-2022}
+{: #schematics-feb22}
 
 Review the release notes for February 2022.
 {: shortdesc}
 
 ### 16 February 2022
-{: #16feb2022}
+{: #schematics-feb1622}
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plugin 
@@ -62,7 +65,7 @@ Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [Linux&trade; arm64 and Mac OS arm64 binaries](/docs/schematics?topic=schematics-setup-cli) Operating System.
 
 ### 11 February 2022
-{: #11feb2022}
+{: #schematics-feb1122}
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plugin 
@@ -70,13 +73,13 @@ Release {{site.data.keyword.bpshort}} command-line plugin
 
 
 ## January 2022
-{: #release-jan-2022}
+{: #schematics-jan22}
 
 Review the release notes for January 2022.
 {: shortdesc}
 
 ### 31 January 2022
-{: #31jan2022}
+{: #schematics-jan3122}
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plugin 
@@ -86,26 +89,26 @@ Supports installer for PowerLinux&trade; and System/390 Linux&trade;
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-setup-cli) Operating System.
 
 ## December 2021
-{: #release-dec-2021}
+{: #schematics-dec21}
 
 Review the release notes for December 2021.
 {: shortdesc}
 
 ### 30 December 2021
-{: #30dec2021}
+{: #schematics-dec3021}
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plugin 
 :   The {{site.data.keyword.bpshort}} [command-line plugin v1.6.2](/docs/schematics?topic=schematics-cli_version-releases) released on 2nd December 2021.
 
 ## November 2021
-{: #release-nov-2021}
+{: #schematics-nov21}
 
 Review the release notes for November 2021.
 {: shortdesc}
 
 ### 30 November 2021
-{: #30nov2021}
+{: #schematics-nov3021}
 {: release-note}
 
 Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
@@ -127,13 +130,13 @@ ResourceQuery attribute deprecated
 :   ResourceQuery attribute is replaced as [resource_queries](/apidocs/schematics/schematics#list-resource-query) in the API.
 
 ## October 2021
-{: #release-oct-2021}
+{: #schematics-oct21}
 
 Review the release notes for October 2021.
 {: shortdesc}
 
 ### 22 October 2021
-{: #22oct2021}
+{: #schematics-oct2221}
 {: release-note}
 
 Onboarding Terraform templates to private catalog
