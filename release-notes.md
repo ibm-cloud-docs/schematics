@@ -2,13 +2,13 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-25"
+lastupdated: "2022-03-26"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
 subcollection: schematics
 
-content-type: release-notes
+content-type: release-note
 
 ---
 
