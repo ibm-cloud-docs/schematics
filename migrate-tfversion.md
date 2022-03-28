@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-03-28"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -36,7 +36,7 @@ required_version = "~> 1.1"
 
 |Current Version|	Recommendation|
 | ---| ---|
-| `v0.11` | Use the [`terraform 0.12checklist`](https://www.terraform.io/language/upgrade-guides/0-12#pre-upgrade-checklist){: external} command to detect and fix to be addressed by referring [v0.12 Upgrade Guide](https://www.terraform.io/language/upgrade-guides/0-12){: external} before upgrading to `v0.12`. **Note** {{site.data.keyword.bpshort}} depreciated `Terraform v0.11`.|
+| `v0.11` | Use the [`Terraform v0.12 checklist`](https://www.terraform.io/language/upgrade-guides/0-12#pre-upgrade-checklist){: external} command to detect and fix to be addressed by referring [v0.12 Upgrade Guide](https://www.terraform.io/language/upgrade-guides/0-12){: external} before upgrading to `v0.12`. **Note** {{site.data.keyword.bpshort}} depreciated `Terraform v0.11`.|
 | `v0.12` | Use the [v0.13 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-13){: external} your configuration file. **Note** {{site.data.keyword.bpshort}} started depreciation process of `Terraform v0.12`.|
 | `v0.13` | To the latest `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, refer to, the [v0.14 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-14){: external}.|
 | `v0.14` | You can upgrade directly to the latest [`Terraform v1.0`](https://www.terraform.io/language/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, refer to, the [v0.15 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-15){: external}.|
@@ -87,7 +87,7 @@ Here are the detailed steps that you can follow to upgrade.
     ```
     {: codeblock}
 
-5. Download the Terraform state file from the existing {{site.data.keyword.bpshort}} workspace, by using [{{site.data.keyword.bpshort}} state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command or through [REST API call](/apidocs/schematics/schematics#get-workspace-state) documentation to your local machine. 
+5. Download the Terraform state file from the existing {{site.data.keyword.bpshort}} workspace, by using [{{site.data.keyword.bpshort}} state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command or through [REST API call](/apidocs/schematics/schematics#get-workspace-state) documentation to your local machine. 
 
 6. Execute the state replace provider command in terminal to update the Terraform version.
     ```sh
@@ -96,8 +96,12 @@ Here are the detailed steps that you can follow to upgrade.
     {: pre}
 
 7. Verify the updates are made to the `terraform.tfstate` file with Terraform version getting updated from `0.12` to `>= 0.13` and provider updated as `registry.terraform.io/ibm-cloud/ibm`. 
-8.	Push the upgraded version of the Terraform configuration files both `terraform.tfstate` and `version.tf` to your Git repository.
-9.	Create a {{site.data.keyword.bpshort}} workspace by using the updated Git repository.
+
+    Whenever the workspace is created with the `tfstate`. {{site.data.keyword.bpshort}} considers that `tfstate` file as a vulnerable. Also, you cannot pull the created `tfstate` file through UI. You need to use command-line to [pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) the state file and [create workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+    {: important}
+
+8.	Push the upgraded `version.tf` to your Git repository.
+9.	Create a [{{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) through command-line by passing `terraform.tfstate` file as the state flag from the updated Git repository.
 10. Generate a [`plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and [`apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) the plan to view your workspace with the resources are now using the Terraform v0.13.
 11. [Optional] you can delete the {{site.data.keyword.bpshort}} workspace that points to Terraform v0.12. 
 
@@ -244,7 +248,7 @@ Make sure your Terraform template of the older version is provisioning perfectly
 ## Upgrade Terraform template from v0.14 to v1.0 
 {: #upgrade-14-to10}
 
-You can upgrade the [Terraform v0.14](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [Terraform v0.15](https://www.terraform.io/language/upgrade-guides/0-15)(: external) to Terraform v1.0, refer to [Terraform v1.0 upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
+You can upgrade the [Terraform v0.14](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [Terraform v0.15](https://www.terraform.io/language/upgrade-guides/0-15){: external} to Terraform v1.0, refer to [Terraform v1.0 upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
 {: shortdesc}
 
 Make sure your existing Terraform template is provisioned perfectly without any errors before upgrading to any version.
