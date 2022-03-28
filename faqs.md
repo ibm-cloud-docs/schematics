@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-28"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -178,16 +178,13 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
 {: deprecated}
 
-You can follow these steps to upgrade Terraform v0.11 to Terraform higher version in {{site.data.keyword.bpshort}}.
-- Export the Terraform state file, from the {{site.data.keyword.bpshort}} workspace by using the [ibmcloud schematics state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
-- Follow the steps described by [Hashicorp](https://www.terraform.io/language/upgrade-guides){: external} to upgrade from `Terraform v0.11 to v0.12`, `Terraform v0.12 to v0.13`, or higher. Upgrade your Terraform configuration `.tf` file and Terraform state file according to the latest Terraform version requirement. **Note** Use your own machine or laptop to perform these operations.
-- Upload the upgraded Terraform configuration `.tf` file, to an existing or a new Git repository.
-- Create the {{site.data.keyword.bpshort}} workspace with the upgraded Terraform configuration `.tf` file in the Git repository and the upgraded state file by using the [ibmcloud schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
-- Run the {{site.data.keyword.bpshort}} workspace [refresh](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the newly created workspace is able to connect and work with the existing {{site.data.keyword.cloud_notm}} resources.
-- Delete the old {{site.data.keyword.bpshort}} workspace without destroying the {{site.data.keyword.cloud_notm}} resources.
+You can follow these topics to upgrade from one Terraform version to another version
 
-You need to be an expert user to upgrade the Terraform version to perform these steps.
-{: note}
+- [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#terraform-version-upgrade)
+- [Upgrade Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#migrate-steps)
+- [Upgrade Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-12-to13)
+- [Upgrade Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-13-to14)
+- [Upgrade Terraform template from v0.14 to v1.0](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-14-to10)
 
 ## How do I overcome the downtime while updating the workspace activities? 
 {: #impact-downtime-workspace}
