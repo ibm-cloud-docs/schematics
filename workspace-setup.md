@@ -30,7 +30,6 @@ If you plan to store your Terraform templates on your local machine and upload t
 Create a workspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The workspace settings can be configured to use the Terraform template that are hosted and managed in a Git repository. Your workspace is used to manage the state of the cloud resources, provisioned using the Terraform template.
 {: shortdesc} 
 
-
 ### Before you begin
 {: #prerequisites}
 
