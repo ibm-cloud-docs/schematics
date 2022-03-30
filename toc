@@ -72,6 +72,7 @@ Schematics
           at.md
     
     job-queue.md
+    delete-schematics-data.md
     version-constraints.md
     terraform.md
 
