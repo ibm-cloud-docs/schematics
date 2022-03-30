@@ -88,6 +88,7 @@ toc:
                 - monitoring-instances.md
                 - at.md
           - job-queue.md
+          - delete-schematics-data.md
           - version-constraints.md
           - terraform.md
           - topicgroup:
