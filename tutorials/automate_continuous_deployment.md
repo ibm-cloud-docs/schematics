@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-30"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -160,7 +160,7 @@ Observe the pipeline dashboard and view the status of your workspace execution.
 
 1. During the update stage process, from the example of `ibm-cos-bucket` repository observe the `main.tf` file configuration with the `cos_instance` name and `bucket_name`. These details are updated in the {{site.data.keyword.bpshort}} workspace after the APPLY stage is passed.
 2. Once the `UPDATE` stage is completed, PLAN stage is in running state.
-3. Click **View logs** and history to view the status of the job from the `PLAN` pane.
+3. Click **Jobs** and history to view the status of the job from the `PLAN` pane.
 4. Observe that the PLAN stage is passed, and APPLY stage is in running state.
 5. From the {{site.data.keyword.bpshort}} workspace check the resource name and bucket name are created successfully.
 6. Observe that the `APPLY` stage is passed and TEST stage is in Running state.
