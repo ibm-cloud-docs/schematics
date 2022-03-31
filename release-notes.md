@@ -41,7 +41,6 @@ Review the release notes for March 2022.
 Support deleting {{site.data.keyword.bpshort}} data objects 
 :   The {{site.data.keyword.bpshort}} supports [deleting {{site.data.keyword.bpshort}} data from UI, CLI, and API](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui) for workspace, action, and inventories objects.
 
-
 Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
 :   - Now you can create Actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
 :   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) support `summary` profile type.
