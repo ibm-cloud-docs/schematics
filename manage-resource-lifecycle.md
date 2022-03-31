@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-03-30"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -11,6 +11,8 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
 
 # Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}
 {: #manage-lifecycle}
@@ -193,7 +195,6 @@ A Terraform execution plan is based on the Terraform state file that was created
 
 7. Optional: Apply the changes in your cloud environment by clicking **Apply plan**. 
 
-
 ## Reviewing resource and deployment details
 {: #review-logs}
 
@@ -281,6 +282,6 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 5. From the navigation, select **Activity** to review the logs for your resource deletion. Ensure that no errors occurred during the deletion process. 
 6. From the navigation, select **Resources** and verify that your resources are removed. 
 
-After the deletion of your resources is complete, the {{site.data.keyword.bplong_notm}} workspace is removed. 
+After the deletion of your resources is complete, the {{site.data.keyword.bplong_notm}} workspace is removed.
 
 
