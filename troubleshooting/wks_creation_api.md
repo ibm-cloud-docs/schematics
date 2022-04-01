@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-04-01"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Why do {{site.data.keyword.bpshort}} workspace create through API fails?
+# Why do {{site.data.keyword.bpshort}} workspace create through API/UI/CLI fails?
 {: #wks-create-api}
 
 The {{site.data.keyword.bpshort}} create workspace fails when you attempt to create through API by using following CURL command.
@@ -42,7 +42,7 @@ When {{site.data.keyword.bpshort}} executes the CURL command, an error states {{
 {: screen}
 
 
-Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region.
+Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region where you want to create or update the workspace.
 {: tsResolve}
 
 **For example:**

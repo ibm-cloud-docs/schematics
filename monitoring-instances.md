@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-25"
+lastupdated: "2022-04-01"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -118,11 +118,11 @@ For the {{site.data.keyword.bpshort}} instance, following five different time se
 
 | Status | Query |
 | ------ | -------- |
-| Number of workspaces created  | Sum(ibm_schematics_workspace_count{}) |
-| Number of active workspaces | ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Active”} |
-| Number of workspaces in draft state |  ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Draft”} |
-| Number of inactive workspaces | ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Inactive”} |
-| Number of workspaces deleted | ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Template Error”} |
+| Number of workspaces created  | `Sum(ibm_schematics_workspace_count{})` |
+| Number of active workspaces | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Active”}` |
+| Number of workspaces in draft state |  `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Draft”}` |
+| Number of inactive workspaces | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Inactive”}` |
+| Number of workspaces deleted | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Template Error”}` |
 {: caption="Workspace time series count" caption-side="bottom"}
 
 ### ibm_schematics_workspace_actions_count
