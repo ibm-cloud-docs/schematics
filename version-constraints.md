@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-04-01"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -16,16 +16,15 @@ subcollection: schematics
 # Specifying version constraints in {{site.data.keyword.bpshort}}
 {: #version-constraints}
 
-Use version constraints to declare the Terraform, Terraform provider, or Ansible version that you want to use for your Terraform template or Ansible playbook. 
+Use version constraints to declare the Terraform, Terraform provider, or Ansible version that you want to use for your Terraform template or Ansible playbook.
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} concurrently supports multiple images that each package a specific version of the {{site.data.keyword.cloud_notm}} Provider plug-in, other Terraform providers, such as the REST API provider, and the Ansible executable. Each image is built, tested, and verified by {{site.data.keyword.cloud_notm}}. Included Terraform provider versions are tested and packaged for a specific Terraform CLI version. 
+{{site.data.keyword.bpshort}} concurrently supports multiple images that each package a specific version of the {{site.data.keyword.cloud_notm}} Provider plug-in, other Terraform providers, such as the REST API provider, and the Ansible executable. Each image is built, tested, and verified by {{site.data.keyword.cloud_notm}}. Included Terraform provider versions are tested and packaged for a specific Terraform CLI version.
 
-It is good practice to declare the version that your Terraform template or Ansible playbook requires by using version constraints. This way, you can ensure that your templates and playbooks continue to work, even if Terraform, Terraform providers, or Ansible publish new versions that might introduce breaking changes. 
+It is good practice to declare the version that your Terraform template or Ansible playbook requires by using version constraints. This way, you can ensure that your templates and playbooks continue to work, even if Terraform, Terraform providers, or Ansible publish new versions that might introduce breaking changes.
 
 ## Overview of {{site.data.keyword.bpshort}} images and packaged Terraform providers
 {: #schematics-image-ov}
-
 
 Use the `ibmcloud schematics version` command to retrieve a list of {{site.data.keyword.bpshort}} images and the Terraform provider and Ansible executable versions that are packaged in each image. For example in the following CLI output, the {{site.data.keyword.cloud_notm}} Provider plug-in latest version is tested on `Terraform v1.1`.
 {: shortdesc}
@@ -36,8 +35,8 @@ It is recommended to use Terraform v0.13 or higher.
 {: note}
 
 * **If you are using Terraform v0.12**, you must use one of the [5 recent {{site.data.keyword.cloud_notm}} provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) versions in your Terraform template. If you specify an older version of the {{site.data.keyword.cloud_notm}} provider in the template, you see the following error `Provider ibm not available for installation.` in the logs.
-		
-* **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [Hashicorp Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud)
+
+* **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [Hashicorp Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud).
 
 To use any of the predefined {{site.data.keyword.bpshort}} images, you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
 {: important}
@@ -51,15 +50,6 @@ ibmcloud schematics version
 {: pre}
 
 ```text
-
-Template Type   Version
-Terraform       terraform_v0.11
-Additional terraform Providers   Version
-Provider for REST API            v1.10.0
-Ansible Provisioner              v2.3.3
-Open shift client                v3.11.0
-Ansible                          v2.9.23
-IBM Cloud Provider               v0.31.0
 
 Template Type   Version
 Terraform       terraform_v0.12
