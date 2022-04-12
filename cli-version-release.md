@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-04-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,6 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.8.0 | 13 March 2022 | Supports passing `.tfvars` and `.json` files to command-line plan and apply command, Usage of `ibmcloud terraform` command displays warning message, supports private {{site.data.keyword.bpshort}} endpoints through command-line, enhances the tabular view output to list the provisioned resource in {{site.data.keyword.bpshort}} workspace. |
 | 1.7.3 | 4 March 2022 | Supports passing `vars` files to command-line plan command, displays `commit ID` in `ibmcloud schematics workspace get` command, and edited the `ibmcloud schematics workspace state show` command description. |
 | 1.7.2 | 17 February 2022 | Supports Linux&trade; arm64 and Mac OS arm64 platform binaries. Fixes related to `stdout/stderr` stream, invalid `TF vars` file and translation are released. |
 | 1.7.1 | 11 February 2022 | Support for trace logging and added integration tests for few commands. Fixes to update `env values metadata`, panic for invalid flags, and `ibmcloud schematics workspace output command` is disabled. |

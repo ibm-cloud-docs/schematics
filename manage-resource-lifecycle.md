@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-30"
+lastupdated: "2022-04-12"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -285,3 +285,48 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 After the deletion of your resources is complete, the {{site.data.keyword.bplong_notm}} workspace is removed.
 
 
+
+
+API:
+———————
+CURL: Deploying your resources:
+List:
+curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H “Authorization: <iam_token>”
+Get:
+curl -X GET https://schematics.cloud.ibm.com/v1/workspaces/{id} -H “Authorization: Bearer <iam_token>”
+Upload tar file:
+curl -X PUT https://schematics.cloud.ibm.com/v1/workspaces/{id}/template_data/{template_id}/template_repo_upload -H “Authorization: <iam_token>” -H “Content-Type: multipart/form-data” --form “file =@<file_path>/mytarfile.tar”
+Plan:
+curl -X POST https://schematics.cloud.ibm.com/v1/workspaces/{id}/plan -H “Authorization: Bearer <iam_token>” -H “refresh_token: <refresh_token>”
+Logs:
+curl --location --request GET https://schematics.cloud.ibm.com/v2/jobs/{job_id}/logs --header “Authorization: <access_token>”
+Apply:
+curl -X PUT https://schematics.cloud.ibm.com/v1/workspaces/{id}/apply -H “Authorization: Bearer <iam_token>” -H “refresh_token: <refresh_token>”
+CURL: Updating your resources:
+List:
+curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/actions --header “Authorization: <access_token>”
+Get:
+curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/{action_id} --header “Authorization: <access_token> ”
+Update action:
+curl --location --request PATCH https://schematics.cloud.ibm.com/v2/actions/{action_id} --header “Authorization: <access_token>” --header “Content-Type: application/json” --data-raw “{”name”: “<action_name>“, “description”: “<action_description>“, “location”: “<action_location>“, “resource_group”: “<resource_group>“, “source”: {“source_type”: “git”, “git”: {“git_repo_url”: “https://github.com/Cloud-Schematics/lamp-simple”}}, “command_parameter”: “<YAML_or_YML file>“, “tags”: [“string”], “credentials”: [{ “name”: “ssh_key”, “value”: “<ssh_key>”
+,“metadata”: { “string”}}], “bastion”: {“name”: “bastionhost”, “type”: “string”, “description”: “string”, “resource_query”: “<IP_address”, “credential_ref”: “ssh_key” }, “inputs”: [{ “name”: “string”, “value”: “string”, “metadata”: {“type”: “string”, “secure”: <true_or_false>, “default_value”: “string” }}, {“name”: “string”, “value”: “string”, “metadata”: { “type”: “string”, “default_value”: “string” }}, { “name”: “dbuser”, “value”: “string”, “metadata”: { “type”: “string”, “default_value”: “string” }}, { “name”: “mysql_port”, “value”: “string”, “metadata”: { “type”: “string”, “default_value”: “string” }}, { “name”: “httpd_port”, “value”: “string”, “metadata”: { “type”: “string”, “secure”: <false_or_true>, “default_value”: “string” } }], “source_type”: “GitHub”,  “targets_ini”: “[hostgroupname]
+ “IP address”
+ host2
+ [hostgroupname]
+ “IP address” “}
+CURL: Managing drift between your cloud environment and your Terraform configuration:
+List:
+curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/actions --header “Authorization: <access_token>”
+Get:
+curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/{action_id} --header “Authorization: <access_token> ”
+Update action:
+curl --location --request PATCH https://schematics.cloud.ibm.com/v2/actions/{action_id} --header “Authorization: <access_token>” --header “Content-Type: application/json” --data-raw “{”name”: “<action_name>“, “description”: “<action_description>“, “location”: “<action_location>“, “resource_group”: “<resource_group>“, “source”: {“source_type”: “git”, “git”: {“git_repo_url”: “https://github.com/Cloud-Schematics/lamp-simple”}}, “command_parameter”: “<YAML_or_YML file>“, “tags”: [“string”], “credentials”: [{ “name”: “ssh_key”, “value”: “<ssh_key>”
+,“metadata”: { “string”}}], “bastion”: {“name”: “bastionhost”, “type”: “string”, “description”: “string”, “resource_query”: “<IP_address”, “credential_ref”: “ssh_key” }, “inputs”: [{ “name”: “string”, “value”: “string”, “metadata”: {“type”: “string”, “secure”: <true_or_false>, “default_value”: “string” }}, {“name”: “string”, “value”: “string”, “metadata”: { “type”: “string”, “default_value”: “string” }}, { “name”: “dbuser”, “value”: “string”, “metadata”: { “type”: “string”, “default_value”: “string” }}, { “name”: “mysql_port”, “value”: “string”, “metadata”: { “type”: “string”, “default_value”: “string” }}, { “name”: “httpd_port”, “value”: “string”, “metadata”: { “type”: “string”, “secure”: <false_or_true>, “default_value”: “string” } }], “source_type”: “GitHub”,  “targets_ini”: “[hostgroupname]
+ “IP address”
+ host2
+ [hostgroupname]
+ “IP address” “}
+Plan:
+curl -X POST https://schematics.cloud.ibm.com/v1/workspaces/{id}/plan -H “Authorization: Bearer <iam_token>” -H “refresh_token: <refresh_token>”
+Logs:
+curl --location --request GET https://schematics.cloud.ibm.com/v2/jobs/{job_id}/logs --header “Authorization: <access_token>”
