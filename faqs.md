@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-12"
+lastupdated: "2022-04-15"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -173,7 +173,7 @@ In the same way {{site.data.keyword.bplong_notm}} supports the ability to persis
 
 Your files must be placed in the `/tmp/.schematics` folder and the size limit is set to `10 MB`. {{site.data.keyword.bpshort}} backups and restores all the files in the `/tmp/.schematics` folder.
 
-## How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}?
+## How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
@@ -710,3 +710,67 @@ Using `ibmcloud terraform` command from CLI release v1.8.0 displays a warning me
 
 Yes, from [CLI release v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) {{site.data.keyowrd.bpshort}} supports private {{site.data.keyword.bpshort}} endpoint to access your private network. For more information, see [private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
 
+## How can I update a workspace created through payload in command-line to resolve invalid payload issue?
+{: #invalid-paylaod-cli}
+{: faq}
+{: support}
+
+You can use `env values` as shown in the sample payload to update the workspace in the command-line. For more information, about creating and using environment variables, see [usage of `env_values`](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage).
+
+**Sample payload:**
+
+```json
+{
+  "name": "newName",
+  "template_data": [
+    {
+      "type": "<same_as_before>",
+      "env_values": [
+        {
+          "env_values_1": "dummy_text"
+        },
+        {
+          "env_values_2": "dummy_text"
+        }
+      ],
+      "env_values_metadata": [
+        {
+          "name": "env_values_1",
+          "hidden": false,
+          "secure": false
+        },
+        {
+          "name": "env_values_2",
+          "hidden": false,
+          "secure": false
+        }
+      ]
+    }
+  ]
+}
+```
+{: pre}
+
+## How can I resolve the error message while connecting to Bastion host IP addresses through {{site.data.keyword.bplong_notm}}?
+{: #bastion-ipaddress-faq}
+{: faq}
+{: support}
+
+**Error:**
+
+```text
+timeout - last error: Error connecting to bastion: dial tcp
+ 2022/03/02 03:59:37 Terraform apply | 52.118.101.204:22: connect: connection timed out
+ 2022/03/02 03:59:37 Terraform apply | 
+ 2022/03/02 03:59:37 Terraform apply | Error: file provisioner error
+```
+{: screen}
+
+You can access your {{site.data.keyword.bpshort}} workspace and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses that are listed in the {{site.data.keyword.bpshort}} documentation. For more information, about the region and the zone based private and public IP addresses, see [Opening required IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
+
+## How do I create a cluster by using Terraform on {{site.data.keyword.cloud_notm}} environment?
+{: #newcluster-workspace-faq}
+{: faq}
+{: support}
+
+You can refer to create [single and multizone {{site.data.keyword.openshiftshort}} and {{site.data.keyword.containershort_notm}} cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster) tutorial.
