@@ -27,7 +27,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integrations** in the side navigation pane.
-4. Select your location and select **Logging** in **Connect** drop down. You are redirected to the {{site.data.keyword.la_full_notm}} service form.
+4. Select your location and click **Connect** > **Logging**. You are redirected to the {{site.data.keyword.la_full_notm}} service form.
 
     In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for IBM Log Analysis to view the {{site.data.keyword.la_full_notm}} service form.
     {: note}
@@ -49,7 +49,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integrations** in the side navigation pane.
-4. Select your location and select **Activity tracking** from **Connect** drop down. You are redirected to the IBM Cloud Activity Tracker service form.
+4. Select your location and click **Connect** > **Activity tracking**. You are redirected to the IBM Cloud Activity Tracker service form.
 
    In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for IBM Cloud Activity Tracker to view the IBM Cloud Activity Tracker service form.
    {: note}
@@ -71,7 +71,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integration** in the side navigation pane.
-4. Select your location and click **Monitoring** in **Connect** drop down. You are redirected to the {{site.data.keyword.cloud_notm}} Monitoring form.
+4. Select your location and click **Connect** > **Monitoring**. You are redirected to the {{site.data.keyword.cloud_notm}} Monitoring form.
    
    In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for IBM Cloud Monitoring view the IBM Cloud Monitoring service form.
    {: note}
@@ -118,7 +118,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}** > **Integrations** > **Connect**. 
-3. Select **Key Management** from the **Connect** drop down.
+3. Click **Connect** > **Key Management** from the drop down.
 4. Select **Service** as **Key Protect**, or **Hyper Protect Crypto Services**.
 5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to [Create a key protect instance](#key-prerequisites).
     

@@ -27,7 +27,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integrations** in the side navigation pane.
-4. Select your location and select **Activity tracking** from **Connect** drop down. You are redirected to the {{site.data.keyword.at_full_notm}} service form.
+4. Select your location and click **Connect** > **Activity tracking**. You are redirected to the {{site.data.keyword.at_full_notm}} service form.
 
    In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.at_full_notm}} to view the {{site.data.keyword.at_full_notm}} service form.
    {: note}
