@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-04-04"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -62,6 +62,3 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```
     {: pre}
-
-
-

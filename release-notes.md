@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-31"
+lastupdated: "2022-04-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -23,6 +23,31 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
+
+## April 2022
+{: #schematics-apr22}
+
+Review the release notes for April 2022.
+{: shortdesc}
+
+### 12 April 2022
+{: #schematics-apr3122}
+{: release-note}
+
+{{site.data.keyword.bpshort}} command-line supports private {{site.data.keyword.bpshort}} endpoint
+:   The {{site.data.keyword.bpshort}} command-line [supports private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
+
+Support `.JSON` and `.tfvars` file extension for {{site.data.keyword.bpshort}} plan and apply commands
+:   The {{site.data.keyword.bpshort}} command-line supports `.JSON` and `.tfvars` file extension in {{site.data.keyword.bpshort}} plan and apply commands.
+
+Enhance resources tabular data view for resources.
+:   The {{site.data.keyword.bpshort}} command-line lists the provisioned resources from your workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
+
+Deprecate and warning message when using `ibmcloud terraform` command.
+:   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Please use 'schematics' or 'sch' in your commands.**
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) released on 9th April 2022.
 
 ## March 2022
 {: #schematics-mar22}

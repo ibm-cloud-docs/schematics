@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-12"
+lastupdated: "2022-04-18"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -21,14 +21,18 @@ Create and manage {{site.data.keyword.bplong_notm}} workspaces on the private ne
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} Private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/schematics?topic=schematics-secure-data#pi-location).
 
-To connect to {{site.data.keyword.bplong_notm}} by using a private network connection, you must use the {{site.data.keyword.bpshort}} API or the command-line plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
+To connect to {{site.data.keyword.bplong_notm}} by using a [private network connection](/docs/schematics?topic=schematics-secure-data#pi-location), you must use the {{site.data.keyword.bpshort}} API or the command-line plug-in. This capability is not available from the {{site.data.keyword.cloud_notm}} console.
 {: note}
 
 ## Private service endpoints in {{site.data.keyword.bpshort}}
 {: #private-cse}
 
-The private service endpoints are available for {{site.data.keyword.bpshort}}. For more information, see [Using private endpoints](/docs/schematics?topic=schematics-secure-data#pi-location).
+The private service endpoints are available for {{site.data.keyword.bpshort}}. {{site.data.keyword.bplong_notm}} CLI users can access their private network by specifying `private-us-south.schematics.cloud.ibm.com` as the API endpoint of {{site.data.keyword.bplong_notm}} CLI. For more information, see [Using private {{site.data.keyword.bpshort}} endpoints](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
+
+To access the private network, you need to first login to private network by using [`ibmcloud login -a private.cloud.ibm.com`](
+https://github.com/IBM-Cloud/ibm-cloud-cli-sdk/blob/master/docs/plugin_developer_guide.md#9-private-endpoint-support). Access {{site.data.keyword.bpshort}} commands to interact with the private {{site.data.keyword.bpshort}} endpoint to automatically access the endpoint.
+{: important}
 
 ### Enable VRF and service endpoints for your account
 {: #private-network-prereqs}

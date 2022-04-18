@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-30"
+lastupdated: "2022-04-15"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -43,7 +43,10 @@ Infrastructure as Code (IaC) helps you codify your cloud environment so that you
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking **Apply plan** from the workspace details page or running the `ibmcloud terraform apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
+{{site.data.keyword.bplong_notm}} workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking **Apply plan** from the workspace details page or running the `ibmcloud schematics apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
+
+The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Please use 'schematics' or 'sch' in your commands.**
+{: note}
 
 ## Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?
 {: #ansible-playbooks}
@@ -170,7 +173,7 @@ In the same way {{site.data.keyword.bplong_notm}} supports the ability to persis
 
 Your files must be placed in the `/tmp/.schematics` folder and the size limit is set to `10 MB`. {{site.data.keyword.bpshort}} backups and restores all the files in the `/tmp/.schematics` folder.
 
-## How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}?
+## How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
@@ -692,3 +695,82 @@ Removing the workspace from {{site.data.keyword.bplong_notm}} does not remove an
 
 Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sure that you backed up your data before you remove a resource. If you choose to remove the infrastructure code, or comment out the resource in your Terraform configuration file, make sure to thoroughly review the log file of your execution plan to verify that all your resources are included in the removal.    
 {: important}
+
+## Does {{site.data.keyword.bpshort}} supports `ibmcloud terraform` command?
+{: #ibmcloud-terraform-cmd-faq}
+{: faq}
+{: support}
+
+Using `ibmcloud terraform` command from CLI release v1.8.0 displays a warning message as **Alias 'terraform' will be deprecated. Please use 'schematics' or 'sch' in your commands.**. For more information, about CLI version history, see [CLI version history](/docs/schematics?topic=schematics-cli_version-releases).
+
+## Can I access private network through {{site.data.keyword.bpshort}}?
+{: #private-endpoint-faq}
+{: faq}
+{: support}
+
+Yes, from [CLI release v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) {{site.data.keyowrd.bpshort}} supports private {{site.data.keyword.bpshort}} endpoint to access your private network. For more information, see [private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
+
+## How can I update a workspace created through payload in command-line to resolve invalid payload issue?
+{: #invalid-paylaod-cli}
+{: faq}
+{: support}
+
+You can use `env values` as shown in the sample payload to update the workspace in the command-line. For more information, about creating and using environment variables, see [usage of `env_values`](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage).
+
+**Sample payload:**
+
+```json
+{
+  "name": "newName",
+  "template_data": [
+    {
+      "type": "<same_as_before>",
+      "env_values": [
+        {
+          "env_values_1": "dummy_text"
+        },
+        {
+          "env_values_2": "dummy_text"
+        }
+      ],
+      "env_values_metadata": [
+        {
+          "name": "env_values_1",
+          "hidden": false,
+          "secure": false
+        },
+        {
+          "name": "env_values_2",
+          "hidden": false,
+          "secure": false
+        }
+      ]
+    }
+  ]
+}
+```
+{: pre}
+
+## How can I resolve the error message while connecting to Bastion host IP addresses through {{site.data.keyword.bplong_notm}}?
+{: #bastion-ipaddress-faq}
+{: faq}
+{: support}
+
+**Error:**
+
+```text
+timeout - last error: Error connecting to bastion: dial tcp
+ 2022/03/02 03:59:37 Terraform apply | 52.118.101.204:22: connect: connection timed out
+ 2022/03/02 03:59:37 Terraform apply | 
+ 2022/03/02 03:59:37 Terraform apply | Error: file provisioner error
+```
+{: screen}
+
+You can access your {{site.data.keyword.bpshort}} workspace and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses that are listed in the {{site.data.keyword.bpshort}} documentation. For more information, about the region and the zone based private and public IP addresses, see [Opening required IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
+
+## How do I create a cluster by using Terraform on {{site.data.keyword.cloud_notm}} environment?
+{: #newcluster-workspace-faq}
+{: faq}
+{: support}
+
+You can refer to create [single and multizone {{site.data.keyword.openshiftshort}} and {{site.data.keyword.containershort_notm}} cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster) tutorial.
