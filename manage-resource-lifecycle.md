@@ -43,7 +43,7 @@ Run your infrastructure code to provision, or modify your {{site.data.keyword.cl
 
 **To deploy your resources**: 
 
-1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform template that you want to apply. 
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that points to the Terraform template that you want to apply. 
 2. Select the **Settings** tab.
 3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. Optional: Review the variables that you set for your workspace. The values of your variables are used every time that you reference the variable in your Terraform template. Make sure that your variables use the correct values.  
@@ -75,7 +75,7 @@ If you change the code of your Terraform template in GitHub, these changes are n
 
 To update your resources: 
 
-1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform template that you updated. 
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that points to the Terraform template that you updated. 
 2. Select the **Settings** tab.
 3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. If you added, or removed variables in your Terraform configuration files, or if you want to change the variable values that you set when you created the workspace, enter or change the variable values. 
@@ -112,7 +112,7 @@ A Terraform execution plan is based on the Terraform state file that was created
 
 **To view deviations between the resources in your {{site.data.keyword.cloud_notm}} account and your Terraform configuration**: 
 
-1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace where you want to inspect deviations between the resources that are provisioned in your account and the resources that you defined in your Terraform configuration file. 
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace where you want to inspect deviations between the resources that are provisioned in your account and the resources that you defined in your Terraform configuration file. 
 2. Select the **Settings** tab.
 3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. Review the values of your input variables and make sure that you want to create the deviation report with the values that you see. 
@@ -201,7 +201,7 @@ A Terraform execution plan is based on the Terraform state file that was created
 View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{site.data.keyword.cloud_notm}} resources that you currently manage with {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
 
-1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace that you want to inspect.
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to inspect.
 2. From the navigation, select **Activity** to find a summary of activities in your workspace.
 3. Review the logs of previous Terraform execution plans and the plans that you applied. 
 4. From the navigation, select **Resources** to review the state of the {{site.data.keyword.cloud_notm}} resources that you created with this workspace. 
@@ -254,7 +254,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
     {: codeblock}
 
 3. Commit the change to your Terraform configuration file. 
-4. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the workspace that points to the Terraform template that you just changed. 
+4. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that points to the Terraform template that you just changed. 
 5. From the navigation, select **Settings**. 
 6. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 7. Click **Generate plan** to create a Terraform execution plan. The workspace **Activity** page opens. Note that during this time, you cannot make changes to your workspace.
@@ -267,7 +267,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 10. Review the log files to ensure that no errors occurred during the deletion process. 
 11. From the navigation, select **Resources** and verify that your resources are removed. 
 12. Optional: After you removed all your resources, remove your workspace. 
-    1. Open the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces) and find the workspace that you want to remove. 
+    1. Open the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external} and find the workspace that you want to remove. 
     2. From the actions menu, click **Delete**. 
     3. Select **Delete workspace**. 
     4. Confirm the deletion of your workspace by clicking **Delete**. 
@@ -275,7 +275,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 
 **To remove your resources from the {{site.data.keyword.bpshort}} console**: 
 
-1. From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), find the workspace that includes the resources that you want to delete. 
+1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, find the workspace that includes the resources that you want to delete. 
 2. From the action menu, click **Delete**. 
 3. Select **Delete workspace** and **Delete all associated resources** to delete the resources and your workspace. 
 4. Confirm the deletion of your workspace by clicking **Delete**. 
