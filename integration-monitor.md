@@ -29,7 +29,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 3. Select **Integration** in the side navigation pane.
 4. Select your location and click **Connect** > **Monitoring**. You are redirected to the {{site.data.keyword.monitoringshort_notm}} form.
    
-   In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.monitoringshort_notm}} view the {{site.data.keyword.monitoringshort_notm}} service form.
+   In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.monitoringshort_notm}} to view the {{site.data.keyword.monitoringshort_notm}} service form.
    {: note}
 
 5. Analyze the configuration and click **Create**.
