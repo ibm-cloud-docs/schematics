@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-12"
+lastupdated: "2022-04-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -29,6 +29,13 @@ For information about releases that occurred before 22 October 2021, see [What's
 
 Review the release notes for April 2022.
 {: shortdesc}
+
+### 18 April 2022
+{: #schematics-apr1822}
+{: release-note}
+
+Support array of injectable Terraform blocks in create workspace API
+:   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apidocs/schematics/schematics#create-workspace).
 
 ### 12 April 2022
 {: #schematics-apr3122}
