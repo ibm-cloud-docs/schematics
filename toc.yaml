@@ -47,7 +47,7 @@ toc:
                 - setup-cli.md
                 - setup-api.md
           - topicgroup:
-              label: Workspaces - Cloud infrastructure deployment with Terraform
+              label: Managing Schematics Workspaces
               topics:
                 - create-terraform-config.md
                 - workspace-setup.md
@@ -63,9 +63,7 @@ toc:
                 - job-download-file.md
                 - access.md
           - topicgroup:
-              label: >-
-                Actions - Configuration management and cloud operations with
-                Ansible
+              label: Managing Schematics Actions
               topics:
                 - action-setup.md
                 - ansible-roles.md
@@ -73,15 +71,16 @@ toc:
                 - autodeploy_actionsamples.md
                 - autodeploy_template.md
           - topicgroup:
-              label: Inventories - Create inventories for Ansible playbook
+              label: Managing Schematics Inventories
               topics:
                 - inventories.md
           - topicgroup:
-              label: >-
-                Integrations - Configure logging, activity tracking, monitoring,
-                and KMS for instance
-              topics:
-                - integration-service.md
+              label: Managing Schematics Integrations
+              topics: 
+                - integration-logging.md
+                - integration-monitor.md
+                - integration-at.md
+                - integration-kms.md
           - topicgroup:
               label: Logging and monitoring
               topics:

@@ -32,7 +32,7 @@ Schematics
           setup-api.md
 
     {: .topicgroup}
-    Workspaces: Cloud infrastructure deployment with Terraform
+    Managing Schematics Workspaces
          create-terraform-config.md
          workspace-setup.md
          special-env-vars.md
@@ -51,7 +51,7 @@ Schematics
          Examples
 
     {: .topicgroup}
-    Actions: Configuration management and cloud operations with Ansible
+    Managing Schematics Actions
          action-setup.md
          ansible-roles.md
          create-ansible-playbook.md
@@ -59,12 +59,15 @@ Schematics
          autodeploy-template.md
 
     {: .topicgroup}
-    Inventories: Create inventories for Ansible playbook
+    Managing Schematics Inventories
          inventories.md
 
     {: .topicgroup}
-    Integrations: Configure logging, activity tracking, monitoring, and KMS for instance
-         integration-service.md
+    Managing Schematics Integrations
+         integration-logging.md
+         integration-monitor.md
+         integration-at.md
+         integration-kms.md
 
     {: .topicgroup}
     Logging and monitoring
