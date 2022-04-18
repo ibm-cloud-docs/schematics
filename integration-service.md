@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-15"
+lastupdated: "2022-04-18"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Monitoring integration resources by using {{site.data.keyword.la_full_notm}}
+# Monitoring integration resources
 {: #monitoring-integration}
 
 {{site.data.keyword.bplong}} integrates to fully manage enterprise-grade activity tracker service instance for logging, activity tracking, monitoring, and key management. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} workspaces by connecting, configuring, and view through observability dashboards.

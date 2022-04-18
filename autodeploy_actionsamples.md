@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-08"
+lastupdated: "2022-04-18"
 
 keywords: action templates, schematics template, terraform template
 
@@ -109,4 +109,3 @@ Access
 Deploy
 :   <img usemap="#deploybutton_map5" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map5" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&repository=https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="1,3,139,20"  shape="rect"></map>
-
