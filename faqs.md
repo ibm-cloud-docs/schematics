@@ -709,7 +709,7 @@ Using `ibmcloud terraform` command from CLI release v1.8.0 displays a warning me
 {: faq}
 {: support}
 
-Yes, from [CLI release v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) {{site.data.keyowrd.bpshort}} supports private {{site.data.keyword.bpshort}} endpoint to access your private network. For more information, see [private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
+Yes, from [CLI release v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) {{site.data.keyword.bpshort}} supports private {{site.data.keyword.bpshort}} endpoint to access your private network. For more information, see [private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
 
 ## How can I update a workspace created through payload in command-line to resolve invalid payload issue?
 {: #invalid-paylaod-cli}
