@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-04-18"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics,
 
@@ -37,12 +37,12 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 ### Available goals for {{site.data.keyword.bplong_notm}}
 {: #{{site.data.keyword.bpshort}}-available-goals}
 
-* Ensure all {{site.data.keyword.bpshort}} resource and action should run on designated location/region.
-* Ensure {{site.data.keyword.bpshort}} workspace is configured with a specific Terraform version.
-* Ensure that {{site.data.keyword.bpshort}} encryption is set to `On`.
-* Ensure that {{site.data.keyword.bpshort}} has logging service enabled.
-* Ensure {{site.data.keyword.bpshort}} has role based access for users.
-* Ensure that {{site.data.keyword.bpshort}} has monitoring service enabled.
+* Check whether {{site.data.keyword.bpshort}} resources and actions must run in a designated location
+* Check whether {{site.data.keyword.bpshort}} is enabled with encryption
+* Check whether {{site.data.keyword.bpshort}} is enabled with IBM Log Analysis
+* Check whether {{site.data.keyword.bpshort}} has role-based access control (RBAC) for users
+* Check whether {{site.data.keyword.bpshort}} is enabled with IBM Cloud Monitoring
+* Check whether {{site.data.keyword.bpshort}} workspace is configured with a specific Terraform version
 
 
 
