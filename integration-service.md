@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-19"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -43,7 +43,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 ## Launching activity tracking
 {: #audit-ui}
 
-Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspace instance events, access, events, and access audit log. Use the audit log to reveal usage patterns that would identify workspace misuse, and you can also take action to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cloud_notm}} Object Storage to retain your logs. Complete these steps to launch activity tracker.
+Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspace instance events, access, events, and access audit log. Use the audit log to reveal usage patterns that would identify workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cloud_notm}} Object Storage to retain your logs. Complete these steps to launch activity tracker.
 {: shortdesc}
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 

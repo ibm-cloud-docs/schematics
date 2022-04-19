@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-19"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -45,32 +45,33 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
 
 **Dynamic inventory** allows to create the collection of hosts in a inventory file that defines the hosts and group of hosts upon which your playbook operates. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `INI` file format that can be used in the `create` and `update` actions commands as `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>` argument.
 
-    **Syntax:**
-    ```text
-    [hostgroupname1]
-    <IPaddress1> 
-    <IPaddress2> 
-    [hostgroupname2]
-    <IPaddress1>
-    ```
-    {: codeblock}
+**Syntax:**
 
-    **Example:** 
+```text
+[hostgroupname1]
+<IPaddress1> 
+<IPaddress2> 
+[hostgroupname2]
+<IPaddress1>
+```
+{: codeblock}
 
-    ```text
-    [webserverhost]
-    178.54.68.78
-    187.54.68.78
-    [dbhost]
-    174.45.86.87
-    ```
-    {: codeblock}
+**Example:** 
 
-    | Target | Description| 
-    |------|  ------|
-    |`hostgroupname1`| The application hostname. For example, Web Server host application name as `[webserverhost]`, database hostname as `[dbhost]`, in a single word. **Note** System validates and throws an error if a space is provided in the host group name.|
-    |`IPaddress`|The IP addresses of the hostname.|
-    {: caption="Inventory host group parameters" caption-side="top"}
+```text
+[webserverhost]
+178.54.68.78
+187.54.68.78
+[dbhost]
+174.45.86.87
+```
+{: codeblock}
+
+| Target | Description| 
+|------|  ------|
+|`hostgroupname1`| The application hostname. For example, Web Server host application name as `[webserverhost]`, database hostname as `[dbhost]`, in a single word. **Note** System validates and throws an error if a space is provided in the host group name.|
+|`IPaddress`|The IP addresses of the hostname.|
+{: caption="Inventory host group parameters" caption-side="top"}
 
 You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.
 {: note}
@@ -1493,50 +1494,50 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
 
 **Sample payload of Test.JSON file**
 
-    ```json
+```json
+{
+    "commands": [
     {
-        "commands": [
-        {
-            "command": "state show",
-            "command_params": "data.template_file.test",
-            "command_name": "Test1",
-            "command_desc": "Showing state",
-            "command_onerror": "continue"
-        },
-        {
-            "command": "taint",
-            "command_params": "null_resource.sleep",
-            "command_name": "Test2",
-            "command_desc": "Marking taint",
-            "command_onerror": "continue"
-        },
-        {
-            "command": "untaint",
-            "command_params": "null_resource.sleep",
-            "command_name": "Test3",
-            "command_desc": "Marking untaint",
-            "command_onerror": "continue"
-        },
-        {
-            "command": "state list ",
-            "command_params": "",
-            "command_name": "Test4",
-            "command_desc": "Checking state list",
-            "command_onerror": "continue"
-        },
-        {
-            "command": "state rm ",
-            "command_params": "data.template_file.test",
-            "command_name": "Test5",
-            "command_desc": "Removing state",
-            "command_onerror": "continue"
-        }
-    ],
-    "operation_name": "Workspace Command",
-    "description": "Executing command"
+        "command": "state show",
+        "command_params": "data.template_file.test",
+        "command_name": "Test1",
+        "command_desc": "Showing state",
+        "command_onerror": "continue"
+    },
+    {
+        "command": "taint",
+        "command_params": "null_resource.sleep",
+        "command_name": "Test2",
+        "command_desc": "Marking taint",
+        "command_onerror": "continue"
+    },
+    {
+        "command": "untaint",
+        "command_params": "null_resource.sleep",
+        "command_name": "Test3",
+        "command_desc": "Marking untaint",
+        "command_onerror": "continue"
+    },
+    {
+        "command": "state list ",
+        "command_params": "",
+        "command_name": "Test4",
+        "command_desc": "Checking state list",
+        "command_onerror": "continue"
+    },
+    {
+        "command": "state rm ",
+        "command_params": "data.template_file.test",
+        "command_name": "Test5",
+        "command_desc": "Removing state",
+        "command_onerror": "continue"
     }
-    ```
-    {: codeblock}
+],
+"operation_name": "Workspace Command",
+"description": "Executing command"
+}
+```
+{: codeblock}
 
 
     The table provides the list of key parameters of the JSON file for the `Commands` API, for the command-line and the API.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-04-19"
 
 keywords: schematics remote host files, modules, private repository, netrc, terraform runtime process
 
@@ -17,7 +17,7 @@ subcollection: schematics
 
 You can use the Terraform template to provision the resource by using the modules which are hosted on the private Git repository. At runtime when {{site.data.keyword.bpshort}} clones the private Git repository of your module templates, only the top level files are cloned. Also you need to pass Git token if your repository are private. Generally, if the template is referring to the module, the modules gets downloaded during `terraform init` command.  The `terraform init` parses the top level template files and then downloads the individual modules referred in top level template files. If your modules are in private Git repository, in {{site.data.keyword.cloud_notm}} catalog, or any other repository. The download fails to clone the files from all level as you do not have a way to pass the credentials to these module in the private repository.
 
-The `__netrc__` configuration can be used with private and public Git repositories such a GitHub, Git Lab, and Bitbucket.
+The `__netrc__` configuration can be used with private and public Git repositories such a `GitHub`, `GitLab`, and `Bitbucket`.
 {: note}
 
 To overcome the download failure, {{site.data.keyword.bpshort}} supports environment variables `__netrc__`. The `__netrc__` accepts the list of `hostname`, `username` and the `password` argument. This feature is supported only in {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace). The syntax is provided as an `env_values` in the JSON payload file.
