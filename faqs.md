@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-19"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -325,7 +325,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
 If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: note}
 
-{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](https://cloud.ibm.com/apidocs/schematics#create-workspace).
+{{site.data.keyword.bpshort}} does not support `release` tag, as its difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace).
 
 ##  How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
@@ -635,11 +635,11 @@ To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.ke
 {: important}
 
 ## What changes can I make to my resources?
-{: #edit-resource-faq}
+{: #resource-faq}
 {: faq}
 {: support}
 
-You can choose to add, modify, or remove infrastructure code in your Terraform template in GitHub, or update variable values from the workspace dashboard in {{site.data.keyword.bplong_notm}}.  
+You can choose to add, modify, or remove infrastructure code in your Terraform template through GitHub, or update variable values from the {{site.data.keyword.bplong_notm}} workspace dashboard. 
 
 ## When I change my configuration file in GitHub, is my change automatically available in the next execution plan?
 {: #edit-resource-confg-faq}
@@ -662,12 +662,13 @@ After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by
 
 To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files and the resources that exist in your {{site.data.keyword.cloud_notm}} account, you can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
 
-## What deviations cannot be detected?
+## What are the deviations that cannot be detected?
 {: #edit-resource-faq}
 {: faq}
 {: support}
 
-A Terraform execution plan is based on the Terraform state file that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.
+- A Terraform execution plan is based on the [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state) that is created when you run your first {{site.data.keyword.bpshort}} apply action. 
+- Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.
 
 ## How should I remove resources with {{site.data.keyword.bplong_notm}}?
 {: #remove-resource-faq}

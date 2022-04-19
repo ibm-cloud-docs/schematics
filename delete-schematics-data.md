@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-30"
+lastupdated: "2022-04-19"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -101,7 +101,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 
 ### Inventories
-{: #delete-schematics-data-invcategory}
+{: #delete-schematics-data-cliinvcategory}
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
