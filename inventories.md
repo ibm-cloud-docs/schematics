@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-10"
+lastupdated: "2022-04-20"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -18,7 +18,7 @@ subcollection: schematics
 A resource inventory defines a single {{site.data.keyword.cloud_notm}} resource or a group of resources where you want to run Ansible playbooks, modules, or roles by using {{site.data.keyword.bpshort}} actions.
 {: shortdesc}
 
-You can specify your resource inventory by using a [static inventory file](#static-inv), or [dynamically retrieve](#dynamic-inv) your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} workspaces that you created.
+You can specify your resource inventory by using a [static inventory file](#static-inv), or [dynamically retrieve](#dynamic-inv) to your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} workspaces that you created.
 
 ## Creating static inventory files
 {: #static-inv}

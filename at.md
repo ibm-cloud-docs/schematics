@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-04-20"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -35,9 +35,9 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 | `schematics.workspace.create` | An event is generated for a request to create a {{site.data.keyword.bpshort}} workspace. |
 | `schematics.workspace.update`| An event is generated for a request to update a {{site.data.keyword.bpshort}} workspace. |
 | `schematics.workspace.delete` | An event is generated for a request to delete a {{site.data.keyword.bpshort}} workspace. |
-| `schematics.workspace.destroy` | An event is generated for a request to delete the {{site.data.keyword.cloud_notm}} resources that are provisioned through a Terraform plan and the workspace.|
-| `schematics.workspace-resources.create` | An event is generated when a Terraform execution plan is created for a workspace. |
-| `schematics.workspace-resources.delete` | An event is generated when a Terraform execution plan is applied in {{site.data.keyword.cloud_notm}} to delete resources.|
+| `schematics.workspace-resources.create` | An event is generated when a Terraform execution apply is created for a workspace. |
+| `schematics.workspace-resources.plan` | An event is generated when a Terraform execution plan is created for a workspace. |
+| `schematics.workspace-resources.delete` | An event is generated for a request to delete the {{site.data.keyword.cloud_notm}} resources that are provisioned through a Terraform plan and the workspace.|
 {: caption="Workspace events" caption-side="top"}
 
 ### Action events

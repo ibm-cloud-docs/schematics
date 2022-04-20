@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-26"
+lastupdated: "2022-04-20"
 
 keywords: schematics, automation, terraform
 
@@ -32,7 +32,7 @@ Understand how to [Create your private catalog](/docs/account?topic=account-rest
 In this tutorial, you import the {{site.data.keyword.IBM_notm}} provided Observability Terraform template as a product to your private catalog to help users create the following {{site.data.keyword.cloud_notm}} services at once: 
 
 - [**{{site.data.keyword.loganalysislong_notm}}**](/docs/log-analysis?topic=log-analysis-getting-started#getting-started): Use this service to add logging capabilities to other {{site.data.keyword.cloud_notm}} services, and to manage system and app logs.
-- [**{{site.data.keyword.monitoringlong_notm}}**](/docs/monitoring?topic=monitoring-getting-started#getting-started): Use this service to gain operational visibility into the performance and health of your apps, services, and platforms.
+- [**{{site.data.keyword.monitoringlong_notm}}**](/docs/monitoring?topic=monitoring-getting-started): Use this service to gain operational visibility into the performance and health of your apps, services, and platforms.
 - [**{{site.data.keyword.cloudaccesstraillong_notm}}**](/docs/activity-tracker?topic=activity-tracker-getting-started): Use this service to track any activity for a service so that you can comply with regulatory audit requirements.
 
 ## Time required
