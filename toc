@@ -13,6 +13,7 @@ Schematics
          getting-started-software.md
 
     about.md
+
     architecture-workload-isolation.md
     release-notes.md
      {: .navgroup-end}
