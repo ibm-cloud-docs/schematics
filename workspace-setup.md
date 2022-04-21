@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-04-21"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -47,13 +47,19 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 2. Specify your template URL in the `GitHub`, `GitLab`, or `Bitbucket` repository URL that hosts your Terraform configuration files.
    - Optional: Enter the Personal access token to authenticate your private Git repositories.
    - Check **Download entire repo** option to download and cache the complete repository, if unchecked, [compact](/docs/schematics?topic=schematics-compact-download) only the specified folder and sub-folders of the Git URL.
-   - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. **Note** You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`. **Note** when you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. 
+   - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. **Note** You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`. 
+   
+    When you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. 
+    {: note}
 
     {{site.data.keyword.bpshort}} supports the stable release of Terraform version 1.1, through `terraform_v1.0`. The terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the latest version.
+    ```terraform
      terraform {
       required_version = "~> 1.1"
      }
-    {: note}
+     ```
+     {: pre}
+
 
    - Click **Next**.
 3. In the **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
@@ -110,7 +116,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     | Parameter | Description |
     | --- |  --- |
     | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
-    | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. |
+    | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, Schematics selects the version from your template. |
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. |
@@ -148,7 +154,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     | -- | -- |
     | `iam_access_token` | Enter the IAM access token that you retrieved in step 1. |
     | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
-    | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. |
+    | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, Schematics selects the version from your template.|
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are store |
