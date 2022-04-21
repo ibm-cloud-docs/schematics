@@ -33,7 +33,7 @@ Schematics
           setup-api.md
 
     {: .topicgroup}
-    Managing Schematics Workspaces
+    Managing Workspaces
          create-terraform-config.md
          workspace-setup.md
          special-env-vars.md
@@ -52,7 +52,7 @@ Schematics
          Examples
 
     {: .topicgroup}
-    Managing Schematics Actions
+    Managing Actions
          action-setup.md
          ansible-roles.md
          create-ansible-playbook.md
@@ -60,11 +60,11 @@ Schematics
          autodeploy-template.md
 
     {: .topicgroup}
-    Managing Schematics Inventories
+    Managing Inventories
          inventories.md
 
     {: .topicgroup}
-    Managing Schematics Integrations
+    Managing Integrations
          integration-logging.md
          integration-monitor.md
          integration-at.md
