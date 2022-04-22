@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-04-22"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -45,7 +45,7 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 ### Workspaces
 {: #delete-schematics-data-wkscategory}
 
-You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using IBM Cloud Console.
+You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} console.
 
 1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
 2. Click **Actions** tab and select **Delete workspace** option.

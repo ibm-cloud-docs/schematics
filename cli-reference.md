@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-04-22"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1449,6 +1449,7 @@ ibmcloud schematics resource-query update --id ID --name RESOURCE_QUERY_NAME [--
 ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121
 ```
 {: pre}
+
 
 
 ## Terraform commands
