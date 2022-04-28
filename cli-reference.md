@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-04-28"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1771,8 +1771,8 @@ ibmcloud schematics workspace delete --id myworkspace-a1aa1a1a-a11a-11
 ```
 {: pre}
 
-### `ibmcloud schematics workspace get`	
-{: #schematics-workspace-get}	
+### `ibmcloud schematics workspace get`
+{: #schematics-workspace-get}
 
 Retrieve the details of an existing workspace, including the values of all input variables.	
 {: shortdesc}	
