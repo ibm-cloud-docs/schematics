@@ -1,4 +1,4 @@
-<staging> ---
+---
 
 copyright:
   years: 2017, 2022
@@ -98,7 +98,7 @@ Review the commands that you can use to view the detect drift by using the job r
     ibmcloud schematics job run --command-object workspace --command-object-id <workspace_id> --command-name drift
     ```
     {: pre}
-    
+
 2. Execute [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action) to retrieve all activities of your workspace.
 
     ```sh
