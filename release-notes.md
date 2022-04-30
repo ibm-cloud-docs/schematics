@@ -40,12 +40,32 @@ Support detecting drift
 Support stopping or terminating the running job
 :   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, about to stop, interrupt, or terminate, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job&interface=ui#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
+Support additional frequently asked questions (FAQs) 
+:  The {{site.data.keyword.bpshort}} supports FAQs releated to [`drift detection`](/docs/schematics?topic=schematics-faqs&interface=api#drift-automatic-faq).
+
+### 26 April 2022
+{: #schematics-apr2622}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.9.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+### 17 April 2022
+{: #schematics-apr2722}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.8.1](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 ### 18 April 2022
 {: #schematics-apr1822}
 {: release-note}
 
 Support array of injectable Terraform blocks in create workspace API
 :   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apidocs/schematics/schematics#create-workspace).
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.9.1](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 12 April 2022
 {: #schematics-apr3122}

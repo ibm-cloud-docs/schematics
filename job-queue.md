@@ -39,7 +39,7 @@ Following are the tasks of the job when it enter into pending queue.
 - The commands or arguments that are passed to the job are not valid. Check that the argument flags specified are correct.
 
 ## Timeout
-{: #job-timeout}
+{: #job-queue-timeout}
 
 The Terraform jobs such as plan, apply, and destroy on a workspace should not generally take more than few hours to provision or deprovision the resources. If you are provisioning many resources simultaneously, which takes time in number of hours, it is suggested to split the resources into different workspaces. {{site.data.keyword.bpshort}} limits the execution time of a job to 24 hours. After 24 hours the jobs are terminated and the job is marked as `STOPPED` and workspace shows `ACTIVE`, or `INACTIVE`.
 
