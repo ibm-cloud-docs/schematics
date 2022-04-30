@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-28"
+lastupdated: "2022-04-30"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -783,19 +783,19 @@ You can refer to create [single and multizone {{site.data.keyword.openshiftshort
 {: faq}
 {: support}
 
-No, the drift detection is not automatic method of detection in the {{site.data.keyword.bplong_notm}}. For more information, about drift detection in {{site.data.keyword.cloud_notm}}, see [drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sc-drift)
+No, the drift detection is not automatic method of detection in the {{site.data.keyword.bplong_notm}}. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
 ## Can I initiate the drift detection?
 {: #drift-initiate-faq}
 {: faq}
 {: support}
 
-In order to initiate drift detection for a workspace, you need to click on the Actions... dropdown and select Detect drift. This would initiate a job to detect drift.
+Yes, you can initiate the drift detection. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
 ## Where can I see the status of the drift detection? OR How can I know if the workspace is drifted?
 {: #drift-status-faq}
 {: faq}
 {: support}
 
-In order to know the details of the drift job, you need to check the drift job log. The job log entry provides the details of the drift is available either `in progress` or `completed` with the appropriate status such as `failure` or `success`.
+In order to know the details of the drift job, you need to check the drift job log. The job log entry provides the details of the drift is available either `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 

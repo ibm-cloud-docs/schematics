@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-04-30"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -29,6 +29,13 @@ For information about releases that occurred before 22 October 2021, see [What's
 
 Review the release notes for April 2022.
 {: shortdesc}
+
+### 30 April 2022
+{: #schematics-apr3022}
+{: release-note}
+
+Support detecting drift in {{site.data.keyword.bpshort}} workspace.
+:   The {{site.data.keyword.bpshort}} supports [drift capabilites](/docs/schematics?topic=schematics-drift-note&interface=ui) for {{site.data.keyword.bpshort}} workspace. For more information, about viewing detecting drift, see drift detection through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note&interface=ui#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
 
 ### 18 April 2022
 {: #schematics-apr1822}
