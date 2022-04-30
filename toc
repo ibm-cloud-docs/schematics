@@ -47,6 +47,7 @@ Schematics
          solutions.md
          compact-download.md
          job-download-file.md
+         job-force-stop.md
          access.md
 
          {: .topicgroup}

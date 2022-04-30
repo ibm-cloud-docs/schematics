@@ -62,6 +62,7 @@ toc:
                 - solutions.md
                 - compact-download.md
                 - job-download-file.md
+                - job-force-stop.md
                 - access.md
           - topicgroup:
               label: Managing Actions
