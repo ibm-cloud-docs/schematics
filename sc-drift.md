@@ -40,6 +40,7 @@ Terraform cannot detect drift of resources and their associated attributes that 
 
 - Drift detection from {{site.data.keyword.cloud_notm}} console
 - Drift detection from CLI
+- Drift detection from API
 
 ## Drift detection through {{site.data.keyword.bpshort}} UI
 {: #drift-ui}
@@ -95,7 +96,7 @@ You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} 
 
 1. [Create the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 2. [Get your workspace ID](docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get).
-3. [Execute the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan).
+3. Execute the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan).
 4. Fetch the [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 5. Execute the [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply).
 6. Execute the [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job) to create a job in {{site.data.keyword.bpshort}} workspace.
