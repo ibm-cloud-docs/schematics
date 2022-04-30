@@ -38,9 +38,9 @@ Terraform cannot detect drift of resources and their associated attributes that 
 
 {{site.data.keyword.bplong_notm}} can now detect drift for your Terraform automation workspaces. You can use following two methods to check the drift detection.
 
-- Drift detection from {{site.data.keyword.cloud_notm}} console
-- Drift detection from CLI
-- Drift detection from API
+- Drift detection through {{site.data.keyword.cloud_notm}} console
+- Drift detection through CLI
+- Drift detection through API
 
 ## Drift detection through {{site.data.keyword.bpshort}} UI
 {: #drift-ui}

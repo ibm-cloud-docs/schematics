@@ -38,7 +38,7 @@ Support detecting drift
 :   The {{site.data.keyword.bpshort}} supports [drift capabilites](/docs/schematics?topic=schematics-drift-note&interface=ui) for {{site.data.keyword.bpshort}} workspace. For more information, about viewing detecting drift, see drift detection through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note&interface=ui#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
 
 Support stopping or terminating the running job
-:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, about to stop, interrupt, or terminate, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job&interface=ui#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-cli).
+:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, about to stop, interrupt, or terminate, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job&interface=ui#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
 ### 18 April 2022
 {: #schematics-apr1822}
