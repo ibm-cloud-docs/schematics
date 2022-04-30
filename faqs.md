@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-04-30"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -223,7 +223,9 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} functions are built by using [Universal Base Image (UBI-8)](/docs/RegistryImages?topic=RegistryImages-ibmliberty#ibmliberty_get_started) and the runtimes that come with the UBI-8 are available in {{site.data.keyword.bpshort}} workspace and actions. For more information, to use these tools in multiple Operating System, refer to, [Solution tutorials](/docs/solution-tutorials?topic=solution-tutorials-tutorials).
+Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions.
+
+{{site.data.keyword.bpshort}} runtime is built by using [Universal Base Image (UBI-8)](/docs/RegistryImages?topic=RegistryImages-ibmliberty#ibmliberty_get_started) and the runtime utilities or softwares that come with the UBI-8 are available in Terraform provisioners and Ansible actions. For more information, to use these tools in multiple Operating System, refer to, [Solution tutorials](/docs/solution-tutorials?topic=solution-tutorials-tutorials).
 
 The following table describes the utilities that are used in {{site.data.keyword.bpshort}} functions and an automation scripts:
 
@@ -775,3 +777,25 @@ You can access your {{site.data.keyword.bpshort}} workspace and connect to Basti
 {: support}
 
 You can refer to create [single and multizone {{site.data.keyword.openshiftshort}} and {{site.data.keyword.containershort_notm}} cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster) tutorial.
+
+## Is the drift detection automatic in the {{site.data.keyword.bplong_notm}}?
+{: #drift-automatic-faq}
+{: faq}
+{: support}
+
+No, the drift detection is not automatic method of detection in the {{site.data.keyword.bplong_notm}}. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+
+## Can I initiate the drift detection?
+{: #drift-initiate-faq}
+{: faq}
+{: support}
+
+Yes, you can initiate the drift detection. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+
+## Where can I see the status of the drift detection? OR How can I know if the workspace is drifted?
+{: #drift-status-faq}
+{: faq}
+{: support}
+
+In order to know the details of the drift job, you need to check the drift job log. The job log entry provides the details of the drift is available either `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+

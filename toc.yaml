@@ -47,11 +47,12 @@ toc:
                 - setup-cli.md
                 - setup-api.md
           - topicgroup:
-              label: Managing Schematics Workspaces
+              label: Managing Workspaces
               topics:
                 - create-terraform-config.md
                 - workspace-setup.md
                 - special-env-vars.md
+                - sc-drift.md
                 - wks-download-module-files.md
                 - manage-resource-lifecycle.md
                 - cross_region_deployment.md
@@ -61,9 +62,10 @@ toc:
                 - solutions.md
                 - compact-download.md
                 - job-download-file.md
+                - job-force-stop.md
                 - access.md
           - topicgroup:
-              label: Managing Schematics Actions
+              label: Managing Actions
               topics:
                 - action-setup.md
                 - ansible-roles.md
@@ -71,11 +73,11 @@ toc:
                 - autodeploy_actionsamples.md
                 - autodeploy_template.md
           - topicgroup:
-              label: Managing Schematics Inventories
+              label: Managing Inventories
               topics:
                 - inventories.md
           - topicgroup:
-              label: Managing Schematics Integrations
+              label: Managing Integrations
               topics: 
                 - integration-logging.md
                 - integration-monitor.md

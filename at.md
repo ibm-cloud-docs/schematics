@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-20"
+lastupdated: "2022-04-21"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -27,7 +27,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 {: shortdesc}
 
 ### Workspace events
-{: #schematics-wks-events-} 
+{: #schematics-wks-events} 
 
 | Action             | Description      | 
 | -------------------| -----------------|
