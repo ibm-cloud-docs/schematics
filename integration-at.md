@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-05-02"
 
 keywords: tracking schematics services, activity tracking, integration services
 
@@ -27,7 +27,9 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integrations** in the side navigation pane.
-4. Select your location and click **Connect** > **Activity tracking**. You are redirected to the {{site.data.keyword.at_full_notm}} service form.
+4. Against your activity tracking instance, click **Configure** and select your instance name based on your location.
+5. Click **Select**.
+6. Select your location and click **Connect** > **Activity tracking**. You are redirected to the {{site.data.keyword.at_full_notm}} service form to monitor your instance.
 
    In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.at_full_notm}} to view the {{site.data.keyword.at_full_notm}} service form.
    {: note}

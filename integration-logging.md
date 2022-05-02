@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-05-02"
 
 keywords: logging schematics services, logging, integration services
 
@@ -27,15 +27,17 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integrations** in the side navigation pane.
-4. Select your location and click **Connect** > **Logging**. You are redirected to the {{site.data.keyword.la_full_notm}} service form.
+4. Against your logging instance, click **Configure** and select your instance name based on your location.
+5. Click **Select**.
+6. Select your location and click **Connect** > **Logging**. You are redirected to the {{site.data.keyword.la_full_notm}} service form to monitor your instance.
 
     In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for IBM Log Analysis to view the {{site.data.keyword.la_full_notm}} service form.
     {: note}
 
-5. Analyze the configuration and click **Create**.
+7. Analyze the configuration and click **Create**.
 
     If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
     {: important}
 
-6. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.
-{: note}
+8. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.
+

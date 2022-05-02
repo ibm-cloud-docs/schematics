@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-30"
+lastupdated: "2022-05-02"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -50,7 +50,7 @@ For more information about how to use this data source, see [Managing cross-work
 ### Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?
 {: #local-remote-exec}
 
-The [time out](/docs/schematics?topic=schematics-remote-state) is set for `local-exec` and `remote-exec` users by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state fails. 
+The [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout) is set for `local-exec` and `remote-exec` users by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state fails. 
 
 ## What is the use of refresh token header?
 {: #refresh-token}

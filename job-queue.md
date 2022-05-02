@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-30"
+lastupdated: "2022-05-02"
 
 keywords: schematics job queue, job queue process, pending queue, schematics pending queue
 
@@ -43,11 +43,9 @@ Following are the tasks of the job when it enter into pending queue.
 
 The Terraform jobs such as plan, apply, and destroy on a workspace should not generally take more than few hours to provision or deprovision the resources. If you are provisioning many resources simultaneously, which takes time in number of hours, it is suggested to split the resources into different workspaces. {{site.data.keyword.bpshort}} limits the execution time of a job to 24 hours. After 24 hours the jobs are terminated and the job is marked as `STOPPED` and workspace shows `ACTIVE`, or `INACTIVE`.
 
-In the point of transition of the state file of `24 hours`, an interrupt signal is sent to the command execution. A graceful period of `10 minutes` is given for the command to finish. If not, a kill signal is sent and the job is stopped. A refresh is done after stopping the state file and other data is collected at the end.
-
-This will be helpful, in cases where a Terraform command is stuck forever and user doesn't intervene.
+In the point of transition of the state file of `24 hours`, an interrupt signal is sent to the command execution. A graceful period of `10 minutes` is given for the command to finish. If not, a kill signal is sent and the job is stopped. A refresh is done after stopping the state file and other data is collected at the end. This is helpful, in cases where a Terraform command is stuck forever and user doesn't intervene.
 
 In a job, multiple commands such as `terraform init`, `terraform apply`, and `terraform refresh` are executed. If the job times out in a command, all further commands gets only `10 minutes` to finish. At the end of `10 minutes`, each command is killed. 
 
 **Example:** 
-If a job is stuck forever on a Terraform apply when the command is stopped, and a refresh is run. If refresh is also stuck, after `15 minutes`, a kill is executed. The Terraform local exec and remote exec already have a time limit of `30 minutes`.
+If a job is stuck forever on a Terraform apply, when the command is stopped, and if you run a refresh. If refresh is also stuck, after `15 minutes`, a kill is executed. The Terraform `local exec` and `remote exec` already have a time limit of `30 minutes`.
