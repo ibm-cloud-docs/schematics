@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-30"
+lastupdated: "2022-05-02"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -29,7 +29,7 @@ Drift can happen for many reasons within the context of your configuration:
 
 A VSI instance is provisioned by using {{site.data.keyword.bplong_notm}} and desired configuration templates. A DevOps cloud user can modify the provisioned VSI configuration by logging into the Cloud console and modifying the boot volume of an instance or adding ethernet interface. By doing that, even your intentioned and desired infrastructure deployment gets `drifted`.
 
-{{site.data.keyword.bplong_notm}} enables you to safely and predictably [manage the resource lifecycle](/docs/schematics?topic=schematics-manage-lifecycle) of your infrastructure by using Terraform. One challenge when managing infrastructure as Code(IaC) is drift. Drift is the term for when the real world state of your infrastructure differs from the state defined in your Terraform template configuration. 
+{{site.data.keyword.bplong_notm}} enables you to safely and predictably [manage the resource lifecycle](/docs/schematics?topic=schematics-manage-lifecycle) of your infrastructure by using Terraform. One challenge when managing IaC is drift. Drift states that when the real world state of your infrastructure differs from the state defined in your Terraform template configuration. 
 
 Terraform cannot detect drift of resources and their associated attributes that are not managed by using Terraform. For example, Terraform do not detect changes in a virtual machine that have occurred as a result of installing applications locally or using a configuration management tool like `Chef` or `Ansible`.
 
