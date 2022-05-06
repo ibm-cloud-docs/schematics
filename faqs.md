@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-30"
+lastupdated: "2022-05-06"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -227,15 +227,15 @@ Schematics runtime is built by using Universal Base Image (UBI-8) and the runtim
 
 {{site.data.keyword.bpshort}} runtime is built by using [Universal Base Image (UBI-8)](/docs/RegistryImages?topic=RegistryImages-ibmliberty#ibmliberty_get_started) and the runtime utilities or softwares that come with the UBI-8 are available in Terraform provisioners and Ansible actions. For more information, to use these tools in multiple Operating System, refer to, [Solution tutorials](/docs/solution-tutorials?topic=solution-tutorials-tutorials).
 
-The following table describes the utilities that are used in {{site.data.keyword.bpshort}} functions and an automation scripts:
+The following table describes the utilities that are used in {{site.data.keyword.bpshort}} functions and  automation scripts: 
 
 |Utilities | Description | 
 |---------|----------|
 | `Python 3` | {{site.data.keyword.bpshort}} uses [Python 3](/docs/cli?topic=cli-enable-existing-python) and higher version to analyze and organize the data, and to automate DevOps. | 
-| `Python 3 - pip` |Standard package manager for Python. Allows you to install and manage modules that are not part of the [Python standard library](https://docs.python.org/3/library/){: external}. For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
+| `Python 3 - pip` |Standard package manager for Python. Allows you to manage modules that are not part of the [Python standard library](https://docs.python.org/3/library/){: external}. For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
 | `OpenShift client` |A [service built docker containers](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_oc) that are orchestrated and managed by Kubernetes on a foundation of Red Hat Enterprise Linux.| 
 | `Ansible 2.9.23`| {{site.data.keyword.bpshort}} uses [Ansible v2.9.23](/docs/cloud-pak-multicloud-management?topic=cloud-pak-multicloud-management-ansible-getting-started) and higher. |
-| `Terraform v12 and v13`|   Automates your resource provisioning. [Terraform v12, and v13](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to use the modules and resource in {{site.data.keyword.bpshort}} workspace. Actions support Terraform v11 and v12. |
+| `Terraform v0.12 and v0.13`|   Automates your resource provisioning. [Terraform v12, and v13](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to use the modules and resource in {{site.data.keyword.bpshort}} workspace. Actions support Terraform v11 and v12. |
 | `kubectl`| A command-line interface for running commands against the [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters.|
 | `{{site.data.keyword.cloud_notm}} CLI v.1.2.0`| The [command-line](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_cli) to interact with {{site.data.keyword.cloud_notm}} API.|
 | `JQ 1.6`| A lightweight and flexible command-line [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq).|
