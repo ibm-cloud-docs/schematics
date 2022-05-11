@@ -29,7 +29,7 @@ You can find information about auditing in [Audit logging](/docs/schematics?topi
 ## Supported classifications of Personal Data
 {: #supported-classifications-of-personal-data}
 
-The following categories of **Personal Data** are supported by {{site.data.keyword.bpshort_notm}}
+The following categories of **Personal Data** are supported by {{site.data.keyword.bpshort}}
 for GDPR:
 
 - Identity and civil status
