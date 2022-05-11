@@ -52,7 +52,7 @@ Please visit [IBM's commitment to GDPR readiness](https://www.ibm.com/data-respo
 If you or your company is a covered entity as defined by HIPAA, you must enable the HIPAA Supported setting on your {{site.data.keyword.cloud_notm}} account if you run sensitive workloads that are regulated under HIPAA and the HITECH Act. HIPAA support from {{site.data.keyword.IBM_notm}} requires that you agree to the terms of the [Business Associate Addendum (BAA) agreement](http://www-03.ibm.com/software/sla/sladb.nsf/sla/baa?OpenDocument) with {{site.data.keyword.IBM_notm}} for your {{site.data.keyword.cloud_notm}} account.
 {: note}
 
-After you enable HIPAA Supported setting in your {{site.data.keyword.cloud_notm}} account, you cannot disable it. See [{{site.data.keyword.cloud_notm}} Docs: Enabling the HIPAA Supported setting](/docs/account?topic=account-eu-hipaa-supported#enabling-hipaa) for additional information. 
+After you enable HIPAA Supported setting in your {{site.data.keyword.cloud_notm}} account, you cannot disable it. See [{{site.data.keyword.cloud_notm}} Docs: Enabling the HIPAA Supported setting](/docs/account?topic=account-enabling-hipaa) for additional information. 
 
 ## International Organization for Standardization (ISO)
 {: #international-organization-for-standardization-iso-}

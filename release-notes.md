@@ -24,6 +24,19 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
 
+## May 2022
+{: #schematics-may22}
+
+Review the release notes for May 2022.
+{: shortdesc}
+
+### 12 May 2022
+{: #schematics-may1222}
+{: release-note}
+
+Enhance documentation with the security and compliance 
+:   Enhanced {{site.data.keyword.bpshort}} documentation with the security and compliance such as, [security](/docs/schematics?topic=schematics-security), [compliance](/docs/schematics?topic=schematics-compliance), [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance), and [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr).
+
 ## April 2022
 {: #schematics-apr22}
 
@@ -35,7 +48,7 @@ Review the release notes for April 2022.
 {: release-note}
 
 Support detecting drift
-:   The {{site.data.keyword.bpshort}} supports [drift capabilites](/docs/schematics?topic=schematics-drift-note&interface=ui) for {{site.data.keyword.bpshort}} workspace. For more information, refere to viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note&interface=ui#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
+:   The {{site.data.keyword.bpshort}} supports [drift capabilites](/docs/schematics?topic=schematics-drift-note&interface=ui) for {{site.data.keyword.bpshort}} workspace. For more information, refer to viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note&interface=ui#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
 
 Support stopping or terminating the running job
 :   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, refer to stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job&interface=ui#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
