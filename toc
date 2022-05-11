@@ -14,6 +14,13 @@ Schematics
 
     about.md
 
+     {: .topicgroup}
+     Security & compliance
+         sc-security.md
+         sc-compliance.md
+         sc-dataprivacygovernance.md
+         sc-gdpr.md
+
     architecture-workload-isolation.md
     release-notes.md
      {: .navgroup-end}

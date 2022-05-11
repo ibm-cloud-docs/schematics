@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-05-11"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -42,6 +42,9 @@ Support stopping or terminating the running job
 
 Support additional frequently asked questions (FAQs) 
 :  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-faqs&interface=api#drift-automatic-faq).
+
+Support enhanced {{site.data.keyword.bpshort}} resource view
+:   The {{site.data.keyword.bpshort}} supports the enhanced [{{site.data.keyword.bpshort}} resource view in UI](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui) page.
 
 ### 26 April 2022
 {: #schematics-apr2622}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-06"
+lastupdated: "2022-05-11"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -799,3 +799,46 @@ Yes, you can initiate the drift detection. For more information, refer to [detec
 
 In order to know the details of the drift job, you need to check the drift job log. The job log entry provides the details of the drift is available either `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
+
+## Can I always set Terraform to use the latest or default version?
+{: #terraform-defaultversion-faq}
+{: faq}
+{: support}
+
+Yes, in the payload or JSON file, if the value for the `type` and `template_type` parameter is not declared, at runtime the default Terraform version is considered. For more information, refer to [specifying version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
+You can specify the Terraform version in the payload by using the `type` or `template_type` parameter. However, check whether the version value for the `type` and `template_type` contains the same version.
+
+## If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0` continue to use even if `Terraform version 2.0` or higher are released?
+{: #terraform-type-faq}
+{: faq}
+{: support}
+
+    ```terraform
+    //Sample JSON file
+    {
+    "name": "<workspace_name>",
+    "type": "terraform_v1.0",
+    "resource_group": "<resource_group>",
+    "location": "",
+    "description": "<workspace_description>",
+    "template_repo": {
+    "url": "http://xxxxx.git",
+    "branch": "main"
+    },
+    "template_data": [{
+    "folder": "",
+    "type": "terraform_v1.0"
+    }]
+    }
+    ```
+    {: codeblock}
+
+No, if the Terraform version is specified in the payload or template, only the version specified in `versions.tf` is considered during provisioning. To consider the latest Terraform version, you can configure the `required_version` parameter as `required_version = ">=1.0.0. <2.0"`. For more information, refer to [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
+
+## Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?
+{: #terraform-reqparam-faq}
+{: faq}
+{: support}
+
+Yes, you need to specify the `version = "x.x.x"` as it signifies the {{site.data.keyword.cloud_notm}} provider version. Where as, `required_version = ">1.0.0, <2.0"` signifies the Terraform version to provision. For more information, refer to [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
+If the version parameter is not declared in your `versions.tf` file, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. For more information, refer to [Version constraints for the Terraform providers](/docs/schematics?topic=schematics-version-constraints#provider-version-contraint).
