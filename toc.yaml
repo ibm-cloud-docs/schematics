@@ -24,10 +24,10 @@ toc:
           - topicgroup:
               label: Security & compliance
               topics:
-                - sc-security.md
-                - sc-compliance.md
-                - sc-dataprivacygovernance.md
-                - sc-gdpr.md
+                - security-compliance/sc-security.md
+                - security-compliance/sc-compliance.md
+                - security-compliance/sc-dataprivacygovernance.md
+                - security-compliance/sc-gdpr.md
           - architecture-workload-isolation.md
           - release-notes.md
     - navgroup:

@@ -15,7 +15,7 @@ subcollection: schematics
 # Data privacy and governance
 {: #data-privacy-and-governance}
 
-As a pioneer in the provision of a fully managed and globally distributable Database-as-a-Service, {{site.data.keyword.bplong}} allows customers to locate data in any global {{site.data.keyword.cloud}} or AWS region. By providing customers with such high levels of data mobility to serve the local needs of customers, {{site.data.keyword.IBM_notm}}, and {{site.data.keyword.bpshort} take data privacy and governance seriously.
+As a pioneer in the provision of a fully managed and globally distributable Database-as-a-Service, {{site.data.keyword.bplong}} allows customers to locate data in any global {{site.data.keyword.cloud}} or AWS region. By providing customers with such high levels of data mobility to serve the local needs of customers, {{site.data.keyword.IBM_notm}}, and {{site.data.keyword.bpshort}} take data privacy and governance seriously.
 
 {{site.data.keyword.cloud_notm}} data privacy processing processes and procedures are documented within the {{site.data.keyword.cloud_notm}} DPA. This Data Processing Addendum (DPA) and its applicable DPA Exhibits apply to the Processing of Personal Data by {{site.data.keyword.cloud_notm}} on behalf of Client (Client Personal Data). The processing of Personal Data is subject to the General Data Protection Regulation 2016/679 (GDPR). It is also subject to any other data protection laws that are identified at [Data Protection Laws](http://www.ibm.com/dpa/dpl){: external} in order to provide services (Services) pursuant to the Agreement between Client and {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.cloud_notm}} DPA can be found at [Data Processing Addendum](https://www.ibm.com/dpa){: external}.
 
