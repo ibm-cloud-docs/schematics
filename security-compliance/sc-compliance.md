@@ -15,20 +15,15 @@ subcollection: schematics
 # Compliance
 {: #compliance}
 
-{{site.data.keyword.bpshort}} actively participates in several industry compliance programs.
+{{site.data.keyword.bplong}} actively participates in several industry compliance programs. As a compliance focal, you can use the {{site.data.keyword.bpshort}} goals to ensure that your organization is adhering to the external and internal standards for your industry. For more information, about monitoring compliance, refer to [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
+
+To monitor your resources with {{site.data.keyword.bpshort}}, refer to [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance).
 {: shortdesc}
-
-## Monitoring compliance
-{: #monitor-compliance}
-
-As a compliance focal, you can use the {{site.data.keyword.bpshort}} goals to ensure that your organization is adhering to the external and internal standards for your industry. For more information, about monitoring compliance, refer to [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
-
-To monitor your resources with {{site.data.keyword.bpshort}} , refer to [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance).
 
 ## Tier-1 physical systems
 {: #tier-1-physical-systems}
 
-{{site.data.keyword.bpshort}} DBaaS is physically hosted on Tier-1 cloud infrastructure providers such as {{site.data.keyword.cloud_notm}}. Therefore, your data is protected by the network and physical security measures that are employed by these providers.
+{{site.data.keyword.bpshort}} is physically hosted on Tier-1 cloud infrastructure providers such as {{site.data.keyword.cloud_notm}}. Therefore, your data is protected by the network and physical security measures that are employed by these providers.
 
 ## General Data Protection Regulation (GDPR) readiness
 {: #compliance-gdpr}
