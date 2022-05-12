@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-12"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -40,9 +40,8 @@ for GDPR:
 
 **Sensitive Personal Data** is restricted to the following category:
 
-If you're storing healthcare data, you *must* complete the following tasks:
-- Notify {{site.data.keyword.bpshort}} before you write any data.
-- Request a HIPAA-compliant Dedicated Cluster.
+If you're storing healthcare data, you *must* complete the following tasks to notify {{site.data.keyword.bpshort}} before you write any data.
+
 
 For more information about supported classifications of Personal Data, see the
 [Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data&interface=ui).
@@ -130,9 +129,6 @@ routine operations. This access is only done as required in order to operate and
 {: #when-is-a-deleted-document-removed-}
 
 Compaction runs automatically and periodically removes old revisions (deleted or otherwise) from the database. {{site.data.keyword.bpshort}} doesn't guarantee that a database is compacted in a specific time. Compaction is done as a background process across the storage tier. Databases are always being compacted. It isn't guaranteed that the data compacted is the data that you deleted or changed.
-
-{{site.data.keyword.bpshort}} doesn't expose the CouchDB compaction API.
-{: tip}
 
 {{site.data.keyword.bpshort}} is accepting the *Right to be forgotten* requests through
 the [{{site.data.keyword.IBM_notm}} Data Privacy Office (DPO)](http://w3.ibm.com/ibm/privacy/index.html){: external}.

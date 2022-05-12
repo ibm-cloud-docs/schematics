@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-12"
 
 keywords: dbaas data protection, tier 1 physical platforms, secure access control, data loss, corruption, byok, encryption, protection 
 
@@ -15,16 +15,14 @@ subcollection: schematics
 # Security
 {: #security}
 
-Protecting application data for large-scale web and mobile apps can be complex, especially with distributed and NoSQL databases.
-
-Just as it reduces the effort of maintaining your databases to keep them running and growing nonstop, {{site.data.keyword.bplong}} also ensures your data stays secure and protected.
+Review what data is stored and encrypted when you use {{site.data.keyword.bplong}}, and how you can delete any personal data? The {{site.data.keyword.bplong_notm}} also ensures your data stays secure and protected.
 {: shortdesc}
 
 ## Tier one physical platforms
 {: #top-tier-physical-platforms}
 
-The {{site.data.keyword.bpshort}} DBaaS is physically hosted on Tier-1 cloud infrastructure providers such as
-{{site.data.keyword.cloud}} and Amazon. Therefore, your data is protected by the network and physical security measures that are employed by those providers, including (but not limited to):
+The {{site.data.keyword.bpshort}} data is physically hosted on Tier-1 cloud infrastructure providers such as
+{{site.data.keyword.cloud}}. Therefore, your data is protected by the network and physical security measures that are employed by those providers, including (but not limited to):
 
 - Certifications - Compliance with SSAE16, SOC2 Type 1, ISAE 3402, ISO 27001, CSA, and other standards.
 - Access and identity management.
@@ -56,11 +54,10 @@ IP allowlisting | {{site.data.keyword.bpshort}} customers who have an {{site.dat
 ## Protection against data loss or corruption
 {: #protection-against-data-loss-or-corruption}
 
-{{site.data.keyword.bpshort}} has a number of features
-to help you maintain data quality and availability:
+{{site.data.keyword.bpshort}} has a number of features to help you maintain data quality and availability.
 
 Feature | Description
 --------|------------
 Redundant and durable data storage | By default, {{site.data.keyword.bpshort}} saves to disk three copies of every document to three different nodes in a cluster. Saving the copies ensures that a working failover copy of your data is always available, regardless of failures.
-Data replication and export | You can replicate your databases continuously between clusters in different data centers or Apache CouchDB. Another option is to export data from {{site.data.keyword.bpshort}} (in JSON format) to other locations or sources (such as your own data center) for added data redundancy.
+Data replication and export | You can replicate your databases continuously between clusters in different data centers. Another option is to export data from {{site.data.keyword.bpshort}} (in JSON format) to other locations or sources (such as your own data center) for added data redundancy.
 {: caption="Table 2. {{site.data.keyword.bpshort}} data quality and availability features" caption-side="top"}

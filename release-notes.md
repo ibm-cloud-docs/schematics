@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -109,9 +109,6 @@ Review the release notes for March 2022.
 {: shortdesc}
 
 
-
-
-
 ### 31 March 2022
 {: #schematics-mar3122}
 {: release-note}
@@ -121,7 +118,7 @@ Support deleting {{site.data.keyword.bpshort}} data objects
 
 Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
 :   - Now you can create Actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
-:   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) support `summary` profile type.
+:   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
 :   - [Get inventory definition](/apidocs/schematics/schematics#get-inventory) supports `detailed` profile type.
 
 Get job files API supports `plan_json` file type
