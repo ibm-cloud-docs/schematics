@@ -21,6 +21,10 @@ Schematics
          security-compliance/sc-dataprivacygovernance.md
          security-compliance/sc-gdpr.md
 
+     {: .topicgroup}
+     Best practices
+         best-practices/sc-bp-objects.md
+
     architecture-workload-isolation.md
     release-notes.md
      {: .navgroup-end}
