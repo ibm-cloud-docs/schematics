@@ -16,6 +16,9 @@ subcollection: schematics
 # Best practices for securing the {{site.data.keyword.bpshort}} objects
 {: #bp-secure-workspace}
 
+
+{{site.data.keyword.bplong}} leverages open source projects, such as Terraform, Ansible, Red Hat OpenShift on IBM Cloud, Operators, and Helm, and delivers to you as a managed service. Rather than installing each open source project on your machine, and learning the API or command-line, you declare the tasks that you want to run in {{site.data.keyword.cloud}} and watch Schematics run these tasks for you.
+
 Take time to review the suggested best practices to lower you security risks for all production, staging, and test servers in your cloud infrastructure. This list is an excellent starting point to increase the security of your cloud infrastructure.
 {: shortdesc}
 
@@ -28,7 +31,7 @@ Take time to review the suggested best practices to lower you security risks for
 - Ensure you have marked your secured variables or output as sensitive by default to secure your data.
 - Always specify the Terraform version and the {{site.data.keyword.cloud}} provider version in your `versions.tf`.
 - Check your script execution do not take more than `60 minutes`, when your template is using `null resources` to provision or configure your resources.
-- Do use only [allowed list file extensions] in your respository.
+- Do use only [allowed list file extensions](docs/schematics?topic=schematics-faqs#clone-file-extension) in your respository.
 
 ## How can the Terraform developers ensure that the sensitive data is not leaked in the log files? 
 {: #bp-security-leak}
@@ -62,7 +65,6 @@ Customize settings to ensure protection against unwanted access and encrypt to y
 - [Activity tracking integration](/docs/schematics?topic=schematics-at-integration&interface=ui)
 - [Monitoring integration](/docs/schematics?topic=schematics-monitoring-integration&interface=ui)
 - [Logging integration](/docs/schematics?topic=schematics-logging-integration&interface=ui)
-
 
 ## Data protection
 {: #bp-security-data-protection}

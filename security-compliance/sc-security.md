@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-05-13"
 
 keywords: dbaas data protection, tier 1 physical platforms, secure access control, data loss, corruption, byok, encryption, protection 
 
@@ -15,7 +15,9 @@ subcollection: schematics
 # Security
 {: #security}
 
-Review what data is stored and encrypted when you use {{site.data.keyword.bplong}}, and how you can delete any personal data? The {{site.data.keyword.bplong_notm}} also ensures your data stays secure and protected.
+Use the powerful tools of {{site.data.keyword.bplong}} to build and spin up your {{site.data.keyword.cloud_notm}} environment, automate cloud resource operations, install software, and run multitiered apps on your cloud resources. The {{site.data.keyword.bplong_notm}} also ensures your data stays secure and protected.
+
+Review what data is stored and encrypted when you use {{site.data.keyword.bplong_notm}}, and how you can delete any personal data? 
 {: shortdesc}
 
 ## Tier one physical platforms
