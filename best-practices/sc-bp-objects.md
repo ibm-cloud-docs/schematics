@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-05-13"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Best practices for securing the {{site.date.keyword.bpshort}} objects
+# Best practices for securing the {{site.data.keyword.bpshort}} objects
 {: #bp-secure-workspace}
 
 Take time to review the suggested best practices to lower you security risks for all production, staging, and test servers in your cloud infrastructure. This list is an excellent starting point to increase the security of your cloud infrastructure.
@@ -27,7 +27,6 @@ Take time to review the suggested best practices to lower you security risks for
 - Do not set your sensitive variable as default in the configuration files.
 - Ensure you have marked your secured variables or output as sensitive by default to secure your data.
 - Always specify the Terraform version and the {{site.data.keyword.cloud}} provider version in your `versions.tf`.
-- Run a [detect secrets](/docs/secrets-manager) to monitor and remove the secret leaks within your repository. To run the detect secrets, you need to [install detect secret CLI tool](/docs/secrets-manager?topic=secrets-manager-cli-plugin-secrets-manager-cli), **scan detect secrets** `detect-secrets scan --update .secrets.baseline`, and **audit detect secrets** `detect-secrets audit .secrets.baseline` to check your respository do not contain the secrets.
 - Check your script execution do not take more than `60 minutes`, when your template is using `null resources` to provision or configure your resources.
 - Do use only [allowed list file extensions] in your respository.
 
