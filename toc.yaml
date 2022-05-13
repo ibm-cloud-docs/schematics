@@ -22,15 +22,12 @@ toc:
                 - getting-started-software.md
           - about.md
           - topicgroup:
-              label: Security & compliance
+              label: Security and compliance
               topics:
                 - security-compliance/sc-security.md
                 - security-compliance/sc-compliance.md
                 - security-compliance/sc-dataprivacygovernance.md
                 - security-compliance/sc-gdpr.md
-          - topicgroup:
-              label: Best practices
-              topics:
                 - best-practices/sc-bp-objects.md
           - architecture-workload-isolation.md
           - release-notes.md

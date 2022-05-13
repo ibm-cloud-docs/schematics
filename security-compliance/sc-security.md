@@ -23,13 +23,11 @@ Review what data is stored and encrypted when you use {{site.data.keyword.bplong
 ## Tier one physical platforms
 {: #top-tier-physical-platforms}
 
-The {{site.data.keyword.bpshort}} data is physically hosted on Tier-1 cloud infrastructure providers such as
-{{site.data.keyword.cloud}}. Therefore, your data is protected by the network and physical security measures that are employed by those providers, including (but not limited to):
+The {{site.data.keyword.bpshort}} data is physically hosted on Tier-1 cloud infrastructure. Therefore, your data is protected by the network and physical security measures that are employed by those providers, including (but not limited to):
 
 - Certifications - Compliance with SSAE16, SOC2 Type 1, ISAE 3402, ISO 27001, CSA, and other standards.
 - Access and identity management.
 - General physical security of data centers and network operations center monitoring.
-- {{site.data.keyword.bpshort}} gives you the flexibility to choose or switch among the different providers as your SLA and cost requirements change.
 
 More details about the certifications are available in the [Compliance information](/docs/security-compliance?topic=security-compliance-getting-started).
 {: tip}
@@ -57,8 +55,8 @@ IP allowlisting | {{site.data.keyword.bpshort}} customers who have an {{site.dat
 
 Feature | Description
 --------|------------
-Redundant and durable data storage | By default, {{site.data.keyword.bpshort}} saves to disk three copies of every document to three different nodes in a cluster. Saving the copies ensures that a working failover copy of your data is always available, regardless of failures. 
-Data replication and export | You can replicate your databases continuously between clusters in different data centers. Another option is to export data from {{site.data.keyword.bpshort}} (in JSON format) to other locations or sources (such as your own data center) for added data redundancy.
+Redundant and durable data storage | By default, {{site.data.keyword.bpshort}} has failover in secondary site cloudant. Saving the copies ensures that a working failover copy of your data is always available, regardless of failures.
+Data replication and export | You do not have control on replication, it is autonomously done by the {{site.data.keyword.bpshort}}.
 {: caption="Table 2. {{site.data.keyword.bpshort}} data quality and availability features" caption-side="top"}
 
 For more information, see [Understanding high availability and disaster recovery for Schematics](/docs/schematics?topic=schematics-high-availability).
