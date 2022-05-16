@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-05-16"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -37,11 +37,6 @@ for GDPR:
 - Professional life
 - Location data
 - Connectivity and device data
-
-**Sensitive Personal Data** is restricted to the following category:
-
-If you're storing healthcare data, you *must* complete the following tasks to notify {{site.data.keyword.bpshort}} before you write any data.
-
 
 For more information about supported classifications of Personal Data, see the
 [Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data&interface=ui).

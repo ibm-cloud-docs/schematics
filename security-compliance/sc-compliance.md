@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-05-16"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -15,15 +15,10 @@ subcollection: schematics
 # Compliance
 {: #compliance}
 
-{{site.data.keyword.bplong}} actively participates in several industry compliance programs. As a compliance focal, you can use the {{site.data.keyword.bpshort}} goals to ensure that your organization is adhering to the external and internal standards for your industry. For more information, about monitoring compliance, refer to [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
+{{site.data.keyword.bplong}} actively participates in several industry compliance programs. For more information, about monitoring compliance, refer to [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
 
-To monitor your resources with {{site.data.keyword.bpshort}}, refer to [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance).
+To monitor your resources with {{site.data.keyword.bpshort}}, refer to [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring-instances).
 {: shortdesc}
-
-## Tier-1 physical systems
-{: #tier-1-physical-systems}
-
-{{site.data.keyword.bpshort}} is physically hosted on Tier-1 cloud infrastructure providers such as {{site.data.keyword.cloud_notm}}. Therefore, your data is protected by the network and physical security measures that are employed by these providers.
 
 ## General Data Protection Regulation (GDPR) readiness
 {: #compliance-gdpr}
@@ -40,7 +35,7 @@ Please visit [IBM's commitment to GDPR readiness](https://www.ibm.com/data-respo
 ## International Organization for Standardization (ISO)
 {: #international-organization-for-standardization-iso}
 
-{{site.data.keyword.bpshort}} and {{site.data.keyword.bpshort}} Dedicated Cluster are audited by a third-party security firm and meet ISO 27001, ISO 27017, and ISO 27018 requirements. For more information, see the [{{site.data.keyword.bpshort}} Compliance page](https://www.ibm.com/cloud/compliance){: external} for links to the certificates. The following descriptions on the {{site.data.keyword.bpshort}} Compliance page cover the {{site.data.keyword.bpshort}} service and respective certifications:
+{{site.data.keyword.bpshort}} are audited by a third-party security firm and meet ISO 27001, ISO 27017, and ISO 27018 requirements. For more information, see the [{{site.data.keyword.bpshort}} Compliance page](https://www.ibm.com/cloud/compliance){: external} for links to the certificates. The following descriptions on the {{site.data.keyword.bpshort}} Compliance page cover the {{site.data.keyword.bpshort}} service and respective certifications:
  
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certified cloud product listing
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certificate - ISO 27001

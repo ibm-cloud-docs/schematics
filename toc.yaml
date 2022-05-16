@@ -28,7 +28,7 @@ toc:
                 - security-compliance/sc-compliance.md
                 - security-compliance/sc-dataprivacygovernance.md
                 - security-compliance/sc-gdpr.md
-                - best-practices/sc-bp-objects.md
+                - security-compliance/sc-bp-objects.md
           - architecture-workload-isolation.md
           - release-notes.md
     - navgroup:
