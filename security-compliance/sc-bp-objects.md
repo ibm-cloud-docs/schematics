@@ -21,7 +21,7 @@ subcollection: schematics
 Take time to review the suggested best practices to lower you security risks for all production, staging, and test servers in your cloud infrastructure. This list is an excellent starting point to increase the security of your cloud infrastructure.
 {: shortdesc}
 
-## Best practices in creating Templates or modules in Git repositories
+## Best practices for creating Terraform Templates or modules in Git repositories
 {: #bp-secure-repo}
 
 ### What are the best practices that I must follow while developing the Terraform templates, and while publishing the same in the Git repositories?

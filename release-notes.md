@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-13"
+lastupdated: "2022-05-16"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -38,7 +38,7 @@ Enhance documentation with the security and compliance
 :   Enhanced {{site.data.keyword.bpshort}} documentation with the security and compliance such as, [security](/docs/schematics?topic=schematics-security), [compliance](/docs/schematics?topic=schematics-compliance), [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance), and [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr).
 
 Enhance documentation with the best practices 
-:   Enhanced {{site.data.keyword.bpshort}} documentation with the best practices when using {{site.data.keyword.bpshort}} objects [Best practices for securing the {{site.data.keyword.bpshort}} objects](/docs/schematics?topic=schematics-bp-secure-workspace).
+:   Enhanced {{site.data.keyword.bpshort}} documentation with the best practices when using {{site.data.keyword.bpshort}} objects [Best practices for securing the {{site.data.keyword.bpshort}} objects](/docs/schematics?topic=schematics-bp-secure-objects).
 
 ## April 2022
 {: #schematics-apr22}
