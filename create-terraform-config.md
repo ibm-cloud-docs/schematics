@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-05-17"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -49,7 +49,7 @@ To configure the `provider` block:
 
 1. Choose how you want to configure the `provider` block. 
     - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform and {{site.data.keyword.bplong_notm}}, and applied to all Terraform configuration files that exist in the same GitHub directory or tape archive file `.tar`. This approach is useful if you split out your infrastructure code across multiple files. 
-    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform configuration file. 
+    - **Option 2: Add a `provider` block to your Terraform configuration file.** You might choose this option if you prefer to, specify the provider alongside with your variables and resources in one Terraform configuration file. 
 
 2. Review what [credentials and information you must provide in the `provider` block to work with your resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
 
@@ -227,7 +227,7 @@ resource ibm_container_cluster "test_cluster" {
 
 After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. 
 - For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
-- For `CLI`, you can refer to create or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
+- For `CLI`, you can refer to, create or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
 - For `API` you can see [create or update the values](/apidocs/schematics/schematics#createworkspace) in the field `template_data` &gt;  `variablestore`. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string for any type of the variable. 
 
     **Example**

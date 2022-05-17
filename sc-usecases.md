@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Common use cases
+# {{site.data.keyword.bpshort}} use cases
 {: #how-it-works}
 {: help}
 {: support}
@@ -31,7 +31,7 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 {{site.data.keyword.bpshort}} workspaces deliver Terraform-as-a-Service capabilities to you so that you can automate the provisioning and management of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. 
 {: shortdesc}
 
-To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, refer to [Getting started tutorial](/docs/schematics?topic=schematics-get-started-terraform). 
+To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, refer to, [Getting started tutorial](/docs/schematics?topic=schematics-get-started-terraform). 
 {: tip}
 
 [Terraform](https://www.terraform.io/){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using a high-level scripting language. Your specification is stored in a Terraform configuration file. The complexity of using APIs, provisioning, and managing your cloud resources is removed from the user. The cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider. And what APIs to invoke with a certain cloud resource? IBM's plug-in is called the [{{site.data.keyword.terraform-provider_full_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).  
@@ -51,7 +51,7 @@ To use the capabilities of the {{site.data.keyword.terraform-provider_full_notm}
 {{site.data.keyword.bpshort}} actions deliver Ansible-as-a-Service capabilities to you so that you can automate the configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure. 
 {: shortdesc}
 
-To get started with configuration management in {{site.data.keyword.bpshort}}, refer to [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 
+To get started with configuration management in {{site.data.keyword.bpshort}}, refer to, [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 
 {: tip}
 
 [Ansible](https://www.ansible.com/){: external} is a configuration management and provisioning tool, similar to [Chef](https://www.chef.io/products/chef-infra) and [Puppet](https://puppet.com/), and is designed to automate the configuration, operation, and management of cloud environments, and to deploy multitiered app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 

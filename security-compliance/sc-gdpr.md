@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-05-17"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -157,4 +157,4 @@ Even with purge, PI in the `_id` field leaks into places you don't want it, such
 
 Deleting a database adds it to the trash for up to 48 hours. After which time, the database is removed from the file system. The {{site.data.keyword.bpshort}} team *does not* make back ups of your databases; this task is the [responsibility of the customer](/docs/schematics?topic=schematics-responsibilities&interface=ui). You must ensure that all copies of your database are removed from your system.
 
-If you need more help, go to the [{{site.data.keyword.cloud_notm}} Support portal](https://www.ibm.com/cloud/support).
+If you need more help, refer to, the [{{site.data.keyword.cloud_notm}} Support portal](https://www.ibm.com/cloud/support).

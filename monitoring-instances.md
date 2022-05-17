@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-20"
+lastupdated: "2022-05-17"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -36,7 +36,7 @@ Complete these steps to view your services instances:
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
 3. Click your instance to view the workspace and action that you created. 
 
-   For more information, about how to create a service instance, refer to [Create service instance](#create-instance).
+   For more information, about how to create a service instance, refer to, [Create service instance](#create-instance).
    {: note}
 
 4. Click the `Open dashboard` link, and expand `IBM` to view the `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
@@ -65,7 +65,7 @@ Complete these steps to create your services instance:
 9. Click `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
 10. Click `View Sysdig` icon, to view your workspace and action that you created.
     
-    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, about monitoring the status, refer to [Monitoring workspace](#launch-dashboard). To create a custom dashboard, refer to [Creating custom dashboard](#create-dashboard).
+    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, about monitoring the status, refer to, [Monitoring workspace](#launch-dashboard). To create a custom dashboard, refer to, [Creating custom dashboard](#create-dashboard).
     {: note}
 
 ## Creating custom dashboard
@@ -84,7 +84,7 @@ Complete these steps to create your custom dashboard:
 6. Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. 
 7. Click `Save`. 
 
-   For more information, about deleting a dashboard, refer to [Deleting a dashboard](/docs/monitoring?topic=monitoring-remove#remove_ui).
+   For more information, about deleting a dashboard, refer to, [Deleting a dashboard](/docs/monitoring?topic=monitoring-remove#remove_ui).
    {: note}
 
 ## {{site.data.keyword.bplong_notm}} metrics details

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-17"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -136,7 +136,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: pre}
 
-4. Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+4. refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ### Creating the workspace from the API
 {: #create-workspace-api}
@@ -169,7 +169,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: pre}
 
-4. Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+4. refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ### Creating the workspace with Terraform
 {: #create-workspace-terraform}
@@ -177,7 +177,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
 1. Follow the steps in [Setting up Terraform for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-terraform-setup) to create your workspace with Terraform.
 
-2. Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+2. refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ### Importing your Terraform template
 {: #import-template}
@@ -198,7 +198,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information, about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup&interface=ui#job-logs).
     {: tip}
 
-6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. Refer to the following table to find example values for each supported data type. 
+6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. refer to, the following table to find example values for each supported data type. 
 
     | Type | Example |
     | --- | -- |
@@ -220,7 +220,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 {: #run-template}
 {: ui}
 
-Refer to [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ## Freezing and unfreezing workspaces 
 {: #lock-workspace}

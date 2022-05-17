@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-05-17"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -37,7 +37,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 
 8. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information, about viewing logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
     {: important}
 
 9. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.
@@ -59,7 +59,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 
 5. Analyze the configuration and click **Create**.
     
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing Activity tracker logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing Activity tracker logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to track your services.
@@ -81,7 +81,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 
 5. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.cloud_notm}} Monitoring that is configured to receive platform service logs. For more information, about monitoring, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.cloud_notm}} Monitoring that is configured to receive platform service logs. For more information, about monitoring, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to monitor the hosts and events of your services.
@@ -123,7 +123,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}** > **Integrations** > **Connect**. 
 3. Click **Connect** > **Key Management** from the drop down.
 4. Select **Service** as **Key Protect**, or **Hyper Protect Crypto Services**.
-5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to [Create a key protect instance](#key-prerequisites).
+5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to, [Create a key protect instance](#key-prerequisites).
     
     You can view your instance in the service list, when the prerequisites are met. Or you can see a message **No Keys** found.
     {: note}

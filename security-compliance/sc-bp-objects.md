@@ -30,8 +30,8 @@ Take time to review the suggested best practices to lower you security risks for
 Follow these practices while developing, and publishing the Terraform template in the Git repositories.
 - Create Terraform template by using `Terraform version1.0` or higher and latest [IBM Cloud provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
 - Create environment variables are created for all your credentials.
-- Check whether pre-commit hooks are executed to inspect your code meets Terraform standards. Refer to [sample repository that contains pre-commit hook](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.pre-commit-config.yaml).
-- Check whether your repository uses Terratest framework to validate your Terraform resources and data source to provision. Refer to [sample validated Terraform repository](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.github/workflows/validate_terraform.yml) to run Terratest.
+- Check whether pre-commit hooks are executed to inspect your code meets Terraform standards. refer to, [sample repository that contains pre-commit hook](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.pre-commit-config.yaml).
+- Check whether your repository uses Terratest framework to validate your Terraform resources and data source to provision. refer to, [sample validated Terraform repository](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.github/workflows/validate_terraform.yml) to run Terratest.
 - Check whether your repository contains `gitignore` for any files that are not tracked by git remain untracked.
 - Add required license file for your template.
 - Do not set your sensitive variable as default in the configuration files.
@@ -126,12 +126,12 @@ Following are the various ways that {{site.data.keyword.bpshort}} data can be pr
 ### Access protection by using Identity and Access Management
 {: #bp-security-iam}
 
-Create an IAM access group for your users and assign service access policies to {{site.data.keyword.bplong_notm}} and the resources that you want your users to work with. IAM users are attached to access groups, for more information, refer to [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup)
+Create an IAM access group for your users and assign service access policies to {{site.data.keyword.bplong_notm}} and the resources that you want your users to work with. IAM users are attached to access groups, for more information, refer to, [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup)
 
 ### Non-repudiation by using Activity tracker
 {: #bp-security-atracker}
 
-You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a Schematics workspace instance events, access, events, and access audit log. For more information, refer to [Auditing events](/docs/schematics?topic=schematics-at_events).
+You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a Schematics workspace instance events, access, events, and access audit log. For more information, refer to, [Auditing events](/docs/schematics?topic=schematics-at_events).
 
 ### Data protection by using KMS
 {: #bp-security-data-protection}
@@ -144,4 +144,4 @@ You can safeguard and encrypt your information from corruption, compromise, or l
 ## Next steps
 {: #bp-security-next-steps}
 
-Check out the [usecases of {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics#how-it-works).
+Check out the [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works).

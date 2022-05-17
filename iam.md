@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-05-17"
 
 keywords: schematics, automation, terraform
 
@@ -18,7 +18,7 @@ subcollection: schematics
 Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bplong_notm}} workspaces and actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, refer to [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
+As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, refer to, [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
 
 
 
@@ -36,7 +36,7 @@ As the account owner or an authorized account administrator, you can assign IAM 
 
 **Is access to {{site.data.keyword.bplong_notm}} sufficient to manage {{site.data.keyword.cloud_notm}} resources?**
 
-No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces and actions in {{site.data.keyword.bplong_notm}}. However, to manage other {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}, you must be assigned the IAM platform or service access role for the individual {{site.data.keyword.cloud_notm}} resource that you want to work with. Refer to the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to work with your resource.
+No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces and actions in {{site.data.keyword.bplong_notm}}. However, to manage other {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}, you must be assigned the IAM platform or service access role for the individual {{site.data.keyword.cloud_notm}} resource that you want to work with. refer to, the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to work with your resource.
 
 ### Workspace permissions
 {: #workspace-permissions}
