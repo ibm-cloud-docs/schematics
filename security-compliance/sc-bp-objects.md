@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-05-17"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -37,7 +37,7 @@ Follow these practices while developing, and publishing the Terraform template i
 - Do not set your sensitive variable as default in the configuration files.
 - Check whether you have marked your secured variables or output as sensitive by default to secure your data.
 - Check your script execution do not take more than `60 minutes`, when your template is using `null resources` to provision or configure your resources.
-- Do use only [allowed list file extensions](docs/schematics?topic=schematics-faqs#clone-file-extension) in your respository.
+- Do use only [allowed list file extensions](/docs/schematics?topic=schematics-faqs&interface=api#clone-file-extension) in your respository.
 
 ### Can I create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?
 {: #bp-security-tfvars}
@@ -95,7 +95,6 @@ You need to specify the right [roles and permissions](/docs/schematics?topic=sch
 Follow these practices while creating an {{site.data.keyword.bpshort}} Action for the Ansible template.
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 - You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To make changes to your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again.
-- In the UI console, there is no limit set to display the job logs. Every `30 seconds` the job logs gets automatically refreshed.
 - As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
 ### How can I protect the access to Actions and its data?
@@ -145,4 +144,4 @@ You can safeguard and encrypt your information from corruption, compromise, or l
 ## Next steps
 {: #bp-security-next-steps}
 
-Check out [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
+Check out the [usecases of {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics#how-it-works).

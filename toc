@@ -13,11 +13,12 @@ Schematics
          getting-started-software.md
 
     about.md
-
+ 
      {: .topicgroup}
      Security and compliance
          security-compliance/sc-security.md
          security-compliance/sc-compliance.md
+         manage-scc.md
          security-compliance/sc-dataprivacygovernance.md
          security-compliance/sc-gdpr.md
          security-compliance/sc-bp-objects.md
