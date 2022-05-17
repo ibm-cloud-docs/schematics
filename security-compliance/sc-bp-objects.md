@@ -65,7 +65,7 @@ Follow these practices while creating a Workspace for the Terraform template.
 {: #bp-security-leak-log}
 
 You need to set the variable or output parameter as sensitive to make sure that the data is not leaked in the logs or outputs.
-  
+
 ### How can I protect the access to Workspaces and its data?
 {: #bp-security-data}
 

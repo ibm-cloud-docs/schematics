@@ -77,6 +77,7 @@ Schematics
 
     {: .topicgroup}
     Managing Integrations
+         integration-agents.md
          integration-logging.md
          integration-monitor.md
          integration-at.md

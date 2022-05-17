@@ -88,6 +88,7 @@ toc:
           - topicgroup:
               label: Managing Integrations
               topics: 
+                - integration-agents.md
                 - integration-logging.md
                 - integration-monitor.md
                 - integration-at.md
