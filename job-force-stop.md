@@ -15,9 +15,6 @@ subcollection: schematics
 # Stopping or terminating the running job
 {: #interrupt-job}
 
-You may want to stop the running job, or want to stop provisioning resources.
-		"Stopping, or cancelling a job" => "Stopping, or cancelling, a job"
-
 After invoking a job on a {{site.data.keyword.bpshort}} workspace like a `plan`, an `apply`, or a `destroy`. You may want to stop the running job, or want to stop provisioning resources. Stopping, or cancelling a job helps you to know whether the job is stuck, or if the job has lot of wait time. {{site.data.keyword.bpshort}} allows users to `interrupt`, `force-stop`, or `terminate` the running job.
 {: shortdesc}
 
@@ -140,3 +137,4 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
 
 For more information, about stopping the running job, see [Stop and delete the running Job](/apidocs/schematics/schematics#delete-workspace-activity) API.
 {: note}
+
