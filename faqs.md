@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-05-18"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -777,7 +777,7 @@ You can access your {{site.data.keyword.bpshort}} workspace and connect to Basti
 
 You can refer to, create [single and multizone {{site.data.keyword.openshiftshort}} and {{site.data.keyword.containershort_notm}} cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster) tutorial.
 
-## Is the drift detection automatic in the {{site.data.keyword.bplong_notm}}?
+## Is the drift detection a automatic in the {{site.data.keyword.bplong_notm}}?
 {: #drift-automatic-faq}
 {: faq}
 {: support}
@@ -789,14 +789,14 @@ No, the drift detection is not automatic method of detection in the {{site.data.
 {: faq}
 {: support}
 
-Yes, you can initiate the drift detection. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+No, you cannot initiate the drift detection. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
-## Where can I see the status of the drift detection? OR How can I know if the workspace is drifted?
+## Where can I see the status of the drift detection? Or How can I know if the workspace has drifted?
 {: #drift-status-faq}
 {: faq}
 {: support}
 
-In order to know the details of the drift job, you need to check the drift job log. The job log entry provides the details of the drift is available either `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+In order to know the details of the drift detection job, you need to check the drift detection job log. The job log provides the details of the drift detection as `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
 
 ## Can I always set Terraform to use the latest or default version?

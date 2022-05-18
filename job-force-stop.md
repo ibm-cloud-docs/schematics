@@ -138,6 +138,6 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
    ```
    {: pre}
 
-For more information, about stopping the running job, see [Stop the running Job, and delete the Job](/apidocs/schematics/schematics#delete-workspace-activity) API.
+For more information, about stopping the running job, see [Stop and delete the running Job](/apidocs/schematics/schematics#delete-workspace-activity) API.
 {: note}
 
