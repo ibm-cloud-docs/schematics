@@ -77,11 +77,10 @@ Schematics
 
     {: .topicgroup}
     Managing Integrations
-         integration-agents.md
-         integration-logging.md
-         integration-monitor.md
-         integration-at.md
-         integration-kms.md
+          integration-logging.md
+          integration-monitor.md
+          integration-at.md
+          integration-kms.md
 
     {: .topicgroup}
     Logging and monitoring

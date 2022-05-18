@@ -782,7 +782,7 @@ You can refer to, create [single and multizone {{site.data.keyword.openshiftshor
 {: faq}
 {: support}
 
-No, the drift detection is not automatic method of detection in the {{site.data.keyword.bplong_notm}}. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+No, the drift detection is not a automatic method of detection in the {{site.data.keyword.bplong_notm}}. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
 ## Can I initiate the drift detection?
 {: #drift-initiate-faq}
@@ -797,7 +797,6 @@ No, you cannot initiate the drift detection. For more information, refer to, [de
 {: support}
 
 In order to know the details of the drift detection job, you need to check the drift detection job log. The job log provides the details of the drift detection as `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
-
 
 ## Can I always set Terraform to use the latest or default version?
 {: #terraform-defaultversion-faq}
