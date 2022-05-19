@@ -25,9 +25,9 @@ The table provides the list of interrupting types of the job stop.
 
 | Types | Description |
 | --- | --- |
-| `interrupt` | Sends an interrupt signal to the Terraform command that you invoke. Typically if you see the job log and click `stop` expecting an interrupt signal to be sent. Such interrupt signal can be sent as many times as possible while the job is running. {{site.data.keyword.bpshort}} waits for the command to finish and exit. After the command is stopped or finished, state and log files are collected and saved.|
+| `interrupt` | Sends an interrupt signal to the Terraform command that you invoke. Typically if you see the job log and click `interrupt` expecting an interrupt signal to be sent. Such interrupt signal can be sent as many times as possible while the job is running. {{site.data.keyword.bpshort}} waits for the command to finish and exit. After the command is stopped or finished, state and log files are collected and saved.|
 | `force-stop`| Sends a kill signal to the Terraform command running. In case you want to force kill the Terraform command after seeing the interrupts not stopping the command. A `force-stop` can be sent as many times as desired until the command exits and job stops. After the command is stopped or finished, state file and log files are collected and saved. |
-| `terminate` | This terminates the job in backend and mark the job as STOPPED and unlock the workspace. The Schematics saves log and statefile to the backend periodically while the job is running. If a job is terminated, the job is killed without collecting any files separately at the end. |
+| `terminate` | This terminates the job in backend and mark the job as `STOPPED` and unlocks the workspace. The {{site.data.keyword.bpshort}} saves log and statefile to the backend periodically while the job is running. If a job is terminated, the job is killed without collecting any files separately at the end. |
 {: caption="Types of job interruption" caption-side="bottom"}
 
 Until the job stops, you can send any number of these stop signals. Typically, you should not send more than three signals. If the Terraform does not respond to `interrupt` signals, you can always use `force-stop`. If `force-stop` does not respond due to some issue in the job, you can always `terminate` the job to block.
