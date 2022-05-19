@@ -846,4 +846,4 @@ If the version parameter is not declared in your `versions.tf` file, the latest 
 {: faq}
 {: support}
 
-Yes, you can interrupt, force-stop, or terminate the provisioning resources or a running job by using the job types. For more information, refer to, [stopping the job types](/docs/schematics?topic=schematics-interrupt-job&interface=ui#stop-job-api).
+Yes, you can interrupt, force-stop, or terminate the provisioning resources or a running job by using the job types. For more information, refer to, [stopping the job types](/docs/schematics?topic=schematics-interrupt-job&interface=ui#interrupt-types).
