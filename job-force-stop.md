@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-18"
+lastupdated: "2022-05-19"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -116,25 +116,40 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
 {: #stop-jobs-api}
 
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
-2. Run
+2. Use the syntax and example to interrupt the running job.
+
+    **Syntax**
 
     ```curl
-    `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=interrupt -H "Authorization: <iam_token>"` to `interrupt` the running job. For example, Run `curl -X DELETE https://schematics.cloud.ibm.com/v2/jobs/{job_id}?signal=interrupt -H "Authorization: <iam_token>"` to `interrupt`
+    curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=interrupt -H "Authorization: <iam_token>"
     ```
-    {: pre}
+    {: codeblock}
 
-3. Run
+    **Example**
+
+    ```curl
+    curl -X DELETE https://schematics.cloud.ibm.com/v2/jobs/{job_id}?signal=interrupt -H "Authorization: <iam_token>"
+    ```
+    {: codeblock}
+
+3. Use the example to `force-stop` the running job.
+   
+   **Example**
+
    ```curl
-   `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=force-stop -H "Authorization: <iam_token>"` to `force-stop` the running job.
+   curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=force-stop -H "Authorization: <iam_token>"
    ```
-   {: pre}
+   {: codeblock}
 
-4. Run
+4. Use the example to `terminate` the runnin job.
+   
+   **Example**
+
    ```curl
-   `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=force-stop -H "Authorization: <iam_token>"` to `terminate` the running job.
+   curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=force-stop -H "Authorization: <iam_token>"
    ```
-   {: pre}
+   {: codeblock}
 
-For more information, about stopping the running job, see [Stop and delete the running Job](/apidocs/schematics/schematics#delete-workspace-activity) API.
-{: note}
+   For more information, about stopping the running job, see [Stop and delete the running Job](/apidocs/schematics/schematics#delete-workspace-activity) API.
+   {: note}
 
