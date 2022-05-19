@@ -841,9 +841,9 @@ No, if the Terraform version is specified in the payload or template, only the v
 Yes, you need to specify the `version = "x.x.x"` as it signifies the {{site.data.keyword.cloud_notm}} provider version. Where as, `required_version = ">1.0.0, <2.0"` signifies the Terraform version to provision. For more information, refer to, [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
 If the version parameter is not declared in your `versions.tf` file, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. For more information, refer to, [Version constraints for the Terraform providers](/docs/schematics?topic=schematics-version-constraints#provider-version-contraint).
 
-## Can I interrupt, force-stop, or terminate the provisioning resources or a running job?
+## Can I interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}}?
 {: #stopping-job-faq}
 {: faq}
 {: support}
 
-Yes, you can interrupt, force-stop, or terminate the provisioning resources or a running job by using the job types. For more information, refer to, [stopping the job types](/docs/schematics?topic=schematics-interrupt-job&interface=ui#interrupt-types).
+Yes, you can interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}} by using the job types. For more information, refer to, [stopping the job types](/docs/schematics?topic=schematics-interrupt-job&interface=ui#interrupt-types).
