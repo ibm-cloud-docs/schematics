@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-05-17"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -49,7 +49,7 @@ The following image shows the cloud architecture components that you provision a
 You can add worker nodes and pool to your VPC cluster by using a  `ibm_container_vpc_worker_pool` provider resource.
 {: note} 
 
-The costs are incurred based on your resource usage. For more information, about the VPC pricing, refer to [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
+The costs are incurred based on your resource usage. For more information, about the VPC pricing, refer to, [VPC pricing](https://www.ibm.com/cloud/vpc/pricing){: external}.
 {: important}
 
 ## Objectives
@@ -105,7 +105,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 {: #create-tut-wks}
 {: step}
 
-1. Specify your {{site.data.keyword.bpshort}} workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to [{{site.data.keyword.bplong_notm}} workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
+1. Specify your {{site.data.keyword.bpshort}} workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to, [{{site.data.keyword.bplong_notm}} workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 
     **Example of the cluster_payload.json:**
 
@@ -174,7 +174,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     | `name` | Specify your unique name. |
     | `type` | Terraform v1.0 |
     | `githubtoken` | Specify your GitHub token. |
-    | `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
+    | `variablestore` | Specify the resource group and its details. Enter the input variable such as name, type, and value that you declared in Terraform configuration file. For more information, about variable store, refer to, [Variable store parameter](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).|
     {: caption="Payload details" caption-side="bottom"}
 
 2. Create the workspace by using the JSON file from command-line interface.
@@ -184,7 +184,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
     ```
     {: pre}
 
-    For more information, about workspace creation, refer to [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
+    For more information, about workspace creation, refer to, [command-line commands and syntax](/docs/schematics?topic=schematics-schematics-cli-reference). 
     {: note}
 
     **Sample example output**
@@ -237,7 +237,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 
 Create a {{site.data.keyword.bpshort}} execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
 
-Your workspace must be in an `Active` state to perform a {{site.data.keyword.bpshort}} plan action. For more information, about the workspace state, refer to [Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).
+Your workspace must be in an `Active` state to perform a {{site.data.keyword.bpshort}} plan action. For more information, about the workspace state, refer to, [Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).
 {: note}
 
 During the creation of the Terraform execution plan, you are not allowed to make any changes to your workspace.

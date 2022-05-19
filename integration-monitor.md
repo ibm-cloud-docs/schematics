@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-05-17"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -37,7 +37,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 
 8. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.monitoringlong_notm}} that is configured to receive platform service logs. For more information, about monitoring, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.monitoringlong_notm}} that is configured to receive platform service logs. For more information, about monitoring, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
     {: important}
 
 9. In the list of instance name, click `Configure` to view `{{site.data.keyword.monitoringshort_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to monitor the hosts and events of your services.

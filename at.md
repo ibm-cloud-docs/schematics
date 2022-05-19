@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-21"
+lastupdated: "2022-05-17"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -21,7 +21,7 @@ You can use {{site.data.keyword.at_full}} to track and audit how users and appli
 ## {{site.data.keyword.bpshort}} events
 {: #schematics-events}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, refer to [Getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, refer to, [Getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
 The following list of {{site.data.keyword.bpshort}} events are sent to {{site.data.keyword.at_full_notm}}.
 {: shortdesc}
@@ -78,7 +78,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the Schematics API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
+| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the {{site.data.keyword.bpshort}} API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
 {: caption="Other events" caption-side="top"}
 
 ## Viewing events

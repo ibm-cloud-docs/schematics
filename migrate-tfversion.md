@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-05-17"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -181,7 +181,7 @@ Check whether your Terraform template of the older version is provisioned perfec
    5. `ibmcloud schematics apply --id <workspace id>`
    6. `ibmcloud schematics job get --id <job-id from apply> --json`
 
-You completed the upgrade successfully. To upgrade refer to [Terraform template from v0.13 to v0.14](#upgrade-13-to14).
+You completed the upgrade successfully. To upgrade refer to, [Terraform template from v0.13 to v0.14](#upgrade-13-to14).
 
 
 ## Upgrading Terraform template from v0.13 to v0.14 
@@ -236,7 +236,7 @@ Check whether your Terraform template of the older version is provisioned perfec
 ## Upgrade Terraform template from `v0.14/v0.15` to `v1.0` 
 {: #upgrade-14-to10}
 
-You can upgrade the [`Terraform v0.14`](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://www.terraform.io/language/upgrade-guides/0-15){: external} to `Terraform v1.0`, refer to [`Terraform v1.0` upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
+You can upgrade the [`Terraform v0.14`](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://www.terraform.io/language/upgrade-guides/0-15){: external} to `Terraform v1.0`, refer to, [`Terraform v1.0` upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
 {: shortdesc}
 
 Check whether your Terraform template of the older version is provisioned perfectly with out any errors before upgrading to any Terraform version. For more information, about workspace creation successfully, see [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup&interface=ui#create-workspace).

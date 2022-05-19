@@ -13,6 +13,15 @@ Schematics
          getting-started-software.md
 
     about.md
+ 
+     {: .topicgroup}
+     Security and compliance
+         security-compliance/sc-security.md
+         security-compliance/sc-compliance.md
+         manage-scc.md
+         security-compliance/sc-dataprivacygovernance.md
+         security-compliance/sc-gdpr.md
+         security-compliance/sc-bp-objects.md
 
     architecture-workload-isolation.md
     release-notes.md
@@ -24,6 +33,7 @@ Schematics
     tutorials/private-catalog.md
     [Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)
     [Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
+    [Building an IBM Blockchain Platform network by using Ansible playbooks](/docs/blockchain-sw-25?topic=blockchain-sw-25-ansible-build)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -67,10 +77,10 @@ Schematics
 
     {: .topicgroup}
     Managing Integrations
-         integration-logging.md
-         integration-monitor.md
-         integration-at.md
-         integration-kms.md
+          integration-logging.md
+          integration-monitor.md
+          integration-at.md
+          integration-kms.md
 
     {: .topicgroup}
     Logging and monitoring

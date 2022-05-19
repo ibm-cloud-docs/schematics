@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-05-18"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Detecting drift in {{site.data.keyword.bpshort}}
 {: #drift-note}
 
-{{site.data.keyword.bplong}} is the {{site.data.keyword.cloud_notm}} automation tool that enables you to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces by using the well-known `declarative` Infrastructure as Code (IaC) concept. However, as Terraform is properly deployed as declared, does not mean Terraform stays as declared. The changing of the infrastructure desired state is called `drift`. When the state of your infrastructure differs from the state defined in your template configuration. Technically speaking, whenever the state file of your deployed workspace is not in synchronise with your infrastructure resources that are deployed, such workspace is said to be drifted.
+{{site.data.keyword.bplong}} is the {{site.data.keyword.cloud_notm}} automation tool that enables you to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces by using the well-known `declarative` Infrastructure as Code (IaC) concept. However, if Terraform is deployed as declared, does not mean Terraform stays as declared. This change in the infrastructure desired state is called `drift`. When the state of your infrastructure differs from the state that are defined in your template configuration. Then the state file of your deployed workspace is not synchronised with your infrastructure resources that are deployed, such workspace is said to be drifted.
 {: shortdesc}
 
 Drift can happen for many reasons within the context of your configuration:
@@ -24,29 +24,25 @@ Drift can happen for many reasons within the context of your configuration:
 - External to your template configuration, drift occurs when changes have been made manually. For example, from a command-line operation on a Cloud resources, or manual modification of the resources from a Cloud console. 
 - Can occur through other automation tools.
 
-## Scenario
+## Example drift scenario
 {: #drift-scenario}
 
-A VSI instance is provisioned by using {{site.data.keyword.bplong_notm}} and desired configuration templates. A DevOps cloud user can modify the provisioned VSI configuration by logging into the Cloud console and modifying the boot volume of an instance or adding ethernet interface. By doing that, even your intentioned and desired infrastructure deployment gets `drifted`.
+A VSI instance is provisioned by using {{site.data.keyword.bplong_notm}} and desired configuration templates. A DevOps cloud user can modify the provisioned VSI configuration by logging into the Cloud console and modifying the boot volume of an instance or adding ethernet interface. By doing that, your desired infrastructure deployment gets `drifted`.
 
-{{site.data.keyword.bplong_notm}} enables you to safely and predictably [manage the resource lifecycle](/docs/schematics?topic=schematics-manage-lifecycle) of your infrastructure by using Terraform. One challenge when managing IaC is drift. Drift states that when the real world state of your infrastructure differs from the state defined in your Terraform template configuration. 
+{{site.data.keyword.bplong_notm}} enables to be safe and predictably [manage the resource lifecycle](/docs/schematics?topic=schematics-manage-lifecycle) of your infrastructure by using Terraform. Drift occurs when the real world state of your infrastructure differs from the state defined in your Terraform template configuration. 
 
 Terraform cannot detect drift of resources and their associated attributes that are not managed by using Terraform. For example, Terraform do not detect changes in a virtual machine that have occurred as a result of installing applications locally or using a configuration management tool like `Chef` or `Ansible`.
 
 ## Drift detection in {{site.data.keyword.cloud_notm}}
 {: #drift-in-ibm}
 
-{{site.data.keyword.bplong_notm}} can now detect drift for your Terraform automation workspaces. You can use following two methods to check the drift detection.
-
-- Drift detection through {{site.data.keyword.cloud_notm}} console
-- Drift detection through CLI
-- Drift detection through API
+Drift detection for your Terraform automation workspaces is possible in {{site.data.keyword.bplong_notm}}. You can use following three methods to check the drift detection.
 
 ## Drift detection through {{site.data.keyword.bpshort}} UI
 {: #drift-ui}
 {: ui}
 
-You can initiate detecting drift for workspaces from the {{site.data.keyword.bpshort}} workspace job page. This event initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. In order to know the details of the drift job, you need to check the drift job log. The log provides the details of the drift status.
+You can initiate detecting drift for workspaces from the {{site.data.keyword.bpshort}} workspace job page. This event initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. In order to know the details of the drift job, you need to check the drift job log for the drift status.
 
 ### Viewing detect drift through UI
 {: #drift-view-ui}
@@ -84,10 +80,10 @@ Use the following steps to view the detect drift.
 {: #drift-cli}
 {: cli}
 
-Use the following commands to view the detect drift.
+You can initiate detecting drift from the create workspaces command line. This initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. In order to know the details of the drift job, you need to check the drift job log for the drift status. Use the following commands to view the detect drift.
 {: shortdesc}
 
-### Viewing detect drift through CLI
+### Creating and viewing the detect drift through CLI
 {: #drift-view-cli}
 {: cli}
 
@@ -95,7 +91,7 @@ You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} 
 {: shortdesc}
 
 1. [Create the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
-2. [Get your workspace ID](docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get).
+2. [Get your workspace ID](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get).
 3. Execute the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan).
 4. Fetch the [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 5. Execute the [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply).
@@ -120,11 +116,11 @@ You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} 
     ```
     {: pre}
 
-## Drift detection through {{site.data.keyword.bpshort}} API
+## Creating and viewing the detect drift through API 
 {: #drift-api}
 {: api}
 
-Review the CURL commands that you need use to view the detect drift.
+Review the CURL commands to create and view the drift through API.
 {: shortdesc}
 
 1. Retrieve your IAM access [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to authenticate with the {{site.data.keyword.bplong_notm}}.

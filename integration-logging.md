@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-05-17"
 
 keywords: logging schematics services, logging, integration services
 
@@ -36,7 +36,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 
 7. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information, about viewing logs, refer to [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information, about viewing logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
     {: important}
 
 8. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.

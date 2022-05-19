@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-30"
+lastupdated: "2022-05-18"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -227,15 +227,15 @@ Schematics runtime is built by using Universal Base Image (UBI-8) and the runtim
 
 {{site.data.keyword.bpshort}} runtime is built by using [Universal Base Image (UBI-8)](/docs/RegistryImages?topic=RegistryImages-ibmliberty#ibmliberty_get_started) and the runtime utilities or softwares that come with the UBI-8 are available in Terraform provisioners and Ansible actions. For more information, to use these tools in multiple Operating System, refer to, [Solution tutorials](/docs/solution-tutorials?topic=solution-tutorials-tutorials).
 
-The following table describes the utilities that are used in {{site.data.keyword.bpshort}} functions and an automation scripts:
+The following table describes the utilities that are used in {{site.data.keyword.bpshort}} functions and  automation scripts: 
 
 |Utilities | Description | 
 |---------|----------|
 | `Python 3` | {{site.data.keyword.bpshort}} uses [Python 3](/docs/cli?topic=cli-enable-existing-python) and higher version to analyze and organize the data, and to automate DevOps. | 
-| `Python 3 - pip` |Standard package manager for Python. Allows you to install and manage modules that are not part of the [Python standard library](https://docs.python.org/3/library/){: external}. For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
+| `Python 3 - pip` |Standard package manager for Python. Allows you to manage modules that are not part of the [Python standard library](https://docs.python.org/3/library/){: external}. For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
 | `OpenShift client` |A [service built docker containers](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_oc) that are orchestrated and managed by Kubernetes on a foundation of Red Hat Enterprise Linux.| 
 | `Ansible 2.9.23`| {{site.data.keyword.bpshort}} uses [Ansible v2.9.23](/docs/cloud-pak-multicloud-management?topic=cloud-pak-multicloud-management-ansible-getting-started) and higher. |
-| `Terraform v12 and v13`|   Automates your resource provisioning. [Terraform v12, and v13](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to use the modules and resource in {{site.data.keyword.bpshort}} workspace. Actions support Terraform v11 and v12. |
+| `Terraform v0.12 and higher`|   Automates your resource provisioning. [Terraform v12, and higher](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to use the modules and resource in {{site.data.keyword.bpshort}} workspace. |
 | `kubectl`| A command-line interface for running commands against the [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters.|
 | `{{site.data.keyword.cloud_notm}} CLI v.1.2.0`| The [command-line](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_cli) to interact with {{site.data.keyword.cloud_notm}} API.|
 | `JQ 1.6`| A lightweight and flexible command-line [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq).|
@@ -244,7 +244,6 @@ The following table describes the utilities that are used in {{site.data.keyword
 
 To avoid the installation of these tools, you can also use the [Cloud Shell](https://cloud.ibm.com/shell) from the {{site.data.keyword.cloud_notm}} console.
 {: tip}
-
 
 ## How can I create workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}
@@ -364,7 +363,7 @@ Yes, you can increase the time out for OpenShift or Kubernetes resources. For mo
 {: faq}
 {: support}
 
-You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload. For more information, about setting the environment variables in the payload, refer to [{{site.data.keyword.bpshort}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
+You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload. For more information, about setting the environment variables in the payload, refer to, [{{site.data.keyword.bpshort}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
 
 ```json
 {
@@ -584,14 +583,14 @@ Yes, {{site.data.keyword.bpshort}} supports the full {{site.data.keyword.cloud_n
 {: faq}
 {: support}
 
-Yes, you can create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in target account to provision, through command-line and API calls by using the target account service ID with authentication, appropriate cross account authorization, or API key. For more information, refer to [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account).
+Yes, you can create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in target account to provision, through command-line and API calls by using the target account service ID with authentication, appropriate cross account authorization, or API key. For more information, refer to, [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account).
 
 ## Could I create a worker node in an existing worker node pool?
 {: #workernode-kubernetes-faq}
 {: faq}
 {: support}
 
-Yes, you can create or add a worker node inside an existing worker node pool by using {{site.data.keyword.IBM_notm}} container worker pool resource in a Kubernetes cluster through {{site.data.keyword.bpshort}}, or Terraform by using {{site.data.keyword.IBM_notm}} container worker pool zone attachment resource. For more information, about {{site.data.keyword.IBM_notm}} container worker pool zone, refer to [ibm_container_worker_pool_zone_attachment](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment){: external}.
+Yes, you can create or add a worker node inside an existing worker node pool by using {{site.data.keyword.IBM_notm}} container worker pool resource in a Kubernetes cluster through {{site.data.keyword.bpshort}}, or Terraform by using {{site.data.keyword.IBM_notm}} container worker pool zone attachment resource. For more information, about {{site.data.keyword.IBM_notm}} container worker pool zone, refer to, [ibm_container_worker_pool_zone_attachment](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment){: external}.
 
 
 ## Where can I view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions?
@@ -606,14 +605,14 @@ You can view the list of public and private allowed IP addresses of `us-south`, 
 {: faq}
 {: support}
 
-North America always indicates both `us-south` and `us-east` location during the {{site.data.keyword.bpshort}} workspace creation. For more information, refer to [Where can I create {{site.data.keyword.bpshort}} workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create-schematics-workspaces) and [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+North America always indicates both `us-south` and `us-east` location during the {{site.data.keyword.bpshort}} workspace creation. For more information, refer to, [Where can I create {{site.data.keyword.bpshort}} workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create-schematics-workspaces) and [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 
 ## What are the port used to communicate with {{site.data.keyword.bpshort}} and resources, such as VPC services?
 {: #port-faq}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall). 
+{{site.data.keyword.bpshort}} communicates with the ports specified by the related resources. For example, VPC related ports, refer to, [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall). 
 
 
 
@@ -776,26 +775,68 @@ You can access your {{site.data.keyword.bpshort}} workspace and connect to Basti
 {: faq}
 {: support}
 
-You can refer to create [single and multizone {{site.data.keyword.openshiftshort}} and {{site.data.keyword.containershort_notm}} cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster) tutorial.
+You can refer to, create [single and multizone {{site.data.keyword.openshiftshort}} and {{site.data.keyword.containershort_notm}} cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster) tutorial.
 
-## Is the drift detection automatic in the {{site.data.keyword.bplong_notm}}?
+## Is the drift detection a automatic in the {{site.data.keyword.bplong_notm}}?
 {: #drift-automatic-faq}
 {: faq}
 {: support}
 
-No, the drift detection is not automatic method of detection in the {{site.data.keyword.bplong_notm}}. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+No, the drift detection is not a automatic method of detection in the {{site.data.keyword.bplong_notm}}. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
 ## Can I initiate the drift detection?
 {: #drift-initiate-faq}
 {: faq}
 {: support}
 
-Yes, you can initiate the drift detection. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+No, you cannot initiate the drift detection. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
-## Where can I see the status of the drift detection? OR How can I know if the workspace is drifted?
+## Where can I see the status of the drift detection? Or How can I know if the workspace has drifted?
 {: #drift-status-faq}
 {: faq}
 {: support}
 
-In order to know the details of the drift job, you need to check the drift job log. The job log entry provides the details of the drift is available either `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+In order to know the details of the drift detection job, you need to check the drift detection job log. The job log provides the details of the drift detection as `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
+## Can I always set Terraform to use the latest or default version?
+{: #terraform-defaultversion-faq}
+{: faq}
+{: support}
+
+Yes, in the payload or JSON file, if the value for the `type` and `template_type` parameter is not declared, at runtime the default Terraform version is considered. For more information, refer to, [specifying version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
+You can specify the Terraform version in the payload by using the `type` or `template_type` parameter. However, check whether the version value for the `type` and `template_type` contains the same version.
+
+## If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0` continue to use even if `Terraform version 2.0` or higher are released?
+{: #terraform-type-faq}
+{: faq}
+{: support}
+
+    ```terraform
+    //Sample JSON file
+    {
+    "name": "<workspace_name>",
+    "type": "terraform_v1.0",
+    "resource_group": "<resource_group>",
+    "location": "",
+    "description": "<workspace_description>",
+    "template_repo": {
+    "url": "http://xxxxx.git",
+    "branch": "main"
+    },
+    "template_data": [{
+    "folder": "",
+    "type": "terraform_v1.0"
+    }]
+    }
+    ```
+    {: codeblock}
+
+No, if the Terraform version is specified in the payload or template, only the version specified in `versions.tf` is considered during provisioning. To consider the latest Terraform version, you can configure the `required_version` parameter as `required_version = ">=1.0.0. <2.0"`. For more information, refer to, [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
+
+## Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?
+{: #terraform-reqparam-faq}
+{: faq}
+{: support}
+
+Yes, you need to specify the `version = "x.x.x"` as it signifies the {{site.data.keyword.cloud_notm}} provider version. Where as, `required_version = ">1.0.0, <2.0"` signifies the Terraform version to provision. For more information, refer to, [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
+If the version parameter is not declared in your `versions.tf` file, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. For more information, refer to, [Version constraints for the Terraform providers](/docs/schematics?topic=schematics-version-constraints#provider-version-contraint).

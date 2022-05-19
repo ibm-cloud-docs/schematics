@@ -21,6 +21,15 @@ toc:
                 - getting-started-ansible-new.md
                 - getting-started-software.md
           - about.md
+          - topicgroup:
+              label: Security and compliance
+              topics:
+                - security-compliance/sc-security.md
+                - security-compliance/sc-compliance.md
+                - manage-scc.md
+                - security-compliance/sc-dataprivacygovernance.md
+                - security-compliance/sc-gdpr.md
+                - security-compliance/sc-bp-objects.md
           - architecture-workload-isolation.md
           - release-notes.md
     - navgroup:

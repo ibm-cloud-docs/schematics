@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-05-17"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -19,7 +19,7 @@ subcollection: schematics
 By default, all IP addresses can be used to log in to the {{site.data.keyword.cloud}} console and access your {{site.data.keyword.bpshort}} workspace. In the {{site.data.keyword.iamlong}} (IAM) console, you can generate a firewall [by creating an allowlist by specifying which IP addresses have access](/docs/account?topic=account-ips), and all other IP addresses are restricted. If you use an IAM firewall, you must add the CIDRs of the {{site.data.keyword.bplong_notm}} for the zones in the region where your cluster is located to the allowlist. You must allow these CIDRs ranges, so that {{site.data.keyword.bplong_notm}} Service to manage the {{site.data.keyword.bplong_notm}} resources.
 {: shortdesc}
 
-You can use these steps to change the IAM allowlist for the user whose credentials are used for the cluster's region and resource group infrastructure permissions. If you are have the credentials, you can change your own IAM allowlist settings. If you do not have credentials, but you are assigned the `Editor` or `Administrator` of the {{site.data.keyword.cloud_notm}} IAM platform role for the user management service. Then, you can update the restricted IP addresses for the credentials owner.
+You can use these steps to change the IAM allowlist for the user whose credentials are used for the cluster's region and resource group infrastructure permissions. If you have the credentials, you can change your own IAM allowlist settings. If you do not have credentials, but you are assigned the `Editor` or `Administrator` of the {{site.data.keyword.cloud_notm}} IAM platform role for the user management service. Then, you can update the restricted IP addresses for the credentials owner.
 
 1. Log in to the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
 2. From the menu bar, click `Manage > Access (IAM)`, and select **Users**.
@@ -38,5 +38,5 @@ You must allow all the zones within the region that your resource is in.
 | US South | dal10 </br> dal12 </br> dal13 | `169.63.254.64/28`,`150.238.230.128/27` </br> `169.47.104.160/28`,`169.61.191.64/27` </br> `169.60.172.144/28`,`169.63.254.64/28` | `10.185.16.64/26` </br> `10.95.173.64/26` </br> `10.220.38.64/26`|
 {: caption="Region and supported public and private IPs" caption-side="bottom"}
 
-You can collapse down the ranges into security group rules. For example, `US-South` and `US-East` as two security group rules like `[169.44.0.0/44, 169.60.0.0/14]`. For more information, about creating security group rules, refer to [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
+You can collapse down the ranges into security group rules. For example, `US-South` and `US-East` as two security group rules like `[169.44.0.0/44, 169.60.0.0/14]`. For more information, about creating security group rules, refer to, [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
 {: note}
