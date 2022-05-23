@@ -22,8 +22,9 @@ The driver to migrate might come from business factors such as cost reduction, o
 ## Upgrading the Terraform template version 
 {: #terraform-version-upgrade}
 
-The table summarizes the recommendations to upgrade to the latest Terraform version. {{site.data.keyword.bpshort}} also supports the stable release of `Terraform v1.1`. The Terraform template must use the version constraint, such as `>`, `>=` or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, to automatically pick the latest provider version.
+The table summarizes the recommendations to upgrade to the latest Terraform version. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. The Terraform template must use the version constraint, such as `>`, `>=` or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, to automatically pick the latest provider version.
 
+Schematics supports all the releases of terraform_v1.x releases through the n-1 version releas.. On Schematics we will plan to make it available after 30 to 45 days days after hashicorp release.
 ```terraform
 terraform {
 required_version = "~> 1.1"

@@ -18,7 +18,7 @@ subcollection: schematics
 {: help}
 {: support}
 
-Choose among the following use cases to learn how {{site.data.keyword.bpshort}} automates your infrastructure, service, and app stacks in {{site.data.keyword.cloud_notm}}.
+Choose among the following use cases to learn how {{site.data.keyword.bpshort}} automates your infrastructure, service, and application stacks in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 - [Infrastructure deployments with {{site.data.keyword.bpshort}} workspaces](#how-to-workspaces)

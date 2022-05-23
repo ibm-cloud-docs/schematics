@@ -29,6 +29,11 @@
         "href": "/docs/schematics?topic=schematics-get-started-software"
       },
       {
+        "title": "Deploy cloud service using Blueprints",
+        "description": "Learn how to deploy the reusable pattern that can be shared and used across multiple environments.",
+        "href": "/docs/schematics?topic=schematics-blueprint-intro"
+      },
+      {
         "title": "Learn more about Schematics",
         "description": "Learn about how Schematics works, integrated open source technologies, and the benefits of using the service.",
         "href": "/docs/schematics?topic=schematics-about-schematics"
