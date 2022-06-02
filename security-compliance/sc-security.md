@@ -30,6 +30,5 @@ At-rest encryption | All data that is stored in an {{site.data.keyword.bpshort}}
 In-flight encryption | All access to {{site.data.keyword.bpshort}} is encrypted by using HTTPs.
 Public Endpoints | All {{site.data.keyword.bpshort}} instances are provided with [external endpoints](/docs/schematics?topic=schematics-secure-data#pi-location) that are publicly accessible. 
 Private Endpoints | Allows customers to connect to an {{site.data.keyword.bpshort}} instance through the internal {{site.data.keyword.cloud_notm}} network to avoid upstream application traffic from going over the public network and incurring bandwidth charges. For more information, see [Service Endpoint](/docs/schematics?topic=schematics-private-endpoints), and also refer to, [enabling Service Endpoints](/docs/schematics?topic=schematics-secure-data#pi-location) for your {{site.data.keyword.cloud_notm}} account. 
-IP allowlisting | Customers can allowlist {{site.data.keyword.bpshort}} IP addresses in their firewall. For more information, see 
-[Opening required IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses) for {{site.data.keyword.bplong}} in your firewall.
+IP allowlisting | Customers can allowlist {{site.data.keyword.bpshort}} IP addresses in their firewall. For more information, see [Opening required IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses) for {{site.data.keyword.bplong}} in your firewall.
 {: caption="{{site.data.keyword.bpshort}} security features" caption-side="bottom"}

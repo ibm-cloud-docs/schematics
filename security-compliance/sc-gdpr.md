@@ -37,7 +37,7 @@ The following categories of **Personal Data** are supported by {{site.data.keywo
 
 For more information, about data security in {{site.data.keyword.bpshort}}, see [Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data&interface=ui).
 
-## Data about me
+## About user data
 {: #data-about-me}
 
 {{site.data.keyword.bpshort}} records few data about its users, which is limited to basic contact information such as email address, and name. {{site.data.keyword.bpshort}} is a data processor for said Personal Information (PI) data. {{site.data.keyword.bpshort}} processes the limited customer PI in the course of running the service and optimizing the user experience. {{site.data.keyword.bpshort}} uses email for contacting customers. Monitoring customer interactions with {{site.data.keyword.bpshort}} is another way {{site.data.keyword.bpshort}} processes PI. 
