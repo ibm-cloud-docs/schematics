@@ -47,7 +47,7 @@ Do not enter sensitive data for {{site.data.keyword.bpshort}}. For example, do n
 ## Is the {{site.data.keyword.bpshort}} database encrypted?
 {: #is-our-ibm-schematics-database-encrypted}
 
-For more information, about how your data is encrypted in {{site.data.keyword.bpshort}}, see [How your data is stored and encrypted in Schematics?](/docs/schematics?topic=schematics-secure-data#data-storage).
+For more information, about how your data is encrypted in {{site.data.keyword.bpshort}}? see [How your data is stored and encrypted in Schematics?](/docs/schematics?topic=schematics-secure-data#data-storage).
 
 ## Data locations
 {: #data-locations}
