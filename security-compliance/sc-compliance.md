@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-02"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Compliance
 {: #compliance}
 
-{{site.data.keyword.bplong}} actively participates in several industry compliance programs. For more information, about monitoring compliance, refer to, [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
+{{site.data.keyword.bplong}} actively participates in several industry compliance programs. As a compliance focal, you can use the {{site.data.keyword.bpshort}} goals to check that your organization is adhering to the external and internal standards for your industry. For more information, about monitoring compliance, refer to, [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
 
 To monitor your resources with {{site.data.keyword.bpshort}}, refer to, [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring-instances).
 {: shortdesc}
@@ -23,24 +23,23 @@ To monitor your resources with {{site.data.keyword.bpshort}}, refer to, [Managin
 ## General Data Protection Regulation (GDPR) readiness
 {: #compliance-gdpr}
 
-Please visit [IBM's commitment to GDPR readiness](https://www.ibm.com/data-responsibility/gdpr/) page to learn about {{site.data.keyword.IBM_notm}}'s GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey. 
-
-- [IBM Data Processing Addendum (DPA)](https://www.ibm.com/support/customer/csol/terms/?cat=dpa) 
+About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Data Protection Regulation](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr). View [IBM's commitment to GDPR readiness](https://www.ibm.com/data-responsibility/gdpr/) to learn about {{site.data.keyword.IBM_notm}}'s GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey. 
 
 ## Privacy shield
 {: #compliance-privacy}
 
-{{site.data.keyword.bpshort}} is privacy shield certified. For more information please visit [{{site.data.keyword.IBM_notm}} Privacy Shield Privacy Policy for Certified {{site.data.keyword.cloud_notm}} Services](https://www.ibm.com/privacy/details/us/en/privacy_shield.html).
+{{site.data.keyword.bpshort}} is privacy shield certified. For more information, see the [{{site.data.keyword.IBM_notm}} Privacy Shield Privacy Policy for Certified {{site.data.keyword.cloud_notm}} Services](https://www.ibm.com/privacy/details/us/en/privacy_shield.html).
 
 ## International Organization for Standardization (ISO)
 {: #international-organization-for-standardization-iso}
 
-{{site.data.keyword.bpshort}} are audited by a third-party security firm and meet ISO 27001, ISO 27017, and ISO 27018 requirements. For more information, see the [{{site.data.keyword.bpshort}} Compliance page](https://www.ibm.com/cloud/compliance){: external} for links to the certificates. The following descriptions on the {{site.data.keyword.bpshort}} Compliance page cover the {{site.data.keyword.bpshort}} service and respective certifications:
+{{site.data.keyword.bpshort}} is audited by a third-party security firm and meet ISO 27001, ISO 27017, ISO 27018, and ISO 27701 requirements. For more information, see the [{{site.data.keyword.bpshort}} Compliance page](https://www.ibm.com/cloud/compliance){: external} for links to the certificates. The following descriptions on the {{site.data.keyword.bpshort}} compliance page cover the {{site.data.keyword.bpshort}} service and respective certifications:
  
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certified cloud product listing
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certificate - ISO 27001
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certificate - ISO 27017
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certificate - ISO 27018
+- {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certificate - ISO 27701
 
 ## SOC 2 Type 2 Certification
 {: #soc-2-type-2-certification}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-02"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # General Data Protection Regulation (GDPR)
 {: #general-data-protection-regulation-gdpr}
 
-The GDPR seeks to create a harmonized data protection law framework across the EU. It aims to give citizens back the control of their personal data, while it imposes strict rules on those who host and "process" this data, anywhere in the world. The Regulation also introduces rules that relate to the free movement of personal data within and outside the EU. 
+The GDPR seeks to create a harmonized data protection law framework across the EU. It aims to give citizens back the control of their personal data, while it imposes strict rules on those who host and **process** this data, anywhere in the world. The Regulation also introduces rules that relate to the free movement of personal data within and outside the EU. 
 {: shortdesc}
 
 With the [General Data Protection Regulation](https://gdpr.eu/){: external}, {{site.data.keyword.bpshort}} customers can rely on
@@ -25,64 +25,70 @@ the {{site.data.keyword.bpshort}} team's understanding and compliance with emerg
 {: #how-do-i-audit-access-to-ibm-schematics}
 
 You can find information about auditing in [Audit logging](/docs/schematics?topic=schematics-at_events) and [managing user access](/docs/schematics?topic=schematics-access#access-roles).
+{: shortdesc}
 
 ## Supported classifications of Personal Data
 {: #supported-classifications-of-personal-data}
 
-The following categories of **Personal Data** are supported by {{site.data.keyword.bpshort}}
-for GDPR:
+The following categories of **Personal Data** are supported by {{site.data.keyword.bpshort}} for GDPR:
 
-- Identity and civil status
-- Personal life
-- Professional life
-- Location data
-- Connectivity and device data
+- Basic contact information, such as email address, name, etc, which is a subset of basic personal information.
+- Technically indentifiable personal information, such as authentication credentials, IP address, etc.
 
-For more information about supported classifications of Personal Data, see the
-[Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data&interface=ui).
+For more information, about data security in {{site.data.keyword.bpshort}}, see [Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data&interface=ui).
 
 ## Data about me
 {: #data-about-me}
 
-{{site.data.keyword.bpshort}} records some data about its users, and is a Data Controller for said
-Personal Information (PI) data. The data that {{site.data.keyword.bpshort}} records depends on the type of account you have.
+{{site.data.keyword.bpshort}} records few data about its users, which is limited to basic contact information such as email address, and name. {{site.data.keyword.bpshort}} is a data processor for said Personal Information (PI) data. {{site.data.keyword.bpshort}} processes the limited customer PI in the course of running the service and optimizing the user experience. {{site.data.keyword.bpshort}} uses email for contacting customers. Monitoring customer interactions with {{site.data.keyword.bpshort}} is another way {{site.data.keyword.bpshort}} processes PI. 
 
-If you have an {{site.data.keyword.bpshort}} Dedicated Cluster or {{site.data.keyword.bpshort}} Enterprise Cluster, {{site.data.keyword.bpshort}} records data about you and are considered a Data Controller for your data within the context of GDPR. If you have an {{site.data.keyword.bpshort}} Dedicated Cluster or {{site.data.keyword.bpshort}} Enterprise Cluster, {{site.data.keyword.bpshort}} stores the following information about you:
-
-- Name
-- Email
-
-The data that {{site.data.keyword.bpshort}} holds can be viewed and updated through the {{site.data.keyword.bpshort}} Dashboard.
-
-If you have an account that is provisioned by {{site.data.keyword.cloud_notm}} (including a dedicated instance),
-{{site.data.keyword.bpshort}} *does not* collect the personal data that was previously mentioned. This data is held by {{site.data.keyword.cloud_notm}}.
-
-Do not use sensitive data for {{site.data.keyword.bpshort}} instance names when you provision by using {{site.data.keyword.cloud_notm}}, such as: Personal Information (PI), Personal Identifying Information (PII), and Customer-specific Data.
-{: important}
-
-{{site.data.keyword.bpshort}} processes limited customer PI in the course of running the service and optimizing the user experience of it. {{site.data.keyword.bpshort}} uses email for contacting customers. Monitoring customer interactions with the {{site.data.keyword.bpshort}} Dashboard is the other way {{site.data.keyword.bpshort}} processes PI.
-
-### Restriction of processing
-{: #restriction-of-processing}
-
-{{site.data.keyword.bpshort}} sends dashboard interaction data to Segment. It's possible to ask {{site.data.keyword.bpshort}} to restrict processing of customer PI in this way with an {{site.data.keyword.bpshort}} support request through the [{{site.data.keyword.cloud_notm}} Support portal](https://www.ibm.com/cloud/support). Upon receipt of such a request, {{site.data.keyword.bpshort}} deletes information that is associated with the customer as sent to Segment, and prevents further data from being sent. {{site.data.keyword.bpshort}} needs to retain the ability to contact dedicated customers by email. {{site.data.keyword.bpshort}} provides an interface for customers to keep this 
-information up to date either directly, or by using customer configuration of their contact details with their {{site.data.keyword.cloud_notm}} account details.
+Do not enter sensitive data for {{site.data.keyword.bpshort}}. For example, do not use any Personal Information (PI), Personal Identifying Information (PII), and customer-specific data in a workspace name.
 
 ## Is the {{site.data.keyword.bpshort}} database encrypted?
 {: #is-our-ibm-schematics-database-encrypted}
 
-All clusters have an encrypted file system (encryption at rest) that uses Linux&trade; Unified Key Setup (LUKS). Data in the database is
-visible to the operations and support teams (see the following paragraph).
-
-For sensitive data, that you determine must remain invisible to {{site.data.keyword.bpshort}}, you must encrypt or otherwise protect (pseudonymize) your data before you send it to us. Do not use PI as a document `_id` in your URLs, since PI is always visible and written to the access logs.
+For more information, about how your data is encrypted in {{site.data.keyword.bpshort}}, see [How your data is stored and encrypted in Schematics?](/docs/schematics?topic=schematics-secure-data#data-storage).
 
 ## Data locations
 {: #data-locations}
 
-Locations where {{site.data.keyword.bpshort}} processes personal data are made available, and kept up to date. For more information about data locations, see the [Locations and service endpoints](/docs/schematics?topic=schematics-locations&interface=ui).
+Locations where {{site.data.keyword.bpshort}} processes personal data are made available, and kept up to date. For more information, about data locations, refer to, [Locations and service endpoints](/docs/schematics?topic=schematics-locations&interface=ui).
 
 ## Service security
 {: #service-security}
+
+Following are the list of service security measures taken by the {{site.data.keyword.bplong_notm}}.
+
+- Physical and environmental security measures.
+- Physical security of our data centers is handled by the {{site.data.keyword.cloud_notm}} infrastructure providers. All hold externally audited certifications for the physical security. {{site.data.keyword.bpshort}} doesn't provide further details of the physical security controls in place at our data centers.
+- Physical security of an office locations that are used by our personnel is handled by {{site.data.keyword.IBM_notm}} corporate.
+- Technical and Organizational Measures. Technical and Organizational Measures (TOMs) are employed by {{site.data.keyword.bpshort}} to ensure the security of personal data. {{site.data.keyword.bpshort}} holds externally audited certifications for the controls {{site.data.keyword.bpshort}} employs.
+- Service access to data.
+- {{site.data.keyword.bpshort}} operations and support staff has access to customer data and can access during routine operations. The access is only done as required in order to operate and support the service. Access is limited to a need to know basis and also is logged, monitored, and audited.
+
+## Deletion of data
+{: #deletion-of-data}
+
+{{site.data.keyword.bplong_notm}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_full}}. For more information, about how to delete your data in {{site.data.keyword.bpshort}}? refer to, [deleting {{site.data.keyword.bplong_notm}} data](https://test.cloud.ibm.com/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui).
+
+{{site.data.keyword.bpshort}} can completely remove all references and data for a customer document when required as an operator-managed process called **purging**. Before you request that data to purge, it's important to understand that purged documents cannot be recovered once the process is complete.
+
+Follow these steps, if data needs to be removed through a right to be forgotten request.
+- Raise a request with the [{{site.data.keyword.IBM_notm}} DPO](http://w3-03.ibm.com/ibm/privacy/index.html){: external} to request purging of {{site.data.keyword.bpshort}} data related to a specific {{site.data.keyword.cloud_notm}} account along with the reason.
+- On receipt of a formal request by the [{{site.data.keyword.IBM_notm}} DPO](http://w3-03.ibm.com/ibm/privacy/index.html){: external}, {{site.data.keyword.bpshort}} operations verifies the request.
+- {{site.data.keyword.bpshort}} triggers the purging action to permanently remove the requested data.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Using {{site.data.keyword.bpshort}} securely
 {: #using-ibm-schematics-securely}
