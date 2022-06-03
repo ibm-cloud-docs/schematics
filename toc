@@ -135,14 +135,14 @@ Schematics
     Troubleshooting 
 
         {: .topicgroup}
-        Debugging Schematics apply errors
+        Troubleshooting Schematics apply errors
              troubleshooting/apply_nullresource.md
              troubleshooting/apply_timeout_taint.md
              troubleshooting/apply_resource_group.md
              troubleshooting/apply_500_errors.md
 
         {: .topicgroup}
-        Debugging Schematics create errors
+        Troubleshooting Schematics create errors
              troubleshooting/wks_creation_api.md
 
         error-messages.md
