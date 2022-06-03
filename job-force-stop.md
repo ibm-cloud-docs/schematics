@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-19"
+lastupdated: "2022-06-02"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -72,7 +72,7 @@ Stops a running job for {{site.data.keyword.bplong_notm}} workspaces.
 **Syntax:**
 
 ```sh
-ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--cancel] [--force-stop] [--terminate]
+ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--stop] [--force-stop] [--terminate] [--no-prompt]
 ```
 {: pre}
 
@@ -85,8 +85,8 @@ ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--canc
 | `--interrupt` | Optional | Removes the job from the pending queue, if it is in pending state. Otherwise, sends an interrupt signal to the Terraform command.|
 | `--force-stop` or `--fs` | Optional | Sends a kill signal to the Terraform execution in the engine attempting to immediately stop the execution. |
 | `--terminate` or `-t` | Optional | Abruptly kills the engine, marks the job as stopped, and unlocks your workspace. **Note** Data is not saved using this flag. |
+| `--no-prompt` | Optional | Set this flag to run the command without an interactive mode. |
 {: caption="{{site.data.keyword.bpshort}} job stop flags" caption-side="bottom"}
-
 
 **Example:**
 

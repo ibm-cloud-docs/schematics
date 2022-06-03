@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-03"
 
 keywords: schematics capabilities, schematics benefits, why use schematics, capabilities
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.bpshort}} Capabilities 
+# {{site.data.keyword.bpshort}} capabilities 
 {: #learn-about-schematics} 
 
 {{site.data.keyword.bplong}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your app workloads.

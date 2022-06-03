@@ -97,7 +97,6 @@ Schematics
         iam.md
         responsibilities.md
         ha-dr.md
-        manage-scc.md
         private-endpoint.md
         data-security.md
         allowips.md
