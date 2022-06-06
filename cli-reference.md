@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-23"
+lastupdated: "2022-06-06"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2064,99 +2064,45 @@ You need to replace the `<...>` placeholders with the actual values. For example
 ```
 {: codeblock}
 
-<table>
-    <caption>JSON file component description</caption>
-    <thead>
-    <th>Parameter</th>
-    <th>Required / Optional</th>
-    <th>Description</th>
-    </thead>
-    <tbody>
-        <tr>
-    <td>`workspace_name`</td>
-    <td>Optional</td>
-    <td>Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).</td>
-    </tr>
-    <tr>
-    <td>`terraform_version`</td>
-    <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, Schematics selects the version from your template.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.</td>
-    </tr>
-    <tr>
-    <td>`location`</td>
-    <td>Optional</td>
-    <td>Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run `ibmcloud target --output json` and look at the `region` field. To target a different region, run `ibmcloud target -r <region>`. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted.</td>
-    </tr>
-    <tr>
-    <td>`description`</td>
-    <td>Optional</td>
-    <td>Enter a description for your workspace.</td>
-    </tr>
-        <td>`template_repo.url`</td>
-    <td>Optional</td>
-    <td>Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored.</td>
-    </tr>
-    <tr>
-    <td>`template_repo.branch`</td>
-    <td>Optional</td>
-    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  **Note** Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
-        <tr>
-    <td>`template_repo.datafolder`</td>
-    <td>Optional</td>
-    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.</td>
-    </tr>
-    <tr>
-    <td>`template_repo.release`</td>
-    <td>Optional</td>
-    <td>Enter the GitHub or GitLab release that points to your Terraform configuration files.</td>
-    </tr>
-    <tr>
-    <td>`github_source_repo_url`</td>
-    <td>Optional</td>
-    <td>Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. If you plan to provide your Terraform template by uploading a tape archive file (`.tar`), leave the URL empty, and use the [ibmcloud schematics workspace upload](#schematics-workspace-upload) command after you created the workspace. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning.</td>
-    </tr>
-    <tr>
-    <td>`env_values`</td>
-    <td>Optional</td>
-    <td>A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key = variable name` and `value = value`. You can define environment variables for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using a bash script files.</td>
-    </tr>
-    <tr>
-    <td>`variable_name`</td>
-    <td>Optional</td>
-    <td>Enter the name for the input variable that you declared in your Terraform configuration files.</td>
-    </tr>
-    <tr>
-    <td>`variable_type`</td>
-    <td>Optional</td>
-    <td>`Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`.</td>
-    </tr>
-    <tr>
-    <td>`variable_value`</td>
-    <td>Optional</td>
-    <td>Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). **Example** <pre class="codeblock">`
-        "variablestore": [
-                {
-                    "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
-                    "description": "",
-                    "name": "docker_ports",
-                    "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
-                },
-        ]`</pre></td>
-    </tr>
-    <tr>
-    <td>`secure`</td>
-    <td>Optional</td>
-    <td>Set the `secure` parameter to **true**. By default, this parameter is set to **false**.</td>
-    </tr>
-    <tr>
-    <td>`val1`</td>
-    <td>Optional</td>
-    <td>In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS.</td>
-    </tr>
-</tbody>
-</table>
+| Parameter | Required / Optional | Description |
+| -- | -- | -- |
+| `workspace_name` | Optional | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).|
+| `terraform_version` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, Schematics selects the version from your template.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. |
+| `location` | Optional | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run `ibmcloud target --output json` and look at the `region` field. To target a different region, run `ibmcloud target -r <region>`. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted. |
+| `description` | Optional | Enter a description for your workspace. |
+| `template_repo.url` | Optional | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. |
+| `template_repo.branch` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  **Note** Now, in template_repo, you can also update URL with more parameters as shown in the block. |
+| `template_repo.datafolder` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored. |
+| `template_repo.release` | Optional | Enter the GitHub or GitLab release that points to your Terraform configuration files. |
+| `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. If you plan to provide your Terraform template by uploading a tape archive file (`.tar`), leave the URL empty, and use the [ibmcloud schematics workspace upload](#schematics-workspace-upload) command after you created the workspace. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension) for cloning. |
+| `env_values` | Optional | A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key = variable name` and `value = value`. You can define environment variables for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using a bash script files. |
+| `variable_name` | Optional | Enter the name for the input variable that you declared in your Terraform configuration files. |
+| `variable_type` | Optional | `Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. |
+| `variable_value` | Optional | Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). [For example](#syntax_of_variablevalue)|
+| `secure` | Optional | Set the `secure` parameter to **true**. By default, this parameter is set to **false**. |
+| `val1` | Optional | In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS. |
+{: caption="JSON file component description" caption-side="bottom"}
+
 
     {{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
+    {: note}
+
+#### Example of variable value
+{: #syntax_of_variablevalue}
+
+Example for the `variable_value` to specify the values.
+
+```json
+"variablestore": [
+    {
+        "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+        "description": "",
+        "name": "docker_ports",
+        "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+    },
+]
+```
+{: pre}
 
 **Example:**
 ```sh
