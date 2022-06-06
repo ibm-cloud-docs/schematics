@@ -370,6 +370,8 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 {: pre}
 
 
+
+
 ## Enable BYOK or KYOK commands
 {: #kms-commands}
 
@@ -2087,22 +2089,6 @@ You need to replace the `<...>` placeholders with the actual values. For example
     {{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
     {: note}
 
-#### Example of variable value
-{: #syntax_of_variablevalue}
-
-Example for the `variable_value` to specify the values.
-
-```json
-"variablestore": [
-    {
-        "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
-        "description": "",
-        "name": "docker_ports",
-        "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
-    },
-]
-```
-{: pre}
 
 **Example:**
 ```sh
@@ -2500,3 +2486,18 @@ ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /U
 
 Create the `TAR` file of your template repo by using the `TAR` command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
 {: note}
+
+#### Example of the variable value
+{: #syntax_of_variablevalue}
+
+```json
+"variablestore": [
+    {
+        "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+        "description": "",
+        "name": "docker_ports",
+        "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+    },
+]
+```
+{: pre}
