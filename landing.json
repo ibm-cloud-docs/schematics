@@ -14,11 +14,6 @@
     },
     "section_recommended": [
       {
-        "title": "Deploy cloud service using Blueprints",
-        "description": "Learn how to deploy the reusable pattern that can be shared and used across multiple environments.",
-        "href": "/docs/schematics?topic=schematics-blueprint-intro"
-      },
-      {
         "title": "Deploy cloud services with workspaces",
         "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to persistently store your data in IBM Cloud.",
         "href": "/docs/schematics?topic=schematics-get-started-terraform"
