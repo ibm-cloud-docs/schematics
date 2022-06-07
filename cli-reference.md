@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-06"
+lastupdated: "2022-06-07"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -368,6 +368,8 @@ ibmcloud schematics action upload --id ACTION_ID --file FILE_NAME [--no-prompt] 
 ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FILE_PATH>/mytestactionupload.tar
 ```
 {: pre}
+
+
 
 
 ## Enable BYOK or KYOK commands
@@ -1493,7 +1495,7 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
 | `--file` or `--f` | Required | Path to the `JSON` file containing the list of Terraform commands.|
 {: caption="{{site.data.keyword.bpshort}} Terraform commands flags" caption-side="top"}
 
-**Sample payload of Test.JSON file**
+**Sample payload of Test.JSON file:**
 
 ```json
 {
@@ -2084,27 +2086,11 @@ You need to replace the `<...>` placeholders with the actual values. For example
 {: caption="JSON file component description" caption-side="bottom"}
 
 
-    {{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
-    {: note}
-
-#### Example of variable value
-{: #syntax_of_variablevalue}
-
-Example for the `variable_value` to specify the values.
-
-```json
-"variablestore": [
-    {
-        "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
-        "description": "",
-        "name": "docker_ports",
-        "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
-    },
-]
-```
-{: pre}
+{{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
+{: note}
 
 **Example:**
+
 ```sh
 ibmcloud schematics workspace new --file example.json
 ```
@@ -2500,3 +2486,18 @@ ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /U
 
 Create the `TAR` file of your template repo by using the `TAR` command given `tar -cvf vpc.tar $TEMPLATE_REPO_FOLDER`
 {: note}
+
+#### Example of the variable value
+{: #syntax_of_variablevalue}
+
+```json
+"variablestore": [
+    {
+        "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
+        "description": "",
+        "name": "docker_ports",
+        "type": "list(object({\n    internal = number\n    external = number\n    protocol = string\n  }))"
+    },
+]
+```
+{: pre}
