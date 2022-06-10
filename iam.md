@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-10"
 
 keywords: schematics, automation, terraform
 
@@ -80,6 +80,8 @@ Review the following table to see what permissions you need to work with {{site.
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
+
+
 
 ### KMS permissions
 {: #kms-permissions}
