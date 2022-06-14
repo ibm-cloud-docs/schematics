@@ -156,11 +156,7 @@ toc:
         topics:
           - faqs.md
           - whats-new.md
-          - topicgroup:
-              label: FAQs
-              topics:
-                - topic-7.md
-                - topic-8.md
+
           - topicgroup:
               label: Troubleshooting
               topics:
