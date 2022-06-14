@@ -14,7 +14,7 @@
     },
     "section_recommended": [
       {
-        "title": "Automate cloud operations with actions",
+        "title": "Automate cloud operations with Action",
         "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
         "href": "/docs/schematics?topic=schematics-getting-started-ansible"
       },
@@ -29,7 +29,7 @@
         "href": "/docs/schematics?topic=schematics-blueprint-intro"
       },
       {
-        "title": "Deploy cloud services with workspaces",
+        "title": "Deploy cloud services with Workspace",
         "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to persistently store your data in IBM Cloud.",
         "href": "/docs/schematics?topic=schematics-get-started-terraform"
       },
