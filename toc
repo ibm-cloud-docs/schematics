@@ -111,8 +111,8 @@ Schematics
     
     {: .topicgroup}
     Blueprint schema reference
-       [IBM Cloud Schematics Blueprint YAML definition](https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-environment-1.0.md)
-       [IBM Cloud Schematics Blueprint config YAML definition](https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-config-1.0.md)
+       [IBM Cloud Schematics Blueprint environment schema](https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-environment-1.0.md)
+       [IBM Cloud Schematics Blueprint configuration schema](https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-config-1.0.md)
     schematics-sdk.md
     locations.md
     limitations.md
