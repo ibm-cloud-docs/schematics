@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-15"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -39,6 +39,13 @@ Enhance documentation with the security and compliance
 
 Enhance documentation with the best practices 
 :   Enhanced {{site.data.keyword.bpshort}} documentation with the best practices when using {{site.data.keyword.bpshort}} objects [Best practices for securing the {{site.data.keyword.bpshort}} objects](/docs/schematics?topic=schematics-bp-secure-objects).
+
+### 5 May 2022
+{: #schematics-may0522}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plugin 
+:   The {{site.data.keyword.bpshort}} [command-line plugin v1.10.0](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ## April 2022
 {: #schematics-apr22}
