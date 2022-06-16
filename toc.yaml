@@ -133,6 +133,7 @@ toc:
                 - link:
                     label: IBM Cloud Schematics Blueprint config YAML definition
                     href: 'https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-config-1.0.md'
+          - sc-tools.md
           - schematics-sdk.md
           - locations.md
           - limitations.md
