@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-07"
+lastupdated: "2022-06-17"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1790,7 +1790,7 @@ ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The unique identifier of the workspace, for which you want to retrieve the details. To find the ID of a workspace, run `ibmcloud schematics workspace list` command. |
+| `--id` or `-i` | Required | The unique identifier of the workspace, for which you want to retrieve the details. To find the `Resource ID` of a workspace, run `ibmcloud schematics workspace list` command to view the of list service instances. From your resource group get an `Resource ID` for the `--id` flag. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} workspace get flags" caption-side="top"}
