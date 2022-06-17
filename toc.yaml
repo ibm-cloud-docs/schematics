@@ -20,7 +20,13 @@ toc:
                 - getting-started-terraform.md
                 - getting-started-ansible-new.md
                 - getting-started-software.md
-          - about.md
+          - topicgroup:
+              label: About
+              topics:
+                - sc-about-capabilities.md
+                - sc-about-terminologies.md
+                - sc-about-opensourceproj.md
+                - sc-about-usecases.md
           - topicgroup:
               label: Security and compliance
               topics:

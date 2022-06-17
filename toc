@@ -11,8 +11,13 @@ Schematics
          getting-started-terraform.md
          getting-started-ansible-new.md
          getting-started-software.md
-
-    about.md
+    
+    {: .topicgroup}
+    About
+        sc-about-capabilities.md
+        sc-about-terminologies.md
+        sc-about-opensourceproj.md
+        sc-about-usecases.md
  
      {: .topicgroup}
      Security and compliance

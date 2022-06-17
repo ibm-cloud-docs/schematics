@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-06-17"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
