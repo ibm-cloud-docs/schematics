@@ -1,41 +1,4 @@
 {
-    "what-is-schematics": [
-      "What is IBM Cloud Schematics",
-      "describe Cloud schematics",
-      "how does Cloud Schematics work",
-      "how to use Schematics",
-      "start with Cloud Schematics",
-      "getting started with Schematics",
-      "tell me about Schematics",
-      "get started with Schematics",
-      "Whats Cloud Schematics",
-      "get started with Cloud Schematics"
-    ],
-    "what-is-terraform": [
-      "What is Terraform",
-      "what's terraform",
-      "describe Terraform",
-      "how does Terraform work",
-      "tell me about terraform",
-      "can I use teraform and schematics together",
-      "schematics and terraform work together",
-      "how to use Schematics with Terraform",
-      "what is terraform as a service",
-      "use of terraform",
-      "getting started with terraform"
-    ],
-    "what-is-iac": [
-      "What is Infrastructure as Code",
-      "what's IAC",
-      "describe IAC",
-      "Infrastructure as Code",
-      "Infrastructure as Code in schematics",
-      "what is infrastructure code",
-      "use IAC for automation",
-      "IAC used for schematics",
-      "use infrastructure code for automation",
-      "infrastructure code used for schematics"
-    ],
     "charges": [
       "charged for when I use Schematics",
       "how much does schematics cost",
