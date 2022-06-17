@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-06-17"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -36,7 +36,7 @@ It is recommended to use Terraform v0.13 or higher.
 
 * **If you are using Terraform v0.12**, you must use one of the [5 recent {{site.data.keyword.cloud_notm}} provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) versions in your Terraform template. If you specify an older version of the {{site.data.keyword.cloud_notm}} provider in the template, you see the following error `Provider ibm not available for installation.` in the logs.
 
-* **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [Hashicorp Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud).
+* **If you are using Terraform v0.13 or higher**, you can arbitrarily choose any version of the {{site.data.keyword.cloud_notm}} provider, in your template. Then, {{site.data.keyword.bpshort}} automatically download the {{site.data.keyword.cloud_notm}} provider either locally from the cache or remotely from the [HashiCorp Configuration Language (HCL) Terraform Registry](https://registry.terraform.io/namespaces/IBM-Cloud).
 
 To use any of the predefined {{site.data.keyword.bpshort}} images, you must explicitly declare the version of the {{site.data.keyword.cloud_notm}} Provider plug-in in your Terraform template that includes the provider versions that you want. For more information, see [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform).
 {: important}
