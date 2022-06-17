@@ -11,8 +11,13 @@ Schematics
          getting-started-terraform.md
          getting-started-ansible-new.md
          getting-started-software.md
-
-    about.md
+    
+    {: .topicgroup}
+    About
+        sc-about-capabilities.md
+        sc-about-terminologies.md
+        sc-about-opensourceproj.md
+        sc-about-usecases.md
  
      {: .topicgroup}
      Security and compliance
@@ -108,6 +113,12 @@ Schematics
         cli-reference.md
         cli-version-release.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
+
+    {: .topicgroup}
+    Blueprint schema reference
+       [IBM Cloud Schematics Blueprint environment schema](https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-environment-1.0.md)
+       [IBM Cloud Schematics Blueprint configuration schema](https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-config-1.0.md)
+    sc-tools.md
     schematics-sdk.md
     locations.md
     limitations.md

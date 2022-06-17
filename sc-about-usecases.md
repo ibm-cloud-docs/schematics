@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-17"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 

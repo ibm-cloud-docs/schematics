@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-10"
 
 keywords: schematics, automation, terraform
 
@@ -43,7 +43,7 @@ No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role
 
 Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} workspaces.
 
-| Action | Reader | Writer | Manager | Account owner |
+| Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
 | `View workspace` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `View workspace activities` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
@@ -66,7 +66,7 @@ Review the following table to see what permissions you need to work with {{site.
 
 Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} actions.
 
-| Action | Reader | Writer | Manager | Account owner |
+| Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
 | `View action` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
 | `View action jobs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
@@ -81,12 +81,14 @@ Review the following table to see what permissions you need to work with {{site.
 {: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
+
+
 ### KMS permissions
 {: #kms-permissions}
 
 Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} key management system.
 
-| Action | Reader | Writer | Manager | Account owner |
+| Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
 | `View KMS instances` | ![Check mark icon.](images/checkmark.svg)| ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|
 | `Read KMS settings` | ![Check mark icon.](images/checkmark.svg)| ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|

@@ -20,7 +20,13 @@ toc:
                 - getting-started-terraform.md
                 - getting-started-ansible-new.md
                 - getting-started-software.md
-          - about.md
+          - topicgroup:
+              label: About
+              topics:
+                - sc-about-capabilities.md
+                - sc-about-terminologies.md
+                - sc-about-opensourceproj.md
+                - sc-about-usecases.md
           - topicgroup:
               label: Security and compliance
               topics:
@@ -124,6 +130,16 @@ toc:
                 - link:
                     label: IBM Cloud Schematics API
                     href: 'https://cloud.ibm.com/apidocs/schematics'
+          - topicgroup:
+              label: Blueprint schema reference
+              links:
+                - link:
+                    label: IBM Cloud Schematics Blueprint YAML definition
+                    href: 'https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-environment-1.0.md'
+                - link:
+                    label: IBM Cloud Schematics Blueprint config YAML definition
+                    href: 'https://github.ibm.com/schematics-solution/schematics-blueprints/blob/master/docs/bp-config-1.0.md'
+          - sc-tools.md
           - schematics-sdk.md
           - locations.md
           - limitations.md
@@ -156,11 +172,7 @@ toc:
         topics:
           - faqs.md
           - whats-new.md
-          - topicgroup:
-              label: FAQs
-              topics:
-                - topic-7.md
-                - topic-8.md
+
           - topicgroup:
               label: Troubleshooting
               topics:
