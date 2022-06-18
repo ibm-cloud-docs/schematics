@@ -186,6 +186,6 @@ toc:
                 - topicgroup:
                     label: Troubleshooting Schematics create errors
                     topics:
-                      - troubleshooting/wks_creation_api.md                      
+                      - troubleshooting/wks_creation_api.md
                 - error-messages.md
           - ts_index.md

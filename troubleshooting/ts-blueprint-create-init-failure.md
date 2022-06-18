@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2022
 lastupdated: "2022-06-18"
 
-keywords: blueprint validate failure, blueprint validate error, validate fails 
+keywords: blueprint create init failure, blueprint init error, create init fails 
 
 subcollection: schematics
 content-type: troubleshoot
@@ -13,13 +13,13 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Why do Blueprint create fails in the Blueprint validate step?
-{: #bp-validate-fails}
+# Why do Blueprint create fails in the Blueprint create_init step?
+{: #bp-create_init-fails}
 
-When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input files contain invalid definitions.  
+When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails during initialization of the {{site.data.keyword.bpshort}} Workspaces for the modules. 
 {: tsSymptoms}
 
-Prior to creating the Blueprint, {{site.data.keyword.bpshort}} validates the syntax of the YAML input files. 
+Blueprints are created in two steps. The first step retrieves and validates the Blueprint definition. The second step creates the required module Workspaces based on the module statements in the definition. This step clones the specified module source repos. An incorrectly specified repository URL results in an initialization failure.  
 {: tsCauses}
 
 Sample error 
