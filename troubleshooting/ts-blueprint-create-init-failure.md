@@ -60,3 +60,36 @@ ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
 {: pre}
 
+On command-line command failures, {{site.data.keyword.bpshort}} Blueprint identifies the failing Workspace and print a summary of the log.  
+
+Sample log output
+
+```text
+Modules to be installed
+SNO   Type        Name                   Status   
+1     Terraform   basic-resource-group   INACTIVE   
+2     Terraform   basic-cos-storage      INACTIVE   
+      
+Blueprint job running eu-gb.JOB.basic.f012ad25
+
+Waiting:0    Draft:0    Connecting:0    InProgress:0    Inactive:0    Active:2    Failed:0   
+
+Type        Name                   Status               Job ID   
+Blueprint   basic                  FULFILMENT_SUCCESS   eu-gb.JOB.basic.f012ad25   
+Terraform   basic-resource-group   FAILED                  
+Terraform   basic-cos-storage      ACTIVE                  
+            
+Blueprint fulfilment_failure at Tue May 31 11:44:12 BST 2022
+Module basic-resource-group failure
+
+Log Summary 
+ 2022/02/17 11:10:40  
+ 2022/02/17 11:10:40    Terraform REFRESH error: Terraform REFRESH errorexit status 1
+ 2022/02/17 11:10:40    Could not execute action
+----- 
+OK
+
+```
+{: screen}
+
+You are directed to the failing Workspace and Terraform automation code. From the provided log output you can follow the existing procedures to resolve the Terraform apply failure.  
