@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-06-20"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -23,6 +23,25 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
+
+## June 2022
+{: #schematics-june22}
+
+Review the release notes for June 2022.
+{: shortdesc}
+
+
+
+### 15 June 2022
+{: #schematics-june1522}
+{: release-note}
+
+Enhance about {{site.data.keyword.bpshort}} documentation
+:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-about-schematics&interface=ui), [{{site.data.keyword.bpshort}} terminology](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-schematics-term&interface=ui), [Using Open Source](https://cloud.ibm.com/docs/schematics?topic=schematics-shematics-open-projects&interface=ui), and [{{site.data.keyword.bpshort}} use cases](https://cloud.ibm.com/docs/schematics?topic=schematics-how-it-works&interface=ui)
+
+
+
+
 
 ## May 2022
 {: #schematics-may22}
