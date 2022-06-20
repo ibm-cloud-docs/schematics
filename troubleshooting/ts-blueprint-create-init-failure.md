@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-18"
+lastupdated: "2022-06-20"
 
 keywords: blueprint create init failure, blueprint init error, create init fails 
 
@@ -13,8 +13,11 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
+The {{site.data.keyword.bpshort}} Agent feature is currently in beta and should not be used for production workloads.
+{: beta}
+
 # Why do Blueprint create fails in the Blueprint create_init step?
-{: #bp-create_init-fails}
+{: #bp-create-init-fails}
 
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails during initialization of the {{site.data.keyword.bpshort}} Workspaces for the modules. 
 {: tsSymptoms}

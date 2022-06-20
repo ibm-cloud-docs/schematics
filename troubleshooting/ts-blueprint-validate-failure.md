@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-18"
+lastupdated: "2022-06-20"
 
 keywords: blueprint validate failure, blueprint validate error, validate fails 
 
@@ -12,6 +12,9 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+The {{site.data.keyword.bpshort}} Agent feature is currently in beta and should not be used for production workloads.
+{: beta}
 
 # Why do Blueprint create fails in the Blueprint validate step?
 {: #bp-validate-fails}
