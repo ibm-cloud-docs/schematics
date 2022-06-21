@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-20"
+lastupdated: "2022-06-21"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -36,7 +36,7 @@ Review the release notes for June 2022.
 {: #schematics-june1522}
 {: release-note}
 
-Enhance about {{site.data.keyword.bpshort}} documentation
+Enhance {{site.data.keyword.bpshort}} getting started section
 :   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-about-schematics&interface=ui), [{{site.data.keyword.bpshort}} terminology](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-schematics-term&interface=ui), [Using Open Source](https://cloud.ibm.com/docs/schematics?topic=schematics-shematics-open-projects&interface=ui), and [{{site.data.keyword.bpshort}} use cases](https://cloud.ibm.com/docs/schematics?topic=schematics-how-it-works&interface=ui)
 
 
@@ -53,7 +53,7 @@ Review the release notes for May 2022.
 {: #schematics-may1222}
 {: release-note}
 
-Enhance documentation with the security and compliance 
+Enhance documentation with the security and compliance section
 :   Enhanced {{site.data.keyword.bpshort}} documentation with the security and compliance such as, [security](/docs/schematics?topic=schematics-security), [compliance](/docs/schematics?topic=schematics-compliance), [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance), and [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr).
 
 Enhance documentation with the best practices 
