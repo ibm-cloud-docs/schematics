@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-21"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -138,8 +138,8 @@ Review the benefits of using {{site.data.keyword.bpshort}}.
 |Full support for integrated open source projects|{{site.data.keyword.bpshort}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue by using the {{site.data.keyword.terraform-provider_full_notm}} or the Ansible support in {{site.data.keyword.bpshort}} actions, you can [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-using-avatar#getting-support).|
 {: caption="{{site.data.keyword.bpshort}} benefits" caption-side="bottom"}
 
-## {{site.data.keyword.bpshort}} terminology
-{: #terminology}
+## {{site.data.keyword.bpshort}} terminologies
+{: #terminologies}
 
 Depending on the {{site.data.keyword.bpshort}} component that you use, specific key terms are used to describe the actions that you want to run. 
 {: shortdesc}
@@ -147,7 +147,7 @@ Depending on the {{site.data.keyword.bpshort}} component that you use, specific 
 ### Key terms for {{site.data.keyword.bpshort}} workspaces
 {: #tf-terms}
 
-Because {{site.data.keyword.bpshort}} workspaces provide Terraform-as-a-Service capabilities to you, the terms that you see when you create a workspace are similar to the terminology that is used in Terraform. 
+Because {{site.data.keyword.bpshort}} workspaces provide Terraform-as-a-Service capabilities to you, the terms that you see when you create a workspace are similar to the terminologies that are used in Terraform. 
 {: shortdesc}
 
 |Term|Description|
@@ -160,10 +160,10 @@ Because {{site.data.keyword.bpshort}} workspaces provide Terraform-as-a-Service 
 |{{site.data.keyword.cloud_notm}} Provider plug-in|To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider must provide a command-line plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is IBM's command-line plug-in for Terraform. {{site.data.keyword.bplong_notm}} uses the plug-in to provision your {{site.data.keyword.cloud_notm}} resources. To find a list of supported {{site.data.keyword.cloud_notm}} resources and how to describe them, see the [{{site.data.keyword.cloud_notm}} Provider resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).|
 {: caption="Key terms" caption-side="bottom"}
 
-### Key terms for {{site.data.keyword.bpshort}} actions
+### Key terms for the {{site.data.keyword.bpshort}} Actions
 {: #ansible-terms}
 
-Because {{site.data.keyword.bpshort}} actions provide Ansible-as-a-Service capabilities to you, the terms that you see when you create an action are similar to the terminology that is used in Ansible. 
+Because {{site.data.keyword.bpshort}} actions provide Ansible-as-a-Service capabilities to you, the terms that you see when you create an action are similar to the terminologies that are used in an Ansible. 
 {: shortdesc}
 
 |Term|Description|

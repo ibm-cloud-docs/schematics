@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-17"
+lastupdated: "2022-06-21"
 
 keywords: schematics capabilities, schematics benefits, why use schematics, capabilities
 
@@ -15,13 +15,13 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} capabilities 
 {: #learn-about-schematics} 
 
-{{site.data.keyword.bplong}} provides powerful set of Infrastructure as Code (IaC) tools as a service to program your cloud infrastructure. {{site.data.keyword.bpshort}} can run your end-to-end automation to build one or more stack of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
+{{site.data.keyword.bplong}} `provides powerful set of Infrastructure as Code (IaC)` tools as a service to program your cloud infrastructure. {{site.data.keyword.bpshort}} can run your end-to-end automation to build one or more stack of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
 {: shortdesc}
 
 ## {{site.data.keyword.bpshort}} benefits
 {: #learn-benefits}
 
-Review the capabilities that {{site.data.keyword.bpshort}} provides you to set up IaC.
+Review the capabilities that {{site.data.keyword.bpshort}} provides for you as you explore {{site.data.keyword.cloud_notm}} automation.
 {: shortdesc}
 
 | Capability | Description |

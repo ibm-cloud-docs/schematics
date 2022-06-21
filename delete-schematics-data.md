@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-22"
+lastupdated: "2022-06-21"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deleting {{site.data.keyword.bplong_notm}} data
+# Deleting {{site.data.keyword.bpshort}} data
 {: #delete-schematics-data-intro}
 
 {{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in IBM Cloud Object Storage. This data-at-rest is encrypted using the envelope encryption technique. As the IBM Cloud account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described. 

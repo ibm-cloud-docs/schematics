@@ -37,7 +37,7 @@ Review the release notes for June 2022.
 {: release-note}
 
 Enhance {{site.data.keyword.bpshort}} getting started section
-:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-about-schematics&interface=ui), [{{site.data.keyword.bpshort}} terminology](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-schematics-term&interface=ui), [Using Open Source](https://cloud.ibm.com/docs/schematics?topic=schematics-shematics-open-projects&interface=ui), and [{{site.data.keyword.bpshort}} use cases](https://cloud.ibm.com/docs/schematics?topic=schematics-how-it-works&interface=ui)
+:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-about-schematics&interface=ui), [{{site.data.keyword.bpshort}} terminologies](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-schematics-term&interface=ui), [Using Open Source](https://cloud.ibm.com/docs/schematics?topic=schematics-shematics-open-projects&interface=ui), and [{{site.data.keyword.bpshort}} use cases](https://cloud.ibm.com/docs/schematics?topic=schematics-how-it-works&interface=ui)
 
 
 

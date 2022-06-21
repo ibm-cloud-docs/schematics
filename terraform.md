@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-06-21"
 
 subcollection: schematics
 
@@ -11,7 +11,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Setting up Terraform for {{site.data.keyword.bplong_notm}} 
+# Setting up Terraform for {{site.data.keyword.bpshort}} 
 {: #terraform-setup}
 
 Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services so that you can rapidly build complex, multitiered cloud environments following Infrastructure as Code (IaC) principles. Similar to using the {{site.data.keyword.cloud_notm}} CLI or API and SDKs, you can automate the provisioning, update, and deletion of your {{site.data.keyword.bplong_notm}} services instances by using HashiCorp Configuration Language (HCL).
