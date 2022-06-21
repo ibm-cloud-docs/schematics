@@ -19,7 +19,7 @@
         "href": "/docs/schematics?topic=schematics-getting-started-ansible"
       },
       {
-        "title": "Extend provisioning through Agent",
+        "title": "Extend provisioning through Agents",
         "description": "Learn how to provision, configure, and operate your private or on-premise cloud cluster resources without any time, network, or software restrictions.",
         "href": "/docs/schematics?topic=schematics-agents-intro"
       },
