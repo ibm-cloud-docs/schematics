@@ -181,7 +181,7 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 Congratulations! You successfully created the {{site.data.keyword.bplong_notm}} workspace and automated the end to end deployment by using the DevOps toolchain. 
 
 ## What's next?
-{: #automate-what's next}
+{: #automate-what-next}
 
 You can now learn how to set up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster. For more information, refer to, [Setting up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
 

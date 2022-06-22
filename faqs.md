@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-06-22"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -30,7 +30,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} service 
 
 To do so, {{site.data.keyword.bpshort}} leverages open source projects, such as Terraform, Ansible, OpenShift, Operators, and Helm, and delivers these capabilities to you as a managed service. Rather than installing each open source project on your machine, and learning the API or CLI, you declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and watch {{site.data.keyword.bpshort}} run these tasks for you.
 
-For more information about how {{site.data.keyword.bpshort}} works, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics).
+For more information about how {{site.data.keyword.bpshort}} works, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-learn-about-schematics).
 
 ## What is Infrastructure as Code?
 {: #what-is-iac}

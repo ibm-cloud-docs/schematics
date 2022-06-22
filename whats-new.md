@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-21"
+  years: 2019, 2021
+lastupdated: "2021-11-13"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -71,7 +71,7 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 
 |Date|Description|
 |-----|---------|
-|14 April 2021 |**Ansible support in {{site.data.keyword.bplong_notm}} is now generally available:** Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multitiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics#how-to-actions).|
+|14 April 2021 |**Ansible support in {{site.data.keyword.bplong_notm}} is now generally available:** Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multitiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).|
 {: caption="What's new in April" caption-side="top"}
 
 

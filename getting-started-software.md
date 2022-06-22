@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-06-22"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -72,6 +72,6 @@ Congratulations! You used the capabilities of {{site.data.keyword.bpshort}} to p
 
 - Explore the capabilities of [{{site.data.keyword.databases-for-postgresql_full_notm}}](/docs/databases-for-postgresql?topic=databases-for-postgresql-getting-started).
 - Browse other [software and infrastructure templates](https://cloud.ibm.com/catalog?search=label%3Aterraform#software){: external} that you can apply with {{site.data.keyword.bpshort}}.
-- Learn more about the [built-in capabilities in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics).
+- Learn more about the [built-in capabilities in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics).
 - Import your {{site.data.keyword.bpshort}} templates and create your [private {{site.data.keyword.cloud_notm}} catalog](/docs/account?topic=account-create-private-catalog).
 - Set up the {{site.data.keyword.bpshort}} [CLI](/docs/schematics?topic=schematics-setup-cli) or [API](/docs/schematics?topic=schematics-setup-api) to start automating the provisioning and management of {{site.data.keyword.cloud_notm}} resources. 
