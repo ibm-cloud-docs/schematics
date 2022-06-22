@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-06-22"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -29,6 +29,8 @@ For information about releases that occurred before 22 October 2021, see [What's
 
 Review the release notes for June 2022.
 {: shortdesc}
+
+
 
 
 
