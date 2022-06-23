@@ -40,7 +40,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
 ## Usage of private module template
 {: #netrc-example}
 
-{{site.data.keyword.bpshort}} internally creates the `.netrc` file based on the `env_values` configured in the JSON file. Here is a syntax and sample `testexample.json` example file to clone all the files to create and apply the {{site.data.keyword.bpshort}} workspace through command-line and API.
+{{site.data.keyword.bpshort}} internally creates the `.netrc` file based on the `env_values` configured in the JSON file. Here is a syntax and sample `testexample.json` example file to clone all the files to create and apply the {{site.data.keyword.bpshort}} Workspaces through command-line and API.
 
 **Syntax with the description:**
 

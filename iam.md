@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-10"
+lastupdated: "2022-06-23"
 
 keywords: schematics, automation, terraform
 
@@ -41,7 +41,7 @@ No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role
 ### Workspace permissions
 {: #workspace-permissions}
 
-Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} workspaces.
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Workspaces.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
@@ -58,13 +58,13 @@ Review the following table to see what permissions you need to work with {{site.
 | `Destroy workspace resources` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
-{: caption="User permissions for {{site.data.keyword.bpshort}} workspaces" caption-side="top"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} Workspaces" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### Action permissions
 {: #action-permissions}
 
-Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} actions.
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Actions.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
@@ -78,7 +78,7 @@ Review the following table to see what permissions you need to work with {{site.
 | `Run an action` | | ![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)| 
 {: row-headers}
 {: class="comparison-table"}
-{: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} Actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 
@@ -113,17 +113,17 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 4. [Assign access to your IAM access group](/docs/account?topic=account-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
     - Make sure to scope access of your group to the resource group that you created for this team. 
     - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies. 
-    - The resource group of the {{site.data.keyword.bpshort}} workspace or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
+    - The resource group of the {{site.data.keyword.bpshort}} Workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
     - For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy.  
 
 
 ## Manage access tag in your account 
 {: #access-tag}
 
-You can now centrally manage access tags to the {{site.data.keyword.bpshort}} workspace in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
+You can now centrally manage access tags to the {{site.data.keyword.bpshort}} Workspaces in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account.
 
 - To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create). 
-- To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
+- To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} Workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
 
 For more information, about managing access tags, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-23"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -31,7 +31,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} workspace by a user.|
+| `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} Workspaces by a user.|
 | `schematics.workspace.create` | An event is generated for a request to create a {{site.data.keyword.bpshort}} workspace. |
 | `schematics.workspace.update`| An event is generated for a request to update a {{site.data.keyword.bpshort}} workspace. |
 | `schematics.workspace.delete` | An event is generated for a request to delete a {{site.data.keyword.bpshort}} workspace. |
@@ -45,10 +45,10 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.action.create` | A {{site.data.keyword.bpshort}} action is created or failed to create. | 
-| `schematics.action.delete` | A {{site.data.keyword.bpshort}} action was deleted or failed to delete. | 
-| `schematics.action.read`| A {{site.data.keyword.bpshort}} action is viewed by a user.|
-| `schematics.action.update`| A {{site.data.keyword.bpshort}} action is updated successfully or failed to update.|
+| `schematics.action.create` | A {{site.data.keyword.bpshort}} Actions is created or failed to create. | 
+| `schematics.action.delete` | A {{site.data.keyword.bpshort}} Actions was deleted or failed to delete. | 
+| `schematics.action.read`| A {{site.data.keyword.bpshort}} Actions is viewed by a user.|
+| `schematics.action.update`| A {{site.data.keyword.bpshort}} Actions is updated successfully or failed to update.|
 {: caption="Action events" caption-side="top"}
 
 ### Job events

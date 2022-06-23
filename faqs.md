@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-22"
+lastupdated: "2022-06-23"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -53,7 +53,7 @@ The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays wa
 {: faq}
 {: support}
 
-Yes, you can run Ansible playbooks or {{site.data.keyword.bpshort}} actions against your {{site.data.keyword.cloud_notm}} by using the Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see the following blogs:
+Yes, you can run Ansible playbooks or {{site.data.keyword.bpshort}} Actions against your {{site.data.keyword.cloud_notm}} by using the Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see the following blogs:
 
 - [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 - [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/){: external}
@@ -100,7 +100,7 @@ curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: applic
 
 For more information, about creating IAM access token and API Docs, see [IAM access token](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](https://cloud.ibm.com/apidocs/iam-identity-token-api#create-api-key). <br> You can set the environment values  `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
 
-## How do I overcome the authentication error when {{site.data.keyword.bpshort}} workspace is created by using API?
+## How do I overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?
 {: #createworkspace-authentication-error}
 {: faq}
 {: support}
@@ -152,7 +152,7 @@ No, the null-exec (null_resources) and remote-exec resources has maximum timeout
 {: faq}
 {: support}
 
-While creating {{site.data.keyword.bpshort}} workspace or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
+While creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
 
 - The allowed file extension are `.cer, .cfg, .conf, .crt, .der, .gitignore, .html, .j2, .jacl, .js, .json, .key, .md, .netrc, .pem, .properties, .ps1, .pub, .py, .service, .sh, .tf, .tf.json, .tfvars, .tmpl, .tpl, .txt, .yaml, .yml, .zip, _rsa, license`.
 - The allowed image extension are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.
@@ -184,7 +184,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 You can follow these topics to upgrade from one Terraform version to another version
 
 - [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#terraform-version-upgrade)
-- [Upgrade Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#migrate-steps)
+- [Upgrade Terraform version in {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#migrate-steps)
 - [Upgrade Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-12-to13)
 - [Upgrade Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-13-to14)
 - [Upgrade Terraform template from v0.14 to v1.0](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-14-to10)
@@ -209,7 +209,7 @@ The unexpected impact due to maintenance results in the failure of the running a
 {: faq}
 {: support}
 
-Updating the {{site.data.keyword.bpshort}} workspace through command-line need the required field `name`.
+Updating the {{site.data.keyword.bpshort}} Workspaces through command-line need the required field `name`.
 
 You need to run `ibmcloud schematics workspace update --id <workspace-id>  --file <updatefile.json>`  command. The sample `updatefile.json` contains the name field with the value.
 ```json
@@ -264,7 +264,7 @@ The test IDs are considered as a valid IBM IDs to perform the global catalog or 
 
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 
-Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [Compact download for {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-compact-download).
+Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, about compact, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
 
 ## Why is my success Action job execution displays DEPRECATION WARNING message?
 {: #deprecation-warn-faq}
@@ -343,7 +343,7 @@ Yes, you can increase the time out for OpenShift or Kubernetes resources. For mo
 {: faq}
 {: support}
 
-You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload. For more information, about setting the environment variables in the payload, refer to, [{{site.data.keyword.bpshort}} workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
+You can set the environment variable for setting the Terraform log debug `TF_LOG=debug` trace in the payload, as shown in the sample payload. For more information, about setting the environment variables in the payload, refer to, [{{site.data.keyword.bpshort}} Workspaces update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
 
 ```json
 {
@@ -371,20 +371,20 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
 }
 ```
 
-## How can I generate {{site.data.keyword.bpshort}} workspace import from CLI?
+## How can I generate {{site.data.keyword.bpshort}} Workspaces import from CLI?
 {: #workspace-import-ibmcli}
 {: faq}
 {: support}
 
-Use `ibmcloud schematics workspace import --options value, -o value : Optional` command and the sample syntax to import from command-line. For more information, about how {{site.data.keyword.bpshort}} workspace import works, see [{{site.data.keyword.bpshort}} workspace import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
+Use `ibmcloud schematics workspace import --options value, -o value : Optional` command and the sample syntax to import from command-line. For more information, about how {{site.data.keyword.bpshort}} Workspaces import works, see [{{site.data.keyword.bpshort}} Workspaces import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
 
 ``` sh
 
-ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
+ibmcloud {{site.data.keyword.bpshort}} Workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "-var IC_API_KEY=XXXXXXXX"
 
 or 
 
-ibmcloud {{site.data.keyword.bpshort}} workspace import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "--var-file=<path-to-var-file>"
+ibmcloud {{site.data.keyword.bpshort}} Workspaces import --id <workspace_id> --address <my terraform resource address> --resourceID <the CRN of the item to import> --options "--var-file=<path-to-var-file>"
 ```
 {: pre}
 
@@ -419,12 +419,12 @@ You can verify the location access to create or view the resource in the catalog
  ```
  {: codeblock}
 
-## Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} workspace console without using Catalog service or {{site.data.keyword.bpshort}} command line?
+## Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} Workspaces console without using Catalog service or {{site.data.keyword.bpshort}} command line?
 {: #terraformcli-arguments-faq}
 {: faq}
 {: support}
 
- No, you cannot set an environment variable values in the {{site.data.keyword.bpshort}} workspace console directly. Instead you can use a CURL by using the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+ No, you cannot set an environment variable values in the {{site.data.keyword.bpshort}} Workspaces console directly. Instead you can use a CURL by using the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace), or [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 
  ```json
    "env_values": [
@@ -467,7 +467,7 @@ Yes, {{site.data.keyword.bpshort}} supports to download the Terraform modules te
   2021/12/06 10:15:50 Could not execute action
 ```
 
-WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
+WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} Actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} Actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
 
 ## Can I edit all the variables in the {{site.data.keyword.bpshort}} console instead of editing individually?
 {: #edit-variables-faq}
@@ -484,7 +484,7 @@ You can edit one variable at a time from {{site.data.keyword.bpshort}} console. 
  Yes, you can use {{site.data.keyword.openwhisk_short}} to perform the managed operations such as start, stop query based on tags and also through scheduler or cron job to trigger the {{site.data.keyword.bpshort}} action. For more information, see [VSI operations and schedule solution](https://github.com/Cloud-Schematics/vsi-operations-scheduler-solution){: external} GitHub repository.
  
 
-## Can I set or manage keys for  `ibm_kms_key` resource when {{site.data.keyword.bpshort}} workspace imports Terraform?
+## Can I set or manage keys for  `ibm_kms_key` resource when {{site.data.keyword.bpshort}} Workspaces imports Terraform?
 {: #kmskey-value-faq}
 {: faq}
 {: support}
@@ -520,7 +520,7 @@ resource "ibm_cos_bucket" "smart-us-south" {
 
 No, currently {{site.data.keyword.bpshort}} do not support this feature while executing `IBMCLOUD_TRACE=true ibmcloud schematics workspace list` command. 
 
-## How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` while trying to fetch {{site.data.keyword.bpshort}} workspaces?
+## How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` while trying to fetch {{site.data.keyword.bpshort}} Workspaces?
 {: #badstatus-workspace-faq}
 {: faq}
 {: support}
@@ -558,12 +558,12 @@ You can use the sample Terraform codeblock to configure the GitLab repository de
 
 Yes, {{site.data.keyword.bpshort}} supports the full {{site.data.keyword.cloud_notm}} provider resource set. For more information, about How IAM access group works? see [ibm_iam_access_group](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group).
 
-## Could I create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in {{site.data.keyword.cloud_notm}} target account to provision?
+## Could I create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in {{site.data.keyword.cloud_notm}} target account to provision?
 {: #account-resource-faq}
 {: faq}
 {: support}
 
-Yes, you can create {{site.data.keyword.bpshort}} workspace in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in target account to provision, through command-line and API calls by using the target account service ID with authentication, appropriate cross account authorization, or API key. For more information, refer to, [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account).
+Yes, you can create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in target account to provision, through command-line and API calls by using the target account service ID with authentication, appropriate cross account authorization, or API key. For more information, refer to, [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account).
 
 ## Could I create a worker node in an existing worker node pool?
 {: #workernode-kubernetes-faq}
@@ -580,12 +580,12 @@ Yes, you can create or add a worker node inside an existing worker node pool by 
 
 You can view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions in [{{site.data.keyword.bpshort}} allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
-## Does `North America` location indicates `us-south`, `us-east`, or `both` during the {{site.data.keyword.bpshort}} workspace creation?
+## Does `North America` location indicates `us-south`, `us-east`, or `both` during the {{site.data.keyword.bpshort}} Workspaces creation?
 {: #location-faq}
 {: faq}
 {: support}
 
-North America always indicates both `us-south` and `us-east` location during the {{site.data.keyword.bpshort}} workspace creation. For more information, refer to, [Where can I create {{site.data.keyword.bpshort}} workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create-schematics-workspaces) and [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+North America always indicates both `us-south` and `us-east` location during the {{site.data.keyword.bpshort}} Workspaces creation. For more information, refer to, [Where can I create {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create-schematics-workspaces) and [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 
 ## What are the port used to communicate with {{site.data.keyword.bpshort}} and resources, such as VPC services?
 {: #port-faq}
@@ -649,7 +649,7 @@ To create a deviation report and view the changes between the infrastructure and
 {: support}
 
 - A Terraform execution plan is based on the [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state) that is created when you run your first {{site.data.keyword.bpshort}} apply action. 
-- Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.
+- Resources that you provisioned in other {{site.data.keyword.bpshort}} Workspaces by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.
 
 ## How should I remove resources with {{site.data.keyword.bplong_notm}}?
 {: #remove-resource-faq}
@@ -748,7 +748,7 @@ timeout - last error: Error connecting to bastion: dial tcp
 ```
 {: screen}
 
-You can access your {{site.data.keyword.bpshort}} workspace and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses that are listed in the {{site.data.keyword.bpshort}} documentation. For more information, about the region and the zone based private and public IP addresses, see [Opening required IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
+You can access your {{site.data.keyword.bpshort}} Workspaces and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses that are listed in the {{site.data.keyword.bpshort}} documentation. For more information, about the region and the zone based private and public IP addresses, see [Opening required IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
 ## How do I create a cluster by using Terraform on {{site.data.keyword.cloud_notm}} environment?
 {: #newcluster-workspace-faq}

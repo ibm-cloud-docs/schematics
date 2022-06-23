@@ -98,7 +98,7 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Terraform template URL.
 {: shortdesc}
 
-1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
+1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, click **Create workspace**.
 2. In **Specify template** section. Enter **GitHub, GitLab, or `Bitbucket` Repository URL** as 
     
     ```text
@@ -114,7 +114,7 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
    Ensure you provide the right resource group, and the location details where you want to create the workspace.
     {: note}
 
-7. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} workspace successfully.
+7. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} Workspaces successfully.
 
 ## Configuring the variables
 {: #configure-variables}
@@ -158,11 +158,11 @@ The GitHub Server type parameter expects the authorization, you need to provide 
 Observe the pipeline dashboard and view the status of your workspace execution.
 {: shortdesc}
 
-1. During the update stage process, from the example of `ibm-cos-bucket` repository observe the `main.tf` file configuration with the `cos_instance` name and `bucket_name`. These details are updated in the {{site.data.keyword.bpshort}} workspace after the APPLY stage is passed.
+1. During the update stage process, from the example of `ibm-cos-bucket` repository observe the `main.tf` file configuration with the `cos_instance` name and `bucket_name`. These details are updated in the {{site.data.keyword.bpshort}} Workspaces after the APPLY stage is passed.
 2. Once the `UPDATE` stage is completed, PLAN stage is in running state.
 3. Click **Jobs** and history to view the status of the job from the `PLAN` pane.
 4. Observe that the PLAN stage is passed, and APPLY stage is in running state.
-5. From the {{site.data.keyword.bpshort}} workspace check the resource name and bucket name are created successfully.
+5. From the {{site.data.keyword.bpshort}} Workspaces check the resource name and bucket name are created successfully.
 6. Observe that the `APPLY` stage is passed and TEST stage is in Running state.
 7. Observe that the `TEST` stage is passed successfully.
 8. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your workspace by the continuous delivery toolchain.
@@ -174,7 +174,7 @@ Observe the pipeline dashboard and view the status of your workspace execution.
 Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace.
 {: shortdesc}
 
-1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}.
+1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}.
 2. Select `Navigation Menu > Schematics > Workspaces > Resources` to observe the apply state of the resources in your workspace.
 3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
 

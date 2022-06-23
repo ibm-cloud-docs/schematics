@@ -20,7 +20,7 @@ subcollection: schematics
 {{site.data.keyword.bplong_notm}} integrates with various open source projects to provide powerful automation and configuration management capabilities. Review the open source projects that {{site.data.keyword.bpshort}} integrates with and the {{site.data.keyword.bpshort}} component that you can use to leverage these capabilities.
 {: shortdesc}
 
-|Logo|Open source project description|{{site.data.keyword.bpshort}} actions|{{site.data.keyword.bpshort}} workspaces|IBM software solutions catalog|
+|Logo|Open source project description|{{site.data.keyword.bpshort}} Actions|{{site.data.keyword.bpshort}} Workspaces|IBM software solutions catalog|
 |---|---|:--:|:--:|:--:|
 |<img src="images/ansible.png" alt="Ansible" width="50" style="width: 50px; border-style: none"/>|[Ansible](https://www.ansible.com/){: external} is a configuration management and provisioning tool, similar to Chef and Puppet, and is designed to automate the configuration and management of cloud environments, and to deploy multitiered app workloads in the cloud. |<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 |<img src="images/helm.svg" alt="Helm" width="50" style="width: 50px; border-style: none"/>|[Helm](https://helm.sh/){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in an {{site.data.keyword.containerlong_notm}} cluster.|||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|

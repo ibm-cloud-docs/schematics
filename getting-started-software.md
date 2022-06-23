@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-22"
+lastupdated: "2022-06-23"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -19,7 +19,7 @@ Try out one of the {{site.data.keyword.IBM}} provided software templates to quic
 
 With {{site.data.keyword.bplong_notm}}, you can choose from a wide variety of [software and infrastructure templates](https://cloud.ibm.com/catalog#software){: external} that you can use to set up {{site.data.keyword.cloud_notm}} services, and to install {{site.data.keyword.IBM_notm}} and 3rd party software. The templates are applied by using the built-in `Terraform`, `Ansible`, `Helm`, `CloudPak`, and `Operator` capabilities in {{site.data.keyword.bpshort}}.
 
-As part of this getting started tutorial, you create a {{site.data.keyword.bpshort}} workspace that points to the [VSI database](https://cloud.ibm.com/catalog/content/VSI-database#about){: external} template. Then, you run this template and watch {{site.data.keyword.bpshort}} provision your VSI and your {{site.data.keyword.databases-for-postgresql_full_notm}} instance. {{site.data.keyword.databases-for-postgresql_full_notm}} is a fully managed database offering in {{site.data.keyword.cloud_notm}} that supports storing of non-relational and relational data types. For more information about this offering, see [What is PostgreSQL?](https://www.ibm.com/cloud/learn/postgresql){: external}. 
+As part of this getting started tutorial, you create a {{site.data.keyword.bpshort}} Workspaces that points to the [VSI database](https://cloud.ibm.com/catalog/content/VSI-database#about){: external} template. Then, you run this template and watch {{site.data.keyword.bpshort}} provision your VSI and your {{site.data.keyword.databases-for-postgresql_full_notm}} instance. {{site.data.keyword.databases-for-postgresql_full_notm}} is a fully managed database offering in {{site.data.keyword.cloud_notm}} that supports storing of non-relational and relational data types. For more information about this offering, see [What is PostgreSQL?](https://www.ibm.com/cloud/learn/postgresql){: external}. 
 
 This getting started tutorial incurs costs. You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. Make sure that you review pricing information for [classic VSIs](https://cloud.ibm.com/gen1/infrastructure/provision/vs){: external} and [PostgreSQL](https://cloud.ibm.com/databases/databases-for-postgresql/create){: external}. 
 {: important}
@@ -56,11 +56,11 @@ Use one of the IBM provided software templates to set up and configure a classic
     - Enter the **iaas_classic_username** as `<your classic_username>` that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 
     - Select the resource group where you want to provision your virtual server and `PostregSQL` instance. 
 
-5. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} workspace **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
+5. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} Workspaces **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
 6. Verify your virtual server and PostgreSQL setup. 
     - From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
     - Click the link to see the details of your instances. 
-7. Optional: Remove your {{site.data.keyword.bpshort}} workspace and all related {{site.data.keyword.cloud_notm}} resources. 
+7. Optional: Remove your {{site.data.keyword.bpshort}} Workspaces and all related {{site.data.keyword.cloud_notm}} resources. 
     - From the **Actions** menu, click **Delete**. 
     - Select the **Delete workspace** and **Delete all associated resources** option.
     - Enter the name of your workspace, and click **Delete**. 

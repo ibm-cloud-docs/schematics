@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-02"
+lastupdated: "2022-06-23"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Stopping or terminating the running job
 {: #interrupt-job}
 
-After invoking a job on a {{site.data.keyword.bpshort}} workspace like a `plan`, an `apply`, or a `destroy`. You may want to stop the running job, or want to stop provisioning resources. Stopping, or cancelling a job helps you to know whether the job is stuck, or if the job has lot of wait time. {{site.data.keyword.bpshort}} allows users to `interrupt`, `force-stop`, or `terminate` the running job.
+After invoking a job on a {{site.data.keyword.bpshort}} Workspaces like a `plan`, an `apply`, or a `destroy`. You may want to stop the running job, or want to stop provisioning resources. Stopping, or cancelling a job helps you to know whether the job is stuck, or if the job has lot of wait time. {{site.data.keyword.bpshort}} allows users to `interrupt`, `force-stop`, or `terminate` the running job.
 {: shortdesc}
 
 ## Stopping job types
@@ -42,9 +42,9 @@ If the job is in a `pending` state, any type of stop signal causes the job to ca
 {: #stop-job-ui}
 {: ui}
 
-You can follow these steps to stop the {{site.data.keyword.bpshort}} workspace running job by using {{site.data.keyword.cloud_notm}} console.
+You can follow these steps to stop the {{site.data.keyword.bpshort}} Workspaces running job by using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.bpshort}} workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to  the running job.
+1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to  the running job.
    
    You can stop or cancel the running job during a plan, an apply, or a destroy execution.
    {: note}

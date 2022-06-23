@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-23"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -162,9 +162,9 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 ## Managing resources in other account
 {: #manage-resource-account}
 
-You can create {{site.data.keyword.bpshort}} workspace in the {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in the target account. You can provision a resource in the target account only through command-line and API calls by using the target account's service ID with authentication, appropriate cross account authorization, or API key. To provision in the target account, you need to have a right permission of the source account.
+You can create {{site.data.keyword.bpshort}} Workspaces in the {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in the target account. You can provision a resource in the target account only through command-line and API calls by using the target account's service ID with authentication, appropriate cross account authorization, or API key. To provision in the target account, you need to have a right permission of the source account.
 
-Whereas in UI, the {{site.data.keyword.bpshort}} workspace uses an users logged in identity for executing operations. Hence, you cannot provision the Terraform providing resources in the target account.
+Whereas in UI, the {{site.data.keyword.bpshort}} Workspaces uses an users logged in identity for executing operations. Hence, you cannot provision the Terraform providing resources in the target account.
 {: important}
 
 ## Using `variable` blocks to customize resources

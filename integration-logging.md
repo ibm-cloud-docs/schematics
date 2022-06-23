@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-23"
 
 keywords: logging schematics services, logging, integration services
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Logging integration
 {: #logging-integration}
 
-{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.loganalysislong}} that can store, search, analyze, monitor, and alert on your {{site.data.keyword.cloud_notm}} logging data and events. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} workspaces by connecting, configuring, and view through observability dashboards.
+{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.loganalysislong}} that can store, search, analyze, monitor, and alert on your {{site.data.keyword.cloud_notm}} logging data and events. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} Workspaces by connecting, configuring, and view through observability dashboards.
 {: shortdesc}
 
 ## Launching logging

@@ -49,7 +49,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
 
 2. Enable your {{site.data.keyword.cloud_notm}} account for [service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint){: external}.
 
-    After you enable VRF and service endpoints for your account, all existing and future {{site.data.keyword.bpshort}} workspaces become available from both the public and private service endpoints.
+    After you enable VRF and service endpoints for your account, all existing and future {{site.data.keyword.bpshort}} Workspaces become available from both the public and private service endpoints.
     {: note}
 
 3. Verify that your account is enabled for VRF and service endpoints.

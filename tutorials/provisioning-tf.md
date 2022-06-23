@@ -105,7 +105,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 {: #create-tut-wks}
 {: step}
 
-1. Specify your {{site.data.keyword.bpshort}} workspace setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to, [{{site.data.keyword.bplong_notm}} workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
+1. Specify your {{site.data.keyword.bpshort}} Workspaces setting by copying the following workspace JSON file and saving it as `cluster_payload.json` on your local machine. For more information, about the payload parameters, refer to, [{{site.data.keyword.bplong_notm}} workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 
     **Example of the cluster_payload.json:**
 

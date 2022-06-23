@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-23"
 
 keywords: tracking schematics services, activity tracking, integration services
 
@@ -15,13 +15,13 @@ subcollection: schematics
 # Activity tracking integration
 {: #at-integration}
 
-{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.at_full_notm}} that enables supervision, compliance, and audits the operations and risk to manage your {{site.data.keyword.cloud_notm}}. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} workspaces by connecting, configuring, and view through observability dashboards.
+{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.at_full_notm}} that enables supervision, compliance, and audits the operations and risk to manage your {{site.data.keyword.cloud_notm}}. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} Workspaces by connecting, configuring, and view through observability dashboards.
 {: shortdesc}
 
 ## Launching activity tracking
 {: #audit-ui}
 
-Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspace instance events, access, events, and access audit log. Use the audit log to reveal usage patterns that would identify workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cos_full_notm}} to retain your logs. Complete these steps to launch {{site.data.keyword.at_short}}.
+Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspaces instance events, access, events, and access audit log. Use the audit log to reveal usage patterns that would identify workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cos_full_notm}} to retain your logs. Complete these steps to launch {{site.data.keyword.at_short}}.
 {: shortdesc}
 
 1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 

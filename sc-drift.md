@@ -42,7 +42,7 @@ Drift detection for your Terraform automation workspaces is possible in {{site.d
 {: #drift-ui}
 {: ui}
 
-You can initiate detecting drift for workspaces from the {{site.data.keyword.bpshort}} workspace job page. This event initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. In order to know the details of the drift job, you need to check the drift job log for the drift status.
+You can initiate detecting drift for workspaces from the {{site.data.keyword.bpshort}} Workspaces job page. This event initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. In order to know the details of the drift job, you need to check the drift job log for the drift status.
 
 ### Viewing detect drift through UI
 {: #drift-view-ui}
@@ -87,10 +87,10 @@ You can initiate detecting drift from the create workspaces command line. This i
 {: #drift-view-cli}
 {: cli}
 
-You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} workspace through command-line.
+You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} Workspaces through command-line.
 {: shortdesc}
 
-1. [Create the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+1. [Create the {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 2. [Get your workspace ID](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get).
 3. Execute the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan).
 4. Fetch the [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).

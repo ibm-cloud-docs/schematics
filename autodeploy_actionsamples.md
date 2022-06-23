@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-06-23"
 
 keywords: action templates, schematics template, terraform template
 
@@ -14,7 +14,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions
+# Sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions
 {: #sample_actiontemplates}
 
 Explore one of the IBM provided Ansible playbooks to perform cloud operations on target hosts or to get started with {{site.data.keyword.bplong_notm}} actions.
@@ -29,7 +29,7 @@ Use the links on this page as follows:
 {: #ansible-vpc}
 
 Description
-:    Use `ansible-is-instance-actions` Ansible playbook to perform day 2 operations such as start, stop, and reboot for {{site.data.keyword.vsi_is_full}}. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md){: external} template file.
+:    Use `ansible-is-instance-actions` Ansible playbook to perform day 2 operations such as start, stop, and reboot for {{site.data.keyword.vsi_is_full}}. To configure and run the {{site.data.keyword.bpshort}} Actions by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-is-instance-actions/blob/master/README.md){: external} template file.
 
 Access
 :   <img src="images/viewgithubrepo.png" alt="View GitHub repository" usemap="#viewgithubimage_map1">
@@ -47,7 +47,7 @@ Deploy
 {: #ansible-lamp-stack}
 
 Description
-:    Use `lamp-simple` Ansible playbook to deploy the LAMP stack components on {{site.data.keyword.vsi_is_short}} by following a simple deployment architecture. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md){: external} template file.
+:    Use `lamp-simple` Ansible playbook to deploy the LAMP stack components on {{site.data.keyword.vsi_is_short}} by following a simple deployment architecture. To configure and run the {{site.data.keyword.bpshort}} Actions by using the CLI or console, see [README](https://github.com/Cloud-Schematics/lamp-simple/blob/master/README.md){: external} template file.
 
 Access
 :   <img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map2">
@@ -64,7 +64,7 @@ Deploy
 {: #ansible-databases}
 
 Description
-:    Use `ansible-icd-postgres-actions` Ansible playbook to configure the WAL2JSON plug-in on your {{site.data.keyword.databases-for-postgresql_full_notm}} service instance. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions/blob/master/README.md){: external} template file.
+:    Use `ansible-icd-postgres-actions` Ansible playbook to configure the WAL2JSON plug-in on your {{site.data.keyword.databases-for-postgresql_full_notm}} service instance. To configure and run the {{site.data.keyword.bpshort}} Actions by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-icd-postgres-actions/blob/master/README.md){: external} template file.
 
 Access
 :   <img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map3">
@@ -81,7 +81,7 @@ Deploy
 {: #ansible-iks-deploy}
 
 Description
-:    Use `ansible-app-deploy-iks` Ansible playbook to deploy Hackathon Starter on an {{site.data.keyword.containerfull}} cluster. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/README.md){: external} template file.
+:    Use `ansible-app-deploy-iks` Ansible playbook to deploy Hackathon Starter on an {{site.data.keyword.containerfull}} cluster. To configure and run the {{site.data.keyword.bpshort}} Actions by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-app-deploy-iks/blob/master/README.md){: external} template file.
 
 Access
 :   <img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map4">
@@ -98,7 +98,7 @@ Deploy
 {: #ansible-kubectl}
 
 Description
-:    Use `ansible-kubectl` Ansible playbook to install the Kubernetes CLI <code>kubectl</code> on {{site.data.keyword.vsi_is_short}} by using a role from Ansible Galaxy. To configure and run the {{site.data.keyword.bpshort}} action by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md){: external} template file.
+:    Use `ansible-kubectl` Ansible playbook to install the Kubernetes CLI <code>kubectl</code> on {{site.data.keyword.vsi_is_short}} by using a role from Ansible Galaxy. To configure and run the {{site.data.keyword.bpshort}} Actions by using the CLI or console, see [README](https://github.com/Cloud-Schematics/ansible-kubectl/blob/master/README.md){: external} template file.
 
 Access
 :   <img src="images/viewgithubrepo.png"  alt="View GitHub repository" usemap="#viewgithubimage_map5">
