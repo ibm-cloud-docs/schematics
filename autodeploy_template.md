@@ -39,7 +39,7 @@ For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible
     {: codeblock}
 
 4. Open your web browser and enter the URL.
-5. Verify that the {{site.data.keyword.bplong_notm}} action create page opens and that the **Action name** and **Repository URL** are pre-populated.
+5. Verify that the {{site.data.keyword.bpshort}} Actions create page opens and that the **Action name** and **Repository URL** are pre-populated.
 
 ## Adding an image to your URL to create the auto deploy button
 {: #add_an_image}

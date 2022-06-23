@@ -17,7 +17,7 @@ subcollection: schematics
 # Sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions
 {: #sample_actiontemplates}
 
-Explore one of the IBM provided Ansible playbooks to perform cloud operations on target hosts or to get started with {{site.data.keyword.bplong_notm}} actions.
+Explore one of the IBM provided Ansible playbooks to perform cloud operations on target hosts or to get started with {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
 
 Use the links on this page as follows: 

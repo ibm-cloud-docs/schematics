@@ -148,4 +148,4 @@ Review the following status that can be assigned to a job:
 
 When the Action job execution displays DEPRECATION WARNING message, you need to set the input variable as `ansible_python_interpreter = auto` as shown in the screen capture to avoid `DEPRECATION WARNING` message in the job.
 
-![Configuring input variable to silence warning message](images/advanced_inputvariable.png "Embedded {{site.data.keyword.bplong_notm}} service flow"){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
+![Configuring input variable to silence warning message](images/advanced_inputvariable.png "Embedded {{site.data.keyword.bpshort} service flow"){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
