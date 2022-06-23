@@ -620,7 +620,7 @@ To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.ke
 {: faq}
 {: support}
 
-You can choose to add, modify, or remove infrastructure code in your Terraform template through GitHub, or update variable values from the {{site.data.keyword.bplong_notm}} workspace dashboard. 
+You can choose to add, modify, or remove infrastructure code in your Terraform template through GitHub, or update variable values from the {{site.data.keyword.bpshort}} Workspaces dashboard. 
 
 ## When I change my configuration file in GitHub, is my change automatically available in the next execution plan?
 {: #edit-resource-confg-faq}

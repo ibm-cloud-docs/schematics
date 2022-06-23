@@ -31,7 +31,7 @@ Be sure to keep your CLI up-to-date so that you can use the latest released comm
 ## Action commands
 {: #schematics-action-commands}
 
-Review the commands that you want to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} actions.
+Review the commands that you want to create, update, list, delete and work with your {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
 
 ### Inventory host groups
@@ -73,13 +73,13 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
 |`IPaddress`|The IP addresses of the hostname.|
 {: caption="Inventory host group parameters" caption-side="top"}
 
-You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bplong_notm}} actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.
+You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. **Note** Currently {{site.data.keyword.bpshort}} Actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.
 {: note}
 
 ### `ibmcloud schematics action create`
 {: #schematics-create-action}
 
-Create an {{site.data.keyword.bplong_notm}} action to run an Ansible playbook on a single target host or a group of target hosts. You use Ansible playbooks to perform cloud operations or install software on cloud resources. To try out this capability or to get started, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. You can create an action by using a payload file or the command's interactive mode.
+Create an {{site.data.keyword.bpshort}} Actions to run an Ansible playbook on a single target host or a group of target hosts. You use Ansible playbooks to perform cloud operations or install software on cloud resources. To try out this capability or to get started, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. You can create an action by using a payload file or the command's interactive mode.
 {: shortdesc}
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
@@ -200,7 +200,7 @@ Instead of entering the command options or using a payload file, you can use the
 ### `ibmcloud schematics action update`
 {: #schematics-update-action}
 
-Update the information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+Update the information of an existing {{site.data.keyword.bpshort}} Actions by using an action ID. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
 **Syntax:**
@@ -250,7 +250,7 @@ ibmcloud schematics action update --id us-south.workspace.101010101 --descriptio
 ### `ibmcloud schematics action get`
 {: #schematics-get-action}
 
-Retrieve the detailed information of an existing {{site.data.keyword.bplong_notm}} action by using an action ID. 
+Retrieve the detailed information of an existing {{site.data.keyword.bpshort}} Actions by using an action ID. 
 {: shortdesc}
 
 **Syntax:**
@@ -1868,7 +1868,7 @@ ibmcloud schematics workspace list --limit 10 --offset 20 --json
 ### `ibmcloud schematics workspace new`
 {: #schematics-workspace-new}
 
-Create an {{site.data.keyword.bplong_notm}} workspace that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command to provide the template.
+Create an {{site.data.keyword.bpshort}} Workspaces that points to your Terraform template in GitHub or GitLab. If you want to provide your Terraform template by uploading a tape archive file (`.tar`), you can create the workspace without a connection to a GitHub repository and then use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command to provide the template.
 
 {{site.data.keyword.bpshort}} does not support passing `.tar` file to create a workspace.
 {: important}

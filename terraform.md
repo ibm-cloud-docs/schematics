@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-06-23"
 
 subcollection: schematics
 
@@ -36,7 +36,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
     If you have a workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information, about the {{site.data.keyword.bpshort}} Workspaces locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
     {: note}
 
-    Then create the {{site.data.keyword.bplong_notm}} workspace `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
+    Then create the {{site.data.keyword.bpshort}} Workspaces `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
 
     **versions.tf**
 

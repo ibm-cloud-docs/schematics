@@ -15,10 +15,10 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bplong_notm}} workspaces and actions. 
+Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} Workspaces and Actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bplong_notm}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, refer to, [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
+As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bpshort}} Workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, refer to, [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
 
 
 
@@ -108,7 +108,7 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups#create_ag) for each team. 
 
-3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bplong_notm}} workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
+3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} Workspaces and Actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
 
 4. [Assign access to your IAM access group](/docs/account?topic=account-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
     - Make sure to scope access of your group to the resource group that you created for this team. 

@@ -22,18 +22,18 @@ subcollection: schematics
 {: #deprecate-phase}
 
 The deprecation of each Terraform version follows these phase:
-1. **Restrict workspace creation** You cannot create the {{site.data.keyword.bplong_notm}} workspace with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces.
+1. **Restrict workspace creation** You cannot create the {{site.data.keyword.bpshort}} Workspaces with that older version, but can continue to manage the {{site.data.keyword.cloud_notm}} resources by using the existing {{site.data.keyword.bplong_notm}} workspaces.
 
 2. **Restrict workspace execution** You can no longer manage {{site.data.keyword.cloud_notm}} resources with these {{site.data.keyword.bplong_notm}} workspaces with the deprecated Terraform version. You can read the {{site.data.keyword.bplong_notm}} workspaces contents.
 
 If you choose not to upgrade to the latest version of Terraform beyond the **restrict workspace execution** phase:
-- Your {{site.data.keyword.bplong_notm}} workspace data will continue to stay in {{site.data.keyword.bpshort}} till you **delete**.
+- Your {{site.data.keyword.bpshort}} Workspaces data will continue to stay in {{site.data.keyword.bpshort}} till you **delete**.
 - You cannot **destroy** the {{site.data.keyword.cloud_notm}} resources, managed by the IBM {{site.data.keyword.bplong_notm}} workspace.
 
 ## Schedule
 {: #deprecate-timeline} 
 
-You are recommended to migrate from your current version of Terraform to the latest available version at the right time. The latest version is always the most appropriate version. You can see the latest version of the Terraform in the drop down list of the {{site.data.keyword.bplong_notm}} workspace configuration page.
+You are recommended to migrate from your current version of Terraform to the latest available version at the right time. The latest version is always the most appropriate version. You can see the latest version of the Terraform in the drop down list of the {{site.data.keyword.bpshort}} Workspaces configuration page.
 {: shortdesc}
 
 We announce the timeline for the deprecation of Terraform **versions**, the related **end of marketing** date and **end of support** date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution. These depreciation timeline might change over time to meet your business needs. 
@@ -55,7 +55,7 @@ We announce the timeline for the deprecation of Terraform **versions**, the rela
 
 Follow these steps to continue working with the latest versions of Terraform in the {{site.data.keyword.bplong_notm}}.
 
-1. **Identification**: Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} workspaces. The {{site.data.keyword.bplong_notm}} workspace list indicates the versions of the Terraform provider that you are using. Also, individual {{site.data.keyword.bplong_notm}} workspace [settings page](/docs/schematics?topic=schematics-workspace-setup&interface=ui#import-template) in the console indicates the Terraform version for that workspace. If you are using the command-line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
+1. **Identification**: Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} workspaces. The {{site.data.keyword.bpshort}} Workspaces list indicates the versions of the Terraform provider that you are using. Also, individual {{site.data.keyword.bpshort}} Workspaces [settings page](/docs/schematics?topic=schematics-workspace-setup&interface=ui#import-template) in the console indicates the Terraform version for that workspace. If you are using the command-line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
 
 2. **Migration**: Migrate an older Terraform version to the supported versions, in case you want to deploy by using {{site.data.keyword.bplong_notm}} after the version's `end of support`. For more information, about migrating Terraform version, see [Upgrade Terraform version in {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps).
 

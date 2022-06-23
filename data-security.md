@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-19"
+lastupdated: "2022-06-23"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -88,7 +88,7 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 
 ![{{site.data.keyword.bplong_notm}} architecture and data encryption process](images/schematics_architecture.png){: caption="{{site.data.keyword.bplong_notm}} architecture and data encryption process" caption-side="bottom"}
 
-1. A user sends a request to create an {{site.data.keyword.bplong_notm}} workspace to the {{site.data.keyword.bpshort}} API server.
+1. A user sends a request to create an {{site.data.keyword.bpshort}} Workspaces to the {{site.data.keyword.bpshort}} API server.
 2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or a tape archive file (`.tar`) that you uploaded from your local machine. 
 3. All user-initiated actions, such as creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. RabbitMQ forwards requests to the {{site.data.keyword.bpshort}} engine to execute the action. 
 4. The {{site.data.keyword.bpshort}} engine starts the process for provisioning, modifying, or deleting {{site.data.keyword.cloud_notm}} resources.

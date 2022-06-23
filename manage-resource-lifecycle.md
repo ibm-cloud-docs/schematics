@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-06-23"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -282,6 +282,6 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 5. From the navigation, select **Activity** to review the logs for your resource deletion. Ensure that no errors occurred during the deletion process. 
 6. From the navigation, select **Resources** and verify that your resources are removed. 
 
-After the deletion of your resources is complete, the {{site.data.keyword.bplong_notm}} workspace is removed.
+After the deletion of your resources is complete, the {{site.data.keyword.bpshort}} Workspaces is removed.
 
 
