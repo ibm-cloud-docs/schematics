@@ -21,7 +21,7 @@ Learn about the {{site.data.keyword.bplong}} service architecture, the service d
 ## Architectural flow
 {: #basic-architecture}
 
-{{site.data.keyword.bpshort} is a shared service. On the initial use, a new service instance is automatically provisioned for each user account by using the provisioning method.
+{{site.data.keyword.bpshort}} is a shared service. On the initial use, a new service instance is automatically provisioned for each user account by using the provisioning method.
 
 The following {{site.data.keyword.bpshort}} architecture image depicts the 
 - Main {{site.data.keyword.bpshort}} components.
