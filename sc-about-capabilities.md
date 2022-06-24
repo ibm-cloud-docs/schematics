@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: schematics capabilities, schematics benefits, why use schematics, capabilities
 
@@ -37,3 +37,9 @@ Review the capabilities that {{site.data.keyword.bpshort}} provides for you as y
 | Control access to cloud environments and configurations | {{site.data.keyword.bpshort}} is fully integrated with IAM so that you can use service access roles to control who can access and collaborate on your workspaces and actions, or roll out changes. You can invite {{site.data.keyword.cloud_notm}} users to your account and leverage IAM access groups to streamline the access assignment process in your organization. As a multi-tenant solution, {{site.data.keyword.bpshort}} creates all resources in your personal account. Resources are not shared or reused by other {{site.data.keyword.cloud_notm}} tenants. Because {{site.data.keyword.bpshort}} is built on Kubernetes, IAM service access roles are mapped to role-based access controls (RBAC) in Kubernetes to enforce resource isolation within your account.|
 | Full {{site.data.keyword.IBM_notm}} Support for integrated open source projects or plugins related to {{site.data.keyword.cloud_notm}} | {{site.data.keyword.bpshort}} is fully integrated into the {{site.data.keyword.cloud_notm}} support system. If you run into an issue by using the `IBM Cloud Provider Plug-in for Terraform` or the Ansible modules for {{site.data.keyword.cloud_notm}}, you can [open an {{site.data.keyword.cloud_notm}} support case](/docs/get-support?topic=get-support-using-avatar#getting-support).|
 {: caption="{{site.data.keyword.bpshort}} benefits" caption-side="bottom"}
+
+## Next steps about {{site.data.keyword.bpshort}}
+{: #nextstep-capabilities}
+
+- Learn more about the {{site.data.keyword.bpshort}} [terminologies](/docs/schematics?topic=schematics-learn-schematics-term) and the [Open Source technolgoies](/docs/schematics?topic=schematics-schematics-open-projects) used in {{site.data.keyword.bpshort}}.
+- Click [here](/docs/schematics?topic=schematics-learn-about-schematics) to revisit the {{site.data.keyword.bpshort}} capabilities.

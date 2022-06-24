@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -53,10 +53,7 @@ The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays wa
 {: faq}
 {: support}
 
-Yes, you can run Ansible playbooks or {{site.data.keyword.bpshort}} Actions against your {{site.data.keyword.cloud_notm}} by using the Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see the following blogs:
-
-- [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
-- [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/){: external}
+Yes, you can run Ansible playbooks against your {{site.data.keyword.cloud_notm}} by using the {{site.data.keyword.bpshort}} Actions or Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform Actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see [sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates).
 
 ## Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?
 {: #provider-versions}
@@ -223,7 +220,7 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible Actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
 ## How can I create workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}

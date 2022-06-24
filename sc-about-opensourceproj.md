@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -28,3 +28,9 @@ subcollection: schematics
 |<img src="images/terraform.png" alt="Terraform" width="50" style="width: 50px; border-style: none"/>|[Terraform](https://www.terraform.io/){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using a high-level scripting language.||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 {: caption="Open Source Projects" caption-side="bottom"}
 
+## Next steps
+{: #nextsteps-technologies}
+
+- Learn more about the {{site.data.keyword.bpshort}} [terminologies](/docs/schematics?topic=schematics-learn-schematics-term) used in {{site.data.keyword.bpshort}}.
+- Do you want to know how the Open Source technologies works in {{site.data.keyword.bpshort}}? Then, you need to explore these [usecases](/docs/schematics?topic=schematics-how-it-works).
+- Click [here](/docs/schematics?topic=schematics-schematics-open-projects) to revisit the {{site.data.keyword.bpshort}} Open Source technologies.

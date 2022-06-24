@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: schematics
 subcollection: schematics
@@ -68,9 +68,15 @@ subcollection: schematics
 
 * [{{site.data.keyword.bpshort}} benefits](/docs/schematics?topic=schematics-learn-about-schematics#learn-benefits)
 
+* [Next steps about {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics#nextstep-capabilities)
+
 [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
 
+* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#nextsteps-terminologies)
+
 [Usage of open source projects in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
+
+* [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
 [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
 
@@ -79,6 +85,8 @@ subcollection: schematics
 * [Configuration management with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
 
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
+
+* [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
 
 
 ## Security and compliance
@@ -650,6 +658,8 @@ subcollection: schematics
 [Creating an auto deploy button for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-auto-deploy-url#auto-deploy-url)
 
 * [Adding an image to your URL to create the auto deploy button](/docs/schematics?topic=schematics-auto-deploy-url#add_an_image)
+
+* [Next steps](/docs/schematics?topic=schematics-auto-deploy-url#sample-actions-nextsteps)
 
 
 ## Managing Inventories
