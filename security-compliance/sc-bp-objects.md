@@ -77,7 +77,7 @@ Your Workspaces and Actions data store depends on the location where you create 
 {: #bp-protect-data}
 
 Follow these practices to protect your Workspace data through Terraform state file, or log files.
-- Use {{site.data.keyword.iamshort}} to control access to a {{site.data.keyword.bpshort}} workspace and related {{site.data.keyword.cloud_notm}} resources.
+- Use {{site.data.keyword.iamshort}} to control access to a {{site.data.keyword.bpshort}} Workspaces and related {{site.data.keyword.cloud_notm}} resources.
 - Secure the source repository for your Terraform template, including access control, security settings, collaboration, and version control.
 - Secure the {{site.data.keyword.cloud_notm}} resources that you create by using the security features that are provided by the resource offering.
 - Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security patches, access controls, and encryption to your resources.
@@ -92,7 +92,7 @@ You need to specify the right [roles and permissions](/docs/schematics?topic=sch
 ### What are the best practices that I must follow while creating an Action for the Ansible template?
 {: #bp-security-ansible}
 
-Follow these practices while creating an {{site.data.keyword.bpshort}} Action for the Ansible template.
+Follow these practices while creating an {{site.data.keyword.bpshort}} Actions for the Ansible template.
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 - You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. To make changes to your action, wait for the job to complete, then change your settings, and click **Check action** or **Run action** again.
 - As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).

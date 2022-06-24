@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-20"
+lastupdated: "2022-06-23"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -18,20 +18,20 @@ subcollection: schematics
 Learn about the {{site.data.keyword.bplong}} service architecture, the service dependencies, and how customer workloads are isolated from each other in {{site.data.keyword.bplong_notm}}?
 {: shortdesc}
 
-## {{site.data.keyword.bplong_notm}} architectural flow
+## Architectural flow
 {: #basic-architecture}
 
-{{site.data.keyword.bplong_notm}} is a shared service. On the initial use, a new service instance is automatically provisioned for each user account by using the provisioning method.
+{{site.data.keyword.bpshort}} is a shared service. On the initial use, a new service instance is automatically provisioned for each user account by using the provisioning method.
 
 The following {{site.data.keyword.bpshort}} architecture image depicts the 
-- Main {{site.data.keyword.bplong_notm}} components.
+- Main {{site.data.keyword.bpshort}} components.
 - How cloud service interact each other with the components for an operation?
 - What type of encryption are applied to secure your services?
 - Usage of the observability services.
 - Role of runtime jobs to interact with {{site.data.keyword.cloud_notm}} APIs, private cloud such as `vSphere`, `Kubernetes`, and other public cloud providers such as `AWS`, `Google`, so on.
 {: shortdesc}
 
-![{{site.data.keyword.bplong_notm}} architecture](images/schematics-enduser-architecture.png){: caption="Figure 1. {{site.data.keyword.bpshort}} architecture" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} architecture](images/schematics-enduser-architecture.png){: caption="Figure 1. {{site.data.keyword.bpshort}} architecture" caption-side="bottom"}
 
 ## Workload isolation
 {: #workload-isolation}

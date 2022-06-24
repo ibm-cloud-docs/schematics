@@ -42,7 +42,7 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 * Check whether {{site.data.keyword.bpshort}} is enabled with IBM Log Analysis
 * Check whether {{site.data.keyword.bpshort}} has role-based access control (RBAC) for users
 * Check whether {{site.data.keyword.bpshort}} is enabled with IBM Cloud Monitoring
-* Check whether {{site.data.keyword.bpshort}} workspace is configured with a specific Terraform version
+* Check whether {{site.data.keyword.bpshort}} Workspaces is configured with a specific Terraform version
 
 
 

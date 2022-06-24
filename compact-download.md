@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-06-23"
 
 keywords: compact, subdirectory, schematics, download, directory
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Compact download for {{site.data.keyword.bpshort}} workspace
 {: #compact-download}
 
-{{site.data.keyword.bpshort}} workspaces act as a container of a Terraform template with the input data, output state, jobs, and job log files. The workspace uses the Git URL of the Terraform template. For example, if the user provides the URL `https://github.com/terraform-ibm-modules/terraform-ibm-database/tree/main/examples/simple-etcd` to download and securely store the template files. The default execution of the {{site.data.keyword.bpshort}} is to download the whole Git repository and to save securely. {{site.data.keyword.bpshort}} assumes that the Terraform templates have relative references to modules, script, or data files that resides in other folders in the repository. 
+{{site.data.keyword.bpshort}} Workspaces act as a container of a Terraform template with the input data, output state, jobs, and job log files. The workspace uses the Git URL of the Terraform template. For example, if the user provides the URL `https://github.com/terraform-ibm-modules/terraform-ibm-database/tree/main/examples/simple-etcd` to download and securely store the template files. The default execution of the {{site.data.keyword.bpshort}} is to download the whole Git repository and to save securely. {{site.data.keyword.bpshort}} assumes that the Terraform templates have relative references to modules, script, or data files that resides in other folders in the repository. 
 
 However, sometimes, the user may be aware that the Terraform templates are isolated to a specific folder and its sub-folders, for example, `examples/simple-etcd` in the Git repository. Now the user wants the workspace to download, only the relevant files from the Git repository. This can be achieved using the **compact download** feature. The compact download feature improves the time it takes to download and process the files from the Git repository while creating, or updating the workspace.
 

@@ -21,14 +21,14 @@ subcollection: schematics
 Choose among the following use cases to learn how {{site.data.keyword.bpshort}} automates your infrastructure, service, and application stacks in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-- [Infrastructure deployments with {{site.data.keyword.bpshort}} workspaces](#how-to-workspaces)
-- [Configuration management with {{site.data.keyword.bpshort}} actions](#how-to-actions)
+- [Infrastructure deployments with {{site.data.keyword.bpshort}} Workspaces](#how-to-workspaces)
+- [Configuration management with {{site.data.keyword.bpshort}} Actions](#how-to-actions)
 - [Software deployments with IBM-provided templates](#how-to-software)
 
-## Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces
+## Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces
 {: #how-to-workspaces}
 
-{{site.data.keyword.bpshort}} workspaces deliver Terraform-as-a-Service capabilities to you so that you can automate the provisioning and management of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. 
+{{site.data.keyword.bpshort}} Workspaces deliver Terraform-as-a-Service capabilities to you so that you can automate the provisioning and management of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. 
 {: shortdesc}
 
 To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, refer to, [Getting started tutorial](/docs/schematics?topic=schematics-get-started-terraform). 
@@ -36,19 +36,19 @@ To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, 
 
 [Terraform](https://www.terraform.io/){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using a high-level scripting language. Your specification is stored in a Terraform configuration file. The complexity of using APIs, provisioning, and managing your cloud resources is removed from the user. The cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider. And what APIs to invoke with a certain cloud resource? IBM's plug-in is called the [{{site.data.keyword.terraform-provider_full_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).  
 
-To use the capabilities of the {{site.data.keyword.terraform-provider_full_notm}}, you create a {{site.data.keyword.bpshort}} workspace that points to the Terraform configuration files that you want to provision. The plug-in analyzes the resources that you specified and determines the order in which these resources including any dependencies that must be provisioned. Review the following image for the detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} workspaces. 
+To use the capabilities of the {{site.data.keyword.terraform-provider_full_notm}}, you create a {{site.data.keyword.bpshort}} Workspaces that points to the Terraform configuration files that you want to provision. The plug-in analyzes the resources that you specified and determines the order in which these resources including any dependencies that must be provisioned. Review the following image for the detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} Workspaces. 
 
 ![Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform](images/schematics_flow.png){: caption="Figure 1. Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform" caption-side="bottom"}
 
 1. **Codify your {{site.data.keyword.cloud_notm}} resources**. Use Terraform HashiCorp Configuration Language (HCL) or JSON format to specify the {{site.data.keyword.cloud_notm}} resources that you want to provision in your {{site.data.keyword.cloud_notm}} environment. If you are not familiar with Terraform, you can select one of the default Terraform templates that {{site.data.keyword.bpshort}} provides to provision the {{site.data.keyword.cloud_notm}} resources that you want. Terraform templates can be stored in a GitHub, GitLab, or `Bitbucket` repository to ensure source control and enable collaboration, review, and auditing in your organization. You can save usage information in `readme` files to make the template shareable and usable across multiple teams. You can also upload tape archive files (`.tar`) from your local machine to provide the template to {{site.data.keyword.bpshort}}.
-2. **Create your workspace**. You can point your {{site.data.keyword.bpshort}} workspace to a GitHub, GitLab, or `Bitbucket` repository where you store your Terraform template, or provide your template by uploading a `.tar` file. Workspaces help to organize resources that belong to one {{site.data.keyword.cloud_notm}} environment. For example, use workspaces to separate your test, staging, and production environment. With {{site.data.keyword.iamlong}}, you can control who has access to your workspaces? and who can run actions on your {{site.data.keyword.cloud_notm}} resources? 
+2. **Create your workspace**. You can point your {{site.data.keyword.bpshort}} Workspaces to a GitHub, GitLab, or `Bitbucket` repository where you store your Terraform template, or provide your template by uploading a `.tar` file. Workspaces help to organize resources that belong to one {{site.data.keyword.cloud_notm}} environment. For example, use workspaces to separate your test, staging, and production environment. With {{site.data.keyword.iamlong}}, you can control who has access to your workspaces? and who can run actions on your {{site.data.keyword.cloud_notm}} resources? 
 3. **Create an execution plan**. Based on your configuration, Terraform creates an execution plan and describes the actions that need to be run to get to the state that is described in your Terraform configuration files. To determine the actions, {{site.data.keyword.bpshort}} analyzes the resources that are already provisioned in your {{site.data.keyword.cloud_notm}} account to give you a preview of whether resources must be added, modified, or removed. You can review the execution plan, change it, or simply execute the plan. 
 4. **Provision your resources**. When you are ready to make changes to your cloud environment, you can apply your Terraform configuration files. To run the actions that are specified in your configuration files, {{site.data.keyword.bpshort}} uses the {{site.data.keyword.terraform-provider_full_notm}}. 
 
-## Configuration management with {{site.data.keyword.bpshort}} actions
+## Configuration management with {{site.data.keyword.bpshort}} Actions
 {: #how-to-actions}
 
-{{site.data.keyword.bpshort}} actions deliver Ansible-as-a-Service capabilities to you so that you can automate the configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure. 
+{{site.data.keyword.bpshort}} Actions deliver Ansible-as-a-Service capabilities to you so that you can automate the configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure. 
 {: shortdesc}
 
 To get started with configuration management in {{site.data.keyword.bpshort}}, refer to, [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 
@@ -58,7 +58,7 @@ To get started with configuration management in {{site.data.keyword.bpshort}}, r
 
 Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
 
-To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create a {{site.data.keyword.bpshort}} action that points to the Ansible playbook that you want to run. Review the following image for the detailed information about how to run Ansible playbooks with {{site.data.keyword.bpshort}} actions. 
+To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create a {{site.data.keyword.bpshort}} Actions that points to the Ansible playbook that you want to run. Review the following image for the detailed information about how to run Ansible playbooks with {{site.data.keyword.bpshort}} Actions. 
 
 ![Configuring {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Ansible](images/ansible_flow.png){: caption="Figure 2. Configuring {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Ansible" caption-side="bottom"}
 
@@ -72,7 +72,7 @@ To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create a {{sit
 Browse the [{{site.data.keyword.IBM_notm}} software solutions catalog](https://cloud.ibm.com/catalog#software){: external} and choose among a wide range of software and infrastructure templates that you can use to set up cloud resources, and to install {{site.data.keyword.IBM_notm}} and 3rd party software in your {{site.data.keyword.containerlong_notm}} cluster, {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or {{site.data.keyword.vsi_is_short}}. 
 {: shortdesc}
 
-Software templates are installed by using the built-in Terraform, Ansible, Helm, {{site.data.keyword.openshiftshort}} Operator, and Cloud Pak capabilities in {{site.data.keyword.bpshort}}. When you choose to install one of the provided templates, you create a {{site.data.keyword.bpshort}} workspace and choose the target service or host where you want run the installation. You can review which of the integrated technologies in {{site.data.keyword.bpshort}} is used to install your template. 
+Software templates are installed by using the built-in Terraform, Ansible, Helm, {{site.data.keyword.openshiftshort}} Operator, and Cloud Pak capabilities in {{site.data.keyword.bpshort}}. When you choose to install one of the provided templates, you create a {{site.data.keyword.bpshort}} Workspaces and choose the target service or host where you want run the installation. You can review which of the integrated technologies in {{site.data.keyword.bpshort}} is used to install your template. 
 
 You can also create your own software and infrastructure templates and import them in to your own private catalog in {{site.data.keyword.cloud_notm}}. For more information, see [Adding products to a private catalog](/docs/account?topic=account-create-private-catalog)
 

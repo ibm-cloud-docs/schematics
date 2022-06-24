@@ -1,6 +1,6 @@
 {
     "title": "IBM Cloud Schematics docs",
-    "lastupdated": "2022-06-21",
+    "lastupdated": "2022-06-24",
     "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
     "section_devtools": {
       "api": "/apidocs/schematics", 
@@ -14,22 +14,22 @@
     },
     "section_recommended": [
       {
-        "title": "Automate cloud operations with Action",
+        "title": "Automate cloud operations with Actions",
         "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
         "href": "/docs/schematics?topic=schematics-getting-started-ansible"
       },
       {
-        "title": "Extend provisioning through Agent",
+        "title": "Extend provisioning through Agents",
         "description": "Learn how to provision, configure, and operate your private or on-premise cloud cluster resources without any time, network, or software restrictions.",
         "href": "/docs/schematics?topic=schematics-agents-intro"
       },
       {
-        "title": "Deploy complex application environments by using Blueprint",
+        "title": "Deploy complex application environments by using Blueprints",
         "description": "Learn how to deploy the large scale and complex application environments from reusable building blocks and used across multiple environments.",
         "href": "/docs/schematics?topic=schematics-blueprint-intro"
       },
       {
-        "title": "Deploy cloud services with Workspace",
+        "title": "Deploy cloud services with Workspaces",
         "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to persistently store your data in IBM Cloud.",
         "href": "/docs/schematics?topic=schematics-get-started-terraform"
       },
@@ -41,7 +41,7 @@
       {
         "title": "Learn more about Schematics",
         "description": "Learn about how Schematics works, integrated open source technologies, and the benefits of using the service.",
-        "href": "/docs/schematics?topic=schematics-about-schematics"
+        "href": "/docs/schematics?topic=schematics-learn-about-schematics"
       },
       {
         "title": "Browse Terrafom templates",

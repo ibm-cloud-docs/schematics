@@ -48,7 +48,7 @@ required_version = "~> 1.1"
 ## Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} workspace
 {: #migrate-steps}
 
-Upgrading the {{site.data.keyword.bpshort}} workspace to use the latest version of the Terraform, may be required to leverage the latest features in Terraform. You must carefully review the [Terraform upgrade guide](https://www.terraform.io/language/upgrade-guides) before attempting to upgrade to the next version. 
+Upgrading the {{site.data.keyword.bpshort}} Workspaces to use the latest version of the Terraform, may be required to leverage the latest features in Terraform. You must carefully review the [Terraform upgrade guide](https://www.terraform.io/language/upgrade-guides) before attempting to upgrade to the next version. 
 
 Use the following steps to upgrade to the latest Terraform version in the {{site.data.keyword.bpshort}} workspace.
 
@@ -56,13 +56,13 @@ Use the following steps to upgrade to the latest Terraform version in the {{site
 2. Migrate the Terraform state file to be compatible with the newer version. {{site.data.keyword.bpshort}} does not support built in upgrade of the Terraform version. Therefore, you need to follow these steps.
 
    1. Prepare the upgraded version of Terraform configuration files and [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state), in your local machine.
-   2. [Create a new {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) with the new Terraform configuration files and Terraform state file.
+   2. [Create a new {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) with the new Terraform configuration files and Terraform state file.
    3. [Delete the older workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) without destroying the resources.
 
 Here are the detailed steps that you can follow to upgrade.
 
-1. As a prerequisites, check whether {{site.data.keyword.bpshort}} workspace is created, plan is generated, and applied a job for your resources by using `Terraform v0.12`. Check the Terraform configuration files and Terraform state file, are in a consistent state for `Terraform v0.12`.
-2. Download or clone the Git repository used by your `Terraform v0.12` {{site.data.keyword.bpshort}} workspace to your local machine.
+1. As a prerequisites, check whether {{site.data.keyword.bpshort}} Workspaces is created, plan is generated, and applied a job for your resources by using `Terraform v0.12`. Check the Terraform configuration files and Terraform state file, are in a consistent state for `Terraform v0.12`.
+2. Download or clone the Git repository used by your `Terraform v0.12` {{site.data.keyword.bpshort}} Workspaces to your local machine.
 3. Change directory to your cloned repository and upgrade your repository to `Terraform v0.13` by executing `Terraform v0.13upgrade` command. For more information, see [Upgrading to `Terraform v0.13` documentation](https://www.terraform.io/language/upgrade-guides/0-13){: external}. The upgrade command generates a `versions.tf` file.
 4. Edit `versions.tf` file to deselect the source parameter and add `source = "IBM-Cloud/ibm"` as shown in the code block.
 
@@ -101,13 +101,13 @@ Here are the detailed steps that you can follow to upgrade.
 
 7. Verify the updates are made to the `terraform.tfstate` file with Terraform version getting updated from `0.12` to `>= 0.13` and provider updated as `registry.terraform.io/ibm-cloud/ibm`.
 8.	Push the upgraded `version.tf` to your Git repository.
-9.	Create a [{{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) through command-line command-line from the updated Git repository.
+9.	Create a [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) through command-line command-line from the updated Git repository.
     
     The Terraform files are present in Git repository, but the state file is present in your local file system.
     {: note}
 
 10. Generate a [`plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and to view your workspace with the resources are now using the `Terraform v0.13`.
-11. [Optional] you can delete the {{site.data.keyword.bpshort}} workspace that points to `Terraform v0.12`. 
+11. [Optional] you can delete the {{site.data.keyword.bpshort}} Workspaces that points to `Terraform v0.12`. 
 
     Do not destroy the resources that are used by your old workspace.
     {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-21"
+lastupdated: "2022-06-22"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -13,7 +13,6 @@ content-type: release-note
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Release notes
 {: #schematics-relnotes}
@@ -32,12 +31,14 @@ Review the release notes for June 2022.
 
 
 
+
+
 ### 15 June 2022
 {: #schematics-june1522}
 {: release-note}
 
 Enhance {{site.data.keyword.bpshort}} getting started section
-:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-about-schematics&interface=ui), [{{site.data.keyword.bpshort}} terminology](https://cloud.ibm.com/docs/schematics?topic=schematics-learn-schematics-term&interface=ui), [Using Open Source](https://cloud.ibm.com/docs/schematics?topic=schematics-shematics-open-projects&interface=ui), and [{{site.data.keyword.bpshort}} use cases](https://cloud.ibm.com/docs/schematics?topic=schematics-how-it-works&interface=ui)
+:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](/docs/schematics?topic=schematics-learn-about-schematics&interface=ui), [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term&interface=ui), [Using Open Source](/docs/schematics?topic=schematics-schematics-open-projects) tools, and [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works&interface=ui)
 
 
 
@@ -236,17 +237,17 @@ Review the release notes for November 2021.
 {: #schematics-nov3021}
 {: release-note}
 
-Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
-:   To create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
+Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in your account
+:   To create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
 
 Support `WinRM` in user interface
-:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} actions.
+:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} Actions.
 
-Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
+Global catalog settings for {{site.data.keyword.bpshort}} Workspaces location
 : You can now, manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 About `compact` download
-:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-compact-download&interface=ui).
+:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download&interface=ui).
 
 About {{site.data.keyword.bpshort}} Job files
 :   You can now download the state-file at every job level along with the latest state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
@@ -268,10 +269,10 @@ Onboarding Terraform templates to private catalog
 :   For onboarding multiple Terraform templates into {{site.data.keyword.cloud_notm}} private catalog, see [Onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).
 
 Sample templates to deploy into {{site.data.keyword.cloud_notm}}
-:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services using {{site.data.keyword.bpshort}} workspaces.
+:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services using {{site.data.keyword.bpshort}} Workspaces.
 
 Support `WinRM` in command-line
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} Actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
 
 Documentation lists the Command-line version change log history
 :   The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).

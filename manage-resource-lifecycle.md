@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-06-23"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -108,7 +108,7 @@ After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by
 To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files and the resources that exist in your {{site.data.keyword.cloud_notm}} account, you can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
 
 **What deviations cannot be detected?**</br>
-A Terraform execution plan is based on the Terraform state file that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces,  by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
+A Terraform execution plan is based on the Terraform state file that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} Workspaces,  by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
 
 **To view deviations between the resources in your {{site.data.keyword.cloud_notm}} account and your Terraform configuration**: 
 
@@ -282,6 +282,6 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 5. From the navigation, select **Activity** to review the logs for your resource deletion. Ensure that no errors occurred during the deletion process. 
 6. From the navigation, select **Resources** and verify that your resources are removed. 
 
-After the deletion of your resources is complete, the {{site.data.keyword.bplong_notm}} workspace is removed.
+After the deletion of your resources is complete, the {{site.data.keyword.bpshort}} Workspaces is removed.
 
 

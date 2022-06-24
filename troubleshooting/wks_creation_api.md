@@ -14,7 +14,7 @@ content-type: troubleshoot
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Why do {{site.data.keyword.bpshort}} workspace create through API/UI/CLI fails?
+# Why do {{site.data.keyword.bpshort}} Workspaces create through API/UI/CLI fails?
 {: #wks-create-api}
 
 The {{site.data.keyword.bpshort}} create workspace fails when you attempt to create through API by using following CURL command.

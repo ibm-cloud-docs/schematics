@@ -131,7 +131,8 @@ Schematics
         {: .topicgroup}
         Ansible
              [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html)     
-    {: .navgroup-end}
+     
+     {: .navgroup-end}
 
     {: .navgroup id="help"}
     faqs.md
@@ -151,6 +152,5 @@ Schematics
         Troubleshooting Schematics create errors
              troubleshooting/wks_creation_api.md
         error-messages.md
-    
     ts_index.md
     {: .navgroup-end}

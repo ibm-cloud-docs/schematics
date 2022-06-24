@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-17"
+lastupdated: "2022-06-21"
 
-keywords: schematics terminology, infrastructure as code, iac, terminology, 
+keywords: schematics terminologies, infrastructure as code, iac, terminologies, terminology 
 
 subcollection: schematics
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.bpshort}} terminology
+# {{site.data.keyword.bpshort}} terminologies
 {: #learn-schematics-term} 
 
 {{site.data.keyword.bplong}} provides powerful set of Infrastructure as Code (IaC) tools as a service to program your cloud infrastructure provisioning. {{site.data.keyword.bpshort}} can run your end-to-end automation to build one or more stack of cloud resources, manage the lifecycle, manage changes in the configurations, deploy of the app workloads, and perform day-2 operations.

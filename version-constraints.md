@@ -118,7 +118,7 @@ You can choose to specify the Terraform CLI version and the version of any of th
 ### Version constraints for the Terraform CLI
 {: #tf-version-constraint}
 
-When you create a {{site.data.keyword.bpshort}} workspace and choose a Terraform version such as `v0.13`, your Terraform templates are executed by using the default patch version that is set in {{site.data.keyword.bpshort}}. For example, if you choose `terraform_v0.13`, your templates are applied by using Terraform v0.13.4. You can use the `required_providers` block in your `provider` definition to force the Terraform engine in {{site.data.keyword.bpshort}} to pull a later version. 
+When you create a {{site.data.keyword.bpshort}} Workspaces and choose a Terraform version such as `v0.13`, your Terraform templates are executed by using the default patch version that is set in {{site.data.keyword.bpshort}}. For example, if you choose `terraform_v0.13`, your templates are applied by using Terraform v0.13.4. You can use the `required_providers` block in your `provider` definition to force the Terraform engine in {{site.data.keyword.bpshort}} to pull a later version. 
 {: shortdesc}
 
 You can only specify versions that are higher than the default `MAJOR.MINOR.PATH` version that is set in {{site.data.keyword.bpshort}}. In the codeblock `version = "x.x.x"` signifies the {{site.data.keyword.cloud_notm}} provider version. 

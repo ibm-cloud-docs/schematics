@@ -91,7 +91,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
         ibmcloud schematics command [arguments...] [command options]
 
     COMMANDS:
-        action, ac           Create and manage {{site.data.keyword.bpshort}} actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
+        action, ac           Create and manage {{site.data.keyword.bpshort}} Actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
         apply                Apply a plan to an workspace to deploy the latest version of your configuration.
         destroy              Destroy resources in an existing workspace. This action cannot be reversed.
         inventory, iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
