@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -141,7 +141,7 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
    ```
    {: codeblock}
 
-4. Use the example to `terminate` the runnin job.
+4. Use the example to `terminate` the running job.
    
    **Example**
 
@@ -152,4 +152,5 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
 
    For more information, about stopping the running job, see [Stop and delete the running Job](/apidocs/schematics/schematics#delete-workspace-activity) API.
    {: note}
+
 

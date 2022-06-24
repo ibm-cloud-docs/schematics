@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: schematics faqs, what is terraform, infrastructure as code, iac, schematics price, schematics pricing, schematics cost, schematics charges, schematics personal information, schematics pii, delete pii from schematics, schematics compliance
 
@@ -45,7 +45,7 @@ Infrastructure as Code (IaC) helps you codify your cloud environment so that you
 
 {{site.data.keyword.bplong_notm}} workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking **Apply plan** from the workspace details page or running the `ibmcloud schematics apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
 
-The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Please use 'schematics' or 'sch' in your commands.**
+The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Use 'schematics' or 'sch' in your commands.**
 {: note}
 
 ## Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?
@@ -53,10 +53,7 @@ The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays wa
 {: faq}
 {: support}
 
-Yes, you can run Ansible playbooks or {{site.data.keyword.bpshort}} Actions against your {{site.data.keyword.cloud_notm}} by using the Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see the following blogs:
-
-- [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
-- [Learn about repeatable and reliable end-to-end app provisioning and configuration](https://developer.ibm.com/articles/application-deployment-with-redhat-ansible-and-ibm-cloud-schematics/){: external}
+Yes, you can run Ansible playbooks against your {{site.data.keyword.cloud_notm}} by using the {{site.data.keyword.bpshort}} Actions or Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform Actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see [sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates).
 
 ## Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?
 {: #provider-versions}
@@ -223,7 +220,7 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible Actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
 ## How can I create workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}
@@ -253,7 +250,7 @@ Currently, the {{site.data.keyword.bplong_notm}} service does not support the ab
 {: faq}
 {: support}
 
-The test IDs are considered as a valid IBM IDs to perform the global catalog or resource controller related API calls. If you are unable to access, please do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
+The test IDs are considered as a valid IBM IDs to perform the global catalog or resource controller related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
 ## How can I download sub-folders from the Git repositories through {{site.data.keyword.bpshort}}
 {: #compact-faq}
@@ -395,7 +392,7 @@ ibmcloud {{site.data.keyword.bpshort}} Workspaces import --id <workspace_id> --a
 
 Yes, you can download the {{site.data.keyword.bpshort}} Job files. For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
-## How can I rectify the 403 Error while validating the location in the account. Please verify you have permission to the location in the global catalog settings?
+## How can I rectify the 403 Error while validating the location in the account.Verify you have permission to the location in the global catalog settings?
 {: #global-setting-location}
 {: faq}
 {: support}
@@ -530,7 +527,7 @@ Error:
 Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
 ```
 
-You might have insufficient access for the workspaces in specified location to fetch the instance. Please do check the permission provided for your account and the locations where your instance need to be created. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+You might have insufficient access for the workspaces in specified location to fetch the instance. Do check the permission provided for your account and the locations where your instance need to be created. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 
 ## How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?
 {: #gitlab-workspace-faq}
@@ -683,7 +680,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 {: faq}
 {: support}
 
-Using `ibmcloud terraform` command from CLI release v1.8.0 displays a warning message as **Alias 'terraform' will be deprecated. Please use 'schematics' or 'sch' in your commands.**. For more information, about CLI version history, see [CLI version history](/docs/schematics?topic=schematics-cli_version-releases).
+Using `ibmcloud terraform` command from CLI release v1.8.0 displays a warning message as **Alias 'terraform' will be deprecated. Use 'schematics' or 'sch' in your commands.**. For more information, about CLI version history, see [CLI version history](/docs/schematics?topic=schematics-cli_version-releases).
 
 ## Can I access private network through {{site.data.keyword.bpshort}}?
 {: #private-endpoint-faq}
