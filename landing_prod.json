@@ -14,22 +14,12 @@
     },
     "section_recommended": [
       {
-        "title": "Automate cloud operations with Actions",
+        "title": "Automate cloud operations with Action",
         "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
         "href": "/docs/schematics?topic=schematics-getting-started-ansible"
       },
       {
-        "title": "Extend provisioning through Agents",
-        "description": "Learn how to provision, configure, and operate your private or on-premise cloud cluster resources without any time, network, or software restrictions.",
-        "href": "/docs/schematics?topic=schematics-agents-intro"
-      },
-      {
-        "title": "Deploy complex application environments by using Blueprints",
-        "description": "Learn how to deploy the large scale and complex application environments from reusable building blocks and used across multiple environments.",
-        "href": "/docs/schematics?topic=schematics-blueprint-intro"
-      },
-      {
-        "title": "Deploy cloud services with Workspaces",
+        "title": "Deploy cloud services with Workspace",
         "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to persistently store your data in IBM Cloud.",
         "href": "/docs/schematics?topic=schematics-get-started-terraform"
       },
