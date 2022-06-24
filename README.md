@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-31"
+lastupdated: "2022-06-24"
 
 ---
 
@@ -14,7 +14,7 @@ Customer-facing documentation: https://cloud.ibm.com/docs/schematics
 
 ## How to open issues
 
-When opening a GitHub issue, please include the following:
+When opening a GitHub issue, include the following:
 * A description of the issue.
 * Whether the content is in staging, production, or both.
 * A link to the content. 

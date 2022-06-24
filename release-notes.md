@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-22"
+lastupdated: "2022-06-24"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -32,6 +32,16 @@ Review the release notes for June 2022.
 
 
 
+
+### 23 June 2022
+{: #schematics-june2322}
+{: release-note}
+
+Enhanced FAQ documentation
+:   {{site.data.keyword.bpshort}} FAQ documentation content, is now enhanced by grouping the FAQs based on the {{site.data.keyword.bpshort}} objects, such as, 
+    - [Actions FAQ](/docs/schematics?topic=schematics-actions-faq)
+    - [General FAQ](/docs/schematics?topic=schematics-general-faq) 
+    - [Workspaces FAQ](/docs/schematics?topic=schematics-workspaces-faq)
 
 ### 15 June 2022
 {: #schematics-june1522}
@@ -127,7 +137,7 @@ Enhance resources tabular data view for resources.
 :   The {{site.data.keyword.bpshort}} command-line lists the provisioned resources from your workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
 
 Deprecate and warning message when using `ibmcloud terraform` command.
-:   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Please use 'schematics' or 'sch' in your commands.**
+:   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Use 'schematics' or 'sch' in your commands.**
 
 Release {{site.data.keyword.bpshort}} command-line plugin 
 :   The {{site.data.keyword.bpshort}} [command-line plugin v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) released on 9th April 2022.
