@@ -25,7 +25,7 @@
       },
       {
         "title": "Deploy complex application environments by using Blueprints",
-        "description": "Learn how to deploy the large scale and complex application environments from reusable building blocks and used across multiple environments.",
+        "description": "Learn how to deploy large scale and complex application environments from reusable building blocks and used across multiple environments.",
         "href": "/docs/schematics?topic=schematics-blueprint-intro"
       },
       {
