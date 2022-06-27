@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2017, 2021
-lastupdated: "2022-06-16"
+  years: 2017, 2022
+lastupdated: "2022-06-27"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -12,28 +12,65 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Schematics runtime development tools
+# Schematics runtime tools
 {: #sch-utilities}
 
-Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions.
+Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kubernetes cluster by using a `schematics-runtime-job` image. The `schematics-runtime-job` image embeds the primary Infrastructure as Code (IaC) automation engine, for example, Terraform CLI, Ansible. The `schematics-runtime-job` image also includes additional helper softwares and tools that are useful while developing an automation.
 
-{{site.data.keyword.bpshort}} runtime is built by using [Universal Base Image (UBI-8)](/docs/RegistryImages?topic=RegistryImages-ibmliberty#ibmliberty_get_started) and the runtime utilities or softwares that come with the UBI-8 are available in Terraform provisioners and Ansible actions. For more information, to use these tools in multiple Operating System, refer to, [Solution tutorials](/docs/solution-tutorials?topic=solution-tutorials-tutorials).
+There is no more software or tool can be installed in the {{site.data.keyword.bpshort}} runtime. Any attempt to install a software in the `schematics-runtime-job` pod, is considered a violation and can cause vulnerability.
+{: note}
 
-The following table describes the utilities that are used in {{site.data.keyword.bpshort}} functions and  automation scripts: 
+The `schematics-runtime-job` image is built by using the Universal Base Image (UBI-8). Refer to the following table for the list of pre-installed helper software and tools in the `schematics-runtime-job` image:
 
-|Utilities | Description | 
-|---------|----------|
-| `Ansible 2.9.23`| {{site.data.keyword.bpshort}} uses [Ansible v2.9.23](/docs/cloud-pak-multicloud-management?topic=cloud-pak-multicloud-management-ansible-getting-started) and higher. |
-| `Helm` |A chart to define, install, and upgrade the most complex [Kubernetes application](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_helm).|
-| `{{site.data.keyword.cloud_notm}} CLI v.1.2.0`| The [command-line](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_cli) to interact with {{site.data.keyword.cloud_notm}} API.|
-| `JQ 1.6`| A lightweight and flexible command-line [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq).|
-| `kubectl`| A command-line interface for running commands against the [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters.|
-| `OpenShift client` |A [service built docker containers](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_oc) that are orchestrated and managed by Kubernetes on a foundation of Red Hat Enterprise Linux.| 
-| `Python 3` | {{site.data.keyword.bpshort}} uses [Python 3](/docs/cli?topic=cli-enable-existing-python) and higher version to analyze and organize the data, and to automate DevOps. | 
-| `Python 3 - pip` |Standard package manager for Python. Allows you to manage modules that are not part of the [Python standard library](https://docs.python.org/3/library/){: external}. For example, `netaddr`, `kubernetes`, `OpenShift`, `ibm-cloud-sdk-core`, `ibm-vpc`.| 
-| `Terraform v0.12 and higher`|   Automates your resource provisioning. [Terraform v12, and higher](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started) to use the modules and resource in {{site.data.keyword.bpshort}} workspace. |
-| `Terraform CLI v1.0.11 and v1.1.5`| {{site.data.keyword.bpshort}} uses [Terraform CLI v1.0.11](https://releases.hashicorp.com/terraform/1.0.11) and [Terraform CLI v1.1.5](https://releases.hashicorp.com/terraform/1.1.5) pre-installed binaries for {{site.data.keyword.bpshort}} Agent feature.|
-{: caption="Utilities to create script for automation." caption-side="top"}
+## Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces
+{: #terraform-runtime-job}
+
+The {{site.data.keyword.bpshort}} Workspaces uses the following Terraform versions in the `Terraform-runtime-job` image:
+-	Terraform 0.12.x, 0.13.x, 0.14.x, 0.15.x
+-	Terraform 1.0.x, 1.1.x
+
+The latest minor version of the Terraform CLI is used in the {{site.data.keyword.bpshort}}.
+{: note}
+
+| Terraform helpers | Description | 
+| --- | --- |
+| `Ansible 2.9.23`| You can use the [ansible-provisioner](https://github.com/radekg/terraform-provisioner-ansible){: external} for Terraform to include Ansible automation alongside your Terraform template. </br>It is recommended to use the {{site.data.keyword.bpshort}} Actions, to run your Ansible automation. |
+| `{{site.data.keyword.cloud_notm}} CLI v1.2.0` | You can use the {{site.data.keyword.cloud_notm}} CLI from within the Terraform automation. </br>It is recommended to use the Terraform resources from {{site.data.keyword.cloud_notm}}, instead of writing scripts by using {{site.data.keyword.cloud_notm}} CLI. |
+| `JQ v1.6` | You can use the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Terraform automation. |
+| `kubectl` | You can use the Kubernetes command-line interface to work with your [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters. |
+| `OpenShift client` | You can use {{site.data.keyword.redhat_openshift_notm}} command-line interface to work with your {{site.data.keyword.redhat_openshift_notm}} clusters](/docs/openshift?topic=openshift-access_cluster).</br>It is recommended to use the Terraform resources for [{{site.data.keyword.cloud_notm}}, instead of writing scripts using {{site.data.keyword.cloud_notm}} CLI. |
+| `Python 3` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Terraform automation. </br> - netaddr |
+{: caption="Helpers in terraform-runtime-job" image caption-side="top"}
+
+## Terraform-runtime-agent-job image used by {{site.data.keyword.bpshort}} Agents
+{: #terraform-runtime-agent-job}
+
+The {{site.data.keyword.bpshort}} Agents uses `Terraform v1.0.x` and `Terraform v1.1.x` versions in the `Terraform-runtime-agent-job` image:
+
+The latest minor version of the Terraform CLI is used in the {{site.data.keyword.bpshort}}.
+{: note}
+
+| Terraform helpers | Description | 
+| --- | --- |
+| `Ansible 2.9.23`| You can use the [ansible-provisioner](https://github.com/radekg/terraform-provisioner-ansible){: external} for Terraform to include Ansible automation alongside your Terraform template. </br>It is recommended to use the {{site.data.keyword.bpshort}} Actions, to run your Ansible automation. |
+{: caption="Helpers in terraform-runtime-agent-job" image caption-side="top"}
+
+## Ansible-runtime-job image used by {{site.data.keyword.bpshort}} Actions
+{: #Ansible-runtime-job}
+
+The {{site.data.keyword.bpshort}} Actions uses the `Ansible v2.9.3` and `Ansible v2.10.3` in the `Ansible-runtime-job` image:
+
+The latest minor version of the Ansible CLI is used in the {{site.data.keyword.bpshort}}.
+{: note}
+
+| Terraform helpers | Description | 
+| --- | --- |
+| `{{site.data.keyword.cloud_notm}} CLI v1.2.0` | You can use the {{site.data.keyword.cloud_notm}} CLI from the Ansbile automation.|
+| `JQ v1.6` | You can use the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Ansible automation. |
+| `kubectl` | You can use the Kubernetes command-line interface to work with your [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters. |
+| `OpenShift client` | You can use {{site.data.keyword.redhat_openshift_notm}} command-line interface to work with your [{{site.data.keyword.redhat_openshift_notm}} clusters](/docs/openshift?topic=openshift-access_cluster). |
+| `Python 3` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Ansible automation. </br> * netaddr </br>* kubernetes </br>* openshift </br>* pywinrm </br>* boto3 </br>* boto </br>* botocore </br>* PyVmomi |
+{: caption="Helpers in ansible-runtime-job" image caption-side="top"}
 
 To avoid the installation of these tools, you can also use the [Cloud Shell](https://cloud.ibm.com/shell) from the {{site.data.keyword.cloud_notm}} console.
 {: tip}
