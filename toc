@@ -136,7 +136,7 @@ Schematics
 
     {: .navgroup id="help"}
     whats-new.md
-
+    
     {: .topicgroup}
     FAQs
         faqs/sc-actions-faq.md

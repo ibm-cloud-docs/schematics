@@ -112,8 +112,6 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     ```
     {: screen}
 
-
-
 ## Updating the CLI
 {: #schematics-cli-update}
 
