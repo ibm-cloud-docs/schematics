@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-27"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -76,6 +76,9 @@ If you change the code of your Terraform template in GitHub, these changes are n
 To update your resources: 
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that points to the Terraform template that you updated. 
+   Sample templates examples are listed in [Cloud {{site.data.keyword.bpshort}}](https://github.com/Cloud-Schematics){: external} GitHub, you can use one of the template for testing. For example, [Easy multizone VPC](https://github.com/Cloud-Schematics/easy-multizone-vpc){: external}.
+   {: note}
+   
 2. Select the **Settings** tab.
 3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
 4. If you added, or removed variables in your Terraform configuration files, or if you want to change the variable values that you set when you created the workspace, enter or change the variable values. 
