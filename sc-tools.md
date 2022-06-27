@@ -1,7 +1,7 @@
 ---
 
 copyright: 
-  years: 2017, 2022
+  years: 2017, 2021
 lastupdated: "2022-06-27"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
@@ -17,10 +17,10 @@ subcollection: schematics
 
 Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kubernetes cluster by using a `schematics-runtime-job` image. The `schematics-runtime-job` image embeds the primary Infrastructure as Code (IaC) automation engine, for example, Terraform CLI, Ansible. The `schematics-runtime-job` image also includes additional helper softwares and tools that are useful while developing an automation.
 
-There is no more software or tool can be installed in the {{site.data.keyword.bpshort}} runtime. Any attempt to install a software in the `schematics-runtime-job` pod, is considered a violation and can cause vulnerability.
+Software or tools cannot be installed in the {{site.data.keyword.bpshort}} runtime. An attempt to install a software in the `schematics-runtime-job` pod, is considered a violation and can cause vulnerability.
 {: note}
 
-The `schematics-runtime-job` image is built by using the Universal Base Image (UBI-8). Refer to the following table for the list of pre-installed helper software and tools in the `schematics-runtime-job` image:
+The `schematics-runtime-job` image is built by using the Universal Base Image (UBI-8)](https://catalog.redhat.com/software/containers/ubi8/ubi/5c359854d70cc534b3a3784e){: external}. See the following table for the list of pre-installed helper software and tools in the `schematics-runtime-job` image:
 
 ## Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces
 {: #terraform-runtime-job}
