@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2022
-lastupdated: "2022-06-27"
+lastupdated: "2022-06-28"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -20,7 +20,7 @@ Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kuberne
 Software or tool cannot be installed in the {{site.data.keyword.bpshort}} runtime. An attempt to install a software in the `schematics-runtime-job` pod, is considered a violation and can cause vulnerability.
 {: note}
 
-The `schematics-runtime-job` image is built by using the Universal Base Image (UBI-8)](https://catalog.redhat.com/software/containers/ubi8/ubi/5c359854d70cc534b3a3784e){: external}. See the following table for the list of pre-installed helper software and tools in the `schematics-runtime-job` image:
+The `schematics-runtime-job` image is built by using the [Universal Base Image (UBI-8)](https://catalog.redhat.com/software/containers/ubi8/ubi/5c359854d70cc534b3a3784e){: external}. See the following table for the list of pre-installed helper software and tools in the `schematics-runtime-job` image:
 
 ## Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces
 {: #terraform-runtime-job}

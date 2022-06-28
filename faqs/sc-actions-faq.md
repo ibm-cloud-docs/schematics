@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-25"
+lastupdated: "2022-06-28"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -61,7 +61,7 @@ WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provis
 {: faq}
 {: support}
 
-After new Terraform and Ansible versions are released by the community, the IBM team begins hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}.
+After new Terraform and Ansible versions are released by the community, the IBM team begins hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}. For more information, see [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version) and [{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-agent-job).
 
 ## Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?
 {: #ansible-playbooks}
