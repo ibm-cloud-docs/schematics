@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-06-28"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -74,8 +74,8 @@ Enhance documentation with the best practices
 {: #schematics-may0522}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.10.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.10.0](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ## April 2022
 {: #schematics-apr22}
@@ -103,15 +103,15 @@ Support enhanced {{site.data.keyword.bpshort}} resource view
 {: #schematics-apr2622}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.9.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.9.0](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 17 April 2022
 {: #schematics-apr2722}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.8.1](/docs/schematics?topic=schematics-cli_version-releases) released.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.8.1](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 18 April 2022
 {: #schematics-apr1822}
@@ -120,8 +120,8 @@ Release {{site.data.keyword.bpshort}} command-line plugin
 Support array of injectable Terraform blocks in create workspace API
 :   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apidocs/schematics/schematics#create-workspace).
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.9.1](/docs/schematics?topic=schematics-cli_version-releases) released.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.9.1](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 12 April 2022
 {: #schematics-apr3122}
@@ -139,8 +139,8 @@ Enhance resources tabular data view for resources.
 Deprecate and warning message when using `ibmcloud terraform` command.
 :   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Use 'schematics' or 'sch' in your commands.**
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) released on 9th April 2022.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) released on 9th April 2022.
 
 ## March 2022
 {: #schematics-mar22}
@@ -181,8 +181,8 @@ Support `__netrc__` environment values in private Git repository
 Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
 :   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup&interface=ui#create-workspace_ui), [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace).
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4th March 2022.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4th March 2022.
 
 ## February 2022
 {: #schematics-feb22}
@@ -194,8 +194,8 @@ Review the release notes for February 2022.
 {: #schematics-feb1622}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.2](/docs/schematics?topic=schematics-cli_version-releases) released on 16th February 2022.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.2](/docs/schematics?topic=schematics-cli_version-releases) released on 16th February 2022.
 
 Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries 
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [Linux&trade; arm64 and Mac OS arm64 binaries](/docs/schematics?topic=schematics-setup-cli) Operating System.
@@ -204,8 +204,8 @@ Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries
 {: #schematics-feb1122}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.1](/docs/schematics?topic=schematics-cli_version-releases) released on 11th February 2022.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.1](/docs/schematics?topic=schematics-cli_version-releases) released on 11th February 2022.
 
 
 ## January 2022
@@ -218,8 +218,8 @@ Review the release notes for January 2022.
 {: #schematics-jan3122}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18th January 2022.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18th January 2022.
 
 Supports installer for PowerLinux&trade; and System/390 Linux&trade; 
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-setup-cli) Operating System.
@@ -234,8 +234,8 @@ Review the release notes for December 2021.
 {: #schematics-dec3021}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} command-line plugin 
-:   The {{site.data.keyword.bpshort}} [command-line plugin v1.6.2](/docs/schematics?topic=schematics-cli_version-releases) released on 2nd December 2021.
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.6.2](/docs/schematics?topic=schematics-cli_version-releases) released on 2nd December 2021.
 
 ## November 2021
 {: #schematics-nov21}
