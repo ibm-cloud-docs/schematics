@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-27"
+lastupdated: "2022-06-28"
 
 keywords: schematics
 subcollection: schematics
@@ -215,7 +215,7 @@ subcollection: schematics
 
     * [5 May 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may0522)
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
 * [April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr22)
 
@@ -233,17 +233,17 @@ subcollection: schematics
 
     * [26 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2622)
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [17 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2722)
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
         * Support array of injectable Terraform blocks in create workspace API
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [12 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr3122)
 
@@ -255,7 +255,7 @@ subcollection: schematics
 
         * Deprecate and warning message when using `ibmcloud terraform` command.
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
 * [March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar22)
 
@@ -277,7 +277,7 @@ subcollection: schematics
 
         * Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
 * [February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb22)
 
@@ -285,13 +285,13 @@ subcollection: schematics
 
     * [16 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1622)
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
         * Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries 
 
     * [11 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1122)
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
 * [January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan22)
 
@@ -299,7 +299,7 @@ subcollection: schematics
 
     * [31 January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan3122)
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
         * Supports installer for PowerLinux&trade; and System/390 Linux&trade; 
 
@@ -309,7 +309,7 @@ subcollection: schematics
 
     * [30 December 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec3021)
 
-        * Release {{site.data.keyword.bpshort}} command-line plugin 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
 * [November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov21)
 

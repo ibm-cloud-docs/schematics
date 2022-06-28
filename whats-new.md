@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-13"
+  years: 2019, 2022
+lastupdated: "2022-06-28"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -90,7 +90,7 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 |Date|Description|
 |-----|---------|
 |25 February 2021 |<ul><li> **{{site.data.keyword.bpshort}} supports the ability to persist the user-defined file**: {{site.data.keyword.bplong_notm}} supports the ability to persist the user-defined file for running the subsequent Terraform commands. For more information, see [persist user-defined files in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-faqs#persist-file).</li><li> **Allowed file extensions in {{site.data.keyword.bpshort}}**: Allowed and blocked file extensions support during cloning. For more information, see [allowed and blocked file extensions](/docs/schematics?topic=schematics-faqs#clone-file-extension).</li><li> **{{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation**: {{site.data.keyword.bplong_notm}} [command-line plug-in to install](/docs/cli?topic=schematics-cli-plugin-schematics-cli-reference), and [view command-line commands](/docs/cli?topic=schematics-cli-plugin-schematics-cli-reference) in the CLI documentation.</li></ul> |
-|12 February 2021 |<ul><li> **Ansible open beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics) blog.</li> </ul> |
+|12 February 2021 |<ul><li> **Ansible open Beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible open Beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics) blog.</li> </ul> |
 {: caption="What's new in February" caption-side="top"}
 
 
@@ -109,7 +109,7 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 
 |Date|Description|
 |-----|---------|
-|9 December 2020 |<ul><li> **Ansible beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Sai Vennam`](mailto:svennam@us.ibm.com), if you are interested in getting early access to this beta offering.</li></ul> |
+|9 December 2020 |<ul><li> **Ansible Beta release**: {{site.data.keyword.bplong_notm}} supports and releases Ansible Beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA). **Beta:**  The open Beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Sai Vennam`](mailto:svennam@us.ibm.com), if you are interested in getting early access to this Beta offering.</li></ul> |
 {: caption="What's new in December" caption-side="top"}
 
 ## November 2020
