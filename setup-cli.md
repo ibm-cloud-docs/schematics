@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-02"
+lastupdated: "2022-06-29"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -144,6 +144,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     {: screen}
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in. 
+
     ```sh
     ibmcloud plugin update schematics
     ```
