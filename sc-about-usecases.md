@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-06-29"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -24,6 +24,7 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 - [Infrastructure deployments with {{site.data.keyword.bpshort}} Workspaces](#how-to-workspaces)
 - [Configuration management with {{site.data.keyword.bpshort}} Actions](#how-to-actions)
 - [Software deployments with IBM-provided templates](#how-to-software)
+- [large scale environments with Blueprints]()
 
 ## Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces
 {: #how-to-workspaces}
@@ -79,7 +80,7 @@ You can also create your own software and infrastructure templates and import th
 To get started with software deployment in {{site.data.keyword.bpshort}}, see the [Getting started tutorial](/docs/schematics?topic=schematics-get-started-software). 
 {: tip}
 
-![Software deployments with {{site.data.keyword.bplong_notm}}](images/software_flow.png){: caption="Figure 3. Software deployments with {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
+![Software deployments with {{site.data.keyword.bpshort}}](images/software_flow.png){: caption="Figure 3. Software deployments with {{site.data.keyword.bpshort}}" caption-side="bottom"}
 
 1. **Choose a template**: The [{{site.data.keyword.IBM_notm}} software solutions catalog](https://cloud.ibm.com/catalog#software){: external} offers a wide variety of infrastructure and software templates that you can choose from. These templates help to quickly install software, such as {{site.data.keyword.cloud_notm}} Paks, {{site.data.keyword.appserver_full}}, or Kibana and Grafana into the target service of your choice. 
 2. **Configure your workspace and target**: When you choose one of the provided templates, you must select the target where you want to install the template. Depending on the template that you choose, the target can be an {{site.data.keyword.containerlong_notm}} cluster, a {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or {{site.data.keyword.vsi_is_short}}. Because {{site.data.keyword.bpshort}} is used to install the software, you must configure the workspace that is automatically created for you. 
