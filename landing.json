@@ -20,7 +20,7 @@
     },
     {
       "title": "Deploy cloud services with Workspaces",
-      "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to persistently store your data in IBM Cloud.",
+      "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to store your data in IBM Cloud.",
       "href": "/docs/schematics?topic=schematics-get-started-terraform"
     },
     {

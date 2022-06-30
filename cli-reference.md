@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-06-30"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1050,7 +1050,7 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {
 ### `ibmcloud schematics apply`
 {: #schematics-apply}
 
-Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, [persisted](/docs/schematics?topic=schematics-faqs#persist-file), or removed in {{site.data.keyword.cloud_notm}}.
+Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, [stored](/docs/schematics?topic=schematics-faqs#persist-file), or removed in {{site.data.keyword.cloud_notm}}.
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}
 
@@ -1095,7 +1095,7 @@ Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with 
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}	
 
-Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you use persistent storage, make sure that you created a backup for your data
+Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you use permanent storage, ensure that you create a backup for your data.
 {: important} 	
 
 Your workspace must be in an **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} destroy action. 
@@ -2339,7 +2339,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td><code>tags</code></td>
     <td>Optional</td>
-    <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.</td>
+    <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace faster.</td>
     </tr>
     <tr>
     <td><code>resource_group</code></td>
