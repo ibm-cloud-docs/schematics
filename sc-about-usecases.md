@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-29"
+lastupdated: "2022-06-30"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -24,7 +24,7 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 - [Infrastructure deployments with {{site.data.keyword.bpshort}} Workspaces](#how-to-workspaces)
 - [Configuration management with {{site.data.keyword.bpshort}} Actions](#how-to-actions)
 - [Software deployments with IBM-provided templates](#how-to-software)
-- [large scale environments with Blueprints]()
+- [large scale environments with Blueprints](/docs/schematics?topic=schematics-get-started-blueprints)
 
 ## Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces
 {: #how-to-workspaces}
