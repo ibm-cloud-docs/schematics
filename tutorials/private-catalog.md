@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-20"
+lastupdated: "2022-07-01"
 
 keywords: schematics, automation, terraform
 
@@ -163,7 +163,7 @@ Create a release in your source code repository to deliver and manage versions o
     9. From the **Actions** menu, click **Share** to make your product available to other users in your private catalog.  **Note** To provide access group and assign your catalog to users, see [Setting up the access groups](/docs/account?topic=account-groups&interface=ui).
     10. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
 
-Congratulations! In this tutorial, you learned how to create a private catalog in {{site.data.keyword.cloud_notm}}? and how to upload an IBM-provided Terraform template as a product to your catalog? 
+In this tutorial, you learned how to create a private catalog in {{site.data.keyword.cloud_notm}}? and how to upload an IBM-provided Terraform template as a product to your catalog?
 
 ## What's next?
 {: #private_what's_next}

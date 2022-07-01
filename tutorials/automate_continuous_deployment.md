@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-07-01"
 
 keywords: automate continuous deployment using Schematics, automate continuous deployment of resource using Schematics and DevOps toolchain, continuous deployment of resources
 
@@ -178,7 +178,7 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 2. Select `Navigation Menu > Schematics > Workspaces > Resources` to observe the apply state of the resources in your workspace.
 3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
 
-Congratulations! You successfully created the {{site.data.keyword.bpshort}} Workspaces and automated the end to end deployment by using the DevOps toolchain. 
+You successfully created the {{site.data.keyword.bpshort}} Workspaces and automated the end to end deployment by using the DevOps toolchain. 
 
 ## What's next?
 {: #automate-what-next}
