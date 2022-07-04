@@ -17,7 +17,10 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Blueprint create fails with an invalid blueprint definitions failed to clone git repo error
+# Blueprint create failures
+{: #bp-create-failure}
+
+## Blueprint create fails with an invalid blueprint definitions failed to clone git repo error
 {: #bp-create-fails1}
 
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input repositories cannot be cloned or found. 
@@ -41,11 +44,10 @@ Check that the source repository for the Blueprints and input files are correctl
 
 Rerun the Blueprints create operation with the correct repository reference.
 
-# Blueprint create fails with an invalid blueprint definitions unable to find file error
+## Blueprint create fails with an invalid blueprint definitions unable to find file error
 {: #bp-create-fails2}
 
-When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input files cannot be found. 
- 
+When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input files cannot be found.
 {: tsSymptoms}
 
 Prior to creating the Blueprint, {{site.data.keyword.bpshort}} downloads the input files and Blueprint definition from the Git repositories specified on the create command and validates the YAML schema. 
@@ -66,9 +68,7 @@ Check that the Blueprint definition file and input files exist in the target rep
 
 Rerun the Blueprints create operation with the correct file name.
 
-
-
-# Blueprint create fails with the requested resource group is invalid
+## Blueprint create fails with the requested resource group is invalid
 {: #bp-create-fails3}
 
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the requested resource group id is invalid or required permissions.  
@@ -85,13 +85,14 @@ Could not create the blueprint. Please verify that your request is correct. If t
 
 The requested resource group id is invalid or required permissions for performing the action are not present on resource group. Please check the resource group ID and permissions.
 ```
+{: screen}
 
 Check that the resource group specified on the `--resource_group` option is valid and that the user has the correct  {{site.data.keyword.bpshort}} [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 {: tsResolve} 
 
 Rerun the Blueprints create operation with the correct group name or permissions.
 
-# Blueprint create fails with the error Blueprint JSON validation failed - field missing or invalid in config
+## Blueprint create fails with the error Blueprint JSON validation failed - field missing or invalid in config
 {: #bp-create-fails4}
 
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with the error that the Blueprint JSON validation failed due to an invalid or missing field in the config. 
@@ -108,13 +109,14 @@ Could not create the blueprint. Please verify that your request is correct. If t
 
 Invalid blueprint definitions. Error - Blueprint json validation failed - Field `config[resource_group_name]` missing or invalid - Value for resource_group_name not defined in config
 ```
+{: screen}
 
 The Blueprint definition is expecting additional inputs that are not defined in any of the input files and should be passed as dynamic inputs. The error output will list name of the expected missing or invalid input. Check the Blueprint readme file to determine the required dynamic inputs or add the input to an input file.  
 {: tsResolve} 
 
 Rerun the Blueprints create operation with all the required dynamic inputs. 
 
-# Blueprint create fails with the error Blueprint JSON validation failed - field missing or invalid 
+## Blueprint create fails with the error Blueprint JSON validation failed - field missing or invalid 
 {: #bp-create-fails5}
 
 When you create a Blueprints in {{site.data.keyword.bpshort}}, the create fails before the Blueprints is created with an error that the Blueprint contains invalid definitions.  
