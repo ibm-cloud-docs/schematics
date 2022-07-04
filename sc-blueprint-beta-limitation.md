@@ -43,6 +43,6 @@ Then at any time come back to the thread you've just created, reply to it to ask
 * The Blueprint name and description specified on the command line are ignored.
 * Cloud resources created by a Blueprint cannot be left in place when a Blueprint is deleted. At this time all resources must be destroyed to delete a Blueprint. 
 * Delete CLI returns immediately at start of execution and does not wait for successful completion
-* Operations should not be directly performed against linked Schematics Workspaces using the workspace commands or UI. Operations should only be performed using Blueprint commands.   
+* Operations should not be directly performed against linked {{site.data.keyword.bpshort}} Workspaces using the workspace commands or UI. Operations should only be performed using Blueprint commands.   
 * Install, destroy and delete commands return "fullfilment_success" on successful completion. 
 

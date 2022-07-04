@@ -38,7 +38,7 @@ For more information, about the command options, see [Destroy command](/docs/sch
 ## Verfiy Blueprint destroy success 
 {: #bp-verify-destroy}
 
-Verify that the Blueprint resources have been destroyed successfully. When you run destroy from the CLI, the command displays details of the Workspaces to be destroyed and the status of Schematics jobs executing the Terraform destroy operations. After prompting to confirm that the user intends to destory all resources, the command only returns on completion.
+Verify that the Blueprint resources have been destroyed successfully. When you run destroy from the CLI, the command displays details of the Workspaces to be destroyed and the status of {{site.data.keyword.bpshort}} jobs executing the Terraform destroy operations. After prompting to confirm that the user intends to destory all resources, the command only returns on completion.
 
 ```text
 Modules to be destroyed

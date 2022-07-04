@@ -1,7 +1,7 @@
 ---
 
 copyright: 
-  years: 2017, 2022
+  years: 2017, 2021
 lastupdated: "2022-06-28"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Schematics runtime tools
+# {{site.data.keyword.bpshort}} runtime tools
 {: #sch-utilities}
 
 Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kubernetes cluster by using a `schematics-runtime-job` image. The `schematics-runtime-job` image embeds the primary Infrastructure as Code (IaC) automation engine, for example, Terraform CLI, Ansible. The `schematics-runtime-job` image also includes additional helper softwares and tools that are useful while developing an automation.

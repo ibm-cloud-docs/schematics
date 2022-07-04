@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-25"
+lastupdated: "2022-07-04"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -114,7 +114,7 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
 ## How can I create workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}

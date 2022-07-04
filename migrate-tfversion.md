@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-07-04"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -24,7 +24,7 @@ The driver to migrate might come from business factors such as cost reduction, o
 
 The table summarizes the recommendations to upgrade to the latest Terraform version. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. The Terraform template must use the version constraint, such as `>`, `>=` or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, to automatically pick the latest provider version.
 
-Schematics supports all the releases of terraform_v1.x releases through the n-1 version releas.. On Schematics we will plan to make it available after 30 to 45 days days after hashicorp release.
+{{site.data.keyword.bpshort}} supports all the releases of `terraform_v1.x`. {{site.data.keyword.bpshort}} has a plan to make all the releases of Teraform `n-1` versions available after 30-45 days after HashiCorp release.
 ```terraform
 terraform {
 required_version = "~> 1.1"

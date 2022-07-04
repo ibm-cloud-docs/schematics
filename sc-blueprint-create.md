@@ -54,7 +54,7 @@ For more information, about the command options, see [Create command](/docs/sche
 ## Verfiy Blueprint creation 
 {: #bp-verify-create}
 
-Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and an continuously updating status of the progress of the Schematics jobs initalising the Workspaces. The command only returns on completion.
+Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and an continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 
 ```text
 Created Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936

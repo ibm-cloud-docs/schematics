@@ -7,8 +7,7 @@ The blueprint.yaml file defines all modules in the Blueprint. Every Blueprint co
 
 Each blueprint.yaml file has a configuration preface:
 
-
-```
+```yaml
 
 name: schematics-dev-blueprint
 type: blueprint
@@ -25,6 +24,7 @@ settings:
   - name: TF_VERSION
     value: 1.0
 ```
+{: pre}
 
 
 Supported settings parameters
@@ -118,7 +118,7 @@ The only supported setting is `TF_VERSION`.
 
 Type:       number
 
-Blueprints sets the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by Schematics to remain compatiable with the Blueprint supported version. Updating this value will change the Terraform version used on the next execution. 
+Blueprints sets the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatiable with the Blueprint supported version. Updating this value will change the Terraform version used on the next execution. 
 
 
 Options:    Terraform version in SemVer format 
@@ -180,7 +180,7 @@ Type: string
 
 Required: true
 
-Name that will be used within Schematics to identify the workspace that will be created to manage the group of resources created by the Terraform config specified on the `modules.source.git.git_url` statement. 
+Name that will be used within {{site.data.keyword.bpshort}} to identify the workspace that will be created to manage the group of resources created by the Terraform config specified on the `modules.source.git.git_url` statement. 
 
 ## modules.module_type
 Type: string
@@ -382,7 +382,7 @@ Type:         list
 Default:      []
 
 
-The injectors block is an optional block to configure the parameters required by Schematics to inject templated files into the module automation repo. The primary use with Blueprints is to enable direct use of Terraform modules with Bluepprints, by the injection of `provider` and `terraform` blocks.   
+The injectors block is an optional block to configure the parameters required by {{site.data.keyword.bpshort}} to inject templated files into the module automation repo. The primary use with Blueprints is to enable direct use of Terraform modules with Bluepprints, by the injection of `provider` and `terraform` blocks.
 
 
 ```

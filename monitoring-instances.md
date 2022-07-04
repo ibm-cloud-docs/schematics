@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-07-04"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -39,9 +39,9 @@ Complete these steps to view your services instances:
    For more information, about how to create a service instance, refer to, [Create service instance](#create-instance).
    {: note}
 
-4. Click the `Open dashboard` link, and expand `IBM` to view the `IBM Schematics Summary Counts` and `IBM Schematics Summary Charts` dashboard list.
-    - Use the `IBM Schematics Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
-    - Use the `IBM Schematics Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
+4. Click the `Open dashboard` link, and expand `IBM` to view the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Counts` and `IBM {{site.data.keyword.bpshort}} Summary Charts` dashboard list.
+    - Use the `{{site.data.keyword.IBM_notm} {{site.data.keyword.bpshort}} Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
+    - Use the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
 
 
 

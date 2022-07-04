@@ -38,7 +38,7 @@ On successful completion the install command will return **fullfilment_success**
 ## Verfiy Blueprint install success 
 {: #bp-verify-install}
 
-Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and an continuously updating status of the progress of the Schematics jobs executing the IAC automation code. The command only returns on completion.
+Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and an continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs executing the IAC automation code. The command only returns on completion.
 
 
 ```text
@@ -91,7 +91,7 @@ After installing the Blueprint, the desired cloud resources are now deployed. Th
 
 
 
-4. Verify that the Blueprint Install has run successfully to create Cloud resources . When you run the install command from the CLI, the command displays the status of the running Schematics jobs and the command only returns on completion. 
+4. Verify that the Blueprint Install has run successfully to create Cloud resources . When you run the install command from the CLI, the command displays the status of the running {{site.data.keyword.bpshort}} jobs and the command only returns on completion. 
 
 
 On successful completion the install command will return **install_success**. 

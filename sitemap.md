@@ -157,7 +157,7 @@ subcollection: schematics
 
     * [How can I protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data)
 
-    * [How does Schematics protect my Action data through input credentials state file, or log files, etc?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
+    * [How does {{site.data.keyword.bpshort}} protect my Action data through input credentials state file, or log files, etc?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
 
 * [Protecting data of {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect)
 
@@ -1024,11 +1024,11 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## Schematics runtime tools
-{: #sitemap_schematics_runtime_tools}
+## {{site.data.keyword.bpshort}} runtime tools
+{: #sitemap__runtime_tools}
 
 
-[Schematics runtime tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
+[{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
 
 * [Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-job)
 

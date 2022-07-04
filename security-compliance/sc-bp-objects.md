@@ -104,7 +104,7 @@ As the account owner or an authorized account administrator, you can assign IAM 
 
 Your Workspaces and Actions data store depends on the location where you create your Workspace or an Action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
-### How does Schematics protect my Action data through input credentials state file, or log files, etc?
+### How does {{site.data.keyword.bpshort}} protect my Action data through input credentials state file, or log files, etc?
 {: #bp-security-protect}
 
 Follow these practices to protect your Workspace data through input credentials state file, or log files, etc.
@@ -131,7 +131,7 @@ Create an IAM access group for your users and assign service access policies to 
 ### Non-repudiation by using Activity tracker
 {: #bp-security-atracker}
 
-You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a Schematics workspace instance events, access, events, and access audit log. For more information, refer to, [Auditing events](/docs/schematics?topic=schematics-at_events).
+You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspace instance events, access, events, and access audit log. For more information, refer to, [Auditing events](/docs/schematics?topic=schematics-at_events).
 
 ### Data protection by using KMS
 {: #bp-security-data-protection}

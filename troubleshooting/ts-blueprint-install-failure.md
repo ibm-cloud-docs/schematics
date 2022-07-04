@@ -22,7 +22,7 @@ content-type: troubleshoot
 When you run the Blueprint install command, it fails with message that the install of module has failed.    
 {: tsSymptoms}
 
-When you install a Blueprint, Schematics runs Terraform Apply operations against all Workspaces which have pending updates.  Errors when running Terraform operations against Workspaces will result in a Workspace job failure and will cause the Blueprint install job to terminate (fail). 
+When you install a Blueprint, {{site.data.keyword.bpshort}} runs Terraform Apply operations against all Workspaces which have pending updates.  Errors when running Terraform operations against Workspaces will result in a Workspace job failure and will cause the Blueprint install job to terminate (fail). 
 {: tsCauses}
 
 Example error message
@@ -66,14 +66,14 @@ Attention! Job ID: eu-gb.JOB.Blueprint-Basic-Example.0cebdb53 FULFILMENT_FAILED
 ```
 {: screen}
 
-Install failures are related to Terraform execution and the specific Terraform config being executed. Debugging a Blueprint install failure follows the same approach as is followed for debugging a Terraform failure for a Schematics Workspace or standalone Terraform usage. 
+Install failures are related to Terraform execution and the specific Terraform config being executed. Debugging a Blueprint install failure follows the same approach as is followed for debugging a Terraform failure for a {{site.data.keyword.bpshort}} Workspace or standalone Terraform usage. 
 {: tsResolve} 
 
 To assist in problem diagnosis reply `y` to the prompt to review the failure logs. The Blueprint Install CLI command output includes the last few lines of the Terraform Apply job log.  As Terraform terminates on an error, frequently the last few lines include sufficient information to identify the cause of the Terraform failure. 
 
 If the log summary does not provide sufficient information, use the provided `ibmcloud schematics logs` command to review the entire Terraform log for the failing Workspace.
 
-See Troubleshooting Schematics apply errors for additional information on debugging Terraform Apply failures  
+See Troubleshooting {{site.data.keyword.bpshort}} apply errors for additional information on debugging Terraform Apply failures  
 
 
 ## Blueprint install failure due to Terraform config coding error  
@@ -95,14 +95,14 @@ If explicit versioning of Blueprint modules is used or specific branches, the Bl
 Where no Git release is specified and relaxed module versioning is used in the Blueprint module statements, no update to the Blueprint definition is required to these repo changes will be pulled in automatically by Schematics.  
 
 
-Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration settings with the update to the Blueprint definition. Schematics will identify the updated module Git repos and perform a Pull-Latest to update any Workspaces with the modified Terraform configs.  
+Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration settings with the update to the Blueprint definition. {{site.data.keyword.bpshort}} will identify the updated module Git repos and perform a Pull-Latest to update any Workspaces with the modified Terraform configs.  
 
 
 ```sh
 $ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
 
-If explicit Blueprint versioning is used with release tags for each Blueprint release, the Blueprint configuration settings must be updated in Schematics with the new release tag.  
+If explicit Blueprint versioning is used with release tags for each Blueprint release, the Blueprint configuration settings must be updated in {{site.data.keyword.bpshort}} with the new release tag.  
 
 
 ```sh
@@ -155,7 +155,7 @@ Analysis of the logs indicates that the cause of the Terraform apply failure was
 Update the input file source and push a new release to its Git source repository . 
 {: tsResolve} 
 
-If explicit input file versioning is used with release tags for each input file change, the Blueprint configuration must be updated in Schematics with the new release tag.  
+If explicit input file versioning is used with release tags for each input file change, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new release tag.  
 
 ```sh
 $ibmcloud schematics blueprint update --id <blueprint_id> --input-git-release x.y.z  
