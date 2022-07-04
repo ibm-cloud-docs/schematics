@@ -44,8 +44,7 @@ The following command creates a Blueprint by using the definition file `basic-bl
 ```sh
 ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=test_rg
 ```
-{: screen}
-
+{: pre}
 
 On successful completion the create command will return **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint.  
 

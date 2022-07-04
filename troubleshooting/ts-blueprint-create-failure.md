@@ -136,4 +136,4 @@ Invalid blueprint definitions. Error - Blueprint json validation failed - Field 
 
 - Push the changes to the Blueprints and input files to Git repository.
 
-- Rerun the Blueprints create operation with the corrected syntax. 
+- Rerun the Blueprints create operation with the corrected syntax.

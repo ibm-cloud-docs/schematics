@@ -1,13 +1,12 @@
 ---
 
 copyright:
-  years: 2017,2022
+  years: 2017, 2022
 lastupdated: "2022-07-04"
 
-keywords: blueprint create init failure, blueprint init error, create init fails 
+keywords:blueprint create init failure, blueprint init error, create init fails,
 
 subcollection: schematics
-content-type: troubleshoot
 
 ---
 
