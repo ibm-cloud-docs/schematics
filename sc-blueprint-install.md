@@ -21,8 +21,6 @@ subcollection: schematics
 Blueprint install is the second step required to create or modify cloud resources when using Blueprints. Install runs the IaC automation code for each Workspace. For each module, {{site.data.keyword.bpshort}} performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. 
 {: shortdesc}
 
-
-
 The following command performs a Blueprint install for the Blueprint with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
 
 **Syntax:**
@@ -30,8 +28,7 @@ The following command performs a Blueprint install for the Blueprint with the ID
 ```sh
 ibmcloud schematics blueprint install -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
 ```
-{: screen}
-
+{: pre}
 
 On successful completion the install command will return **fullfilment_success**. 
 
@@ -39,7 +36,6 @@ On successful completion the install command will return **fullfilment_success**
 {: #bp-verify-install}
 
 Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and an continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs executing the IAC automation code. The command only returns on completion.
-
 
 ```text
 Modules to be installed
@@ -65,86 +61,35 @@ On successful completion the install command will return **fullfillment_success*
 
 For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
-## Next steps
-{: #bp-install-nextsteps}
 
 After installing the Blueprint, the desired cloud resources are now deployed. The resources can be located on the Blueprint Resources tab in the UI. Or via the Console Resource list. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4. Verify that the Blueprint Install has run successfully to create Cloud resources . When you run the install command from the CLI, the command displays the status of the running {{site.data.keyword.bpshort}} jobs and the command only returns on completion. 
-
+Verify that the Blueprint Install has run successfully to create Cloud resources . When you run the install command from the CLI, the command displays the status of the running {{site.data.keyword.bpshort}} jobs and the command only returns on completion. 
 
 On successful completion the install command will return **install_success**. 
 
+For more information, about to diagnose and resolve the install failure, refer to [Troubleshooting section](/docs/schematics?topic=schematics-bp-input-schema-yaml).
 
-If the install fails refer to the {HowTo Troubleshooting section]() for more information on how to diagnose and resolve the error.  
+Show the status of all Blueprints in Schematics.  
 
-
-
-
-
-
-
-5. Show the status of all Blueprints in Schematics.  
-
-
-```
+```sh
 ibmcloud schematics blueprint list 
 ```
-
+{: pre}
 
 -- other parameters
-
 
 Example output 
 
 
-```
+Retrieve Blueprint outputs
 
-
-
-
-```
-
-
-6. Retrieve Blueprint outputs
-
-
-
-
-```
+```sh
 ibmcloud schematics blueprint get -id blueprint_id --output
 ```
-
+{: pre}
 
 --output 
 
-
-
-
-
-
 Example output
 
-
-```
