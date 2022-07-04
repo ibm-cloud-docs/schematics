@@ -17,7 +17,11 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Blueprint install fails with message Install of module Failed
+# Blueprint install failures
+{: #bp-install-fails}
+
+
+## Blueprint install fails with message Install of module `Failed`
 {: #bp-install-fails1}
 
 When you run the Blueprint install command, it fails with message that the install of module has failed.    
@@ -76,7 +80,6 @@ If the log summary does not provide sufficient information, use the provided `ib
 
 See Troubleshooting {{site.data.keyword.bpshort}} apply errors for additional information on debugging Terraform Apply failures  
 
-
 ## Blueprint install failure due to Terraform config coding error  
 {: #bp-install-fails2}
 
@@ -86,7 +89,6 @@ When you run the Blueprint install command, it fails with message that the insta
 Analysis of the logs indicates that the modules Terraform config has a coding error which caused the Terraform apply failure.  
 {: tsCauses}
 
-
 Correct the Terraform config error at source and push a new release to its Git source repository . 
 {: tsResolve} 
 
@@ -95,31 +97,26 @@ If explicit versioning of Blueprint modules is used or specific branches, the Bl
 
 Where no Git release is specified and relaxed module versioning is used in the Blueprint module statements, no update to the Blueprint definition is required to these repo changes will be pulled in automatically by Schematics.  
 
-
 Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration settings with the update to the Blueprint definition. {{site.data.keyword.bpshort}} will identify the updated module Git repos and perform a Pull-Latest to update any Workspaces with the modified Terraform configs.  
 
-
 ```sh
-$ibmcloud schematics blueprint update -id <blueprint_id> 
+ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
+{: pre}
 
 If explicit Blueprint versioning is used with release tags for each Blueprint release, the Blueprint configuration settings must be updated in {{site.data.keyword.bpshort}} with the new release tag.  
 
+```sh
+ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z  
+```
+{: pre}
+
+Finally, run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation and complete all operations against all workspaces.  
 
 ```sh
-$ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z  
+ibmcloud schematics blueprint install -id <blueprint_id> 
 ```
-
-Finally run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation and complete all operations against all workspaces.  
-
-
-```sh
-$ibmcloud schematics blueprint install -id <blueprint_id> 
-```
-
-
-
-
+{: pre}
 
 ## Blueprint install failure due to Terraform timeouts or transient failures 
 {: #bp-install-fails3}
@@ -136,12 +133,10 @@ No user action should be necessary and the Blueprint install operation can be re
 
 Run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation and complete all operations against all workspaces.  
 
-
 ```sh
-$ibmcloud schematics blueprint install -id <blueprint_id> 
+ibmcloud schematics blueprint install -id <blueprint_id> 
 ```
-
-
+{: pre}
 
 ## Blueprint install failures that require changes to values in input files  
 {: #bp-install-fails4}
@@ -152,33 +147,31 @@ When you run the Blueprint install command, it fails with message that the insta
 Analysis of the logs indicates that the cause of the Terraform apply failure was due to an incorrect input value.  
 {: tsCauses}
 
-
 Update the input file source and push a new release to its Git source repository . 
 {: tsResolve} 
 
 If explicit input file versioning is used with release tags for each input file change, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new release tag.  
 
 ```sh
-$ibmcloud schematics blueprint update --id <blueprint_id> --input-git-release x.y.z  
+ibmcloud schematics blueprint update --id <blueprint_id> --input-git-release x.y.z  
 ```
+{: pre}
 
 Where no Git release is specified and relaxed module versioning is for used input files in the Blueprint config, no change to the Blueprint config is required and the input file changes will be pulled in automatically by Schematics.  
 
 Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration with the changes. This will update the Blueprint and Workspaces with updated input values. 
 
 ```sh
-$ibmcloud schematics blueprint update -id <blueprint_id> 
+ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
+{: pre}
 
-Finally run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation and complete all operations against all workspaces.  
-
+Finally, run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation and complete all operations against all workspaces.  
 
 ```sh
-$ibmcloud schematics blueprint install -id <blueprint_id> 
+ibmcloud schematics blueprint install -id <blueprint_id> 
 ```
-
-
-
+{: pre}
 
 ## Blueprint install failures that require changes to dynamic inputs
 {: #bp-install-fails5}
@@ -191,14 +184,14 @@ Analysis of the logs indicates that the cause of the Terraform apply failure was
 
 Identify the input value that must be updated and run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration with the change. This will update the Blueprint and Workspaces with updated input value. 
 
-
 ```sh
-$ibmcloud schematics blueprint update --id <blueprint_id> --inputs <name>=<value>
+ibmcloud schematics blueprint update --id <blueprint_id> --inputs <name>=<value>
 ```
+{: pre}
 
 Finally run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation and complete all operations against all Workspaces.  
 
-
 ```sh
-$ibmcloud schematics blueprint install -id <blueprint_id> 
+ibmcloud schematics blueprint install -id <blueprint_id> 
 ```
+{: pre}
