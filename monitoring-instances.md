@@ -40,7 +40,7 @@ Complete these steps to view your services instances:
    {: note}
 
 4. Click the `Open dashboard` link, and expand `IBM` to view the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Counts` and `IBM {{site.data.keyword.bpshort}} Summary Charts` dashboard list.
-    - Use the `{{site.data.keyword.IBM_notm} {{site.data.keyword.bpshort}} Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
+    - Use the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
     - Use the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
 
 
