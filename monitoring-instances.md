@@ -54,7 +54,7 @@ You can create your services instance in the {{site.data.keyword.cloud_notm}} co
 
 Complete these steps to create your services instance:
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. Select `Navigation menu > Observability > Monitoring`.
 3. Click `Create` by using your plan.
 4. Select a region, for example,  `Dallas`.
@@ -76,7 +76,7 @@ You can create your custom dashboard in the {{site.data.keyword.cloud_notm}} con
 
 Complete these steps to create your custom dashboard:
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
 3. Click `Create Custom Dashboard` to view the create dashboard from template pop-up.
 4. Name your dashboard, and click `Create and Open`.

@@ -35,7 +35,7 @@ In other words, the Terraform automation will run in your provisioned Agent infr
 ## Steps to bind an existing workspace to the Agent
 {: #steps-bind-exist-wks}
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/){: external} account by using your credentials.
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/){: external} account by using your credentials.
 2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
 3. Select your Agent from the list, and use the `...` dots to perform **Bind Agent** operation.
 4. In the side navigation pane, select **Workspaces** to be bound statically to the Agent.
@@ -44,7 +44,7 @@ In other words, the Terraform automation will run in your provisioned Agent infr
 ## Steps to Bind a new workspace to the Agent
 {: #steps-bind-new-wks}
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/){: external} account by using your credentials.
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/){: external} account by using your credentials.
 2. Navigate to **Schematics** > **Workspaces** > **Create Workspace**.
 3. In the Workspaces details page, use the Bind Agent to select the **Bind Agent** that must be used to run the Jobs.
 

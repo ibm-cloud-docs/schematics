@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-07-04"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -52,7 +52,7 @@ KMS setting is a one time settings. You need to open the [support ticket](/docs/
 
 Follow these steps to launch key management system and encrypt your keys with {{site.data.keyword.bpshort}}.
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}** > **Integrations** > **Connect**. 
 3. Click **Connect** > **Key Management** from the drop down.
 4. Select **Service** as **{{site.data.keyword.keymanagementserviceshort}}**, or **{{site.data.keyword.hscrypto}}**.
