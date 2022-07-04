@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-02"
+lastupdated: "2022-07-04"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -33,7 +33,7 @@ About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Dat
 ## International Organization for Standardization (ISO)
 {: #international-organization-for-standardization-iso}
 
-{{site.data.keyword.bpshort}} is audited by a third-party security firm and meet ISO 27001, ISO 27017, ISO 27018, and ISO 27701 requirements. For more information, see the [{{site.data.keyword.bpshort}} Compliance page](https://www.ibm.com/cloud/compliance){: external} for links to the certificates. The following descriptions on the {{site.data.keyword.bpshort}} compliance page cover the {{site.data.keyword.bpshort}} service and respective certifications:
+{{site.data.keyword.bpshort}} is audited by a Third party security firm and meet ISO 27001, ISO 27017, ISO 27018, and ISO 27701 requirements. For more information, see the [{{site.data.keyword.bpshort}} Compliance page](https://www.ibm.com/cloud/compliance){: external} for links to the certificates. The following descriptions on the {{site.data.keyword.bpshort}} compliance page cover the {{site.data.keyword.bpshort}} service and respective certifications:
  
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certified cloud product listing
 - {{site.data.keyword.cloud_notm}} Services (PaaS and SaaS) certificate - ISO 27001

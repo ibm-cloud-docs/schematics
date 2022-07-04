@@ -16,7 +16,7 @@ subcollection: schematics
 # Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}
 {: #monitoring-instances}
 
-[{{site.data.keyword.mon_full}}](/docs/monitoring?topic=monitoring-getting-started) is a third-party cloud native, and container intelligence management system that you can include as part of your {{site.data.keyword.bplong_notm}}. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
+[{{site.data.keyword.mon_full}}](/docs/monitoring?topic=monitoring-getting-started) is a Third party cloud native, and container intelligence management system that you can include as part of your {{site.data.keyword.bplong_notm}}. Use it to gain operational visibility into the performance and health check of your applications, services, and platforms. It offers administrators, developers full stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards.
 {: shortdesc}
 
 You need to create Sysdig monitor in `us-south` region to view the {{site.data.keyword.bpshort}} metrics that relates to workspaces, actions, or an environment that you create in `US` region. And create Sysdig monitor in `eu-de` region to view the {{site.data.keyword.bpshort}} metrics that relates to workspaces, actions, or an environment that you create in `EU` region.

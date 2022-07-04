@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-04"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -70,7 +70,7 @@ To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create a {{sit
 ## Software deployments with IBM-provided templates
 {: #how-to-software}
 
-Browse the [{{site.data.keyword.IBM_notm}} software solutions catalog](https://cloud.ibm.com/catalog#software){: external} and choose among a wide range of software and infrastructure templates that you can use to set up cloud resources, and to install {{site.data.keyword.IBM_notm}} and 3rd party software in your {{site.data.keyword.containerlong_notm}} cluster, {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or {{site.data.keyword.vsi_is_short}}. 
+Browse the [{{site.data.keyword.IBM_notm}} software solutions catalog](https://cloud.ibm.com/catalog#software){: external} and choose among a wide range of software and infrastructure templates that you can use to set up cloud resources, and to install {{site.data.keyword.IBM_notm}} and Third party software in your {{site.data.keyword.containerlong_notm}} cluster, {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or {{site.data.keyword.vsi_is_short}}. 
 {: shortdesc}
 
 Software templates are installed by using the built-in Terraform, Ansible, Helm, {{site.data.keyword.openshiftshort}} Operator, and Cloud Pak capabilities in {{site.data.keyword.bpshort}}. When you choose to install one of the provided templates, you create a {{site.data.keyword.bpshort}} Workspaces and choose the target service or host where you want run the installation. You can review which of the integrated technologies in {{site.data.keyword.bpshort}} is used to install your template. 

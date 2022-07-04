@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-04"
 
 keywords: schematics terminologies, infrastructure as code, iac, terminologies, terminology 
 
@@ -27,7 +27,7 @@ Learn the basic concepts of the technology behind {{site.data.keyword.bplong_not
 | Objects | Description |
 | --- | --- |
 | `Action` | Use [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-setup) to run your Ansible playbook in {{site.data.keyword.bpshort}}. It acts as a container, for artifacts, used while running your [Ansible playbook](/docs/schematics?topic=schematics-getting-started-ansible) in Schematics. </br> The Action points to your Ansible playbook in GitHub or GitLab repository, the inventory to run the playbook, input variables and environment variables are used to run the playbook. When you run the Action, it creates a {{site.data.keyword.bpshort}} Job. The Action also stores the historical data pertaining to the jobs, the job results and the job logs. |
-| `Catalog` | A collection of automation templates that can be ordered from {{site.data.keyword.cloud_notm}}. You can onboard your Terraform automation to the {{site.data.keyword.cloud_notm}} catalog, and share the catalog of templates in a controlled manner with your team by using IAM permissions and policies. </br>{{site.data.keyword.cloud_notm}} catalog already supports a collection of {{site.data.keyword.IBM_notm}} owned and third-party developed automation in the catalog. The automation is used to provision infrastructure and softwares by using Helm charts, Kubernetes Operators, OVA images, Cloud pak automation. {{site.data.keyword.bpshort}} Workspaces are used to run these automation.|
+| `Catalog` | A collection of automation templates that can be ordered from {{site.data.keyword.cloud_notm}}. You can onboard your Terraform automation to the {{site.data.keyword.cloud_notm}} catalog, and share the catalog of templates in a controlled manner with your team by using IAM permissions and policies. </br>{{site.data.keyword.cloud_notm}} catalog already supports a collection of {{site.data.keyword.IBM_notm}} owned and Third party developed automation in the catalog. The automation is used to provision infrastructure and softwares by using Helm charts, Kubernetes Operators, OVA images, Cloud pak automation. {{site.data.keyword.bpshort}} Workspaces are used to run these automation.|
 | `Inventory` | A collection of cloud resources that are used as target for running the Ansible playbooks, modules, or roles. </br>Your resource inventory can be defined by using a static inventory file, or dynamically retrieve to your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} Workspaces in your {{site.data.keyword.cloud_notm}} account.|
 | `Job` | A record of all the {{site.data.keyword.bpshort}} operations. You can see these job records appearing in the context of `Action`, `Blueprint`, and `Workspace`. </br>The job record describes the status of the Job, inputs used to run the job, outputs produced by the job and the console logs.|
 | `Template` or `Modules` | Automation code written for provisioning and configuring a cloud infrastructure by using Terraform, Ansible, Helm, Operators, etc., in the IaC language. </br> You can use {{site.data.keyword.bpshort}} to run the automation templates by using Workspaces or Action. Automation modules are reusable elements that are used to assemble an automation templates. |
