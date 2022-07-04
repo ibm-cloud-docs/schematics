@@ -1,12 +1,13 @@
 ---
 
 copyright:
-  years: 2017,2022
+  years: 2017, 2022
 lastupdated: "2022-07-04"
 
-keywords: blueprint create failure, blueprint download error, create fails 
+keywords: blueprint create failure, blueprint download error, create fails,
 
 subcollection: schematics
+
 content-type: troubleshoot
 
 ---

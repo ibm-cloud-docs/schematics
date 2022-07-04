@@ -1,13 +1,12 @@
 ---
 
 copyright:
-  years: 2017,2022
+  years: 2017, 2022
 lastupdated: "2022-07-04"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
 subcollection: schematics
-content-type: troubleshoot
 
 ---
 

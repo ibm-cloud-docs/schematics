@@ -4,9 +4,10 @@ copyright:
   years: 2017,2022
 lastupdated: "2022-07-04"
 
-keywords: blueprint install failure, terraform error, terraform fails, install fails 
+keywords: blueprint install failure, terraform error, terraform fails, install fails,
 
 subcollection: schematics
+
 content-type: troubleshoot
 
 ---
