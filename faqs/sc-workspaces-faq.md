@@ -139,12 +139,12 @@ You see authorization issues when the roles and permission access is insufficien
 
 The test IDs are considered as a valid IBM IDs to perform the global catalog or resource controller related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
-## How can I download sub-folders from the Git repositories through {{site.data.keyword.bpshort}}
+## How can I download subfolders from the Git repositories through {{site.data.keyword.bpshort}}
 {: #compact-faq}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the sub-folder from the GIT repositories. If the compact flag is set to **true** you can download and save sub-folder recursively, otherwise, you will continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the subfolder from the GIT repositories. If the compact flag is set to **true** you can download and save subfolder recursively, otherwise, you will continue to download and save the full repository on workspace creation.
 
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 

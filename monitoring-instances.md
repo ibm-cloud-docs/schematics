@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-05"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -36,12 +36,12 @@ Complete these steps to view your services instances:
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
 3. Click your instance to view the workspace and action that you created. 
 
-   For more information, about how to create a service instance, refer to, [Create service instance](#create-instance).
+   For more information about how to create a service instance? see [Create service instance](#create-instance).
    {: note}
 
 4. Click the `Open dashboard` link, and expand `IBM` to view the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Counts` and `IBM {{site.data.keyword.bpshort}} Summary Charts` dashboard list.
-    - Use the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Counts` dashboard to monitor the counts regarding your workspace state, action, and its success and failure status.
-    - Use the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Charts` dashboard to monitor the charts regarding your workspace by state, by type and outcome, and the vulnerability count.
+    - Use the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Counts` dashboard to monitor the counts of your workspace state, action, and its success and failure status.
+    - Use the `{{site.data.keyword.IBM_notm}} {{site.data.keyword.bpshort}} Summary Charts` dashboard to monitor the charts of your workspace by state, by type and outcome, and the vulnerability count.
 
 
 
@@ -61,11 +61,11 @@ Complete these steps to create your services instance:
 5. Create an {{site.data.keyword.mon_full_notm}} instance by using the `Lite plan`.
 6. Select the instance and accept the license.
 7. Click **create**.
-8. Select the created sysdig instance from the Monitoring page.
+8. Select the created Sysdig instance from the Monitoring page.
 9. Click `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
-10. Click `View Sysdig` icon, to view your workspace and action that you created.
+10. Click `View Sysdig` icon to view your workspace and action that you created.
     
-    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information, about monitoring the status, refer to, [Monitoring workspace](#launch-dashboard). To create a custom dashboard, refer to, [Creating custom dashboard](#create-dashboard).
+    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information about monitoring the status, refer to, [Monitoring workspace](#launch-dashboard). To create a custom dashboard, refer to, [Creating custom dashboard](#create-dashboard).
     {: note}
 
 ## Creating custom dashboard
@@ -78,31 +78,31 @@ Complete these steps to create your custom dashboard:
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
-3. Click `Create Custom Dashboard` to view the create dashboard from template pop-up.
+3. Click `Create Custom Dashboard` to view the create dashboard from template.
 4. Name your dashboard, and click `Create and Open`.
 5. Click `Add Dashboard` icon, the New Dashboard page opens.
 6. Now, you can use `your custom dashboard` to edit the metrics that you want to monitor, the counts of your workspace state, action, and its success and failure status. 
 7. Click `Save`. 
 
-   For more information, about deleting a dashboard, refer to, [Deleting a dashboard](/docs/monitoring?topic=monitoring-remove#remove_ui).
+   For more information about deleting a dashboard, refer to, [Deleting a dashboard](/docs/monitoring?topic=monitoring-remove#remove_ui).
    {: note}
 
 ## {{site.data.keyword.bplong_notm}} metrics details
 {: #metrics-details}
 
-{{site.data.keyword.bpshort}} supports three metrics that you can use to configure in your dashboard for monitoring. The tables provides the details about the metrics.
+{{site.data.keyword.bpshort}} supports three metrics that you can use to configure in your dashboard for monitoring. The tables provide the details about the metrics.
 
 | Metric name | Enterprise | Lite | Standard |
 | --------| -------- | -------- | ------- |
-| [ibm_schematics_workspace_actions_count](#wkspace-actions-count) | yes | no | yes |
-| [ibm_schematics_workspace_count](#wkspace-actions-count) | yes | no | yes |
-| [ibm_schematics_workspace_vulnerability_count](#wkspace-vulnerability-count) | yes | no | yes |
+| [ibm_schematics_workspace_actions_count](#wkspace-actions-count) | Yes | No | Yes |
+| [ibm_schematics_workspace_count](#wkspace-actions-count) | Yes | No | Yes |
+| [ibm_schematics_workspace_vulnerability_count](#wkspace-vulnerability-count) | Yes | No | Yes |
 {: caption="Metrics details" caption-side="bottom"}
 
 ### ibm_schematics_workspace_count
 {: #wkspace-count}
 
-The number of workspaces state and actions count are stated in the table.
+The number of workspaces state and actions count is stated in the table.
 {: shortdesc}
 
 | Metadata | Description |
@@ -128,7 +128,7 @@ For the {{site.data.keyword.bpshort}} instance, following five different time se
 ### ibm_schematics_workspace_actions_count
 {: #wkspace-actions-count}
 
-The number of workspace actions count are stated in the table.
+The number of workspace actions count's are stated in the table.
 {: shortdesc}
 
 | Metadata | Description |
@@ -158,7 +158,7 @@ You can create similar queries to fetch `apply`, `destroy`, and `plan` actions.
 ### ibm_schematics_vulnerability_count
 {: #wkspace-vulnerability-count}
 
-Average vulnerability count of the workspaces are stated in the table.
+Average vulnerability count of the Workspaces is stated in the table.
 {: shortdesc}
 
 | Metadata | Description |
@@ -174,5 +174,5 @@ For the {{site.data.keyword.bpshort}} instance, following time series counts and
 
 | Status | Query |
 | ------ | -------- |
-| Number of workspace currently managed  | `avg(avg(ibm_schematics_vulnerability_count))` |
+| Number of Workspaces currently managed  | `avg(avg(ibm_schematics_vulnerability_count))` |
 {: caption="Vulnerability count of {{site.data.keyword.bpshort}} workspace" caption-side="bottom"}

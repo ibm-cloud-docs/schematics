@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-01"
+lastupdated: "2022-07-05"
 
 keywords: schematics, automation, terraform
 
@@ -31,9 +31,9 @@ Understand how to [Create your private catalog](/docs/account?topic=account-rest
 
 In this tutorial, you import the {{site.data.keyword.IBM_notm}} provided Observability Terraform template as a product to your private catalog to help users create the following {{site.data.keyword.cloud_notm}} services at once: 
 
-- [**{{site.data.keyword.loganalysislong_notm}}**](/docs/log-analysis?topic=log-analysis-getting-started#getting-started): Use this service to add logging capabilities to other {{site.data.keyword.cloud_notm}} services, and to manage system and app logs.
-- [**{{site.data.keyword.monitoringlong_notm}}**](/docs/monitoring?topic=monitoring-getting-started): Use this service to gain operational visibility into the performance and health of your apps, services, and platforms.
-- [**{{site.data.keyword.cloudaccesstraillong_notm}}**](/docs/activity-tracker?topic=activity-tracker-getting-started): Use this service to track any activity for a service so that you can comply with regulatory audit requirements.
+- [**{{site.data.keyword.loganalysislong_notm}}**](/docs/log-analysis?topic=log-analysis-getting-started#getting-started) - Use this service to add logging capabilities to other {{site.data.keyword.cloud_notm}} services, and to manage system and app logs.
+- [**{{site.data.keyword.monitoringlong_notm}}**](/docs/monitoring?topic=monitoring-getting-started) - Use this service to gain operational visibility into the performance and health of your apps, services, and platforms.
+- [**{{site.data.keyword.cloudaccesstraillong_notm}}**](/docs/activity-tracker?topic=activity-tracker-getting-started) - Use this service to track any activity for a service so that you can comply with regulatory audit requirements.
 
 ## Time required
 {: #private-timereq}
@@ -49,11 +49,11 @@ This tutorial is intended for developers and system administrators who want to l
 {: #private-prerequisites}
 
 Before you begin, make sure that you are assigned the following permissions: 
-- [To create a private catalog](/docs/account?topic=account-create-private-catalog#prereq-create) in {{site.data.keyword.cloud_notm}}
-- [To create a {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-access#workspace-permissions)
-- [To create an {{site.data.keyword.loganalysislong_notm}} instance](/docs/log-analysis?topic=log-analysis-iam#platform)
-- [To create an {{site.data.keyword.monitoringlong_notm}} instance](/docs/monitoring?topic=monitoring-iam#iam_platform)
-- [To create an {{site.data.keyword.cloudaccesstraillong_notm}} instance](/docs/activity-tracker?topic=activity-tracker-iam#platform)
+- [To create a private catalog](/docs/account?topic=account-create-private-catalog#prereq-create) in {{site.data.keyword.cloud_notm}}.
+- [To create a {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-access#workspace-permissions).
+- [To create an {{site.data.keyword.loganalysislong_notm}} instance](/docs/log-analysis?topic=log-analysis-iam#platform).
+- [To create an {{site.data.keyword.monitoringlong_notm}} instance](/docs/monitoring?topic=monitoring-iam#iam_platform).
+- [To create an {{site.data.keyword.cloudaccesstraillong_notm}} instance](/docs/activity-tracker?topic=activity-tracker-iam#platform).
 - Write access to a GitHub repository on `github.com`. This repository is needed to upload the Terraform template that you want to add as a product to your private catalog.
 
 ## Prepare your Terraform template for the private catalog
@@ -65,7 +65,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 1. Download the content of the `terraform-ibm-observability` sample repository to your local machine. This repository is owned and maintained by {{site.data.keyword.IBM_notm}}, and provides a Terraform template to create an instance of {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}}. 
 
-    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a sub-folder. 
+    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a subfolder. 
     {: tip}
 
     ```sh
@@ -82,10 +82,10 @@ To upload a Terraform template to a private catalog, you must first compress all
 3. Optional: Review the `readme.md` file and the Terraform configuration files. 
 4. Compress your Terraform configuration files to create the `TGZ` file. The `TGZ` file is required to upload your Terraform template as a product to the private catalog. 
 
-    To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level above. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
+    To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level preceding. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
     {: note}
 
-    If your `.tgz` file size if greater than 40 MB, Use `rm -rf .git .gitignore` command to reduce the size of the `.tgz` file and then create `tar czfv <reponame>.tgz .`.
+    If your `.tgz` file size if greater than 40 MB. Then, sse `rm -rf .git .gitignore` command to reduce the size of the `.tgz` file and then create `tar czfv <reponame>.tgz .`.
     {: tip}
 
     ```sh
@@ -93,7 +93,7 @@ To upload a Terraform template to a private catalog, you must first compress all
     ```
     {: pre}
 
-    Example output:
+    Example output
     ```text
     a .
     a ./output.tf
@@ -130,12 +130,12 @@ Create a release in your source code repository to deliver and manage versions o
 
 3. Click **Draft a new release**. 
 4. Click **Choose a tag**, type a version number, a title, and an optional description for your release. Use the tagging suggestions in the GitHub UI to find a supported tag version. 
-5. If you have created a new tag, use the drop-down menu to select the branch that contains the project you want to release.
-6. Drag your `TGZ` file from your local machine to the **Attach binaries by dropping them here or selecting them** section. 
-7. Click **Publish release** to view your published releases feed for your repository
+5. If you had created a tag, use the drop-down menu to select the branch that contains the project you want to release.
+6. Drag your `TGZ` file from your local machine to the **Attach binary file by dropping them here or selecting them** section. 
+7. Click **Publish release** to view your published releases feed for your repository.
 8. Optional: Right-click on your `TGZ` file and copy the link to the file. 
 9. Enter the link in your browser to verify that the `TGZ` file is automatically downloaded to your local machine. 
-10. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the sub-folder. 
+10. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the subfolder. 
 
 ## Create a private catalog and add your Terraform template as a product
 {: #create-private-catalog}
@@ -163,7 +163,7 @@ Create a release in your source code repository to deliver and manage versions o
     9. From the **Actions** menu, click **Share** to make your product available to other users in your private catalog.  **Note** To provide access group and assign your catalog to users, see [Setting up the access groups](/docs/account?topic=account-groups&interface=ui).
     10. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
 
-In this tutorial, you learned how to create a private catalog in {{site.data.keyword.cloud_notm}}? and how to upload an IBM-provided Terraform template as a product to your catalog?
+In this tutorial, you learned how to create a private catalog in {{site.data.keyword.cloud_notm}}? and How to upload an IBM-provided Terraform template as a product to your catalog?
 
 ## What's next?
 {: #private_what's_next}
