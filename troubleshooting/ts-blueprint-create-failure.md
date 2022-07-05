@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-05"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -17,8 +17,11 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Blueprint create failures
-{: #bp-create-failure}
+# Blueprint create fails 
+{: #bp-create-fails}
+
+Review the following sections to assist in debugging Blueprint install failures. 
+
 
 ## Blueprint create fails with an invalid blueprint definitions failed to clone git repo error
 {: #bp-create-fails1}
@@ -67,6 +70,8 @@ Check that the Blueprint definition file and input files exist in the target rep
 {: tsResolve} 
 
 Rerun the Blueprints create operation with the correct file name.
+
+
 
 ## Blueprint create fails with the requested resource group is invalid
 {: #bp-create-fails3}

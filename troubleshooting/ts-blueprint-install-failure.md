@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-05"
 
 keywords: blueprint install failure, terraform error, terraform fails, install fails,
 
@@ -17,11 +17,13 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Blueprint install failures
+# Blueprint install fails 
 {: #bp-install-fails}
 
+Review the following sections to assist in debugging Blueprint install failures. 
 
-## Blueprint install fails with message Install of module `Failed`
+
+## Blueprint install fails with message Install of module Failed
 {: #bp-install-fails1}
 
 When you run the Blueprint install command, it fails with message that the install of module has failed.    

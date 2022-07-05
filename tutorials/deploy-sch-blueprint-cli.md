@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-05"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -42,7 +42,7 @@ Before your begin
 {: #select-schematics-blueprint-cli}
 {: step}
 
-This tutorial uses a [sample Blueprint](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} to create two {{site.data.keyword.bpshort}} Workspaces containing a resource group and the {{site.data.keyword.cos_full}} bucket.
+This tutorial uses a [sample Blueprint](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} to create two {{site.data.keyword.bpshort}} Workspaces referencing an existing resource group and creating a {{site.data.keyword.cos_full}} instance and bucket.
 
 The sample Blueprint takes two input parameters, `provision_rg=false`, and `resource_group_name=Default`. These configure the Blueprint to retrieve the ID of the Default resource group. See the example README file for alternative parameters to create a new resource group. 
 
@@ -100,6 +100,10 @@ The output shows that the Workspaces `basic-resource-group` and `basic-cos-stora
 Record the generated ID of the Blueprint to use in the later commands.
 {: important}
 
+Refer to [Troubleshooting Blueprint create failures](/docs/schematics?topic=schematics-bp-create-fails) for details on debugging create failures. 
+
+
+
 ## Installing Blueprints to create cloud resources
 {: #install-schematics-blueprint-cli}
 {: step}
@@ -107,7 +111,7 @@ Record the generated ID of the Blueprint to use in the later commands.
 Here you can use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command to perform Terraform Apply operations using the Terraform configurations specified in the Blueprint definition. The operation will create cloud resources. Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 
 ```sh
-ibmcloud schematics blueprints install -id Blueprints-Starter-Sample.c579f31d
+ibmcloud schematics blueprint install -id Blueprints-Starter-Sample.c579f31d
 ```
 {: pre}
 
@@ -132,13 +136,28 @@ OK
 ```
 {: screen}
 
-The output shows that the Workspaces `basic-resource-group` and `basic-cos-storage` are now in `Active` status to indicate that Terraform resources have been created by an `Apply` operation.
+The output shows that the Workspaces `basic-resource-group` and `basic-cos-storage` are now in `Active` status to indicate that the Terraform Apply has run successfully and Terraform resources have been created.
 
-If the resource group specified in the input parameters already exists, the Terraform `Apply` for the create of the resource group will fail. This is the expected Terraform behaviour. The Blueprint command output will identify the Workspace `Apply` failure and will return a summary of the Terraform error to the user.
+Refer to [Troubleshooting Blueprint install failures](/docs/schematics?topic=schematics-bp-install-fails) for details on debugging install failures. 
 
-## Reviewing Blueprints and its output
-{: #review-schematics-blueprint-cli}
+## Review successful Blueprint creation and outputs
+{: #review-schematics-blueprint}
 {: step}
+
+After a successful install of the Blueprint, review the deployed Blueprint via the CLI or UI.  
+
+
+### Using the Cloud UI 
+{: #review-schematics-blueprint-ui}
+
+From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.test.cloud.ibm.com/blueprints){: external}, select the provisioned Blueprint to view the created Workspaces and cloud resources.  
+
+Review UI tabs: Overview, Modules, Resources, Variables, Jobs history, Settings 
+
+The computed output values for the Blueprint and be reviewed on the Variables/Outputs tab. 
+
+### Using the CLI
+{: #review-schematics-blueprint-cli}
 
 Run the [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-get) command to display the details about the Blueprint and the deployed environment. Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 
@@ -147,14 +166,14 @@ ibmcloud schematics blueprint get -id blueprint_id
 ```
 {: pre}
 
-The computed output values of the Blueprint can be retrieved by using the `--output` option.
+The computed output values of the Blueprint can be retrieved by using the `--profile outputs` option.
 
 ```sh
-ibmcloud schematics blueprint get -id blueprint_id --output
+ibmcloud schematics blueprint get -id blueprint_id -profile outputs
 ```
 {: pre}
 
-### Output
+#### Output
 {: #step4-output}
 
 ```text
@@ -181,6 +200,9 @@ OK
 ```
 {: screen}
 
+When using the `-profile output` flag, the `Blueprints Outputs` section in the command output lists any output values computed by the Blueprint. A Blueprint definition can be configured to output any of the Terraform output values from the linked Workspaces.  
+
+
 ## Destroying Blueprints cloud resources
 {: #destroy-schematics-blueprint-cli}
 {: step}
@@ -190,7 +212,7 @@ Run the [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schemat
 * When prompted reply `yes`, or `y` to destroy the cloud resources.
 
 ```sh
-ibmcloud schematics blueprints destroy -id Blueprints-Starter-Sample.c579f31d
+ibmcloud schematics blueprint destroy -id Blueprints-Starter-Sample.c579f31d
 ```
 {: pre}
 
@@ -253,5 +275,7 @@ OK
 
 You have now deployed a {{site.data.keyword.bpshort}} Blueprint. By completing this tutorial, you've learned to take a Blueprint through its lifecycle of creation to retirement by creating multiple Workspaces, cloud resources, and then destroying the created cloud environment.  
 
-Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint).
+Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). 
+
+Check the example Readme files for further Blueprint customisation and usage scenarios for each sample. 
 
