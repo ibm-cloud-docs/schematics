@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-05"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Using {{site.data.keyword.bpshort}} Agent
 {: #using-agent}
 
-You have successfully connected the Agent to {{site.data.keyword.bpshort}} service instance. The next step is to bind your Agent Workspaces to the Agent. The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow.
+You have successfully connected the Agent to {{site.data.keyword.bpshort}} service instance. The next step is to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent. The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow.
 {: shortdesc}
 
 ![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup1.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="left"}
@@ -39,7 +39,7 @@ In other words, the Terraform automation will run in your provisioned Agent infr
 2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
 3. Select your Agent from the list, and use the `...` dots to perform **Bind Agent** operation.
 4. In the side navigation pane, select **Workspaces** to be bound statically to the Agent.
-5. Select your bounded Agent Workspaces to view the status of your Agent execution to monitor.
+5. Select your bounded Agent, to view the list of related Workspaces.
 
 ## Steps to Bind a new workspace to the Agent
 {: #steps-bind-new-wks}
