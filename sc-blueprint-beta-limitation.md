@@ -24,7 +24,7 @@ Join the `#tmp-blueprints-beta-2022` slack channel and post a message including 
 - Your name
 - email address
 - Your Company/Organization name
-- Your level of experience with cloud automation, specifically with regard to Terraform or {{site.data.keyword.bplong_notm}}
+- Your level of experience with cloud automation, specifically with regard to Terraform, or {{site.data.keyword.bplong_notm}}
 - Any initial questions or comments
 
 Then at any time come back to the thread you've just created, reply to it to ask more questions or give feedback.

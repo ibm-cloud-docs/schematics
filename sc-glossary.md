@@ -56,7 +56,7 @@ Method of provisioning that can be used for identifying backend systems.
 ## Blueprints
 {: #glossary-blueprint}
 
-It the {{site.data.keyword.bpshort}} service used to deploy and manage large scale environments created from Infrastructure as Code (IaC) building blocks. 
+It the {{site.data.keyword.bpshort}} service used to deploy and manage large-scale environments created from Infrastructure as Code (IaC) building blocks. 
 
 ### Blueprint
 {: #bpb1}
@@ -66,7 +66,7 @@ A Blueprint is a specific instance of a repeatable solution architecture, custom
 ### Blueprint definition
 {: #bpb2}
 
-[Blueprint definitions](/docs/schematics?topic=schematics-blueprint-definitions) define a solution architecture out of IaC automation building blocks written in Hashicorp Terraform or Red Hat Ansible. These files are written in YAML with a minimum of syntax that specifies the automation modules to be used in the definition, their versions, source libraries, and relationships for passing resource dependency data between modules. The term 'blueprint' may be used as shorthand for the Blueprint definition file. 
+[Blueprint definitions](/docs/schematics?topic=schematics-blueprint-definitions) define a solution architecture out of IaC automation building blocks written in HashiCorp Terraform, or Red Hat Ansible. These files are written in YAML with a minimum of syntax that specifies the automation modules to be used in the definition, their versions, source libraries, and relationships for passing resource dependency data between modules. The term 'blueprint' may be used as shorthand for the Blueprint definition file. 
 
 
 ### Blueprint configuration
@@ -82,7 +82,7 @@ The set of {{site.data.keyword.cloud_notm}} resources created by a Blueprint and
 ### Blueprint Modules
 {: #bpb5}
 
-Blueprints are composed from IaC automation modules implemented in Hashicorp Terraform or Red Hat Ansible. Both Terraform configs and Terraform modules can be used as Blueprint Modules.    
+Blueprints are composed from IaC automation modules implemented in HashiCorp Terraform, or Red Hat Ansible. Both Terraform configs and Terraform modules can be used as Blueprint Modules.    
 
 ### Blueprint dynamic inputs
 {: #bpi1}
@@ -97,7 +97,7 @@ Blueprints operations (command) are executed as jobs by {{site.data.keyword.bpsh
 ### Blueprint Lifecycle
 {: #bpl1}
 
-Blueprints follows a lifecycle approach to deploy and manage application environments on {{site.data.keyword.cloud_notm}}. Blueprints follow a [cycle of create, update and delete operations](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds). 
+Blueprints follow a lifecycle approach to deploy and manage application environments on {{site.data.keyword.cloud_notm}}. Blueprints follow a [cycle of create, update and delete operations](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds). 
 
 ## Catalog
 {: #glossa-catalog}
@@ -151,7 +151,7 @@ Maps to the provisioned Terraform resources within the infrastructure.
 ### Readme
 {: #wksr2} 
 
-Refers to the demonstration of an example template with steps to prerequisites, provision resources with limitations and steps to execute terraform template with support of IBMCloud Schematics.
+Refers to the demonstration of an example template with steps to prerequisites, provision resources with limitations, and steps to execute terraform template with support of IBMCloud Schematics.
 
 ### Settings
 {: #wkss1} 

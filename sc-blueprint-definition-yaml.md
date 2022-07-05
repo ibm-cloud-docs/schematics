@@ -197,7 +197,7 @@ String specifying the IAC type of the automation module. Only Terraform is suppo
 Options: `terraform`
 
 **modules.source options:**
-The source where the Terraform or Ansible config will be downloaded from. 
+The source where the Terraform, or Ansible config will be downloaded from. 
 
 ```yaml
 source:

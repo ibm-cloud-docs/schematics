@@ -20,7 +20,7 @@ subcollection: schematics
 
 A {{site.data.keyword.bpshort}} Blueprint is composed of three versioned components:
 
-1. Automation modules written in Terraform or Ansible.
+1. Automation modules written in Terraform, or Ansible.
 2. A Blueprint definition specifying the automation modules and dependencies.
 3. Input variables used to configure and customize the Blueprints deployment.
 {: shortdesc}
@@ -30,11 +30,11 @@ A {{site.data.keyword.bpshort}} Blueprint is composed of three versioned compone
 
 The core of {{site.data.keyword.bpshort}} Blueprints is the Blueprints definition. 
 - Blueprints are written in YAML with a minimum of syntax that specifies the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. 
-- The resource management and provisioning functionality of Blueprints is implemented by the automation modules by using the familiar open source Terraform or Ansible automation tools. 
+- The resource management and provisioning functionality of Blueprints is implemented by the automation modules by using the familiar open source Terraform, or Ansible automation tools. 
 - Input variable files customize the reusable Blueprints definition to create cloud environments.
 {: shortdesc}
 
-Input files, Blueprints, and modules are all maintained in Git source control. The version controlled components are linked at create time by a Blueprint configuration. The configuration defines the source of the versioned Blueprint definition in source control and the desired input files to customize the Blueprint. Also additional parameters for naming the Blueprint, access control and dynamic inputs. 
+Input files, Blueprints, and modules are all maintained in Git source control. The version controlled components are linked at create time by a Blueprint configuration. The configuration defines the source of the versioned Blueprint definition in source control and the input files to customize the Blueprint. Also additional parameters for naming the Blueprint, access control and dynamic inputs. 
 
 ## Blueprints YAML file
 {: #blueprint-yaml-file}
@@ -263,7 +263,7 @@ ibmcloud schematics blueprint create -name <name> -resource_group <resource_grou
 ## What's next
 {: #bp-def-whatsnext}
 
-In this section you have learned about {{site.data.keyword.bpshort}} Blueprint definitions and configuration. Here are the next steps to: 
+In this section you have learned about {{site.data.keyword.bpshort}} Blueprint definitions and configuration. Now you can 
 - Explore [deploying {{site.data.keyword.bpshort}} Blueprints using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli&interface=ui) tutorial to create cloud resources with a Blueprints managed cloud environment.
-- Refer to [Blueprints definition YAML](/docs/schematics?topic=schematics-blueprint-schema-definition) and [Blueprints input YAML](/docs/schematics?topic=schematics-blueprint-schema-inputs) for more information about the parameters used in the YAML files.
+- Refer to, [Blueprints definition YAML](/docs/schematics?topic=schematics-blueprint-schema-definition) and [Blueprints input YAML](/docs/schematics?topic=schematics-blueprint-schema-inputs) for more information about the parameters used in the YAML files.
 

@@ -1241,7 +1241,7 @@ subcollection: schematics
 
 * [How do I overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 
-* [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
+* [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
 * [How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 

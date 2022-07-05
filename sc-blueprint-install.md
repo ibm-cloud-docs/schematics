@@ -62,7 +62,7 @@ On successful completion the install command will return **fullfillment_success*
 For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 
-After installing the Blueprint, the desired cloud resources are now deployed. The resources can be located on the Blueprint Resources tab in the UI. Or via the Console Resource list. 
+After installing the Blueprint, the required cloud resources are now deployed. The resources can be located on the Blueprint Resources tab in the UI. Or via the Console Resource list. 
 
 Verify that the Blueprint Install has run successfully to create Cloud resources . When you run the install command from the CLI, the command displays the status of the running {{site.data.keyword.bpshort}} jobs and the command only returns on completion. 
 

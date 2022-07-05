@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -50,12 +50,12 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
 
-## How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform or Ansible templates?
+## How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?
 {: #clone-file-extension}
 {: faq}
 {: support}
 
-While creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
+While creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform, or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
 
 - The allowed file extension are `.cer, .cfg, .conf, .crt, .der, .gitignore, .html, .j2, .jacl, .js, .json, .key, .md, .netrc, .pem, .properties, .ps1, .pub, .py, .service, .sh, .tf, .tf.json, .tfvars, .tmpl, .tpl, .txt, .yaml, .yml, .zip, _rsa, license`.
 - The allowed image extension are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.

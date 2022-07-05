@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-30"
+lastupdated: "2022-07-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -27,7 +27,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} are clas
 
 {{site.data.keyword.bplong_notm}} provides powerful tools to automate your cloud infrastructure provisioning and management process, the configuration and operation of your cloud resources, and the deployment of your app workloads.
 
-To do so, {{site.data.keyword.bpshort}} leverages open source projects, such as Terraform, Ansible, OpenShift, Operators, and Helm, and delivers these capabilities to you as a managed service. Rather than installing each open source project on your machine, and learning the API or CLI, you declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and watch {{site.data.keyword.bpshort}} run these tasks for you.
+To do so, {{site.data.keyword.bpshort}} leverages open source projects, such as Terraform, Ansible, OpenShift, Operators, and Helm, and delivers these capabilities to you as a managed service. Rather than installing each open source project on your machine, and learning the API or CLI. You can declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and watch {{site.data.keyword.bpshort}} run these tasks for you.
 
 For more information about how {{site.data.keyword.bpshort}} works, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-learn-about-schematics).
 

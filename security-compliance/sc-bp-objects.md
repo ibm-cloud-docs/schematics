@@ -16,7 +16,7 @@ subcollection: schematics
 # Best practices for securing the {{site.data.keyword.bpshort}} objects
 {: #bp-secure-objects}
 
-{{site.data.keyword.bplong}} leverages open source projects, such as Terraform, Ansible, {{site.data.keyword.openshiftshort}}, Operators, and Helm, and delivers to you as a managed service. Rather than installing each open source project on your machine, and learning the API or command-line. You declare the tasks that you want to run in {{site.data.keyword.cloud}} and watch {{site.data.keyword.bpshort}} run these tasks for you.
+{{site.data.keyword.bplong}} leverages open source projects, such as Terraform, Ansible, {{site.data.keyword.openshiftshort}}, Operators, and Helm, and delivers to you as a managed service. Rather than installing each open source project on your machine, and learning the API or command-line. You can declare the tasks that you want to run in {{site.data.keyword.cloud}} and watch {{site.data.keyword.bpshort}} run these tasks for you.
 
 Take time to review the suggested best practices to reduce the security risks for all production, staging, and test servers in your cloud infrastructure. This list is an excellent starting point to increase the security of your cloud infrastructure.
 {: shortdesc}
