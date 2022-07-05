@@ -21,7 +21,7 @@ subcollection: schematics
 You have successfully connected the Agent to {{site.data.keyword.bpshort}} service instance. The next step is to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent. The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow.
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup1.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="left"}
+![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="left"}
 
 Once you bind the Workspace to the Agent, then the corresponding Workspace Jobs such as `terraform plan`, `terraform apply`, `terraform destroy`, etc. will be automatically routed to the Agent. 
 
