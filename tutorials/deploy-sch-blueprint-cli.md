@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-06"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -29,7 +29,7 @@ completion-time: 60m
 Use an {{site.data.keyword.IBM}} provided sample to deploy a scalable multi-Workspace {{site.data.keyword.bpshort}} Blueprint from the command-line.
 {: shortdesc}
 
-In this tutorial, you will deploy a {{site.data.keyword.bpshort}} Blueprints environment by using the {{site.data.keyword.bpshort}} command-line. The tutorial demonstrates the Blueprints lifecycle of creating cloud resources with a Blueprints managed cloud environment before deleting the resources and the {{site.data.keyword.bpshort}} Blueprint.
+In this tutorial, you will deploy a {{site.data.keyword.bpshort}} Blueprint environment by using the {{site.data.keyword.bpshort}} command-line. The tutorial demonstrates the Blueprints lifecycle of creating cloud resources with a Blueprint managed cloud environment before deleting the resources and the {{site.data.keyword.bpshort}} Blueprint.
 
 Before your begin
 
@@ -46,7 +46,7 @@ This tutorial uses a [sample Blueprint](https://github.com/Cloud-Schematics/blue
 
 The sample Blueprint takes two input parameters, `provision_rg=false`, and `resource_group_name=Default`. These configure the Blueprint to retrieve the ID of the Default resource group. See the example README file for alternative parameters to create a new resource group. 
 
-## Create Blueprints in {{site.data.keyword.bpshort}}
+## Create {{site.data.keyword.bpshort}} Blueprints
 {: #create-schematics-blueprint-cli}
 {: step}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-06"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -40,18 +40,23 @@ settings:
 ```
 {: pre}
 
+## Supporting setting parameters
+{: #bp-parameters}
 
-Supported settings parameters
+Following are the supporting setting parameters that can be used to configure `blueprint.yaml`.
 
+### name
+{: #bp-name}
 
-**name:**
 Type:       string
 
 Required:   true
 
 Name that will be used to identify the blueprint definition in use 
 
-**schema_version:**
+### schema_version
+{: #bp-schema-version}
+
 Type: number
 
 Required: true
@@ -68,7 +73,9 @@ schema_version: "1.0"
 {: pre}
 
 
-**description:**
+### description
+{: #bp-description}
+
 Type: string
 
 Default: []
@@ -81,7 +88,9 @@ description: "Project to provision Application Service."
 ```
 {: pre}
 
-**inputs:**
+### inputs
+{: #bp-inputs}
+
 Type: list
 
 Default: []
@@ -98,7 +107,9 @@ inputs:
 ```
 {: pre}
 
-**outputs:**
+### outputs
+{: #bp-outputs}
+
 Type: list
 
 Default: [] 
@@ -114,7 +125,7 @@ outputs:
 ```
 {: pre}
 
-**settings:**
+settings:**
 Type: list
 
 Default: [] 
@@ -123,7 +134,9 @@ A list of the settings to be used by the blueprint defined as key value pairs. E
 
 The only supported setting is `TF_VERSION`. 
 
-**settings.TF_VERSION:**
+### settings.TF_VERSION
+{: #bp-tf-version}
+
 Type:       number
 
 Blueprints sets the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatiable with the Blueprint supported version. Updating this value will change the Terraform version used on the next execution. 
@@ -131,6 +144,7 @@ Blueprints sets the Terraform version to be used at Workspace execution time bas
 Options:    Terraform version in SemVer format 
 
 Example
+
 ```yaml
 settings: # Master settings for all modules 
   - name: TF_VERSION
@@ -138,7 +152,9 @@ settings: # Master settings for all modules
 ```
 {: pre}
 
-**Modules schema:**
+### Modules schema
+{: #bp-modules-schema}
+
 The `modules` block defines the Terraform and Ansible modules from which the solution is constructed. 
 
 Each module list entry is defined by a name, the source for the module, inputs and outputs.   
@@ -180,14 +196,18 @@ modules:
 ```
 {: pre}
 
-**modules.name:**
+### modules.name
+{: #bp-modules-name}
+
 Type: string
 
 Required: true
 
 Name that will be used within {{site.data.keyword.bpshort}} to identify the workspace that will be created to manage the group of resources created by the Terraform config specified on the `modules.source.git.git_url` statement. 
 
-**modules.module_type:**
+### modules.module_type
+{: #bp-modules-moduletype}
+
 Type: string
 
 Required: true
@@ -196,7 +216,9 @@ String specifying the IAC type of the automation module. Only Terraform is suppo
 
 Options: `terraform`
 
-**modules.source options:**
+### modules.source options
+{: #bp-modules-sourceoptions}
+
 The source where the Terraform, or Ansible config will be downloaded from. 
 
 ```yaml
@@ -208,7 +230,9 @@ source:
 ```
 {: pre}
 
-**modules.source.git.source_type:**
+### modules.source.git.source_type
+{: #bp-modules-source-type}
+
 Type: string
 
 Required: true
@@ -217,21 +241,27 @@ Type of Git source repository. Only Githib validated at this time.
 
 Options: `github` 
 
-**modules.source.git.git_repo_url:**
+### modules.source.git.git_repo_url
+{: #bp-modules-git-repo-url}
+
 Type: url string
 
 Required: true
 
 URL for the automation module in its content repository. If the config exists in a sub directory the folder name is appended. 
 
-**modules.source.git.git_branch:**
+### modules.source.git.git_branch
+{: #bp-modules-git-branch}
+
 Type: string
 
 Default: master
 
 If content is in git, the branch containing the users Terraform config. This option is mutually exclusive with the `git_release` option. 
 
-**modules.source.git.git_release:**
+### modules.source.git.git_release
+{: #bp-modules-git-release}
+
 Type: string
 
 Default: latest
@@ -240,7 +270,8 @@ If content is git, the release tag for the repo containing the users Terraform c
 
 Options: `latest` or release in SemVer format 
 
-**modules.inputs options:**
+### modules.inputs options
+{: #bp-modules-inputs-options}
 
 Type: list
 
@@ -268,14 +299,18 @@ inputs:
 ```
 {: pre}
 
-**modules.inputs.name:**
+### modules.inputs.name
+{: #bp-modules-inputs-name}
+
 Type: string
 
 Required: true
 
 Name of variable to be passed to Terraform Workspace or Ansible playbook. This must match the value in the target template for the value to be passed at execution time to the Workspace. 
 
-**modules.inputs.type:**
+### modules.inputs.type
+{: #bp-modules-inputs-type}
+
 Type: YAML flow or block scalar 
 
 Default: string 
@@ -300,7 +335,9 @@ Example
 ```
 {: pre}
 
-**modules.inputs.value:**
+### modules.inputs.value
+{: #bp-modules-inputs-value}
+
 Type: Any valid Terraform variable type
 
 Required: true
@@ -337,16 +374,18 @@ Example value sourced from an output statement on the module `IBM-Resource-Group
 ```
 {: pre}
 
+### modules.inputs.secure
+{: #bp-modules-inputs-secure}
 
-
-**modules.inputs.secure:**
 Type: Boolean
 
 Default: false
 
 Flag specifying if the value is a sensitive variable and must be masked in the output
 
-**module.outputs:**
+### module.outputs
+{: #bp-module-outputs}
+
 Type:       list
 
 Default:    []  
@@ -361,12 +400,14 @@ outputs:
 ```
 {: pre}
 
-**module.injectors options:**
+### module.injectors options
+{: #bp-modules-outputs-injector}
+
 Type:         list 
 
 Default:      []
 
-The injectors block is an optional block to configure the parameters required by {{site.data.keyword.bpshort}} to inject templated files into the module automation repo. The primary use with Blueprints is to enable direct use of Terraform modules with Bluepprints, by the injection of `provider` and `terraform` blocks.
+The injectors block is an optional block to configure the parameters required by {{site.data.keyword.bpshort}} to inject templated files into the module automation repo. The primary use with Blueprints is to enable direct use of Terraform modules with Blueprints, by the injection of `provider` and `terraform` blocks.
 
 ```yaml
 injectors:
@@ -383,14 +424,18 @@ injectors:
 ```
 {: pre}
 
-**module.injectors.tft_git_url:**
+### module.injectors.tft_git_url
+{: #bp-module-tft-git-url}
+
 Type: URL
 
 Required: true
 
 URL of the Git repo containing the template files used for injection. 
 
-**module.injectors.tft_name:**
+### module.injectors.tft_name
+{: #bp-module-tft-name}
+
 Type: string
 
 Required: true
@@ -399,7 +444,9 @@ Name of the template file to use
 
 Options: `ibm` or `kubernetes`
 
-**module.injectors.injection_type:**
+### module.injectors.injection_type
+{: #bp-module-injection-type}
+
 Type: string
 
 Required: true
@@ -408,7 +455,9 @@ Two modes of injection are supported with Terraform configs. Definitions can be 
 
 Options: `override` or `inject`
 
-**module.injectors.tft_parameters:**
+### module.injectors.tft_parameters
+{: #bp-modules-tft-parameters}
+
 Type: list
 
 Required: true
