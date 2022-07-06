@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-06"
 
 keywords: blueprint install, install blueprint, blueprint
 
@@ -32,10 +32,10 @@ ibmcloud schematics blueprint install -id eu-de.BLUEPRINT.Blueprint-Basic-Exampl
 
 On successful completion the install command will return **fullfilment_success**. 
 
-## Verfiy Blueprint install success 
+## Verify Blueprint install success 
 {: #bp-verify-install}
 
-Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and an continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs executing the IAC automation code. The command only returns on completion.
+Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs executing the IAC automation code. The command only returns on completion.
 
 ```text
 Modules to be installed
@@ -62,34 +62,12 @@ On successful completion the install command will return **fullfillment_success*
 For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 
-After installing the Blueprint, the required cloud resources are now deployed. The resources can be located on the Blueprint Resources tab in the UI. Or via the Console Resource list. 
+## Next steps
+{: #bp-install-nextsteps}
 
-Verify that the Blueprint Install has run successfully to create Cloud resources . When you run the install command from the CLI, the command displays the status of the running {{site.data.keyword.bpshort}} jobs and the command only returns on completion. 
-
-On successful completion the install command will return **install_success**. 
-
-For more information, about to diagnose and resolve the install failure, refer to [Troubleshooting section](/docs/schematics?topic=schematics-bp-input-schema-yaml).
-
-Show the status of all Blueprints in Schematics.  
-
-```sh
-ibmcloud schematics blueprint list 
-```
-{: pre}
-
--- other parameters
-
-Example output 
+After installing the Blueprint, the desired cloud resources are now deployed. The resources can be located on the Blueprint Resources tab in the [Blueprints UI](https://cloud.ibm.com/schematics/blueprints){:external}. Or via the Console [Resource list](https://cloud.ibm.com/resources){:external}. 
 
 
-Retrieve Blueprint outputs
+The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-display-blueprint). 
 
-```sh
-ibmcloud schematics blueprint get -id blueprint_id --output
-```
-{: pre}
-
---output 
-
-Example output
 

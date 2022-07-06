@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-06"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -53,7 +53,7 @@ For more information, about the command options, see [Create command](/docs/sche
 ## Verfiy Blueprint creation 
 {: #bp-verify-create}
 
-Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and an continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
+Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 
 ```text
 Created Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
@@ -77,7 +77,7 @@ OK
 
 On successful completion the create command will return **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint. 
 
-For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-init-fails).
+For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails).
 
 ## Next steps
 {: #bp-create-nextsteps}

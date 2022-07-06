@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-06"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -38,7 +38,6 @@ Then at any time come back to the thread you've just created, reply to it to ask
 | --- |--- | --- | 
 | Red Hat Ansible support is planned for year end 2022.  | | | 
 | Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | | | 
-
 | The Terraform Plan operation is not supported for Blueprints | | | 
 | Install operations are performed as a single operation against all Workspaces.  | | | 
 | Created Cloud resources are not tagged with Blueprint and Workspace IDs. | | | 
@@ -47,6 +46,8 @@ Then at any time come back to the thread you've just created, reply to it to ask
 | Delete CLI returns immediately at start of execution and does not wait for successful completion | | | 
 | Operations should not be directly performed against linked Schematics Workspaces using the workspace commands or UI. Operations should only be performed using Blueprint commands.    | | |
 | No external Blueprint definition validation command | | | 
+| Only Blueprints and modules in Github are formally supported. Testing is not complete for GitLab and other repositories | | | 
+| Only Blueprints and modules in public repos are formally supported. Testing is not complete for private repos | | | 
 
 
 
@@ -57,7 +58,8 @@ Then at any time come back to the thread you've just created, reply to it to ask
 | On create the Blueprint name and description specified on the command line are ignored. | | |
 | On update, Blueprint name not updated | | |  
 | Install, destroy and delete commands return "fullfilment_success" on successful completion.  | | | 
-| Automatic pull latest of updated Terraform configs from Git repos is not performed on Blueprint Update | | | 
-| UI not showing log for failed Workspace jobs | | | 
-| Rerun of failed install job does not execute | | | 
-| Update command requires inputs to be specified to trigger refresh of Blueprint definition from Git | | |   
+| Automatic pull latest of updated Module Terraform configs from Git repos is not performed on Blueprint Update | | | 
+| UI not showing logs for failed Workspace jobs | | | 
+| JSON output option not supported on commands | | |   
+| On CLI cursor is lost if command is cancelled during spinner | | | 
+| Command output date and time formatting | | | 

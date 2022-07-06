@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-06"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -59,6 +59,11 @@ Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 fulfilment_success
 OK
 ```
 {: screen}
+
+On successful completion the destroy command will return **fullfillment_success**.
+
+Successful command completion and the status of the Workspaces as `Inactive` indicates that resources in all linked Workspaces have been destroyed
+
 
 ## Next steps
 {: #bp-destroy-nextsteps}
