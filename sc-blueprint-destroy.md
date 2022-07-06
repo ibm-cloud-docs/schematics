@@ -29,11 +29,9 @@ ibmcloud schematics blueprints destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Examp
 ```
 {: pre}
 
-On successful completion the destroy command will return **fullfilment_success**. 
+On successful completion the destroy command returns **fullfilment_success**. 
 
 For more information, about the command options, see [Destroy command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy).
-
-
 
 ## Verfiy Blueprint destroy success 
 {: #bp-verify-destroy}
@@ -63,7 +61,6 @@ OK
 On successful completion the destroy command will return **fullfillment_success**.
 
 Successful command completion and the status of the Workspaces as `Inactive` indicates that resources in all linked Workspaces have been destroyed
-
 
 ## Next steps
 {: #bp-destroy-nextsteps}

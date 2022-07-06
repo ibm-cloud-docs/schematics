@@ -18,7 +18,7 @@ subcollection: schematics
 # Installing a Blueprint
 {: #install-blueprint}
 
-Blueprint install is the second step required to create or modify cloud resources when using Blueprints. Install runs the IaC automation code for each Workspace. For each module, {{site.data.keyword.bpshort}} performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. 
+Blueprint install is the second step required to create or modify cloud resources when using Blueprints. Install runs the IaC automation code for each workspace. For each module, {{site.data.keyword.bpshort}} performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. 
 {: shortdesc}
 
 The following command performs a Blueprint install for the Blueprint with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
@@ -30,12 +30,12 @@ ibmcloud schematics blueprint install -id eu-de.BLUEPRINT.Blueprint-Basic-Exampl
 ```
 {: pre}
 
-On successful completion the install command will return **fullfilment_success**. 
+On successful completion the install command returns **fullfilment_success**. 
 
 ## Verify Blueprint install success 
 {: #bp-verify-install}
 
-Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs executing the IAC automation code. The command only returns on completion.
+Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs executing the IaC automation code. The command only returns on completion.
 
 ```text
 Modules to be installed
@@ -57,7 +57,7 @@ OK
 ```
 {: screen}
 
-On successful completion the install command will return **fullfillment_success**.  
+On successful completion the install command returns **fullfillment_success**.  
 
 For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
@@ -65,9 +65,7 @@ For more information, about how to diagnose and resolve issues if the install fa
 ## Next steps
 {: #bp-install-nextsteps}
 
-After installing the Blueprint, the desired cloud resources are now deployed. The resources can be located on the Blueprint Resources tab in the [Blueprints UI](https://cloud.ibm.com/schematics/blueprints){:external}. Or via the Console [Resource list](https://cloud.ibm.com/resources){:external}. 
-
+After installing the Blueprint, the cloud resources are now deployed. The resources can be located on the Blueprint `Resources` tab in the [Blueprints UI](https://cloud.ibm.com/schematics/blueprints){: external}, or through [Resource list](https://cloud.ibm.com/resources){: external}. 
+{: shortdesc}
 
 The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-display-blueprint). 
-
-
