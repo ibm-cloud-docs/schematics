@@ -225,6 +225,8 @@ subcollection: schematics
 
         * New {{site.data.keyword.bpshort}} Blueprints Beta release
 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
 * [June 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june22)
 
     * Review the release notes for June 2022.
@@ -560,6 +562,8 @@ subcollection: schematics
 [Creating a Blueprint](/docs/schematics?topic=schematics-create-blueprint#create-blueprint)
 
 * [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
+
+* [Verify Blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#bp-verify-create-ui)
 
 * [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
 

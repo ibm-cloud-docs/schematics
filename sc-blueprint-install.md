@@ -70,10 +70,6 @@ OK
 
 On successful completion the install command returns **fullfillment_success**.  
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
-
-
-
 For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Next steps
