@@ -225,6 +225,8 @@ subcollection: schematics
 
         * New {{site.data.keyword.bpshort}} Blueprints Beta release
 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
 * [June 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june22)
 
     * Review the release notes for June 2022.

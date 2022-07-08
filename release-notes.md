@@ -48,6 +48,9 @@ New {{site.data.keyword.bpshort}} Blueprints Beta release
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails&interface=ui) for any challenges and questions on Blueprints.
     - [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations&interface=ui) to provide your feedback and limitations that you observe.
 
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.11.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 
 
 ## June 2022
