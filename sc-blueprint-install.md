@@ -78,4 +78,6 @@ For more information, about how to diagnose and resolve issues if the install fa
 After installing the Blueprint, the cloud resources are now deployed. The resources can be located on the Blueprint `Resources` tab in the [Blueprints UI](https://cloud.ibm.com/schematics/blueprints){: external}, or through [Resource list](https://cloud.ibm.com/resources){: external}. 
 {: shortdesc}
 
-The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-display-blueprint). 
+The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
+
+Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 

@@ -29,7 +29,7 @@ The first step in deploying cloud resources is the creation of a Blueprint in {{
 
 1. Open the [{{site.data.keyword.bpshort}} Blueprints page](https://cloud.ibm.com/schematics/blueprints){: external}. 
 2. Click **Create Blueprint via CLI**.
-    Currently, you can only create Blueprint from command-line. Follow the [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli) to create a Blueprint and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
+    Currently, you can only create Blueprint from command-line by using [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli) and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
     {: note}
 
    Verify Blueprint creation from the UI 
@@ -78,7 +78,7 @@ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Defau
 
 On successful completion the create command returns **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint. For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
 
-Verify Blueprint creation 
+Verify Blueprint create 
 
 Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 
@@ -106,14 +106,13 @@ On successful completion the create command will return **create_success** and t
 
 For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
-
 ## Creating a Blueprint from the API
 {: #create-blueprint-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint update, refer to, [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-Blueprint create API runs `Blueprint create`, and `Blueprint jobs` APIs together, to performs the create and install Blueprint operations.
+Blueprint create API runs `Blueprint create`, and `Blueprint jobs` APIs together, to performs the create, and install Blueprint operations.
 {: important}
 
 Example
@@ -233,3 +232,5 @@ For more information, about how to diagnose and resolve issues if the create fai
 {: #bp-create-nextsteps}
 
 After creating the Blueprint in {{site.data.keyword.bpshort}}, the next step in deploying the cloud resources defined by the Blueprint is to [install](/docs/schematics?topic=schematics-install-blueprint) the Blueprint. 
+
+Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 

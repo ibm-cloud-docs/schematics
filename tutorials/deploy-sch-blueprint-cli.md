@@ -275,6 +275,5 @@ OK
 
 You have now deployed a {{site.data.keyword.bpshort}} Blueprint. By completing this tutorial, you've learned to take a Blueprint through its lifecycle of creation to retirement by creating multiple Workspaces, cloud resources, and then destroying the created cloud environment.  
 
-Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). 
+Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
 
-Check the example Readme files for further Blueprint customization and usage scenarios for each sample. 

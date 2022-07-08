@@ -579,17 +579,35 @@ subcollection: schematics
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
-* [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update)
+* [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
+
+* [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
+
+* [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
+
+* [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
+
+    * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-api-nextsteps)
 
 [Destroying a Blueprint](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint)
 
-* [Verify Blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#bp-verify-destroy)
+* [Destroying a Blueprint from the UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
+
+* [Destroying a Blueprint from the CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
+
+* [Destroying a Blueprint from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
 
 * [Next steps](/docs/schematics?topic=schematics-destroy-blueprint#bp-destroy-nextsteps)
 
 [Deleting a Blueprint](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint)
 
-* [Verify Blueprint delete success](/docs/schematics?topic=schematics-delete-blueprint#bp-verify-delete)
+* [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
+
+* [Deleting Blueprint from the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
+
+* [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
 
 
 ## Managing Workspaces
