@@ -42,7 +42,7 @@ Before your begin
 {: #select-schematics-blueprint-cli}
 {: step}
 
-This tutorial uses a [sample Blueprint](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} to create two {{site.data.keyword.bpshort}} Workspaces referencing an existing resource group and creating a {{site.data.keyword.cos_full}} instance and bucket.
+This tutorial uses a [sample Blueprint](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} to create two {{site.data.keyword.bpshort}} Workspaces referencing an existing resource group and creating an {{site.data.keyword.cos_full}} instance and bucket.
 
 The sample Blueprint takes two input parameters, `provision_rg=false`, and `resource_group_name=Default`. These configure the Blueprint to retrieve the ID of the Default resource group. See the example README file for alternative parameters to create a new resource group. 
 
@@ -277,4 +277,4 @@ You have now deployed a {{site.data.keyword.bpshort}} Blueprint. By completing t
 
 Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). 
 
-Check the example Readme files for further Blueprint customisation and usage scenarios for each sample. 
+Check the example Readme files for further Blueprint customization and usage scenarios for each sample. 
