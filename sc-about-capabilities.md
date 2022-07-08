@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-08"
 
 keywords: schematics capabilities, schematics benefits, why use schematics, capabilities
 
@@ -41,5 +41,5 @@ Review the capabilities that {{site.data.keyword.bpshort}} provides for you as y
 ## Next steps about {{site.data.keyword.bpshort}}
 {: #nextstep-capabilities}
 
-- Learn more about the {{site.data.keyword.bpshort}} [terminologies](/docs/schematics?topic=schematics-learn-schematics-term) and the [Open Source technolgoies](/docs/schematics?topic=schematics-schematics-open-projects) used in {{site.data.keyword.bpshort}}.
+- Learn more about the {{site.data.keyword.bpshort}} [terminologies](/docs/schematics?topic=schematics-learn-schematics-term) and the [Open Source technologies](/docs/schematics?topic=schematics-schematics-open-projects) used in {{site.data.keyword.bpshort}}.
 - Click [here](/docs/schematics?topic=schematics-learn-about-schematics) to revisit the {{site.data.keyword.bpshort}} capabilities.
