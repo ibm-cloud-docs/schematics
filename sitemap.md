@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-08"
 
 keywords: schematics
 subcollection: schematics
@@ -87,6 +87,22 @@ subcollection: schematics
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
+
+[Your responsibilities with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sc-responsibilities#sc-responsibilities)
+
+* [Managed products](/docs/schematics?topic=schematics-sc-responsibilities#managed-responsibilities)
+
+* [Managed products for Agents](/docs/schematics?topic=schematics-sc-responsibilities#managed-offerings-on-customers-resources-responsibilities)
+
+* [Security](/docs/schematics?topic=schematics-sc-responsibilities#responsibilities-security)
+
+* [Resource provisioning and change management](/docs/schematics?topic=schematics-sc-responsibilities#change-management)
+
+* [High availability, backup, and disaster recovery](/docs/schematics?topic=schematics-sc-responsibilities#disaster-recovery)
+
+* [Identity and access management](/docs/schematics?topic=schematics-sc-responsibilities#iam)
+
+* [Incident and Operations Management](/docs/schematics?topic=schematics-sc-responsibilities#incident-ops-mgt)
 
 
 ## Security and compliance
