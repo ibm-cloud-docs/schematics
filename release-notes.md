@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-07-08"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,33 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
+
+
+
+## July 2022
+{: #schematics-july22}
+
+Review the release notes for July 2022.
+{: shortdesc}
+
+### 8 July 2022
+{: #schematics-july0822}
+{: release-note}
+
+New {{site.data.keyword.bpshort}} Blueprints Beta release
+:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to know about {{site.data.keyword.bpshort}} Blueprints Beta releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints journey.
+    - [Getting started](/docs/schematics?topic=schematics-getting-started).
+    - [Getting started usecase](/docs/schematics?topic=schematics-get-started-blueprints).
+    - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
+    - [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions&interface=ui) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-install-blueprint&interface=ui) to configure the right schemas and use the right Blueprints commands for the deployment of Blueprints.
+    - See [Blueprints permissions](/docs/schematics?topic=schematics-access&interface=ui#blueprint-permissions) to get access permissions to explore Blueprints deployment.
+    - Refer the Blueprints [CLI](/docs/schematics?topic=schematics-create-blueprint&interface=cli), [UI](/docs/schematics?topic=schematics-create-blueprint&interface=ui), and [API](/docs/schematics?topic=schematics-create-blueprint&interface=cli) instructions.
+    - Explore [deploying {{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli&interface=ui) tutorial to create cloud resources with a Blueprints managed cloud environment. For more information, refer the Blueprints CLI, UI, and API instructions.
+    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails&interface=ui) for any challenges and questions on Blueprints.
+    - [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations&interface=ui) to provide your feedback and limitations that you observe.
+
+
 
 ## June 2022
 {: #schematics-june22}

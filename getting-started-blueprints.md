@@ -121,10 +121,14 @@ In the UI view the provisioned {{site.data.keyword.cos_full_notm}} Blueprint and
 
 You have now deployed a {{site.data.keyword.bpshort}} Blueprint and created a multi-workspace environment.
 
-Clean up the deployed Blueprint with the following commands:
+Optionally, you can clean up the deployed Blueprint with the following commands:
 
 ```sh
 ibmcloud schematics blueprint destroy -id <blueprint_id>
+```
+{: pre}
+
+```sh
 ibmcloud schematics blueprint delete -id <blueprint_id>
 ```
 {: pre}

@@ -11,14 +11,15 @@ Schematics
          getting-started-terraform.md
          getting-started-ansible-new.md
          getting-started-software.md
+         getting-started-blueprints.md
     
     {: .topicgroup}
     About
         sc-about-capabilities.md
         sc-about-terminologies.md
         sc-about-opensourceproj.md
+        sc-blueprint.md
         sc-about-usecases.md
-        sc-about-responsibilities.md
  
      {: .topicgroup}
      Security and compliance
@@ -37,6 +38,7 @@ Schematics
     tutorials/provisioning-tf.md
     tutorials/automate_continuous_deployment.md
     tutorials/private-catalog.md
+    tutorials/deploy-sch-blueprint-cli.md
     [Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/)
     [Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
     [Building an IBM Blockchain Platform network by using Ansible playbooks](/docs/blockchain-sw-25?topic=blockchain-sw-25-ansible-build)
@@ -47,6 +49,16 @@ Schematics
     Setting up the CLI and API
           setup-cli.md
           setup-api.md
+
+    {: .topicgroup}
+    Managing Blueprints
+         sc-blueprint-definitions.md
+         sc-blueprint-lifecycle.md
+         sc-blueprint-create.md
+         sc-blueprint-install.md
+         sc-blueprint-update.md
+         sc-blueprint-destroy.md
+         sc-blueprint-delete.md
 
     {: .topicgroup}
     Managing Workspaces
@@ -114,10 +126,18 @@ Schematics
         cli-reference.md
         cli-version-release.md
     [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics)
+
+    {: .topicgroup}
+    Blueprints definition reference
+        sc-blueprint-definition-yaml.md
+        sc-blueprint-input-yaml.md
+    sc-agent-beta-limitations.md
+    sc-blueprint-beta-limitation.md
     sc-tools.md
     schematics-sdk.md
     locations.md
     limitations.md
+    sc-glossary.md
     license-notices.md
 
     {: .topicgroup}
@@ -141,6 +161,7 @@ Schematics
     {: .topicgroup}
     FAQs
         faqs/sc-actions-faq.md
+        faqs/sc-agents-faq.md
         faqs/sc-general-faq.md
         faqs/sc-workspaces-faq.md
     
@@ -157,6 +178,12 @@ Schematics
         {: .topicgroup}
         Troubleshooting Schematics create errors
              troubleshooting/wks_creation_api.md
+
+        {: .topicgroup}
+        Troubleshooting Blueprints
+             troubleshooting/ts-blueprint-create-failure.md
+             troubleshooting/ts-blueprint-create-init-failure.md
+             troubleshooting/ts-blueprint-install-failure.md
         error-messages.md
     ts_index.md
     {: .navgroup-end}

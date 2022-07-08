@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-08"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -27,31 +27,6 @@ The following cross-references are used in this glossary:
 {: #glossary-actions}
 
 Automate resource and application management with Ansible playbook.
-
-## Agents
-{: #glossary-agents}
-
-Extends {{site.data.keyword.bpshort}} ability to reach user infrastructure.
-
-### Agent
-{: #agentsa1}
-
-Method or service to bind {{site.data.keyword.bpshort}} Agents with {{site.data.keyword.bpshort}} Workspaces.
-
-### Agent service
-{: #agentsa2}
-
-Process of integrating {{site.data.keyword.bpshort}} Workspaces with Agents to establish {{site.data.keyword.bpshort}} service to provision, configure, and operate user IaC resources.
-
-### network policies
-{: #agentsn1}
-
-Allow you to designate who is authorized to connect or cannot connect to the Agent network.
-
-### proxies
-{: #agentsp1}
-
-Method of provisioning that can be used for identifying backend systems.
 
 ## Blueprints
 {: #glossary-blueprint}
@@ -161,6 +136,4 @@ Common area to edit values of the variables so that new terraform template can b
 ### Workspace
 {: #wksw1}
 
-A platform to build the infrastructure by using Open Source tools such as Terraform, Ansible, Helm, Open Shift Cloud to manage various cloud infrastructure resources.
-
-
+A platform to build the infrastructure by using Open Source tools such as `Terraform`, `Ansible`, `Helm`, `Open Shift` cloud to manage various cloud infrastructure resources.

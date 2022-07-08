@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-08"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -139,11 +139,14 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output: 
 
     ```text
-    schematics                      1.7.2        Update Available           false
+    schematics                      1.10.0        Update Available           false
     ```
     {: screen}
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in.
+
+    For {{site.data.keyword.bpshort}} Blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.11.0` version.
+    {: note}
 
     ```sh
     ibmcloud plugin update schematics
@@ -155,11 +158,71 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     ```
     {: pre}
 
-    Example output: 
+   Example output for Blueprints support: 
 
     ```text
-    schematics                      1.10.0        true
+    schematics                      1.11.0        true
     ```
     {: screen}
 
+5. Show the {{site.data.keyword.bpshort}} plug-in.
+    ```sh
+    ibmcloud plugin show schematics
+    ```
+    {: pre}
 
+    Example output:
+
+    ```text
+    Plugin Name                              schematics
+    Plugin Version                           1.11.1
+    Plugin SDK Version                       0.8.0
+    Minimal IBM Cloud CLI version required   0.15.1
+    Private endpoints supported              true
+
+    Commands:
+    schematics,sch                     IBM Cloud Schematics plug-in
+    schematics,sch workspace,ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
+    schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
+    schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.
+    schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
+    schematics,sch apply               Apply a plan to an workspace to deploy the latest version of your configuration.
+    schematics,sch refresh             Refresh the workspace with latest version of your workspace configuration.
+    schematics,sch destroy             Destroy resources in an existing workspace. This action cannot be reversed.
+    schematics,sch output              Get all the output values from your workspace; (ex. result of terraform output command
+    schematics,sch version             Report version information about the IBM Cloud Schematics CLI.
+    schematics,sch logs                Show details about actions that ran against an workspace.
+    schematics,sch state               Advanced state management
+    schematics,sch kms                 listing and enabling IBM Cloud Schematics kms instances and root keys .
+    schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
+    schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
+    schematics,sch blueprint,bp        [Beta] Create and manage Blueprints.
+    ```
+    {: screen}
+
+## Uninstalling the {{site.data.keyword.bplong_notm}} command-line plug-in
+{: #uninstall-schematics-plugin}
+
+Uninstall the {{site.data.keyword.bplong_notm}} plug-in to remove the {{site.data.keyword.bpshort}} plugin from your local system.
+{: shortdesc}
+
+1. Uninstall the {{site.data.keyword.cloud_notm}} command-line plug-in for {{site.data.keyword.bpshort}}.
+    ```sh
+    ibmcloud plugin uninstall schematics
+    ```
+    {: pre}
+
+    Example output:
+
+    ```text
+    Uninstalling plug-in 'schematics'...
+    OK
+    Plug-in 'schematics' was successfully uninstalled.
+    ```
+    {: screen}
+
+2. Verify that the {{site.data.keyword.bplong_notm}} command-line plug-in is uninstalled successfully.
+    ```sh
+    ibmcloud plugin list | grep schematics
+    ```
+    {: pre}
