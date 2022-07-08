@@ -1482,6 +1482,22 @@ subcollection: schematics
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
+[Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
+
+* [Why do I perform Blueprint operations using `Blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
+
+* [How does resource provisioning happen when using the Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
+
+* [How do I view the Blueprints provisioned results in my cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
+
+* [How do I securely pass input variables to Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
+
+* [Why does the Blueprints basic example fail in the Install step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
+
+* [What is the time taken to create a IKS cluster using Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
+
+* [How do I tell Blueprints what version of Terraform executable to use?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
+
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 
 * [What is {{site.data.keyword.bplong_notm}} and how does it work?](/docs/schematics?topic=schematics-general-faq#what-is-schematics)
