@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-07-04"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -24,7 +24,7 @@ subcollection: schematics
 Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_notm}} workspace. To set up {{site.data.keyword.monitoringshort_notm}}, create a {{site.data.keyword.monitoringshort_notm}} instance in a public cloud region and plan associated to the resource. The region defines where your metrics are centralized. The plan specifies the features and retention period for your metrics. Complete these steps to launch {{site.data.keyword.monitoringshort_notm}}.
 {: shortdesc}
 
-1. Login to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integration** in the side navigation pane.
 4. Against your monitoring instance, click **Configure** and select your instance name based on your location.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-04"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -67,6 +67,6 @@ You can add an image to your URL to create your `Deploy to {{site.data.keyword.c
 ## Next steps
 {: #sample-actions-nextsteps}
 
-Explore the [{{site.data.keyword.bpshort}} samples templates](docs/schematics?topic=schematics-sample_actiontemplates) to deploy in your {{site.data.keyword.cloud_notm}} account.
+Explore the [{{site.data.keyword.bpshort}} samples templates](/docs/schematics?topic=schematics-sample_actiontemplates) to deploy in your {{site.data.keyword.cloud_notm}} account.
 Looking for more code examples? Check out the [samples for {{site.data.keyword.bplong_notm}} GitHub repositories](https://github.com/Cloud-Schematics?q=Ansible&type=all&language=&sort=){: external}.
 

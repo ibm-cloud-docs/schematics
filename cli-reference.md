@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-08"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -377,7 +377,6 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 
 You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 {: shortdesc}
-
 
 ### Prerequisites
 {: #key-prerequisites}
@@ -814,9 +813,9 @@ ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-objec
 | `--command-name,` or `-n` | Required | The command that you want to run for your action. Supported values are `ansible_playbook_check`, and `ansible_playbook_run`.|
 | `--playbook-name` or `-pn` | Optional | The name of the Ansible playbook that you want to run.  |
 | `--command-options` or `-co` | Optional | The command-line options for the command.|
-| `--input` or `--in` | Optional | The input variables for an action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
+| `--input` or `--in` | Optional | The input variables for an action. **Note** This flag can be set multiple times, and must be in a format `--inputs test=testvalue`.|
 |`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
-| `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables foo=bar`.|
+| `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables test=testvalue`.|
 | `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains environment variables. |
 | `--result-format` or `-f` | Optional |The result response output in JSON format.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of the new job. |
@@ -1051,7 +1050,7 @@ Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {
 ### `ibmcloud schematics apply`
 {: #schematics-apply}
 
-Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, [persisted](/docs/schematics?topic=schematics-faqs#persist-file), or removed in {{site.data.keyword.cloud_notm}}.
+Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, [stored](/docs/schematics?topic=schematics-faqs#persist-file), or removed in {{site.data.keyword.cloud_notm}}.
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}
 
@@ -1096,7 +1095,7 @@ Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with 
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}	
 
-Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you use persistent storage, make sure that you created a backup for your data
+Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you use permanent storage, ensure that you create a backup for your data.
 {: important} 	
 
 Your workspace must be in an **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} destroy action. 
@@ -2069,7 +2068,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 | Parameter | Required / Optional | Description |
 | -- | -- | -- |
 | `workspace_name` | Optional | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).|
-| `terraform_version` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, Schematics selects the version from your template.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. |
+| `terraform_version` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. |
 | `location` | Optional | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run `ibmcloud target --output json` and look at the `region` field. To target a different region, run `ibmcloud target -r <region>`. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted. |
 | `description` | Optional | Enter a description for your workspace. |
 | `template_repo.url` | Optional | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. |
@@ -2330,7 +2329,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td><code>type</code></td>
     <td>Optional</td>
-    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.1` to use Terraform version 1.1, `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, Schematics selects the version from your template.</td>
+    <td>The Terraform version that you want to use to run your Terraform code. Enter `Terraform_v1.1` to use Terraform version 1.1, `Terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template.</td>
     </tr>
     <tr>
     <td><code>description</code></td>
@@ -2340,7 +2339,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td><code>tags</code></td>
     <td>Optional</td>
-    <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace more easily.</td>
+    <td>Enter tags that you want to associate with your workspace. Tags can help you find your workspace faster.</td>
     </tr>
     <tr>
     <td><code>resource_group</code></td>

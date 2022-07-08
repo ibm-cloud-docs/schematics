@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-07-08"
 
 keywords: schematics
 subcollection: schematics
@@ -88,6 +88,22 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
 
+[Your responsibilities with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sc-responsibilities#sc-responsibilities)
+
+* [Managed products](/docs/schematics?topic=schematics-sc-responsibilities#managed-responsibilities)
+
+* [Managed products for Agents](/docs/schematics?topic=schematics-sc-responsibilities#managed-offerings-on-customers-resources-responsibilities)
+
+* [Security](/docs/schematics?topic=schematics-sc-responsibilities#responsibilities-security)
+
+* [Resource provisioning and change management](/docs/schematics?topic=schematics-sc-responsibilities#change-management)
+
+* [High availability, backup, and disaster recovery](/docs/schematics?topic=schematics-sc-responsibilities#disaster-recovery)
+
+* [Identity and access management](/docs/schematics?topic=schematics-sc-responsibilities#iam)
+
+* [Incident and Operations Management](/docs/schematics?topic=schematics-sc-responsibilities#incident-ops-mgt)
+
 
 ## Security and compliance
 {: #sitemap_security_and_compliance}
@@ -135,7 +151,7 @@ subcollection: schematics
 
 * [Best practices for creating Terraform Templates or modules in Git repositories](/docs/schematics?topic=schematics-bp-secure-objects#bp-secure-repo)
 
-    * [What are the best practices that I must follow while developing the Terraform templates, and while publishing the same in the Git repositories?](/docs/schematics?topic=schematics-bp-secure-objects#bp-template-strategy)
+    * [What are the best practices that I must follow when developing the Terraform templates, and publishing the same in the Git repositories?](/docs/schematics?topic=schematics-bp-secure-objects#bp-template-strategy)
 
     * [Can I create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-tfvars)
 
@@ -143,27 +159,27 @@ subcollection: schematics
 
 * [Best practices of managing {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
 
-    * [What are the best practices that I must follow while creating a Workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
+    * [What are the best practices that I must follow when creating a Workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
 
     * [How can I ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
 
     * [How can I protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data)
 
-    * [How does {{site.data.keyword.bpshort}} protect my Workspace data through Terraform state file, or log files, etc?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
+    * [How does {{site.data.keyword.bpshort}} protect my Workspace data through Terraform state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
 * [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
 
-    * [What are the best practices that I must follow while creating an Action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
+    * [What are the best practices that I must follow when creating an Action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
 
     * [How can I protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data)
 
-    * [How does Schematics protect my Action data through input credentials state file, or log files, etc?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
+    * [How does {{site.data.keyword.bpshort}} protect my Action data through input credentials state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
 
 * [Protecting data of {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect)
 
     * [Access protection by using Identity and Access Management](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-iam)
 
-    * [Non-repudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
+    * [Nonrepudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
 
     * [Data protection by using KMS](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data-protection)
 
@@ -1024,11 +1040,11 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## Schematics runtime tools
-{: #sitemap_schematics_runtime_tools}
+## {{site.data.keyword.bpshort}} runtime tools
+{: #sitemap__runtime_tools}
 
 
-[Schematics runtime tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
+[{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
 
 * [Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-job)
 
@@ -1241,7 +1257,7 @@ subcollection: schematics
 
 * [How do I overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 
-* [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
+* [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
 * [How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 
@@ -1259,7 +1275,7 @@ subcollection: schematics
 
 * [How can I access the {{site.data.keyword.bpshort}} services for test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
-* [How can I download sub-folders from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
+* [How can I download subfolders from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
 * [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 

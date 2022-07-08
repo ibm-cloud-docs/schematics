@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-25"
+lastupdated: "2022-07-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -50,12 +50,12 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
 
-## How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform or Ansible templates?
+## How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?
 {: #clone-file-extension}
 {: faq}
 {: support}
 
-While creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
+While creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.keyword.bplong_notm}} takes a copy of the Terraform, or Ansible template from your Git repository and stores in a secured location. Before the template files is saved, {{site.data.keyword.bpshort}} analyses the files and are removed, based on the following conditions:
 
 - The allowed file extension are `.cer, .cfg, .conf, .crt, .der, .gitignore, .html, .j2, .jacl, .js, .json, .key, .md, .netrc, .pem, .properties, .ps1, .pub, .py, .service, .sh, .tf, .tf.json, .tfvars, .tmpl, .tpl, .txt, .yaml, .yml, .zip, _rsa, license`.
 - The allowed image extension are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.
@@ -114,7 +114,7 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-Schematics runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
 ## How can I create workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}
@@ -139,12 +139,12 @@ You see authorization issues when the roles and permission access is insufficien
 
 The test IDs are considered as a valid IBM IDs to perform the global catalog or resource controller related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
-## How can I download sub-folders from the Git repositories through {{site.data.keyword.bpshort}}
+## How can I download subfolders from the Git repositories through {{site.data.keyword.bpshort}}
 {: #compact-faq}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the sub-folder from the GIT repositories. If the compact flag is set to **true** you can download and save sub-folder recursively, otherwise, you will continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the subfolder from the GIT repositories. If the compact flag is set to **true** you can download and save subfolder recursively, otherwise, you will continue to download and save the full repository on workspace creation.
 
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 

@@ -18,6 +18,7 @@ Schematics
         sc-about-terminologies.md
         sc-about-opensourceproj.md
         sc-about-usecases.md
+        sc-about-responsibilities.md
  
      {: .topicgroup}
      Security and compliance

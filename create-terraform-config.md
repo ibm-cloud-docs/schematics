@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-07-04"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -226,7 +226,7 @@ resource ibm_container_cluster "test_cluster" {
 {: #declare-variable}
 
 After creating the workspace, you can provide the values, for {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. 
-- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; Schematics &gt; Workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
+- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; {{site.data.keyword.bpshort}} &gt; Workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
 - For `CLI`, you can refer to, create or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then the `value` field must contain escaped string for the variable store, as shown in the example.
 - For `API` you can see [create or update the values](/apidocs/schematics/schematics#createworkspace) in the field `template_data` &gt;  `variablestore`. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string for any type of the variable. 
 
