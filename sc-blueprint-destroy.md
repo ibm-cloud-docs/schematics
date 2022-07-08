@@ -17,7 +17,6 @@ subcollection: schematics
 
 # Destroying a Blueprint
 {: #destroy-blueprint}
-{: cli}
 
 The cloud resources created by a Blueprint are destroyed using the `blueprint destroy` command. If it is then needed to remove the Blueprint from Schematics, this is performed after all resources have been destroyed using the [Blueprint destroy](/docs/schematics?topic=schematics-sc-blueprint-delete) command. Refer to [Blueprints lifecycle](https://test.cloud.ibm.com/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands create, update and delete and the Blueprints lifecycle. 
 
