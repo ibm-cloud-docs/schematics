@@ -68,10 +68,9 @@ Create your Blueprints environment by using the [`ibmcloud schematics blueprint 
 {: #step1-syntax}
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=Default
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=default
 ```
 {: pre}
-
 
 ### Output
 {: #step1-output}

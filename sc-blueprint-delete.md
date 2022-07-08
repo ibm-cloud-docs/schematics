@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-08"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -47,7 +47,7 @@ OK
 {: screen}
 
 
-## Verfiy Blueprint delete success 
+## Verify Blueprint delete success 
 {: #bp-verify-delete}
 
 During the beta, the delete CLI command does not wait for successful job completion and returns immediately. 

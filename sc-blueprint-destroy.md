@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-08"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -33,7 +33,7 @@ On successful completion the destroy command returns **fullfilment_success**.
 
 For more information, about the command options, see [Destroy command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy).
 
-## Verfiy Blueprint destroy success 
+## Verify Blueprint destroy success 
 {: #bp-verify-destroy}
 
 Verify that the Blueprint resources have been destroyed successfully. When you run destroy from the CLI, the command displays details of the Workspaces to be destroyed and the status of {{site.data.keyword.bpshort}} jobs executing the Terraform destroy operations. After prompting to confirm that the user intends to destory all resources, the command only returns on completion.

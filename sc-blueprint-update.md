@@ -72,10 +72,6 @@ ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
 {: pre}
 
-
-
-
-
 **Syntax:**
 
 ```sh
@@ -87,9 +83,8 @@ On successful completion the update command will return **update_success**.
 
 For more information, about the command options, see [Update command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update).
 
-
-
-## Verfiy Blueprint update
+## Verify Blueprint update
+{: #verify-bp-update}
 
 Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 

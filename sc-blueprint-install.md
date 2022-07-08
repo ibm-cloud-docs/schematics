@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-08"
 
 keywords: blueprint install, install blueprint, blueprint
 
@@ -20,6 +20,17 @@ subcollection: schematics
 
 Blueprint install is the second step required to create or modify cloud resources when using Blueprints. Install runs the IaC automation code for each workspace. For each module, {{site.data.keyword.bpshort}} performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. 
 {: shortdesc}
+
+## Installing a Blueprint from the CLI 
+{: #install-blueprint-cli}
+{: cli}
+
+To install and deploy your Blueprint with the CLI, use the `ibmcloud schematics blueprint install` command. This command requires a name and the Git URL of a Blueprint definition and other optional arguments. For a complete listing of options, see the [ibmcloud schematics blueprint install](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
+{: shortdesc}
+
+Before your begin
+
+- Install and log in to the [{{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli).
 
 The following command performs a Blueprint install for the Blueprint with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
 
@@ -59,8 +70,11 @@ OK
 
 On successful completion the install command returns **fullfillment_success**.  
 
-For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
+
+
+For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Next steps
 {: #bp-install-nextsteps}
