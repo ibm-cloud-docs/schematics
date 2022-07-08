@@ -29,7 +29,7 @@ The first step in deploying cloud resources is the creation of a Blueprint in {{
 
 1. Open the [{{site.data.keyword.bpshort}} Blueprints page](https://cloud.ibm.com/schematics/blueprints){: external}. 
 2. Click **Create Blueprint via CLI**.
-    Currently, you can only create Blueprint from command-line. Follow the [command-line instructions](#create-blueprint-cli) to create a Blueprint.
+    Currently, you can only create Blueprint from command-line. Follow the [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli) to create a Blueprint and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
     {: note}
 
 3. Click your Blueprint that are listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
