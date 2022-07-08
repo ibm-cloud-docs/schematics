@@ -21,7 +21,34 @@ subcollection: schematics
 Deploying cloud resources with Blueprints is a two step process, create and install. The first step creates a Blueprint in {{site.data.keyword.bpshort}}. The second [install](/docs/schematics?topic=schematics-sc-blueprint-install) step executes the IaC automation modules to deploy cloud resources. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands such as `create`, `update`, and `delete`.
 {: shortdesc} 
 
-The first step in deploying cloud resources is the creation of a Blueprint in {{site.data.keyword.bpshort}}. This saves the Blueprint configuration for future operations. The Blueprint config specfies the Git source and release of the Blueprint definition, input files, and any optional input values that will be used to create cloud resources. A linked Workspace is created for each module in the Blueprint definition, initialised from the modules IaC source repository and module inputs. 
+The first step in deploying cloud resources is the creation of a Blueprint in {{site.data.keyword.bpshort}}. This saves the Blueprint configuration for future operations. The Blueprint config specfies the Git source and release of the Blueprint definition, input files, and any optional input values that will be used to create cloud resources. A linked Workspace is created for each module in the Blueprint definition, initialised from the modules IaC source repository and module inputs.
+
+## Creating a Blueprint from the UI 
+{: #create-blueprint-ui}
+{: ui}
+
+1. Open the [{{site.data.keyword.bpshort}} Blueprints page](https://cloud.ibm.com/schematics/blueprints){: external}. 
+2. Click **Create Blueprint via CLI**.
+    Currently, you can only create Blueprint from command-line. Follow the [command-line instructions](#create-blueprint-cli) to create a Blueprint.
+    {: note}
+
+3. Click your Blueprint that are listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
+4. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
+    - Optional: From **Modules status** section, Click **View details** to view the module details.
+    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
+5. Click **Modules** tab to see the list of resource modules that are in `Inactive` status.
+    - Click `basic-resource-group` module hyperlink.
+    - Click **Apply plan** to provision your resource. Wait few minutes to complete the execution.
+    - View the **Jobs** logs and **Resources** page and observe the workspace status as `ACTIVE`.
+      Repeat these steps to provision `basic-cos-storage` hyperlink.
+      {: note}
+
+6. Click **Resource** tab to view your provisioned resources list.
+7. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
+8. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
+9. Click **Settings** tab to view the summary of the deployed Blueprint.
+
+For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Creating a Blueprint from the CLI 
 {: #create-blueprint-cli}
@@ -79,32 +106,6 @@ On successful completion the create command will return **create_success** and t
 
 For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
-## Creating a Blueprint from the UI 
-{: #create-blueprint-ui}
-{: ui}
-
-1. Open the [{{site.data.keyword.bpshort}} Blueprints page](https://cloud.ibm.com/schematics/blueprints){: external}. 
-2. Click **Create Blueprint via CLI**.
-    Currently, you can only create Blueprint from command-line. Follow the [command-line instructions](#create-blueprint-cli) to create a Blueprint.
-    {: note}
-
-3. Click your Blueprint that are listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-4. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
-    - Optional: From **Modules status** section, Click **View details** to view the module details.
-    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
-5. Click **Modules** tab to see the list of resource modules that are in `Inactive` status.
-    - Click `basic-resource-group` module hyperlink.
-    - Click **Apply plan** to provision your resource. Wait few minutes to complete the execution.
-    - View the **Jobs** logs and **Resources** page and observe the workspace status as `ACTIVE`.
-      Repeat these steps to provision `basic-cos-storage` hyperlink.
-      {: note}
-
-6. Click **Resource** tab to view your provisioned resources list.
-7. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
-8. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
-9. Click **Settings** tab to view the summary of the deployed Blueprint.
-
-For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Creating a Blueprint from the API
 {: #create-blueprint-api}
