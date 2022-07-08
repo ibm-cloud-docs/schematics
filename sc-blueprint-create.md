@@ -33,7 +33,7 @@ The first step in deploying cloud resources is the creation of a Blueprint in {{
     {: note}
 
 ## Verify Blueprint creation from the UI 
-{: #bp-verify-create-ui}
+{: #create-blueprint-ui}
 
 1. Click your Blueprint that are listed from the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
 2. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
@@ -82,7 +82,7 @@ On successful completion the create command returns **create_success** and the u
 For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
 
 ## Verify Blueprint creation 
-{: #bp-verify-create}
+{: #create-blueprint-cli}
 
 Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 
