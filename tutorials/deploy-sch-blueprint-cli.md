@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-08"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -71,6 +71,7 @@ Create your Blueprints environment by using the [`ibmcloud schematics blueprint 
 ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=Default
 ```
 {: pre}
+
 
 ### Output
 {: #step1-output}
@@ -278,4 +279,3 @@ You have now deployed a {{site.data.keyword.bpshort}} Blueprint. By completing t
 Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). 
 
 Check the example Readme files for further Blueprint customisation and usage scenarios for each sample. 
-

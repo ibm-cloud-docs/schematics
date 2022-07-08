@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-08"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -15,11 +15,11 @@ subcollection: schematics
 # Blueprint definition YAML Schema
 {: #bp-definition-schema-yaml}
 
-This document is the reference of the YAML schema used to describe the Blueprint.yaml file.
+This document is the reference of the YAML schema used to describe the `blueprint.yaml` file.
 
-The blueprint.yaml file defines all modules in the Blueprint. Every Blueprint consists of a list of automation modules from which the solution architecture is composed. 
+The `blueprint.yaml` file defines all modules in the Blueprint. Every Blueprint consists of a list of automation modules from which the solution architecture is composed. 
 
-Each blueprint.yaml file has a configuration preface:
+Each `blueprint.yaml` file has a configuration preface:
 
 ```yaml
 
@@ -52,7 +52,7 @@ Type:       string
 
 Required:   true
 
-Name that will be used to identify the blueprint definition in use 
+Name that is used to identify the blueprint definition in use 
 
 ### schema_version
 {: #bp-schema-version}
@@ -80,7 +80,7 @@ Type: string
 
 Default: []
 
-A string used to describe the blueprint to provide users with more information about its usage and the solution it describes.
+A string used to describe the Blueprint to provide users with more information about its usage and the solution it describes.
 
 Example 
 ```yaml
@@ -95,7 +95,7 @@ Type: list
 
 Default: []
 
-A list defining all the inputs required by the blueprint. Inputs are specified in the [input.yaml](/docs/schematics?topic=schematics-bp-input-schema-yaml) files or as configuration parameters when the Blueprint is configured in Schematics. Inputs are defined with a `name:` key. 
+A list defining all the inputs required by the Blueprint. Inputs are specified in the [input.yaml](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as configuration parameters when the Blueprint is configured in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. 
 
 Example
 
@@ -114,7 +114,7 @@ Type: list
 
 Default: [] 
  
-A list defining all the outputs that will be returned by the blueprint to the user. Each output is identified by a key value pair. 
+A list defining all the outputs that are returned by the Blueprint to the user. Each output is identified by a key-value pair. 
 
 Example
 
@@ -125,14 +125,16 @@ outputs:
 ```
 {: pre}
 
-settings:**
+### settings
+{: #bp-settings}
+
 Type: list
 
-Default: [] 
+Default: []
 
-A list of the settings to be used by the blueprint defined as key value pairs. Each setting is identified by the key `name`.
+A list of the settings to be used by the Blueprint defined as key-value pairs. Each setting is identified by the key `name`.
 
-The only supported setting is `TF_VERSION`. 
+The only supported setting is `TF_VERSION`.
 
 ### settings.TF_VERSION
 {: #bp-tf-version}
@@ -152,12 +154,12 @@ settings: # Master settings for all modules
 ```
 {: pre}
 
-### Modules schema
+### modules schema
 {: #bp-modules-schema}
 
-The `modules` block defines the Terraform and Ansible modules from which the solution is constructed. 
+The `modules` block defines the Terraform, and Ansible modules from which the solution is constructed. 
 
-Each module list entry is defined by a name, the source for the module, inputs and outputs.   
+Each module list entry is defined by a name, the source for the module, inputs, and outputs.   
 
 ```yaml
 modules:
@@ -203,7 +205,7 @@ Type: string
 
 Required: true
 
-Name that will be used within {{site.data.keyword.bpshort}} to identify the workspace that will be created to manage the group of resources created by the Terraform config specified on the `modules.source.git.git_url` statement. 
+The name that are used within {{site.data.keyword.bpshort}} to identify the workspace that will be created to manage the group of resources created by the Terraform config specified on the `modules.source.git.git_url` statement. 
 
 ### modules.module_type
 {: #bp-modules-moduletype}
@@ -212,7 +214,7 @@ Type: string
 
 Required: true
 
-String specifying the IAC type of the automation module. Only Terraform is supported at this time.   
+String specifying the IaC type of the automation module. Only Terraform is supported at this time.   
 
 Options: `terraform`
 

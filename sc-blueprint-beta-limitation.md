@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-08"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -75,8 +75,6 @@ Following steps allows you to join the {{site.data.keyword.bpshort}} Blueprints 
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page will be opened
 - Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Blueprints Beta**.
-- Support Case Description: **Please invite my email address to the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel**
+- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel**
 - Click **Next** .
-- Click **Submit case**.
-   Wait for 10 - 15 minutes, to provide an access.
-   {: note}
+- Click **Submit case**. Wait for 10 - 15 minutes, to provide an access.

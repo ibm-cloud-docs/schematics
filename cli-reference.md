@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-08"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -813,9 +813,9 @@ ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-objec
 | `--command-name,` or `-n` | Required | The command that you want to run for your action. Supported values are `ansible_playbook_check`, and `ansible_playbook_run`.|
 | `--playbook-name` or `-pn` | Optional | The name of the Ansible playbook that you want to run.  |
 | `--command-options` or `-co` | Optional | The command-line options for the command.|
-| `--input` or `--in` | Optional | The input variables for an action. **Note** This flag can be set multiple times, and must be in a format `--inputs foo=bar`.|
+| `--input` or `--in` | Optional | The input variables for an action. **Note** This flag can be set multiple times, and must be in a format `--inputs test=testvalue`.|
 |`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
-| `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables foo=bar`.|
+| `--env` or `-e` | Optional | The environment variables for an Action. **Note** This flag can be set multiple times, and must be in a format `--env-variables test=testvalue`.|
 | `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains environment variables. |
 | `--result-format` or `-f` | Optional |The result response output in JSON format.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of the new job. |
