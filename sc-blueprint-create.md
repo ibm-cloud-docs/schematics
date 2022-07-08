@@ -32,21 +32,18 @@ The first step in deploying cloud resources is the creation of a Blueprint in {{
     Currently, you can only create Blueprint from command-line. Follow the [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli) to create a Blueprint and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
     {: note}
 
-3. Click your Blueprint that are listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-4. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
+## Verify Blueprint creation from the UI 
+{: #bp-verify-create-ui}
+
+1. Click your Blueprint that are listed from the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
+2. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
     - Optional: From **Modules status** section, Click **View details** to view the module details.
     - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
-5. Click **Modules** tab to see the list of resource modules that are in `Inactive` status.
-    - Click `basic-resource-group` module hyperlink.
-    - Click **Apply plan** to provision your resource. Wait few minutes to complete the execution.
-    - View the **Jobs** logs and **Resources** page and observe the workspace status as `ACTIVE`.
-      Repeat these steps to provision `basic-cos-storage` hyperlink.
-      {: note}
-
-6. Click **Resource** tab to view your provisioned resources list.
-7. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
-8. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
-9. Click **Settings** tab to view the summary of the deployed Blueprint.
+3. Click **Modules** tab to see the list of resource modules that are in `Active` status.
+4. Click **Resource** tab to view your provisioned resources list.
+5. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
+6. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
+7. Click **Settings** tab to view the summary of the deployed Blueprint.
 
 For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
@@ -112,6 +109,9 @@ For more information, about how to diagnose and resolve issues if the create fai
 {: api}
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
+
+Blueprint create API runs `Blueprint create`, and `Blueprint jobs` APIs together, to performs the create and install Blueprint operations.
+{: important}
 
 Example
 
