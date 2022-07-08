@@ -583,8 +583,6 @@ subcollection: schematics
 
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
-* [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
-
 * [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
     * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-api-nextsteps)

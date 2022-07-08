@@ -129,9 +129,6 @@ On successful completion the update command will return **update_success**.
 
 For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
 
-## Next steps
-{: #bp-update-nextsteps}
-
 After updating the Blueprint in {{site.data.keyword.bpshort}}, the next step in deploying the cloud resources defined by the Blueprint is to [install](/docs/schematics?topic=schematics-install-blueprint) the Blueprint. 
 
 ## Updating a Blueprint from the API
