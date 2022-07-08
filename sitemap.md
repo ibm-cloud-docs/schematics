@@ -563,11 +563,7 @@ subcollection: schematics
 
 * [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
 
-* [Verify Blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#bp-verify-create-ui)
-
 * [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
-
-* [Verify Blueprint creation](/docs/schematics?topic=schematics-create-blueprint#bp-verify-create)
 
 * [Creating a Blueprint from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 

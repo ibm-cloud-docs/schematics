@@ -32,18 +32,17 @@ The first step in deploying cloud resources is the creation of a Blueprint in {{
     Currently, you can only create Blueprint from command-line. Follow the [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli) to create a Blueprint and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
     {: note}
 
-## Verify Blueprint creation from the UI 
-{: #bp-verify-create-ui}
+   Verify Blueprint creation from the UI 
 
-1. Click your Blueprint that are listed from the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-2. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
-    - Optional: From **Modules status** section, Click **View details** to view the module details.
-    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
-3. Click **Modules** tab to see the list of resource modules that are in `Active` status.
-4. Click **Resource** tab to view your provisioned resources list.
-5. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
-6. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
-7. Click **Settings** tab to view the summary of the deployed Blueprint.
+    1. Click your Blueprint that are listed from the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
+    2. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
+        - Optional: From **Modules status** section, Click **View details** to view the module details.
+        - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
+    3. Click **Modules** tab to see the list of resource modules that are in `Active` status.
+    4. Click **Resource** tab to view your provisioned resources list.
+    5. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
+    6. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
+    7. Click **Settings** tab to view the summary of the deployed Blueprint.
 
 For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
@@ -77,12 +76,9 @@ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Defau
 ```
 {: pre}
 
-On successful completion the create command returns **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint.  
+On successful completion the create command returns **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint. For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
 
-For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
-
-## Verify Blueprint creation 
-{: #bp-verify-create}
+Verify Blueprint creation 
 
 Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 
