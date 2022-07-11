@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-11"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -23,9 +23,9 @@ You have successfully connected the Agent to {{site.data.keyword.bpshort}} servi
 
 ![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
 
-Once you bind the Workspace to the Agent, then the corresponding Workspace Jobs such as `terraform plan`, `terraform apply`, `terraform destroy`, etc. will be automatically routed to the Agent. 
+Once you bind the Workspace to the Agent, then the corresponding Workspace Jobs such as `terraform plan`, `terraform apply`, `terraform destroy`, etc. is automated to route to the Agent. 
 
-In other words, the Terraform automation will run in your provisioned Agent infrastructure (cluster). The {{site.data.keyword.bpshort}} Workspace can be bound to the Agent in the following ways:
+In other words, the Terraform automation runs in your provisioned Agent infrastructure (cluster). The {{site.data.keyword.bpshort}} Workspace can be bound to the Agent in the following ways:
 - Bind an new workspace to the Agent
    When you bind the new workspace to the Agent, the Terraform templates are downloaded from the Git repositories by using Sandbox jobs that run in your Agent infrastructure (cluster). Further, the Terraform jobs are also run in your cluster.
 
@@ -39,19 +39,21 @@ In other words, the Terraform automation will run in your provisioned Agent infr
 2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
 3. Select your Agent from the list, and use the `...` dots to perform **Bind Agent** operation.
 4. In the side navigation pane, select **Workspaces** to be bound statically to the Agent.
-5. Select your bounded Agent, to view the list of related Workspaces.
+5. Select the bounded Agent to view the list of related Workspaces.
 
 ## Steps to Bind a new workspace to the Agent
 {: #steps-bind-new-wks}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://test.cloud.ibm.com/){: external} account by using your credentials.
-2. Navigate to **Schematics** > **Workspaces** > **Create Workspace**.
-3. In the Workspaces details page, use the Bind Agent to select the **Bind Agent** that must be used to run the Jobs.
+2. Navigate to **{{site.data.keyword.bpshort}}** > **Workspaces** > **Create Workspace**.
+3. In the Workspaces details page, use the Bind Agent to select the **Bind Agent** that is used to run the Jobs.
 
 **Validate the Job execution by the Agent**
 {: #validate-agent-job}
 
-Once the Workspace is bound to an Agent, you can validate whether the Jobs are being run by the Agent, by viewing the job logs.  You will see the following messages in the job logs which signifies that the Sandbox job or the Terraform jobs are being run by the Agent.
+Once the Workspace is bound to an Agent, you can validate whether the Jobs are being run by the Agent. View the Jobs log to see the following messages in the job logs which signifies that the Sandbox job or the Terraform jobs are run by the Agent.
+
+Now, you are ready to install your software or a tool in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate on your cloud cluster resources without any time, network, or software restrictions.
 
 ## Next steps
 {: #connect-nextsteps}
