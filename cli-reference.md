@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-11"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -368,6 +368,8 @@ ibmcloud schematics action upload --id ACTION_ID --file FILE_NAME [--no-prompt] 
 ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FILE_PATH>/mytestactionupload.tar
 ```
 {: pre}
+
+
 
 ## Blueprints commands
 {: #blueprints-cmd}
@@ -2301,7 +2303,7 @@ To create a workspace, you can specify your workspace settings in a JSON file. M
 **Syntax:**
 
 ```sh
-ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--github-token GITHUB_TOKEN][--output OUTPUT][--json]
+ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [--agent-id AGENT_ID]  [--github-token GITHUB_TOKEN] [--output OUTPUT] [--json]
 ```
 {: pre}
 
@@ -2312,6 +2314,7 @@ ibmcloud schematics workspace new --file FILE_NAME --state STATE_FILE_PATH [--gi
 | `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information, about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
 | `--state` | Optional | The relative path to an existing Terraform state file on your local machine. To create the Terraform state file: **1.** Show the content of an existing Terraform state file by using the [`ibmcloud schematics state pull`](#state-pull) command. **2.** Copy the content of the state file from your command-line output in to a file on your local machine that is named `terraform.tfstate`. **3.** Use the relative path to the file in the `--state` command parameter.|
 | `--github-token` or `-g` | Optional |  Enter the functional personal access tokens for HTTPS Git operations. For example, `--github-token ${FUNCTIONAL_GIT_KEY}`.|
+| `--agent-id` or `--aid` | Optional | **New** ID of the Agent to bind your new workspace. Agents help you to run your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).|
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces create flags" caption-side="top"}
