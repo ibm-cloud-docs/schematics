@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-11"
 
 keywords: schematics
 subcollection: schematics
@@ -1680,7 +1680,7 @@ subcollection: schematics
 
 [Blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
 
-* [Blueprint create fails with an invalid blueprint definitions: failed to clone git repo error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
+* [Blueprint create fails with an invalid blueprint definitions: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
 
 * [Blueprint create fails with an invalid blueprint definitions: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
 

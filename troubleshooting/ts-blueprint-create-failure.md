@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-11"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -22,8 +22,7 @@ content-type: troubleshoot
 
 Review the following sections to assist in debugging Blueprint install failures. 
 
-
-## Blueprint create fails with an invalid blueprint definitions: failed to clone git repo error
+## Blueprint create fails with an invalid blueprint definitions: failed to clone Git repository error
 {: #bp-create-fails1}
 
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input repositories cannot be cloned or found. 
@@ -53,7 +52,7 @@ Rerun the Blueprints create operation with the correct repository reference.
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input files cannot be found.
 {: tsSymptoms}
 
-Prior to creating the Blueprint, {{site.data.keyword.bpshort}} attempts to download the input files and Blueprint definition from the Git repositories specified on the create command and validate the YAML schema. The repo was located, but the definition or input files cannot be found. 
+Prior to creating the Blueprint, {{site.data.keyword.bpshort}} attempts to download the input files and Blueprint definition from the Git repositories specified on the create command and validate the YAML schema. The repository was located, but the definition or input files cannot be found. 
 {: tsCauses}
 
 Sample error
@@ -71,12 +70,10 @@ Check that the Blueprint definition file and input files identified in the error
 
 Rerun the Blueprints create operation with the correct file name.
 
-
-
 ## Blueprint create fails with the requested resource group is invalid
 {: #bp-create-fails3}
 
-When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the requested resource group id is invalid or required permissions.  
+When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the requested resource group ID is invalid or required permissions.  
 {: tsSymptoms}
 
 During creation the Blueprint is assigned to the {{site.data.keyword.bpshort}} management resource group passed on the create command. If the group is invalid or the user does not have the correct {{site.data.keyword.bpshort}} IAM permissions for the group the create operation will fail. 
