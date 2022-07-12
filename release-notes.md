@@ -39,7 +39,7 @@ New! {{site.data.keyword.bpshort}} Agents Beta release in production.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
     - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui), APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Explore [installing {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup&interface=ui) through UI to install an Agent infrastructure and Agent service Workspaces.
-    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) throught UI to register the Agent to your {{site.data.keyword.bpshort}} service instance.
+    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) through UI to register the Agent to your {{site.data.keyword.bpshort}} service instance.
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
     - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent&interface=ui) to clean up the Agent infrastructure and Agent services.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=ui) for any challenges and questions on Agents.
