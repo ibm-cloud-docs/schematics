@@ -235,8 +235,6 @@ subcollection: schematics
 
         * New! {{site.data.keyword.bpshort}} Agents Beta release in production.
 
-        * Release {{site.data.keyword.bpshort}} command-line plug-in 
-
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
         * New {{site.data.keyword.bpshort}} Blueprints Beta release in production.

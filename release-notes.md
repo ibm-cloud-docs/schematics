@@ -45,8 +45,7 @@ New! {{site.data.keyword.bpshort}} Agents Beta release in production.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=ui) for any challenges and questions on Agents.
     - [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to provide your feedback and limitations that you observe.
 
-Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 
 ### 8 July 2022
 {: #schematics-july0822}
