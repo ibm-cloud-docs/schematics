@@ -30,7 +30,7 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
 - Bind the existing workspace to the Agent
    When you bind an existing workspace to the Agent, the Terraform templates may be downloaded by the shared {{site.data.keyword.bpshort}} service instance. However, the subsequent template operations such as, update the terraform template from the Git repositories will be done by using the Sandbox jobs that run in your Agent infrastructure (cluster). Further, the Terraform jobs are also run in your Cluster.
 
-## Steps to bind an existing workspace to the Agent
+## Steps to Bind an existing workspace to the Agent
 {: #steps-bind-exist-wks}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
@@ -67,7 +67,7 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
    - `prefix` - `<The prefix that you would like to append your resource, for example, mytest>` 
 5. Click **Apply plan** on the `Provisioning-wks-through-myagent` Workspace to deploy the Agent service. Wait 5 - 15 minutes to complete the job execution.
 
-**Validate the Job execution by the Agent**
+## Validate the Job execution by the Agent
 {: #validate-agent-job}
 
 After the workspace is bound to an Agent, you can validate whether the Jobs are being run by the Agent. 
