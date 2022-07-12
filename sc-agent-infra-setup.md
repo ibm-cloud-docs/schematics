@@ -42,10 +42,10 @@ Before you begin, complete the following prerequisites.
 
 You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure in your {{site.data.keyword.cloud_notm}} account. The Agent infrastructure is composed of the following resources.
 
-[VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
-[IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
-[LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam)
-[Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam)
+    - [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
+    - [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
+    - [LogDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam)
+    - [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam)
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure Workspace.
