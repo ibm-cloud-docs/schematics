@@ -876,6 +876,21 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
+## Managing Agents
+{: #sitemap_managing_agents}
+
+
+[Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
+
+* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+
+* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+
+* [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
+
+* [Next steps](/docs/schematics?topic=schematics-using-agent#connect-nextsteps)
+
+
 ## Logging and monitoring
 {: #sitemap_logging_and_monitoring}
 
@@ -1711,6 +1726,11 @@ subcollection: schematics
 * [Blueprint install failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails4)
 
 * [Blueprint install failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails5)
+
+
+### Troubleshooting Agents
+{: #sitemap_troubleshooting_agents}
+
 
 [Troubleshooting errors](/docs/schematics?topic=schematics-handling-error#handling-error)
 
