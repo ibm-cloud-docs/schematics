@@ -37,8 +37,7 @@ New! {{site.data.keyword.bpshort}} Agents Beta release in production.
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} ability to reach your private, or on-premises infrastructure. Check the following content to know about {{site.data.keyword.bpshort}} Agents Beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents journey.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
-    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui).
-    - APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui), APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Explore [installing {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup&interface=ui) through UI to install an Agent infrastructure and Agent service Workspaces.
     - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) throught UI to register the Agent to your {{site.data.keyword.bpshort}} service instance.
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
