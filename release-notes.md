@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -23,19 +23,36 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
 
-
-
 ## July 2022
 {: #schematics-july22}
 
 Review the release notes for July 2022.
 {: shortdesc}
 
+### 11 July 2022
+{: #schematics-july1122}
+{: release-note}
+
+New! {{site.data.keyword.bpshort}} Agents Beta release in production.
+:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} ability to reach your private, or on-premises infrastructure. Check the following content to know about {{site.data.keyword.bpshort}} Agents Beta releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents journey.
+    - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
+    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui).
+    - APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Explore [installing {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup&interface=ui) to install an Agent infrastructure and Agent service Workspaces.
+    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) to to register the Agent to your {{site.data.keyword.bpshort}} service instance.
+    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI and CLI to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
+    - [FAQs](/docs/schematics?topic=schematics-faqs-agent&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=ui) for any challenges and questions on Agents.
+    - [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to provide your feedback and limitations that you observe.
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 ### 8 July 2022
 {: #schematics-july0822}
 {: release-note}
 
-New {{site.data.keyword.bpshort}} Blueprints Beta release
+New {{site.data.keyword.bpshort}} Blueprints Beta release in production.
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to know about {{site.data.keyword.bpshort}} Blueprints Beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints journey.
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
@@ -50,7 +67,6 @@ New {{site.data.keyword.bpshort}} Blueprints Beta release
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.11.0](/docs/schematics?topic=schematics-cli_version-releases) released.
-
 
 
 ## June 2022
