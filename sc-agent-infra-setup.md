@@ -42,10 +42,10 @@ Before you begin, complete the following prerequisites.
 
 You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure in your {{site.data.keyword.cloud_notm}} account. The Agent infrastructure is composed of the following resources.
 
-[VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
-[IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
-[LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam)
-[Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam)
+    - [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
+    - [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
+    - [LogDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam)
+    - [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam)
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure Workspace.
@@ -165,13 +165,36 @@ Before your begin
 
 Here are the list of commands used to provision the Agent infrastructure.
 
-- Run `ibmcloud schematics workspace new --file https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_infra_workspace.json` command to create the Agent infrastructure workspace.
+- Run workspace new command to create the Agent infrastructure workspace.
+   ```sh
+   ibmcloud schematics workspace new --file https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_infra_workspace.json
+   ```
+   {: pre}
+
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud-Schematics Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
-- Run `ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>` command to upload the tar file.
+- Run workspace upload command to upload the tar file.
+   ```sh
+   ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
+   ```
+   {: pre}
+
 - Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the Agent infrastructure. Wait 45 - 90 minutes to provision the resource. 
-- Run `ibmcloud schematics apply --id <Provide your workspace ID>`. 
+- Run apply command to apply the plan to provision the Agent infrastructure.
+   ```sh
+   ibmcloud schematics apply --id <Provide your workspace ID>
+   ```
+   {: pre}.
+
 - Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**.
-- Run `ibmcloud schematics job logs --id JOB_ID`. For more information, refer to, [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
+- Run job logs command to view your job logs.
+   ```sh
+   ibmcloud schematics job logs --id JOB_ID
+   ```
+   {: pre} 
+   
+   For more information, refer to, [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
+   {: note}
+
 - Optional: View the **Jobs** logs and **Resources** page and observe the workspace status as `ACTIVE` from [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external}.
 - If case of Job failure, rectify the issue in the **Settings** page of the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external} and run `ibmcloud schematics refresh --id  <Provide your workspace ID>` command.
 - View the **Jobs** logs and **Resources** page to observe the workspace status as `ACTIVE`.
@@ -198,7 +221,7 @@ Before you begin
 
 Here are the list of commands used to create the Agent service.
 
-- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external}. For more information, about the input variables, refer to [Input variable for Agent service](docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-svc).
+- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information, about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-svc).
     - `cluster_id` = `<provide the recorded cluster_id from Agent infrastructure job log>`
     - `resource_group_name` = `<provide the target resource group name, for example, default>`
     - `logdna_name` = `<provide the recorded cluster_id from Agent infrastructure job log>`
@@ -262,95 +285,7 @@ Here are the list of commands used to create the Agent service.
     You can search the Agents services and its status with the tag name from the [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page.
     {: note}
 
-## Provision the Agent infrastructure through API
-{: #agents-setup-infra-api}
-{: api}
 
-1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
-2. You have the right permission to create [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started), [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam) services.
-
-Here are the list of CURL commands used to provision the Agent.
-
-1. Run 
-   ```sh
-    curl -X POST \
-    https://schematics.cloud.ibm.com/v2/settings/agents \
-    -H 'authorization: ' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'github-token: github_token' \
-    -d '{
-        "name": "devclitestpart",
-        "description": "Register agent",
-        "resource_group": "Default",
-        "tags": [
-            "agent"
-        ],
-        "location": "eu-de",
-        "agent_location": "us-south",
-        "profile_id": "smkumar9",
-        "user_state": {
-            "state": "enable"
-        }
-    }'
-   {: pre}
-
-2. Get all registered/unregistered agents in the Account.
-
-   ```sh
-    curl -X GET \
-    https://schematics.cloud.ibm.com/v2/settings/agents \
-    -H 'authorization: ' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'github-token: github_token' \
-   {: pre}
-
-5. Get the registered agent details by passing agentID in path parameter.
-
-    ```sh
-    curl -X GET \
-    https://schematics.cloud.ibm.com/v2/settings/agents/{agent_id} \
-    -H 'authorization: ' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -H 'github-token: github_token' \
-   {: pre}
-
-6. Update the agent registeration by passing agentID in path parameter.
-
-   ```sh
-    curl -X PATCH \
-    https://schematics.cloud.ibm.com/v2/settings/agents/{agent_id} \
-    -H 'authorization: \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -d '{
-        "name": "devclitestpart",
-        "description": "Register agent description changet",
-        "resource_group": "string",
-        "tags": [
-            "string"
-        ],
-        "location": "us-south",
-        "agent_location": "us-south",
-        "profile_id": "string",
-        "user_state": {
-            "state": "enable"
-        }
-    }'
-   {: pre}
-
-7. Deregister the agent by passing agentID in path parameter.
-
-   ```sh
-    curl -X DELETE \
-    https://schematics.cloud.ibm.com/v2/settings/agents/{agent_id} \
-    -H 'authorization: ' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -d ''
-   {: pre}
 
 ## Next steps
 {: #nextsteps-agentsetup}

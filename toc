@@ -18,6 +18,7 @@ Schematics
         sc-about-capabilities.md
         sc-about-terminologies.md
         sc-about-opensourceproj.md
+        sc-about-agent.md
         sc-blueprint.md
         sc-about-usecases.md
  
@@ -100,6 +101,13 @@ Schematics
           integration-at.md
           integration-kms.md
 
+     {: .topicgroup}
+     Managing Agents
+          sc-agent-infra-setup.md
+          sc-agent-connect.md
+          sc-agent-using.md
+          sc-agent-uninstall.md
+
     {: .topicgroup}
     Logging and monitoring
           monitoring-instances.md
@@ -139,6 +147,7 @@ Schematics
     limitations.md
     sc-glossary.md
     license-notices.md
+    sc-agent-trustedprofile.md
 
     {: .topicgroup}
     Related links
@@ -161,6 +170,7 @@ Schematics
     {: .topicgroup}
     FAQs
         faqs/sc-actions-faq.md
+        faqs/sc-agents-faq.md
         faqs/sc-blueprints-faq.md
         faqs/sc-general-faq.md
         faqs/sc-workspaces-faq.md
@@ -184,6 +194,11 @@ Schematics
              troubleshooting/ts-blueprint-create-failure.md
              troubleshooting/ts-blueprint-create-init-failure.md
              troubleshooting/ts-blueprint-install-failure.md
+
+        {: .topicgroup}
+        Troubleshooting Agents
+             troubleshooting/ts-agent-resource.md
+             troubleshooting/ts-agent-endpoint-gwy.md
         error-messages.md
     ts_index.md
     {: .navgroup-end}

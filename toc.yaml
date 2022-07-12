@@ -162,6 +162,7 @@ toc:
           - limitations.md
           - sc-glossary.md
           - license-notices.md
+          - sc-agent-trustedprofile.md
           - topicgroup:
               label: Related links
               topics:

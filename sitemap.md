@@ -231,9 +231,13 @@ subcollection: schematics
 
     * Review the release notes for July 2022.
 
+    * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
+
+        * New! {{site.data.keyword.bpshort}} Agents Beta release in production.
+
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * New {{site.data.keyword.bpshort}} Blueprints Beta release
+        * New {{site.data.keyword.bpshort}} Blueprints Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -906,17 +910,11 @@ subcollection: schematics
 
     * [Deploying the Agent services through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-cli)
 
-* [Provision the Agent infrastructure through API](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-api)
-
 * [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
 
 [Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent#register-agent)
 
 * [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
-
-* [Connecting Agent through CLI](/docs/schematics?topic=schematics-register-agent#register-cli)
-
-* [Connecting Agent through API](/docs/schematics?topic=schematics-register-agent#register-api)
 
 * [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
 
@@ -1512,6 +1510,15 @@ subcollection: schematics
 * [Creative Commons Attribution Share Alike 3.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-3.0)
 
 * [Creative Commons Attribution Share Alike 4.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-4.0)
+
+
+## Create `profile_id` for Agents
+{: #sitemap_create_profile_id_for_agents}
+
+
+[Create `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile#agent-trusted-profile)
+
+* [Next Step](/docs/schematics?topic=schematics-agent-trusted-profile#agent-profile-id-nextstep)
 
 
 ## Related links

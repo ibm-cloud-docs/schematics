@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-18"
+lastupdated: "2022-07-12"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -101,10 +101,9 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect {{site.data.keyword.bpshort}} service on the private network from Virtual Private Endpoint Gateways.
 {: shortdesc}
 
-**Public:** A service endpoint on the {{site.data.keyword.cloud_notm}} public network.  \n
-**Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.  \n
-**Both public and private:** Service endpoints that allow access over both networks.  \n
-
+    - **Public:** A service endpoint on the {{site.data.keyword.cloud_notm}} public network.
+    - **Private:** A service endpoint that is accessible only on the {{site.data.keyword.cloud_notm}} private network with no access from the public internet.
+    - **Both public and private:** Service endpoints that allow access over both networks.
 
 Virtual Private Endpoint Gateways is only supported for the VPC Generation 2.
 {: note}
