@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-11"
+lastupdated: "2022-07-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -28,7 +28,7 @@ Run these commands when you want to automate your {{site.data.keyword.bplong_not
 Be sure to keep your CLI up-to-date so that you can use the latest released commands and their options. For more information, about the latest command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
 {: important}
 
-## Action commands
+## Actions commands
 {: #schematics-action-commands}
 
 Review the commands that you want to create, update, list, delete and work with your {{site.data.keyword.bpshort}} Actions.
@@ -974,7 +974,7 @@ ibmcloud schematics version --output json > "<filename.json>"
 {: pre}
 
 
-## Inventory commands
+## Inventories commands
 {: #inv-commands}
 
 Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} inventory.
@@ -2112,7 +2112,7 @@ ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --addre
 {: pre}
 
 
-## Workspace commands
+## Workspaces commands
 {: #schematics-workspace-commands}
 
 Review the commands that you can use to set up and work with your {{site.data.keyword.bplong_notm}} workspace. 

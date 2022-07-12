@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-11"
+lastupdated: "2022-07-12"
 
 keywords: schematics
 subcollection: schematics
@@ -1056,7 +1056,7 @@ subcollection: schematics
 
 * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
 
-* [Action commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
+* [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
     * [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps)
 
@@ -1110,7 +1110,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version)
 
-* [Inventory commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
+* [Inventories commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
 
     * [`ibmcloud schematics inventory create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv)
 
@@ -1174,7 +1174,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
 
-* [Workspace commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
+* [Workspaces commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
 
     * [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action)
 
