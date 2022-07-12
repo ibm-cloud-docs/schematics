@@ -33,39 +33,39 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
 ## Steps to Bind an existing workspace to the Agent
 {: #steps-bind-exist-wks}
 
-1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
-2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
-3. Select your Agent from the list, and use the `...` dots to perform **Bind Agent** operation.
-4. In the side navigation pane, select **Workspaces** to be bound statically to the Agent.
-5. Select the bounded Agent to view the list of related Workspaces.
+   1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+   2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
+   3. Select your Agent from the list, and use the `...` dots to perform **Bind Agent** operation.
+   4. In the side navigation pane, select **Workspaces** to be bound statically to the Agent.
+   5. Select the bounded Agent to view the list of related Workspaces.
 
 ## Steps to Bind a new workspace to the Agent
 {: #steps-bind-new-wks}
 
-1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/workspaces){: external} account by using your credentials.
-2. Click [**Create workspace +**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
-    - In **Specify Template** section:
-        - **GitHub, GitLab or Bitbucket repository URL** - `https://github.com/Cloud-Schematics/cos-module`.
-        - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform verion 1.0 or greater than version.
-        - Click **Bind Agent**. Choose your **Agent name** to bind to run the Jobs.
-        - Click `Next`.
-    - In **Workspace details** section:
-        - **Workspace name** as `Provisioning-wks-through-myagent`.
-        - **Tags** as `myagent`.
-        - **Resource group** as `default` or other resource group for this Workspace. 
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace.
-            If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
-           {: note}
+   1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/workspaces){: external} account by using your credentials.
+   2. Click [**Create workspace +**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
+      - In **Specify Template** section:
+         - **GitHub, GitLab or Bitbucket repository URL** - `https://github.com/Cloud-Schematics/cos-module`.
+         - **Personal access token** - `<leave it blank>`.
+         - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform verion 1.0 or greater than version.
+         - Click **Bind Agent**. Choose your **Agent name** to bind to run the Jobs.
+         - Click `Next`.
+      - In **Workspace details** section:
+         - **Workspace name** as `Provisioning-wks-through-myagent`.
+         - **Tags** as `myagent`.
+         - **Resource group** as `default` or other resource group for this Workspace. 
+         - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace.
+               If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
+            {: note}
 
-        - Click `Next`.
-        - Check the information entered are correct to create a Workspace.
-    - Click `Create`.
-3. On successful creation of `Provisioning-wks-through-myagent` Workspace. 
-4. Click **Settings** to edit the following input variables in the Workspace. For more information, about the input variable, refer to, [Readme](https://github.com/Cloud-Schematics/cos-module/blob/main/README.md){: external} file.
-   - `region` - `<your region where you want to deploy the VPC, for example, us-south>` and 
-   - `prefix` - `<The prefix that you would like to append your resource, for example, mytest>` 
-5. Click **Apply plan** on the `Provisioning-wks-through-myagent` Workspace to deploy the Agent service. Wait 5 - 15 minutes to complete the job execution.
+         - Click `Next`.
+         - Check the information entered are correct to create a Workspace.
+      - Click `Create`.
+   3. On successful creation of `Provisioning-wks-through-myagent` Workspace. 
+   4. Click **Settings** to edit the following input variables in the Workspace. For more information, about the input variable, refer to, [Readme](https://github.com/Cloud-Schematics/cos-module/blob/main/README.md){: external} file.
+      - `region` - `<your region where you want to deploy the VPC, for example, us-south>` and 
+      - `prefix` - `<The prefix that you would like to append your resource, for example, mytest>` 
+   5. Click **Apply plan** on the `Provisioning-wks-through-myagent` Workspace to deploy the Agent service. Wait 5 - 15 minutes to complete the job execution.
 
 ## Validate the Job execution by the Agent
 {: #validate-agent-job}
