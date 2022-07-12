@@ -1354,6 +1354,14 @@ subcollection: schematics
 
 * [Actions](/docs/schematics?topic=schematics-glossary#glossary-actions)
 
+* [Agents](/docs/schematics?topic=schematics-glossary#glossary-agents)
+
+    * [Agent](/docs/schematics?topic=schematics-glossary#agentsa1)
+
+    * [Agent service](/docs/schematics?topic=schematics-glossary#agentsa2)
+
+    * [Agent Infrastructure](/docs/schematics?topic=schematics-glossary#agentsa3)
+
 * [Blueprints](/docs/schematics?topic=schematics-glossary#glossary-blueprint)
 
     * [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1)

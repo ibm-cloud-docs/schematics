@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-12"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -27,6 +27,32 @@ The following cross-references are used in this glossary:
 {: #glossary-actions}
 
 Automate resource and application management with Ansible playbook.
+
+## Agents
+{: #glossary-agents}
+
+Extends {{site.data.keyword.bpshort}} ability to reach user infrastructure.
+
+### Agent
+{: #agentsa1}
+
+Method or service to bind {{site.data.keyword.bpshort}} Agents with {{site.data.keyword.bpshort}} Workspaces.
+
+### Agent service
+{: #agentsa2}
+
+A collection of Agent related microservices deployed on the Agent infrastructure. It is composed of the following microservices.
+- Jobrunner microservice
+- Sandbox microservice
+- RuntimeWorkspace Job
+
+### Agent Infrastructure
+{: #agentsa3}
+
+A Kubernetes cluster used to deploy and run the Agent services. It is composed of the following resources.
+- VPC infrastructure as public_gateways, subnets
+- Kubernetes Service as vpc_kubernetes_cluster
+- IBM LogDNA instance 
 
 ## Blueprints
 {: #glossary-blueprint}
