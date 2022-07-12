@@ -141,7 +141,7 @@ The only supported setting is `TF_VERSION`.
 
 Type:       number
 
-Blueprints sets the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatiable with the Blueprint supported version. Updating this value will change the Terraform version used on the next execution. 
+Blueprints sets the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the Blueprint supported version. Updating this value will change the Terraform version used on the next execution. 
 
 Options:    Terraform version in SemVer format 
 
@@ -239,7 +239,7 @@ Type: string
 
 Required: true
 
-Type of Git source repository. Only Githib validated at this time. 
+Type of Git source repository. Only Github validated at this time. 
 
 Options: `github` 
 
@@ -317,7 +317,7 @@ Type: YAML flow or block scalar
 
 Default: string 
 
-As Blueprints primarily works with Terraform configs, Terraform variable type constraints are used to perform type validation for Blueprints inputs. https://www.terraform.io/language/expressions/type-constraints#type-constraints  The type constaint must match the variable type in the target config for the value to be passed successfully at execution time to the Workspace. The type can be copied from the module meta data or the Terraform variables.tf file. 
+As Blueprints primarily works with Terraform configs, Terraform variable type constraints are used to perform type validation for Blueprints inputs. https://www.terraform.io/language/expressions/type-constraints#type-constraints  The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the Workspace. The type can be copied from the module meta data or the Terraform variables.tf file. 
 
 As complex Terraform types are typically represented as multi-line strings, YAML block syntax can be used.   
 

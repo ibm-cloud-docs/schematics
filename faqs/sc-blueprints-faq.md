@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -35,7 +35,7 @@ In Blueprints the displayed name of the Blueprint is not a unique identifier. On
 {: faq}
 {: support}
 
-Resource configuration with Blueprints is a two step process, user driven process. Refer to [Blueprints lifecycle](https://test.cloud.ibm.com/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands: create, update, and delete for an overview of the Blueprints lifecycle. 
+Resource configuration with Blueprints is a two step process, user driven process. Refer to [Blueprints lifecycle](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands: create, update, and delete for an overview of the Blueprints lifecycle. 
 
 
 In the first step the Blueprint configuration in {{site.data.keyword.bpshort}} is created or updated. This saves in {{site.data.keyword.bpshort}} the required releases of the Blueprint definition and Input files from Git, and any optional input values that will be used to create cloud resources. For each Blueprint module, Workspaces are initialised or settings updated as required based on the specified release of the Blueprint definition and Blueprint inputs. For more information, refer to [Creating Blueprint](/docs/schematics?topic=schematics-create-blueprint).
@@ -73,7 +73,7 @@ ibmcloud schematics blueprint create  ......................   --inputs sshkey=$
 
 The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) as used in the Blueprints [tutorial](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) demonstrates the principles of deploying cloud resources using two {{site.data.keyword.bpshort}} Workspaces which reference and create cloud resources. If the user has insufficient IAM access permissions to this account, Terraform Workspace operations can fail, resulting in an Install failure.   
 
-It is assumed the user has access to a Pay-Go or Subscription account and has IAM access permisions to create resources in the Default resource group and [Cloud Object Storage](https://test.cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Also permissions to create {{site.data.keyword.bpshort}} [Workspaces and Blueprints](https://test.cloud.ibm.com/docs/schematics?topic=schematics-access). 
+It is assumed the user has access to a Pay-Go or Subscription account and has IAM access permisions to create resources in the Default resource group and [Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Also permissions to create {{site.data.keyword.bpshort}} [Workspaces and Blueprints](https://cloud.ibm.com/docs/schematics?topic=schematics-access). 
 
 The example uses the inputs `provisiong_rg=false` and `resource_group_name=Default` to reference the default resource group and provide this ID for the COS instance creation. 
 

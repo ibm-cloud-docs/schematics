@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-12"
 
 keywords: schematics
 subcollection: schematics
@@ -95,6 +95,16 @@ subcollection: schematics
 [Usage of open source projects in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
+
+[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
+
+* [Usage of an Agents](/docs/schematics?topic=schematics-agents-intro#agent-usage)
+
+* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#agents-architecture)
+
+* [Comparing {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-comparision)
+
+* [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
 
 [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
 
@@ -876,6 +886,57 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
+## Managing Agents
+{: #sitemap_managing_agents}
+
+
+[Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
+
+* [Prerequisites](/docs/schematics?topic=schematics-agents-setup#agents-setup-prereq)
+
+* [Provision the Agent infrastructure through UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui)
+
+    * [Output](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output)
+
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc)
+
+* [Provision the Agent infrastructure through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-cli)
+
+    * [Output of CLI Agent infrastructure](/docs/schematics?topic=schematics-agents-setup#agents-infra-cli-output)
+
+    * [Deploying the Agent services through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-cli)
+
+* [Provision the Agent infrastructure through API](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-api)
+
+* [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
+
+[Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent#register-agent)
+
+* [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
+
+* [Connecting Agent through CLI](/docs/schematics?topic=schematics-register-agent#register-cli)
+
+* [Connecting Agent through API](/docs/schematics?topic=schematics-register-agent#register-api)
+
+* [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
+
+[Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
+
+* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+
+* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+
+* [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
+
+* [Next steps](/docs/schematics?topic=schematics-using-agent#connect-nextsteps)
+
+[Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-uninstall-agent#uninstall-agent)
+
+* [Clean up Agent infrastructure](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-infra)
+
+* [Clean up Agent service](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-service)
+
+
 ## Logging and monitoring
 {: #sitemap_logging_and_monitoring}
 
@@ -1056,7 +1117,7 @@ subcollection: schematics
 
 * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
 
-* [Action commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
+* [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
     * [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps)
 
@@ -1071,6 +1132,24 @@ subcollection: schematics
     * [`ibmcloud schematics action delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-action)
 
     * [`ibmcloud schematics action upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-upload-action)
+
+* [Agents commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
+
+    * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
+
+    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
+
+    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list)
+
+    * [`ibmcloud schematics agent register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
+
+    * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
+
+    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update)
+
+    * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
+
+    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
 
 * [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 
@@ -1110,7 +1189,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version)
 
-* [Inventory commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
+* [Inventories commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
 
     * [`ibmcloud schematics inventory create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv)
 
@@ -1174,7 +1253,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
 
-* [Workspace commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
+* [Workspaces commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
 
     * [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action)
 
@@ -1277,6 +1356,15 @@ subcollection: schematics
 * [Complex input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#complex-input-value)
 
 
+## Beta-level code for {{site.data.keyword.bpshort}} Agents
+{: #sitemap_beta-level_code_for__agents}
+
+
+[Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
+
+* [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
+
+
 ## Beta-level code for {{site.data.keyword.bpshort}} Blueprints
 {: #sitemap_beta-level_code_for__blueprints}
 
@@ -1353,6 +1441,14 @@ subcollection: schematics
 [Glossary](/docs/schematics?topic=schematics-glossary#glossary)
 
 * [Actions](/docs/schematics?topic=schematics-glossary#glossary-actions)
+
+* [Agents](/docs/schematics?topic=schematics-glossary#glossary-agents)
+
+    * [Agent](/docs/schematics?topic=schematics-glossary#agentsa1)
+
+    * [Agent service](/docs/schematics?topic=schematics-glossary#agentsa2)
+
+    * [Agent Infrastructure](/docs/schematics?topic=schematics-glossary#agentsa3)
 
 * [Blueprints](/docs/schematics?topic=schematics-glossary#glossary-blueprint)
 
@@ -1497,6 +1593,42 @@ subcollection: schematics
 * [When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions)
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
+
+[Agents](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
+
+* [Can I install more than one Agent Service on the Agent infrastructure?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+
+* [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
+
+* [What {{site.data.keyword.bpshort}} jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
+
+* [How can I see the Workspace job results and logs, for the workloads that ran on the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-job-logs)
+
+* [How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-job-parallel)
+
+* [While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What should I do next?](/docs/schematics?topic=schematics-faqs-agent#faqs-auth-error)
+
+* [List the tools and resources that I can deploy and run into my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-tool)
+
+* [Is there a length of time that I can deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
+
+* [Can I see the Job results in my local machine by logging into the cloud account? Or Do I need to use the {{site.data.keyword.bplong_notm}} interface to view the Job logs?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
+
+* [Can I install {{site.data.keyword.cloud_notm}} services in my cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+
+* [If I install the softwares on a local cluster. Can I integrate back to a service in the {{site.data.keyword.cloud_notm}}? Do I need to set up a VPN tunnel to integrate?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-software)
+
+* [What is the difference between agent-location and location input variable flag in Agents service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-location)
+
+* [Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-rg)
+
+* [Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+
+* [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-region)
+
+* [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
+
+* [Can I know the steps to get the Jobrunner (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
@@ -1680,7 +1812,7 @@ subcollection: schematics
 
 [Blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
 
-* [Blueprint create fails with an invalid blueprint definitions: failed to clone git repo error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
+* [Blueprint create fails with an invalid blueprint definitions: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
 
 * [Blueprint create fails with an invalid blueprint definitions: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
 
@@ -1703,6 +1835,15 @@ subcollection: schematics
 * [Blueprint install failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails4)
 
 * [Blueprint install failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails5)
+
+
+### Troubleshooting Agents
+{: #sitemap_troubleshooting_agents}
+
+
+[How can I provide value to `schematics_resource_crn` variable?](/docs/schematics?topic=schematics-agent-crn-not-found#agent-crn-not-found)
+
+[Why am I getting create endpoint gateway failed with wrong number of segments in CRN?](/docs/schematics?topic=schematics-agent-endpoint-error#agent-endpoint-error)
 
 [Troubleshooting errors](/docs/schematics?topic=schematics-handling-error#handling-error)
 

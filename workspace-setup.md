@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-12"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -43,39 +43,43 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #create-workspace_ui}
 {: ui}
 
-1. Open the [{{site.data.keyword.bpshort}} Workspaces create page](https://cloud.ibm.com/schematics/workspaces/create){: external}. 
-2. Specify your template URL in the `GitHub`, `GitLab`, or `Bitbucket` repository URL that hosts your Terraform configuration files.
-   - Optional: Enter the Personal access token to authenticate your private Git repositories.
-   - Check **Download entire repo** option to download and cache the complete repository, if unchecked, [compact](/docs/schematics?topic=schematics-compact-download) only the specified folder and subfolders of the Git URL.
-   - Select the Terraform version used to configure your Terraform templates. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. **Note** You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`. 
-   
-    When you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
-    {: note}
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/).
+2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
+    - In **Specify Template** section:
+        - **GitHub, GitLab or Bitbucket repository URL** - `<provide your Terraform template Git repository URL`.
+        - **Personal access token** - `<leave it blank>`.
+        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform verion 1.0 or greater than version. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. 
+          You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0. When you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
+          {: note}
 
-    {{site.data.keyword.bpshort}} supports the stable release of Terraform version 1.1, through `terraform_v1.0`. The terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the latest version.
-    ```terraform
-     terraform {
-      required_version = "~> 1.1"
-     }
-     ```
-     {: pre}
+          {{site.data.keyword.bpshort}} supports the stable release of Terraform version 1.1, through `terraform_v1.0`. The terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the latest version.
+          ```terraform
+          terraform {
+          required_version = "~> 1.1"
+          }
+          ```
+          {: pre}
 
-
-   - Click **Next**.
-3. In the **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
-   - Optional: Enter tags for your workspace. You can use the tags later to find your workspace faster.
-   - Select the `Resource group` where you want to create the workspace.
-   - Select the `Location`. **Note** decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
-   - Optional: Enter a descriptive name for your workspace.
-   - Click **Next**.
-4. Click **Create** to create your workspace. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
-
+        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. **Note** If you do not see the Agents, check have you connected the Agents](/docs/schematics?topic=schematics-register-agent)?
+        - Click `Next`.
+    - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
+        - **Workspace name** as `schematics-agent-service`.
+        - **Tags** as `my-tags`. Optional: Enter tags for your workspace. You can use the tags later to find your workspace faster.
+        - **Resource group** as `default` or other resource group for this Workspace. 
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace. **Note** decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
+        - Optional: Enter a descriptive name for your workspace.
+        - Click `Next`.
+    - Click `Create`. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
 
 ### Creating the workspace from the CLI
 {: #create-workspace-cli}
 {: cli}
 
 1. Create a JSON file on your local machine and add your workspace configuration. For additional configuration options when creating the workspace, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+
+    To create a workspace with Agent, refer to [ibmcloud schematics workspace new with Agent](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-new) command.
+    {: note}
+
     ```json
     {
     "name": "<workspace_name>",
@@ -136,7 +140,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     ```
     {: pre}
 
-4. refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
+4. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
 ### Creating the workspace from the API
 {: #create-workspace-api}

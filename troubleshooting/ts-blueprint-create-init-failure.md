@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-07-11"
 
 keywords: blueprint create init failure, blueprint init error, create init fails,
 
@@ -23,7 +23,7 @@ content-type: troubleshoot
 When you create a Blueprint, the create fails during initialization of the {{site.data.keyword.bpshort}} Workspaces for the modules. 
 {: tsSymptoms}
 
-Blueprints are created in two steps. The first step retrieves, validates the Blueprint definition and creates the configuration in {{site.data.keyword.bpshort}}. The second step creates the required module Workspaces based on the module statements in the definition. This step clones the specified module source repos. An incorrectly specified repo URL will result in a Workspace initialisation failure. Other possible causes are the repo is private and an access token is not specified, or the access token is invalid. 
+Blueprints are created in two steps. The first step retrieves, validates the Blueprint definition and creates the configuration in {{site.data.keyword.bpshort}}. The second step creates the required module Workspaces based on the module statements in the definition. This step clones the specified module source repos. An incorrectly specified repo URL will result in a Workspace initialisation failure. Other possible causes are the repository is private and an access token is not specified, or the access token is invalid. 
 {: tsCauses}
 
 Sample error

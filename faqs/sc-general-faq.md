@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-11"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -245,7 +245,7 @@ timeout - last error: Error connecting to bastion: dial tcp
 ```
 {: screen}
 
-You can access your {{site.data.keyword.bpshort}} Workspaces and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses that are listed in the {{site.data.keyword.bpshort}} documentation. For more information, about the region and the zone based private and public IP addresses, see [Opening required IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
+You can access your {{site.data.keyword.bpshort}} Workspaces and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses that are listed in the {{site.data.keyword.bpshort}} documentation. For more information, about the region, and the zone based private and public IP addresses, see [Opening required IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
 ## How do I create a cluster by using Terraform on {{site.data.keyword.cloud_notm}} environment?
 {: #newcluster-workspace-faq}
