@@ -41,10 +41,13 @@ New! {{site.data.keyword.bpshort}} Agents Beta release in production.
     - APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Explore [installing {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup&interface=ui) to install an Agent infrastructure and Agent service Workspaces.
     - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) to to register the Agent to your {{site.data.keyword.bpshort}} service instance.
-    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI and CLI to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
+    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI, and CLI to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
+    - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent&interface=ui) to remove the Agent infrastructure and Agent services from {{site.data.keyword.bpshort}}.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=ui) for any challenges and questions on Agents.
     - [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to provide your feedback and limitations that you observe.
 
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 
 ### 8 July 2022
