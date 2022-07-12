@@ -70,8 +70,7 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
 ## Validate the Job execution by the Agent
 {: #validate-agent-job}
 
-After the workspace is bound to an Agent, you can validate whether the Jobs are being run by the Agent. 
-From your `Provisioning-wks-through-myagent` Workspace click the Jobs log to see the following messages in the job logs that signifies the Sandbox job or the Terraform jobs are run by the Agent.
+After the workspace is bound to an Agent, you can validate whether the Jobs are being run by the Agent. From your `Provisioning-wks-through-myagent` Workspace view the Jobs log to see the following messages that signifies the Sandbox job or the Terraform jobs are run by the Agent.
 ```text
 .....
 Related Workspace: name=<prefix>-003-cos-module, sourcerelease=(not specified), sourceurl=https://github.com/Cloud-Schematics/cos-module, folder=.
@@ -80,7 +79,9 @@ Related Workspace: name=<prefix>-003-cos-module, sourcerelease=(not specified), 
 ```
 {: screen}
 
-Now, you are ready to use the your COS to store your objects of files. Also, you can deploy any existing {{site.data.keyword.bpshort}} templates, and bind your Agent to load the software, or a tool in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate on your cloud cluster resources without any time, network, or software restrictions.
+- Now, you are ready to use the provisioned COS service to store your objects or files. 
+- You can also deploy your {{site.data.keyword.bpshort}} Workspaces template, and bind your Agent to provision, install the software, or a tool in your private network to the {{site.data.keyword.bplong_notm}} service.
+- You can also configure, and operate on your cloud cluster resources without any time, network, or software restrictions.
 
 ## Next steps
 {: #connect-nextsteps}

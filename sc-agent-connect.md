@@ -45,6 +45,7 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
     - **Pause Agent** to pause the Agent execution.
     - **Delete Agent** to delete a Agent.
 
+</staging>
 
 ## Connecting Agent through CLI
 {: #register-cli}
@@ -163,6 +164,7 @@ Here are the list of CURL commands use to register and unregister the Agent. For
    {: pre}
 
     For more information, about the Agent register, refer to, [ibmcloud schematics agents delete](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agents-unregister).
+</staging>
 
 ## Next steps
 {: #connect-nextsteps}
