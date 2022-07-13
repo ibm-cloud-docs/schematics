@@ -102,7 +102,7 @@ Schematics
     Logging and monitoring
           monitoring-instances.md
           at.md
-    
+          
     job-queue.md
     delete-schematics-data.md
     version-constraints.md
@@ -127,7 +127,7 @@ Schematics
     [Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md)
     [Building an IBM Blockchain Platform network by using Ansible playbooks](/docs/blockchain-sw-25?topic=blockchain-sw-25-ansible-build)
     {: .navgroup-end}
-    
+
     {: .navgroup id="reference"}
     {: .topicgroup}
     CLI reference
