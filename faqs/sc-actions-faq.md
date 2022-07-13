@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-07-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -53,6 +53,7 @@ In the Action settings page you need to set the input variable as `ansible_pytho
   2021/12/06 10:15:50 Terraform APPLY error: Terraform APPLY errorexit status 1
   2021/12/06 10:15:50 Could not execute action
 ```
+{: screen}
 
 WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} Actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} Actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-13"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -183,7 +183,7 @@ Here are the list of commands used to provision the Agent infrastructure.
    ```sh
    ibmcloud schematics apply --id <Provide your workspace ID>
    ```
-   {: pre}.
+   {: pre}
 
 - Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**.
 - Run job logs command to view your job logs.
