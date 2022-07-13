@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-13"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -45,7 +45,8 @@ New! {{site.data.keyword.bpshort}} Agents Beta release in production.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=ui) for any challenges and questions on Agents.
     - [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to provide your feedback and limitations that you observe.
 
-
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 8 July 2022
 {: #schematics-july0822}
@@ -331,4 +332,3 @@ Support `WinRM` in command-line
 
 Documentation lists the Command-line version change log history
 :   The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-13"
 
 keywords: schematics
 subcollection: schematics
@@ -235,6 +235,8 @@ subcollection: schematics
 
         * New! {{site.data.keyword.bpshort}} Agents Beta release in production.
 
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
         * New {{site.data.keyword.bpshort}} Blueprints Beta release in production.
@@ -392,120 +394,6 @@ subcollection: schematics
         * Support `WinRM` in command-line
 
         * Documentation lists the Command-line version change log history
-
-
-## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
-{: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_{{sitedatakeywordbpfull_notm}}}
-
-
-[Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
-
-* [Description](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-desc)
-
-* [Objectives](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-obj)
-
-* [Time required](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-timereq)
-
-* [Audience](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-audience)
-
-* [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
-
-* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
-
-* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
-
-* [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
-
-* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_what's_next)
-
-
-## Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
-{: #sitemap_setting_up_continuous_deployment_with__and_devops_toolchain}
-
-
-[Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
-
-* [Description](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-desc)
-
-* [Objectives](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-obj)
-
-* [Time required](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-timereq)
-
-* [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
-
-* [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
-
-* [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
-
-* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
-
-* [Configuring the variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-variables)
-
-* [Automating the continuous deployment process](/docs/schematics?topic=schematics-workspace-continuous-deployment#continuous-deployment)
-
-* [Analyzing the pipeline execution process](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-deployment)
-
-* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
-
-* [What's next?](/docs/schematics?topic=schematics-workspace-continuous-deployment#automate-what-next)
-
-
-## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
-{: #sitemap_importing__templates_into_the_{{sitedatakeywordcloud_notm}}_catalog}
-
-
-[Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
-
-* [Objectives](/docs/schematics?topic=schematics-private-catalog#private-tut-obj)
-
-* [Time required](/docs/schematics?topic=schematics-private-catalog#private-timereq)
-
-* [Audience](/docs/schematics?topic=schematics-private-catalog#private-tut-audience)
-
-* [Prerequisites](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
-
-* [Prepare your Terraform template for the private catalog](/docs/schematics?topic=schematics-private-catalog#prepare-tf-templates)
-
-* [Creating a release](/docs/schematics?topic=schematics-private-catalog#create-release)
-
-* [Create a private catalog and add your Terraform template as a product](/docs/schematics?topic=schematics-private-catalog#create-private-catalog)
-
-* [What's next?](/docs/schematics?topic=schematics-private-catalog#private_what's_next)
-
-
-## Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line
-{: #sitemap_deploying__blueprints_using_the_command-line}
-
-
-[Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
-
-* [Select a Blueprint definition](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
-
-* [Create {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
-
-    * [Syntax](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-syntax)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-output)
-
-* [Installing Blueprints to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
-
-* [Review successful Blueprint creation and outputs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
-
-    * [Using the Cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
-
-    * [Using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-cli)
-
-* [Destroying Blueprints cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step5-output)
-
-* [Deleting the Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step6-output)
-
-* [Next steps](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
 
 
 ## Setting up the CLI and API
@@ -1105,6 +993,120 @@ subcollection: schematics
 * [How can I delete my information?](/docs/schematics?topic=schematics-secure-data#delete-data)
 
 [Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
+
+
+## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
+{: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_{{sitedatakeywordbpfull_notm}}}
+
+
+[Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
+
+* [Description](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-desc)
+
+* [Objectives](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-obj)
+
+* [Time required](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-timereq)
+
+* [Audience](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-audience)
+
+* [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
+
+* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
+
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
+
+* [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
+
+* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_what's_next)
+
+
+## Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
+{: #sitemap_setting_up_continuous_deployment_with__and_devops_toolchain}
+
+
+[Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
+
+* [Description](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-desc)
+
+* [Objectives](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-obj)
+
+* [Time required](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-timereq)
+
+* [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
+
+* [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
+
+* [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
+
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
+
+* [Configuring the variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-variables)
+
+* [Automating the continuous deployment process](/docs/schematics?topic=schematics-workspace-continuous-deployment#continuous-deployment)
+
+* [Analyzing the pipeline execution process](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-deployment)
+
+* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
+
+* [What's next?](/docs/schematics?topic=schematics-workspace-continuous-deployment#automate-what-next)
+
+
+## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
+{: #sitemap_importing__templates_into_the_{{sitedatakeywordcloud_notm}}_catalog}
+
+
+[Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
+
+* [Objectives](/docs/schematics?topic=schematics-private-catalog#private-tut-obj)
+
+* [Time required](/docs/schematics?topic=schematics-private-catalog#private-timereq)
+
+* [Audience](/docs/schematics?topic=schematics-private-catalog#private-tut-audience)
+
+* [Prerequisites](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
+
+* [Prepare your Terraform template for the private catalog](/docs/schematics?topic=schematics-private-catalog#prepare-tf-templates)
+
+* [Creating a release](/docs/schematics?topic=schematics-private-catalog#create-release)
+
+* [Create a private catalog and add your Terraform template as a product](/docs/schematics?topic=schematics-private-catalog#create-private-catalog)
+
+* [What's next?](/docs/schematics?topic=schematics-private-catalog#private_what's_next)
+
+
+## Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line
+{: #sitemap_deploying__blueprints_using_the_command-line}
+
+
+[Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
+
+* [Select a Blueprint definition](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
+
+* [Create {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
+
+    * [Syntax](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-syntax)
+
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-output)
+
+* [Installing Blueprints to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
+
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
+
+* [Review successful Blueprint creation and outputs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
+
+    * [Using the Cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
+
+    * [Using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-cli)
+
+* [Destroying Blueprints cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
+
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step5-output)
+
+* [Deleting the Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
+
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step6-output)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
 
 
 ## CLI reference
