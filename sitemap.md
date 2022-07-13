@@ -233,7 +233,7 @@ subcollection: schematics
 
     * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 
-        * New! {{site.data.keyword.bpshort}} Agents Beta release in production.
+        * {{site.data.keyword.bpshort}} Agents Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -1655,6 +1655,8 @@ subcollection: schematics
 
 * [How do I tell Blueprints what version of Terraform executable to use?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
 
+* [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
+
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 
 * [What is {{site.data.keyword.bplong_notm}} and how does it work?](/docs/schematics?topic=schematics-general-faq#what-is-schematics)
@@ -1712,6 +1714,10 @@ subcollection: schematics
 * [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0` continue to use even if `Terraform version 2.0` or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
 * [Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
+
+* [What is the difference between delete and destroy in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#faq-delete-destroy)
+
+* [Can I delete and destroy operation as one step?](/docs/schematics?topic=schematics-general-faq#faq-delete-destroy-operation)
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -37,7 +37,6 @@ In Blueprints the displayed name of the Blueprint is not a unique identifier. On
 
 Resource configuration with Blueprints is a two step process, user driven process. Refer to [Blueprints lifecycle](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands: create, update, and delete for an overview of the Blueprints lifecycle. 
 
-
 In the first step the Blueprint configuration in {{site.data.keyword.bpshort}} is created or updated. This saves in {{site.data.keyword.bpshort}} the required releases of the Blueprint definition and Input files from Git, and any optional input values that will be used to create cloud resources. For each Blueprint module, Workspaces are initialised or settings updated as required based on the specified release of the Blueprint definition and Blueprint inputs. For more information, refer to [Creating Blueprint](/docs/schematics?topic=schematics-create-blueprint).
 
 In the second step, the user performs the Install operation to deploy new or changed cloud resources. This runs the Infrastructure as code (IaC) automation code modules associated with the Workspaces by using the initial input configuration. For each module {{site.data.keyword.bpshort}} performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. For more information, refer to [Installing Blueprint](/docs/schematics?topic=schematics-install-blueprint).
@@ -49,7 +48,7 @@ In the second step, the user performs the Install operation to deploy new or cha
 
 After installing a Blueprint, cloud resources created by a Blueprint can be viewed on the Blueprint `Resources` tab in the UI.  
 
-During the beta, Blueprints will support the application of IBM Cloud tags to all created cloud resources. All resources created by a Blueprint will be automatically tagged with the unique Blueprint ID of the owning Blueprint. With tagging the Cloud Resource List can be filtered by tag to identify all cloud resources created by a Blueprint. 
+During the Beta, Blueprints will support the application of IBM Cloud tags to all created cloud resources. All resources created by a Blueprint will be automatically tagged with the unique Blueprint ID of the owning Blueprint. With tagging the Cloud Resource List can be filtered by tag to identify all cloud resources created by a Blueprint. 
 
 ## How do I securely pass input variables to Blueprints?
 {: #faqs-bp-secure-inputs}
@@ -103,3 +102,29 @@ Blueprints runs IaC automation code modules written in HashiCorp Terraform. Thes
 {: support}
 
 The version of Terraform used for Blueprint Workspaces can be set using the Blueprint definition setting `TF_VERSION`. At execution time {{site.data.keyword.bpshort}} will programmatically determine the Terraform version supported by the automation modules, looking for a `terraform` block with a [required_version](https://www.terraform.io/language/settings#specifying-a-required-terraform-version){: external} parameter. {{site.data.keyword.bpshort}} will choose the most recent executable release that meets the constraints of the both the `TF_VERSION` and `required_ version` from the Terraform config.
+
+## Is it possible to override the GitHub definition `location` and use a command-line file instead?
+{: #faqs-bp-location-override}
+{: faq}
+{: support}
+
+There are 2 ways to create Blueprint using CLI
+1. Using a local file in JSON format.
+   
+   Example
+
+   ```sh
+   ibmcloud sch bp create --file payload_complex.json
+   ```
+   {: pre}
+
+2. Using command line arguments.
+   
+   Example
+
+   ```sh
+   ibmcloud schematics blueprint create --name bp-useast-basic1 --resource-group Default --bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --bp-git-file basic-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --input-git-file basic-input.yaml --input-git-branch main --inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1
+   ```
+   {: pre}
+
+   The `--inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1` will override the values from GitHub config file.

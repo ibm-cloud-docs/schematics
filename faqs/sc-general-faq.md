@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-11"
+lastupdated: "2022-07-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -297,3 +297,17 @@ No, if the Terraform version is specified in the payload or template, only the v
 Yes, you need to specify the `version = "x.x.x"` as it signifies the {{site.data.keyword.cloud_notm}} provider version. Where as, `required_version = ">1.0.0, <2.0"` signifies the Terraform version to provision. For more information, refer to, [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
 If the version parameter is not declared in your `versions.tf` file, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. For more information, refer to, [Version constraints for the Terraform providers](/docs/schematics?topic=schematics-version-constraints#provider-version-contraint).
 
+## What is the difference between delete and destroy in {{site.data.keyword.bpshort}}?
+{: #faq-delete-destroy}
+{: faq}
+{: support}
+
+Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first fromt he workspace, and then perform delete workspace. For more information, refer to [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace)
+
+
+## Can I delete and destroy operation as one step?
+{: #faq-delete-destroy-operation}
+{: faq}
+{: support}
+
+No, you cannot delete and destroy operation in one step. This is the [process](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace) you need to follow to destroy first and delete.

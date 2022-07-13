@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-13"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -24,7 +24,7 @@ Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/o
 {: #get-started-blueprints-prereq}
 
 - Install and login to the [{{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli).
-- Select the {{site.data.keyword.cloud_notm}} region you wish to use to manage your {{site.data.keyword.bpshort}} Blueprints environment from. Set the region by running the command `ibmcloud target --region <us-south>`.
+- Select the {{site.data.keyword.cloud_notm}} region you wish to use to manage your {{site.data.keyword.bpshort}} Blueprint environment from. Set the region by running the command `ibmcloud target --region <us-south>`.
 - Install the [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) plug-in, or [update the command line plug-in](/docs/schematics?topic=schematics-setup-cli#schematics-cli-update) to access the {{site.data.keyword.bpshort}} Blueprints commands.
 - Check that you have the right [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 
@@ -42,7 +42,7 @@ This sample Blueprint is a simple scenario creating two linked Workspaces and re
 {: #get-started-blueprints-create}
 {: step}
 
-Create your Blueprints environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command. 
+Create your Blueprint environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command. 
 
 ### Syntax
 {: #get-started-blueprints-syntax}

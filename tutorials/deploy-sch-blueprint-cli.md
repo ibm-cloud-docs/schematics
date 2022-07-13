@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-13"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -34,7 +34,7 @@ In this tutorial, you will deploy a {{site.data.keyword.bpshort}} Blueprint envi
 Before your begin
 
 - Install and login to the [{{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli).
-- Select the {{site.data.keyword.cloud_notm}} region you wish to use to manage your {{site.data.keyword.bpshort}} Blueprints environment from. Set the region by running the command `ibmcloud target --region <us-south>`.
+- Select the {{site.data.keyword.cloud_notm}} region you wish to use to manage your {{site.data.keyword.bpshort}} Blueprint environment. Set the region by running the command `ibmcloud target --region <us-south>`.
 - Install the [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) plug-in, or [update the command line plug-in](/docs/schematics?topic=schematics-setup-cli#schematics-cli-update) to access the {{site.data.keyword.bpshort}} Blueprints commands.
 - Check that you have the right [permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 
@@ -50,7 +50,7 @@ The sample Blueprint takes two input parameters, `provision_rg=false`, and `reso
 {: #create-schematics-blueprint-cli}
 {: step}
 
-Create your Blueprints environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command. The following parameters are used to create a Blueprint.
+Create your Blueprint environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command. The following parameters are used to create a Blueprint.
 
 - Name of the blueprint: `Blueprint_basic`
 - {{site.data.keyword.bpshort}} management resource group: `Default`
@@ -243,7 +243,8 @@ OK
 {: #delete-schematics-blueprint-cli}
 {: step}
 
-Run the [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-delete) command for the Blueprints environment to remove the Blueprint created in earlier steps. 
+Run the [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-delete) command to remove the Blueprint created in earlier steps. 
+
 * Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 * When prompted reply `yes`, or `y` to delete the cloud resources.
 
