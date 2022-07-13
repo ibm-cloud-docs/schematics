@@ -42,20 +42,6 @@ toc:
           - architecture-workload-isolation.md
           - release-notes.md 
     - navgroup:
-        id: tutorial
-        topics:
-          - tutorials/provisioning-tf.md
-          - tutorials/automate_continuous_deployment.md
-          - tutorials/private-catalog.md
-          - tutorials/deploy-sch-blueprint-cli.md
-        links:
-          - link:
-              label: Deploying a VPC environment on IBM Cloud by using Bastion host
-              href: 'https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/'
-          - link:
-              label: Deploying multitiered VPC on IBM Cloud by using Bastion host
-              href: 'https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md'
-    - navgroup:
         id: howto
         topics:
           - topicgroup:
@@ -135,6 +121,21 @@ toc:
                 - private-endpoint.md
                 - data-security.md
                 - allowips.md
+    - navgroup:
+        id: tutorial
+        topics:
+          - tutorials/provisioning-tf.md
+          - tutorials/automate_continuous_deployment.md
+          - tutorials/private-catalog.md
+          - tutorials/deploy-sch-blueprint-cli.md
+        links:
+          - link:
+              label: Deploying a VPC environment on IBM Cloud by using Bastion host
+              href: 'https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/'
+          - link:
+              label: Deploying multitiered VPC on IBM Cloud by using Bastion host
+              href: 'https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md'
+              
     - navgroup:
         id: reference
         topics:

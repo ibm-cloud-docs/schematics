@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-13"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -61,4 +61,4 @@ So far you learned a little about {{site.data.keyword.bpshort}} Blueprints, its 
 - See [Blueprints permissions](/docs/schematics?topic=schematics-access&interface=ui#blueprint-permissions) to set access permissions to explore Blueprint deployments.
 - Explore [deploying {{site.data.keyword.bpshort}} Blueprints using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprints managed cloud environment.
 - [FAQs](/docs/schematics?topic=schematics-blueprints-faq&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-failure) for any challenges and questions on Blueprints.
-- [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand beta limitations.
+- [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand Beta limitations.

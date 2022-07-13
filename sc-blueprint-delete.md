@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-13"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -71,7 +71,7 @@ OK
 
 Verify Blueprint delete 
 
-During the beta, the delete CLI command does not wait for successful job completion and returns immediately. 
+During the Beta, the delete CLI command does not wait for successful job completion and returns immediately. 
 
 The status of the delete operation can be monitored using the `blueprint job get` command. The following command performs a Blueprint `job get` for the JOB ID `eu-gb.JOB.Blueprint-Basic-Example.f2d388d3`. The job ID will be displayed in the delete command output. 
 

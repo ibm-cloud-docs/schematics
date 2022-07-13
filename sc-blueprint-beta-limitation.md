@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-13"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -27,7 +27,7 @@ Join the `#tmp-blueprints-beta-2022` slack channel and post a message including 
 - Your level of experience with cloud automation, specifically with regard to Terraform, or {{site.data.keyword.bplong_notm}}
 - Any initial questions or comments
 
-Then at any time come back to the thread you've just created, reply to it to ask more questions or give feedback.
+You can come back any time to your created thread to add information, ask questions, or give feedback.
 {: important}
 
 ## Beta release limitations 
