@@ -169,48 +169,43 @@ Before your begin
 
 Here are the list of commands used to provision the Agent infrastructure.
 
-- Run workspace new command to create the Agent infrastructure workspace.
+- Run [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-new) command to create the Agent infrastructure workspace.
    ```sh
    ibmcloud schematics workspace new --file https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_infra_workspace.json
    ```
    {: pre}
 
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud-Schematics Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
-- Run workspace upload command to upload the tar file.
+- Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-upload) command to upload the tar file.
    ```sh
    ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
    ```
    {: pre}
 
-- Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the Agent infrastructure. Wait 45 - 90 minutes to provision the resource. 
-- Run apply command to apply the plan to provision the Agent infrastructure.
+- Run [apply command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-apply) to provision the Agent infrastructure.
    ```sh
    ibmcloud schematics apply --id <Provide your workspace ID>
    ```
    {: pre}
 
+   Wait 45 - 90 minutes to provision the resource.
+   {: note}
+
 - Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**.
-- Run job logs command to view your job logs.
+- Run [job logs](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-logs-job) command to view your job logs.
    ```sh
    ibmcloud schematics job logs --id JOB_ID
    ```
    {: pre} 
-   
-   For more information, refer to, [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
-   {: note}
 
 - Optional: View the **Jobs** logs and **Resources** page and observe the workspace status as `ACTIVE` from [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external}.
-- If case of Job failure, rectify the issue in the **Settings** page of the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external} and run `ibmcloud schematics refresh --id  <Provide your workspace ID>` command.
+- If case of job failure, rectify the issue in the **Settings** page of the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external} and run `ibmcloud schematics refresh --id  <Provide your workspace ID>` command.
 - View the **Jobs** logs and **Resources** page to observe the workspace status as `ACTIVE`.
 
-### Output of CLI Agent infrastructure
-{: #agents-infra-cli-output}
+    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, run apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
+    {: important}
 
-1. Navigate to the [Resources list](https://cloud.ibm.com/resources/){: external} page.
-2. Verify the following resources are provisioned from the resource list page.
-    - **VPC > Search** `<agent_prefix>-vpc` the status as **Available**.
-    - **Services and Software** > `<agent_prefix>-logdna` the status as **Active**.
-    - **Clusters** > `<agent_prefix>-iks` the status as **Normal**.
+- Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-output) provisioned.
    
     Optionally, you can search the provisioned resources with the tag name from the [Resources list](https://cloud.ibm.com/resources/){: external} page.
     {: note}
@@ -240,14 +235,14 @@ Here are the list of commands used to create the Agent service.
     The Agent service workspace should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` that are recorded while provisioning the Agent infrastructure.
     {: note}
 
-- Run workspace new command to create the Agent service workspace.
+- Run [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-new) command to create the Agent service workspace.
    ```sh
    ibmcloud schematics workspace new --file https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json
    ```
    {: pre}
 
-- Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud-Schematics Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
-- Run upload command to upload the tar file.
+- Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud {{site.data.keyword.bpshort}} Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
+- Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-upload) to upload the tar file.
    ```sh
    ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-service-templates.tar --template <provide your template_id>
    ```
@@ -257,14 +252,17 @@ Here are the list of commands used to create the Agent service.
     The Agent service workspace should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` that are recorded while provisioning the Agent infrastructure.
     {: note}
 
-- Run apply command, and wait 15 - 30 minutes to complete the service execution.
+- Run [apply command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-apply) to provision cloud resource.
    ```sh
    ibmcloud schematics apply --id <Provide your workspace ID>
    ```
    {: pre}
 
+   Wait 15 - 30 minutes to complete the service execution.
+   {: note}
+
 - Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**. **Note** wait for 15-30 minutes.
-- Run job command. For more information, refer to, [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
+- Run [job log](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-logs-job) command to view your job logs.
    ```sh
    ibmcloud schematics job logs --id JOB_ID
    ```
@@ -279,20 +277,276 @@ Here are the list of commands used to create the Agent service.
 
 - View the **Jobs** logs and **Resources** page to observe the workspace status as `ACTIVE`.
 
-#### Output of CLI Agent service
-{: #agents-svc-cli-output}
+- Review the output to view the [Agent service workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-svc-output) execution.
 
-1. Navigate to the target [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
-2. Click **Kubernetes Clusters**  page.
-3. Click your `<cluster>` hyperlink > click **Kubernetes dashboard** > **Pods**.
-4. Switch to your **schematics-job-runtime** namespace from the drop down box next to search icon to view `jobrunner` pod (1 instance) > Status: `Running` or green icon showing the running status.
-5. Switch to your **schematics-ibm-observe** namespace from the drop down box next to search icon to view `logdna-agent` pods (3 instances - one on each worker node) > Status: `Running` or green icon showing the running status.
-6. Switch to your **schematics-runtime** namespace from the drop down box next to search icon to view `jobx0.x0` pods (3 instances - one on each worker node) > Status: `Running` or green icon showing the running status.
-
-    You can search the Agents services and its status with the tag name from the [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page.
+    You can search the Agent services and its status with the tag name from the [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page.
     {: note}
 
+## Provision the Agent infrastructure through API
+{: #agents-setup-infra-api}
+{: api}
 
+1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
+2. You have the right permission to create [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started), [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam) services.
+
+Here are the list of CURL commands used to provision the Agent infrastructure:
+1. Run a workspace create command.
+   ```curl
+    curl -X POST \
+    https://schematics.cloud.ibm.com/v1/workspaces \
+    -H 'authorization: <auth> \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -d '{
+        "name": "smulampa-schematics-agent-infra-workspace",
+        "type": [
+            "terraform_v1.0"
+        ],
+        "description": "schematics agents infra workspace",
+        "template_repo": {
+            "url": ""
+        },
+        "template_data": [{
+            "folder": ".",
+            "type": "terraform_v1.0",
+            "variablestore": [{
+                    "name": "agent_prefix",
+                    "type": "string",
+                    "value": "myproject-agent"
+                },
+                {
+                    "name": "location",
+                    "type": "string",
+                    "value": "us-south"
+                },
+                {
+                    "name": "resource_group_name",
+                    "type": "string",
+                    "value": "Default"
+                }
+            ]
+        }]
+    }'
+    ```
+   {: codeblock}
+
+2. Run [workspace get](/apidocs/schematics/schematics#get-workspace) to record the workspace ID.
+   ```curl
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v1/workspaces/ \
+    -H 'authorization: <auth> \
+    -H 'cache-control: no-cache' \
+    ```
+   {: pre}
+
+3. Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) to upload a `agent-infrastructure-templates.tar` file that contains the Blueprint definition, inputs details.
+   ```curl
+    curl -X PUT \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/template_data/{template_id}/template_repo_upload \
+    -H 'authorization: <auth> \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+    -F file=@agent-infrastructure-templates.tar
+    ```
+   {: pre}
+
+4. Run [workspace get](/apidocs/schematics/schematics#get-workspace) command to pull the workspace details that are uploaded by the `agent-infrastructure-templates.tar` file.
+   ```curl
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id} \
+    -H 'authorization: <auth> ' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    ```
+   {: pre}
+
+   Wait 45 - 90 minutes to provision the resource. 
+   {: note}
+
+5. Run [apply command](/apidocs/schematics/schematics#apply-workspace-command) to provision an Agent infrastructure.
+   ```curl
+    curl -X PUT \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/apply \
+    -H 'authorization: <auth>' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -d '{
+        "name": "smulampa-schematics-agent-infra-workspace",
+        "type": [
+            "terraform_v1.0"
+        ],
+        "description": "schematics agents infra workspace",
+        "template_repo": {
+            "url": ""
+        },
+        "template_data": [{
+            "folder": ".",
+            "type": "terraform_v1.0",
+            "variablestore": [{
+                    "name": "agent_prefix",
+                    "type": "string",
+                    "value": "myproject-agent"
+                },
+                {
+                    "name": "location",
+                    "type": "string",
+                    "value": "us-south"
+                },
+                {
+                    "name": "resource_group_name",
+                    "type": "string",
+                    "value": "Default"
+                }
+            ]
+        }]
+    }'
+    ```
+   {: pre}
+
+6. Run [job logs](/apidocs/schematics/schematics#get-job) to pull your workspace logs.
+   ```curl
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/runtime_data/{template_id}/log_store \
+    -H 'authorization: <auth>' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    ```
+   {: pre}
+
+    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, run apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
+    {: important}
+
+7. Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-output) provisioned.
+
+### Deploying the Agent services
+{: #agents-setup-svc-api}
+
+Here are the list of CURL commands used to provision the Agent Service:
+1. Run [workspace create](/apidocs/schematics/schematics#create-workspace) using the payload.
+   ```curl
+    curl -X POST \
+    https://schematics.cloud.ibm.com/v1/workspaces \
+    -H 'authorization: <auth>' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -d '{
+        "name": "smulampa-schematics-agent-service-workspace",
+        "type": [
+            "terraform_v1.0"
+        ],
+        "description": "schematics agents service workspace",
+        "template_repo": {
+            "url": ""
+        },
+        "template_data": [{
+            "folder": ".",
+            "type": "terraform_v1.0",
+            "variablestore": [{
+                    "name": "agent_prefix",
+                    "type": "string",
+                    "value": "myproject-agent"
+                },
+                {
+                    "name": "location",
+                    "type": "string",
+                    "value": "us-south"
+                },
+                {
+                    "name": "resource_group_name",
+                    "type": "string",
+                    "value": "Default"
+                }
+            ]
+        }]
+    }'
+    ```
+   {: pre}
+
+2. Run [workspace get](/apidocs/schematics/schematics#get-workspace) to list the workspaces.
+   ```curl
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id} \
+    -H 'authorization: <auth>' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    ```
+   {: pre}
+
+3. Run [workspace upload](/apidocs/schematics/schematics#template-repo-upload) to upload `agent-service-templates.tar` file.
+   ```curl
+    curl -X PUT \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/template_data/{template_id}/template_repo_upload \
+    -H 'authorization: <auth>' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+    -F file=@agent-service-templates.tar
+    ```
+   {: pre}
+
+4. Run [workspace get](/apidocs/schematics/schematics#get-workspace) operation to pull the workspace details from the `.tar` file.
+   ```curl
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id} \
+    -H 'authorization: <auth> ' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    ```
+   {: pre}
+
+5.  Run [apply command](/apidocs/schematics/schematics#apply-workspace-command) to provision an Agent service.
+   ```curl
+    curl -X PUT \
+    https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/apply \
+    -H 'authorization: <auth>' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -d '{
+        "name": "smulampa-schematics-agent-service-workspace",
+        "type": [
+            "terraform_v1.0"
+        ],
+        "description": "schematics agents service workspace",
+        "template_repo": {
+            "url": ""
+        },
+        "template_data": [{
+            "folder": ".",
+            "type": "terraform_v1.0",
+            "variablestore": [{
+                    "name": "agent_prefix",
+                    "type": "string",
+                    "value": "myproject-agent"
+                },
+                {
+                    "name": "location",
+                    "type": "string",
+                    "value": "us-south"
+                },
+                {
+                    "name": "resource_group_name",
+                    "type": "string",
+                    "value": "Default"
+                }
+            ]
+        }]
+    }'
+    ```
+   {: pre}
+
+   Wait 15 - 30 minutes to complete the service execution
+   {: note}
+
+6. Run [job logs](/apidocs/schematics/schematics#get-job) to pull your workspace logs.
+    ```curl
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v1/workspaces/workspaces/{w_id}/runtime_data/{template_id}/log_store \
+    -H 'authorization: <auth>' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    ```
+   {: pre}
+
+7. Review the output to view the [Agent service workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-svc-output) execution.
 
 ## Next steps
 {: #nextsteps-agentsetup}

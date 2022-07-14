@@ -794,9 +794,11 @@ subcollection: schematics
 
 * [Provision the Agent infrastructure through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-cli)
 
-    * [Output of CLI Agent infrastructure](/docs/schematics?topic=schematics-agents-setup#agents-infra-cli-output)
-
     * [Deploying the Agent services through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-cli)
+
+* [Provision the Agent infrastructure through API](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-api)
+
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-api)
 
 * [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
 
