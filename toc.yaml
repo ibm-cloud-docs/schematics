@@ -41,6 +41,7 @@ toc:
                 - security-compliance/sc-bp-objects.md
           - architecture-workload-isolation.md
           - release-notes.md
+
     - navgroup:
         id: howto
         topics:
@@ -121,6 +122,7 @@ toc:
                 - private-endpoint.md
                 - data-security.md
                 - allowips.md
+
     - navgroup:
         id: tutorial
         topics:
@@ -135,6 +137,7 @@ toc:
           - link:
               label: Deploying multitiered VPC on IBM Cloud by using Bastion host
               href: 'https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md'
+
     - navgroup:
         id: reference
         topics:

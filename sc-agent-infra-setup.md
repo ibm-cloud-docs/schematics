@@ -88,6 +88,8 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
 ### Output
 {: #agents-setup-infra-output}
 
+Follow the steps to view the Agent infrastructure workspace setup.
+
 1. Navigate to the [Resources list](https://cloud.ibm.com/resources/){: external} page.
 2. Verify the following resources are provisioned from the resource list page.
     - **VPC > Search** `<agent_prefix>-vpc` the status as **Available**.
@@ -143,6 +145,8 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
 
 #### Output
 {: #agents-svc-output}
+
+Follow the steps to view the deployment of Agent service workspace.
 
 1. Navigate to the target [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
 2. Click **Kubernetes Clusters**  page.
