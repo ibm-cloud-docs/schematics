@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -222,13 +222,16 @@ Before you begin
 Here are the list of commands used to create the Agent service.
 
 - Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information, about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-svc).
-    - `cluster_id` = `<provide the recorded cluster_id from Agent infrastructure job log>`
-    - `resource_group_name` = `<provide the target resource group name, for example, default>`
-    - `logdna_name` = `<provide the recorded cluster_id from Agent infrastructure job log>`
-    - `schematics_endpoint_location` = `<provide your endpoint location, for example, us>`
-    - `profile_id` = `<Provide your trusted profile ID>`
-    - `location` = `<Enter the region, for example, us-south>`
-    - `agent_name` = `<Enter your agent name, for example, myproject>`
+    | Input variable | value |
+    | --- | --- |
+    | `cluster_id` | provide the recorded cluster_id from Agent infrastructure job log. |
+    | `resource_group_name` | provide the target resource group name, for example, default.|
+    | `logdna_name` | provide the recorded cluster_id from Agent infrastructure job log.|
+    | `schematics_endpoint_location` | provide your endpoint location, for example, `us`.|
+    | `profile_id` | Provide your trusted profile ID.|
+    | `location` | Enter the region, for example, `us-south`.|
+    | `agent_name` | Enter your agent name, for example, myproject.|
+    {: caption="Agent service input variable" caption-side="bottom"}
 
     The Agent service workspace should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` that are recorded while provisioning the Agent infrastructure.
     {: note}

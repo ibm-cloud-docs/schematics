@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -35,15 +35,15 @@ Review the release notes for July 2022.
 
 {{site.data.keyword.bpshort}} Agents Beta release in production.
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents Beta releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents journey.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
     - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui), APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
-    - Explore [installing {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup&interface=ui) through UI to install an Agent infrastructure and Agent service Workspaces.
-    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) through UI to register the Agent to your {{site.data.keyword.bpshort}} service instance.
-    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
+    - Install [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup&interface=ui) through UI.
+    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
+    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
     - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent&interface=ui) to clean up the Agent infrastructure and Agent services.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=ui) for any challenges and questions on Agents.
-    - [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to provide your feedback and limitations that you observe.
+    - [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -52,18 +52,18 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july0822}
 {: release-note}
 
-New {{site.data.keyword.bpshort}} Blueprints Beta release in production.
+{{site.data.keyword.bpshort}} Blueprints Beta release in production.
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} Blueprints Beta releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints journey.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints engagement.
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
-    - [Getting started usecase](/docs/schematics?topic=schematics-get-started-blueprints).
+    - [Usecase](/docs/schematics?topic=schematics-get-started-blueprints).
     - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions&interface=ui) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-install-blueprint&interface=ui) to configure the right schemas and use the right Blueprints commands for the deployment of Blueprints.
-    - See [Blueprints permissions](/docs/schematics?topic=schematics-access&interface=ui#blueprint-permissions) to get access permissions to explore Blueprints deployment.
+    - See [Blueprints permissions](/docs/schematics?topic=schematics-access&interface=ui#blueprint-permissions) to get access permissions to install Blueprints deployment.
     - Blueprints are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint&interface=ui#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
-    - Explore [deploying {{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli&interface=ui) tutorial to create cloud resources with a Blueprints managed cloud environment.
+    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli&interface=ui) tutorial to create cloud resources with a Blueprints managed cloud environment.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails&interface=ui) for any challenges and questions on Blueprints.
-    - [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations&interface=ui) to provide your feedback and limitations that you observe.
+    - [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations&interface=ui) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.11.0](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -325,7 +325,7 @@ Onboarding Terraform templates to private catalog
 :   For onboarding multiple Terraform templates into {{site.data.keyword.cloud_notm}} private catalog, see [Onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).
 
 Sample templates to deploy into {{site.data.keyword.cloud_notm}}
-:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services using {{site.data.keyword.bpshort}} Workspaces.
+:   Install [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services using {{site.data.keyword.bpshort}} Workspaces.
 
 Support `WinRM` in command-line
 :   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} Actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.

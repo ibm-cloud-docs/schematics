@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: schematics agent, agent, Beta release, agent Beta release
 
@@ -50,3 +50,4 @@ There will be multiple Beta releases in short window period, this requires the u
 | Agents can be installed in a freshly provisioned Agent infrastructure, not in any other cluster.
 | Update to Agent settings is not propogated to the Agent service. It requires a redeployment of Agent service using **Kubernetes Dashboard**. |  | |
 {: caption="Beta release limitations" caption-side="bottom"}
+

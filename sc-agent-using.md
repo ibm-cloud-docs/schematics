@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-14"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -87,5 +87,5 @@ Related Workspace: name=<prefix>-003-cos-module, sourcerelease=(not specified), 
 {: #connect-nextsteps}
 
 You have completed the entire {{site.data.keyword.bpshort}} Agent set up and working flow.
-- Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics?q=Agent&type=all&language=&sort=){: external}.
+- Looking for Agents samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics?q=Agent&type=all&language=&sort=){: external}.
 - For any challenges in Agents set up, refer to, [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).

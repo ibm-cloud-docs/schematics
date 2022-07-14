@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: schematics
 subcollection: schematics
@@ -31,9 +31,9 @@ subcollection: schematics
 {: #sitemap_getting_started}
 
 
-[Getting started with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
+[Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
 
-[Getting started with infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
+[Getting started: Infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-terraform#prereq)
 
@@ -43,7 +43,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
-[Getting started with configuration management in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
+[Getting started: Configuration management in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
 * [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
 
@@ -51,7 +51,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-getting-started-ansible#ansible-whats-next)
 
-[Getting started with software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
+[Getting started: Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-software#vsi-postgres-prereq)
 
@@ -59,7 +59,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
 
-[Getting started with large-scale cloud environments in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
+[Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
 
 * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
 
@@ -239,7 +239,7 @@ subcollection: schematics
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * New {{site.data.keyword.bpshort}} Blueprints Beta release in production.
+        * {{site.data.keyword.bpshort}} Blueprints Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -423,7 +423,7 @@ subcollection: schematics
 {: #sitemap_managing_blueprints}
 
 
-[Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-definitions)
+[Understanding Blueprint definitions](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-definitions)
 
 * [Definitions overview](/docs/schematics?topic=schematics-blueprint-definitions#definition-overview)
 
@@ -1082,27 +1082,27 @@ subcollection: schematics
 
 * [Select a Blueprint definition](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
 
-* [Create {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
+* [Create {{site.data.keyword.bpshort}} Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
 
     * [Syntax](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-syntax)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-output)
 
-* [Installing Blueprints to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
+* [Install Blueprint to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
 
-* [Review successful Blueprint creation and outputs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
+* [Access and test the Blueprint created resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
 
-    * [Using the Cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
+    * [Using the cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
 
     * [Using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-cli)
 
-* [Destroying Blueprints cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
+* [Destroy Blueprint cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step5-output)
 
-* [Deleting the Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
+* [Delete the Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step6-output)
 
@@ -1238,6 +1238,10 @@ subcollection: schematics
     * [`ibmcloud schematics resource query list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-rq)
 
     * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
+
+* [Stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
+
+    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
 
 * [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
 

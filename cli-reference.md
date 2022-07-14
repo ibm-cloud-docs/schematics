@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-14"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -588,6 +588,8 @@ ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
 
 For more information, about the flags refer to, [Workspace get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-get) command.
 {: note}
+
+
 
 ## Blueprints commands
 {: #blueprints-cmd}
@@ -2089,6 +2091,56 @@ ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory1231
 {: pre}
 
 
+## Stop commands
+{: #stop-cmds}
+
+After invoking a job on a {{site.data.keyword.bpshort}} Workspaces like a `plan`, an `apply`, or a `destroy`. You may want to stop the running job, or want to stop provisioning resources. Stopping, or cancelling a job helps you to know whether the job is stuck, does the job has lot of wait time? {{site.data.keyword.bpshort}} allows users to `force-stop`, `interrupt`, or `terminate` the running job. 
+{: shortdesc}
+
+Review the commands to `force-stop`, `interrupt`, or `terminate` job stop command.
+
+### `ibmcloud schematics workspace job stop`
+{: #schematics-stop-job}
+
+Stops a running action or a job in {{site.data.keyword.bplong_notm}} workspaces.
+{: shortdesc}
+
+**Syntax:**
+
+```sh
+ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--cancel] [--force-stop] [--terminate]
+```
+{: pre}
+
+**Command options:**
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required | The workspace ID to update. |
+| `--job-id` or `--jid` | Required | The job ID of the job. |
+| `--interrupt,` | Optional | Removes the job from the pending queue.|
+| `--force-stop` or `--fs` | Optional | Sends a kill signal to the Terraform execution in the engine, also attempts to immediately stop the execution. |
+| `--terminate` or `-t` | Optional | Abruptly kills the engine, marks the job as stopped, and unlocks your workspace. **Note** Data is not saved using this flag. |
+{: caption="{{site.data.keyword.bpshort}} job stop flags" caption-side="bottom"}
+
+**Example:**
+
+```sh
+ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --force-stop --job-id <JOB_ID>
+```
+{: pre}
+
+```sh
+ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --interrupt --job-id <JOB_ID>
+```
+{: pre}
+
+```sh
+ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --terminate --job-id <JOB_ID>
+```
+{: pre}
+
+</staging>
 
 ## Terraform commands
 {: #tf-cmds}
