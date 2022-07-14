@@ -31,9 +31,9 @@ subcollection: schematics
 {: #sitemap_getting_started}
 
 
-[Getting started with {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
+[Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
 
-[Getting started with infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
+[Getting started: Infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-terraform#prereq)
 
@@ -43,7 +43,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
-[Getting started with configuration management in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
+[Getting started: Configuration management in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
 * [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
 
@@ -51,7 +51,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-getting-started-ansible#ansible-whats-next)
 
-[Getting started with software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
+[Getting started: Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-software#vsi-postgres-prereq)
 
@@ -59,7 +59,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
 
-[Getting started with large-scale cloud environments in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
+[Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
 
 * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started with large-scale cloud environments in {{site.data.keyword.bplong_notm}}
+# Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}
 {: #get-started-blueprints}
 
 Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint) to deploy a {{site.data.keyword.bpshort}} Blueprint with multiple linked Workspaces from the command-line.
@@ -134,4 +134,4 @@ ibmcloud schematics blueprint delete -id <blueprint_id>
 {: pre}
 
 - Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro&interface=ui).
-- Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics/?q=topic:blueprint). 
+- Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics/?q=topic:blueprint). 

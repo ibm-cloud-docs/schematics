@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started with {{site.data.keyword.bplong_notm}}
+# Getting started: {{site.data.keyword.bplong_notm}}
 {: #getting-started}
 
 Use the powerful tools of {{site.data.keyword.bplong}} to build and spin up your {{site.data.keyword.cloud_notm}} environment, automate cloud resource operations, install software, and run multitiered apps on your cloud resources. 

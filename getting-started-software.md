@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-07-14"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -11,7 +11,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started with software deployment in {{site.data.keyword.bplong_notm}}
+# Getting started: Software deployment in {{site.data.keyword.bplong_notm}}
 {: #get-started-software}
 
 Try out one of the {{site.data.keyword.IBM}} provided software templates to quickly spin up a classic Virtual Server Instance (VSI), and automatically configure the instance to connect to an {{site.data.keyword.databases-for-postgresql_full}} instance.

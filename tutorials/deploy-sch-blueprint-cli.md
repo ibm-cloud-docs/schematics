@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -276,5 +276,5 @@ OK
 
 You have now deployed a {{site.data.keyword.bpshort}} Blueprint. By completing this tutorial, you've learned to take a Blueprint through its lifecycle of creation to retirement by creating multiple Workspaces, cloud resources, and then destroying the created cloud environment.  
 
-Looking for more samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
+Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
 
