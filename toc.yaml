@@ -40,7 +40,7 @@ toc:
                 - security-compliance/sc-gdpr.md
                 - security-compliance/sc-bp-objects.md
           - architecture-workload-isolation.md
-          - release-notes.md 
+          - release-notes.md
     - navgroup:
         id: howto
         topics:
@@ -91,7 +91,7 @@ toc:
                 - inventories.md
           - topicgroup:
               label: Managing Integrations
-              topics: 
+              topics:
                 - integration-logging.md
                 - integration-monitor.md
                 - integration-at.md
