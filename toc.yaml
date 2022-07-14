@@ -184,6 +184,7 @@ toc:
                       - link:
                           label: Ansible documentation
                           href: 'https://docs.ansible.com/ansible/latest/index.html'
+
     - navgroup:
         id: help
         topics:

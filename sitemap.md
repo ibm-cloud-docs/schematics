@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: schematics
 subcollection: schematics
@@ -239,7 +239,7 @@ subcollection: schematics
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * New {{site.data.keyword.bpshort}} Blueprints Beta release in production.
+        * {{site.data.keyword.bpshort}} Blueprints Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -423,7 +423,7 @@ subcollection: schematics
 {: #sitemap_managing_blueprints}
 
 
-[Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-definitions)
+[Understanding Blueprint definitions](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-definitions)
 
 * [Definitions overview](/docs/schematics?topic=schematics-blueprint-definitions#definition-overview)
 
