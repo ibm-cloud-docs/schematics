@@ -1239,6 +1239,10 @@ subcollection: schematics
 
     * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
 
+* [Stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
+
+    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
+
 * [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
 
     * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
