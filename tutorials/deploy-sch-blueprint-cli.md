@@ -199,7 +199,7 @@ When using the `-profile output` flag, the `Blueprints Outputs` section in the c
 {: #destroy-schematics-blueprint-cli}
 {: step}
 
-Run the [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-destroy) command for the Blueprint environment to destroy all the cloud resources that are created in earlier steps. 
+Optional: Run the [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-destroy) command for the Blueprint environment to destroy all the cloud resources that are created in earlier steps. 
 * Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 * When prompted reply `yes`, or `y` to destroy the cloud resources.
 
@@ -234,7 +234,7 @@ OK
 {: #delete-schematics-blueprint-cli}
 {: step}
 
-Run the [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-delete) command to remove the Blueprint created in earlier steps. 
+Optional: Run the [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-delete) command to remove the Blueprint created in earlier steps. 
 
 * Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 * When prompted reply `yes`, or `y` to delete the cloud resources.
