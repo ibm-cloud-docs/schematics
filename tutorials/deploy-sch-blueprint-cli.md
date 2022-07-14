@@ -46,20 +46,20 @@ This tutorial uses a [sample Blueprint](https://github.com/Cloud-Schematics/blue
 
 The sample Blueprint takes two input parameters, `provision_rg=false`, and `resource_group_name=Default`. These configure the Blueprint to retrieve the ID of the Default resource group. See the example README file for alternative parameters to create a new resource group. 
 
-## Create {{site.data.keyword.bpshort}} Blueprints
+## Create {{site.data.keyword.bpshort}} Blueprint
 {: #create-schematics-blueprint-cli}
 {: step}
 
-Create your Blueprint environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command. The following parameters are used to create a Blueprint.
+Create your Blueprint environment by using CLI command [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create). Use the following parameter to create a Blueprint.
 
-- Name of the blueprint: `Blueprint_basic`
-- {{site.data.keyword.bpshort}} management resource group: `Default`
-- Blueprint URL: `https://github.com/Cloud-Schematics/blueprint-basic-example`
-- Blueprint file: `basic-blueprint.yaml`
-- Blueprint Git branch `main`
-- Input file URL: `https://github.com/Cloud-Schematics/blueprint-basic-example`
-- Input file: `basic-input.yaml` 
-- Input Git branch `main`
+- The Name of the Blueprint: `Blueprint_basic`
+- The {{site.data.keyword.bpshort}} management resource group: `Default` **Note** you can create a new resource group for the Blueprint.
+- The Blueprint URL: `https://github.com/Cloud-Schematics/blueprint-basic-example`
+- The Blueprint file: `basic-blueprint.yaml`
+- The Blueprint Git branch `main`
+- An Input file URL: `https://github.com/Cloud-Schematics/blueprint-basic-example`
+- An Input file: `basic-input.yaml` 
+- An Input Git branch `main`
 - Inputs: 
     - `provisiong_rg`=**false**
     - `resource_group_name`=**Default**
@@ -102,9 +102,7 @@ Record the generated ID of the Blueprint to use in the later commands.
 
 Refer to [Troubleshooting Blueprint create failures](/docs/schematics?topic=schematics-bp-create-fails) for details on debugging create failures. 
 
-
-
-## Installing Blueprints to create cloud resources
+## Install Blueprint to create cloud resources
 {: #install-schematics-blueprint-cli}
 {: step}
 
@@ -140,21 +138,16 @@ The output shows that the Workspaces `basic-resource-group` and `basic-cos-stora
 
 Refer to [Troubleshooting Blueprint install failures](/docs/schematics?topic=schematics-bp-install-fails) for details on debugging install failures. 
 
-## Review successful Blueprint creation and outputs
+## Access and test the Blueprint created resources
 {: #review-schematics-blueprint}
 {: step}
 
-After a successful install of the Blueprint, review the deployed Blueprint via the CLI or UI.  
+After a successful installation of the Blueprint, review the deployed Blueprint via the CLI or UI.  
 
-
-### Using the Cloud UI 
+### Using the cloud UI 
 {: #review-schematics-blueprint-ui}
 
-From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.test.cloud.ibm.com/blueprints){: external}, select the provisioned Blueprint to view the created Workspaces and cloud resources.  
-
-Review UI tabs: Overview, Modules, Resources, Variables, Jobs history, Settings 
-
-The computed output values for the Blueprint and be reviewed on the Variables/Outputs tab. 
+From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.test.cloud.ibm.com/blueprints){: external}, select the provisioned Blueprint to view the your Workspaces and cloud resources. Review UI tabs such as **Overview**, **Modules**, **Resources**, **Variables**, **Jobs history**, and **Settings** for the computed output values of the Blueprint. 
 
 ### Using the CLI
 {: #review-schematics-blueprint-cli}
@@ -184,7 +177,7 @@ ID              eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
 Description     Simple two module blueprint. Deploys Resource Group and COS bucket   
 Status          Normal   
 Location        eu-de   
-Creator         steve_strutt@uk.ibm.com   
+Creator         sabc@uk.ibm.com   
 Last modified   2022-06-27T15:22:15.199Z   
                 
 MODULES
@@ -202,8 +195,7 @@ OK
 
 When using the `-profile output` flag, the `Blueprints Outputs` section in the command output lists any output values computed by the Blueprint. A Blueprint definition can be configured to output any of the Terraform output values from the linked Workspaces.  
 
-
-## Destroying Blueprints cloud resources
+## Destroy Blueprint cloud resources
 {: #destroy-schematics-blueprint-cli}
 {: step}
 
@@ -238,8 +230,7 @@ OK
 ```
 {: screen}
 
-
-## Deleting the Blueprint
+## Delete the Blueprint
 {: #delete-schematics-blueprint-cli}
 {: step}
 
@@ -276,5 +267,5 @@ OK
 
 By completing this tutorial, you've learned to deploy the cloud environment using {{site.data.keyword.bpshort}} Blueprint.
 
-Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
+- Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
 

@@ -1082,27 +1082,27 @@ subcollection: schematics
 
 * [Select a Blueprint definition](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
 
-* [Create {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
+* [Create {{site.data.keyword.bpshort}} Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
 
     * [Syntax](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-syntax)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-output)
 
-* [Installing Blueprints to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
+* [Install Blueprint to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
 
-* [Review successful Blueprint creation and outputs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
+* [Access and test the Blueprint created resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
 
-    * [Using the Cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
+    * [Using the cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
 
     * [Using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-cli)
 
-* [Destroying Blueprints cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
+* [Destroy Blueprint cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step5-output)
 
-* [Deleting the Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
+* [Delete the Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step6-output)
 
