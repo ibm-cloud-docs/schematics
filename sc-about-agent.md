@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-15"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -38,7 +38,7 @@ The following are the primary drivers to create the {{site.data.keyword.bplong_n
 
 The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and how it functions in {{site.data.keyword.bpshort}}?
 
-![{{site.data.keyword.bpshort}} Agent Architecture](images/agent-blueprint.png){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
 1. As the {{site.data.keyword.bpshort}} Agents user, you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your cloud account. 
 2. Configure the {{site.data.keyword.bpshort}} Agent by using an `Agents infrastructure` and an `Agents service` Workspaces to create the cluster infrastructure.
