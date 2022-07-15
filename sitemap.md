@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-15"
 
 keywords: schematics
 subcollection: schematics
@@ -1109,6 +1109,18 @@ subcollection: schematics
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step6-output)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
+
+
+## Deploying a VPC environment on IBM Cloud by using Bastion host
+{: #sitemap_deploying-a-vpc-environment-on-ibm-cloud-by-using-bastion-host}
+
+[Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
+
+
+## Deploying multitiered VPC on IBM Cloud by using Bastion host
+{: #sitemap_deploying-multitiered-vpc-on-ibm-cloud-by-using-bastion-host}
+
+[Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
 
 
 ## CLI reference
