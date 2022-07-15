@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-07-14"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -33,7 +33,7 @@ The core principles of IaC are commonly defined as:
 - Continuously test, integrate, and deploy
 - Make your infrastructure code modular
 
-{{site.data.keyword.bpshort}} Blueprints applies these IaC principles to manage the definition and lifecycle of composite HashiCorp Terraform, and {{site.data.keyword.redhat_full}} Ansible IaC environments. The definition and linking of {{site.data.keyword.bpshort}} hosted Terraform and Ansible environments enables {{site.data.keyword.bpshort}} to simplify creation and management of large-scale infrastructure deployments on {{site.data.keyword.cloud_notm}}. 
+{{site.data.keyword.bpshort}} Blueprints applies these IaC principles to manage the definition and lifecycle of composite HashiCorp Terraform, and {{site.data.keyword.redhat_full}} Ansible IaC environments. The definition and linking of {{site.data.keyword.bpshort}} hosted Terraform and Ansible environments enables {{site.data.keyword.bpshort}} to simplify the creation and management of large-scale infrastructure deployments on {{site.data.keyword.cloud_notm}}. 
 
 This approach to large-scale environment management is represented by the key Blueprints concepts outlined in the diagram.
 
