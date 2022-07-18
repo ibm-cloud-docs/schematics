@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-18"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -26,7 +26,7 @@ The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-age
 
 The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set-up flow that you can provision, deploy, connect, and use.
 
-![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](images/agent-blueprint.png "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
 
 ## Prerequisites
 {: #agents-setup-prereq}
