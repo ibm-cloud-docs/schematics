@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -190,7 +190,7 @@ If the `Release` parameter is empty and the `Branch` was set with release tag.
 {: support}
 
 ```sh
-curl -X GET https://schematics.test.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Authorization: $IAM_TOKEN"
+curl -X GET https://schematics.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Authorization: $IAM_TOKEN"
 {"requestid":"3a3cbffe-e23a-4ccf-b764-042f7379c084","timestamp":"2021-11-11T17:00:07.169953698Z","messageid":"M1078","message":"Error while validating the location in the account. Verify you have permission to the location in the global catalog settings.","statuscode":403}
 ```
 {: pre}
@@ -496,3 +496,73 @@ In order to know the details of the drift detection job, you need to check the d
 
 Yes, you can interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}} by using the job types. For more information, refer to, [stopping the job types](/docs/schematics?topic=schematics-interrupt-job&interface=ui#interrupt-types).
 
+## How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?
+{: #postcartapi-job-faq}
+{: faq}
+{: support}
+
+Error
+
+```text
+{
+    "requestid": "3f59c342-cd2c-4703-aa10-9e8e7072a3ac",
+    "timestamp": "2022-06-28T20:02:58.529765308Z",
+    "messageid": "M1097",
+    "message": "Incorrect Location Input.",
+    "statuscode": 400
+}
+```
+{: screen}
+
+The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environment. Therefore, you need to use [regional endpoints](/apidocs/schematics/schematics#api-endpoints) to point your location to a `eu-de` region. 
+
+## What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?
+{: #clicmdresource-job-faq}
+{: faq}
+{: support}
+
+Use the [`state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) CLI command to view the same resources as in {{site.data.keyword.bplong_notm}} UI.
+
+
+## How do I fix the `CreateWorkspaceWithContext failed Bad request` error while creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?
+{: #locationres-job-faq}
+{: faq}
+{: support}
+
+Error
+
+```text
+CreateWorkspaceWithContext failed Bad request. Check that the information you entered in the payload is complete and formatted correctly in JSON.
+```
+{: screen}
+
+The {{site.data.keyword.bpshort}} public or private endpoint global URL by default points to `us` region. As a workaround you can set the [environment variable key](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#config-provider) before running the Terraform commands.
+
+    ```sh
+    export IBMCLOUD_SCHEMATICS_API_ENDPOINT="https://eu-de.schematics.cloud.ibm.com"
+    ```
+
+You can also add the endpoints to a JSON file to categorize the endpoints service as public or private.
+
+Sample provider declaration
+
+```terraform
+{
+    "IBMCLOUD_SCHEMATICS_API_ENDPOINT":{
+        "public":{
+            "eu-de":"https://eu-de.schematics.cloud.ibm.com"
+        }
+         }
+}
+```
+{: codeblock}
+
+Example Provider Block
+
+```terraform
+provider "ibm" {
+
+  endpoints_file_path= "endpoints.json"
+}
+```
+{: codeblock}

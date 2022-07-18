@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-18"
 
 keywords: schematics
 subcollection: schematics
@@ -1111,6 +1111,18 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
 
 
+## Deploying a VPC environment on IBM Cloud by using Bastion host
+{: #sitemap_deploying-a-vpc-environment-on-ibm-cloud-by-using-bastion-host}
+
+[Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
+
+
+## Deploying multitiered VPC on IBM Cloud by using Bastion host
+{: #sitemap_deploying-multitiered-vpc-on-ibm-cloud-by-using-bastion-host}
+
+[Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
+
+
 ## CLI reference
 {: #sitemap_cli_reference}
 
@@ -1611,7 +1623,7 @@ subcollection: schematics
 
 [Agents](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
-* [Can I install more than one Agent Service on the Agent infrastructure?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+* [Can I install more than one Agent service on the Agent infrastructure?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
 * [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
@@ -1623,17 +1635,7 @@ subcollection: schematics
 
 * [While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What should I do next?](/docs/schematics?topic=schematics-faqs-agent#faqs-auth-error)
 
-* [List the tools and resources that I can deploy and run into my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-tool)
-
-* [Is there a length of time that I can deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
-
-* [Can I see the Job results in my local machine by logging into the cloud account? Or Do I need to use the {{site.data.keyword.bplong_notm}} interface to view the Job logs?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
-
-* [Can I install {{site.data.keyword.cloud_notm}} services in my cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
-
-* [If I install the softwares on a local cluster. Can I integrate back to a service in the {{site.data.keyword.cloud_notm}}? Do I need to set up a VPN tunnel to integrate?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-software)
-
-* [What is the difference between agent-location and location input variable flag in Agents service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-location)
+* [What is the difference between `agent-location` and `location` input variable flag in Agents service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-location)
 
 * [Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-rg)
 
@@ -1644,6 +1646,8 @@ subcollection: schematics
 * [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
 
 * [Can I know the steps to get the Jobrunner (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
+
+* [What is time period set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
@@ -1802,6 +1806,12 @@ subcollection: schematics
 * [Where can I see the status of the drift detection? Or How can I know if the workspace has drifted?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
 
 * [Can I interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#stopping-job-faq)
+
+* [How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?](/docs/schematics?topic=schematics-workspaces-faq#postcartapi-job-faq)
+
+* [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
+
+* [How do I fix the `CreateWorkspaceWithContext failed Bad request` error while creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
 
 
 ## Troubleshooting
