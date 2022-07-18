@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -23,12 +23,12 @@ content-type: faq
 Answers to common questions about the {{site.data.keyword.bplong_notm}} Agents are classified into following sections.
 {: shortdesc}
 
-## Can I install more than one Agent Service on the Agent infrastructure?
+## Can I install more than one Agent service on the Agent infrastructure?
 {: #faqs-agent-install}
 {: faq}
 {: support}
 
-You can install only one Agent Service instance in the Agent infrastructure such as Kubernetes cluster, LogDNA.
+You can install more than one Agent Service onto different clusters, but not the same cluster.  Installing a second Agent into the same cluster it not supported and fails with the namespace collision error. There is no need for a second Agent service on the Agent infrastructure, such as, Kubernetes cluster, LogDNA.
 
 ## What is the cost of installing the {{site.data.keyword.bpshort}} Agent?
 {: #faqs-agent-cost}
@@ -37,12 +37,12 @@ You can install only one Agent Service instance in the Agent infrastructure such
 
 The cost break-up for the {{site.data.keyword.bpshort}} Agents is as follows:
 
-Agent infrastructure
+Agents infrastructure
 - Cost of VPC infrastructure elements such as, subnet, public gateways.
 - Cost of IBM Kubernetes Service (cluster) on VPC, with 3 node worker pool.
 - Cost of IBM Log Analysis services.
 
-Agent services
+Agents service
 - There is no cost involved with running the Agent Service for Beta.
    Agent Services will be a priced service, post Beta.
    {: note}
@@ -52,9 +52,9 @@ Agent services
 {: faq}
 {: support}
 
-For Beta you can run bind a `{{site.data.keyword.bpshort}} Workspace`, to the Agent. Therefore, you can run Terraform workload on the Agent.
+For Beta you can bind a `{{site.data.keyword.bpshort}} Workspace`, to the Agent. Therefore, you can run Terraform workload on the Agent.
 
-Currently, you cannot bind the `{{site.data.keyword.bpshort}} Action`, to the Agent. Therefore, you cannot run Ansible workload on the Agent.
+Currently, you cannot bind the `{{site.data.keyword.bpshort}} Action`, to the Agents. Therefore, you cannot run Ansible workload on the Agent.
 {: note}
 
 ## How can I see the Workspace job results and logs, for the workloads that ran on the Agent?
@@ -91,44 +91,7 @@ Error: Authentication failed, Unable to refresh auth token: Request failed with 
 
 You need to just retry to provision an Agent infrastructure. Or, you can provide a valid API key to provision the Agent infrastructure. 
 
-FAQ to delete from here
-
-## List the tools and resources that I can deploy and run into my Agent?
-{: #faqs-agent-tool}
-{: faq}
-{: support}
-
-You can run any Terraform workload with Agent. Currently `Action`, `Cloudpak`, `Helm`, and `OVA` are not supported with Agent. 
-
-## Is there a length of time that I can deploy the cloud resources?
-{: #faqs-agent-limit}
-{: faq}
-{: support}
-
-Currently, `30 minutes` limit is set to deploy or execute the cloud resources for the Agent.
-
-## Can I see the Job results in my local machine by logging into the cloud account? Or Do I need to use the {{site.data.keyword.bplong_notm}} interface to view the Job logs?
-{: #faqs-agent-job}
-{: faq}
-{: support}
-
-Job logs are available only in {{site.data.keyword.bpshort}}, that can be accessed through API REST client call, CLI, or UI console.
-
-## Can I install {{site.data.keyword.cloud_notm}} services in my cluster?
-{: #faqs-agent-install}
-{: faq}
-{: support}
-
-No, You can install only {{site.data.keyword.IBM_notm}} softwares not the {{site.data.keyword.cloud_notm}} services in your cluster.
-
-## If I install the softwares on a local cluster. Can I integrate back to a service in the {{site.data.keyword.cloud_notm}}? Do I need to set up a VPN tunnel to integrate?
-{: #faqs-agent-software}
-{: faq}
-{: support}
-
-Yes, you need an VPN connection to integrate back to a service in the {{site.data.keyword.cloud_notm}}.
-
-## What is the difference between agent-location and location input variable flag in Agents service?
+## What is the difference between `agent-location` and `location` input variable flag in Agents service?
 {: #faqs-agent-location}
 {: faq}
 {: support}
@@ -166,10 +129,16 @@ If an Agent is running is Sydney, but Agent having us-sourth, or eu-de as an end
 ## Can I know the steps to get the Jobrunner (JR) logs to provide the request ID?
 {: #faqs-agent-jr-logs}
 {: faq}
-{: support}
+{: support}f
 
 The following steps allows to get the JR logs and provide the request Id:
 - Get the `logdna_name` from outputs: section of your jobs log in the Agent infrastructure workspace.
 - After your job is run and `failed`, or `succeeded`. If you want to {{site.data.keyword.bpshort}} team to debug the backend logs of the Agent, you can filter the logDNA logs with the request ID from the jobs log.
 - The logDNA sends to your mail. You can save the logs with that filter and send the file to {{site.data.keyword.bpshort}} team.
 
+## What is time period set to deploy the cloud resources?
+{: #faqs-agent-limit}
+{: faq}
+{: support}
+
+The default time period set to deploy the cloud resources is `30 minutes` for an Agent. For more information, to set the time limit, refer to [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
