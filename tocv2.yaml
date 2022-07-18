@@ -5,14 +5,13 @@ toc:
     category: dev_ops
     audience: service
     href: /docs/schematics
-    path: schematics
-    label: schematics
     version: 2
     console-page: /schematics/overview
     product-page: http://cloud.ibm.com/schematics
- 
-  entries: 
-  - navgroup: 
+    path: schematics
+    label: Schematics
+  entries:
+  - navgroup:
       id: learn
       topics:
       - topicgroup:
@@ -43,6 +42,7 @@ toc:
           - security-compliance/sc-bp-objects.md
       - architecture-workload-isolation.md
       - release-notes.md
+
   - navgroup:
       id: howto
       topics:
@@ -136,6 +136,7 @@ toc:
       - link:
           label: Deploying multitiered VPC on IBM Cloud by using Bastion host
           href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
+
   - navgroup:
       id: reference
       topics:
@@ -185,6 +186,7 @@ toc:
                 - link:
                     label: Ansible documentation
                     href: https://docs.ansible.com/ansible/latest/index.html
+
   - navgroup:
       id: help
       topics:
