@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-18"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -114,7 +114,7 @@ OK
 {: screen}
 
 In the UI view the provisioned {{site.data.keyword.cos_full_notm}} Blueprint and Workspaces. 
-- From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.test.cloud.ibm.com/blueprints){: external}, select the provisioned Blueprint to view the created Workspaces and cloud resources. 
+- From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.cloud.ibm.com/blueprints){: external}, select the provisioned Blueprint to view the created Workspaces and cloud resources. 
 
 ## Next steps
 {: #get-started-blueprints-nextsteps}
