@@ -26,7 +26,7 @@ The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-age
 
 The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set-up flow that you can provision, deploy, connect, and use.
 
-![{{site.data.keyword.bpshort}} Agents set up](images/agent-blueprint.png "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](images/sc_agents_architecture.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
 
 ## Prerequisites
 {: #agents-setup-prereq}
