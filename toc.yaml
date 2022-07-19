@@ -6,7 +6,7 @@ toc:
     audience: service
     href: /docs/schematics
     path: schematics
-    label: schematics
+    label: Schematics
     version: 2
     console-page: /schematics/overview
     product-page: http://cloud.ibm.com/schematics

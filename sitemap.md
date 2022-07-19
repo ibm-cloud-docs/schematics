@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-07-19"
 
 keywords: schematics
 subcollection: schematics

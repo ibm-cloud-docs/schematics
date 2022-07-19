@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-19"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,8 +20,8 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.0 | 11 July 2022 | Support for Agents commands in {{site.data.keyword.bpshort}} from command-line.|
-| 1.11.1 | 8 July 2022 | Support for Blueprints commands, and fix the translation issue in {{site.data.keyword.bpshort}} from command-line.|
+| 1.12.0 | 11 July 2022 | Support for `Agents` commands in {{site.data.keyword.bpshort}} from command-line.|
+| 1.11.1 | 8 July 2022 | Support for `Blueprints` commands, and fix the translation issue in {{site.data.keyword.bpshort}} from command-line.|
 | 1.10.0 | 5 May 2022 | Support for `stop`, `force-stop`, and `terminate` in {{site.data.keyword.bpshort}} from command-line.|
 | 1.9.0 | 25 April 2022 | Support for `Drift` detection in {{site.data.keyword.bpshort}} from command-line.|
 | 1.8.1 | 17 April 2022 | Fixes alias deprecation display message for the {{site.data.keyword.bpshort}} JSON output.|
