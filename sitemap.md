@@ -31,249 +31,249 @@ subcollection: schematics
 {: #sitemap_getting_started}
 
 
-[Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-getting-started#getting-started)
+[Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
 
-[Getting started: Infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-get-started-terraform#get-started-terraform)
+[Getting started: Infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
 
-* [Before you begin](/docs/schematics?topic=Schematics-get-started-terraform#prereq)
+* [Before you begin](/docs/schematics?topic=schematics-get-started-terraform#prereq)
 
-* [Creating an {{site.data.keyword.cos_full_notm}} instance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-get-started-terraform#create-cos)
+* [Creating an {{site.data.keyword.cos_full_notm}} instance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-terraform#create-cos)
 
-    * [Output](/docs/schematics?topic=Schematics-get-started-terraform#create-cos-output)
+    * [Output](/docs/schematics?topic=schematics-get-started-terraform#create-cos-output)
 
-* [What's next?](/docs/schematics?topic=Schematics-get-started-terraform#whats-next-gs)
+* [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
-[Getting started: Configuration management in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-getting-started-ansible#getting-started-ansible)
+[Getting started: Configuration management in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
-* [Before you begin](/docs/schematics?topic=Schematics-getting-started-ansible#ansible-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
 
-* [Starting and stopping {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=Schematics-getting-started-ansible#ansible-vsi)
+* [Starting and stopping {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-getting-started-ansible#ansible-vsi)
 
-* [What's next?](/docs/schematics?topic=Schematics-getting-started-ansible#ansible-whats-next)
+* [What's next?](/docs/schematics?topic=schematics-getting-started-ansible#ansible-whats-next)
 
-[Getting started: Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-get-started-software#get-started-software)
+[Getting started: Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
 
-* [Before you begin](/docs/schematics?topic=Schematics-get-started-software#vsi-postgres-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-get-started-software#vsi-postgres-prereq)
 
-* [Setting up and configuring a classic VSI to run PostgreSQL with {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-get-started-software#vsi-postgres)
+* [Setting up and configuring a classic VSI to run PostgreSQL with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-software#vsi-postgres)
 
-* [What's next?](/docs/schematics?topic=Schematics-get-started-software#whats-next)
+* [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
 
-[Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-blueprints)
+[Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
 
-* [Before your begin](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-blueprints-prereq)
+* [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
 
-* [Select a Blueprint definition](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-blueprints-select)
+* [Select a Blueprint definition](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
 
-* [Creating a Blueprint environment in {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-blueprints-create)
+* [Creating a Blueprint environment in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
 
-    * [Syntax](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-blueprints-syntax)
+    * [Syntax](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-syntax)
 
-    * [Output](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-bp-create-output)
+    * [Output](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-create-output)
 
-* [Installing the Blueprint to create cloud resources](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-blueprints-install)
+* [Installing the Blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-install)
 
-    * [Output](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-bp-install-output)
+    * [Output](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-install-output)
 
-* [Next steps](/docs/schematics?topic=Schematics-get-started-blueprints#get-started-blueprints-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-nextsteps)
 
 
 ## About
 {: #sitemap_about}
 
 
-[{{site.data.keyword.bpshort}} capabilities](/docs/schematics?topic=Schematics-learn-about-schematics#learn-about-schematics)
+[{{site.data.keyword.bpshort}} capabilities](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
 
-* [{{site.data.keyword.bpshort}} benefits](/docs/schematics?topic=Schematics-learn-about-schematics#learn-benefits)
+* [{{site.data.keyword.bpshort}} benefits](/docs/schematics?topic=schematics-learn-about-schematics#learn-benefits)
 
-* [Next steps about {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-learn-about-schematics#nextstep-capabilities)
+* [Next steps about {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics#nextstep-capabilities)
 
-[{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=Schematics-learn-schematics-term#learn-schematics-term)
+[{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
 
-* [Next steps](/docs/schematics?topic=Schematics-learn-schematics-term#nextsteps-terminologies)
+* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#nextsteps-terminologies)
 
-[Usage of open source projects in {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-schematics-open-projects#schematics-open-projects)
+[Usage of open source projects in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
-* [Next steps](/docs/schematics?topic=Schematics-schematics-open-projects#nextsteps-technologies)
+* [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
-[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=Schematics-agents-intro#agents-intro)
+[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
 
-* [Usage of an Agents](/docs/schematics?topic=Schematics-agents-intro#agent-usage)
+* [Usage of an Agents](/docs/schematics?topic=schematics-agents-intro#agent-usage)
 
-* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=Schematics-agents-intro#agents-architecture)
+* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#agents-architecture)
 
-* [Comparing {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=Schematics-agents-intro#agents-comparision)
+* [Comparing {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-comparision)
 
-* [Next steps](/docs/schematics?topic=Schematics-agents-intro#nextsteps-agent-arch)
+* [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
 
-[{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=Schematics-blueprint-intro#blueprint-intro)
+[{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
 
-* [Overview](/docs/schematics?topic=Schematics-blueprint-intro#blueprint-overview)
+* [Overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview)
 
-* [Architecture](/docs/schematics?topic=Schematics-blueprint-intro#blueprint-architecture)
+* [Architecture](/docs/schematics?topic=schematics-blueprint-intro#blueprint-architecture)
 
-* [Next steps](/docs/schematics?topic=Schematics-blueprint-intro#nextsteps-bp-arch)
+* [Next steps](/docs/schematics?topic=schematics-blueprint-intro#nextsteps-bp-arch)
 
-[{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=Schematics-how-it-works#how-it-works)
+[{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
 
-* [Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=Schematics-how-it-works#how-to-workspaces)
+* [Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
 
-* [Configuration management with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=Schematics-how-it-works#how-to-actions)
+* [Configuration management with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
 
-* [Software deployments with IBM-provided templates](/docs/schematics?topic=Schematics-how-it-works#how-to-software)
+* [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
-* [Next steps](/docs/schematics?topic=Schematics-how-it-works#nextsteps-terminologies)
+* [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
 
 
 ## Security and compliance
 {: #sitemap_security_and_compliance}
 
 
-[Security](/docs/schematics?topic=Schematics-security#security)
+[Security](/docs/schematics?topic=schematics-security#security)
 
-* [Secure access control](/docs/schematics?topic=Schematics-security#secure-access-control)
+* [Secure access control](/docs/schematics?topic=schematics-security#secure-access-control)
 
-[Compliance](/docs/schematics?topic=Schematics-compliance#compliance)
+[Compliance](/docs/schematics?topic=schematics-compliance#compliance)
 
-* [General Data Protection Regulation (GDPR) readiness](/docs/schematics?topic=Schematics-compliance#compliance-gdpr)
+* [General Data Protection Regulation (GDPR) readiness](/docs/schematics?topic=schematics-compliance#compliance-gdpr)
 
-* [Privacy shield](/docs/schematics?topic=Schematics-compliance#compliance-privacy)
+* [Privacy shield](/docs/schematics?topic=schematics-compliance#compliance-privacy)
 
-* [International Organization for Standardization (ISO)](/docs/schematics?topic=Schematics-compliance#international-organization-for-standardization-iso)
+* [International Organization for Standardization (ISO)](/docs/schematics?topic=schematics-compliance#international-organization-for-standardization-iso)
 
-* [SOC 2 Type 2 Certification](/docs/schematics?topic=Schematics-compliance#soc-2-type-2-certification)
+* [SOC 2 Type 2 Certification](/docs/schematics?topic=schematics-compliance#soc-2-type-2-certification)
 
-[Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-manage-security-compliance#manage-security-compliance)
+[Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#manage-security-compliance)
 
-* [Monitoring security and compliance posture with {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-manage-security-compliance#monitor-{{site.data.keyword.bpshort)
+* [Monitoring security and compliance posture with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#monitor-{{site.data.keyword.bpshort)
 
-    * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-manage-security-compliance#{{site.data.keyword.bpshort-available-goals)
+    * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-manage-security-compliance#{{site.data.keyword.bpshort-available-goals)
 
-[Data privacy and governance](/docs/schematics?topic=Schematics-data-privacy-and-governance#data-privacy-and-governance)
+[Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
 
-[General Data Protection Regulation (GDPR)](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#general-data-protection-regulation-gdpr)
+[General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#general-data-protection-regulation-gdpr)
 
-* [How do I audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
+* [How do I audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
 
-* [Supported classifications of Personal Data](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
+* [Supported classifications of Personal Data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
 
-* [About user data](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#data-about-me)
+* [About user data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-about-me)
 
-* [Is the {{site.data.keyword.bpshort}} database encrypted?](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#is-our-ibm-schematics-database-encrypted)
+* [Is the {{site.data.keyword.bpshort}} database encrypted?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#is-our-ibm-schematics-database-encrypted)
 
-* [Data locations](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#data-locations)
+* [Data locations](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-locations)
 
-* [Service security](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#service-security)
+* [Service security](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#service-security)
 
-* [Deletion of data](/docs/schematics?topic=Schematics-general-data-protection-regulation-gdpr#deletion-of-data)
+* [Deletion of data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#deletion-of-data)
 
-[Best practices for securing the {{site.data.keyword.bpshort}} objects](/docs/schematics?topic=Schematics-bp-secure-objects#bp-secure-objects)
+[Best practices for securing the {{site.data.keyword.bpshort}} objects](/docs/schematics?topic=schematics-bp-secure-objects#bp-secure-objects)
 
-* [Best practices for creating Terraform Templates or modules in Git repositories](/docs/schematics?topic=Schematics-bp-secure-objects#bp-secure-repo)
+* [Best practices for creating Terraform Templates or modules in Git repositories](/docs/schematics?topic=schematics-bp-secure-objects#bp-secure-repo)
 
-    * [What are the best practices that I must follow when developing the Terraform templates, and publishing the same in the Git repositories?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-template-strategy)
+    * [What are the best practices that I must follow when developing the Terraform templates, and publishing the same in the Git repositories?](/docs/schematics?topic=schematics-bp-secure-objects#bp-template-strategy)
 
-    * [Can I create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-tfvars)
+    * [Can I create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-tfvars)
 
-    * [How can the Terraform developers ensure that the sensitive data is not leaked in the log files?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-leak)
+    * [How can the Terraform developers ensure that the sensitive data is not leaked in the log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak)
 
-* [Best practices of managing {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=Schematics-bp-secure-objects#bp-workspaces)
+* [Best practices of managing {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
 
-    * [What are the best practices that I must follow when creating a Workspace for the Terraform template?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-wks)
+    * [What are the best practices that I must follow when creating a Workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
 
-    * [How can I ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-leak-log)
+    * [How can I ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
 
-    * [How can I protect the access to Workspaces and its data?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-data)
+    * [How can I protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data)
 
-    * [How does {{site.data.keyword.bpshort}} protect my Workspace data through Terraform state file, or log files, and so on?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-protect-data)
+    * [How does {{site.data.keyword.bpshort}} protect my Workspace data through Terraform state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
-* [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=Schematics-bp-secure-objects#bp-actions)
+* [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
 
-    * [What are the best practices that I must follow when creating an Action for the Ansible template?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-ansible)
+    * [What are the best practices that I must follow when creating an Action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
 
-    * [How can I protect the access to Actions and its data?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-data)
+    * [How can I protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data)
 
-    * [How does {{site.data.keyword.bpshort}} protect my Action data through input credentials state file, or log files, and so on?](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-protect)
+    * [How does {{site.data.keyword.bpshort}} protect my Action data through input credentials state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
 
-* [Protecting data of {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-bp-secure-objects#bp-protect)
+* [Protecting data of {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect)
 
-    * [Access protection by using Identity and Access Management](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-iam)
+    * [Access protection by using Identity and Access Management](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-iam)
 
-    * [Nonrepudiation by using Activity tracker](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-atracker)
+    * [Nonrepudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
 
-    * [Data protection by using KMS](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-data-protection)
+    * [Data protection by using KMS](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data-protection)
 
-* [Next steps](/docs/schematics?topic=Schematics-bp-secure-objects#bp-security-next-steps)
+* [Next steps](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-next-steps)
 
 
 ## {{site.data.keyword.bpshort}} architecture
 {: #sitemap__architecture}
 
 
-[{{site.data.keyword.bpshort}} architecture](/docs/schematics?topic=Schematics-compute-isolation#compute-isolation)
+[{{site.data.keyword.bpshort}} architecture](/docs/schematics?topic=schematics-compute-isolation#compute-isolation)
 
-* [Architectural flow](/docs/schematics?topic=Schematics-compute-isolation#basic-architecture)
+* [Architectural flow](/docs/schematics?topic=schematics-compute-isolation#basic-architecture)
 
-* [Workload isolation](/docs/schematics?topic=Schematics-compute-isolation#workload-isolation)
+* [Workload isolation](/docs/schematics?topic=schematics-compute-isolation#workload-isolation)
 
-    * [How are API requests to the service isolated from other API requests?](/docs/schematics?topic=Schematics-compute-isolation#workload-api-isolation)
+    * [How are API requests to the service isolated from other API requests?](/docs/schematics?topic=schematics-compute-isolation#workload-api-isolation)
 
-    * [How are the workloads isolated from other tenants?](/docs/schematics?topic=Schematics-compute-isolation#workload-tenant-isolation)
+    * [How are the workloads isolated from other tenants?](/docs/schematics?topic=schematics-compute-isolation#workload-tenant-isolation)
 
 
 ## Release notes
 {: #sitemap_release_notes}
 
 
-[Release notes](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-relnotes)
+[Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
-* [July 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-july22)
+* [July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july22)
 
     * Review the release notes for July 2022.
 
-    * [11 July 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-july1122)
+    * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 
         * {{site.data.keyword.bpshort}} Agents Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-    * [8 July 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-july0822)
+    * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
         * {{site.data.keyword.bpshort}} Blueprints Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-* [June 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-june22)
+* [June 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june22)
 
     * Review the release notes for June 2022.
 
-    * [23 June 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-june2322)
+    * [23 June 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june2322)
 
         * Enhanced FAQ documentation
 
-    * [15 June 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-june1522)
+    * [15 June 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-june1522)
 
         * Enhance {{site.data.keyword.bpshort}} getting started section
 
-* [May 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-may22)
+* [May 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may22)
 
     * Review the release notes for May 2022.
 
-    * [12 May 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-may1222)
+    * [12 May 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may1222)
 
         * Enhance documentation with the security and compliance section
 
         * Enhance documentation with the best practices 
 
-    * [5 May 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-may0522)
+    * [5 May 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may0522)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-* [April 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-apr22)
+* [April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr22)
 
     * Review the release notes for April 2022.
 
-    * [30 April 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-apr3022)
+    * [30 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr3022)
 
         * Support detecting drift
 
@@ -283,21 +283,21 @@ subcollection: schematics
 
         * Support enhanced {{site.data.keyword.bpshort}} resource view
 
-    * [26 April 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-apr2622)
+    * [26 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2622)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-    * [17 April 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-apr2722)
+    * [17 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr2722)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-    * [18 April 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-apr1822)
+    * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
         * Support array of injectable Terraform blocks in create workspace API
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-    * [12 April 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-apr3122)
+    * [12 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr3122)
 
         * {{site.data.keyword.bpshort}} command-line supports private {{site.data.keyword.bpshort}} endpoint
 
@@ -309,11 +309,11 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-* [March 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-mar22)
+* [March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar22)
 
     * Review the release notes for March 2022.
 
-    * [31 March 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-mar3122)
+    * [31 March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3122)
 
         * Support deleting {{site.data.keyword.bpshort}} data objects 
 
@@ -321,53 +321,53 @@ subcollection: schematics
 
         * Get job files API supports `plan_json` file type
 
-    * [15 March 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-mar1522)
+    * [15 March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar1522)
 
         * Support `__netrc__` environment values in private Git repository
 
-    * [4 March 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-mar422)
+    * [4 March 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar422)
 
         * Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-* [February 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-feb22)
+* [February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb22)
 
     * Review the release notes for February 2022.
 
-    * [16 February 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-feb1622)
+    * [16 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1622)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
         * Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries 
 
-    * [11 February 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-feb1122)
+    * [11 February 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1122)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-* [January 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-jan22)
+* [January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan22)
 
     * Review the release notes for January 2022.
 
-    * [31 January 2022](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-jan3122)
+    * [31 January 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan3122)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
         * Supports installer for PowerLinux&trade; and System/390 Linux&trade; 
 
-* [December 2021](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-dec21)
+* [December 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec21)
 
     * Review the release notes for December 2021.
 
-    * [30 December 2021](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-dec3021)
+    * [30 December 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec3021)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-* [November 2021](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-nov21)
+* [November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov21)
 
     * Review the release notes for November 2021.
 
-    * [30 November 2021](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-nov3021)
+    * [30 November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov3021)
 
         * Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in your account
 
@@ -381,11 +381,11 @@ subcollection: schematics
 
         * ResourceQuery attribute deprecated 
 
-* [October 2021](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-oct21)
+* [October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct21)
 
     * Review the release notes for October 2021.
 
-    * [22 October 2021](/docs/schematics?topic=Schematics-schematics-relnotes#schematics-oct2221)
+    * [22 October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2221)
 
         * Onboarding Terraform templates to private catalog
 
@@ -400,715 +400,715 @@ subcollection: schematics
 {: #sitemap_setting_up_the_cli_and_api}
 
 
-[Setting up the CLI](/docs/schematics?topic=Schematics-setup-cli#setup-cli)
+[Setting up the CLI](/docs/schematics?topic=schematics-setup-cli#setup-cli)
 
-* [Installing the {{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=Schematics-setup-cli#install-schematics-cli)
+* [Installing the {{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli)
 
-* [Installing the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=Schematics-setup-cli#install-schematics-plugin)
+* [Installing the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 
-* [Updating the CLI](/docs/schematics?topic=Schematics-setup-cli#schematics-cli-update)
+* [Updating the CLI](/docs/schematics?topic=schematics-setup-cli#schematics-cli-update)
 
-* [Uninstalling the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=Schematics-setup-cli#uninstall-schematics-plugin)
+* [Uninstalling the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli#uninstall-schematics-plugin)
 
-[Setting up the API](/docs/schematics?topic=Schematics-setup-api#setup-api)
+[Setting up the API](/docs/schematics?topic=schematics-setup-api#setup-api)
 
-* [Automating deployments with the API](/docs/schematics?topic=Schematics-setup-api#cs_api)
+* [Automating deployments with the API](/docs/schematics?topic=schematics-setup-api#cs_api)
 
-* [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API](/docs/schematics?topic=Schematics-setup-api#api_refresh)
+* [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
 
-* [Table1](/docs/schematics?topic=Schematics-setup-api#table1)
+* [Table1](/docs/schematics?topic=schematics-setup-api#table1)
 
 
 ## Managing Blueprints
 {: #sitemap_managing_blueprints}
 
 
-[Understanding Blueprint definitions](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-definitions)
+[Understanding Blueprint definitions](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-definitions)
 
-* [Definitions overview](/docs/schematics?topic=Schematics-blueprint-definitions#definition-overview)
+* [Definitions overview](/docs/schematics?topic=schematics-blueprint-definitions#definition-overview)
 
-* [Blueprints YAML file](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-yaml-file)
+* [Blueprints YAML file](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-yaml-file)
 
-* [Input statements](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-input-statements)
+* [Input statements](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-input-statements)
 
-* [Module statements](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-module)
+* [Module statements](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-module)
 
-    * [Module Source](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-module-source)
+    * [Module Source](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-module-source)
 
-    * [Module inputs](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-module-inputs)
+    * [Module inputs](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-module-inputs)
 
-    * [Module outputs](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-module-outputs)
+    * [Module outputs](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-module-outputs)
 
-* [Output statements](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-output)
+* [Output statements](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-output)
 
-* [Blueprints inputs](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-inputs)
+* [Blueprints inputs](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-inputs)
 
-    * [Input files](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-input-file)
+    * [Input files](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-input-file)
 
-* [Configuration of dynamic inputs](/docs/schematics?topic=Schematics-blueprint-definitions#blueprint-dynamic-input)
+* [Configuration of dynamic inputs](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-dynamic-input)
 
-* [What's next](/docs/schematics?topic=Schematics-blueprint-definitions#bp-def-whatsnext)
+* [What's next](/docs/schematics?topic=schematics-blueprint-definitions#bp-def-whatsnext)
 
-[Infrastructure lifecycle commands](/docs/schematics?topic=Schematics-blueprint-lifecycle-cmds#blueprint-lifecycle-cmds)
+[Infrastructure lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#blueprint-lifecycle-cmds)
 
-* [Lifecycle commands](/docs/schematics?topic=Schematics-blueprint-lifecycle-cmds#lifecycle-cmds)
+* [Lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-cmds)
 
-    * [Create and install](/docs/schematics?topic=Schematics-blueprint-lifecycle-cmds#lifecycle-create-install)
+    * [Create and install](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-create-install)
 
-    * [Update and Install](/docs/schematics?topic=Schematics-blueprint-lifecycle-cmds#lifecycle-update-install)
+    * [Update and Install](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-update-install)
 
-    * [Destroy and Delete](/docs/schematics?topic=Schematics-blueprint-lifecycle-cmds#lifecycle-destroy-delete)
+    * [Destroy and Delete](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-destroy-delete)
 
-* [Next steps](/docs/schematics?topic=Schematics-blueprint-lifecycle-cmds#lifecyle-nextstep)
+* [Next steps](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecyle-nextstep)
 
-[Creating a Blueprint](/docs/schematics?topic=Schematics-create-blueprint#create-blueprint)
+[Creating a Blueprint](/docs/schematics?topic=schematics-create-blueprint#create-blueprint)
 
-* [Creating a Blueprint from the UI](/docs/schematics?topic=Schematics-create-blueprint#create-blueprint-ui)
+* [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
 
-* [Creating a Blueprint from the CLI](/docs/schematics?topic=Schematics-create-blueprint#create-blueprint-cli)
+* [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
 
-* [Creating a Blueprint from the API](/docs/schematics?topic=Schematics-create-blueprint#create-blueprint-api)
+* [Creating a Blueprint from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
-* [Next steps](/docs/schematics?topic=Schematics-create-blueprint#bp-create-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-create-blueprint#bp-create-nextsteps)
 
-[Installing a Blueprint](/docs/schematics?topic=Schematics-install-blueprint#install-blueprint)
+[Installing a Blueprint](/docs/schematics?topic=schematics-install-blueprint#install-blueprint)
 
-* [Installing a Blueprint from the CLI](/docs/schematics?topic=Schematics-install-blueprint#install-blueprint-cli)
+* [Installing a Blueprint from the CLI](/docs/schematics?topic=schematics-install-blueprint#install-blueprint-cli)
 
-* [Verify Blueprint install success](/docs/schematics?topic=Schematics-install-blueprint#bp-verify-install)
+* [Verify Blueprint install success](/docs/schematics?topic=schematics-install-blueprint#bp-verify-install)
 
-* [Next steps](/docs/schematics?topic=Schematics-install-blueprint#bp-install-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-install-blueprint#bp-install-nextsteps)
 
-[Updating a Blueprint](/docs/schematics?topic=Schematics-update-blueprint#update-blueprint)
+[Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
-* [Updating a Blueprint from the UI](/docs/schematics?topic=Schematics-update-blueprint#update-blueprint-ui)
+* [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
 
-* [Updating a Blueprint from the CLI](/docs/schematics?topic=Schematics-update-blueprint#update-blueprint-cli)
+* [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
-* [Updating a Blueprint from the API](/docs/schematics?topic=Schematics-update-blueprint#update-blueprint-api)
+* [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
-    * [Next steps](/docs/schematics?topic=Schematics-update-blueprint#bp-update-api-nextsteps)
+    * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-api-nextsteps)
 
-[Destroying a Blueprint](/docs/schematics?topic=Schematics-destroy-blueprint#destroy-blueprint)
+[Destroying a Blueprint](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint)
 
-* [Destroying a Blueprint from the UI](/docs/schematics?topic=Schematics-destroy-blueprint#destroy-blueprint-ui)
+* [Destroying a Blueprint from the UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
 
-* [Destroying a Blueprint from the CLI](/docs/schematics?topic=Schematics-destroy-blueprint#destroy-blueprint-cli)
+* [Destroying a Blueprint from the CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
 
-* [Destroying a Blueprint from the API](/docs/schematics?topic=Schematics-destroy-blueprint#destroy-blueprint-api)
+* [Destroying a Blueprint from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
 
-* [Next steps](/docs/schematics?topic=Schematics-destroy-blueprint#bp-destroy-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-destroy-blueprint#bp-destroy-nextsteps)
 
-[Deleting a Blueprint](/docs/schematics?topic=Schematics-delete-blueprint#delete-blueprint)
+[Deleting a Blueprint](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint)
 
-* [Deleting a Blueprint from the UI](/docs/schematics?topic=Schematics-delete-blueprint#delete-blueprint-ui)
+* [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
 
-* [Deleting Blueprint from the CLI](/docs/schematics?topic=Schematics-delete-blueprint#delete-blueprint-cli)
+* [Deleting Blueprint from the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
 
-* [Deleting a Blueprint from the API](/docs/schematics?topic=Schematics-delete-blueprint#delete-blueprint-api)
+* [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
-* [Next steps](/docs/schematics?topic=Schematics-delete-blueprint#bp-delete-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
 
 
 ## Managing Workspaces
 {: #sitemap_managing_workspaces}
 
 
-[Creating Terraform templates](/docs/schematics?topic=Schematics-create-tf-config#create-tf-config)
+[Creating Terraform templates](/docs/schematics?topic=schematics-create-tf-config#create-tf-config)
 
-* [Configuring the `provider` block](/docs/schematics?topic=Schematics-create-tf-config#configure-provider)
+* [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider)
 
-* [Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block](/docs/schematics?topic=Schematics-create-tf-config#configure-resources)
+* [Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block](/docs/schematics?topic=schematics-create-tf-config#configure-resources)
 
-    * [Referencing resources in other resource blocks](/docs/schematics?topic=Schematics-create-tf-config#reference-resource-info)
+    * [Referencing resources in other resource blocks](/docs/schematics?topic=schematics-create-tf-config#reference-resource-info)
 
-* [Managing resources in other account](/docs/schematics?topic=Schematics-create-tf-config#manage-resource-account)
+* [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account)
 
-* [Using `variable` blocks to customize resources](/docs/schematics?topic=Schematics-create-tf-config#configure-variables)
+* [Using `variable` blocks to customize resources](/docs/schematics?topic=schematics-create-tf-config#configure-variables)
 
-    * [Referencing variables](/docs/schematics?topic=Schematics-create-tf-config#reference-variables)
+    * [Referencing variables](/docs/schematics?topic=schematics-create-tf-config#reference-variables)
 
-* [Providing values to {{site.data.keyword.bplong_notm}} for the declared variables](/docs/schematics?topic=Schematics-create-tf-config#declare-variable)
+* [Providing values to {{site.data.keyword.bplong_notm}} for the declared variables](/docs/schematics?topic=schematics-create-tf-config#declare-variable)
 
-* [Storing your Terraform templates](/docs/schematics?topic=Schematics-create-tf-config#store-template)
+* [Storing your Terraform templates](/docs/schematics?topic=schematics-create-tf-config#store-template)
 
-[Setting up workspaces](/docs/schematics?topic=Schematics-workspace-setup#workspace-setup)
+[Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup#workspace-setup)
 
-* [Creating workspaces and importing your Terraform template](/docs/schematics?topic=Schematics-workspace-setup#create-workspace)
+* [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
 
-    * [Before you begin](/docs/schematics?topic=Schematics-workspace-setup#prerequisites)
+    * [Before you begin](/docs/schematics?topic=schematics-workspace-setup#prerequisites)
 
-    * [Creating the workspace from the console](/docs/schematics?topic=Schematics-workspace-setup#create-workspace_ui)
+    * [Creating the workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
 
-    * [Creating the workspace from the CLI](/docs/schematics?topic=Schematics-workspace-setup#create-workspace-cli)
+    * [Creating the workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
 
-    * [Creating the workspace from the API](/docs/schematics?topic=Schematics-workspace-setup#create-workspace-api)
+    * [Creating the workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
 
-    * [Creating the workspace with Terraform](/docs/schematics?topic=Schematics-workspace-setup#create-workspace-terraform)
+    * [Creating the workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
 
-    * [Importing your Terraform template](/docs/schematics?topic=Schematics-workspace-setup#import-template)
+    * [Importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#import-template)
 
-    * [Running your Terraform template in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=Schematics-workspace-setup#run-template)
+    * [Running your Terraform template in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-workspace-setup#run-template)
 
-* [Freezing and unfreezing workspaces](/docs/schematics?topic=Schematics-workspace-setup#lock-workspace)
+* [Freezing and unfreezing workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
 
-* [Deleting a workspace](/docs/schematics?topic=Schematics-workspace-setup#del-workspace)
+* [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
 
-* [Planning your workspace](/docs/schematics?topic=Schematics-workspace-setup#workspaces-plan)
+* [Planning your workspace](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan)
 
-    * [Designing your workspace and Git repository structure](/docs/schematics?topic=Schematics-workspace-setup#structure-workspace)
+    * [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
 
-    * [How many workspaces do I need?](/docs/schematics?topic=Schematics-workspace-setup#plan-number-of-workspaces)
+    * [How many workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
 
-    * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=Schematics-workspace-setup#plan-github-structure)
+    * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-github-structure)
 
-    * [How can I reuse configuration files across environments and workspaces?](/docs/schematics?topic=Schematics-workspace-setup#plan-reuse)
+    * [How can I reuse configuration files across environments and workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-reuse)
 
-    * [How do I control access to my workspaces?](/docs/schematics?topic=Schematics-workspace-setup#plan-workspace-access)
+    * [How do I control access to my workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-workspace-access)
 
-    * [What do I need to be aware of when I have a repository that I managed with native Terraform?](/docs/schematics?topic=Schematics-workspace-setup#plan-terraform-migration)
+    * [What do I need to be aware of when I have a repository that I managed with native Terraform?](/docs/schematics?topic=schematics-workspace-setup#plan-terraform-migration)
 
-* [Setting up a continuous delivery toolchain for your workspace](/docs/schematics?topic=Schematics-workspace-setup#continuous-delivery)
+* [Setting up a continuous delivery toolchain for your workspace](/docs/schematics?topic=schematics-workspace-setup#continuous-delivery)
 
-* [Workspace states](/docs/schematics?topic=Schematics-workspace-setup#wks-state)
+* [Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state)
 
-    * [Workspace state overview](/docs/schematics?topic=Schematics-workspace-setup#states-overview)
+    * [Workspace state overview](/docs/schematics?topic=schematics-workspace-setup#states-overview)
 
-    * [Workspace state diagram and manipulative job](/docs/schematics?topic=Schematics-workspace-setup#workspace-state-diagram)
+    * [Workspace state diagram and manipulative job](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram)
 
-* [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-workspace-setup#create-deploy-to-schematics)
+* [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics)
 
-* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=Schematics-workspace-setup#job-logs)
+* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs)
 
-[Supporting Terraform environment variables in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-set-parallelism#set-parallelism)
+[Supporting Terraform environment variables in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-set-parallelism#set-parallelism)
 
-* [Usage](/docs/schematics?topic=Schematics-set-parallelism#parelleism-usage)
+* [Usage](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage)
 
-    * [Example using parallelism](/docs/schematics?topic=Schematics-set-parallelism#parallelism-example)
+    * [Example using parallelism](/docs/schematics?topic=schematics-set-parallelism#parallelism-example)
 
-* [List of environment variables](/docs/schematics?topic=Schematics-set-parallelism#list-special-env-vars)
+* [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars)
 
-[Detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-drift-note#drift-note)
+[Detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note#drift-note)
 
-* [Example drift scenario](/docs/schematics?topic=Schematics-drift-note#drift-scenario)
+* [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
 
-* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=Schematics-drift-note#drift-in-ibm)
+* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
 
-* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=Schematics-drift-note#drift-ui)
+* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
 
-    * [Viewing detect drift through UI](/docs/schematics?topic=Schematics-drift-note#drift-view-ui)
+    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
 
-* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=Schematics-drift-note#drift-cli)
+* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
 
-    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=Schematics-drift-note#drift-view-cli)
+    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
 
-* [Creating and viewing the detect drift through API](/docs/schematics?topic=Schematics-drift-note#drift-api)
+* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
 
-[Supporting to download modules from private remote host](/docs/schematics?topic=Schematics-download-modules-pvt-git#download-modules-pvt-git)
+[Supporting to download modules from private remote host](/docs/schematics?topic=schematics-download-modules-pvt-git#download-modules-pvt-git)
 
-* [Usage of private module template](/docs/schematics?topic=Schematics-download-modules-pvt-git#netrc-example)
+* [Usage of private module template](/docs/schematics?topic=schematics-download-modules-pvt-git#netrc-example)
 
-[Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-manage-lifecycle#manage-lifecycle)
+[Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
 
-* [Deploying your resources](/docs/schematics?topic=Schematics-manage-lifecycle#deploy-resources)
+* [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources)
 
-* [Updating your resources](/docs/schematics?topic=Schematics-manage-lifecycle#update-resources)
+* [Updating your resources](/docs/schematics?topic=schematics-manage-lifecycle#update-resources)
 
-* [Managing drift between your cloud environment and your Terraform configuration](/docs/schematics?topic=Schematics-manage-lifecycle#drift-report)
+* [Managing drift between your cloud environment and your Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle#drift-report)
 
-* [Reviewing resource and deployment details](/docs/schematics?topic=Schematics-manage-lifecycle#review-logs)
+* [Reviewing resource and deployment details](/docs/schematics?topic=schematics-manage-lifecycle#review-logs)
 
-* [Removing your resources](/docs/schematics?topic=Schematics-manage-lifecycle#destroy-resources)
+* [Removing your resources](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources)
 
-[Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions](/docs/schematics?topic=Schematics-multi-region-deployment#multi-region-deployment)
+[Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions](/docs/schematics?topic=schematics-multi-region-deployment#multi-region-deployment)
 
-* [Deploying services in a specific region](/docs/schematics?topic=Schematics-multi-region-deployment#single-region)
+* [Deploying services in a specific region](/docs/schematics?topic=schematics-multi-region-deployment#single-region)
 
-* [Deploying services across regions](/docs/schematics?topic=Schematics-multi-region-deployment#across-regions)
+* [Deploying services across regions](/docs/schematics?topic=schematics-multi-region-deployment#across-regions)
 
-[Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-deprecate-tf-version#deprecate-tf-version)
+[Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
 
-* [Phases](/docs/schematics?topic=Schematics-deprecate-tf-version#deprecate-phase)
+* [Phases](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
 
-* [Schedule](/docs/schematics?topic=Schematics-deprecate-tf-version#deprecate-timeline)
+* [Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline)
 
-* [User actions](/docs/schematics?topic=Schematics-deprecate-tf-version#user-action)
+* [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 
-[Migrating Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=Schematics-migrating-terraform-version#migrating-terraform-version)
+[Migrating Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
-* [Upgrading the Terraform template version](/docs/schematics?topic=Schematics-migrating-terraform-version#terraform-version-upgrade)
+* [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade)
 
-* [Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=Schematics-migrating-terraform-version#migrate-steps)
+* [Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps)
 
-* [Upgrading Terraform template from v0.12 to v0.13](/docs/schematics?topic=Schematics-migrating-terraform-version#upgrade-12-to13)
+* [Upgrading Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-12-to13)
 
-* [Upgrading Terraform template from v0.13 to v0.14](/docs/schematics?topic=Schematics-migrating-terraform-version#upgrade-13-to14)
+* [Upgrading Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to14)
 
-* [Upgrade Terraform template from `v0.14/v0.15` to `v1.0`](/docs/schematics?topic=Schematics-migrating-terraform-version#upgrade-14-to10)
+* [Upgrade Terraform template from `v0.14/v0.15` to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
 
-[Managing cross-workspace state access with Terraform](/docs/schematics?topic=Schematics-remote-state#remote-state)
+[Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state#remote-state)
 
-[Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-sol-overview#sol-overview)
+[Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-sol-overview#sol-overview)
 
-[Compact download for {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=Schematics-compact-download#compact-download)
+[Compact download for {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-compact-download#compact-download)
 
-* [Using compact download](/docs/schematics?topic=Schematics-compact-download#compact-active)
+* [Using compact download](/docs/schematics?topic=schematics-compact-download#compact-active)
 
-* [Note](/docs/schematics?topic=Schematics-compact-download#compact-note)
+* [Note](/docs/schematics?topic=schematics-compact-download#compact-note)
 
-[Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=Schematics-job-download#job-download)
+[Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download#job-download)
 
-* [Note](/docs/schematics?topic=Schematics-job-download#job-note)
+* [Note](/docs/schematics?topic=schematics-job-download#job-note)
 
-[Stopping or terminating the running job](/docs/schematics?topic=Schematics-interrupt-job#interrupt-job)
+[Stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job#interrupt-job)
 
-* [Stopping job types](/docs/schematics?topic=Schematics-interrupt-job#interrupt-types)
+* [Stopping job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types)
 
-* [Cancelling](/docs/schematics?topic=Schematics-interrupt-job#cancelling)
+* [Cancelling](/docs/schematics?topic=schematics-interrupt-job#cancelling)
 
-* [Stopping a running job through UI](/docs/schematics?topic=Schematics-interrupt-job#stop-job-ui)
+* [Stopping a running job through UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui)
 
-* [Stopping a running job through CLI](/docs/schematics?topic=Schematics-interrupt-job#stop-job-cli)
+* [Stopping a running job through CLI](/docs/schematics?topic=schematics-interrupt-job#stop-job-cli)
 
-* [Stopping a running job through API](/docs/schematics?topic=Schematics-interrupt-job#stop-job-api)
+* [Stopping a running job through API](/docs/schematics?topic=schematics-interrupt-job#stop-job-api)
 
-    * [Syntax to stop running jobs](/docs/schematics?topic=Schematics-interrupt-job#stop-jobs-api)
+    * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job#stop-jobs-api)
 
-[Assigning access through {{site.data.keyword.cloud_notm}} Catalog](/docs/schematics?topic=Schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
+[Assigning access through {{site.data.keyword.cloud_notm}} Catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
 
-* [Manage location settings in catalog](/docs/schematics?topic=Schematics-access-ibm-cloud-catalog#configure-location)
+* [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
 
 
 ## Managing Actions
 {: #sitemap_managing_actions}
 
 
-[Setting up {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=Schematics-action-setup#action-setup)
+[Setting up {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-setup#action-setup)
 
-* [Creating and running the {{site.data.keyword.bpshort}} action](/docs/schematics?topic=Schematics-action-setup#create-action)
+* [Creating and running the {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-setup#create-action)
 
-    * [Prerequisites](/docs/schematics?topic=Schematics-action-setup#action-setup-prereq)
+    * [Prerequisites](/docs/schematics?topic=schematics-action-setup#action-setup-prereq)
 
-    * [To create an action](/docs/schematics?topic=Schematics-action-setup#create-action-setup)
+    * [To create an action](/docs/schematics?topic=schematics-action-setup#create-action-setup)
 
-* [Editing the {{site.data.keyword.bpshort}} Actions settings](/docs/schematics?topic=Schematics-action-setup#action-settings)
+* [Editing the {{site.data.keyword.bpshort}} Actions settings](/docs/schematics?topic=schematics-action-setup#action-settings)
 
-* [Deleting a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=Schematics-action-setup#delete-ansible-actions)
+* [Deleting a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-setup#delete-ansible-actions)
 
-* [Action state](/docs/schematics?topic=Schematics-action-setup#action-state-diagram)
+* [Action state](/docs/schematics?topic=schematics-action-setup#action-state-diagram)
 
-    * [State diagram flow](/docs/schematics?topic=Schematics-action-setup#state-diagram-flow)
+    * [State diagram flow](/docs/schematics?topic=schematics-action-setup#state-diagram-flow)
 
-* [Reviewing the {{site.data.keyword.bpshort}} Actions job details](/docs/schematics?topic=Schematics-action-setup#action-jobs)
+* [Reviewing the {{site.data.keyword.bpshort}} Actions job details](/docs/schematics?topic=schematics-action-setup#action-jobs)
 
-[Creating Ansible roles and galaxy](/docs/schematics?topic=Schematics-ansible-roles-galaxy#ansible-roles-galaxy)
+[Creating Ansible roles and galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#ansible-roles-galaxy)
 
-* [Creating your own roles in Ansible](/docs/schematics?topic=Schematics-ansible-roles-galaxy#main-file)
+* [Creating your own roles in Ansible](/docs/schematics?topic=schematics-ansible-roles-galaxy#main-file)
 
-* [Installing roles from Ansible Galaxy](/docs/schematics?topic=Schematics-ansible-roles-galaxy#requirements-file)
+* [Installing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file)
 
-[Creating an Ansible playbook](/docs/schematics?topic=Schematics-create-playbook#create-playbook)
+[Creating an Ansible playbook](/docs/schematics?topic=schematics-create-playbook#create-playbook)
 
-* [Referencing Ansible collections in your playbook](/docs/schematics?topic=Schematics-create-playbook#schematics-collections)
+* [Referencing Ansible collections in your playbook](/docs/schematics?topic=schematics-create-playbook#schematics-collections)
 
-* [Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-create-playbook#plan-ansible-playbook)
+* [Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-create-playbook#plan-ansible-playbook)
 
-[Sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=Schematics-sample_actiontemplates#sample_actiontemplates)
+[Sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
 
-* [Running cloud operations on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=Schematics-sample_actiontemplates#ansible-vpc)
+* [Running cloud operations on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-vpc)
 
-* [Provisioning a LAMP stack on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=Schematics-sample_actiontemplates#ansible-lamp-stack)
+* [Provisioning a LAMP stack on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-lamp-stack)
 
-* [Configuring {{site.data.keyword.databases-for-postgresql_full_notm}} with WAL2JSON plug-in](/docs/schematics?topic=Schematics-sample_actiontemplates#ansible-databases)
+* [Configuring {{site.data.keyword.databases-for-postgresql_full_notm}} with WAL2JSON plug-in](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-databases)
 
-* [Automating app deployments in {{site.data.keyword.containerfull_notm}}](/docs/schematics?topic=Schematics-sample_actiontemplates#ansible-iks-deploy)
+* [Automating app deployments in {{site.data.keyword.containerfull_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-iks-deploy)
 
-* [Installing `kubectl` on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=Schematics-sample_actiontemplates#ansible-kubectl)
+* [Installing `kubectl` on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-kubectl)
 
-[Creating an auto deploy button for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=Schematics-auto-deploy-url#auto-deploy-url)
+[Creating an auto deploy button for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-auto-deploy-url#auto-deploy-url)
 
-* [Adding an image to your URL to create the auto deploy button](/docs/schematics?topic=Schematics-auto-deploy-url#add_an_image)
+* [Adding an image to your URL to create the auto deploy button](/docs/schematics?topic=schematics-auto-deploy-url#add_an_image)
 
-* [Next steps](/docs/schematics?topic=Schematics-auto-deploy-url#sample-actions-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-auto-deploy-url#sample-actions-nextsteps)
 
 
 ## Managing Inventories
 {: #sitemap_managing_inventories}
 
 
-[Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=Schematics-inventories-setup#inventories-setup)
+[Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
 
-* [Creating static inventory files](/docs/schematics?topic=Schematics-inventories-setup#static-inv)
+* [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
 
-    * [File format](/docs/schematics?topic=Schematics-inventories-setup#inv-file-format)
+    * [File format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format)
 
-    * [Limitations](/docs/schematics?topic=Schematics-inventories-setup#inv-file-limitation)
+    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
 
-* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=Schematics-inventories-setup#dynamic-inv)
+* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
 
-    * [Supported resource queries](/docs/schematics?topic=Schematics-inventories-setup#supported-queries)
+    * [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries)
 
-    * [Limitations](/docs/schematics?topic=Schematics-inventories-setup#dynamic-inv-limitation)
+    * [Limitations](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv-limitation)
 
 
 ## Managing Integrations
 {: #sitemap_managing_integrations}
 
 
-[Logging integration](/docs/schematics?topic=Schematics-logging-integration#logging-integration)
+[Logging integration](/docs/schematics?topic=schematics-logging-integration#logging-integration)
 
-* [Launching logging](/docs/schematics?topic=Schematics-logging-integration#logging-ui)
+* [Launching logging](/docs/schematics?topic=schematics-logging-integration#logging-ui)
 
-[{{site.data.keyword.monitoringshort_notm}} integration](/docs/schematics?topic=Schematics-monitoring-integration#monitoring-integration)
+[{{site.data.keyword.monitoringshort_notm}} integration](/docs/schematics?topic=schematics-monitoring-integration#monitoring-integration)
 
-* [Launching monitoring](/docs/schematics?topic=Schematics-monitoring-integration#monitoring-ui)
+* [Launching monitoring](/docs/schematics?topic=schematics-monitoring-integration#monitoring-ui)
 
-[Activity tracking integration](/docs/schematics?topic=Schematics-at-integration#at-integration)
+[Activity tracking integration](/docs/schematics?topic=schematics-at-integration#at-integration)
 
-* [Launching activity tracking](/docs/schematics?topic=Schematics-at-integration#audit-ui)
+* [Launching activity tracking](/docs/schematics?topic=schematics-at-integration#audit-ui)
 
-[KMS integration for BYOK or KYOK](/docs/schematics?topic=Schematics-kms-integration#kms-integration)
+[KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration#kms-integration)
 
-* [Launching key management](/docs/schematics?topic=Schematics-kms-integration#key-mgt-ui)
+* [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
 
-    * [Prerequisites](/docs/schematics?topic=Schematics-kms-integration#key-prerequisites)
+    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#key-prerequisites)
 
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=Schematics-kms-integration#integrate-byok-ui)
+    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-ui)
 
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=Schematics-kms-integration#integrate-byok-cli)
+    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
 ## Managing Agents
 {: #sitemap_managing_agents}
 
 
-[Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=Schematics-agents-setup#agents-setup)
+[Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
 
-* [Prerequisites](/docs/schematics?topic=Schematics-agents-setup#agents-setup-prereq)
+* [Prerequisites](/docs/schematics?topic=schematics-agents-setup#agents-setup-prereq)
 
-* [Provision the Agent infrastructure through UI](/docs/schematics?topic=Schematics-agents-setup#agents-setup-infra-ui)
+* [Provision the Agent infrastructure through UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui)
 
-    * [Output](/docs/schematics?topic=Schematics-agents-setup#agents-setup-infra-output)
+    * [Output](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output)
 
-    * [Deploying the Agent services](/docs/schematics?topic=Schematics-agents-setup#agents-setup-svc)
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc)
 
-* [Provision the Agent infrastructure through CLI](/docs/schematics?topic=Schematics-agents-setup#agents-setup-infra-cli)
+* [Provision the Agent infrastructure through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-cli)
 
-    * [Deploying the Agent services through CLI](/docs/schematics?topic=Schematics-agents-setup#agents-setup-svc-cli)
+    * [Deploying the Agent services through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-cli)
 
-* [Provision the Agent infrastructure through API](/docs/schematics?topic=Schematics-agents-setup#agents-setup-infra-api)
+* [Provision the Agent infrastructure through API](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-api)
 
-    * [Deploying the Agent services](/docs/schematics?topic=Schematics-agents-setup#agents-setup-svc-api)
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-api)
 
-* [Next steps](/docs/schematics?topic=Schematics-agents-setup#nextsteps-agentsetup)
+* [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
 
-[Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=Schematics-register-agent#register-agent)
+[Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent#register-agent)
 
-* [Connecting Agent through UI](/docs/schematics?topic=Schematics-register-agent#register-ui)
+* [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
 
-* [Next steps](/docs/schematics?topic=Schematics-register-agent#connect-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
 
-[Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=Schematics-using-agent#using-agent)
+[Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
 
-* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=Schematics-using-agent#steps-bind-exist-wks)
+* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
 
-* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=Schematics-using-agent#steps-bind-new-wks)
+* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
 
-* [Validate the Job execution by the Agent](/docs/schematics?topic=Schematics-using-agent#validate-agent-job)
+* [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 
-* [Next steps](/docs/schematics?topic=Schematics-using-agent#connect-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-using-agent#connect-nextsteps)
 
-[Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=Schematics-uninstall-agent#uninstall-agent)
+[Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-uninstall-agent#uninstall-agent)
 
-* [Clean up Agent infrastructure](/docs/schematics?topic=Schematics-uninstall-agent#cleanup-agent-infra)
+* [Clean up Agent infrastructure](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-infra)
 
-* [Clean up Agent service](/docs/schematics?topic=Schematics-uninstall-agent#cleanup-agent-service)
+* [Clean up Agent service](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-service)
 
 
 ## Logging and monitoring
 {: #sitemap_logging_and_monitoring}
 
 
-[Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}](/docs/schematics?topic=Schematics-monitoring-instances#monitoring-instances)
+[Monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.mon_full_notm}}](/docs/schematics?topic=schematics-monitoring-instances#monitoring-instances)
 
-* [Launching Monitoring UI from the {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=Schematics-monitoring-instances#launch-dashboard)
+* [Launching Monitoring UI from the {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-monitoring-instances#launch-dashboard)
 
-* [Creating service instance](/docs/schematics?topic=Schematics-monitoring-instances#create-instance)
+* [Creating service instance](/docs/schematics?topic=schematics-monitoring-instances#create-instance)
 
-* [Creating custom dashboard](/docs/schematics?topic=Schematics-monitoring-instances#create-dashboard)
+* [Creating custom dashboard](/docs/schematics?topic=schematics-monitoring-instances#create-dashboard)
 
-* [{{site.data.keyword.bplong_notm}} metrics details](/docs/schematics?topic=Schematics-monitoring-instances#metrics-details)
+* [{{site.data.keyword.bplong_notm}} metrics details](/docs/schematics?topic=schematics-monitoring-instances#metrics-details)
 
-    * [ibm_schematics_workspace_count](/docs/schematics?topic=Schematics-monitoring-instances#wkspace-count)
+    * [ibm_schematics_workspace_count](/docs/schematics?topic=schematics-monitoring-instances#wkspace-count)
 
-    * [ibm_schematics_workspace_actions_count](/docs/schematics?topic=Schematics-monitoring-instances#wkspace-actions-count)
+    * [ibm_schematics_workspace_actions_count](/docs/schematics?topic=schematics-monitoring-instances#wkspace-actions-count)
 
-    * [ibm_schematics_vulnerability_count](/docs/schematics?topic=Schematics-monitoring-instances#wkspace-vulnerability-count)
+    * [ibm_schematics_vulnerability_count](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
 
-[Auditing events](/docs/schematics?topic=Schematics-at_events#at_events)
+[Auditing events](/docs/schematics?topic=schematics-at_events#at_events)
 
-* [{{site.data.keyword.bpshort}} events](/docs/schematics?topic=Schematics-at_events#schematics-events)
+* [{{site.data.keyword.bpshort}} events](/docs/schematics?topic=schematics-at_events#schematics-events)
 
-    * [Workspace events](/docs/schematics?topic=Schematics-at_events#schematics-wks-events)
+    * [Workspace events](/docs/schematics?topic=schematics-at_events#schematics-wks-events)
 
-    * [Action events](/docs/schematics?topic=Schematics-at_events#schematics-action-events)
+    * [Action events](/docs/schematics?topic=schematics-at_events#schematics-action-events)
 
-    * [Job events](/docs/schematics?topic=Schematics-at_events#schematics-job-events)
+    * [Job events](/docs/schematics?topic=schematics-at_events#schematics-job-events)
 
-    * [`Shareddata` events](/docs/schematics?topic=Schematics-at_events#schematics-shareddata-events)
+    * [`Shareddata` events](/docs/schematics?topic=schematics-at_events#schematics-shareddata-events)
 
-    * [Other events](/docs/schematics?topic=Schematics-at_events#schematics-otherevents)
+    * [Other events](/docs/schematics?topic=schematics-at_events#schematics-otherevents)
 
-* [Viewing events](/docs/schematics?topic=Schematics-at_events#at_ui)
+* [Viewing events](/docs/schematics?topic=schematics-at_events#at_ui)
 
-* [Analyzing events](/docs/schematics?topic=Schematics-at_events#at_analyze)
+* [Analyzing events](/docs/schematics?topic=schematics-at_events#at_analyze)
 
-    * [Creating a workspace](/docs/schematics?topic=Schematics-at_events#at_analyze_1)
+    * [Creating a workspace](/docs/schematics?topic=schematics-at_events#at_analyze_1)
 
 
 ## Executing process of the {{site.data.keyword.bpshort}} job queue
 {: #sitemap_executing_process_of_the__job_queue}
 
 
-[Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=Schematics-job-queue-process#job-queue-process)
+[Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#job-queue-process)
 
-* [About job queue](/docs/schematics?topic=Schematics-job-queue-process#about-job-queue)
+* [About job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue)
 
-* [Functioning of job queue](/docs/schematics?topic=Schematics-job-queue-process#functions-job-queue)
+* [Functioning of job queue](/docs/schematics?topic=schematics-job-queue-process#functions-job-queue)
 
-* [When does the job enter into the pending queue?](/docs/schematics?topic=Schematics-job-queue-process#pending-job-queue)
+* [When does the job enter into the pending queue?](/docs/schematics?topic=schematics-job-queue-process#pending-job-queue)
 
-* [Timeout](/docs/schematics?topic=Schematics-job-queue-process#job-queue-timeout)
+* [Timeout](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
 
 
 ## Deleting {{site.data.keyword.bpshort}} data
 {: #sitemap_deleting__data}
 
 
-[Deleting {{site.data.keyword.bpshort}} data](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-intro)
+[Deleting {{site.data.keyword.bpshort}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-intro)
 
-* [Scope](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-scope)
+* [Scope](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-scope)
 
-* [Deleting {{site.data.keyword.bpshort}} objects from UI](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-ui)
+* [Deleting {{site.data.keyword.bpshort}} objects from UI](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-ui)
 
-    * [Workspaces](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-wkscategory)
+    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-wkscategory)
 
-    * [Actions](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-actionscategory)
+    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-actionscategory)
 
-    * [Inventories](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-invcategory)
+    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-invcategory)
 
-* [Deleting {{site.data.keyword.bpshort}} objects from CLI](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-cli)
+* [Deleting {{site.data.keyword.bpshort}} objects from CLI](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cli)
 
-    * [Workspaces](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-cliwks)
+    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cliwks)
 
-    * [Actions](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-cliactions)
+    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cliactions)
 
-    * [Inventories](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-cliinvcategory)
+    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cliinvcategory)
 
-* [Deleting {{site.data.keyword.bpshort}} objects from API](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-api)
+* [Deleting {{site.data.keyword.bpshort}} objects from API](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-api)
 
-    * [Workspaces](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-apiwks)
+    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-apiwks)
 
-    * [Actions](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-apiactions)
+    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-apiactions)
 
-    * [Inventories](/docs/schematics?topic=Schematics-delete-schematics-data-intro#delete-schematics-data-apicategory)
+    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-apicategory)
 
 
 ## Specifying version constraints in {{site.data.keyword.bpshort}}
 {: #sitemap_specifying_version_constraints_in_}
 
 
-[Specifying version constraints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-version-constraints#version-constraints)
+[Specifying version constraints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-version-constraints#version-constraints)
 
-* [Overview of {{site.data.keyword.bpshort}} images and packaged Terraform providers](/docs/schematics?topic=Schematics-version-constraints#schematics-image-ov)
+* [Overview of {{site.data.keyword.bpshort}} images and packaged Terraform providers](/docs/schematics?topic=schematics-version-constraints#schematics-image-ov)
 
-* [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=Schematics-version-constraints#version-constraints-terraform)
+* [Specifying version constraints for the Terraform CLI and Terraform providers](/docs/schematics?topic=schematics-version-constraints#version-constraints-terraform)
 
-    * [Version constraints for the Terraform CLI](/docs/schematics?topic=Schematics-version-constraints#tf-version-constraint)
+    * [Version constraints for the Terraform CLI](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint)
 
-    * [Version constraints for Terraform providers](/docs/schematics?topic=Schematics-version-constraints#provider-version-contraint)
+    * [Version constraints for Terraform providers](/docs/schematics?topic=schematics-version-constraints#provider-version-contraint)
 
-* [Specifying version constraints in Ansible](/docs/schematics?topic=Schematics-version-constraints#version-constraints-ansible)
+* [Specifying version constraints in Ansible](/docs/schematics?topic=schematics-version-constraints#version-constraints-ansible)
 
 
 ## Setting up Terraform for {{site.data.keyword.bpshort}}
 {: #sitemap_setting_up_terraform_for_}
 
 
-[Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-terraform-setup#terraform-setup)
+[Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup#terraform-setup)
 
-* [Example: Creating the {{site.data.keyword.bpshort}} Workspaces by using Terraform](/docs/schematics?topic=Schematics-terraform-setup#workspace-resource)
+* [Example: Creating the {{site.data.keyword.bpshort}} Workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
 
-* [What's next?](/docs/schematics?topic=Schematics-terraform-setup#terraform-setup-next)
+* [What's next?](/docs/schematics?topic=schematics-terraform-setup#terraform-setup-next)
 
 
 ## Enhancing security for Schematics
 {: #sitemap_enhancing_security_for_schematics}
 
 
-[Managing user access](/docs/schematics?topic=Schematics-access#access)
+[Managing user access](/docs/schematics?topic=schematics-access#access)
 
-* [Overview of {{site.data.keyword.bpshort}} service access roles and required permissions](/docs/schematics?topic=Schematics-access#access-roles)
+* [Overview of {{site.data.keyword.bpshort}} service access roles and required permissions](/docs/schematics?topic=schematics-access#access-roles)
 
-    * [Workspace permissions](/docs/schematics?topic=Schematics-access#workspace-permissions)
+    * [Workspace permissions](/docs/schematics?topic=schematics-access#workspace-permissions)
 
-    * [Action permissions](/docs/schematics?topic=Schematics-access#action-permissions)
+    * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
 
-    * [KMS permissions](/docs/schematics?topic=Schematics-access#kms-permissions)
+    * [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 
-* [Setting up access for your users](/docs/schematics?topic=Schematics-access#access-setup)
+* [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup)
 
-* [Manage access tag in your account](/docs/schematics?topic=Schematics-access#access-tag)
+* [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag)
 
-[User responsibilities by using {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=Schematics-responsibilities#responsibilities)
+[User responsibilities by using {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-responsibilities#responsibilities)
 
-[Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-high-availability#high-availability)
+[Understanding high availability and disaster recovery for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-high-availability#high-availability)
 
-[Using private endpoints](/docs/schematics?topic=Schematics-private-endpoints#private-endpoints)
+[Using private endpoints](/docs/schematics?topic=schematics-private-endpoints#private-endpoints)
 
-* [Private service endpoints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-private-endpoints#private-cse)
+* [Private service endpoints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-private-endpoints#private-cse)
 
-    * [Enable VRF and service endpoints for your account](/docs/schematics?topic=Schematics-private-endpoints#private-network-prereqs)
+    * [Enable VRF and service endpoints for your account](/docs/schematics?topic=schematics-private-endpoints#private-network-prereqs)
 
-    * [Connect to the {{site.data.keyword.bpshort}} private service endpoint](/docs/schematics?topic=Schematics-private-endpoints#configure-private-network)
+    * [Connect to the {{site.data.keyword.bpshort}} private service endpoint](/docs/schematics?topic=schematics-private-endpoints#configure-private-network)
 
-* [Virtual Private Endpoints Gateways for {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-private-endpoints#endpoint-setup)
+* [Virtual Private Endpoints Gateways for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-private-endpoints#endpoint-setup)
 
-    * [Before you begin](/docs/schematics?topic=Schematics-private-endpoints#endpoint-prereq)
+    * [Before you begin](/docs/schematics?topic=schematics-private-endpoints#endpoint-prereq)
 
-    * [Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-private-endpoints#endpoint-add)
+    * [Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-private-endpoints#endpoint-add)
 
-[Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-secure-data#secure-data)
+[Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#secure-data)
 
-* [How your data is stored and encrypted in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-secure-data#data-storage)
+* [How your data is stored and encrypted in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#data-storage)
 
-    * [Key deletion or disable](/docs/schematics?topic=Schematics-secure-data#key-delete)
+    * [Key deletion or disable](/docs/schematics?topic=schematics-secure-data#key-delete)
 
-    * [Key enable or restore](/docs/schematics?topic=Schematics-secure-data#key-enable)
+    * [Key enable or restore](/docs/schematics?topic=schematics-secure-data#key-enable)
 
-* [What are the details stored in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-secure-data#pi-data)
+* [What are the details stored in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#pi-data)
 
-* [Where is my information stored?](/docs/schematics?topic=Schematics-secure-data#pi-location)
+* [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
-* [How is my information encrypted?](/docs/schematics?topic=Schematics-secure-data#pi-encrypt)
+* [How is my information encrypted?](/docs/schematics?topic=schematics-secure-data#pi-encrypt)
 
-* [How can I delete my information?](/docs/schematics?topic=Schematics-secure-data#delete-data)
+* [How can I delete my information?](/docs/schematics?topic=schematics-secure-data#delete-data)
 
-[Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=Schematics-allowed-ipaddresses#allowed-ipaddresses)
+[Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
 {: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_{{sitedatakeywordbpfull_notm}}}
 
 
-[Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=Schematics-provisioning-terraform-template#provisioning-terraform-template)
+[Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
 
-* [Description](/docs/schematics?topic=Schematics-provisioning-terraform-template#provisioning-desc)
+* [Description](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-desc)
 
-* [Objectives](/docs/schematics?topic=Schematics-provisioning-terraform-template#provisioning-tut-obj)
+* [Objectives](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-obj)
 
-* [Time required](/docs/schematics?topic=Schematics-provisioning-terraform-template#provisioning-timereq)
+* [Time required](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-timereq)
 
-* [Audience](/docs/schematics?topic=Schematics-provisioning-terraform-template#provisioning-tut-audience)
+* [Audience](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=Schematics-provisioning-terraform-template#provisioning-tut-prereq)
+* [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
 
-* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=Schematics-provisioning-terraform-template#create-wkspace-for-cluster)
+* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
 
-* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=Schematics-provisioning-terraform-template#create-tut-wks)
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
 
-* [Planning and applying the Terraform template](/docs/schematics?topic=Schematics-provisioning-terraform-template#tut-plan-wks)
+* [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
 
-* [What's next?](/docs/schematics?topic=Schematics-provisioning-terraform-template#tut_what's_next)
+* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_what's_next)
 
 
 ## Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
 {: #sitemap_setting_up_continuous_deployment_with__and_devops_toolchain}
 
 
-[Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain](/docs/schematics?topic=Schematics-workspace-continuous-deployment#workspace-continuous-deployment)
+[Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
 
-* [Description](/docs/schematics?topic=Schematics-workspace-continuous-deployment#workspace-desc)
+* [Description](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-desc)
 
-* [Objectives](/docs/schematics?topic=Schematics-workspace-continuous-deployment#workspace-obj)
+* [Objectives](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-obj)
 
-* [Time required](/docs/schematics?topic=Schematics-workspace-continuous-deployment#workspace-timereq)
+* [Time required](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-timereq)
 
-* [Audience](/docs/schematics?topic=Schematics-workspace-continuous-deployment#workspace-tut-audience)
+* [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=Schematics-workspace-continuous-deployment#workspace-prereq)
+* [Prerequisites](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-prereq)
 
-* [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=Schematics-workspace-continuous-deployment#access-automate-template)
+* [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
 
-* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=Schematics-workspace-continuous-deployment#create-wkspace)
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
 
-* [Configuring the variables](/docs/schematics?topic=Schematics-workspace-continuous-deployment#configure-variables)
+* [Configuring the variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-variables)
 
-* [Automating the continuous deployment process](/docs/schematics?topic=Schematics-workspace-continuous-deployment#continuous-deployment)
+* [Automating the continuous deployment process](/docs/schematics?topic=schematics-workspace-continuous-deployment#continuous-deployment)
 
-* [Analyzing the pipeline execution process](/docs/schematics?topic=Schematics-workspace-continuous-deployment#analyze-deployment)
+* [Analyzing the pipeline execution process](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-deployment)
 
-* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=Schematics-workspace-continuous-deployment#analyze-workspace-process)
+* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
 
-* [What's next?](/docs/schematics?topic=Schematics-workspace-continuous-deployment#automate-what-next)
+* [What's next?](/docs/schematics?topic=schematics-workspace-continuous-deployment#automate-what-next)
 
 
 ## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
 {: #sitemap_importing__templates_into_the_{{sitedatakeywordcloud_notm}}_catalog}
 
 
-[Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=Schematics-private-catalog#private-catalog)
+[Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
 
-* [Objectives](/docs/schematics?topic=Schematics-private-catalog#private-tut-obj)
+* [Objectives](/docs/schematics?topic=schematics-private-catalog#private-tut-obj)
 
-* [Time required](/docs/schematics?topic=Schematics-private-catalog#private-timereq)
+* [Time required](/docs/schematics?topic=schematics-private-catalog#private-timereq)
 
-* [Audience](/docs/schematics?topic=Schematics-private-catalog#private-tut-audience)
+* [Audience](/docs/schematics?topic=schematics-private-catalog#private-tut-audience)
 
-* [Prerequisites](/docs/schematics?topic=Schematics-private-catalog#private-prerequisites)
+* [Prerequisites](/docs/schematics?topic=schematics-private-catalog#private-prerequisites)
 
-* [Prepare your Terraform template for the private catalog](/docs/schematics?topic=Schematics-private-catalog#prepare-tf-templates)
+* [Prepare your Terraform template for the private catalog](/docs/schematics?topic=schematics-private-catalog#prepare-tf-templates)
 
-* [Creating a release](/docs/schematics?topic=Schematics-private-catalog#create-release)
+* [Creating a release](/docs/schematics?topic=schematics-private-catalog#create-release)
 
-* [Create a private catalog and add your Terraform template as a product](/docs/schematics?topic=Schematics-private-catalog#create-private-catalog)
+* [Create a private catalog and add your Terraform template as a product](/docs/schematics?topic=schematics-private-catalog#create-private-catalog)
 
-* [What's next?](/docs/schematics?topic=Schematics-private-catalog#private_what's_next)
+* [What's next?](/docs/schematics?topic=schematics-private-catalog#private_what's_next)
 
 
 ## Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line
 {: #sitemap_deploying__blueprints_using_the_command-line}
 
 
-[Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
+[Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
 
-* [Select a Blueprint definition](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
+* [Select a Blueprint definition](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
 
-* [Create {{site.data.keyword.bpshort}} Blueprint](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
+* [Create {{site.data.keyword.bpshort}} Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
 
-    * [Syntax](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#step1-syntax)
+    * [Syntax](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-syntax)
 
-    * [Output](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#step1-output)
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-output)
 
-* [Install Blueprint to create cloud resources](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
+* [Install Blueprint to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
 
-    * [Output](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#step3-output)
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
 
-* [Access and test the Blueprint created resources](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
+* [Access and test the Blueprint created resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
 
-    * [Using the cloud UI](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
+    * [Using the cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
 
-    * [Using the CLI](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-cli)
+    * [Using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-cli)
 
-* [Destroy Blueprint cloud resources](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
+* [Destroy Blueprint cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
 
-    * [Output](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#step5-output)
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step5-output)
 
-* [Delete the Blueprint](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
+* [Delete the Blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
 
-    * [Output](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#step6-output)
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step6-output)
 
-* [Next steps](/docs/schematics?topic=Schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
+* [Next steps](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
 
 
 ## Deploying a VPC environment on IBM Cloud by using Bastion host
@@ -1127,177 +1127,177 @@ subcollection: schematics
 {: #sitemap_cli_reference}
 
 
-[{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-cli-reference)
+[{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
 
-* [Prerequisites](/docs/schematics?topic=Schematics-schematics-cli-reference#cli-prerequisites)
+* [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
 
-* [Actions commands](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-action-commands)
+* [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
-    * [Inventory host groups](/docs/schematics?topic=Schematics-schematics-cli-reference#inventory-host-grps)
+    * [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps)
 
-    * [`ibmcloud schematics action create`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-create-action)
+    * [`ibmcloud schematics action create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action)
 
-    * [`ibmcloud schematics action update`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-update-action)
+    * [`ibmcloud schematics action update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action)
 
-    * [`ibmcloud schematics action get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-get-action)
+    * [`ibmcloud schematics action get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-action)
 
-    * [`ibmcloud schematics action list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-list-action)
+    * [`ibmcloud schematics action list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-action)
 
-    * [`ibmcloud schematics action delete`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-delete-action)
+    * [`ibmcloud schematics action delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-action)
 
-    * [`ibmcloud schematics action upload`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-upload-action)
+    * [`ibmcloud schematics action upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-upload-action)
 
-* [Agents commands](/docs/schematics?topic=Schematics-schematics-cli-reference#agents-cmd)
+* [Agents commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
-    * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agents-bind-wks)
+    * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
 
-    * [`ibmcloud schematics agents get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agent-get)
+    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
 
-    * [`ibmcloud schematics agents list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agent-list)
+    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list)
 
-    * [`ibmcloud schematics agent register`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agent-register)
+    * [`ibmcloud schematics agent register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
 
-    * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agents-unregister)
+    * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
 
-    * [`ibmcloud schematics agents update`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agent-update)
+    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update)
 
-    * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agent-new)
+    * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
 
-    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-agents-get)
+    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
 
-* [Blueprints commands](/docs/schematics?topic=Schematics-schematics-cli-reference#blueprints-cmd)
+* [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 
-    * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-create)
+    * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
 
-    * [`ibmcloud schematics blueprint install`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-install)
+    * [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install)
 
-    * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-update)
+    * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
 
-    * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-get)
+    * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get)
 
-    * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-list)
+    * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
 
-    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-delete)
+    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
 
-    * [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-destroy)
+    * [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
 
-    * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-job-get)
+    * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
 
-    * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-job-list)
+    * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-list)
 
-    * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-blueprint-job-logs)
+    * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
 
-* [Enable BYOK or KYOK commands](/docs/schematics?topic=Schematics-schematics-cli-reference#kms-commands)
+* [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
-    * [Prerequisites](/docs/schematics?topic=Schematics-schematics-cli-reference#key-prerequisites)
+    * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
 
-    * [`ibmcloud schematics kms instance ls`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-kms-list)
+    * [`ibmcloud schematics kms instance ls`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-list)
 
-    * [`ibmcloud schematics kms enable`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-kms-enable)
+    * [`ibmcloud schematics kms enable`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-enable)
 
-    * [`ibmcloud schematics kms info`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-kms-info)
+    * [`ibmcloud schematics kms info`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-info)
 
-* [General commands](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-general-commands)
+* [General commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-general-commands)
 
-    * [`ibmcloud schematics help`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-help-cmd)
+    * [`ibmcloud schematics help`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-help-cmd)
 
-    * [`ibmcloud schematics version`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-version)
+    * [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version)
 
-* [Inventories commands](/docs/schematics?topic=Schematics-schematics-cli-reference#inv-commands)
+* [Inventories commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
 
-    * [`ibmcloud schematics inventory create`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-create-inv)
+    * [`ibmcloud schematics inventory create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv)
 
-    * [`ibmcloud schematics inventory delete`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-delete-inventory)
+    * [`ibmcloud schematics inventory delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-inventory)
 
-    * [`ibmcloud schematics inventory get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-get-inv)
+    * [`ibmcloud schematics inventory get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-inv)
 
-    * [`ibmcloud schematics inventory list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-list-inv)
+    * [`ibmcloud schematics inventory list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-inv)
 
-    * [`ibmcloud schematics inventory update`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-update-inv)
+    * [`ibmcloud schematics inventory update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-inv)
 
-* [Job commands](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-job-commands)
+* [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
 
-    * [`ibmcloud schematics job run`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-run-job)
+    * [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job)
 
-    * [`ibmcloud schematics job update`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-update-job)
+    * [`ibmcloud schematics job update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-job)
 
-    * [`ibmcloud schematics job get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-get-job)
+    * [`ibmcloud schematics job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-job)
 
-    * [`ibmcloud schematics job list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-list-job)
+    * [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job)
 
-    * [`ibmcloud schematics job logs`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-logs-job)
+    * [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
 
-    * [`ibmcloud schematics job delete`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-delete-job)
+    * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
 
-* [Resource management commands](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-resource-commands)
+* [Resource management commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
 
-    * [`ibmcloud schematics apply`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-apply)
+    * [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply)
 
-    * [`ibmcloud schematics destroy`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-destroy)
+    * [`ibmcloud schematics destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy)
 
-    * [`ibmcloud schematics logs`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-logs)
+    * [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs)
 
-    * [`ibmcloud schematics output`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-output2)
+    * [`ibmcloud schematics output`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-output2)
 
-    * [`ibmcloud schematics plan`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-plan)
+    * [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan)
 
-* [Resource query commands](/docs/schematics?topic=Schematics-schematics-cli-reference#rq-commands)
+* [Resource query commands](/docs/schematics?topic=schematics-schematics-cli-reference#rq-commands)
 
-    * [`ibmcloud schematics resource query create`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-create-rq)
+    * [`ibmcloud schematics resource query create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq)
 
-    * [`ibmcloud schematics resource query delete`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-delete-resource-query)
+    * [`ibmcloud schematics resource query delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-resource-query)
 
-    * [`ibmcloud schematics resource query get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-get-rq)
+    * [`ibmcloud schematics resource query get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-rq)
 
-    * [`ibmcloud schematics resource query list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-list-rq)
+    * [`ibmcloud schematics resource query list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-rq)
 
-    * [`ibmcloud schematics resource query update`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-update-rq)
+    * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
 
-* [Stop commands](/docs/schematics?topic=Schematics-schematics-cli-reference#stop-cmds)
+* [Stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
 
-    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-stop-job)
+    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
 
-* [Terraform commands](/docs/schematics?topic=Schematics-schematics-cli-reference#tf-cmds)
+* [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
 
-    * [Commands](/docs/schematics?topic=Schematics-schematics-cli-reference#cmds)
+    * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
 
-* [Terraform state file commands](/docs/schematics?topic=Schematics-schematics-cli-reference#state)
+* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state)
 
-    * [`ibmcloud schematics state pull`](/docs/schematics?topic=Schematics-schematics-cli-reference#state-pull)
+    * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
 
-    * [`ibmcloud schematics workspace state show`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-show)
+    * [`ibmcloud schematics workspace state show`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show)
 
-    * [`ibmcloud schematics workspace state mv`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-wks_statemv)
+    * [`ibmcloud schematics workspace state mv`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv)
 
-    * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-wks_staterm)
+    * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
 
-* [Workspaces commands](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-commands)
+* [Workspaces commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
 
-    * [`ibmcloud schematics workspace action`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-action)
+    * [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action)
 
-    * [`ibmcloud schematics workspace delete`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-delete)
+    * [`ibmcloud schematics workspace delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete)
 
-    * [`ibmcloud schematics workspace get`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-get)
+    * [`ibmcloud schematics workspace get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get)
 
-    * [`ibmcloud schematics workspace import`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-import)
+    * [`ibmcloud schematics workspace import`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import)
 
-    * [`ibmcloud schematics workspace list`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-list)
+    * [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list)
 
-    * [`ibmcloud schematics workspace new`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-new)
+    * [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new)
 
-    * [`ibmcloud schematics refresh`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-refresh)
+    * [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh)
 
-    * [`ibmcloud schematics state list`](/docs/schematics?topic=Schematics-schematics-cli-reference#state-list)
+    * [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list)
 
-    * [`ibmcloud schematics workspace taint`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-taint)
+    * [`ibmcloud schematics workspace taint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint)
 
-    * [`ibmcloud schematics workspace untaint`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-untaint)
+    * [`ibmcloud schematics workspace untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint)
 
-    * [`ibmcloud schematics workspace update`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-update)
+    * [`ibmcloud schematics workspace update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update)
 
-    * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=Schematics-schematics-cli-reference#schematics-workspace-upload)
+    * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload)
 
-[CLI version history](/docs/schematics?topic=Schematics-cli_version-releases#cli_version-releases)
+[CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
 
 ## API reference
@@ -1311,234 +1311,234 @@ subcollection: schematics
 {: #sitemap_blueprints_definition_reference}
 
 
-[Blueprint definition YAML Schema](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-definition-schema-yaml)
+[Blueprint definition YAML Schema](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-definition-schema-yaml)
 
-* [Supporting setting parameters](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-parameters)
+* [Supporting setting parameters](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-parameters)
 
-    * [name](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-name)
+    * [name](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-name)
 
-    * [schema_version](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-schema-version)
+    * [schema_version](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-schema-version)
 
-    * [description](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-description)
+    * [description](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-description)
 
-    * [inputs](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-inputs)
+    * [inputs](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-inputs)
 
-    * [outputs](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-outputs)
+    * [outputs](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-outputs)
 
-    * [settings](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-settings)
+    * [settings](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-settings)
 
-    * [settings.TF_VERSION](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-tf-version)
+    * [settings.TF_VERSION](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-tf-version)
 
-    * [modules schema](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-schema)
+    * [modules schema](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-schema)
 
-    * [modules.name](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-name)
+    * [modules.name](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-name)
 
-    * [modules.module_type](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-moduletype)
+    * [modules.module_type](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-moduletype)
 
-    * [modules.source options](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-sourceoptions)
+    * [modules.source options](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-sourceoptions)
 
-    * [modules.source.git.source_type](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-source-type)
+    * [modules.source.git.source_type](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-source-type)
 
-    * [modules.source.git.git_repo_url](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-git-repo-url)
+    * [modules.source.git.git_repo_url](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-git-repo-url)
 
-    * [modules.source.git.git_branch](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-git-branch)
+    * [modules.source.git.git_branch](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-git-branch)
 
-    * [modules.source.git.git_release](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-git-release)
+    * [modules.source.git.git_release](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-git-release)
 
-    * [modules.inputs options](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-inputs-options)
+    * [modules.inputs options](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-inputs-options)
 
-    * [modules.inputs.name](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-inputs-name)
+    * [modules.inputs.name](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-inputs-name)
 
-    * [modules.inputs.type](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-inputs-type)
+    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-inputs-type)
 
-    * [modules.inputs.value](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-inputs-value)
+    * [modules.inputs.value](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-inputs-value)
 
-    * [modules.inputs.secure](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-inputs-secure)
+    * [modules.inputs.secure](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-inputs-secure)
 
-    * [module.outputs](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-module-outputs)
+    * [module.outputs](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-module-outputs)
 
-    * [module.injectors options](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-outputs-injector)
+    * [module.injectors options](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-outputs-injector)
 
-    * [module.injectors.tft_git_url](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-module-tft-git-url)
+    * [module.injectors.tft_git_url](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-module-tft-git-url)
 
-    * [module.injectors.tft_name](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-module-tft-name)
+    * [module.injectors.tft_name](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-module-tft-name)
 
-    * [module.injectors.injection_type](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-module-injection-type)
+    * [module.injectors.injection_type](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-module-injection-type)
 
-    * [module.injectors.tft_parameters](/docs/schematics?topic=Schematics-bp-definition-schema-yaml#bp-modules-tft-parameters)
+    * [module.injectors.tft_parameters](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-modules-tft-parameters)
 
-[Blueprint input file YAML Schema](/docs/schematics?topic=Schematics-bp-input-schema-yaml#bp-input-schema-yaml)
+[Blueprint input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml#bp-input-schema-yaml)
 
-* [Defining input values](/docs/schematics?topic=Schematics-bp-input-schema-yaml#define-input-value)
+* [Defining input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#define-input-value)
 
-* [Complex input values](/docs/schematics?topic=Schematics-bp-input-schema-yaml#complex-input-value)
+* [Complex input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#complex-input-value)
 
 
 ## Beta-level code for {{site.data.keyword.bpshort}} Agents
 {: #sitemap_beta-level_code_for__agents}
 
 
-[Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=Schematics-agent-beta-limitations#agent-beta-limitations)
+[Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
 
-* [Beta release limitations for Agent](/docs/schematics?topic=Schematics-agent-beta-limitations#sc-agent-beta-limitation)
+* [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
 
 
 ## Beta-level code for {{site.data.keyword.bpshort}} Blueprints
 {: #sitemap_beta-level_code_for__blueprints}
 
 
-[Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=Schematics-bp-beta-limitations#bp-beta-limitations)
+[Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
 
-* [Beta release limitations](/docs/schematics?topic=Schematics-bp-beta-limitations#sc-bp-beta-limitation)
+* [Beta release limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation)
 
-* [Beta release known issues](/docs/schematics?topic=Schematics-bp-beta-limitations#sc-bp-beta-knownissues)
+* [Beta release known issues](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-knownissues)
 
-* [Joining public slack channel](/docs/schematics?topic=Schematics-bp-beta-limitations#sc-bp-join-public-slack)
+* [Joining public slack channel](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack)
 
-    * [Steps to join public slack](/docs/schematics?topic=Schematics-bp-beta-limitations#sc-bp-join-slack)
+    * [Steps to join public slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-slack)
 
 
 ## {{site.data.keyword.bpshort}} runtime tools
 {: #sitemap__runtime_tools}
 
 
-[{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=Schematics-sch-utilities#sch-utilities)
+[{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
 
-* [Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=Schematics-sch-utilities#terraform-runtime-job)
+* [Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-job)
 
-* [Terraform-runtime-agent-job image used by {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=Schematics-sch-utilities#terraform-runtime-agent-job)
+* [Terraform-runtime-agent-job image used by {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-agent-job)
 
-* [Ansible-runtime-job image used by {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=Schematics-sch-utilities#Ansible-runtime-job)
+* [Ansible-runtime-job image used by {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sch-utilities#Ansible-runtime-job)
 
 
 ## {{site.data.keyword.bpshort}} SDKs
 {: #sitemap__sdks}
 
 
-[{{site.data.keyword.bpshort}} SDKs](/docs/schematics?topic=Schematics-schematics-sdks#schematics-sdks)
+[{{site.data.keyword.bpshort}} SDKs](/docs/schematics?topic=schematics-schematics-sdks#schematics-sdks)
 
 
 ## Locations and service endpoints
 {: #sitemap_locations_and_service_endpoints}
 
 
-[Locations and service endpoints](/docs/schematics?topic=Schematics-locations#locations)
+[Locations and service endpoints](/docs/schematics?topic=schematics-locations#locations)
 
-* [Where can I create {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=Schematics-locations#where-can-i-create--workspaces?)
+* [Where can I create {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create--workspaces?)
 
-* [Where do my {{site.data.keyword.bpshort}} Actions run?](/docs/schematics?topic=Schematics-locations#where-do-locations-run)
+* [Where do my {{site.data.keyword.bpshort}} Actions run?](/docs/schematics?topic=schematics-locations#where-do-locations-run)
 
-* [Where is my data stored?](/docs/schematics?topic=Schematics-locations#where-is-data-stored)
+* [Where is my data stored?](/docs/schematics?topic=schematics-locations#where-is-data-stored)
 
-* [Where are my {{site.data.keyword.cloud_notm}} resources provisioned?](/docs/schematics?topic=Schematics-locations#where-are-resources-provisioned)
+* [Where are my {{site.data.keyword.cloud_notm}} resources provisioned?](/docs/schematics?topic=schematics-locations#where-are-resources-provisioned)
 
 
 ## Service limitations
 {: #sitemap_service_limitations}
 
 
-[Service limitations](/docs/schematics?topic=Schematics-schematics-limitations#schematics-limitations)
+[Service limitations](/docs/schematics?topic=schematics-schematics-limitations#schematics-limitations)
 
-* [Differences to native Terraform](/docs/schematics?topic=Schematics-schematics-limitations#terraform-vs-schematics)
+* [Differences to native Terraform](/docs/schematics?topic=schematics-schematics-limitations#terraform-vs-schematics)
 
-    * [Do I need to provide an {{site.data.keyword.cloud_notm}} API key in the `provider` block?](/docs/schematics?topic=Schematics-schematics-limitations#provider-block)
+    * [Do I need to provide an {{site.data.keyword.cloud_notm}} API key in the `provider` block?](/docs/schematics?topic=schematics-schematics-limitations#provider-block)
 
-    * [Can I use my local `terraform.tfvars` file?](/docs/schematics?topic=Schematics-schematics-limitations#terraformtfvars)
+    * [Can I use my local `terraform.tfvars` file?](/docs/schematics?topic=schematics-schematics-limitations#terraformtfvars)
 
-    * [Is Terraform remote state supported in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-schematics-limitations#tf-remote-state)
+    * [Is Terraform remote state supported in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-schematics-limitations#tf-remote-state)
 
-    * [Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?](/docs/schematics?topic=Schematics-schematics-limitations#local-remote-exec)
+    * [Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?](/docs/schematics?topic=schematics-schematics-limitations#local-remote-exec)
 
-* [What is the use of refresh token header?](/docs/schematics?topic=Schematics-schematics-limitations#refresh-token)
+* [What is the use of refresh token header?](/docs/schematics?topic=schematics-schematics-limitations#refresh-token)
 
 
 ## Glossary
 {: #sitemap_glossary}
 
 
-[Glossary](/docs/schematics?topic=Schematics-glossary#glossary)
+[Glossary](/docs/schematics?topic=schematics-glossary#glossary)
 
-* [Actions](/docs/schematics?topic=Schematics-glossary#glossary-actions)
+* [Actions](/docs/schematics?topic=schematics-glossary#glossary-actions)
 
-* [Agents](/docs/schematics?topic=Schematics-glossary#glossary-agents)
+* [Agents](/docs/schematics?topic=schematics-glossary#glossary-agents)
 
-    * [Agent](/docs/schematics?topic=Schematics-glossary#agentsa1)
+    * [Agent](/docs/schematics?topic=schematics-glossary#agentsa1)
 
-    * [Agent service](/docs/schematics?topic=Schematics-glossary#agentsa2)
+    * [Agent service](/docs/schematics?topic=schematics-glossary#agentsa2)
 
-    * [Agent Infrastructure](/docs/schematics?topic=Schematics-glossary#agentsa3)
+    * [Agent Infrastructure](/docs/schematics?topic=schematics-glossary#agentsa3)
 
-* [Blueprints](/docs/schematics?topic=Schematics-glossary#glossary-blueprint)
+* [Blueprints](/docs/schematics?topic=schematics-glossary#glossary-blueprint)
 
-    * [Blueprint](/docs/schematics?topic=Schematics-glossary#bpb1)
+    * [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1)
 
-    * [Blueprint definition](/docs/schematics?topic=Schematics-glossary#bpb2)
+    * [Blueprint definition](/docs/schematics?topic=schematics-glossary#bpb2)
 
-    * [Blueprint configuration](/docs/schematics?topic=Schematics-glossary#bpb3)
+    * [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3)
 
-    * [Blueprint environment](/docs/schematics?topic=Schematics-glossary#bpb4)
+    * [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4)
 
-    * [Blueprint Modules](/docs/schematics?topic=Schematics-glossary#bpb5)
+    * [Blueprint Modules](/docs/schematics?topic=schematics-glossary#bpb5)
 
-    * [Blueprint dynamic inputs](/docs/schematics?topic=Schematics-glossary#bpi1)
+    * [Blueprint dynamic inputs](/docs/schematics?topic=schematics-glossary#bpi1)
 
-    * [Blueprint Jobs](/docs/schematics?topic=Schematics-glossary#bpj1)
+    * [Blueprint Jobs](/docs/schematics?topic=schematics-glossary#bpj1)
 
-    * [Blueprint Lifecycle](/docs/schematics?topic=Schematics-glossary#bpl1)
+    * [Blueprint Lifecycle](/docs/schematics?topic=schematics-glossary#bpl1)
 
-* [Catalog](/docs/schematics?topic=Schematics-glossary#glossa-catalog)
+* [Catalog](/docs/schematics?topic=schematics-glossary#glossa-catalog)
 
-* [Inventories](/docs/schematics?topic=Schematics-glossary#glossa-inventory)
+* [Inventories](/docs/schematics?topic=schematics-glossary#glossa-inventory)
 
-    * [Resource inventory](/docs/schematics?topic=Schematics-glossary#rir1)
+    * [Resource inventory](/docs/schematics?topic=schematics-glossary#rir1)
 
-* [Jobs](/docs/schematics?topic=Schematics-glossary#glossary-job)
+* [Jobs](/docs/schematics?topic=schematics-glossary#glossary-job)
 
-* [Templates or Modules](/docs/schematics?topic=Schematics-glossary#glossary-template)
+* [Templates or Modules](/docs/schematics?topic=schematics-glossary#glossary-template)
 
-* [Workspaces](/docs/schematics?topic=Schematics-glossary#glossary-workspace)
+* [Workspaces](/docs/schematics?topic=schematics-glossary#glossary-workspace)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=Schematics-glossary#wkss1)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-glossary#wkss1)
 
-    * [Jobs](/docs/schematics?topic=Schematics-glossary#wksj1)
+    * [Jobs](/docs/schematics?topic=schematics-glossary#wksj1)
 
-    * [Resources](/docs/schematics?topic=Schematics-glossary#wksr1)
+    * [Resources](/docs/schematics?topic=schematics-glossary#wksr1)
 
-    * [Readme](/docs/schematics?topic=Schematics-glossary#wksr2)
+    * [Readme](/docs/schematics?topic=schematics-glossary#wksr2)
 
-    * [Settings](/docs/schematics?topic=Schematics-glossary#wkss1)
+    * [Settings](/docs/schematics?topic=schematics-glossary#wkss1)
 
-    * [Workspace](/docs/schematics?topic=Schematics-glossary#wksw1)
+    * [Workspace](/docs/schematics?topic=schematics-glossary#wksw1)
 
 
 ## {{site.data.keyword.bplong_notm}} notices and information
 {: #sitemap__notices_and_information}
 
 
-[{{site.data.keyword.bplong_notm}} notices and information](/docs/schematics?topic=Schematics-schematics-notices#schematics-notices)
+[{{site.data.keyword.bplong_notm}} notices and information](/docs/schematics?topic=schematics-schematics-notices#schematics-notices)
 
-* [Creative Commons Attribution 3.0](/docs/schematics?topic=Schematics-schematics-notices#CC-BY-3.0)
+* [Creative Commons Attribution 3.0](/docs/schematics?topic=schematics-schematics-notices#CC-BY-3.0)
 
-* [Creative Commons Attribution 4.0](/docs/schematics?topic=Schematics-schematics-notices#CC-BY-4.0)
+* [Creative Commons Attribution 4.0](/docs/schematics?topic=schematics-schematics-notices#CC-BY-4.0)
 
-* [Creative Commons Attribution Share Alike 1.0 Generic](/docs/schematics?topic=Schematics-schematics-notices#CC-BY-SA-1.0)
+* [Creative Commons Attribution Share Alike 1.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-1.0)
 
-* [Creative Commons Attributions Share Alike 2.0 Generic](/docs/schematics?topic=Schematics-schematics-notices#CC-BY-SA-2.0)
+* [Creative Commons Attributions Share Alike 2.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-2.0)
 
-* [Creative Commons Attribution 2.5 Generic](/docs/schematics?topic=Schematics-schematics-notices#CC-BY-SA-2.5)
+* [Creative Commons Attribution 2.5 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-2.5)
 
-* [Creative Commons Attribution Share Alike 3.0 Generic](/docs/schematics?topic=Schematics-schematics-notices#CC-BY-SA-3.0)
+* [Creative Commons Attribution Share Alike 3.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-3.0)
 
-* [Creative Commons Attribution Share Alike 4.0 Generic](/docs/schematics?topic=Schematics-schematics-notices#CC-BY-SA-4.0)
+* [Creative Commons Attribution Share Alike 4.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-4.0)
 
 
 ## Create `profile_id` for Agents
 {: #sitemap_create_profile_id_for_agents}
 
 
-[Create `profile_id` for Agents](/docs/schematics?topic=Schematics-agent-trusted-profile#agent-trusted-profile)
+[Create `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile#agent-trusted-profile)
 
-* [Next Step](/docs/schematics?topic=Schematics-agent-trusted-profile#agent-profile-id-nextstep)
+* [Next Step](/docs/schematics?topic=schematics-agent-trusted-profile#agent-profile-id-nextstep)
 
 
 ## Related links
@@ -1568,250 +1568,250 @@ subcollection: schematics
 {: #sitemap_what's_new_in_?}
 
 
-[What's new in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-new-in-schematics#new-in-schematics)
+[What's new in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-new-in-schematics#new-in-schematics)
 
-* [September 2021](/docs/schematics?topic=Schematics-new-in-schematics#sept30-2021)
+* [September 2021](/docs/schematics?topic=schematics-new-in-schematics#sept30-2021)
 
-* [August 2021](/docs/schematics?topic=Schematics-new-in-schematics#aug-2021)
+* [August 2021](/docs/schematics?topic=schematics-new-in-schematics#aug-2021)
 
-* [July 2021](/docs/schematics?topic=Schematics-new-in-schematics#july-2021)
+* [July 2021](/docs/schematics?topic=schematics-new-in-schematics#july-2021)
 
-* [June 2021](/docs/schematics?topic=Schematics-new-in-schematics#june-2021)
+* [June 2021](/docs/schematics?topic=schematics-new-in-schematics#june-2021)
 
-* [May 2021](/docs/schematics?topic=Schematics-new-in-schematics#may-2021)
+* [May 2021](/docs/schematics?topic=schematics-new-in-schematics#may-2021)
 
-* [April 2021](/docs/schematics?topic=Schematics-new-in-schematics#april-2021)
+* [April 2021](/docs/schematics?topic=schematics-new-in-schematics#april-2021)
 
-* [March 2021](/docs/schematics?topic=Schematics-new-in-schematics#march-2021)
+* [March 2021](/docs/schematics?topic=schematics-new-in-schematics#march-2021)
 
-* [February 2021](/docs/schematics?topic=Schematics-new-in-schematics#February-2021)
+* [February 2021](/docs/schematics?topic=schematics-new-in-schematics#February-2021)
 
-* [January 2021](/docs/schematics?topic=Schematics-new-in-schematics#January-2021)
+* [January 2021](/docs/schematics?topic=schematics-new-in-schematics#January-2021)
 
-* [December 2020](/docs/schematics?topic=Schematics-new-in-schematics#december-2020)
+* [December 2020](/docs/schematics?topic=schematics-new-in-schematics#december-2020)
 
-* [November 2020](/docs/schematics?topic=Schematics-new-in-schematics#november-2020)
+* [November 2020](/docs/schematics?topic=schematics-new-in-schematics#november-2020)
 
-* [October 2020](/docs/schematics?topic=Schematics-new-in-schematics#october-2020)
+* [October 2020](/docs/schematics?topic=schematics-new-in-schematics#october-2020)
 
-* [September 2020](/docs/schematics?topic=Schematics-new-in-schematics#september-2020)
+* [September 2020](/docs/schematics?topic=schematics-new-in-schematics#september-2020)
 
-* [August 2020](/docs/schematics?topic=Schematics-new-in-schematics#august-2020)
+* [August 2020](/docs/schematics?topic=schematics-new-in-schematics#august-2020)
 
-* [July 2020](/docs/schematics?topic=Schematics-new-in-schematics#july-2020)
+* [July 2020](/docs/schematics?topic=schematics-new-in-schematics#july-2020)
 
-* [June 2020](/docs/schematics?topic=Schematics-new-in-schematics#june-2020)
+* [June 2020](/docs/schematics?topic=schematics-new-in-schematics#june-2020)
 
-* [May 2020](/docs/schematics?topic=Schematics-new-in-schematics#may-2020)
+* [May 2020](/docs/schematics?topic=schematics-new-in-schematics#may-2020)
 
-* [April 2020](/docs/schematics?topic=Schematics-new-in-schematics#april-2020)
+* [April 2020](/docs/schematics?topic=schematics-new-in-schematics#april-2020)
 
 
 ## FAQs
 {: #sitemap_faqs}
 
 
-[Actions](/docs/schematics?topic=Schematics-actions-faq#actions-faq)
+[Actions](/docs/schematics?topic=schematics-actions-faq#actions-faq)
 
-* [Why is my success Action job execution displays DEPRECATION WARNING message?](/docs/schematics?topic=Schematics-actions-faq#deprecation-warn-faq)
+* [Why is my success Action job execution displays DEPRECATION WARNING message?](/docs/schematics?topic=schematics-actions-faq#deprecation-warn-faq)
 
-* [How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?](/docs/schematics?topic=Schematics-actions-faq#winrm-faq)
+* [How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?](/docs/schematics?topic=schematics-actions-faq#winrm-faq)
 
-* [When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-actions-faq#new-versions)
+* [When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions)
 
-* [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-actions-faq#ansible-playbooks)
+* [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
-[Agents](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent)
+[Agents](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
-* [Can I install more than one Agent service on the Agent infrastructure?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-install)
+* [Can I install more than one Agent service on the Agent infrastructure?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
-* [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-cost)
+* [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
-* [What {{site.data.keyword.bpshort}} jobs can I run in my Agent?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-jobs)
+* [What {{site.data.keyword.bpshort}} jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
-* [How can I see the Workspace job results and logs, for the workloads that ran on the Agent?](/docs/schematics?topic=Schematics-faqs-agent#faqs-wks-job-logs)
+* [How can I see the Workspace job results and logs, for the workloads that ran on the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-job-logs)
 
-* [How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?](/docs/schematics?topic=Schematics-faqs-agent#faqs-job-parallel)
+* [How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-job-parallel)
 
-* [While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What should I do next?](/docs/schematics?topic=Schematics-faqs-agent#faqs-auth-error)
+* [While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What should I do next?](/docs/schematics?topic=schematics-faqs-agent#faqs-auth-error)
 
-* [What is the difference between `agent-location` and `location` input variable flag in Agents service?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-location)
+* [What is the difference between `agent-location` and `location` input variable flag in Agents service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-location)
 
-* [Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agents?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-rg)
+* [Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-rg)
 
-* [Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-register)
+* [Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
 
-* [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-region)
+* [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-region)
 
-* [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=Schematics-faqs-agent#faqs-wks-agent-region)
+* [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
 
-* [Can I know the steps to get the Jobrunner (JR) logs to provide the request ID?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-jr-logs)
+* [Can I know the steps to get the Jobrunner (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
 
-* [What is time period set to deploy the cloud resources?](/docs/schematics?topic=Schematics-faqs-agent#faqs-agent-limit)
+* [What is time period set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
 
-[Blueprints](/docs/schematics?topic=Schematics-blueprints-faq#blueprints-faq)
+[Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
-* [Why do I perform Blueprint operations using `Blueprint id`?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-install)
+* [Why do I perform Blueprint operations using `Blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
-* [How does resource provisioning happen when using the Blueprints?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-resource)
+* [How does resource provisioning happen when using the Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
 
-* [How do I view the Blueprints provisioned results in my cloud account?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-results)
+* [How do I view the Blueprints provisioned results in my cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
 
-* [How do I securely pass input variables to Blueprints?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-secure-inputs)
+* [How do I securely pass input variables to Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
 
-* [Why does the Blueprints basic example fail in the Install step?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-basic-example)
+* [Why does the Blueprints basic example fail in the Install step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 
-* [What is the time taken to create a IKS cluster using Blueprints?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-time)
+* [What is the time taken to create a IKS cluster using Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
 
-* [How do I tell Blueprints what version of Terraform executable to use?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-tf-version)
+* [How do I tell Blueprints what version of Terraform executable to use?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
 
-* [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=Schematics-blueprints-faq#faqs-bp-location-override)
+* [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
 
-[General](/docs/schematics?topic=Schematics-general-faq#general-faq)
+[General](/docs/schematics?topic=schematics-general-faq#general-faq)
 
-* [What is {{site.data.keyword.bplong_notm}} and how does it work?](/docs/schematics?topic=Schematics-general-faq#what-is-schematics)
+* [What is {{site.data.keyword.bplong_notm}} and how does it work?](/docs/schematics?topic=schematics-general-faq#what-is-schematics)
 
-* [What is Infrastructure as Code?](/docs/schematics?topic=Schematics-general-faq#what-is-iac)
+* [What is Infrastructure as Code?](/docs/schematics?topic=schematics-general-faq#what-is-iac)
 
-* [What am I charged for when I use {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-general-faq#charges)
+* [What am I charged for when I use {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#charges)
 
-* [Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?](/docs/schematics?topic=Schematics-general-faq#provider-versions)
+* [Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?](/docs/schematics?topic=schematics-general-faq#provider-versions)
 
-* [How do I generate IAM access token, if client id `bx` is used?](/docs/schematics?topic=Schematics-general-faq#createworkspace-generate-tokens)
+* [How do I generate IAM access token, if client id `bx` is used?](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens)
 
-* [How do I rectify 'Failed to clone git repository, couldn’t find remote ref “refs/heads/master” (most likely invalid branch name is passed)'?](/docs/schematics?topic=Schematics-general-faq#template-errors)
+* [How do I rectify 'Failed to clone git repository, couldn’t find remote ref “refs/heads/master” (most likely invalid branch name is passed)'?](/docs/schematics?topic=schematics-general-faq#template-errors)
 
-* [Can I increase the timeout for null-exec and remote-exec resource?](/docs/schematics?topic=Schematics-general-faq#timeout-null-resource)
+* [Can I increase the timeout for null-exec and remote-exec resource?](/docs/schematics?topic=schematics-general-faq#timeout-null-resource)
 
-* [How can I save user-defined files generated by the Terraform modules and use them across multiple Terraform plan, apply, destroy, refresh, or import commands?](/docs/schematics?topic=Schematics-general-faq#persist-file)
+* [How can I save user-defined files generated by the Terraform modules and use them across multiple Terraform plan, apply, destroy, refresh, or import commands?](/docs/schematics?topic=schematics-general-faq#persist-file)
 
-* [How do I identify the best way to synchronize a deleted resource with the Terraform state?](/docs/schematics?topic=Schematics-general-faq#sync-delresource-terraform)
+* [How do I identify the best way to synchronize a deleted resource with the Terraform state?](/docs/schematics?topic=schematics-general-faq#sync-delresource-terraform)
 
-* [ How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?](/docs/schematics?topic=Schematics-general-faq#clusterquota-warn-faq)
+* [ How do I overcome the request exceeding the Cluster resource quota of '100' for the account in any region?](/docs/schematics?topic=schematics-general-faq#clusterquota-warn-faq)
 
-* [While creating OpenShift or Kubernetes resources, can I tune 90 minutes time out to higher?](/docs/schematics?topic=Schematics-general-faq#resourcetimeout-warn-faq)
+* [While creating OpenShift or Kubernetes resources, can I tune 90 minutes time out to higher?](/docs/schematics?topic=schematics-general-faq#resourcetimeout-warn-faq)
 
-* [How can I rectify the 403 Error while validating the location in the account. Verify you have permission to the location in the global catalog settings?](/docs/schematics?topic=Schematics-general-faq#global-setting-location)
+* [How can I rectify the 403 Error while validating the location in the account. Verify you have permission to the location in the global catalog settings?](/docs/schematics?topic=schematics-general-faq#global-setting-location)
 
-* [Can I start or stop the {{site.data.keyword.vsi_is_short}} based on tags and through scheduler or cron job?](/docs/schematics?topic=Schematics-general-faq#vm-tags-faq)
+* [Can I start or stop the {{site.data.keyword.vsi_is_short}} based on tags and through scheduler or cron job?](/docs/schematics?topic=schematics-general-faq#vm-tags-faq)
 
-* [Could I create a worker node in an existing worker node pool?](/docs/schematics?topic=Schematics-general-faq#workernode-kubernetes-faq)
+* [Could I create a worker node in an existing worker node pool?](/docs/schematics?topic=schematics-general-faq#workernode-kubernetes-faq)
 
-* [Where can I view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions?](/docs/schematics?topic=Schematics-general-faq#privateip-workspace-faq)
+* [Where can I view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions?](/docs/schematics?topic=schematics-general-faq#privateip-workspace-faq)
 
-* [Can I manually add, or remove a resource from the service dashboard directly?](/docs/schematics?topic=Schematics-general-faq#add-remove-resource-faq)
+* [Can I manually add, or remove a resource from the service dashboard directly?](/docs/schematics?topic=schematics-general-faq#add-remove-resource-faq)
 
-* [What changes can I make to my resources?](/docs/schematics?topic=Schematics-general-faq#resource-faq)
+* [What changes can I make to my resources?](/docs/schematics?topic=schematics-general-faq#resource-faq)
 
-* [How can I compare the required state of my cloud resources against the actual state of my resources?](/docs/schematics?topic=Schematics-general-faq#required-resource-state-faq)
+* [How can I compare the required state of my cloud resources against the actual state of my resources?](/docs/schematics?topic=schematics-general-faq#required-resource-state-faq)
 
-* [What are the deviations that cannot be detected?](/docs/schematics?topic=Schematics-general-faq#edit-resource-faq)
+* [What are the deviations that cannot be detected?](/docs/schematics?topic=schematics-general-faq#edit-resource-faq)
 
-* [How should I remove resources with {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=Schematics-general-faq#remove-resource-faq)
+* [How should I remove resources with {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=schematics-general-faq#remove-resource-faq)
 
-* [What happens if I choose to delete my resource directly from the resource dashboard?](/docs/schematics?topic=Schematics-general-faq#delete-resource-directly-faq)
+* [What happens if I choose to delete my resource directly from the resource dashboard?](/docs/schematics?topic=schematics-general-faq#delete-resource-directly-faq)
 
-* [Does {{site.data.keyword.bpshort}} supports `ibmcloud terraform` command?](/docs/schematics?topic=Schematics-general-faq#ibmcloud-terraform-cmd-faq)
+* [Does {{site.data.keyword.bpshort}} supports `ibmcloud terraform` command?](/docs/schematics?topic=schematics-general-faq#ibmcloud-terraform-cmd-faq)
 
-* [Can I access private network through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-general-faq#private-endpoint-faq)
+* [Can I access private network through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#private-endpoint-faq)
 
-* [How can I resolve the error message while connecting to Bastion host IP addresses through {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=Schematics-general-faq#bastion-ipaddress-faq)
+* [How can I resolve the error message while connecting to Bastion host IP addresses through {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=schematics-general-faq#bastion-ipaddress-faq)
 
-* [How do I create a cluster by using Terraform on {{site.data.keyword.cloud_notm}} environment?](/docs/schematics?topic=Schematics-general-faq#newcluster-workspace-faq)
+* [How do I create a cluster by using Terraform on {{site.data.keyword.cloud_notm}} environment?](/docs/schematics?topic=schematics-general-faq#newcluster-workspace-faq)
 
-* [Can I always set Terraform to use the latest or default version?](/docs/schematics?topic=Schematics-general-faq#terraform-defaultversion-faq)
+* [Can I always set Terraform to use the latest or default version?](/docs/schematics?topic=schematics-general-faq#terraform-defaultversion-faq)
 
-* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0` continue to use even if `Terraform version 2.0` or higher are released?](/docs/schematics?topic=Schematics-general-faq#terraform-type-faq)
+* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0` continue to use even if `Terraform version 2.0` or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
-* [Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?](/docs/schematics?topic=Schematics-general-faq#terraform-reqparam-faq)
+* [Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
 
-* [What is the difference between delete and destroy in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-general-faq#faq-delete-destroy)
+* [What is the difference between delete and destroy in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#faq-delete-destroy)
 
-* [Can I delete and destroy operation as one step?](/docs/schematics?topic=Schematics-general-faq#faq-delete-destroy-operation)
+* [Can I delete and destroy operation as one step?](/docs/schematics?topic=schematics-general-faq#faq-delete-destroy-operation)
 
-[Workspaces](/docs/schematics?topic=Schematics-workspaces-faq#workspaces-faq)
+[Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
-* [How do I overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?](/docs/schematics?topic=Schematics-workspaces-faq#createworkspace-authentication-error)
+* [How do I overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 
-* [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?](/docs/schematics?topic=Schematics-workspaces-faq#clone-file-extension)
+* [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
-* [How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?](/docs/schematics?topic=Schematics-workspaces-faq#migrate-terraform-v11)
+* [How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 
-* [How do I overcome the downtime while updating the workspace activities?](/docs/schematics?topic=Schematics-workspaces-faq#impact-downtime-workspace)
+* [How do I overcome the downtime while updating the workspace activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
 
-* [Why do the jobs delay in a queue when plan is generated?](/docs/schematics?topic=Schematics-workspaces-faq#job-queue-faq)
+* [Why do the jobs delay in a queue when plan is generated?](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq)
 
-* [How do I pull latest code from the Workspace through command-line?](/docs/schematics?topic=Schematics-workspaces-faq#latestcode-workspace-commandline)
+* [How do I pull latest code from the Workspace through command-line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
 
-* [What are the development tools and utilities used in the {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-workspaces-faq#schematics-tools)
+* [What are the development tools and utilities used in the {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#schematics-tools)
 
-* [How can I create workspace from command-line by using Git repositories and personal access token with full permission?](/docs/schematics?topic=Schematics-workspaces-faq#create-workspace-cli-tokens)
+* [How can I create workspace from command-line by using Git repositories and personal access token with full permission?](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
 
-* [How do I overcome the authorization issue when creating or updating a workspace or a template?](/docs/schematics?topic=Schematics-workspaces-faq#workspace-auth)
+* [How do I overcome the authorization issue when creating or updating a workspace or a template?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
 
-* [How can I access the {{site.data.keyword.bpshort}} services for test ID?](/docs/schematics?topic=Schematics-workspaces-faq#global-catalog-faq)
+* [How can I access the {{site.data.keyword.bpshort}} services for test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
-* [How can I download subfolders from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=Schematics-workspaces-faq#compact-faq)
+* [How can I download subfolders from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
-* [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=Schematics-workspaces-faq#clusterdeletion-warn-faq)
+* [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
-* [what is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=Schematics-workspaces-faq#gherepo-warn-faq)
+* [what is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
-* [How do I set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-workspaces-faq#releasetag-warn-faq)
+* [How do I set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
 
-* [Why I am getting 403 error instead of 404 error when providing an invalid workspace ID?](/docs/schematics?topic=Schematics-workspaces-faq#invalidwspid-warn-faq)
+* [Why I am getting 403 error instead of 404 error when providing an invalid workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
 
-* [How can I enable Terraform debug through the `ibmcloud schematics` command line?](/docs/schematics?topic=Schematics-workspaces-faq#terraform-debug-ibmcli)
+* [How can I enable Terraform debug through the `ibmcloud schematics` command line?](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
 
-* [How can I generate {{site.data.keyword.bpshort}} Workspaces import from CLI?](/docs/schematics?topic=Schematics-workspaces-faq#workspace-import-ibmcli)
+* [How can I generate {{site.data.keyword.bpshort}} Workspaces import from CLI?](/docs/schematics?topic=schematics-workspaces-faq#workspace-import-ibmcli)
 
-* [Can I download the {{site.data.keyword.bpshort}} Job files?](/docs/schematics?topic=Schematics-workspaces-faq#download-jobfile)
+* [Can I download the {{site.data.keyword.bpshort}} Job files?](/docs/schematics?topic=schematics-workspaces-faq#download-jobfile)
 
-* [Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} Workspaces console without using Catalog service or {{site.data.keyword.bpshort}} command line?](/docs/schematics?topic=Schematics-workspaces-faq#terraformcli-arguments-faq)
+* [Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} Workspaces console without using Catalog service or {{site.data.keyword.bpshort}} command line?](/docs/schematics?topic=schematics-workspaces-faq#terraformcli-arguments-faq)
 
-* [Does {{site.data.keyword.bpshort}} support to download the Terraform modules template from the private repository?](/docs/schematics?topic=Schematics-workspaces-faq#download-module-netrc-faq)
+* [Does {{site.data.keyword.bpshort}} support to download the Terraform modules template from the private repository?](/docs/schematics?topic=schematics-workspaces-faq#download-module-netrc-faq)
 
-* [Can I edit all the variables in the {{site.data.keyword.bpshort}} console instead of editing individually?](/docs/schematics?topic=Schematics-workspaces-faq#edit-variables-faq)
+* [Can I edit all the variables in the {{site.data.keyword.bpshort}} console instead of editing individually?](/docs/schematics?topic=schematics-workspaces-faq#edit-variables-faq)
 
-* [Can I set or manage keys for  `ibm_kms_key` resource when {{site.data.keyword.bpshort}} Workspaces imports Terraform?](/docs/schematics?topic=Schematics-workspaces-faq#kmskey-value-faq)
+* [Can I set or manage keys for  `ibm_kms_key` resource when {{site.data.keyword.bpshort}} Workspaces imports Terraform?](/docs/schematics?topic=schematics-workspaces-faq#kmskey-value-faq)
 
-* [Can I enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running workspace list command?](/docs/schematics?topic=Schematics-workspaces-faq#traces-api-faq)
+* [Can I enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
 
-* [How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` while trying to fetch {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=Schematics-workspaces-faq#badstatus-workspace-faq)
+* [How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` while trying to fetch {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
 
-* [How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?](/docs/schematics?topic=Schematics-workspaces-faq#gitlab-workspace-faq)
+* [How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?](/docs/schematics?topic=schematics-workspaces-faq#gitlab-workspace-faq)
 
-* [Does {{site.data.keyword.cloud_notm}} provider supports managing IAM access groups in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-workspaces-faq#manageaccessgrp-iam-faq)
+* [Does {{site.data.keyword.cloud_notm}} provider supports managing IAM access groups in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#manageaccessgrp-iam-faq)
 
-* [Could I create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in {{site.data.keyword.cloud_notm}} target account to provision?](/docs/schematics?topic=Schematics-workspaces-faq#account-resource-faq)
+* [Could I create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in {{site.data.keyword.cloud_notm}} target account to provision?](/docs/schematics?topic=schematics-workspaces-faq#account-resource-faq)
 
-* [Does `North America` location indicates `us-south`, `us-east`, or `both` during the {{site.data.keyword.bpshort}} Workspaces creation?](/docs/schematics?topic=Schematics-workspaces-faq#location-faq)
+* [Does `North America` location indicates `us-south`, `us-east`, or `both` during the {{site.data.keyword.bpshort}} Workspaces creation?](/docs/schematics?topic=schematics-workspaces-faq#location-faq)
 
-* [What are the port used to communicate with {{site.data.keyword.bpshort}} and resources, such as VPC services?](/docs/schematics?topic=Schematics-workspaces-faq#port-faq)
+* [What are the port used to communicate with {{site.data.keyword.bpshort}} and resources, such as VPC services?](/docs/schematics?topic=schematics-workspaces-faq#port-faq)
 
-* [When do I use {{site.data.keyword.bplong_notm}} versus the individual resource dashboards?](/docs/schematics?topic=Schematics-workspaces-faq#schematics-vs-cloud-resource-faq)
+* [When do I use {{site.data.keyword.bplong_notm}} versus the individual resource dashboards?](/docs/schematics?topic=schematics-workspaces-faq#schematics-vs-cloud-resource-faq)
 
-* [When I change my configuration file in GitHub, is my change automatically available in the next execution plan?](/docs/schematics?topic=Schematics-workspaces-faq#edit-resource-confg-faq)
+* [When I change my configuration file in GitHub, is my change automatically available in the next execution plan?](/docs/schematics?topic=schematics-workspaces-faq#edit-resource-confg-faq)
 
-* [Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?](/docs/schematics?topic=Schematics-workspaces-faq#resource-state-faq)
+* [Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?](/docs/schematics?topic=schematics-workspaces-faq#resource-state-faq)
 
-* [Are my resources removed when I remove the workspace?](/docs/schematics?topic=Schematics-workspaces-faq#delete-resource-wks-faq)
+* [Are my resources removed when I remove the workspace?](/docs/schematics?topic=schematics-workspaces-faq#delete-resource-wks-faq)
 
-* [How can I update a workspace created through payload in command-line to resolve invalid payload issue?](/docs/schematics?topic=Schematics-workspaces-faq#invalid-paylaod-cli)
+* [How can I update a workspace created through payload in command-line to resolve invalid payload issue?](/docs/schematics?topic=schematics-workspaces-faq#invalid-paylaod-cli)
 
-* [Is the drift detection a automatic in the {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=Schematics-workspaces-faq#drift-automatic-faq)
+* [Is the drift detection a automatic in the {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq)
 
-* [Can I initiate the drift detection?](/docs/schematics?topic=Schematics-workspaces-faq#drift-initiate-faq)
+* [Can I initiate the drift detection?](/docs/schematics?topic=schematics-workspaces-faq#drift-initiate-faq)
 
-* [Where can I see the status of the drift detection? Or How can I know if the workspace has drifted?](/docs/schematics?topic=Schematics-workspaces-faq#drift-status-faq)
+* [Where can I see the status of the drift detection? Or How can I know if the workspace has drifted?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
 
-* [Can I interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=Schematics-workspaces-faq#stopping-job-faq)
+* [Can I interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#stopping-job-faq)
 
-* [How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?](/docs/schematics?topic=Schematics-workspaces-faq#postcartapi-job-faq)
+* [How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?](/docs/schematics?topic=schematics-workspaces-faq#postcartapi-job-faq)
 
-* [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?](/docs/schematics?topic=Schematics-workspaces-faq#clicmdresource-job-faq)
+* [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
 
-* [How do I fix the `CreateWorkspaceWithContext failed Bad request` error while creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=Schematics-workspaces-faq#locationres-job-faq)
+* [How do I fix the `CreateWorkspaceWithContext failed Bad request` error while creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
 
 
 ## Troubleshooting
@@ -1823,74 +1823,74 @@ subcollection: schematics
 {: #sitemap_troubleshooting_schematics_apply_errors}
 
 
-[How can I find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=Schematics-nullresource-errors#nullresource-errors)
+[How can I find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
 
-[Why can't {{site.data.keyword.bpshort}} find my resource group?](/docs/schematics?topic=Schematics-rg-not-found#rg-not-found)
+[Why can't {{site.data.keyword.bpshort}} find my resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
 
-[Why am I getting 5xx HTTP errors?](/docs/schematics?topic=Schematics-server-errors#server-errors)
+[Why am I getting 5xx HTTP errors?](/docs/schematics?topic=schematics-server-errors#server-errors)
 
 
 ### Troubleshooting Schematics create errors
 {: #sitemap_troubleshooting_schematics_create_errors}
 
 
-[Why do {{site.data.keyword.bpshort}} Workspaces create through API/UI/CLI fails?](/docs/schematics?topic=Schematics-wks-create-api#wks-create-api)
+[Why do {{site.data.keyword.bpshort}} Workspaces create through API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
 
 
 ### Troubleshooting Blueprints
 {: #sitemap_troubleshooting_blueprints}
 
 
-[Blueprint create fails](/docs/schematics?topic=Schematics-bp-create-fails#bp-create-fails)
+[Blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
 
-* [Blueprint create fails with an invalid blueprint definitions: failed to clone Git repository error](/docs/schematics?topic=Schematics-bp-create-fails#bp-create-fails1)
+* [Blueprint create fails with an invalid blueprint definitions: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
 
-* [Blueprint create fails with an invalid blueprint definitions: unable to find file error](/docs/schematics?topic=Schematics-bp-create-fails#bp-create-fails2)
+* [Blueprint create fails with an invalid blueprint definitions: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
 
-* [Blueprint create fails with the requested resource group is invalid](/docs/schematics?topic=Schematics-bp-create-fails#bp-create-fails3)
+* [Blueprint create fails with the requested resource group is invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails3)
 
-* [Blueprint create fails with the error Blueprint JSON validation failed: field missing or invalid in config](/docs/schematics?topic=Schematics-bp-create-fails#bp-create-fails4)
+* [Blueprint create fails with the error Blueprint JSON validation failed: field missing or invalid in config](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails4)
 
-* [Blueprint create fails with the error Blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=Schematics-bp-create-fails#bp-create-fails5)
+* [Blueprint create fails with the error Blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails5)
 
-[Blueprint create fails in the Blueprint `create_init` step](/docs/schematics?topic=Schematics-bp-create-init-fails#bp-create-init-fails)
+[Blueprint create fails in the Blueprint `create_init` step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
-[Blueprint install fails](/docs/schematics?topic=Schematics-bp-install-fails#bp-install-fails)
+[Blueprint install fails](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails)
 
-* [Blueprint install fails with message "Install of module xyz Failed"](/docs/schematics?topic=Schematics-bp-install-fails#bp-install-fails1)
+* [Blueprint install fails with message "Install of module xyz Failed"](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails1)
 
-* [Blueprint install failure due to Terraform config coding error](/docs/schematics?topic=Schematics-bp-install-fails#bp-install-fails2)
+* [Blueprint install failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails2)
 
-* [Blueprint install failure due to Terraform timeouts or transient failures](/docs/schematics?topic=Schematics-bp-install-fails#bp-install-fails3)
+* [Blueprint install failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails3)
 
-* [Blueprint install failures that require changes to values in input files](/docs/schematics?topic=Schematics-bp-install-fails#bp-install-fails4)
+* [Blueprint install failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails4)
 
-* [Blueprint install failures that require changes to dynamic inputs](/docs/schematics?topic=Schematics-bp-install-fails#bp-install-fails5)
+* [Blueprint install failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails5)
 
 
 ### Troubleshooting Agents
 {: #sitemap_troubleshooting_agents}
 
 
-[How can I provide value to `schematics_resource_crn` variable?](/docs/schematics?topic=Schematics-agent-crn-not-found#agent-crn-not-found)
+[How can I provide value to `schematics_resource_crn` variable?](/docs/schematics?topic=schematics-agent-crn-not-found#agent-crn-not-found)
 
-[Why am I getting create endpoint gateway failed with wrong number of segments in CRN?](/docs/schematics?topic=Schematics-agent-endpoint-error#agent-endpoint-error)
+[Why am I getting create endpoint gateway failed with wrong number of segments in CRN?](/docs/schematics?topic=schematics-agent-endpoint-error#agent-endpoint-error)
 
-[Troubleshooting errors](/docs/schematics?topic=Schematics-handling-error#handling-error)
+[Troubleshooting errors](/docs/schematics?topic=schematics-handling-error#handling-error)
 
-* [Action error messages](/docs/schematics?topic=Schematics-handling-error#action-errmsg)
+* [Action error messages](/docs/schematics?topic=schematics-handling-error#action-errmsg)
 
-    * [Parameter error](/docs/schematics?topic=Schematics-handling-error#param-error)
+    * [Parameter error](/docs/schematics?topic=schematics-handling-error#param-error)
 
-    * [ Service error](/docs/schematics?topic=Schematics-handling-error#svc-error)
+    * [ Service error](/docs/schematics?topic=schematics-handling-error#svc-error)
 
-    * [State error](/docs/schematics?topic=Schematics-handling-error#state-error)
+    * [State error](/docs/schematics?topic=schematics-handling-error#state-error)
 
-    * [Job error](/docs/schematics?topic=Schematics-handling-error#job-error)
+    * [Job error](/docs/schematics?topic=schematics-handling-error#job-error)
 
 
 ## Getting help and support
 {: #sitemap_getting_help_and_support}
 
 
-[Getting help and support](/docs/schematics?topic=Schematics-schematics-help#schematics-help)
+[Getting help and support](/docs/schematics?topic=schematics-schematics-help#schematics-help)
