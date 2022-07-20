@@ -233,7 +233,7 @@ subcollection: schematics
 
     * [20 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2022)
 
-        * {{site.data.keyword.bpshort}} allowed IP address for US region are updated
+        * {{site.data.keyword.bpshort}} allowed IP address for `US` region are updated
 
     * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 
