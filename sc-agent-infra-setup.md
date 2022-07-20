@@ -18,7 +18,9 @@ subcollection: schematics
 # Installing {{site.data.keyword.bpshort}} Agent
 {: #agents-setup}
 
-The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro) installation and configuration involves the following steps: 
+The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro) are deployed in your {{site.data.keyword.cloud}} account and configured to connect to your {{site.data.keyword.bpshort}} service instance. You can follow these steps to use the included deployment automation to provision the required Kubernetes cluster and to install a single Agent in that cluster.
+{: shortdesc}
+
 1. Provisioning the Agent infrastructure (estimated time 45 - 90 minutes)
 2. Deploying the Agent services (estimated time 15 - 30 minutes)
 3. Connecting the Agent to {{site.data.keyword.bpshort}} (estimated time 15 - 20 minutes)
@@ -87,7 +89,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
     Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, click **Apply plan** to refresh your workspace.
     {: important}
 
-### Output
+### Expected outcome
 {: #agents-setup-infra-output}
 
 Follow the steps to view the Agent infrastructure workspace setup.
@@ -146,7 +148,7 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
 4. Click **Apply plan** on the `schematics-agent-service` workspace to deploy the Agent service. Wait 15 - 30 minutes to complete the service execution.
 5. View the **Jobs** logs and **Resources** page to observe the workspace status as `ACTIVE`.
 
-#### Output
+#### Expected outcome
 {: #agents-svc-output}
 
 Follow the steps to view the deployment of Agent service workspace.
