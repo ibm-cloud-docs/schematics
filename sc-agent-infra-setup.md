@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-07-20"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -33,8 +33,9 @@ The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set-up flo
 
 Before you begin, complete the following prerequisites.
 
-- Your {{site.data.keyword.cloud_notm}} account must be a paid account.
-- You must have the permissions to provision VPC, {{site.data.keyword.containerlong_notm}} cluster, and logging service in a predefined resource group.
+- You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information, about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
+- Check whether you have the permissions to [provision VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-access_reference#rbac_ref), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in a predefined resource group.
+- Check whether you have the [permissions](/docs/schematics?topic=schematics-access#workspace-permissions) to create a {{site.data.keyword.bpshort}} Workspaces.
 
 ## Provision the Agent infrastructure through UI
 {: #agents-setup-infra-ui}

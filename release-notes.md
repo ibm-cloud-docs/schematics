@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-20"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -28,6 +28,13 @@ For information about releases that occurred before 22 October 2021, see [What's
 
 Review the release notes for July 2022.
 {: shortdesc}
+
+### 20 July 2022
+{: #schematics-july2022}
+{: release-note}
+
+{{site.data.keyword.bpshort}} allowed IP address for US region are updated
+:   {{site.data.keyword.bpshort}} lists the `US` region allowed IP addresses to support `us-east` and `us-south` region endpoints.
 
 ### 11 July 2022
 {: #schematics-july1122}
