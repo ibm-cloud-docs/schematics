@@ -497,49 +497,50 @@ Here are the list of CURL commands used to provision the Agent Service:
    {: pre}
 
 5.  Run [apply command](/apidocs/schematics/schematics#apply-workspace-command) to provision an Agent service.
-   ```curl
-    curl -X PUT \
-    https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/apply \
-    -H 'authorization: <auth>' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -d '{
-        "name": "smulampa-schematics-agent-service-workspace",
-        "type": [
-            "terraform_v1.0"
-        ],
-        "description": "schematics agents service workspace",
-        "template_repo": {
-            "url": ""
-        },
-        "template_data": [{
-            "folder": ".",
-            "type": "terraform_v1.0",
-            "variablestore": [{
-                    "name": "agent_prefix",
-                    "type": "string",
-                    "value": "myproject-agent"
-                },
-                {
-                    "name": "location",
-                    "type": "string",
-                    "value": "us-south"
-                },
-                {
-                    "name": "resource_group_name",
-                    "type": "string",
-                    "value": "Default"
-                }
-            ]
-        }]
-    }'
+    ```curl
+        curl -X PUT \
+        https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/apply \
+        -H 'authorization: <auth>' \
+        -H 'cache-control: no-cache' \
+        -H 'content-type: application/json' \
+        -d '{
+            "name": "smulampa-schematics-agent-service-workspace",
+            "type": [
+                "terraform_v1.0"
+            ],
+            "description": "schematics agents service workspace",
+            "template_repo": {
+                "url": ""
+            },
+            "template_data": [{
+                "folder": ".",
+                "type": "terraform_v1.0",
+                "variablestore": [{
+                        "name": "agent_prefix",
+                        "type": "string",
+                        "value": "myproject-agent"
+                    },
+                    {
+                        "name": "location",
+                        "type": "string",
+                        "value": "us-south"
+                    },
+                    {
+                        "name": "resource_group_name",
+                        "type": "string",
+                        "value": "Default"
+                    }
+                ]
+            }]
+        }'
     ```
-   {: pre}
+    {: pre}
 
-   Wait 15 - 30 minutes to complete the service execution
-   {: note}
+     Wait 15 - 30 minutes to complete the service execution
+     {: note}
 
 6. Run [job logs](/apidocs/schematics/schematics#get-job) to pull your workspace logs.
+
     ```curl
     curl -X GET \
     https://schematics.cloud.ibm.com/v1/workspaces/workspaces/{w_id}/runtime_data/{template_id}/log_store \
@@ -547,7 +548,7 @@ Here are the list of CURL commands used to provision the Agent Service:
     -H 'cache-control: no-cache' \
     -H 'content-type: application/json' \
     ```
-   {: pre}
+    {: pre}
 
 7. Review the output to view the [Agent service workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-svc-output) execution.
 
