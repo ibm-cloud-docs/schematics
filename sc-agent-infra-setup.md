@@ -24,9 +24,9 @@ The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-age
 3. Connecting the Agent to {{site.data.keyword.bpshort}} (estimated time 15 - 20 minutes)
 4. Using the Agent to run your IaC automation (estimated time 15 - 20 minutes) 
 
-The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set-up flow that you can provision, deploy, connect, and use.
+The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow that you can provision, deploy, connect, and use.
 
-![{{site.data.keyword.bpshort}} Agents set up](images/sc_agents_architecture.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
 
 ## Prerequisites
 {: #agents-setup-prereq}
@@ -83,6 +83,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
 
 4. Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the Agent infrastructure. Wait 45 - 90 minutes to provision the resource. 
 5. View the **Jobs** logs and **Resources** page to monitor the resources are provisioned successfully and observe the workspace status as `ACTIVE`.
+
     Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, click **Apply plan** to refresh your workspace.
     {: important}
 
@@ -127,6 +128,7 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
     - Click `Create`.
 
 3. On successful creation of `schematics-agent-service` workspace, review, and edit the following Agent service input variables in the workspace **Settings** page.
+
     The Agent service workspace and the Agent service should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` recorded while provisioning the Agent infrastructure.
     {: note}
 
