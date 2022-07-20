@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-20"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -107,7 +107,7 @@ Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrie
 Blueprint delete API runs `Blueprint delete`, and `Blueprint jobs` APIs together, to performs the delete, and install Blueprint operations.
 {: important}
 
-Record the Blueprint ID that needs to be deleted. To list the Blueprint ID, run [Get all the blueprint instances](https://cloud.ibm.com/apidocs/schematics/schematics#list-blueprint) command.
+Record the Blueprint ID that needs to be deleted. To list the Blueprint ID, run [Get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
 Example
 

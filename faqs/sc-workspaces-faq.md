@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-07-20"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -25,7 +25,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} Workspac
 {: faq}
 {: support}
 
-You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](https://cloud.ibm.com/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer to, the following sample error message and the solution for the authentication error.
+You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, about creating IAM access token, see [Get token password](/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer to, the following sample error message and the solution for the authentication error.
 ```text
 Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
 ```

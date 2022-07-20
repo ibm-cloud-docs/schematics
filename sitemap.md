@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-19"
+lastupdated: "2022-07-20"
 
 keywords: schematics
 subcollection: schematics
@@ -230,6 +230,10 @@ subcollection: schematics
 * [July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july22)
 
     * Review the release notes for July 2022.
+
+    * [20 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2022)
+
+        * {{site.data.keyword.bpshort}} allowed IP address for `US` region are updated
 
     * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 

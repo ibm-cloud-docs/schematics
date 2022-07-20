@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-07-20"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -24,17 +24,18 @@ The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-age
 3. Connecting the Agent to {{site.data.keyword.bpshort}} (estimated time 15 - 20 minutes)
 4. Using the Agent to run your IaC automation (estimated time 15 - 20 minutes) 
 
-The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set-up flow that you can provision, deploy, connect, and use.
+The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow that you can provision, deploy, connect, and use.
 
-![{{site.data.keyword.bpshort}} Agents set up](images/sc_agents_architecture.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
 
 ## Prerequisites
 {: #agents-setup-prereq}
 
 Before you begin, complete the following prerequisites.
 
-- Your {{site.data.keyword.cloud_notm}} account must be a paid account.
-- You must have the permissions to provision VPC, {{site.data.keyword.containerlong_notm}} cluster, and logging service in a predefined resource group.
+- You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information, about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
+- Check whether you have the permissions to [provision VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-access_reference#rbac_ref), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in a predefined resource group.
+- Check whether you have the [permissions](/docs/schematics?topic=schematics-access#workspace-permissions) to create a Schematics Workspaces.
 
 ## Provision the Agent infrastructure through UI
 {: #agents-setup-infra-ui}
@@ -42,10 +43,10 @@ Before you begin, complete the following prerequisites.
 
 You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure in your {{site.data.keyword.cloud_notm}} account. The Agent infrastructure is composed of the following resources.
 
-    - [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
-    - [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
-    - [LogDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam)
-    - [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam)
+- [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
+- [IKS](/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
+- [LogDNA](/docs/log-analysis?topic=log-analysis-iam)
+- [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam)
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure Workspace.
@@ -82,6 +83,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
 
 4. Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the Agent infrastructure. Wait 45 - 90 minutes to provision the resource. 
 5. View the **Jobs** logs and **Resources** page to monitor the resources are provisioned successfully and observe the workspace status as `ACTIVE`.
+
     Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, click **Apply plan** to refresh your workspace.
     {: important}
 
@@ -126,6 +128,7 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
     - Click `Create`.
 
 3. On successful creation of `schematics-agent-service` workspace, review, and edit the following Agent service input variables in the workspace **Settings** page.
+
     The Agent service workspace and the Agent service should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` recorded while provisioning the Agent infrastructure.
     {: note}
 
@@ -165,7 +168,7 @@ Follow the steps to view the deployment of Agent service workspace.
 Before your begin
 - Setup your [CLI](/docs/schematics?topic=schematics-setup-cli).
 - Install [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
-- You have the right permission to create [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started), [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam) services.
+- You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
 Here are the list of commands used to provision the Agent infrastructure.
 
@@ -287,7 +290,7 @@ Here are the list of commands used to create the Agent service.
 {: api}
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
-2. You have the right permission to create [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started), [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam) services.
+2. You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
 Here are the list of CURL commands used to provision the Agent infrastructure:
 1. Run a workspace create command.

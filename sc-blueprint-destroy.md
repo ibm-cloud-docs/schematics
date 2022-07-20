@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-20"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Destroying a Blueprint
 {: #destroy-blueprint}
 
-The cloud resources created by a Blueprint are destroyed using the `blueprint destroy` command. If it is then needed to remove the Blueprint from Schematics, this is performed after all resources have been destroyed using the [Blueprint destroy](/docs/schematics?topic=schematics-sc-blueprint-delete) command. Refer to [Blueprints lifecycle](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands create, update and delete and the Blueprints lifecycle. 
+The cloud resources created by a Blueprint are destroyed using the `blueprint destroy` command. If it is then needed to remove the Blueprint from Schematics, this is performed after all resources have been destroyed using the [Blueprint destroy](/docs/schematics?topic=schematics-sc-blueprint-delete) command. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands create, update and delete and the Blueprints lifecycle. 
 
 For Terraform Workspaces, destroy runs a Terraform destroy operation against each Workspace in turn. This removes all cloud resources in reverse dependency order. 
 

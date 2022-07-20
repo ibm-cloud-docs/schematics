@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-20"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Updating a Blueprint
 {: #update-blueprint}
 
-Updating cloud resources with Blueprints is a two step process, update and install. The first step updates the Blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the definition, IaC module or inputs. The second [install](/docs/schematics?topic=schematics-sc-blueprint-install) step executes the IaC automation modules to deploy the changes in the Blueprint configuration.  For more information, refer to, [Blueprints lifecycle](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands.
+Updating cloud resources with Blueprints is a two step process, update and install. The first step updates the Blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the definition, IaC module or inputs. The second [install](/docs/schematics?topic=schematics-sc-blueprint-install) step executes the IaC automation modules to deploy the changes in the Blueprint configuration.  For more information, refer to, [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands.
 {: shortdesc} 
 
 Blueprint update leverages the capabilities of Terraform to perform updates to deployed cloud resources. The Terraform config and inputs to a workspace are updated and Terraform performs the execution.
