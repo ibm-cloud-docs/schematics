@@ -35,7 +35,7 @@ Before you begin, complete the following prerequisites.
 
 - You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information, about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
 - Check whether you have the permissions to [provision VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-access_reference#rbac_ref), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in a predefined resource group.
-- Check whether you have the [permissions](/docs/schematics?topic=schematics-access#workspace-permissions) to create a {{site.data.keyword.bpshort}} Workspaces.
+- Check whether you have the [permissions](/docs/schematics?topic=schematics-access#workspace-permissions) to create a Schematics Workspaces.
 
 ## Provision the Agent infrastructure through UI
 {: #agents-setup-infra-ui}
@@ -43,10 +43,10 @@ Before you begin, complete the following prerequisites.
 
 You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure in your {{site.data.keyword.cloud_notm}} account. The Agent infrastructure is composed of the following resources.
 
-    - [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
-    - [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
-    - [LogDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam)
-    - [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam)
+    - [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started) as `public_gateways`, `subnets`.
+    - [IKS](/docs/containers?topic=containers-access_reference) as `vpc_kubernetes_cluster`.
+    - [LogDNA](/docs/log-analysis?topic=log-analysis-iam)
+    - [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam)
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure Workspace.
@@ -166,7 +166,7 @@ Follow the steps to view the deployment of Agent service workspace.
 Before your begin
 - Setup your [CLI](/docs/schematics?topic=schematics-setup-cli).
 - Install [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
-- You have the right permission to create [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started), [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam) services.
+- You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
 Here are the list of commands used to provision the Agent infrastructure.
 
@@ -288,7 +288,7 @@ Here are the list of commands used to create the Agent service.
 {: api}
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
-2. You have the right permission to create [VPC infrastructure](https://cloud.ibm.com/docs/vpc?topic=vpc-iam-getting-started), [IKS](https://cloud.ibm.com/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](https://cloud.ibm.com/docs/activity-tracker?topic=activity-tracker-iam) services.
+2. You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
 Here are the list of CURL commands used to provision the Agent infrastructure:
 1. Run a workspace create command.

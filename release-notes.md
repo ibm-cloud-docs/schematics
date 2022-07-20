@@ -34,7 +34,7 @@ Review the release notes for July 2022.
 {: release-note}
 
 {{site.data.keyword.bpshort}} allowed IP address for US region are updated
-:   {{site.data.keyword.bpshort}} lists the `US` region allowed IP addresses to support `us-east` and `us-south` region endpoints.
+:   {{site.data.keyword.bpshort}} lists the [`US` region](/docs/schematics?topic=schematics-allowed-ipaddresses) allowed IP addresses to support `us-east` and `us-south` region endpoints.
 
 ### 11 July 2022
 {: #schematics-july1122}
