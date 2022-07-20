@@ -810,6 +810,8 @@ subcollection: schematics
 
 * [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
 
+* [Connecting Agent through API](/docs/schematics?topic=schematics-register-agent#register-api)
+
 * [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
 
 [Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)

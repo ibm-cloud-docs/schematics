@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-07-20"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -46,6 +46,105 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
     - **Delete Agent** to delete a Agent.
 
 
+
+## Connecting Agent through API
+{: #register-api}
+{: api}
+
+1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
+2. You have the right permission to create 
+    - [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started).
+    - [IKS](/docs/containers?topic=containers-access_reference) cluster.
+    - [LogDNA](/docs/log-analysis?topic=log-analysis-iam).
+    - [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
+
+Here are the list of CURL commands use to register and unregister the Agent. For more information, about the Agents related APIs, refer to, [Agents APIs](/apidocs/schematics/schematics#list-agent). 
+
+1. Run post API to [register an Agent](/apidocs/schematics/schematics#register-agent) with the {{site.data.keyword.bpshort}}.
+   ```sh
+    curl -X POST \
+    https://schematics.cloud.ibm.com/v2/settings/agents \
+    -H 'authorization: ' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -H 'github-token: github_token' \
+    -d '{
+        "name": "devclitestpart",
+        "description": "Register agent",
+        "resource_group": "Default",
+        "tags": [
+            "agent"
+        ],
+        "location": "<Enter your location>",
+        "agent_location": "<Enter your agent location>",
+        "profile_id": "<Enter you profile_id>",
+        "user_state": {
+            "state": "enable"
+        }
+    }'
+    ```
+    {: pre}
+
+2. Run get all API to [fetch all the registered or unregistered](/apidocs/schematics/schematics#list-agent) Agents from the Account.
+
+   ```sh
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v2/settings/agents \
+    -H 'authorization: ' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -H 'github-token: github_token' \
+    ```
+    {: pre}
+
+3. Run get API to fetch a [registered Agent](/apidocs/schematics/schematics#get-agent) details by providing the Agent ID in the path parameter.
+
+    ```sh
+    curl -X GET \
+    https://schematics.cloud.ibm.com/v2/settings/agents/{agent_id} \
+    -H 'authorization: ' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -H 'github-token: github_token' \
+    ```
+    {: pre}
+
+4. Optional: [Update the Agent](/apidocs/schematics/schematics#update-agent-registration) registration by providing the Agent ID in path parameter.
+
+   ```sh
+    curl -X PUT \
+    https://schematics.cloud.ibm.com/v2/settings/agents/{agent_id} \
+    -H 'authorization: \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -d '{
+        "name": "devclitestpart",
+        "description": "Register agent description changet",
+        "resource_group": "string",
+        "tags": [
+            "string"
+        ],
+        "location": "us-south",
+        "agent_location": "us-south",
+        "profile_id": "string",
+        "user_state": {
+            "state": "enable"
+        }
+    }'
+    ```
+    {: pre}
+
+5. Optional: [Deregister the Agent](/apidocs/schematics/schematics#delete-agent) by providing the Agent ID in path parameter.
+
+   ```sh
+    curl -X DELETE \
+    https://schematics.cloud.ibm.com/v2/settings/agents/{agent_id} \
+    -H 'authorization: ' \
+    -H 'cache-control: no-cache' \
+    -H 'content-type: application/json' \
+    -d ''
+    ```
+   {: pre}
 
 ## Next steps
 {: #connect-nextsteps}
