@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-15"
+lastupdated: "2022-07-21"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -18,7 +18,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to, the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the Beta release.
 {: beta}
 
-The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premise cloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses Terraform, Terraform CLI v1.0.11, Terraform CLI v1.1.5, and Microservices. For more information, about the Agents utilities, refer to, [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
+The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premise cloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, and `Microservices`. For more information, about the Agents utilities, refer to, [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
 {: shortdesc}
 
 ## Usage of an Agents
@@ -26,11 +26,11 @@ The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ab
 
 The following are the primary drivers to create the {{site.data.keyword.bplong_notm}} Agents.
 
-- Use {{site.data.keyword.bpshort}} and {{site.data.keyword.satellitelong}} to deploy and configure hybrid cloud resources such as private cloud resources, private data center resources, and other public cloud resources.
-- Use {{site.data.keyword.bpshort}} to securely connect and manage hybrid cloud infrastructure by using Terraform, Ansible, and other automation tools to perform the deployment, configurations, and the operations.
+- Use [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics) and [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) to deploy and configure hybrid cloud resources such as private cloud resources, private data center resources, and other public cloud resources.
+- Use {{site.data.keyword.bpshort}} to securely connect and manage hybrid cloud infrastructure by using [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about), [Ansible](/docs/schematics?topic=schematics-getting-started-ansible), and other automation tools to perform the deployment, configurations, and the day-2 operations.
 - Use to reduce your wait time in a shared {{site.data.keyword.bpshort}} queue to run your automation.
 - Use a dedicated infrastructure to run your automation and the ability to scale up or scale down the capacity depending on your automation workloads.
-- Use to fine tune the network policies such as ingress or egress rules that are used by {{site.data.keyword.bpshort}} to connect to hybrid cloud infrastructure.
+- Use to fine tune the network policies such as [ingress](/docs/openshift?topic=openshift-ingress-about-roks4) or [egress](/docs/openshift?topic=openshift-vpc-firewall#vpc-allowlist_workers_egress) rules that are used by {{site.data.keyword.bpshort}} to connect to hybrid cloud infrastructure.
 - Use your software, and versions in conjunction with automation engine provided by the {{site.data.keyword.bpshort}} runtime.
 
 ## {{site.data.keyword.bpshort}} Agent architecture
@@ -42,14 +42,14 @@ The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and
 
 1. As the {{site.data.keyword.bpshort}} Agents user, you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your cloud account. 
 2. Configure the {{site.data.keyword.bpshort}} Agent by using an `Agents infrastructure` and an `Agents service` Workspaces to create the cluster infrastructure.
-3. Integrate the {{site.data.keyword.bpshort}} private endpoint to the {{site.data.keyword.bplong_notm}} service to provision, configure, monitor, and operate your private or on-premise cloud resources.
+3. Integrate the {{site.data.keyword.bpshort}} private endpoint to the {{site.data.keyword.bplong_notm}} service to provision, configure, monitor, and operate as a Microservice on the user cloud.
 
 ## Comparing {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents
 {: #agents-comparision}
 
-Following are the advantage of using {{site.data.keyword.bpshort}} Agent against the listed components:
+The table lists the importance of using {{site.data.keyword.bpshort}} without Agent versus {{site.data.keyword.bpshort}} with Agent, with respect to the components such as cluster, cloud providers, compute time, latency, software, tenancy, and network configurations. 
 
-| Components | {{site.data.keyword.bpshort}} | {{site.data.keyword.bpshort}} Agent|
+| Components | {{site.data.keyword.bpshort}} without Agent | {{site.data.keyword.bpshort}} with Agent|
 | -- | -- | -- |
 | `Cluster` | Runs in {{site.data.keyword.bpshort}} cluster. | Runs in customer's cluster. |
 | `Cloud providers` | Works primarily with {{site.data.keyword.cloud_notm}} **Note** not tested with other cloud services. | Can integrate with any cloud service providers or private cloud. |
