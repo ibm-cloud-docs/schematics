@@ -792,7 +792,7 @@ subcollection: schematics
 
 * [Provision the Agent infrastructure through UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui)
 
-    * [Output](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output)
+    * [Expected outcome](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output)
 
     * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc)
 
