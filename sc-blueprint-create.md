@@ -32,14 +32,13 @@ Currently, you can only create a Blueprint from command-line by using the [creat
 {: note}
 
 ### Verify Blueprint creation from the UI 
-
+{: #verify-blueprint-create-ui}
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
 2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` should show the summary details of the Blueprint create job. 
 3. Click **Modules** tab to see the status of the resource modules. These will be in `Inactive` state.
 4. Click **Jobs history** tab view the result of the Blueprint create job and operations performed against the resource modules.  
-7. Click **Settings** tab to view the summary of the new Blueprint configuration.
-
+5. Click **Settings** tab to view the summary of the new Blueprint configuration.
 
 
 For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
@@ -77,6 +76,7 @@ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Defau
 On successful completion the create command returns **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint. For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
 
 ### Verify Blueprint create 
+{: #verify-blueprint-create-cli}
 
 Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 

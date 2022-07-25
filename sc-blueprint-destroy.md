@@ -29,6 +29,7 @@ For Terraform Workspaces, destroy runs a Terraform destroy operation against eac
 You can only destroy the cloud resources created by a Blueprint from command-line by using the [destroy command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
 
 ### Verify Blueprint destroy 
+{: #verify-bp-destory-ui}
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the destroy operation. 
 2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
@@ -52,6 +53,7 @@ On successful completion the destroy command returns **fullfilment_success**.
 For more information, about the command options, see [Destroy command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy).
 
 ### Verify Blueprint destroy success 
+{: #verify-bp-destory-cli}
 
 Verify that the Blueprint resources have been destroyed successfully. When you run destroy from the CLI, the command displays details of the Workspaces to be destroyed and the status of {{site.data.keyword.bpshort}} jobs executing the Terraform destroy operations. After prompting to confirm that the user intends to destory all resources, the command only returns on completion.
 

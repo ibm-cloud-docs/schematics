@@ -59,7 +59,7 @@ toc:
           - sc-blueprint-create.md
           - sc-blueprint-install.md
           - sc-blueprint-display.md
-          - sc-blueprint-jobs.md</staging>
+          - sc-blueprint-jobs.md
           - sc-blueprint-update.md
           - sc-blueprint-destroy.md
           - sc-blueprint-delete.md

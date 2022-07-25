@@ -29,6 +29,7 @@ This behaviour can be modified by using the `-force-delete` flag to allow deleti
 You can only delete Blueprint from command-line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
 
 ### Verify Blueprint deletion 
+{: #verify-bp-deletion-ui}
 
 After deletion the Blueprint will not be displayed in the UI. 
 
@@ -62,6 +63,7 @@ OK
 {: screen}
 
 ### Verify Blueprint delete 
+{: #verify-bp-delete-cli}
 
 During the Beta, the delete CLI command does not wait for successful job completion and returns immediately. 
 

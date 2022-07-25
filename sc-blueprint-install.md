@@ -79,7 +79,6 @@ For more information, about how to diagnose and resolve issues if the install fa
 
 Currently, you can only install a Blueprint from command-line by using the [install command](#install-blueprint-cli) to deploy cloud resources.
 
-
 ### Verify Blueprint install from the UI 
 {: #bp-verify-install-ui}
 
@@ -88,7 +87,6 @@ Currently, you can only install a Blueprint from command-line by using the [inst
 3. Click **Modules** tab to see the status of the resource modules that are now in `Active` status.
 4. Click **Resource** tab to view your provisioned resources list.
 5. Click **Jobs history** tab view the result of the Blueprint install job and operations performed against the resource modules to deploy the resources.  
-
 
 
 ## Next steps

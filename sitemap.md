@@ -469,11 +469,11 @@ subcollection: schematics
 
 * [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
 
-    * [Verify Blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-creation-from-the-ui)
+    * [Verify Blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-ui)
 
 * [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
 
-    * [Verify Blueprint create](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create)
+    * [Verify Blueprint create](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-cli)
 
 * [Creating a Blueprint from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
@@ -505,11 +505,29 @@ subcollection: schematics
 
 * [Displaying a Blueprint from the UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
 
+* [Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
+
+    * [Blueprint job list](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-output-cli)
+
+* [Viewing Blueprint job results](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
+
+    * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
+
+    * [Blueprint job get summary log](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-drilldown-cli)
+
+* [Viewing Blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
+
+    * [Blueprint job log output](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
+
+* [Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
+
+* [Viewing Blueprint job results](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
+
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
 * [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
 
-    * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-blueprint-update-from-the-ui)
+    * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
@@ -523,11 +541,11 @@ subcollection: schematics
 
 * [Destroying a Blueprint from the UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
 
-    * [Verify Blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint#verify-blueprint-destroy)
+    * [Verify Blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destory-ui)
 
 * [Destroying a Blueprint from the CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
 
-    * [Verify Blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-blueprint-destroy-success)
+    * [Verify Blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destory-cli)
 
 * [Destroying a Blueprint from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
 
@@ -537,11 +555,11 @@ subcollection: schematics
 
 * [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
 
-    * [Verify Blueprint deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-blueprint-deletion)
+    * [Verify Blueprint deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
 
 * [Deleting Blueprint from the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
 
-    * [Verify Blueprint delete](/docs/schematics?topic=schematics-delete-blueprint#verify-blueprint-delete)
+    * [Verify Blueprint delete](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-cli)
 
 * [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
