@@ -1,4 +1,4 @@
-<staging>---
+---
 
 copyright:
   years: 2017, 2022
@@ -55,7 +55,7 @@ To display the details of Blueprints and their configuration with the CLI, use t
 - `detailed` Blueprint configuration, settings and source URLs. 
 - `modules` Detailed listing of the Blueprint definition, modules and variables
 - `outputs` Output variables returned by Blueprint on deploying cloud resources.
- 
+
 For a complete listing of options, see the [ibmcloud schematics blueprint get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get) command.
 {: shortdesc}
 
@@ -141,7 +141,7 @@ OK
 
 This example shows the returned computed value for the output variable `blueprint-output`  
 
-### Blueprint display summary 
+### Blueprint display summary CLI
 {: #display-blueprint-summary-cli}
 
 **Syntax:**

@@ -1,4 +1,4 @@
-<staging>---
+---
 
 copyright:
   years: 2017, 2022
@@ -226,7 +226,7 @@ OK
 
 
 
-## Listing Blueprint jobs
+## Listing Blueprint jobs UI
 {: #list-blueprint-jobs-ui}
 {: ui}
 
@@ -238,7 +238,7 @@ The results of Blueprints operations, `create`, `install`, `update`, `destroy` a
 
 The color coding indicates if the job was successful or failed. 
 
-## Viewing Blueprint job results
+## Viewing Blueprint job results UI
 {: #blueprint-job-get-ui}
 {: ui}
 
@@ -249,6 +249,5 @@ The color coding indicates if the job was successful or failed.
 This will open up a detailed view of the Blueprint job results, which contains a number of child jobs. The color coding of the child jobs will indicate which job log should be reviewed for further information about job failures. 
 
 Blueprint operations are performed by child `module` jobs operating against each module (Workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A Blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
-
 4. Click on the name of a child job to review the job log.  
     - Optional: Click **Show more** to view the full job log. 

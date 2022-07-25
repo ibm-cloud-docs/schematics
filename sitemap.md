@@ -501,7 +501,7 @@ subcollection: schematics
 
     * [Blueprint display outputs](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-outputs-cli)
 
-    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
+    * [Blueprint display summary CLI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
 
 * [Displaying a Blueprint from the UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
 
@@ -519,9 +519,9 @@ subcollection: schematics
 
     * [Blueprint job log output](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
 
-* [Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
+* [Listing Blueprint jobs UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
 
-* [Viewing Blueprint job results](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
+* [Viewing Blueprint job results UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
