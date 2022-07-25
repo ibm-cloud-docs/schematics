@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-07-25"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -53,6 +53,17 @@ Type:       string
 Required:   true
 
 Name that is used to identify the blueprint definition in use 
+
+### type
+{: #bp-type}
+
+Type:       string
+
+Required:   true
+
+Required file type identifier 
+
+Value: `blueprint`
 
 ### schema_version
 {: #bp-schema-version}
@@ -166,8 +177,8 @@ modules:
   - name: bp-vsi-resource-group
     module_type: terraform 
     source:
+      source_type: github
       git: 
-        source_type: github
         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/master/IBM-ResourceGroup"
         git_branch: master
     inputs:
@@ -181,8 +192,8 @@ modules:
   - name: bp-vsi-cos-storage
     module_type: terraform 
     source:
+      source_type: github
       git:
-        source_type: github
         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/master/IBM-Storage"
         git_branch: master
     inputs:
@@ -191,7 +202,7 @@ modules:
       - name: cos_single_site_loc
         value: "ams03"
       - name: resource_group_id
-        value: $workitem.bp-vsi-resource-group.outputs.resource_group_id
+        value: $module.bp-vsi-resource-group.outputs.resource_group_id
     outputs:
       - name: cos_id
       - name: cos_crn
@@ -289,7 +300,7 @@ inputs:
   - name: cos_single_site_loc
     value: "ams03"
   - name: resource_group_id
-    value: $workitem.bp-vsi-resource-group.outputs.resource_group_id
+    value: $module.bp-vsi-resource-group.outputs.resource_group_id
   - name: docker_ports
     value: $blueprint.docker_ports
     type: |

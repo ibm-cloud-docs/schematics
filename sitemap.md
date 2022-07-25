@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-25"
 
 keywords: schematics
 subcollection: schematics
@@ -469,7 +469,11 @@ subcollection: schematics
 
 * [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
 
+    * [Verify Blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-creation-from-the-ui)
+
 * [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
+
+    * [Verify Blueprint create](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create)
 
 * [Creating a Blueprint from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
@@ -479,25 +483,51 @@ subcollection: schematics
 
 * [Installing a Blueprint from the CLI](/docs/schematics?topic=schematics-install-blueprint#install-blueprint-cli)
 
-* [Verify Blueprint install success](/docs/schematics?topic=schematics-install-blueprint#bp-verify-install)
+    * [Verify Blueprint install success](/docs/schematics?topic=schematics-install-blueprint#bp-verify-install-cli)
+
+* [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-install-blueprint#create-blueprint-ui)
+
+    * [Verify Blueprint install from the UI](/docs/schematics?topic=schematics-install-blueprint#bp-verify-install-ui)
 
 * [Next steps](/docs/schematics?topic=schematics-install-blueprint#bp-install-nextsteps)
+
+* [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
+
+    * [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
+
+* [Displaying Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
+
+    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
+
+    * [Blueprint display outputs](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-outputs-cli)
+
+    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
+
+* [Displaying a Blueprint from the UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
 * [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
 
+    * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-blueprint-update-from-the-ui)
+
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
+
+    * [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-blueprint-update)
 
 * [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
-    * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-api-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
 
 [Destroying a Blueprint](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint)
 
 * [Destroying a Blueprint from the UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
 
+    * [Verify Blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint#verify-blueprint-destroy)
+
 * [Destroying a Blueprint from the CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
+
+    * [Verify Blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-blueprint-destroy-success)
 
 * [Destroying a Blueprint from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
 
@@ -507,7 +537,11 @@ subcollection: schematics
 
 * [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
 
+    * [Verify Blueprint deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-blueprint-deletion)
+
 * [Deleting Blueprint from the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
+
+    * [Verify Blueprint delete](/docs/schematics?topic=schematics-delete-blueprint#verify-blueprint-delete)
 
 * [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
@@ -1322,6 +1356,8 @@ subcollection: schematics
 * [Supporting setting parameters](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-parameters)
 
     * [name](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-name)
+
+    * [type](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-type)
 
     * [schema_version](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-schema-version)
 

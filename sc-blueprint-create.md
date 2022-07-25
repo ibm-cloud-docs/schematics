@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-25"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -27,22 +27,20 @@ The first step in deploying cloud resources is the creation of a Blueprint in {{
 {: #create-blueprint-ui}
 {: ui}
 
-1. Open the [{{site.data.keyword.bpshort}} Blueprints page](https://cloud.ibm.com/schematics/blueprints){: external}. 
-2. Click **Create Blueprint via CLI**.
-    Currently, you can only create Blueprint from command-line by using [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli) and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
-    {: note}
 
-   Verify Blueprint creation from the UI 
+Currently, you can only create a Blueprint from command-line by using the [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli). Followed by [install](/docs/schematics?topic=schematics-install-blueprint) command to create cloud resources.
+{: note}
 
-    1. Click your Blueprint that are listed from the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-    2. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
-        - Optional: From **Modules status** section, Click **View details** to view the module details.
-        - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
-    3. Click **Modules** tab to see the list of resource modules that are in `Active` status.
-    4. Click **Resource** tab to view your provisioned resources list.
-    5. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
-    6. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
-    7. Click **Settings** tab to view the summary of the deployed Blueprint.
+### Verify Blueprint creation from the UI 
+
+
+1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
+2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` should show the summary details of the Blueprint create job. 
+3. Click **Modules** tab to see the status of the resource modules. These will be in `Inactive` state.
+4. Click **Jobs history** tab view the result of the Blueprint create job and operations performed against the resource modules.  
+7. Click **Settings** tab to view the summary of the new Blueprint configuration.
+
+
 
 For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
@@ -78,7 +76,7 @@ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Defau
 
 On successful completion the create command returns **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint. For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
 
-Verify Blueprint create 
+### Verify Blueprint create 
 
 Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 
@@ -112,7 +110,7 @@ For more information, about how to diagnose and resolve issues if the create fai
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint update, refer to, [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-Blueprint create API runs `Blueprint create`, and `Blueprint jobs` APIs together, to performs the create, and install Blueprint operations.
+Blueprint create API runs `Blueprint create`, and `Blueprint jobs` APIs together, to perform the create, and install Blueprint operations.
 {: important}
 
 Example

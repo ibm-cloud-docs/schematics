@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-25"
 
 keywords: blueprint install, install blueprint, blueprint
 
@@ -25,7 +25,7 @@ Blueprint install is the second step required to create or modify cloud resource
 {: #install-blueprint-cli}
 {: cli}
 
-To install and deploy your Blueprint with the CLI, use the `ibmcloud schematics blueprint install` command. This command requires a name and the Git URL of a Blueprint definition and other optional arguments. For a complete listing of options, see the [ibmcloud schematics blueprint install](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
+To install and deploy your Blueprint with the CLI, use the `ibmcloud schematics blueprint install` command. 
 {: shortdesc}
 
 Before your begin
@@ -43,8 +43,8 @@ ibmcloud schematics blueprint install -id eu-de.BLUEPRINT.Blueprint-Basic-Exampl
 
 On successful completion the install command returns **fullfilment_success**. 
 
-## Verify Blueprint install success 
-{: #bp-verify-install}
+### Verify Blueprint install success 
+{: #bp-verify-install-cli}
 
 Verify that the Blueprint has been installed successfully. When you install the Blueprint from the CLI, the command displays details of the Workspaces being installed and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs executing the IaC automation code. The command only returns on completion.
 
@@ -72,6 +72,25 @@ On successful completion the install command returns **fullfillment_success**.
 
 For more information, about how to diagnose and resolve issues if the install fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
+
+## Creating a Blueprint from the UI 
+{: #create-blueprint-ui}
+{: ui}
+
+Currently, you can only install a Blueprint from command-line by using the [install command](#install-blueprint-cli) to deploy cloud resources.
+
+
+### Verify Blueprint install from the UI 
+{: #bp-verify-install-ui}
+
+1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the install operation. 
+2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` should show the summary details of the Blueprint install job. 
+3. Click **Modules** tab to see the status of the resource modules that are now in `Active` status.
+4. Click **Resource** tab to view your provisioned resources list.
+5. Click **Jobs history** tab view the result of the Blueprint install job and operations performed against the resource modules to deploy the resources.  
+
+
+
 ## Next steps
 {: #bp-install-nextsteps}
 
@@ -80,4 +99,4 @@ After installing the Blueprint, the cloud resources are now deployed. The resour
 
 The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
 
-Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
+Looking for additional Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 

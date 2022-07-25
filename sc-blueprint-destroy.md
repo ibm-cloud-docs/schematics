@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-25"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -26,19 +26,15 @@ For Terraform Workspaces, destroy runs a Terraform destroy operation against eac
 {: #destroy-blueprint-ui}
 {: ui}
 
-You can only destroy Blueprint from command-line by using the [destroy command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete) and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
+You can only destroy the cloud resources created by a Blueprint from command-line by using the [destroy command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
 
-Verify Blueprint creation 
+### Verify Blueprint destroy 
 
-1. Click your Blueprint that are listed from the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-2. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
-    - Optional: From **Modules status** section, Click **View details** to view the module details.
-    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
-3. Click **Modules** tab to see the list of resource modules that are in `Active` status.
-4. Click **Resource** tab to view your provisioned resources list.
-5. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
-6. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
-7. Click **Settings** tab to view the summary of the deployed Blueprint.
+1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the destroy operation. 
+2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
+3. Click **Modules** tab to see the list of resource modules. These will be in an `Inactive` state.
+4. Click **Jobs history** tab view the result of the Blueprint destroy job and operations performed against the resource modules.  
+
 
 ## Destroying a Blueprint from the CLI
 {: #destroy-blueprint-cli}
@@ -55,7 +51,7 @@ On successful completion the destroy command returns **fullfilment_success**.
 
 For more information, about the command options, see [Destroy command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy).
 
-Verify Blueprint destroy success 
+### Verify Blueprint destroy success 
 
 Verify that the Blueprint resources have been destroyed successfully. When you run destroy from the CLI, the command displays details of the Workspaces to be destroyed and the status of {{site.data.keyword.bpshort}} jobs executing the Terraform destroy operations. After prompting to confirm that the user intends to destory all resources, the command only returns on completion.
 
@@ -80,6 +76,7 @@ OK
 {: screen}
 
 On successful completion the destroy command will return **fullfillment_success**. Successful command completion and the status of the Workspaces as `Inactive` indicates that resources in all linked Workspaces have been destroyed
+
 
 ## Destroying a Blueprint from the API
 {: #destroy-blueprint-api}
