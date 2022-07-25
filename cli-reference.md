@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-07-25"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -373,7 +373,7 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 ## Agents commands
 {: #agents-cmd}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to, the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
 {: beta}
 
 ### `ibmcloud schematics agents bind-workspaces`
@@ -822,7 +822,7 @@ Using the `ibmcloud schematics blueprint get` command you can display the config
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint get --id BLUEPRINT_ID [--profile PROFILE]
+ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL]
 ```
 {: pre}
 
@@ -831,7 +831,7 @@ ibmcloud schematics blueprint get --id BLUEPRINT_ID [--profile PROFILE]
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The ID of the Blueprints. |
-| `--profile` or `-p` | Optional | Level of details to return. Valid values are `detailed` or `d`, `modules` or `m`, and `outputs` or `o`. The default value is **summary**. |
+| `--level` or `-l` | Optional | Level of details to return. Valid values are `summary`, `detailed`, `modules`, and `outputs`. The default value is **summary**. |
 {: caption="{{site.data.keyword.bpshort}} Blueprints get flags" caption-side="top"}
 
 **Example:**

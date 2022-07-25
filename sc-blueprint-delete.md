@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-25"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -26,19 +26,13 @@ This behaviour can be modified by using the `-force-delete` flag to allow deleti
 {: #delete-blueprint-ui}
 {: ui}
 
-You can only delete Blueprint from command-line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete) and [install](/docs/schematics?topic=schematics-install-blueprint) commands.
+You can only delete Blueprint from command-line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
 
-Verify Blueprint creation 
+### Verify Blueprint deletion 
+{: #verify-bp-deletion-ui}
 
-1. Click your Blueprint that are listed from the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-2. Click **Overview** to view the summary such as `Modules`, `Variables`, `Details`, `Recent Job runs` of your Blueprint. 
-    - Optional: From **Modules status** section, Click **View details** to view the module details.
-    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
-3. Click **Modules** tab to see the list of resource modules that are in `Active` status.
-4. Click **Resource** tab to view your provisioned resources list.
-5. Click **Variables** tab to view your **Inputs** and **Outputs** configurations.
-6. Click **Jobs history** tab view all Blueprints, and module activities in the jobs log.
-7. Click **Settings** tab to view the summary of the deployed Blueprint.
+After deletion the Blueprint will not be displayed in the UI. 
+
 
 ## Deleting Blueprint from the CLI
 {: #delete-blueprint-cli}
@@ -68,8 +62,8 @@ OK
 ```
 {: screen}
 
-
-Verify Blueprint delete 
+### Verify Blueprint delete 
+{: #verify-bp-delete-cli}
 
 During the Beta, the delete CLI command does not wait for successful job completion and returns immediately. 
 
@@ -94,7 +88,7 @@ OK
 ```
 {: screen}
 
-The Blueprint and all of its cloud resources are now deleted. 
+During the delete operation the status will show `In Progress`, when completed the status will change to `Normal`. The Blueprint and all of its cloud resources are now deleted. 
 
 For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
 
