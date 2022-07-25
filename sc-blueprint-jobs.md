@@ -15,7 +15,8 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-## Listing Blueprint jobs
+
+# Listing Blueprint jobs
 {: #list-blueprint-jobs-cli}
 {: cli}
 
@@ -31,7 +32,7 @@ ibmcloud schematics blueprint job list -id <blueprint_id>
 
 On successful completion the list command returns the list of jobs executed for this Blueprint. This example does not follow the interactive prompt. 
 
-### Blueprint job list 
+## Blueprint job list 
 {: #list-blueprint-output-cli} 
 
 ```text        
@@ -72,7 +73,6 @@ Enter Job sequence number to get Blueprint child job output summary(or enter no/
 {: screen}
 
 Review the following section for the `blueprint job get` command for an explanation of the job output. 
-
 
 ## Viewing Blueprint job results
 {: #blueprint-job-get-cli}
@@ -181,7 +181,7 @@ Only the last 15 lines of a child job log are shown. On Terraform failures, thes
 If it is desired to review the **full** job log output for a child job, the CLI command to view the full job log for a child job is shown at the end of the get job output. Cut and paste this into your terminal window to view the full log. 
 
 
-## Viewing Blueprint job logs
+### Viewing Blueprint job logs
 {: #blueprint-job-log-cli}
 {: cli}
 
@@ -201,8 +201,7 @@ ibmcloud schematics blueprint job logs -id <job_id>
 {: pre}
 
 
-### Blueprint job log output
-{: #blueprint-job-log-cli} 
+Output
 
 ```text        
  2022/07/08 13:54:34 -----  New Environment Action  -----
@@ -223,7 +222,6 @@ ibmcloud schematics blueprint job logs -id <job_id>
 OK
 ```
 {: screen}
-
 
 
 ## Listing Blueprint jobs UI
