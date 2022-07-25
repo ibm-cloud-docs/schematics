@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-## Listing Blueprints
+# Listing Blueprints
 {: #list-blueprint-cli}
 {: cli}
 
@@ -107,9 +107,9 @@ ibmcloud schematics blueprint get -id <blueprint_id> -level outputs
 On successful completion the get command returns the summary details of the Blueprint and the output variables returned by the Blueprint.  
 
 ```text
-BLUEPRINT          
-                
-Name            Blueprint_Complex   
+BLUEPRINT
+
+Name            Blueprint_Complex
 ID              us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
 Status          Normal   
 Location        us-south   

@@ -491,7 +491,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-install-blueprint#bp-install-nextsteps)
 
-* [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
+[Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
     * [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
 
@@ -505,9 +505,9 @@ subcollection: schematics
 
 * [Displaying a Blueprint from the UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
 
-* [Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
+[Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
 
-    * [Blueprint job list](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-output-cli)
+* [Blueprint job list](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-output-cli)
 
 * [Viewing Blueprint job results](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
 
@@ -515,9 +515,7 @@ subcollection: schematics
 
     * [Blueprint job get summary log](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-drilldown-cli)
 
-* [Viewing Blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
-
-    * [Blueprint job log output](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
+    * [Viewing Blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
 
 * [Listing Blueprint jobs UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
 
