@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-07-26"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -554,7 +554,7 @@ ibmcloud schematics agents update --id AGENT_ID
 ### `ibmcloud schematics workspace new with Agent`
 {: #schematics-agent-new}
 
-Create the {{site.data.keyword.bpshort}} Workspace to work with your Terraform configuration and bind your Agent to the new Workspace. 
+Create the {{site.data.keyword.bpshort}} Workspace to work with your Terraform configuration and bind your Agent to the new workspace. 
 
 **Syntax:**
 

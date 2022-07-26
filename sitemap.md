@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-07-26"
 
 keywords: schematics
 subcollection: schematics
@@ -495,7 +495,7 @@ subcollection: schematics
 
 [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
-    * [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
+* [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
 
 * [Displaying Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 
