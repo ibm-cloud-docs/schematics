@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-07-26"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -38,11 +38,12 @@ The following are the primary drivers to create the {{site.data.keyword.bplong_n
 
 The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and how it functions in {{site.data.keyword.bpshort}}?
 
-![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.png){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
 1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
-2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui) and an [Agents service workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-svc) to create the cluster infrastructure.
-3. Integrate the {{site.data.keyword.bpshort}} private endpoint with the {{site.data.keyword.bplong_notm}} service to provision, configure, monitor, and operate as a Microservice application on the user cloud.
+2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa2) to create your cluster infrastructure.
+3. Integrate the {{site.data.keyword.bpshort}} private endpoint with the {{site.data.keyword.bpshort}} service to provision, configure, and monitor your application through {{site.data.keyword.bpshort}} Agent.
+4. Manage your tools and softwares through Agents services containing the microservices such as Job, job-runner, and sandbox on the user cloud.
 
 ## Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents
 {: #agents-augmenting}

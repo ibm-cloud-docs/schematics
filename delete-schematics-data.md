@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-07-26"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -68,7 +68,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using IBM Cloud Console.
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/inventories){: external}, select the inventories that you want to delete.
-2. Click three dots against the inventory you want to delete and click **Delete**.
+2. Click `...` dots against the inventory you want to delete and click **Delete**.
 3. Type your inventory name in **Type Inventory_name to confirm** text box.
 4. Click **Delete** button.
 

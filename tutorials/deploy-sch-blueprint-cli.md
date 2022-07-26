@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-07-26"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -34,7 +34,7 @@ In this tutorial, you will deploy a {{site.data.keyword.bpshort}} Blueprint envi
 Before your begin
 
 - Install and login to the [{{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli).
-- Select the {{site.data.keyword.cloud_notm}} region you wish to use to manage your {{site.data.keyword.bpshort}} Blueprint environment. Set the region by running the command `ibmcloud target --region <us-south>`.
+- Select the {{site.data.keyword.cloud_notm}} region you wish to use to manage your {{site.data.keyword.bpshort}} Blueprint environment. Set the region by running the command `ibmcloud target -r <us-south>`.
 - Install the [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) plug-in, or [update the command line plug-in](/docs/schematics?topic=schematics-setup-cli#schematics-cli-update) to access the {{site.data.keyword.bpshort}} Blueprints commands.
 - Check that you have the right [permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 
@@ -46,7 +46,7 @@ This tutorial uses a [sample Blueprint](https://github.com/Cloud-Schematics/blue
 
 The sample Blueprint takes two input parameters, `provision_rg=false`, and `resource_group_name=Default`. These configure the Blueprint to retrieve the ID of the Default resource group. See the example README file for alternative parameters to create a new resource group. 
 
-## Create {{site.data.keyword.bpshort}} Blueprint
+## Create the Blueprint
 {: #create-schematics-blueprint-cli}
 {: step}
 

@@ -1,16 +1,16 @@
 {
     "charges": [
       "charged for when I use Schematics",
-      "how much does schematics cost",
-      "price of schmatics",
-      "use schematics for free",
+      "how much does Schematics cost",
+      "price of Schematics",
+      "use Schematics for free",
       "price for Cloud Schematics",
-      "pricing for schematics",
+      "pricing for Schematics",
       "use Schematics for free",
       "costs of Schematics",
-      "how do you charge schematics",
-      "is schematics free",
-      "schematics at no cost"
+      "how do you charge Schematics",
+      "is Schematics free",
+      "Schematics at no cost"
     ],
     "ansible-playbooks": [
       "run Ansible playbooks with Schematics",
@@ -18,12 +18,12 @@
       "run Ansible actions in Schematics",
       "how to use the Ansible provisioner",
       "use of Ansible provisioner",
-      "Ansible in schematics",
+      "Ansible in Schematics",
       "Ansible playbooks",
       "want to run Ansible actions in Cloud",
       "running Ansible actions for Cloud",
       "run Ansible playbooks within Cloud",
-      "how to use the Ansible in schematics"
+      "how to use the Ansible in Schematics"
     ],
     "provider-versions": [
       "Schematics supports multiple Terraform provider versions",
@@ -31,11 +31,12 @@
       "how to add Terraform provider block",
       "add a Terraform provider block",
       "versions of Terraform supported in Schematics",
-      "a multiple provider configuration for schematics",
-      "what is the provider latest version for Scematics",
+      "a multiple provider configuration for Schematics",
+      "what is the provider latest version for Schematics",
       "are multiple Terraform provider version supported",
       "what is supported terraform version",
-      "multiple provider configuration in schematics"
+      "multiple provider configuration in Schematics",
+      "what is supported terraform version"
     ],
     "createworkspace-generate-tokens": [
       "how to create IAM access token for Schematics",
@@ -44,10 +45,10 @@
       "create IAM access token in Schematics",
       "create API keys for Schematics",
       "where to get API key in Schematics",
-      "need IAM access for schematics",
+      "need IAM access for Schematics",
       "How to get a new IAM acess token",
-      "looking for API key for schematics",
-      "API key to create a new schematics access token",
+      "looking for API key for Schematics",
+      "API key to create a new Schematics access token",
       "generate IAM access token when client id bx is used",
       "IAM access in Schematics when client id bx"
     ],
@@ -57,7 +58,7 @@
       "Request fails with status code: 400 in Schematics",
       "Schematics authentication error",
       "IBM Cloud Schematics authentication error",
-      "In Schematiocs get Request failes with status code: 400",
+      "In Schematics get Request failes with status code: 400",
       "authentication error when Schematics workspace is created",
       "Error: Request failes with status code: 400, BXNIMO137E: For the original authentication",
       "getting an authentication error in Schematics after creating the workspace",
