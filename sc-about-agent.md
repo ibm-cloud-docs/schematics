@@ -43,7 +43,7 @@ The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and
 1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
 2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa2) to create your cluster infrastructure.
 3. Integrate the {{site.data.keyword.bpshort}} private endpoint with the {{site.data.keyword.bpshort}} service to provision, configure, and monitor your application through {{site.data.keyword.bpshort}} Agent.
-4. Manage your tools and softwares through Agents services containing the microservices such as Job, job-runner, and sandbox on the user cloud.
+4. Manage the tools and softwares through Agents services containing the microservices.
 
 ## Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents
 {: #agents-augmenting}
