@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-07-26"
 
 keywords: schematics
 subcollection: schematics
@@ -102,7 +102,9 @@ subcollection: schematics
 
 * [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#agents-architecture)
 
-* [Comparing {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-comparision)
+* [Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-augmenting)
+
+* [Setting up an Agent](/docs/schematics?topic=schematics-agents-intro#setting-agent)
 
 * [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
 
@@ -493,7 +495,7 @@ subcollection: schematics
 
 [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
-    * [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
+* [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
 
 * [Displaying Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 

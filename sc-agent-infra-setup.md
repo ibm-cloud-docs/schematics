@@ -18,17 +18,18 @@ subcollection: schematics
 # Installing {{site.data.keyword.bpshort}} Agent
 {: #agents-setup}
 
-The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro) are deployed in your {{site.data.keyword.cloud}} account and configured to connect to your {{site.data.keyword.bpshort}} service instance. You can follow these steps to use the included deployment automation to provision the required Kubernetes cluster and to install a single Agent in that cluster.
+The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro) are deployed in your {{site.data.keyword.cloud}} account and configured to connect to your {{site.data.keyword.bpshort}} service instance. You can follow these steps to use the included deployment automation to provision the required Kubernetes cluster and to install an Agent in that cluster.
 {: shortdesc}
 
+The block diagram represents the {{site.data.keyword.bpshort}} Agent set up flow that you can provision, deploy, connect, and use.
+
+![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
+
+Following are the estimated time to complete the {{site.data.keyword.bpshort}} Agents set up.
 1. Provisioning the Agent infrastructure (estimated time 45 - 90 minutes)
 2. Deploying the Agent services (estimated time 15 - 30 minutes)
 3. Connecting the Agent to {{site.data.keyword.bpshort}} (estimated time 15 - 20 minutes)
 4. Using the Agent to run your IaC automation (estimated time 15 - 20 minutes) 
-
-The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow that you can provision, deploy, connect, and use.
-
-![{{site.data.keyword.bpshort}} Agents set up](images/agents-infra-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
 
 ## Prerequisites
 {: #agents-setup-prereq}

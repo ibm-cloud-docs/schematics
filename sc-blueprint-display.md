@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-07-26"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -31,7 +31,7 @@ ibmcloud schematics blueprint list
 
 On successful completion the list command returns a list of Blueprints  
 
-### Blueprint list output
+## Blueprint list output
 {: #list-blueprint-output-cli} 
 
 The command lists all the Blueprints created in the CLI region. 

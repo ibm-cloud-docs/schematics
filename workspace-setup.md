@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-26"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -60,7 +60,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
           ```
           {: pre}
 
-        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. **Note** If you do not see the Agents, check have you connected the Agents](/docs/schematics?topic=schematics-register-agent)?
+        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. **Note** If you do not see the Agents list, check have you [connected the Agents](/docs/schematics?topic=schematics-register-agent)?
         - Click `Next`.
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
