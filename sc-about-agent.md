@@ -38,7 +38,7 @@ The following are the primary drivers to create the {{site.data.keyword.bplong_n
 
 The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and how it functions in {{site.data.keyword.bpshort}}?
 
-![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.png){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
 1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
 2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa2) to create your cluster infrastructure.
