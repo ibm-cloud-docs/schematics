@@ -102,7 +102,9 @@ subcollection: schematics
 
 * [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#agents-architecture)
 
-* [Comparing {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-comparision)
+* [Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-augmenting)
+
+* [Setting up an Agent](/docs/schematics?topic=schematics-agents-intro#setting-agent)
 
 * [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
 

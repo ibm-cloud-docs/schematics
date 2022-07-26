@@ -40,14 +40,14 @@ The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and
 
 ![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
-1. As the {{site.data.keyword.bpshort}} Agents user, you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your cloud account. 
-2. Configure the {{site.data.keyword.bpshort}} Agent by using an `Agents infrastructure` and an `Agents service` Workspaces to create the cluster infrastructure.
-3. Integrate the {{site.data.keyword.bpshort}} private endpoint to the {{site.data.keyword.bplong_notm}} service to provision, configure, monitor, and operate as a Microservice on the user cloud.
+1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
+2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui) and an [Agents service workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-svc) to create the cluster infrastructure.
+3. Integrate the {{site.data.keyword.bpshort}} private endpoint with the {{site.data.keyword.bplong_notm}} service to provision, configure, monitor, and operate as a Microservice application on the user cloud.
 
-## Comparing {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents
-{: #agents-comparision}
+## Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents
+{: #agents-augmenting}
 
-The table lists the importance of using {{site.data.keyword.bpshort}} without Agent versus {{site.data.keyword.bpshort}} with Agent, with respect to the components such as cluster, cloud providers, compute time, latency, software, tenancy, and network configurations. 
+The table describes how the {{site.data.keyword.bpshort}} are augmented with {{site.data.keyword.bpshort}} Agents with the components such as, cluster, cloud providers, compute time, latency, software, tenancy, and network configurations.
 
 | Components | {{site.data.keyword.bpshort}} without Agent | {{site.data.keyword.bpshort}} with Agent|
 | -- | -- | -- |
@@ -59,6 +59,16 @@ The table lists the importance of using {{site.data.keyword.bpshort}} without Ag
 | `Software` | Can use only pre-installed software such as `Python / Jquery / {{site.data.keyword.cloud_notm}} command line` cannot install additional software. | Customer is free to install additional software on need basis. |
 | `Tenancy` | Multi tenant. | Single tenant. |
 {: caption="Usage of {{site.data.keyword.bpshort}} Agents" caption-side="bottom"}
+
+## Setting up an Agent
+{: #setting-agent}
+
+The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro) are deployed in your {{site.data.keyword.cloud}} account and configured to connect to your {{site.data.keyword.bpshort}} service instance. The block diagram represents the set up to provision, deploy, connect, and use the required cluster infrastructure.
+{: shortdesc}
+
+![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
+
+For more information, about estimated time to set up an Agent, refer to [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup&interface=ui).
 
 ## Next steps
 {: #nextsteps-agent-arch}
