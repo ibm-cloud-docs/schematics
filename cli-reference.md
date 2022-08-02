@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-02"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -590,7 +590,6 @@ For more information, about the flags refer to, [Workspace get](/docs/schematics
 {: note}
 
 
-
 ## Blueprints commands
 {: #blueprints-cmd}
 
@@ -606,8 +605,7 @@ Create a {{site.data.keyword.bpshort}} Blueprint by using the `ibmcloud schemati
 **Syntax to create using command:**
 
 ```sh
-ibmcloud schematics blueprint create { --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE  [--bp-git-branch BLUEPRINT_GIT_BRANCH | --bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE  [--input-git-branch INPUT_GIT_BRANCH | --input-git-release INPUT_GIT_RELEASE]  [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH }
-
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH
 ```
 {: pre}
 
@@ -793,7 +791,7 @@ You update the Blueprint configuration in {{site.data.keyword.bpshort}} with cha
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint update --id BLUEPRINT_ID [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN]
+ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN]
 ```
 {: pre}
 
@@ -802,6 +800,7 @@ ibmcloud schematics blueprint update --id BLUEPRINT_ID [--input INPUT_VARIABLES_
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the Blueprint.|
+| `--file` or `-f` | Optional | The path to the JSON file containing the definition of the Blueprint to update. |
 | `--input` or `--in` | Optional | Input variables for the Blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=testvalue,test1=testvalue1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access private Git repository.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints update flags" caption-side="top"}
@@ -859,8 +858,8 @@ ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--limit` or `-l` | Optional | The maximum number of Blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`|
 | `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary` or `ids`. The default value is **summary**. |
+| `--limit` or `-l` | Optional | The maximum number of Blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.
 {: caption="{{site.data.keyword.bpshort}} Blueprints list flags" caption-side="top"}
 
@@ -870,6 +869,35 @@ ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset
 ibmcloud schematics blueprint list 
 ```
 {: pre}
+
+### `ibmcloud schematics blueprint destroy`
+{: #schematics-blueprint-destroy}
+
+Destroys all the resources associated with the modules in a Blueprint. This action cannot be reversed. On Workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
+{: shortdesc}
+
+**Syntax:**
+
+```sh
+ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt]
+```
+{: pre}
+
+**Command options:**
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i`| Required | The ID of the Blueprint.|
+| `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
+{: caption="{{site.data.keyword.bpshort}} Blueprints destroy flags" caption-side="top"}
+
+**Example:**
+
+```sh
+ibmcloud schematics blueprint destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+```
+{: pre}
+
 
 ### `ibmcloud schematics blueprint delete`
 {: #schematics-blueprint-delete}
@@ -897,34 +925,6 @@ ibmcloud schematics blueprint delete [--id BLUEPRINT_ID] [—force-delete] [--no
 
 ```sh
 ibmcloud schematics blueprint delete -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
-```
-{: pre}
-
-### `ibmcloud schematics blueprint destroy`
-{: #schematics-blueprint-destroy}
-
-Destroys all the resources associated with the modules in a Blueprint. This action cannot be reversed. On Workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
-{: shortdesc}
-
-**Syntax:**
-
-```sh
-ibmcloud schematics blueprint destroy --id BLUEPRINT_ID
-```
-{: pre}
-
-**Command options:**
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the Blueprint.|
-| `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
-{: caption="{{site.data.keyword.bpshort}} Blueprints destroy flags" caption-side="top"}
-
-**Example:**
-
-```sh
-ibmcloud schematics blueprint destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
 ```
 {: pre}
 
@@ -974,7 +974,7 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the Blueprint. |
 | `--limit` or `-l` | Optional | The maximum number of jobs to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`|
-| `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.
+| `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints job list flags" caption-side="top"}
 
 **Example:**

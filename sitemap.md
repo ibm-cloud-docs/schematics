@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-02"
 
 keywords: schematics
 subcollection: schematics
@@ -1235,9 +1235,9 @@ subcollection: schematics
 
     * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
 
-    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
-
     * [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
+
+    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
 
     * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
 
