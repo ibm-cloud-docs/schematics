@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-08-02"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -177,29 +177,30 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output:
 
     ```text
-    Plugin Name                              schematics
-    Plugin Version                           1.11.1
-    Plugin SDK Version                       0.8.0
-    Minimal IBM Cloud CLI version required   0.15.1
-    Private endpoints supported              true
+    Plugin Name                              schematics   
+    Plugin Version                           1.12.1   
+    Plugin SDK Version                       0.8.0   
+    Minimal IBM Cloud CLI version required   0.15.1   
+    Private endpoints supported              true   
 
     Commands:
-    schematics,sch                     IBM Cloud Schematics plug-in
-    schematics,sch workspace,ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
-    schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
-    schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.
-    schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
-    schematics,sch apply               Apply a plan to an workspace to deploy the latest version of your configuration.
-    schematics,sch refresh             Refresh the workspace with latest version of your workspace configuration.
-    schematics,sch destroy             Destroy resources in an existing workspace. This action cannot be reversed.
-    schematics,sch output              Get all the output values from your workspace; (ex. result of terraform output command
-    schematics,sch version             Report version information about the IBM Cloud Schematics CLI.
-    schematics,sch logs                Show details about actions that ran against an workspace.
-    schematics,sch state               Advanced state management
-    schematics,sch kms                 listing and enabling IBM Cloud Schematics kms instances and root keys .
-    schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
-    schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
-    schematics,sch blueprint,bp        [Beta] Create and manage Blueprints.
+    schematics,sch                     IBM Cloud Schematics plug-in   
+    schematics,sch workspace,ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.   
+    schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.   
+    schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.   
+    schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.   
+    schematics,sch apply               Apply a plan to an workspace to deploy the latest version of your configuration.   
+    schematics,sch refresh             Refresh the workspace with latest version of your workspace configuration.   
+    schematics,sch destroy             Destroy resources in an existing workspace. This action cannot be reversed.   
+    schematics,sch output              Get all the output values from your workspace; (ex. result of terraform output command   
+    schematics,sch version             Report version information about the IBM Cloud Schematics CLI.   
+    schematics,sch logs                Show details about actions that ran against an workspace.   
+    schematics,sch state               Advanced state management   
+    schematics,sch kms                 listing and enabling IBM Cloud Schematics kms instances and root keys .   
+    schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's   
+    schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions   
+    schematics,sch agents,ag           [Beta] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.   
+    schematics,sch blueprint,bp        [Beta] Create and manage Blueprints.  
     ```
     {: screen}
 
