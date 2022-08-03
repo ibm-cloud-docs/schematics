@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-08-03"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -44,7 +44,7 @@ You can only destroy the cloud resources created by a Blueprint from command-lin
 The following command performs a Blueprint destroy for the Blueprint with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
 
 ```sh
-ibmcloud schematics blueprints destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+ibmcloud schematics blueprint destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
 ```
 {: pre}
 
