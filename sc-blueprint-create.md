@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-03"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -59,17 +59,17 @@ Before your begin
 
 The following command creates a Blueprint by using the definition file `basic-blueprint.yaml` and input file `basic-input.yaml` from the source Git repository `https://github.com/Cloud-Schematics/blueprint-basic-example`. This Blueprint definition requires the two inputs `provision_rg=true` and `resource_group_name=default` are passed during the Blueprint creation. You can create Blueprint using `default` or new resource group `mynew-resourcegroup`, both the syntax are provided.  
 
-**Syntax: To use the `default` resource group, and create COS instance with the bucket in `default` resource group**
+**Syntax: To create a resource group named `mynewrg`, and create COS instance with the bucket in `mynewrg` resource group**
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=default
+$ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrg
 ```
 {: pre}
 
-**Syntax: To create a resource group named `mynew-resourcegroup`, and create COS instance with the bucket in `mynew-resourcegroup` resource group**
+**Syntax: To use the `default` resource group, and create COS instance with the bucket in `default` resource group**
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynew-resourcegroup
+$ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
 ```
 {: pre}
 

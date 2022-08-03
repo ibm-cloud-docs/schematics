@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-08-03"
 
 keywords: schematics blueprints infrastructure, blueprints lifecycle commands, lifecycle commands
 
@@ -36,12 +36,12 @@ The Blueprints commands implement a full lifecycle for managing cloud resources 
 
 - Create
 
-Creates a new Blueprints instance in {{site.data.keyword.bpshort}} from a user supplied Blueprints definition and input variables. A Workspace is created for each Blueprints module. For more information, refer to, [Creating Blueprint](/docs/schematics?topic=schematics-create-blueprint). 
+Creates a new Blueprints instance in {{site.data.keyword.bpshort}} from a user supplied Blueprints definition and input variables. A Workspace is created for each Blueprints module. For more information, refer to, [Creating Blueprint](/docs/schematics?topic=schematics-create-blueprint&interface=cli). 
 {: shortdesc} 
 
 - Install 
 
-Runs the Infrastructure as code (IaC) automation code modules associated with the Workspaces by using the initial input configuration. For each module it performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. For more information, refer to, [Installing Blueprint](/docs/schematics?topic=schematics-install-blueprint).
+Runs the Infrastructure as code (IaC) automation code modules associated with the Workspaces by using the initial input configuration. For each module it performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. For more information, refer to, [Installing Blueprint](/docs/schematics?topic=schematics-install-blueprint&interface=cli).
 {: shortdesc} 
 
 ### Update and Install
@@ -49,12 +49,12 @@ Runs the Infrastructure as code (IaC) automation code modules associated with th
 
 - Update 
 
-Updates the stored Blueprints definition with versioned changes to the source definition and inputs. Changes to the module versions and inputs are propagated to the Workspaces. For more information, refer to, [Updating Blueprint](/docs/schematics?topic=schematics-update-blueprint).
+Updates the stored Blueprints definition with versioned changes to the source definition and inputs. Changes to the module versions and inputs are propagated to the Workspaces. For more information, refer to, [Updating Blueprint](/docs/schematics?topic=schematics-update-blueprint&interface=cli).
 {: shortdesc} 
 
 - Install
 
-Reruns the install of the IaC modules based on the updated configuration. For each module this performs a Terraform Apply or Ansible playbook tun to create, modify, or delete cloud resources as determined by the configuration changes from the update. For more information, refer to, [Installing Blueprint](/docs/schematics?topic=schematics-install-blueprint).
+Reruns the install of the IaC modules based on the updated configuration. For each module this performs a Terraform Apply or Ansible playbook tun to create, modify, or delete cloud resources as determined by the configuration changes from the update. For more information, refer to, [Installing Blueprint](/docs/schematics?topic=schematics-install-blueprint&interface=cli).
 {: shortdesc} 
 
 ### Destroy and Delete
@@ -62,12 +62,12 @@ Reruns the install of the IaC modules based on the updated configuration. For ea
 
 - Destroy
 
-Removes or destroys the deployed cloud resources associated with each Workspace. For Terraform Workspaces, {{site.data.keyword.bpshort}} runs a Terraform destroy operation on each workspace. For more information, refer to, [Destroying Blueprint](/docs/schematics?topic=schematics-destroy-blueprint).
+Removes or destroys the deployed cloud resources associated with each Workspace. For Terraform Workspaces, {{site.data.keyword.bpshort}} runs a Terraform destroy operation on each workspace. For more information, refer to, [Destroying Blueprint](docs/schematics?topic=schematics-destroy-blueprint&interface=cli).
 {: shortdesc} 
 
 - Delete
 
-Deletes the Blueprints and all attached Workspaces from {{site.data.keyword.bpshort}}. For more information, refer to, [Deleting Blueprint](/docs/schematics?topic=schematics-delete-blueprint).
+Deletes the Blueprints and all attached Workspaces from {{site.data.keyword.bpshort}}. For more information, refer to, [Deleting Blueprint](/docs/schematics?topic=schematics-delete-blueprint&interface=cli).
 {: shortdesc} 
 
 These form a lifecycle of operations from environment creation to retirement. During the useful operational life of a cloud environment the `update and install` cycle are performed many times to apply updates and configuration changes.
