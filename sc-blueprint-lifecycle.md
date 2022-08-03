@@ -62,7 +62,7 @@ Reruns the install of the IaC modules based on the updated configuration. For ea
 
 - Destroy
 
-Removes or destroys the deployed cloud resources associated with each Workspace. For Terraform Workspaces, {{site.data.keyword.bpshort}} runs a Terraform destroy operation on each workspace. For more information, refer to, [Destroying Blueprint](docs/schematics?topic=schematics-destroy-blueprint&interface=cli).
+Removes or destroys the deployed cloud resources associated with each Workspace. For Terraform Workspaces, {{site.data.keyword.bpshort}} runs a Terraform destroy operation on each workspace. For more information, refer to, [Destroying Blueprint](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli).
 {: shortdesc} 
 
 - Delete
