@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-08-04"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -47,7 +47,7 @@ Key Deletion is a destructive action. When you disable or delete a root key that
 
 
 
-When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration&interface=ui#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that are inaccessible due to disabled or deleted root key is now completely accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}. 
+When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that are inaccessible due to disabled or deleted root key is now completely accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}. 
 {: shortdesc}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-08"
+lastupdated: "2022-08-04"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -117,7 +117,7 @@ The following are the detailed steps to upgrade:
 Use the following steps to upgrade from the `Terraform v0.12` to `Terraform v0.13`.
 {: shortdesc}
 
-Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade of Terraform version. For more information, about workspace creation, see [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup&interface=ui#create-workspace).
+Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade of Terraform version. For more information, about workspace creation, see [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
 {: note}
 
 1. From the Terraform template `v0.12` Git repository, clone to a new GitHub repository.
@@ -189,7 +189,7 @@ You completed the upgrade successfully. See [Terraform template from v0.13 to v0
 Use the following steps to upgrade from the `Terraform v0.13` to `Terraform v0.14`.
 {: shortdesc}
 
-Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, about workspace creation, see [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup&interface=ui#create-workspace).
+Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, about workspace creation, see [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
 {: note}
 
 1. From your Terraform template `v0.13` Git repository, clone to a new GitHub repository.
@@ -238,5 +238,5 @@ Check whether your Terraform template of the older version is provisioned perfec
 You can upgrade the [`Terraform v0.14`](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://www.terraform.io/language/upgrade-guides/0-15){: external} to `Terraform v1.0`, refer to, [`Terraform v1.0` upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
 {: shortdesc}
 
-Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, about workspace creation successfully, see [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup&interface=ui#create-workspace).
+Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, about workspace creation successfully, see [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
 {: note}

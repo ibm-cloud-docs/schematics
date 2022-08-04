@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-22"
+lastupdated: "2022-08-04"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -35,7 +35,7 @@ The following categories of **Personal Data** are supported by {{site.data.keywo
 - Basic contact information, such as email address, name, etc, which is a subset of basic personal information.
 - Technically indentifiable personal information, such as authentication credentials, IP address, etc.
 
-For more information, about data security in {{site.data.keyword.bpshort}}, see [Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data&interface=ui).
+For more information, about data security in {{site.data.keyword.bpshort}}, see [Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
 ## About user data
 {: #data-about-me}
@@ -52,7 +52,7 @@ For more information, about how your data is encrypted in {{site.data.keyword.bp
 ## Data locations
 {: #data-locations}
 
-Locations where {{site.data.keyword.bpshort}} processes personal data are made available, and kept up to date. For more information, about data locations, refer to, [Locations and service endpoints](/docs/schematics?topic=schematics-locations&interface=ui).
+Locations where {{site.data.keyword.bpshort}} processes personal data are made available, and kept up to date. For more information, about data locations, refer to, [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
 
 ## Service security
 {: #service-security}
@@ -69,7 +69,7 @@ Following are the list of service security measures taken by the {{site.data.key
 ## Deletion of data
 {: #deletion-of-data}
 
-{{site.data.keyword.bplong_notm}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_full}}. For more information, about how to delete your data in {{site.data.keyword.bpshort}}? refer to, [deleting {{site.data.keyword.bplong_notm}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui).
+{{site.data.keyword.bplong_notm}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_full}}. For more information, about how to delete your data in {{site.data.keyword.bpshort}}? refer to, [deleting {{site.data.keyword.bplong_notm}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro).
 
 {{site.data.keyword.bpshort}} can completely remove all references and data for a customer document when required as an operator-managed process called **purging**. Before you request that data to purge, it's important to understand that purged documents cannot be recovered once the process is complete.
 

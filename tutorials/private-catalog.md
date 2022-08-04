@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-08-04"
 
 keywords: schematics, automation, terraform
 
@@ -23,7 +23,7 @@ completion-time: 30m
 {: toc-services="schematics"}
 {: toc-completion-time="30m"}
 
-Understand how to [Create your private catalog](/docs/account?topic=account-restrict-by-user&interface=ui), [manage your private catalog](/docs/account?topic=account-filter-account&interface=ui), [assign access to the private catalog](/docs/account?topic=account-catalog-access&interface=ui) in {{site.data.keyword.cloud}}. And import your Terraform templates as products to make them available to your users. With a private catalog, you can limit the services that you want your users to see and the service settings that they can adjust. This way, you have more control over the type of service that is provisioned in your account and that naming conventions for services and service components are followed in your organization. 
+Understand how to [Create your private catalog](/docs/account?topic=account-restrict-by-user), [manage your private catalog](/docs/account?topic=account-filter-account), [assign access to the private catalog](/docs/account?topic=account-catalog-access) in {{site.data.keyword.cloud}}. And import your Terraform templates as products to make them available to your users. With a private catalog, you can limit the services that you want your users to see and the service settings that they can adjust. This way, you have more control over the type of service that is provisioned in your account and that naming conventions for services and service components are followed in your organization. 
 {: shortdesc}
 
 ## Objectives
@@ -141,7 +141,7 @@ Create a release in your source code repository to deliver and manage versions o
 {: #create-private-catalog}
 {: step}
 
-1. Create a [private catalog in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-catalog-access&interface=ui).
+1. Create a [private catalog in {{site.data.keyword.cloud_notm}}](/docs/account?topic=account-catalog-access).
 2. Import your {{site.data.keyword.bpshort}} template as a product into your private catalog.
     1. From the **Private catalogs** page, select the private catalog that you created.
     2. Click **Add**. 
@@ -160,7 +160,7 @@ Create a release in your source code repository to deliver and manage versions o
        - Enter a name for the {{site.data.keyword.bpshort}} Workspaces that you want to create for the product validation. 
        - In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary. 
        - Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} Workspaces is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
-    9. From the **Actions** menu, click **Share** to make your product available to other users in your private catalog.  **Note** To provide access group and assign your catalog to users, see [Setting up the access groups](/docs/account?topic=account-groups&interface=ui).
+    9. From the **Actions** menu, click **Share** to make your product available to other users in your private catalog.  **Note** To provide access group and assign your catalog to users, see [Setting up the access groups](/docs/account?topic=account-groups).
     10. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
 
 In this tutorial, you learned how to create a private catalog in {{site.data.keyword.cloud_notm}}? and How to upload an IBM-provided Terraform template as a product to your catalog?

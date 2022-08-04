@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-04"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -302,7 +302,7 @@ If the version parameter is not declared in your `versions.tf` file, the latest 
 {: faq}
 {: support}
 
-Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first fromt he workspace, and then perform delete workspace. For more information, refer to [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace)
+Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first fromt he workspace, and then perform delete workspace. For more information, refer to [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
 
 
 ## Can I delete and destroy operation as one step?
@@ -310,4 +310,4 @@ Destroy delete the associated cloud resource from the workspace. Delete workspac
 {: faq}
 {: support}
 
-No, you cannot delete and destroy operation in one step. This is the [process](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace) you need to follow to destroy first and delete.
+No, you cannot delete and destroy operation in one step. This is the [process](/docs/schematics?topic=schematics-workspace-setup#del-workspace) you need to follow to destroy first and delete.

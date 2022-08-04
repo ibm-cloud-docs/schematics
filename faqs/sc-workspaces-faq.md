@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-04"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -75,11 +75,11 @@ The allowed extension list is continuously monitored and updated in every releas
 
 You can follow these topics to upgrade from one Terraform version to another version
 
-- [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#terraform-version-upgrade)
-- [Upgrade Terraform version in {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#migrate-steps)
-- [Upgrade Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-12-to13)
-- [Upgrade Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-13-to14)
-- [Upgrade Terraform template from v0.14 to v1.0](/docs/schematics?topic=schematics-migrating-terraform-version&interface=ui#upgrade-14-to10)
+- [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade)
+- [Upgrade Terraform version in {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps)
+- [Upgrade Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-12-to13)
+- [Upgrade Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to14)
+- [Upgrade Terraform template from v0.14 to v1.0](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
 
 ## How do I overcome the downtime while updating the workspace activities? 
 {: #impact-downtime-workspace}
@@ -155,7 +155,7 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 {: faq}
 {: support}
 
-You need to delete the workspace and NOT destroying the resources as if there are no resource available. For more information, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+You need to delete the workspace and NOT destroying the resources as if there are no resource available. For more information, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
 
 ## what is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?
 {: #gherepo-warn-faq}
@@ -494,7 +494,7 @@ In order to know the details of the drift detection job, you need to check the d
 {: faq}
 {: support}
 
-Yes, you can interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}} by using the job types. For more information, refer to, [stopping the job types](/docs/schematics?topic=schematics-interrupt-job&interface=ui#interrupt-types).
+Yes, you can interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}} by using the job types. For more information, refer to, [stopping the job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types).
 
 ## How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?
 {: #postcartapi-job-faq}

@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2017, 2021
-lastupdated: "2022-03-12"
+  years: 2017, 2022
+lastupdated: "2022-08-04"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -31,7 +31,7 @@ Follow the steps to configure the {{site.data.keyword.bpshort}} resource based o
 
 4. Click **Update** in Filter by Location page.
 5. Use the **Preview** table to confirm your selections, and click **Update**.
-6. In settings page, click **Update** to restrict the access to read, create, or update in the location. For more information,  about global catalog settings, see [Managing catalog settings](/docs/account?topic=account-filter-account&interface=ui).
+6. In settings page, click **Update** to restrict the access to read, create, or update in the location. For more information,  about global catalog settings, see [Managing catalog settings](/docs/account?topic=account-filter-account).
 
 Account owner can edit the location in {{site.data.keyword.cloud}} catalog settings only after `30 minutes`. As the catalog settings created once are valid for `30 minutes`.
 {: important}

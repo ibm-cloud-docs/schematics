@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-04"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -42,7 +42,7 @@ This sample Blueprint is a simple scenario creating two linked Workspaces and re
 {: #get-started-blueprints-create}
 {: step}
 
-Create your Blueprint environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command. 
+Create your Blueprint environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command. 
 
 ### Syntax
 {: #get-started-blueprints-syntax}
@@ -83,7 +83,7 @@ Record the ID of the Blueprint to use in the later commands.
 {: #get-started-blueprints-install}
 {: step}
 
-Use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-install) command to perform Terraform apply operations by using the Terraform configurations specified in the Blueprint definition. This operation will create cloud resources. Insert the ID saved from the [output of the create](#create-schematics-blueprint) command.
+Use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install) command to perform Terraform apply operations by using the Terraform configurations specified in the Blueprint definition. This operation will create cloud resources. Insert the ID saved from the [output of the create](#create-schematics-blueprint) command.
 
 ```sh
 ibmcloud schematics blueprint install -id <blueprint_id>
@@ -133,5 +133,5 @@ ibmcloud schematics blueprint delete -id <blueprint_id>
 ```
 {: pre}
 
-- Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro&interface=ui).
+- Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
 - Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics/?q=topic:blueprint). 

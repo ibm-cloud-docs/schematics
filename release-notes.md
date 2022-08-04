@@ -57,12 +57,12 @@ Review the release notes for July 2022.
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents Beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
-    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-ui), APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
-    - Install [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup&interface=ui) through UI.
-    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
-    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent&interface=ui) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
-    - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent&interface=ui) to clean up the Agent infrastructure and Agent services.
-    - [FAQs](/docs/schematics?topic=schematics-faqs-agent&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=ui) for any challenges and questions on Agents.
+    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Install [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup) through UI.
+    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
+    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
+    - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent) to clean up the Agent infrastructure and Agent services.
+    - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on Agents.
     - [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
@@ -78,12 +78,12 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
     - [Usecase](/docs/schematics?topic=schematics-get-started-blueprints).
     - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
-    - [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions&interface=ui) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-install-blueprint&interface=ui) to configure the right schemas and use the right Blueprints commands for the deployment of Blueprints.
-    - See [Blueprints permissions](/docs/schematics?topic=schematics-access&interface=ui#blueprint-permissions) to get access permissions to install Blueprints deployment.
-    - Blueprints are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint&interface=ui#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
-    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli&interface=ui) tutorial to create cloud resources with a Blueprints managed cloud environment.
-    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails&interface=ui) for any challenges and questions on Blueprints.
-    - [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations&interface=ui) to engage with the Agents Beta level code and provide feedback.
+    - [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-install-blueprint) to configure the right schemas and use the right Blueprints commands for the deployment of Blueprints.
+    - See [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to install Blueprints deployment.
+    - Blueprints are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprints managed cloud environment.
+    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on Blueprints.
+    - [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.11.0](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -114,7 +114,7 @@ Enhanced FAQ documentation
 {: release-note}
 
 Enhance {{site.data.keyword.bpshort}} getting started section
-:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](/docs/schematics?topic=schematics-learn-about-schematics&interface=ui), [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term&interface=ui), [Using Open Source](/docs/schematics?topic=schematics-schematics-open-projects) tools, and [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works&interface=ui)
+:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](/docs/schematics?topic=schematics-learn-about-schematics), [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term), [Using Open Source](/docs/schematics?topic=schematics-schematics-open-projects) tools, and [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works)
 
 
 
@@ -154,16 +154,16 @@ Review the release notes for April 2022.
 {: release-note}
 
 Support detecting drift
-:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note&interface=ui) for {{site.data.keyword.bpshort}} workspace. For more information, refer to, viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note&interface=ui#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
+:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note) for {{site.data.keyword.bpshort}} workspace. For more information, refer to, viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
 
 Support stopping or terminating the running job
-:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, refer to, stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job&interface=ui#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
+:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, refer to, stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
 Support additional frequently asked questions (FAQs) 
 :  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-faqs&interface=api#drift-automatic-faq).
 
 Support enhanced {{site.data.keyword.bpshort}} resource view
-:   The {{site.data.keyword.bpshort}} supports the enhanced [{{site.data.keyword.bpshort}} resource view in UI](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui) page.
+:   The {{site.data.keyword.bpshort}} supports the enhanced [{{site.data.keyword.bpshort}} resource view in UI](/docs/schematics?topic=schematics-manage-lifecycle) page.
 
 ### 26 April 2022
 {: #schematics-apr2622}
@@ -220,7 +220,7 @@ Review the release notes for March 2022.
 {: release-note}
 
 Support deleting {{site.data.keyword.bpshort}} data objects 
-:   The {{site.data.keyword.bpshort}} supports [deleting {{site.data.keyword.bpshort}} data from UI, CLI, and API](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui) for workspace, action, and inventories objects.
+:   The {{site.data.keyword.bpshort}} supports [deleting {{site.data.keyword.bpshort}} data from UI, CLI, and API](/docs/schematics?topic=schematics-delete-schematics-data-intro) for workspace, action, and inventories objects.
 
 Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
 :   - Now you can create Actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
@@ -245,7 +245,7 @@ Support `__netrc__` environment values in private Git repository
 {: release-note}
 
 Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
-:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup&interface=ui#create-workspace_ui), [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui), [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4th March 2022.
@@ -317,13 +317,13 @@ Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in you
 :   To create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
 
 Support `WinRM` in user interface
-:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup&interface=ui#create-action-setup) for {{site.data.keyword.bpshort}} Actions.
+:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup#create-action-setup) for {{site.data.keyword.bpshort}} Actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} Workspaces location
 : You can now, manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 About `compact` download
-:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download&interface=ui).
+:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
 
 About {{site.data.keyword.bpshort}} Job files
 :   You can now download the state-file at every job level along with the latest state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).

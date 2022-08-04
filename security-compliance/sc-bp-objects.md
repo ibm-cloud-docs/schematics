@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-08-04"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -58,7 +58,7 @@ Developers need to check whether the variable or output parameter as a sensitive
 Follow these practices when creating a Workspace for the Terraform template.
 - Check whether you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspace. For more information, about location and endpoint, see [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
-- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or command line.
+- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or command line.
 - Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 
 ### How can I ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?
@@ -137,9 +137,9 @@ You can use IBM Cloud® Activity Tracker to track and audit how users and applic
 {: #bp-security-data-protection}
 
 You can safeguard and encrypt your information from corruption, compromise, or loss in {{site.data.keyword.bpshort}} by:
-- [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration&interface=ui)
+- [KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration)
 - [Managing data encryption](/docs/schematics?topic=schematics-secure-data#pi-encrypt)
-- Restrict network access for all the resources to provision by [Allowing specific IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses&interface=ui).
+- Restrict network access for all the resources to provision by [Allowing specific IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
 ## Next steps
 {: #bp-security-next-steps}

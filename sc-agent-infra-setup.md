@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-04"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -62,7 +62,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
     - In **Workspace details** section:
         - **Workspace name** as `schematics-agent-infra_workspace`.
         - **Tags** as `agents-infra`. 
-        - **Resource group** as `default` or other resource group for this Workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs&interface=ui). Ensure you have right access permission for the resource group.
+        - **Resource group** as `default` or other resource group for this Workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group.
         - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace. 
            If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
            {: note}
@@ -80,7 +80,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
     |--|--|--| -- |
     | `agent_prefix` | String | Required | Provide the prefix that is used for your VPC, {{site.data.keyword.containerlong_notm}} Cluster, and Observability.
     | `location`| String | Required | The location of an Agent infrastructure. **Note** for Beta, the Agent must be deployed in a fresh provisioned VPC, {{site.data.keyword.containerlong_notm}} Cluster, and Log Analysis instance. For example, **us-south**. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.|
-    | `resource_group_name` | String | Required | Name for the resource group used for an Agent infrastructure and Agent service. For example, **test_agent**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs&interface=ui). Ensure you have right access permission for the resource group. |
+    | `resource_group_name` | String | Required | Name for the resource group used for an Agent infrastructure and Agent service. For example, **test_agent**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group. |
     | `ibmcloud_api_key` | String | Optional | The {{site.data.keyword.cloud_notm}} API key used to provision the {{site.data.keyword.bpshort}} Agent infrastructure resources. If not provided, resources provisions in currently logged in user credentials.|
     | `tags` | List(String) | Optional | A list of tags for an Agent infrastructure. For example, `myproject:agent`, `test:agentinfra`. You can find the provisioned resources of an Agent faster by using Tag name. |
     {: caption="{{site.data.keyword.bpshort}} Agents infrastructure inputs" caption-side="bottom"}
@@ -140,7 +140,7 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
     |----|----| --- | -- |
     | `agent_name` | String | Required | The name of an Agent. |
     | `location` | String | Required | The [location](/docs/schematics?topic=schematics-multi-region-deployment) of an Agent services. It must be the same as the Agent infrastructure/cluster location. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.|
-    | `resource_group_name` | String | Required | The name of the resource group used for an Agent infrastructure and Agent service. For more information, see [Creating a resource group](/docs/account?topic=account-rgs&interface=ui). Ensure you have right access permission for the resource group.|
+    | `resource_group_name` | String | Required | The name of the resource group used for an Agent infrastructure and Agent service. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group.|
     | `profile_id` | String | Required | Create an IAM trusted profile ID for the Agents with the roles and actions. For more information, refer to, [creating profile_id for Agents](/docs/schematics?topic=schematics-agent-trusted-profile).|
     | `cluster_id` | String | Required | The {{site.data.keyword.containerlong_notm}} cluster ID used to run an Agent service. **Note** to provide the `cluster_id` details that you received in Agent infrastructure output logs.|
     | `logdna_name` | String | Required | The LogDNA service instance name used to send an Agent logs. **Note** to provide the `logdna_name` details that you received in Agent infrastructure output logs.|
@@ -176,20 +176,20 @@ Before your begin
 
 Here are the list of commands used to provision the Agent infrastructure.
 
-- Run [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-new) command to create the Agent infrastructure workspace.
+- Run [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command to create the Agent infrastructure workspace.
    ```sh
    ibmcloud schematics workspace new --file https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_infra_workspace.json
    ```
    {: pre}
 
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud-Schematics Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
-- Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-upload) command to upload the tar file.
+- Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to upload the tar file.
    ```sh
    ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
    ```
    {: pre}
 
-- Run [apply command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-apply) to provision the Agent infrastructure.
+- Run [apply command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) to provision the Agent infrastructure.
    ```sh
    ibmcloud schematics apply --id <Provide your workspace ID>
    ```
@@ -199,7 +199,7 @@ Here are the list of commands used to provision the Agent infrastructure.
    {: note}
 
 - Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**.
-- Run [job logs](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-logs-job) command to view your job logs.
+- Run [job logs](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job) command to view your job logs.
    ```sh
    ibmcloud schematics job logs --id JOB_ID
    ```
@@ -212,7 +212,7 @@ Here are the list of commands used to provision the Agent infrastructure.
     Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, run apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
     {: important}
 
-- Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-output) provisioned.
+- Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output) provisioned.
    
     Optionally, you can search the provisioned resources with the tag name from the [Resources list](https://cloud.ibm.com/resources/){: external} page.
     {: note}
@@ -227,7 +227,7 @@ Before you begin
 
 Here are the list of commands used to create the Agent service.
 
-- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information, about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-svc).
+- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information, about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc).
     | Input variable | value |
     | --- | --- |
     | `cluster_id` | provide the recorded cluster_id from Agent infrastructure job log. |
@@ -242,14 +242,14 @@ Here are the list of commands used to create the Agent service.
     The Agent service workspace should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` that are recorded while provisioning the Agent infrastructure.
     {: note}
 
-- Run [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-new) command to create the Agent service workspace.
+- Run [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command to create the Agent service workspace.
    ```sh
    ibmcloud schematics workspace new --file https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json
    ```
    {: pre}
 
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud {{site.data.keyword.bpshort}} Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
-- Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-workspace-upload) to upload the tar file.
+- Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) to upload the tar file.
    ```sh
    ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-service-templates.tar --template <provide your template_id>
    ```
@@ -259,7 +259,7 @@ Here are the list of commands used to create the Agent service.
     The Agent service workspace should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` that are recorded while provisioning the Agent infrastructure.
     {: note}
 
-- Run [apply command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-apply) to provision cloud resource.
+- Run [apply command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) to provision cloud resource.
    ```sh
    ibmcloud schematics apply --id <Provide your workspace ID>
    ```
@@ -269,7 +269,7 @@ Here are the list of commands used to create the Agent service.
    {: note}
 
 - Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**. **Note** wait for 15-30 minutes.
-- Run [job log](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-logs-job) command to view your job logs.
+- Run [job log](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job) command to view your job logs.
    ```sh
    ibmcloud schematics job logs --id JOB_ID
    ```
@@ -284,7 +284,7 @@ Here are the list of commands used to create the Agent service.
 
 - View the **Jobs** logs and **Resources** page to observe the workspace status as `ACTIVE`.
 
-- Review the output to view the [Agent service workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-svc-output) execution.
+- Review the output to view the [Agent service workspace](/docs/schematics?topic=schematics-agents-setup#agents-svc-output) execution.
 
     You can search the Agent services and its status with the tag name from the [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page.
     {: note}
@@ -423,7 +423,7 @@ Here are the list of CURL commands used to provision the Agent infrastructure:
     Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, run apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
     {: important}
 
-7. Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-setup-infra-output) provisioned.
+7. Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output) provisioned.
 
 ### Deploying the Agent services
 {: #agents-setup-svc-api}
@@ -554,11 +554,11 @@ Here are the list of CURL commands used to provision the Agent Service:
     ```
     {: pre}
 
-7. Review the output to view the [Agent service workspace](/docs/schematics?topic=schematics-agents-setup&interface=ui#agents-svc-output) execution.
+7. Review the output to view the [Agent service workspace](/docs/schematics?topic=schematics-agents-setup#agents-svc-output) execution.
 
 ## Next steps
 {: #nextsteps-agentsetup}
 
 You have completed the {{site.data.keyword.bpshort}} Agent set up.
-- Now, you need to [Connect your Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) with your {{site.data.keyword.bpshort}} service instance.
+- Now, you need to [Connect your Agent](/docs/schematics?topic=schematics-register-agent) with your {{site.data.keyword.bpshort}} service instance.
 - For any challenges in Agents installation or configuration, refer to, [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent&interface=cli) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=cli).

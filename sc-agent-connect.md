@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-04"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -150,5 +150,5 @@ Here are the list of CURL commands use to register and unregister the Agent. For
 {: #connect-nextsteps}
 
 You have completed the Agent connection to your {{site.data.keyword.bpshort}} service instance.
-- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-register-agent&interface=ui) to bind the Agent to your Workspace, in order to run the IaC automation in your cluster.
+- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-register-agent) to bind the Agent to your Workspace, in order to run the IaC automation in your cluster.
 - For any challenges in Agents installation or configuration, refer to, [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent&interface=cli) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=cli).
