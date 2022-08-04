@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-04"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,19 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
 {: note}
+
+## August 2022
+{: #schematics-aug22}
+
+Review the release notes for August 2022.
+{: shortdesc}
+
+### 04 August 2022
+{: #schematics-aug2022}
+{: release-note}
+
+{{site.data.keyword.bpshort}} allowed IP address for `US`, `EU Central`, and `UK South` region are updated
+:   {{site.data.keyword.bpshort}} lists the [`US`, `EU Central`, and `UK South` region](/docs/schematics?topic=schematics-allowed-ipaddresses) allowed IP addresses to support `US`, `EU Central`, and `UK South` region endpoints.
 
 ## July 2022
 {: #schematics-july22}
