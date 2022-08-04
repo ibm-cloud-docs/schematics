@@ -28,14 +28,9 @@
     "provider-versions": [
       "Schematics supports multiple Terraform provider versions",
       "what is the supported terraform versions",
-      "how to add Terraform provider block",
-      "add a Terraform provider block",
       "versions of Terraform supported in Schematics",
-      "a multiple provider configuration for Schematics",
       "what is the provider latest version for Schematics",
       "are multiple Terraform provider version supported",
-      "what is supported terraform version",
-      "multiple provider configuration in Schematics",
       "what is supported terraform version"
     ],
     "createworkspace-generate-tokens": [
