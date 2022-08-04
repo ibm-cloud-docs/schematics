@@ -2143,8 +2143,6 @@ ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --terminate --job-id 
 ```
 {: pre}
 
-</staging>
-
 ## Terraform commands
 {: #tf-cmds}
 
