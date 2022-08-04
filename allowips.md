@@ -37,7 +37,7 @@ You must allow all the zones within the region that your resource is in. For exa
 | US | wdc04 </br> wdc06 </br> wdc07 </br> dal10 </br> dal12 </br> dal13| `169.45.235.176/28`,`169.55.65.48/28`,`169.55.82.128/27` </br> `169.60.69.0/27`,`169.61.99.176/28`,`169.62.1.224/28` </br> `169.62.49.128/27`,`169.63.150.144/28`,`169.63.173.208/28` </br> `150.238.230.128/27`,`169.63.254.64/28` </br> `169.47.104.160/28`,`169.61.191.64/27`,`169.60.172.144/28` </br> `169.62.204.32/27` | `10.148.98.0/26`,`10.189.2.128/26` </br> `10.148.245.128/26` </br> `10.190.16.128/26`,`10.191.181.64/26` </br> `10.95.173.64/26` </br> `10.185.16.64/26` </br> `10.220.38.64/26` |
 {: caption="Region and supported public and private IPs" caption-side="bottom"}
 
-You can collapse down the ranges into security group rules. For example, `us-south` and `us-east` as two security group rules like `[169.44.0.0/44, 169.60.0.0/14]`. For more information, about creating security group rules, refer to, [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
+You can collapse down the ranges into security group rules. For example, `us-south` and `us-east` as two security group rules like `[169.45.235.176/28, 150.238.230.128/27]`. For more information, about creating security group rules, refer to, [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
 {: note}
 
 
