@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-02"
+lastupdated: "2022-08-04"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -609,6 +609,9 @@ ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESO
 ```
 {: pre}
 
+If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a subfolder of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/<subfolder>`. 
+{: note}
+
 **Command options:**
 
 | Flag | Required / Optional | Description |
@@ -631,7 +634,7 @@ ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESO
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=default
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
 ```
 {: pre}
 
@@ -917,7 +920,7 @@ ibmcloud schematics blueprint delete [--id BLUEPRINT_ID] [—force-delete] [--no
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the Blueprint.|
-| `--force-delete` or `--fd` | Optional | Force delete a Blueprint when there are Workspaces that are not in an `Inactive` state .|
+| `--force-delete` or `--fd` | Optional | Force deletes the Blueprint including the active module. This action cannot be reversed.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} Blueprints delete flags" caption-side="top"}
 
