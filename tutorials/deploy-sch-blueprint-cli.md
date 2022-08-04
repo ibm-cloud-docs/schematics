@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-04"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -50,7 +50,7 @@ The sample Blueprint takes two input parameters, `provision_rg=false`, and `reso
 {: #create-schematics-blueprint-cli}
 {: step}
 
-Create your Blueprint environment by using CLI command [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create). Use the following parameter to create a Blueprint.
+Create your Blueprint environment by using CLI command [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create). Use the following parameter to create a Blueprint.
 
 - The Name of the Blueprint: `Blueprint_basic`
 - The {{site.data.keyword.bpshort}} management resource group: `Default` **Note** you can create a new resource group for the Blueprint.
@@ -68,7 +68,7 @@ Create your Blueprint environment by using CLI command [`ibmcloud schematics blu
 {: #step1-syntax}
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=default
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=default
 ```
 {: pre}
 
@@ -106,7 +106,7 @@ Refer to [Troubleshooting Blueprint create failures](/docs/schematics?topic=sche
 {: #install-schematics-blueprint-cli}
 {: step}
 
-Here you can use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-create) command to perform Terraform Apply operations using the Terraform configurations specified in the Blueprint definition. The operation will create cloud resources. Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
+Here you can use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command to perform Terraform Apply operations using the Terraform configurations specified in the Blueprint definition. The operation will create cloud resources. Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 
 ```sh
 ibmcloud schematics blueprint install -id Blueprints-Starter-Sample.c579f31d
@@ -152,7 +152,7 @@ From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.clou
 ### Using the CLI
 {: #review-schematics-blueprint-cli}
 
-Run the [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-get) command to display the details about the Blueprint and the deployed environment. Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
+Run the [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get) command to display the details about the Blueprint and the deployed environment. Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 
 ```sh
 ibmcloud schematics blueprint get -id blueprint_id
@@ -199,7 +199,7 @@ When using the `-profile output` flag, the `Blueprints Outputs` section in the c
 {: #destroy-schematics-blueprint-cli}
 {: step}
 
-Optional: Run the [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-destroy) command for the Blueprint environment to destroy all the cloud resources that are created in earlier steps. 
+Optional: Run the [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy) command for the Blueprint environment to destroy all the cloud resources that are created in earlier steps. 
 * Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 * When prompted reply `yes`, or `y` to destroy the cloud resources.
 
@@ -234,7 +234,7 @@ OK
 {: #delete-schematics-blueprint-cli}
 {: step}
 
-Optional: Run the [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-delete) command to remove the Blueprint created in earlier steps. 
+Optional: Run the [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete) command to remove the Blueprint created in earlier steps. 
 
 * Insert the ID saved from the [output of the create](#create-schematics-blueprint-cli) command.
 * When prompted reply `yes`, or `y` to delete the cloud resources.

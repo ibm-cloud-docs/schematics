@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-08-04"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -264,6 +264,6 @@ ibmcloud schematics blueprint create -name <name> -resource_group <resource_grou
 {: #bp-def-whatsnext}
 
 In this section you have learned about {{site.data.keyword.bpshort}} Blueprint definitions and configuration. Now you can 
-- Explore [deploying {{site.data.keyword.bpshort}} Blueprints using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli&interface=ui) tutorial to create cloud resources with a Blueprints managed cloud environment.
+- Explore [deploying {{site.data.keyword.bpshort}} Blueprints using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprints managed cloud environment.
 - Refer to, [Blueprints definition YAML](/docs/schematics?topic=schematics-blueprint-schema-definition) and [Blueprints input YAML](/docs/schematics?topic=schematics-blueprint-schema-inputs) for more information about the parameters used in the YAML files.
 

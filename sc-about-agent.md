@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-04"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -41,7 +41,7 @@ The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and
 ![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
 1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
-2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary&interface=ui#agentsa2) to create your cluster infrastructure.
+2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary#agentsa2) to create your cluster infrastructure.
 3. Integrate the {{site.data.keyword.bpshort}} private endpoint with the {{site.data.keyword.bpshort}} service to provision, configure, and monitor your application through {{site.data.keyword.bpshort}} Agent.
 4. Manage the tools and softwares through Agents services containing the microservices.
 
@@ -69,10 +69,10 @@ The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-age
 
 ![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
 
-For more information, about estimated time to set up an Agent, refer to [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup&interface=ui).
+For more information, about estimated time to set up an Agent, refer to [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup).
 
 ## Next steps
 {: #nextsteps-agent-arch}
 
 Now that you learned about the {{site.data.keyword.bpshort}} Agents architecture and its advantages. The next steps to explore {{site.data.keyword.bpshort}} Agents:
-- You can explore the steps for [Installing the {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup&interface=ui) in your {{site.data.keyword.cloud_notm}} account.
+- You can explore the steps for [Installing the {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup) in your {{site.data.keyword.cloud_notm}} account.

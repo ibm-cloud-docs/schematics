@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-08-04"
 
 keywords: schematics agent, agent, Beta release, agent Beta release
 
@@ -42,7 +42,7 @@ There will be multiple Beta releases in short window period, this requires the u
 | --- |--- | --- | 
 | UI capabilities are not final and will be updated throughout the Beta process.| | |
 | Support for drift detection is not available in Agents.| | |
-| Support to [store or persit user-defined](/docs/schematics?topic=schematics-general-faq&interface=ui#persist-file) files is not available in Agents.| | |
+| Support to [store or persit user-defined](/docs/schematics?topic=schematics-general-faq#persist-file) files is not available in Agents.| | |
 | Agents supports only `Terraform v1.0` or higher Terraform version. | | |
 | Agent customization is not finalized, will be communicated. | | |
 | Support to monitor Agent health is limited in this release.| | |

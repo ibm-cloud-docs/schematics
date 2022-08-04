@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-04"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -32,12 +32,12 @@ You must allow all the zones within the region that your resource is in. For exa
 
 | Region | Zone | Public IP addresses | Private IP addresses |
 | -- | -- | -- | -- |
-| EU Central | fra02 </br> fra04 </br> fra05 | `158.177.210.176/28`,`158.177.216.144/28` </br> `161.156.37.164/27`, `161.156.138.80/28` </br> `149.81.135.64/28` | `10.134.233.192/26`,`10.123.76.192/26` </br> `10.194.127.64/26` </br> `10.75.204.128/26` |
-| UK South | lon04  </br> lon05 </br> lon06 | `158.175.90.16/28`, `158.175.138.176/28` </br> `141.125.142.102/26`, `141.125.79.160/28` </br> `158.176.134.80/28`, `158.176.111.68/30` | `10.45.190.64/26`, `10.45.215.128/26` </br> `10.72.173.0/26` </br> `10.196.59.0/26` |
-| US | wdc04 </br> wdc06 </br> wdc07 </br> dal10 </br> dal12 </br> dal13| `169.55.82.140/26`,`169.45.235.176/28`,`169.55.65.48/28` </br> `169.60.69.10/27`,`169.63.173.208/28`,`169.63.150.144/28`,`169.63.150.104/29` </br> `169.62.49.135/27`,`169.61.99.176/28`,`169.62.1.224/28` </br> `150.238.230.128/27`,`169.63.254.64/28` </br> `169.61.191.64/27`,`169.47.104.160/28` </br> `169.62.204.36/26`,`169.60.172.144/28`,`169.63.254.64/28` |`10.148.98.0/26` </br>   `10.189.2.128/26`,`10.189.2.16/29` </br> `10.191.181.64/26`,`10.190.16.145/26` </br> `10.185.16.64/26` </br> `10.95.173.64/26` </br> `10.220.38.64/26` |
+| EU Central | fra02 </br> fra04 </br> fra05 | `149.81.123.64/27`,`149.81.135.64/28` </br> `158.177.210.176/28`,`158.177.216.144/28` </br> `161.156.138.80/28`,`161.156.37.160/27`| `10.123.76.192/26`,`10.134.233.192/26` </br> `10.194.127.64/26` </br> `10.75.204.128/26` |
+| UK South | lon04  </br> lon05 </br> lon06 | `158.175.90.16/28`,`158.175.138.176/28` </br> `141.125.79.160/28`,`141.125.142.96/27` </br> `158.176.111.64/27`,`158.176.134.80/28` | `10.45.190.64/26`,`10.45.215.128/26` </br> `10.196.59.0/26` </br> `10.72.173.0/26` |
+| US | wdc04 </br> wdc06 </br> wdc07 </br> dal10 </br> dal12 </br> dal13| `169.45.235.176/28`,`169.55.65.48/28`,`169.55.82.128/27` </br> `169.60.69.0/27`,`169.61.99.176/28`,`169.62.1.224/28` </br> `169.62.49.128/27`,`169.63.150.144/28`,`169.63.173.208/28` </br> `150.238.230.128/27`,`169.63.254.64/28` </br> `169.47.104.160/28`,`169.61.191.64/27`,`169.60.172.144/28` </br> `169.62.204.32/27` | `10.148.98.0/26`,`10.189.2.128/26` </br> `10.148.245.128/26` </br> `10.190.16.128/26`,`10.191.181.64/26` </br> `10.95.173.64/26` </br> `10.185.16.64/26` </br> `10.220.38.64/26` |
 {: caption="Region and supported public and private IPs" caption-side="bottom"}
 
-You can collapse down the ranges into security group rules. For example, `us-south` and `us-east` as two security group rules like `[169.44.0.0/44, 169.60.0.0/14]`. For more information, about creating security group rules, refer to, [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
+You can collapse down the ranges into security group rules. For example, `us-south` and `us-east` as two security group rules like `[169.45.235.176/28, 150.238.230.128/27]`. For more information, about creating security group rules, refer to, [IBM security group rules](/docs/security-groups?topic=security-groups-security-groups-guidelines#rules-1).
 {: note}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-08-04"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Creating a Blueprint 
 {: #create-blueprint}
 
-Deploying cloud resources with Blueprints is a two step process, create and install. The first step creates a Blueprint in {{site.data.keyword.bpshort}}. The second [install](/docs/schematics?topic=schematics-sc-blueprint-install) step executes the IaC automation modules to deploy cloud resources. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands such as `create`, `update`, and `delete`.
+Deploying cloud resources with Blueprints is a two step process, create and install. The first step creates a Blueprint in {{site.data.keyword.bpshort}}. The second [install](/docs/schematics?topic=schematics-install-blueprint&interface=cli) step executes the IaC automation modules to deploy cloud resources. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands such as `create`, `update`, and `delete`.
 {: shortdesc} 
 
 The first step in deploying cloud resources is the creation of a Blueprint in {{site.data.keyword.bpshort}}. This saves the Blueprint configuration for future operations. The Blueprint config specifies the Git source and release of the Blueprint definition, input files, and any optional input values that will be used to create cloud resources. A linked Workspace is created for each module in the Blueprint definition, initialised from the modules IaC source repository and module inputs.
@@ -57,7 +57,10 @@ Before your begin
 - Install the [{{site.data.keyword.bpshort}} command line](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) plug-in, or [update the command line plug-in](/docs/schematics?topic=schematics-setup-cli#schematics-cli-update) to access the {{site.data.keyword.bpshort}} Blueprints commands.
 - Check that you have the right [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 
-The following command creates a Blueprint by using the definition file `basic-blueprint.yaml` and input file `basic-input.yaml` from the source Git repository `https://github.com/Cloud-Schematics/blueprint-basic-example`. This Blueprint definition requires the two inputs `provision_rg=true` and `resource_group_name=default` are passed during the Blueprint creation. You can create Blueprint using `default` or new resource group `mynew-resourcegroup`, both the syntax are provided.  
+The following command creates a Blueprint by using the definition file `basic-blueprint.yaml` and input file `basic-input.yaml` from the source Git repository `https://github.com/Cloud-Schematics/blueprint-basic-example`. This Blueprint definition requires the two inputs `provision_rg=true` and `resource_group_name=default` are passed during the Blueprint creation. You can create Blueprint using `default` or new resource group `mynew-resourcegroup`, both the syntax are provided.
+
+If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a subfolder of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/<subfolder>`. 
+{: note}
 
 **Syntax: To create a resource group named `mynewrg`, and create COS instance with the bucket in `mynewrg` resource group**
 

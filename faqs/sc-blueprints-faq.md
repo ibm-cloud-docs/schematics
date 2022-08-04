@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-04"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -81,7 +81,7 @@ If alternative input parameters are used to create a new resource group with a u
 - Trial accounts can only have a single resource group. Additional resource groups cannot be created unless the account is upgraded to a paid account. In a trial account there is already a single `Default` resource group and additional resource groups are not allowed.
 - When using a shared paid account, the example can fail due to duplicate resource groups. If the sample Blueprint is deployed multiple times in the same account with the same documented input parameters from the Readme, the install step will fail. This occurs as the second and subsequent Blueprints use the same resource group name as input. 
 - Delete and recreate the Blueprint using a different `resource_group_name`.
-    - In a shared user account, the resource group creation can fail due to insufficient IAM permissions to create resource groups. To create resource groups, a user needs [Account Management, editor or administrator permissions](/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles). 
+    - In a shared user account, the resource group creation can fail due to insufficient IAM permissions to create resource groups. To create resource groups, a user needs [Account Management, editor or administrator permissions](/docs/account?topic=account-account-services#account-management-actions-roles). 
 - When creating the COS instance, the following errors may occur when using Lite or Trial accounts:
     - "This plan requires a paid account. You can upgrade by adding a credit card to your account or you can select the free plan if it's available."
     - "You can only have one instance of a Lite plan per service. To create a new instance, either delete your existing Lite plan instance or select a paid plan."

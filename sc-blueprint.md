@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-14"
+lastupdated: "2022-08-04"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -57,8 +57,8 @@ Module statements in the Blueprint define the Workspaces that will be created an
 {: #nextsteps-bp-arch}
 
 So far you learned a little about {{site.data.keyword.bpshort}} Blueprints, its architecture and advantages. Here are some next steps to learn more:
-- [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions&interface=ui) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to configure Blueprint definitions and use Blueprints commands to deploy Blueprints.
-- See [Blueprints permissions](/docs/schematics?topic=schematics-access&interface=ui#blueprint-permissions) to set access permissions to explore Blueprint deployments.
+- [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to configure Blueprint definitions and use Blueprints commands to deploy Blueprints.
+- See [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to set access permissions to explore Blueprint deployments.
 - Explore [deploying {{site.data.keyword.bpshort}} Blueprints using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprints managed cloud environment.
-- [FAQs](/docs/schematics?topic=schematics-blueprints-faq&interface=ui) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-failure) for any challenges and questions on Blueprints.
+- [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-failure) for any challenges and questions on Blueprints.
 - [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand Beta limitations.

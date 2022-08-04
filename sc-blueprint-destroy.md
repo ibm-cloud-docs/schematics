@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-03"
+lastupdated: "2022-08-04"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -181,7 +181,7 @@ For more information, about how to diagnose and resolve issues if the command fa
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-After the cloud resources are destroyed, the Blueprint can be [deleted](/docs/schematics?topic=schematics-sc-blueprint-delete) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [Blueprint install](/docs/schematics?topic=schematics-sc-blueprint-install) again using the same Blueprint configuration.
+After the cloud resources are destroyed, the Blueprint can be [deleted](/docs/schematics?topic=schematics-sc-blueprint-delete) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [Blueprint install](/docs/schematics?topic=schematics-install-blueprint&interface=cli) again using the same Blueprint configuration.
 
 The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
 

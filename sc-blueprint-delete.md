@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-08-04"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -32,7 +32,6 @@ You can only delete Blueprint from command-line by using the [delete command](/d
 {: #verify-bp-deletion-ui}
 
 After deletion the Blueprint will not be displayed in the UI. 
-
 
 ## Deleting Blueprint from the CLI
 {: #delete-blueprint-cli}

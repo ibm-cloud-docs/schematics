@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-08-04"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Updating a Blueprint
 {: #update-blueprint}
 
-Updating cloud resources with Blueprints is a two step process, update and install. The first step updates the Blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the definition, IaC modules or inputs. The second [install](/docs/schematics?topic=schematics-sc-blueprint-install) step executes the IaC automation modules to deploy the changes in the Blueprint configuration.  For more information, refer to, [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands.
+Updating cloud resources with Blueprints is a two step process, update and install. The first step updates the Blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the definition, IaC modules or inputs. The second [install](/docs/schematics?topic=schematics-install-blueprint&interface=cli) step executes the IaC automation modules to deploy the changes in the Blueprint configuration.  For more information, refer to, [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands.
 {: shortdesc} 
 
 Blueprint update leverages the capabilities of Terraform to perform updates to deployed cloud resources. The Terraform config and inputs to a Workspace are updated by the Blueprint update operation. From the updated configuration, Terraform determines the changes that must be performed against the existing deployed resources and performs the required resource updates, deletions or creates.  
@@ -77,7 +77,7 @@ For more information, about how to diagnose and resolve issues if the command fa
 {: #update-blueprint-cli}
 {: cli}
 
-Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-blueprint-update) command to refresh the Blueprint configuration with the changes. This will update the Blueprint and Workspaces with the updated input values. 
+Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the Blueprint configuration with the changes. This will update the Blueprint and Workspaces with the updated input values. 
 
 
 Syntax
