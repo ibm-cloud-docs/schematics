@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-08-08"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -224,7 +224,7 @@ OK
 {: screen}
 
 
-## Listing Blueprint jobs UI
+## Listing Blueprint jobs through UI
 {: #list-blueprint-jobs-ui}
 {: ui}
 
@@ -236,9 +236,8 @@ The results of Blueprints operations, `create`, `install`, `update`, `destroy` a
 
 The color coding indicates if the job was successful or failed. 
 
-## Viewing Blueprint job results UI
+## Viewing Blueprint job results through UI
 {: #blueprint-job-get-ui}
-{: ui}
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
 2. Click **Jobs history** tab view the job logs for all Blueprint and module operations.

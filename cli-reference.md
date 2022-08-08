@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2232,18 +2232,18 @@ ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME
 {: codeblock}
 
 
-    The table provides the list of key parameters of the JSON file for the `Commands` API, for the command-line and the API.
+The table provides the list of key parameters of the JSON file for the `Commands` API, for the command-line and the API.
 
-    | Key | Required / Optional | Description |
-    | ------ | -------- | ---------- |
-    |`command`| Required |Provide the command. Supported commands are `show`,`taint`, `untaint`, `state`, `import`, `output`.|
-    |`command_params`| Required | The address parameters for the command name for `CLI`, such as resource name, absolute path of the file name. **Note** For API, you have to send option flag and address parameter in `command_params`.|
-    |`command_name`| Optional | The name for the command block.|
-    |`command_desc`| Optional | The text to describe the command block.|
-    |`command_onError`| Optional |  Instruction to continue or break in case of error in the command. |
-    |`command_dependsOn`|Optional| Dependency on the previous commands.|
-    |`command_status`| Not required | Displays the command executed status, either `success` or `failure`|
-    {: caption="List of key parameters" caption-side="bottom"}
+| Key | Required / Optional | Description |
+| ------ | -------- | ---------- |
+|`command`| Required |Provide the command. Supported commands are `show`,`taint`, `untaint`, `state`, `import`, `output`.|
+|`command_params`| Required | The address parameters for the command name for `CLI`, such as resource name, absolute path of the file name. **Note** For API, you have to send option flag and address parameter in `command_params`.|
+|`command_name`| Optional | The name for the command block.|
+|`command_desc`| Optional | The text to describe the command block.|
+|`command_onError`| Optional |  Instruction to continue or break in case of error in the command. |
+|`command_dependsOn`|Optional| Dependency on the previous commands.|
+|`command_status`| Not required | Displays the command executed status, either `success` or `failure`|
+{: caption="List of key parameters" caption-side="bottom"}
 
 **Example:**
 
