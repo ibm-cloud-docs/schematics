@@ -4,9 +4,9 @@ copyright:
   years: 2020, 2022
 lastupdated: "2022-08-08"
 
-keywords: {{site.data.keyword.bpshort}} , hybrid, multicloud, RACI
+keywords: schematics , hybrid, multicloud, RACI
 
-subcollection: {{site.data.keyword.bpshort}} 
+subcollection: schematics 
 
 ---
 
