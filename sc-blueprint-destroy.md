@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Destroying a Blueprint
 {: #destroy-blueprint}
 
-The cloud resources created by a Blueprint are destroyed using the `blueprint destroy` command. If it is then needed to remove the Blueprint from Schematics, this is performed after all resources have been destroyed using the [Blueprint destroy](/docs/schematics?topic=schematics-sc-blueprint-delete) command. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands create, update and delete and the Blueprints lifecycle. 
+The cloud resources created by a Blueprint are destroyed using the `blueprint destroy` command. If it is then needed to remove the Blueprint from Schematics, this is performed after all resources have been destroyed using the [Blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands create, update and delete and the Blueprints lifecycle. 
 
 For Terraform Workspaces, destroy runs a Terraform destroy operation against each Workspace in turn. This removes all cloud resources in reverse dependency order. 
 
@@ -181,7 +181,7 @@ For more information, about how to diagnose and resolve issues if the command fa
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-After the cloud resources are destroyed, the Blueprint can be [deleted](/docs/schematics?topic=schematics-sc-blueprint-delete) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [Blueprint install](/docs/schematics?topic=schematics-install-blueprint&interface=cli) again using the same Blueprint configuration.
+After the cloud resources are destroyed, the Blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=cli) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [Blueprint install](/docs/schematics?topic=schematics-install-blueprint&interface=cli) again using the same Blueprint configuration.
 
 The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
 

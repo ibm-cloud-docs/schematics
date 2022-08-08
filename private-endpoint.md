@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-08-08"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -115,7 +115,7 @@ Before you begin, to access the  {{site.data.keyword.bpshort}} service through t
 
 * Make sure that you have the required [permissions](/docs/schematics?topic=schematics-access#access-setup) to [create VPC](/docs/vpc?topic=vpc-getting-started), to create an endpoint gateway, to create or bind a reserved IP from the subnet, and [account limits for VSI creation](/docs/vpc?topic=vpc-quotas#vpcquotas) for concurrent instances.
 * A VPC Generation 2 instance and a subnet zones to bind an IP address at the same time you provision the endpoint gateway. For more information, see [Getting started with VPC](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
-* A VSI is created. For more information, see [creating a VSI](/docs/vpc?topic=vpc-creating-virtual-servers-cli#create-instance-cli).
+* A VSI is created. For more information, see [creating a VSI](/docs/vpc?topic=vpc-creating-virtual-servers&interface=cli).
 
 ### Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-add}
