@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-08"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -56,7 +56,7 @@ The [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-tim
 {: #refresh-token}
 
 If the `destroyresource` flag is set to `true`, refresh token header configuration is required to delete all the {{site.data.keyword.cloud_notm}} resources, and the {{site.data.keyword.bpshort}} workspace. Following are the uses of refresh token header:
-- If the token is expired, you can use `refresh token` to get a new IAM access token, see [IAM access token](/docs/schematics?topic=schematics-faqs#createworkspace-generate-tokens). 
+- If the token is expired, you can use `refresh token` to get a new IAM access token, see [IAM access token](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens). 
 - The `refresh_token` parameter cannot be used to retrieve a new IAM access token. 
 - When the IAM access token is about to expire, use the [API key](/apidocs/iam-identity-token-api#create-api-key){: external} to create a new access token.
 

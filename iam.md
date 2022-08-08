@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-08-08"
 
 keywords: schematics, automation, terraform
 
@@ -81,7 +81,31 @@ Review the following table to see what permissions you need to work with {{site.
 {: caption="User permissions for {{site.data.keyword.bpshort}} Actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{: beta}
 
+### Blueprints permissions
+{: #blueprint-permissions}
+
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Blueprint.
+
+In addition to the listed Blueprints activities and permission, you must check whether you have related [Workspace permissions](#workspace-permissions) for `Init blueprint`, `Install blueprint`, `Delete blueprint`, and `Destroy blueprint resources` activities to execute successfully.
+{: important} 
+
+| Activities | Reader | Writer | Manager | Account owner |
+|-----|-----|-----|-----|--------|
+| `View blueprint` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View blueprint logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Create blueprint` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Update blueprint` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Delete blueprint`| | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Init blueprint`| | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Install blueprint` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Destroy blueprint resources` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+{: row-headers}
+{: class="comparison-table"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} Blueprint" caption-side="top"}
+{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### KMS permissions
 {: #kms-permissions}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -37,7 +37,7 @@ Follow these practices while developing, and publishing the Terraform template i
 - Do not set your sensitive variable as default in the configuration files.
 - Check your secured variables or output as sensitive.
 - Check that your script executions do not take more than `60 minutes`, when your template is using `null resources` to provision or configure your resources.
-- Do use only [allowed list file extensions](/docs/schematics?topic=schematics-faqs&interface=api#clone-file-extension) in your repository.
+- Do use only [allowed list file extensions](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension) in your repository.
 
 ### Can I create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?
 {: #bp-security-tfvars}

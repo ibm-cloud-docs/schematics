@@ -21,12 +21,6 @@ subcollection: schematics
 
 
 
-
-
-
-
-
-
 ## Getting started
 {: #sitemap_getting_started}
 
@@ -1020,6 +1014,8 @@ subcollection: schematics
 
     * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
 
+    * [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions)
+
     * [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 
 * [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup)
@@ -1823,7 +1819,7 @@ subcollection: schematics
 
 * [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
-* [what is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
+* [What is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
 * [How do I set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
 
