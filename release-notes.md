@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -160,7 +160,7 @@ Support stopping or terminating the running job
 :   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, refer to, stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
 Support additional frequently asked questions (FAQs) 
-:  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-faqs&interface=api#drift-automatic-faq).
+:  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq).
 
 Support enhanced {{site.data.keyword.bpshort}} resource view
 :   The {{site.data.keyword.bpshort}} supports the enhanced [{{site.data.keyword.bpshort}} resource view in UI](/docs/schematics?topic=schematics-manage-lifecycle) page.

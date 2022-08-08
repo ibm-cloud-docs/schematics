@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -83,7 +83,7 @@ Record the ID of the Blueprint to use in the later commands.
 {: #get-started-blueprints-install}
 {: step}
 
-Use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install) command to perform Terraform apply operations by using the Terraform configurations specified in the Blueprint definition. This operation will create cloud resources. Insert the ID saved from the [output of the create](#create-schematics-blueprint) command.
+Use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install) command to perform Terraform apply operations by using the Terraform configurations specified in the Blueprint definition. This operation will create cloud resources. Insert the ID saved from the [output of the create](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli) command.
 
 ```sh
 ibmcloud schematics blueprint install -id <blueprint_id>
@@ -114,7 +114,7 @@ OK
 {: screen}
 
 In the UI view the provisioned {{site.data.keyword.cos_full_notm}} Blueprint and Workspaces. 
-- From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.cloud.ibm.com/blueprints){: external}, select the provisioned Blueprint to view the created Workspaces and cloud resources. 
+- From the [{{site.data.keyword.bpshort}} Blueprints list](https://cloud.ibm.com/schematics/blueprints){: external}, select the provisioned Blueprint to view the created Workspaces and cloud resources. 
 
 ## Next steps
 {: #get-started-blueprints-nextsteps}

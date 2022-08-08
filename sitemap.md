@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: schematics
 subcollection: schematics
@@ -15,12 +15,6 @@ subcollection: schematics
 
 # Site map
 {: #sitemap}
-
-
-
-
-
-
 
 
 
@@ -513,7 +507,7 @@ subcollection: schematics
 
     * [Blueprint display summary CLI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
 
-* [Displaying a Blueprint from the UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
+* [Displaying a Blueprint through UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
 
 [Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
 
@@ -527,9 +521,9 @@ subcollection: schematics
 
     * [Viewing Blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
 
-* [Listing Blueprint jobs UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
+* [Listing Blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
 
-* [Viewing Blueprint job results UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
+* [Viewing Blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
@@ -1019,6 +1013,8 @@ subcollection: schematics
     * [Workspace permissions](/docs/schematics?topic=schematics-access#workspace-permissions)
 
     * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
+
+    * [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions)
 
     * [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 
@@ -1823,7 +1819,7 @@ subcollection: schematics
 
 * [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
-* [what is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
+* [What is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
 * [How do I set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
 

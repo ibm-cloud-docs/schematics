@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-08-08"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -93,7 +93,7 @@ Dynamic inputs are used at Blueprint create time to pass inputs to dynamically c
 ### Blueprint Jobs
 {: #bpj1}
 
-Blueprints operations (command) are executed as jobs by {{site.data.keyword.bpshort}}. [Blueprints job commands](/docs/schematics?topic=schematics-review-blueprint) shows the value of the output variables defined in a Blueprint. 
+Blueprints operations (command) are executed as jobs by {{site.data.keyword.bpshort}}. [Blueprints job commands](/docs/schematics?topic=schematics-list-blueprint-jobs-cli&interface=cli) shows the value of the output variables defined in a Blueprint. 
 
 ### Blueprint Lifecycle
 {: #bpl1}

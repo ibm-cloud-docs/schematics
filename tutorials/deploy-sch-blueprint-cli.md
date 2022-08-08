@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -147,7 +147,7 @@ After a successful installation of the Blueprint, review the deployed Blueprint 
 ### Using the cloud UI 
 {: #review-schematics-blueprint-ui}
 
-From the [{{site.data.keyword.bpshort}} Blueprints list](https://schematics.cloud.ibm.com/blueprints){: external}, select the provisioned Blueprint to view the your Workspaces and cloud resources. Review UI tabs such as **Overview**, **Modules**, **Resources**, **Variables**, **Jobs history**, and **Settings** for the computed output values of the Blueprint. 
+From the [{{site.data.keyword.bpshort}} Blueprints list](https://cloud.ibm.com/schematics/blueprints){: external}, select the provisioned Blueprint to view the your Workspaces and cloud resources. Review UI tabs such as **Overview**, **Modules**, **Resources**, **Variables**, **Jobs history**, and **Settings** for the computed output values of the Blueprint. 
 
 ### Using the CLI
 {: #review-schematics-blueprint-cli}

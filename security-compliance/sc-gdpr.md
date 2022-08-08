@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -74,6 +74,7 @@ Following are the list of service security measures taken by the {{site.data.key
 {{site.data.keyword.bpshort}} can completely remove all references and data for a customer document when required as an operator-managed process called **purging**. Before you request that data to purge, it's important to understand that purged documents cannot be recovered once the process is complete.
 
 Follow these steps, if data needs to be removed through a right to be forgotten request.
-- Raise a request with the [{{site.data.keyword.IBM_notm}} DPO](http://w3-03.ibm.com/ibm/privacy/index.html){: external} to request purging of {{site.data.keyword.bpshort}} data related to a specific {{site.data.keyword.cloud_notm}} account along with the reason.
-- On receipt of a formal request by the [{{site.data.keyword.IBM_notm}} DPO](http://w3-03.ibm.com/ibm/privacy/index.html){: external}, {{site.data.keyword.bpshort}} operations verifies the request.
+- Raise a request with the [{{site.data.keyword.IBM_notm}} DPO](https://w3.ibm.com/ibm/privacy/){: external} to request purging of {{site.data.keyword.bpshort}} data related to a specific {{site.data.keyword.cloud_notm}} account along with the reason.
+- On receipt of a formal request by the [{{site.data.keyword.IBM_notm}} DPO](https://w3.ibm.com/ibm/privacy/){: external}, {{site.data.keyword.bpshort}} operations verifies the request.
 - {{site.data.keyword.bpshort}} triggers the purging action to permanently remove the requested data.
+

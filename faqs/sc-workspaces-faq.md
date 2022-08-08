@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-08"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -157,7 +157,7 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 
 You need to delete the workspace and NOT destroying the resources as if there are no resource available. For more information, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
 
-## what is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?
+## What is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?
 {: #gherepo-warn-faq}
 {: faq}
 {: support}
