@@ -41,7 +41,7 @@ You do not have the required permissions to use the resource group in {{site.dat
 Check whether you have access for the `Default` or `job-runner` resource group for creating {{site.data.keyword.bpshort}} Workspace for the {{site.data.keyword.bpshort}} Agent infrastructure set up. Then, you need to provide the `schematics_resource_crn` value to create a VPE for {{site.data.keyword.bpshort}} service by using Terraform. Once the VPE is created, the Agent running in your cluster, communicates to the {{site.data.keyword.bpshort}} service over {{site.data.keyword.cloud_notm}} private endpoint. To fetch the {{site.data.keyword.cloud_notm}} service instance value, run `ibmcloud resource service-instance schematics` command.
 {: tsResolve}
 
-Example : To retrieve the service instance in all resource groups from your acount.
+Example : To retrieve the service instance in all resource groups from your account.
 
 ```sh
 ibmcloud resource service-instance schematics

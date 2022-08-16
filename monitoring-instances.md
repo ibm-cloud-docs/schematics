@@ -94,12 +94,12 @@ Complete these steps to create your custom dashboard:
 
 | Metric name | Enterprise | Lite | Standard |
 | --------| -------- | -------- | ------- |
-| [ibm_schematics_workspace_actions_count](#wkspace-actions-count) | Yes | No | Yes |
-| [ibm_schematics_workspace_count](#wkspace-actions-count) | Yes | No | Yes |
-| [ibm_schematics_workspace_vulnerability_count](#wkspace-vulnerability-count) | Yes | No | Yes |
+| [`ibm_schematics_workspace_actions_count`](#wkspace-actions-count) | Yes | No | Yes |
+| [`ibm_schematics_workspace_count`](#wkspace-actions-count) | Yes | No | Yes |
+| [`ibm_schematics_workspace_vulnerability_count`](#wkspace-vulnerability-count) | Yes | No | Yes |
 {: caption="Metrics details" caption-side="bottom"}
 
-### ibm_schematics_workspace_count
+### `ibm_schematics_workspace_count`
 {: #wkspace-count}
 
 The number of workspaces state and actions count is stated in the table.
@@ -128,7 +128,7 @@ For the {{site.data.keyword.bpshort}} instance, following five different time se
 ### ibm_schematics_workspace_actions_count
 {: #wkspace-actions-count}
 
-The number of workspace actions count's are stated in the table.
+The number of workspace actions count are stated in the table.
 {: shortdesc}
 
 | Metadata | Description |
@@ -155,7 +155,7 @@ For the {{site.data.keyword.bpshort}} instance, following six different time ser
 You can create similar queries to fetch `apply`, `destroy`, and `plan` actions.
 {: note}
 
-### ibm_schematics_vulnerability_count
+### `ibm_schematics_vulnerability_count`
 {: #wkspace-vulnerability-count}
 
 Average vulnerability count of the Workspaces is stated in the table.

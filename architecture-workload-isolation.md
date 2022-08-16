@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-08-16"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
 
@@ -28,7 +28,7 @@ The following {{site.data.keyword.bpshort}} architecture image depicts the
 - How cloud service interact each other with the components for an operation?
 - What type of encryption are applied to secure your services?
 - Usage of the observability services.
-- Role of runtime jobs to interact with {{site.data.keyword.cloud_notm}} APIs, private cloud such as `vSphere`, `Kubernetes`, and other public cloud providers such as `AWS`, `Google`, so on.
+- Role of runtime jobs to interact with {{site.data.keyword.cloud_notm}} `APIs`, private cloud such as `vSphere`, `Kubernetes`, and other public cloud providers such as `AWS`, `Google`, so on.
 {: shortdesc}
 
 ![{{site.data.keyword.bpshort}} architecture](images/schematics-enduser-architecture.png){: caption="Figure 1. {{site.data.keyword.bpshort}} architecture" caption-side="bottom"}

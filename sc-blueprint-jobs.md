@@ -81,7 +81,7 @@ Review the following section for the `blueprint job get` command for an explanat
 {: #blueprint-job-get-cli}
 {: cli}
 
-To view the summary details of a Blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interative and will prompt the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `create`, `install`, `update`, `destroy` and `delete` operations are performed. It can also be retrieved using the `blueprint job list` command.  
+To view the summary details of a Blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and will prompt the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `create`, `install`, `update`, `destroy` and `delete` operations are performed. It can also be retrieved using the `blueprint job list` command.  
 {: shortdesc}
 
 
@@ -98,7 +98,7 @@ On successful completion the job get command returns the summary detail for the 
 ### Blueprint job get 
 {: #blueprint-job-get-cli} 
 
-The example here shows job summary output without following the interative prompt.  
+The example here shows job summary output without following the interactive prompt.  
 
 ```text          
 BLUEPRINT JOB DETAILS      
@@ -120,7 +120,7 @@ OK
 ```
 {: screen}
 
-The first section of the job output shows the overall execution status of the Blueprint operation (job), e.g. `create`, `install`, `update`, `destroy` or `delete`. 
+The first section of the job output shows the overall execution status of the Blueprint operation (job), such as, `create`, `install`, `update`, `destroy` or `delete`. 
 
 The second section has a detailed breakdown of the execution results at a Workspace level. 
 

@@ -32,7 +32,7 @@ Error: Request failes with status code: 400, BXNIMO137E: For the original authen
 
 The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation only shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.
 
-1. You need to create access_token and refresh_token.
+1. You need to create `access_token` and `refresh_token`.
 
     ```sh
     export IBMCLOUD_API_KEY=<ibmcloud-api_key>
@@ -139,12 +139,12 @@ You see authorization issues when the roles and permission access is insufficien
 
 The test IDs are considered as a valid IBM IDs to perform the global catalog or resource controller related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
-## How can I download subfolders from the Git repositories through {{site.data.keyword.bpshort}}
+## How can I download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}
 {: #compact-faq}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the subfolder from the GIT repositories. If the compact flag is set to **true** you can download and save subfolder recursively, otherwise, you will continue to download and save the full repository on workspace creation.
+{{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `subfolder` from the GIT repositories. If the compact flag is set to **true** you can download and save `subfolder` recursively, otherwise, you will continue to download and save the full repository on workspace creation.
 
 You can get the response by invoking get workspace API to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download will be compact.
 
@@ -488,7 +488,7 @@ No, you cannot initiate the drift detection. For more information, refer to, [de
 {: faq}
 {: support}
 
-In order to know the details of the drift detection job, you need to check the drift detection job log. The job log provides the details of the drift detection as `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+To know the details of the drift detection job, you need to check the drift detection job log. The job log provides the details of the drift detection as `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, refer to, [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
 ## Can I interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}}?
 {: #stopping-job-faq}

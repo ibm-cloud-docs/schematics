@@ -42,7 +42,7 @@ Drift detection for your Terraform automation Workspaces is possible in {{site.d
 {: #drift-ui}
 {: ui}
 
-You can initiate detecting drift for Workspaces from the {{site.data.keyword.bpshort}} Workspaces job page. This event initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. In order to know the details of the drift job, you need to check the drift job log for the drift status.
+You can initiate detecting drift for Workspaces from the {{site.data.keyword.bpshort}} Workspaces job page. This event initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. Instead to know the details of the drift job, you need to check the drift job log for the drift status.
 
 ### Viewing detect drift through UI
 {: #drift-view-ui}
@@ -54,7 +54,7 @@ Use the following steps to view the detect drift.
 3. Click **Actions** tab.
 4. Select **Detect drift** option to view the drift job is in `completed` with a `success` status or `in progress` with a `failure` status. The sample success example and failure example job log are shown in the screen capture.
 
-    The success example job log in order to identify the drift details.
+    The success example job log instead identify the drift details.
     ```text
     2022/04/19 10:10:44 -----  Terraform DRIFT  -----
     2022/04/19 10:10:44 Starting command: terraform-drift-cli drift
@@ -69,7 +69,7 @@ Use the following steps to view the detect drift.
     ```
     {: screen}
 
-    The failure example job log in order to identify the drift details.
+    The failure example job log instead identify the drift details.
     ```text
     2022/04/13 13:05:46 -----  Terraform Commands  -----
     2022/04/13 13:05:46 Could not execute job: Error : Drift cannot be executed since state file doesn't exist. Please run terraform apply to generate state file.
@@ -80,7 +80,7 @@ Use the following steps to view the detect drift.
 {: #drift-cli}
 {: cli}
 
-You can initiate detecting drift from the create Workspaces command line. This initiate a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. In order to know the details of the drift job, you need to check the drift job log for the drift status. Use the following commands to view the detect drift.
+You can initiate detecting drift from the create Workspaces command line. This initiate a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. Instead to know the details of the drift job, you need to check the drift job log for the drift status. Use the following commands to view the detect drift.
 {: shortdesc}
 
 ### Creating and viewing the detect drift through CLI

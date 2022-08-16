@@ -46,9 +46,9 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/).
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
     - In **Specify Template** section:
-        - **GitHub, GitLab or Bitbucket repository URL** - `<provide your Terraform template Git repository URL`.
+        - **GitHub, GitLab or `Bitbucket` repository URL** - `<provide your Terraform template Git repository URL`.
         - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform verion 1.0 or greater version. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. 
+        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater version. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. 
           You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0. When you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
           {: note}
 

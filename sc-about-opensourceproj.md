@@ -32,5 +32,5 @@ subcollection: schematics
 {: #nextsteps-technologies}
 
 - Learn more about the {{site.data.keyword.bpshort}} [terminologies](/docs/schematics?topic=schematics-learn-schematics-term) used in {{site.data.keyword.bpshort}}.
-- Do you want to know how the Open Source technologies works in {{site.data.keyword.bpshort}}? Then, you need to explore these [usecases](/docs/schematics?topic=schematics-how-it-works).
+- Do you want to know how the Open Source technologies works in {{site.data.keyword.bpshort}}? Then, you need to explore these [use cases](/docs/schematics?topic=schematics-how-it-works).
 - Click [here](/docs/schematics?topic=schematics-schematics-open-projects) to revisit the {{site.data.keyword.bpshort}} Open Source technologies.

@@ -28,14 +28,14 @@ Blueprints allows updating of:
 - Input files
 - Dynamic inputs  
 
-Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with updates to the Blueprint definition and module source repositories. When using the `git_release` option With `latest`, {{site.data.keyword.bpshort}} will identify the if any of the module Git repositories have been updated and perform a **pull latest** to update the Workspaces with the modified Terraform configs.
+Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with updates to the Blueprint definition and module source repositories. When using the `git_release` option With `latest`, {{site.data.keyword.bpshort}} will identify the if any of the module Git repositories have been updated and perform a **pull latest** to update the Workspaces with the modified Terraform configurations.
 
 ```sh
 ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
 {: pre}
 
-If explicit Blueprint versioning is used with release tags for each Blueprint definition release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new Blueprint release tag.  
+If explicit Blueprint version is used with release tags for each Blueprint definition release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new Blueprint release tag.  
 
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z  
@@ -44,14 +44,14 @@ ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z�
 
 Update the input file source and push a new release to its Git source repository. 
 
-If explicit input file versioning is used with release tags for each input file release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
+If explicit input file version is used with release tags for each input file release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
 
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_id> --input-git-release x.y.z  
 ```
 {: pre}
 
-Where no Git release is specified and relaxed versioning (latest) is used for input files in the Blueprint config, no change to the Blueprint config is required and the input file changes will be pulled in automatically by Schematics. 
+Where no Git release is specified and relaxed version (latest) is used for input files in the Blueprint config, no change to the Blueprint config is required and the input file changes will be pulled in automatically by Schematics. 
 
 Record the Blueprint ID that needs to be updated. To list the Blueprint IDs, run [Get all the blueprint instances](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-list) command.
 {: note}
@@ -97,12 +97,12 @@ ibmcloud schematics blueprint update -name Blueprint_Basic -resource-group defau
 ```
 {: pre}
 
-On successful completion the update command will return **update_success**. For more information, about the command options, see [Update command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update).
+On successful completion the update command will return **`update_success`**. For more information, about the command options, see [Update command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update).
 
 ### Verify Blueprint update
 {: #verify-update}
 
-Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
+Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalizing the Workspaces. The command only returns on completion.
 
 ```text
 Update Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
@@ -119,12 +119,12 @@ Blueprint   Blueprint Basic Example   updatE_SUCCESS   eu-de.JOB.Blueprint-Basic
 Workspace   basic-resource-group      INACTIVE            
 Workspace   basic-cos-storage         INACTIVE            
             
-Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 update_success at Mon Jun 27 16:18:47 BST 2022
+Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 `update_success` at Mon Jun 27 16:18:47 BST 2022
 OK
 ```
 {: screen}
 
-On successful completion the update command will return **update_success**. 
+On successful completion the update command will return **`update_success`**. 
 
 For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
 
@@ -136,7 +136,7 @@ For more information, about how to diagnose and resolve issues if the command fa
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint update, refer to, [Update a Blueprint](/apidocs/schematics/schematics#replace-blueprint) by using API.
 
-Blueprint update API runs `Blueprint update`, and `Blueprint jobs` APIs together, to performs the update, and install Blueprint operations.
+Blueprint update API runs `Blueprint update`, and `Blueprint jobs` `APIs` together, to performs the update, and install Blueprint operations.
 {: important}
 
 Record the Blueprint ID that need to be deleted. To list the Blueprint ID, run [Get all the Blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.

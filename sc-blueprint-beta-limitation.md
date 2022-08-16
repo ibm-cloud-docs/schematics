@@ -24,7 +24,7 @@ Join the `#tmp-blueprints-beta-2022` slack channel and post a message including 
 - Your name
 - email address
 - Your Company/Organization name
-- Your level of experience with cloud automation, specifically with regard to Terraform, or {{site.data.keyword.bplong_notm}}
+- Your level of experience with cloud automation, specifically regarding Terraform, or {{site.data.keyword.bplong_notm}}
 - Any initial questions or comments
 
 You can come back any time to your created thread to add information, ask questions, or give feedback.
@@ -56,11 +56,11 @@ You can come back any time to your created thread to add information, ask questi
 | --- |--- | --- | 
 | On create the Blueprint name and description specified on the command line are ignored. | | |
 | On update, Blueprint name not updated. | | |  
-| Install, destroy and delete command returns **fullfilment_success** on successful completion.  | | | 
-| Automatic pull latest of updated module Terraform configs from Git repositories are not performed on Blueprint update. | | | 
+| Install, destroy and delete command returns **`fullfilment_success`** on successful completion.  | | | 
+| Automatic pull latest of updated module Terraform configuration from Git repositories are not performed on Blueprint update. | | | 
 | UI not showing logs for failed workspace jobs. | | | 
 | JSON output option not supported on commands. | | |   
-| On CLI cursor is lost if command is cancelled during spinner. | | | 
+| On CLI cursor is lost, if the cancel command is used during spinner. | | | 
 | Command output date and time formatting. | | | 
 {: caption="Beta release known issues" caption-side="bottom"}
 

@@ -64,7 +64,7 @@ Review the release notes for July 2022.
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents Beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
-    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), APIs related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Install [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup) through UI.
     - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
@@ -83,7 +83,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} Blueprints Beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints engagement.
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
-    - [Usecase](/docs/schematics?topic=schematics-get-started-blueprints).
+    - [Use case](/docs/schematics?topic=schematics-get-started-blueprints).
     - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-install-blueprint) to configure the right schemas and use the right Blueprints commands for the deployment of Blueprints.
     - See [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to install Blueprints deployment.
@@ -244,7 +244,7 @@ Get job files API supports `plan_json` file type
 {: release-note}
 
 Support `__netrc__` environment values in private Git repository
-:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command-line](/docs/schematics?topic=schematics-download-modules-pvt-git) and [APIs](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command-line](/docs/schematics?topic=schematics-download-modules-pvt-git) and [`APIs`](/apidocs/schematics/schematics#create-workspace).
 
 
 ### 4 March 2022
@@ -252,7 +252,7 @@ Support `__netrc__` environment values in private Git repository
 {: release-note}
 
 Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
-:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui), [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui), [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4th March 2022.
@@ -336,7 +336,7 @@ About {{site.data.keyword.bpshort}} Job files
 :   You can now download the state-file at every job level along with the latest state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 ResourceQuery attribute deprecated 
-:   ResourceQuery attribute is replaced as [resource_queries](/apidocs/schematics/schematics#list-resource-query) in the API.
+:   ResourceQuery attribute is replaced as [`resource_queries`](/apidocs/schematics/schematics#list-resource-query) in the API.
 
 ## October 2021
 {: #schematics-oct21}

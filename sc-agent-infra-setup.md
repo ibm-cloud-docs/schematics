@@ -55,9 +55,9 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure Workspace.
     - In **Specify Template** section:
-        - **GitHub, GitLab or Bitbucket repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure`.
+        - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure`.
         - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform verion 1.0 or greater than version.
+        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater than version.
         - Click `Next`.
     - In **Workspace details** section:
         - **Workspace name** as `schematics-agent-infra_workspace`.
@@ -80,7 +80,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
     |--|--|--| -- |
     | `agent_prefix` | String | Required | Provide the prefix that is used for your VPC, {{site.data.keyword.containerlong_notm}} Cluster, and Observability.
     | `location`| String | Required | The location of an Agent infrastructure. **Note** for Beta, the Agent must be deployed in a fresh provisioned VPC, {{site.data.keyword.containerlong_notm}} Cluster, and Log Analysis instance. For example, **us-south**. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.|
-    | `resource_group_name` | String | Required | Name for the resource group used for an Agent infrastructure and Agent service. For example, **test_agent**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group. |
+    | `resource_group_name` | String | Required | Name for the resource group used for an Agent infrastructure and Agent service. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group. |
     | `ibmcloud_api_key` | String | Optional | The {{site.data.keyword.cloud_notm}} API key used to provision the {{site.data.keyword.bpshort}} Agent infrastructure resources. If not provided, resources provisions in currently logged in user credentials.|
     | `tags` | List(String) | Optional | A list of tags for an Agent infrastructure. For example, `myproject:agent`, `test:agentinfra`. You can find the provisioned resources of an Agent faster by using Tag name. |
     {: caption="{{site.data.keyword.bpshort}} Agents infrastructure inputs" caption-side="bottom"}
@@ -115,9 +115,9 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/).
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
     - In **Specify Template** section:
-        - **GitHub, GitLab or Bitbucket repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/service`.
+        - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/service`.
         - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform verion 1.0 or greater than version.
+        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater than version.
         - Click `Next`.
     - In **Workspace details** section:
         - **Workspace name** as `schematics-agent-service`.
@@ -141,7 +141,7 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
     | `agent_name` | String | Required | The name of an Agent. |
     | `location` | String | Required | The [location](/docs/schematics?topic=schematics-multi-region-deployment) of an Agent services. It must be the same as the Agent infrastructure/cluster location. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.|
     | `resource_group_name` | String | Required | The name of the resource group used for an Agent infrastructure and Agent service. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group.|
-    | `profile_id` | String | Required | Create an IAM trusted profile ID for the Agents with the roles and actions. For more information, refer to, [creating profile_id for Agents](/docs/schematics?topic=schematics-agent-trusted-profile).|
+    | `profile_id` | String | Required | Create an IAM trusted profile ID for the Agents with the roles and actions. For more information, refer to, [creating `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile).|
     | `cluster_id` | String | Required | The {{site.data.keyword.containerlong_notm}} cluster ID used to run an Agent service. **Note** to provide the `cluster_id` details that you received in Agent infrastructure output logs.|
     | `logdna_name` | String | Required | The LogDNA service instance name used to send an Agent logs. **Note** to provide the `logdna_name` details that you received in Agent infrastructure output logs.|
     | `ibmcloud_api_key` | String | Optional | The {{site.data.keyword.cloud_notm}} API key used to deploy the {{site.data.keyword.bpshort}} Agent resources. If not provided, resources provisions in currently logged in user credentials.|
@@ -157,7 +157,7 @@ Follow the steps to view the deployment of Agent service workspace.
 
 1. Navigate to the target [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
 2. Click **Kubernetes Clusters**  page.
-3. Click your `<cluster>` hyperlink > click **Kubernetes dashboard** > **Pods**.
+3. Click your `<cluster> hyperlink` > click **Kubernetes dashboard** > **Pods**.
 4. Switch to your **schematics-job-runtime** namespace from the drop down box next to search icon to view `jobrunner` pod (1 instance) > Status: `Running`.
 5. Switch to your **schematics-ibm-observe** namespace from the drop down box next to search icon to view `logdna-agent` pods (3 instances - one on each worker node) > Status: `Running`.
 6. Switch to your **schematics-runtime** namespace from the drop down box next to search icon to view `jobx0.x0` pods (3 instances - one on each worker node) > Status: `Running`.
@@ -223,7 +223,7 @@ Here are the list of commands used to provision the Agent infrastructure.
 Before you begin
 
 - Keep your the `cluster_id`, and `logdna_name` that are recorded from the Agent infrastructure Job logs.
-- Create or use an existing trusted `profile_id`. For more information to create trusted `profile-id`, refer to [Create profile_id for Agents](/docs/schematics?topic=schematics-agent-trusted-profile).
+- Create or use an existing trusted `profile_id`. For more information to create trusted `profile-id`, refer to [Create `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile).
 
 Here are the list of commands used to create the Agent service.
 
@@ -236,7 +236,7 @@ Here are the list of commands used to create the Agent service.
     | `schematics_endpoint_location` | provide your endpoint location, for example, `us`.|
     | `profile_id` | Provide your trusted profile ID.|
     | `location` | Enter the region, for example, `us-south`.|
-    | `agent_name` | Enter your agent name, for example, myproject.|
+    | `agent_name` | Enter your agent name, for example, `myproject`.|
     {: caption="Agent service input variable" caption-side="bottom"}
 
     The Agent service workspace should have the same input values for Resource Group, Location, and Tags. Use the `cluster_id`, and `logdna_name` that are recorded while provisioning the Agent infrastructure.

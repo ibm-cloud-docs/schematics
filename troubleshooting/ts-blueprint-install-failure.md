@@ -23,7 +23,7 @@ content-type: troubleshoot
 Review the following sections to assist in debugging Blueprint install failures. 
 
 
-## Blueprint install fails with message "Install of module xyz Failed"
+## Blueprint install fails with message "Install of module Failed"
 {: #bp-install-fails1}
 
 When you run the Blueprint install command, it fails with message that the install of a module has failed.    
@@ -73,7 +73,7 @@ Attention! Job ID: eu-gb.JOB.Blueprint-Basic-Example.0cebdb53 FULFILMENT_FAILED
 ```
 {: screen}
 
-Install failures are related to Terraform execution and the specific Terraform config being executed. Debugging a Blueprint install failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or standalone Terraform usage. 
+Install failures are related to Terraform execution and the specific Terraform config being executed. Debugging a Blueprint install failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or stand-alone Terraform usage. 
 {: tsResolve} 
 
 The Blueprint install command will indicate which module has failed. Then prompt to show a summary of the log for the failed Workspace.  
@@ -112,20 +112,20 @@ The analysis of the Workspace logs indicates that the modules Terraform config h
 Correct the Terraform config error at source and push a new release to its Git source repository . 
 {: tsResolve} 
 
-If explicit versioning of Blueprint modules is used or specific branches, the Blueprint definition will also require updating in its Git repo to specify the new release tag or branch fon the module statement. 
+If explicit version of Blueprint modules is used or specific branches, the Blueprint definition will also require updating in its Git repo to specify the new release tag or branch for the module statement. 
 - Update the Blueprint module statements to specify the new module version. 
 - Push the new release of the Blueprint definition to its Git source repository. With an updated release tag for the Blueprint definition if required.
 
-For modules, when no Git release is specified on the Blueprint module statements and relaxed module versioning is used, to always use the latest module release, no update to the Blueprint definition is required. The (latest) change to the module repo will be pulled in automatically by Schematics.  
+For modules, when no Git release is specified on the Blueprint module statements and relaxed module version is used, to always use the latest module release, no update to the Blueprint definition is required. The (latest) change to the module repo will be pulled in automatically by Schematics.  
 
-Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. With 'latest' release, {{site.data.keyword.bpshort}} will identify the updated module Git repos and perform a Pull-Latest to update any Workspaces with the modified Terraform configs.  
+Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. With 'latest' release, {{site.data.keyword.bpshort}} will identify the updated module Git repos and perform a Pull-Latest to update any Workspaces with the modified Terraform configurations.  
 
 ```sh
 ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
 {: pre}
 
-If explicit Blueprint versioning is used with release tags for each Blueprint definition release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new Blueprint release tag.  
+If explicit Blueprint version is used with release tags for each Blueprint definition release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new Blueprint release tag.  
 
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z  
@@ -145,7 +145,7 @@ ibmcloud schematics blueprint install -id <blueprint_id> 
 When you run the Blueprint install command, it fails with message that the install of module has failed. 
 {: tsSymptoms}
 
-Analysis of the logs indicates that the modules Terraform apply operation timed out or a transient failure occuted. 
+Analysis of the logs indicates that the modules Terraform apply operation timed out or a transient failure occurs. 
 {: tsCauses}
 
 
@@ -171,14 +171,14 @@ Analysis of the Workspace logs indicates that the cause of the Terraform apply f
 Update the input file source and push a new release to its Git source repository . 
 {: tsResolve} 
 
-If explicit input file versioning is used with release tags for each input file release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
+If explicit input file version is used with release tags for each input file release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
 
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_id> --input-git-release x.y.z  
 ```
 {: pre}
 
-Where no Git release is specified and relaxed module versioning (latest) is used for input files in the Blueprint config, no change to the Blueprint config is required and the input file changes will be pulled in automatically by Schematics.  
+Where no Git release is specified and relaxed module version (latest) is used for input files in the Blueprint config, no change to the Blueprint config is required and the input file changes will be pulled in automatically by Schematics.  
 
 Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration with the changes. This will update the Blueprint and Workspaces with the updated input values. 
 

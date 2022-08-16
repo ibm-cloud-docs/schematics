@@ -28,7 +28,7 @@ Review the following sections to assist in debugging Blueprint install failures.
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input repositories cannot be cloned or found. 
 {: tsSymptoms}
 
-Prior to creating the Blueprint, {{site.data.keyword.bpshort}} attempts to download the input files and Blueprint definition from the Git repositories specified on the create command and validate the YAML schema. 
+Before creating the Blueprint, {{site.data.keyword.bpshort}} attempts to download the input files and Blueprint definition from the Git repositories specified on the create command and validate the YAML schema. 
 {: tsCauses}
 
 Sample error
@@ -52,7 +52,7 @@ Rerun the Blueprints create operation with the correct repository reference.
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprint is created with an error that the Blueprint or input files cannot be found.
 {: tsSymptoms}
 
-Prior to creating the Blueprint, {{site.data.keyword.bpshort}} attempts to download the input files and Blueprint definition from the Git repositories specified on the create command and validate the YAML schema. The repository was located, but the definition or input files cannot be found. 
+Before creating the Blueprint, {{site.data.keyword.bpshort}} attempts to download the input files and Blueprint definition from the Git repositories specified on the create command and validate the YAML schema. The repository was located, but the definition or input files cannot be found. 
 {: tsCauses}
 
 Sample error
@@ -124,7 +124,7 @@ Rerun the Blueprints create operation with all the required inputs.
 When you create a Blueprint in {{site.data.keyword.bpshort}}, the create fails before the Blueprints is created with an error that the Blueprint contains invalid definitions.  
 {: tsSymptoms}
 
-Prior to creating the Blueprint, {{site.data.keyword.bpshort}} validates the syntax of the YAML Blueprint definition file. If the syntax is specified incorrectly the create will fail. 
+Before creating the Blueprint, {{site.data.keyword.bpshort}} validates the syntax of the YAML Blueprint definition file. If the syntax is specified incorrectly the create will fail. 
 {: tsCauses}
 
 Sample error 

@@ -44,7 +44,7 @@ ibmcloud schematics blueprint install -id eu-de.BLUEPRINT.Blueprint-Basic-Exampl
 ```
 {: pre}
 
-On successful completion the install command returns **fullfilment_success**. 
+On successful completion the install command returns **`fullfilment_success`**. 
 
 ### Verify Blueprint install success 
 {: #bp-verify-install-cli}
@@ -100,4 +100,4 @@ After installing the Blueprint, the cloud resources are now deployed. The resour
 
 The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
 
-Looking for additional Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
+Looking for additional Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 

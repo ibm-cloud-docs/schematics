@@ -1,7 +1,7 @@
 ---
 
 copyright: 
-  years: 2017, 2022
+  years: 2017, 2021
 lastupdated: "2022-08-16"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
@@ -57,11 +57,11 @@ The latest minor version of the Ansible CLI is used in the {{site.data.keyword.b
 
 | Terraform helpers | Description | 
 | --- | --- |
-| `{{site.data.keyword.cloud_notm}} CLI` | You can use the {{site.data.keyword.cloud_notm}} CLI from the Ansbile automation.|
+| `{{site.data.keyword.cloud_notm}} CLI` | You can use the {{site.data.keyword.cloud_notm}} CLI from the Ansible automation.|
 | `JQ v1.6` | You can use the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Ansible automation. |
 | `kubectl` | You can use the Kubernetes command-line interface to work with your [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters. |
 | `OpenShift client` | You can use {{site.data.keyword.redhat_openshift_notm}} command-line interface to work with your [{{site.data.keyword.redhat_openshift_notm}} clusters](/docs/openshift?topic=openshift-access_cluster). |
-| `Python 3.6` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Ansible automation. </br> * netaddr </br>* kubernetes </br>* openshift </br>* pywinrm </br>* boto3 </br>* boto </br>* botocore </br>* PyVmomi |
+| `Python 3.6` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Ansible automation. </br> * `netaddr` </br>* `kubernetes` </br>* `openshift` </br>* `pywinrm` </br>* `boto3` </br>* `boto` </br>* `botocore` </br>* `PyVmomi` |
 {: caption="Helpers in ansible-runtime-job" image caption-side="top"}
 
 To avoid the installation of these tools, you can also use the [Cloud Shell](https://cloud.ibm.com/shell) from the {{site.data.keyword.cloud_notm}} console.

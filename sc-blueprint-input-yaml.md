@@ -20,7 +20,7 @@ subcollection: schematics
 
 This document is the reference of the YAML schema used to describe a Blueprint input.yaml file containing Blueprint input variables. 
 
-Each blueprint.yaml file contains a prefix section defining the [input variables](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-input-statements) required to customise the definition to a specific use case. If a value is not defined, it is assumed that the input is satisfied by a user defined input value at Blueprint creation time. These must be satisfied at Blueprint create time by an input file or dynamic inputs. 
+Each blueprint.yaml file contains a prefix section defining the [input variables](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-input-statements) required to customize the definition to a specific use case. If a value is not defined, it is assumed that the input is satisfied by a user defined input value at Blueprint creation time. These must be satisfied at Blueprint create time by an input file or dynamic inputs. 
 {: shortdesc}  
 
 The type of an input variable is defined in the [input block](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-module-inputs) of the consuming Module in the Blueprint definition. The supported types are the same as the [Terraform variable types](https://www.terraform.io/language/expressions/types). If the type is omitted the default is `string`.
@@ -39,7 +39,7 @@ region: us-south
 ## Complex input values
 {: #complex-input-value}
 
-Blueprints has full support for all Terraform HCL complex data types. To retain compatibility with Terraform HCL and readibility for Terraform users, complex variables are not represented directly in YAML as collections or lists, but retain their original HCL representation. Complex variables in Blueprints are represented as single or multi-line strings, as flow or block scalars.  
+Blueprints has full support for all Terraform HCL complex data types. To retain compatibility with Terraform HCL and readability for Terraform users, complex variables are not represented directly in YAML as collections or lists, but retain their original HCL representation. Complex variables in Blueprints are represented as single or multi-line strings, as flow or block scalars.  
 
 See the sample [Blueprints complex inputs](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} contains several complex data types represented as YAML scalars. 
 {: shortdesc} 
