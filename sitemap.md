@@ -501,7 +501,7 @@ subcollection: schematics
 
 [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
-* [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
+* [Listing Blueprint through CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
 
 * [Displaying Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 

@@ -17,13 +17,20 @@ subcollection: schematics
 
 # Listing Blueprints
 {: #list-blueprint-cli}
-{: cli}
+
 
 To list your Blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command takes requires no arguments, but is region specific and will only list Blueprints in the selected CLI region. 
 {: shortdesc}
 
 For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
+
+## Listing Blueprint through CLI
+{: #listing-bp-cli}
+{: cli}
+
+Lists all the Blueprints.
+{: shortdesc}
 
 **Syntax:**
 
@@ -34,8 +41,7 @@ ibmcloud schematics blueprint list
 
 On successful completion the list command returns a list of Blueprints  
 
-## Blueprint list output
-{: #list-blueprint-output-cli} 
+**Output:**
 
 The command lists all the Blueprints created in the CLI region. 
 
@@ -51,7 +57,6 @@ OK
 
 ## Displaying Blueprints
 {: #display-blueprint-cli}
-{: cli}
 
 To display the details of Blueprints and their configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
 - `summary` Blueprint and module status
@@ -62,7 +67,6 @@ To display the details of Blueprints and their configuration with the CLI, use t
 For a complete listing of options, see the [ibmcloud schematics blueprint get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get) command.
 {: shortdesc}
 
-
 ### Blueprint display summary 
 {: #display-blueprint-summary-cli}
 
@@ -72,6 +76,8 @@ For a complete listing of options, see the [ibmcloud schematics blueprint get](/
 ibmcloud schematics blueprint get -id <blueprint_id>
 ```
 {: pre}
+
+**Output:**
 
 On successful completion the get command returns summary details of the Blueprint and module status.  
 
@@ -96,9 +102,11 @@ OK
 {: screen}
 
 
-
 ### Blueprint display outputs
 {: #display-blueprint-outputs-cli}
+
+Displays the Blueprint with the summary information of the Blueprint.
+{: shortdesc}
 
 **Syntax:**
 
@@ -108,6 +116,8 @@ ibmcloud schematics blueprint get -id <blueprint_id> -level outputs
 {: pre}
 
 On successful completion the get command returns the summary details of the Blueprint and the output variables returned by the Blueprint.  
+
+**Output:**
 
 ```text
 BLUEPRINT
@@ -146,6 +156,9 @@ This example shows the returned computed value for the output variable `blueprin
 
 ### Blueprint display summary CLI
 {: #display-blueprint-summary-cli}
+
+Displays the output with the module level.
+{: shortdesc}
 
 **Syntax:**
 
