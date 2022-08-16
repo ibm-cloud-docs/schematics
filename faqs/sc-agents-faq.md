@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-18"
+lastupdated: "2022-08-16"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -70,7 +70,7 @@ The Workspace job logs are available in {{site.data.keyword.bpshort}} UI console
 {: support}
 
 Currently, the {{site.data.keyword.bpshort}} Agent will run three {{site.data.keyword.bpshort}} jobs in parallel. The rest of the jobs are queued in your cluster.
-You can customize the Agent service deployment to increase the number of job PODs in order to increase the number of parallel jobs.
+You can customize the Agent service deployment to increase the number of job PODs instead increase the number of parallel jobs.
 You must also monitor the resources in the Agent Infrastructure. The number of the workers in the worker pool must be increased to run more jobs, in parallel.
 
 ## While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What should I do next? 
@@ -96,7 +96,7 @@ You need to just retry to provision an Agent infrastructure. Or, you can provide
 {: faq}
 {: support}
 
-`--agent-location` is a required variable that specifies the region of the cluster where the Agent service is deployed. For example, `us-south`. Where as `--location` is also a required varaible that specified the geographic locations that are supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing.
+`--agent-location` is a required variable that specifies the region of the cluster where the Agent service is deployed. For example, `us-south`. Where as `--location` is also a required variable that specified the geographic locations that are supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing.
 
 ## Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agents?
 {: #faqs-agent-rg}
@@ -136,9 +136,9 @@ The following steps allows to get the JR logs and provide the request Id:
 - After your job is run and `failed`, or `succeeded`. If you want to {{site.data.keyword.bpshort}} team to debug the backend logs of the Agent, you can filter the logDNA logs with the request ID from the jobs log.
 - The logDNA sends to your mail. You can save the logs with that filter and send the file to {{site.data.keyword.bpshort}} team.
 
-## What is time period set to deploy the cloud resources?
+## What is time set to deploy the cloud resources?
 {: #faqs-agent-limit}
 {: faq}
 {: support}
 
-The default time period set to deploy the cloud resources is `30 minutes` for an Agent. For more information, to set the time limit, refer to [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
+The default time set to deploy the cloud resources is `30 minutes` for an Agent. For more information, to set the time limit, refer to [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)

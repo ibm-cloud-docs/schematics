@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-16"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -37,7 +37,7 @@ In Blueprints the displayed name of the Blueprint is not a unique identifier. On
 
 Resource configuration with Blueprints is a two step process, user driven process. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands: create, update, and delete for an overview of the Blueprints lifecycle. 
 
-In the first step the Blueprint configuration in {{site.data.keyword.bpshort}} is created or updated. This saves in {{site.data.keyword.bpshort}} the required releases of the Blueprint definition and Input files from Git, and any optional input values that will be used to create cloud resources. For each Blueprint module, Workspaces are initialised or settings updated as required based on the specified release of the Blueprint definition and Blueprint inputs. For more information, refer to [Creating Blueprint](/docs/schematics?topic=schematics-create-blueprint).
+In the first step the Blueprint configuration in {{site.data.keyword.bpshort}} is created or updated. This saves in {{site.data.keyword.bpshort}} the required releases of the Blueprint definition and Input files from Git, and any optional input values that will be used to create cloud resources. For each Blueprint module, Workspaces are initialized or settings updated as required based on the specified release of the Blueprint definition and Blueprint inputs. For more information, refer to [Creating Blueprint](/docs/schematics?topic=schematics-create-blueprint).
 
 In the second step, the user performs the Install operation to deploy new or changed cloud resources. This runs the Infrastructure as code (IaC) automation code modules associated with the Workspaces by using the initial input configuration. For each module {{site.data.keyword.bpshort}} performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. For more information, refer to [Installing Blueprint](/docs/schematics?topic=schematics-install-blueprint).
 
@@ -55,9 +55,9 @@ During the Beta, Blueprints will support the application of IBM Cloud tags to al
 {: faq}
 {: support}
 
-Sensitive input variables like API Keys or SSH Keys should not be saved in Blueprint input files due to the risk of security exposure from a Git repository. To avoid accidential exposure, sensitive inputs should be passed as dynamic inputs at Blueprint create time using the `--inputs` flag. 
+Sensitive input variables like API Keys or SSH Keys should not be saved in Blueprint input files due to the risk of security exposure from a Git repository. To avoid accidental exposure, sensitive inputs should be passed as dynamic inputs at Blueprint create time using the `--inputs` flag. 
 
-Senstive values can be exported as environment variables and shell variable substituion used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command using `--inputs sshkey=$user_ssh_key`
+Sensitive values can be exported as environment variables and shell variable substitution used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command using `--inputs sshkey=$user_ssh_key`
 
 ```sh
 export user_ssh_key="ssh xxx"
@@ -72,7 +72,7 @@ ibmcloud schematics blueprint create  ......................   --inputs sshkey=$
 
 The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) as used in the Blueprints [tutorial](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) demonstrates the principles of deploying cloud resources using two {{site.data.keyword.bpshort}} Workspaces which reference and create cloud resources. If the user has insufficient IAM access permissions to this account, Terraform Workspace operations can fail, resulting in an Install failure.   
 
-It is assumed the user has access to a Pay-Go or Subscription account and has IAM access permisions to create resources in the Default resource group and [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Also permissions to create {{site.data.keyword.bpshort}} [Workspaces and Blueprints](/docs/schematics?topic=schematics-access). 
+It is assumed the user has access to a Pay-Go or Subscription account and has IAM access permissions to create resources in the Default resource group and [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Also permissions to create {{site.data.keyword.bpshort}} [Workspaces and Blueprints](/docs/schematics?topic=schematics-access). 
 
 The example uses the inputs `provisiong_rg=false` and `resource_group_name=Default` to reference the default resource group and provide this ID for the COS instance creation. 
 
@@ -94,21 +94,25 @@ If alternative input parameters are used to create a new resource group with a u
 {: faq}
 {: support}
 
-Blueprints runs IaC automation code modules written in HashiCorp Terraform. These can take minutes to hours to execute depending on the cloud resources being created. Automation modules are coded not to return on initial resource creation, but to only return when the resource is fully initialized and available to be used by subsequent automation modules. Compared to the experience of creating resources via the UI, where control is returned immediately and initialisation continues in the background, automation modules can take significantly longer to execute. 
+Blueprints runs IaC automation code modules written in HashiCorp Terraform. These can take minutes to hours to execute depending on the cloud resources being created. Automation modules are coded not to return on initial resource creation, but to only return when the resource is fully initialized and available to be used by subsequent automation modules. Compared to the experience of creating resources via the UI, where control is returned immediately and initialization continues in the background, automation modules can take significantly longer to execute. 
 
 ## How do I tell Blueprints what version of Terraform executable to use?
 {: #faqs-bp-tf-version}
 {: faq}
 {: support}
 
-The version of Terraform used for Blueprint Workspaces can be set using the Blueprint definition setting `TF_VERSION`. At execution time {{site.data.keyword.bpshort}} will programmatically determine the Terraform version supported by the automation modules, looking for a `terraform` block with a [required_version](https://www.terraform.io/language/settings#specifying-a-required-terraform-version){: external} parameter. {{site.data.keyword.bpshort}} will choose the most recent executable release that meets the constraints of the both the `TF_VERSION` and `required_ version` from the Terraform config.
+The version of Terraform used for Blueprint Workspaces can be set using the Blueprint definition setting `TF_VERSION`. At execution time {{site.data.keyword.bpshort}} will programmatically determine the Terraform version supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://www.terraform.io/language/settings#specifying-a-required-terraform-version){: external} parameter. {{site.data.keyword.bpshort}} will choose the most recent executable release that meets the constraints of the both the `TF_VERSION` and `required_ version` from the Terraform config.
 
 ## Is it possible to override the GitHub definition `location` and use a command-line file instead?
 {: #faqs-bp-location-override}
 {: faq}
 {: support}
 
-There are 2 ways to create Blueprint using CLI
+There are 2 ways to create Blueprint using CLI.
+
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+{: important}
+
 1. Using a local file in JSON format.
    
    Example

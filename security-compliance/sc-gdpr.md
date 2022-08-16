@@ -33,7 +33,7 @@ You can find information about auditing in [Audit logging](/docs/schematics?topi
 The following categories of **Personal Data** are supported by {{site.data.keyword.bpshort}} for GDPR:
 
 - Basic contact information, such as email address, name, etc, which is a subset of basic personal information.
-- Technically indentifiable personal information, such as authentication credentials, IP address, etc.
+- Technically identifiable personal information, such as authentication credentials, IP address, and so on.
 
 For more information, about data security in {{site.data.keyword.bpshort}}, see [Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
@@ -64,7 +64,7 @@ Following are the list of service security measures taken by the {{site.data.key
 - Physical security of an office locations that are used by our personnel is handled by {{site.data.keyword.IBM_notm}} corporate.
 - Technical and Organizational Measures. Technical and Organizational Measures (TOMs) are employed by {{site.data.keyword.bpshort}} to ensure the security of personal data. {{site.data.keyword.bpshort}} holds externally audited certifications for the controls {{site.data.keyword.bpshort}} employs.
 - Service access to data.
-- {{site.data.keyword.bpshort}} operations and support staff has access to customer data and can access during routine operations. The access is only done as required in order to operate and support the service. Access is limited to a need to know basis and also is logged, monitored, and audited.
+- {{site.data.keyword.bpshort}} operations and support staff has access to customer data and can access during routine operations. The access is only done as required instead operate and support the service. Access is limited to a need to know basis and also is logged, monitored, and audited.
 
 ## Deletion of data
 {: #deletion-of-data}

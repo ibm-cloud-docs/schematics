@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-16"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -65,7 +65,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     3. Action supports **SSH** and **WinRM** types of inventory connection tab to connect to your remote host.
        - Select **SSH** tab, to enter the **username** and **{{site.data.keyword.cloud_notm}} resource inventory private SSH key** that you want to use to connect to your target hosts. All hosts must be configured with the matching public SSH key so that {{site.data.keyword.bpshort}} can connect to your hosts and run your playbook. 
          * Select the **Bastion host access is required**, for the bastion host access. To use a different SSH key to connect to your bastion host, deselect the **Use the same key for bastion host** option. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
-       - Select **WinRM** tab, for the communication between the client and the server. Currently, WinRM supports only Windows system with the public IPs and do not support Bastion host.
+       - Select **WinRM** tab, for the communication between the client and the server. Currently, WinRM supports only Windows system with the public `IPs` and do not support Bastion host.
          * Provide the **Username** and the **Password** of your Windows system with the public IP.
     4. Click **Save**.
 

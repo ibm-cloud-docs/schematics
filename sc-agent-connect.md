@@ -58,7 +58,7 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
     - [LogDNA](/docs/log-analysis?topic=log-analysis-iam).
     - [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
-Here are the list of CURL commands use to register and unregister the Agent. For more information, about the Agents related APIs, refer to, [Agents APIs](/apidocs/schematics/schematics#list-agent). 
+Here are the list of CURL commands use to register and unregister the Agent. For more information, about the Agents related `APIs`, refer to, [Agents `APIs`](/apidocs/schematics/schematics#list-agent). 
 
 1. Run post API to [register an Agent](/apidocs/schematics/schematics#register-agent) with the {{site.data.keyword.bpshort}}.
    ```sh
@@ -134,7 +134,7 @@ Here are the list of CURL commands use to register and unregister the Agent. For
     ```
     {: pre}
 
-5. Optional: [Deregister the Agent](/apidocs/schematics/schematics#delete-agent) by providing the Agent ID in path parameter.
+5. Optional: [`Deregister the Agent`](/apidocs/schematics/schematics#delete-agent) by providing the Agent ID in path parameter.
 
    ```sh
     curl -X DELETE \
@@ -150,5 +150,5 @@ Here are the list of CURL commands use to register and unregister the Agent. For
 {: #connect-nextsteps}
 
 You have completed the Agent connection to your {{site.data.keyword.bpshort}} service instance.
-- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-register-agent) to bind the Agent to your Workspace, in order to run the IaC automation in your cluster.
+- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-register-agent) to bind the Agent to your Workspace, instead run the IaC automation in your cluster.
 - For any challenges in Agents installation or configuration, refer to, [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent&interface=cli) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=cli).

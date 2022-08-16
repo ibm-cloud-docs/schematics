@@ -20,7 +20,7 @@ This glossary provides terms and definitions for {{site.data.keyword.bpshort}} o
 
 The following cross-references are used in this glossary:
 
-- *See* refers you from a nonpreferred term to the preferred term or from an abbreviation to the spelled-out form.
+- *See* refers you from a non preferred term to the preferred term or from an abbreviation to the spelled-out form.
 - *See also* refers you to a related or contrasting term.
 
 ## Actions
@@ -50,7 +50,7 @@ A collection of Agent related microservices deployed on the Agent infrastructure
 {: #agentsa3}
 
 A Kubernetes cluster used to deploy and run the Agent services. It is composed of the following resources.
-- VPC infrastructure as public_gateways, subnets
+- VPC infrastructure as `public_gateways`, subnets
 - Kubernetes Service as vpc_kubernetes_cluster
 - IBM LogDNA instance 
 
@@ -62,7 +62,7 @@ It the {{site.data.keyword.bpshort}} service used to deploy and manage large-sca
 ### Blueprint
 {: #bpb1}
 
-A Blueprint is a specific instance of a repeatable solution architecture, customised with input values to a specific use case. It is also the term used when you are working on specific Blueprint in {{site.data.keyword.bpshort}} created from an initial [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) with customised input values.  
+A Blueprint is a specific instance of a repeatable solution architecture, customized with input values to a specific use case. It is also the term used when you are working on specific Blueprint in {{site.data.keyword.bpshort}} created from an initial [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) with customized input values.  
 
 ### Blueprint definition
 {: #bpb2}
@@ -83,12 +83,12 @@ The set of {{site.data.keyword.cloud_notm}} resources created by a Blueprint and
 ### Blueprint Modules
 {: #bpb5}
 
-Blueprints are composed from IaC automation modules implemented in HashiCorp Terraform, or Red Hat Ansible. Both Terraform configs and Terraform modules can be used as Blueprint Modules.    
+Blueprints are composed from IaC automation modules implemented in HashiCorp Terraform, or Red Hat Ansible. Both Terraform configuration and Terraform modules can be used as Blueprint Modules.    
 
 ### Blueprint dynamic inputs
 {: #bpi1}
 
-Dynamic inputs are used at Blueprint create time to pass inputs to dynamically customise the Blueprint and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
+Dynamic inputs are used at Blueprint create time to pass inputs to dynamically customize the Blueprint and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
 
 ### Blueprint Jobs
 {: #bpj1}
@@ -132,12 +132,12 @@ Modules is a container for multiple resources or templates that are used togethe
 ## Workspaces
 {: #glossary-workspace}
 
-A platform to build the infrastructure, provision resources and deploy applications with support to multiple environments with feasibility or previlige to access using Git private or public repositories with secured access token.
+A platform to build the infrastructure, provision resources and deploy applications with support to multiple environments with feasibility or privilege to access using Git private or public repositories with secured access token.
 
 ### {{site.data.keyword.bpshort}} Workspaces
 {: #wkss1}
 
-A platform to build the infrastructure, provision resources and deploy applications with support to multiple environments with feasibility or previlige to access using Git private or public repositories with secured access token.
+A platform to build the infrastructure, provision resources and deploy applications with support to multiple environments with feasibility or privilege to access using Git private or public repositories with secured access token.
 
 ### Jobs
 {: #wksj1}

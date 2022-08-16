@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-16"
 
 keywords: schematics agents trusted profile id, agent trusted id, trusted profile,
 
@@ -38,12 +38,13 @@ Enable and configure your Agent service to establish trust with computed resourc
 
 3. Assign access to the trusted profile.
 
-   - From the **Access policies**, click **Assign access +**.
+   - From the **Access policy**.
    - Select **{{site.data.keyword.bpshort}}** service to assign access.
    - Click **Next**.
    - Check **All Resources** to scope the access.
    - Click **Next**.
    - Check **Reader**, **Manager**, **Viewer**, and **Operator** level of access for the Roles and actions.
+   - Click **Review**.
    - Check **Create**.
 
 4. View trusted profile ID.

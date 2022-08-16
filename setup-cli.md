@@ -91,7 +91,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
         ibmcloud schematics command [arguments...] [command options]
 
     COMMANDS:
-        action, ac           Create and manage {{site.data.keyword.bpshort}} Actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
+        action, ac           Create and manage {{site.data.keyword.bpshort}} Actions. Action let you define the source control repository that contains your playbook yamls and so on. and pass environment-specific variables.
         apply                Apply a plan to an workspace to deploy the latest version of your configuration.
         destroy              Destroy resources in an existing workspace. This action cannot be reversed.
         inventory, iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
@@ -186,7 +186,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Commands:
     schematics,sch                     IBM Cloud Schematics plug-in   
     schematics,sch workspace,ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.   
-    schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.   
+    schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls and so on. and pass environment-specific variables.   
     schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.   
     schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.   
     schematics,sch apply               Apply a plan to an workspace to deploy the latest version of your configuration.   

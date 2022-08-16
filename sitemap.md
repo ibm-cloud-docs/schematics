@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-16"
 
 keywords: schematics
 subcollection: schematics
@@ -141,9 +141,9 @@ subcollection: schematics
 
 [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#manage-security-compliance)
 
-* [Monitoring security and compliance posture with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#monitor-{{site.data.keyword.bpshort)
+* [Monitoring security and compliance posture with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#monitor-schematics)
 
-    * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-manage-security-compliance#{{site.data.keyword.bpshort-available-goals)
+    * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-manage-security-compliance#schematics-available-goals)
 
 [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
 
@@ -195,7 +195,7 @@ subcollection: schematics
 
     * [Access protection by using Identity and Access Management](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-iam)
 
-    * [Nonrepudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
+    * [Non repudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
 
     * [Data protection by using KMS](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data-protection)
 
@@ -226,6 +226,10 @@ subcollection: schematics
 * [August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug22)
 
     * Review the release notes for August 2022.
+
+    * [16 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1622)
+
+        * {{site.data.keyword.bpshort}} runtime now supports Ansible v2.9.27
 
     * [04 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2022)
 
@@ -533,7 +537,7 @@ subcollection: schematics
 
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
-    * [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-blueprint-update)
+    * [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
 
 * [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
@@ -722,7 +726,7 @@ subcollection: schematics
 
 * [Stopping job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types)
 
-* [Cancelling](/docs/schematics?topic=schematics-interrupt-job#cancelling)
+* [Cancelling a job](/docs/schematics?topic=schematics-interrupt-job#cancelling)
 
 * [Stopping a running job through UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui)
 
@@ -899,11 +903,11 @@ subcollection: schematics
 
 * [{{site.data.keyword.bplong_notm}} metrics details](/docs/schematics?topic=schematics-monitoring-instances#metrics-details)
 
-    * [ibm_schematics_workspace_count](/docs/schematics?topic=schematics-monitoring-instances#wkspace-count)
+    * [`ibm_schematics_workspace_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-count)
 
     * [ibm_schematics_workspace_actions_count](/docs/schematics?topic=schematics-monitoring-instances#wkspace-actions-count)
 
-    * [ibm_schematics_vulnerability_count](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
+    * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
 
 [Auditing events](/docs/schematics?topic=schematics-at_events#at_events)
 
@@ -1081,7 +1085,7 @@ subcollection: schematics
 
 * [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
 
-* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_what's_next)
+* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_whats_next)
 
 
 ## Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
@@ -1155,6 +1159,8 @@ subcollection: schematics
 * [Install Blueprint to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
+
+* [View Blueprint job logs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#view-schematics-blueprint-cli)
 
 * [Access and test the Blueprint created resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
 
@@ -1711,7 +1717,7 @@ subcollection: schematics
 
 * [Can I know the steps to get the Jobrunner (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
 
-* [What is time period set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
+* [What is time set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
@@ -1815,7 +1821,7 @@ subcollection: schematics
 
 * [How can I access the {{site.data.keyword.bpshort}} services for test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
-* [How can I download subfolders from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
+* [How can I download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
 * [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
@@ -1921,7 +1927,7 @@ subcollection: schematics
 
 [Blueprint install fails](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails)
 
-* [Blueprint install fails with message "Install of module xyz Failed"](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails1)
+* [Blueprint install fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails1)
 
 * [Blueprint install failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails2)
 

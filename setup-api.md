@@ -18,7 +18,7 @@ subcollection: schematics
 You can use the {{site.data.keyword.bplong}} API to automate {{site.data.keyword.bpshort}} capabilities in {{site.data.keyword.cloud_notm}}. To use the CLI, see [Setting up the CLI](/docs/schematics?topic=schematics-setup-cli).
 {: shortdesc}
 
-To find an overview of supported {{site.data.keyword.bplong}} APIs, API endpoints, and required API header and body information, see the [{{site.data.keyword.bplong}} API documentation](/apidocs/schematics){: external}. 
+To find an overview of supported {{site.data.keyword.bplong}} `APIs`, API endpoints, and required API header and body information, see the [{{site.data.keyword.bplong}} API documentation](/apidocs/schematics){: external}. 
 {: tip}
 
 ## Automating deployments with the API
@@ -38,7 +38,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
 1. Create your {{site.data.keyword.cloud_notm}} IAM access token. The body information that is included in your request varies based on the {{site.data.keyword.cloud_notm}} authentication method that you use. [Review the parameter table](#table1)
 
-   You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** field of your API output. Note the {{site.data.keyword.cloud_notm}} IAM token to retrieve additional header information in the next steps.
+   You can find the {{site.data.keyword.cloud_notm}} IAM token in the **`access_token`** field of your API output. Note the {{site.data.keyword.cloud_notm}} IAM token to retrieve additional header information in the next steps.
     ```sh
     POST `https://iam.cloud.ibm.com/identity/token`
     ```
@@ -60,7 +60,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     ```
     {: screen}
 
-2. Retrieve the ID of the {{site.data.keyword.cloud_notm}} account that you want to work with. Replace `<iam_access_token>` with the {{site.data.keyword.cloud_notm}} IAM token that you retrieved from the **access_token** field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the **resources.metadata.guid** field.
+2. Retrieve the ID of the {{site.data.keyword.cloud_notm}} account that you want to work with. Replace `<iam_access_token>` with the {{site.data.keyword.cloud_notm}} IAM token that you retrieved from the **`access_token`** field of your API output in the previous step. In your API output, you can find the ID of your {{site.data.keyword.cloud_notm}} account in the **resources.metadata.guid** field.
     ```sh
     GET https://accounts.cloud.ibm.com/coe/v2/accounts
     ```
@@ -127,7 +127,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     ```
     {: screen}
 
-    You can find the {{site.data.keyword.cloud_notm}} IAM token in the **access_token** and the refresh token in the **refresh_token** field of your API output.
+    You can find the {{site.data.keyword.cloud_notm}} IAM token in the **`access_token`** and the refresh token in the **`refresh_token`** field of your API output.
 
 4. Use the {{site.data.keyword.bpshort}} API to list all the workspaces in your account. 
 
@@ -155,7 +155,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     | Path | `id <workspace_ID>`: The ID of the workspace. To retrieve the workspace ID, run `ibmcloud schematics workspace list` |
     {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
-5. Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics/schematics#introduction){: external} to find a list of supported APIs.
+5. Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics/schematics#introduction){: external} to find a list of supported `APIs`.
 
 ## Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API
 {: #api_refresh}
@@ -205,7 +205,7 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     {: screen}
 
 
-    You can find your new {{site.data.keyword.cloud_notm}} IAM token in the **access_token**, and the refresh token in the **refresh_token** field of your API output.
+    You can find your new {{site.data.keyword.cloud_notm}} IAM token in the **`access_token`**, and the refresh token in the **`refresh_token`** field of your API output.
 
 2. Continue working with the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics){: external} by using the token from the previous step.
 

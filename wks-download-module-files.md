@@ -20,7 +20,7 @@ You can use the Terraform template to provision the resource by using the module
 The `__netrc__` configuration can be used with private and public Git repositories such a `GitHub`, `GitLab`, and `Bitbucket`.
 {: note}
 
-To overcome the download failure, {{site.data.keyword.bpshort}} supports environment variables `__netrc__`. The `__netrc__` accepts the list of `hostname`, `username` and the `password` argument. This feature is supported only in {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [APIs](/apidocs/schematics/schematics#create-workspace). The syntax is provided as an `env_values` in the JSON payload file.
+To overcome the download failure, {{site.data.keyword.bpshort}} supports environment variables `__netrc__`. The `__netrc__` accepts the list of `hostname`, `username` and the `password` argument. This feature is supported only in {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace). The syntax is provided as an `env_values` in the JSON payload file.
 
 The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax. 
 {: important}

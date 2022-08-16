@@ -20,7 +20,7 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} Blueprints follow a lifecycle approach to deploy and manage application environments on {{site.data.keyword.cloud}}. 
 
-Blueprints follow a cycle of create, update and delete. Cloud environments are created and resources are deployed as specified by the Blueprint definition. The deployed configuration is updated as required through the life of the environment, to maintain platform currency and compliance as security policies evolve. Finally, when the application is retired or rehosted into a new environment, the cloud infrastructure is retired by destroying any associated resources and deleting the Blueprint.
+Blueprints follow a cycle of create, update and delete. Cloud environments are created and resources are deployed as specified by the Blueprint definition. The deployed configuration is updated as required through the life of the environment, to maintain platform currency and compliance as security policies evolve. Finally, when the application is retired or hosted into a new environment, the cloud infrastructure is retired by destroying any associated resources and deleting the Blueprint.
 {: shortdesc}
 
 ## Lifecycle commands
@@ -49,7 +49,7 @@ Runs the Infrastructure as code (IaC) automation code modules associated with th
 
 - Update 
 
-Updates the stored Blueprints definition with versioned changes to the source definition and inputs. Changes to the module versions and inputs are propagated to the Workspaces. For more information, refer to, [Updating Blueprint](/docs/schematics?topic=schematics-update-blueprint&interface=cli).
+Updates the stored Blueprints definition with the version changes to the source definition and inputs. Changes to the module versions and inputs are propagated to the Workspaces. For more information, refer to, [Updating Blueprint](/docs/schematics?topic=schematics-update-blueprint&interface=cli).
 {: shortdesc} 
 
 - Install

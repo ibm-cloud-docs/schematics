@@ -18,7 +18,7 @@ subcollection: schematics
 # Understanding Blueprint definitions
 {: #blueprint-definitions}
 
-A {{site.data.keyword.bpshort}} Blueprint is composed of three versioned components:
+A {{site.data.keyword.bpshort}} Blueprint is composed of three version components:
 
 1. Automation modules written in Terraform, or Ansible.
 2. A Blueprint definition specifying the automation modules and dependencies.
@@ -34,7 +34,7 @@ The core of {{site.data.keyword.bpshort}} Blueprints is the Blueprints definitio
 - Input variable files customize the reusable Blueprints definition to create cloud environments.
 {: shortdesc}
 
-Input files, Blueprints, and modules are all maintained in Git source control. The version controlled components are linked at create time by a Blueprint configuration. The configuration defines the source of the versioned Blueprint definition in source control and the input files to customize the Blueprint. Also additional parameters for naming the Blueprint, access control and dynamic inputs. 
+Input files, Blueprints, and modules are all maintained in Git source control. The version controlled components are linked at create time by a Blueprint configuration. The configuration defines the source of the version Blueprint definition in source control and the input files to customize the Blueprint. Also additional parameters for naming the Blueprint, access control and dynamic inputs. 
 
 ## Blueprints YAML file
 {: #blueprint-yaml-file}
@@ -109,7 +109,7 @@ inputs:
 ## Module statements
 {: #blueprint-module}
 
-Module statements define the modules utilised by the Blueprint. Each statement defines the source repository for the IaC automation modules, the inputs and outputs for passing of resource information between dependent modules. Typically they contain 3 statement blocks:
+Module statements define the modules utilized by the Blueprint. Each statement defines the source repository for the IaC automation modules, the inputs and outputs for passing of resource information between dependent modules. Typically they contain 3 statement blocks:
 1. source
 2. inputs
 3. outputs
@@ -118,7 +118,7 @@ Module statements define the modules utilised by the Blueprint. Each statement d
 ### Module Source
 {: #blueprint-module-source}
 
-Blueprints modules are sourced from version controlled Git source repositories. Following IaC principles, versioned modules can be explicitly selected by release tags, or by a relaxed branch, latest commit approach. See, schema reference `git` example.
+Blueprints modules are sourced from version controlled Git source repositories. Following IaC principles, version modules can be explicitly selected by release tags, or by a relaxed branch, latest commit approach. See, schema reference `git` example.
 {: shortdesc} 
 
 ```yaml
@@ -157,7 +157,7 @@ Four keywords define the variable attributes: `name`, `value`, `type`, and `secu
 
 Similar to Terraform, values can be specified as static values or interpolated references to Blueprint inputs or other modules by using the `$` symbol as shown in the sample snippet. 
 
-Two input variable reference types are supported. Inter-module references, mapping module inputs to the outputs of other modules using the `$module` token. Additionally, Blueprints input references can be defined using the `$blueprint` token. Check the readme and meta-data for the automation modules to determine the supported inputs and variable types. 
+Two input variable reference types are supported. Inter-module references, mapping module inputs to the outputs of other modules using the `$module` token. Additionally, Blueprints input references can be defined using the `$blueprint` token. Check the readme and metadata for the automation modules to determine the supported inputs and variable types. 
 
 To reference the output value of another module, the format is `$module` followed by the dependent module name, the token `outputs`, followed by referenced output name.
 
@@ -186,7 +186,7 @@ inputs:
 ### Module outputs
 {: #blueprint-module-outputs}
 
-{{site.data.keyword.cloud_notm}} automation modules implemented in Terraform must contain HCL output statements to pass data and resource information to dependent modules. Check the readme and meta-data for the module to determine the supported outputs and data types.
+{{site.data.keyword.cloud_notm}} automation modules implemented in Terraform must contain HCL output statements to pass data and resource information to dependent modules. Check the readme and metadata for the module to determine the supported outputs and data types.
 {: shortdesc} 
 
 ```yaml
@@ -218,7 +218,7 @@ The inputs required by a Blueprints are defined in the inputs section. Where no 
 {: shortdesc} 
 
 - Version controlled input variable YAML files
-- Ad-hoc dynamic input variables, which are not version controlled 
+- Ad hoc dynamic input variables, which are not version controlled 
 
 ### Input files
 {: #blueprint-input-file}
@@ -248,7 +248,7 @@ docker_ports: | 
 ## Configuration of dynamic inputs
 {: #blueprint-dynamic-input}
 
-Dynamic inputs are used at Blueprint create time to pass inputs to dynamically customise the Blueprint and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository. API keys and SSH keys would typically be passed as dynamic inputs at creation time. See the [Blueprint FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs) for using dynamic inputs to pass sensitive variables. 
+Dynamic inputs are used at Blueprint create time to pass inputs to dynamically customize the Blueprint and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository. API keys and SSH keys would typically be passed as dynamic inputs at creation time. See the [Blueprint FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs) for using dynamic inputs to pass sensitive variables. 
 {: shortdesc} 
 
 Blueprints only supports input variables of type `string` as dynamic inputs. 

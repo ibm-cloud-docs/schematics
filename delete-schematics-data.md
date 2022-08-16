@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-16"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -49,7 +49,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
 2. Click **Actions** tab and select **Delete workspace** option.
-3. Type your workspace name in **Type Workspace_name to confirm** text box.
+3. Type your workspace name in **Type `Workspace_name` to confirm** text box.
 4. Click **Delete** button.
 
 ### Actions
@@ -59,7 +59,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/actions){: external}, select the actions that you want to delete.
 2. Click **Actions** tab and select **Delete** option.
-3. Type your Actions name in **Type Action_name to confirm** text box.
+3. Type your Actions name in **Type `Action_name` to confirm** text box.
 4. Click **Delete** button.
 
 ### Inventories
@@ -69,7 +69,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/inventories){: external}, select the inventories that you want to delete.
 2. Click `...` dots against the inventory you want to delete and click **Delete**.
-3. Type your inventory name in **Type Inventory_name to confirm** text box.
+3. Type your inventory name in **Type `Inventory_name` to confirm** text box.
 4. Click **Delete** button.
 
 ## Deleting {{site.data.keyword.bpshort}} objects from CLI

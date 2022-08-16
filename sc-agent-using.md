@@ -21,7 +21,7 @@ subcollection: schematics
 You have successfully connected the Agent to {{site.data.keyword.bpshort}} service instance. The next step is to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
 {: shortdesc}
 
-Once you bind the Workspace to the Agent, then the corresponding Workspace Jobs such as `terraform plan`, `terraform apply`, `terraform destroy`, etc. is automated to route to the Agent. 
+Once you bind the Workspace to the Agent, then the corresponding Workspace Jobs such as `terraform plan`, `terraform apply`, `terraform destroy`, and so on. is automated to route to the Agent. 
 
 In other words, the Terraform automation runs in your provisioned Agent infrastructure (cluster). Then the {{site.data.keyword.bpshort}} Workspace bounds to the Agent in the following ways:
 - Bind an new workspace to the Agent
@@ -45,9 +45,9 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
    1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/workspaces){: external} account by using your credentials.
    2. Click [**Create workspace +**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
       - In **Specify Template** section:
-         - **GitHub, GitLab or Bitbucket repository URL** - `https://github.com/Cloud-Schematics/cos-module`.
+         - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/cos-module`.
          - **Personal access token** - `<leave it blank>`.
-         - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform verion 1.0 or greater version.
+         - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater version.
          - Click **Bind Agent**. Choose your **Agent name** to bind to execute the Jobs.
          - Click `Next`.
       - In **Workspace details** section:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-16"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -38,6 +38,9 @@ After deletion the Blueprint will not be displayed in the UI.
 {: cli}
 
 For more information, about the command options, see the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete).
+
+For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+{: important}
 
 ```sh
 ibmcloud schematics blueprint delete -id us-east.ENVIRONMENT.Blueprints-Starter-Sample.c579f31d
@@ -87,7 +90,7 @@ OK
 ```
 {: screen}
 
-During the delete operation the status will show `In Progress`, when completed the status will change to `Normal`. The Blueprint and all of its cloud resources are now deleted. 
+During the delete operation the status will show `In Progress`, when completed the status will change to `Normal`. The Blueprint and all its cloud resources are now deleted. 
 
 For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
 
@@ -97,7 +100,7 @@ For more information, about how to diagnose and resolve issues if the command fa
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint delete, refer to, [Delete a Blueprint](/apidocs/schematics/schematics#delete-blueprint) by using API.
 
-Blueprint delete API runs `Blueprint delete`, and `Blueprint jobs` APIs together, to performs the delete, and install Blueprint operations.
+Blueprint delete API runs `Blueprint delete`, and `Blueprint jobs` `APIs` together, to performs the delete, and install Blueprint operations.
 {: important}
 
 Record the Blueprint ID that needs to be deleted. To list the Blueprint ID, run [Get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
@@ -218,4 +221,4 @@ For more information, about how to diagnose and resolve issues if the command fa
 ## Next steps
 {: #bp-delete-nextsteps}
 
-Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
+Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 

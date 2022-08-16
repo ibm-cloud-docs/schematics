@@ -65,7 +65,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 1. Download the content of the `terraform-ibm-observability` sample repository to your local machine. This repository is owned and maintained by {{site.data.keyword.IBM_notm}}, and provides a Terraform template to create an instance of {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}}. 
 
-    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a subfolder. 
+    If you want to use your own Terraform template, make sure that you put all Terraform configuration files in to a folder on your local machine. Do not store Terraform configuration files in a `subfolder`. 
     {: tip}
 
     ```sh
@@ -85,7 +85,7 @@ To upload a Terraform template to a private catalog, you must first compress all
     To run this command, make sure that you are not in the directory that stores your Terraform template, but that you navigate to the parent directory one level preceding. If you use the IBM-provided observability template as part of this tutorial, make sure that you are in the `terraform-ibm-observability` directory. 
     {: note}
 
-    If your `.tgz` file size if greater than 40 MB. Then, sse `rm -rf .git .gitignore` command to reduce the size of the `.tgz` file and then create `tar czfv <reponame>.tgz .`.
+    If your `.tgz` file size if greater than 40 MB. Then, use `rm -rf .git .gitignore` command to reduce the size of the `.tgz` file and then create `tar czfv <reponame>.tgz .`.
     {: tip}
 
     ```sh
@@ -135,7 +135,7 @@ Create a release in your source code repository to deliver and manage versions o
 7. Click **Publish release** to view your published releases feed for your repository.
 8. Optional: Right-click on your `TGZ` file and copy the link to the file. 
 9. Enter the link in your browser to verify that the `TGZ` file is automatically downloaded to your local machine. 
-10. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the subfolder. 
+10. Decompress the `TGZ` file and verify that you can see all Terraform configuration files without the `subfolder`. 
 
 ## Create a private catalog and add your Terraform template as a product
 {: #create-private-catalog}

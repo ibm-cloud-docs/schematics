@@ -29,7 +29,7 @@ subcollection: schematics
 
 The core principles of IaC are commonly defined as:
 - Codify everything
-- Everything versioned and in source control
+- All version and in the source control
 - Continuously test, integrate, and deploy
 - Make your infrastructure code modular
 
@@ -45,7 +45,7 @@ This approach to large-scale environment management is represented by the key Bl
 The key to building scalable cloud architectures with {{site.data.keyword.bpshort}} Blueprints is open source IaC automation modules. {{site.data.keyword.cloud_notm}} automation modules are reusable IaC definitions implementing the layers of an infrastructure stack as HashiCorp Terraform, or {{site.data.keyword.redhat_full}} Ansible configurations. To assist in creating Blueprints and {{site.data.keyword.cloud_notm}} environments, automation modules are purposely developed to a set of [guidelines](https://github.com/terraform-ibm-modules/getting-started/blob/master/README.md){: external} for resource naming conventions, variable definitions, inputs, and outputs.
 {: shortdesc} 
 
-In {{site.data.keyword.bpshort}}, Blueprint modules are deployed as linked {{site.data.keyword.bpshort}} (Terraform) Workspaces. {{site.data.keyword.bpshort}} performs data handling between the linked Workspaces, based on the resource dependencies between the modules. The linking of the Workspace IaC configs defines the solution architecture.  
+In {{site.data.keyword.bpshort}}, Blueprint modules are deployed as linked {{site.data.keyword.bpshort}} (Terraform) Workspaces. {{site.data.keyword.bpshort}} performs data handling between the linked Workspaces, based on the resource dependencies between the modules. The linking of the Workspace IaC configuration defines the solution architecture.  
 
 The mapping of a Blueprint definition with input variables and automation modules, to {{site.data.keyword.bpshort}} Workspaces, and deployed in cloud resources is illustrated in the diagram. 
 

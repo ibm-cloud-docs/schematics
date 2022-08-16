@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-16"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -43,12 +43,15 @@ You can only destroy the cloud resources created by a Blueprint from command-lin
 
 The following command performs a Blueprint destroy for the Blueprint with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
 
+For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+{: important}
+
 ```sh
 ibmcloud schematics blueprint destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
 ```
 {: pre}
 
-On successful completion the destroy command returns **fullfilment_success**. 
+On successful completion the destroy command returns **`fullfilment_success`**. 
 
 For more information, about the command options, see [Destroy command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy).
 
@@ -86,7 +89,7 @@ On successful completion the destroy command will return **fullfillment_success*
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint delete, refer to, [Destroy a Blueprint](/apidocs/schematics/schematics#delete-blueprint) by using API.
 
-Blueprint destroy API runs `Blueprint destroy`, and `Blueprint jobs` APIs together, to performs the delete, and install Blueprint operations.
+Blueprint destroy API runs `Blueprint destroy`, and `Blueprint jobs` `APIs` together, to performs the delete, and install Blueprint operations.
 {: important}
 
 Record the Blueprint ID that needs to be destroyed. To list the Blueprint ID, run [Get all the Blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
@@ -185,4 +188,4 @@ After the cloud resources are destroyed, the Blueprint can be [deleted](/docs/sc
 
 The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
 
-Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
+Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 

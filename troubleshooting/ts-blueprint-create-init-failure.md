@@ -23,7 +23,7 @@ content-type: troubleshoot
 When you create a Blueprint, the create fails during initialization of the {{site.data.keyword.bpshort}} Workspaces for the modules. 
 {: tsSymptoms}
 
-Blueprints are created in two steps. The first step retrieves, validates the Blueprint definition and creates the configuration in {{site.data.keyword.bpshort}}. The second step creates the required module Workspaces based on the module statements in the definition. This step clones the specified module source repos. An incorrectly specified repo URL will result in a Workspace initialisation failure. Other possible causes are the repository is private and an access token is not specified, or the access token is invalid. 
+Blueprints are created in two steps. The first step retrieves, validates the Blueprint definition and creates the configuration in {{site.data.keyword.bpshort}}. The second step creates the required module Workspaces based on the module statements in the definition. This step clones the specified module source repos. An incorrectly specified repo URL will result in a Workspace initialization failure. Other possible causes are the repository is private and an access token is not specified, or the access token is invalid. 
 {: tsCauses}
 
 Sample error
@@ -53,7 +53,7 @@ OK
 The Blueprint job status shows as `create_failed`. Additionally the Workspace job status shows as `NA` indicating that {{site.data.keyword.bpshort}} failed to create the Workspaces and no Workspace logs are available.  
 
 
-Review the error messages from the log of the failing Blueprint job, the Blueprint module definitions and Git repos to determine the cause of the initialisation failure.  
+Review the error messages from the log of the failing Blueprint job, the Blueprint module definitions and Git repos to determine the cause of the initialization failure.  
 {: tsResolve}
 
 Typical issues are:
@@ -65,7 +65,7 @@ Correct the cause of the failure. Most typically it is an invalid module repo UR
 - Update the Blueprint module statements to specify the correct Git repo URL
 - Push the new release of the Blueprint definition to its Git source repository. With an updated release tag if required.
 
-If using relaxed Blueprint definition versioning (latest), run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. 
+If using relaxed Blueprint definition versio (latest), run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. 
 
 
 ```sh
@@ -73,7 +73,7 @@ ibmcloud schematics blueprint update -id <blueprint_id> 
 ```
 {: pre}
 
-If explicit Blueprint versioning is used with release tags for each Blueprint definition release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new Blueprint release tag.  
+If explicit Blueprint version is used with release tags for each Blueprint definition release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new Blueprint release tag.  
 
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z  
@@ -81,7 +81,7 @@ ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z�
 {: pre}
 
 
-Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
+Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalizing the Workspaces. The command only returns on completion.
 
 ```text
 Update Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
@@ -98,11 +98,11 @@ Blueprint   Blueprint Basic Example   CREATE_SUCCESS   eu-de.JOB.Blueprint-Basic
 Workspace   basic-resource-group      INACTIVE            
 Workspace   basic-cos-storage         INACTIVE            
             
-Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 update_success at Mon Jun 27 16:18:47 BST 2022
+Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 `update_success` at Mon Jun 27 16:18:47 BST 2022
 OK
 ```
 {: screen}
 
-On successful completion the update command will return **update_success**. All Workspaces should now be initialised to `Inactive` state and deployment of the Blueprint can continue with [blueprint install](/docs/schematics?topic=schematics-install-blueprint). 
+On successful completion the update command will return **`update_success`**. All Workspaces should now be initialized to `Inactive` state and deployment of the Blueprint can continue with [blueprint install](/docs/schematics?topic=schematics-install-blueprint). 
 
-If the update job fails, repeat problem diagnosis and resolution until update commpletes successfully and all Workspaces are in `Inactive` state. 
+If the update job fails, repeat problem diagnosis and resolution until update completes successfully and all Workspaces are in `Inactive` state. 

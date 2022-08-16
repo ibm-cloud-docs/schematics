@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-08-16"
 
 keywords: blueprint install, install blueprint, blueprint
 
@@ -34,6 +34,9 @@ Before your begin
 
 The following command performs a Blueprint install for the Blueprint with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
 
+For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+{: important}
+
 **Syntax:**
 
 ```sh
@@ -41,7 +44,7 @@ ibmcloud schematics blueprint install -id eu-de.BLUEPRINT.Blueprint-Basic-Exampl
 ```
 {: pre}
 
-On successful completion the install command returns **fullfilment_success**. 
+On successful completion the install command returns **`fullfilment_success`**. 
 
 ### Verify Blueprint install success 
 {: #bp-verify-install-cli}
@@ -97,4 +100,4 @@ After installing the Blueprint, the cloud resources are now deployed. The resour
 
 The configuration of the Blueprint and outputs can be reviewed using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
 
-Looking for additional Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customisation and usage scenarios for each sample. 
+Looking for additional Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 
