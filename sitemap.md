@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-16"
 
 keywords: schematics
 subcollection: schematics
@@ -226,6 +226,10 @@ subcollection: schematics
 * [August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug22)
 
     * Review the release notes for August 2022.
+
+    * [16 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1622)
+
+        * {{site.data.keyword.bpshort}} runtime now supports Ansible v2.9.27
 
     * [04 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2022)
 

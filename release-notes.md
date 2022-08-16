@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-16"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -28,6 +28,13 @@ For information about releases that occurred before 22 October 2021, see [What's
 
 Review the release notes for August 2022.
 {: shortdesc}
+
+### 16 August 2022
+{: #schematics-aug1622}
+{: release-note}
+
+{{site.data.keyword.bpshort}} runtime now supports Ansible v2.9.27
+:   [{{site.data.keyword.bpshort}} runtime](/docs/schematics?topic=schematics-sch-utilities) supports Ansible v2.9.27 to run your Ansible automation.
 
 ### 04 August 2022
 {: #schematics-aug2022}

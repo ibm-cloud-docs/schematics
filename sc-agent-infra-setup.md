@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-16"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -172,7 +172,7 @@ Follow the steps to view the deployment of Agent service workspace.
 Before your begin
 - Setup your [CLI](/docs/schematics?topic=schematics-setup-cli).
 - Install [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
-- You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
+- You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
 Here are the list of commands used to provision the Agent infrastructure.
 
@@ -185,7 +185,7 @@ Here are the list of commands used to provision the Agent infrastructure.
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud-Schematics Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
 - Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to upload the tar file.
    ```sh
-   ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
+   ibmcloud schematics workspace upload  --id <provide your workspace ID> --file </provide-path-where-tar-fileresides>/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
    ```
    {: pre}
 
@@ -230,9 +230,9 @@ Here are the list of commands used to create the Agent service.
 - Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information, about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc).
     | Input variable | value |
     | --- | --- |
-    | `cluster_id` | provide the recorded cluster_id from Agent infrastructure job log. |
+    | `cluster_id` | provide the recorded `cluster_id` from Agent infrastructure job log. |
     | `resource_group_name` | provide the target resource group name, for example, default.|
-    | `logdna_name` | provide the recorded cluster_id from Agent infrastructure job log.|
+    | `logdna_name` | provide the recorded `logdna_name` from Agent infrastructure job log.|
     | `schematics_endpoint_location` | provide your endpoint location, for example, `us`.|
     | `profile_id` | Provide your trusted profile ID.|
     | `location` | Enter the region, for example, `us-south`.|
@@ -244,14 +244,14 @@ Here are the list of commands used to create the Agent service.
 
 - Run [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command to create the Agent service workspace.
    ```sh
-   ibmcloud schematics workspace new --file https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json
+   ibmcloud schematics workspace new --file <Provide the path where the JSON file resides>/create_agent_service_workspace.json
    ```
    {: pre}
 
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud {{site.data.keyword.bpshort}} Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
 - Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) to upload the tar file.
    ```sh
-   ibmcloud schematics workspace upload  --id <provide your workspace ID> --file /Users/sundeepmulampaka/goblueprint/src/github.ibm.com/schematicsblueprint/schematics-agents/tarfiles/agent-service-templates.tar --template <provide your template_id>
+   ibmcloud schematics workspace upload  --id <provide your workspace ID> --file </provide-path-where-tar-fileresides>/schematics-agents/tarfiles/agent-service-templates.tar --template <provide your template_id>
    ```
    {: pre} 
 
@@ -265,10 +265,10 @@ Here are the list of commands used to create the Agent service.
    ```
    {: pre}
 
+- Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**. **Note** wait for 15-30 minutes.
    Wait 15 - 30 minutes to complete the service execution.
    {: note}
 
-- Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**. **Note** wait for 15-30 minutes.
 - Run [job log](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job) command to view your job logs.
    ```sh
    ibmcloud schematics job logs --id JOB_ID
@@ -294,7 +294,7 @@ Here are the list of commands used to create the Agent service.
 {: api}
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
-2. You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
+2. You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
 Here are the list of CURL commands used to provision the Agent infrastructure:
 1. Run a workspace create command.
