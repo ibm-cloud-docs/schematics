@@ -911,7 +911,7 @@ ibmcloud schematics blueprint destroy -id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint delete`
 {: #schematics-blueprint-delete}
 
-Delete a {{site.data.keyword.bpshort}} Blueprint. A Blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state.
+Delete a {{site.data.keyword.bpshort}} Blueprint. A Blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state. For more information, about the difference between destroy and delete command, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 {: shortdesc}
 
 **Syntax:**

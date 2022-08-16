@@ -37,7 +37,7 @@ After deletion the Blueprint will not be displayed in the UI.
 {: #delete-blueprint-cli}
 {: cli}
 
-For more information, about the command options, see the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete).
+For more information, about the command options, see the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete). You need to run Blueprint destroy command and then run Blueprint delete command. For more information, about the difference between destroy and delete command, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 
 For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
@@ -98,7 +98,9 @@ For more information, about how to diagnose and resolve issues if the command fa
 {: #delete-blueprint-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint delete, refer to, [Delete a Blueprint](/apidocs/schematics/schematics#delete-blueprint) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint delete, refer to, [Delete a Blueprint](/apidocs/schematics/schematics#delete-blueprint) by using API. 
+
+You need to run Blueprint destroy command and then run Blueprint delete command. For more information, about the difference between destroy and delete command, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 
 Blueprint delete API runs `Blueprint delete`, and `Blueprint jobs` `APIs` together, to performs the delete, and install Blueprint operations.
 {: important}

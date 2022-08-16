@@ -131,6 +131,9 @@ ibmcloud schematics blueprint destroy -id <blueprint_id>
 ```
 {: pre}
 
+You need to run Blueprint destroy command and then run Blueprint delete command. For more information, about the difference between destroy and delete command, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+{: note}
+
 ```sh
 ibmcloud schematics blueprint delete -id <blueprint_id>
 ```
