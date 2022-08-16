@@ -141,9 +141,9 @@ subcollection: schematics
 
 [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#manage-security-compliance)
 
-* [Monitoring security and compliance posture with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#monitor-{{site.data.keyword.bpshort)
+* [Monitoring security and compliance posture with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-security-compliance#monitor-schematics)
 
-    * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-manage-security-compliance#{{site.data.keyword.bpshort-available-goals)
+    * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-manage-security-compliance#schematics-available-goals)
 
 [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
 
@@ -1085,7 +1085,7 @@ subcollection: schematics
 
 * [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
 
-* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_what's_next)
+* [What's next?](/docs/schematics?topic=schematics-provisioning-terraform-template#tut_whats_next)
 
 
 ## Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain

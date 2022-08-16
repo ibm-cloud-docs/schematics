@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-16"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -108,7 +108,11 @@ The version of Terraform used for Blueprint Workspaces can be set using the Blue
 {: faq}
 {: support}
 
-There are 2 ways to create Blueprint using CLI
+There are 2 ways to create Blueprint using CLI.
+
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+{: important}
+
 1. Using a local file in JSON format.
    
    Example

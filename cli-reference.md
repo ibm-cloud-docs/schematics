@@ -602,6 +602,9 @@ For more information, about the flags refer to, [Workspace get](/docs/schematics
 Create a {{site.data.keyword.bpshort}} Blueprint by using the `ibmcloud schematics blueprint create` command.
 {: shortdesc}
 
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+{: important}
+
 **Syntax to create using command:**
 
 ```sh

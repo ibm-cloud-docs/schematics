@@ -40,7 +40,6 @@ Currently, you can only create a Blueprint from command-line by using the [creat
 4. Click **Jobs history** tab view the result of the Blueprint create job and operations performed against the resource modules.  
 5. Click **Settings** tab to view the summary of the new Blueprint configuration.
 
-
 For more information, about how to diagnose and resolve issues if the create fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Creating a Blueprint from the CLI 
@@ -49,6 +48,9 @@ For more information, about how to diagnose and resolve issues if the create fai
 
 To create and deploy your Blueprint with the CLI, use the `ibmcloud schematics blueprint create` command. This command requires a name and the Git URL of a Blueprint definition and other optional arguments. For a complete listing of options, see the [ibmcloud schematics blueprint create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
 {: shortdesc}
+
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+{: important}
 
 Before your begin
 
