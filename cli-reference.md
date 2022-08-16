@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-16"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -634,9 +634,10 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-gitbranch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
+
 
 #### Using a config file
 {: #bp-create-config}
@@ -739,21 +740,23 @@ ibmcloud schematics blueprint create --file createtest.json --github-token <ENTE
 Output:
 
 ```text
-Created Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+Created Blueprint ID: Blueprint_Basic.eaB.5cd9
 
 Modules to be created
-SNO  Type    Name
-1     Workspace   basic-resource-group   
-2     Workspace   basic-cos-storage   
-      
-Blueprint job running eu-de.JOB.Blueprint-Basic-Example.da1b13ca
-Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:2    Active:0    Failed:0   
-Type        Name                      Status           Job ID   
-Blueprint   Blueprint Basic Example   CREATE_SUCCESS   eu-de.JOB.Blueprint-Basic-Example.da1b13ca   
-Workspace   basic-resource-group      INACTIVE            
-Workspace   basic-cos-storage         INACTIVE            
-            
-Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 create_success at Mon Jun 27 16:18:47 BST 2022
+SNO Type Name
+1 terraform basic-resource-group
+2 terraform basic-cos-storage
+
+Blueprint job running us-east.JOB.Blueprint_Basic.bb553ac5
+Waiting:0 Draft:0 Connecting:0 In Progress:0 Inactive:2 Active:0
+Failed:0
+Type Name Status Job ID
+Blueprint Blueprint_Basic CREATE_SUCCESS useast.JOB.Blueprint_Basic.bb553ac5
+terraform basic-resource-group INACTIVE
+terraform basic-cos-storage INACTIVE
+
+Blueprint ID Blueprint_Basic.eaB.5cd9 create_success at 2022-08-03
+21:19:16
 OK
 ```
 {: screen}
@@ -781,7 +784,7 @@ ibmcloud schematics blueprint install --id BLUEPRINT_ID
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint install -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 
+ibmcloud schematics blueprint install --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -811,7 +814,7 @@ ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH]
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint update -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -839,7 +842,7 @@ ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL]
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint get --id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+ibmcloud schematics blueprint get --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -897,7 +900,7 @@ ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt]
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+ibmcloud schematics blueprint destroy -id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -927,7 +930,7 @@ ibmcloud schematics blueprint delete [--id BLUEPRINT_ID] [—force-delete] [--no
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint delete -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+ibmcloud schematics blueprint delete -id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -954,7 +957,7 @@ ibmcloud schematics blueprint job get --id JOB_ID
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint job get --id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+ibmcloud schematics blueprint job get --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -983,7 +986,7 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint job logs -id eu-gb.JOB.Blueprint-Basic-Example.0a0eb889
+ibmcloud schematics blueprint job logs -id useast.JOB.Blueprint_Basic.e4081308
 ```
 {: pre}
 
@@ -1010,7 +1013,7 @@ ibmcloud schematics blueprint job logs --id JOB_ID
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint job logs  
+ibmcloud schematics blueprint job logs --id useast.JOB.Blueprint_Basic.e4081308
 ```
 {: pre}
 

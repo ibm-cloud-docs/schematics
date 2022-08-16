@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-16"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -62,19 +62,23 @@ The following command creates a Blueprint by using the definition file `basic-bl
 If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a subfolder of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/<subfolder>`. 
 {: note}
 
-**Syntax: To create a resource group named `mynewrg`, and create COS instance with the bucket in `mynewrg` resource group**
+**Syntax: To create a resource group named `mynewrgdemo`, and create COS instance with the bucket in `mynewrg` resource group**
+
+For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+{: important}
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrg
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-gitbranch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
 
 **Syntax: To use the `default` resource group, and create COS instance with the bucket in `default` resource group**
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
+ibmcloud schematics blueprint create -name Blueprint_Basic -resourcegroup default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-gitbranch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
 ```
 {: pre}
+
 
 On successful completion the create command returns **create_success** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint. For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
 
@@ -84,21 +88,24 @@ On successful completion the create command returns **create_success** and the u
 Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 
 ```text
-Created Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
-Modules to be created
-SNO   Type        Name   
-1     Workspace   basic-resource-group   
-2     Workspace   basic-cos-storage   
-      
-Blueprint job running eu-de.JOB.Blueprint-Basic-Example.da1b13ca
-Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:2    Active:0    Failed:0   
+Created Blueprint ID: Blueprint_Basic.eaB.5cd9
 
-Type        Name                      Status           Job ID   
-Blueprint   Blueprint Basic Example   CREATE_SUCCESS   eu-de.JOB.Blueprint-Basic-Example.da1b13ca   
-Workspace   basic-resource-group      INACTIVE            
-Workspace   basic-cos-storage         INACTIVE            
-            
-Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 create_success at Mon Jun 27 16:18:47 BST 2022
+Modules to be created
+SNO Type Name
+1 terraform basic-resource-group
+2 terraform basic-cos-storage
+
+Blueprint job running us-east.JOB.Blueprint_Basic.bb553ac5
+Waiting:0 Draft:0 Connecting:0 In Progress:0 Inactive:2 Active:0
+Failed:0
+Type Name Status Job ID
+Blueprint Blueprint_Basic CREATE_SUCCESS useast.JOB.Blueprint_Basic.bb553ac5
+terraform basic-resource-group INACTIVE
+terraform basic-cos-storage INACTIVE
+
+Blueprint ID Blueprint_Basic.eaB.5cd9 create_success at 2022-08-03
+21:19:16
+
 OK
 ```
 {: screen}

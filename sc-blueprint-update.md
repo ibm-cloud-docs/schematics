@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-16"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -28,7 +28,7 @@ Blueprints allows updating of:
 - Input files
 - Dynamic inputs  
 
-Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with updates to the Blueprint definition and module source repositories. When using the `git_release` option With `latest`, {{site.data.keyword.bpshort}} will identify the if any of the module Git repositories have been updated and perform a **pull latest** to update the Workspaces with the modified Terraform configs.  
+Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with updates to the Blueprint definition and module source repositories. When using the `git_release` option With `latest`, {{site.data.keyword.bpshort}} will identify the if any of the module Git repositories have been updated and perform a **pull latest** to update the Workspaces with the modified Terraform configs.
 
 ```sh
 ibmcloud schematics blueprint update -id <blueprint_id> 
@@ -77,26 +77,30 @@ For more information, about how to diagnose and resolve issues if the command fa
 {: #update-blueprint-cli}
 {: cli}
 
-Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the Blueprint configuration with the changes. This will update the Blueprint and Workspaces with the updated input values. 
+Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the Blueprint configuration with the changes. This will update the Blueprint and Workspaces with the updated input values.
+{: shortdesc} 
 
+For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+{: important}
 
 Syntax
 
 ```sh
-ibmcloud schematics blueprint update -name Blueprint_Basic -bp-git-branch main -input-git-url -input-git-branch main  -inputs provision_rg=true,resource_group_name=test_rg
+ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN]
 ```
 {: pre}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint update -name Blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynew-resourcegroup
+ibmcloud schematics blueprint update -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
 
 On successful completion the update command will return **update_success**. For more information, about the command options, see [Update command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update).
 
 ### Verify Blueprint update
+{: #verify-update}
 
 Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalising the Workspaces. The command only returns on completion.
 

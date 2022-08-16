@@ -537,7 +537,7 @@ subcollection: schematics
 
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
-    * [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-blueprint-update)
+    * [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
 
 * [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
@@ -1159,6 +1159,8 @@ subcollection: schematics
 * [Install Blueprint to create cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
+
+* [View Blueprint job logs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#view-schematics-blueprint-cli)
 
 * [Access and test the Blueprint created resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
 

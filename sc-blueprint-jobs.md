@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-16"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -22,6 +22,9 @@ subcollection: schematics
 
 To list your Blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and will prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_id>`. 
 {: shortdesc}
+
+For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+{: important}
 
 **Syntax:**
 
