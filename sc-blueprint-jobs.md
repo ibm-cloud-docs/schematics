@@ -18,13 +18,18 @@ subcollection: schematics
 
 # Listing Blueprint jobs
 {: #list-blueprint-jobs-cli}
-{: cli}
 
-To list your Blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and will prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_id>`. 
+To list your Blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_id>`. 
 {: shortdesc}
 
 For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
+
+## Listing Blueprint jobs through CLI
+{: #list-blueprint-cli}
+{: cli}
+
+Lists all the Blueprint job.
 
 **Syntax:**
 
@@ -34,9 +39,6 @@ ibmcloud schematics blueprint job list -id <blueprint_id>
 {: pre}
 
 On successful completion the list command returns the list of jobs executed for this Blueprint. This example does not follow the interactive prompt. 
-
-## Blueprint job list 
-{: #list-blueprint-output-cli} 
 
 ```text        
 ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
@@ -75,15 +77,14 @@ Enter Job sequence number to get Blueprint child job output summary(or enter no/
 ```
 {: screen}
 
-Review the following section for the `blueprint job get` command for an explanation of the job output. 
 
-## Viewing Blueprint job results
+## Viewing Blueprint job results through CLI
 {: #blueprint-job-get-cli}
-{: cli}
+
+Review the following section for the `blueprint job get` command for an explanation of the job output. 
 
 To view the summary details of a Blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and will prompt the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `create`, `install`, `update`, `destroy` and `delete` operations are performed. It can also be retrieved using the `blueprint job list` command.  
 {: shortdesc}
-
 
 **Syntax:**
 
@@ -186,7 +187,6 @@ If it is desired to review the **full** job log output for a child job, the CLI 
 
 ### Viewing Blueprint job logs
 {: #blueprint-job-log-cli}
-{: cli}
 
 The two types of Blueprint child job are, `blueprint` and `module`. 
 

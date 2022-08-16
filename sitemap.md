@@ -501,7 +501,7 @@ subcollection: schematics
 
 [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
-* [Blueprint list output](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-output-cli)
+* [Listing Blueprint through CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
 
 * [Displaying Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 
@@ -515,9 +515,9 @@ subcollection: schematics
 
 [Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
 
-* [Blueprint job list](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-output-cli)
+* [Listing Blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-cli)
 
-* [Viewing Blueprint job results](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
+* [Viewing Blueprint job results through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
 
     * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
 
@@ -1161,6 +1161,8 @@ subcollection: schematics
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
 
 * [View Blueprint job logs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#view-schematics-blueprint-cli)
+
+    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#viewing-output)
 
 * [Access and test the Blueprint created resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
 
