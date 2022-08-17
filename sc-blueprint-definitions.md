@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-17"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -109,7 +109,7 @@ inputs:
 ## Module statements
 {: #blueprint-module}
 
-Module statements define the modules utilized by the Blueprint. Each statement defines the source repository for the IaC automation modules, the inputs and outputs for passing of resource information between dependent modules. Typically they contain 3 statement blocks:
+Module statements define the modules utilised by the Blueprint. Each statement defines the source repository for the IaC automation modules, the inputs and outputs for passing of resource information between dependent modules. Typically they contain 3 statement blocks:
 1. source
 2. inputs
 3. outputs
@@ -157,7 +157,7 @@ Four keywords define the variable attributes: `name`, `value`, `type`, and `secu
 
 Similar to Terraform, values can be specified as static values or interpolated references to Blueprint inputs or other modules by using the `$` symbol as shown in the sample snippet. 
 
-Two input variable reference types are supported. Inter-module references, mapping module inputs to the outputs of other modules using the `$module` token. Additionally, Blueprints input references can be defined using the `$blueprint` token. Check the readme and metadata for the automation modules to determine the supported inputs and variable types. 
+Two input variable reference types are supported. Inter-module references, mapping module inputs to the outputs of other modules using the `$module` token. Additionally, Blueprints input references can be defined using the `$blueprint` token. Check the readme and meta-data for the automation modules to determine the supported inputs and variable types. 
 
 To reference the output value of another module, the format is `$module` followed by the dependent module name, the token `outputs`, followed by referenced output name.
 
@@ -186,7 +186,7 @@ inputs:
 ### Module outputs
 {: #blueprint-module-outputs}
 
-{{site.data.keyword.cloud_notm}} automation modules implemented in Terraform must contain HCL output statements to pass data and resource information to dependent modules. Check the readme and metadata for the module to determine the supported outputs and data types.
+{{site.data.keyword.cloud_notm}} automation modules implemented in Terraform must contain HCL output statements to pass data and resource information to dependent modules. Check the readme and meta-data for the module to determine the supported outputs and data types.
 {: shortdesc} 
 
 ```yaml
@@ -218,7 +218,7 @@ The inputs required by a Blueprints are defined in the inputs section. Where no 
 {: shortdesc} 
 
 - Version controlled input variable YAML files
-- Ad hoc dynamic input variables, which are not version controlled 
+- Ad-hoc dynamic input variables, which are not version controlled 
 
 ### Input files
 {: #blueprint-input-file}

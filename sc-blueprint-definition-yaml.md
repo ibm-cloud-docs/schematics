@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-25"
+lastupdated: "2022-08-17"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -403,7 +403,7 @@ Type:       list
 
 Default:    []  
 
-A list defining all the outputs that will be returned by the module to be utilized as inputs to other workspaces or output from the blueprint. Each output is identified by the label `name`.  This must match the value in the module template for the value to be retrieved at execution time from the Workspace. The name can be copied from the module meta data or from inspecting the Terraform tf files. 
+A list defining all the outputs that will be returned by the module to be utilised as inputs to other workspaces or output from the blueprint. Each output is identified by the label `name`.  This must match the value in the module template for the value to be retrieved at execution time from the Workspace. The name can be copied from the module meta data or from inspecting the Terraform tf files. 
 
 Example
 ```yaml
