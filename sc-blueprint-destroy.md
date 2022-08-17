@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-17"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -47,7 +47,7 @@ For all the Blueprints commands, syntax, and detailed option flags, refer to, [B
 {: important}
 
 ```sh
-ibmcloud schematics blueprint destroy -id eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
+ibmcloud schematics blueprint destroy --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -62,20 +62,22 @@ Verify that the Blueprint resources have been destroyed successfully. When you r
 
 ```text
 Modules to be destroyed
-SNO   Type        Name                   Status   
-1     Workspace   basic-resource-group   ACTIVE   
-2     Workspace   basic-cos-storage      ACTIVE   
-      
-Do you really want to destroy all the resources of blueprint eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936? [y/N]> y
-Blueprint job running eu-de.JOB.Blueprint-Basic-Example.62942aa1
+SNO Type Name Status
+1 terraform basic-resource-group ACTIVE
+2 terraform basic-cos-storage ACTIVE
 
-Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:2    Active:0    Failed:0   
-Type        Name                      Status               Job ID   
-Blueprint   Blueprint Basic Example   FULFILMENT_SUCCESS   eu-de.JOB.Blueprint-Basic-Example.62942aa1   
-Workspace   basic-resource-group      INACTIVE                
-Workspace   basic-cos-storage         INACTIVE                
-            
-Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 fulfilment_success at Mon Jun 27 16:43:30 BST 2022
+Do you really want to destroy all the resources of Blueprint
+Blueprint_Basic.eaB.5cd9? [y/N]> y
+Blueprint job running us-east.JOB.Blueprint_Basic.f69f5bf2
+Waiting:0 Draft:0 Connecting:0 In Progress:0 Inactive:2 Active:0
+Failed:0
+Type Name Status Job ID
+Blueprint Blueprint_Basic FULFILMENT_SUCCESS useast.JOB.Blueprint_Basic.f69f5bf2
+terraform basic-resource-group INACTIVE
+terraform basic-cos-storage INACTIVE
+
+Blueprint ID Blueprint_Basic.eaB.5cd9 fulfilment_success at 2022-08-04
+17:48:36
 OK
 ```
 {: screen}
