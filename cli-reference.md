@@ -599,7 +599,7 @@ For more information, about the flags refer to, [Workspace get](/docs/schematics
 ### `ibmcloud schematics blueprint create`
 {: #schematics-blueprint-create}
 
-Create a {{site.data.keyword.bpshort}} Blueprint by using the `ibmcloud schematics blueprint create` command.
+Create a {{site.data.keyword.bpshort}} Blueprint by using the `ibmcloud schematics blueprint create` command. The Blueprint is created from a user provided configuration that specifies the source of the Blueprint definition in a Git repository, the input files and optional override inputs.
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
@@ -623,7 +623,7 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--resource-group` or `-r` | Required | The management resource group for the Blueprint.|
 | `--bp-git-url` or `--bu` | Required | The Blueprint Git URL. |
 | `--bp-git-file` or `--bf`| Required | The Blueprint Git file name. |
-| `--bp-git-branch` or `--bb`| Optional | The Blueprint Git branch name, if not provided it defaults to main. In case the branch and release details are not present, currently the command will throw error for one of the value passed.|
+| `--bp-git-branch` or `--bb`| Optional | The Blueprint Git branch name, if not provided it defaults to main.|
 | `--bp-git-release` or `--br`| Optional | The Blueprint Git release tag. Exclusive with branch name.|
 | `--input-git-url` or `--iu`| Optional | The input Git URL.|
 | `--input-git-file` or `--if`| Optional | The input file name. |
