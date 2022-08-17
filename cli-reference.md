@@ -764,6 +764,7 @@ OK
 ```
 {: screen}
 
+
 ### `ibmcloud schematics blueprint install`
 {: #schematics-blueprint-install}
 

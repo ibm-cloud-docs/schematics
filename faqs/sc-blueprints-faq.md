@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -132,3 +132,14 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
    {: pre}
 
    The `--inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1` will override the values from GitHub config file.
+
+blueprint region created is us-east not us-south Note the target location is us-south. The job indicates us-east.
+
+## When I create a Blueprint in `us-south` target region, why is it always my Blueprint job ID indicates `us-east` as job type?
+{: #faqs-bp-target-region}
+{: faq}
+{: support}
+
+The Command line uses general regional API endpoints behind the scenes, as in `us.schematics.cloud.ibm.com` is called irrespective of target `us-south` or `us-east` and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of target `eu-gb` or `eu-de`. The {{site.data.keyword.cis_short}} load balancer decides which region to send the request. So in your case even though `us-south` is targeted during the time of creation the {{site.data.keyword.cis_short}} load balancer for some reason (such as `us-south` might be down at that point or having issues) sent the request to `us-east` and that is the region where Blueprint got created.
+
+This behaviour is similar to UI for example in {{site.data.keyword.bpshort}} workspace creation page, you can only select `North America` region from dropdown.

@@ -1739,6 +1739,8 @@ subcollection: schematics
 
 * [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
 
+* [When I create a Blueprint in `us-south` target region, why is it always my Blueprint job ID indicates `us-east` as job type?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
+
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 
 * [What is {{site.data.keyword.bplong_notm}} and how does it work?](/docs/schematics?topic=schematics-general-faq#what-is-schematics)
