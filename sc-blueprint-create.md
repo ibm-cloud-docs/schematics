@@ -36,7 +36,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 Before your begin
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.11.0` version.
-- Select the {{site.data.keyword.cloud_notm}} region you want to use to manage your {{site.data.keyword.bpshort}}. For example, to set the region use [`ibmcloud target -r <provide your region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Select the {{site.data.keyword.cloud_notm}} region you want to use to manage your {{site.data.keyword.bpshort}}. For example, to set the region use [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
 - Check that you have the right [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 
 The following command creates a Blueprint by using the definition file `basic-blueprint.yaml` and input file `basic-input.yaml` from the source Git repository `https://github.com/Cloud-Schematics/blueprint-basic-example`. This Blueprint definition requires the two inputs `provision_rg=true` and `resource_group_name=default` are passed during the Blueprint creation. You can create Blueprint using `default` or new resource group `mynew-resourcegroup`, both the syntax are provided.
