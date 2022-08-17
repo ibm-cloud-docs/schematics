@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-17"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -43,23 +43,20 @@ For all the Blueprints commands, syntax, and detailed option flags, refer to, [B
 {: important}
 
 ```sh
-ibmcloud schematics blueprint delete -id us-east.ENVIRONMENT.Blueprints-Starter-Sample.c579f31d
+ibmcloud schematics blueprint delete --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
 Output
 
 ```text
-Modules to be deleted
-SNO   Type        Name                   Status   
-1     Workspace   basic-resource-group   INACTIVE   
-2     Workspace   basic-cos-storage      INACTIVE   
-      
-Do you really want to delete the blueprint ? [y/N]> y
-Job : eu-gb.JOB.Blueprint-Basic-Example.f2d388d3 Created
+SNO Type Name Status
+1 terraform basic-resource-group INACTIVE
+2 terraform basic-cos-storage INACTIVE
 
+Do you really want to delete the Blueprint ? [y/N]> y
+Job : us-east.JOB.Blueprint_Basic.cbe0591e Created
 Job Type: BLUEPRINT DELETE
-
 OK
 ```
 {: screen}
@@ -72,19 +69,18 @@ During the Beta, the delete CLI command does not wait for successful job complet
 The status of the delete operation can be monitored using the `blueprint job get` command. The following command performs a Blueprint `job get` for the JOB ID `eu-gb.JOB.Blueprint-Basic-Example.f2d388d3`. The job ID will be displayed in the delete command output. 
 
 ```sh
-ibmcloud schematics blueprint job get -id eu-gb.JOB.Blueprint-Basic-Example.f2d388d3
+mcloud schematics blueprint job get --id useast.JOB.Blueprint_Basic.e4081308
 ```
 {: pre}
 
 
 ```text
-ID                      eu-gb.JOB.Blueprint-Basic-Example.f2d388d3   
-Blueprint ID            eu-gb.ENVIRONMENT.Blueprint-Basic-Example.d39591ae   
+ID                      useast.JOB.Blueprint_Basic.e4081308   
+Blueprint ID            Blueprint_Basic.eaB.5cd9   
 Job Type                blueprint_delete   
-Location                eu-gb   
-Start Time              2022-07-02 09:33:40   
-End Time                0001-01-01 00:00:00   
-Status                  Normal   
+Location                us-east
+Start Time              2022-08-03 15:51:12
+End Time                2022-08-03 15:54:11    
                            
 OK
 ```

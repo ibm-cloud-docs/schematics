@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-17"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -38,7 +38,7 @@ ibmcloud schematics blueprint update -id <blueprint_id> 
 If explicit Blueprint version is used with release tags for each Blueprint definition release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new Blueprint release tag.  
 
 ```sh
-ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.z  
+ibmcloud schematics blueprint update --id basic-demo-pre.deB.1794 --inputs resource_group_name=basic-rg-demo-pre 
 ```
 {: pre}
 
@@ -55,6 +55,8 @@ Where no Git release is specified and relaxed version (latest) is used for input
 
 Record the Blueprint ID that needs to be updated. To list the Blueprint IDs, run [Get all the blueprint instances](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-list) command.
 {: note}
+
+
 
 ## Updating a Blueprint from the UI 
 {: #update-blueprint-ui}
@@ -99,27 +101,36 @@ ibmcloud schematics blueprint update -name Blueprint_Basic -resource-group defau
 
 On successful completion the update command will return **`update_success`**. For more information, about the command options, see [Update command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update).
 
+**Example**
+
+```sh
+ibmcloud schematics blueprint update --id Blueprint_Basic.eaB.5cd9 --inputs resource_group_name=basic-rg-demo-pre
+```
+{: pre}
+
 ### Verify Blueprint update
 {: #verify-update}
 
 Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalizing the Workspaces. The command only returns on completion.
 
 ```text
-Update Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
-Modules to be updated
-SNO   Type        Name   
-1     Workspace   basic-resource-group   
-2     Workspace   basic-cos-storage   
-      
-Blueprint job running eu-de.JOB.Blueprint-Basic-Example.da1b13ca
-Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:2    Active:0    Failed:0   
+Update Blueprint  blueprint
 
-Type        Name                      Status           Job ID   
-Blueprint   Blueprint Basic Example   updatE_SUCCESS   eu-de.JOB.Blueprint-Basic-Example.da1b13ca   
-Workspace   basic-resource-group      INACTIVE            
-Workspace   basic-cos-storage         INACTIVE            
-            
-Blueprint ID eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936 `update_success` at Mon Jun 27 16:18:47 BST 2022
+Modules to be updated
+SNO   Module Type   Name                   Updates   
+1     Workspace     basic-resource-group   Updating   
+2     Workspace     basic-cos-storage      NA   
+      
+Blueprint job running us-east.JOB.Blueprint_Basic.e4081308
+
+Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:0    Active:0    Failed:0   
+
+Module Type   Name                   Status           Job ID   
+Blueprint     blueprint              UPDATE_SUCCESS   us-east.JOB.Blueprint_Basic.e4081308   
+Workspace     basic-resource-group   INACTIVE            
+Workspace     basic-cos-storage      INACTIVE            
+              
+Blueprint ID Blueprint_Basic.eaB.5cd9 update_success at 2022-08-15 13:19:27
 OK
 ```
 {: screen}
