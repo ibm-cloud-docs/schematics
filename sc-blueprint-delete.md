@@ -219,4 +219,6 @@ For more information, about how to diagnose and resolve issues if the command fa
 ## Next steps
 {: #bp-delete-nextsteps}
 
+To destroy or delete a Blueprint, refer to, [destroy a Blueprint](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) and [delete a Blueprint](/docs/schematics?topic=schematics-delete-blueprint&interface=cli#delete-blueprint-cli).
+
 Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 
