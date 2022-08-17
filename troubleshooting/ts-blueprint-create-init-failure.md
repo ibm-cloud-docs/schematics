@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-11"
+lastupdated: "2022-08-17"
 
 keywords: blueprint create init failure, blueprint init error, create init fails,
 
@@ -32,7 +32,7 @@ Sample error
 Created Blueprint   blueprints-starter-example   eu-gb.BLUEPRINT.blueprints-starter-example.deee1f6f
 
 Modules to be created
-SNO   Type        Name   
+SNO   Type        Name    
 1     Terraform   terraform_module2   
 2     Terraform   terraform_module1   
       

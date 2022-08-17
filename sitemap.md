@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-17"
 
 keywords: schematics
 subcollection: schematics
@@ -475,13 +475,13 @@ subcollection: schematics
 
 [Creating a Blueprint](/docs/schematics?topic=schematics-create-blueprint#create-blueprint)
 
-* [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
-
-    * [Verify Blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-ui)
-
 * [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
 
     * [Verify Blueprint create](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-cli)
+
+* [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
+
+    * [Verify Blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-ui)
 
 * [Creating a Blueprint from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
@@ -531,13 +531,13 @@ subcollection: schematics
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
-* [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
-
-    * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
-
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
     * [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
+
+* [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
+
+    * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
 * [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
@@ -559,13 +559,13 @@ subcollection: schematics
 
 [Deleting a Blueprint](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint)
 
-* [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
-
-    * [Verify Blueprint deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
-
 * [Deleting Blueprint from the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
 
     * [Verify Blueprint delete](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-cli)
+
+* [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
+
+    * [Verify Blueprint deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
 
 * [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
@@ -1738,6 +1738,8 @@ subcollection: schematics
 * [How do I tell Blueprints what version of Terraform executable to use?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
 
 * [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
+
+* [When I create a Blueprint in `us-south` target region, why is it always my Blueprint job ID indicates `us-east` as job type?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
 
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 

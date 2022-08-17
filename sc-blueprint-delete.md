@@ -18,20 +18,10 @@ subcollection: schematics
 # Deleting a Blueprint
 {: #delete-blueprint}
 
-Blueprint delete is the second step required to completely delete a Blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a Blueprint can only be deleted when cloud resources in all the linked Workspaces have been deleted and the Workspaces are in `Inactive` state.  
+Blueprint delete is the second step required to completely delete a Blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a Blueprint can only be deleted when cloud resources in all the linked Workspaces have been deleted and the Workspaces are in `Inactive` state. The first step is to execute the [destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) to destroy the resources that are used in the modules or workspaces.
 
-This behaviour can be modified by using the `-force-delete` flag to allow deletion when Workspaces cannot be returned to an Inactive state. 
-
-## Deleting a Blueprint from the UI 
-{: #delete-blueprint-ui}
-{: ui}
-
-You can only delete Blueprint from command-line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
-
-### Verify Blueprint deletion 
-{: #verify-bp-deletion-ui}
-
-After deletion the Blueprint will not be displayed in the UI. 
+This behaviour can be modified by using the `-force-delete` flag to allow deletion when Workspaces cannot be returned to an `Inactive` state.
+{: shortdesc}
 
 ## Deleting Blueprint from the CLI
 {: #delete-blueprint-cli}
@@ -39,7 +29,7 @@ After deletion the Blueprint will not be displayed in the UI.
 
 For more information, about the command options, see the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete). You need to run Blueprint destroy command and then run Blueprint delete command. For more information, about the difference between destroy and delete command, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 
-For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the Blueprints commands, syntax, and option flag details, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ```sh
@@ -89,6 +79,17 @@ OK
 During the delete operation the status will show `In Progress`, when completed the status will change to `Normal`. The Blueprint and all its cloud resources are now deleted. 
 
 For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
+
+## Deleting a Blueprint from the UI 
+{: #delete-blueprint-ui}
+{: ui}
+
+You can only delete Blueprint from command-line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
+
+### Verify Blueprint deletion 
+{: #verify-bp-deletion-ui}
+
+After deletion the Blueprint is not displayed in the UI. 
 
 ## Deleting a Blueprint from the API
 {: #delete-blueprint-api}

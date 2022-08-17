@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-17"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -22,7 +22,7 @@ subcollection: schematics
 To list your Blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command takes requires no arguments, but is region specific and will only list Blueprints in the selected CLI region. 
 {: shortdesc}
 
-For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the Blueprints commands, syntax, and option flag details, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ## Listing Blueprint through CLI
@@ -293,12 +293,9 @@ OK
 ```
 {: screen}
 
-
-
 ## Displaying a Blueprint through UI 
 {: #display-blueprint-ui}
 {: ui}
-
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
 2. Click **Overview** to view the BLueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your Blueprint. 

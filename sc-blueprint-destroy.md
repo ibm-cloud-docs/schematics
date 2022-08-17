@@ -36,14 +36,13 @@ You can only destroy the cloud resources created by a Blueprint from command-lin
 3. Click **Modules** tab to see the list of resource modules. These will be in an `Inactive` state.
 4. Click **Jobs history** tab view the result of the Blueprint destroy job and operations performed against the resource modules.  
 
-
 ## Destroying a Blueprint from the CLI
 {: #destroy-blueprint-cli}
 {: cli}
 
 The following command performs a Blueprint destroy for the Blueprint with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
 
-For all the Blueprints commands, syntax, and detailed option flags, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the Blueprints commands, syntax, and option flag details, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ```sh
