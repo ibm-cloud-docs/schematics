@@ -36,7 +36,6 @@ You can only destroy the cloud resources created by a Blueprint from command-lin
 3. Click **Modules** tab to see the list of resource modules. These will be in an `Inactive` state.
 4. Click **Jobs history** tab view the result of the Blueprint destroy job and operations performed against the resource modules.  
 
-
 ## Destroying a Blueprint from the CLI
 {: #destroy-blueprint-cli}
 {: cli}

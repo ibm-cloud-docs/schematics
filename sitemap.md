@@ -531,13 +531,13 @@ subcollection: schematics
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
-* [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
-
-    * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
-
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
     * [Verify Blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
+
+* [Updating a Blueprint from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
+
+    * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
 * [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
@@ -559,13 +559,13 @@ subcollection: schematics
 
 [Deleting a Blueprint](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint)
 
-* [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
-
-    * [Verify Blueprint deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
-
 * [Deleting Blueprint from the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
 
     * [Verify Blueprint delete](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-cli)
+
+* [Deleting a Blueprint from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
+
+    * [Verify Blueprint deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
 
 * [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 

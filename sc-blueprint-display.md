@@ -293,12 +293,9 @@ OK
 ```
 {: screen}
 
-
-
 ## Displaying a Blueprint through UI 
 {: #display-blueprint-ui}
 {: ui}
-
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
 2. Click **Overview** to view the BLueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your Blueprint. 

@@ -56,25 +56,6 @@ Where no Git release is specified and relaxed version (latest) is used for input
 Record the Blueprint ID that needs to be updated. To list the Blueprint IDs, run [Get all the blueprint instances](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-list) command.
 {: note}
 
-
-
-## Updating a Blueprint from the UI 
-{: #update-blueprint-ui}
-{: ui}
-
-Currently, you can only update Blueprint from command-line by using the [update command](#update-blueprint-cli) to update the Blueprint configuration and then run the [install](/docs/schematics?topic=schematics-install-blueprint) command to deploy the changes.
-
-### Verify Blueprint update from the UI
-{: #verify-bp-update-ui}
-
-1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the update operation. 
-2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` should show the summary details of the Blueprint update job. 
-3. Click **Modules** tab to see the status of the resource modules. 
-4. Click **Jobs history** tab view the result of the Blueprint update job and operations performed against the resource modules.  
-5. Click **Settings** tab to view the summary of the updated Blueprint.
-
-For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
-
 ## Updating a Blueprint from the CLI
 {: #update-blueprint-cli}
 {: cli}
@@ -140,6 +121,22 @@ On successful completion the update command will return **`update_success`**.
 For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
 
 
+## Updating a Blueprint from the UI 
+{: #update-blueprint-ui}
+{: ui}
+
+Currently, you can only update Blueprint from command-line by using the [update command](#update-blueprint-cli) to update the Blueprint configuration and then run the [install](/docs/schematics?topic=schematics-install-blueprint) command to deploy the changes.
+
+### Verify Blueprint update from the UI
+{: #verify-bp-update-ui}
+
+1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the update operation. 
+2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` should show the summary details of the Blueprint update job. 
+3. Click **Modules** tab to see the status of the resource modules. 
+4. Click **Jobs history** tab view the result of the Blueprint update job and operations performed against the resource modules.  
+5. Click **Settings** tab to view the summary of the updated Blueprint.
+
+For more information, about how to diagnose and resolve issues if the command fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails&interface=cli).
 
 ## Updating a Blueprint from the API
 {: #update-blueprint-api}
