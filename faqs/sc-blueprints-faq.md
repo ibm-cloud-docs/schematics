@@ -131,9 +131,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
    ```
    {: pre}
 
-   The `--inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1` will override the values from GitHub config file.
-
-blueprint region created is us-east not us-south Note the target location is us-south. The job indicates us-east.
+   The `--inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1` overrides the values from GitHub config file.
 
 ## When I create a Blueprint in `us-south` target region, why is it always my Blueprint job ID indicates `us-east` as job type?
 {: #faqs-bp-target-region}
