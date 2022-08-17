@@ -18,9 +18,10 @@ subcollection: schematics
 # Deleting a Blueprint
 {: #delete-blueprint}
 
-Blueprint delete is the second step required to completely delete a Blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a Blueprint can only be deleted when cloud resources in all the linked Workspaces have been deleted and the Workspaces are in `Inactive` state.  
+Blueprint delete is the second step required to completely delete a Blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a Blueprint can only be deleted when cloud resources in all the linked Workspaces have been deleted and the Workspaces are in `Inactive` state. The first step is to execute the [destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) to destroy the resources that are used in the modules or workspaces.
 
-This behaviour can be modified by using the `-force-delete` flag to allow deletion when Workspaces cannot be returned to an Inactive state. 
+This behaviour can be modified by using the `-force-delete` flag to allow deletion when Workspaces cannot be returned to an `Inactive` state.
+{: shortdesc}
 
 ## Deleting a Blueprint from the UI 
 {: #delete-blueprint-ui}
