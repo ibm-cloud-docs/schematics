@@ -623,7 +623,7 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--resource-group` or `-r` | Required | The management resource group for the Blueprint.|
 | `--bp-git-url` or `--bu` | Required | The Blueprint Git URL. |
 | `--bp-git-file` or `--bf`| Required | The Blueprint Git file name. |
-| `--bp-git-branch` or `--bb`| Optional | The Blueprint Git branch name, if not provided defaults to main.|
+| `--bp-git-branch` or `--bb`| Optional | The Blueprint Git branch name, if not provided defaults to main. In case the `--bp-git-branch` and `--bp-git-release` values are not provided, the command errors for one of the value to be provided.|
 | `--bp-git-release` or `--br`| Optional | The Blueprint Git release tag. Exclusive with branch name.|
 | `--input-git-url` or `--iu`| Optional | The input Git URL.|
 | `--input-git-file` or `--if`| Optional | The input file name. |
