@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,7 +20,7 @@ content-type: release-note
 Use the release notes to learn about the latest changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}.
+For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}
 {: note}
 
 ## August 2022
