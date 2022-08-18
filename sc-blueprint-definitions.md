@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-18"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -56,8 +56,8 @@ modules:
   - name: basic-resource-group
   - module_type: terraform
     source:
+      source_type: github
       git: 
-        source_type: github
         git_repo_url: "https://github.ibm.com/steve-strutt/blueprint-examples-modules/tree/master/IBM-ResourceGroup"
         git_branch: master
     inputs:
@@ -70,8 +70,8 @@ modules:
       - name: resource_group_id
 - name: basic-cos-storage
     source:
+      source_type: github
       git:
-        source_type: github
         git_repo_url: "https://github.ibm.com/steve-strutt/blueprint-examples-modules/tree/master/IBM-Storage"
         git_branch: master
         git_release: latest

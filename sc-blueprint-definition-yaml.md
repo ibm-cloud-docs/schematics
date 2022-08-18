@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-18"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -236,8 +236,8 @@ The source where the Terraform, or Ansible config will be downloaded from.
 
 ```yaml
 source:
+  source_type: github
   git: 
-    source_type: github
     git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/master/IBM-ResourceGroup"
     git_branch: master
 ```
@@ -250,7 +250,7 @@ Type: string
 
 Required: true
 
-Type of Git source repository. Only Github validated at this time. 
+Type of Git source repository. Only GitHub validated at this time. 
 
 Options: `github` 
 
