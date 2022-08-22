@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-22"
 
 keywords: schematics
 subcollection: schematics
@@ -464,12 +464,6 @@ subcollection: schematics
 [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#blueprint-lifecycle-cmds)
 
 * [Lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-cmds)
-
-    * [Create and install](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-create-install)
-
-    * [Update and Install](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-update-install)
-
-    * [Destroy and Delete](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-destroy-delete)
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecyle-nextstep)
 

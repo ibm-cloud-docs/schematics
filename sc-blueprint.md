@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-22"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -37,7 +37,7 @@ The core principles of IaC are commonly defined as:
 
 This approach to large-scale environment management is represented by the key Blueprints concepts outlined in the diagram.
 
-![Large-scale environments using Terraform, Ansible and Blueprints](images/sch-bluepint-overview.png){: caption="Large-scale environments using Terraform, Ansible and Blueprints" caption-side="bottom"}
+![Large-scale environments using Terraform, Ansible and Blueprints](images/blueprint-architecture.svg){: caption="Large-scale environments using Terraform, Ansible and Blueprints" caption-side="bottom"}
 
 ## Architecture
 {: #blueprint-architecture}
