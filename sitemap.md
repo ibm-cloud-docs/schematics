@@ -227,6 +227,10 @@ subcollection: schematics
 
     * Review the release notes for August 2022.
 
+    * [22 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2222)
+
+        * Python version upgrade in {{site.data.keyword.bpshort}} runtime jobs.
+
     * [16 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1622)
 
         * {{site.data.keyword.bpshort}} runtime now supports Ansible v2.9.27
