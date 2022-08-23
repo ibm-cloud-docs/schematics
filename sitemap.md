@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-22"
+lastupdated: "2022-08-23"
 
 keywords: schematics
 subcollection: schematics
@@ -226,10 +226,6 @@ subcollection: schematics
 * [August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug22)
 
     * Review the release notes for August 2022.
-
-    * [22 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2222)
-
-        * Python version upgrade in {{site.data.keyword.bpshort}} runtime jobs.
 
     * [16 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1622)
 

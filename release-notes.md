@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-22"
+lastupdated: "2022-08-23"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -23,7 +23,7 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}
 {: note}
 
-{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Workspaces and Actions jobs to `Python v3.8`. For more information, see [{{site.data.keyword.bpshort}} announcement](https://test.cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Schematics Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 {: deprecated}
 
 ## August 2022
@@ -31,14 +31,6 @@ For information about releases that occurred before 22 October 2021, see [What's
 
 Review the release notes for August 2022.
 {: shortdesc}
-
-### 22 August 2022
-{: #schematics-aug2222}
-{: release-note}
-
-Python version upgrade in {{site.data.keyword.bpshort}} runtime jobs.
-:   [{{site.data.keyword.bpshort}} runtime](/docs/schematics?topic=schematics-sch-utilities) upgrades `Python v3.6 to Python v3.8` for the {{site.data.keyword.bpshort}} Workspaces and Actions Jobs from mid September 2022.
-{: deprecated}
 
 ### 16 August 2022
 {: #schematics-aug1622}
