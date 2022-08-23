@@ -28,7 +28,9 @@ Blueprints follow a cycle of create, update and delete. Cloud environments are c
 
 ![Blueprints lifecycle commands](images/sc-blueprint-lifecycle-cmd.png){: caption="Blueprints lifecycle commands" caption-side="bottom"}
 
-The Blueprints commands implement a full lifecycle for managing cloud resources are create, update, install, delete, and destroy. Blueprints operations are performed in pairs. One acts on the stored Blueprints config in {{site.data.keyword.bpshort}} and the second on the cloud resources, applies the requested configuration.
+- Blueprints commands implement a full lifecycle for managing cloud resources are create, update, install, delete, and destroy. 
+- Blueprints operations are performed in pairs. 
+- First command acts on the stored Blueprints config in {{site.data.keyword.bpshort}}, and the second command acts on the cloud resources, and applies the requested configuration.
 {: shortdesc} 
 
 | Blueprint operations | Description |

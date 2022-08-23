@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2017, 2021
-lastupdated: "2022-08-16"
+  years: 2017, 2022
+lastupdated: "2022-08-23"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -14,6 +14,9 @@ subcollection: schematics
 
 # {{site.data.keyword.bpshort}} runtime tools
 {: #sch-utilities}
+
+{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Schematics Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+{: deprecated}
 
 Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kubernetes cluster by using a `schematics-runtime-job` image. The `schematics-runtime-job` image embeds the primary Infrastructure as Code (IaC) automation engine, for example, Terraform CLI, Ansible. The `schematics-runtime-job` image also includes additional helper software, and tools that are useful while developing an automation.
 
