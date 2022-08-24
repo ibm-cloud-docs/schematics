@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to, the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
+{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
 {: beta}
 
 # Using {{site.data.keyword.bpshort}} Agent
@@ -21,7 +21,7 @@ subcollection: schematics
 You have successfully connected the Agent to {{site.data.keyword.bpshort}} service instance. The next step is to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
 {: shortdesc}
 
-Once you bind the Workspace to the Agent, then the corresponding Workspace Jobs such as `terraform plan`, `terraform apply`, `terraform destroy`, and so on. is automated to route to the Agent. 
+Once you bind the Workspace to the Agent, then the corresponding Workspace Jobs such as `terraform plan`, `terraform apply`, or `terraform destroy` is automated to route to the Agent. 
 
 In other words, the Terraform automation runs in your provisioned Agent infrastructure (cluster). Then the {{site.data.keyword.bpshort}} Workspace bounds to the Agent in the following ways:
 - Bind an new workspace to the Agent

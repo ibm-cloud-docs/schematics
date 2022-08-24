@@ -15,13 +15,13 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} Agents
 {: #agents-intro}
 
-{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to, the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the Beta release.
+{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the Beta release.
 {: beta}
 
-The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premisescloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, and `Microservices`. For more information, about the Agents utilities, refer to, [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
+The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, and `Microservices`. For more information, about the Agents utilities, refer to, [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
 {: shortdesc}
 
-## Usage of an Agents
+## Usage of an Agent
 {: #agent-usage}
 
 The following are the primary drivers to create the {{site.data.keyword.bplong_notm}} Agents.
@@ -36,7 +36,7 @@ The following are the primary drivers to create the {{site.data.keyword.bplong_n
 ## {{site.data.keyword.bpshort}} Agent architecture
 {: #agents-architecture}
 
-The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and how it functions in {{site.data.keyword.bpshort}}?
+The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and how it functions in {{site.data.keyword.bpshort}}.
 
 ![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
@@ -54,9 +54,9 @@ The table describes how the {{site.data.keyword.bpshort}} are augmented with {{s
 | -- | -- | -- |
 | `Cluster` | Runs in {{site.data.keyword.bpshort}} cluster. | Runs in customer's cluster. |
 | `Cloud providers` | Works primarily with {{site.data.keyword.cloud_notm}} **Note** not tested with other cloud services. | Can integrate with any cloud service providers or private cloud. |
-| `Compute time` | Null resources or [(local-exec)](/docs/schematics?topic=schematics-schematics-limitations#local-remote-exec) executes for a maximum of 30 minutes. | There is no compute time restrictions. |
-| `Latency` | Runs in {{site.data.keyword.bpshort}} clusters provisioned in `us or eu` region only. | Can be configured to run on edge cluster or {{site.data.keyword.satelliteshort}} cluster for faster response time. |
-| `Network configuration` | `Ingress/egress` policies are controlled by {{site.data.keyword.bpshort}}. Cannot reach out to any external PORT that are not in allowed list.| Can decide on `ingress/egress` policies, and can open additional PORTS as required.|
+| `Compute time` | Null resources or [local-exec](/docs/schematics?topic=schematics-schematics-limitations#local-remote-exec) executes for a maximum of 30 minutes. | There is no compute time restrictions. |
+| `Latency` | Runs in {{site.data.keyword.bpshort}} clusters provisioned in `us` or `eu` region only. | Can be configured to run on edge cluster or {{site.data.keyword.satelliteshort}} cluster for faster response time. |
+| `Network configuration` | `Ingress/egress` policies are controlled by {{site.data.keyword.bpshort}}. Cannot reach out to any external PORT that are not in allowed list.| Can decide on `ingress/egress` policies, and can allow PORTS accordingly.|
 | `Software` | Can use only pre-installed software such as `Python / Jquery / {{site.data.keyword.cloud_notm}} command line` cannot install additional software. | Customer is free to install additional software on need basis. |
 | `Tenancy` | Multi tenant. | Single tenant. |
 {: caption="Usage of {{site.data.keyword.bpshort}} Agents" caption-side="bottom"}

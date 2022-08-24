@@ -92,7 +92,7 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
 
-* [Usage of an Agents](/docs/schematics?topic=schematics-agents-intro#agent-usage)
+* [Usage of an Agent](/docs/schematics?topic=schematics-agents-intro#agent-usage)
 
 * [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#agents-architecture)
 
@@ -1733,7 +1733,7 @@ subcollection: schematics
 
 * [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
 
-* [When I create a Blueprint in `us-south` target region, why is it always my Blueprint job ID indicates `us-east` as job type?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
+* [When I create a Blueprint in `us-south` target region, why is the job type in Blueprint job ID indicates `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
 
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 
