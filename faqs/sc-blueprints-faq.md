@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-24"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -133,7 +133,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 
    The `--inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1` overrides the values from GitHub config file.
 
-## When I create a Blueprint in `us-south` target region, why is it always my Blueprint job ID indicates `us-east` as job type?
+## When I create a Blueprint in `us-south` target region, why is the job type in Blueprint job ID indicates `us-east`?
 {: #faqs-bp-target-region}
 {: faq}
 {: support}

@@ -20,7 +20,7 @@
       },
       {
         "title": "Extend provisioning through Agents",
-        "description": "Learn how to provision, configure, and operate your private or on-premisescloud cluster resources without any time, network, or software restrictions.",
+        "description": "Learn how to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions.",
         "href": "/docs/schematics?topic=schematics-agents-intro"
       },
       {

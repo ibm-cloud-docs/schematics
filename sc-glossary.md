@@ -98,7 +98,7 @@ Blueprints operations (command) are executed as jobs by {{site.data.keyword.bpsh
 ### Blueprint Lifecycle
 {: #bpl1}
 
-Blueprints follow a lifecycle approach to deploy and manage application environments on {{site.data.keyword.cloud_notm}}. Blueprints follow a [cycle of create, update and delete operations](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds). 
+Blueprints follow a lifecycle approach to deploy and manage application environments on {{site.data.keyword.cloud_notm}}. Blueprints follow a [cycle of create, update, and delete operations](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds). 
 
 ## Catalog
 {: #glossa-catalog}

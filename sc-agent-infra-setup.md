@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to, the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
+{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
 {: beta}
 
 # Installing {{site.data.keyword.bpshort}} Agent
@@ -157,10 +157,11 @@ Follow the steps to view the deployment of Agent service workspace.
 
 1. Navigate to the target [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
 2. Click **Kubernetes Clusters**  page.
-3. Click your `<cluster> hyperlink` > click **Kubernetes dashboard** > **Pods**.
-4. Switch to your **schematics-job-runtime** namespace from the drop down box next to search icon to view `jobrunner` pod (1 instance) > Status: `Running`.
-5. Switch to your **schematics-ibm-observe** namespace from the drop down box next to search icon to view `logdna-agent` pods (3 instances - one on each worker node) > Status: `Running`.
-6. Switch to your **schematics-runtime** namespace from the drop down box next to search icon to view `jobx0.x0` pods (3 instances - one on each worker node) > Status: `Running`.
+3. Click your cluster hyperlink.
+4. Click **Kubernetes dashboard** > **Pods**.
+5. Switch to your **schematics-job-runtime** namespace from the drop down box next to search icon to view `jobrunner` pod (1 instance) > Status: `Running`.
+6. Switch to your **schematics-ibm-observe** namespace from the drop down box next to search icon to view `logdna-agent` pods (3 instances - one on each worker node) > Status: `Running`.
+7. Switch to your **schematics-runtime** namespace from the drop down box next to search icon to view `jobx0.x0` pods (3 instances - one on each worker node) > Status: `Running`.
 
     You can search the Agents services and its status with the tag name from the [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page.
     {: note}

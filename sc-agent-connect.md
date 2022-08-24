@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to, the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
+{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
 
 # Connecting {{site.data.keyword.bpshort}} Agent
 {: #register-agent}
@@ -150,5 +150,5 @@ Here are the list of CURL commands use to register and unregister the Agent. For
 {: #connect-nextsteps}
 
 You have completed the Agent connection to your {{site.data.keyword.bpshort}} service instance.
-- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-register-agent) to bind the Agent to your Workspace, instead run the IaC automation in your cluster.
+- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-using-agent) to bind the Agent to your Workspace.
 - For any challenges in Agents installation or configuration, refer to, [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent&interface=cli) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=cli).
