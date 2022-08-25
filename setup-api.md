@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-08-25"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -108,10 +108,10 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
 
     | Input parameters | Values |
     | ---- | --- |
-    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=`[^]**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.|
-    | Body for {{site.data.keyword.cloud_notm}} username and password | :`grant_type: password`:`response_type: cloud_iam uaa`:`username`: Your {{site.data.keyword.cloud_notm}} username. :`password`: Your {{site.data.keyword.cloud_notm}} password. :`uaa_client_ID: cf`:`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.:`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
-    | Body for {{site.data.keyword.cloud_notm}} API keys | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey`: Your {{site.data.keyword.cloud_notm}} API key.:`uaa_client_ID: cf`:`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified.:`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
-    | Body for {{site.data.keyword.cloud_notm}} one-time passcode | :`grant_type:urn:ibm:params:oauth:grant-type:passcode`:`response_type: cloud_iam uaa`:`passcode`: Your {{site.data.keyword.cloud_notm}} passcode. :`uaa_client_ID: cf`:`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified. :`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
+    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=`[^] </br> `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.|
+    | Body for {{site.data.keyword.cloud_notm}} username and password | :`grant_type: password`:`response_type: cloud_iam uaa`:`username`: Your {{site.data.keyword.cloud_notm}} username. :`password`: Your {{site.data.keyword.cloud_notm}} password. :`uaa_client_ID: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified.:`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
+    | Body for {{site.data.keyword.cloud_notm}} API keys | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey`: Your {{site.data.keyword.cloud_notm}} API key.:`uaa_client_ID: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified.:`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
+    | Body for {{site.data.keyword.cloud_notm}} one-time passcode | :`grant_type:urn:ibm:params:oauth:grant-type:passcode`:`response_type: cloud_iam uaa`:`passcode`: Your {{site.data.keyword.cloud_notm}} passcode. :`uaa_client_ID: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified. :`bss_account`: The {{site.data.keyword.cloud_notm}} account ID that you retrieved in the previous step. |
     {: caption="Input parameters to get IAM tokens." caption-side="top"}
 
     **Example output**
@@ -184,9 +184,9 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
 
     | Input parameters | Values |
     | ---- | --- |
-    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=`  </br></br> **Note:** `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**. |
-    | Body when using the refresh token |:`grant_type: refresh_token`:`response_type: cloud_iam uaa`:`refresh_token:` Your {{site.data.keyword.cloud_notm}} IAM refresh token. :`uaa_client_ID: cf`:`uaa_client_secret:`:`bss_account:` Your {{site.data.keyword.cloud_notm}} account ID.  </br> **Note**: Add the `uaa_client_secret` key with no value specified. |
-    | Body when using the {{site.data.keyword.cloud_notm}} API key | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey:` Your {{site.data.keyword.cloud_notm}} API key. :`uaa_client_ID: cf`:`uaa_client_secret:`  **Note:** Add the `uaa_client_secret` key with no value specified. |
+    | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=` </br></br>  `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**. |
+    | Body when using the refresh token |:`grant_type: refresh_token`:`response_type: cloud_iam uaa`:`refresh_token:` Your {{site.data.keyword.cloud_notm}} IAM refresh token. :`uaa_client_ID: cf`:`uaa_client_secret:`:`bss_account:` Your {{site.data.keyword.cloud_notm}} account ID.  </br></br> Add the `uaa_client_secret` key with no value specified. |
+    | Body when using the {{site.data.keyword.cloud_notm}} API key | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey:` Your {{site.data.keyword.cloud_notm}} API key. :`uaa_client_ID: cf`:`uaa_client_secret:`  Add the `uaa_client_secret` key with no value specified. |
     {: caption="Input parameters for a new {{site.data.keyword.cloud_notm}} IAM token." caption-side="top"}
 
     **Example API output**
@@ -215,10 +215,10 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
 
 | Input parameters | Values |
 | ---- | ---- |
-| Header | :`Content-Type: application/x-www-form-urlencoded`:Authorization: Basic Yng6Yng=[^]**Note**: `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.|
-| Body for {{site.data.keyword.cloud_notm}} username and password | :`grant_type: password`:`response_type: cloud_iam uaa`:`username`: Your {{site.data.keyword.cloud_notm}} username.:`password`: Your {{site.data.keyword.cloud_notm}} password.:`uaa_client_id: cf`:`uaa_client_secret:`</br>**Note**: Add the `uaa_client_secret` key with no value specified. |
-| Body for {{site.data.keyword.cloud_notm}} API keys | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey`: Your {{site.data.keyword.cloud_notm}} API key:`uaa_client_id: cf`:`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified. |
-| Body for {{site.data.keyword.cloud_notm}} one-time passcode | :`grant_type:urn:ibm:params:oauth:grant-type:passcode`:`response_type: cloud_iam uaa`:`passcode`: Your {{site.data.keyword.cloud_notm}} one-time passcode. Run `ibmcloud login --sso` and follow the instructions in your CLI output to retrieve your one-time passcode by using your web browser.:`uaa_client_id: cf`:`uaa_client_secret:` </br>**Note**: Add the `uaa_client_secret` key with no value specified. |
+| Header | :`Content-Type: application/x-www-form-urlencoded`:Authorization: Basic Yng6Yng=[^] </br>`Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**.|
+| Body for {{site.data.keyword.cloud_notm}} username and password | :`grant_type: password`:`response_type: cloud_iam uaa`:`username`: Your {{site.data.keyword.cloud_notm}} username.:`password`: Your {{site.data.keyword.cloud_notm}} password.:`uaa_client_id: cf`:`uaa_client_secret:`</br> Add the `uaa_client_secret` key with no value specified. |
+| Body for {{site.data.keyword.cloud_notm}} API keys | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey`: Your {{site.data.keyword.cloud_notm}} API key:`uaa_client_id: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified. |
+| Body for {{site.data.keyword.cloud_notm}} one-time passcode | :`grant_type:urn:ibm:params:oauth:grant-type:passcode`:`response_type: cloud_iam uaa`:`passcode`: Your {{site.data.keyword.cloud_notm}} one-time passcode. Run `ibmcloud login --sso` and follow the instructions in your CLI output to retrieve your one-time passcode by using your web browser.:`uaa_client_id: cf`:`uaa_client_secret:` </br> Add the `uaa_client_secret` key with no value specified. |
 {: caption="Table" caption-side="bottom"}
 
 

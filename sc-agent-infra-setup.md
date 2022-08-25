@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-25"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -57,7 +57,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
     - In **Specify Template** section:
         - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure`.
         - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater than version.
+        - Terraform Version - `terraform_v1.0`. Note that you need to select Terraform version 1.0 or greater than version.
         - Click `Next`.
     - In **Workspace details** section:
         - **Workspace name** as `schematics-agent-infra_workspace`.
@@ -79,7 +79,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
     | Input variable  | Data type | Required/Optional | Description |
     |--|--|--| -- |
     | `agent_prefix` | String | Required | Provide the prefix that is used for your VPC, {{site.data.keyword.containerlong_notm}} Cluster, and Observability.
-    | `location`| String | Required | The location of an Agent infrastructure. **Note** for Beta, the Agent must be deployed in a fresh provisioned VPC, {{site.data.keyword.containerlong_notm}} Cluster, and Log Analysis instance. For example, **us-south**. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.|
+    | `location`| String | Required | The location of an Agent infrastructure. For Beta, the Agent must be deployed in a fresh provisioned VPC, {{site.data.keyword.containerlong_notm}} Cluster, and Log Analysis instance. For example, **us-south**. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.|
     | `resource_group_name` | String | Required | Name for the resource group used for an Agent infrastructure and Agent service. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group. |
     | `ibmcloud_api_key` | String | Optional | The {{site.data.keyword.cloud_notm}} API key used to provision the {{site.data.keyword.bpshort}} Agent infrastructure resources. If not provided, resources provisions in currently logged in user credentials.|
     | `tags` | List(String) | Optional | A list of tags for an Agent infrastructure. For example, `myproject:agent`, `test:agentinfra`. You can find the provisioned resources of an Agent faster by using Tag name. |
@@ -117,7 +117,7 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
     - In **Specify Template** section:
         - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/service`.
         - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater than version.
+        - Terraform Version - `terraform_v1.0`. Note that you need to select Terraform version 1.0 or greater than version.
         - Click `Next`.
     - In **Workspace details** section:
         - **Workspace name** as `schematics-agent-service`.
@@ -142,8 +142,8 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
     | `location` | String | Required | The [location](/docs/schematics?topic=schematics-multi-region-deployment) of an Agent services. It must be the same as the Agent infrastructure/cluster location. If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.|
     | `resource_group_name` | String | Required | The name of the resource group used for an Agent infrastructure and Agent service. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group.|
     | `profile_id` | String | Required | Create an IAM trusted profile ID for the Agents with the roles and actions. For more information, refer to, [creating `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile).|
-    | `cluster_id` | String | Required | The {{site.data.keyword.containerlong_notm}} cluster ID used to run an Agent service. **Note** to provide the `cluster_id` details that you received in Agent infrastructure output logs.|
-    | `logdna_name` | String | Required | The LogDNA service instance name used to send an Agent logs. **Note** to provide the `logdna_name` details that you received in Agent infrastructure output logs.|
+    | `cluster_id` | String | Required | The {{site.data.keyword.containerlong_notm}} cluster ID used to run an Agent service. You need to record the `cluster_id` details that you have received in Agent infrastructure output job logs.|
+    | `logdna_name` | String | Required | The LogDNA service instance name used to send an Agent logs. You need to record the `logdna_name` details that you have received in Agent infrastructure output job logs.|
     | `ibmcloud_api_key` | String | Optional | The {{site.data.keyword.cloud_notm}} API key used to deploy the {{site.data.keyword.bpshort}} Agent resources. If not provided, resources provisions in currently logged in user credentials.|
     {: caption="{{site.data.keyword.bpshort}} service inputs" caption-side="bottom"}
 
@@ -266,7 +266,7 @@ Here are the list of commands used to create the Agent service.
    ```
    {: pre}
 
-- Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**. **Note** wait for 15-30 minutes.
+- Enter `y` for **Do you really want to perform this action? [y/N]>**. Record the generated **Activity ID**. Wait for 15-30 minutes.
    Wait 15 - 30 minutes to complete the service execution.
    {: note}
 

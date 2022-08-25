@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-26"
+lastupdated: "2022-08-25"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -47,7 +47,7 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
       - In **Specify Template** section:
          - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/cos-module`.
          - **Personal access token** - `<leave it blank>`.
-         - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater version.
+         - Terraform Version - `terraform_v1.0`. You need to select Terraform version 1.0 or greater version.
          - Click **Bind Agent**. Choose your **Agent name** to bind to execute the Jobs.
          - Click `Next`.
       - In **Workspace details** section:
