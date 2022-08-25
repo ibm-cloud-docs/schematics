@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-08-25"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -48,7 +48,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     - In **Specify Template** section:
         - **GitHub, GitLab or `Bitbucket` repository URL** - `<provide your Terraform template Git repository URL`.
         - **Personal access token** - `<leave it blank>`.
-        - Terraform Version - `terraform_v1.0`. **Note** you need to select Terraform version 1.0 or greater version. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. 
+        - Terraform Version - `terraform_v1.0`. You need to select Terraform version 1.0 or greater version. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. 
           You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0. When you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
           {: note}
 
@@ -60,13 +60,13 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
           ```
           {: pre}
 
-        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. **Note** If you do not see the Agents list, check have you [connected the Agents](/docs/schematics?topic=schematics-register-agent)?
+        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the Agents list, check have you [connected the Agents](/docs/schematics?topic=schematics-register-agent)?
         - Click `Next`.
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
         - **Tags** as `my-tags`. Optional: Enter tags for your workspace. You can use the tags later to find your workspace faster.
         - **Resource group** as `default` or other resource group for this Workspace. 
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace. **Note** decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace. Decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
         - Optional: Enter a descriptive name for your workspace.
         - Click `Next`.
     - Click `Create`. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
@@ -256,7 +256,7 @@ You can use the {{site.data.keyword.bplong_notm}} to delete your workspace. Whil
 
     | Job | Delete workspace | Destroy the associated cloud resources |
     | -- | -- |  -- |
-    | Delete workspace  \n **Note** use this option, if you have already destroyed the cloud resources, or intend to destroy them later by using the command-line or user interface. | True | False |
+    | Delete workspace  \n Use this option, if you have already destroyed the cloud resources, or intend to destroy them later by using the command-line or user interface. | True | False |
     | Destroy only resources | False | True |
     | Delete workspace and destroy the resources provisioned by workspace | True | True |
     | Resources destroyed using command-line or resource list, and want to delete workspace | True | False |

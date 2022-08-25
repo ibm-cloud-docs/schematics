@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-25"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -33,7 +33,7 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
 5. In the **Connect an Agent to {{site.data.keyword.bpshort}}** page, enter the input value.
     - **Agent name** - Enter the unique name. For example, `myagent-connection`.
     - **IAM Trusted ID** - Link your trusted profile ID. For more information, to view the trusted profile ID, see [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile). For example, `Profile-1bd5eala-000-4a6666-00011`.
-    - **Resource Group** - Select your resource group and specific resources where you need to connect a Agent. **Note** Check you have the right permissions for the resource group.
+    - **Resource Group** - Select your resource group and specific resources where you need to connect a Agent. Check you have the right permissions for the resource group.
 6. Click **Connect**.
     - The Agent status will change to **Ready to bind** status.
        The **Ready to bind** status signifies that the Agent is ready for the next step to bind the Workspace. Wait 15-30 minutes to view the Agent status.
