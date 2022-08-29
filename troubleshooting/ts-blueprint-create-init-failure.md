@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-29"
 
 keywords: blueprint create init failure, blueprint init error, create init fails,
 
@@ -17,7 +17,7 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Blueprint create fails in the Blueprint `create_init` step
+# Blueprint create fails in the Blueprint create_init step
 {: #bp-create-init-fails}
 
 When you create a Blueprint, the create fails during initialization of the {{site.data.keyword.bpshort}} Workspaces for the modules. 
@@ -65,7 +65,7 @@ Correct the cause of the failure. Most typically it is an invalid module repo UR
 - Update the Blueprint module statements to specify the correct Git repo URL
 - Push the new release of the Blueprint definition to its Git source repository. With an updated release tag if required.
 
-If using relaxed Blueprint definition versio (latest), run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. 
+If using relaxed Blueprint definition latest version, run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. 
 
 
 ```sh
@@ -81,7 +81,7 @@ ibmcloud schematics blueprint update --id <blueprint_id> --bp-git-release x.y.zÂ
 {: pre}
 
 
-Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalizing the Workspaces. The command only returns on completion.
+Verify that the Blueprint has been updated successfully. When you update the Blueprint from the CLI, the command displays details of the linked Workspaces to be updated and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initialising the Workspaces. The command only returns on completion.
 
 ```text
 Update Blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936

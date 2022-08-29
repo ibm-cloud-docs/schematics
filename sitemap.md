@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-23"
+lastupdated: "2022-08-29"
 
 keywords: schematics
 subcollection: schematics
@@ -720,7 +720,7 @@ subcollection: schematics
 
 * [Stopping job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types)
 
-* [Cancelling a job](/docs/schematics?topic=schematics-interrupt-job#cancelling)
+* [Canceling a job](/docs/schematics?topic=schematics-interrupt-job#cancelling)
 
 * [Stopping a running job through UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui)
 
@@ -899,7 +899,7 @@ subcollection: schematics
 
     * [`ibm_schematics_workspace_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-count)
 
-    * [ibm_schematics_workspace_actions_count](/docs/schematics?topic=schematics-monitoring-instances#wkspace-actions-count)
+    * [`ibm_schematics_workspace_actions_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-actions-count)
 
     * [`ibm_schematics_vulnerability_count`](/docs/schematics?topic=schematics-monitoring-instances#wkspace-vulnerability-count)
 
@@ -1921,7 +1921,7 @@ subcollection: schematics
 
 * [Blueprint create fails with the error Blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails5)
 
-[Blueprint create fails in the Blueprint `create_init` step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
+[Blueprint create fails in the Blueprint create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
 [Blueprint install fails](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails)
 

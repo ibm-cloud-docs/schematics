@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-29"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Troubleshooting errors
 {: #handling-error}
 
-When {{site.data.keyword.bpshort}} Actions or workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. {{site.data.keyword.bpshort}} provides resolution to handle such errors and help you get the expected behaviour, output.
+When {{site.data.keyword.bpshort}} Actions or workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. {{site.data.keyword.bpshort}} provides resolution to handle such errors and help you get the expected behavior, output.
 {: shortdesc}
 
 This is not the complete list of error messages. Some messages are created by other systems, such as IAM authentication errors messages to the {{site.data.keyword.bpshort}} action.

@@ -67,7 +67,7 @@ On successful completion the create command returns **`create_success`** and the
 ### Verify Blueprint create 
 {: #verify-blueprint-create-cli}
 
-Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initalizing the Workspaces. The command only returns on completion.
+Verify that the Blueprint has been created successfully. When you create the Blueprint from the CLI, the command displays details of the linked Workspaces to be created and a continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initialising the Workspaces. The command only returns on completion.
 
 ```text
 Created Blueprint ID: Blueprint_Basic.eaB.5cd9

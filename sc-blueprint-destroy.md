@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-29"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -81,7 +81,7 @@ OK
 ```
 {: screen}
 
-On successful completion the destroy command will return **fullfillment_success**. Successful command completion and the status of the Workspaces as `Inactive` indicates that resources in all linked Workspaces have been destroyed
+On successful completion the destroy command will return **fulfillment_success**. Successful command completion and the status of the Workspaces as `Inactive` indicates that resources in all linked Workspaces have been destroyed
 
 
 ## Destroying a Blueprint from the API
