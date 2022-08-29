@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-18"
+lastupdated: "2022-08-29"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -24,7 +24,7 @@ Each `blueprint.yaml` file has a configuration preface:
 ```yaml
 
 name: schematics-dev-blueprint
-type: blueprint
+type: "blueprint"
 schema_version: "1.0"
 description: "Project to provision Schematics Service."
 inputs:
