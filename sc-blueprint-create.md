@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-08-29"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -50,16 +50,17 @@ For all the Blueprints commands, syntax, and option flag details, refer to, [Blu
 {: important}
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-gitbranch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
 
 **Syntax: To use the `default` resource group, and create COS instance with the bucket in `default` resource group**
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resourcegroup default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-gitbranch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
+ibmcloud schematics blueprint create -name Blueprint_Basic -resourcegroup default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
 ```
 {: pre}
+
 
 On successful completion the create command returns **`create_success`** and the unique ID of the Blueprint created. This ID is required as input for all future `schematics blueprint` operations against this Blueprint. For more information, about the command options, see [Create command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
 
