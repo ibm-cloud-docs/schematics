@@ -232,7 +232,7 @@ Check whether your Terraform template of the older version is provisioned perfec
    5. `ibmcloud schematics apply --id <workspace id>`.
    6. `ibmcloud schematics job get --id <job-id from apply> --json`.
 
-## Upgrade Terraform template from `v0.14` or `v0.15` to `v1.0` 
+## Upgrade Terraform template from `v0.14`/`v0.15` to `v1.0`
 {: #upgrade-14-to10}
 
 You can upgrade the [`Terraform v0.14`](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://www.terraform.io/language/upgrade-guides/0-15){: external} to `Terraform v1.0`, refer to, [`Terraform v1.0` upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
