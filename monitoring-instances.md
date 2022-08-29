@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-08-29"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -125,7 +125,7 @@ For the {{site.data.keyword.bpshort}} instance, following five different time se
 | Number of workspaces deleted | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Template Error”}` |
 {: caption="Workspace time series count" caption-side="bottom"}
 
-### ibm_schematics_workspace_actions_count
+### `ibm_schematics_workspace_actions_count`
 {: #wkspace-actions-count}
 
 The number of workspace actions count are stated in the table.

@@ -1231,7 +1231,7 @@ You need to pass either `--inventories-ini` file path or `--resource-query` ID f
 | ----- | -------- | ------- |
 | `--name` or `-n` | Required | The unique name of a resource inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as **us-south, us-east, eu-de,** or **eu-gb**. For more information about data storage in {{site.data.keyword.bpshort}}, see [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location). |
+| `--location` or `-l` | Optional | The location where you want to store your resource inventory, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. For more information about data storage in {{site.data.keyword.bpshort}}, see [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location). |
 |`resource-group` or `-r`| Optional | The name of the resource group where you want to create the action.|
 |`--inventories-ini` or `-y` | Optional |The file path to the resource inventory file where you specified all target hosts. The resource inventory file must be provided in `INI` format. For more information about how to create a static resource inventory file, see [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv). |
 |`--resource-query` | Optional |Enter the ID of a resource query that you created. A resource query helps to dynamically build your resource inventory by using the {{site.data.keyword.cloud_notm}} resources that you created with a {{site.data.keyword.bpshort}} workspace. To create a resource query, see the `ibmcloud schematics resource-query create` [command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq). To enter multiple resource query IDs, use `--resource-query id1 --resource-query id2`.|
@@ -1415,7 +1415,7 @@ ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--descripti
 | `--id`  or `-i` | Required | Enter the ID of a resource inventory that you want to update. |
 | `--name` or `-n` | Required | The unique name of an inventory. |
 | `--description` or `-d` | Optional | The short description of an inventory. |
-| `--location` or `-l` | Optional | The geographic locations supported by {{site.data.keyword.bplong_notm}} service, such as **us-south, us-east, eu-de,** or **eu-gb**.|
+| `--location` or `-l` | Optional | The geographic locations supported by {{site.data.keyword.bplong_notm}} service, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`.|
 |`resource-group` or `-r`| Optional | The resource group name for an action.|
 |`--inventories-ini` or `-y` | Optional |  File path of `INI` format file that contains the host details.|
 |`--resource-query` | Optional |  Pass resource query ID. To pass multiple IDs use `--resource-query id1 --resource-query id2`.|
@@ -2500,7 +2500,7 @@ ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 ### `ibmcloud schematics workspace import`
 {: #schematics-workspace-import}
 
-You can import the existing resource with an valid address from the workspace ID and import it into your Terraform state. You need to ensure one resource can be imported to only one Terraform resource address. Otherwise, you may see unwanted behaviour from {{site.data.keyword.bpshort}}.
+You can import the existing resource with an valid address from the workspace ID and import it into your Terraform state. You need to ensure one resource can be imported to only one Terraform resource address. Otherwise, you may see unwanted behavior from {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 **Syntax:**
@@ -2550,7 +2550,7 @@ ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] 
 | `--offset` or `-m` | Optional | The position of the workspace in the list of workspaces. For example, if you have three workspaces in your account, the command returns these workspaces as a list with three elements. To see a specific workspace in this list, you must enter the position number that the workspace has in the list. To list the first workspace in the list, enter `0`. To list the second workspace, enter `1` and so forth. Negative numbers are not supported and are ignored. The default value is `-1`.|
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
-| `--region` or `-r` | Optional | Specify the region, such as **eu, us, eu-gb, eu-de, us-south,** or **us-east**.|
+| `--region` or `-r` | Optional | Specify the region, such as `eu`, `us`, `eu-gb`, `eu-de`, `us-south`, or `us-east`.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces list flags" caption-side="top"}
 
 **Example:** 
@@ -2927,7 +2927,7 @@ ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --addr
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.
 
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The region can be **us-east, us-south, eu-gb**, or **eu-de** region. You need to wait before calling the command again. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The region can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}	
 
 If you provided your Terraform template by uploading a tape archive file (`.tar`) and you want to update your template, you must use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command.
@@ -3056,7 +3056,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td><code>template_repo.branch</code></td>
     <td>Optional</td>
-    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  <strong>Note</strong> Now, in template_repo, you can also update URL with more parameters as shown in the block. </td></tr>
+    <td>Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  Now, in template repository, you can also update URL with more parameters as shown in the block. </td></tr>
         <tr>
     <td><code>template_repo.datafolder</code></td>
     <td>Optional</td>

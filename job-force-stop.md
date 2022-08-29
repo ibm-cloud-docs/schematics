@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-08-29"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -33,7 +33,7 @@ The table provides the list of interrupting types of the job stop.
 Until the job stops, you can send any number of these stop signals. Typically, you should not send more than three signals. If the Terraform does not respond to `interrupt` signals, you can always use `force-stop`. If `force-stop` does not respond due to some issue in the job, you can always `terminate` the job to block.
 {: important}
 
-## Cancelling a job
+## Canceling a job
 {: #cancelling}
 
 If the job is in a `pending` state, any type of stop signal causes the job to cancel. The `Cancel` button shows up if the job is in a `pending` state, when it can be simply cancel. Cancel removes the job from the pending queue. If the `plan`, `apply`, or `destroy` execution is started in the meanwhile, this end up become an interrupt signal to the Terraform execution.

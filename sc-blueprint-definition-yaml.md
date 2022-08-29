@@ -328,7 +328,7 @@ Type: YAML flow or block scalar
 
 Default: string 
 
-As Blueprints primarily works with Terraform configurations, Terraform variable type constraints are used to perform type validation for Blueprints inputs. https://www.terraform.io/language/expressions/type-constraints#type-constraints  The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the Workspace. The type can be copied from the module meta data or the Terraform variables.tf file. 
+As Blueprints primarily works with Terraform configurations, Terraform variable type constraints are used to perform type validation for Blueprints inputs. https://www.terraform.io/language/expressions/type-constraints#type-constraints  The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the Workspace. The type can be copied from the module metedata or the Terraform `variables.tf` file. 
 
 As complex Terraform types are typically represented as multi-line strings, YAML block syntax can be used.   
 
@@ -403,7 +403,7 @@ Type:       list
 
 Default:    []  
 
-A list defining all the outputs that will be returned by the module to be utilised as inputs to other workspaces or output from the blueprint. Each output is identified by the label `name`.  This must match the value in the module template for the value to be retrieved at execution time from the Workspace. The name can be copied from the module meta data or from inspecting the Terraform tf files. 
+A list defining all the outputs that will be returned by the module to be utilized as inputs to other workspaces or output from the blueprint. Each output is identified by the label `name`.  This must match the value in the module template for the value to be retrieved at execution time from the Workspace. The name can be copied from the module metedata or from inspecting the Terraform `.tf` files. 
 
 Example
 ```yaml
@@ -420,7 +420,7 @@ Type:         list
 
 Default:      []
 
-The injectors block is an optional block to configure the parameters required by {{site.data.keyword.bpshort}} to inject templated files into the module automation repo. The primary use with Blueprints is to enable direct use of Terraform modules with Blueprints, by the injection of `provider` and `terraform` blocks.
+The injectors block is an optional block to configure the parameters required by {{site.data.keyword.bpshort}} to inject the template files into the module automation repo. The primary use with Blueprints is to enable direct use of Terraform modules with Blueprints, by the injection of `provider` and `terraform` blocks.
 
 ```yaml
 injectors:
