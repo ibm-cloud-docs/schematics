@@ -164,7 +164,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
 You can create {{site.data.keyword.bpshort}} Workspaces in the {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in the target account. You can provision a resource in the target account only through command-line and API calls by using the target account's service ID with authentication, appropriate cross account authorization, or API key. To provision in the target account, you need to have a right permission of the source account.
 
-Whereas in UI, the {{site.data.keyword.bpshort}} Workspaces use an users who are logged in identity for executing operations. Hence, you cannot provision the Terraform providing resources in the target account.
+Whereas in UI, the {{site.data.keyword.bpshort}} Workspaces use a user who are logged in identity for executing operations. Hence, you cannot provision the Terraform providing resources in the target account.
 {: important}
 
 ## Using `variable` blocks to customize resources
