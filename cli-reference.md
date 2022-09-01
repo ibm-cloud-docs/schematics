@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-09-01"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -960,7 +960,7 @@ ibmcloud schematics blueprint job get --id JOB_ID
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint job get --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint job get --id eu-de.JOB.Blueprint_Basic.c5e3c831
 ```
 {: pre}
 
@@ -989,7 +989,7 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint job logs -id useast.JOB.Blueprint_Basic.e4081308
+ibmcloud schematics blueprint job logs --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -1016,7 +1016,7 @@ ibmcloud schematics blueprint job logs --id JOB_ID
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint job logs --id useast.JOB.Blueprint_Basic.e4081308
+ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint_Basic.e4081308
 ```
 {: pre}
 
