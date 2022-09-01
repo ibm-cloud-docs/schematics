@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-09-01"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -59,13 +59,13 @@ During the Beta, the delete CLI command does not wait for successful job complet
 The status of the delete operation can be monitored using the `blueprint job get` command. The following command performs a Blueprint `job get` for the JOB ID `eu-gb.JOB.Blueprint-Basic-Example.f2d388d3`. The job ID will be displayed in the delete command output. 
 
 ```sh
-mcloud schematics blueprint job get --id useast.JOB.Blueprint_Basic.e4081308
+mcloud schematics blueprint job get --id us-east.JOB.Blueprint_Basic.e4081308
 ```
 {: pre}
 
 
 ```text
-ID                      useast.JOB.Blueprint_Basic.e4081308   
+ID                      us-east.JOB.Blueprint_Basic.e4081308   
 Blueprint ID            Blueprint_Basic.eaB.5cd9   
 Job Type                blueprint_delete   
 Location                us-east

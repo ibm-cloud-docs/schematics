@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-30"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -26,20 +26,20 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 
 
 
-All data, user inputs and the data generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted at rest by [envelope encryption](#x9860393){: term} technique by using a root key selected for each geographical location. The root keys are secured by FIPS 140-2 Level 3 certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. {{site.data.keyword.bpshort}} support encryption with the root keys by using following encryption.
+All data, user inputs and the data generated at runtime during execution of automation code, are stored in {{site.data.keyword.cos_full_notm}}. This data is encrypted at rest by [envelope encryption](#x9860393){: term} technique by using a root key that is selected for each geographical location. The root keys are secured by `FIPS 140-2 Level 3` certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. {{site.data.keyword.bpshort}} support encryption with the root keys by using following encryption.
 
 1. {{site.data.keyword.bpshort}} owned root key.
 2. Bring your own key (BYOK) by integrating with Key Protect.
 3. Keep your own key (KYOK) by integrating with Hyper Protect Crypto Services (HPCS)
 
-Key protect offers manual and automatic key rotation. When you rotate a root key, the registered key is used to re-encrypted {{site.data.keyword.bpshort}} resources with a new key version. You can access the {{site.data.keyword.bpshort}} resources metadata such as details till the rotation completes.
+Key protect offers manual and automatic key rotation. When you rotate a root key, the registered key is used to reencrypted {{site.data.keyword.bpshort}} resources with a new key version. You can access the {{site.data.keyword.bpshort}} resources metadata such as details until the rotation completes.
 {: shortdesc}
 
 ### Key deletion or disable
 {: #key-delete}
 
 
-Key Deletion is a destructive action. When you disable or delete a root key that is used to encrypt your {{site.data.keyword.bpshort}} resources, you cannot access transactional data such as activity or job logs, resource list, variable store. However, you can access the metadata details. Furthermore any subsequent deployment or configuration operation through {{site.data.keyword.bpshort}} will result in failure. Key deletion or disable events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}.
+Key Deletion is a destructive action. When you disable or delete a root key that is used to encrypt your {{site.data.keyword.bpshort}} resources, you cannot access transactional data such as activity or job logs, resource list, variable store. However, you can access the metadata details. Furthermore any subsequent deployment or configuration operation through {{site.data.keyword.bpshort}} result in failure. Key deletion or disable events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}.
 {: shortdesc}
 
 ### Key enable or restore
@@ -47,7 +47,7 @@ Key Deletion is a destructive action. When you disable or delete a root key that
 
 
 
-When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that are inaccessible due to disabled or deleted root key is now completely accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}. 
+When you can [enable or restore a root key](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui), the {{site.data.keyword.bpshort}} resources transactional data that is inaccessible due to disabled or deleted root key is now accessible. You can also use {{site.data.keyword.bpshort}} resources for deployment or configuration operations. Key enable or restore events are sent to the {{site.data.keyword.la_full_notm}} {{site.data.keyword.at_short}}. 
 {: shortdesc}
 
 
@@ -55,7 +55,7 @@ When you can [enable or restore a root key](/docs/schematics?topic=schematics-km
 ## What are the details stored in {{site.data.keyword.bpshort}}?
 {: #pi-data}
 
-The following details are stored when you create and use a {{site.data.keyword.bpshort}} workspace: 
+The following details are stored when you create and use an {{site.data.keyword.bpshort}} workspace: 
 - Workspace details
 - Workspace variables
 - Terraform configuration files that your workspace points to
@@ -69,14 +69,14 @@ The following details are stored when you create and use a {{site.data.keyword.b
 By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Make sure that your data can be stored in these locations before you start {{site.data.keyword.bpshort}}.
 {: shortdesc} 
 
-|Geography/ location| API endpoint|Data is stored in|Data is replicated to|
+|Geography/ location| API endpoint|Data stored|Data replicated|
 |------------|----------------|------|--------|
-|North America|**Public**: </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> **Private**: </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
-|Dallas|**Public**: </br>`https://us-south.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
-|Washington|**Public**: </br>`https://us-east.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
-|Europe|**Public**: </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
-|Frankfurt|**Public**: </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> **Private**: </br> `https://private-eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
-|London|**Public**: </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> **Private**: </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
+|North America|**Public** </br>`https://us.schematics.cloud.ibm.com` </br></br>`https://cloud.ibm.com/schematics/overview` </br></br> **Private** </br> `https://private-us.schematics.cloud.ibm.com` (Deprecated) |Workspaces that are created with this endpoint and all associated data are stored in the US. | Data is replicated between two locations in the US.|
+|Dallas|**Public** </br>`https://us-south.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-us-south.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Dallas location.|Data is replicated between two locations in the US.|
+|Washington|**Public** </br>`https://us-east.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-us-east.schematics.cloud.ibm.com` |Workspaces that are created with this endpoint and all associated data are stored in the Washington location.|Data is replicated between two locations in the US.|
+|Europe|**Public** </br> `https://eu.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-eu.schematics.cloud.ibm.com` (Deprecated) | Workspaces that are created with this endpoint and all associated data are stored in Europe. | Data is replicated between two locations in Europe. |
+|Frankfurt|**Public** </br> `https://eu-de.schematics.cloud.ibm.com` </br></br> **Private** </br> `https://private-eu-de.schematics.cloud.ibm.com`| Workspaces that are created with this endpoint and all associated data are stored in Frankfurt. | Data is replicated between two locations in Europe. |
+|London|**Public** </br> `https://eu-gb.schematics.cloud.ibm.com`  </br></br> **Private** </br> `https://private-eu-gb.schematics.cloud.ibm.com` | Workspaces that are created with this endpoint and all associated data are stored in London. | Data is replicated between two locations in Europe. |
 {: caption="Location information" caption-side="bottom"}
 
 
@@ -101,6 +101,6 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 {: #delete-data}
 
 To remove your data from {{site.data.keyword.bplong_notm}}, choose among the following options: 
-- **Delete the workspace**: When you delete your workspace, all data related to a workspace is permanently deleted. 
+- **Delete the workspace**: When you delete your workspace, all data that is related to a workspace is permanently deleted. 
 - **Open an {{site.data.keyword.cloud_notm}} support case**: Contact IBM Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-using-avatar). 
 - **End your {{site.data.keyword.cloud_notm}} subscription**: A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all workspaces that are stored with IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated data are deleted. 

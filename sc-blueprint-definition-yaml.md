@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-08-30"
 
 keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -357,7 +357,7 @@ Required: true
 
 The value field sources the input value for modules from three sources:
 - Statically defined values specified on the name value pair statement of the module, in yaml syntax
-- An input to the Blueprint defined in the settings prefix and sourced at run time from an input file. Identified by the $blueprint prefix
+- An input to the Blueprint defined in the settings prefix and sourced at runtime from an input file. Identified by the $blueprint prefix
 - An output value from another module defined in this blueprint.yaml file. 
     - Identified by the `$module` prefix and must be included in the output section of another module.
     - The format is the token, `$module` followed by the module name, the token `outputs`, followed by the module output name. 
