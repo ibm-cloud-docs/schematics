@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-07"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -23,7 +23,7 @@ The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-age
 
 The block diagram represents the {{site.data.keyword.bpshort}} Agent set up flow that you can provision, deploy, connect, and use.
 
-![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption=" " caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
 
 Following are the estimated time to complete the {{site.data.keyword.bpshort}} Agents set up.
 1. Provisioning the Agent infrastructure (estimated time 45 - 90 minutes)
