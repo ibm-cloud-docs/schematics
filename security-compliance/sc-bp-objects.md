@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-09-07"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -67,7 +67,7 @@ Follow these practices when creating a Workspace for the Terraform template.
 You need to set the variable or output parameter as sensitive to make sure that the data is not leaked in the logs or outputs.
 
 ### How can I protect the access to Workspaces and its data?
-{: #bp-security-data}
+{: #bp-security-wks-data}
 
 As the account owner or an authorized account administrator, you can assign {{site.data.keyword.iamlong}} (IAM) service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
@@ -98,7 +98,7 @@ Follow these practices when creating a {{site.data.keyword.bpshort}} Actions for
 - As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
 ### How can I protect the access to Actions and its data?
-{: #bp-security-data}
+{: #bp-security-action-data}
 
 As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 

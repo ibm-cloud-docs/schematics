@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-17"
+lastupdated: "2022-09-07"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -79,7 +79,7 @@ Enter Job sequence number to get Blueprint child job output summary(or enter no/
 
 
 ## Viewing Blueprint job results through CLI
-{: #blueprint-job-get-cli}
+{: #view-blueprint-job-get-cli}
 
 Review the following section for the `blueprint job get` command for an explanation of the job output. 
 
