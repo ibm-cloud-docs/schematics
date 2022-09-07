@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-09-07"
 
 keywords: schematics
 subcollection: schematics
@@ -179,7 +179,7 @@ subcollection: schematics
 
     * [How can I ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
 
-    * [How can I protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data)
+    * [How can I protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks-data)
 
     * [How does {{site.data.keyword.bpshort}} protect my Workspace data through Terraform state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
@@ -187,7 +187,7 @@ subcollection: schematics
 
     * [What are the best practices that I must follow when creating an Action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
 
-    * [How can I protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data)
+    * [How can I protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-action-data)
 
     * [How does {{site.data.keyword.bpshort}} protect my Action data through input credentials state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
 
@@ -511,7 +511,7 @@ subcollection: schematics
 
 * [Listing Blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-cli)
 
-* [Viewing Blueprint job results through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
+* [Viewing Blueprint job results through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#view-blueprint-job-get-cli)
 
     * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
 
@@ -1572,7 +1572,7 @@ subcollection: schematics
 
     * [Readme](/docs/schematics?topic=schematics-glossary#wksr2)
 
-    * [Settings](/docs/schematics?topic=schematics-glossary#wkss1)
+    * [Settings](/docs/schematics?topic=schematics-glossary#wkss2)
 
     * [Workspace](/docs/schematics?topic=schematics-glossary#wksw1)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-09-07"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -155,7 +155,7 @@ Maps to the provisioned Terraform resources within the infrastructure.
 Refers to the demonstration of an example template with steps to prerequisites, provision resources with limitations, and steps to execute terraform template with support of IBMCloud Schematics.
 
 ### Settings
-{: #wkss1} 
+{: #wkss2} 
 
 Common area to edit values of the variables so that new terraform template can be generated or re-imply with new changes.
 
