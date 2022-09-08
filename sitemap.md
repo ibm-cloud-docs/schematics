@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-08"
 
 keywords: schematics
 subcollection: schematics
@@ -119,6 +119,24 @@ subcollection: schematics
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
+
+
+## Working with Blueprints
+{: #sitemap_working_with_blueprints}
+
+
+[Working with Blueprints](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+
+* [Lifecycle of IaC managed cloud infrastructure](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
+
+* [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
+
+
+## Internal adopters
+{: #sitemap_internal_adopters}
+
+
+[IBM Cloud Schematics internal_v1.0 API](/apidocs/schematics/schematics_internal_v1)
 
 
 ## Security and compliance
@@ -564,6 +582,29 @@ subcollection: schematics
 * [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
+
+
+## Managing Blueprints New
+{: #sitemap_managing_blueprints_new}
+
+
+[Defining Blueprint environments](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
+
+[Deploying Blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
+
+[Operating Blueprint environments](/docs/schematics?topic=schematics-operate-blueprints#operate-blueprints)
+
+* [Multi-step process](/docs/schematics?topic=schematics-operate-blueprints#operate-multistep)
+
+* [Next steps](/docs/schematics?topic=schematics-operate-blueprints#operate-nextsteps)
+
+[Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
 
 
 ## Managing Workspaces
