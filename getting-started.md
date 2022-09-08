@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-09-07"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 
@@ -27,3 +27,4 @@ Review the following use cases to see how you can get started with {{site.data.k
 | <img src="images/application.svg" alt="Software deployment" width="50" style="width: 50px; border-style: none"/> </br>Software deployment| Use a template from our software catalog to install IBM and Third party software in your {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} clusters, or in other {{site.data.keyword.cloud_notm}} resources. | [Link](/docs/schematics?topic=schematics-get-started-software)|
 | <img src="images/bp-gettingstarted32.svg" alt="Large-scale environments" width="50" style="width: 50px; border-style: none"/> </br>Large-scale environments| Deploy and manage large-scale environments with Blueprints, created from Infrastructure as Code (IaC) building blocks. Apply Terraform based automation modules, create repeatable and customizable solution architectures by using version configurations. | [Link](/docs/schematics?topic=schematics-get-started-blueprints)|
 {: caption="Use case" caption-side="bottom"}
+
