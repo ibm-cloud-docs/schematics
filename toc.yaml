@@ -74,13 +74,6 @@ toc:
           - sc-blueprint-destroy.md
           - sc-blueprint-delete.md
       - topicgroup:
-          label: Managing Blueprints New
-          topics:
-          - draft-bp/sc-bp-define.md
-          - draft-bp/sc-bp-deploy.md
-          - draft-bp/sc-bp-operate.md
-          - draft-bp/sc-bp-delete.md
-      - topicgroup:
           label: Managing Workspaces
           topics:
           - create-terraform-config.md
