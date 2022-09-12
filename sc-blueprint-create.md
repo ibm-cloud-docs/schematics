@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-09-12"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -18,46 +18,76 @@ subcollection: schematics
 # Creating a Blueprint 
 {: #create-blueprint}
 
-Deploying cloud resources with Blueprints is a two step process, create and install. The first step creates a Blueprint in {{site.data.keyword.bpshort}}. The second [install](/docs/schematics?topic=schematics-install-blueprint&interface=cli) step executes the IaC automation modules to deploy cloud resources. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) to understand the role of the Blueprint commands such as `create`, `update`, and `delete`.
+Deploying cloud resources using a solution pattern with the Blueprints service is a two-step process, Create and Apply. See [Deploying Blueprints](/docs/schematics?topic=sc-bp-deploy) for an overview of the Blueprints deploy lifecycle stage and the two-phase approach to managing deployments and change in Blueprint environments.     
+
+Create takes as its input the Blueprint definitions and input configurations created during the [Defining Blueprints](/docs/schematics?topic=sc-bp-define) lifecycle stage.  
 {: shortdesc} 
 
-The first step in deploying the cloud resources is the creation of a Blueprint in {{site.data.keyword.bpshort}}. This saves the Blueprint configuration for future operations. The Blueprint config specifies the Git source and release of the Blueprint definition, input files, and any optional input values that will be used to create cloud resources. A linked Workspace is created for each module in the Blueprint definition, initialized from the modules IaC source repository and module inputs.
+The first step in deploying cloud resources is the [create](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-cli) of a Blueprint in {{site.data.keyword.bpshort}}. This saves the Blueprint configuration for future operations. The Blueprint config specifies the Git source and release of the Blueprint definition, input files, and any optional input values that will be used to create cloud resources. A linked Workspace is created for each module in the Blueprint definition. The Workspaces are initialized from the modules Terraform source Git repository and module inputs.
+
+The second [Apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step executes the automation modules and the Terraform code to deploy cloud resources. 
+
 
 ## Creating a Blueprint from the CLI 
 {: #create-blueprint-cli}
 {: cli}
 
-Create and deploy your Blueprint with the CLI. Create command requires a name and the Git URL of a Blueprint definition and other optional arguments. For a complete listing of options, see the [ibmcloud schematics blueprint create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
+Create your Blueprint with the CLI. The Create command requires a name and the Git URL of a Blueprint definition and other optional arguments. For a complete listing of options, see the [ibmcloud schematics blueprint create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
 {: shortdesc}
 
-For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+To work with {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
 {: important}
 
-Before your begin
+Before your begin:
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.11.0` version.
-- Select the {{site.data.keyword.cloud_notm}} region you want to use to manage your {{site.data.keyword.bpshort}}. For example, to set the region use [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
-- Check that you have the right [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
+- Select the {{site.data.keyword.cloud_notm}} region you want to use to manage your {{site.data.keyword.bpshort}} Blueprint. For example, to set the region use [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 
-The following command creates a Blueprint by using the definition file `basic-blueprint.yaml` and input file `basic-input.yaml` from the source Git repository `https://github.com/Cloud-Schematics/blueprint-basic-example`. This Blueprint definition requires the two inputs `provision_rg=true` and `resource_group_name=default` are passed during the Blueprint creation. You can create Blueprint using `default` or new resource group `mynew-resourcegroup`, both the syntax are provided.
+The command example used here creates a Blueprint in {{site.data.keyword.bpshort}} using the definition file `basic-blueprint.yaml` and input file `basic-input.yaml` from the source Git repository `https://github.com/Cloud-Schematics/blueprint-basic-example`. With this basic two module example, the first module will create a resource group and the second, create a COS instance and bucket in the specified resource group. 
 
 If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a `subfolder` of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/<subfolder>`. 
 {: note}
 
-**Syntax: To create a resource group named `mynewrgdemo`, and create COS instance with the bucket in `mynewrg` resource group**
+This example also demonstrates using additional inputs at create time to customise the deployment. In this example the inputs `provision_rg` and `resource_group_name`  are used to customise the deployment and demonstrate the use of inputs to modify module execution behaviour. These additional inputs allow the Blueprint deployment to be customised to a users account setup and IAM permissions to access or create resource groups. The input `provision_rg` enables or disables provisioning of a resource group. The input `resource_group_name` specifies the name of the resource group that should be created or the name of an existing group to be used.    
+
+| Operation | IAM permissions | provision_rg |  resource_group_name | 
+| -- | -- | -- | -- |
+| Reuse resource group | Access 'default' group | false | default | 
+| Create resource group | Create resource groups  | true  | my_resource_group |
 
 For all the Blueprints commands, syntax, and option flag details, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
+### Reuse existing resource group 
+
+Syntax of the `inputs` flag to use the existing `default` resource group, and create COS instance with the bucket in `default` resource group.
+
+`-inputs provision_rg=false,resource_group_name=default`
+
+Full `blueprint create` command syntax:
+
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
+ibmcloud schematics blueprint create -name Blueprint_Basic -resourcegroup default \
+-bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-file basic-blueprint.yaml \
+-input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
+-inputs provision_rg=false,resource_group_name=default
 ```
 {: pre}
 
-**Syntax: To use the `default` resource group, and create COS instance with the bucket in `default` resource group**
+### Create new resource group 
+
+Syntax of the `inputs` flag to create a new resource group `my_resource_group` and create the COS bucket in this group. 
+
+`-inputs provision_rg=true,resource_group_name=my_resource_group`
+
+Full `blueprint create` command syntax:
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resourcegroup default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=false,resource_group_name=default
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default \
+-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml \
+-input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
+-inputs provision_rg=true,resource_group_name=my_resource_group
 ```
 {: pre}
 
@@ -100,7 +130,7 @@ For more information, about how to diagnose and resolve issues if the create fai
 {: #create-blueprint-ui}
 {: ui}
 
-Currently, you can only create a Blueprint from command-line by using the [create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli). Followed by [install](/docs/schematics?topic=schematics-install-blueprint) command to create cloud resources.
+Currently, you can only create a Blueprint from command-line by using the [Create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli). Followed by [Apply](/docs/schematics?topic=schematics-apply-blueprint) command to create cloud resources.
 {: note}
 
 ### Verify Blueprint creation from the UI 
@@ -118,9 +148,9 @@ For more information, about how to diagnose and resolve issues if the create fai
 {: #create-blueprint-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint update, refer to, [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint Update, refer to, [Create a Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-Blueprint create API runs `Blueprint create`, and `Blueprint jobs` `APIs` together, to perform the create, and install Blueprint operations.
+The Blueprint create API runs `blueprint create`, and `blueprint jobs` `APIs` together, to perform the create Blueprint operations.
 {: important}
 
 Example
@@ -239,6 +269,6 @@ For more information, about how to diagnose and resolve issues if the create fai
 ## Next steps
 {: #bp-create-nextsteps}
 
-After creating the Blueprint in {{site.data.keyword.bpshort}}, the next step in deploying the cloud resources defined by the Blueprint is to [install](/docs/schematics?topic=schematics-install-blueprint) the Blueprint. 
+After creating the Blueprint in {{site.data.keyword.bpshort}}, the next step in deploying the cloud resources defined by the Blueprint is to [Apply](/docs/schematics?topic=schematics-apply-blueprint) the Blueprint. 
 
 Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 

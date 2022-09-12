@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-12"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -44,7 +44,7 @@ On successful completion the list command returns the list of jobs executed for 
 ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
 JOBS      
 SNO   Job Type                Status   Start Time            Job ID   
-1     blueprint_install       Normal   2022-07-08 13:54:31   us-south.JOB.Blueprint_Complex.357fc181   
+1     blueprint_apply       Normal   2022-07-08 13:54:31   us-south.JOB.Blueprint_Complex.357fc181   
 2     blueprint_create_init   Normal   2022-07-08 11:03:10   us-south.JOB.Blueprint_Complex.57b42827   
       
 Enter Job sequence number to get the Blueprint job summary.(or enter no/n to ignore)> 
@@ -57,19 +57,19 @@ Following the interactive prompts, you can drill down into the details of a spec
 ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
 JOBS      
 SNO   Job Type                Status   Start Time            Job ID   
-1     blueprint_install       Normal   2022-07-08 13:54:31   us-south.JOB.Blueprint_Complex.357fc181   
+1     blueprint_apply       Normal   2022-07-08 13:54:31   us-south.JOB.Blueprint_Complex.357fc181   
 2     blueprint_create_init   Normal   2022-07-08 11:03:10   us-south.JOB.Blueprint_Complex.57b42827   
       
 Enter Job sequence number to get the Blueprint job summary.(or enter no/n to ignore)> 1
 BLUEPRINT JOB DETAILS      
 Job ID                  us-south.JOB.Blueprint_Complex.357fc181   
-Job Type                blueprint_install   
+Job Type                blueprint_apply   
 Status                  Normal   
 Start Time              2022-07-08 13:54:31   
 End Time                2022-07-08 13:56:42   
                            
 SNO   Child Job           Module ID                                       Job Status     Job ID   
-1     blueprint_install                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
+1     blueprint_apply                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
 2     Module_apply        us-south.workspace.terraform_module1.6cef8e6d   job_finished   67a110742e5e3f336262ca3ab994048f   
 3     Module_apply        us-south.workspace.terraform_module2.875fda22   job_finished   dced88881344254af903fac251731ed2   
                           
@@ -83,7 +83,7 @@ Enter Job sequence number to get Blueprint child job output summary(or enter no/
 
 Review the following section for the `blueprint job get` command for an explanation of the job output. 
 
-To view the summary details of a Blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and will prompt the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `create`, `install`, `update`, `destroy` and `delete` operations are performed. It can also be retrieved using the `blueprint job list` command.  
+To view the summary details of a Blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and will prompt the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy` and `Delete` operations are performed. It can also be retrieved using the `blueprint job list` command.  
 {: shortdesc}
 
 **Syntax:**
@@ -105,14 +105,14 @@ The example here shows job summary output without following the interactive prom
 BLUEPRINT JOB DETAILS      
 Job ID                  us-south.JOB.Blueprint_Complex.357fc181   
 Blueprint ID            us-south.ENVIRONMENT.Blueprint_Complex.5448a1c0   
-Job Type                blueprint_install   
+Job Type                blueprint_apply   
 Location                us-south   
 Start Time              2022-07-08 13:54:31   
 End Time                2022-07-08 13:56:42   
 Status                  Normal   
                            
 SNO   Child Job           Module ID                                       Job Status     Job ID   
-1     blueprint_install                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
+1     blueprint_apply                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
 2     Module_apply        us-south.workspace.terraform_module1.6cef8e6d   job_finished   67a110742e5e3f336262ca3ab994048f   
 3     Module_apply        us-south.workspace.terraform_module2.875fda22   job_finished   dced88881344254af903fac251731ed2   
                           
@@ -121,7 +121,7 @@ OK
 ```
 {: screen}
 
-The first section of the job output shows the overall execution status of the Blueprint operation (job), such as, `create`, `install`, `update`, `destroy` or `delete`. 
+The first section of the job output shows the overall execution status of the Blueprint operation (job), such as, `create`, `apply`, `update`, `destroy` or `delete`. 
 
 The second section has a detailed breakdown of the execution results at a Workspace level. 
 
@@ -137,14 +137,14 @@ The example here shows job summary output, following the interactive prompt to r
 BLUEPRINT JOB DETAILS      
 Job ID                  us-south.JOB.Blueprint_Complex.357fc181   
 Blueprint ID            us-south.ENVIRONMENT.Blueprint_Complex.5448a1c0   
-Job Type                blueprint_install   
+Job Type                blueprint_apply   
 Location                us-south   
 Start Time              2022-07-08 13:54:31   
 End Time                2022-07-08 13:56:42   
 Status                  Normal   
                            
 SNO   Child Job           Module ID                                       Job Status     Job ID   
-1     blueprint_install                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
+1     blueprint_apply                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
 2     Module_apply        us-south.workspace.terraform_module1.6cef8e6d   job_finished   67a110742e5e3f336262ca3ab994048f   
 3     Module_apply        us-south.workspace.terraform_module2.875fda22   job_finished   dced88881344254af903fac251731ed2   
                           
@@ -192,7 +192,7 @@ The two types of Blueprint child job are, `blueprint` and `module`.
 
 Full `module` job logs can be reviewed with the `schematics logs` command as in the previous section. 
 
-To view the full `blueprint` orchestration job log with the CLI, use the `ibmcloud schematics blueprint job logs` command. This command provides more detail than the summary log with the `blueprint job get` command. The command takes as input the `job_id`. The `job_id` is displayed when the `create`, `install`, `update`, `destroy` and `delete` commands are executed. It can also be retrieved using the `blueprint job list` command.  
+To view the full `blueprint` orchestration job log with the CLI, use the `ibmcloud schematics blueprint job logs` command. This command provides more detail than the summary log with the `blueprint job get` command. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy` and `Delete` commands are executed. It can also be retrieved using the `blueprint job list` command.  
 {: shortdesc}
 
 
@@ -210,17 +210,17 @@ Output
  2022/07/08 13:54:34 -----  New Environment Action  -----
  2022/07/08 13:54:34 Request: environmentId=us-south.ENVIRONMENT.Blueprint_Complex.5448a1c0, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=geetha_sathyamurthy@in.ibm.com, requestID=6aa7b2c7-565f-418d-9596-70d6edf08d05
  2022/07/08 13:54:34 Related Job:  jobID=us-south.JOB.Blueprint_Complex.357fc181
- 2022/07/08 13:54:44  --- Ready to execute the environment flow install command --- 
+ 2022/07/08 13:54:44  --- Ready to execute the environment flow apply command --- 
  2022/07/08 13:54:44 Processing WorkItem Entry us-south.workspace.terraform_module1.6cef8e6d
  2022/07/08 13:54:44 Work Item Status for WorkItemID=us-south.workspace.terraform_module1.6cef8e6d is INACTIVE
- 2022/07/08 13:55:34 Install activity completed for workitem WorkItemID=us-south.workspace.terraform_module1.6cef8e6d
+ 2022/07/08 13:55:34 apply activity completed for workitem WorkItemID=us-south.workspace.terraform_module1.6cef8e6d
  2022/07/08 13:55:34 Status for workitem WorkItemID=us-south.workspace.terraform_module1.6cef8e6d is ACTIVE
  2022/07/08 13:55:37 Processing WorkItem Entry us-south.workspace.terraform_module2.875fda22
  2022/07/08 13:55:38 Work Item Status for WorkItemID=us-south.workspace.terraform_module2.875fda22 is INACTIVE
- 2022/07/08 13:56:38 Install activity completed for workitem WorkItemID=us-south.workspace.terraform_module2.875fda22
+ 2022/07/08 13:56:38 apply activity completed for workitem WorkItemID=us-south.workspace.terraform_module2.875fda22
  2022/07/08 13:56:38 Status for workitem WorkItemID=us-south.workspace.terraform_module2.875fda22 is ACTIVE
- 2022/07/08 13:56:40 ENVIRONMENT_INSTALL - ENVIRONMENT_SYSTEM_STATEENUM_FULFILMENT_SUCCESS
- 2022/07/08 13:56:42  Done with the environment install flow job 
+ 2022/07/08 13:56:40 ENVIRONMENT_apply - ENVIRONMENT_SYSTEM_STATEENUM_FULFILMENT_SUCCESS
+ 2022/07/08 13:56:42  Done with the environment apply flow job 
 
 OK
 ```
@@ -231,7 +231,7 @@ OK
 {: #list-blueprint-jobs-ui}
 {: ui}
 
-The results of Blueprints operations, `create`, `install`, `update`, `destroy` and `delete` can be reviewed on the **Jobs history** page of a Blueprint. 
+The results of Blueprints operations, `create`, `apply`, `update`, `destroy` and `delete` can be reviewed on the **Jobs history** page of a Blueprint. 
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
 2. Click **Overview** to view the BLueprint summary, this includes `Recent Job runs` of your Blueprint. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-12"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -57,38 +57,44 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 ## Blueprints
 {: #glossary-blueprint}
 
-It the {{site.data.keyword.bpshort}} service used to deploy and manage large-scale environments created from Infrastructure as Code (IaC) building blocks. 
+{{site.data.keyword.bpshort}} Blueprints is a pattern based deployment and lifecycle management service for large scale cloud environments. It builds on the proven {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with Blueprints](/docs/schematics?topic=workingwithblueprints) for details of how to use Blueprints and Terraform to create large scale environments from solution patterns. In the Blueprints service, {{site.data.keyword.bpshort}} users create a [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources specified by a solution pattern.   
+
+{{site.data.keyword.IBM}}
 
 ### Blueprint
 {: #bpb1}
 
-A Blueprint is a specific instance of a repeatable solution architecture, customized with input values to a specific use case. It is also the term used when you are working on specific Blueprint in {{site.data.keyword.bpshort}} created from an initial [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) with customized input values.  
+A Blueprint is the resource in {{site.data.keyword.bpshort}} a user works with to manage the cloud environment and resources created from a Blueprint soluton pattern. The Blueprint resource in {{site.data.keyword.bpshort}} stores the details of the solution pattern and the specific configuration details. All operations against the deployed cloud environment are performed using the Blueprint resource in {{site.data.keyword.bpshort}} Blueprints. 
+
+The Blueprint resource in {{site.data.keyword.bpshort}} maintains the record of operations performed against the cloud environment, current status, the cloud resources deployed, the [Blueprint defintion](/docs/schematics?topic=schematics-glossary#bpb2) that defines the solution pattern and infrastructure architecture, and the unique input values used to configure the environment.   
+
+A Blueprint is created from a [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The set of deployed cloud resources is referred to as a [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4). 
 
 ### Blueprint definition
 {: #bpb2}
 
-[Blueprint definitions](/docs/schematics?topic=schematics-blueprint-definitions) define a solution architecture out of IaC automation building blocks written in HashiCorp Terraform, or Red Hat Ansible. These files are written in YAML with a minimum of syntax that specifies the automation modules to be used in the definition, their versions, source libraries, and relationships for passing resource dependency data between modules. The term 'blueprint' may be used as shorthand for the Blueprint definition file. 
+A [Blueprint definition](/docs/schematics?topic=schematics-blueprint-definitions) defines the infrastructure architecture, topology and cloud resources for a solution pattern. The definition implements the desired solution architecture from reusable [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) written in Terraform. Definition files are written in YAML and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. 
 
 
 ### Blueprint configuration
 {: #bpb3}
 
-Are the initial settings provided by the user when a Blueprint is first created in {{site.data.keyword.bpshort}}. The configuration defines the Blueprint definition to be used, input files and any dynamic input variables. 
+A Blueprint configuration is the initial settings the user must provide to create a Blueprint (resource) in {{site.data.keyword.bpshort}}. The configuration defines the Blueprint definition YAML file to be used, its Git source location, input value files, document version information and any additional inputs.  
 
 ### Blueprint environment
 {: #bpb4}
 
-The set of {{site.data.keyword.cloud_notm}} resources created by a Blueprint and its associated Workspaces. 
+A Blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources created from a [Blueprint defintion](/docs/schematics?topic=schematics-glossary#bpb2) and inputs specified by a [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3).  
 
-### Blueprint Modules
+### Blueprint automation modules
 {: #bpb5}
 
-Blueprints are composed from IaC automation modules implemented in HashiCorp Terraform, or Red Hat Ansible. Both Terraform configuration and Terraform modules can be used as Blueprint Modules.    
+Blueprint definitions are composed from IaC automation modules implemented in HashiCorp Terraform. Automation modules can be implemented using fully operable Terraform configurations ([root modules](https://www.terraform.io/language/modules#the-root-module)) or using Terraform ([child](https://www.terraform.io/language/modules#child-modules)). Examples of {{site.data.keyword.IBM_notm}} authored modules can be found in the GitHub repository [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}.
 
-### Blueprint dynamic inputs
+### Blueprint inputs
 {: #bpi1}
 
-Dynamic inputs are used at Blueprint create time to pass inputs to dynamically customize the Blueprint and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
+Inputs are specified at Blueprint create time to pass inputs to dynamically customize the Blueprint and over-ride inputs from a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
 
 ### Blueprint Jobs
 {: #bpj1}
@@ -98,7 +104,8 @@ Blueprints operations (command) are executed as jobs by {{site.data.keyword.bpsh
 ### Blueprint Lifecycle
 {: #bpl1}
 
-Blueprints follow a lifecycle approach to deploy and manage application environments on {{site.data.keyword.cloud_notm}}. Blueprints follow a [cycle of create, update, and delete operations](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds). 
+Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. Blueprint environments follow a lifecycle of definition, deployment, operation and deletion. See [Working with Blueprints](/docs/schematics?topic=workingwithblueprints). 
+{: shortdesc}
 
 ## Catalog
 {: #glossa-catalog}
@@ -113,12 +120,12 @@ The collection of hosts that you can run your Ansible playbook.
 ### Resource inventory
 {: #rir1}
 
-A resource inventory defines a single {{site.data.keyword.cloud_notm}} resource or a group of resources where you want to run Ansible playbooks, modules, or roles by using {{site.data.keyword.bpshort}} Actions.
+A resource inventory defines a single {{site.data.keyword.cloud_notm}} resource or a group of resources against which you want to run Ansible playbooks, modules, or roles when using {{site.data.keyword.bpshort}} Actions.
 
 ## Jobs
 {: #glossary-job}
 
-Job maintains a record of an automation execution of the {{site.data.keyword.bpshort}} objects such as `Workspaces`, `Actions`, `Blueprints`, `Agents`.
+A job maintains a record of the execution of tasks or operations for {{site.data.keyword.bpshort}} resources, `Workspaces`, `Actions`, `Blueprints` and `Agents`.
 
 ## Templates or Modules
 {: #glossary-template}

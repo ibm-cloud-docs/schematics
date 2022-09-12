@@ -65,7 +65,6 @@ toc:
           label: Managing Blueprints
           topics:
           - sc-blueprint-definitions.md
-          - sc-blueprint-lifecycle.md
           - sc-blueprint-create.md
           - sc-blueprint-install.md
           - sc-blueprint-display.md

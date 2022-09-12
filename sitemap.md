@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-09"
+lastupdated: "2022-09-12"
 
 keywords: schematics
 subcollection: schematics
@@ -127,7 +127,7 @@ subcollection: schematics
 
 [Working with Blueprints](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
 
-* [Lifecycle of IaC managed cloud infrastructure](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
+* [Lifecycle of cloud environments](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
 
@@ -453,9 +453,9 @@ subcollection: schematics
 {: #sitemap_managing_blueprints}
 
 
-[Understanding Blueprint definitions](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-definitions)
+[Understanding Blueprint definitions and configuration](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-definitions)
 
-* [Definitions overview](/docs/schematics?topic=schematics-blueprint-definitions#definition-overview)
+* [Blueprint definition overview](/docs/schematics?topic=schematics-blueprint-definitions#definition-overview)
 
 * [Blueprints YAML file](/docs/schematics?topic=schematics-blueprint-definitions#blueprint-yaml-file)
 
@@ -479,15 +479,13 @@ subcollection: schematics
 
 * [What's next](/docs/schematics?topic=schematics-blueprint-definitions#bp-def-whatsnext)
 
-[Infrastructure lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#blueprint-lifecycle-cmds)
-
-* [Lifecycle commands](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecycle-cmds)
-
-* [Next steps](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds#lifecyle-nextstep)
-
 [Creating a Blueprint](/docs/schematics?topic=schematics-create-blueprint#create-blueprint)
 
 * [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
+
+    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint#reuse-existing-resource-group)
+
+    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint#create-new-resource-group)
 
     * [Verify Blueprint create](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-cli)
 
@@ -498,18 +496,6 @@ subcollection: schematics
 * [Creating a Blueprint from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
 * [Next steps](/docs/schematics?topic=schematics-create-blueprint#bp-create-nextsteps)
-
-[Installing a Blueprint](/docs/schematics?topic=schematics-install-blueprint#install-blueprint)
-
-* [Installing a Blueprint from the CLI](/docs/schematics?topic=schematics-install-blueprint#install-blueprint-cli)
-
-    * [Verify Blueprint install success](/docs/schematics?topic=schematics-install-blueprint#bp-verify-install-cli)
-
-* [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-install-blueprint#create-blueprint-ui)
-
-    * [Verify Blueprint install from the UI](/docs/schematics?topic=schematics-install-blueprint#bp-verify-install-ui)
-
-* [Next steps](/docs/schematics?topic=schematics-install-blueprint#bp-install-nextsteps)
 
 [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
@@ -542,6 +528,14 @@ subcollection: schematics
 * [Viewing Blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
+
+* [Update process](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-process)
+
+* [Explicit and relaxed versioning](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-versioning)
+
+    * [Relaxed versioning](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-relaxed)
+
+    * [Explicit versioning](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-strict)
 
 * [Updating a Blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
@@ -1562,9 +1556,9 @@ subcollection: schematics
 
     * [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4)
 
-    * [Blueprint Modules](/docs/schematics?topic=schematics-glossary#bpb5)
+    * [Blueprint automation modules](/docs/schematics?topic=schematics-glossary#bpb5)
 
-    * [Blueprint dynamic inputs](/docs/schematics?topic=schematics-glossary#bpi1)
+    * [Blueprint inputs](/docs/schematics?topic=schematics-glossary#bpi1)
 
     * [Blueprint Jobs](/docs/schematics?topic=schematics-glossary#bpj1)
 
@@ -1735,7 +1729,7 @@ subcollection: schematics
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
-* [Why do I perform Blueprint operations using `Blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
+* [Why do I perform Blueprint operations using a `Blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
 * [How does resource provisioning happen when using the Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
 

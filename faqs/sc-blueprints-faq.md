@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-06"
+lastupdated: "2022-09-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -23,7 +23,7 @@ content-type: faq
 Answers to common questions about the {{site.data.keyword.bpshort}} Blueprints are classified into following sections.
 {: shortdesc}
 
-## Why do I perform Blueprint operations using `Blueprint id`?
+## Why do I perform Blueprint operations using a `Blueprint id`?
 {: #faqs-bp-install}
 {: faq}
 {: support}
@@ -35,11 +35,7 @@ In Blueprints the displayed name of the Blueprint is not a unique identifier. On
 {: faq}
 {: support}
 
-Resource configuration with Blueprints is a two step process, user driven process. Refer to [Blueprints lifecycle](/docs/schematics?topic=schematics-blueprint-lifecycle-cmds) commands: create, update, and delete for an overview of the Blueprints lifecycle. 
-
-In the first step the Blueprint configuration in {{site.data.keyword.bpshort}} is created or updated. This saves in {{site.data.keyword.bpshort}} the required releases of the Blueprint definition and Input files from Git, and any optional input values that will be used to create cloud resources. For each Blueprint module, Workspaces are initialized or settings updated as required based on the specified release of the Blueprint definition and Blueprint inputs. For more information, refer to [Creating Blueprint](/docs/schematics?topic=schematics-create-blueprint).
-
-In the second step, the user performs the Install operation to deploy new or changed cloud resources. This runs the Infrastructure as code (IaC) automation code modules associated with the Workspaces by using the initial input configuration. For each module {{site.data.keyword.bpshort}} performs a Terraform apply or Ansible playbook run to create or configure the specified cloud resources. For more information, refer to [Installing Blueprint](/docs/schematics?topic=schematics-install-blueprint).
+Cloud resource deployment with Blueprints is a two step process, user driven process. Refer to [Deploying Blueprint environments](/docs/schematics?topic=workingwithblueprints#deploy-blueprints) for an overview of the Blueprints deployment and resource provisioning process.  
 
 ## How do I view the Blueprints provisioned results in my cloud account?
 {: #faqs-bp-results}

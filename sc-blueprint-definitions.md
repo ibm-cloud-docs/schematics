@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-09-12"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -15,34 +15,46 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Understanding Blueprint definitions
+# Understanding Blueprint definitions and configuration
 {: #blueprint-definitions}
 
-A {{site.data.keyword.bpshort}} Blueprint is composed of three version components:
-
-1. Automation modules written in Terraform, or Ansible.
-2. A Blueprint definition specifying the automation modules and dependencies.
-3. Input variables used to configure and customize the Blueprints deployment.
+{{site.data.keyword.bplong}} Blueprints is a pattern based deployment service for large scale cloud environments. Blueprints managed cloud environments are created from a user supplied Blueprint configuration that identifies the solution pattern (Blueprint defintion) and a set of input values that are used to customise the pattern. 
 {: shortdesc}
 
-## Definitions overview
+A {{site.data.keyword.bpshort}} Blueprint environment is specified by three versioned elements:
+1. A Blueprint definition file specifying the resource topology, infrastructure architecture, IaC automation modules and dependencies.
+2. Input variables to configure and customize the Blueprints defintion at deployment time.
+3. Automation modules written in Terraform to deploy the desired cloud resources. 
+
+These elements and their relationships are shown in the diagram.  
+
+![Understanding Blueprints definitions](images/sc-blueprint-definition.png){: caption="Understanding Blueprints definitions" caption-side="bottom"}
+
+A Blueprint configuration is the initial settings the user must provide to create a Blueprint in {{site.data.keyword.bpshort}}. The configuration defines the Blueprint definition YAML file to be used, its Git source location, input value files, document version information and any additional inputs.
+
+The configuration specifies the:
+1. A Blueprint definition file specifying the resource topology, infrastructure architecture, IaC automation modules and dependencies.
+2. Input variables used to configure and customize the Blueprints deployment.
+3. Automation modules written in Terraform.
+
+
+## Blueprint definition overview
 {: #definition-overview}
 
-The core of {{site.data.keyword.bpshort}} Blueprints is the Blueprints definition. 
-- Blueprints are written in YAML with a minimum of syntax that specifies the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. 
-- The resource management and provisioning functionality of Blueprints is implemented by the automation modules by using the familiar open source Terraform, or Ansible automation tools. 
+Central to deploying a solution pattern as a Blueprint environment is the Blueprint definition. 
+- Blueprint definitions are written in YAML with a minimum of syntax that specifies the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. 
+- The resource management and provisioning functionality of the Blueprints service is implemented by the automation modules by using the familiar open source Terraform automation tool. 
 - Input variable files customize the reusable Blueprints definition to create cloud environments.
 {: shortdesc}
 
-Input files, Blueprints, and modules are all maintained in Git source control. The version controlled components are linked at create time by a Blueprint configuration. The configuration defines the source of the version Blueprint definition in source control and the input files to customize the Blueprint. Also additional parameters for naming the Blueprint, access control and dynamic inputs. 
+Input files, Blueprint defintions, and modules are all maintained in Git source control. These version controlled components are specified at Create time by a Blueprint configuration. The configuration defines the source of the version Blueprint definition in source control and the input files to customize the Blueprint. Also additional parameters for naming the Blueprint, access control and additional inputs. 
 
 ## Blueprints YAML file
 {: #blueprint-yaml-file}
 
-The diagram is a simplified view of a Blueprint YAML file identifying the inputs and outputs, the definition of modules, and the variable linkage between modules. Definitions follow standard YAML syntax. For more details, see [Blueprints schema reference](/docs/schematics?topic=schematics-blueprint-definitions).
+The diagram shows a simplified view of a Blueprint definition YAML file. It identifies the definitions inputs and outputs, the choice of modules, and the dependencies and variable linkage between modules. Definitions follow standard YAML syntax. For more details, see the [Blueprints schema reference](/docs/schematics?topic=schematics-blueprint-definitions).
 {: shortdesc} 
 
-![Understanding Blueprints definitions](images/sc-blueprint-definition.png){: caption="Understanding Blueprints definitions" caption-side="bottom"}
 
 ```yaml
 name: "basic"
@@ -88,7 +100,7 @@ modules:
 ```
 {: codeblock}
 
-A Blueprint consists of a number of definition sections. An initial settings section contains a default name and description for the blueprint, and related settings. Also it defines the inputs the Blueprint requires and any outputs it generates and returns to the user through {{site.data.keyword.bpshort}}. This is followed by a `modules` section containing the module definitions. 
+A Blueprint definition consists of a number of sections. An initial settings section contains a default name and description for the Blueprint, and related settings. Also it defines the inputs the definition requires and any outputs it generates and returns to the user through {{site.data.keyword.bpshort}}. This is followed by a `modules` section containing the module definitions. 
 
 Dependencies are created between modules by interpolation of module input and output values. In the `basic-cos-storage` module definition above, the input `resource_group_id` specifies the interpolated value `$module.basic-resource-group.outputs.resource_group_id` which creates a dependency on the `resource_group_id` output value from the module `basic-resource-group`.
 

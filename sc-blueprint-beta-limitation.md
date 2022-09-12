@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-09-12"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -35,7 +35,6 @@ You can come back any time to your created thread to add information, ask questi
 
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
-| Red Hat Ansible support is planned for year end 2022.  | | | 
 | Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | | | 
 | The Terraform Plan operation is not supported for Blueprints. | | | 
 | Install operations are performed as a single operation against all Workspaces.  | | | 
@@ -55,13 +54,10 @@ You can come back any time to your created thread to add information, ask questi
 | Issue | Resolved | Date |
 | --- |--- | --- | 
 | On create the Blueprint name and description specified on the command line are ignored. | | |
-| On update, Blueprint name not updated. | | |  
-| Install, destroy and delete command returns **`fullfilment_success`** on successful completion.  | | | 
+| On update, Blueprint name is not updated. | | |  
+| Install, destroy and delete commands return **`fullfilment_success`** on successful completion.  | | | 
 | Automatic pull latest of updated module Terraform configuration from Git repositories are not performed on Blueprint update. | | | 
-| UI not showing logs for failed workspace jobs. | | | 
 | JSON output option not supported on commands. | | |   
-| On CLI cursor is lost, if the cancel command is used during spinner. | | | 
-| Command output date and time formatting. | | | 
 {: caption="Beta release known issues" caption-side="bottom"}
 
 ## Joining public slack channel
