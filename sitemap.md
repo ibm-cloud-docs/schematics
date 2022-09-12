@@ -1787,7 +1787,7 @@ subcollection: schematics
 
 * [Can I start or stop the {{site.data.keyword.vsi_is_short}} based on tags and through scheduler or cron job?](/docs/schematics?topic=schematics-general-faq#vm-tags-faq)
 
-* [Could I create a worker node in an existing worker node pool?](/docs/schematics?topic=schematics-general-faq#workernode-kubernetes-faq)
+* [Might I create a worker node in an existing worker node pool?](/docs/schematics?topic=schematics-general-faq#workernode-kubernetes-faq)
 
 * [Where can I view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions?](/docs/schematics?topic=schematics-general-faq#privateip-workspace-faq)
 
@@ -1813,7 +1813,7 @@ subcollection: schematics
 
 * [Can I always set Terraform to use the current or default version?](/docs/schematics?topic=schematics-general-faq#terraform-defaultversion-faq)
 
-* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0` continue to use even if `Terraform version 2.0` or higher are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
+* [If I set `"type”: = “terraform_v1.0"` in the JSON file as shown in the code block, will `Terraform version 1.0 continue to use even if Terraform version 2.0 or higher` are released?](/docs/schematics?topic=schematics-general-faq#terraform-type-faq)
 
 * [Can I specify only the provider version in the `version` parameter? Or is it mandatory to provide the `required_version` parameter in the `versions.tf` file?](/docs/schematics?topic=schematics-general-faq#terraform-reqparam-faq)
 
@@ -1827,31 +1827,31 @@ subcollection: schematics
 
 * [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
-* [How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
+* [How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during Workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 
-* [How do I overcome the downtime while updating the workspace activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
+* [How do I overcome the downtime updating the Workspace activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
 
 * [Why do the jobs delay in a queue when plan is generated?](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq)
 
-* [How do I pull latest code from the Workspace through command-line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
+* [How do I `pull latest` code from the Workspace through command line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
 
 * [What are the development tools and utilities used in the {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#schematics-tools)
 
-* [How can I create workspace from command-line by using Git repositories and personal access token with full permission?](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
+* [How can I create Workspace from command-line by using Git repositories and personal access token with full permission?](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
 
-* [How do I overcome the authorization issue when creating or updating a workspace or a template?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
+* [How do I overcome the authorization issue when creating or updating a Workspace or a template?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
 
 * [How can I access the {{site.data.keyword.bpshort}} services for test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
 * [How can I download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
-* [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
+* [How do I resolve issue while trying to delete a Workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
 * [What is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
 * [How do I set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
 
-* [Why I am getting 403 error instead of 404 error when providing an invalid workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
+* [Why I am getting 403 error instead of 404 error when providing an invalid Workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
 
 * [How can I enable Terraform debug through the `ibmcloud schematics` command line?](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
 
@@ -1859,25 +1859,25 @@ subcollection: schematics
 
 * [Can I download the {{site.data.keyword.bpshort}} Job files?](/docs/schematics?topic=schematics-workspaces-faq#download-jobfile)
 
-* [Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} Workspaces console without using Catalog service or {{site.data.keyword.bpshort}} command line?](/docs/schematics?topic=schematics-workspaces-faq#terraformcli-arguments-faq)
+* [Can I set TF_CLI_ARGS environment variable in the {{site.data.keyword.bpshort}} Workspaces console without using catalog service or {{site.data.keyword.bpshort}} command line?](/docs/schematics?topic=schematics-workspaces-faq#terraformcli-arguments-faq)
 
 * [Does {{site.data.keyword.bpshort}} support to download the Terraform modules template from the private repository?](/docs/schematics?topic=schematics-workspaces-faq#download-module-netrc-faq)
 
 * [Can I edit all the variables in the {{site.data.keyword.bpshort}} console instead of editing individually?](/docs/schematics?topic=schematics-workspaces-faq#edit-variables-faq)
 
-* [Can I set or manage keys for  `ibm_kms_key` resource when {{site.data.keyword.bpshort}} Workspaces imports Terraform?](/docs/schematics?topic=schematics-workspaces-faq#kmskey-value-faq)
+* [Can I set or manage keys for `ibm_kms_key` resource when {{site.data.keyword.bpshort}} Workspaces imports Terraform?](/docs/schematics?topic=schematics-workspaces-faq#kmskey-value-faq)
 
-* [Can I enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
+* [Can I enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running Workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
 
-* [How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` while trying to fetch {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
+* [How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` to fetch {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
 
 * [How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?](/docs/schematics?topic=schematics-workspaces-faq#gitlab-workspace-faq)
 
-* [Does {{site.data.keyword.cloud_notm}} provider supports managing IAM access groups in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#manageaccessgrp-iam-faq)
+* [Does {{site.data.keyword.cloud_notm}} provider support manages IAM access groups in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#manageaccessgrp-iam-faq)
 
-* [Could I create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in {{site.data.keyword.cloud_notm}} target account to provision?](/docs/schematics?topic=schematics-workspaces-faq#account-resource-faq)
+* [Might I create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyword.cloud_notm}} source account and run Terraform providing resources in {{site.data.keyword.cloud_notm}} target account to provision?](/docs/schematics?topic=schematics-workspaces-faq#account-resource-faq)
 
-* [Does `North America` location indicates `us-south`, `us-east`, or `both` during the {{site.data.keyword.bpshort}} Workspaces creation?](/docs/schematics?topic=schematics-workspaces-faq#location-faq)
+* [Does `North America` location indicate `us-south`, `us-east`, or `both` during the {{site.data.keyword.bpshort}} Workspaces creation?](/docs/schematics?topic=schematics-workspaces-faq#location-faq)
 
 * [What are the port used to communicate with {{site.data.keyword.bpshort}} and resources, such as VPC services?](/docs/schematics?topic=schematics-workspaces-faq#port-faq)
 
@@ -1889,21 +1889,21 @@ subcollection: schematics
 
 * [Are my resources removed when I remove the workspace?](/docs/schematics?topic=schematics-workspaces-faq#delete-resource-wks-faq)
 
-* [How can I update a workspace created through payload in command-line to resolve invalid payload issue?](/docs/schematics?topic=schematics-workspaces-faq#invalid-paylaod-cli)
+* [How can I update a Workspace that is created through payload in command line to resolve invalid payload issue?](/docs/schematics?topic=schematics-workspaces-faq#invalid-paylaod-cli)
 
-* [Is the drift detection a automatic in the {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq)
+* [Is the drift detection an automatic in the {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq)
 
 * [Can I initiate the drift detection?](/docs/schematics?topic=schematics-workspaces-faq#drift-initiate-faq)
 
-* [Where can I see the status of the drift detection? Or How can I know if the workspace has drifted?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
+* [Where can I see the status of the drift detection? Or How can I know whether the Workspace is in drift?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
 
-* [Can I interrupt, force-stop, or terminate the provisioning resources or a running job in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#stopping-job-faq)
+* [Can I `interrupt`, `force-stop`, or `terminate` the provisioning resources or a running job in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#stopping-job-faq)
 
 * [How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?](/docs/schematics?topic=schematics-workspaces-faq#postcartapi-job-faq)
 
 * [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
 
-* [How do I fix the `CreateWorkspaceWithContext failed Bad request` error while creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
+* [How do I fix the `CreateWorkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
 
 
 ## Troubleshooting

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-12"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -57,7 +57,7 @@ Developers need to check whether the variable or output parameter as a sensitive
 
 Follow these practices when creating a Workspace for the Terraform template.
 - Check whether you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
-- Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspace. For more information, about location and endpoint, see [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+- Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspace. For more information about location and endpoint, see [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 - Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or command line.
 - Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 
@@ -82,7 +82,7 @@ Follow these practices to protect your Workspace data through Terraform state fi
 - Secure the {{site.data.keyword.cloud_notm}} resources that you create by using the security features that are provided by the resource offering.
 - Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security patches, access controls, and encryption to your resources.
 
-You need to specify the right [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. For more information, about {{site.data.keyword.bpshort}} service access roles and required permissions for
+You need to specify the right [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. For more information about {{site.data.keyword.bpshort}} service access roles and required permissions for
 - [Workspace Permissions](/docs/schematics?topic=schematics-access#workspace-permissions) 
 - [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 
@@ -93,7 +93,7 @@ You need to specify the right [roles and permissions](/docs/schematics?topic=sch
 {: #bp-security-ansible}
 
 Follow these practices when creating a {{site.data.keyword.bpshort}} Actions for the Ansible template.
-- Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace. For more information, about location and endpoint, see [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+- Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace. For more information about location and endpoint, see [Where is my information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 - You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. Wait for the job to complete, then change your settings, and click **Check action**, or **Run action** again.
 - As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
@@ -111,7 +111,7 @@ Follow these practices to protect your Workspace data through input credentials 
 - Use Cloud Identity and Access Management to control access to a {{site.data.keyword.bpshort}} Actions.
 - Secure the source repository of your Terraform template, including access control, security settings, collaboration, and version control.
 - Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security patches, access controls, and encryption to your resources.
-- You need to specify the right [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. For more information, about {{site.data.keyword.bpshort}} service access roles and required permissions for 
+- You need to specify the right [roles and permissions](/docs/schematics?topic=schematics-access#access-setup) to a user who controls the state file. For more information about {{site.data.keyword.bpshort}} service access roles and required permissions for 
 - [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
 - [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 

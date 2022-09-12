@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-12"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -36,7 +36,7 @@ Following are the estimated time to complete the {{site.data.keyword.bpshort}} A
 
 Before you begin, complete the following prerequisites.
 
-- You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information, about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
+- You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
 - Check whether you have the permissions to [provision VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-access_reference#rbac_ref), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in a predefined resource group.
 - Check whether you have the [permissions](/docs/schematics?topic=schematics-access#workspace-permissions) to create a Schematics Workspaces.
 - Create an IAM trusted ID. For more information, see [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile).
@@ -228,7 +228,7 @@ Before you begin
 
 Here are the list of commands used to create the Agent service.
 
-- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information, about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc).
+- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc).
     | Input variable | value |
     | --- | --- |
     | `cluster_id` | provide the recorded `cluster_id` from Agent infrastructure job log. |

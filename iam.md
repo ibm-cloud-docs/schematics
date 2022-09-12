@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-09-12"
 
 keywords: schematics, automation, terraform
 
@@ -149,7 +149,7 @@ You can now centrally manage access tags to the {{site.data.keyword.bpshort}} Wo
 - To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create). 
 - To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} Workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
 
-For more information, about managing access tags, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
+For more information about managing access tags, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-12"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -18,7 +18,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the Beta release.
 {: beta}
 
-The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, and `Microservices`. For more information, about the Agents utilities, refer to, [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
+The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, and `Microservices`. For more information about the Agents utilities, refer to, [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
 {: shortdesc}
 
 ## Usage of an Agent
@@ -69,7 +69,7 @@ The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-age
 
 ![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
 
-For more information, about estimated time to set up an Agent, refer to [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup).
+For more information about estimated time to set up an Agent, refer to [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup).
 
 ## Next steps
 {: #nextsteps-agent-arch}

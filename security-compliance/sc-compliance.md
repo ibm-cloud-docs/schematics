@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-04"
+lastupdated: "2022-09-12"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Compliance
 {: #compliance}
 
-{{site.data.keyword.bplong}} actively participates in several industry compliance programs. As a compliance focal, you can use the {{site.data.keyword.bpshort}} goals to check that your organization is adhering to the external and internal standards for your industry. For more information, about monitoring compliance, refer to, [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
+{{site.data.keyword.bplong}} actively participates in several industry compliance programs. As a compliance focal, you can use the {{site.data.keyword.bpshort}} goals to check that your organization is adhering to the external and internal standards for your industry. For more information about monitoring compliance, refer to, [Getting started with Security and Compliance Center](/docs/security-compliance?topic=security-compliance-getting-started).
 
 To monitor your resources with {{site.data.keyword.bpshort}}, refer to, [Managing security and compliance with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-monitoring-instances).
 {: shortdesc}
