@@ -114,7 +114,7 @@ ibmcloud schematics blueprint update --id Blueprint_Basic.eaB.5cd9 --inputs reso
 ### Verify Blueprint update
 {: #verify-update}
 
-Verify that the Blueprint is updated successfully. When you update the Blueprint from the CLI, the command displays the details of the linked Workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializing the Workspaces. The command returns on completion.
+Verify that the Blueprint is updated successfully. When you update the Blueprint from the CLI, the command displays the details of the linked Workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializes the Workspaces. The command returns on completion.
 
 ```text
 Update Blueprint  blueprint

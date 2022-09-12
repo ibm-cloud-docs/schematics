@@ -1594,7 +1594,7 @@ subcollection: schematics
 
     * [Resources](/docs/schematics?topic=schematics-glossary#wksr1)
 
-    * [Readme](/docs/schematics?topic=schematics-glossary#wksr2)
+    * [Readme file](/docs/schematics?topic=schematics-glossary#wksr2)
 
     * [Settings](/docs/schematics?topic=schematics-glossary#wkss2)
 
