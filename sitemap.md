@@ -497,6 +497,18 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-create-blueprint#bp-create-nextsteps)
 
+[Applying a Blueprint](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint)
+
+* [Applying a Blueprint from the CLI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-cli)
+
+    * [Verify Blueprint Apply success](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-cli)
+
+* [Creating a Blueprint from the UI](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-ui)
+
+    * [Verify Blueprint Apply from the UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
+
+* [Next steps](/docs/schematics?topic=schematics-apply-blueprint#bp-apply-nextsteps)
+
 [Listing Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
 * [Listing Blueprint through CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
