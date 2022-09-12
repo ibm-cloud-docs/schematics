@@ -483,9 +483,9 @@ subcollection: schematics
 
 * [Creating a Blueprint from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
 
-    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint#reuse-existing-resource-group)
+    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint#reuse-blueprint-rg-cli)
 
-    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint#create-new-resource-group)
+    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-rg-cli)
 
     * [Verify Blueprint create](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-cli)
 
