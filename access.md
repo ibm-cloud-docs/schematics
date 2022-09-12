@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2022
-lastupdated: "2022-09-06"
+lastupdated: "2022-09-12"
 
 keywords: access global catalog, catalog visibility, staging environment
 
