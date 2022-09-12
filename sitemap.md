@@ -1729,23 +1729,23 @@ subcollection: schematics
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
-* [Why do I perform Blueprint operations using a `Blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
+* [Why do you set Blueprint operations by using a `Blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
-* [How does resource provisioning happen when using the Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
+* [How does resource provisioning happen by using the Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
 
-* [How do I view the Blueprints provisioned results in my cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
+* [How do you view the Blueprints provisioned results in your cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
 
-* [How do I securely pass input variables to Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
+* [How do you securely pass input variables to Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
 
 * [Why does the Blueprints basic example fail in the Install step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 
-* [What is the time taken to create a IKS cluster using Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
+* [What is the time taken to create an IBM Kubernetes Service cluster by using Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
 
-* [How do I tell Blueprints what version of Terraform executable to use?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
+* [How do you tell Blueprints what version of Terraform to use?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
 
 * [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
 
-* [When I create a Blueprint in `us-south` target region, why is the job type in Blueprint job ID indicates `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
+* [When you create a Blueprint in `us-south` target region, why is the job type in Blueprint job ID indicates `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
 
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 
