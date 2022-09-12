@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-24"
+lastupdated: "2022-09-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
+{{site.data.keyword.bpshort}} Agents are a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
 {: beta}
 
 # Agents
@@ -28,7 +28,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} Agents a
 {: faq}
 {: support}
 
-You can install more than one Agent Service onto different clusters, but not the same cluster.  Installing a second Agent into the same cluster it not supported and fails with the namespace collision error. There is no need for a second Agent service on the Agent infrastructure, such as, Kubernetes cluster, LogDNA.
+You can install more than one Agent Service onto different clusters, but not the same cluster. Installing a second Agent into the same cluster is not supported and fails with the namespace collision error. There is no need for a second Agent service on the Agent infrastructure, such as Kubernetes cluster, LogDNA.
 
 ## What is the cost of installing the {{site.data.keyword.bpshort}} Agent?
 {: #faqs-agent-cost}
@@ -39,12 +39,12 @@ The cost break-up for the {{site.data.keyword.bpshort}} Agents is as follows:
 
 Agents infrastructure
 - Cost of VPC infrastructure elements such as, subnet, public gateways.
-- Cost of IBM Kubernetes Service (cluster) on VPC, with 3 node worker pool.
+- Cost of IBM Kubernetes Service (cluster) on VPC, with three node worker pool.
 - Cost of IBM Log Analysis services.
 
 Agents service
-- There is no cost involved with running the Agent Service for Beta.
-   Agent Services will be a priced service, post Beta.
+- There is no cost that is involved with running the Agent Service for Beta.
+   Agent Services are a priced service, post Beta.
    {: note}
 
 ## What {{site.data.keyword.bpshort}} jobs can I run in my Agent?
@@ -69,11 +69,11 @@ The Workspace job logs are available in {{site.data.keyword.bpshort}} UI console
 {: faq}
 {: support}
 
-Currently, the {{site.data.keyword.bpshort}} Agent will run three {{site.data.keyword.bpshort}} jobs in parallel. The rest of the jobs are queued in your cluster.
+Currently, the {{site.data.keyword.bpshort}} Agent runs three {{site.data.keyword.bpshort}} jobs in parallel. The rest of the jobs are queued in your cluster.
 You can customize the Agent service deployment to increase the number of job PODs instead increase the number of parallel jobs.
 You must also monitor the resources in the Agent Infrastructure. The number of the workers in the worker pool must be increased to run more jobs, in parallel.
 
-## While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What should I do next? 
+## While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What must I do next? 
 {: #faqs-auth-error}
 {: faq}
 {: support}
@@ -87,23 +87,23 @@ Error: Authentication failed, Unable to refresh auth token: Request failed with 
 ```
 {: screen}
 
-**Root cause** is while provisioning the Agent infrastructure, the API key is an optional input. If you did not provide the API key, {{site.data.keyword.bpshort}} uses your IAM token as the user credentials to provision the Agent infrastructure. The Agent Infrastructure may take a long time to complete the provisioning. Sometimes, the IAM token would expire before the provisioning completes. An expired IAM token is one possible cause of this Authentication failure.
+`Root cause` is when provisioning the Agent infrastructure, the API key is an optional input. If you did not provide the API key, {{site.data.keyword.bpshort}} uses your IAM token as the user credentials to provision the Agent infrastructure. The Agent Infrastructure can take a long time to complete the provisioning. Sometimes, the IAM token would expire before the provisioning completes. An expired IAM token is one possible cause of this Authentication failure.
 
-You need to just retry to provision an Agent infrastructure. Or, you can provide a valid API key to provision the Agent infrastructure. 
+You need to retry to provision an Agent infrastructure. Or, you can provide a valid API key to provision the Agent infrastructure. 
 
 ## What is the difference between `agent-location` and `location` input variable flag in Agents service?
 {: #faqs-agent-location}
 {: faq}
 {: support}
 
-`--agent-location` is a required variable that specifies the region of the cluster where the Agent service is deployed. For example, `us-south`. Where as `--location` is also a required variable that specified the geographic locations that are supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing.
+`--agent-location` is a variable that specifies the region of the cluster where the Agent service is deployed. For example, `us-south`. Whereas `--location` is a needed variable that specifies the geographic locations that are supported by {{site.data.keyword.bpshort}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing.
 
-## Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agents?
+## Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agent?
 {: #faqs-agent-rg}
 {: faq}
 {: support}
 
-Yes, you can have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agents.
+Yes, you can have a different resource group for {{site.data.keyword.bpshort}} Workspaces and an Agent.
 
 ## Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure Workspaces? 
 {: #faqs-agent-register}
@@ -124,16 +124,16 @@ Yes, you can register an Agent in a different region to what is provided in the 
 {: faq}
 {: support}
 
-If an Agent is running is Sydney, but Agent having us-sourth, or eu-de as an endpoint. Workspaces should be created in the same region, where the {{site.data.keyword.bpshort}} endpoint is configures. Because {{site.data.keyword.bpshort}} picks the jobs to executed based on the {{site.data.keyword.bpshort}} endpoint configuration.
+If an Agent is running in Sydney, but Agent having us-sourth, or eu-de as an endpoint. Workspaces must be created in the same region, where the {{site.data.keyword.bpshort}} endpoint is configures. Because {{site.data.keyword.bpshort}} picks the jobs to run based on the {{site.data.keyword.bpshort}} endpoint configuration.
 
-## Can I know the steps to get the Jobrunner (JR) logs to provide the request ID?
+## Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?
 {: #faqs-agent-jr-logs}
 {: faq}
 {: support}f
 
-The following steps allows to get the JR logs and provide the request Id:
-- Get the `logdna_name` from outputs: section of your jobs log in the Agent infrastructure workspace.
-- After your job is run and `failed`, or `succeeded`. If you want to {{site.data.keyword.bpshort}} team to debug the backend logs of the Agent, you can filter the logDNA logs with the request ID from the jobs log.
+The following steps allow the JR logs and provide the request ID:
+- Get the `logdna_name` from outputs: section of your jobs logs in the Agent infrastructure workspace.
+- After your job is run and `failed`, or `succeeded`. If you want the {{site.data.keyword.bpshort}} team to debug the backend logs of the Agent, you can filter the logDNA logs with the request ID from the jobs log.
 - The logDNA sends to your mail. You can save the logs with that filter and send the file to {{site.data.keyword.bpshort}} team.
 
 ## What is time set to deploy the cloud resources?
@@ -141,4 +141,4 @@ The following steps allows to get the JR logs and provide the request Id:
 {: faq}
 {: support}
 
-The default time set to deploy the cloud resources is `30 minutes` for an Agent. For more information, to set the time limit, refer to [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
+The default time set to deploy the cloud resources is `30 minutes` for an Agent. For more information, see [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)

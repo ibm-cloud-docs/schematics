@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-13"
+lastupdated: "2022-09-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -25,11 +25,11 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} Actions 
 {: faq}
 {: support}
 
-In the Action settings page you need to set the input variable as `ansible_python_interpreter = auto` as shown in the screen capture to avoid `DEPRECATION WARNING` message.
+In the Action settings page you, need to set the input variable as `ansible_python_interpreter = auto` as shown in the screen capture to avoid `DEPRECATION WARNING` message.
 
 ![Configuring input variable to silence warning message](../images/advanced_inputvariable.png "Embedded {{site.data.keyword.bplong_notm}} service flow"){: caption="Configuring input variable to silence warning message" caption-side="bottom"}
 
-## How can I resolve the could not execute action error while provisioning WinRM by using {{site.data.keyword.bpshort}} action?
+## How can I resolve that might not run action error while provisioning `WinRM` by using {{site.data.keyword.bpshort}} action?
 {: #winrm-faq}
 {: faq}
 {: support}
@@ -55,19 +55,19 @@ In the Action settings page you need to set the input variable as `ansible_pytho
 ```
 {: screen}
 
-WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} Actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} Actions supports [WinRM](/docs/schematics?topic=schematics-action-setup).
+WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} Actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} Actions support [WinRM](/docs/schematics?topic=schematics-action-setup).
 
 ## When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?
 {: #new-versions}
 {: faq}
 {: support}
 
-After new Terraform and Ansible versions are released by the community, the IBM team begins hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depend on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}. For more information, see [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version) and [{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-agent-job).
+After new Terraform and Ansible versions are released by the community, the IBM team begins hardening and testing the release for {{site.data.keyword.bpshort}}. Availability of new versions depends on the results of these tests, community updates, security patches, and technology changes between versions. Make sure that your Terraform templates and Ansible playbooks are compatible with one of the supported versions so that you can run them in {{site.data.keyword.bpshort}}. For more information, see [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version) and [{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-agent-job).
 
 ## Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?
 {: #ansible-playbooks}
 {: faq}
 {: support}
 
-Yes, you can run Ansible playbooks against your {{site.data.keyword.cloud_notm}} by using the {{site.data.keyword.bpshort}} Actions or Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or perform Actions against your resources, such as shutting down a virtual server instance. For more information, about how to use the Ansible provisioner, see [sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates).
+Yes, you can run Ansible playbooks against your {{site.data.keyword.cloud_notm}} by using the {{site.data.keyword.bpshort}} Actions or Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or set Actions against your resources, such as shutting down a virtual server instance. For more information, see [sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates).
 
