@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-01"
+lastupdated: "2022-09-12"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -31,7 +31,7 @@ In this tutorial, you can learn to use your credentials and an API key to use a 
 The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker, and {{site.data.keyword.monitoringfull}}. 
 {: shortdesc}
 
-Costs are incurred based on your resource usage. For more information, about the pricing, refer to, [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to, [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
+Costs are incurred based on your resource usage. For more information about the pricing, refer to, [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to, [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
 {: important}
 
 ## Objectives
@@ -71,10 +71,10 @@ For the information, about the importance of using an {{site.data.keyword.cloud_
 
 Complete the following prerequisites for the tutorial:
 
-- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information, about managing {{site.data.keyword.cloud_notm}} account, refer to, [Managing {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
-- Install the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in. For more information, about command-line setup, see [{{site.data.keyword.bpshort}} command-line setup](/docs/schematics?topic=schematics-setup-cli).
+- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information about managing {{site.data.keyword.cloud_notm}} account, refer to, [Managing {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
+- Install the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in. For more information about command-line setup, see [{{site.data.keyword.bpshort}} command-line setup](/docs/schematics?topic=schematics-setup-cli).
 - Ensure you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. refer to, [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
-- Follow the instructions to ensure you are assigned the required permissions in {{site.data.keyword.iamshort}} to create resources. For more information, about create {{site.data.keyword.cos_full_notm}}, refer to, [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
+- Follow the instructions to ensure you are assigned the required permissions in {{site.data.keyword.iamshort}} to create resources. For more information about create {{site.data.keyword.cos_full_notm}}, refer to, [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
 
 ## Accessing the {{site.data.keyword.cloud_notm}} and GitHub
 {: #access-automate-template}

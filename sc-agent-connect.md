@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-07"
+lastupdated: "2022-09-12"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -58,7 +58,7 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
     - [LogDNA](/docs/log-analysis?topic=log-analysis-iam).
     - [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
-Here are the list of CURL commands use to register and unregister the Agent. For more information, about the Agents related `APIs`, refer to, [Agents `APIs`](/apidocs/schematics/schematics#list-agent). 
+Here are the list of CURL commands use to register and unregister the Agent. For more information about the Agents related `APIs`, refer to, [Agents `APIs`](/apidocs/schematics/schematics#list-agent). 
 
 1. Run post API to [register an Agent](/apidocs/schematics/schematics#register-agent) with the {{site.data.keyword.bpshort}}.
    ```sh

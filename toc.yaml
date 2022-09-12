@@ -65,21 +65,13 @@ toc:
           label: Managing Blueprints
           topics:
           - sc-blueprint-definitions.md
-          - sc-blueprint-lifecycle.md
           - sc-blueprint-create.md
-          - sc-blueprint-install.md
+          - sc-blueprint-apply.md
           - sc-blueprint-display.md
           - sc-blueprint-jobs.md
           - sc-blueprint-update.md
           - sc-blueprint-destroy.md
           - sc-blueprint-delete.md
-      - topicgroup:
-          label: Managing Blueprints New
-          topics:
-          - draft-bp/sc-bp-define.md
-          - draft-bp/sc-bp-deploy.md
-          - draft-bp/sc-bp-operate.md
-          - draft-bp/sc-bp-delete.md
       - topicgroup:
           label: Managing Workspaces
           topics:

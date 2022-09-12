@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-09-12"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -37,7 +37,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 
 8. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information, about viewing logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information about viewing logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
     {: important}
 
 9. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.
@@ -59,7 +59,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 
 5. Analyze the configuration and click **Create**.
     
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information, about viewing Activity tracker logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information about viewing Activity tracker logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to track your services.
@@ -81,7 +81,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 
 5. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.cloud_notm}} Monitoring that is configured to receive platform service logs. For more information, about monitoring, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.cloud_notm}} Monitoring that is configured to receive platform service logs. For more information about monitoring, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to monitor the hosts and events of your services.
@@ -92,7 +92,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 The data that you store in {{site.data.keyword.bpshort}} Workspaces by using the Enterprise plan is encrypted by default by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources. 
 {: shortdesc}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 
 ### Prerequisites
 {: #key-prerequisites}
@@ -156,6 +156,6 @@ Follow the steps to integrate root keys with {{site.data.keyword.bpshort}} to en
     ```
     {: pre}
 
-    For more information, about enabling the `BYOK` or `KYOK` commands, see [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands).
+    For more information about enabling the `BYOK` or `KYOK` commands, see [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands).
     {: note}
 

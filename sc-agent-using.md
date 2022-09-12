@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-12"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -62,7 +62,7 @@ In other words, the Terraform automation runs in your provisioned Agent infrastr
          - Check the information entered are correct to create a Workspace.
       - Click `Create`.
    3. On successful creation of `Provisioning-wks-through-myagent` Workspace. 
-   4. Click **Settings** to edit the following input variables in the Workspace. For more information, about the input variable, refer to, [Readme](https://github.com/Cloud-Schematics/cos-module/blob/main/README.md){: external} file.
+   4. Click **Settings** to edit the following input variables in the Workspace. For more information about the input variable, refer to, [Readme](https://github.com/Cloud-Schematics/cos-module/blob/main/README.md){: external} file.
       - `region` - `<your region where you want to deploy the VPC, for example, us-south>` and 
       - `prefix` - `<The prefix that you would like to append your resource, for example, mytest>` 
    5. Click **Apply plan** on the `Provisioning-wks-through-myagent` Workspace to deploy the Agent service. Wait 5 - 15 minutes to complete the job execution.

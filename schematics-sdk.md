@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-27"
+lastupdated: "2022-09-12"
 
 keywords: schematics, python sdk, python, go, golang, java server sdk, java, go admin sdk, npm, node sdk, integrate sdk, sdk, 
 
@@ -17,7 +17,7 @@ subcollection: schematics
 
 {{site.data.keyword.bplong}} simplifies application development by abstracting much of the complexity of deploying application environments. {{site.data.keyword.bpshort}} SDKs are provided in multiple programming languages to assist application developers to integrate {{site.data.keyword.bpshort}} `IaC` operations into continuous integration and continuous delivery (**CI**/**CD**) tools and pipelines.
 
-Following are the list of {{site.data.keyword.bplong_notm}} server SDKs that are available for Node, Python, Go, and Java. For more information, about installation and technical concepts, see readme file in the SDK documentation.
+Following are the list of {{site.data.keyword.bplong_notm}} server SDKs that are available for Node, Python, Go, and Java. For more information about installation and technical concepts, see readme file in the SDK documentation.
 {: shortdesc}
 
 |Server SDKs | SDK Documentation |

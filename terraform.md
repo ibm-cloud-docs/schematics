@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-09-12"
 
 subcollection: schematics
 
@@ -33,7 +33,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
 
     You can use the Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API. 
 
-    If you have a workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information, about the {{site.data.keyword.bpshort}} Workspaces locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+    If you have a workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information about the {{site.data.keyword.bpshort}} Workspaces locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
     {: note}
 
     Then create the {{site.data.keyword.bpshort}} Workspaces `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
@@ -104,7 +104,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
     ```
     {: codeblock}
 
-    The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information, about the detailed parameters to create workspace, see [`ibm_schematics_workspace`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external} resource.
+    The following table lists supported parameters when you create and initialize a service instance with Terraform. For more information about the detailed parameters to create workspace, see [`ibm_schematics_workspace`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_workspace){: external} resource.
 
     | Parameter | Description |
     | -------- | --------- |
@@ -142,7 +142,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
     ```
     {: pre}
 
-    For more information, about troubleshooting the `terraform apply` command errors, see [find the root cause of why {{site.data.keyword.bpshort}} apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
+    For more information about troubleshooting the `terraform apply` command errors, see [find the root cause of why {{site.data.keyword.bpshort}} apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
     {: note}
 
 6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `tf-testwks-apigwy` workspace is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.

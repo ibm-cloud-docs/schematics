@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-06"
+lastupdated: "2022-09-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -25,7 +25,7 @@ Run these commands when you want to automate your {{site.data.keyword.bplong_not
 - Setup your [CLI](/docs/schematics?topic=schematics-setup-cli).
 - Install [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
 
-Be sure to keep your CLI up-to-date so that you can use the latest released commands and their options. For more information, about the latest command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
+Be sure to keep your CLI up-to-date so that you can use the latest released commands and their options. For more information about the latest command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
 {: important}
 
 ## Actions commands
@@ -82,7 +82,7 @@ You can set the proxy between a SSH client and the {{site.data.keyword.cloud_not
 Create an {{site.data.keyword.bpshort}} Actions to run an Ansible playbook on a single target host or a group of target hosts. You use Ansible playbooks to perform cloud operations or install software on cloud resources. To try out this capability or to get started, use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. You can create an action by using a payload file or the command's interactive mode.
 {: shortdesc}
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
 **Syntax:**
@@ -200,7 +200,7 @@ Instead of entering the command options or using a payload file, you can use the
 ### `ibmcloud schematics action update`
 {: #schematics-update-action}
 
-Update the information of an existing {{site.data.keyword.bpshort}} Actions by using an action ID. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+Update the information of an existing {{site.data.keyword.bpshort}} Actions by using an action ID. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
 **Syntax:**
@@ -462,7 +462,7 @@ ibmcloud schematics agents list
 ### `ibmcloud schematics agent register`
 {: #schematics-agent-register}
 
-Register the Agent with {{site.data.keyword.bpshort}} to run your workspace jobs on your Agent infrastructure. For more information, about Agent infrastructure, refer to, [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
+Register the Agent with {{site.data.keyword.bpshort}} to run your workspace jobs on your Agent infrastructure. For more information about Agent infrastructure, refer to, [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
 
 **Syntax:**
 
@@ -563,7 +563,7 @@ ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [-
 ```
 {: pre}
 
-For more information, about the flags refer to, [Workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-new) command.
+For more information about the flags refer to, [Workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-new) command.
 {: note}
 
 **Example:**
@@ -586,7 +586,7 @@ ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
 ```
 {: pre}
 
-For more information, about the flags refer to, [Workspace get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-get) command.
+For more information about the flags refer to, [Workspace get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-get) command.
 {: note}
 
 
@@ -912,7 +912,7 @@ ibmcloud schematics blueprint destroy -id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint delete`
 {: #schematics-blueprint-delete}
 
-Delete a {{site.data.keyword.bpshort}} Blueprint. A Blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state. For more information, about the difference between destroy and delete command, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+Delete a {{site.data.keyword.bpshort}} Blueprint. A Blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state. For more information about the difference between destroy and delete command, refer to, [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 {: shortdesc}
 
 **Syntax:**
@@ -1024,7 +1024,7 @@ ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint_Basic.e4081308
 ## Enable BYOK or KYOK commands
 {: #kms-commands}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information, about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 {: shortdesc}
 
 ### Prerequisites
@@ -1073,7 +1073,7 @@ ibmcloud schematics kms instances ls -l US -s byok
 ### `ibmcloud schematics kms enable`
 {: #schematics-kms-enable}
 
-Enable KMS to encrypt your data in the specific location. For more information, about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#data-storage).
+Enable KMS to encrypt your data in the specific location. For more information about enabling customer-managed keys for {{site.data.keyword.bpshort}}, see [enabling keys](/docs/schematics?topic=schematics-secure-data#data-storage).
 
 Update the KMS settings for your location, by using your private endpoint, `CRN`, primary `CRK`, and secondary `CRK`. Note that you can update the KMS settings only once. For example, if you use an API endpoint for a geography, such as `North America`, only that are created in `us-south` or `us-east` are retrieved.
 {: shortdesc}
@@ -1632,7 +1632,7 @@ ibmcloud schematics job list --resource-type action --id us-south.ACTION.interac
 ### `ibmcloud schematics job logs`
 {: #schematics-logs-job}
 
-Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshort}} action. For more information, about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
+Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshort}} action. For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
 {: shortdesc}
 
 **Syntax:**
@@ -1703,7 +1703,7 @@ Scan and run the infrastructure code of your Terraform template that your worksp
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}
 
-Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} apply action. For more information, about workspace state, see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} apply action. For more information about workspace state, see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
 {: note}
 
 While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you cannot make any changes to your workspace.
@@ -1875,7 +1875,7 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 ## Resource query commands
 {: #rq-commands}
 
-Dynamically build resource inventories by using resource queries. Resource queries help you to retrieve your target hosts from existing {{site.data.keyword.bplong_notm}} workspaces. For more information, about resource queries and conditions, see [Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup).
+Dynamically build resource inventories by using resource queries. Resource queries help you to retrieve your target hosts from existing {{site.data.keyword.bplong_notm}} workspaces. For more information about resource queries and conditions, see [Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup).
 {: shortdesc}
 
 ### `ibmcloud schematics resource query create`
@@ -2572,7 +2572,7 @@ Create an {{site.data.keyword.bpshort}} Workspaces that points to your Terraform
 {{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The location can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}	
 
-To create a workspace, you can specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. Also ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+To create a workspace, you can specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. Also ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -2589,7 +2589,7 @@ ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [-
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information, about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
+| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
 | `--state` | Optional | The relative path to an existing Terraform state file on your local machine. To create the Terraform state file: **1.** Show the content of an existing Terraform state file by using the [`ibmcloud schematics state pull`](#state-pull) command. **2.** Copy the content of the state file from your command-line output in to a file on your local machine that is named `terraform.tfstate`. **3.** Use the relative path to the file in the `--state` command parameter.|
 | `--github-token` or `-g` | Optional |  Enter the functional personal access tokens for HTTPS Git operations. For example, `--github-token ${FUNCTIONAL_GIT_KEY}`.|
 | `--agent-id` or `--aid` | Optional | **New** ID of the Agent to bind your new workspace. Agents help you to run your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).|
@@ -2777,13 +2777,13 @@ You need to replace the `<...>` placeholders with the actual values. For example
 | `env_values` | Optional | A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field must be provided as a list of key-value pairs. Each entry will be a map with one entry where `key = variable name` and `value = value`. You can define environment variables for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using a bash script files. |
 | `variable_name` | Optional | Enter the name for the input variable that you declared in your Terraform configuration files. |
 | `variable_type` | Optional | `Terraform v0.12` supports `string`, `list`, `map`, `bool`, `number` and complex data types such as `list(type)`, `map(type)`, `object({attribute name=type,..})`, `set(type)`, `tuple([type])`. |
-| `variable_value` | Optional | Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). [For example](#syntax_of_variablevalue)|
+| `variable_value` | Optional | Enter the value as a string for the primitive types such as `bool`, `number`, `string`, and `HCL` format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of `HCL` format for the value, as shown in the example. For more information about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable). [For example](#syntax_of_variablevalue)|
 | `secure` | Optional | Set the `secure` parameter to **true**. By default, this parameter is set to **false**. |
 | `val1` | Optional | In the payload you can provide an environment variable that can execute in your workspace during plan, apply or destroy stage. Also values are encrypted and stored in COS. |
 {: caption="JSON file component description" caption-side="bottom"}
 
 
-{{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information, about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
+{{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
 {: note}
 
 **Example:**
@@ -2928,7 +2928,7 @@ ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --addr
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](#schematics-plan) command.
 
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The region can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The region can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}	
 
 If you provided your Terraform template by uploading a tape archive file (`.tar`) and you want to update your template, you must use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command.
@@ -2949,7 +2949,7 @@ ibmcloud schematics workspace update --id WORKSPACE_ID [--file FILE_NAME] [--git
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to update the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
-| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. For more information, about the sample JSON file with the details, see [JSON file update template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-update-template).|
+| `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. For more information about the sample JSON file with the details, see [JSON file update template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-update-template).|
 | `--github-token` or `-g` | Optional |  Enter the GitHub token value to access private Git repository.|
 | `--pull-latest` or `--pl` | Optional | Pull the latest changes from your GitHub repository into workspace. If this flag is set `--file` flag is ignored. |
 | `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
@@ -3111,7 +3111,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     <tr>
     <td><code>template_data[0].variablestore[iii].value</code></td>
     <td>Optional</td>
-    <td>Enter the value as a string for the primitive types such as <code>bool</code>, <code>number</code>, <code>string</code>, and <code>HCL</code> format for the complex variables, as you provide in a <code>.tfvars</code> file. You can override the default values of <code>.tfvars</code> by setting <code>use_default</code> parameter as <code>true</code>. You need to enter escaped string of <code>HCL</code> format for the value, as shown in the example. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock"><code>"variablestore": [
+    <td>Enter the value as a string for the primitive types such as <code>bool</code>, <code>number</code>, <code>string</code>, and <code>HCL</code> format for the complex variables, as you provide in a <code>.tfvars</code> file. You can override the default values of <code>.tfvars</code> by setting <code>use_default</code> parameter as <code>true</code>. You need to enter escaped string of <code>HCL</code> format for the value, as shown in the example. For more information about how to declare variables in a Terraform configuration file and provide value to schematics, see [Using input variables to customize resources](/docs/schematics?topic=schematics-create-tf-config#declare-variable) <pre class="codeblock"><code>"variablestore": [
                 {
                     "value": "[\n    {\n      internal = 800\n      external = 83009\n      protocol = \"tcp\"\n    }\n  ]",
                     "description": "",

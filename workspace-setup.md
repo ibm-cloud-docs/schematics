@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-09-12"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -36,7 +36,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information, about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
 ### Creating the workspace from the console
@@ -199,7 +199,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 4. Click the checkbox `I understand the changes that could happen if I edit this URL and I agree to these happening` option.
 5. Click **Save**. {{site.data.keyword.bplong_notm}} automatically downloads the Terraform configuration files from your repository, scans them for syntax errors, and retrieves all input variables that you declared in your configuration files. When all configuration files are downloaded successfully and no syntax errors are found, the workspace state changes to **Inactive**.
 
-    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information, about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
+    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
     {: tip}
 
 6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. refer to, the following table to find example values for each supported data type. 
@@ -375,7 +375,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
     2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
 7. Click **Create** to finish the setup of your toolchain. You see an overview of tools that were configured for your toolchain. 
 8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
-9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. For more information, about viewing logs and history, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
+9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. For more information about viewing logs and history, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
 
 ## Workspace states
 {: #wks-state}
@@ -416,13 +416,13 @@ The state of a workspace indicates if you have successfully created a Terraform 
 ## Creating an auto deployment to the {{site.data.keyword.bplong_notm}}
 {: #create-deploy-to-schematics}
 
-{{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information, about deploy to {{site.data.keyword.cloud_notm}}, see [automating the deployment to the {{site.data.keyword.bpshort}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics).
+{{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information about deploy to {{site.data.keyword.cloud_notm}}, see [automating the deployment to the {{site.data.keyword.bpshort}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics).
 
 
 ## Reviewing the {{site.data.keyword.bpshort}} job details
 {: #job-logs}
 
-Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information, about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue).
+Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue).
 
 In the job log you can see a message such as: 
 

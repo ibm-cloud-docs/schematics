@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-09-12"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -37,7 +37,7 @@ You can specify your resource inventory by using a [static inventory file](#stat
 ### File format
 {: #inv-file-format}
 
-Review the following sample `hosts.ini` file to see the structure of the static host inventory list. For more information, about `hosts.ini` file structures, see [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#how-to-build-your-inventory){: external}.
+Review the following sample `hosts.ini` file to see the structure of the static host inventory list. For more information about `hosts.ini` file structures, see [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#how-to-build-your-inventory){: external}.
 
     ```text
     mail.example.com
@@ -65,7 +65,7 @@ Review the following limitations of static inventory files in {{site.data.keywor
 - Variables are not supported in `hosts.ini` files.
 - Specifying host groups by using key-value pairs in `hosts.ini` files is not supported.
 - You must manually update the `hosts.ini` file if hostname or IP address of target hosts change.
-- All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
+- All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
 
 
 ## Dynamically building resource inventories from {{site.data.keyword.bpshort}} Workspaces
@@ -104,4 +104,4 @@ Review the following limitations of dynamic inventories in {{site.data.keyword.b
 
 - You can choose among the [supported queries](#supported-queries) to select the target virtual server instances to include in your resource inventory.
 - {{site.data.keyword.bpshort}} retrieves the IP address of a target {{site.data.keyword.vsi_is_short}}s and adds the IP address to the resource inventory. Hostname cannot be added, if a public IP address is assigned to the target {{site.data.keyword.vsi_is_short}}, the public IP address is added to the resource inventory. If public IP address do not exists, the private IP address is added to the resource inventory.
-- All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information, about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
+- All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
