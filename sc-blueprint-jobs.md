@@ -29,16 +29,14 @@ For all the Blueprints commands, syntax, and option flag details, refer to, [Blu
 {: #list-blueprint-cli}
 {: cli}
 
-Lists all the Blueprint job.
-
-**Syntax:**
+Lists all the Blueprint job, the command is shown in the code block.
 
 ```sh
 ibmcloud schematics blueprint job list -id <blueprint_id>
 ```
 {: pre}
 
-On successful completion the list command returns the list of jobs executed for this Blueprint. This example does not follow the interactive prompt. 
+The list command returns the list of jobs that runs for this Blueprint. This example does not follow the interactive prompt. 
 
 ```text        
 ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
@@ -51,7 +49,7 @@ Enter Job sequence number to get the Blueprint job summary.(or enter no/n to ign
 ```
 {: screen}
 
-Following the interactive prompts, you can drill down into the details of a specific Blueprint job, then drill down to review the log summary for operations performed at a module level. Enter the sequence number of the job listed in the prior lines to drill down to the next level. 
+Following the interactive prompts, you can drill down into the details of a specific Blueprint job, then drill down to review the log summary for the operations set at a module level. Enter the sequence number of the job listed in the prior lines to drill down to the next level. 
 
 ```text                 
 ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
@@ -83,17 +81,15 @@ Enter Job sequence number to get Blueprint child job output summary(or enter no/
 
 Review the following section for the `blueprint job get` command for an explanation of the job output. 
 
-To view the summary details of a Blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and will prompt the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy` and `Delete` operations are performed. It can also be retrieved using the `blueprint job list` command.  
+To view the summary details of a Blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and prompts the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy`, and `Delete` operations are set. It can also be retrieved by using the `blueprint job list` command.  
 {: shortdesc}
-
-**Syntax:**
 
 ```sh
 ibmcloud schematics blueprint job get -id <job_id>
 ```
 {: pre}
 
-On successful completion the job get command returns the summary detail for the Blueprint operation performed, along with the status for all the child jobs executed against the Blueprint modules. Similar to the job list command, it supports drill down to review a summary of the execution results for all child jobs. 
+On successful completion, job get command returns the summary detail for the Blueprint operation set, along with the status for all the child jobs ran against the Blueprint modules. Similar to the job list command, it supports drill down to review a summary of the execution results for all child jobs. 
 
 
 ### Blueprint job get 
@@ -121,11 +117,11 @@ OK
 ```
 {: screen}
 
-The first section of the job output shows the overall execution status of the Blueprint operation (job), such as, `create`, `apply`, `update`, `destroy` or `delete`. 
+The first section of the job output shows the overall execution status of the Blueprint operation (job), such as, `create`, `apply`, `update`, `destroy`, or `delete`. 
 
 The second section has a detailed breakdown of the execution results at a Workspace level. 
 
-Blueprint operations are performed by child `module` jobs operating against each module (Workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A Blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
+Blueprint operations are set by the child `module`. The jobs operate against each module (Workspace), under the control of a `blueprint` orchestration job. For the Terraform based modules, it is the {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations set to deploy and configure cloud resources. A Blueprint job failure is typically caused by a Module job failure and the failing module log must be reviewed to identify the cause of the job failure. 
 
 ### Blueprint job get summary log
 {: #blueprint-job-get-drilldown-cli} 
@@ -180,10 +176,9 @@ OK
 ```
 {: screen}
 
-Only the last 15 lines of a child job log are shown. On Terraform failures, these lines typically return sufficient error information to identify the Terraform error causing the Blueprint job failure.  
+Only the last 15 lines of a child job log are shown. On Terraform failures, these lines typically return sufficient error information to identify the Terraform error causes the Blueprint job failure.  
 
-If it is desired to review the **full** job log output for a child job, the CLI command to view the full job log for a child job is shown at the end of the get job output. Cut and paste this into your terminal window to view the full log. 
-
+If wanted to review the **full** job log output for a child job. The CLI command views the full job log for a child job that is shown at the end of the get job output. Cut and paste into your command line to view the full log. 
 
 ### Viewing Blueprint job logs
 {: #blueprint-job-log-cli}
@@ -192,11 +187,10 @@ The two types of Blueprint child job are, `blueprint` and `module`.
 
 Full `module` job logs can be reviewed with the `schematics logs` command as in the previous section. 
 
-To view the full `blueprint` orchestration job log with the CLI, use the `ibmcloud schematics blueprint job logs` command. This command provides more detail than the summary log with the `blueprint job get` command. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy` and `Delete` commands are executed. It can also be retrieved using the `blueprint job list` command.  
+To view the full `blueprint` orchestration job log with the CLI, use the `ibmcloud schematics blueprint job logs` command. This command provides more detail than the summary log with the `blueprint job get` command. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy`, and `Delete` commands ran. It can also be retrieved by using the `blueprint job list` command.  
 {: shortdesc}
 
-
-**Syntax:**
+The syntax is given in the code block.
 
 ```sh
 ibmcloud schematics blueprint job logs -id <job_id>
@@ -231,23 +225,23 @@ OK
 {: #list-blueprint-jobs-ui}
 {: ui}
 
-The results of Blueprints operations, `create`, `apply`, `update`, `destroy` and `delete` can be reviewed on the **Jobs history** page of a Blueprint. 
+The results of Blueprints operations, `create`, `apply`, `update`, `destroy`, and `delete` can be reviewed on the **Jobs history** page of a Blueprint. 
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-2. Click **Overview** to view the BLueprint summary, this includes `Recent Job runs` of your Blueprint. 
-3. Click **Jobs history** tab view the job logs for all Blueprint and module operations.
+2. Click **Overview** to view the Blueprint summary that includes `Recent Job runs` of your Blueprint. 
+3. Click **Jobs history** tab view that the job logs for all Blueprint and module operations.
 
-The color coding indicates if the job was successful or failed. 
+The color coding indicates whether the job was successful or failed. 
 
 ## Viewing Blueprint job results through UI
 {: #blueprint-job-get-ui}
 
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
-2. Click **Jobs history** tab view the job logs for all Blueprint and module operations.
-3. Navigate to the line of the desired job and click the expand/collapse arrow on the right hand side. 
+2. Click **Jobs history** tab view that the job logs for all Blueprint and module operations.
+3. Click the job to `expand` or `collapse` arrow on the right side. 
 
-This will open up a detailed view of the Blueprint job results, which contains a number of child jobs. The color coding of the child jobs will indicate which job log should be reviewed for further information about job failures. 
+The detailed view of the Blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
 
-Blueprint operations are performed by child `module` jobs operating against each module (Workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A Blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
-4. Click on the name of a child job to review the job log.  
-    - Optional: Click **Show more** to view the full job log. 
+Blueprint operations are set by child `module`. The jobs operate against each module (Workspace), under the control of a `blueprint` orchestration job. For the Terraform based modules, it is the {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations are set to deploy and configure cloud resources. A Blueprint job failure is typically caused by a Module job failure and the failing module log must be reviewed to identify the cause of the job failure. 
+4. Click the name of a child job to review the job log.  
+    - Click **Show more** to view the full job log. 

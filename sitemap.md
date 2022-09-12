@@ -565,11 +565,11 @@ subcollection: schematics
 
 * [Destroying a Blueprint from the UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
 
-    * [Verify Blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destory-ui)
+    * [Verifying Blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destory-ui)
 
 * [Destroying a Blueprint from the CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
 
-    * [Verify Blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destory-cli)
+    * [Verifying Blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destory-cli)
 
 * [Destroying a Blueprint from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
 

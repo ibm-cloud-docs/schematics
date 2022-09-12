@@ -18,11 +18,11 @@ subcollection: schematics
 # Deleting a Blueprint
 {: #delete-blueprint}
 
-When a Blueprint environment is no longer required, it enters the delete lifecycle stage. See [Deleting Blueprint environments](/docs/schematics?topic=sc-bp-delete) to understand the process of deleting Blueprint environments and the required steps. Deleting a Blueprint environment is a two-stage process of first destroys all the associated cloud resources and then deleting the Blueprint in {{site.data.keyword.bpshort}}.
+When a Blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting Blueprint environments](/docs/schematics?topic=sc-bp-delete) to understand the process of deleting Blueprint environments and the steps. Deleting a Blueprint environment is a two-stage process of first destroys all the associated cloud resources and then deleting the Blueprint in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 
-Blueprint delete is the second step that is required to completely delete a Blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a Blueprint can be deleted when cloud resources in all the linked Workspaces are deleted and the Workspaces are in `Inactive` state. The first step is to run the [destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) command to destroy the resources that are used in the Workspaces.
+Blueprint delete is the second step that is needed to completely delete a Blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a Blueprint can be deleted when cloud resources in all the linked Workspaces are deleted and the Workspaces are in `Inactive` state. The first step is to run the [destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) command to destroy the resources that are used in the Workspaces.
 
 This behavior can be modified by using the `-force-delete` flag to allow deletion when Workspaces cannot be returned to an `Inactive` state.
 {: shortdesc}
