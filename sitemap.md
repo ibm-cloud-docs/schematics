@@ -1387,7 +1387,7 @@ subcollection: schematics
 {: #sitemap_blueprints_definition_reference}
 
 
-[Blueprint definition YAML Schema](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-definition-schema-yaml)
+[Blueprint definition YAML schema](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-definition-schema-yaml)
 
 * [Supporting setting parameters](/docs/schematics?topic=schematics-bp-definition-schema-yaml#bp-parameters)
 
