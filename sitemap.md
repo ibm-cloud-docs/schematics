@@ -590,6 +590,29 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
 
 
+## Staging Blueprints
+{: #sitemap_staging_blueprints}
+
+
+[Defining Blueprint environments](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
+
+[Deploying Blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
+
+[Operating Blueprint environments](/docs/schematics?topic=schematics-operate-blueprints#operate-blueprints)
+
+* [Updating deployed environments](/docs/schematics?topic=schematics-operate-blueprints#operate-multistep)
+
+* [Next steps](/docs/schematics?topic=schematics-operate-blueprints#operate-nextsteps)
+
+[Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
+
+
 ## Managing Workspaces
 {: #sitemap_managing_workspaces}
 
