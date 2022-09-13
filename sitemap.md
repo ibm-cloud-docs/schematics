@@ -267,6 +267,10 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} runtime now supports Ansible v2.9.27
 
+    * [11 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1122)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
     * [04 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2022)
 
         * {{site.data.keyword.bpshort}} allowed IP address for `US`, `EU Central`, and `UK South` region are updated
@@ -274,6 +278,10 @@ subcollection: schematics
 * [July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july22)
 
     * Review the release notes for July 2022.
+
+    * [26 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2622)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [20 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2022)
 

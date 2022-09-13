@@ -39,6 +39,13 @@ Review the release notes for August 2022.
 {{site.data.keyword.bpshort}} runtime now supports Ansible v2.9.27
 :   [{{site.data.keyword.bpshort}} runtime](/docs/schematics?topic=schematics-sch-utilities) supports Ansible v2.9.27 to run your Ansible automation.
 
+### 11 August 2022
+{: #schematics-aug1122}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.2](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 ### 04 August 2022
 {: #schematics-aug2022}
 {: release-note}
@@ -51,6 +58,13 @@ Review the release notes for August 2022.
 
 Review the release notes for July 2022.
 {: shortdesc}
+
+### 26 July 2022
+{: #schematics-jul2622}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.1](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 20 July 2022
 {: #schematics-july2022}
