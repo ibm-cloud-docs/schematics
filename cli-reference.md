@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -113,7 +113,7 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--env` or `-e` | Optional | The environment variables for an action. Environment variables must be entered as key-value pairs, such as `--env mykey=myvalue`. To provide multiple environment variables, use multiple `--env` flags in your command.|
 | `--env-file` or `-E`| Optional | The path to a file where you specified all environment variables for an action. Environment variables must be specified as key-value pairs in JSON format. |
 | `--github-token` or `-g` | Optional | The personal access token in GitHub that you want to use to connect to a private GitHub repository. If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension) for cloning.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--file` or `-f` | Required | The path to the JSON payload file containing the definition of the action that you want to create. For more information, see [Using a payload file](#create-action-payload). |
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive mode. |
 {: caption="{{site.data.keyword.bpshort}} Actions create flags" caption-side="top"}
@@ -234,7 +234,7 @@ ibmcloud schematics action update --id ACTION_ID --name ACTION_NAME [--descripti
 | `--env-file` or `-E`| Optional | The path to a file where you specified all environment variables for an action. Environment variables must be specified as key-value pairs in JSON format. |
 | `--file` or `-f` | Optional | Path to the JSON payload file containing the definition of the action to update. For more information, see [Using the payload file](#create-action-payload). Note that parameters, such as the location or resource group cannot be updated after the action is created.|
 | `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `--j` | Deprecated | Prints the output as JSON. Use `--output` JSON instead. | 
 {: caption="{{site.data.keyword.bpshort}} Actions update flags" caption-side="top"}
 
@@ -266,7 +266,7 @@ ibmcloud schematics action get --id ACTION_ID [--profile PROFILE] [--output OUTP
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The ID of an action that you want to retrieve. |
 | `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 | `--no-prompt` | Optional |Set this flag to run the command without the interactive mode. |
 {: caption="{{site.data.keyword.bpshort}} Actions get flags" caption-side="top"}
@@ -298,7 +298,7 @@ ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PRO
 | `--limit` or `-l` | Optional | The maximum number of actions that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
 | `--offset` or `-m` | Optional | The position of the action in the list of actions from where you want to start listing your actions. For example, if you have three actions in your account, the command returns these actions as a list with three elements. To retrieve all actions, you must enter position number 0. To retrieve actions number 2 and 3 and leave out action number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of actions. Negative numbers are not supported and are ignored. |
 | `--profile` or `-p` | Optional |The depth of information that is returned. Supported values are `ids`, and `summary`. The default value is `summary`. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Actions list flags" caption-side="top"}
 
@@ -359,7 +359,7 @@ ibmcloud schematics action upload --id ACTION_ID --file FILE_NAME [--no-prompt] 
 | `--id` or `-i` | Required | ID of an action that you want to upload. |
 | `--file` or `-f` | Required | Path of the `TAR` file to upload for an action.|
 | `--no-prompt` | Optional | Set this flag to stop interactive command-line session. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="{{site.data.keyword.bpshort}} Actions upload flags" caption-side="top"}
 
 **Example:**
@@ -392,7 +392,7 @@ ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WO
 | `--agent-id` or `--aid` | Required | ID of the Agent.|
 | `--workspace-id` | Required | Workspace ID to bind the Agent. This flag can be used multiple times to bind multiple Workspace IDs.|
 | `--file` or `-f`| Optional | Path to the JSON file containing the definition of the policy. |
-| `--output` or  `-o` | Optional |Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent bind flags" caption-side="bottom"}
 
@@ -419,7 +419,7 @@ ibmcloud schematics agents get --id AGENT_ID [--profile PROFILE] [--output OUTPU
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | Geographic region supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`.|
 | `--profile` or `p` | Optional |  Set this flag to filter Agents. Valid values are `all`, `saved`, and `new`. If not set defaults to `saved`. |
-| `--output` or `-o` |  Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--no-prompt` | Optional |  Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent get flags" caption-side="top"}
 
@@ -448,7 +448,7 @@ ibmcloud schematics agents list [--region REGION] [--filter NEW] [--limit LIMIT]
 | `--filter`  | Optional | Set this flag to filter Agents. Valid values are `all`, `saved`, and `new`. If not set defaults to `saved`. |
 | `--limit` or `-l` | Optional |  Maximum number of workspaces to list. Ignored if a negative number is set. The number must be a positive integer between 1 and 200. The default value is `-1`.|
 | `--offset`or `-m`| Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
-| `--output` or `-o` |  Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} agent list flags" caption-side="top"}
 
 **Example:**
@@ -483,7 +483,7 @@ ibmcloud schematics agents register --name AGENT_NAME --profile-id PROFILE_ID --
 | `--resource-group` or `-r` | Optional |  Resource group for the Agent.|
 | `--tags` or `-t`| Optional | Agent tags. This flag can be used multiple times and search the Agent related resources faster.|
 | `--file` or `-f`| Optional | Path to the JSON file containing the definition of the Agent.|
-| `--output` or `-o` | Optional |Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent register flags" caption-side="top"}
 
@@ -540,7 +540,7 @@ ibmcloud schematics agents update --id AGENT_ID [--description DESCRIPTION] [--u
 | `--user-state` | Optional | User defined status of the Agent. It can be either `enable`, or `disable`.|
 | `--profile-id` | Optional | IAM [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile), used by the Agent instance.|
 | `--file` or `-f` | Optional| Path to the JSON file containing the definition of the Agent.|
-| `--output` or  `-o` | Optional |Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent update flags" caption-side="top"}
 
@@ -608,7 +608,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 **Syntax to create using command:**
 
 ```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
 ```
 {: pre}
 
@@ -632,6 +632,7 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--inputs` or `--in` | Optional | The input variables for the Blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
 | `--file` or `-f` | Optional | Config JSON file to create the Blueprint. Exclusive with other options. |
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
 
 **Example:**
@@ -774,7 +775,7 @@ The install command creates the cloud resources defined by the Blueprint definit
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint install --id BLUEPRINT_ID
+ibmcloud schematics blueprint install --id BLUEPRINT_ID [--output OUTPUT]
 ```
 {: pre}
 
@@ -783,6 +784,7 @@ ibmcloud schematics blueprint install --id BLUEPRINT_ID
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the Blueprint.|
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints install flags" caption-side="top"}
 
 **Example:**
@@ -801,7 +803,7 @@ You update the Blueprint configuration in {{site.data.keyword.bpshort}} with cha
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN]
+ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
 ```
 {: pre}
 
@@ -813,6 +815,7 @@ ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH]
 | `--file` or `-f` | Optional | The path to the JSON file containing the definition of the Blueprint to update. |
 | `--input` or `--in` | Optional | Input variables for the Blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=testvalue,test1=testvalue1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access private Git repository.|
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints update flags" caption-side="top"}
 
 **Example:**
@@ -831,7 +834,7 @@ Using the `ibmcloud schematics blueprint get` command you can display the config
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL]
+ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL] [--output OUTPUT]
 ```
 {: pre}
 
@@ -841,6 +844,7 @@ ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL]
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The ID of the Blueprints. |
 | `--level` or `-l` | Optional | Level of details to return. Valid values are `summary`, `detailed`, `modules`, and `outputs`. The default value is **summary**. |
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints get flags" caption-side="top"}
 
 **Example:**
@@ -860,7 +864,7 @@ You can list all the {{site.data.keyword.bpshort}} Blueprints.
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset OFFSET]
+ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]
 ```
 {: pre}
 
@@ -869,8 +873,9 @@ ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary` or `ids`. The default value is **summary**. |
-| `--limit` or `-l` | Optional | The maximum number of Blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`|
-| `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.
+| `--limit` or `-l` | Optional | The maximum number of Blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`.|
+| `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
+| `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints list flags" caption-side="top"}
 
 **Example:**
@@ -889,7 +894,7 @@ Destroys all the resources associated with the modules in a Blueprint. This acti
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt]
+ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt] [--output OUTPUT]
 ```
 {: pre}
 
@@ -899,6 +904,7 @@ ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt]
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the Blueprint.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
+| `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints destroy flags" caption-side="top"}
 
 **Example:**
@@ -918,7 +924,7 @@ Delete a {{site.data.keyword.bpshort}} Blueprint. A Blueprint can only be delete
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint delete [--id BLUEPRINT_ID] [—force-delete] [--no-prompt]
+ibmcloud schematics blueprint delete --id BLUEPRINT_ID [—force-delete] [--no-prompt] [--output OUTPUT]
 ```
 {: pre}
 
@@ -929,6 +935,7 @@ ibmcloud schematics blueprint delete [--id BLUEPRINT_ID] [—force-delete] [--no
 | `--id` or `-i`| Required | The ID of the Blueprint.|
 | `--force-delete` or `--fd` | Optional | Force deletes the Blueprint including the active module. This action cannot be reversed.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
+| `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints delete flags" caption-side="top"}
 
 **Example:**
@@ -947,7 +954,7 @@ Get information of a Blueprint job.
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint job get --id JOB_ID
+ibmcloud schematics blueprint job get --id JOB_ID [--output OUTPUT]
 ```
 {: pre}
 
@@ -956,6 +963,7 @@ ibmcloud schematics blueprint job get --id JOB_ID
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job list` to get Job ID of a particular Blueprint job.|
+| `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints job get flags" caption-side="top"}
 
 **Example:**
@@ -974,7 +982,7 @@ List all the Jobs for a Blueprint.
 **Syntax:**
 
 ```sh
-ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offset OFFSET]
+ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]
 ```
 {: pre}
 
@@ -985,12 +993,13 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 | `--id` or `-i`| Required | The ID of the Blueprint. |
 | `--limit` or `-l` | Optional | The maximum number of jobs to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
+| `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints job list flags" caption-side="top"}
 
 **Example:**
 
 ```sh
-ibmcloud schematics blueprint job logs --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint job list --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -1059,7 +1068,7 @@ ibmcloud schematics kms instances ls --location LOCATION_NAME --scheme ENCRYPTIO
 | ----- | -------- | ------ | 
 | `--location` or `-l` | Required | Set the {{site.data.keyword.bpshort}} location name. Supported values are `US`, or `EU`. |
 | `--scheme` or `-s` | Required | Specify the encryption scheme. Supported values are `KYOK`, or `BYOK`. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format.Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} KMS list flags" caption-side="top"}
 
@@ -1099,7 +1108,7 @@ ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHE
 | `--secondary_name` or `--sn` | Optional | Specify the secondary KMS name.|
 | `--secondary_crn` or `--sc`| Optional | Specify the secondary key CRN.|
 | `--secondary_endpoint` or `--se`|Optional | Specify the secondary KMS private endpoint.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--json` or `-j` | Deprecated | Prints the output in the `JSON` format. |
 {: caption="{{site.data.keyword.bpshort}} KMS enable flags" caption-side="top"}
 
@@ -1129,7 +1138,7 @@ ibmcloud schematics kms info --location LOCATION_NAME [--output OUTPUT][--json]
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
 | `--location` or `-l` | Required | Set the {{site.data.keyword.bpshort}} location name. Supported values are `US`, or `EU`. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format.Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--json` or `-j` | Deprecated | Prints the output in the `JSON` format. |
 {: caption="{{site.data.keyword.bpshort}} KMS information flags" caption-side="top"}
 
@@ -1468,7 +1477,7 @@ ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-objec
 | `--env-file` or `-E`| Optional | The environment variables for an action. Provide JSON file path that contains environment variables. |
 | `--result-format` or `-f` | Optional |The result response output in JSON format.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of the new job. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} job run flags" caption-side="top"}
 
@@ -1550,7 +1559,7 @@ ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--no-prompt] [--js
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
 | `--id` | Required | The ID of an existing job that you want to copy and run again. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to create the job without an interactive command-line session. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} job update flags" caption-side="top"}
@@ -1581,7 +1590,7 @@ ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [-
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The ID of the job ID that you want to retrieve. |
 | `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format.Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to retrieve job details without an interactive command-line session. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} job get flags" caption-side="top"}
@@ -1615,7 +1624,7 @@ ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--l
 | `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
 | `--offset` or `-m` | Optional | The position of the job in the list of jobs from where you want to start listing your jobs. For example, if you have three jobs in your account, the command returns these jobs as a list with three elements. To retrieve all jobs, you must enter position number 0. To retrieve job number 2 and 3 and leave out job number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of jobs. Negative numbers are not supported and are ignored. |
 | `--profile` or `-p` | Optional | The depth of information that is returned. Supported values are `ids` or `summary`. The default value is `summary`. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--all` or `-A` | Optional | Lists all the jobs including the {{site.data.keyword.bpshort}} internal jobs.|
 | `--no-prompt` | Optional | Set this flag to create the job without an interactive command-line session. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -1725,7 +1734,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE1] [--target RESOU
 | `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file will not be created or updated. To target the creation of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
 | `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} apply flags" caption-side="top"}
 
@@ -1765,7 +1774,7 @@ ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE1] [--target RES
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that specifies the {{site.data.keyword.cloud_notm}} resources that you want to remove. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
 | `--target` or `-t` | Optional | Target the deletion of a specific resource by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources in your workspace remain unchanged. To target the deletion of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for deletion. Also, if the targeted resource can only be deleted if dependent resources are deleted, such as a VPC can only be deleted if the attached subnet is deleted, then all dependent resources are targeted for deletion as well.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} destroy flags" caption-side="top"}
 
@@ -1823,7 +1832,7 @@ ibmcloud schematics output --id WORKSPACE_ID[--output OUTPUT][--json]
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list Terraform output values. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} output flags" caption-side="top"}
 
@@ -1860,7 +1869,7 @@ ibmcloud schematics plan --id WORKSPACE_ID [--output OUTPUT] [--json]
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that you want to scan. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} output flags" caption-side="top"}
 
@@ -1899,7 +1908,7 @@ ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RES
 | `--type` or `-t` | Optional | The type of resource that you want to retrieve. Supported values are `vsi`.  |
 |`--query-file` or `-f` | Optional | The path to the JSON file where you specified the details of your resource query. To find a list of supported queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries). |
 | `--file` or `-f` | Optional | The path to the JSON file that specifies the details of the resource query that you want to create. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to create the resource query without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} resource query create flags" caption-side="top"}
 
@@ -2089,7 +2098,7 @@ ibmcloud schematics resource-query update --id ID --name RESOURCE_QUERY_NAME [--
 | `--type` or `-t` | Optional | The type of the resource query. such as `vsi`|
 |`--query-file` or `-f` | Optional | The path to the JSON file containing queries.|
 | `--file` or `-f` | Optional | Path to the JSON file containing the definition of an inventory.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format.Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 | `--no-prompt` | Optional | Set this flag to create the resource query without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} resource query update flags" caption-side="top"}
 
@@ -2419,7 +2428,7 @@ ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--o
 | `--id` or `-i` | Required | The unique identifier of the workspace for which you want to retrieve workspace activities. To find the ID of your workspace, run `ibmcloud schematics workspace list` command. |
 | `--act-id` or `-a` | Optional | Enter the ID of a action that you want to retrieve. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format.Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces action flags" caption-side="top"}
 
 **Example:**
@@ -2519,7 +2528,7 @@ ibmcloud schematics workspace import --id WORKSPACE_ID --options OPTIONS --addre
 | `--options` or `-o` | Required | The command-line flags. |
 | `--address` or `-adr` | Required | Provide the address of the resource name you want to import.|
 | `--resourceID` or `-rid` | Required | Provide the resource ID that you need to import in the file. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces import flags" caption-side="top"}
 
@@ -2550,7 +2559,7 @@ ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] 
 | `--limit` or `-l` | Optional |  The maximum number of workspaces that you want to list. The number must be a positive integer starting from 1, maximum is 200. The default value is `-1`. |
 | `--offset` or `-m` | Optional | The position of the workspace in the list of workspaces. For example, if you have three workspaces in your account, the command returns these workspaces as a list with three elements. To see a specific workspace in this list, you must enter the position number that the workspace has in the list. To list the first workspace in the list, enter `0`. To list the second workspace, enter `1` and so forth. Negative numbers are not supported and are ignored. The default value is `-1`.|
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--region` or `-r` | Optional | Specify the region, such as `eu`, `us`, `eu-gb`, `eu-de`, `us-south`, or `us-east`.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces list flags" caption-side="top"}
 
@@ -2593,7 +2602,7 @@ ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [-
 | `--state` | Optional | The relative path to an existing Terraform state file on your local machine. To create the Terraform state file: **1.** Show the content of an existing Terraform state file by using the [`ibmcloud schematics state pull`](#state-pull) command. **2.** Copy the content of the state file from your command-line output in to a file on your local machine that is named `terraform.tfstate`. **3.** Use the relative path to the file in the `--state` command parameter.|
 | `--github-token` or `-g` | Optional |  Enter the functional personal access tokens for HTTPS Git operations. For example, `--github-token ${FUNCTIONAL_GIT_KEY}`.|
 | `--agent-id` or `--aid` | Optional | **New** ID of the Agent to bind your new workspace. Agents help you to run your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces create flags" caption-side="top"}
 
@@ -2812,7 +2821,7 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--output OUTPUT][--json]
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that you want to refresh and run an action against. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} refresh flags" caption-side="top"}
 
@@ -2844,7 +2853,7 @@ ibmcloud schematics state list --id WORKSPACE_ID  [--output json]
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to list the {{site.data.keyword.cloud_notm}} resources that are documented in the Terraform state file. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} state list flags" caption-side="top"}
 
 **Example:**
@@ -2952,7 +2961,7 @@ ibmcloud schematics workspace update --id WORKSPACE_ID [--file FILE_NAME] [--git
 | `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. For more information about the sample JSON file with the details, see [JSON file update template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-update-template).|
 | `--github-token` or `-g` | Optional |  Enter the GitHub token value to access private Git repository.|
 | `--pull-latest` or `--pl` | Optional | Pull the latest changes from your GitHub repository into workspace. If this flag is set `--file` flag is ignored. |
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces update flags" caption-side="top"}
 
@@ -3169,7 +3178,7 @@ ibmcloud schematics workspace upload  --id WORKSPACE_ID --file FILE_NAME --templ
 | `--id` or `-i` | Required |  The unique identifier of the workspace where you want to upload your tape archive file (`.tar`). To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--file` or `-f` | Required | Enter the full file path on your local machine where your `.tar` file is stored.|
 | `--template` or `-tid` | Required |  The unique identifier of the Terraform template for which you want to show the content of the Terraform state file. To find the ID of the template, run `ibmcloud schematics workspace get --id <workspace_ID>` and find the template ID in the **Template Variables for:** field of your command-line output.|
-| `--output` or `-o` | Optional | Return the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces upload flags" caption-side="top"}
 
