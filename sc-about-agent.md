@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -30,7 +30,7 @@ The following are the primary drivers to create the {{site.data.keyword.bplong_n
 - Use {{site.data.keyword.bpshort}} to securely connect and manage hybrid cloud infrastructure by using [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about), [Ansible](/docs/schematics?topic=schematics-getting-started-ansible), and other automation tools to perform the deployment, configurations, and the day-2 operations.
 - Use to reduce your wait time in a shared {{site.data.keyword.bpshort}} queue to run your automation.
 - Use a dedicated infrastructure to run your automation and the ability to scale up or scale down the capacity depending on your automation workloads.
-- Use to fine tune the network policies such as [ingress](/docs/openshift?topic=openshift-ingress-about-roks4) or [egress](/docs/openshift?topic=openshift-vpc-firewall#vpc-allowlist_workers_egress) rules that are used by {{site.data.keyword.bpshort}} to connect to hybrid cloud infrastructure.
+- Use to fine tune the network policies such as [ingress](/docs/containers?topic=containers-ingress-types) or [egress](/docs/containers?topic=containers-network_policies) rules that are used by {{site.data.keyword.bpshort}} to connect to hybrid cloud infrastructure.
 - Use your software, and versions in conjunction with automation engine provided by the {{site.data.keyword.bpshort}} runtime.
 
 ## {{site.data.keyword.bpshort}} Agent architecture
@@ -67,7 +67,7 @@ The table describes how the {{site.data.keyword.bpshort}} are augmented with {{s
 The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro) are deployed in your {{site.data.keyword.cloud}} account and configured to connect to your {{site.data.keyword.bpshort}} service instance. The block diagram represents the set up to provision, deploy, connect, and use the required cluster infrastructure.
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](For more information aimages/agents-setup-latest.svgbout "{{site.data.keyword.bpshort}} Agents set up"){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
 
 For more information about estimated time to set up an Agent, refer to [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup).
 
