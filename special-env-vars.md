@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -31,7 +31,7 @@ You can pass Terraform command-line arguments `TF_CLI_ARGS` as an environment va
 ### Example using parallelism
 {: #parallelism-example}
 
-The code block is the sample payload for creating workspace with parallelism passed as an environment variable.
+The code block is the sample payload for creating Workspace with parallelism passed as an environment variable.
 
 ```json
 {
@@ -71,7 +71,7 @@ The code block is the sample payload for creating workspace with parallelism pas
 ```
 {: codeblock}
 
-A sample `env_values` block in the payload to update environment variable by using variable update API. For more information, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs) API.
+A sample `env_values` block in the payload to update environment variable by using variable update API. For more information, see [Update Workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs) API.
 
 ```json
 "env_values": [

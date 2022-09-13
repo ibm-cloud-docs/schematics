@@ -57,7 +57,7 @@ This example also demonstrates by using more inputs at create time to customize 
 | Create resource group | Create resource groups  | true  | my_resource_group |
 {: caption="IAM permissions" caption-side="top"}
 
-For all the Blueprints commands, syntax, and option flag details, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the Blueprints commands, syntax, and option flag details, see [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ### Reuse existing resource group 

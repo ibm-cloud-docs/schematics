@@ -341,7 +341,7 @@ subcollection: schematics
 
     * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
-        * Support array of injectable Terraform blocks in create workspace API
+        * Support array of injectable Terraform blocks in create Workspace API
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -632,31 +632,31 @@ subcollection: schematics
 
 [Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup#workspace-setup)
 
-* [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
+* [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
 
     * [Before you begin](/docs/schematics?topic=schematics-workspace-setup#prerequisites)
 
-    * [Creating the workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
+    * [Creating the Workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
 
-    * [Creating the workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
+    * [Creating the Workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
 
-    * [Creating the workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
+    * [Creating the Workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
 
-    * [Creating the workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
+    * [Creating the Workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
 
     * [Importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#import-template)
 
     * [Running your Terraform template in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-workspace-setup#run-template)
 
-* [Freezing and unfreezing workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
+* [Freezing and unfreezing Workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
 
 * [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
 
 * [Planning your workspace](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan)
 
-    * [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
+    * [Designing your Workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
 
-    * [How many workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
+    * [How many Workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
 
     * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-github-structure)
 
@@ -910,9 +910,9 @@ subcollection: schematics
 
 [Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
 
-* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+* [Steps to Bind an existing Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
 
-* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+* [Steps to Bind a new Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
 
 * [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 

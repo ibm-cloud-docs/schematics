@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-09-13"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -21,7 +21,7 @@ You can use {{site.data.keyword.at_full}} to track and audit how users and appli
 ## {{site.data.keyword.bpshort}} events
 {: #schematics-events}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, refer to, [Getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see [Getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
 The following list of {{site.data.keyword.bpshort}} events are sent to {{site.data.keyword.at_full_notm}}.
 {: shortdesc}
@@ -78,7 +78,7 @@ The following list of {{site.data.keyword.bpshort}} events are sent to {{site.da
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variables in the {{site.data.keyword.bpshort}} API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
+| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a Workspace variables in the {{site.data.keyword.bpshort}} API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
 {: caption="Other events" caption-side="top"}
 
 ## Viewing events
@@ -113,16 +113,16 @@ To monitor the service, [launch the {{site.data.keyword.at_short}} UI](/docs/act
 When you create your first workspace, the following events are created by a {{site.data.keyword.bpshort}} owned service ID and sent to {{site.data.keyword.at_full_notm}}.
 
 When you manage a workspace, the following events are created by the {{site.data.keyword.bpshort}} service:
-* An event with an action `schematics.instance.create`, when a first workspace is created.
-* An event with an action `schematics.instance.update`, when a workspace is modified.
-* An event with an action `schematics.instance.delete`, when a workspace is deleted.
+* An event with an action `schematics.instance.create`, when a first Workspace is created.
+* An event with an action `schematics.instance.update`, when a Workspace is modified.
+* An event with an action `schematics.instance.delete`, when a Workspace is deleted.
 
 The `initiatorId` of the request for these actions is set to a service ID that is owned by the {{site.data.keyword.bpshort}} service.
 
-In addition, when a workspace is created, additional events are also generated:
+In addition, when a Workspace is created, additional events are also generated:
 - Event with action `schematics.tag.attach` to report tagging of the workspace
-- Event with action `schematics.instance.create` to report the creation of the workspace instance in your account
-- Event with action `schematics.instance.update` to report updates to the workspace properties
+- Event with action `schematics.instance.create` to report the creation of the Workspace instance in your account
+- Event with action `schematics.instance.update` to report updates to the Workspace properties
 
 
 You can search by `target.id` to identify all events that report actions on a workspace. For example, you can use a query such as, `crn:v1:bluemix:public:schematics:eu-de:a/xxxxxx:xxxxxxx:workspace:eu-de.workspace.observability-workspace.xxxxxxxx`.

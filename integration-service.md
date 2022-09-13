@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -21,7 +21,7 @@ subcollection: schematics
 ## Launching logging
 {: #logging-ui}
 
-You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} workspace. Complete these steps to launch and analyze the log.
+You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your Workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} workspace. Complete these steps to launch and analyze the log.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
@@ -37,7 +37,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 
 8. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information about viewing logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information about viewing logs, see [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
     {: important}
 
 9. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.
@@ -46,7 +46,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 ## Launching activity tracking
 {: #audit-ui}
 
-Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspaces instance events, access, events, and access audit log. Use the audit log to reveal usage patterns that would identify workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cloud_notm}} Object Storage to retain your logs. Complete these steps to launch activity tracker.
+Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspaces instance events, access, events, and access audit log. Use the audit log to reveal usage patterns that would identify Workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cloud_notm}} Object Storage to retain your logs. Complete these steps to launch activity tracker.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
@@ -59,7 +59,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 
 5. Analyze the configuration and click **Create**.
     
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information about viewing Activity tracker logs, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Activity Tracker that is configured to receive platform service logs. For more information about viewing Activity tracker logs, see [Viewing logs](/docs/log-analysis?topic=log-analysis-at_events).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to track your services.
@@ -81,7 +81,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 
 5. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.cloud_notm}} Monitoring that is configured to receive platform service logs. For more information about monitoring, refer to, [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the {{site.data.keyword.cloud_notm}} Monitoring that is configured to receive platform service logs. For more information about monitoring, see [Viewing logs](/docs/log-analysis?topic=log-analysis-monitor_logs).
     {: important}
 
 6. In the list of instance name, click `Configure` to view `{{site.data.keyword.at_full_notm}}` page to retrieve the instance summary details and click `Open Dashboard` to monitor the hosts and events of your services.
@@ -99,7 +99,7 @@ You can use your encryption keys from key management services (KMS), {{site.data
 
 The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
-- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK](https://cloud.ibm.com/catalog/services/key-protect). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services).
+- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to your `KYOK`, or `BYOK` instance.
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service. Follow these steps to grant service to service authorization {{site.data.keyword.keymanagementserviceshort}} access to {{site.data.keyword.bpshort}} service.
     * In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations** > **Create**.
@@ -123,7 +123,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}** > **Integrations** > **Connect**. 
 3. Click **Connect** > **Key Management** from the drop down.
 4. Select **Service** as **Key Protect**, or **Hyper Protect Crypto Services**.
-5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to, [Create a key protect instance](#key-prerequisites).
+5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, see [Create a key protect instance](#key-prerequisites).
     
     You can view your instance in the service list, when the prerequisites are met. Or you can see a message **No Keys** found.
     {: note}

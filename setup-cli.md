@@ -104,7 +104,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
         resource-query, rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
         state                Advanced state management
         version              Report version information about the IBM Cloud Schematics CLI.
-        workspace, ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
+        workspace, ws        Create and manage workspaces. Workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
         help, h              Show help
 
         Enter `ibmcloud schematics help [command]` for more information about a command
@@ -185,7 +185,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
     Commands:
     schematics,sch                     IBM Cloud Schematics plug-in   
-    schematics,sch workspace,ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.   
+    schematics,sch workspace,ws        Create and manage workspaces. Workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.   
     schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.   
     schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.   
     schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.   

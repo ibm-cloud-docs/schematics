@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -31,7 +31,7 @@ You can use your encryption keys from key management services (KMS), {{site.data
 
 The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
-- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, refer to, [create KYOK](https://cloud.ibm.com/catalog/services/key-protect). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, refer to, [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services).
+- You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create KYOK](https://cloud.ibm.com/catalog/services/key-protect). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create BYOK](https://cloud.ibm.com/catalog/services/hyper-protect-crypto-services).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to your `KYOK`, or `BYOK` instance.
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service. Follow these steps to grant service to service authorization {{site.data.keyword.keymanagementserviceshort}} access to {{site.data.keyword.bpshort}} service.
     * In the {{site.data.keyword.cloud_notm}} console, click **Manage** > **Access (IAM)**, and select **Authorizations** > **Create**.
@@ -56,7 +56,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}** > **Integrations** > **Connect**. 
 3. Click **Connect** > **Key Management** from the drop down.
 4. Select **Service** as **{{site.data.keyword.keymanagementserviceshort}}**, or **{{site.data.keyword.hscrypto}}**.
-5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, refer to, [Create a key protect instance](#key-prerequisites).
+5. Select an **Choose existing instance** instance. If your instance not created, select an **Create a new instance** to create {{site.data.keyword.keymanagementservicelong_notm}}, or {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}. For more information, see [Create a key protect instance](#key-prerequisites).
     
     You can view your instance in the service list, when the prerequisites are met. Or you can see a message **No Keys** found.
     {: note}

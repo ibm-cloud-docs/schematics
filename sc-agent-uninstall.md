@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-09-13"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -21,7 +21,7 @@ subcollection: schematics
 The {{site.data.keyword.bpshort}} Agent that are deployed in your {{site.data.keyword.cloud}} account can be uninstalled from your {{site.data.keyword.bpshort}} service instance by following the given cleanup steps.
 {: shortdesc}
 
-Decide if you want to delete the workspace and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or [command-line](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-delete). For more information, refer to [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
+Decide if you want to delete the Workspace and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the Workspace and keep the cloud resources, you need to manage the resources with the resource list or [command-line](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-delete). For more information, refer to [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
 {: note}
 
 ## Clean up Agent infrastructure

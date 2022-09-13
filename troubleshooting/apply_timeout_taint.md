@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-04"
+lastupdated: "2022-09-13"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -25,7 +25,7 @@ The {{site.data.keyword.terraform-provider_full_notm}} sets certain timeouts whe
 To avoid that a successfully provisioned resource is deleted and re-created, you must `untaint` the resource.
 {: tsResolve}
 
-1. List the workspaces in your account and note the ID of the workspace that includes the failed resource. 
+1. List the Workspaces in your account and note the ID of the Workspace that includes the failed resource. 
     ```sh
     ibmcloud schematics workspace list
     ```
@@ -43,7 +43,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-4. Retrieve the [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) for your workspace and note the name of the resource that is tainted.
+4. Retrieve the [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) for your Workspace and note the name of the resource that is tainted.
     ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```
@@ -57,7 +57,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-7. Retrieve the Terraform state file for your workspace again and verify that your resource is marked as [`untainted`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).  
+7. Retrieve the Terraform state file for your Workspace again and verify that your resource is marked as [`untainted`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).  
     ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```

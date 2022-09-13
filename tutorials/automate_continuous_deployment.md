@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -31,7 +31,7 @@ In this tutorial, you can learn to use your credentials and an API key to use a 
 The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker, and {{site.data.keyword.monitoringfull}}. 
 {: shortdesc}
 
-Costs are incurred based on your resource usage. For more information about the pricing, refer to, [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, refer to, [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
+Costs are incurred based on your resource usage. For more information about the pricing, see [Pricing](/docs/billing-usage?topic=billing-usage-charges). About the support and help, see [{{site.data.keyword.bpshort}} help](/docs/schematics?topic=schematics-schematics-help).
 {: important}
 
 ## Objectives
@@ -66,15 +66,15 @@ IaC helps you codify your cloud environment to automate the provisioning, speeds
 
 A DevOps toolchain is a set of tools that automates the tasks of developing and deploying your app. A toolchain is a set of tool integrations that support development, deployment, and operations tasks. The collective power of a toolchain is greater than the sum of its individual tool integrations.
 
-For the information, about the importance of using an {{site.data.keyword.cloud_notm}} toolchain and continuous delivery of your app, refer to, [DevOps toolchain](/docs/apps?topic=apps-devops-toolchains).
+For the information, about the importance of using an {{site.data.keyword.cloud_notm}} toolchain and continuous delivery of your app, see [DevOps toolchain](/docs/apps?topic=apps-devops-toolchains).
 {{site.data.keyword.bpshort}} provides option to enable the continuous delivery of your infrastructure configurations as well with {{site.data.keyword.cloud_notm}} toolchain.
 
 Complete the following prerequisites for the tutorial:
 
-- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information about managing {{site.data.keyword.cloud_notm}} account, refer to, [Managing {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
+- If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account and pay as you use. For more information about managing {{site.data.keyword.cloud_notm}} account, see [Managing {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
 - Install the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.keyword.bpshort}} command-line plug-in. For more information about command-line setup, see [{{site.data.keyword.bpshort}} command-line setup](/docs/schematics?topic=schematics-setup-cli).
-- Ensure you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. refer to, [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
-- Follow the instructions to ensure you are assigned the required permissions in {{site.data.keyword.iamshort}} to create resources. For more information about create {{site.data.keyword.cos_full_notm}}, refer to, [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
+- Ensure you are assigned the required permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. see [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
+- Follow the instructions to ensure you are assigned the required permissions in {{site.data.keyword.iamshort}} to create resources. For more information about create {{site.data.keyword.cos_full_notm}}, see [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
 
 ## Accessing the {{site.data.keyword.cloud_notm}} and GitHub
 {: #access-automate-template}
@@ -126,8 +126,8 @@ Click `...` to configure the variables as described in the table to authenticate
 |Name|Value|
 |-----|-----|
 |`iaas_classic_username`|Enter the username to access {{site.data.keyword.cloud_notm}} classic infrastructure. |
-|`iaas_classic_api_key`|Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information, to create an API key, refer to, [Classic infrastructure API keys](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).|
-|`ibmcloud_api_key`|Enter your {{site.data.keyword.cloud_notm}}API Key, for more information on API key, refer to, [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys).|
+|`iaas_classic_api_key`|Enter the API key to access {{site.data.keyword.cloud_notm}} classic infrastructure. For more information, to create an API key, see [Classic infrastructure API keys](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key).|
+|`ibmcloud_api_key`|Enter your {{site.data.keyword.cloud_notm}}API Key, for more information on API key, see [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam#/apikeys).|
 |`resource_group_name`| Keep as default.|
 {: caption="Variables" caption-side="bottom"}
 
@@ -155,7 +155,7 @@ The GitHub Server type parameter expects the authorization, you need to provide 
 {: #analyze-deployment}
 {: step}
 
-Observe the pipeline dashboard and view the status of your workspace execution.
+Observe the pipeline dashboard and view the status of your Workspace execution.
 {: shortdesc}
 
 1. During the update stage process, from the example of `ibm-cos-bucket` repository observe the `main.tf` file configuration with the `cos_instance` name and `bucket_name`. These details are updated in the {{site.data.keyword.bpshort}} Workspaces after the APPLY stage is passed.
@@ -165,7 +165,7 @@ Observe the pipeline dashboard and view the status of your workspace execution.
 5. From the {{site.data.keyword.bpshort}} Workspaces check the resource name and bucket name are created successfully.
 6. Observe that the `APPLY` stage is passed and TEST stage is in Running state.
 7. Observe that the `TEST` stage is passed successfully.
-8. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your workspace by the continuous delivery toolchain.
+8. Now, you can edit your template in the configured repository and observe that there is an automatic pull of your Workspace by the continuous delivery toolchain.
 
 ## Analyzing the {{site.data.keyword.bpshort}} workspace
 {: #analyze-workspace-process}
@@ -176,13 +176,13 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}.
 2. Select `Navigation Menu > {{site.data.keyword.bpshort}} > Workspaces > Resources` to observe the apply state of the resources in your workspace.
-3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
+3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the Workspace status.
 
 You successfully created the {{site.data.keyword.bpshort}} Workspaces and automated the end to end deployment by using the DevOps toolchain. 
 
 ## What's next?
 {: #automate-what-next}
 
-You can now learn how to set up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster. For more information, refer to, [Setting up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
+You can now learn how to set up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster. For more information, see [Setting up a continuous delivery pipeline for an {{site.data.keyword.IBM_notm}} cluster](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster).
 
 

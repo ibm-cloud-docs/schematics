@@ -42,7 +42,7 @@ For more information about data security in {{site.data.keyword.bpshort}}, see [
 
 {{site.data.keyword.bpshort}} records few data about its users, which is limited to basic contact information such as email address, and name. {{site.data.keyword.bpshort}} is a data processor for said Personal Information (PI) data. {{site.data.keyword.bpshort}} processes the limited customer PI in the course of running the service and optimizing the user experience. {{site.data.keyword.bpshort}} uses email for contacting customers. Monitoring customer interactions with {{site.data.keyword.bpshort}} is another way {{site.data.keyword.bpshort}} processes PI. 
 
-Do not enter sensitive data for {{site.data.keyword.bpshort}}. For example, do not use any Personal Information (PI), Personal Identifying Information (PII), and customer-specific data in a workspace name.
+Do not enter sensitive data for {{site.data.keyword.bpshort}}. For example, do not use any Personal Information (PI), Personal Identifying Information (PII), and customer-specific data in a Workspace name.
 
 ## Is the {{site.data.keyword.bpshort}} database encrypted?
 {: #is-our-ibm-schematics-database-encrypted}

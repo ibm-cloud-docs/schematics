@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -47,9 +47,9 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
+1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the Workspace that you want to delete.
 2. Click **Actions** tab and select **Delete workspace** option.
-3. Type your workspace name in **Type `Workspace_name` to confirm** text box.
+3. Type your Workspace name in **Type `Workspace_name` to confirm** text box.
 4. Click **Delete** button.
 
 ### Actions
@@ -87,8 +87,8 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. Install the [IBM Cloud CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
-2. Run `ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} Workspaces list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command.
-3. Run `ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} Workspaces delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) command.
+2. Run `ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]` to list and select the Workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} Workspaces list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command.
+3. Run `ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]` to delete the workspace. For more information about Workspace delete, see [{{site.data.keyword.bpshort}} Workspaces delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) command.
 
 ### Actions
 {: #delete-schematics-data-cliactions}
@@ -124,8 +124,8 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
-2. Run `curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_token>"` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} Workspaces list](/apidocs/schematics/schematics#list-workspaces) API.
-3. Run `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/{id} -H "Authorization: <iam_token>"` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} Workspaces delete](/apidocs/schematics/schematics#delete-workspace) API.
+2. Run `curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_token>"` to list and select the Workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} Workspaces list](/apidocs/schematics/schematics#list-workspaces) API.
+3. Run `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/{id} -H "Authorization: <iam_token>"` to delete the workspace. For more information about Workspace delete, see [{{site.data.keyword.bpshort}} Workspaces delete](/apidocs/schematics/schematics#delete-workspace) API.
 
 ### Actions
 {: #delete-schematics-data-apiactions}

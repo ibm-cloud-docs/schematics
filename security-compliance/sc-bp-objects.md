@@ -30,8 +30,8 @@ Take time to review the suggested practices to reduce the security risks for all
 Follow these practices in developing, and publishing the Terraform template in the Git repositories.
 - Create Terraform template by using `Terraform version1.0` or higher and current [IBM Cloud provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
 - Create environment variables are created for all your credentials.
-- Check whether pre-commit hooks are run to inspect your code meets Terraform standards, refer to, [sample repository that contains pre-commit hook](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.pre-commit-config.yaml).
-- Check whether your repository uses `Terratest` framework to validate your Terraform resources and data source to provision, refer to, [sample validated Terraform repository](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.github/workflows/validate_terraform.yml) to run `Terratest`.
+- Check whether pre-commit hooks are run to inspect your code meets Terraform standards, see [sample repository that contains pre-commit hook](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.pre-commit-config.yaml).
+- Check whether your repository uses `Terratest` framework to validate your Terraform resources and data source to provision, see [sample validated Terraform repository](https://github.com/terraform-ibm-modules/terraform-ibm-iam/blob/main/.github/workflows/validate_terraform.yml) to run `Terratest`.
 - Check whether your repository contains `gitignore` for any files that are not tracked by Git remain untracked.
 - Add the license file for your template.
 - Do not set your sensitive variable as default in the configuration files.
@@ -58,8 +58,8 @@ Developers need to check whether the variable or output parameter as a sensitive
 Follow these practices in creating a Workspace for the Terraform template.
 - Check whether you have the [right permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspace. For more information about location and endpoint, see [Where is the information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
-- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
-- Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
+- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the Workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
+- Do not use one Workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 
 ### How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?
 {: #bp-security-leak-log}
@@ -100,7 +100,7 @@ Follow these practices in creating a {{site.data.keyword.bpshort}} Action for th
 ### How can you protect the access to Actions and its data?
 {: #bp-security-action-data}
 
-As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
 Your Workspaces and Actions data store depends on the location where you create your Workspace or an Action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
@@ -131,7 +131,7 @@ Create an IAM access group for your users and assign service access policies to 
 ### Nonrepudiation by using Activity tracker
 {: #bp-security-atracker}
 
-You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspace instance events, access, events, and access audit log. For more information, see [Auditing events](/docs/schematics?topic=schematics-at_events).
+You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspace instance events, access, events, and access audit log. For more information, see [Auditing events](/docs/schematics?topic=schematics-at_events).
 
 ### Data protection by using KMS
 {: #bp-security-data-protection}

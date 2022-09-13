@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -43,7 +43,7 @@ You can come back anytime to your created thread to add information, ask questio
 | Only one input file is supported per Blueprint definition. | | |
 | Cloud resources that are created by a Blueprint cannot be left in place when a Blueprint is deleted. Now all resources are destroyed to delete a Blueprint.  | | |  
 | Delete CLI returns immediately at start of execution and does not wait for successful completion. | | | 
-| Operations must not be directly set against linked {{site.data.keyword.bpshort}} Workspaces by using the workspace commands or UI. Operations can be set by using Blueprint commands.    | | |
+| Operations must not be directly set against linked {{site.data.keyword.bpshort}} Workspaces by using the Workspace commands or UI. Operations can be set by using Blueprint commands.    | | |
 | No external Blueprint definition validation command. | | | 
 | Only Blueprints and modules in GitHub are formally supported. Testing is not complete for GitLab and other repositories. | | | 
 | Only Blueprints and modules in public repositories are formally supported. Testing is not complete for private repositories. | | | 

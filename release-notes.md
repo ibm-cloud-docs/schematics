@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-23"
+lastupdated: "2022-09-13"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -164,10 +164,10 @@ Review the release notes for April 2022.
 {: release-note}
 
 Support detecting drift
-:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note) for {{site.data.keyword.bpshort}} workspace. For more information, refer to, viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
+:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note) for {{site.data.keyword.bpshort}} workspace. For more information, see viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
 
 Support stopping or terminating the running job
-:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, refer to, stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
+:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
 Support additional frequently asked questions (FAQs) 
 :  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq).
@@ -193,8 +193,8 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-apr1822}
 {: release-note}
 
-Support array of injectable Terraform blocks in create workspace API
-:   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apidocs/schematics/schematics#create-workspace).
+Support array of injectable Terraform blocks in create Workspace API
+:   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create Workspace API](/apidocs/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.9.1](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -210,7 +210,7 @@ Support `.JSON` and `.tfvars` file extension for {{site.data.keyword.bpshort}} p
 :   The {{site.data.keyword.bpshort}} command-line supports `.JSON` and `.tfvars` file extension in {{site.data.keyword.bpshort}} plan and apply commands.
 
 Enhance resources tabular data view for resources.
-:   The {{site.data.keyword.bpshort}} command-line lists the provisioned resources from your workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
+:   The {{site.data.keyword.bpshort}} command-line lists the provisioned resources from your Workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
 
 Deprecate and warning message when using `ibmcloud terraform` command.
 :   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Use 'schematics' or 'sch' in your commands.**
@@ -234,7 +234,7 @@ Support deleting {{site.data.keyword.bpshort}} data objects
 
 Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
 :   - Now you can create Actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
-:   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
+:   - [List Workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
 :   - [Get inventory definition](/apidocs/schematics/schematics#get-inventory) supports `detailed` profile type.
 
 Get job files API supports `plan_json` file type
@@ -336,7 +336,7 @@ About `compact` download
 :   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
 
 About {{site.data.keyword.bpshort}} Job files
-:   You can now download the state-file at every job level along with the latest state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
+:   You can now download the state-file at every job level along with the latest state-file of a Workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 ResourceQuery attribute deprecated 
 :   ResourceQuery attribute is replaced as [`resource_queries`](/apidocs/schematics/schematics#list-resource-query) in the API.

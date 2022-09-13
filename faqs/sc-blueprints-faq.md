@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -138,4 +138,4 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 
 The CLI uses general regional API endpoints behind the scenes, as in `us.schematics.cloud.ibm.com` is called irrespective of target `us-south` or `us-east` and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of target `eu-gb` or `eu-de`. The {{site.data.keyword.cis_short}} load balancer decides which region to send the request. So in your case even though `us-south` is targeted during the time of creation the {{site.data.keyword.cis_short}} load balancer for some reason (such as `us-south` might be down at that point or having issues) sent the request to `us-east` and that is the region where Blueprint got created.
 
-This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}} workspace creation page, you select `North America` region from the list.
+This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.

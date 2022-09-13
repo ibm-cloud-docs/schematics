@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
-keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
+keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
 
 subcollection: schematics
 
@@ -25,7 +25,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} Workspac
 {: faq}
 {: support}
 
-You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, see [Get token password](/apidocs/iam-identity-token-api#gettoken-password){: external}. You can refer to, the following sample error message and the solution for the authentication error.
+You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, see [Get token password](/apidocs/iam-identity-token-api#gettoken-password){: external}. You can see the following sample error message and the solution for the authentication error.
 ```text
 Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
 ```
@@ -114,7 +114,7 @@ You need to run `ibmcloud schematics Workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, refer to, the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
 ## How can I create Workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}
@@ -395,7 +395,7 @@ North America always indicates both `us-south`, and `us-east` location during th
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} communicates with the ports that are specified by the related resources. For example, VPC related ports, refer to, [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall). 
+{{site.data.keyword.bpshort}} communicates with the ports that are specified by the related resources. For example, VPC related ports, see [VPC: Opening required ports and IP addresses in other network firewalls](/docs/containers?topic=containers-vpc-firewall). 
 
 ## When do I use {{site.data.keyword.bplong_notm}} versus the individual resource dashboards?
 {: #schematics-vs-cloud-resource-faq}

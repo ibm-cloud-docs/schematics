@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -37,7 +37,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 2. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create** to view the **Details** section.
 3. In the **Ansible playbook** section, click **Edit icon** and enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field.
 4. Click **Retrieve playbooks**.
-5. Select the **`stop-vsi-playbook.yaml`** playbook. refer to, [floating IP address](/docs/vpc?topic=vpc-using-instance-vnics#editing-network-interfaces){: external} of the VSI to set your input variable.
+5. Select the **`stop-vsi-playbook.yaml`** playbook. see [floating IP address](/docs/vpc?topic=vpc-using-instance-vnics#editing-network-interfaces){: external} of the VSI to set your input variable.
 6. Expand the **Advanced options**.
 7. In the **Define your variables** section, enter `instance_ip` as the **key** and the floating IP address of your {{site.data.keyword.vsi_is_short}} as the **value**.
 8. Click **Save**.
