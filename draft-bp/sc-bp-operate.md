@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -27,7 +27,6 @@ Operating a cloud environment is about managing continual change. Cloud environm
 - Changes are also expected in the solution environment to reflect new user requirements, scaling up or down, rotation of API keys, certificates and more. 
 
 Operation of a Blueprint environment is an iterative cycle of applying changes to the deployed environment to maintain currency and compliance.   
-
 
 ## Updating deployed environments
 {: #operate-multistep}
