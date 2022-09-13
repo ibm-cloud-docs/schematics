@@ -32,7 +32,14 @@ toc:
           - sc-about-agent.md
           - sc-blueprint.md
           - sc-about-usecases.md
-      - draft-bp/workingwithblueprints.md
+      - topicgroup:
+          label: Working with Blueprints
+          topics:
+          - draft-bp/workingwithblueprints.md
+          - draft-bp/sc-bp-define.md
+          - draft-bp/sc-bp-deploy.md
+          - draft-bp/sc-bp-operate.md
+          - draft-bp/sc-bp-delete.md
       - topicgroup:
           label: Internal adopters
           topics:
@@ -72,13 +79,6 @@ toc:
           - sc-blueprint-update.md
           - sc-blueprint-destroy.md
           - sc-blueprint-delete.md
-      - topicgroup:
-          label: Staging Blueprints
-          topics:
-          - draft-bp/sc-bp-define.md
-          - draft-bp/sc-bp-deploy.md
-          - draft-bp/sc-bp-operate.md
-          - draft-bp/sc-bp-delete.md
           - draft-bp/sc-bp-ui-flow.md
       - topicgroup:
           label: Managing Workspaces

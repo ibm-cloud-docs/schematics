@@ -131,6 +131,24 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
 
+[Defining Blueprint environments](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
+
+[Deploying Blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
+
+[Operating Blueprint environments](/docs/schematics?topic=schematics-operate-blueprints#operate-blueprints)
+
+* [Updating deployed environments](/docs/schematics?topic=schematics-operate-blueprints#operate-multistep)
+
+* [Next steps](/docs/schematics?topic=schematics-operate-blueprints#operate-nextsteps)
+
+[Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
+
 
 ## Internal adopters
 {: #sitemap_internal_adopters}
@@ -167,9 +185,9 @@ subcollection: schematics
 
 [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#general-data-protection-regulation-gdpr)
 
-* [How do I audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
+* [How do you audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
 
-* [Supported classifications of Personal Data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
+* [Supporting classifications of personal data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
 
 * [About user data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-about-me)
 
@@ -588,29 +606,6 @@ subcollection: schematics
 * [Deleting a Blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
-
-
-## Staging Blueprints
-{: #sitemap_staging_blueprints}
-
-
-[Defining Blueprint environments](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
-
-* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
-
-[Deploying Blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
-
-* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
-
-[Operating Blueprint environments](/docs/schematics?topic=schematics-operate-blueprints#operate-blueprints)
-
-* [Updating deployed environments](/docs/schematics?topic=schematics-operate-blueprints#operate-multistep)
-
-* [Next steps](/docs/schematics?topic=schematics-operate-blueprints#operate-nextsteps)
-
-[Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
-
-* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
 
 
 ## Managing Workspaces
