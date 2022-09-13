@@ -164,7 +164,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output for Blueprints support: 
 
     ```text
-    schematics                      1.12.0        true
+    schematics                      1.12.2        true
     ```
     {: screen}
 
