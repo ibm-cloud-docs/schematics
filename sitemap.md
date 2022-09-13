@@ -154,7 +154,7 @@ subcollection: schematics
 {: #sitemap_internal_adopters}
 
 
-[IBM Cloud Schematics internal_v1.0 API](/apidocs/schematics/schematics_internal_v1)
+[IBM Cloud Schematics internal_v1.0 API](/apidocs/schematics/)
 
 
 ## Security and compliance
