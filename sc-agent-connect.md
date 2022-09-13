@@ -20,7 +20,7 @@ subcollection: schematics
 You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastructure and Agents services, the next step is to connect or register your Agent. So that, the {{site.data.keyword.bpshort}} knows about Agent and connect the service instance to it. The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow.
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} Agents set up](For more information aimages/agents-setup-latest.svgbout "{{site.data.keyword.bpshort}} Agents set up"){: caption=""{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup-latest.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
 
 ## Connecting Agent through UI
 {: #register-ui}

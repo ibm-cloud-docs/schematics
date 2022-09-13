@@ -1498,6 +1498,10 @@ subcollection: schematics
 
 * [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
 
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
+
 
 ## Beta-level code for {{site.data.keyword.bpshort}} Blueprints
 {: #sitemap_beta-level_code_for__blueprints}

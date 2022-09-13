@@ -18,7 +18,7 @@ subcollection: schematics
 The Blueprints level of code is considered Beta-level code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
 {: shortdesc}
 
-Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join Blueprints Beta Slack](#sc-bp-join-slack) channel.
+Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join Blueprints Beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.
 
 Join the `#tmp-blueprints-beta-2022` slack channel and post a message include the following information.
 
@@ -68,7 +68,7 @@ You can come back anytime to your created thread to add information, ask questio
 {: #sc-bp-join-slack}
 
 Following steps allows you to join the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel.
-- Click https://cloud.ibm.com/schematics/slack
+- Click Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page is opened.
 - Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Blueprints Beta**.
