@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-29"
+lastupdated: "2022-09-13"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Troubleshooting errors
 {: #handling-error}
 
-When {{site.data.keyword.bpshort}} Actions or workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. {{site.data.keyword.bpshort}} provides resolution to handle such errors and help you get the expected behavior, output.
+When {{site.data.keyword.bpshort}} Actions or Workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. {{site.data.keyword.bpshort}} provides resolution to handle such errors and help you get the expected behavior, output.
 {: shortdesc}
 
 This is not the complete list of error messages. Some messages are created by other systems, such as IAM authentication errors messages to the {{site.data.keyword.bpshort}} action.
@@ -67,7 +67,7 @@ The {{site.data.keyword.bpshort}} Actions instance and resources are overloaded 
 #### Resolve
 {: #svc-resolve}
 
-- Check the user jobs and all jobs logs. For more information, refer to, [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
+- Check the user jobs and all jobs logs. For more information, see [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
 - Wait for a minute and check your configuration and execute the action again.
 - Check you have the required permissions such as [IAM access or key](/docs/schematics?topic=schematics-action-setup).
 - Check the firewall IP are enabled.
@@ -99,7 +99,7 @@ While processing the create, delete, update action, the {{site.data.keyword.bpsh
 {: #state-resolve}
 
 
-- Check the logs. For more information, refer to, [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
+- Check the logs. For more information, see [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
 
 ### Job error
 {: #job-error}

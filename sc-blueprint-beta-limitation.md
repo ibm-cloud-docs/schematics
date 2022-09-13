@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -18,7 +18,7 @@ subcollection: schematics
 The Blueprints level of code is considered Beta-level code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
 {: shortdesc}
 
-Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join Blueprints Beta Slack](#sc-bp-join-slack) channel.
+Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join Blueprints Beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.
 
 Join the `#tmp-blueprints-beta-2022` slack channel and post a message include the following information.
 
@@ -43,7 +43,7 @@ You can come back anytime to your created thread to add information, ask questio
 | Only one input file is supported per Blueprint definition. | | |
 | Cloud resources that are created by a Blueprint cannot be left in place when a Blueprint is deleted. Now all resources are destroyed to delete a Blueprint.  | | |  
 | Delete CLI returns immediately at start of execution and does not wait for successful completion. | | | 
-| Operations must not be directly set against linked {{site.data.keyword.bpshort}} Workspaces by using the workspace commands or UI. Operations can be set by using Blueprint commands.    | | |
+| Operations must not be directly set against linked {{site.data.keyword.bpshort}} Workspaces by using the Workspace commands or UI. Operations can be set by using Blueprint commands.    | | |
 | No external Blueprint definition validation command. | | | 
 | Only Blueprints and modules in GitHub are formally supported. Testing is not complete for GitLab and other repositories. | | | 
 | Only Blueprints and modules in public repositories are formally supported. Testing is not complete for private repositories. | | | 
@@ -68,7 +68,7 @@ You can come back anytime to your created thread to add information, ask questio
 {: #sc-bp-join-slack}
 
 Following steps allows you to join the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel.
-- Click https://cloud.ibm.com/schematics/slack
+- Click Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page is opened.
 - Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Blueprints Beta**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-09-13"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -31,7 +31,7 @@ The {{site.data.keyword.terraform-provider_full_notm}} sets certain timeouts whe
 To avoid that a successfully provisioned resource is deleted and re-created, you must `untaint` the resource.
 {: tsResolve}
 
-1. List the workspaces in your account and note the ID of the workspace that includes the failed resource. 
+1. List the Workspaces in your account and note the ID of the Workspace that includes the failed resource. 
     ```sh
     ibmcloud schematics workspace list
     ```
@@ -49,7 +49,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-4. Retrieve the Terraform state file for your workspace and note the name of the resource that is [tainted](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint).
+4. Retrieve the Terraform state file for your Workspace and note the name of the resource that is [tainted](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint).
     ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```
@@ -63,7 +63,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-7. Retrieve the Terraform state file for your workspace again and verify that your resource is marked as `untainted`. 
+7. Retrieve the Terraform state file for your Workspace again and verify that your resource is marked as `untainted`. 
     ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```

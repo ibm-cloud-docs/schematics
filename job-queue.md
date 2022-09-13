@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-30"
+lastupdated: "2022-09-13"
 
 keywords: schematics job queue, job queue process, pending queue, schematics pending queue
 
@@ -41,7 +41,7 @@ Following are the tasks of the job when it enter into pending queue.
 ## Timeout
 {: #job-queue-timeout}
 
-The Terraform jobs such as plan, apply, and destroy on a workspace should not generally take more than few hours to provision or deprovision the resources. If you are provisioning many resources simultaneously, which takes time in number of hours, it is suggested to split the resources into different workspaces. {{site.data.keyword.bpshort}} limits the execution time of a job to 24 hours. After 24 hours the jobs are terminated and the job is marked as `STOPPED` and workspace shows `ACTIVE`, or `INACTIVE`.
+The Terraform jobs such as plan, apply, and destroy on a Workspace should not generally take more than few hours to provision or deprovision the resources. If you are provisioning many resources simultaneously, which takes time in number of hours, it is suggested to split the resources into different workspaces. {{site.data.keyword.bpshort}} limits the execution time of a job to 24 hours. After 24 hours the jobs are terminated and the job is marked as `STOPPED` and Workspace shows `ACTIVE`, or `INACTIVE`.
 
 In the point of transition of the state file of `24 hours`, an interrupt signal is sent to the command execution. A graceful period of `10 minutes` is given for the command to finish. If not, a kill signal is sent and the job is stopped. A refresh is done after stopping the state file and other data is collected at the end. This is helpful, in cases where a Terraform command is stuck forever and user doesn't intervene.
 

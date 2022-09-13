@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-08"
+lastupdated: "2022-09-13"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Using private endpoints
 {: #private-endpoints}  
 
-Create and manage {{site.data.keyword.bplong_notm}} workspaces on the private network by targeting the {{site.data.keyword.bpshort}} private service endpoint.
+Create and manage {{site.data.keyword.bplong_notm}} Workspaces on the private network by targeting the {{site.data.keyword.bpshort}} private service endpoint.
 {: shortdesc} 
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} Private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/schematics?topic=schematics-secure-data#pi-location).

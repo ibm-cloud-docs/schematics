@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -21,7 +21,7 @@ subcollection: schematics
 Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform are constantly evolving. Without maintenance and updates of the Blueprint IaC definitions, inputs and modules, a deployed environment loses currency, compliance, and cease to be manageable through {{site.data.keyword.bpshort}} IaC automation.   
 {: shortdesc}
 
-After the [deployment](/docs/schematics?topic=sc-bp-deploy) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the Blueprint definition, IaC modules, and inputs. See [Updating deployed environments](/docs/schematics?topic=sc-bp-operate#operate-multistep) to understand more about the process of updating Blueprint environments and the steps needed to set regular updates. 
+After the [deployment](/docs/schematics?topic=sc-bp-deploy) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the Blueprint definition, IaC modules, and inputs. See [Updating deployed environments](/docs/schematics?topic=schematics-operate-blueprints#operate-multistep) to understand more about the process of updating Blueprint environments and the steps needed to set regular updates. 
 
 ## Update process
 {: #update-blueprint-process} 
@@ -87,7 +87,7 @@ Record the Blueprint ID that needs to be updated. To list the Blueprint IDs, run
 Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the Blueprint configuration with the changes. It updates the Blueprint and Workspaces with the updated input values.
 {: shortdesc} 
 
-For all the Blueprints commands, syntax, and option flag details, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the Blueprints commands, syntax, and option flag details, see [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 Syntax

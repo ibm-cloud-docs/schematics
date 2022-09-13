@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: schematics
 subcollection: schematics
@@ -131,12 +131,30 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
 
+[Defining Blueprint environments](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
+
+[Deploying Blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
+
+[Operating Blueprint environments](/docs/schematics?topic=schematics-operate-blueprints#operate-blueprints)
+
+* [Updating deployed environments](/docs/schematics?topic=schematics-operate-blueprints#operate-multistep)
+
+* [Next steps](/docs/schematics?topic=schematics-operate-blueprints#operate-nextsteps)
+
+[Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
+
 
 ## Internal adopters
 {: #sitemap_internal_adopters}
 
 
-[IBM Cloud Schematics internal_v1.0 API](/apidocs/schematics/schematics_internal_v1)
+[IBM Cloud Schematics internal_v1.0 API](/apidocs/schematics/)
 
 
 ## Security and compliance
@@ -167,9 +185,9 @@ subcollection: schematics
 
 [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#general-data-protection-regulation-gdpr)
 
-* [How do I audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
+* [How do you audit access to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#how-do-i-audit-access-to-ibm-schematics)
 
-* [Supported classifications of Personal Data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
+* [Supporting classifications of personal data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#supported-classifications-of-personal-data)
 
 * [About user data](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#data-about-me)
 
@@ -185,35 +203,35 @@ subcollection: schematics
 
 * [Best practices for creating Terraform Templates or modules in Git repositories](/docs/schematics?topic=schematics-bp-secure-objects#bp-secure-repo)
 
-    * [What are the best practices that I must follow when developing the Terraform templates, and publishing the same in the Git repositories?](/docs/schematics?topic=schematics-bp-secure-objects#bp-template-strategy)
+    * [What are the best practices that you must follow in developing the Terraform templates, and publishing the same in the Git repositories?](/docs/schematics?topic=schematics-bp-secure-objects#bp-template-strategy)
 
-    * [Can I create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-tfvars)
+    * [Can you create `tfvars` files with the {{site.data.keyword.cloud}} provider templates?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-tfvars)
 
     * [How can the Terraform developers ensure that the sensitive data is not leaked in the log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak)
 
 * [Best practices of managing {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
 
-    * [What are the best practices that I must follow when creating a Workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
+    * [What are the best practices that you must follow in creating a Workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
 
-    * [How can I ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
+    * [How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
 
-    * [How can I protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks-data)
+    * [How can you protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks-data)
 
-    * [How does {{site.data.keyword.bpshort}} protect my Workspace data through Terraform state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
+    * [How does {{site.data.keyword.bpshort}} protect the Workspace data through Terraform state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
 * [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
 
-    * [What are the best practices that I must follow when creating an Action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
+    * [What are the best practices that you must follow in creating an Action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
 
-    * [How can I protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-action-data)
+    * [How can you protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-action-data)
 
-    * [How does {{site.data.keyword.bpshort}} protect my Action data through input credentials state file, or log files, and so on?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
+    * [How does {{site.data.keyword.bpshort}} protect the Action data through input credentials state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
 
 * [Protecting data of {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect)
 
     * [Access protection by using Identity and Access Management](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-iam)
 
-    * [Non repudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
+    * [Nonrepudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
 
     * [Data protection by using KMS](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data-protection)
 
@@ -249,6 +267,10 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} runtime now supports Ansible v2.9.27
 
+    * [11 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug1122)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
     * [04 August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2022)
 
         * {{site.data.keyword.bpshort}} allowed IP address for `US`, `EU Central`, and `UK South` region are updated
@@ -256,6 +278,10 @@ subcollection: schematics
 * [July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july22)
 
     * Review the release notes for July 2022.
+
+    * [26 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul2622)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [20 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2022)
 
@@ -323,7 +349,7 @@ subcollection: schematics
 
     * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
-        * Support array of injectable Terraform blocks in create workspace API
+        * Support array of injectable Terraform blocks in create Workspace API
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -614,31 +640,31 @@ subcollection: schematics
 
 [Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup#workspace-setup)
 
-* [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
+* [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
 
     * [Before you begin](/docs/schematics?topic=schematics-workspace-setup#prerequisites)
 
-    * [Creating the workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
+    * [Creating the Workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
 
-    * [Creating the workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
+    * [Creating the Workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
 
-    * [Creating the workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
+    * [Creating the Workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
 
-    * [Creating the workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
+    * [Creating the Workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
 
     * [Importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#import-template)
 
     * [Running your Terraform template in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-workspace-setup#run-template)
 
-* [Freezing and unfreezing workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
+* [Freezing and unfreezing Workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
 
 * [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
 
 * [Planning your workspace](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan)
 
-    * [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
+    * [Designing your Workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
 
-    * [How many workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
+    * [How many Workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
 
     * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-github-structure)
 
@@ -892,9 +918,9 @@ subcollection: schematics
 
 [Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
 
-* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+* [Steps to Bind an existing Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
 
-* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+* [Steps to Bind a new Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
 
 * [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 
@@ -1471,6 +1497,10 @@ subcollection: schematics
 [Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
 
 * [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
 
 
 ## Beta-level code for {{site.data.keyword.bpshort}} Blueprints

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 subcollection: schematics
 
@@ -33,10 +33,10 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
 
     You can use the Terraform example Git URL `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`. This example uses service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that you can securely consume your API. 
 
-    If you have a workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information about the {{site.data.keyword.bpshort}} Workspaces locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+    If you have a Workspace created other in a region other than `us`, you must set the API endpoint to that region. For example, if your region specified is `eu`, the API endpoint should be specified as `IBMCLOUD_SCHEMATICS_API_ENDPOINT=https://eu.schematics.cloud.ibm.com` in the environment variable. For more information about the {{site.data.keyword.bpshort}} Workspaces locations and endpoints to be used, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
     {: note}
 
-    Then create the {{site.data.keyword.bpshort}} Workspaces `tf-testwks-apigwy` in the `default` resource group of your region. This workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
+    Then create the {{site.data.keyword.bpshort}} Workspaces `tf-testwks-apigwy` in the `default` resource group of your region. This Workspace points to a Terraform template of your choice that requires the Terraform version `terraform_v1.0`. 
 
     **versions.tf**
 
@@ -111,7 +111,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
     | `description` | The description of the workspace. |
     | `location` | The location where you want to create your {{site.data.keyword.bpshort}} Workspaces and run {{site.data.keyword.bpshort}} Actions. |
     | `resource_group` | The ID of the resource group where you want to provision the workspace. |
-    | `name` | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name.|
+    | `name` | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create aWorkspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name.|
     | `tags` | A list of tags that are associated with the workspace. |
     | `template_env_settings` | A list of environment variables that you want to apply during the execution of a Terraform action. |
     | `template_git_url` | The Git repository URL, where you have the configuration details to provision the resource. |
@@ -145,7 +145,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
     For more information about troubleshooting the `terraform apply` command errors, see [find the root cause of why {{site.data.keyword.bpshort}} apply is failing](/docs/schematics?topic=schematics-nullresource-errors).
     {: note}
 
-6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `tf-testwks-apigwy` workspace is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
+6. From the [{{site.data.keyword.bpshort}} dashboard](https://cloud.ibm.com/schematics), check your `tf-testwks-apigwy` Workspace is created. And the resources are provisioned from the [{{site.data.keyword.bplong_notm}} resource list](https://cloud.ibm.com/resources){: external}.
 
 7. Verify that the access policy is successfully assigned. For more information, see [Reviewing assigned access in the console](/docs/account?topic=account-assign-access-resources#review-your-access-console).
 

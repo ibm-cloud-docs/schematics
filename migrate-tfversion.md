@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-06"
+lastupdated: "2022-09-13"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -39,15 +39,15 @@ required_version = "~> 1.1"
 | ---| ---|
 | `v0.11` | Use the [`Terraform v0.12 checklist`](https://www.terraform.io/language/upgrade-guides/0-12#pre-upgrade-checklist){: external} command to detect and fix to be addressed by referring [v0.12 Upgrade Guide](https://www.terraform.io/language/upgrade-guides/0-12){: external} before upgrade to `v0.12`. {{site.data.keyword.bpshort}} deprecated `Terraform v0.11` and `Terraform v0.12`.|
 | `v0.12` | Use the [v0.13 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-13){: external} your configuration file. The {{site.data.keyword.bpshort}} deprecated `Terraform v0.12`.|
-| `v0.13` | To the `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, refer to, the [v0.14 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-14){: external}.|
-| `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, refer to, the [v0.15 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-15){: external}.|
+| `v0.13` | To the `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, see the [v0.14 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-14){: external}.|
+| `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, see the [v0.15 upgrade guide](https://www.terraform.io/language/upgrade-guides/0-15){: external}.|
 | `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compactible with an earlier version `Terraform v0.15.5`.|
 {: caption="Terraform versions list" caption-side="bottom"}
 
 ## Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} workspace
 {: #migrate-steps}
 
-Upgrading the {{site.data.keyword.bpshort}} workspace to use the version of the Terraform, can be required to use the current features in Terraform. You must carefully review the [Terraform upgrade guide](https://www.terraform.io/language/upgrade-guides) by using the next version. 
+Upgrading the {{site.data.keyword.bpshort}} Workspace to use the version of the Terraform, can be required to use the current features in Terraform. You must carefully review the [Terraform upgrade guide](https://www.terraform.io/language/upgrade-guides) by using the next version. 
 
 Use the following steps to upgrade to the current Terraform version in the {{site.data.keyword.bpshort}} workspace.
 
@@ -89,7 +89,7 @@ The following are the detailed steps to upgrade:
 
 5. Download the Terraform state file from the existing {{site.data.keyword.bpshort}} workspace, by using [{{site.data.keyword.bpshort}} state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
 
-    When, the workspace is created with the `tfstate` {{site.data.keyword.bpshort}} considers as a secure file. Also, you cannot pull the created `tfstate` file through UI. You need to use command line to [pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) the state file and [create workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+    When, the Workspace is created with the `tfstate` {{site.data.keyword.bpshort}} considers as a secure file. Also, you cannot pull the created `tfstate` file through UI. You need to use command line to [pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) the state file and [create workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
     {: important}
 
 6. Run the state replace provider command in command-line to update the Terraform version.
@@ -105,7 +105,7 @@ The following are the detailed steps to upgrade:
     The Terraform files are present in Git repository, but the state file is present in your local file system.
     {: note}
 
-10. Generate a [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and to view your workspace with the resources are now using the `Terraform v0.13`.
+10. Generate a [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and to view your Workspace with the resources are now using the `Terraform v0.13`.
 11. [Optional] you can delete the {{site.data.keyword.bpshort}} Workspaces that points to `Terraform v0.12`. 
 
     Do not destroy the resources that are used by your old workspace.
@@ -142,7 +142,7 @@ Check that your Terraform template of the older version is provisioned without a
     {: codeblock}
 
 4. Push the `versions.tf` changes to the GitHub repository.
-5. Pull the state file from the `Terraform v0.12` workspace by running `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`.
+5. Pull the state file from the `Terraform v0.12` Workspace by running `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`.
 6. Copy the content of state pull result in `state.json` file.
 7. Create or update `workspace.json` as shown in the code block.
 
@@ -170,12 +170,12 @@ Check that your Terraform template of the older version is provisioned without a
 8. Run these commands through command-line
    1. `ibmcloud schematics workspace new --file workspace.json --state state.json`.
    2. `ibmcloud schematics workspace get --id  <workspace-id> --json`.
-        If your workspace status is not `inactive`, wait for few seconds and retry the command.
+        If your Workspace status is not `inactive`, wait for few seconds and retry the command.
         {: note}
 
    3. `ibmcloud schematics plan id <workspace id>`.
    4. `ibmcloud schematics job get --id <job-id form plan> --json`.
-        If your workspace plan status is not `success`, wait for few seconds and retry the command.
+        If your Workspace plan status is not `success`, wait for few seconds and retry the command.
         {: note}
    
    5. `ibmcloud schematics apply --id <workspace id>`.
@@ -193,7 +193,7 @@ Check whether your Terraform template of the older version is provisioned perfec
 {: note}
 
 1. From your Terraform template `v0.13` Git repository, clone to a new GitHub repository.
-2. Pull the state file from the Terraform `v0.13` workspace by running `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`.
+2. Pull the state file from the Terraform `v0.13` Workspace by running `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`.
 3. Copy the content of state pull result in `state.json` file.
 4. Create or update `workspace.json` as shown in the code block.
 
@@ -221,12 +221,12 @@ Check whether your Terraform template of the older version is provisioned perfec
 5. Run these commands through command-line
    1. `ibmcloud schematics workspace new --file workspace.json --state state.json`.
    2. `ibmcloud schematics workspace get --id  <workspace-id> --json`.
-        If your workspace status is not `inactive`, wait for few seconds and retry the command.
+        If your Workspace status is not `inactive`, wait for few seconds and retry the command.
         {: note}
 
    3. `ibmcloud schematics plan id <workspace id>`.
    4. `ibmcloud schematics job get --id <job-id form plan> --json`.
-        If your workspace plan status is not `success`, wait for few seconds and retry the command.
+        If your Workspace plan status is not `success`, wait for few seconds and retry the command.
         {: note}
    
    5. `ibmcloud schematics apply --id <workspace id>`.
@@ -235,8 +235,8 @@ Check whether your Terraform template of the older version is provisioned perfec
 ## Upgrade Terraform template from `v0.14`/`v0.15` to `v1.0`
 {: #upgrade-14-to10}
 
-You can upgrade the [`Terraform v0.14`](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://www.terraform.io/language/upgrade-guides/0-15){: external} to `Terraform v1.0`, refer to, [`Terraform v1.0` upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
+You can upgrade the [`Terraform v0.14`](https://www.terraform.io/language/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://www.terraform.io/language/upgrade-guides/0-15){: external} to `Terraform v1.0`, see [`Terraform v1.0` upgrade process](https://www.terraform.io/language/upgrade-guides/1-0){: external}.
 {: shortdesc}
 
-Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, see [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
+Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, see [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
 {: note}

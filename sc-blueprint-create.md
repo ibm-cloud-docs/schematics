@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-13"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Creating a Blueprint 
 {: #create-blueprint}
 
-Deploying cloud resources by using a solution pattern with the Blueprints service is a two-step process such as `Create`, and `Apply`. See [Deploying Blueprints](/docs/schematics?topic=sc-bp-deploy) for an overview of the Blueprints deployment lifecycle stage and the two-phase approach to managing deployments and change in Blueprint environments.
+Deploying cloud resources by using a solution pattern with the Blueprints service is a two-step process such as `Create`, and `Apply`. See [Deploying Blueprints](/docs/schematics?topic=sc-bp-deploy) for an overview of the Blueprints deployment lifecycle stage and the two-phase approach to managing deployments, and change in Blueprint environments.
 
 Create takes as its input the Blueprint definitions and input configurations that are created during the [Defining Blueprints](/docs/schematics?topic=sc-bp-define) lifecycle stage.  
 {: shortdesc} 
@@ -57,7 +57,7 @@ This example also demonstrates by using more inputs at create time to customize 
 | Create resource group | Create resource groups  | true  | my_resource_group |
 {: caption="IAM permissions" caption-side="top"}
 
-For all the Blueprints commands, syntax, and option flag details, refer to, [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the Blueprints commands, syntax, and option flag details, see [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ### Reuse existing resource group 
