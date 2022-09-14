@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-14"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Working with Blueprints
+# Overview
 {: #work-with-blueprints}
 
 {{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) pattern-based deployment and lifecycle management service for large-scale cloud environments. Using Terraform based IaC automation modules designed for the IBM Cloud, Blueprints make it possible for teams to reliably and repeatedly stand up large and complex environments that are composed from modular components. Then, continue to use versioning and IaC to manage these environments over their lifecycle, cradle-to-grave. 
