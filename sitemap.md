@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-14"
 
 keywords: schematics
 subcollection: schematics
@@ -148,13 +148,6 @@ subcollection: schematics
 [Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
-
-
-## Internal adopters
-{: #sitemap_internal_adopters}
-
-
-[IBM Cloud Schematics internal_v1.0 API](/apidocs/schematics)
 
 
 ## Security and compliance
@@ -1418,7 +1411,7 @@ subcollection: schematics
 {: #sitemap_api_reference}
 
 
-[IBM Cloud Schematics API](/apidocs/schematics)
+[IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
 ## Blueprints definition reference
