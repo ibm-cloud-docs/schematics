@@ -125,7 +125,7 @@ subcollection: schematics
 {: #sitemap_working_with_blueprints}
 
 
-[Working with Blueprints](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+[Overview](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
 
 * [Lifecycle of cloud environments](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
 
