@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-15"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -171,7 +171,7 @@ Authorization: Bearer
         "git": {
             "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
             "git_repo_folder": "basic-blueprint.yaml",
-            "git_branch": "main"
+            "git_branch": "master"
         }
     },
     "config": [
@@ -181,7 +181,7 @@ Authorization: Bearer
                 "git": {
                     "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
                     "git_repo_folder": "basic-input.yaml",
-                    "git_branch": "main"
+                    "git_branch": "master"
                 }
             }
         }
@@ -193,10 +193,14 @@ Authorization: Bearer
         },
         {
             "name": "resource_group_name",
-            "value": "myrg4"
+            "value": "mybp-rg-test1"
+        }
+        {
+            "name": "cos_instance_name",
+            "value": "mybp-cos-test1"
         }
     ],
-    "description": "Deploys a simple two module blueprint",
+    "description": "Deploys a simple two module Blueprint",
     "resource_group": "Default"
 }
 ```
@@ -206,62 +210,128 @@ Output:
 
 ```text
 {
-  "name": "Blueprint Basic Example",
-  "source": {
-    "source_type": "git_hub",
-    "git": {
-      "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
-      "git_repo_folder": "basic-blueprint.yaml"
+    “name”: “Blueprint Basic Example”,
+    “source”: {
+        “source_type”: “git_hub”,
+        “git”: {
+            “git_repo_url”: “https://github.com/KshamaG/blueprint-basic-example”,
+            “git_repo_folder”: “basic-blueprint.yaml”
+        },
+        “catalog”: {},
+        “cos_bucket”: {}
     },
-    "catalog": {},
-    "cos_bucket": {}
-  },
-  "config": [
-    {
-      "source": {
-        "source_type": "git_hub",
-        "git": {
-          "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
-          "git_repo_folder": "basic-input.yaml",
-          "git_branch": "main"
-        },
-        "catalog": {},
-        "cos_bucket": {}
-      },
-      "inputs": [
+    “config”: [
         {
-          "name": "cos_instance_name",
-          "value": "Blueprint-basic"
-        },
-        {
-          "name": "resource_group_name",
-          "value": "myrg4"
-        },
-        {
-          "name": "provision_rg",
-          "value": "true"
+            “source”: {
+                “source_type”: “git_hub”,
+                “git”: {
+                    “git_repo_url”: “https://github.com/KshamaG/blueprint-basic-example”,
+                    “git_repo_folder”: “basic-input.yaml”,
+                    “git_branch”: “master”
+                },
+                “catalog”: {},
+                “cos_bucket”: {}
+            },
+            “inputs”: [
+                {
+                    “name”: “resource_group_name”,
+                    “value”: “bp-rg-test1"
+                },
+                {
+                    “name”: “provision_rg”,
+                    “value”: “true”
+                },
+                {
+                    “name”: “cos_instance_name”,
+                    “value”: “bp-cos-test1"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "description": "Simple two module blueprint. Deploys Resource Group and COS bucket",
-  "resource_group": "47ecbb1f38ea4b8aa0a091edb1e4e909",
-  ........
-  "flow": {},
-  "blueprint_id": "us-south.BLUEPRINT.Blueprint-Basic-Example.b14a205d",
-  "crn": "crn:v1:bluemix:public:schematics:us-south:a/16a85b7b99a6622e7c186fb6503781a0:17e412e5-dfac-486a-804c-907d21a4454b:blueprint:us-south.BLUEPRINT.Blueprint-Basic-Example.b14a205d",
-  "account": "16a85b7b99a6622e7c186fb6503781a0",
-  "created_at": "2022-07-01T08:21:30.145Z",
-  "created_by": "kgurudut@in.ibm.com",
-  "updated_at": "1901-01-01T00:00:00.000Z",
-  "sys_lock": {
-    "sys_locked_at": "1901-01-01T00:00:00.000Z"
-  },
-  "user_state": {
-    "state": "Environment_Create_Init",
-    "set_at": "1901-01-01T00:00:00.000Z"
-  },
-  "state": {}
+    ],
+    “description”: “Deploys a simple two module Blueprint”,
+    “resource_group”: “aac37f57b20142dba1a435c70aeb12df”,
+    “location”: “us-south”,
+    “inputs”: [
+        {
+            “name”: “resource_group_name”,
+            “metadata”: {}
+        },
+        {
+            “name”: “provision_rg”,
+            “metadata”: {}
+        },
+        {
+            “name”: “cos_instance_name”,
+            “metadata”: {}
+        }
+    ],
+    “settings”: [
+        {
+            “name”: “TF_VERSION”,
+            “value”: “1.0”,
+            “metadata”: {}
+        }
+    ],
+    “outputs”: [
+        {
+            “name”: “cos_id”,
+            “value”: “$module.basic-cos-storage-test1.outputs.cos_id”,
+            “metadata”: {}
+        }
+    ],
+    “modules”: [
+        {
+            “module_type”: “terraform”,
+            “name”: “basic-resource-group-test1”,
+            “layer”: “RG”,
+            “source”: {
+                “source_type”: “git_hub”,
+                “git”: {
+                    “git_repo_url”: “https://github.com/Cloud-Schematics/blueprint-basic-example/tree/master/IBM-ResourceGroup”,
+                    “git_branch”: “master”
+                },
+                “catalog”: {},
+                “cos_bucket”: {}
+            },
+            “created_at”: “0001-01-01T00:00:00Z”,
+            “updated_at”: “0001-01-01T00:00:00Z”,
+            “inputs”: [
+                {
+                    “name”: “provision”,
+                    “value”: “$blueprint.provision_rg”
+                },
+                {
+                    “name”: “name”,
+                    “value”: “$blueprint.resource_group_name”
+                }
+            ],
+            “outputs”: [
+                {
+                    “name”: “resource_group_name”
+                },
+                {
+                    “name”: “resource_group_id”
+                }
+            ],
+            “last_job”: {}
+        },
+        {
+    ........,
+    “flow”: {},
+    “blueprint_id”: “blueprint-basic-testdev-test.soB.13f7",
+    “crn”: “crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:blueprint:blueprint-basic-testdev-smulampa.soB.13f7",
+    “account”: “1f7277194bb748cdb1d35fd8fb85a7cb”,
+    “created_at”: “2022-09-14T08:00:32.029373639Z”,
+    “created_by”: “test@in.ibm.com”,
+    “updated_at”: “0001-01-01T00:00:00Z”,
+    “sys_lock”: {
+        “sys_locked_at”: “0001-01-01T00:00:00Z”
+    },
+    “user_state”: {
+        “state”: “Environment_Create_Init”,
+        “set_at”: “0001-01-01T00:00:00Z”
+    },
+    “state”: {}
 }
 ```
 {: screen}

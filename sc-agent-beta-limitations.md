@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-15"
 
 keywords: schematics agent, agent, Beta release, agent Beta release
 
@@ -12,14 +12,14 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Beta-level code for {{site.data.keyword.bpshort}} Agents
+# Beta code for {{site.data.keyword.bpshort}} Agents
 {: #agent-beta-limitations}
 
-The Agent level of code is considered Beta-level code as there will be changes in function and capabilities between now and the General Availability (GA) date.
+The Agent level of code is considered beta code as there will be changes in function and capabilities between now and the General Availability (GA) date.
 
 Although Agent usage has no cost involved during Beta, it will have a cost eventually in the GA timeframe. You will be updated in the documentation with the usage and the charges.
 
-Join our Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Agents Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03M925E8BH){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, refer to the [steps to join Agents Beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-agent-join-public-slack) channel.
+Join our Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Agents Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03M925E8BH){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, refer to the [steps to join Agents Beta Slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack) channel.
 
 Join the `#tmp-agents-beta-2022` slack channel and post a message including the following information.
 
