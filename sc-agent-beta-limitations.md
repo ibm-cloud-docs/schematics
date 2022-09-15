@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-15"
 
 keywords: schematics agent, agent, Beta release, agent Beta release
 
@@ -12,10 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Beta-level code for {{site.data.keyword.bpshort}} Agents
+# Beta code for {{site.data.keyword.bpshort}} Agents
 {: #agent-beta-limitations}
 
-The Agent level of code is considered Beta-level code as there will be changes in function and capabilities between now and the General Availability (GA) date.
+The Agent level of code is considered Beta code as there will be changes in function and capabilities between now and the General Availability (GA) date.
 
 Although Agent usage has no cost involved during Beta, it will have a cost eventually in the GA timeframe. You will be updated in the documentation with the usage and the charges.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-15"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -37,7 +37,7 @@ The core principles of IaC are commonly defined as:
 
 This approach to large-scale environment management is represented by the key Blueprints concepts that are outlined in the diagram.
 
-![Large-scale environments by using Terraform and Blueprints](images/blueprint-architecture.svg){: caption="Large-scale environments using Terraform and Blueprints" caption-side="bottom"}
+![Large-scale environments by using Terraform and Blueprints](images/bp-largescale-env.svg){: caption="Large-scale environments using Terraform and Blueprints" caption-side="bottom"}
 
 ## Architecture
 {: #blueprint-architecture}
@@ -62,4 +62,4 @@ So far you learned a little about {{site.data.keyword.bpshort}} Blueprints, its 
 - See [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to set access permissions to set the Blueprint deployments.
 - Explore [deploying {{site.data.keyword.bpshort}} Blueprints by using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprint-managed cloud environment.
 - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on Blueprints.
-- [Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand Beta limitations.
+- [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand Beta limitations.

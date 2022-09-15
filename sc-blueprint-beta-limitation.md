@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-15"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -12,10 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Beta-level code for {{site.data.keyword.bpshort}} Blueprints
+# Beta code for {{site.data.keyword.bpshort}} Blueprints
 {: #bp-beta-limitations}
 
-The Blueprints level of code is considered Beta-level code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
+The Blueprints level of code is considered Beta code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
 {: shortdesc}
 
 Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join Blueprints Beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.

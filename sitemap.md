@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-14"
+lastupdated: "2022-09-15"
 
 keywords: schematics
 subcollection: schematics
@@ -1483,11 +1483,11 @@ subcollection: schematics
 * [Complex input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#complex-input-value)
 
 
-## Beta-level code for {{site.data.keyword.bpshort}} Agents
-{: #sitemap_beta-level_code_for__agents}
+## Beta code for {{site.data.keyword.bpshort}} Agents
+{: #sitemap_beta_code_for__agents}
 
 
-[Beta-level code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
+[Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
 
 * [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
 
@@ -1496,11 +1496,11 @@ subcollection: schematics
     * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
 
 
-## Beta-level code for {{site.data.keyword.bpshort}} Blueprints
-{: #sitemap_beta-level_code_for__blueprints}
+## Beta code for {{site.data.keyword.bpshort}} Blueprints
+{: #sitemap_beta_code_for__blueprints}
 
 
-[Beta-level code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
+[Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
 
 * [Beta release limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation)
 
