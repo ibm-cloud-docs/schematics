@@ -49,7 +49,7 @@ In {{site.data.keyword.bpshort}}, Blueprint modules are deployed as linked {{sit
 
 The mapping of a Blueprint definition with input variables, and automation modules to the {{site.data.keyword.bpshort}} Workspaces, and deployed in cloud resources is illustrated in the diagram. 
 
-![{{site.data.keyword.bpshort}} Blueprints architecture](images/sc-blueprint-architecture.png){: caption="{{site.data.keyword.bpshort}} Blueprints architecture" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Blueprints architecture](images/bp-architecture.svg){: caption="{{site.data.keyword.bpshort}} Blueprints architecture" caption-side="bottom"}
 
 Module statements in the Blueprint definition define the Workspaces that creates in the respective source repositories that contain the Terraform module configurations. The composition of the solution is created by the dependencies and links between the modules. When the Blueprint is deployed, {{site.data.keyword.bpshort}} manages the data flows of output resource data from the modules in underneath infrastructure layers to that of the higher in the stack.
 
