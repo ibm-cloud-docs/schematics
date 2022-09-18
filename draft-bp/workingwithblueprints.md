@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-14"
+lastupdated: "2022-09-18"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -33,7 +33,7 @@ In {{site.data.keyword.bpshort}} Blueprints these life stages are referred to as
 
 The Blueprints lifecycle stages are illustrated in the diagram. Each Blueprint lifecycle stage encompasses multiple tasks. For example, composing and editing the Blueprint definition, running {{site.data.keyword.bpshort}} Blueprint operations, monitoring job execution and reviewing the results. 
 
-![Life stages of {{site.data.keyword.bpshort}} Blueprints](../images/bp-life-stages-Lifecycle.svg){: caption="Life stages of {{site.data.keyword.bpshort}} Blueprints" caption-side="bottom"}
+![Life stages of {{site.data.keyword.bpshort}} Blueprints](../images/bp-life-stages.svg){: caption="Life stages of {{site.data.keyword.bpshort}} Blueprints" caption-side="bottom"}
 
 The four life stages of working with {{site.data.keyword.bpshort}} Blueprints to deploy and manage cloud environments are outlined in the table.
 
