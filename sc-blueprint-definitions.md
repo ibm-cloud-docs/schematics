@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-18"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -28,7 +28,7 @@ A {{site.data.keyword.bpshort}} Blueprint environment is specified by three vers
 
 These elements and their relationships are shown in the diagram.  
 
-![Understanding Blueprints definitions](images/sc-blueprint-definition.png){: caption="Understanding Blueprints definitions" caption-side="bottom"}
+![Understanding Blueprints definitions](images/bp-definitions.svg){: caption="Understanding Blueprints definitions" caption-side="bottom"}
 
 A Blueprint configuration is the initial settings the user must provide to create a Blueprint in {{site.data.keyword.bpshort}}. The configuration defines the Blueprint definition YAML file to be used, its Git source location, input value files, document version information and any additional inputs.
 
