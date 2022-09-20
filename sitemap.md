@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-15"
+lastupdated: "2022-09-20"
 
 keywords: schematics
 subcollection: schematics
@@ -542,6 +542,10 @@ subcollection: schematics
 
 * [Displaying a Blueprint through UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
 
+* [Displaying a Blueprint through API](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-api)
+
+* [Next steps](/docs/schematics?topic=schematics-list-blueprint-cli#bp-create-nextsteps)
+
 [Listing Blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
 
 * [Listing Blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-cli)
@@ -557,6 +561,10 @@ subcollection: schematics
 * [Listing Blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
 
 * [Viewing Blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
+
+* [Listing Blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#install-blueprint-api)
+
+* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#bp-create-nextsteps)
 
 [Updating a Blueprint](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 

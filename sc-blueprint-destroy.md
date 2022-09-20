@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-20"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -100,13 +100,15 @@ Example
 POST /v2/jobs/ HTTP/1.1
 Host: schematics.cloud.ibm.com
 Content-Type: application/json
-Authorization: Bearer 
+Authorization: Bearer <auth_token>
+refresh_token: <refresh_token>
 
 {
-    "command_name": "env_destroy",
+    "command_name": "blueprint_destroy",
     "command_object": "blueprint",
-    "command_object_id": "us-south.BLUEPRINT.Blueprint-Basic-Example.b14a205d"
+    "command_object_id": "Blueprint-Basic-Test.eaB.bbb9"
 }
+
 ```
 {: codeblock}
 
@@ -115,16 +117,16 @@ Output
 ```text
 {
     "command_object": "blueprint",
-    "command_object_id": "us-south.ENVIRONMENT.Blueprint-Basic-Example.b14a205d",
-    "command_name": "env_destroy",
-    "id": "us-south.JOB.Blueprint-Basic-Example.89fca6a0",
-    "name": "JOB.Blueprint-Basic-Example.env_destroy.1656666265457",
-    "description": "Simple two module blueprint. Deploys Resource Group and COS bucket",
-    "location": "us-south",
-    "resource_group": "47ecbb1f38ea4b8aa0a091edb1e4e909",
-    "submitted_at": "2022-07-01T09:04:25.457117754Z",
-    "submitted_by": "kgurudut@in.ibm.com",
-    "start_at": "2022-07-01T09:04:25.457110765Z",
+    "command_object_id": "Blueprint-Basic-Test.eaB.e03e",
+    "command_name": "blueprint_destroy",
+    "id": "us-east.JOB.Blueprint-Basic-Test.54893e45",
+    "name": "JOB.Blueprint-Basic-Test.blueprint_destroy.1663585276714",
+    "description": "Deploys a simple two module blueprint",
+    "location": "us-east",
+    "resource_group": "aac37f57b20142dba1a435c70aeb12df",
+    "submitted_at": "2022-09-19T11:01:16.714386434Z",
+    "submitted_by": "smulampa@in.ibm.com",
+    "start_at": "2022-09-19T11:01:16.714383262Z",
     "end_at": "0001-01-01T00:00:00Z",
     "status": {
         "workspace_job_status": {
@@ -134,10 +136,10 @@ Output
             "updated_at": "0001-01-01T00:00:00Z"
         },
         "action_job_status": {
-            "action_name": "Blueprint Basic Example",
+            "action_name": "Blueprint Basic Test",
             "status_code": "job_pending",
             "status_message": "Job created and pending to start",
-            "updated_at": "2022-07-01T09:04:25.457124147Z"
+            "updated_at": "2022-09-19T11:01:16.714389855Z"
         },
         "system_job_status": {
             "updated_at": "0001-01-01T00:00:00Z"
@@ -161,7 +163,106 @@ Output
         "system_job_data": {
             "updated_at": "0001-01-01T00:00:00Z"
         },
-     ..........
+        "flow_job_data": {
+            "workitems": [
+                {
+                    "command_object_id": "us-east.workspace.basic-resource-group.a99dc1a0",
+                    "command_object_name": "basic-resource-group",
+                    "source": {
+                        "source_type": "git_hub",
+                        "git": {
+                            "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup",
+                            "git_branch": "main"
+                        },
+                        "catalog": {},
+                        "cos_bucket": {}
+                    },
+                    "inputs": [
+                        {
+                            "name": "provision",
+                            "value": "$blueprint.provision_rg",
+                            "metadata": {}
+                        },
+                        {
+                            "name": "name",
+                            "value": "$blueprint.resource_group_name",
+                            "metadata": {}
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "resource_group_name",
+                            "metadata": {}
+                        },
+                        {
+                            "name": "resource_group_id",
+                            "metadata": {}
+                        }
+                    ],
+                    "last_job": {
+                        "command_object_id": "us-east.workspace.basic-resource-group.a99dc1a0",
+                        "command_name": "workspace_apply",
+                        "job_status": "job_finished"
+                    },
+                    "updated_at": "0001-01-01T00:00:00Z",
+                    "updated": "false"
+                },
+                {
+                    "command_object_id": "us-east.workspace.basic-cos-storage.61cb03be",
+                    "command_object_name": "basic-cos-storage",
+                    "source": {
+                        "source_type": "git_hub",
+                        "git": {
+                            "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-Storage",
+                            "git_branch": "main"
+                        },
+                        "catalog": {},
+                        "cos_bucket": {}
+                    },
+                    "inputs": [
+                        {
+                            "name": "cos_instance_name",
+                            "value": "$blueprint.cos_instance_name",
+                            "metadata": {}
+                        },
+                        {
+                            "name": "cos_storage_plan",
+                            "value": "$blueprint.cos_storage_plan",
+                            "metadata": {}
+                        },
+                        {
+                            "name": "cos_single_site_loc",
+                            "value": "ams03",
+                            "metadata": {}
+                        },
+                        {
+                            "name": "resource_group_id",
+                            "value": "$module.basic-resource-group.outputs.resource_group_id",
+                            "metadata": {}
+                        }
+                    ],
+                    "outputs": [
+                        {
+                            "name": "cos_id",
+                            "metadata": {}
+                        },
+                        {
+                            "name": "cos_crn",
+                            "metadata": {}
+                        }
+                    ],
+                    "last_job": {
+                        "command_object_id": "us-east.workspace.basic-cos-storage.61cb03be",
+                        "command_name": "workspace_apply",
+                        "job_status": "job_finished"
+                    },
+                    "updated_at": "0001-01-01T00:00:00Z",
+                    "updated": "false"
+                }
+            ],
+            "updated_at": "0001-01-01T00:00:00Z"
+        }
+    },
     "bastion": {},
     "log_summary": {
         "log_start_at": "0001-01-01T00:00:00Z",
@@ -184,8 +285,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-Once the cloud resources are destroyed, the Blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=cli) from {{site.data.keyword.bpshort}}. Alternatively, the cloud environment can be reconstituted and the resources re-created by running [Blueprint Apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) again by using the same Blueprint configuration.
-
-The configuration of the Blueprint and outputs can be reviewed by using the `blueprint get` command. See section [Displaying Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-get). 
+After the cloud resources are destroyed, the Blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=api) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [Blueprint install](/docs/schematics?topic=schematics-install-blueprint&interface=cli) again using the same Blueprint configuration.
 
 Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 
