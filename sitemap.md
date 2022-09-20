@@ -1946,11 +1946,11 @@ subcollection: schematics
 {: #sitemap_troubleshooting_schematics_apply_errors}
 
 
-[How can I find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
+[How can you find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
 
-[Why can't {{site.data.keyword.bpshort}} find my resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
+[Why can't {{site.data.keyword.bpshort}} find your resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
 
-[Why am I getting 5xx HTTP errors?](/docs/schematics?topic=schematics-server-errors#server-errors)
+[Why are you getting 5xx HTTP errors?](/docs/schematics?topic=schematics-server-errors#server-errors)
 
 
 ### Troubleshooting Schematics create errors
@@ -1966,11 +1966,11 @@ subcollection: schematics
 
 [Blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
 
-* [Blueprint create fails with an invalid blueprint definitions: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
+* [Blueprint create fails with an invalid Blueprint definition: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
 
-* [Blueprint create fails with an invalid blueprint definitions: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
+* [Blueprint create fails with an invalid Blueprint definition: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
 
-* [Blueprint create fails with the requested resource group is invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails3)
+* [Blueprint create fails with the requested resource group as invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails3)
 
 * [Blueprint create fails with the error Blueprint JSON validation failed: field missing or invalid in config](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails4)
 
@@ -1995,9 +1995,9 @@ subcollection: schematics
 {: #sitemap_troubleshooting_agents}
 
 
-[How can I provide value to `schematics_resource_crn` variable?](/docs/schematics?topic=schematics-agent-crn-not-found#agent-crn-not-found)
+[How can you provide value to `schematics_resource_crn` variable?](/docs/schematics?topic=schematics-agent-crn-not-found#agent-crn-not-found)
 
-[Why am I getting create endpoint gateway failed with wrong number of segments in CRN?](/docs/schematics?topic=schematics-agent-endpoint-error#agent-endpoint-error)
+[Why are your getting create endpoint gateway that is failed with wrong number of segments in CRN?](/docs/schematics?topic=schematics-agent-endpoint-error#agent-endpoint-error)
 
 [Troubleshooting errors](/docs/schematics?topic=schematics-handling-error#handling-error)
 

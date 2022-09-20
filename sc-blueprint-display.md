@@ -32,7 +32,7 @@ For all the Blueprints commands, syntax, and option flag details, see [Blueprint
 Lists all the Blueprints.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint list
@@ -70,7 +70,7 @@ For a complete listing of options, see the [ibmcloud schematics blueprint get](/
 ### Blueprint display summary 
 {: #display-blueprint-summary-cli}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint get -id <blueprint_id>
@@ -108,7 +108,7 @@ OK
 Displays the Blueprint with the summary information of the Blueprint.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint get -id <blueprint_id> -level outputs
@@ -160,7 +160,7 @@ This example shows the returned computed value for the output variable `blueprin
 Displays the output with the module level.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint get -id <blueprint_id> -level modules

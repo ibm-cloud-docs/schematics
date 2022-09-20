@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-20"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -45,7 +45,7 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
 
 **Dynamic inventory** allows to create the collection of hosts in a inventory file that defines the hosts and group of hosts upon which your playbook operates. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `INI` file format that can be used in the `create` and `update` actions commands as `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>` argument.
 
-**Syntax:**
+**`Syntax`**
 
 ```text
 [hostgroupname1]
@@ -56,7 +56,7 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
 ```
 {: codeblock}
 
-**Example:** 
+**`Example`** 
 
 ```text
 [webserverhost]
@@ -85,7 +85,7 @@ Create an {{site.data.keyword.bpshort}} Actions to run an Ansible playbook on a 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--credential CREDENTIAL_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--inventory INVENTORY_ID] [—-inventory-connection-type INVENTORY_CONNECTION_TYPE] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--github-token GITHUB_ACCESS_TOKEN] [--output OUTPUT] [--file FILE_NAME ] [--json] [--no-prompt]
@@ -118,7 +118,7 @@ ibmcloud schematics action create --name ACTION_NAME [--description DESCRIPTION]
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive mode. |
 {: caption="{{site.data.keyword.bpshort}} Actions create flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics action create --name start-vsi --location us-south --resource-group default --template https://github.com/Cloud-Schematics/ansible-is-instance-actions --playbook-name stop-vsi-playbook.yml --input instance_ip=172.4.5.0
@@ -134,7 +134,7 @@ Create a JSON file that includes the details for the action that you want to cre
 You need to replace the `<...>` placeholders with the actual values. For example, `"<ACTION_NAME>"` as `"testaction"`.
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```json
 {
@@ -169,7 +169,7 @@ ibmcloud schematics action create --file <FILE_NAME>
 ```
 {: pre}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics action create --file sample.json
@@ -203,7 +203,7 @@ Instead of entering the command options or using a payload file, you can use the
 Update the information of an existing {{site.data.keyword.bpshort}} Actions by using an action ID. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics action update --id ACTION_ID --name ACTION_NAME [--description DESCRIPTION] --location GEOGRAPHY --resource-group RESOURCE_GROUP [--template GIT_TEMPLATE_REPO] [--playbook-name PLAYBOOK_NAME] [--github-token GITHUB_ACCESS_TOKEN] [--credential CREDENTIAL_FILE] [--credential-json CREDENTIAL_JSON_FILE] [--bastion BASTION_HOST_IP_ADDRESS] [--bastion-credential-json BASTION_CREDENTIAL_JSON_FILE] [--inventory INVENTORY_ID] [--inventory-connection-type INVENTORY_CONNECTION_TYPE] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--file FILE_NAME] [--no-prompt] [--output OUTPUT] [--json]
@@ -239,7 +239,7 @@ ibmcloud schematics action update --id ACTION_ID --name ACTION_NAME [--descripti
 {: caption="{{site.data.keyword.bpshort}} Actions update flags" caption-side="top"}
 
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics action update --id us-south.workspace.101010101 --description "This is my description" 
@@ -253,7 +253,7 @@ ibmcloud schematics action update --id us-south.workspace.101010101 --descriptio
 Retrieve the detailed information of an existing {{site.data.keyword.bpshort}} Actions by using an action ID. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics action get --id ACTION_ID [--profile PROFILE] [--output OUTPUT] [--json] [--no-prompt]
@@ -271,7 +271,7 @@ ibmcloud schematics action get --id ACTION_ID [--profile PROFILE] [--output OUTP
 | `--no-prompt` | Optional |Set this flag to run the command without the interactive mode. |
 {: caption="{{site.data.keyword.bpshort}} Actions get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics action get --id us-south.workspace.101010101 -p summary 
@@ -284,7 +284,7 @@ ibmcloud schematics action get --id us-south.workspace.101010101 -p summary
 Retrieve a list of all {{site.data.keyword.bpshort}} Actions in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT]  [--json]
@@ -302,7 +302,7 @@ ibmcloud schematics action list [--limit LIMIT] [--offset OFFSET] [--profile PRO
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Actions list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics action list --profile ids
@@ -315,7 +315,7 @@ ibmcloud schematics action list --profile ids
 Delete a {{site.data.keyword.bpshort}} action. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics action delete --id ACTION_ID [--force][--no-prompt]
@@ -331,7 +331,7 @@ ibmcloud schematics action delete --id ACTION_ID [--force][--no-prompt]
 | `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 {: caption="{{site.data.keyword.bpshort}} Actions delete flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics action delete --id us-south.workspace.101010101
@@ -345,7 +345,7 @@ ibmcloud schematics action delete --id us-south.workspace.101010101
 You can upload a tape archive file (`.tar`) from your local file system to an {{site.data.keyword.bplong_notm}} action. Enter the full file path on your local machine where your `.tar` file is stored. Create the `.tar` file of your template repo by using the `TAR` command given `tar -cvf mytestactionupload.tar $TEMPLATE_REPO_FOLDER` command.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics action upload --id ACTION_ID --file FILE_NAME [--no-prompt] [--output OUTPUT]
@@ -362,7 +362,7 @@ ibmcloud schematics action upload --id ACTION_ID --file FILE_NAME [--no-prompt] 
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="{{site.data.keyword.bpshort}} Actions upload flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FILE_PATH>/mytestactionupload.tar
@@ -381,7 +381,7 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 
 Create a policy for binding Workspace(s) to the Agent on {{site.data.keyword.bplong_notm}}.
 
-**Syntax:**
+**`Syntax`**
 ```sh
 ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WORKSPACE_ID [--workspace-id WORKSPACE_ID] [--file FILE] [--output OUTPUT] [--no-prompt]
 ```
@@ -396,7 +396,7 @@ ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WO
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent bind flags" caption-side="bottom"}
 
-**Example:**
+**`Example`**
 ```sh
 ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WORKSPACE_ID
 ```
@@ -408,7 +408,7 @@ ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WO
 
 Retrieves the {{site.data.keyword.bpshort}} Agent.
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics agents get --id AGENT_ID [--profile PROFILE] [--output OUTPUT] [--no-prompt]
@@ -423,7 +423,7 @@ ibmcloud schematics agents get --id AGENT_ID [--profile PROFILE] [--output OUTPU
 | `--no-prompt` | Optional |  Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics agents get 
@@ -435,7 +435,7 @@ ibmcloud schematics agents get
 
 Lists all the Agents. Defaults to show the registered agents.
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics agents list [--region REGION] [--filter NEW] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT_FORMAT]
@@ -451,7 +451,7 @@ ibmcloud schematics agents list [--region REGION] [--filter NEW] [--limit LIMIT]
 | `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} agent list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics agents list 
@@ -464,7 +464,7 @@ ibmcloud schematics agents list
 
 Register the Agent with {{site.data.keyword.bpshort}} to run your Workspace jobs on your Agent infrastructure. For more information about Agent infrastructure, see [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics agents register --name AGENT_NAME --profile-id PROFILE_ID --agent-location AGENT_LOCATION --location LOCATION [--description DESCRIPTION] [--resource-group RESOURCE_GROUP] [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
@@ -487,7 +487,7 @@ ibmcloud schematics agents register --name AGENT_NAME --profile-id PROFILE_ID --
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent register flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics agents register 
@@ -500,7 +500,7 @@ ibmcloud schematics agents register
 
 Unregister the {{site.data.keyword.bpshort}} Agent.
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics agents unregister --id AGENT_ID [--no-prompt]
@@ -513,7 +513,7 @@ ibmcloud schematics agents unregister --id AGENT_ID [--no-prompt]
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent unregister flags" caption-side="bottom"}
 
-**Example:**
+**`Example`**
 ```sh
 ibmcloud schematics agents unregister --id AGENT_ID
 ```
@@ -525,7 +525,7 @@ ibmcloud schematics agents unregister --id AGENT_ID
 
 Updates the {{site.data.keyword.bpshort}} Agent.
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics agents update --id AGENT_ID [--description DESCRIPTION] [--user-state USER_STATE] [--tags TAGS] [--profile-id PROFILE_ID] [--file FILE] [--output OUTPUT] [--no-prompt]
@@ -544,7 +544,7 @@ ibmcloud schematics agents update --id AGENT_ID [--description DESCRIPTION] [--u
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent update flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics agents update --id AGENT_ID
@@ -556,7 +556,7 @@ ibmcloud schematics agents update --id AGENT_ID
 
 Create the {{site.data.keyword.bpshort}} Workspace to work with your Terraform configuration and bind your Agent to the new workspace. 
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [--agent-id AGENT_ID]  [--github-token GITHUB_TOKEN] [--output OUTPUT] [--json]
@@ -566,7 +566,7 @@ ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [-
 For more information about the flags see [Workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-new) command.
 {: note}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH 
@@ -579,7 +579,7 @@ ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH
 Retrieve the details of an existing workspace, including the values of all input variables and {{site.data.keyword.bpshort}} Agent.	
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
@@ -634,7 +634,7 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
@@ -693,7 +693,7 @@ You need to replace the `<...>` placeholders with the actual values.
 ```
 {: codeblock}
 
-**Example:**
+**`Example`**
 
 ```json
 {
@@ -771,7 +771,7 @@ OK
 The install command creates the cloud resources defined by the Blueprint definition. Install performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the Blueprint definition to create the cloud resources.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint install --id BLUEPRINT_ID [--output OUTPUT]
@@ -786,7 +786,7 @@ ibmcloud schematics blueprint install --id BLUEPRINT_ID [--output OUTPUT]
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints install flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint install --id Blueprint_Basic.eaB.5cd9
@@ -799,7 +799,7 @@ ibmcloud schematics blueprint install --id Blueprint_Basic.eaB.5cd9
 You update the Blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and Blueprint definition with the `ibmcloud schematics blueprint update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics bluepeint install` after the update has been performed.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
@@ -817,7 +817,7 @@ ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH]
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints update flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9
@@ -830,7 +830,7 @@ ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9
 Using the `ibmcloud schematics blueprint get` command you can display the configuration of a {{site.data.keyword.bpshort}} Blueprint.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL] [--output OUTPUT]
@@ -846,7 +846,7 @@ ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL] [--output OU
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint get --id Blueprint_Basic.eaB.5cd9
@@ -860,7 +860,7 @@ ibmcloud schematics blueprint get --id Blueprint_Basic.eaB.5cd9
 You can list all the {{site.data.keyword.bpshort}} Blueprints.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]
@@ -877,7 +877,7 @@ ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint list 
@@ -890,7 +890,7 @@ ibmcloud schematics blueprint list
 Destroys all the resources associated with the modules in a Blueprint. This action cannot be reversed. On Workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt] [--output OUTPUT]
@@ -906,7 +906,7 @@ ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt] [--output 
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints destroy flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint destroy -id Blueprint_Basic.eaB.5cd9
@@ -920,7 +920,7 @@ ibmcloud schematics blueprint destroy -id Blueprint_Basic.eaB.5cd9
 Delete a {{site.data.keyword.bpshort}} Blueprint. A Blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state. For more information about the difference between destroy and delete command, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint delete --id BLUEPRINT_ID [—force-delete] [--no-prompt] [--output OUTPUT]
@@ -937,7 +937,7 @@ ibmcloud schematics blueprint delete --id BLUEPRINT_ID [—force-delete] [--no-p
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints delete flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint delete -id Blueprint_Basic.eaB.5cd9
@@ -950,7 +950,7 @@ ibmcloud schematics blueprint delete -id Blueprint_Basic.eaB.5cd9
 Get information of a Blueprint job.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint job get --id JOB_ID [--output OUTPUT]
@@ -965,7 +965,7 @@ ibmcloud schematics blueprint job get --id JOB_ID [--output OUTPUT]
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints job get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint job get --id eu-de.JOB.Blueprint_Basic.c5e3c831
@@ -978,7 +978,7 @@ ibmcloud schematics blueprint job get --id eu-de.JOB.Blueprint_Basic.c5e3c831
 List all the Jobs for a Blueprint. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]
@@ -995,7 +995,7 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints job list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint job list --id Blueprint_Basic.eaB.5cd9
@@ -1008,7 +1008,7 @@ ibmcloud schematics blueprint job list --id Blueprint_Basic.eaB.5cd9
 Get logs of a single Blueprint job. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics blueprint job logs --id JOB_ID
@@ -1022,7 +1022,7 @@ ibmcloud schematics blueprint job logs --id JOB_ID
 | `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job get` to get a particular Blueprint job logs. |
 {: caption="{{site.data.keyword.bpshort}} Blueprints job list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint_Basic.e4081308
@@ -1054,7 +1054,7 @@ KMS setting is a one time settings. You need to open the [support ticket](/docs/
 Lists all the KMS instances of your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}}or {{site.data.keyword.hscrypto}} by using your location  where keys are created and encrypted scheme such as `KYOK`, or `BYOK`. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics kms instances ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME [--output OUTPUT][--json]
@@ -1071,7 +1071,7 @@ ibmcloud schematics kms instances ls --location LOCATION_NAME --scheme ENCRYPTIO
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} KMS list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics kms instances ls -l US -s byok
@@ -1086,7 +1086,7 @@ Enable KMS to encrypt your data in the specific location. For more information a
 Update the KMS settings for your location, by using your private endpoint, `CRN`, primary `CRK`, and secondary `CRK`. Note that you can update the KMS settings only once. For example, if you use an API endpoint for a geography, such as `North America`, only that are created in `us-south` or `us-east` are retrieved.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHEME --group RESOURCE_GROUP --primary_name PRIMARY_KMS_NAME --primary_crn PRIMARY_KEY_CRN --primary_endpoint PRIMARY_KMSPRIVATEENDPOINT [--secondary_name SECONDARY_KMS_NAME][--secondary_crn SECONDARY_KEY_CRN] [--secondary_endpoint SECONDARY_KMSPRIVATEENDPOINT] [--output OUTPUT][--json]
@@ -1111,7 +1111,7 @@ ibmcloud schematics kms enable --location LOCATION_NAME --scheme ENCRYPTION_SCHE
 | `--json` or `-j` | Deprecated | Prints the output in the `JSON` format. |
 {: caption="{{site.data.keyword.bpshort}} KMS enable flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics kms enable -l US -s byok -g Default -pn Key-Protect-south -pc crn:v1:bluemix:public:kms:us-south:lalalalal -pe https://private.us-south.kms.cloud.ibm.com
@@ -1125,7 +1125,7 @@ ibmcloud schematics kms enable -l US -s byok -g Default -pn Key-Protect-south -p
 Retrieve the KMS on the API endpoint that you have your `KYOK`, or `BYOK`. For example, if you use an API endpoint for a geography, such as `North America`, only that are created in `us-south` or `us-east` are retrieved. Note that you need to enable `kms instances` in your account to run `info` command-line.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics kms info --location LOCATION_NAME [--output OUTPUT][--json]
@@ -1141,7 +1141,7 @@ ibmcloud schematics kms info --location LOCATION_NAME [--output OUTPUT][--json]
 | `--json` or `-j` | Deprecated | Prints the output in the `JSON` format. |
 {: caption="{{site.data.keyword.bpshort}} KMS information flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics kms info -l US 
@@ -1160,7 +1160,7 @@ Use these general commands to find help and version information for the {{site.d
 View the supported {{site.data.keyword.bplong_notm}} command-line commands. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics help [command]
@@ -1175,7 +1175,7 @@ ibmcloud schematics help [command]
 | `command` | Optional | Specify the name of the command to fetch the command details. |
 {: caption="{{site.data.keyword.bpshort}} help flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics help 
@@ -1188,7 +1188,7 @@ ibmcloud schematics help
 List the versions of all supported open source projects in {{site.data.keyword.bpshort}}, such as the {{site.data.keyword.terraform-provider_full_notm}}, Ansible, Helm, and Kubernetes that are used to run {{site.data.keyword.bpshort}} Actions on {{site.data.keyword.cloud_notm}} resources.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics version [--output OUTPUT] [--json JSON_FILE]
@@ -1204,7 +1204,7 @@ ibmcloud schematics version [--output OUTPUT] [--json JSON_FILE]
 | `--output` or `-o` | Optional | Returns the CLI output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="{{site.data.keyword.bpshort}} version flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics version --output json > "<filename.json>"
@@ -1224,7 +1224,7 @@ Review the command that you want to create, update, list, delete and to work wit
 Create a resource inventory in {{site.data.keyword.bplong_notm}} that you can reference in a {{site.data.keyword.bpshort}} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics inventory create --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
@@ -1259,7 +1259,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 {: note}
 
 
-**Syntax:**
+**`Syntax`**
 
 ```json
 {
@@ -1275,7 +1275,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 ```
 {: codeblock}
 
-**Example:**
+**`Example`**
 
 ```json
 {
@@ -1311,7 +1311,7 @@ Instead of entering your inventory details by using the command options or a pay
 
 2. Enter a name for your inventory and press the return key.
 3. Enter the resource group where you want to create the inventory and press the return key. 
-4. Enter the location where you want to create the inventory, such as **us-south**, **us-east**, **eu-de**, or **eu-gb**. Then, press the return key.
+4. Enter the location where you want to create the inventory, such as **`us-south`**, **us-east**, **eu-de**, or **eu-gb**. Then, press the return key.
 5. Review the details of the inventory that was created. 
 
 ### `ibmcloud schematics inventory delete`
@@ -1320,7 +1320,7 @@ Instead of entering your inventory details by using the command options or a pay
 Delete the resource inventory definition by using the inventory ID from the {{site.data.keyword.bplong_notm}} service. Note you can delete the location and region, resource group from where your inventory was created. Also, make sure your IP addresses are in the [allowlist](/docs/schematics?topic=schematics-allowed-ipaddresses). 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics inventory delete --id ACTION_ID [--force][--no-prompt]
@@ -1336,7 +1336,7 @@ ibmcloud schematics inventory delete --id ACTION_ID [--force][--no-prompt]
 | `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 {: caption="{{site.data.keyword.bpshort}} inventory delete flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics inventory delete --id us-east.INVENTORY.inventoryid12342
@@ -1350,7 +1350,7 @@ ibmcloud schematics inventory delete --id us-east.INVENTORY.inventoryid12342
 Retrieve detailed information of an existing {{site.data.keyword.bplong_notm}} inventory by using the inventory ID.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics inventory get --id ID [--profile PROFILE] [--output OUTPUT] [--no-prompt]
@@ -1367,7 +1367,7 @@ ibmcloud schematics inventory get --id ID [--profile PROFILE] [--output OUTPUT] 
 | `--no-prompt` | Optional | Set this flag to retrieve details of an inventory without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} inventory get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics inventory get --id us-east.INVENTORY.inventoryid12342 --output json
@@ -1380,7 +1380,7 @@ ibmcloud schematics inventory get --id us-east.INVENTORY.inventoryid12342 --outp
 Retrieve a list of all {{site.data.keyword.bpshort}} inventories in your account.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics inventory list [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]
@@ -1396,7 +1396,7 @@ ibmcloud schematics inventory list [--limit LIMIT] [--offset OFFSET] [--output O
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 {: caption="{{site.data.keyword.bpshort}} job list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics inventory list --output json
@@ -1410,7 +1410,7 @@ ibmcloud schematics inventory list --output json
 Update or replace an existing resource inventory. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--description DESCRIPTION] [--location GEOGRAPHY] [--resource-group RESOURCE_GROUP] [--inventories-ini INVENTORY_INI_FILE] [--resource-query RESOURCE_QUERY_ID] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
@@ -1433,7 +1433,7 @@ ibmcloud schematics inventory update  --id ID --name INVENTORY_NAME [--descripti
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} inventory update flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics inventory update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121  --output OUTPUT
@@ -1453,7 +1453,7 @@ Review the commands to create, update, list, and delete {{site.data.keyword.bplo
 Create a job in {{site.data.keyword.bplong_notm}} to run the Ansible playbook in your {{site.data.keyword.bpshort}} action. You can create a job by using a payload file or the command's interactive mode. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-object-id COMMAND_OBJECT_ID --command-name COMMAND_NAME [--playbook-name PLAYBOOK_NAME] [--command-options COMMAND_OPTIONS] [--input INPUT_VARIABLES_LIST] [--input-file INPUT_VARIABLES_FILE_PATH] [--env ENV_VARIABLES_LIST] [--env-file ENV_VARIABLES_FILE_PATH] [--output OUTPUT] [--file FILE_NAME ] [--no-prompt] [--json]
@@ -1492,7 +1492,7 @@ You can provide a payload file to specify certain parameters for the `job run` c
 You need to replace the `<...>` placeholders with the actual values. For example, `"<COMMAND_OBJECT>"` as "action".
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```json
 {
@@ -1504,7 +1504,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 ```
 {: codeblock}
 
-**Example:**
+**`Example`**
 
 ```json
 {
@@ -1546,7 +1546,7 @@ Instead of entering your job details by using command options or a payload file,
 Create a job by copying the settings of an existing job, and run the job in {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--no-prompt] [--json]
@@ -1563,7 +1563,7 @@ ibmcloud schematics job update --id JOB_ID [--output OUTPUT] [--no-prompt] [--js
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} job update flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics job update --id  us-east.JOB.yourjob_ID_1231 
@@ -1576,7 +1576,7 @@ ibmcloud schematics job update --id  us-east.JOB.yourjob_ID_1231
 Retrieve the information of an existing {{site.data.keyword.bplong_notm}} job by using a job ID.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [--json] [--no-prompt]
@@ -1594,7 +1594,7 @@ ibmcloud schematics job get --id JOB_ID [--profile PROFILE] [--output OUTPUT] [-
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} job get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics job get --id us-east.JOB.yourjob_ID_1231 --profile detailed
@@ -1607,7 +1607,7 @@ ibmcloud schematics job get --id us-east.JOB.yourjob_ID_1231 --profile detailed
 Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran against a target hosts through {{site.data.keyword.bpshort}} action. The job displays a list of jobs with the status as `in_progess`, `success`, or `failed`.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--limit LIMIT] [--offset OFFSET] [--profile PROFILE] [--output OUTPUT] [--all] [--no-prompt] [--json]
@@ -1629,7 +1629,7 @@ ibmcloud schematics job list --resource-type RESOURCE_TYPE --id RESOURCE_ID [--l
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} job list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics job list --resource-type action --id us-south.ACTION.interactive.aaa1a111 --profile ids --output json
@@ -1643,7 +1643,7 @@ ibmcloud schematics job list --resource-type action --id us-south.ACTION.interac
 Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshort}} action. For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics job logs --id JOB_ID [log-prefix] [log-header] [--no-prompt]
@@ -1660,7 +1660,7 @@ ibmcloud schematics job logs --id JOB_ID [log-prefix] [log-header] [--no-prompt]
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} job logs flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics job logs --id us-east.JOB.yourjob_ID_1231 
@@ -1676,7 +1676,7 @@ Delete a job for a {{site.data.keyword.bpshort}} action.
 You cannot delete or stop a running job. To remove a job, you must wait for the job to complete.  
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics job delete --id JOB_ID [--force] [--no-prompt]
@@ -1692,7 +1692,7 @@ ibmcloud schematics job delete --id JOB_ID [--force] [--no-prompt]
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} job delete flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics job delete --id us-east.JOB.yourjob_ID_1231 
@@ -1717,7 +1717,7 @@ Your Workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped
 While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you cannot make any changes to your workspace.
 {: important}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE1] [--target RESOURCE2] [--var-file PATH_TO_VARIABLES_FILE] [--force] [--output OUTPUT][--json]
@@ -1737,7 +1737,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE1] [--target RESOU
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} apply flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_instance.vm1 --var-file ./terraform.tfvars
@@ -1758,7 +1758,7 @@ Use this command with caution. After you run the command, you cannot reverse the
 Your Workspace must be in an **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} destroy action. 
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE1] [--target RESOURCE2] [--force] [--output OUTPUT][--json]
@@ -1777,7 +1777,7 @@ ibmcloud schematics destroy --id WORKSPACE_ID [--target RESOURCE1] [--target RES
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} destroy flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_is_vpc.myvpc
@@ -1790,7 +1790,7 @@ ibmcloud schematics destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ib
 Retrieve the Terraform log files for a {{site.data.keyword.bpshort}} Workspaces or a specific action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
 {: shortdesc}	
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
@@ -1806,7 +1806,7 @@ ibmcloud schematics logs --id WORKSPACE_ID [--act-id ACTION_ID]
 | `--act-id` or `-1` | Optional | The ID of an action for which you want to retrieve Terraform logs. To find a list of action IDs, run `ibmcloud schematics workspace action --id WORKSPACE_ID` command. |
 {: caption="{{site.data.keyword.bpshort}} logs flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121abc1234cdst
@@ -1819,7 +1819,7 @@ ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121ab
 Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics output --id WORKSPACE_ID[--output OUTPUT][--json]
@@ -1835,7 +1835,7 @@ ibmcloud schematics output --id WORKSPACE_ID[--output OUTPUT][--json]
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} output flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
@@ -1855,7 +1855,7 @@ Your Workspace must be in an **Inactive**, **Active**, **Failed**, or **Stopped*
 During the creation of the Terraform execution plan, you cannot make any changes to your workspace. 
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics plan --id WORKSPACE_ID [--output OUTPUT] [--json]
@@ -1872,7 +1872,7 @@ ibmcloud schematics plan --id WORKSPACE_ID [--output OUTPUT] [--json]
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} output flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
@@ -1892,7 +1892,7 @@ Dynamically build resource inventories by using resource queries. Resource queri
 Create a resource query in {{site.data.keyword.bplong_notm}} that you can use to build your resource inventory. You can create a resource query by using a payload file or the command's interactive mode. You can create resource conditions by using [resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics resource-query create --name RESOURCE_QUERY_NAME [--type RESOURCE_QUERY_TYPE] [--query-file QUERY_FILE_PATH] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
@@ -1920,7 +1920,7 @@ You can provide a payload file to specify certain parameters for the `resource_q
 You need to replace the `<...>` placeholders with the actual values. For example, `"<WORKSPACE_ID"` as "us-east.workspace.ID1231".
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```json
 [{
@@ -1941,7 +1941,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 ```
 {: codeblock}
 
-**Example:**
+**`Example`**
 
 ```json
 [{
@@ -1991,7 +1991,7 @@ Instead of entering your resource query details by using the command options or 
 Delete the resource resource query definition by using the resource query ID from the {{site.data.keyword.bplong_notm}} service. Note you can delete the location and region, resource group from where your inventory was created. Also, make sure your IP addresses are in the [allowlist](/docs/schematics?topic=schematics-allowed-ipaddresses). 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics resource-query delete --id ID [--force] [--no-prompt]
@@ -2007,7 +2007,7 @@ ibmcloud schematics resource-query delete --id ID [--force] [--no-prompt]
 | `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
 {: caption="{{site.data.keyword.bpshort}} resource query delete flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics resource-query  delete --id us-east.INVENTORY.inventoryid12342
@@ -2021,7 +2021,7 @@ ibmcloud schematics resource-query  delete --id us-east.INVENTORY.inventoryid123
 Retrieve the information of an existing {{site.data.keyword.bplong_notm}} resource query by using a resource query ID.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics resource-query get --id ID [--profile PROFILE] [--output OUTPUT] [--no-prompt]
@@ -2038,7 +2038,7 @@ ibmcloud schematics resource-query get --id ID [--profile PROFILE] [--output OUT
 | `--no-prompt` | Optional | Set this flag to retrieve a resource query without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} resource query get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics resource-query get --id us-east.INVENTORY.inventoryid12342
@@ -2051,7 +2051,7 @@ ibmcloud schematics resource-query get --id us-east.INVENTORY.inventoryid12342
 Retrieve a list of all {{site.data.keyword.bpshort}} resource queries in your account.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics resource-query list [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]
@@ -2067,7 +2067,7 @@ ibmcloud schematics resource-query list [--limit LIMIT] [--offset OFFSET] [--out
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 {: caption="{{site.data.keyword.bpshort}} resource query list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics resource-query list --output listoutput.json
@@ -2081,7 +2081,7 @@ ibmcloud schematics resource-query list --output listoutput.json
 Update or replace a resource query creates a copy of an resource query and relaunches an existing resource query by updating the information of an existing {{site.data.keyword.bplong_notm}} resource query. 
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics resource-query update --id ID --name RESOURCE_QUERY_NAME [--type RESOURCE_QUERY_TYPE] [--query-file QUERY_FILE_PATH] [--file FILE_NAME ] [--output OUTPUT] [--no-prompt]
@@ -2101,7 +2101,7 @@ ibmcloud schematics resource-query update --id ID --name RESOURCE_QUERY_NAME [--
 | `--no-prompt` | Optional | Set this flag to create the resource query without an interactive command-line session. |
 {: caption="{{site.data.keyword.bpshort}} resource query update flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory12312 --name inventoryname600 --description "Short description" --location us-east --resource-group Default --resource-query default.RESOURCEQUERY.string.12121
@@ -2123,7 +2123,7 @@ Review the commands to `force-stop`, `interrupt`, or `terminate` job stop comman
 Stops a running action or a job in {{site.data.keyword.bplong_notm}} workspaces.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--cancel] [--force-stop] [--terminate]
@@ -2141,7 +2141,7 @@ ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--canc
 | `--terminate` or `-t` | Optional | Abruptly kills the engine, marks the job as stopped, and unlocks your workspace. Data is not saved using this flag. |
 {: caption="{{site.data.keyword.bpshort}} job stop flags" caption-side="bottom"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --force-stop --job-id <JOB_ID>
@@ -2184,7 +2184,7 @@ The table provides the summary of supported commands by the `commands` API.
 
 The `Commands` API executes one or group of Terraform commands by using the JSON file for your Workspace command requirements. The access control such as `plan`, `apply`, `destroy`, or `refresh` are applicable for `Commands API`. Select your region where the Workspace is created, and use the following syntax to run the commands API.
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace commands --id WORKSPACE_ID --file FILE_NAME 
@@ -2260,7 +2260,7 @@ The table provides the list of key parameters of the JSON file for the `Commands
 |`command_status`| Not required | Displays the command executed status, either `success` or `failure`|
 {: caption="List of key parameters" caption-side="bottom"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /<FILE_PATH>/Test.JSON
@@ -2282,7 +2282,7 @@ You can import an existing Terraform state file during the creation of your work
 Show the content of the Terraform state file (`terraform.tfstate`) for a specific Terraform template of your workspace.  
 {: shortdesc}	
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
@@ -2299,7 +2299,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 | `--template` or `--tid` | Required | The unique identifier of the Terraform template for which you want to show the content of the Terraform state file. To find the ID of the template, run `ibmcloud schematics workspace get --id <workspace_ID>` and find the template ID in the **Template Variables for:** field of your command-line output. |
 {: caption="{{site.data.keyword.bpshort}} state pull flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa11a1-11a1-11
@@ -2313,7 +2313,7 @@ ibmcloud schematics state pull --id myworkspace-a1aa1a1a-a11a-11 --template a1aa
 Provides the readable output from a state or plan of a Workspace as Terraform sees it. You can use to ensure the current state and planned operations status. You need to use the Workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](#schematics-logs) command.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace state show --id WORKSPACE_ID  --address ADDRESS [--options OPTIONS]
@@ -2331,7 +2331,7 @@ ibmcloud schematics workspace state show --id WORKSPACE_ID  --address ADDRESS [-
 | `--options` or `-o` | Optional | Enter the command-line flags. |
 {: caption="{{site.data.keyword.bpshort}} state pull flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep 
@@ -2360,7 +2360,7 @@ ibmcloud schematics workspace state mv --id WORKSPACE_ID --source SOURCE  --dest
 | `--destination` or `-d` | Required | Provide the destination address of an item.|
 {: caption="{{site.data.keyword.bpshort}} state move flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 -s testsourceresource -d null_resource.sleep 
@@ -2390,7 +2390,7 @@ ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options OPTIONS] --a
 | `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="{{site.data.keyword.bpshort}} state remove flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --address null_resource.sleep --destination null_resource.slept 
@@ -2412,7 +2412,7 @@ Retrieve all activities for a workspace, including the user ID of the person who
 
 When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} Actions is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud schematics logs`](#schematics-logs) command.
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--output OUTPUT][--json]
@@ -2430,7 +2430,7 @@ ibmcloud schematics workspace action --id WORKSPACE_ID [--act-id ACTION_ID] [--o
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces action flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 ```sh
 ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 ```
@@ -2455,7 +2455,7 @@ Decide if you want to delete the workspace, any associated resources, or both. T
 | Resources destroyed using command-line or resource list, and want to delete Workspace | True | False |
 {: caption="delete Workspace and associated resource" caption-side="bottom"}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
@@ -2470,7 +2470,7 @@ ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]
 | `--force` or `-f` | Optional | Force the deletion of your Workspace without command-line prompts. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces delete flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace delete --id myworkspace-a1aa1a1a-a11a-11 
@@ -2483,7 +2483,7 @@ ibmcloud schematics workspace delete --id myworkspace-a1aa1a1a-a11a-11
 Retrieve the details of an existing workspace, including the values of all input variables.	
 {: shortdesc}	
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
@@ -2499,7 +2499,7 @@ ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces get flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
@@ -2512,7 +2512,7 @@ ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 You can import the existing resource with an valid address from the Workspace ID and import it into your Terraform state. You need to ensure one resource can be imported to only one Terraform resource address. Otherwise, you may see unwanted behavior from {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
-**Syntax:**
+**`Syntax`**
 
 ```
 ibmcloud schematics workspace import --id WORKSPACE_ID --options OPTIONS --address ADDRESS --resourceID RESOURCE_ID
@@ -2531,7 +2531,7 @@ ibmcloud schematics workspace import --id WORKSPACE_ID --options OPTIONS --addre
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces import flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.accgrp --resourceID AccessGroupId-xxxxxx-xxxx-xxx-xxx-xxxx
@@ -2544,7 +2544,7 @@ ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.acc
 
 List the Workspaces in your {{site.data.keyword.cloud_notm}} account and optionally, show the details for your workspace.	
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]
@@ -2562,7 +2562,7 @@ ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] 
 | `--region` or `-r` | Optional | Specify the region, such as `eu`, `us`, `eu-gb`, `eu-de`, `us-south`, or `us-east`.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces list flags" caption-side="top"}
 
-**Example:** 
+**`Example`** 
 
 ```sh
 ibmcloud schematics workspace list --limit 10 --offset 20 --json
@@ -2586,7 +2586,7 @@ To create a workspace, you can specify your Workspace settings in a JSON file. M
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
 {: deprecated}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [--agent-id AGENT_ID]  [--github-token GITHUB_TOKEN] [--output OUTPUT] [--json]
@@ -2794,7 +2794,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 {{site.data.keyword.bplong_notm}} supports setting up environment variable such as `TF_PARALLELISM`, `TF_LOG`. For more information about the list of environment variable and its usage, see [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars).
 {: note}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace new --file example.json
@@ -2808,7 +2808,7 @@ Perform an {{site.data.keyword.cloud_notm}} refresh action against your workspac
 {: shortdesc}
 
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics refresh --id WORKSPACE_ID [--output OUTPUT][--json]
@@ -2825,7 +2825,7 @@ ibmcloud schematics refresh --id WORKSPACE_ID [--output OUTPUT][--json]
 {: caption="{{site.data.keyword.bpshort}} refresh flags" caption-side="top"}
 
 
-**Example:**
+**`Example`**
 ```sh
 ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11 
 ```
@@ -2840,7 +2840,7 @@ List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cl
 `Taint Status` returns **tainted** for (true) or **blank** for (false).
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics state list --id WORKSPACE_ID  [--output json]
@@ -2855,7 +2855,7 @@ ibmcloud schematics state list --id WORKSPACE_ID  [--output json]
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} state list flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics state list --id myworkspace-a1aa1a1a-a11a-11  
@@ -2872,7 +2872,7 @@ Manually marks an instance or resources as tainted, by forcing the resources to 
 You must execute [`ibmcloud schematics state list`](#state-list) command to view the tainted status of your resources. `Taint Status` returns **tainted** for (true) or **blank** for (false).
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace taint --id WORKSPACE_ID [--options OPTIONS]  --address PARAMETER
@@ -2888,7 +2888,7 @@ ibmcloud schematics workspace taint --id WORKSPACE_ID [--options OPTIONS]  --add
 | `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces taint flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace taint --id myworkspace-lalalalalalala-11 --address null_resource.sleep  
@@ -2905,7 +2905,7 @@ Manually marks an instance or resources as untainted, by forcing the resources t
 You can execute [`ibmcloud schematics state list`](#state-list) command to view the tainted status of your resources. `Taint Status` returns **tainted** for (true) or **blank** for (false).
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options OPTIONS]  [--address PARAMETER]
@@ -2921,7 +2921,7 @@ ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options OPTIONS]  [--
 | `--address` or `-adr` | Optional | Enter the address of the resource to mark as untaint.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces untaint flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --address null_resource.sleep  
@@ -2942,7 +2942,7 @@ Update the details for an existing workspace, such as the workspace name, variab
 If you provided your Terraform template by uploading a tape archive file (`.tar`) and you want to update your template, you must use the [`ibmcloud schematics workspace upload`](#schematics-workspace-upload) command.
 {: note}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace update --id WORKSPACE_ID [--file FILE_NAME] [--github-token GITHUB_TOKEN] [--pull-latest] [--output OUTPUT] [--json]
@@ -3145,7 +3145,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
     </tr>
     </tbody></table>
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace update --id myworkspace-a1aa1a1a-a11a-11 --file myfile.json --json
@@ -3161,7 +3161,7 @@ Provide your Terraform template by uploading a tape archive file (`.tar`) to you
 Before you begin, make sure that you [created your workspace](#schematics-workspace-new) without a link to a GitHub or GitLab repository.
 {: important}
 
-**Syntax:**
+**`Syntax`**
 
 ```sh
 ibmcloud schematics workspace upload  --id WORKSPACE_ID --file FILE_NAME --template TEMPLATE_ID [--output OUTPUT][--json]
@@ -3181,7 +3181,7 @@ ibmcloud schematics workspace upload  --id WORKSPACE_ID --file FILE_NAME --templ
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces upload flags" caption-side="top"}
 
-**Example:**
+**`Example`**
 
 ```sh
 ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /Users/myuser/Documents/mytar/vpc.tar --template 25111111-0000-4c
