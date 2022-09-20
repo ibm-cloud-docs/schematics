@@ -1143,7 +1143,7 @@ subcollection: schematics
 
 * [Objectives](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-obj)
 
-* [Time required](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-timereq)
+* [Time needed](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-timereq)
 
 * [Audience](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-tut-audience)
 
