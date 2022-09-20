@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-20"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -242,6 +242,119 @@ The color coding indicates whether the job was successful or failed.
 
 The detailed view of the Blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
 
-Blueprint operations are set by child `module`. The jobs operate against each module (Workspace), under the control of a `blueprint` orchestration job. For the Terraform based modules, it is the {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations are set to deploy and configure cloud resources. A Blueprint job failure is typically caused by a Module job failure and the failing module log must be reviewed to identify the cause of the job failure. 
-4. Click the name of a child job to review the job log.  
-    - Click **Show more** to view the full job log. 
+Blueprint operations are performed by child `module` jobs operating against each module (Workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A Blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
+4. Click on the name of a child job to review the job log.  
+    - Optional: Click **Show more** to view the full job log. 
+
+    
+## Listing Blueprint from the API
+{: #install-blueprint-api}
+{: api}
+
+
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about Blueprint update, refer to, [Installing Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
+
+Blueprint create API runs `Blueprint install`, and `Blueprint jobs` `APIs` together, to perform the create, and install Blueprint operations.
+{: important}
+
+Example
+
+```json
+GET /v2/jobs/us-east.JOB.Blueprint-Basic-Test.29bba543/ HTTP/1.1
+Host: schematics.cloud.ibm.com
+Content-Type: application/json
+Authorization: Bearer <auth_token>
+
+```
+{: codeblock}
+
+Output:
+
+```text
+{
+    "id": "us-east.JOB.Blueprint-Basic-Test.29bba543",
+    "name": "JOB.Blueprint-Basic-Test.blueprint_create_init.1663235859012",
+    "description": "Deploys a simple two module blueprint",
+    "command_object": "blueprint",
+    "command_object_id": "Blueprint-Basic-Test.eaB.bbb9",
+    "command_name": "blueprint_create_init",
+    "location": "us-east",
+    "resource_group": "aac37f57b20142dba1a435c70aeb12df",
+    "submitted_at": "2022-09-15T09:57:39.011795189Z",
+    "submitted_by": "smulampa@in.ibm.com",
+    "start_at": "2022-09-15T09:57:39.011790195Z",
+    "end_at": "2022-09-15T09:58:48.146982565Z",
+    "status": {
+        "workspace_job_status": {
+            "flow_status": {
+                "updated_at": "0001-01-01T00:00:00Z"
+            },
+            "updated_at": "0001-01-01T00:00:00Z"
+        },
+        "action_job_status": {
+            "action_name": "Blueprint Basic Test",
+            "status_code": "job_pending",
+            "status_message": "Job created and pending to start",
+            "updated_at": "2022-09-15T09:57:39.011800186Z"
+        },
+        "system_job_status": {
+            "updated_at": "0001-01-01T00:00:00Z"
+        },
+        "flow_job_status": {
+            "status_code": "job_finished",
+            "workitems": [
+                {
+                    "workspace_id": "us-east.workspace.basic-resource-group.d92dd0b6",
+                    "workspace_name": "basic-resource-group",
+                    "status_code": "job_finished",
+                    "updated_at": "2022-09-15T09:58:17.599926716Z"
+                },
+                {
+                    "workspace_id": "us-east.workspace.basic-cos-storage.8e3e7448",
+                    "workspace_name": "basic-cos-storage",
+                    "status_code": "job_finished",
+                    "updated_at": "2022-09-15T09:58:46.838327639Z"
+                }
+            ],
+            "updated_at": "0001-01-01T00:00:00Z"
+        }
+    },
+    "log_summary": {
+        "log_start_at": "0001-01-01T00:00:00Z",
+        "log_analyzed_till": "0001-01-01T00:00:00Z",
+        "repo_download_job": {},
+        "workspace_job": {},
+        "flow_job": {
+            "workitems_completed": 2,
+            "workitems": [
+                {
+                    "workspace_id": "us-east.workspace.basic-resource-group.d92dd0b6",
+                    "job_id": "554aceeabf87d9b1b8f9c55c41432e17",
+                    "log_url": "https://schematics.cloud.ibm.com/v1/workspaces/us-east.workspace.basic-resource-group.d92dd0b6/runtime_data/IBM-ResourceGroup-61535f6c-5cfd-40/log_store/actions/554aceeabf87d9b1b8f9c55c41432e17"
+                },
+                {
+                    "workspace_id": "us-east.workspace.basic-cos-storage.8e3e7448",
+                    "job_id": "4f90836a3291d4949851e7b678d1f4ee",
+                    "log_url": "https://schematics.cloud.ibm.com/v1/workspaces/us-east.workspace.basic-cos-storage.8e3e7448/runtime_data/IBM-Storage-38af0396-64ed-48/log_store/actions/4f90836a3291d4949851e7b678d1f4ee"
+                }
+            ]
+        },
+        "action_job": {
+            "recap": {}
+        },
+        "system_job": {}
+    },
+    "updated_at": "0001-01-01T00:00:00Z"
+}
+```
+{: screen}
+
+For more information, about how to diagnose and resolve issues if the list job fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
+
+## Next steps
+{: #bp-create-nextsteps}
+
+After displaying the Blueprint jobs in {{site.data.keyword.bpshort}}, the next step in updating the blueprint is to [Update](/docs/schematics?topic=schematics-update-blueprint&interface=api) the configuration.
+
+Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 
+

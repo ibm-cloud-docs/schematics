@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-20"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -26,7 +26,7 @@ curl --request POST --url https://cloud.ibm.com/schematics/workspaces -H "Author
 {: screen}
 
 
-When {{site.data.keyword.bpshort}} executes the CURL command, an error states {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the Workspace create is marked with `Bad request` message. 
+When {{site.data.keyword.bpshort}} runs the CURL command, an error state {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the Workspace create is marked with `Bad request` message. 
 {: tsCauses}
 
 
@@ -45,7 +45,7 @@ When {{site.data.keyword.bpshort}} executes the CURL command, an error states {{
 Verify your CURL or the payload contains that the `location` and the `url` are pointing to the same region where you want to create or update the workspace.
 {: tsResolve}
 
-**For example:**
+**`For example`**
 
-- For creating Workspace in `US` region: Use  `location` as **us-east** or **us-south** and `url` as **https://us-south.schematics.cloud.ibm.com/** or **https://us-east.schematics.cloud.ibm.com/**. By default **https://cloud.ibm.com/schematics/workspaces** points to **https://cloud.ibm.com/schematics/overview** endpoint.
-- For Workspace in the `EU` region: Use `location` as **eu-de** or **eu-gb** and `url` as **https://eu-de.schematics.cloud.ibm.com** and **https://eu-gb.schematics.cloud.ibm.com** endpoint.
+- For creating Workspace in `US` region: Use `location` as **`us-east`** or **`us-south`** and `url` as **`https://us-south.schematics.cloud.ibm.com/`** or **`https://us-east.schematics.cloud.ibm.com/`**. By default **`https://cloud.ibm.com/schematics/workspaces`** points to **`https://cloud.ibm.com/schematics/overview`** endpoint.
+- For Workspace in the `EU` region: Use `location` as **`eu-de`** or **`eu-gb`** and `url` as **`https://eu-de.schematics.cloud.ibm.com`** and **`https://eu-gb.schematics.cloud.ibm.com`** endpoint.

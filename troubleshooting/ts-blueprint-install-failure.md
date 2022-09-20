@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-06"
+lastupdated: "2022-09-20"
 
 keywords: blueprint install failure, terraform error, terraform fails, install fails,
 
@@ -20,16 +20,16 @@ content-type: troubleshoot
 # Blueprint install fails 
 {: #bp-install-fails}
 
-Review the following sections to assist in debugging Blueprint install failures. 
+Review the following sections to help debugging Blueprint install failures. 
 
 
 ## Blueprint install fails with message "Install of module Failed"
 {: #bp-install-fails1}
 
-When you run the Blueprint install command, it fails with message that the install of a module has failed.    
+When you run the Blueprint install command, it fails with message that the install of a module fails.    
 {: tsSymptoms}
 
-When you install a Blueprint, {{site.data.keyword.bpshort}} runs Terraform Apply operations against all Workspaces which have pending updates.  Errors when running Terraform operations against Workspaces will result in a Workspace job failure and will cause the Blueprint install job to terminate (fail). 
+When you install a Blueprint, {{site.data.keyword.bpshort}} runs Terraform Apply operations against all Workspaces, which have pending updates. Errors when you run the Terraform operations against the Workspaces result in a Workspace job failure, and cause the Blueprint install job to fail. 
 {: tsCauses}
 
 Example error message
@@ -73,10 +73,10 @@ Attention! Job ID: eu-gb.JOB.Blueprint-Basic-Example.0cebdb53 FULFILMENT_FAILED
 ```
 {: screen}
 
-Install failures are related to Terraform execution and the specific Terraform config being executed. Debugging a Blueprint install failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or stand-alone Terraform usage. 
+Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a Blueprint install failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or stand-alone Terraform usage. 
 {: tsResolve} 
 
-The Blueprint install command will indicate which module has failed. Then prompt to show a summary of the log for the failed Workspace.  
+The Blueprint install command indicates which module fails. Then, prompt to show a summary of the log for the failed Workspace.  
 
 ```text
 Errors:
@@ -87,9 +87,9 @@ Review job failure log yes/no [y/N]>
 ```
 {: screen}
 
-To assist in problem diagnosis reply `y` to the prompt to review the failure logs. The Blueprint Install CLI command output includes the last few lines of the Terraform Apply job log.  As Terraform terminates on an error, frequently the last few lines of the Terraform apply log will include sufficient information to identify the cause of the Terraform failure. 
+To help problem diagnosis reply `y` to the prompt to review the failure logs. The Blueprint Install CLI command output includes the last few lines of the Terraform Apply job log.  As Terraform fails on an error, frequently the last few lines of the Terraform apply log includes sufficient information to identify the cause of the Terraform failure. 
 
-If the log summary does not provide sufficient information, the `ibmcloud schematics logs` command to review the entire Terraform log for the failing Workspace is printed below the summary. 
+If the log summary does not provide sufficient information, the `ibmcloud schematics logs` command to review the entire Terraform log for the failing Workspace is printed summary. 
 
 ```text
 Status               FAILED   
@@ -97,28 +97,27 @@ Workspace Logs CLI   ibmcloud schematics logs --id eu-gb.workspace.basic-cos-sto
 ```
 {: screen}
 
-
-See Troubleshooting {{site.data.keyword.bpshort}} apply errors for additional information on debugging Terraform Apply failures  
+See troubleshooting {{site.data.keyword.bpshort}} apply errors for additional information on debugging Terraform Apply failures  
 
 ## Blueprint install failure due to Terraform config coding error  
 {: #bp-install-fails2}
 
-When you run the Blueprint install command, it fails with message that the install of module has failed. 
+When you run the Blueprint install command, it fails with message that the install of module fails. 
 {: tsSymptoms}
 
-The analysis of the Workspace logs indicates that the modules Terraform config has a coding error which caused the Terraform apply failure.  
+The analysis of the Workspace logs indicates that the modules Terraform config has a coding error, which caused the Terraform apply failure.  
 {: tsCauses}
 
-Correct the Terraform config error at source and push a new release to its Git source repository . 
+Correct the Terraform config error at source and push a new release to its Git source repository. 
 {: tsResolve} 
 
-If explicit version of Blueprint modules is used or specific branches, the Blueprint definition will also require updating in its Git repo to specify the new release tag or branch for the module statement. 
+If explicit version of the Blueprint modules is used on specific branches. The Blueprint definition requires updating in its Git repository to specify the new release tag or branch for the module statement. 
 - Update the Blueprint module statements to specify the new module version. 
-- Push the new release of the Blueprint definition to its Git source repository. With an updated release tag for the Blueprint definition if required.
+- Push the new release of the Blueprint definition to its Git source repository. With an updated release tag for the Blueprint definition if needed.
 
-For modules, when no Git release is specified on the Blueprint module statements and relaxed module version is used, to always use the latest module release, no update to the Blueprint definition is required. The (latest) change to the module repo will be pulled in automatically by Schematics.  
+For modules, when no Git release is specified on the Blueprint module statements and relaxed module version are used. No update to the Blueprint definition is needed. The current change to the module repository is pulled automatically by Schematics.  
 
-Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. With 'latest' release, {{site.data.keyword.bpshort}} will identify the updated module Git repos and perform a Pull-Latest to update any Workspaces with the modified Terraform configurations.  
+Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration that is stored by {{site.data.keyword.bpshort}} with the update to the Blueprint definition. With `latest` release, {{site.data.keyword.bpshort}} identifies the updated module Git repository and run the Pull-Latest to update any Workspaces with the modified Terraform configurations.  
 
 ```sh
 ibmcloud schematics blueprint update -id <blueprint_id> 
@@ -142,14 +141,14 @@ ibmcloud schematics blueprint install -id <blueprint_id> 
 ## Blueprint install failure due to Terraform timeouts or transient failures 
 {: #bp-install-fails3}
 
-When you run the Blueprint install command, it fails with message that the install of module has failed. 
+When you run the Blueprint install command, it fails with message that the install of module fails. 
 {: tsSymptoms}
 
-Analysis of the logs indicates that the modules Terraform apply operation timed out or a transient failure occurs. 
+Analysis of the logs indicates that the modules Terraform apply operation that is timed out or a transient failure occurs. 
 {: tsCauses}
 
 
-No user action should be necessary to recover from this and the Blueprint install operation can be retried. 
+No user action must be necessary to recover and the Blueprint install operation can be retried. 
 {: tsResolve} 
 
 Run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation and complete all operations against all workspaces.  
@@ -162,13 +161,13 @@ ibmcloud schematics blueprint install -id <blueprint_id> 
 ## Blueprint install failures that require changes to values in input files  
 {: #bp-install-fails4}
 
-When you run the Blueprint install command, it fails with message that the install of module has failed. 
+When you run the Blueprint install command, it fails with message that the install of module fails. 
 {: tsSymptoms}
 
 Analysis of the Workspace logs indicates that the cause of the Terraform apply failure was due to an incorrect input value.  
 {: tsCauses}
 
-Update the input file source and push a new release to its Git source repository . 
+Update the input file source and push a new release to its Git source repository. 
 {: tsResolve} 
 
 If explicit input file version is used with release tags for each input file release, the Blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
@@ -178,9 +177,9 @@ ibmcloud schematics blueprint update --id <blueprint_id> --input-git-release x.y
 ```
 {: pre}
 
-Where no Git release is specified and relaxed module version (latest) is used for input files in the Blueprint config, no change to the Blueprint config is required and the input file changes will be pulled in automatically by Schematics.  
+Where no Git release is specified and relaxed module current version is used for input files in the Blueprint config. No change to the Blueprint config is needed and the input file changes are pulled in automatically by Schematics.  
 
-Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration with the changes. This will update the Blueprint and Workspaces with the updated input values. 
+Run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration with the changes. It updates the Blueprint and Workspaces with the updated input values. 
 
 ```sh
 ibmcloud schematics blueprint update -id <blueprint_id> 
@@ -197,20 +196,20 @@ ibmcloud schematics blueprint install -id <blueprint_id> 
 ## Blueprint install failures that require changes to dynamic inputs
 {: #bp-install-fails5}
 
-When you run the Blueprint install command, it fails with message that the install of module has failed. 
+When you run the Blueprint install command, it fails with message that the install of module fails. 
 {: tsSymptoms}
 
 Analysis of the logs indicates that the cause of the Terraform apply failure was due to an incorrect dynamic input value  
 {: tsCauses}
 
-Identify the input value that must be updated and run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration with the change. This will update the Blueprint and Workspaces with updated input value. Input values can be changed individually and all dynamic inputs do not have to be re-entered. 
+Identify the input value that must be updated and run the `ibmcloud schematics blueprint update` command to refresh the Blueprint configuration with the change. It updates the Blueprint and Workspaces with updated input value. Input values can be changed individually and all dynamic inputs do not have to be reentered. 
 
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_id> --inputs <name>=<value>
 ```
 {: pre}
 
-Finally run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation with the updated dynamic inputs and complete all operations against all Workspaces.  
+Finally, run the `ibmcloud schematics blueprint install` command to rerun the failed Terraform Apply operation with the updated dynamic inputs and complete all operations against all Workspaces.  
 
 ```sh
 ibmcloud schematics blueprint install -id <blueprint_id> 

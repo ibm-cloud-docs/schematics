@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-15"
+lastupdated: "2022-09-20"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -189,15 +189,15 @@ Authorization: Bearer
     "inputs": [
         {
             "name": "provision_rg",
-            "value": "true"
+            "value": "false"
         },
         {
             "name": "resource_group_name",
-            "value": "mybp-rg-test1"
-        }
+            "value": "myrg4"
+        },
         {
             "name": "cos_instance_name",
-            "value": "mybp-cos-test1"
+            "value": "myrg4"
         }
     ],
     "description": "Deploys a simple two module Blueprint",

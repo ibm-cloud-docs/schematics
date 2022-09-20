@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-12"
+lastupdated: "2022-09-20"
 
 keywords: schematics resource group not found, schematics resource crn error, schematics resource crn not found
 
@@ -13,12 +13,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
+{{site.data.keyword.bpshort}} Agents are a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
 
-# How can I provide value to `schematics_resource_crn` variable?
+# How can you provide value to `schematics_resource_crn` variable?
 {: #agent-crn-not-found}
 
-When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{site.data.keyword.bpshort}} infrastructure Workspace set up, the resource group that you try to retrieve by using the `{{site.data.keyword.bpshort}}_resource_crn` cannot be found. You receive an error message similar to the following:
+When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{site.data.keyword.bpshort}} infrastructure Workspace setup, the resource group that you try to retrieve by using the `{{site.data.keyword.bpshort}}_resource_crn` cannot be found. Following error are received.
 {: tsSymptoms}
 
 ```text
@@ -35,10 +35,10 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{
 ```
 {: screen}
 
-You do not have the required permissions to use the resource group in {{site.data.keyword.iamlong}}, and provide the value for the  `schematics_resource_crn` variable.
+You do not have the needed permissions to use the resource group in {{site.data.keyword.iamlong}}, and provide the value for the `schematics_resource_crn` variable.
 {: tsCauses}
 
-Check whether you have access for the `Default` or `job-runner` resource group for creating {{site.data.keyword.bpshort}} Workspace for the {{site.data.keyword.bpshort}} Agent infrastructure set up. Then, you need to provide the `schematics_resource_crn` value to create a VPE for {{site.data.keyword.bpshort}} service by using Terraform. Once the VPE is created, the Agent running in your cluster, communicates to the {{site.data.keyword.bpshort}} service over {{site.data.keyword.cloud_notm}} private endpoint. To fetch the {{site.data.keyword.cloud_notm}} service instance value, run `ibmcloud resource service-instance schematics` command.
+Check whether you have access for the `Default` or `job-runner` resource group for creating {{site.data.keyword.bpshort}} Workspace for the {{site.data.keyword.bpshort}} Agent infrastructure setup. Then, you need to provide the `schematics_resource_crn` value to create a VPE for {{site.data.keyword.bpshort}} service by using Terraform. When the VPE is created, the Agent running in your cluster, communicates to the {{site.data.keyword.bpshort}} service over {{site.data.keyword.cloud_notm}} private endpoint. To fetch the {{site.data.keyword.cloud_notm}} service instance value, run `ibmcloud resource service-instance schematics` command.
 {: tsResolve}
 
 Example : To retrieve the service instance in all resource groups from your account.
