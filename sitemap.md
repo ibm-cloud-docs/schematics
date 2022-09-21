@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: schematics
 subcollection: schematics
@@ -514,6 +514,8 @@ subcollection: schematics
 
 * [Creating a Blueprint from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
+    * [Verify Blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint#verify-bp-update-api)
+
 * [Next steps](/docs/schematics?topic=schematics-create-blueprint#bp-create-nextsteps)
 
 [Applying a Blueprint](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint)
@@ -532,7 +534,7 @@ subcollection: schematics
 
 * [Listing Blueprint through CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
 
-* [Displaying Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
+    * [Displaying Blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 
     * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
 
@@ -585,6 +587,8 @@ subcollection: schematics
     * [Verify Blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
 * [Updating a Blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
+
+    * [Verify Blueprint create from the API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
 
 * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
 

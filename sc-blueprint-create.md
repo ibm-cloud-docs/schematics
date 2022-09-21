@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -138,6 +138,9 @@ Currently, you can create a Blueprint from command line by using the [Create com
 ### Verify Blueprint creation from the UI 
 {: #verify-blueprint-create-ui}
 
+Here the steps to verify your Blueprint creation.
+{: shortdesc}
+
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
 2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` must show the summary details of the Blueprint create job. 
 3. Click **Modules** tab to see the status of the resource modules in an `Inactive` state.
@@ -206,7 +209,10 @@ Authorization: Bearer
 ```
 {: codeblock}
 
-Output:
+### Verify Blueprint create from the API
+{: #verify-bp-update-api}
+
+**`Output`**
 
 ```text
 {

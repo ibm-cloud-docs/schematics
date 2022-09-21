@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -246,7 +246,6 @@ Blueprint operations are performed by child `module` jobs operating against each
 4. Click on the name of a child job to review the job log.  
     - Optional: Click **Show more** to view the full job log. 
 
-    
 ## Listing Blueprint from the API
 {: #install-blueprint-api}
 {: api}

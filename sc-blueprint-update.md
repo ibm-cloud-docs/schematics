@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -166,10 +166,10 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Update a Blueprint](/apidocs/schematics/schematics#replace-blueprint) by using API.
 
-Blueprint update API runs `Blueprint update` `API`, to performs the changes in configuration using Blueprint operations.
+Blueprint update API runs `Blueprint update` `API`, to perform the changes in configuration by using Blueprint operations.
 {: important}
 
-Record the Blueprint ID that needs to be deleted. To list the Blueprint ID, run [get all the Blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
+To list the Blueprint ID, run [get all the Blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
 Example
 
@@ -224,7 +224,11 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-Output:
+### Verify Blueprint create from the API
+{: #verify-bp-update-api}
+
+
+**`Output:`**
 
 ```text
 {
