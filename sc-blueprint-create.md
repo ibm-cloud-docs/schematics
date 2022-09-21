@@ -20,7 +20,7 @@ subcollection: schematics
 
 Deploying cloud resources by using a solution pattern with the Blueprints service is a two-step process such as `Create`, and `Apply`. See [Deploying Blueprints](/docs/schematics?topic=sc-bp-deploy) for an overview of the Blueprints deployment lifecycle stage and the two-phase approach to managing deployments, and change in Blueprint environments.
 
-Create takes as its input the Blueprint definitions and input configurations that are created during the [Defining Blueprints](/docs/schematics?topic=sc-bp-define) lifecycle stage.  
+Create takes as its input the Blueprint definitions and input configurations that are created during the [Defining Blueprints](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage.  
 {: shortdesc} 
 
 The first step in deploying cloud resources is the [creating](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-cli) of a Blueprint in {{site.data.keyword.bpshort}}. It saves the Blueprint configuration for future operations. The Blueprint config specifies the Git source and release of the Blueprint definition, input files, and any input values that are used to create cloud resources. A linked Workspace is created for each module in the Blueprint definition. The Workspaces are initialized from the modules Terraform source Git repository and module inputs.

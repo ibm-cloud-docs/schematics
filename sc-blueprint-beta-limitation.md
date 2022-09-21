@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-15"
+lastupdated: "2022-09-21"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -67,11 +67,11 @@ You can come back anytime to your created thread to add information, ask questio
 ### Steps to join public slack
 {: #sc-bp-join-slack}
 
-Following steps allows you to join the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel.
-- Click Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
+Following steps asks you to join the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel.
+- Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page is opened.
 - Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Blueprints Beta**.
 - Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel**
 - Click **Next**.
-- Click **Submit case**. Wait for 10 - 15 minutes to get an access.
+- Click **Submit case**. Wait for 10 - 15 minutes to get access.
