@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-21"
+lastupdated: "2022-09-22"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -3206,3 +3206,4 @@ Create the `TAR` file of your template repo by using the `TAR` command given `ta
 ]
 ```
 {: pre}
+
