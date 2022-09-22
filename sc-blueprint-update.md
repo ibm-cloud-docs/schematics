@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-21"
+lastupdated: "2022-09-22"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -420,4 +420,4 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 After updating the Blueprint configuration in {{site.data.keyword.bpshort}}, the next step is destroying the Blueprint [destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=api) resource.
 
-Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 
+Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 

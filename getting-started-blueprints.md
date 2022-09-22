@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-22"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}
 {: #get-started-blueprints}
 
-Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint) to deploy a {{site.data.keyword.bpshort}} Blueprint with multiple linked Workspaces from the command-line.
+Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external} to deploy a {{site.data.keyword.bpshort}} Blueprint with multiple linked Workspaces from the command-line.
 {: shortdesc}
 
 {{site.data.keyword.bplong_notm}} Blueprints support deploying and managing large-scale application environments using solution architecture definitions created from building blocks of open source IaC Code. Building on open source Infrastructure as Code (IaC) automation, Blueprints scales infrastructure deployments by linking multiple {{site.data.keyword.bpshort}} Workspaces to create large-scale environments.  

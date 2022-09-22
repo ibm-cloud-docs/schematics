@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-22"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
 
@@ -409,7 +409,7 @@ With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in 
 {: faq}
 {: support}
 
-If you change the code of your Terraform template in GitHub, these changes are not available automatically when you create an execution plan in {{site.data.keyword.bplong_notm}}. To pull the cuurent changes from your GitHub repository, make sure that you click the `Pull latest` option from the Workspace `settings` page before you create your execution plan.
+If you change the code of your Terraform template in GitHub, these changes are not available automatically when you create an execution plan in {{site.data.keyword.bplong_notm}}. To pull the current changes from your GitHub repository, make sure that you click the `Pull latest` option from the Workspace `settings` page before you create your execution plan.
 
 ## Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?
 {: #resource-state-faq}

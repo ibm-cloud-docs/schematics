@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-21"
+lastupdated: "2022-09-22"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 

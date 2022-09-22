@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-21"
+lastupdated: "2022-09-22"
 
 keywords: schematics
 subcollection: schematics
@@ -838,7 +838,13 @@ subcollection: schematics
 
 [Creating an auto deploy button for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-auto-deploy-url#auto-deploy-url)
 
-* [Adding an image to your URL to create the auto deploy button](/docs/schematics?topic=schematics-auto-deploy-url#add_an_image)
+* [Creating the deployment URL](/docs/schematics?topic=schematics-auto-deploy-url#create-url)
+
+* [Adding the button to a website or page](/docs/schematics?topic=schematics-auto-deploy-url#add_an_image)
+
+    * [Adding the button in HTML](/docs/schematics?topic=schematics-auto-deploy-url#add-button-html)
+
+    * [Adding the button in Markdown](/docs/schematics?topic=schematics-auto-deploy-url#add-button-markdown)
 
 * [Next steps](/docs/schematics?topic=schematics-auto-deploy-url#sample-actions-nextsteps)
 
@@ -1675,18 +1681,10 @@ subcollection: schematics
 {: #sitemap_terraform}
 
 
-* [Sample Terraform templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}
-
-* [IBM Cloud provider for Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}
-
-* [Terraform documentation](https://www.terraform.io/docs/index.html){: external}
-
 
 ### Ansible
 {: #sitemap_ansible}
 
-
-* [Ansible documentation](https://docs.ansible.com/ansible/latest/index.html){: external}
 
 
 ## What's new in {{site.data.keyword.bpshort}}?
