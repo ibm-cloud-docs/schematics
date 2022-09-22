@@ -3206,4 +3206,3 @@ Create the `TAR` file of your template repo by using the `TAR` command given `ta
 ]
 ```
 {: pre}
-
