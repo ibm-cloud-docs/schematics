@@ -15,7 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} runtime tools
 {: #sch-utilities}
 
-{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgraded the {{site.data.keyword.bpshort}} Job image to support `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+{{site.data.keyword.bpshort}} deprecates `Python v3.6` support and upgrades the {{site.data.keyword.bpshort}} Job image to support `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 
 Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kubernetes cluster by using a `schematics-runtime-job` image. The `schematics-runtime-job` image embeds the primary Infrastructure as Code (IaC) automation engine, for example, Terraform CLI, Ansible. The `schematics-runtime-job` image also includes more helper software, and tools that are useful in developing an automation.
 
