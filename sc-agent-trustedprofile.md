@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-09-22"
 
 keywords: schematics agents trusted profile id, agent trusted id, trusted profile,
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
+{{site.data.keyword.bpshort}} Agents are a [Beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
 {: beta}
 
 # Create `profile_id` for Agents
@@ -33,19 +33,33 @@ Enable and configure your Agent service to establish trust with computed resourc
    - Click **Add a resource +**.
    - For **Allow access to**, select your cluster.
    - For **Namespace** enter `schematics-job-runtime`.
-   - For  **Service account**, enter **default**.
+   - For **Service account**, enter **default**.
    - Click **Continue**.
+
+   You created a trusted profile for a compute resource (Cluster running agent micro-services in `schematics-job-runner` namespace in your default service account.
+   {: note}
 
 3. Assign access to the trusted profile.
 
    - From the **Access policy**.
-   - Select **{{site.data.keyword.bpshort}}** service to assign access.
+   - Click on **access tab** and then click **Assign Access**.
+   - Select **{{site.data.keyword.bpshort}}** service.
    - Click **Next**.
-   - Check **All Resources** to scope the access.
-   - Click **Next**.
-   - Check **Reader**, **Manager**, **Viewer**, and **Operator** level of access for the Roles and actions.
-   - Click **Review**.
-   - Click **Add**.
+   - Select `Operator` role.
+   - Click **Add** and click `Assign` in the right navigation bar.
+     The trusted profile is provided Operator access in {{site.data.keyword.bpshort}} services to allow Agents to fetch jobs to process.
+     {: note}
+
+   - Click **Assign** access.
+   - Select `All Identity and Access enabled services`.
+      - Click **Next**.
+      - Select **Specific Resources** option. Enter the name of the resource group where your Agents are registered.
+      - Click **Next** and select `Viewer` role.
+      - Click **Next** and select `Reader` role.
+      - Click **Add** and select `Assign` in the right navigation bar.
+        The trusted profile provides `Reader`, and `Viewer` access for the resource group that allow Agents to read an Agent registration detail.
+        {: note}
+
    - Check **Create**.
 
 4. View trusted profile ID.
