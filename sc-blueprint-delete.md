@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Deleting a Blueprint
 {: #delete-blueprint}
 
-When a Blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting Blueprint environments](/docs/schematics?topic=sc-bp-delete) to understand the process of deleting Blueprint environments and the steps. Deleting a Blueprint environment is a two-stage process of first destroys all the associated cloud resources and then deleting the Blueprint in {{site.data.keyword.bpshort}}.
+When a Blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) to understand the process of deleting Blueprint environments and the steps. Deleting a Blueprint environment is a two-stage process of first destroys all the associated cloud resources and then deleting the Blueprint in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 
@@ -297,10 +297,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-delete-nextsteps}
 
-<<<<<<< HEAD
 To destroy or delete a Blueprint, see [destroy a Blueprint](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli), and [delete a Blueprint](/docs/schematics?topic=schematics-delete-blueprint&interface=cli#delete-blueprint-cli).
-=======
-To destroy or delete a Blueprint, refer to, [destroy a Blueprint](/docs/schematics?topic=schematics-destroy-blueprint&interface=api) and [delete a Blueprint](/docs/schematics?topic=schematics-delete-blueprint&interface=api).
->>>>>>> blueprint doc changes
 
 Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint). Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 

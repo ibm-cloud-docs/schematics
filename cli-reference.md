@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2355,7 +2355,7 @@ ibmcloud schematics workspace state mv --id WORKSPACE_ID --source SOURCE  --dest
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The unique ID of theWorkspace for which you want to move an instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required | The unique ID of the Workspace for which you want to move an instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--source` or `-s` | Required | Enter the source address of an item to move.|
 | `--destination` or `-d` | Required | Provide the destination address of an item.|
 {: caption="{{site.data.keyword.bpshort}} state move flags" caption-side="top"}
@@ -2916,7 +2916,7 @@ ibmcloud schematics workspace untaint --id WORKSPACE_ID [--options OPTIONS]  [--
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of theWorkspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the Workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to show.  |
 | `--address` or `-adr` | Optional | Enter the address of the resource to mark as untaint.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces untaint flags" caption-side="top"}
@@ -2956,7 +2956,7 @@ ibmcloud schematics workspace update --id WORKSPACE_ID [--file FILE_NAME] [--git
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required |  The unique identifier of theWorkspace for which you want to update the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
+| `--id` or `-i` | Required |  The unique identifier of the Workspace for which you want to update the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that includes the updated parameters for your workspace. For more information about the sample JSON file with the details, see [JSON file update template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-update-template).|
 | `--github-token` or `-g` | Optional |  Enter the GitHub token value to access private Git repository.|
 | `--pull-latest` or `--pl` | Optional | Pull the latest changes from your GitHub repository into workspace. If this flag is set `--file` flag is ignored. |

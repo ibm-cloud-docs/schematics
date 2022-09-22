@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -17,7 +17,6 @@ subcollection: schematics
 
 # Listing Blueprints
 {: #list-blueprint-cli}
-
 
 To list your Blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command takes requires no arguments, but is region specific and will only list Blueprints in the selected CLI region. 
 {: shortdesc}
@@ -55,7 +54,7 @@ OK
 {: screen}
 
 
-## Displaying Blueprints
+### Displaying Blueprints
 {: #display-blueprint-cli}
 
 To display the details of Blueprints and their configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
@@ -297,6 +296,9 @@ OK
 {: #display-blueprint-ui}
 {: ui}
 
+Here are the steps to display a Blueprint by using UI.
+{: shortdesc}
+
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the Blueprint details.
 2. Click **Overview** to view the BLueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your Blueprint. 
     - Optional: From **Modules status** section, Click **View details** to view the module details.
@@ -329,7 +331,7 @@ Authorization: Bearer <auth_token>
 ```
 {: codeblock}
 
-Output:
+**`Output`**
 
 ```text
 {
@@ -386,7 +388,7 @@ Output:
 ```
 {: screen}
 
-This API lists the detailed information with respect to the Blueprint Id.
+This API lists the detailed information with respect to the Blueprint ID.
 {: important}
 
 Example
@@ -400,7 +402,7 @@ Authorization: Bearer <auth_token>
 ```
 {: codeblock}
 
-Output:
+**`Output`**
 
 ```text
 {

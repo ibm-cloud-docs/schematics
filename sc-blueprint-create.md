@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-21"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -20,7 +20,7 @@ subcollection: schematics
 
 Deploying cloud resources by using a solution pattern with the Blueprints service is a two-step process such as `Create`, and `Apply`. See [Deploying Blueprints](/docs/schematics?topic=sc-bp-deploy) for an overview of the Blueprints deployment lifecycle stage and the two-phase approach to managing deployments, and change in Blueprint environments.
 
-Create takes as its input the Blueprint definitions and input configurations that are created during the [Defining Blueprints](/docs/schematics?topic=sc-bp-define) lifecycle stage.  
+Create takes as its input the Blueprint definitions and input configurations that are created during the [Defining Blueprints](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage.  
 {: shortdesc} 
 
 The first step in deploying cloud resources is the [creating](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-cli) of a Blueprint in {{site.data.keyword.bpshort}}. It saves the Blueprint configuration for future operations. The Blueprint config specifies the Git source and release of the Blueprint definition, input files, and any input values that are used to create cloud resources. A linked Workspace is created for each module in the Blueprint definition. The Workspaces are initialized from the modules Terraform source Git repository and module inputs.
@@ -138,6 +138,9 @@ Currently, you can create a Blueprint from command line by using the [Create com
 ### Verify Blueprint creation from the UI 
 {: #verify-blueprint-create-ui}
 
+Here the steps to verify your Blueprint creation.
+{: shortdesc}
+
 1. Click your Blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
 2. Click **Overview** tab to see the Blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` must show the summary details of the Blueprint create job. 
 3. Click **Modules** tab to see the status of the resource modules in an `Inactive` state.
@@ -206,7 +209,10 @@ Authorization: Bearer
 ```
 {: codeblock}
 
-Output:
+### Verify Blueprint create from the API
+{: #verify-bp-update-api}
+
+**`Output`**
 
 ```text
 {
