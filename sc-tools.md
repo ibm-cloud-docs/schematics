@@ -15,8 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} runtime tools
 {: #sch-utilities}
 
-{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Schematics Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
-{: deprecated}
+{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgraded the {{site.data.keyword.bpshort}} Job image to support `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 
 Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kubernetes cluster by using a `schematics-runtime-job` image. The `schematics-runtime-job` image embeds the primary Infrastructure as Code (IaC) automation engine, for example, Terraform CLI, Ansible. The `schematics-runtime-job` image also includes more helper software, and tools that are useful in developing an automation.
 
@@ -42,7 +41,7 @@ The current minor version of the Terraform CLI is used in the {{site.data.keywor
 | `JQ v1.6` | You can use the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Terraform automation. |
 | `kubectl` | You can use the Kubernetes command-line interface to work with your [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters. |
 | `OpenShift client` | You can use {{site.data.keyword.redhat_openshift_notm}} command-line interface to work with your [{{site.data.keyword.redhat_openshift_notm}} clusters](/docs/openshift?topic=openshift-access_cluster).</br> It is better to use the Terraform resources for [{{site.data.keyword.cloud_notm}}, instead of writing scripts by using {{site.data.keyword.cloud_notm}} CLI. |
-| `Python 3.6` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and higher with the `netaddr` libraries in your Terraform automation.|
+| `Python v3.8` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and higher with the `netaddr` libraries in your Terraform automation.|
 {: caption="Helpers in terraform-runtime-job" image caption-side="top"}
 
 ## Terraform-runtime-agent-job image used by {{site.data.keyword.bpshort}} Agents
@@ -64,7 +63,7 @@ The current minor version of the Ansible CLI is used in the {{site.data.keyword.
 | `JQ v1.6` | You can use the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Ansible automation. |
 | `kubectl` | You can use the Kubernetes command-line interface to work with your [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters. |
 | `OpenShift client` | You can use {{site.data.keyword.redhat_openshift_notm}} command-line interface to work with your [{{site.data.keyword.redhat_openshift_notm}} clusters](/docs/openshift?topic=openshift-access_cluster). |
-| `Python 3.6` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Ansible automation. </br> * `netaddr` </br>* `kubernetes` </br>* `openshift` </br>* `pywinrm` </br>* `boto3` </br>* `boto` </br>* `botocore` </br>* `PyVmomi` |
+| `Python v3.8` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Ansible automation. </br> * `netaddr` </br>* `kubernetes` </br>* `openshift` </br>* `pywinrm` </br>* `boto3` </br>* `boto` </br>* `botocore` </br>* `PyVmomi` |
 {: caption="Helpers in ansible-runtime-job" image caption-side="top"}
 
 
