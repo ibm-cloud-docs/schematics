@@ -252,6 +252,14 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [September 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept22)
+
+    * Review the release notes for September 2022.
+
+    * [21 September 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept2222)
+
+        * The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+
 * [August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug22)
 
     * Review the release notes for August 2022.
