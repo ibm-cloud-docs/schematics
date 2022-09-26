@@ -63,7 +63,7 @@ The current minor version of the Ansible CLI is used in the {{site.data.keyword.
 | `JQ v1.6` | You can use the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Ansible automation. |
 | `kubectl` | You can use the Kubernetes command-line interface to work with your [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters. |
 | `OpenShift client` | You can use {{site.data.keyword.redhat_openshift_notm}} command-line interface to work with your [{{site.data.keyword.redhat_openshift_notm}} clusters](/docs/openshift?topic=openshift-access_cluster). |
-| `Python v3.8` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Ansible automation. </br> * `netaddr` </br>* `kubernetes` </br>* `openshift` </br>* `pywinrm` </br>* `boto3` </br>* `boto` </br>* `botocore` </br>* `PyVmomi` |
+| `Python v3.8` | You can use [Python 3](/docs/cli?topic=cli-enable-existing-python) and the following libraries, in your Ansible automation.</br> * `netaddr` </br>* `kubernetes` </br>* `openshift` </br>* `pywinrm` </br>* `boto3` </br>* `boto` </br>* `botocore` </br>* `PyVmomi` |
 {: caption="Helpers in ansible-runtime-job" image caption-side="top"}
 
 

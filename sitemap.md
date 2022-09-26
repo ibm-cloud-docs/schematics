@@ -1123,7 +1123,7 @@ subcollection: schematics
 
 * [How can I delete my information?](/docs/schematics?topic=schematics-secure-data#delete-data)
 
-[Opening required IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
+[Opening needed IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
