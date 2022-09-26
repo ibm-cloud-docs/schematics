@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-09-26"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} runtime tools
 {: #sch-utilities}
 
-{{site.data.keyword.bpshort}} deprecates `Python v3.6` support and upgrades the {{site.data.keyword.bpshort}} Job image to support `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+{{site.data.keyword.bpshort}} deprecates `Python v3.6` support and upgrades the {{site.data.keyword.bpshort}} Job image to support `Python v3.8` from 21 September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 
 Your automation templates are run by {{site.data.keyword.bpshort}}, in a Kubernetes cluster by using a `schematics-runtime-job` image. The `schematics-runtime-job` image embeds the primary Infrastructure as Code (IaC) automation engine, for example, Terraform CLI, Ansible. The `schematics-runtime-job` image also includes more helper software, and tools that are useful in developing an automation.
 
@@ -37,7 +37,7 @@ The current minor version of the Terraform CLI is used in the {{site.data.keywor
 | Terraform helpers | Description | 
 | --- | --- |
 | `Ansible 2.9.27`| You can use the [ansible-provisioner](https://github.com/radekg/terraform-provisioner-ansible){: external} for Terraform to include Ansible automation alongside your Terraform template. </br>It is better to use the {{site.data.keyword.bpshort}} Actions to run your Ansible automation. |
-| `{{site.data.keyword.cloud_notm}} CLI` | You can use the {{site.data.keyword.cloud_notm}} CLI from within the Terraform automation. </br>It is better to use the Terraform resources from {{site.data.keyword.cloud_notm}}, instead of writing scripts by using [{{site.data.keyword.cloud_notm}} CLI release](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases/tag/v2.9.0){: external}. |
+| `{{site.data.keyword.cloud_notm}} CLI` |{{site.data.keyword.cloud_notm}} CLI has all the installed plug-in, for example, [{{site.data.keyword.bpshort}} current CLI version plug-in](/docs/schematics?topic=schematics-cli_version-releases). You can use the {{site.data.keyword.cloud_notm}} CLI from within the Terraform automation. </br>It is better to use the Terraform resources from {{site.data.keyword.cloud_notm}}, instead of writing scripts by using [{{site.data.keyword.cloud_notm}} CLI release](https://github.com/IBM-Cloud/ibm-cloud-cli-release/releases){: external}.|
 | `JQ v1.6` | You can use the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Terraform automation. |
 | `kubectl` | You can use the Kubernetes command-line interface to work with your [Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_kubectl) clusters. |
 | `OpenShift client` | You can use {{site.data.keyword.redhat_openshift_notm}} command-line interface to work with your [{{site.data.keyword.redhat_openshift_notm}} clusters](/docs/openshift?topic=openshift-access_cluster).</br> It is better to use the Terraform resources for [{{site.data.keyword.cloud_notm}}, instead of writing scripts by using {{site.data.keyword.cloud_notm}} CLI. |
