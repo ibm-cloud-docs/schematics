@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-09-26"
 
 keywords: schematics ansible roles, schematics action, create schematics galaxy, ansible playbooks
 
@@ -15,9 +15,9 @@ subcollection: schematics
 # Creating Ansible roles and galaxy
 {: #ansible-roles-galaxy}
  
-An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to separate one big Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
+An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to separate one significant Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
 
-[Ansible Galaxy](https://docs.ansible.com/ansible/2.7/reference_appendices/galaxy.html) is a repository for Ansible roles that are available to drop directly into your Playbooks to streamline your automation projects. A a new sysadmin could start automating with Ansible in a matter of a few hours.
+[Ansible Galaxy](https://docs.ansible.com/ansible/2.7/reference_appendices/galaxy.html) is a repository for Ansible roles that are available to drop directly into your Playbooks to streamline your automation projects. A new sysadmin might start automating with Ansible in a matter of a few hours.
 {: shortdesc}
 
 You can [create your own roles](#main-file) or [use existing roles from Ansible Galaxy](#requirements-file). 
@@ -25,12 +25,12 @@ You can [create your own roles](#main-file) or [use existing roles from Ansible 
 ## Creating your own roles in Ansible 
 {: #main-file}
 
-To streamline your Ansible playbook, you can decide to separate out playbook tasks by creating roles and referencing them in your playbook. It let you automatically load related variables, files, tasks, handlers, and other Ansible artifacts based on a known file structure.
+To streamline your Ansible playbook, you can decide to separate out playbook tasks by creating roles and referencing them in your playbook. Use it to automatically load related variables, files, tasks, handlers, and other Ansible artifacts based on a known file structure.
 {: shortdesc}
 
 1. Identify the tasks in your playbook that you want to reuse across multiple hosts. For example, you can group tasks that you want to run on all your hosts, and tasks that you want to run on your web servers and your databases. Each group of tasks can become its own role. 
 
-2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. The roles directory can have a subdirectory such as  **/roles/db/** describing the tasks in the `main.yml` file.
+2. Create the Ansible role structure in your GitHub repository. Roles must be stored in a `roles` directory relative to your Ansible playbook. The roles directory can have a subdirectory such as `/roles/db/` describing the tasks in the `main.yml` file.
     ```text
     ├── roles
         └── db
@@ -98,5 +98,5 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
     ```
     {: codeblock}
 
-For more information about Ansible playbook examples, see [IBM provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
+For more information about Ansible playbook examples, see that [IBM provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
 {: tip}
