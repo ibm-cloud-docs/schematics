@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-09-26"
 
 keywords: schematics
 subcollection: schematics
@@ -1205,11 +1205,11 @@ subcollection: schematics
 * [What's next?](/docs/schematics?topic=schematics-private-catalog#private_what's_next)
 
 
-## Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line
-{: #sitemap_deploying__blueprints_using_the_command-line}
+## Deploying {{site.data.keyword.bpshort}} Blueprints by using the command line
+{: #sitemap_deploying__blueprints_by_using_the_command_line}
 
 
-[Deploying {{site.data.keyword.bpshort}} Blueprints using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
+[Deploying {{site.data.keyword.bpshort}} Blueprints by using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
 
 * [Select a Blueprint definition](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
 
