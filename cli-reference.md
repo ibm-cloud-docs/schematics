@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-09-26"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -22,16 +22,16 @@ Run these commands when you want to automate your {{site.data.keyword.bplong_not
 ## Prerequisites
 {: #cli-prerequisites}
 
-- Setup your [CLI](/docs/schematics?topic=schematics-setup-cli).
+- Set up your [CLI](/docs/schematics?topic=schematics-setup-cli).
 - Install [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
 
-Be sure to keep your CLI up-to-date so that you can use the latest released commands and their options. For more information about the latest command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
+Be sure to keep your CLI up-to-date so that you can use the current released commands and their options. For more information about the current command-line version releases, see [Command-line version history](/docs/schematics?topic=schematics-cli_version-releases).
 {: important}
 
 ## Actions commands
 {: #schematics-action-commands}
 
-Review the commands that you want to create, update, list, delete and work with your {{site.data.keyword.bpshort}} Actions.
+Review the commands that you want to create, update, list, delete, and work with your {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
 
 ### Inventory host groups
@@ -39,9 +39,9 @@ Review the commands that you want to create, update, list, delete and work with 
 
 {{site.data.keyword.bplong_notm}} supports inventory host groups to group the applications hostname such as web server, database server, Operating System, region, or network. 
 
-A host group is a collection of hosts that you can run your Ansible playbook against. A condition defines either a Workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `development` workspace, or against all hosts with a `webserver` tag in your `development` workspace.  The host groups can be defined by using  **Static inventory** or **Dynamic inventory** method. 
+A host group is a collection of hosts that you can run your Ansible playbook against. A condition defines either a Workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `development` workspace, or against all hosts with a `webserver` tag in your `development` workspace.  The host groups can be defined by using **Static inventory** or **Dynamic inventory** method. 
 
-**Static inventory** allows to create the collection of hosts that you can run your Ansible playbook against. A condition defines either a Workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `dev` workspace, or against all hosts with a `webserver` tag in your `dev` workspace. You can also add multiple conditional target resources for your Workspaces to execute. 
+**Static inventory** allows to create the collection of hosts that you can run your Ansible playbook against. A condition defines either a Workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `dev` workspace, or against all hosts with a `webserver` tag in your `dev` workspace. You can also add multiple conditional target resources for your Workspaces to run. 
 
 **Dynamic inventory** allows to create the collection of hosts in a inventory file that defines the hosts and group of hosts upon which your playbook operates. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `INI` file format that can be used in the `create` and `update` actions commands as `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>` argument.
 
@@ -73,7 +73,7 @@ A host group is a collection of hosts that you can run your Ansible playbook aga
 |`IPaddress`|The IP addresses of the hostname.|
 {: caption="Inventory host group parameters" caption-side="top"}
 
-You can set the proxy between a SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. Note that currently the {{site.data.keyword.bpshort}} Actions supports only `one SSH key` for all virtual server instances. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.
+You can set the proxy between an SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **IBM cloud resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. Note now the {{site.data.keyword.bpshort}} Actions support only `one SSH key` for all virtual server instances. The SSH key must contain `\n` at the end of the key details in case of command-line or API calls.
 {: note}
 
 ### `ibmcloud schematics action create`
