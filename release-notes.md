@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-09-29"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -36,7 +36,8 @@ Review the release notes for September 2022.
 {: #schematics-sept2222}
 {: release-note}
 
-The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` 
+:   The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 
 ## August 2022
 {: #schematics-aug22}
