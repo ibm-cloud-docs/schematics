@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-26"
+lastupdated: "2022-09-29"
 
 keywords: schematics
 subcollection: schematics
@@ -258,7 +258,7 @@ subcollection: schematics
 
     * [21 September 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept2222)
 
-        * The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+        * The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` 
 
 * [August 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug22)
 
@@ -1864,11 +1864,11 @@ subcollection: schematics
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
-* [How do I overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
+* [How do you overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
 
 * [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
-* [How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during Workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
+* [How do you upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during Workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 
 * [How do I overcome the downtime updating the Workspace activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
 
@@ -1880,21 +1880,21 @@ subcollection: schematics
 
 * [How can I create Workspace from command-line by using Git repositories and personal access token with full permission?](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
 
-* [How do I overcome the authorization issue when creating or updating a Workspace or a template?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
+* [How do you overcome the authorization issue when create or update a Workspace or a template?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
 
 * [How can I access the {{site.data.keyword.bpshort}} services for test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
-* [How can I download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
+* [How can you download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
 * [How do I resolve issue while trying to delete a Workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
 * [What is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
-* [How do I set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
+* [How do you set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
 
-* [Why I am getting 403 error instead of 404 error when providing an invalid Workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
+* [Why you are getting 403 error instead of 404 error when providing an invalid Workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
 
-* [How can I enable Terraform debug through the `ibmcloud schematics` command line?](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
+* [How can you enable Terraform debug through the `ibmcloud schematics` command line?](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
 
 * [How can I generate {{site.data.keyword.bpshort}} Workspaces import from CLI?](/docs/schematics?topic=schematics-workspaces-faq#workspace-import-ibmcli)
 
@@ -1908,7 +1908,7 @@ subcollection: schematics
 
 * [Can I set or manage keys for `ibm_kms_key` resource when {{site.data.keyword.bpshort}} Workspaces imports Terraform?](/docs/schematics?topic=schematics-workspaces-faq#kmskey-value-faq)
 
-* [Can I enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running Workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
+* [Can you enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running Workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
 
 * [How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` to fetch {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
 
@@ -1926,9 +1926,9 @@ subcollection: schematics
 
 * [When I change my configuration file in GitHub, is my change automatically available in the next execution plan?](/docs/schematics?topic=schematics-workspaces-faq#edit-resource-confg-faq)
 
-* [Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?](/docs/schematics?topic=schematics-workspaces-faq#resource-state-faq)
+* [Where does {{site.data.keyword.bpshort}} store the state of the cloud resources?](/docs/schematics?topic=schematics-workspaces-faq#resource-state-faq)
 
-* [Are my resources removed when I remove the workspace?](/docs/schematics?topic=schematics-workspaces-faq#delete-resource-wks-faq)
+* [Are the resources removed when remove the workspace is run?](/docs/schematics?topic=schematics-workspaces-faq#delete-resource-wks-faq)
 
 * [How can I update a Workspace that is created through payload in command line to resolve invalid payload issue?](/docs/schematics?topic=schematics-workspaces-faq#invalid-paylaod-cli)
 

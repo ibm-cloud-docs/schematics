@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-09-29"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
 
@@ -20,7 +20,7 @@ content-type: faq
 Answers to common questions about the {{site.data.keyword.bplong_notm}} Workspaces are classified into following section.
 {: shortdesc}
 
-## How do I overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?
+## How do you overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?
 {: #createworkspace-authentication-error}
 {: faq}
 {: support}
@@ -61,11 +61,12 @@ Creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.keyword.
 - The allowed image extensions are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.
 - The files that are removed are `.asa, .asax, .exe, .php5, .pht, .phtml, .shtml, .swf, .tfstate, .tfstate.backup, .xap`.
 - All files that are larger than 500 KB are removed. This file size limit does not apply for the allowed image files.
+- The folder name starts with a (period) `.` is treated as vulnerable. 
 
 The allowed extension list is continuously monitored and updated in every release. You can raise a [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a file extension to the list.
 {: note}
 
-## How do I upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during Workspace recreation?
+## How do you upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during Workspace recreation?
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
@@ -100,7 +101,7 @@ The unexpected impact due to maintenance results in the failure of the running a
 {: faq}
 {: support}
 
-Updating the {{site.data.keyword.bpshort}} Workspaces through command-line need the required field `name`.
+Updating the {{site.data.keyword.bpshort}} Workspaces through command line need the needed field `name`.
 
 You need to run `ibmcloud schematics Workspace update --id <workspace-id>  --file <updatefile.json>`  command. The sample `updatefile.json` contains the name field with the value.
 ```json
@@ -123,23 +124,23 @@ You need to run `ibmcloud schematics Workspace update --id <workspace-id>  --fil
 
 Using `schematics Workspace new --file schematic-file.json -g xxxx` command throws an `Access token creation failed status`, as the token name not specified in the command.
 
-You need to check your [authentication](/docs/schematics?topic=schematics-setup-api#cs_api) before setting the post operation through command-line. Then, create a Workspace by using `schematics Workspace new --file schematic-file.json --github-token xxxx` command. For more information, see [ibmcloud schematics Workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
+You need to check your [authentication](/docs/schematics?topic=schematics-setup-api#cs_api) before setting the post operation through command-line. Then, create a Workspace by using `schematics Workspace new --file schematic-file.json --github-token xxxx` command. For more information, see [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 
-## How do I overcome the authorization issue when creating or updating a Workspace or a template?
+## How do you overcome the authorization issue when create or update a Workspace or a template?
 {: #workspace-auth}
 {: faq}
 {: support}
 
-You see authorization issues when the roles and permission access is insufficient while performing updates on workspace. For more information, see [Managing user access](/docs/schematics?topic=schematics-access).
+You see authorization issues when the roles and permission access is insufficient while updating Workspace. For more information, see [Managing user access](/docs/schematics?topic=schematics-access).
 
 ## How can I access the {{site.data.keyword.bpshort}} services for test ID?
 {: #global-catalog-faq}
 {: faq}
 {: support}
 
-The test IDs are considered as a valid IBM ID to set the global catalog or resource controller related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
+The test IDs are considered as a valid `IBM ID` to set the global catalog or resource controller-related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
-## How can I download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}
+## How can you download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}
 {: #compact-faq}
 {: faq}
 {: support}
@@ -155,16 +156,16 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 {: faq}
 {: support}
 
-You need to delete the Workspace and NOT destroying the resources as if resource are not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
+You need to delete the Workspace and NOT destroying the resources as if resource is not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
 
 ## What is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?
 {: #gherepo-warn-faq}
 {: faq}
 {: support}
 
-The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the Helm charts where inside the catalog you can keep the credentials and mark it as secured. For more information, see [List of catalog related to Helm](https://cloud.ibm.com/catalog?search=label%3Ahelm).
+The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the Helm charts where inside the catalog you can keep the credentials and mark it as secured. For more information, see [List of catalog that is related to Helm](https://cloud.ibm.com/catalog?search=label%3Ahelm).
 
-## How do I set the release tag through {{site.data.keyword.bpshort}}? 
+## How do you set the release tag through {{site.data.keyword.bpshort}}? 
 {: #releasetag-warn-faq}
 {: faq}
 {: support}
@@ -184,7 +185,7 @@ If the `Release` parameter is empty and the `Branch` was set with release tag.
 
 {{site.data.keyword.bpshort}} does not support `release` tag, as it's difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace).
 
-## Why I am getting 403 error instead of 404 error when providing an invalid Workspace ID?
+## Why you are getting 403 error instead of 404 error when providing an invalid Workspace ID?
 {: #invalidwspid-warn-faq}
 {: faq}
 {: support}
@@ -195,9 +196,9 @@ curl -X GET https://schematics.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Au
 ```
 {: pre}
 
-Yes there is a change in the API which checks for the location first and if it doesn’t get proper location for the Workspace it returns 403 error instead of 404 error.
+Yes there is a change in the API that checks for the location first and if it doesn’t get proper location for the Workspace it returns 403 error instead of 404 error.
 
-## How can I enable Terraform debug through the `ibmcloud schematics` command line?
+## How can you enable Terraform debug through the `ibmcloud schematics` command line?
 {: #terraform-debug-ibmcli}
 {: faq}
 {: support}
@@ -235,7 +236,7 @@ You can set the environment variable for setting the Terraform log debug `TF_LOG
 {: faq}
 {: support}
 
-Use `ibmcloud schematics Workspace import --options value, -o value : Optional` command and the sample syntax to import from command-line. For more information, see [{{site.data.keyword.bpshort}} Workspaces import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
+Use `ibmcloud schematics Workspace import --options value, -o value : Optional` command and the sample syntax to import from command line. For more information, see [{{site.data.keyword.bpshort}} Workspaces import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import).
 
 ``` sh
 
@@ -306,7 +307,7 @@ You can edit one variable at a time from {{site.data.keyword.bpshort}} console. 
 {: faq}
 {: support}
 
-Yes, you can set or manage the keys by using `ibm_kms_key` as shown in the sample codeblock. For more information, see [ibm_kms_key]( https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key#import). 
+Yes, you can set or manage the keys by using `ibm_kms_key` as shown in the sample code block. For more information, see [ibm_kms_key]( https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key#import). 
 
 ```terraform
 resource "ibm_resource_instance" "kms_instance" {
@@ -330,7 +331,7 @@ resource "ibm_cos_bucket" "smart-us-south" {
 }
 ```
 
-## Can I enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running Workspace list command?
+## Can you enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running Workspace list command?
 {: #traces-api-faq}
 {: faq}
 {: support}
@@ -411,14 +412,14 @@ With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in 
 
 If you change the code of your Terraform template in GitHub, these changes are not available automatically when you create an execution plan in {{site.data.keyword.bplong_notm}}. To pull the current changes from your GitHub repository, make sure that you click the `Pull latest` option from the Workspace `settings` page before you create your execution plan.
 
-## Where does {{site.data.keyword.bpshort}} store the state of my cloud resources?
+## Where does {{site.data.keyword.bpshort}} store the state of the cloud resources?
 {: #resource-state-faq}
 {: faq}
 {: support}
 
 After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by running a {{site.data.keyword.bpshort}} apply action, the state of resources is stored in a Terraform state file (`terraform.tfstate`). {{site.data.keyword.bpshort}} uses this state file as the single source of truth to determine what resources exist in your account. The state file maps the resources that you specified in your Terraform configuration file to the {{site.data.keyword.cloud_notm}} resource that you provisioned.
 
-## Are my resources removed when I remove the workspace?
+## Are the resources removed when remove the workspace is run?
 {: #delete-resource-wks-faq}
 {: faq}
 {: support}

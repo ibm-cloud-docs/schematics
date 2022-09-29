@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-09-28"
 
 keywords: schematics agents trusted profile id, agent trusted id, trusted profile,
 
@@ -31,8 +31,8 @@ Enable and configure your Agent service to establish trust with computed resourc
    - Select Compute service type as **Kubernetes**.
    - Select **Specific resources**.
    - Click **Add a resource +**.
-   - For **Allow access to**, select your cluster.
-   - For **Namespace** enter `schematics-job-runtime`.
+   - In **Allow access to**, select your cluster.
+   - In **Namespace** enter `schematics-job-runtime`.
    - For **Service account**, enter **default**.
    - Click **Continue**.
 
@@ -41,16 +41,16 @@ Enable and configure your Agent service to establish trust with computed resourc
 
 3. Assign access to the trusted profile.
 
-   - From the **Access policy**.
-   - Click on **access tab** and then click **Assign Access**.
+   - Click the **Access policy**.
    - Select **{{site.data.keyword.bpshort}}** service.
    - Click **Next**.
+   - Select **All resources**.
+   - Click **Next**.
    - Select `Operator` role.
-   - Click **Add** and click `Assign` in the right navigation bar.
+   - Click **Add**.
      The trusted profile is provided Operator access in {{site.data.keyword.bpshort}} services to allow Agents to fetch jobs to process.
      {: note}
 
-   - Click **Assign** access.
    - Select `All Identity and Access enabled services`.
       - Click **Next**.
       - Select **Specific Resources** option. Enter the name of the resource group where your Agents are registered.
@@ -60,7 +60,7 @@ Enable and configure your Agent service to establish trust with computed resourc
         The trusted profile provides `Reader`, and `Viewer` access for the resource group that allow Agents to read an Agent registration detail.
         {: note}
 
-   - Check **Create**.
+   - Click **Create**.
 
 4. View trusted profile ID.
 
