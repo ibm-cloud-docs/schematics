@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-28"
+lastupdated: "2022-09-29"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
 
@@ -61,7 +61,7 @@ Creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.keyword.
 - The allowed image extensions are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.
 - The files that are removed are `.asa, .asax, .exe, .php5, .pht, .phtml, .shtml, .swf, .tfstate, .tfstate.backup, .xap`.
 - All files that are larger than 500 KB are removed. This file size limit does not apply for the allowed image files.
-- The folder name that started with a period `.` is treated as vulnerable. 
+- The folder name starts with a (period) `.` is treated as vulnerable. 
 
 The allowed extension list is continuously monitored and updated in every release. You can raise a [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a file extension to the list.
 {: note}
