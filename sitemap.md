@@ -286,7 +286,7 @@ subcollection: schematics
 
     * [20 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july2022)
 
-        * {{site.data.keyword.bpshort}} allowed IP address for `US` region are updated
+        * {{site.data.keyword.bpshort}} allowed IP address for `US` region is updated
 
     * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 
@@ -336,7 +336,7 @@ subcollection: schematics
 
         * Support stopping or terminating the running job
 
-        * Support additional frequently asked questions (FAQs) 
+        * Support more frequently asked questions (FAQs) 
 
         * Support enhanced {{site.data.keyword.bpshort}} resource view
 
@@ -448,7 +448,7 @@ subcollection: schematics
 
         * Sample templates to deploy into {{site.data.keyword.cloud_notm}}
 
-        * Support `WinRM` in command-line
+        * Support `WinRM` in command line
 
         * Documentation lists the Command-line version change log history
 

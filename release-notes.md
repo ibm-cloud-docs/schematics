@@ -17,13 +17,13 @@ content-type: release-note
 # Release notes
 {: #schematics-relnotes}
 
-Use the release notes to learn about the latest changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
+Use the release notes to learn about the current changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occurred before 22 October 2021, see [What's new?](/docs/schematics?topic=schematics-new-in-schematics){: external}
+For information about releases that occurred before 22 October 2021, see [What's new](/docs/schematics?topic=schematics-new-in-schematics){: external}?
 {: note}
 
-{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}}  Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 {: deprecated}
 
 ## September 2022
@@ -37,7 +37,7 @@ Review the release notes for September 2022.
 {: release-note}
 
 The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` 
-:   The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` from 21st September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+:   The {{site.data.keyword.bpshort}} Job image supports `Python v3.8` from 21 September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 
 ## August 2022
 {: #schematics-aug22}
@@ -83,7 +83,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july2022}
 {: release-note}
 
-{{site.data.keyword.bpshort}} allowed IP address for `US` region are updated
+{{site.data.keyword.bpshort}} allowed IP address for `US` region is updated
 :   {{site.data.keyword.bpshort}} lists the [`US` region](/docs/schematics?topic=schematics-allowed-ipaddresses) allowed IP addresses to support `us-east` and `us-south` region endpoints.
 
 ### 11 July 2022
@@ -94,7 +94,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents Beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
-    - Agents are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Install [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup) through UI.
     - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
@@ -117,8 +117,8 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-install-blueprint) to configure the right schemas and use the right Blueprints commands for the deployment of Blueprints.
     - See [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to install Blueprints deployment.
-    - Blueprints are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
-    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprints managed cloud environment.
+    - Blueprints are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Deploy [{{site.data.keyword.bpshort}} Blueprints by using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprint-managed cloud environment.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on Blueprints.
     - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
@@ -151,7 +151,7 @@ Enhanced FAQ documentation
 {: release-note}
 
 Enhance {{site.data.keyword.bpshort}} getting started section
-:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](/docs/schematics?topic=schematics-learn-about-schematics), [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term), [Using Open Source](/docs/schematics?topic=schematics-schematics-open-projects) tools, and [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works)
+:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](/docs/schematics?topic=schematics-learn-about-schematics), [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term), [Using open source](/docs/schematics?topic=schematics-schematics-open-projects) tools, and [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works)
 
 
 
@@ -168,7 +168,7 @@ Review the release notes for May 2022.
 {: release-note}
 
 Enhance documentation with the security and compliance section
-:   Enhanced {{site.data.keyword.bpshort}} documentation with the security and compliance such as, [security](/docs/schematics?topic=schematics-security), [compliance](/docs/schematics?topic=schematics-compliance), [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance), and [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr).
+:   Enhanced {{site.data.keyword.bpshort}} documentation with the security and compliance such as [security](/docs/schematics?topic=schematics-security), [compliance](/docs/schematics?topic=schematics-compliance), [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance), and [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr).
 
 Enhance documentation with the best practices 
 :   Enhanced {{site.data.keyword.bpshort}} documentation with the best practices when using {{site.data.keyword.bpshort}} objects [Best practices for securing the {{site.data.keyword.bpshort}} objects](/docs/schematics?topic=schematics-bp-secure-objects).
@@ -196,7 +196,7 @@ Support detecting drift
 Support stopping or terminating the running job
 :   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
-Support additional frequently asked questions (FAQs) 
+Support more frequently asked questions (FAQs) 
 :  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq).
 
 Support enhanced {{site.data.keyword.bpshort}} resource view
@@ -231,19 +231,19 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: release-note}
 
 {{site.data.keyword.bpshort}} command-line supports private {{site.data.keyword.bpshort}} endpoint
-:   The {{site.data.keyword.bpshort}} command-line [supports private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
+:   The {{site.data.keyword.bpshort}} command line [supports private {{site.data.keyword.bpshort}} endpoint](/docs/schematics?topic=schematics-private-endpoints#private-cse).
 
 Support `.JSON` and `.tfvars` file extension for {{site.data.keyword.bpshort}} plan and apply commands
-:   The {{site.data.keyword.bpshort}} command-line supports `.JSON` and `.tfvars` file extension in {{site.data.keyword.bpshort}} plan and apply commands.
+:   The {{site.data.keyword.bpshort}} command line supports `.JSON` and `.tfvars` file extension in {{site.data.keyword.bpshort}} plan and apply commands.
 
 Enhance resources tabular data view for resources.
-:   The {{site.data.keyword.bpshort}} command-line lists the provisioned resources from your Workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
+:   The {{site.data.keyword.bpshort}} command line lists the provisioned resources from your Workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
 
 Deprecate and warning message when using `ibmcloud terraform` command.
-:   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **Alias 'terraform' will be deprecated. Use 'schematics' or 'sch' in your commands.**
+:   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **`Alias 'terraform' will be deprecated. Use schematics or sch in your commands`**.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) released on 9th April 2022.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.8.0](/docs/schematics?topic=schematics-cli_version-releases) released on 9 April 2022.
 
 ## March 2022
 {: #schematics-mar22}
@@ -274,7 +274,7 @@ Get job files API supports `plan_json` file type
 {: release-note}
 
 Support `__netrc__` environment values in private Git repository
-:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command-line](/docs/schematics?topic=schematics-download-modules-pvt-git) and [`APIs`](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `__netrc__` environment values to support download the Terraform module templates for private Git repository in [command line](/docs/schematics?topic=schematics-download-modules-pvt-git) and [`APIs`](/apidocs/schematics/schematics#create-workspace).
 
 
 ### 4 March 2022
@@ -282,10 +282,10 @@ Support `__netrc__` environment values in private Git repository
 {: release-note}
 
 Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
-:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui), [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui), [command-line, and [`APIs`](/apidocs/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4th March 2022.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4 March 2022.
 
 ## February 2022
 {: #schematics-feb22}
@@ -298,7 +298,7 @@ Review the release notes for February 2022.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.2](/docs/schematics?topic=schematics-cli_version-releases) released on 16th February 2022.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.2](/docs/schematics?topic=schematics-cli_version-releases) released on 16 February 2022.
 
 Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries 
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [Linux&trade; arm64 and Mac OS arm64 binaries](/docs/schematics?topic=schematics-setup-cli) Operating System.
@@ -308,7 +308,7 @@ Supports installer for Linux&trade; arm64 and Mac OS arm64 binaries
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.1](/docs/schematics?topic=schematics-cli_version-releases) released on 11th February 2022.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.1](/docs/schematics?topic=schematics-cli_version-releases) released on 11 February 2022.
 
 
 ## January 2022
@@ -322,7 +322,7 @@ Review the release notes for January 2022.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18th January 2022.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.0](/docs/schematics?topic=schematics-cli_version-releases) released on 18 January 2022.
 
 Supports installer for PowerLinux&trade; and System/390 Linux&trade; 
 :   The {{site.data.keyword.bpshort}} supports command-line installer for [PowerLinux&trade; 64-bit and System/390 Linux&trade; 64-bit](/docs/schematics?topic=schematics-setup-cli) Operating System.
@@ -360,10 +360,10 @@ Global catalog settings for {{site.data.keyword.bpshort}} Workspaces location
 : You can now, manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 About `compact` download
-:   You can download only the relevant files from the Git repository for your workspaces, for more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
+:   You can download the relevant files from the Git repository for your workspaces. For more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
 
 About {{site.data.keyword.bpshort}} Job files
-:   You can now download the state-file at every job level along with the latest state-file of a Workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
+:   You can now download the state-file at every job level along with the current state-file of a Workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 ResourceQuery attribute deprecated 
 :   ResourceQuery attribute is replaced as [`resource_queries`](/apidocs/schematics/schematics#list-resource-query) in the API.
@@ -382,9 +382,9 @@ Onboarding Terraform templates to private catalog
 :   For onboarding multiple Terraform templates into {{site.data.keyword.cloud_notm}} private catalog, see [Onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).
 
 Sample templates to deploy into {{site.data.keyword.cloud_notm}}
-:   Install [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services using {{site.data.keyword.bpshort}} Workspaces.
+:   Install [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services by using {{site.data.keyword.bpshort}} Workspaces.
 
-Support `WinRM` in command-line
+Support `WinRM` in command line
 :   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} Actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
 
 Documentation lists the Command-line version change log history
