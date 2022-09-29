@@ -110,7 +110,5 @@ Deploy
 :   <img usemap="#deploybutton_map5" alt="Auto deployment button" src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg"><map name="deploybutton_map5" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&repository=https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="1,3,139,20"  shape="rect"></map>
 
-
-
 Looking for more code examples? Check out the [samples for {{site.data.keyword.bplong_notm}} GitHub repositories](https://github.com/Cloud-Schematics?q=Ansible&type=all&language=&sort=){: external}.
 {: tip}
