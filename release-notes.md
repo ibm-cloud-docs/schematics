@@ -20,9 +20,6 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occurred before 22 October 2021, see [What's new](/docs/schematics?topic=schematics-new-in-schematics){: external}?
-{: note}
-
 {{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 {: deprecated}
 

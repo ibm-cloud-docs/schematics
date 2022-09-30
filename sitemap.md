@@ -1926,49 +1926,6 @@ subcollection: schematics
 
 
 
-## What's new in {{site.data.keyword.bpshort}}?
-{: #sitemap_what's_new_in_?}
-
-
-[What's new in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-new-in-schematics#new-in-schematics)
-
-* [September 2021](/docs/schematics?topic=schematics-new-in-schematics#sept30-2021)
-
-* [August 2021](/docs/schematics?topic=schematics-new-in-schematics#aug-2021)
-
-* [July 2021](/docs/schematics?topic=schematics-new-in-schematics#july-2021)
-
-* [June 2021](/docs/schematics?topic=schematics-new-in-schematics#june-2021)
-
-* [May 2021](/docs/schematics?topic=schematics-new-in-schematics#may-2021)
-
-* [April 2021](/docs/schematics?topic=schematics-new-in-schematics#april-2021)
-
-* [March 2021](/docs/schematics?topic=schematics-new-in-schematics#march-2021)
-
-* [February 2021](/docs/schematics?topic=schematics-new-in-schematics#February-2021)
-
-* [January 2021](/docs/schematics?topic=schematics-new-in-schematics#January-2021)
-
-* [December 2020](/docs/schematics?topic=schematics-new-in-schematics#december-2020)
-
-* [November 2020](/docs/schematics?topic=schematics-new-in-schematics#november-2020)
-
-* [October 2020](/docs/schematics?topic=schematics-new-in-schematics#october-2020)
-
-* [September 2020](/docs/schematics?topic=schematics-new-in-schematics#september-2020)
-
-* [August 2020](/docs/schematics?topic=schematics-new-in-schematics#august-2020)
-
-* [July 2020](/docs/schematics?topic=schematics-new-in-schematics#july-2020)
-
-* [June 2020](/docs/schematics?topic=schematics-new-in-schematics#june-2020)
-
-* [May 2020](/docs/schematics?topic=schematics-new-in-schematics#may-2020)
-
-* [April 2020](/docs/schematics?topic=schematics-new-in-schematics#april-2020)
-
-
 ## FAQs
 {: #sitemap_faqs}
 

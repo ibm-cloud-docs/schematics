@@ -198,7 +198,6 @@ toc:
   - navgroup:
       id: help
       topics:
-      - whats-new.md
       - topicgroup:
           label: FAQs
           topics:
