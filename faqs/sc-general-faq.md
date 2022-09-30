@@ -118,7 +118,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 
 Currently, the {{site.data.keyword.bplong_notm}} service does not support the ability to import or synchronize the {{site.data.keyword.cloud_notm}} resource state into the {{site.data.keyword.bpshort}} workspace. It is planned in the future roadmap.
 
-##  How do I overcome the request exceeds the Cluster resource quota of '100' for the account in any region?
+## How do I overcome the request exceeds the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
 {: faq}
 {: support}
