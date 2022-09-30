@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-30"
 
 keywords: blueprint create init failure, blueprint init error, create init fails,
 
@@ -105,4 +105,4 @@ OK
 
 On successful completion the update command returns **`update_success`**. All Workspaces must be initialized to `Inactive` state and deployment of the Blueprint can continue with [Blueprint installation](/docs/schematics?topic=schematics-install-blueprint). 
 
-If the update job fails, repeat problem diagnosis, and resolution until update completes successfully and all Workspaces are in `Inactive` state. 
+If the update job fails, repeat problem diagnosis, and resolution until update completes successfully and all Workspaces are in `Inactive` state.

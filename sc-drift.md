@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-30"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -56,8 +56,7 @@ Use the following steps to view the drift job log.
 3. Click **Actions** tab.
 4. Select **Detect drift** option to initiate the detect drift job. 
 5. During execution, the status shows `in progress` moving to a `success` or a job `failure` status on completion. 
-6. The drift status can be determined by reviewing the output of the job logon when the job is in a `success` state.  
-  A sample success job execution with detected drift is shown in the screen capture.
+6. The drift status can be determined by reviewing the output of the job logon when the job is in a `success` state. A sample success job execution with detected drift is shown in the screen capture.
 
     Review the success job log to identify the drift details.
     ```text

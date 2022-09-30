@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-29"
+lastupdated: "2022-09-30"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -82,7 +82,7 @@ To create IAM access token, use `export IBMCLOUD_API_KEY=<ibmcloud_api_key>` and
 curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx.
 ``` 
 
-For more information, see [IAM access token](/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](/apidocs/iam-identity-token-api#create-api-key). </br> You can set the environment values `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
+For more information, see [IAM access token](/apidocs/iam-identity-token-api#gettoken-password) and [Create API key](/apidocs/iam-identity-token-api#create-api-key). You can set the environment values `export ACCESS_TOKEN=<access_token>`, and `export REFRESH_TOKEN=<refresh_token>`. 
 
 ## How do I rectify 'Failed to clone Git repository, might not find remote ref `refs/heads/master` (most likely invalid branch name is passed)'?
 {: #template-errors}
@@ -163,8 +163,6 @@ Yes, you can create or add a worker node inside an existing worker node pool by 
 {: support}
 
 You can view the list of public and private allowed IP addresses of `us-south`, `us-east`, `eu-gb`, and `eu-de` regions in [{{site.data.keyword.bpshort}} allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses).
-
-
 
 ## Can I manually add, or remove a resource from the service dashboard directly?
 {: #add-remove-resource-faq}
@@ -304,7 +302,6 @@ If the version parameter is not declared in your `versions.tf` file, the current
 {: support}
 
 Destroy delete the associated cloud resource from the workspace. Delete Workspace is to used to delete the workspace. The recommendation is to destroy the resource first from the workspace, and then set delete workspace. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
-
 
 ## Can I delete and destroy operation as one step?
 {: #faq-delete-destroy-operation}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-13"
+  years: 2019, 2022
+lastupdated: "2022-09-30"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -173,5 +173,3 @@ Learn about the changes to the {{site.data.keyword.bplong_notm}} service that ar
 |Date|Description|
 |-----|-----------|
 |17 April 2020|<ul><li>**Terraform v0.12 support**: You can now choose to run your infrastructure code with Terraform version 0.11 or 0.12. With Terraform version 0.12, the syntax for configuration files changed. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. To migrate your Terraform configuration files from version 0.11 to version 0.12, see [Migrating your Terraform configuration files from version 0.11 to version 0.12](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol).  </li><li>**New Workspace creation flow**: The Workspace creation flow is now [a two-step process](/docs/schematics?topic=schematics-workspace-setup#create-workspace). First, you create the Workspace without connecting it to a GitHub or GitLab repository. Then, you add the details of your GitHub or GitLab repository, retrieve input variables, and let {{site.data.keyword.bpshort}} scan your Terraform configuration files for syntax errors. With the change of the Workspace creation flow, [new Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state) are introduced as well.</li></ul> |
-
-

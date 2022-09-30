@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-29"
+lastupdated: "2022-09-30"
 
 keywords: schematics
 subcollection: schematics
@@ -15,7 +15,6 @@ subcollection: schematics
 
 # Site map
 {: #sitemap}
-
 
 
 
@@ -648,6 +647,10 @@ subcollection: schematics
     * [Referencing variables](/docs/schematics?topic=schematics-create-tf-config#reference-variables)
 
 * [Providing values to {{site.data.keyword.bplong_notm}} for the declared variables](/docs/schematics?topic=schematics-create-tf-config#declare-variable)
+
+    * [Example for list of Strings](/docs/schematics?topic=schematics-create-tf-config#example-list-strings)
+
+    * [Example for list of Objects](/docs/schematics?topic=schematics-create-tf-config#example-list-object)
 
 * [Storing your Terraform templates](/docs/schematics?topic=schematics-create-tf-config#store-template)
 
@@ -1563,7 +1566,7 @@ subcollection: schematics
 
 [Locations and service endpoints](/docs/schematics?topic=schematics-locations#locations)
 
-* [Where can I create {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-can-i-create--workspaces?)
+* [Where can I create {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
 
 * [Where do my {{site.data.keyword.bpshort}} Actions run?](/docs/schematics?topic=schematics-locations#where-do-locations-run)
 

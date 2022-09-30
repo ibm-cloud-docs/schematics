@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-21"
+lastupdated: "2022-09-30"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -18,7 +18,7 @@ subcollection: schematics
 Learn how to create Terraform templates that are well-structured, reusable, and comprehensive.
 {: shortdesc}
 
-A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
+A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](/docs/schematics?topic=schematics-create-tf-config#configure-provider) and [add resources to your Terraform configuration file](/docs/schematics?topic=schematics-create-tf-config#configure-resources). Optionally, you can use [input variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables) to customize your resources.
 
 You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format.  
 
@@ -256,53 +256,29 @@ You can provide the values after creating the Workspace for the {{site.data.keyw
     {: codeblock}
 
 
-
 **Can I see how to declare complex variables in a file?**
 
 Yes, when you declare and assign the value to the variables, you can view the tooltip in the UI. The table provides few examples of the complex data type that can be declared in the variable store.
 
+| Type | Example |
+| --- | --- |
+| `number` | 4.56 |
+| `string` | example value |
+| `bool` | false |
+| `map(string)` | {key1 = "value1", key2 = "value2"} |
+| `set(string)` | ["hello", "he"] |
+| `map(number)` | {internal = 8080, external = 2020} |
+| `list(string)` | ["us-south", "eu-gb"] |
+| `list` | ["value", 30] |
+| `list(list(string))` | See [list of String example](/docs/schematics?topic=schematics-create-tf-config#example-list-strings). |
+| `list(object({internal = number </br> external = number </br> protocol = string}))` | See [list of Object example](/docs/schematics?topic=schematics-create-tf-config#example-list-object). |
+{: caption="Complex variable types with example" caption-side="bottom"}
 
-<table>
-    <thead>
-    <th>Type</th>
-    <th>Example</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td><ul>number</li></ul></td>
-        <td><ul>4.56</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>string</li></ul></td>
-        <td><ul>example value</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul><code>bool</code></li></ul></td>
-        <td><ul>false</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>map(string)</li></ul></td>
-        <td><ul>{key1 = "value1", key2 = "value2"}</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>set(string)</li></ul></td>
-        <td><ul>["hello", "he"]</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>map(number)</li></ul></td>
-        <td><ul>{internal = 8080, external = 2020}</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>list(string)</li></ul></td>
-        <td><ul>["us-south", "eu-gb"]</li></ul></td>
-    </tr>
-    <tr>
-    <td><ul>list</li></ul></td>
-        <td><ul>["value", 30]</li></ul></td>
-    </tr>
-        <tr>
-    <td><ul>list(list(string))</li></ul></td>
-    <td><ul><p><pre class="codeblock"><code>[
+### Example for list of Strings
+{: #example-list-strings}
+
+```yaml
+[
     {
         internal = 8300
         external = 8300
@@ -313,15 +289,15 @@ Yes, when you declare and assign the value to the variables, you can view the to
         external = 8301
         protocol = "ldp"
     }
-]</code></pre></p></ul></td>
-    </tr>
-    <tr>
-    <td><ul><p><pre class="codeblock"><code>list(object({
-        internal = number
-    external = number
-    protocol = string
-}))</code></pre></p></li></ul></td>
-        <td><ul><p><pre class="codeblock"><code>[
+]
+```
+{: pre}
+
+### Example for list of Objects
+{: #example-list-object}
+
+```yaml
+[
     {
         internal = 8300
         external = 8300
@@ -332,10 +308,9 @@ Yes, when you declare and assign the value to the variables, you can view the to
         external = 8301
         protocol = "ldp"
     }
-]</code></pre></p></li></ul></td>
-    </tr>
-</tbody>
-</table>
+]
+```
+{: pre}
 
 ## Storing your Terraform templates
 {: #store-template}
@@ -353,3 +328,4 @@ The directory structure of the Terraform template in the GitHub repository is li
 | `provider.tf` | Create `provider.tf` |
 | `variables.tf` | Create `variables.tf` |
 {: caption="Terraform template directory structure" caption-side="bottom"}
+
