@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-09-30"
 
 keywords: schematics job queue, job queue process, pending queue, schematics pending queue
 
@@ -47,5 +47,5 @@ In the point of transition of the state file of `24 hours`, an interrupt signal 
 
 In a job, multiple commands such as `terraform init`, `terraform apply`, and `terraform refresh` are executed. If the job times out in a command, all further commands gets only `10 minutes` to finish. At the end of `10 minutes`, each command is killed. 
 
-**`Example`** 
+**Example** 
 If a job is stuck forever on a Terraform apply, when the command is stopped, and if you run a refresh. If refresh is also stuck, after `15 minutes`, a kill is executed. The Terraform `local exec` and `remote exec` already have a time limit of `30 minutes`.

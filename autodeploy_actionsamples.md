@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-26"
+lastupdated: "2022-09-29"
 
 keywords: action templates, schematics template, terraform template
 
@@ -38,7 +38,7 @@ Access
 </map>
 
 Deploy
-:   <img usemap="#deploybutton_map1" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map1" alt="This image leads to create an action.">
+:   <img usemap="#deploybutton_map1" alt="Auto deployment button" src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg"><map name="deploybutton_map1" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-is-instance-actions&repository=https://github.com/Cloud-Schematics/ansible-is-instance-actions" target="_blank" coords="1,3,139,20" shape="rect">
 </map>
 
@@ -56,7 +56,7 @@ Access
 </map>
 
 Deploy
-:   <img usemap="#deploybutton_map2" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_map2" alt="This image leads to create an action.">
+:   <img usemap="#deploybutton_map2" alt="Auto deployment button"  src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg"><map name="deploybutton_map2" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=lamp-simple&repository=https://github.com/Cloud-Schematics/lamp-simple" target="_blank" coords="1,3,139,20"  shape="rect"></map>
 
 
@@ -73,7 +73,7 @@ Access
 </map>
 
 Deploy
-:   <img usemap="#deploybutton_map3" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map3" alt="This image leads to create an action.">
+:   <img usemap="#deploybutton_map3" alt="Auto deployment button" src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg"><map name="deploybutton_map3" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-icd-postgres-actions&repository=https://github.com/Cloud-Schematics/ansible-icd-postgres-actions" target="_blank" coords="1,3,139,20" shape="rect"></map>
 
 
@@ -90,7 +90,7 @@ Access
 </map>
 
 Deploy
-:   <img usemap="#deploybutton_map4" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map4" alt="This image leads to create an action.">
+:   <img usemap="#deploybutton_map4" alt="Auto deployment button" src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg"><map name="deploybutton_map4" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy-iks&repository=https://github.com/Cloud-Schematics/ansible-app-deploy-iks" target="_blank" coords="1,3,139,20" shape="rect"></map>
 
 
@@ -107,9 +107,8 @@ Access
 </map>
 
 Deploy
-:   <img usemap="#deploybutton_map5" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map5" alt="This image leads to create an action.">
+:   <img usemap="#deploybutton_map5" alt="Auto deployment button" src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg"><map name="deploybutton_map5" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/actions/create?name=ansible-kubectl&repository=https://github.com/Cloud-Schematics/ansible-kubectl" target="_blank" coords="1,3,139,20"  shape="rect"></map>
-
 
 Looking for more code examples? Check out the [samples for {{site.data.keyword.bplong_notm}} GitHub repositories](https://github.com/Cloud-Schematics?q=Ansible&type=all&language=&sort=){: external}.
 {: tip}
