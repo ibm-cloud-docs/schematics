@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-09-30"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -54,7 +54,7 @@ The parameter error represents that all the required or optional {{site.data.key
 
 You should read the error message carefully to rectify. You can check out the required parameter is unique, has rightly provided in the payload, and you need to follow the maximum and minimum character limit to process your parameter value.
 
-###  Service error
+### Service error
 {: #svc-error}
 
 The {{site.data.keyword.bpshort}} Actions instance and resources are overloaded or down for maintenance. 

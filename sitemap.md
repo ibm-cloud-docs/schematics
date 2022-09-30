@@ -11,8 +11,6 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # Site map
 {: #sitemap}
 
@@ -2008,7 +2006,7 @@ subcollection: schematics
 
 * [How do I identify the best way to synchronize a deleted resource with the Terraform state?](/docs/schematics?topic=schematics-general-faq#sync-delresource-terraform)
 
-* [ How do I overcome the request exceeds the Cluster resource quota of '100' for the account in any region?](/docs/schematics?topic=schematics-general-faq#clusterquota-warn-faq)
+* [How do I overcome the request exceeds the Cluster resource quota of '100' for the account in any region?](/docs/schematics?topic=schematics-general-faq#clusterquota-warn-faq)
 
 * [While creating Red Hat OpenShift or Kubernetes resources, can I tune 90 minutes time out to higher?](/docs/schematics?topic=schematics-general-faq#resourcetimeout-warn-faq)
 
@@ -2203,7 +2201,7 @@ subcollection: schematics
 
     * [Parameter error](/docs/schematics?topic=schematics-handling-error#param-error)
 
-    * [ Service error](/docs/schematics?topic=schematics-handling-error#svc-error)
+    * [Service error](/docs/schematics?topic=schematics-handling-error#svc-error)
 
     * [State error](/docs/schematics?topic=schematics-handling-error#state-error)
 

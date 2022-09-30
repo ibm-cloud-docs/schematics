@@ -2514,7 +2514,7 @@ You can import the existing resource with an valid address from the Workspace ID
 
 **`Syntax`**
 
-```
+```sh
 ibmcloud schematics workspace import --id WORKSPACE_ID --options OPTIONS --address ADDRESS --resourceID RESOURCE_ID
 ```
 {: pre}
