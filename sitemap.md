@@ -451,6 +451,26 @@ subcollection: schematics
 
         * Documentation lists the Command-line version change log history
 
+* [September 2021](/docs/schematics?topic=schematics-schematics-relnotes#sept30-2021)
+
+    * Review the release notes for October 2021.
+
+    * [30 September 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept302221)
+
+        * Inventory target feature support in {{site.data.keyword.bpshort}} Actions API
+
+        * Bastion host enhancement in {{site.data.keyword.bpshort}} Actions API
+
+        * {{site.data.keyword.bpshort}} Actions API enhancement to support bastion host connection with non-root user
+
+        * {{site.data.keyword.bplong_notm}} job queue process
+
+        * {{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
+
+        * {{site.data.keyword.bpshort}} introduces compact flag in the Workspace create and update API
+
+        * Importance of location and URL endpoint in Workspace creation
+
 
 ## Setting up the CLI and API
 {: #sitemap_setting_up_the_cli_and_api}

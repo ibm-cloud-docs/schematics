@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-29"
+lastupdated: "2022-09-30"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -389,3 +389,34 @@ Support `WinRM` in command line
 
 Documentation lists the Command-line version change log history
 :   The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).
+
+## September 2021
+{: #sept30-2021}
+
+Review the release notes for October 2021.
+{: shortdesc}
+
+### 30 September 2021
+{: #schematics-sept302221}
+{: release-note}
+
+Inventory target feature support in {{site.data.keyword.bpshort}} Actions API
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+
+Bastion host enhancement in {{site.data.keyword.bpshort}} Actions API
+:   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `winrm`.
+
+{{site.data.keyword.bpshort}} Actions API enhancement to support bastion host connection with non-root user
+:   The {{site.data.keyword.bpshort}} Actions API now supports bastion host connection with non-root user and the `ssh` in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+
+{{site.data.keyword.bplong_notm}} job queue process
+:   For more information about job queue process, see [Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process) and [FAQ](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq).
+
+{{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
+:   You can now access the inventory username through the credentials parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+
+{{site.data.keyword.bpshort}} introduces compact flag in the Workspace create and update API
+:   You can now download the `subfolders` from the GIT repositories through {{site.data.keyword.bpshort}}. For more information, see [How can I download `subfolders` from the GIT repositories through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#compact-faq).
+
+Importance of location and URL endpoint in Workspace creation
+:   [Why do {{site.data.keyword.bpshort}} Workspaces create through API fails?](/docs/schematics?topic=schematics-wks-create-api).
