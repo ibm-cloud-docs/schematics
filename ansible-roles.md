@@ -20,7 +20,7 @@ An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_r
 [Ansible Galaxy](https://docs.ansible.com/ansible/2.7/reference_appendices/galaxy.html) is a repository for Ansible roles that are available to drop directly into your Playbooks to streamline your automation projects. A new sysadmin might start automating with Ansible in a matter of a few hours.
 {: shortdesc}
 
-You can [create your own roles](/docs/schematics?topic=schematics-schematics-cli-reference#main-file) or [use existing roles from Ansible Galaxy](/docs/schematics?topic=schematics-schematics-cli-reference#requirements-file). 
+You can [create your own roles](/docs/schematics?topic=schematics-ansible-roles-galaxy#main-file) or [use existing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file). 
 
 ## Creating your own roles in Ansible 
 {: #main-file}

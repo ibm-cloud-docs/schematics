@@ -423,7 +423,7 @@ subcollection: schematics
 
     * Review the release notes for November 2021.
 
-    * [30 November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov3021)
+    * [30 November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov302021)
 
         * Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in your account
 
@@ -441,7 +441,7 @@ subcollection: schematics
 
     * Review the release notes for October 2021.
 
-    * [22 October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2221)
+    * [22 October 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct2021)
 
         * Onboarding Terraform templates to private catalog
 
@@ -453,9 +453,9 @@ subcollection: schematics
 
 * [September 2021](/docs/schematics?topic=schematics-schematics-relnotes#sept30-2021)
 
-    * Review the release notes for October 2021.
+    * Review the release notes for September 2021.
 
-    * [30 September 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept302221)
+    * [30 September 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept302021)
 
         * Inventory target feature support in {{site.data.keyword.bpshort}} Actions API
 
@@ -470,6 +470,214 @@ subcollection: schematics
         * {{site.data.keyword.bpshort}} introduces compact flag in the Workspace create and update API
 
         * Importance of location and URL endpoint in Workspace creation
+
+* [August 2021](/docs/schematics?topic=schematics-schematics-relnotes#aug-2021)
+
+    * Review the release notes for August 2021.
+
+    * [27 August 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug272021)
+
+        * Workspace update command enhancement
+
+        * Terraform v1.0 support
+
+        * {{site.data.keyword.bplong_notm}} support job queue logs enhancement
+
+    * [11 August 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug112021)
+
+        * {{site.data.keyword.bplong_notm}} deprecates older version of Terraform
+
+* [July 2021](/docs/schematics?topic=schematics-schematics-relnotes#july-2021)
+
+    * Review the release notes for July 2021.
+
+    * [30 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul302021)
+
+        * {{site.data.keyword.bplong_notm}} deprecates Terraform v0.11
+
+        * Terraform v0.15 support
+
+        * Ansible v2.9.23 API and command-line support
+
+    * [19 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul302021)
+
+        * Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}
+
+* [June 2021](/docs/schematics?topic=schematics-schematics-relnotes#june-2021)
+
+    * Review the release notes for June 2021.
+
+    * [30 June 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun302021)
+
+        * Support taint and untaint feature enhancement in {{site.data.keyword.bplong_notm}}
+
+        * Documentation support to deploy resources in specific region or across multiple region
+
+        * Documentation support to create Workspace by using {{site.data.keyword.bplong_notm}} resources
+
+        * One page view to create Workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
+
+        * Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
+
+* [May 2021](/docs/schematics?topic=schematics-schematics-relnotes#may-2021)
+
+    * Review the release notes for May 2021.
+
+    * [26 May 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may262021)
+
+        * Version constraints support in {{site.data.keyword.bplong_notm}}
+
+        * Troubleshooting guide support
+
+        * {{site.data.keyword.bpshort}} supports sample solutions
+
+* [April 2021](/docs/schematics?topic=schematics-schematics-relnotes#april-2021)
+
+    * Review the release notes for April 2021.
+
+    * [14 April 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apri142021)
+
+        * Ansible support in {{site.data.keyword.bplong_notm}} is now generally available
+
+* [March 2021](/docs/schematics?topic=schematics-schematics-relnotes#march-2021)
+
+    * Review the release notes for March 2021.
+
+    * [29 March 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar142021)
+
+        * Terraform v0.14 support
+
+* [February 2021](/docs/schematics?topic=schematics-schematics-relnotes#feb-2021)
+
+    * Review the release notes for February 2021.
+
+    * [25 February 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb252021)
+
+        * {{site.data.keyword.bpshort}} supports the ability to store the user-defined file
+
+        * Allowed file extensions in {{site.data.keyword.bpshort}}
+
+        * {{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation
+
+    * [12 February 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb122021)
+
+        * Ansible open Beta release
+
+* [January 2021](/docs/schematics?topic=schematics-schematics-relnotes#jan-2021)
+
+    * Review the release notes for January 2021.
+
+    * [29 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan292021)
+
+        * Virtual Private Endpoint Gateways support
+
+    * [20 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan202021)
+
+        * Terraform commands API support
+
+        * Terraform commands command-line support
+
+        * command-line Commands
+
+    * [7 January 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan072021)
+
+        * Multiple SDK support
+
+* [December 2020](/docs/schematics?topic=schematics-schematics-relnotes#dec-2020)
+
+    * Review the release notes for December 2020.
+
+    * [9 December 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec92020)
+
+        * Ansible Beta release
+
+        * Beta
+
+* [November 2020](/docs/schematics?topic=schematics-schematics-relnotes#nov-2020)
+
+    * Review the release notes for November 2020.
+
+    * [25 November 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec252020)
+
+        * Terraform v0.13 support
+
+* [October 2020](/docs/schematics?topic=schematics-schematics-relnotes#oct-2020)
+
+    * Review the release notes for October 2020.
+
+    * [16 October 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct162020)
+
+        * Monitoring
+
+        * Files and resources for your Workspace actions
+
+        * Creating a deploy to {{site.data.keyword.bplong_notm}} link
+
+* [September 2020](/docs/schematics?topic=schematics-schematics-relnotes#sept-2020)
+
+    * Review the release notes for September 2020.
+
+    * [11 September 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept112020)
+
+        * `Bitbucket` supports private repository
+
+        * Support to override the default variable
+
+* [August 2020](/docs/schematics?topic=schematics-schematics-relnotes#aug-2020)
+
+    * Review the release notes for August 2020.
+
+    * [14 August 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug142020)
+
+        * Support for multiple Terraform provider
+
+        * Time out set for local-exec and remote-exec users
+
+        * `Bitbucket` is used as a template repository source
+
+* [July 2020](/docs/schematics?topic=schematics-schematics-relnotes#jul-2020)
+
+    * Review the release notes for July 2020.
+
+    * [9 July 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul92020)
+
+        * Stop apply support
+
+        * New {{site.data.keyword.bpshort}} locations
+
+* [June 2020](/docs/schematics?topic=schematics-schematics-relnotes#jun-2020)
+
+    * Review the release notes for June 2020.
+
+    * [26 June 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun262020)
+
+        * Ansible provisioner support
+
+    * [25 June 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun252020)
+
+        * Version 1.8.0 of the {{site.data.keyword.cloud_notm}} Provider plug-in available
+
+    * [22 June 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun222020)
+
+        * Upload Terraform templates as TAR files
+
+* [May 2020](/docs/schematics?topic=schematics-schematics-relnotes#may-2020)
+
+    * Review the release notes for May 2020.
+
+    * [8 May 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may82020)
+
+        * New EU API endpoint
+
+* [April 2020](/docs/schematics?topic=schematics-schematics-relnotes#april-2020)
+
+    * Review the release notes for April 2020.
+
+    * [17 April 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may82020)
+
+        * Terraform v0.12 support
+
+        * New Workspace creation flow
 
 
 ## Setting up the CLI and API
