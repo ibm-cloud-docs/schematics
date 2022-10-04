@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-10-04"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -15,20 +15,20 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Listing Blueprints
+# Listing blueprint environments
 {: #list-blueprint-cli}
 
-To list your Blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command takes requires no arguments, but is region specific and will only list Blueprints in the selected CLI region. 
+To list your blueprint environments with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments, but is region specific and will only list blueprint environments in the selected CLI region. 
 {: shortdesc}
 
-For all the Blueprints commands, syntax, and option flag details, see [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the blueprint commands, syntax, and option flag details, see [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
-## Listing Blueprint through CLI
+## Listing blueprint environments via CLI
 {: #listing-bp-cli}
 {: cli}
 
-Lists all the Blueprints.
+Lists all the blueprint environments.
 {: shortdesc}
 
 **`Syntax`**
@@ -38,11 +38,11 @@ ibmcloud schematics blueprint list
 ```
 {: pre}
 
-On successful completion the list command returns a list of Blueprints  
+On successful completion the list command returns a list of blueprint environments.  
 
 **Output:**
 
-The command lists all the Blueprints created in the CLI region. 
+The command lists all the environments created in the CLI region. 
 
 ```text
 Name                        ID                                                   Status   Location   Creator                   Last modified   
@@ -54,14 +54,14 @@ OK
 {: screen}
 
 
-### Displaying Blueprints
+### Displaying blueprint environments
 {: #display-blueprint-cli}
 
-To display the details of Blueprints and their configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
-- `summary` Blueprint and module status
-- `detailed` Blueprint configuration, settings and source URLs. 
-- `modules` Detailed listing of the Blueprint definition, modules and variables
-- `outputs` Output variables returned by Blueprint on deploying cloud resources.
+To display the details of a blueprint environment and its configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
+- `summary` blueprint run status
+- `detailed` blueprint configuration, settings and source URLs. 
+- `modules` Detailed listing of the blueprint template, modules and variables
+- `outputs` Output variables returned by the blueprint template on deploying cloud resources.
 
 For a complete listing of options, see the [ibmcloud schematics blueprint get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get) command.
 {: shortdesc}
@@ -104,7 +104,7 @@ OK
 ### Blueprint display outputs
 {: #display-blueprint-outputs-cli}
 
-Displays the Blueprint with the summary information of the Blueprint.
+Displays the blueprint environment with the summary information.
 {: shortdesc}
 
 **`Syntax`**
@@ -114,7 +114,7 @@ ibmcloud schematics blueprint get -id <blueprint_id> -level outputs
 ```
 {: pre}
 
-On successful completion the get command returns the summary details of the Blueprint and the output variables returned by the Blueprint.  
+On successful completion the get command returns the summary details of the blueprint environment and the output values defined by the template.  
 
 **Output:**
 
@@ -166,7 +166,7 @@ ibmcloud schematics blueprint get -id <blueprint_id> -level modules
 ```
 {: pre}
 
-On successful completion the get command returns a detailed listing of the Blueprint definition, modules and variables
+On successful completion the get command returns a detailed listing of the blueprint template, modules and variables
 
 ```text
 BLUEPRINT          

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-09-12"
+lastupdated: "2022-10-04"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -73,7 +73,7 @@ A Blueprint is created from a [Blueprint configuration](/docs/schematics?topic=s
 ### Blueprint definition
 {: #bpb2}
 
-A [Blueprint definition](/docs/schematics?topic=schematics-blueprint-definitions) defines the infrastructure architecture, topology, and cloud resources for a solution pattern. The definition implements the wanted solution architecture from reusable [automation modules that are written in Terraform. Definition files are written in YAML and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. 
+A [Blueprint definition](/docs/schematics?topic=schematics-blueprint-templates) defines the infrastructure architecture, topology, and cloud resources for a solution pattern. The definition implements the wanted solution architecture from reusable [automation modules that are written in Terraform. Definition files are written in YAML and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. 
 
 
 ### Blueprint configuration

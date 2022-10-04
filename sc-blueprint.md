@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-15"
+lastupdated: "2022-10-04"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -24,7 +24,7 @@ subcollection: schematics
 ## Overview
 {: #blueprint-overview}
 
-{{site.data.keyword.bpshort}} Blueprints helps DevOps teams deploy and build large-scale and repeatable application environments, by building on existing, and tested {{site.data.keyword.bpshort}} automation concepts.
+{{site.data.keyword.bpshort}} Blueprints assists DevOps teams to deploy and build large-scale and repeatable application environments. It builds on existing and tested {{site.data.keyword.bpshort}} automation capabilities. 
 {: shortdesc} 
 
 The core principles of IaC are commonly defined as:
@@ -35,31 +35,31 @@ The core principles of IaC are commonly defined as:
 
 {{site.data.keyword.bpshort}} Blueprints applies these IaC principles to manage the definition and lifecycle of large-scale HashiCorp Terraform environments. The definition and linking of {{site.data.keyword.bpshort}} hosted Terraform environments enables {{site.data.keyword.bpshort}} to simplify the creation and management of large-scale infrastructure deployments on {{site.data.keyword.cloud_notm}}. 
 
-This approach to large-scale environment management is represented by the key Blueprints concepts that are outlined in the diagram.
+This approach to large-scale environment management is represented by the key concepts that are outlined in the diagram.
 
-![Large-scale environments by using Terraform and Blueprints](images/bp-largescale-env.svg){: caption="Large-scale environments using Terraform and Blueprints" caption-side="bottom"}
+![Large-scale environments by using Terraform and blueprints](images/bp-largescale-env.svg){: caption="Large-scale environments using Terraform and blueprints" caption-side="bottom"}
 
 ## Architecture
 {: #blueprint-architecture}
 
-The key to building scalable cloud architectures with {{site.data.keyword.bpshort}} Blueprints is open source IaC automation modules. {{site.data.keyword.cloud_notm}} automation modules are reusable IaC definitions implements the layers of an infrastructure stack as HashiCorp Terraform configurations. To help creating Blueprints and {{site.data.keyword.cloud_notm}} environments, automation modules are purposely developed to a set of [guidelines](https://github.com/terraform-ibm-modules/getting-started/blob/master/README.md){: external} for resource naming conventions, variable definitions, inputs, and outputs.
+The key to building scalable cloud architectures with {{site.data.keyword.bpshort}} Blueprints is open source IaC automation modules. {{site.data.keyword.cloud_notm}} automation modules are reusable IaC definitions that implement the layers of an infrastructure stack as HashiCorp Terraform configurations. To assist in creating {{site.data.keyword.cloud_notm}} environments, automation modules are purposely developed to a set of [guidelines](https://github.com/terraform-ibm-modules/getting-started/blob/master/README.md){: external} for resource naming conventions, variable definitions, inputs, and outputs.
 {: shortdesc} 
 
-In {{site.data.keyword.bpshort}}, Blueprint modules are deployed as linked {{site.data.keyword.bpshort}} (Terraform) Workspaces. The {{site.data.keyword.bpshort}} sets data handling between the linked Workspaces based on the resource dependencies between the modules. The linking of the Workspace IaC configuration defines the solution architecture and resource topology.  
+In {{site.data.keyword.bpshort}}, Blueprint modules are deployed as linked {{site.data.keyword.bpshort}} (Terraform) Workspaces. The {{site.data.keyword.bpshort}} manages data handling between the linked Workspaces based on the resource dependencies between the modules. The linking of the Workspace IaC configuration defines the solution architecture and resource topology.  
 
-The mapping of a Blueprint definition with input variables, and automation modules to the {{site.data.keyword.bpshort}} Workspaces, and deployed in cloud resources is illustrated in the diagram. 
+The mapping of a blueprint template with input variables, and automation modules to the {{site.data.keyword.bpshort}} Workspaces, and deployed in cloud resources is illustrated in the diagram. 
 
 ![{{site.data.keyword.bpshort}} Blueprints architecture](images/bp-architecture.svg){: caption="{{site.data.keyword.bpshort}} Blueprints architecture" caption-side="bottom"}
 
-Module statements in the Blueprint definition define the Workspaces that creates in the respective source repositories that contain the Terraform module configurations. The composition of the solution is created by the dependencies and links between the modules. When the Blueprint is deployed, {{site.data.keyword.bpshort}} manages the data flows of output resource data from the modules in underneath infrastructure layers to that of the higher in the stack.
+Module statements in the blueprint template define the Workspaces that creates in the respective source repositories that contain the Terraform module configurations. The composition of the solution is created by the dependencies and links between the modules. When the environment is deployed, {{site.data.keyword.bpshort}} manages the data flows of output resource data from the modules in underneath infrastructure layers to that of the higher in the stack.
 
 ## Next steps
 {: #nextsteps-bp-arch}
 
 So far you learned a little about {{site.data.keyword.bpshort}} Blueprints, its architecture, and advantages. Following are the next steps to explore.
 
-- [Working with Blueprints](/docs/schematics?topic=workingwithblueprints) to configure Blueprint definitions and use Blueprints commands to deploy Blueprints.
-- See [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to set access permissions to set the Blueprint deployments.
-- Explore [deploying {{site.data.keyword.bpshort}} Blueprints by using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprint-managed cloud environment.
-- [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on Blueprints.
+- [Working with blueprint environments](/docs/schematics?topic=workingwithblueprints) to configure blueprint templates and use blueprint commands to deploy environments.
+- See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to set access permissions to run the blueprint commands.
+- Explore [deploying {{site.data.keyword.bpshort}} Blueprints by using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint environment.
+- [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions.
 - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand Beta limitations.

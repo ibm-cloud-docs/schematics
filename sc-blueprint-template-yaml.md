@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-04"
 
-keywords: schematics blueprints definition, blueprints yaml, schema definitions, definitions, yaml,
+keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
 subcollection: schematics
 
@@ -12,12 +12,12 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Blueprint definition YAML schema
-{: #bp-definition-schema-yaml}
+# Blueprint template YAML schema
+{: #bp-template-schema-yaml}
 
 This document is the reference of the YAML schema that is used to describe the `blueprint.yaml` file.
 
-The `blueprint.yaml` file defines all modules in the Blueprint. Every Blueprint consists of a list of automation modules from which the solution architecture is composed. 
+The `blueprint.yaml` file defines all modules in the blueprint template. Every blueprint template consists of a list of automation modules from which the reference architecture is composed. 
 
 Each `blueprint.yaml` file has a configuration preface:
 
@@ -52,7 +52,7 @@ Type:       string
 
 Required:   true
 
-Name that is used to identify the blueprint definition in use 
+Name that is used to identify the blueprint template in use 
 
 ### type
 {: #bp-type}
@@ -91,7 +91,7 @@ Type: string
 
 Default: []
 
-A string used to describe the Blueprint to provide users with more information about its usage and the solution it describes.
+A string used to describe the template to provide users with more information about its usage and the solution it describes.
 
 Example 
 ```yaml
@@ -106,7 +106,7 @@ Type: list
 
 Default: []
 
-A list defines all the inputs that are needed by the Blueprint. Inputs are specified in the [`input.yaml`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as configuration parameters when the Blueprint is configured in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. 
+A list defines all the inputs that are needed by the template. Inputs are specified in the [`input.yaml`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as configuration parameters when the template is configured in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. 
 
 Example
 
@@ -125,7 +125,7 @@ Type: list
 
 Default: [] 
  
-A list defines all the outputs that are returned by the Blueprint to the user. Each output is identified by a key-value pair. 
+A list defines all the outputs that are returned by the template to the user. Each output is identified by a key-value pair. 
 
 Example
 
@@ -143,7 +143,7 @@ Type: list
 
 Default: []
 
-A list of the settings to be used by the Blueprint that is defined as key-value pairs. Each setting is identified by the key `name`.
+A list of the settings to be used by the template that is defined as key-value pairs. Each setting is identified by the key `name`.
 
 The only supported setting is `TF_VERSION`.
 
@@ -152,7 +152,7 @@ The only supported setting is `TF_VERSION`.
 
 Type:       number
 
-Blueprints set the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the Blueprint supported version. Updating this value will change the Terraform version that is used on the next execution. 
+Blueprints set the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
 
 Options:    Terraform version in `SemVer` format 
 
@@ -328,7 +328,7 @@ Type: YAML flow or block scalar
 
 Default: string 
 
-As Blueprints primarily works with Terraform configurations, Terraform variable [type constraints](https://www.terraform.io/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for Blueprints inputs. The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the Workspace. The type can be copied from the module metadata or the Terraform `variables.tf` file.
+As templates work with Terraform configurations, Terraform variable [type constraints](https://www.terraform.io/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the Workspace. The type can be copied from the module metadata or the Terraform `variables.tf` file.
 
 As complex Terraform types are typically represented as multi-line strings, YAML block syntax can be used.
 
@@ -357,7 +357,7 @@ Required: true
 
 The value field sources the input value for modules from three sources:
 - Statically defined values specified on the name value pair statement of the module, in yaml syntax
-- An input to the Blueprint defined in the settings prefix and sourced at run time from an input file. Identified by the $blueprint prefix
+- An input to the template defined in the settings prefix and sourced at run time from an input file. Identified by the $blueprint prefix
 - An output value from another module defined in the `blueprint.yaml` file. 
     - Identified by the `$module` prefix and must be included in the output section of another module.
     - The format is the token, `$module` followed by the module name, the token `outputs`, followed by the module output name. 
@@ -420,7 +420,7 @@ Type:         list
 
 Default:      []
 
-The injectors block is an optional block to configure the parameters that are required by {{site.data.keyword.bpshort}} to inject the template files into the module automation repo. The primary use with Blueprints is to enable direct use of Terraform modules with Blueprints, by the injection of `provider` and `terraform` blocks.
+The injectors block is an optional block to configure the parameters that are required by {{site.data.keyword.bpshort}} to inject the template files into the module automation repo. The primary use with templates is to enable direct use of Terraform modules, by the injection of `provider` and `terraform` blocks.
 
 ```yaml
 injectors:
