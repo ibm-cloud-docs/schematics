@@ -33,16 +33,15 @@ Operation of a blueprint environment is an iterative cycle of applying changes t
 {: #operate-multistep}
 
 After deployment, blueprint environments will continue to evolve through managed change, implemented as updates to the blueprint template, IaC modules, and inputs.
-
-Changes to the environment are first prepared as versioned updates to the blueprint template and input files. The blueprint configuration is updated in {{site.data.keyword.bpshort}} with the updated templae and input versions. These changes are then applied to the blueprint environment. This two-step process ensures controlled application of change first to the {{site.data.keyword.bpshort}} blueprint configuration and template, then second to the cloud resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied.   
 {: shortdesc}
+
+Changes to the environment are first prepared as versioned updates to the blueprint template and input files. The blueprint configuration is updated in {{site.data.keyword.bpshort}} with the updated templae and input versions. These changes are then applied to the blueprint environment. This two-step process ensures controlled application of change first to the {{site.data.keyword.bpshort}} blueprint configuration and template, then second to the cloud resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied.
 
 During this lifecycle stage, the blueprint environment might be updated many times. Changes are applied to the cloud resources to satisfy changing application requirements. Or to maintain platform currency and compliance as security policies evolve. Additionally scheduled operations can run compliance checks, and run drift detection on the environment. 
 
 As noted earlier, {{site.data.keyword.IBM}} authored automation modules are maintained and refreshed by {{site.data.keyword.IBM}} to support new service features, maintain {{site.data.keyword.cloud}} currency and to address evolving security compliance requirements. It is suggested that blueprint configurations, and templates are regularly updated to use the current version of modules and these updates are applied to blueprint environments. The risk of not performing regular updates is that environments lose currency, compliance, and cease to be manageable through {{site.data.keyword.bpshort}} automation. 
 
-Review the section on blueprint version management to understand how to manage change to blueprint templates and input YAML files by using Git tags and branches.  
-
+Review the section on blueprint version management to understand how to manage change to blueprint templates and input YAML files by using Git tags and branches.
 
 The two-step process flow to update a blueprint environment is illustrated in the diagram.
 

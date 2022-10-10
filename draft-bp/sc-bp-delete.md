@@ -30,12 +30,10 @@ The first stage destroys all the deployed cloud resources, leaving the blueprint
 1. The user initiates a destroy of the cloud resources that belong to the blueprint environment. The blueprint destroy operation iterates through all the blueprint modules, destroying resources in reverse dependency order to ensure that all cloud resources are cleanly removed. On resource destroy, all the modules return to an `Inactive` state to indicate that no cloud resources remain. For more information, see [Destroy blueprint](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-destroy). When the resources get destroyed, billing gets terminated.  
     - Optional: A fresh instance of the environment can be deployed from the saved {{site.data.keyword.bplong}} blueprint configuration by running the [blueprint run apply](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-install) operation to re-create the environment and cloud resources. 
 
-2. The blueprint modules and blueprint configuration are deleted from {{site.data.keyword.bpshort}} using the delete operation. It is only enabled if all the resources are destroyed and the modules are in an `Inactive` state. For more information, see [Delete blueprint](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete). 
-The {{site.data.keyword.bpshort}} blueprint environment and cloud resources are now deleted. 
+2. The blueprint modules and blueprint configuration are deleted from {{site.data.keyword.bpshort}} by using the delete operation. It is only enabled if all the resources are destroyed and the modules are in an `Inactive` state. For more information, see [Delete blueprint](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete). The {{site.data.keyword.bpshort}} blueprint environment and cloud resources are now deleted. 
 
 ## Next steps
 {: #delete-nextsteps}
 
 - You can explore more by using the [blueprint tutorials](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli&interface=cli).
 - See the [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on using blueprints.
-

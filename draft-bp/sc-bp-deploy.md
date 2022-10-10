@@ -18,7 +18,7 @@ subcollection: schematics
 # Deploying blueprint environments
 {: #deploy-blueprints}
 
-Deploying a blueprint environment using a blueprint template and input values is currenly a two-step operation in {{site.data.keyword.bpshort}}. The two-step process ensures controlled application of change first to the {{site.data.keyword.bpshort}} blueprint configuration and templates, then second to the cloud resources. In a future release a plan step will be added to allow preview of all resource changes prior to deploying.   
+Deploying a blueprint environment by using a blueprint template and input values is currenly a two-step operation in {{site.data.keyword.bpshort}}. The two-step process ensures controlled application of change first to the {{site.data.keyword.bpshort}} blueprint configuration and templates, then second to the cloud resources. In a future release a plan step will be added to allow preview of all resource changes prior to deploying.   
 {: shortdesc} 
 
 - `Create the blueprint configuration in {{site.data.keyword.bpshort}}:` This first step creates and saves the blueprint configuration in {{site.data.keyword.bpshort}}. It retrieves the user specified blueprint template from Git, input values and registers the wanted configuration for the environment in {{site.data.keyword.bpshort}}. The supplied blueprint template and the inputs are validated. All the Terraform IaC automation modules are imported from their source repositories. The required {{site.data.keyword.bpshort}} linked modules are initialized to manage deployment of the IaC modules and creation of cloud resources in the next step.
@@ -29,19 +29,18 @@ The deployment process is illustrated in the diagram.
 ![Blueprint environment deployment](../images/sc-bp-deploy.svg){: caption="Blueprint environment deployment" caption-side="bottom"}
 
 1. Prepare the configuration for the blueprint environment. The configuration specifies the source of the blueprint template in Git, the input files to customize the environment instance and version information.  
-2. Create and save the blueprint configuration in {{site.data.keyword.bpshort}}. For more information, see the section [Creating a blueprint TBC](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
+2. Create and save the blueprint configuration in {{site.data.keyword.bpshort}}. For more information, see the section [Creating a blueprint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create).
     - This step retrieves the YAML template and input file from Git. 
-    - After successful validation, the blueprint configuration moves to a `validated` state.  
+    - After successful validation, the blueprint configuration moves to a `validated` state.
 3. {{site.data.keyword.bpshort}} automatically initializes its dependencies. The set of dependent linked modules is created to manage the cloud resources of the environment. Each module in the UI or CLI represents an automation module in the blueprint template. 
     - The saved blueprint configuration can be reviewed before environment and resource deployment.     
 4. Deploy the blueprint environment with the `blueprint run apply` command or UI Run Apply operation. For more information, see the section [Apply blueprint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply). 
     - Based on your blueprint configuration, {{site.data.keyword.bpshort}} creates an internal deployment plan and runs the IaC module code in dependency order to create the environment and resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied. 
     - For each module, {{site.data.keyword.bpshort}} runs a Terraform Apply to create cloud resources. 
 5. After all the modules are applied, {{site.data.keyword.bpshort}} returns the blueprint outputs. 
-    - The outputs can be used as input to further configuration steps or used directly to access resources in the environment.   
+    - The outputs can be used as an input to further configuration steps or used directly to access resources in the environment.   
 
 ## Next steps
 {: #deploy-nextsteps}
 
-The next stage of working with blueprints is [Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprints).
-
+The next stage of working with blueprint is [Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprints).

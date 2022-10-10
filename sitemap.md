@@ -1936,7 +1936,7 @@ subcollection: schematics
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
-* [Why do you set Blueprint operations by using a `Blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
+* [Why do you set blueprint operations by using a `blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
 * [How does resource provisioning happen by using the Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
 
@@ -1952,7 +1952,7 @@ subcollection: schematics
 
 * [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
 
-* [When you create a Blueprint in `us-south` target region, why is the job type in Blueprint job ID indicates `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
+* [When you create a blueprint in `us-south` target region, why is the job type in blueprint job ID indicates `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
 
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 

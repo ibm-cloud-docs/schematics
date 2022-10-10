@@ -26,19 +26,19 @@ During the lifecycle of a blueprint environment, {{site.data.keyword.bpshort}} B
 
 Operations on blueprint environments follow the sequence:
 - Creating or updating the blueprint configuration with changes to the inputs, template or module versions
-- Planning the change to identify resource changes, additions or deletions. 
+- Planning the change to identify resource changes, additions, or deletions 
 - Executing the plan to apply the changes 
 {: shortdesc}
 
 ## Lifecycle of cloud environments
 {: #lifecycle-of-iac}
 
-When you work with cloud environments, hosted applications or services they all follow a lifecycle from creation to end-of-life. IaC managed cloud environments implicitly go through several lifecycle states. This starts with the initial definition of an IaC configuration and a set of environment inputs. Then, onto deployment of the environment, its' infrastructure and resources. The environment is maintained through its operational life, which might be hours to years. Finally, deletion when all associated resources are destroyed, billing gets terminated, and the environment and all configuration is removed.  
+When you work with cloud environments, hosted applications, or services they all follow a lifecycle from creation to end-of-life. IaC managed cloud environments implicitly go through several lifecycle states. This starts with the initial definition of an IaC configuration and a set of environment inputs. Then, onto deployment of the environment, its infrastructure and resources. The environment is maintained through its operational life, which might be hours to years. Finally, deletion when all associated resources are destroyed, billing gets terminated, and the environment and all configuration is removed.  
 {: shortdesc}
 
 {{site.data.keyword.bpshort}} Blueprints refers to these life stages as the `define`, `deploy`, `update and operate`, and `delete` lifecycle stages. 
 
-The lifecycle stages of a blueprint environment are illustrated in the diagram. Each stage is composed of multiple blueprint tasks. For example, composing and editing the blueprint template, running {{site.data.keyword.bpshort}} blueprint operations, monitoring job execution and reviewing the results. 
+The lifecycle stages of a blueprint environment are illustrated in the diagram. Each stage is composed of multiple blueprint tasks. For example, composing and editing the blueprint template, running {{site.data.keyword.bpshort}} blueprint operations, monitoring job execution, and reviewing the results. 
 
 ![Life stages of {{site.data.keyword.bpshort}} Blueprints](../images/bp-life-stages.svg){: caption="Life stages of {{site.data.keyword.bpshort}} Blueprints" caption-side="bottom"}
 
