@@ -95,7 +95,7 @@ You can delete a blueprint from command line by using the [delete command](/docs
 
 After deletion, the blueprint is not displayed in the UI. 
 
-## Deleting a blueprint config from the API
+## Deleting blueprint from the API
 {: #delete-blueprint-api}
 {: api}
 
@@ -103,10 +103,9 @@ Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrie
 
 You need to run `blueprint run destroy` command and then run `blueprint config delete` command. For more information, see [Deleting a blueprint ](/docs/schematics?topic=schematics-blueprint-setup&interface=ui#bp-delete).
 
-
 Record the blueprint ID that needs to be deleted. To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
-Example
+**Example:**
 
 ```json
 POST /v2/jobs/ HTTP/1.1
@@ -123,7 +122,13 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-Output
+### Verify blueprint delete from the API
+{: #verify-bp-delete-api}
+
+Verify that the blueprint is deleted successfully as shown in the output.
+{: shortdesc}
+
+**Output:**
 
 ```text
 {
@@ -136,7 +141,7 @@ Output
     "location": "us-east",
     "resource_group": "aac37f57b20142dba1a435c70aeb12df",
     "submitted_at": "2022-09-19T11:05:54.251828146Z",
-    "submitted_by": "smulampa@in.ibm.com",
+    "submitted_by": "test@in.ibm.com",
     "start_at": "2022-09-19T11:05:54.251825549Z",
     "end_at": "0001-01-01T00:00:00Z",
     "status": {

@@ -21,7 +21,7 @@ subcollection: schematics
 When a blueprint  environment is no longer needed, it enters the delete lifecycle stage. See [Deleting blueprint environments](/docs/schematics?topic=sc-bp-delete) to understand the process of deleting blueprint  environments and the steps. Deleting a blueprint  environment is a two-stage process of first destroys all the associated cloud resources and then deleting the blueprint config in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
-The cloud resources that are created by a blueprint environment are destroyed by using the `blueprint run destroy` command. If it is, then needed to remove the blueprint config from Schematics. It is run after all resources are destroyed by using the [Blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 
+The cloud resources that are created by a blueprint environment are destroyed by using the `blueprint run destroy` command. If it is, then needed to remove the blueprint config from Schematics. It is run after all resources are destroyed by using the [blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 
 
 For Terraform Workspaces, destroy runs a Terraform destroy operation against each Workspace. It removes all cloud resources in reverse dependency order. 
 
@@ -86,7 +86,7 @@ OK
 
 On successful completion, destroy command returns `fulfillment_success`. Successful command completion and the status of the modules as `Inactive` indicates that resources in all modules are destroyed.
 
-## Destroying a blueprint environment from the API
+## Destroying blueprint environment from the API
 {: #destroy-blueprint-api}
 {: api}
 
@@ -94,7 +94,13 @@ Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrie
 
 Record the blueprint environment ID that is destroyed. To list the blueprint environment IDs, run [get all the blueprint environments](/apidocs/schematics/schematics#list-blueprint) command.
 
-Example
+### Verify blueprint destroy from the API
+{: #bp-verify-display-api}
+
+Verify that the blueprint is destoryed successfully.
+{: shortdesc}
+
+**Example*:**
 
 ```json
 POST /v2/jobs/ HTTP/1.1
@@ -108,16 +114,15 @@ refresh_token: <refresh_token>
     "command_object": "blueprint",
     "command_object_id": "Blueprint-Basic-Test.eaB.bbb9"
 }
-
 ```
 {: codeblock}
 
-Output
+**Output:**
 
 ```text
 {
     "command_object": "blueprint",
-    "command_object_id": "Blueprint-Basic-Test.eaB.e03e",
+    "command_object_id": "Blueprint-Basic-Test.eaB.bbb9",
     "command_name": "blueprint_destroy",
     "id": "us-east.JOB.Blueprint-Basic-Test.54893e45",
     "name": "JOB.Blueprint-Basic-Test.blueprint_destroy.1663585276714",
@@ -125,7 +130,7 @@ Output
     "location": "us-east",
     "resource_group": "aac37f57b20142dba1a435c70aeb12df",
     "submitted_at": "2022-09-19T11:01:16.714386434Z",
-    "submitted_by": "smulampa@in.ibm.com",
+    "submitted_by": "test@in.ibm.com",
     "start_at": "2022-09-19T11:01:16.714383262Z",
     "end_at": "0001-01-01T00:00:00Z",
     "status": {
@@ -285,6 +290,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-After the cloud resources are destroyed, the Blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=api) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [blueprint run apply](/docs/schematics?topic=schematics-runapply-blueprint&interface=cli) again using the same Blueprint configuration.
+After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=cli) from {{site.data.keyword.bpshort}}. Alternatively, the cloud environment can be re-created by running [blueprint run apply](/docs/schematics?topic=schematics-runapply-blueprint&interface=cli).
 
-Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 
+Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample. 

@@ -715,7 +715,7 @@ subcollection: schematics
 
 * [Creating a blueprint environment from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
-    * [Verify Blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint#verify-bp-update-api)
+    * [Verify blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint#verify-bp-update-api)
 
 * [Next steps](/docs/schematics?topic=schematics-create-blueprint#bp-create-nextsteps)
 
@@ -803,7 +803,9 @@ subcollection: schematics
 
     * [Verifying blueprint run destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destory-cli)
 
-* [Destroying a blueprint environment from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
+* [Destroying blueprint environment from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
+
+    * [Verify blueprint destroy from the API](/docs/schematics?topic=schematics-destroy-blueprint#bp-verify-display-api)
 
 * [Next steps](/docs/schematics?topic=schematics-destroy-blueprint#bp-destroy-nextsteps)
 
@@ -817,7 +819,9 @@ subcollection: schematics
 
     * [Verify blueprint config deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
 
-* [Deleting a blueprint config from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
+* [Deleting blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
+
+    * [Verify blueprint delete from the API](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
 
@@ -1953,6 +1957,8 @@ subcollection: schematics
 * [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
 
 * [When you create a blueprint in `us-south` target region, why is the job type in blueprint job ID indicates `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
+
+* [Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-schematics-instance)
 
 [General](/docs/schematics?topic=schematics-general-faq#general-faq)
 
