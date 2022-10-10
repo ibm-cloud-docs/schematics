@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-10"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the beta release.
 {: beta}
 
 # {{site.data.keyword.bpshort}} Blueprints
@@ -33,7 +33,7 @@ The core principles of IaC are commonly defined as:
 - Continuously test, integrate, and deploy
 - Make your infrastructure code modular
 
-{{site.data.keyword.bpshort}} Blueprints applies these IaC principles to manage the definition and lifecycle of large-scale HashiCorp Terraform environments. The definition and linking of {{site.data.keyword.bpshort}} hosted Terraform environments enables {{site.data.keyword.bpshort}} to simplify the creation and management of large-scale infrastructure deployments on {{site.data.keyword.cloud_notm}}. 
+{{site.data.keyword.bpshort}} Blueprints applies these IaC principles to manage the template and lifecycle of large-scale HashiCorp Terraform environments. The definition and linking of {{site.data.keyword.bpshort}} hosted Terraform environments enables {{site.data.keyword.bpshort}} to simplify the creation and management of large-scale infrastructure deployments on {{site.data.keyword.cloud_notm}}. 
 
 This approach to large-scale environment management is represented by the key concepts that are outlined in the diagram.
 
@@ -45,7 +45,7 @@ This approach to large-scale environment management is represented by the key co
 The key to building scalable cloud architectures with {{site.data.keyword.bpshort}} Blueprints is open source IaC automation modules. {{site.data.keyword.cloud_notm}} automation modules are reusable IaC definitions that implement the layers of an infrastructure stack as HashiCorp Terraform configurations. To assist in creating {{site.data.keyword.cloud_notm}} environments, automation modules are purposely developed to a set of [guidelines](https://github.com/terraform-ibm-modules/getting-started/blob/master/README.md){: external} for resource naming conventions, variable definitions, inputs, and outputs.
 {: shortdesc} 
 
-In {{site.data.keyword.bpshort}}, Blueprint modules are deployed as linked {{site.data.keyword.bpshort}} (Terraform) Workspaces. The {{site.data.keyword.bpshort}} manages data handling between the linked Workspaces based on the resource dependencies between the modules. The linking of the Workspace IaC configuration defines the solution architecture and resource topology.  
+In {{site.data.keyword.bpshort}}, blueprint modules are deployed as linked {{site.data.keyword.bpshort}} (Terraform) Workspaces. The {{site.data.keyword.bpshort}} manages data handling between the linked Workspaces based on the resource dependencies between the modules. The linking of the Workspace IaC configuration defines the solution architecture and resource topology.  
 
 The mapping of a blueprint template with input variables, and automation modules to the {{site.data.keyword.bpshort}} Workspaces, and deployed in cloud resources is illustrated in the diagram. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-10"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -58,8 +58,6 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 {: #glossary-blueprint}
 
 {{site.data.keyword.bpshort}} Blueprints is a pattern-based deployment and lifecycle management service for large-scale cloud environments. It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with Blueprints](/docs/schematics?topic=workingwithblueprints) for details of how to use Blueprints and Terraform to create large-scale environments from solution patterns. In the Blueprints service, {{site.data.keyword.bpshort}} users create a [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a solution pattern.   
-
-{{site.data.keyword.IBM}}
 
 ### Blueprint
 {: #bpb1}

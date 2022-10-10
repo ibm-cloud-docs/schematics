@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-10-10"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -15,34 +15,34 @@ subcollection: schematics
 # Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}
 {: #get-started-blueprints}
 
-Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external} to deploy a {{site.data.keyword.bpshort}} Blueprint with multiple linked Workspaces from the command-line.
+Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external} to deploy a {{site.data.keyword.bpshort}} blueprint with multiple linked Workspaces from the command-line.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} Blueprints support deploying and managing large-scale application environments using solution architecture definitions created from building blocks of open source IaC Code. Building on open source Infrastructure as Code (IaC) automation, Blueprints scales infrastructure deployments by linking multiple {{site.data.keyword.bpshort}} Workspaces to create large-scale environments.  
+{{site.data.keyword.bplong_notm}} Blueprints support deploying and managing large-scale application environments by using solution architecture definitions that are created from building blocks of open source IaC Code. Building on open source Infrastructure as Code (IaC) automation, Blueprints scales infrastructure deployments by linking multiple {{site.data.keyword.bpshort}} Workspaces to create large-scale environments.  
 
 ## Before your begin
 {: #get-started-blueprints-prereq}
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.11.0` version.
-- Select the {{site.data.keyword.cloud_notm}} region you want to use to manage your {{site.data.keyword.bpshort}}. For example, to set the region use [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Select the {{site.data.keyword.cloud_notm}} region that you want to use to manage your {{site.data.keyword.bpshort}}. For example, to set the region use [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
 - Check that you have the right [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create Blueprints.
 
-## Select a Blueprint definition
+## Select a blueprint template
 {: #get-started-blueprints-select}
 {: step}
 
-Use one of the [sample Blueprints](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} to create a scalable Blueprint cloud environment containing multiple {{site.data.keyword.bpshort}} Workspaces. 
+Use one of the [sample Blueprints](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} to create a scalable blueprint cloud environment contains multiple {{site.data.keyword.bpshort}} Workspaces. 
 {: shortdesc}
 
-This sample Blueprint is a simple scenario creating two linked Workspaces and resource data flows between the Workspaces. No cloud resources are created by this example.  
+This sample blueprint is a simple scenario creating two linked Workspaces and resource data flows between the Workspaces. No cloud resources are created by this example.  
 
-## Creating a Blueprint environment in {{site.data.keyword.bpshort}}
+## Creating a blueprint environment in {{site.data.keyword.bpshort}}
 {: #get-started-blueprints-create}
 {: step}
 
-Create your Blueprint environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command. 
+Create your blueprint environment by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command. 
 
-For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0`.
 {: important}
 
 ### Syntax
@@ -77,14 +77,14 @@ Blueprint ID us-south.BLUEPRINT.blueprints-complex-inputs.17a2b552 create_succes
 ```
 {: screen}
 
-Record the ID of the Blueprint to use in the later commands.
+Record the blueprint ID to use in the later commands.
 {: important}
 
-## Installing the Blueprint to create cloud resources
+## Installing the blueprint to create cloud resources
 {: #get-started-blueprints-install}
 {: step}
 
-Use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install) command to perform Terraform apply operations by using the Terraform configurations specified in the Blueprint definition. This operation will create cloud resources. Insert the ID saved from the [output of the create](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli) command.
+Use the [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install) command to perform Terraform apply operations by using the Terraform configurations specified in the blueprint template. This operation creates the cloud resources. Insert the ID saved from the [output of the create](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli) command.
 
 ```sh
 ibmcloud schematics blueprint install -id <blueprint_id>
@@ -114,22 +114,22 @@ OK
 ```
 {: screen}
 
-In the UI view the provisioned {{site.data.keyword.cos_full_notm}} Blueprint and Workspaces. 
-- From the [{{site.data.keyword.bpshort}} Blueprints list](https://cloud.ibm.com/schematics/blueprints){: external}, select the provisioned Blueprint to view the created Workspaces and cloud resources. 
+In the UI view, the provisioned {{site.data.keyword.cos_full_notm}} blueprint and Workspaces. 
+- From the [{{site.data.keyword.bpshort}} Blueprints list](https://cloud.ibm.com/schematics/blueprints){: external}, select the provisioned blueprint to view the created Workspaces and cloud resources. 
 
 ## Next steps
 {: #get-started-blueprints-nextsteps}
 
-You have now deployed a {{site.data.keyword.bpshort}} Blueprint and created a multi-workspace environment.
+You now deployed a {{site.data.keyword.bpshort}} blueprint and created a multi-workspace environment.
 
-Optionally, you can clean up the deployed Blueprint with the following commands:
+You can clean up the deployed blueprint with the following commands:
 
 ```sh
 ibmcloud schematics blueprint destroy -id <blueprint_id>
 ```
 {: pre}
 
-You need to run Blueprint destroy command and then run Blueprint delete command. For more information about the difference between destroy and delete command, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+You need to run blueprint destroy command and then run blueprint delete command. For more information about the difference between destroy and delete command, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 {: note}
 
 ```sh
@@ -138,4 +138,4 @@ ibmcloud schematics blueprint delete -id <blueprint_id>
 {: pre}
 
 - Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
-- Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics/?q=topic:blueprint). 
+- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics/?q=topic:blueprint). 

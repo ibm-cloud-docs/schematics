@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-10"
 
 keywords: schematics
 subcollection: schematics
@@ -54,15 +54,15 @@ subcollection: schematics
 
 * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
 
-* [Select a Blueprint definition](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
+* [Select a blueprint template](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
 
-* [Creating a Blueprint environment in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
+* [Creating a blueprint environment in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
 
     * [Syntax](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-syntax)
 
     * [Output](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-create-output)
 
-* [Installing the Blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-install)
+* [Installing the blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-install)
 
     * [Output](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-install-output)
 
