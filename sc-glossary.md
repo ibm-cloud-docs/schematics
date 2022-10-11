@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -68,29 +68,29 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 ### Blueprint
 {: #bpb1}
 
-A Blueprint is the resource in the {{site.data.keyword.bpshort}} that a user works with to manage the cloud environment and resources that are created from a Blueprint solution pattern. The Blueprint resource in {{site.data.keyword.bpshort}} stores the details of the solution pattern and the specific configuration details. All operations against the deployed cloud environment are set by using the Blueprint resource in {{site.data.keyword.bpshort}} Blueprints. 
+A blueprint is the resource in the {{site.data.keyword.bpshort}} that a user works with to manage the cloud environment and resources that are created from a blueprint solution pattern. The blueprint environment resource in {{site.data.keyword.bpshort}} stores the details of the solution pattern and the specific configuration details. All operations against the deployed cloud environment are set by using the blueprint environment resource in {{site.data.keyword.bpshort}} Blueprints. 
 {: shortdesc}
 
-The Blueprint resource maintains the record of operations set against the cloud environment, status, the cloud resources deployed, and the [Blueprint definition](/docs/schematics?topic=schematics-glossary#bpb2). It defines the solution pattern and infrastructure architecture, and the unique input values that are used to configure the environment.
+The blueprint environment resource maintains the record of operations set against the cloud environment, status, the cloud resources deployed, and the [Blueprint definition](/docs/schematics?topic=schematics-glossary#bpb2). It defines the solution pattern and infrastructure architecture, and the unique input values that are used to configure the environment.
 
-A Blueprint is created from a [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The set of deployed cloud resources is referred to as a [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4). 
+A blueprint is created from a [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The set of deployed cloud resources is referred to as a [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4). 
 
-### Blueprint definition
+### Blueprint template
 {: #bpb2}
 
-A [Blueprint definition](/docs/schematics?topic=schematics-blueprint-templates) defines the infrastructure architecture, topology, and cloud resources for a solution pattern. The definition implements the wanted solution architecture from reusable [automation modules that are written in Terraform. Definition files are written in YAML and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. 
+A [Blueprint template](/docs/schematics?topic=schematics-blueprint-templates) defines the infrastructure architecture, topology, and cloud resources for a solution pattern. The definition implements the wanted solution architecture from reusable [automation modules that are written in Terraform. Definition files are written in YAML and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. 
 {: shortdesc}
 
 ### Blueprint configuration
 {: #bpb3}
 
-A Blueprint configuration is the initial settings that the user must provide to create a Blueprint (resource) in {{site.data.keyword.bpshort}}. The configuration defines the Blueprint definition YAML file to be used, its Git source location, input value files, document version information, and any more inputs.  
+A blueprint configuration is the initial settings that the user must provide to create a blueprint (resource) in {{site.data.keyword.bpshort}}. The configuration defines the blueprint template YAML file to be used, its Git source location, input value files, document version information, and any more inputs.  
 {: shortdesc}
 
 ### Blueprint environment
 {: #bpb4}
 
-A Blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources that are created from a [Blueprint definition](/docs/schematics?topic=schematics-glossary#bpb2) and inputs that are specified by a [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3).  
+A blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources that are created from a [Blueprint definition](/docs/schematics?topic=schematics-glossary#bpb2) and inputs that are specified by a [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3).  
 {: shortdesc}
 
 ### Blueprint automation modules
@@ -102,19 +102,19 @@ Blueprint definitions are composed from IaC automation modules that are implemen
 ### Blueprint inputs
 {: #bpi1}
 
-Inputs are specified at Blueprint create time to pass inputs to dynamically customize the Blueprint and over-ride inputs from a version-controlled input file that is sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
+Inputs are specified at blueprint create time to pass inputs to dynamically customize the blueprint and over-ride inputs from a version-controlled input file that is sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
 {: shortdesc}
 
-### Blueprint Jobs
+### Blueprint jobs
 {: #bpj1}
 
 Blueprints operations (command) are run as jobs by {{site.data.keyword.bpshort}}. [Blueprints job commands show the value of the output variables that are defined in a Blueprint.
 {: shortdesc}
 
-### Blueprint Lifecycle
+### Blueprint lifecycle
 {: #bpl1}
 
-Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. Blueprint environments follow a lifecycle of definition, deployment, operation, and deletion. See [Working with Blueprints](/docs/schematics?topic=workingwithblueprints). 
+Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. blueprint environments follow a lifecycle of definition, deployment, operation, and deletion. See [Working with Blueprints](/docs/schematics?topic=workingwithblueprints). 
 {: shortdesc}
 
 ## Catalog

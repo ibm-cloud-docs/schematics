@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -55,7 +55,7 @@ OK
 ```
 {: screen}
 
-### Verify blueprint config deletion 
+### Verifying blueprint config deletion 
 {: #verify-bp-delete-cli}
 
 During the Beta, the config delete CLI command does not wait for successful job completion and returns immediately. 
@@ -90,7 +90,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 You can delete a blueprint from command line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
 
-### Verify blueprint config deletion 
+### Verifying blueprint config deletion 
 {: #verify-bp-deletion-ui}
 
 After deletion, the blueprint is not displayed in the UI. 
@@ -122,7 +122,7 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-### Verify blueprint delete from the API
+### Verifying blueprint delete from the API
 {: #verify-bp-delete-api}
 
 Verify that the blueprint is deleted successfully as shown in the output.
@@ -302,6 +302,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-delete-nextsteps}
 
-To destroy or delete a blueprint environment, see [destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli), and [delete a blueprint configuration](/docs/schematics?topic=schematics-delete-blueprint&interface=cli#delete-blueprint-cli).
+- To destroy or delete a blueprint environment, see [destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli), and [delete a blueprint configuration](/docs/schematics?topic=schematics-delete-blueprint&interface=cli#delete-blueprint-cli).
 
-Looking for blueprint template samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further customization and usage scenarios for each sample. 
+- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 

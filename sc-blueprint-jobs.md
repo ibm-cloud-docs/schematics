@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -25,7 +25,7 @@ To list your blueprint jobs with the CLI, use the `ibmcloud schematics blueprint
 For all the blueprint commands, syntax, and option flag details, see [blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
-## Listing Blueprint jobs through CLI
+## Listing blueprint jobs through CLI
 {: #list-blueprint-cli}
 {: cli}
 
@@ -250,10 +250,9 @@ Blueprint operations are performed by child `module` jobs operating against each
 {: #install-blueprint-api}
 {: api}
 
-
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about blueprint config update, refer to, [Installing Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-Blueprint create API runs `Blueprint install`, and `Blueprint jobs` `APIs` together, to perform the create, and install Blueprint operations.
+Blueprint jobs API runs `blueprint apply`, and `blueprint jobs` API's together, to perform the create and apply a blueprint operations.
 {: important}
 
 Example
@@ -267,7 +266,13 @@ Authorization: Bearer <auth_token>
 ```
 {: codeblock}
 
-Output:
+### Verifying blueprint job results from the API 
+{: #bp-verify-jobs-api}
+
+Verify that the blueprint jobs is success as shown in the output.
+{: shortdesc}
+
+**Output:**
 
 ```text
 {
@@ -348,12 +353,11 @@ Output:
 ```
 {: screen}
 
-For more information, about how to diagnose and resolve issues if the list job fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
+For more information, about how to diagnose and resolve issues if the list job fails, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Next steps
 {: #bp-create-nextsteps}
 
-After displaying the blueprint jobs in {{site.data.keyword.bpshort}}, the next step in updating the environment is to [update](/docs/schematics?topic=schematics-update-blueprint&interface=api) the configuration.
+- After displaying the blueprint jobs in {{site.data.keyword.bpshort}}, the next step in updating the environment is to [update](/docs/schematics?topic=schematics-update-blueprint&interface=api) the configuration.
 
-Looking for blueprint template samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further customization and usage scenarios for each sample. 
-
+- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 

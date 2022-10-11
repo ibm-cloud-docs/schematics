@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Understanding blueprint templates and configuration
 {: #blueprint-templates}
 
-{{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilises the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. Blueprint environments are created from a user supplied blueprint template that identifies the reference architecture, Terraform modules and a set of input values that are used to customise the template. 
+{{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilises the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. blueprint environments are created from a user supplied blueprint template that identifies the reference architecture, Terraform modules and a set of input values that are used to customise the template. 
 {: shortdesc}
 
 A {{site.data.keyword.bpshort}} blueprint environment is specified by three versioned elements:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -598,7 +598,7 @@ For more information about the flags see [Workspace get](/docs/schematics?topic=
 ### `ibmcloud schematics blueprint create`
 {: #schematics-blueprint-create}
 
-Create a {{site.data.keyword.bpshort}} Blueprint by using the `ibmcloud schematics blueprint create` command. The Blueprint is created from a user provided configuration that specifies the source of the Blueprint definition in a Git repository, the input files and optional override inputs.
+Create a {{site.data.keyword.bpshort}} blueprint by using the `ibmcloud schematics blueprint create` command. The blueprint is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the input files and optional override inputs.
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
@@ -620,10 +620,10 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | ----- | -------- | ------- |
 | `--name`or `-n`| Required | Name of the Blueprint. |
 | `--resource-group` or `-r` | Required | The management resource group for the Blueprint.|
-| `--bp-git-url` or `--bu` | Required | The Blueprint Git URL. |
-| `--bp-git-file` or `--bf`| Required | The Blueprint Git file name. |
-| `--bp-git-branch` or `--bb`| Optional | The Blueprint Git branch name, if not provided defaults to main. In case the `--bp-git-branch` and `--bp-git-release` values are not provided, the command errors for one of the value to be provided.|
-| `--bp-git-release` or `--br`| Optional | The Blueprint Git release tag. Exclusive with branch name.|
+| `--bp-git-url` or `--bu` | Required | The blueprint Git URL. |
+| `--bp-git-file` or `--bf`| Required | The blueprint Git file name. |
+| `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name, if not provided defaults to main. In case the `--bp-git-branch` and `--bp-git-release` values are not provided, the command errors for one of the value to be provided.|
+| `--bp-git-release` or `--br`| Optional | The blueprint Git release tag. Exclusive with branch name.|
 | `--input-git-url` or `--iu`| Optional | The input Git URL.|
 | `--input-git-file` or `--if`| Optional | The input file name. |
 | `--input-git-branch` or `--ib`| Optional |The input file Git branch name, if not provided it defaults to main. In case the `--input-git-branch` and `--input-git-release` values are not provided, the command errors for one of the value to be provided.|
@@ -645,7 +645,7 @@ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group defau
 #### Using a config file
 {: #bp-create-config}
 
-Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the Blueprint create command. Pass the file name to the command by using the `--file` command option.
+Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint create command. Pass the file name to the command by using the `--file` command option.
 {: shortdesc}
 
 You need to replace the `<...>` placeholders with the actual values.
@@ -740,7 +740,7 @@ ibmcloud schematics blueprint create --file createtest.json --github-token <ENTE
 ```
 {: pre}
 
-Output:
+**Output:**
 
 ```text
 Created Blueprint ID: Blueprint_Basic.eaB.5cd9
@@ -768,7 +768,7 @@ OK
 ### `ibmcloud schematics blueprint install`
 {: #schematics-blueprint-install}
 
-The install command creates the cloud resources defined by the Blueprint definition. Install performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the Blueprint definition to create the cloud resources.
+The install command creates the cloud resources defined by the blueprint template. Install performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the blueprint template to create the cloud resources.
 {: shortdesc}
 
 **`Syntax`**
@@ -796,7 +796,7 @@ ibmcloud schematics blueprint install --id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint update`
 {: #schematics-blueprint-update}
 
-You update the Blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and Blueprint definition with the `ibmcloud schematics blueprint update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics bluepeint install` after the update has been performed.
+You update the blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and blueprint template with the `ibmcloud schematics blueprint update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics bluepeint install` after the update has been performed.
 {: shortdesc}
 
 **`Syntax`**
@@ -811,7 +811,7 @@ ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH]
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the Blueprint.|
-| `--file` or `-f` | Optional | The path to the JSON file containing the definition of the Blueprint to update. |
+| `--file` or `-f` | Optional | The path to the JSON file containing the definition of the blueprint to update. |
 | `--input` or `--in` | Optional | Input variables for the Blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=testvalue,test1=testvalue1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access private Git repository.|
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
@@ -917,7 +917,7 @@ ibmcloud schematics blueprint destroy -id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint delete`
 {: #schematics-blueprint-delete}
 
-Delete a {{site.data.keyword.bpshort}} Blueprint. A Blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state. For more information about the difference between destroy and delete command, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+Delete a {{site.data.keyword.bpshort}} Blueprint. A blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state. For more information about the difference between destroy and delete command, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
 {: shortdesc}
 
 **`Syntax`**
@@ -932,7 +932,7 @@ ibmcloud schematics blueprint delete --id BLUEPRINT_ID [—force-delete] [--no-p
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the Blueprint.|
-| `--force-delete` or `--fd` | Optional | Force deletes the Blueprint including the active module. This action cannot be reversed.|
+| `--force-delete` or `--fd` | Optional | Force deletes the blueprint including the active module. This action cannot be reversed.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints delete flags" caption-side="top"}
@@ -947,7 +947,7 @@ ibmcloud schematics blueprint delete -id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint job get`
 {: #schematics-blueprint-job-get}
 
-Get information of a Blueprint job.
+Get information of a blueprint job.
 {: shortdesc}
 
 **`Syntax`**
@@ -961,7 +961,7 @@ ibmcloud schematics blueprint job get --id JOB_ID [--output OUTPUT]
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job list` to get Job ID of a particular Blueprint job.|
+| `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job list` to get Job ID of a particular blueprint job.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} Blueprints job get flags" caption-side="top"}
 
@@ -1005,7 +1005,7 @@ ibmcloud schematics blueprint job list --id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint job logs`
 {: #schematics-blueprint-job-logs}
 
-Get logs of a single Blueprint job. 
+Get logs of a single blueprint job. 
 {: shortdesc}
 
 **`Syntax`**
@@ -1019,7 +1019,7 @@ ibmcloud schematics blueprint job logs --id JOB_ID
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job get` to get a particular Blueprint job logs. |
+| `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job get` to get a particular blueprint job logs. |
 {: caption="{{site.data.keyword.bpshort}} Blueprints job list flags" caption-side="top"}
 
 **`Example`**

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -32,7 +32,7 @@ Updating a deployed blueprint environment and cloud resources is a two-step proc
 Updating a blueprint environment uses the capabilities of Terraform to runs updates to deployed cloud resources. The Terraform config and inputs to a Workspace are updated by the blueprint Update operation. From the updated configuration, Terraform determines the changes that must be set against the existing deployed resources and sets the needed resource updates, deletions, or creates.  
 
 Update supports modification of:
-- Blueprint definition YAML file 
+- Blueprint template YAML file 
 - Input values file
 - Extra inputs  
 
@@ -111,7 +111,7 @@ ibmcloud schematics blueprint update --id Blueprint_Basic.eaB.5cd9 --inputs reso
 ```
 {: pre}
 
-### Verify blueprint config update
+### Verifying blueprint config update
 {: #verify-update}
 
 Verify that the blueprint config is updated successfully. When you update the config from the CLI, the command displays the details of the linked Workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializes the Workspaces. The command returns on completion.
@@ -142,14 +142,13 @@ On successful completion the update command returns **`update_success`**.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
 
-
 ## Updating a blueprint environment from the UI 
 {: #update-blueprint-ui}
 {: ui}
 
-Currently, you can update Blueprint from CLI by using the [update command](#update-blueprint-cli) to update the Blueprint configuration and then run the [Apply](/docs/schematics?topic=schematics-apply-blueprint) command to deploy the changes.
+Currently, you can update blueprint from CLI by using the [update command](#update-blueprint-cli) to update the blueprint configuration and then run the [Apply](/docs/schematics?topic=schematics-apply-blueprint) command to deploy the changes.
 
-### Verify blueprint update from the UI
+### Verifying blueprint update from the UI
 {: #verify-bp-update-ui}
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the update operation. 
@@ -166,12 +165,12 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Update a blueprint](/apidocs/schematics/schematics#replace-blueprint) by using API.
 
-Blueprint update API runs `blueprint update` `API`, to perform the changes in configuration by using Blueprint operations.
+Blueprint update API updates the changes in configuration by using blueprint operations.
 {: important}
 
 To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
-Example
+**Example:**
 
 ```json
 PUT /v2/blueprints/Blueprint-Basic-Test.eaB.bbb9/ HTTP/1.1
@@ -220,15 +219,16 @@ refresh_token: <refresh_token>
     "description": "Deploys a simple two module blueprint Updated",
     "resource_group": "Default"
 }
-
 ```
 {: codeblock}
 
-### Verify blueprint create from the API
+### Verifying blueprint update from the API
 {: #verify-bp-update-api}
 
+Verify that the blueprint update is success as shown in the output.
+{: shortdesc}
 
-**`Output:`**
+**Output:**
 
 ```text
 {
@@ -418,6 +418,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-update-nextsteps}
 
-After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is applying the blueprint [apply](/docs/schematics?topic=schematics-apply-blueprint&interface=api).
+- After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is applying a blueprint [destroy](/docs/schematics?topic=schematics-destroy-blueprint) resource.
 
-Looking for template samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further customization and usage scenarios for each sample. 
+- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 

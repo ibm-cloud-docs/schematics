@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-11"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -39,8 +39,8 @@ You can come back anytime to your created thread to add information, ask questio
 | Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | | | 
 | The Terraform Plan operation is not supported for Blueprints. | | | 
 | Run operations are performed as a single operation against all modules. A future 2023 release will support single module operations  | | | 
-| Created Cloud resources are not tagged with Blueprint and Workspace IDs. | | | 
-| Only one input file is supported per Blueprint configuration. | | |
+| Created Cloud resources are not tagged with blueprint and Workspace IDs. | | | 
+| Only one input file is supported per blueprint configuration. | | |
 | Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources are destroyed to delete a Blueprint.  | | |  
 | The Delete CLI command returns immediately at start of execution and does not wait for successful completion. | | | 
 | Operations must not be directly run against linked {{site.data.keyword.bpshort}} modules (Workspaces) by using the Workspace commands or UI. Operations must be run by using blueprint commands.    | | |
@@ -57,7 +57,7 @@ You can come back anytime to your created thread to add information, ask questio
 | On config create, the blueprint name and description that is specified on the command line are ignored. | | |
 | On config update, the blueprint name is not updated. | | |  
 | Run apply, run destroy, and config delete commands return the generic message **`fullfilment_success`** on successful completion.  | | | 
-| Automatic `pull latest` of updated module Terraform configuration from Git repositories is not being run on the Blueprint update. | | | 
+| Automatic `pull latest` of updated module Terraform configuration from Git repositories is not being run on the blueprint update. | | | 
 | JSON output option not supported on commands. As a workaround perform a pull-latest via the Workspace UI  | | |   
 {: caption="Beta release known issues" caption-side="bottom"}
 

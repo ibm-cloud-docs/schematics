@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -347,7 +347,7 @@ Here are the list of CURL commands used to provision the Agent infrastructure:
     ```
    {: pre}
 
-3. Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) to upload a `agent-infrastructure-templates.tar` file that contains the Blueprint definition, inputs details.
+3. Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) to upload a `agent-infrastructure-templates.tar` file that contains the blueprint template, inputs details.
    ```curl
     curl -X PUT \
     https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/template_data/{template_id}/template_repo_upload \

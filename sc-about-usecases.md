@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-11"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -89,5 +89,5 @@ To get started with software deployment in {{site.data.keyword.bpshort}}, see th
 ## Next steps
 {: #nextsteps-terminologies}
 
-- Explore Blueprint samples by using {{site.data.keyword.bpshort}} [tutorials](/docs/schematics?topic=schematics-provisioning-terraform-template).
+- Explore blueprint samples by using {{site.data.keyword.bpshort}} [tutorials](/docs/schematics?topic=schematics-provisioning-terraform-template).
 - Click [here](/docs/schematics?topic=schematics-how-it-works) to revisit the {{site.data.keyword.bpshort}} use cases.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: blueprint destroy, destroy blueprint, blueprint
 
@@ -94,13 +94,13 @@ Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrie
 
 Record the blueprint environment ID that is destroyed. To list the blueprint environment IDs, run [get all the blueprint environments](/apidocs/schematics/schematics#list-blueprint) command.
 
-### Verify blueprint destroy from the API
+### Verifying blueprint destroy from the API
 {: #bp-verify-display-api}
 
 Verify that the blueprint is destoryed successfully.
 {: shortdesc}
 
-**Example*:**
+**Example:**
 
 ```json
 POST /v2/jobs/ HTTP/1.1
@@ -290,6 +290,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=cli) from {{site.data.keyword.bpshort}}. Alternatively, the cloud environment can be re-created by running [blueprint run apply](/docs/schematics?topic=schematics-runapply-blueprint&interface=cli).
+- After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=cli) from {{site.data.keyword.bpshort}}. Alternatively, the cloud environment can be re-created by running [blueprint run apply](/docs/schematics?topic=schematics-runapply-blueprint&interface=cli).
 
-Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample. 
+- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 

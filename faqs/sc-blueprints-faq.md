@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -149,10 +149,11 @@ This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}
 {: support}
 
 You cannot delete the {{site.data.keyword.bpshort}} service instance. Instead you can `destory` the cloud resources that are created by using {{site.data.keyword.bpshort}} Terraform and `delete` the {{site.data.keyword.bpshort}} objects such as Workspace, or an Action.
+{: shortdesc}
 
 {{site.data.keyword.bpshort}} service is provisioned for the following reasons.
 
-- Whenever {{site.data.keyword.bpshort}} service is used for the first time. you do not explicitly provision the {{site.data.keyword.bpshort}}.
+- Whenever {{site.data.keyword.bpshort}} service is used for the first time, you do not explicitly provision the {{site.data.keyword.bpshort}}.
 - {{site.data.keyword.bpshort}} is a free service, not charged for the service instance.
 
 There is no plan to add this feature to delete the {{site.data.keyword.bpshort}} service instance.

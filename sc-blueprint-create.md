@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -96,7 +96,7 @@ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group defau
 
 On successful completion, the config create command returns **`create_success`** and the unique ID of the {{site.data.keyword.bpshort}} blueprint created. This ID is needed as input for all future `schematics blueprint` operations against this environment. For more information, see [blueprint config create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
 
-### Verify blueprint config creation 
+### Verifying blueprint config creation 
 {: #verify-blueprint-create-cli}
 
 Verify that the blueprint configuration was created successfully and returns the command prompt on completion.
@@ -135,7 +135,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 Currently, you can create a blueprint from command line by using the [Create command](/docs/schematics?topic=schematics-create-blueprint&interface=cli). Followed by [Apply](/docs/schematics?topic=schematics-apply-blueprint) command to create cloud resources.
 {: note}
 
-### Verify blueprint creation from the UI 
+### Verifying blueprint creation from the UI 
 {: #verify-blueprint-create-ui}
 
 Here the steps to verify your blueprint creation.
@@ -211,7 +211,7 @@ Authorization: Bearer
 ```
 {: codeblock}
 
-### Verify blueprint create from the API
+### Verifying blueprint create from the API
 {: #verify-bp-update-api}
 
 Verify that the blueprint is created successfully as shown in the output.
@@ -352,6 +352,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-create-nextsteps}
 
-The next step in deploying the cloud resources that are defined by the blueprint is to [Apply](/docs/schematics?topic=schematics-apply-blueprint) the Blueprint. 
+- The next step in deploying the cloud resources that are defined by the blueprint is to [Apply](/docs/schematics?topic=schematics-apply-blueprint) the Blueprint. 
 
-Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample. 
+- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 
