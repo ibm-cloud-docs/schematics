@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-10-11"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -112,11 +112,11 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
     - [Use case](/docs/schematics?topic=schematics-get-started-blueprints).
     - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
-    - [Understanding Blueprints definitions](/docs/schematics?topic=schematics-blueprint-definitions) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-install-blueprint) to configure the right schemas and use the right Blueprints commands for the deployment of Blueprints.
-    - See [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to install Blueprints deployment.
-    - Blueprints are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
-    - Deploy [{{site.data.keyword.bpshort}} Blueprints by using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a Blueprint-managed cloud environment.
-    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on Blueprints.
+    - [Understanding blueprint templates](/docs/schematics?topic=schematics-bp-template-schema-yaml) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac) to configure the right schemas and use the right blueprint commands for the deployment of blueprint environments.
+    - See [Blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprint environments.
+    - Blueprints are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint environment.
+    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprint environments.
     - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
@@ -432,7 +432,7 @@ Workspace update command enhancement
 :   The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bpshort}} Workspaces update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
 
 Terraform v1.0 support
-:   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://www.terraform.io/language/upgrade-guides/1-0).
+:   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-0).
 
 {{site.data.keyword.bplong_notm}} support job queue logs enhancement
 :   For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
@@ -462,7 +462,7 @@ Ansible v2.9.23 API and command-line support
 :   Ansible v2.9.23 and Ansible provisioner v2.3.3 are supported in the {{site.data.keyword.bplong_notm}} Action.
 
 ### 19 July 2021
-{: #schematics-jul302021}
+{: #schematics-jul192021}
 {: release-note}
 
 Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}
@@ -743,7 +743,7 @@ Review the release notes for April 2020.
 {: shortdesc}
 
 ### 17 April 2020
-{: #schematics-may82020}
+{: #schematics-apr172020}
 {: release-note}
 
 Terraform v0.12 support

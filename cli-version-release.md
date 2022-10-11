@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-11"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,8 +20,8 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.2 | 11 Aug 2022 | Included `--output` flag and bug fixes for all Blueprint commands in  and released  {{site.data.keyword.bpshort}} v1.12.2 plug-in.|
-| 1.12.1 | 26 July 2022 | Incorporated the bugs and fixes related to Blueprint commands in {{site.data.keyword.bpshort}} and released v1.12.1 plug-in.|
+| 1.12.2 | 11 Aug 2022 | Included `--output` flag and bug fixes for all blueprint commands in  and released  {{site.data.keyword.bpshort}} v1.12.2 plug-in.|
+| 1.12.1 | 26 July 2022 | Incorporated the bugs and fixes related to blueprint commands in {{site.data.keyword.bpshort}} and released v1.12.1 plug-in.|
 | 1.12.0 | 11 July 2022 | Support for `Agents` commands in {{site.data.keyword.bpshort}} from command-line.|
 | 1.11.1 | 8 July 2022 | Support for `Blueprints` commands, and fix the translation issue in {{site.data.keyword.bpshort}} from command-line.|
 | 1.10.0 | 5 May 2022 | Support for `stop`, `force-stop`, and `terminate` in {{site.data.keyword.bpshort}} from command-line.|

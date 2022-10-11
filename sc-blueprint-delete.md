@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-10-11"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -12,28 +12,28 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the beta release.
 {: beta}
 
-# Deleting a Blueprint
+# Deleting a blueprint configuration
 {: #delete-blueprint}
 
-When a Blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting Blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) to understand the process of deleting Blueprint environments and the steps. Deleting a Blueprint environment is a two-stage process of first destroys all the associated cloud resources and then deleting the Blueprint in {{site.data.keyword.bpshort}}.
+When a blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) to understand the process of deleting blueprint environments and the steps. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and then deletes the blueprint configuration in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 
-Blueprint delete is the second step that is needed to completely delete a Blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a Blueprint can be deleted when cloud resources in all the linked Workspaces are deleted and the Workspaces are in `Inactive` state. The first step is to run the [destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) command to destroy the resources that are used in the Workspaces.
+Blueprint config delete is the second step that is needed to completely delete a blueprint configuration from {{site.data.keyword.bpshort}}. To protect from accidental deletion, a config can only be deleted when cloud resources in all the modules have been deleted and the morkspaces are in `Inactive` state. The first step is to run the [blueprint run destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) command to destroy the resources in the blueprint environment. 
 
-This behavior can be modified by using the `-force-delete` flag to allow deletion when Workspaces cannot be returned to an `Inactive` state.
+This behavior can be modified by using the `-force-delete` flag to allow deletion when modules cannot be returned to an `Inactive` state due to a {{site.data.keyword.bpshort}} or Terraform error. 
 {: shortdesc}
 
-## Deleting Blueprint from the CLI
+## Deleting a blueprint config from the CLI
 {: #delete-blueprint-cli}
 {: cli}
 
-For more information, see [delete command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete). You need to run Blueprint destroy command and then run Blueprint delete command. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+For more information, see [blueprint config delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete) command. First the `blueprint run destroy` command must have been run to destroy the resources, then can the `blueprint run delete` command run. 
 
-For all the Blueprints commands, syntax, and option flag details, see [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ```sh
@@ -55,12 +55,12 @@ OK
 ```
 {: screen}
 
-### Verify Blueprint delete 
+### Verifying blueprint config deletion 
 {: #verify-bp-delete-cli}
 
-During the Beta, the delete CLI command does not wait for successful job completion and returns immediately. 
+During the Beta, the config delete CLI command does not wait for successful job completion and returns immediately. 
 
-The status of the delete operation can be monitored by using the `blueprint job get` command. The following command sets a Blueprint `job get` for the JOB ID `eu-gb.JOB.Blueprint-Basic-Example.f2d388d3`. The job ID is displayed in the delete command output. 
+The status of the config delete operation can be monitored by using the `blueprint job get` command. The following command runs a `blueprint job get` for the JOB ID `eu-gb.JOB.Blueprint-Basic-Example.f2d388d3`. The job ID is displayed in the config delete command output. 
 
 ```sh
 mcloud schematics blueprint job get --id us-east.JOB.Blueprint_Basic.e4081308
@@ -80,33 +80,32 @@ OK
 ```
 {: screen}
 
-During the delete operation that the status shows `In Progress`, when completed the status changes to `Normal`. The Blueprint and all the depended cloud resources are now deleted. 
+During the delete operation that the status shows `In Progress`, when completed the status changes to `Normal`. The blueprint confg and all the dependent cloud resources are now deleted. 
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
-## Deleting a Blueprint from the UI 
+## Deleting a blueprint config from the UI 
 {: #delete-blueprint-ui}
 {: ui}
 
-You can delete a Blueprint from command line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
+You can delete a blueprint from command line by using the [delete command](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
 
-### Verify Blueprint deletion 
+### Verifying blueprint config deletion 
 {: #verify-bp-deletion-ui}
 
-After deletion, the Blueprint is not displayed in the UI. 
+After deletion, the blueprint is not displayed in the UI. 
 
-## Deleting a Blueprint from the API
+## Deleting blueprint from the API
 {: #delete-blueprint-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Delete a Blueprint](/apidocs/schematics/schematics#delete-blueprint) by using API. 
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Delete a blueprint config](/apidocs/schematics/schematics#delete-blueprint) by using API. 
 
-You need to run Blueprint destroy command and then run Blueprint delete command. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
+You need to run `blueprint run destroy` command and then run `blueprint config delete` command. For more information, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint) configuration.
 
+Record the blueprint ID that needs to be deleted. To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
-Record the Blueprint ID that needs to be deleted. To list the Blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
-
-Example
+**Example:**
 
 ```json
 POST /v2/jobs/ HTTP/1.1
@@ -123,7 +122,13 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-Output
+### Verifying blueprint delete from the API
+{: #verify-bp-delete-api}
+
+Verify that the blueprint is deleted successfully as shown in the output.
+{: shortdesc}
+
+**Output:**
 
 ```text
 {
@@ -136,7 +141,7 @@ Output
     "location": "us-east",
     "resource_group": "aac37f57b20142dba1a435c70aeb12df",
     "submitted_at": "2022-09-19T11:05:54.251828146Z",
-    "submitted_by": "smulampa@in.ibm.com",
+    "submitted_by": "test@in.ibm.com",
     "start_at": "2022-09-19T11:05:54.251825549Z",
     "end_at": "0001-01-01T00:00:00Z",
     "status": {
@@ -292,11 +297,11 @@ Output
 ```
 {: screen}
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Next steps
 {: #bp-delete-nextsteps}
 
-To destroy or delete a Blueprint, see [destroy a Blueprint](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli), and [delete a Blueprint](/docs/schematics?topic=schematics-delete-blueprint&interface=cli#delete-blueprint-cli).
+- To destroy or delete a blueprint environment, see [destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli), and [delete a blueprint configuration](/docs/schematics?topic=schematics-delete-blueprint&interface=cli#delete-blueprint-cli).
 
-Looking for Blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further Blueprint customization and usage scenarios for each sample. 
+- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 
