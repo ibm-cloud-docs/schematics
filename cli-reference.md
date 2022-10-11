@@ -765,16 +765,16 @@ OK
 {: screen}
 
 
-### `ibmcloud schematics blueprint install`
-{: #schematics-blueprint-install}
+### `ibmcloud schematics blueprint apply`
+{: #schematics-blueprint-apply}
 
-The install command creates the cloud resources defined by the blueprint template. Install performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the blueprint template to create the cloud resources.
+The apply command creates the cloud resources defined by the blueprint template. Apply performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the blueprint template to create the cloud resources.
 {: shortdesc}
 
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint install --id BLUEPRINT_ID [--output OUTPUT]
+ibmcloud schematics blueprint apply --id BLUEPRINT_ID [--output OUTPUT]
 ```
 {: pre}
 
@@ -789,7 +789,7 @@ ibmcloud schematics blueprint install --id BLUEPRINT_ID [--output OUTPUT]
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint install --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint apply --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 

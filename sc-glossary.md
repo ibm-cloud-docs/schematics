@@ -62,7 +62,7 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 ## Blueprints
 {: #glossary-blueprint}
 
-{{site.data.keyword.bpshort}} Blueprints is a pattern-based deployment and lifecycle management service for large-scale cloud environments. It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with Blueprints](/docs/schematics?topic=workingwithblueprints) for details of how to use Blueprints and Terraform to create large-scale environments from solution patterns. In the Blueprints service, {{site.data.keyword.bpshort}} users create a [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a solution pattern.   
+{{site.data.keyword.bpshort}} Blueprints is a pattern-based deployment and lifecycle management service for large-scale cloud environments. It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with Blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use Blueprints and Terraform to create large-scale environments from solution patterns. In the Blueprints service, {{site.data.keyword.bpshort}} users create a [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a solution pattern.   
 {: shortdesc}
 
 ### Blueprint
@@ -78,7 +78,7 @@ A blueprint is created from a [Blueprint configuration](/docs/schematics?topic=s
 ### Blueprint template
 {: #bpb2}
 
-A [Blueprint template](/docs/schematics?topic=schematics-blueprint-templates) defines the infrastructure architecture, topology, and cloud resources for a solution pattern. The definition implements the wanted solution architecture from reusable [automation modules that are written in Terraform. Definition files are written in YAML and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. 
+A [Blueprint template](/docs/schematics?topic=schematics-bp-template-schema-yaml) defines the infrastructure architecture, topology, and cloud resources for a solution pattern. The definition implements the wanted solution architecture from reusable [automation modules that are written in Terraform. Definition files are written in YAML and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. 
 {: shortdesc}
 
 ### Blueprint configuration
@@ -114,7 +114,7 @@ Blueprints operations (command) are run as jobs by {{site.data.keyword.bpshort}}
 ### Blueprint lifecycle
 {: #bpl1}
 
-Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. blueprint environments follow a lifecycle of definition, deployment, operation, and deletion. See [Working with Blueprints](/docs/schematics?topic=workingwithblueprints). 
+Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. blueprint environments follow a lifecycle of definition, deployment, operation, and deletion. See [Working with Blueprints](/docs/schematics?topic=schematics-work-with-blueprints).
 {: shortdesc}
 
 ## Catalog

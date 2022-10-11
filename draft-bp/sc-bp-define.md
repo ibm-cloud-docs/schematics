@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -26,7 +26,7 @@ subcollection: schematics
 Blueprint environments can be created from existing user or {{site.data.keyword.IBM_notm}} authored blueprint templates. Alternatively, new blueprint templates can be authored to address specific application requirements. Either by creating a new template from scratch or modification of an existing blueprint template. Blueprint templates are reusable across multiple environments, as the customizable input values maintained separately from the template. In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own blueprint configuration and blueprint inputs. This separation of template from its inputs allows a single blueprint template to be reused many times to deploy a range of environments such as `dev`, `stage`, and `production` with multiple target regions. Each environment being customized with its own input values.
 {: shortdesc}  
 
-For more information about the examples of blueprint templates and inputs, see the [{{site.data.keyword.bplong_notm}} repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint){: external}.  For guidance on creating or modifying an existing blueprint template, review the sections on [understanding blueprint configurations](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-templates){: external} and [blueprint template reference](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-templates){: external}.  
+For more information about the examples of blueprint templates and inputs, see the [{{site.data.keyword.bplong_notm}} repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint){: external}.  For guidance on creating or modifying an existing blueprint template, review the sections on [understanding blueprint configurations](/docs/schematics?topic=schematics-bp-template-schema-yaml) and [blueprint template reference](/docs/schematics?topic=schematics-bp-template-schema-yaml).  
 
 Change to blueprint environments is explicitly managed through version control. Template and input documents are all sourced from a version control system such as GitHub, GitLab or IBM Catalog. 
 

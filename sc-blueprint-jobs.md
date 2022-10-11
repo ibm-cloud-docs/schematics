@@ -358,6 +358,6 @@ For more information, about how to diagnose and resolve issues if the list job f
 ## Next steps
 {: #bp-create-nextsteps}
 
-- After displaying the blueprint jobs in {{site.data.keyword.bpshort}}, the next step in updating the environment is to [update](/docs/schematics?topic=schematics-update-blueprint&interface=api) the configuration.
+- After displaying the blueprint jobs in {{site.data.keyword.bpshort}}, the next step in updating the environment is to [update](/docs/schematics?topic=schematics-update-blueprint) the configuration.
 
 - Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 

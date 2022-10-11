@@ -136,6 +136,12 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
 
+[Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprints#update-blueprints)
+
+* [Updating blueprint environments](/docs/schematics?topic=schematics-update-blueprints#operate-multistep)
+
+* [Next steps](/docs/schematics?topic=schematics-update-blueprints#operate-nextsteps)
+
 [Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
@@ -1505,7 +1511,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
 
-    * [`ibmcloud schematics blueprint install`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install)
+    * [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply)
 
     * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
 

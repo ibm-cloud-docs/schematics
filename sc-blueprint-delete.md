@@ -18,7 +18,7 @@ subcollection: schematics
 # Deleting a blueprint configuration
 {: #delete-blueprint}
 
-When a blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) to understand the process of deleting blueprint  environments and the steps. Deleting a blueprint  environment is a two-stage process that first destroys all the associated cloud resources and then deletes the blueprint configuration in {{site.data.keyword.bpshort}}.
+When a blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) to understand the process of deleting blueprint environments and the steps. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and then deletes the blueprint configuration in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 
@@ -82,7 +82,7 @@ OK
 
 During the delete operation that the status shows `In Progress`, when completed the status changes to `Normal`. The blueprint confg and all the dependent cloud resources are now deleted. 
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Deleting a blueprint config from the UI 
 {: #delete-blueprint-ui}
@@ -101,7 +101,7 @@ After deletion, the blueprint is not displayed in the UI.
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Delete a blueprint config](/apidocs/schematics/schematics#delete-blueprint) by using API. 
 
-You need to run `blueprint run destroy` command and then run `blueprint config delete` command. For more information, see [Deleting a blueprint ](/docs/schematics?topic=schematics-blueprint-setup&interface=ui#bp-delete).
+You need to run `blueprint run destroy` command and then run `blueprint config delete` command. For more information, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint) configuration.
 
 Record the blueprint ID that needs to be deleted. To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
@@ -297,7 +297,7 @@ Verify that the blueprint is deleted successfully as shown in the output.
 ```
 {: screen}
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Next steps
 {: #bp-delete-nextsteps}

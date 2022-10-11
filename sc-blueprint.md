@@ -58,7 +58,7 @@ Module statements in the blueprint template define the Workspaces that creates i
 
 So far you learned a little about {{site.data.keyword.bpshort}} Blueprints, its architecture, and advantages. Following are the next steps to explore.
 
-- [Working with blueprint environments](/docs/schematics?topic=workingwithblueprints) to configure blueprint templates and use blueprint commands to deploy environments.
+- [Working with blueprint environments](/docs/schematics?topic=schematics-work-with-blueprints) to configure blueprint templates and use blueprint commands to deploy environments.
 - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to set access permissions to run the blueprint commands.
 - Explore [deploying {{site.data.keyword.bpshort}} Blueprints by using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint environment.
 - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions.

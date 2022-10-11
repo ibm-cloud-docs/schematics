@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -56,7 +56,7 @@ Each of these lifecycle stages of working with blueprint environments is explore
 
 1. [Defining blueprint environments](/docs/schematics?topic=schematics-define-blueprints) 
 2. [Deploying blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints)
-3. [Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprints)
+3. [Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprint)
 4. [Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) 
   
 ## Next steps

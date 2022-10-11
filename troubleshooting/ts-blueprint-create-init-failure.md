@@ -103,6 +103,6 @@ OK
 ```
 {: screen}
 
-On successful completion the update command returns **`update_success`**. All Workspaces must be initialized to `Inactive` state and deployment of the blueprint can continue with [Blueprint installation](/docs/schematics?topic=schematics-install-blueprint). 
+On successful completion the update command returns `update_success`. All Workspaces must be initialized to `Inactive` state and deployment of the blueprint can continue with the [blueprint installation](/docs/schematics?topic=schematics-setup-cli).
 
 If the update job fails, repeat problem diagnosis, and resolution until update completes successfully and all Workspaces are in `Inactive` state.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-29"
+lastupdated: "2022-10-11"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
 
@@ -388,7 +388,7 @@ Yes, you can create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyw
 {: faq}
 {: support}
 
-North America always indicates both `us-south`, and `us-east` location during the {{site.data.keyword.bpshort}} Workspaces creation. For more information, see [Where can I create {{site.data.keyword.bpshort}} Workspaces?,](/docs/schematics?topic=schematics-locations#where-can-i-create-schematics-workspaces) and [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+North America always indicates both `us-south`, and `us-east` location during the {{site.data.keyword.bpshort}} Workspaces creation. For more information, see [Where can I create {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created), and [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
 
 ## What are the port used to communicate with {{site.data.keyword.bpshort}} and resources, such as VPC services?

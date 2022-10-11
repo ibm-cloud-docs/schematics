@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics blueprints, deploy blueprint, managed environments
 
@@ -43,4 +43,4 @@ The deployment process is illustrated in the diagram.
 ## Next steps
 {: #deploy-nextsteps}
 
-The next stage of working with blueprint is [Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprints).
+The next stage of working with blueprint is [Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprint).

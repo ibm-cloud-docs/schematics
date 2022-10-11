@@ -18,12 +18,12 @@ subcollection: schematics
 # Creating a blueprint configuration 
 {: #create-blueprint}
 
-Deploying cloud resources using a blueprint template with {{site.data.keyword.bpshort}} Blueprints is a two-step process. The first step is creating a blueprint configuration in {{site.data.keyword.bpshort}}, and then deploying this configuration it with a `blueprint run apply' operation. See [Deploying blueprint environments](/docs/schematics?topic=sc-bp-deploy) for an overview of the deployment lifecycle stage and the two-step approach to managing deployments, and change in blueprint environments.
+Deploying cloud resources using a blueprint template with {{site.data.keyword.bpshort}} Blueprints is a two-step process. The first step is creating a blueprint configuration in {{site.data.keyword.bpshort}}, and then deploying this configuration it with a `blueprint run apply' operation. See [Deploying blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of the deployment lifecycle stage and the two-step approach to managing deployments, and change in blueprint environments.
 
-Creating a configuration takes as its input the blueprint template YAML and input YAML file that were created during the [Defining blueprint environments](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage.  
+Creating a configuration takes as its input the blueprint template YAML and input YAML file that were created during the [Defining blueprint environments](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage.
 {: shortdesc} 
 
-The first step in deploying cloud resources is the [creation](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-cli) of a blueprint configuration in {{site.data.keyword.bpshort}}. It saves the blueprint configuration for future operations. The blueprint config specifies the Git source and release of the blueprint template, input files, and any input values that are used to create cloud resources. A linked Workspace is created for each module in the blueprint template. The Workspaces are initialized from the modules Terraform source Git repository and module inputs.
+The first step in deploying cloud resources is the [creation](/docs/schematics?topic=schematics-create-blueprint) of a blueprint configuration in {{site.data.keyword.bpshort}}. It saves the blueprint configuration for future operations. The blueprint config specifies the Git source and release of the blueprint template, input files, and any input values that are used to create cloud resources. A linked Workspace is created for each module in the blueprint template. The Workspaces are initialized from the modules Terraform source Git repository and module inputs.
 
 The second [Apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step runs the automation modules and the Terraform code to deploy cloud resources. 
 

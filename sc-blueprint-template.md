@@ -52,7 +52,7 @@ Input files, blueprint defintions, and modules are all maintained in Git source 
 ## Blueprint template YAML file
 {: #blueprint-yaml-file}
 
-The diagram shows a simplified view of a blueprint template YAML file. It identifies the definitions inputs and outputs, the choice of modules, and the dependencies and variable linkage between modules. Definitions follow standard YAML syntax. For more details, see the [blueprint template schema reference](/docs/schematics?topic=schematics-blueprint-templates).
+The diagram shows a simplified view of a blueprint template YAML file. It identifies the definitions inputs and outputs, the choice of modules, and the dependencies and variable linkage between modules. Definitions follow standard YAML syntax. For more details, see the [blueprint template schema reference](/docs/schematics?topic=schematics-bp-template-schema-yaml).
 {: shortdesc} 
 
 
@@ -235,7 +235,7 @@ The inputs required by a template are defined in the inputs section. Where no va
 ### Input files
 {: #blueprint-input-file}
 
-Input files define the version controlled input values used for template customization. The variable type must match the module input type in the template template. For more information, see the templates [input file schema reference](/docs/schematics?topic=schematics-blueprint-templates#blueprint-inputs).
+Input files define the version controlled input values used for template customization. The variable type must match the module input type in the template template. For more information, see the [input file schema reference](/docs/schematics?topic=schematics-bp-input-schema-yaml).
 {: shortdesc} 
 
 ```yaml

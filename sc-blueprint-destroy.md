@@ -18,7 +18,7 @@ subcollection: schematics
 # Destroying a blueprint environment 
 {: #destroy-blueprint}
 
-When a blueprint  environment is no longer needed, it enters the delete lifecycle stage. See [Deleting blueprint environments](/docs/schematics?topic=sc-bp-delete) to understand the process of deleting blueprint  environments and the steps. Deleting a blueprint  environment is a two-stage process of first destroys all the associated cloud resources and then deleting the blueprint config in {{site.data.keyword.bpshort}}.
+When a blueprint environment is no longer needed, it enters the delete lifecycle stage. See [Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) to understand the process of deleting blueprint environments and the steps. Deleting a blueprint environment is a two-stage process of first destroys all the associated cloud resources and then deleting the blueprint config in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 The cloud resources that are created by a blueprint environment are destroyed by using the `blueprint run destroy` command. If it is, then needed to remove the blueprint config from Schematics. It is run after all resources are destroyed by using the [blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 
@@ -285,11 +285,11 @@ refresh_token: <refresh_token>
 ```
 {: screen}
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-- After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=cli) from {{site.data.keyword.bpshort}}. Alternatively, the cloud environment can be re-created by running [blueprint run apply](/docs/schematics?topic=schematics-runapply-blueprint&interface=cli).
+- After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=cli) from {{site.data.keyword.bpshort}}. Alternatively, the cloud environment can be re-created by running [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint).
 
 - Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 

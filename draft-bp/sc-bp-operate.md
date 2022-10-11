@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-11"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the beta release.
 {: beta}
 
-# Upsating and operating blueprint environments
+# Updating and operating blueprint environments
 {: #update-blueprints}
 
 Updating and operating a cloud environment is about managing continual change. Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform are constantly evolving. Without maintenance and updates of the blueprint templates, inputs and automation module code, a deployed environment loses currency and compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation. 
@@ -56,7 +56,7 @@ The two-step process flow to update a blueprint environment is illustrated in th
 3. On a successful configuration update, {{site.data.keyword.bpshort}} automatically reinitializes the modules with any updated input values and updates to the module IaC code.  
 4. Apply the updated configuration and templates. The modules that have pending IaC code changes, or inputs are highlighted by {{site.data.keyword.bpshort}}. The changes to the blueprint environment are applied with the `blueprint run apply` command or UI Run Apply operation.
     - Based on your updated blueprint configuration, {{site.data.keyword.bpshort}} creates an internal deployment plan and runs the IaC modules in dependency order to update the environment. In a future release the plan will be presented for review prior to apply. 
-    - For each module, it runs a Terraform Apply to create, modify, or delete cloud resources as determined by the configuration changes from the update. For more information, see [blueprint run](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-run).  
+    - For each module, it runs a Terraform apply to create, modify, or delete cloud resources as determined by the configuration changes from the update. For more information, see [blueprint run](/docs/schematics?topic=schematics-apply-blueprint).  
 5. On successful deployment of the updates, the blueprint output values are updated with any changed outputs.
 
 ## Next steps

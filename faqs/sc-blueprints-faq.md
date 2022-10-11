@@ -36,7 +36,7 @@ In Blueprints, the displayed name of the blueprint is not a unique identifier. O
 {: faq}
 {: support}
 
-Cloud resource deployment with Blueprints is a two-step process, user driven process. Refer to [Deploying blueprint environments](/docs/schematics?topic=workingwithblueprints#deploy-blueprints) for an overview of the Blueprints deployment and resource provisioning process.
+Cloud resource deployment with blueprints is a two-step process, user driven process. Refer to [Deploying blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of the blueprints deployment and resource provisioning process.
 {: shortdesc}
 
 ## How do you view the Blueprints provisioned results in your cloud account?

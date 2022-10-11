@@ -21,7 +21,7 @@ subcollection: schematics
 Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform are constantly evolving. Without maintenance and updates of the blueprint IaC definitions, inputs and modules, a deployed environment loses currency, compliance, and cease to be manageable through {{site.data.keyword.bpshort}} IaC automation.   
 {: shortdesc}
 
-After the [deployment](/docs/schematics?topic=sc-bp-deploy) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the blueprint template, automation modules, and inputs. See [Updating deployed environments](/docs/schematics?topic=schematics-update-blueprints#operate-multistep) to understand more about the process of updating blueprint environments and the steps needed to set regular updates. 
+After the [deployment](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the blueprint template, automation modules, and inputs. See [Updating deployed environments](/docs/schematics?topic=schematics-update-blueprint#operate-multistep) to understand more about the process of updating blueprint environments and the steps needed to set regular updates. 
 
 ## Update process
 {: #update-blueprint-process} 
@@ -140,7 +140,7 @@ OK
 
 On successful completion the update command returns **`update_success`**. 
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Updating a blueprint environment from the UI 
 {: #update-blueprint-ui}
@@ -157,7 +157,7 @@ Currently, you can update blueprint from CLI by using the [update command](#upda
 4. Click **Jobs history** tab view the result of the blueprint update job and operations that are set against the resource modules.  
 5. Click **Settings** tab to view the summary of the updated blueprint.
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Updating a blueprint from the API
 {: #update-blueprint-api}
@@ -413,7 +413,7 @@ Verify that the blueprint update is success as shown in the output.
 ```
 {: screen}
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails&interface=cli).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
 
 ## Next steps
 {: #bp-update-nextsteps}
