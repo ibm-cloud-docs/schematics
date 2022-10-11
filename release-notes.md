@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-11"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -462,7 +462,7 @@ Ansible v2.9.23 API and command-line support
 :   Ansible v2.9.23 and Ansible provisioner v2.3.3 are supported in the {{site.data.keyword.bplong_notm}} Action.
 
 ### 19 July 2021
-{: #schematics-jul302021}
+{: #schematics-jul192021}
 {: release-note}
 
 Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}
@@ -743,7 +743,7 @@ Review the release notes for April 2020.
 {: shortdesc}
 
 ### 17 April 2020
-{: #schematics-may82020}
+{: #schematics-apr172020}
 {: release-note}
 
 Terraform v0.12 support

@@ -67,7 +67,7 @@ For a complete listing of options, see the [ibmcloud schematics blueprint get](/
 {: shortdesc}
 
 ### Blueprint display summary 
-{: #display-blueprint-summary-cli}
+{: #display-blueprint-summary}
 
 **`Syntax`**
 

@@ -497,7 +497,7 @@ subcollection: schematics
 
         * Ansible v2.9.23 API and command-line support
 
-    * [19 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul302021)
+    * [19 July 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jul192021)
 
         * Support parallelism and other environment variables in {{site.data.keyword.bplong_notm}}
 
@@ -671,7 +671,7 @@ subcollection: schematics
 
     * Review the release notes for April 2020.
 
-    * [17 April 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may82020)
+    * [17 April 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr172020)
 
         * Terraform v0.12 support
 
@@ -743,7 +743,7 @@ subcollection: schematics
 
     * [Displaying blueprint environments](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 
-    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
+    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary)
 
     * [Blueprint display outputs](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-outputs-cli)
 
