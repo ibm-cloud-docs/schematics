@@ -48,7 +48,7 @@ The steps to specify a blueprint template and prepare the inputs are illustrated
     - Again in your favorite editor, create and name a new blueprint input YAML file.
     - Using the blueprint template inputs as a guide, populate the input file with environment-specific input key-value pairs. The variable type of the input value must match that defined in the template YAML file.
     - Inputs defining secrets or sensitive values are left with null-values. Sensitive values are specified when the blueprint configuration is created in {{site.data.keyword.bpshort}}.
-5. Push the blueprint input YAML file to a Git repo. As required, create a Git version release tag for version management. If the blueprint template is intended for reuse across multiple environments, the blueprint input files should be versioned in separate repos to the template.  
+5. Push the blueprint input YAML file to a Git repo. As required, create a Git version release tag for version management. If the blueprint template is intended for reuse across multiple environments, the blueprint input files should be versioned in separate repos to the template. 
 
 ## Next steps
 {: #define-nextsteps}

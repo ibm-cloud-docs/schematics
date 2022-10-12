@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-12"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -70,8 +70,8 @@ Syntax of the `inputs` flag to use the existing `default` resource group, and cr
 Full `blueprint create` command syntax:
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resourcegroup default \
--bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-file basic-blueprint.yaml \
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default \
+-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml \
 -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
 -inputs provision_rg=false,resource_group_name=default
 ```
