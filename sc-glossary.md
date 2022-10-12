@@ -20,7 +20,7 @@ This glossary provides terms and definitions for {{site.data.keyword.bpshort}} o
 
 The following cross-references are used in this glossary:
 
-- `See` refers you from a nonpreferred term to the preferred term or from an abbreviation to the spelled-out form.
+- `See` refers you from a non-preferred term to the preferred term or from an abbreviation to the spelled-out form.
 - `See also` refers you to a related or contrasting term.
 
 ## Actions
@@ -62,18 +62,18 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 ## Blueprints
 {: #glossary-blueprint}
 
-{{site.data.keyword.bpshort}} blueprints is a pattern-based deployment and lifecycle management service for large-scale cloud environments. It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=workingwithblueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution patterns. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a blueprint template.   
-
-{{site.data.keyword.IBM}}
+{{site.data.keyword.bpshort}} Blueprints is a pattern-based deployment and lifecycle management service for large-scale cloud environments. It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with Blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use Blueprints and Terraform to create large-scale environments from solution patterns. In the Blueprints service, {{site.data.keyword.bpshort}} users create a [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a solution pattern.   
+{: shortdesc}
 
 ### Blueprint
 {: #bpb1}
 
-A blueprint is the resource in the {{site.data.keyword.bpshort}} a user works with to manage the cloud environment and resources that are created from a blueprint template. The blueprint resource in {{site.data.keyword.bpshort}} stores the details of the template and the specific configuration details. All operations against the deployed cloud resources are performed using the blueprint resource in {{site.data.keyword.bpshort}} blueprints. 
+A blueprint is the resource in the {{site.data.keyword.bpshort}} that a user works with to manage the cloud environment and resources that are created from a blueprint solution pattern. The blueprint environment resource in {{site.data.keyword.bpshort}} stores the details of the solution pattern and the specific configuration details. All operations against the deployed cloud environment are set by using the blueprint environment resource in {{site.data.keyword.bpshort}} Blueprints. 
+{: shortdesc}
 
-The blueprint (resource) maintains the record of operations set against the cloud environment, status, the cloud resources deployed, and the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2). It defines the solution pattern and infrastructure architecture, and the unique input values that are used to configure the environment.
+The blueprint environment resource maintains the record of operations set against the cloud environment, status, the cloud resources deployed, and the [Blueprint definition](/docs/schematics?topic=schematics-glossary#bpb2). It defines the solution pattern and infrastructure architecture, and the unique input values that are used to configure the environment.
 
-A blueprint is created from a [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The set of cloud resources deployed by a blueprint is referred to as a [blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4). 
+A blueprint is created from a [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The set of deployed cloud resources is referred to as a [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4). 
 
 ### Blueprint template
 {: #bpb2}
@@ -102,7 +102,8 @@ Blueprint definitions are composed from IaC automation modules that are implemen
 ### Blueprint inputs
 {: #bpi1}
 
-Inputs are specified at blueprint config create time to pass inputs to dynamically customize the blueprint and over-ride inputs from a version-controlled input file that is sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
+Inputs are specified at blueprint create time to pass inputs to dynamically customize the blueprint and over-ride inputs from a version-controlled input file that is sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository.
+{: shortdesc}
 
 ### Blueprint jobs
 {: #bpj1}
@@ -113,7 +114,7 @@ Blueprints operations (command) are run as jobs by {{site.data.keyword.bpshort}}
 ### Blueprint lifecycle
 {: #bpl1}
 
-Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. Blueprints and their environments follow a lifecycle of definition, deployment, operation, and deletion. See [Working with blueprints](/docs/schematics?topic=workingwithblueprints). 
+Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. blueprint environments follow a lifecycle of definition, deployment, operation, and deletion. See [Working with Blueprints](/docs/schematics?topic=schematics-work-with-blueprints).
 {: shortdesc}
 
 ## Catalog
@@ -183,7 +184,7 @@ Refers to the demonstration of an example template with steps to prerequisites, 
 ### Settings
 {: #wkss2} 
 
-Common area to edit values of the variables so that new Terraform template can be generated or reimply with new changes.
+Common area to edit values of the variables so that new Terraform template can be generated or re-imply with new changes.
 {: shortdesc}
 
 ### Workspace

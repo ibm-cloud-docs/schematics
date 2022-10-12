@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-10-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -134,7 +134,7 @@ You see this quota validation error when the `Cluster` resource quota of `100` f
 {: faq}
 {: support}
 
-Yes, you can increase the time-out for Red Hat OpenShift or Kubernetes resources. For more information, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
+Yes, you can increase the timeout for Red Hat OpenShift or Kubernetes resources. For more information, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) provides the following Timeouts configuration options.
 
 ## How can I rectify the 403 Error while validating the location in the account. Verify you have permission to the location in the global catalog settings?
 {: #global-setting-location}
@@ -203,7 +203,7 @@ To create a deviation report and view the changes between the infrastructure and
 {: faq}
 {: support}
 
-You can use the {{site.data.keyword.bplong_notm}} console or CLI to remove all the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in synchronize with your Terraform template, make sure to remove the associated infrastructure code from your Terraform template. So that, your resources are not readded when you apply a new version of your Terraform template. 
+You can use the {{site.data.keyword.bplong_notm}} console or CLI to remove all the resources that you provisioned with {{site.data.keyword.bpshort}}. To stay in synchronize with your Terraform template, make sure to remove the associated infrastructure code from your Terraform template. So that, your resources are not added again when you apply a new version of your Terraform template. 
 
 ## What happens if I choose to delete my resource directly from the resource dashboard?
 {: #delete-resource-directly-faq}

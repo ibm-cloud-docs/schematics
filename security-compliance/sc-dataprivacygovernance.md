@@ -25,4 +25,4 @@ In addition to the DPA, the cloud services contain DPA exhibits that detail the 
 
 For {{site.data.keyword.cloud_notm}}'s position on trust and transparency, in relation to customer data, see [Trust principles](https://www.ibm.com/blogs/policy/trust-principles/){: external}.
 
-If more questions that are associated with {{site.data.keyword.cloud_notm}}'s data privacy policies arise, email DPA.Help.project@uk.ibm.com. 
+If more questions that are associated with {{site.data.keyword.cloud_notm}}'s data privacy policies arise, email `DPA.Help.project@uk.ibm.com`. 

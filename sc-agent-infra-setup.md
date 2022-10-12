@@ -157,7 +157,7 @@ Follow the steps to view the deployment of Agent service workspace.
 
 1. Navigate to the target [{{site.data.keyword.cloud_notm}} clusters](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
 2. Click **Kubernetes Clusters**  page.
-3. Click your cluster hyperlink.
+3. Click your cluster hyper link.
 4. Click **Kubernetes dashboard** > **Pods**.
 5. Switch to your **schematics-job-runtime** namespace from the drop down box next to search icon to view `jobrunner` pod (1 instance) > Status: `Running`.
 6. Switch to your **schematics-ibm-observe** namespace from the drop down box next to search icon to view `logdna-agent` pods (3 instances - one on each worker node) > Status: `Running`.

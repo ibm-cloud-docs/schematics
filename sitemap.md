@@ -124,19 +124,19 @@ subcollection: schematics
 
 [Overview](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
 
-* [Managing blueprint environments](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
+* [Lifecycle of cloud environments](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
 
-[Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
+[Defining blueprint environments](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
 
-[Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
+[Deploying blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
 
-[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+[Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
 
@@ -215,7 +215,7 @@ subcollection: schematics
 
     * [Access protection by using Identity and Access Management](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-iam)
 
-    * [Nonrepudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
+    * [Non-repudiation by using Activity tracker](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-atracker)
 
     * [Data protection by using KMS](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-data-protection)
 
@@ -725,25 +725,25 @@ subcollection: schematics
 
 * [What's next](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
 
-[Creating a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-config)
+[Creating a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint#create-blueprint)
 
-* [Creating a blueprint configuration from the CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
+* [Creating a blueprint configuration from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
 
-    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-rg-cli)
+    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint#reuse-blueprint-rg-cli)
 
-    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint-config#reuse-blueprint-rg-cli)
+    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-rg-cli)
 
-    * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-cli)
+    * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-cli)
 
-* [Creating a blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
+* [Creating a blueprint environment from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
 
-    * [Verifying blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
+    * [Verifying blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-ui)
 
-* [Creating a blueprint from the API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
+* [Creating a blueprint environment from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
 
-    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-update-api)
+    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint#verify-bp-update-api)
 
-* [Next steps](/docs/schematics?topic=schematics-create-blueprint-config#bp-create-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-create-blueprint#bp-create-nextsteps)
 
 [Running a blueprint apply](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint)
 
@@ -813,11 +813,11 @@ subcollection: schematics
 
 * [Updating a blueprint environment from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
 
-    * [Verify blueprint config update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
+    * [Verifying blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
 * [Updating a blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
-    * [Verify blueprint config create from the API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
+    * [Verifying blueprint update from the API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
 
 * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
 
@@ -2174,7 +2174,7 @@ subcollection: schematics
 
 * [Blueprint create fails with the error blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails5)
 
-[Blueprint config create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
+[Blueprint create fails in the blueprint create init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
 [Blueprint run apply fails](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails)
 

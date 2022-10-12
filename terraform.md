@@ -111,7 +111,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
     | `description` | The description of the workspace. |
     | `location` | The location where you want to create your {{site.data.keyword.bpshort}} Workspaces and run {{site.data.keyword.bpshort}} Actions. |
     | `resource_group` | The ID of the resource group where you want to provision the workspace. |
-    | `name` | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create aWorkspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name.|
+    | `name` | The name of your workspace. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores. When you create a workspace for your own Terraform template, consider including the microservice component that you set up with your Terraform template and the {{site.data.keyword.cloud_notm}} environment where you want to deploy your resources in your name.|
     | `tags` | A list of tags that are associated with the workspace. |
     | `template_env_settings` | A list of environment variables that you want to apply during the execution of a Terraform action. |
     | `template_git_url` | The Git repository URL, where you have the configuration details to provision the resource. |

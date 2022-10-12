@@ -27,7 +27,7 @@ If you plan to store your Terraform templates on your local machine and upload t
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
 {: deprecated}
 
-Create aWorkspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The Workspace settings can be configured to use the Terraform template that are hosted and managed in a Git repository. Your Workspace is used to manage the state of the cloud resources, provisioned using the Terraform template.
+Create a workspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The Workspace settings can be configured to use the Terraform template that are hosted and managed in a Git repository. Your Workspace is used to manage the state of the cloud resources, provisioned using the Terraform template.
 {: shortdesc} 
 
 ### Before you begin
