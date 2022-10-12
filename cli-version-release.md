@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -23,7 +23,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.12.2 | 11 Aug 2022 | Included `--output` flag and bug fixes for all blueprint commands in  and released  {{site.data.keyword.bpshort}} v1.12.2 plug-in.|
 | 1.12.1 | 26 July 2022 | Incorporated the bugs and fixes related to blueprint commands in {{site.data.keyword.bpshort}} and released v1.12.1 plug-in.|
 | 1.12.0 | 11 July 2022 | Support for `Agents` commands in {{site.data.keyword.bpshort}} from command-line.|
-| 1.11.1 | 8 July 2022 | Support for `Blueprints` commands, and fix the translation issue in {{site.data.keyword.bpshort}} from command-line.|
+| 1.11.1 | 8 July 2022 | Support for `Blueprint` commands, and fix the translation issue in {{site.data.keyword.bpshort}} from command-line.|
 | 1.10.0 | 5 May 2022 | Support for `stop`, `force-stop`, and `terminate` in {{site.data.keyword.bpshort}} from command-line.|
 | 1.9.0 | 25 April 2022 | Support for `Drift` detection in {{site.data.keyword.bpshort}} from command-line.|
 | 1.8.1 | 17 April 2022 | Fixes alias deprecation display message for the {{site.data.keyword.bpshort}} JSON output.|
@@ -33,7 +33,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.7.1 | 11 February 2022 | Support for trace logging and added integration tests for few commands. Fixes to update `env values metadata`, panic for invalid flags, and `ibmcloud schematics workspace output command` is disabled. |
 | 1.7.0 | 12 January 2022 | Displays Terraform v11.0 deprecation message after command execution. Fix command-line alias. Remove the appearance of the duplicate strings.  Support global time in the log file. |
 | 1.6.2 | 2 December 2021 | Support for non-English translations. Fix apply command `--var-file` and actions `--target not setting` argument. Fix pipeline vulnerability.|
-| 1.6.1 | 21 October 2021 | Supports `winrm` for {{site.data.keyword.bpshort}} Actions. Added the `--inventory-connection-type`, `--bastion-credential-json` and `--credential-json` option value to the create, and update commands. Updated non-english translations for the command-line. Fixed duplication display of `command-object` argument in `ibmcloud schematics jobs run` interactive mode.|
+| 1.6.1 | 21 October 2021 | Supports `winrm` for {{site.data.keyword.bpshort}} Actions. Added the `--inventory-connection-type`, `--bastion-credential-json` and `--credential-json` option value to the create, and config updates. Updated non-english translations for the command-line. Fixed duplication display of `command-object` argument in `ibmcloud schematics jobs run` interactive mode.|
 | 1.6.0 | 29 September 2021 | Support for `linux-ppc64le`, and `linux-s390x` binaries. Lists `Terraform v1.0` in the details panel. Display `Terraform v0.11` depreciation message in {{site.data.keyword.bpshort}} Workspaces page. Fixed the resource query list command returns values as empty string.|
 | 1.5.12 | 02 September 2021 | Suppress status message for `--output json` flag.|
 | 1.5.11 | 27 August 2021 | Added a flag `--pull-latest` to existing Workspace **update** command. Fixed `BNPP` issue. Fixed the locale translations.|

@@ -106,18 +106,18 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july0822}
 {: release-note}
 
-{{site.data.keyword.bpshort}} Blueprints Beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} Blueprints Beta releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints engagement.
+{{site.data.keyword.bpshort}} blueprints Beta release in production.
+:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} blueprints Beta releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} blueprints engagement.
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
     - [Use case](/docs/schematics?topic=schematics-get-started-blueprints).
-    - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
-    - [Understanding blueprint templates](/docs/schematics?topic=schematics-bp-template-schema-yaml) and [Infrastructure lifecycle commands](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac) to configure the right schemas and use the right blueprint commands for the deployment of blueprint environments.
-    - See [Blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprint environments.
-    - Blueprints are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
-    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint environment.
-    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprint environments.
-    - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
+    - [About {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-blueprint-intro)
+    - [Understanding blueprint templates](/docs/schematics?topic=schematics-blueprint-templates) to configure the right schemas and use blueprint commands to deploy blueprints.
+    - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprints.
+    - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Deploy [{{site.data.keyword.bpshort}} blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
+    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
+    - [Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.11.0](/docs/schematics?topic=schematics-cli_version-releases) released.
