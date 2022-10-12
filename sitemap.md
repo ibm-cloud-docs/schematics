@@ -56,7 +56,7 @@ subcollection: schematics
 
 * [Select a blueprint template](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
 
-* [Creating a blueprint environment in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
+* [Creating a blueprint in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
 
     * [Syntax](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-syntax)
 
@@ -99,7 +99,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
 
-[{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
+[{{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
 
 * [Overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview)
 
@@ -118,31 +118,25 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
 
 
-## Working with Blueprints
+## Working with blueprints
 {: #sitemap_working_with_blueprints}
 
 
 [Overview](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
 
-* [Lifecycle of cloud environments](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
+* [Managing blueprint environments](/docs/schematics?topic=schematics-work-with-blueprints#lifecycle-of-iac)
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
 
-[Defining blueprint environments](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
+[Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
 
-[Deploying blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
+[Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
 
-[Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprints#update-blueprints)
-
-* [Updating blueprint environments](/docs/schematics?topic=schematics-update-blueprints#operate-multistep)
-
-* [Next steps](/docs/schematics?topic=schematics-update-blueprints#operate-nextsteps)
-
-[Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
 
@@ -293,7 +287,7 @@ subcollection: schematics
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * {{site.data.keyword.bpshort}} Blueprints Beta release in production.
+        * {{site.data.keyword.bpshort}} blueprints Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -701,29 +695,55 @@ subcollection: schematics
 * [Table1](/docs/schematics?topic=schematics-setup-api#table1)
 
 
-## Managing Blueprints
+## Managing blueprints
 {: #sitemap_managing_blueprints}
 
 
-[Creating a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint#create-blueprint)
+[Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
 
-* [Creating a blueprint configuration from the CLI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-cli)
+* [Blueprint template overview](/docs/schematics?topic=schematics-blueprint-templates#template-overview)
 
-    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint#reuse-blueprint-rg-cli)
+* [Blueprint template YAML file](/docs/schematics?topic=schematics-blueprint-templates#blueprint-yaml-file)
 
-    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-rg-cli)
+* [Input statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements)
 
-    * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-cli)
+* [Module statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module)
 
-* [Creating a blueprint environment from the UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui)
+    * [Module Source](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-source)
 
-    * [Verifying blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint#verify-blueprint-create-ui)
+    * [Module inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-inputs)
 
-* [Creating a blueprint environment from the API](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-api)
+    * [Module outputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-outputs)
 
-    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint#verify-bp-update-api)
+* [Output statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-output)
 
-* [Next steps](/docs/schematics?topic=schematics-create-blueprint#bp-create-nextsteps)
+* [template inputs](/docs/schematics?topic=schematics-blueprint-templates#template-inputs)
+
+    * [Input files](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-file)
+
+* [Configuration of dynamic inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
+
+* [What's next](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
+
+[Creating a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-config)
+
+* [Creating a blueprint configuration from the CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
+
+    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-rg-cli)
+
+    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint-config#reuse-blueprint-rg-cli)
+
+    * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-cli)
+
+* [Creating a blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
+
+    * [Verifying blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
+
+* [Creating a blueprint from the API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
+
+    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-update-api)
+
+* [Next steps](/docs/schematics?topic=schematics-create-blueprint-config#bp-create-nextsteps)
 
 [Running a blueprint apply](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint)
 
@@ -737,11 +757,11 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-apply-blueprint#bp-apply-nextsteps)
 
-[Listing blueprint environments](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
+[Listing blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
-* [Listing blueprint environments via CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
+* [Listing blueprints via CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
 
-    * [Displaying blueprint environments](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
+    * [Displaying blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 
     * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary)
 
@@ -751,7 +771,7 @@ subcollection: schematics
 
 * [Displaying a blueprint through UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
 
-* [Displaying blueprint through API](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-api)
+* [Displaying a blueprint through API](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-api)
 
 * [Next steps](/docs/schematics?topic=schematics-list-blueprint-cli#bp-create-nextsteps)
 
@@ -793,11 +813,11 @@ subcollection: schematics
 
 * [Updating a blueprint environment from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
 
-    * [Verifying blueprint update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
+    * [Verify blueprint config update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
 * [Updating a blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
-    * [Verifying blueprint update from the API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
+    * [Verify blueprint config create from the API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
 
 * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
 
@@ -1290,7 +1310,7 @@ subcollection: schematics
 
     * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
 
-    * [Blueprints permissions](/docs/schematics?topic=schematics-access#blueprint-permissions)
+    * [Blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions)
 
     * [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 
@@ -1507,21 +1527,21 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
 
-* [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
+* [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 
-    * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
+    * [`ibmcloud schematics blueprint config create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
 
-    * [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply)
+    * [`ibmcloud schematics blueprint run apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-install)
 
-    * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
+    * [`ibmcloud schematics blueprint config update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
 
     * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get)
 
     * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
 
-    * [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
+    * [`ibmcloud schematics blueprint run destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
 
-    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
+    * [`ibmcloud schematics blueprint config delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
 
     * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
 
@@ -1649,8 +1669,8 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## Blueprints definition reference
-{: #sitemap_blueprints_definition_reference}
+## Blueprint definitions reference
+{: #sitemap_blueprint_definitions_reference}
 
 
 [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-template-schema-yaml)
@@ -1711,7 +1731,7 @@ subcollection: schematics
 
     * [module.injectors.tft_parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-tft-parameters)
 
-[Blueprint input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml#bp-input-schema-yaml)
+[blueprint input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml#bp-input-schema-yaml)
 
 * [Defining input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#define-input-value)
 
@@ -1731,11 +1751,11 @@ subcollection: schematics
     * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
 
 
-## Beta code for {{site.data.keyword.bpshort}} Blueprints
+## Beta code for {{site.data.keyword.bpshort}} blueprints
 {: #sitemap_beta_code_for__blueprints}
 
 
-[Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
+[Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
 
 * [Beta release limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation)
 
@@ -1948,23 +1968,23 @@ subcollection: schematics
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
-* [Why do you set blueprint operations by using a `blueprint id`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
+* [Why do blueprint operations require a `blueprint ID`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
-* [How does resource provisioning happen by using the Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
+* [How is resource provisioning performed?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
 
-* [How do you view the Blueprints provisioned results in your cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
+* [How do you view the blueprint provisioned resources in your cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
 
-* [How do you securely pass input variables to Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
+* [How do you securely pass input variables?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
 
-* [Why does the Blueprints basic example fail in the Install step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
+* [Why does the blueprint template, basic example, fail in the Install step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 
-* [What is the time taken to create an IBM Kubernetes Service cluster by using Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
+* [What is the time taken to create an IBM Kubernetes Service cluster and other resources?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
 
-* [How do you tell Blueprints what version of Terraform to use?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
+* [How do you configure the version of Terraform to used?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
 
-* [Is it possible to override the GitHub definition `location` and use a command-line file instead?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
+* [Is it possible to specify the CLI parameters as a file?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
 
-* [When you create a blueprint in `us-south` target region, why is the job type in blueprint job ID indicates `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
+* [When you create a blueprint config in the `us-south` target region, why is the blueprint job ID indicating `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
 
 * [Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-schematics-instance)
 
@@ -2138,13 +2158,13 @@ subcollection: schematics
 [Why do {{site.data.keyword.bpshort}} Workspaces create through API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
 
 
-### Troubleshooting Blueprints
+### Troubleshooting blueprints
 {: #sitemap_troubleshooting_blueprints}
 
 
-[Blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
+[Blueprint config create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
 
-* [Blueprint create fails with an invalid blueprint template: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
+* [Blueprint config create fails with an invalid blueprint template: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
 
 * [Blueprint create fails with an invalid blueprint template: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
 
@@ -2154,19 +2174,19 @@ subcollection: schematics
 
 * [Blueprint create fails with the error blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails5)
 
-[Blueprint create fails in the blueprint create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
+[Blueprint config create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
-[Blueprint install fails](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails)
+[Blueprint run apply fails](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails)
 
-* [Blueprint install fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails1)
+* [Blueprint run apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails1)
 
-* [Blueprint install failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails2)
+* [blueprint run apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails2)
 
-* [Blueprint install failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails3)
+* [blueprint run apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails3)
 
-* [Blueprint install failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails4)
+* [blueprint run apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails4)
 
-* [Blueprint install failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails5)
+* [blueprint run apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails5)
 
 
 ### Troubleshooting Agents

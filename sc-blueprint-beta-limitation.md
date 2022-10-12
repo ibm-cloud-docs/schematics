@@ -12,13 +12,13 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Beta code for {{site.data.keyword.bpshort}} Blueprints
+# Beta code for {{site.data.keyword.bpshort}} blueprints
 {: #bp-beta-limitations}
 
-The {{site.data.keyword.bpshort}} Blueprints level of code is considered beta code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
+The {{site.data.keyword.bpshort}} blueprints level of code is considered beta code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
 {: shortdesc}
 
-Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join Blueprints Beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.
+Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join blueprints Beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.
 
 Join the `#tmp-blueprints-beta-2022` slack channel and post a message include the following information.
 
@@ -37,11 +37,11 @@ You can come back anytime to your created thread to add information, ask questio
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
 | Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | | | 
-| The Terraform Plan operation is not supported for Blueprints. | | | 
+| The Terraform Plan operation is not supported for blueprints. | | | 
 | Run operations are performed as a single operation against all modules. A future 2023 release will support single module operations  | | | 
 | Created Cloud resources are not tagged with blueprint and Workspace IDs. | | | 
 | Only one input file is supported per blueprint configuration. | | |
-| Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources are destroyed to delete a Blueprint.  | | |  
+| Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources are destroyed to delete a blueprint.  | | |  
 | The Delete CLI command returns immediately at start of execution and does not wait for successful completion. | | | 
 | Operations must not be directly run against linked {{site.data.keyword.bpshort}} modules (Workspaces) by using the Workspace commands or UI. Operations must be run by using blueprint commands.    | | |
 | No blueprint configuration validation command. | | | 
@@ -56,8 +56,8 @@ You can come back anytime to your created thread to add information, ask questio
 | --- |--- | --- | 
 | On config create, the blueprint name and description that is specified on the command line are ignored. | | |
 | On config update, the blueprint name is not updated. | | |  
-| Run apply, run destroy, and config delete commands return the generic message **`fullfilment_success`** on successful completion.  | | | 
-| Automatic `pull latest` of updated module Terraform configuration from Git repositories is not being run on the blueprint update. | | | 
+| Run apply, run destroy, and config deletes return the generic message **`fullfilment_success`** on successful completion.  | | | 
+| Automatic `pull latest` of updated module Terraform configuration from Git repositories is not being run on the blueprint config update. | | | 
 | JSON output option not supported on commands. As a workaround perform a pull-latest via the Workspace UI  | | |   
 {: caption="Beta release known issues" caption-side="bottom"}
 
@@ -67,11 +67,11 @@ You can come back anytime to your created thread to add information, ask questio
 ### Steps to join public slack
 {: #sc-bp-join-slack}
 
-Following steps asks you to join the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel.
+Following steps asks you to join the {{site.data.keyword.bpshort}} blueprints Beta public Slack channel.
 - Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page is opened.
-- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Blueprints Beta**.
-- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel**
+- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} blueprints Beta**.
+- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} blueprints Beta public Slack channel**
 - Click **Next**.
 - Click **Submit case**. Wait for 10 - 15 minutes to get access.

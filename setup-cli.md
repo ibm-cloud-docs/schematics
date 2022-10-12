@@ -145,7 +145,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in.
 
-    For {{site.data.keyword.bpshort}} Blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.11.0` version.
+    For {{site.data.keyword.bpshort}} blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.11.0` version.
     {: note}
 
     For {{site.data.keyword.bpshort}} Agents, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.0` version.
@@ -161,7 +161,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     ```
     {: pre}
 
-   Example output for Blueprints support: 
+   Example output for blueprints support: 
 
     ```text
     schematics                      1.12.2        true
@@ -200,7 +200,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's   
     schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions   
     schematics,sch agents,ag           [Beta] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.   
-    schematics,sch blueprint,bp        [Beta] Create and manage Blueprints
+    schematics,sch blueprint,bp        [Beta] Create and manage blueprints
     ```
     {: screen}
 

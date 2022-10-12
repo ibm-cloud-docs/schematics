@@ -12,23 +12,23 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the beta release.
+{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Listing blueprint environments
+# Listing blueprints
 {: #list-blueprint-cli}
 
-To list your blueprint environments with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments, but is region specific and will only list blueprint environments in the selected CLI region. 
+To list your blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
 {: shortdesc}
 
-For all the blueprint commands, syntax, and option flag details, see [Blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
-## Listing blueprint environments via CLI
+## Listing blueprints via CLI
 {: #listing-bp-cli}
 {: cli}
 
-Lists all the blueprint environments.
+Lists all the blueprints.
 {: shortdesc}
 
 **`Syntax`**
@@ -38,7 +38,7 @@ ibmcloud schematics blueprint list
 ```
 {: pre}
 
-On successful completion the list command returns a list of blueprint environments.  
+On successful completion the list command returns a list of blueprints.  
 
 **Output:**
 
@@ -54,10 +54,10 @@ OK
 {: screen}
 
 
-### Displaying blueprint environments
+### Displaying blueprints
 {: #display-blueprint-cli}
 
-To display the details of a blueprint environment and its configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
+To display the details of a blueprint and its configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
 - `summary` blueprint run status
 - `detailed` blueprint configuration, settings and source URLs. 
 - `modules` Detailed listing of the blueprint template, modules and variables
@@ -72,7 +72,7 @@ For a complete listing of options, see the [ibmcloud schematics blueprint get](/
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint get -id <blueprint_id>
+ibmcloud schematics blueprint get -id <blueprint_ID>
 ```
 {: pre}
 
@@ -104,17 +104,17 @@ OK
 ### Blueprint display outputs
 {: #display-blueprint-outputs-cli}
 
-Displays the blueprint environment with the summary information.
+Displays the blueprint with the summary information.
 {: shortdesc}
 
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint get -id <blueprint_id> -level outputs
+ibmcloud schematics blueprint get -id <blueprint_ID> -level outputs
 ```
 {: pre}
 
-On successful completion the get command returns the summary details of the blueprint environment and the output values defined by the template.  
+On successful completion the get command returns the summary details of the blueprint and the output values defined by the template.  
 
 **Output:**
 
@@ -162,7 +162,7 @@ Displays the output with the module level.
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint get -id <blueprint_id> -level modules
+ibmcloud schematics blueprint get -id <blueprint_ID> -level modules
 ```
 {: pre}
 
@@ -300,22 +300,22 @@ Here are the steps to display a blueprint by using UI.
 {: shortdesc}
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
-2. Click **Overview** to view the BLueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your Blueprint. 
+2. Click **Overview** to view the BLueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your blueprint. 
     - Optional: From **Modules status** section, Click **View details** to view the module details.
     - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
 3. Click **Modules** tab to see the list of resource modules and their current status. 
     - Optional: Click on **Show details** to view the module details.
     - Optional: Click on the module name to be taken to the modules' `Workspace` page. 
-4. Click **Resource** tab to view the resources provisioned by the Blueprint.
+4. Click **Resource** tab to view the resources provisioned by the blueprint.
 5. Click **Variables** tab to view your **Inputs** and **Outputs** variables and values.
 6. Click **Jobs history** tab view the job logs for all blueprint and module operations.
-7. Click **Settings** tab to view the configuration settings for the Blueprint.
+7. Click **Settings** tab to view the configuration settings for the blueprint.
 
-## Displaying blueprint through API 
+## Displaying a blueprint through API 
 {: #display-blueprint-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about configuration of the blueprint and its outputs, refer to, [Display Blueprint](/apidocs/schematics/schematics#get-blueprint) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about configuration of the blueprint and its outputs, refer to, [Display blueprint](/apidocs/schematics/schematics#get-blueprint) by using API.
 
 Blueprint display API `blueprint_list` runs the configuration of the blueprint and detailed output.
 {: important}
@@ -563,7 +563,7 @@ Authorization: Bearer <auth_token>
         }
     ],
     "flow": {},
-    "blueprint_id": "Blueprint-Basic-Test.eaB.bbb9",
+    "blueprint_ID": "Blueprint-Basic-Test.eaB.bbb9",
     "crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:blueprint:Blueprint-Basic-Test.eaB.e03e",
     "account": "1f7277194bb748cdb1d35fd8fb85a7cb",
     "created_at": "2022-09-19T10:33:13.029985037Z",
@@ -586,6 +586,6 @@ For more information, about how to diagnose and resolve issues if the list job f
 ## Next steps
 {: #bp-create-nextsteps}
 
-- After displaying the list of blueprint in {{site.data.keyword.bpshort}}, the next step in displaying the blueprint jobs is to refer to [list-blueprint-jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli) API in the blueprint. 
+After displaying the list of blueprint in {{site.data.keyword.bpshort}}, the next step in displaying the blueprint jobs is to refer to [list-blueprint-jobs](docs/schematics?topic=schematics-list-blueprint-jobs-cli&interface=api) API in the Blueprint. 
 
-- Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 
+Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample.

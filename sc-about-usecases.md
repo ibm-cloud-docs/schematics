@@ -24,7 +24,7 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 - [Infrastructure deployments with {{site.data.keyword.bpshort}} Workspaces](#how-to-workspaces)
 - [Configuration management with {{site.data.keyword.bpshort}} Actions](#how-to-actions)
 - [Software deployments with IBM-provided templates](#how-to-software)
-- [large-scale environments with Blueprints](/docs/schematics?topic=schematics-get-started-blueprints)
+- [large-scale environments with blueprints](/docs/schematics?topic=schematics-get-started-blueprints)
 
 ## Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces
 {: #how-to-workspaces}

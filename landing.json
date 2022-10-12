@@ -24,7 +24,7 @@
         "href": "/docs/schematics?topic=schematics-agents-intro"
       },
       {
-        "title": "Deploy complex application environments by using Blueprints",
+        "title": "Deploy complex application environments by using blueprints",
         "description": "Learn how to deploy large-scale and complex application environments from reusable building blocks and used across multiple environments.",
         "href": "/docs/schematics?topic=schematics-blueprint-intro"
       },

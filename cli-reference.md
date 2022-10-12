@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -589,25 +589,25 @@ ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
 For more information about the flags see [Workspace get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-get) command.
 {: note}
 
-## Blueprints commands
+## Blueprint commands
 {: #blueprints-cmd}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the beta release.
+{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-### `ibmcloud schematics blueprint create`
+### `ibmcloud schematics blueprint config create`
 {: #schematics-blueprint-create}
 
-Create a {{site.data.keyword.bpshort}} blueprint by using the `ibmcloud schematics blueprint create` command. The blueprint is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the input files and optional override inputs.
+Create a {{site.data.keyword.bpshort}} blueprintby using the `ibmcloud schematics blueprint config create` command. The blueprint is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the input files and optional override inputs.
 {: shortdesc}
 
-For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+For {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
 {: important}
 
 **Syntax to create using command:**
 
 ```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
+ibmcloud schematics blueprint config create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
 ```
 {: pre}
 
@@ -618,8 +618,8 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
-| `--name`or `-n`| Required | Name of the Blueprint. |
-| `--resource-group` or `-r` | Required | The management resource group for the Blueprint.|
+| `--name`or `-n`| Required | Name of the blueprint. |
+| `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
 | `--bp-git-url` or `--bu` | Required | The blueprint Git URL. |
 | `--bp-git-file` or `--bf`| Required | The blueprint Git file name. |
 | `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name, if not provided defaults to main. In case the `--bp-git-branch` and `--bp-git-release` values are not provided, the command errors for one of the value to be provided.|
@@ -628,16 +628,16 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--input-git-file` or `--if`| Optional | The input file name. |
 | `--input-git-branch` or `--ib`| Optional |The input file Git branch name, if not provided it defaults to main. In case the `--input-git-branch` and `--input-git-release` values are not provided, the command errors for one of the value to be provided.|
 | `--input-git-release` or `--ir`| Optional | The input file release tag. Exclusive with branch name.|
-| `--inputs` or `--in` | Optional | The input variables for the Blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
+| `--inputs` or `--in` | Optional | The input variables for the blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
-| `--file` or `-f` | Optional | Config JSON file to create the Blueprint. Exclusive with other options. |
+| `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
+{: caption="{{site.data.keyword.bpshort}} blueprint config create flags" caption-side="bottom"}
 
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
+ibmcloud schematics blueprint config create -name blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
 
@@ -645,7 +645,7 @@ ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group defau
 #### Using a config file
 {: #bp-create-config}
 
-Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint create command. Pass the file name to the command by using the `--file` command option.
+Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option.
 {: shortdesc}
 
 You need to replace the `<...>` placeholders with the actual values.
@@ -655,12 +655,12 @@ You need to replace the `<...>` placeholders with the actual values.
 ```json
 {
   "name": "<PROVIDE BLUEPRINT NAME>",
-  "schema_version": "<BLUEPRINT DEFINITION VERSION>",
+  "schema_version": "<blueprint template VERSION>",
   "source": {
     "source_type": "<BLUEPRINT TEMPLATE RESPOSITORY, FOR EXAMPLE, `git_hub`>",
     "git": {
       "git_repo_url": "<BLUEPRINT INPUT FILE ABSOLUTE PATH>",
-      "git_repo_folder": "<BLUEPRINT DEFINITION FILE>",
+      "git_repo_folder": "<blueprint template FILE>",
       "git_branch": "main"
     }
   },
@@ -736,14 +736,14 @@ You need to replace the `<...>` placeholders with the actual values.
 {: codeblock}
 
 ```sh
-ibmcloud schematics blueprint create --file createtest.json --github-token <ENTER YOUR GIT TOKEN>
+ibmcloud schematics blueprint config create --file createtest.json --github-token <ENTER YOUR GIT TOKEN>
 ```
 {: pre}
 
 **Output:**
 
 ```text
-Created Blueprint ID: Blueprint_Basic.eaB.5cd9
+Created blueprint ID: Blueprint_Basic.eaB.5cd9
 
 Modules to be created
 SNO Type Name
@@ -765,8 +765,8 @@ OK
 {: screen}
 
 
-### `ibmcloud schematics blueprint apply`
-{: #schematics-blueprint-apply}
+### `ibmcloud schematics blueprint run apply`
+{: #schematics-blueprint-install}
 
 The apply command creates the cloud resources defined by the blueprint template. Apply performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the blueprint template to create the cloud resources.
 {: shortdesc}
@@ -774,7 +774,7 @@ The apply command creates the cloud resources defined by the blueprint template.
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint apply --id BLUEPRINT_ID [--output OUTPUT]
+ibmcloud schematics blueprint run apply --id BLUEPRINT_ID [--output OUTPUT]
 ```
 {: pre}
 
@@ -782,27 +782,27 @@ ibmcloud schematics blueprint apply --id BLUEPRINT_ID [--output OUTPUT]
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the Blueprint.|
+| `--id` or `-i`| Required | The ID of the blueprint.|
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints install flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints install flags" caption-side="top"}
 
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint apply --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint run apply --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
-### `ibmcloud schematics blueprint update`
+### `ibmcloud schematics blueprint config update`
 {: #schematics-blueprint-update}
 
-You update the blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and blueprint template with the `ibmcloud schematics blueprint update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics bluepeint install` after the update has been performed.
+You update the blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and blueprint template with the `ibmcloud schematics blueprint config update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics bluepeint install` after the update has been performed.
 {: shortdesc}
 
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
+ibmcloud schematics blueprint config update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
 ```
 {: pre}
 
@@ -810,17 +810,17 @@ ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH]
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the Blueprint.|
+| `--id` or `-i`| Required | The ID of the blueprint.|
 | `--file` or `-f` | Optional | The path to the JSON file containing the definition of the blueprint to update. |
-| `--input` or `--in` | Optional | Input variables for the Blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=testvalue,test1=testvalue1`.|
+| `--input` or `--in` | Optional | Input variables for the blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=testvalue,test1=testvalue1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access private Git repository.|
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints update flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints update flags" caption-side="top"}
 
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint config update -id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -841,10 +841,10 @@ ibmcloud schematics blueprint get --id BLUEPRINT_ID [--level LEVEL] [--output OU
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The ID of the Blueprints. |
+| `--id` or `-i` | Required | The ID of the blueprints. |
 | `--level` or `-l` | Optional | Level of details to return. Valid values are `summary`, `detailed`, `modules`, and `outputs`. The default value is **summary**. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints get flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints get flags" caption-side="top"}
 
 **`Example`**
 
@@ -857,7 +857,7 @@ ibmcloud schematics blueprint get --id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint list`
 {: #schematics-blueprint-list}
 
-You can list all the {{site.data.keyword.bpshort}} Blueprints.
+You can list all the {{site.data.keyword.bpshort}} blueprints.
 {: shortdesc}
 
 **`Syntax`**
@@ -872,10 +872,10 @@ ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary` or `ids`. The default value is **summary**. |
-| `--limit` or `-l` | Optional | The maximum number of Blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`.|
+| `--limit` or `-l` | Optional | The maximum number of blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`.|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints list flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints list flags" caption-side="top"}
 
 **`Example`**
 
@@ -884,16 +884,16 @@ ibmcloud schematics blueprint list
 ```
 {: pre}
 
-### `ibmcloud schematics blueprint destroy`
+### `ibmcloud schematics blueprint run destroy`
 {: #schematics-blueprint-destroy}
 
-Destroys all the resources associated with the modules in a Blueprint. This action cannot be reversed. On Workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
+Destroys all the resources associated with the modules in a blueprint. This action cannot be reversed. On Workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
 {: shortdesc}
 
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt] [--output OUTPUT]
+ibmcloud schematics blueprint run destroy --id BLUEPRINT_ID [--no-prompt] [--output OUTPUT]
 ```
 {: pre}
 
@@ -901,20 +901,20 @@ ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt] [--output 
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the Blueprint.|
+| `--id` or `-i`| Required | The ID of the blueprint.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints destroy flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints destroy flags" caption-side="top"}
 
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint destroy -id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint run destroy -id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
 
-### `ibmcloud schematics blueprint delete`
+### `ibmcloud schematics blueprint config delete`
 {: #schematics-blueprint-delete}
 
 Delete a {{site.data.keyword.bpshort}} Blueprint. A blueprint can only be deleted once all resources have been destroyed using the `destroy` command and Workspaces are in `Inactive` state. For more information about the difference between destroy and delete command, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
@@ -923,7 +923,7 @@ Delete a {{site.data.keyword.bpshort}} Blueprint. A blueprint can only be delete
 **`Syntax`**
 
 ```sh
-ibmcloud schematics blueprint delete --id BLUEPRINT_ID [—force-delete] [--no-prompt] [--output OUTPUT]
+ibmcloud schematics blueprint config delete --id BLUEPRINT_ID [—force-delete] [--no-prompt] [--output OUTPUT]
 ```
 {: pre}
 
@@ -931,16 +931,16 @@ ibmcloud schematics blueprint delete --id BLUEPRINT_ID [—force-delete] [--no-p
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the Blueprint.|
+| `--id` or `-i`| Required | The ID of the blueprint.|
 | `--force-delete` or `--fd` | Optional | Force deletes the blueprint including the active module. This action cannot be reversed.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints delete flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints delete flags" caption-side="top"}
 
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint delete -id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint config delete -id blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -963,7 +963,7 @@ ibmcloud schematics blueprint job get --id JOB_ID [--output OUTPUT]
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job list` to get Job ID of a particular blueprint job.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints job get flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints job get flags" caption-side="top"}
 
 **`Example`**
 
@@ -975,7 +975,7 @@ ibmcloud schematics blueprint job get --id eu-de.JOB.Blueprint_Basic.c5e3c831
 ### `ibmcloud schematics blueprint job list`
 {: #schematics-blueprint-job-list}
 
-List all the Jobs for a Blueprint. 
+List all the Jobs for a blueprint. 
 {: shortdesc}
 
 **`Syntax`**
@@ -989,16 +989,16 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the Blueprint. |
+| `--id` or `-i`| Required | The ID of the blueprint. |
 | `--limit` or `-l` | Optional | The maximum number of jobs to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Blueprints job list flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints job list flags" caption-side="top"}
 
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint job list --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint job list --id blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -1020,7 +1020,7 @@ ibmcloud schematics blueprint job logs --id JOB_ID
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the job that you want to get. Run `ibmcloud schematics blueprint job get` to get a particular blueprint job logs. |
-{: caption="{{site.data.keyword.bpshort}} Blueprints job list flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints job list flags" caption-side="top"}
 
 **`Example`**
 

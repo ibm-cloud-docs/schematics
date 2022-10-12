@@ -12,14 +12,14 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the beta release.
+{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 
 # Listing blueprint jobs
 {: #list-blueprint-jobs-cli}
 
-To list your blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_id>`. 
+To list your blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_ID>`. 
 {: shortdesc}
 
 For all the blueprint commands, syntax, and option flag details, see [blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
@@ -32,11 +32,11 @@ For all the blueprint commands, syntax, and option flag details, see [blueprint 
 Lists all the blueprint jobs, the command is shown in the code block.
 
 ```sh
-ibmcloud schematics blueprint job list -id <blueprint_id>
+ibmcloud schematics blueprint job list -id <blueprint_ID>
 ```
 {: pre}
 
-The list command returns the list of jobs that runs for this blueprint environment. This example does not follow the interactive prompt. 
+The list command returns the list of jobs that runs for this blueprint. This example does not follow the interactive prompt. 
 
 ```text        
 ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
@@ -225,7 +225,7 @@ OK
 {: #list-blueprint-jobs-ui}
 {: ui}
 
-The results of blueprint operations, `config create`, `run apply`, `config update`, `run destroy`, and `config delete` can be reviewed on the **Jobs history** page of a blueprint environment. 
+The results of blueprint operations, `config create`, `run apply`, `config update`, `run destroy`, and `config delete` can be reviewed on the **Jobs history** page of a blueprint. 
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
 2. Click **Overview** to view the blueprint summary that includes `Recent Job runs` of your blueprint. 
@@ -250,9 +250,10 @@ Blueprint operations are performed by child `module` jobs operating against each
 {: #install-blueprint-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about blueprint config update, refer to, [Installing Blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-Blueprint jobs API runs `blueprint apply`, and `blueprint jobs` API's together, to perform the create and apply a blueprint operations.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about blueprint config update, refer to, [Installing blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
+
+Blueprint create API runs `blueprint run apply`, and `blueprint jobs` `APIs` together, to perform the config create, and blueprint run apply operations.
 {: important}
 
 Example

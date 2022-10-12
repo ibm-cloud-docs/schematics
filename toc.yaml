@@ -33,12 +33,12 @@ toc:
           - sc-blueprint.md
           - sc-about-usecases.md
       - topicgroup:
-          label: Working with Blueprints
+          label: Working with blueprints
           topics:
           - draft-bp/workingwithblueprints.md
           - draft-bp/sc-bp-define.md
           - draft-bp/sc-bp-deploy.md
-          - draft-bp/sc-bp-operate.md
+          - draft-bp/sc-bp-update.md
           - draft-bp/sc-bp-delete.md
       - topicgroup:
           label: Security and compliance
@@ -60,9 +60,9 @@ toc:
           - setup-cli.md
           - setup-api.md
       - topicgroup:
-          label: Managing Blueprints
+          label: Managing blueprints
           topics:
-          - sc-blueprint-templates.md
+          - sc-blueprint-template.md
           - sc-blueprint-create.md
           - sc-blueprint-apply.md
           - sc-blueprint-display.md
@@ -161,7 +161,7 @@ toc:
                 label: IBM Cloud Schematics API
                 href: https://cloud.ibm.com/apidocs/schematics
       - topicgroup:
-          label: Blueprints definition reference
+          label: Blueprint definitions reference
           topics:
             - sc-blueprint-template-yaml.md
             - sc-blueprint-input-yaml.md
@@ -221,7 +221,7 @@ toc:
               topics:
               - troubleshooting/wks_creation_api.md
           - topicgroup:
-              label: Troubleshooting Blueprints
+              label: Troubleshooting blueprints
               topics:
               - troubleshooting/ts-blueprint-create-failure.md
               - troubleshooting/ts-blueprint-create-init-failure.md
