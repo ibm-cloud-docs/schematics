@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
 
@@ -87,7 +87,7 @@ You can follow the topics to upgrade from one Terraform version to another versi
 {: faq}
 {: support}
 
-The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such Workspace and the ongoing activity are marked as `Failed`. The user can then reexecute the activity. For more information, see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such Workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
 
 ## Why do the jobs delay in a queue when plan is generated?
 {: #job-queue-faq}
@@ -115,7 +115,7 @@ You need to run `ibmcloud schematics Workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisioners and Ansible actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisions and Ansible Actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
 ## How can I create Workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}

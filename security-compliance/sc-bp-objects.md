@@ -120,7 +120,7 @@ Follow these practices to protect your Workspace data through input credentials 
 
 Following are the various ways that {{site.data.keyword.bpshort}} data can be protected.
 - Access protection by using {{site.data.keyword.iamshort}}.
-- Nonrepudiation by using {{site.data.keyword.cloudaccesstrailshort}}.
+- Non-repudiation by using {{site.data.keyword.cloudaccesstrailshort}}.
 - Data protection by using Key Management Systems (KMS).
 
 ### Access protection by using Identity and Access Management
@@ -128,7 +128,7 @@ Following are the various ways that {{site.data.keyword.bpshort}} data can be pr
 
 Create an IAM access group for your users and assign service access policies to {{site.data.keyword.bplong_notm}} and the resources that you want your users to work with. IAM users are attached to access groups. For more information, see [Setting up access for your users](/docs/schematics?topic=schematics-access#access-setup).
 
-### Nonrepudiation by using Activity tracker
+### Non-repudiation by using Activity tracker
 {: #bp-security-atracker}
 
 You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspace instance events, access, events, and access audit log. For more information, see [Auditing events](/docs/schematics?topic=schematics-at_events).

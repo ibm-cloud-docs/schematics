@@ -30,7 +30,7 @@ Similar to the `remote_state` data source, you can only access information that 
 
 1. Follow the example in the [getting started tutorial](/docs/schematics?topic=schematics-getting-started) to create a {{site.data.keyword.bpshort}} Workspaces and provision a virtual server in a VPC. As you follow the instructions, review the output variables that are defined at the end of the `vpc.tf` Terraform configuration file. 
 
-    If you already used a different Terraform configuration file in one of your workspaces, you can use thisWorkspace for this exercise. Make sure to add output values as outlined in this example to your configuration file so that you can access your Workspace information later. 
+    If you already used a different Terraform configuration file in one of your workspaces, you can use this workspace for the exercise. Make sure to add output values as outlined in this example to your configuration file so that you can access your Workspace information later. 
     {: tip}
 
     ```terraform

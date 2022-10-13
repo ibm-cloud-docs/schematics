@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-12"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -32,7 +32,7 @@ All data, user inputs and the data generated at runtime during execution of auto
 2. Bring your own key (BYOK) by integrating with Key Protect.
 3. Keep your own key (KYOK) by integrating with Hyper Protect Crypto Services (HPCS)
 
-Key protect offers manual and automatic key rotation. When you rotate a root key, the registered key is used to reencrypted {{site.data.keyword.bpshort}} resources with a new key version. You can access the {{site.data.keyword.bpshort}} resources metadata such as details until the rotation completes.
+Key protect offers manual and automatic key rotation. When you rotate a root key, the registered key is used to re-encrypted {{site.data.keyword.bpshort}} resources with a new key version. You can access the {{site.data.keyword.bpshort}} resources metadata such as details until the rotation completes.
 {: shortdesc}
 
 ### Key deletion or disable
