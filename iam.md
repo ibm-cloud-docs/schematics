@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-17"
 
 keywords: schematics, automation, terraform
 
@@ -28,7 +28,7 @@ As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that y
 {: support}
 
 Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keyword.iamlong}} (IAM) service access roles to your users. 
-{: shortdsec}
+{: shortdesc}
 
 **Who must grant access to {{site.data.keyword.bplong_notm}}?**
 
@@ -87,7 +87,7 @@ Review the following table to see what permissions you need to work with {{site.
 ### Blueprint permissions
 {: #blueprint-permissions}
 
-Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Blueprint.
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} blueprint.
 
 In addition to the listed blueprints activities and permission, you must check whether you have related [Workspace permissions](#workspace-permissions) for `blueprint config create`, `blueprint run apply`, `blueprint config delete`, and `blueprint run destroy` activities to execute successfully.
 {: important} 
@@ -103,7 +103,7 @@ In addition to the listed blueprints activities and permission, you must check w
 | `blueprint run destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
-{: caption="User permissions for {{site.data.keyword.bpshort}} Blueprint" caption-side="top"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} blueprint" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### KMS permissions

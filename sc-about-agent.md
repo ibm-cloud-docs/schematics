@@ -18,7 +18,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the Beta release.
 {: beta}
 
-The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, and `Microservices`. For more information about the Agents utilities, see [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
+The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure. Integrate the {{site.data.keyword.bpshort}} Agents running in your private network to the {{site.data.keyword.bplong_notm}} service to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions. The {{site.data.keyword.bpshort}} Agents runtime uses `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, and `Micro-services`. For more information about the Agents utilities, see [{{site.data.keyword.bpshort}} runtime development tools](/docs/schematics?topic=schematics-sch-utilities).
 {: shortdesc}
 
 ## Usage of an Agent
@@ -43,7 +43,7 @@ The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and
 1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
 2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary#agentsa2) to create your cluster infrastructure.
 3. Integrate the {{site.data.keyword.bpshort}} private endpoint with the {{site.data.keyword.bpshort}} service to provision, configure, and monitor your application through {{site.data.keyword.bpshort}} Agent.
-4. Manage the tools and softwares through Agents services containing the microservices.
+4. Manage the tools and softwares through Agents services containing the micro-services.
 
 ## Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents
 {: #agents-augmenting}
@@ -67,7 +67,7 @@ The table describes how the {{site.data.keyword.bpshort}} are augmented with {{s
 The [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro) are deployed in your {{site.data.keyword.cloud}} account and configured to connect to your {{site.data.keyword.bpshort}} service instance. The block diagram represents the set up to provision, deploy, connect, and use the required cluster infrastructure.
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} Agents set up](For more information aimages/agents-setup-latest.svgbout "{{site.data.keyword.bpshort}} Agents set up"){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
+![{{site.data.keyword.bpshort}} Agents set up](/images/agents-setup-latest.svgbout){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
 
 For more information about estimated time to set up an Agent, refer to [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup).
 

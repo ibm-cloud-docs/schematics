@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-26"
+lastupdated: "2022-10-17"
 
-keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics depdendencies
+keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
 subcollection: schematics
 

@@ -24,34 +24,28 @@ subcollection: schematics
 ## Overview
 {: #blueprint-overview}
 
-{{site.data.keyword.bpshort}} blueprints assists DevOps teams to deploy and build large-scale and repeatable application environments. It builds on existing and tested {{site.data.keyword.bpshort}} automation capabilities. 
-{: shortdesc} 
+{{site.data.keyword.bplong}} blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac) (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A craftsman builds the house from well defined components using the blueprint for guidance.      
 
-The core principles of IaC are commonly defined as:
-- Codify everything
-- All version and in the source control
-- Continuously test, integrate, and deploy
-- Make your infrastructure code modular
+In a similar fashion, {{site.data.keyword.bpshort}} blueprints enables users to rapidly define and deploy cloud environments from reusable and well defined building blocks of [Terraform](https://www.terraform.io) automation code. Reusable modules implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. Templates determine the architecture, specifying the modules required for the implementation and infrastructure topology. Reuse is at the heart of {{site.data.keyword.bpshort}} blueprints. Publicly available modules designed for IBM Cloud can be mixed with third-party and user developed modules to create customized solutions. Templates are reusable across environments with separately maintained configurations, supporting dev, stage and prod pipelines and reuse across organizations. 
+{: shortdesc} 
 
-{{site.data.keyword.bpshort}} blueprints applies these IaC principles to manage the definition and lifecycle of large-scale HashiCorp Terraform environments. The definition and linking of {{site.data.keyword.bpshort}} hosted Terraform environments enables {{site.data.keyword.bpshort}} to simplify the creation and management of large-scale infrastructure deployments on {{site.data.keyword.cloud_notm}}. 
 
-This approach to large-scale environment management is represented by the key concepts that are outlined in the diagram.
+![Large-scale environments by using Terraform and blueprints](/images/bp-largescale-env.svg){: caption="Large-scale environments using Terraform and blueprints" caption-side="bottom"}
 
-![Managing lLarge-scale environments using Terraform and blueprints](images/bp-largescale-env.svg){: caption="Managing large-scale environments using Terraform and blueprints" caption-side="bottom"}
 
-## Architecture
-{: #blueprint-architecture}
+{{site.data.keyword.bpshort}} blueprints complements Terraform's IaC automation capabilities with:
+- Composition: Build from an eco-system of reusable and maintained IBM Cloud architecture components written in Terraform
+- Reusability: Reuse templates (architectures) across environments, pipelines and teams
+- Scalability: Structure large environments by linking modules and Terraform workspaces  
+- Lifecycle: Cradle-to-grave. Future: scheduled ops, drift detection, cost estimation, policy compliance  
+- Extensibility (future): Provisioning and configuration with RedHat Ansible              
 
-The key to building scalable cloud architectures with {{site.data.keyword.bpshort}} blueprints is open source IaC automation modules. {{site.data.keyword.cloud_notm}} automation modules are reusable IaC definitions that implement the layers of an infrastructure stack as HashiCorp Terraform configurations. To simplify creation of cloud environments using blueprints, automation modules are purposely developed to a set of [guidelines](https://github.com/terraform-ibm-modules/getting-started/blob/master/README.md){: external} for resource naming conventions, variable definitions, inputs, and outputs.
-{: shortdesc} 
+IAC best practices, support the lifecycle of blueprint environments, cradle-to-grave. Versioning and configuration, support controlled change as requirements evolve, while templates and modules are maintained and updated to remain current and compliant.   
 
-In {{site.data.keyword.bpshort}}, blueprint modules are deployed as linked {{site.data.keyword.bpshort}} (Terraform) Workspaces. {{site.data.keyword.bpshort}} manages data handling between the linked Workspaces based on the resource dependencies between the modules. The linking of the modules defines the infrastructure architecture and resource topology.  
 
-The mapping of a blueprint template with input variables, and automation modules to the {{site.data.keyword.bpshort}} Workspaces, and deployed cloud resources is illustrated in the diagram. 
+![{{site.data.keyword.bpshort}} blueprints overview](/images/blueprints-v2-Overview.svg){: caption="{{site.data.keyword.bpshort}} blueprints overview" caption-side="bottom"}
 
-![{{site.data.keyword.bpshort}} blueprints architecture](images/bp-architecture.svg){: caption="{{site.data.keyword.bpshort}} blueprints architecture" caption-side="bottom"}
 
-Module statements in a blueprint template define the modules that creates in the respective source repositories that contain the Terraform module configurations. The layers of an infrastructure architecture and resource dependencies are created from the dependencies and links between the modules. When {{site.data.keyword.bpshort}} blueprints deploys an environment,  resource data is passed between modules to link the layers of the archirecture. 
 
 ## Next steps
 {: #nextsteps-bp-arch}

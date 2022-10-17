@@ -191,7 +191,7 @@ Key                     Value
 resource_group          -   
 region                  -   
 sample_var              -   
-boolian_var             -   
+boolean_var             -   
 list_any_flow_scalar    -   
 list_any_block_scalar   -   
 docker_ports            -   
@@ -241,7 +241,7 @@ docker_ports            [
                           }   
                         ]   
                            
-boolian_var             false   
+boolean_var             false   
                            
 MODULES
 
@@ -278,7 +278,7 @@ sample_var              $blueprint.sample_var
 image_id                ami-image   
 list_any_flow_scalar    $blueprint.list_any_flow_scalar   
 list_any_block_scalar   $blueprint.list_any_block_scalar   
-docker_ports            $workitem.terraform_module1.nested_complex   
+docker_ports            $module.terraform_module1.nested_complex   
                         
 OUTPUTS
 
@@ -360,7 +360,7 @@ Authorization: Bearer <auth_token>
         },
         {
             "name": "Blueprint FVT",
-            "description": "Deploys dev environtment instance in Toronto Region",
+            "description": "Deploys dev environment instance in Toronto Region",
             "resource_group": "f8ceaec00ee14de48ee802cf11202a81",
             "tags": [
                 "blueprint:Tor-Dev"
@@ -586,6 +586,6 @@ For more information, about how to diagnose and resolve issues if the list job f
 ## Next steps
 {: #bp-create-nextsteps}
 
-After displaying the list of blueprint in {{site.data.keyword.bpshort}}, the next step in displaying the blueprint jobs is to refer to [list-blueprint-jobs](docs/schematics?topic=schematics-list-blueprint-jobs-cli&interface=api) API in the Blueprint. 
+After displaying the list of blueprint in {{site.data.keyword.bpshort}}, the next step in displaying blueprint jobs is to refer to [list-blueprint-jobs](docs/schematics?topic=schematics-list-blueprint-jobs-cli&interface=api) API. 
 
-Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample.
+

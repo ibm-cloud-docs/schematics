@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -124,7 +124,7 @@ Yes, you can register an Agent in a different region to what is provided in the 
 {: faq}
 {: support}
 
-If an Agent is running in Sydney, but Agent having us-sourth, or eu-de as an endpoint. Workspaces must be created in the same region, where the {{site.data.keyword.bpshort}} endpoint is configures. Because {{site.data.keyword.bpshort}} picks the jobs to run based on the {{site.data.keyword.bpshort}} endpoint configuration.
+If an Agent is running in Sydney, but Agent having us-south, or eu-de as an endpoint. Workspaces must be created in the same region, where the {{site.data.keyword.bpshort}} endpoint is configures. Because {{site.data.keyword.bpshort}} picks the jobs to run based on the {{site.data.keyword.bpshort}} endpoint configuration.
 
 ## Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?
 {: #faqs-agent-jr-logs}

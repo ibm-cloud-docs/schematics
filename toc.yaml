@@ -70,6 +70,7 @@ toc:
           - sc-blueprint-update.md
           - sc-blueprint-destroy.md
           - sc-blueprint-delete.md
+          - sc-blueprint-terraform.md
           - draft-bp/sc-bp-ui-flow.md
       - topicgroup:
           label: Managing Workspaces

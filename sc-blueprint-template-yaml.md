@@ -15,24 +15,24 @@ subcollection: schematics
 # Blueprint template YAML schema
 {: #bp-template-schema-yaml}
 
-This document is the reference of the YAML schema that is used to describe the `blueprint.yaml` file.
+This document is the reference of the YAML schema that is used to describe the blueprint template YAML file.
 
-The `blueprint.yaml` file defines all modules in the blueprint template. Every blueprint template consists of a list of automation modules from which the reference architecture is composed. 
+The template file defines all modules in the blueprint template. Every template contains a list of modules from which the infrastructure architecture is composed. 
 
-Each `blueprint.yaml` file has a configuration preface:
+Each template file has a configuration preface:
 
 ```yaml
 
-name: schematics-dev-blueprint
+name: dev-blueprint
 type: "blueprint"
 schema_version: "1.0"
-description: "Project to provision Schematics Service."
+description: "Project to provision Application Service."
 inputs:
   - name: resource_group
   - name: region
   - name: api_key
 outputs:
-  - name: schematics-service-url
+  - name: service-url
     value: $module.bp-vsi-vpc-app.outputs.app_url
 settings: 
   - name: TF_VERSION
@@ -43,7 +43,7 @@ settings:
 ## Supporting setting parameters
 {: #bp-parameters}
 
-Following are the supporting setting parameters that can be used to configure `blueprint.yaml`.
+Following are the supporting setting parameters that can be used to configure a template
 
 ### name
 {: #bp-name}
@@ -106,7 +106,7 @@ Type: list
 
 Default: []
 
-A list defines all the inputs that are needed by the template. Inputs are specified in the [`input.yaml`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as configuration parameters when the template is configured in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. 
+A list defines all the inputs that are required by the template. Inputs are specified in the [`input file`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as input values when the blueprint is created in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. 
 
 Example
 
@@ -152,7 +152,7 @@ The only supported setting is `TF_VERSION`.
 
 Type:       number
 
-Blueprints set the Terraform version to be used at Workspace execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
+Blueprint templates set the Terraform version to be used at module execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
 
 Options:    Terraform version in `SemVer` format 
 
@@ -170,7 +170,9 @@ settings: # Master settings for all modules
 
 The `modules` block defines the Terraform, and Ansible modules from which the solution is constructed. 
 
-Each module list entry is defined by a name, the source for the module, inputs, and outputs.   
+Each module list entry is defined by a name, followed by the source for the module, inputs, and expected outputs. 
+
+Review the automation module metadata and readme file information for the [module](https://github.com/terraform-ibm-modules){: external} to guide defining the module block.     
 
 ```yaml
 modules:
@@ -216,7 +218,7 @@ Type: string
 
 Required: true
 
-The name that is used within {{site.data.keyword.bpshort}} to identify the Workspace that is created to manage the group of resources that are created by the Terraform config specified on the `modules.source.git.git_url` statement. 
+The name that is used within {{site.data.keyword.bpshort}} to identify the blueprint module created to manage the resources  created by the Terraform config or module specified on the `modules.source.git.git_url` statement. 
 
 ### modules.module_type
 {: #bp-modules-moduletype}
@@ -225,14 +227,14 @@ Type: string
 
 Required: true
 
-String specifying the IaC type of the automation module. Only Terraform is supported now.   
+String specifying the IaC type of the automation module. Only Terraform is supported at this time.   
 
 Options: `terraform`
 
 ### modules.source options
 {: #bp-modules-sourceoptions}
 
-The source where the Terraform, or Ansible config are downloaded from. 
+The version control source library from where the Terraform config, or Ansible playbook are retrieved. 
 
 ```yaml
 source:
@@ -250,9 +252,9 @@ Type: string
 
 Required: true
 
-Type of Git source repository. Only GitHub validated now. 
+Type of Git source repository. 
 
-Options: `github` 
+Options: `github`, `gitlab` 
 
 ### modules.source.git.git_repo_url
 {: #bp-modules-git-repo-url}
@@ -270,7 +272,7 @@ Type: string
 
 Default: master
 
-If content is in Git, the branch contains the users Terraform config. This option is mutually exclusive with the `git_release` option. 
+If content is in Git, the branch containing the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. 
 
 ### modules.source.git.git_release
 {: #bp-modules-git-release}
@@ -279,7 +281,7 @@ Type: string
 
 Default: latest
 
-If content is Git, the release tag for the repository contains the users Terraform config. This option is mutually exclusive with the `git_branch` option.
+If content is Git, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint config update` operation. 
 
 Options: `latest` or release in SemVer format 
 
@@ -290,7 +292,7 @@ Type: list
 
 Default: []
 
-A list defines all the inputs that are needed by the module. 
+A list that defines all the inputs that are required by the module. 
 
 ```yaml
 inputs:
@@ -319,7 +321,7 @@ Type: string
 
 Required: true
 
-Name of variable to be passed to Terraform Workspace or Ansible playbook. It must match the value in the target template for the value to be passed at execution time to the Workspace. 
+Name of variable to be passed to Terraform module or Ansible playbook. It must match the value in the Terraform template for the value to be passed at execution time to the module. 
 
 ### modules.inputs.type
 {: #bp-modules-inputs-type}
@@ -328,7 +330,7 @@ Type: YAML flow or block scalar
 
 Default: string 
 
-As templates work with Terraform configurations, Terraform variable [type constraints](https://www.terraform.io/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the Workspace. The type can be copied from the module metadata or the Terraform `variables.tf` file.
+As templates work with Terraform configs and modules, Terraform variable [type constraints](https://www.terraform.io/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the module. The type can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or the Terraform `variables.tf` file.
 
 As complex Terraform types are typically represented as multi-line strings, YAML block syntax can be used.
 
@@ -355,10 +357,10 @@ Type: Any valid Terraform variable type
 
 Required: true
 
-The value field sources the input value for modules from three sources:
+The value field sources the input value for a module from three sources:
 - Statically defined values specified on the name value pair statement of the module, in yaml syntax
-- An input to the template defined in the settings prefix and sourced at run time from an input file. Identified by the $blueprint prefix
-- An output value from another module defined in the `blueprint.yaml` file. 
+- An input to the template defined in the settings prefix and sourced at run time from the [inputs](/docs/schematics?topic=schematics-glossary#bpi1) defined by the blueprint configuration. Identified by the $blueprint prefix
+- An output value from another module defined in the template file. 
     - Identified by the `$module` prefix and must be included in the output section of another module.
     - The format is the token, `$module` followed by the module name, the token `outputs`, followed by the module output name. 
 
@@ -372,7 +374,7 @@ Example of statically defined values
 ```
 {: pre}
 
-Example value sourced from an input statement in the blueprint `inputs` section
+Example value sourced from an input statement in the template `inputs` section
 ```yaml
 - name: logdna_sts_region
   type: string
@@ -403,7 +405,7 @@ Type:       list
 
 Default:    []  
 
-A list defines all the outputs that are returned by the module to be used as inputs to other Workspaces or output from the blueprint. Each output is identified by the label `name`.  It must match the value in the module template for the value to be retrieved at execution time from the Workspace. The name can be copied from the module metadata or from inspecting the Terraform `.tf` files. 
+A list defines all the outputs that are returned by the module to be used as inputs to other modules or output from the blueprint. Each output is identified by the label `name`.  It must match an [output declaration](https://www.terraform.io/language/values/outputs){: external} in the Terraform template for the value to be retrieved at execution time from the module. The name can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or from inspecting the Terraform `.tf` files. 
 
 Example
 ```yaml
@@ -414,13 +416,13 @@ outputs:
 {: pre}
 
 ### module.injectors options
-{: #bp-modules-outputs-injector}
+{: #bp-modules-injector}
 
 Type:         list 
 
 Default:      []
 
-The injectors block is an optional block to configure the parameters that are required by {{site.data.keyword.bpshort}} to inject the template files into the module automation repo. The primary use with templates is to enable direct use of Terraform modules, by the injection of `provider` and `terraform` blocks.
+The injectors block is an optional block to configure the parameters that are required by {{site.data.keyword.bpshort}} to inject additional files into the automation module source at execution time. The primary use with blueprint templates is to enable direct use of Terraform child modules, by the injection of `.tf` files containing `provider` and `terraform` blocks. 
 
 ```yaml
 injectors:
@@ -444,7 +446,7 @@ Type: URL
 
 Required: true
 
-URL of the Git repository contains the template files that are used for injection. 
+URL of the Git repository that contain the templating files used for injection. 
 
 ### module.injectors.tft_name
 {: #bp-module-tft-name}
@@ -453,7 +455,7 @@ Type: string
 
 Required: true
 
-Name of the template file to use
+Name of the templating file to use
 
 Options: `ibm` or `kubernetes`
 
@@ -464,7 +466,7 @@ Type: string
 
 Required: true
 
-Two modes of injection are supported by Terraform configurations. Definitions can be injected as extra files, only if it is believed that no conflict with any existing HCL statements. Alternatively they can be injected as [HCL override files](https://www.terraform.io/language/files/override).
+Two modes of injection are supported by Terraform. Definitions can be injected as extra files, only if it is believed that no conflict with any existing HCL statements. Alternatively they can be injected as [HCL override files](https://www.terraform.io/language/files/override){: external}.
 
 Options: `override` or `inject`
 
@@ -475,7 +477,7 @@ Type: list
 
 Required: true
 
-A list defines the inputs as name-value pairs, needed as input to the selected template. Now, only static values are supported.  
+A list that defines the templating inputs as name-value pairs. At this time, only static values are supported.  
  
 Example
 ```yaml

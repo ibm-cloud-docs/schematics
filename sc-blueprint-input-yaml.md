@@ -18,9 +18,9 @@ subcollection: schematics
 # blueprint input file YAML Schema
 {: #bp-input-schema-yaml}
 
-This document is the reference of the YAML schema used to describe a blueprint input YAML file containing blueprint input variables. 
+This document is the reference of the YAML schema used to describe a blueprint input YAML file containing the blueprint input variables required by a template. 
 
-Each blueprint inputs file contains a prefix section defining the [input variables](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements) required to customize the template to a specific use case. If a value is not defined, it is assumed that the input is satisfied by a user defined input value at blueprint config create time. These must be satisfied at create time by an input file or dynamic inputs. 
+A blueprint input file defines the [input variables](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements) required to customize the template to a specific use case. If a value is not defined, it is assumed that the input is satisfied by a user defined input value at blueprint config create time. These must be satisfied at create time by an input file or dynamic inputs. 
 {: shortdesc}  
 
 The type of an input variable is defined in the [input block](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-options) of the consuming Module in the template. The supported types are the same as the [Terraform variable types](https://www.terraform.io/language/expressions/types). If the type is omitted the default is `string`.
@@ -78,6 +78,6 @@ docker_ports: |
     }
   ]
 
-boolian_var: false  
+boolean_var: false  
 ```
 {: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-17"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -54,7 +54,7 @@ Use one of the IBM provided software templates to set up and configure a classic
       {: note}
 
     - Enter the **iaas_classic_username** as `<your classic_username>` that you retrieved earlier. For more information about how to retrieve this information, see [Creating a classic infrastructure API key](/docs/account?topic=account-classic_keys#create-classic-infrastructure-key). 
-    - Select the resource group where you want to provision your virtual server and `PostregSQL` instance. 
+    - Select the resource group where you want to provision your virtual server and `PostgresSQL` instance. 
 
 5. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} Workspaces **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
 6. Verify your virtual server and PostgreSQL setup. 

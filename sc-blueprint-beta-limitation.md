@@ -31,22 +31,31 @@ Join the `#tmp-blueprints-beta-2022` slack channel and post a message include th
 You can come back anytime to your created thread to add information, ask questions, or give feedback.
 {: important}
 
+## Beta changes October 2022
+Blueprint commands have been renamed with the 1.12.3 release of the Schematics CLI Plugin 
+- `blueprint create` > `blueprint config create`
+- `blueprint update` > `blueprint config update`
+- `blueprint delete` > `blueprint config delete`
+- `blueprint apply` > `blueprint run apply`
+- `blueprint destroy` > `blueprint run destroy` 
+
+
 ## Beta release limitations 
 {: #sc-bp-beta-limitation}
 
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
-| Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | | | 
-| The Terraform Plan operation is not supported for blueprints. | | | 
+| Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | Support planned for November 2022 | | 
+| The Terraform Plan operation is not supported for blueprints. | Support planned for year end | | 
 | Run operations are performed as a single operation against all modules. A future 2023 release will support single module operations  | | | 
 | Created Cloud resources are not tagged with blueprint and Workspace IDs. | | | 
 | Only one input file is supported per blueprint configuration. | | |
 | Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources are destroyed to delete a blueprint.  | | |  
 | The Delete CLI command returns immediately at start of execution and does not wait for successful completion. | | | 
 | Operations must not be directly run against linked {{site.data.keyword.bpshort}} modules (Workspaces) by using the Workspace commands or UI. Operations must be run by using blueprint commands.    | | |
-| No blueprint configuration validation command. | | | 
-| Only blueprint templates and modules in GitHub are formally supported. Testing is not complete for GitLab and other repositories. | | | 
-| Only blueprint templates and modules in public repositories are formally supported. Testing is not complete for private repositories. | | | 
+| No blueprint configuration validation command. | Support planned for November 2022 | | 
+| Only blueprint templates and modules in GitHub are formally supported. Testing is not complete for GitLab and other repositories. | Support planned for November 2022 | | 
+| Only blueprint templates and modules in public repositories are formally supported. Testing is not complete for private repositories. | Support planned for November 2022 | | 
 {: caption="Beta release limitations" caption-side="bottom"}
 
 ## Beta release known issues 
@@ -54,11 +63,8 @@ You can come back anytime to your created thread to add information, ask questio
 
 | Issue | Resolved | Date |
 | --- |--- | --- | 
-| On config create, the blueprint name and description that is specified on the command line are ignored. | | |
-| On config update, the blueprint name is not updated. | | |  
 | Run apply, run destroy, and config deletes return the generic message **`fullfilment_success`** on successful completion.  | | | 
-| Automatic `pull latest` of updated module Terraform configuration from Git repositories is not being run on the blueprint config update. | | | 
-| JSON output option not supported on commands. As a workaround perform a pull-latest via the Workspace UI  | | |   
+| JSON output option not supported on commands.  | | |   
 {: caption="Beta release known issues" caption-side="bottom"}
 
 ## Joining public slack channel
