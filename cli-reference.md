@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-18"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -766,7 +766,7 @@ OK
 
 
 ### `ibmcloud schematics blueprint run apply`
-{: #schematics-blueprint-install}
+{: #schematics-blueprint-apply}
 
 The apply command creates the cloud resources defined by the blueprint template. Apply performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the blueprint template to create the cloud resources.
 {: shortdesc}

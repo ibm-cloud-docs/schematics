@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-18"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -20,7 +20,11 @@ subcollection: schematics
 
 One of the use cases for blueprints is to compose infrastructure architectures directly from [Terraform modules](https://www.terraform.io/language/modules#modules). 
 
- Blueprint templates can reuse existing Terraform modules from the [Terraform registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}, along with {{site.data.keyword.IBM_notm}} and user created modules from public and private libraries. Best practice implementations for {{site.data.keyword.IBM_notm}} Cloud are available as reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry. The combination of {{site.data.keyword.IBM_notm}} and user modules from public and private repos to create a custom template is illustrated in the figure.   
+ Blueprint templates can reuse existing Terraform modules from the [Terraform registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}, along with {{site.data.keyword.IBM_notm}} and user created modules from public and private libraries. Best practice implementations for {{site.data.keyword.IBM_notm}} Cloud are available as reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry. See the [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines) for creating user modules compliant with {{site.data.keyword.bpshort}} blueprints. 
+ 
+ 
+ 
+ The combination of {{site.data.keyword.IBM_notm}} and user modules from public and private repos to create a custom template is illustrated in the figure.   
 
 ![Custom templates with public and private modules](/images/bp-terraform-modules.svg){: caption="Custom templates with public and private modules" caption-side="bottom"}
 

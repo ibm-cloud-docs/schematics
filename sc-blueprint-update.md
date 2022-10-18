@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-18"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -15,40 +15,40 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Updating a blueprint environment
+# Update a blueprint configuration
 {: #update-blueprint}
 
-Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform are constantly evolving. Without maintenance and updates of the blueprint IaC definitions, inputs and modules, a deployed environment loses currency, compliance, and cease to be manageable through {{site.data.keyword.bpshort}} IaC automation.   
+Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform is constantly evolving. Without maintenance and updates of the blueprint templates, inputs and modules, a deployed environment loses currency, compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation.   
 {: shortdesc}
 
-After the [deployment](/docs/schematics?topic=sc-bp-deploy) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the blueprint template, automation modules and inputs. See [Updating blueprints](/docs/schematics?topic=schematics-update-blueprints#update-multistep) to understand more about the process of updating blueprint environments and the steps needed to run regular updates. 
+After the [deploy](/docs/schematics?topic=sc-bp-deploy) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the blueprint template, automation modules and inputs. See [updating blueprints](/docs/schematics?topic=schematics-sc-bp-update) to understand more about the process of updating blueprint environments and the steps required to run regular updates. 
 
 ## Update process
 {: #update-blueprint-process} 
 
-Updating a deployed blueprint environment and cloud resources is a two-step process, Update, and Apply. The first step updates the blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the blueprint template, IaC module code, and inputs. The second [Apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step runs the automation module code to deploy the changes in the blueprint configuration.  
+Updating a deployed blueprint environment and cloud resources is a two-step process, Update, and Apply. The first step updates the blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the blueprint template, IaC module code, and inputs. The second [blueprint run apply](/docs/schematics?topic=schematics-sc-blueprint-apply&interface=cli) step runs the automation module code to deploy the changes in the blueprint configuration.  
 {: shortdesc} 
 
-Updating a blueprint environment uses the capabilities of Terraform to runs updates to deployed cloud resources. The Terraform config and inputs to a Workspace are updated by the blueprint Update operation. From the updated configuration, Terraform determines the changes that must be set against the existing deployed resources and sets the needed resource updates, deletions, or creates.  
+Updating a blueprint environment uses the capabilities of Terraform to update deployed cloud resources. The Terraform config and inputs for a module are updated by the `blueprint config update` operation. From the updated configuration, Terraform determines the changes that must be run against the existing deployed resources and runs the needed resource updates, deletions, or creates.  
 
 Update supports modification of:
 - Blueprint template YAML file 
-- Input values file
-- Extra inputs  
+- Blueprint input file
+- Additional inputs  
 
 Run the [`ibmcloud schematics blueprint config update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the blueprint configuration that is stored by {{site.data.keyword.bpshort}} with updates to the blueprint template and IaC code in the module source repositories. 
 
 ## Explicit and relaxed versioning
 {: #update-blueprint-versioning}
 
-blueprints support two update approaches for changes to templates and modules. Either a relaxed 'development' mode where the current version of a template or module is always pulled, or a 'production' mode where an explicit version is specified. 
+Blueprints supports two update approaches for changes to templates and modules. Either a relaxed 'development' mode where the current version of a template or module is always pulled, or a 'production' mode where an explicit version is specified. 
 
 ### Relaxed versioning
 {: #update-blueprint-relaxed} 
 
-In some development environments, or where IaC code and blueprint templates are being developed, versioning of IaC definitions that are not needed.  
+In some development environments, or where IaC code and blueprint templates are being developed, versioning of IaC definitions is not needed.  
 
-Blueprints support a default option to always pull the current template, inputs, or modules on an update option. Here template and module statements can use the `git_release` option `latest`. When specified the {{site.data.keyword.bpshort}} identifies if the blueprint template, or module Git repositories are updated, and sets a `pull latest` to update the blueprint configuration. Any Workspaces with modified Terraform module configurations.
+Blueprints defaults to always pull the current template, inputs, or modules on an update operation if no versioning is specified. Alternatively template and module statements can use the `git_release` option `latest`. When `latest` is in effect, {{site.data.keyword.bpshort}} identifies if the blueprint template, or module Git repositories are updated, and runs a `pull latest` to update the blueprint configuration. 
 
 ```sh
 ibmcloud schematics blueprint config update -id <blueprint_ID> 
@@ -58,11 +58,11 @@ ibmcloud schematics blueprint config update -id <blueprint_ID> 
 ### Explicit versioning
 {: #update-blueprint-strict} 
 
-If explicit blueprint version is used with Git release tags for each blueprint template release, the blueprint configuration is only updated if a new release tag is specified on the Update operation. 
+If explicit blueprint versioning is used with Git release tags for each blueprint template release, the blueprint configuration is only updated if a new release tag is specified on the Update operation. 
  
 
 ```sh
-ibmcloud schematics blueprint config update --id basic-demo-pre.deB.1794 --inputs resource_group_name=basic-rg-demo-pre 
+ibmcloud schematics blueprint config update --id <blueprint_ID> --bp-git-release x.y.z 
 ```
 {: pre}
 
@@ -73,11 +73,9 @@ If explicit input file version is used with release tags for each input file rel
 ```sh
 ibmcloud schematics blueprint config update --id <blueprint_ID> --input-git-release x.y.z  
 ```
-{: pre}
+{: pre} 
 
-Where no Git release is specified, and relaxed version (current) is used for input files in the blueprint config. You cannot see the change to the blueprint config that are needed, and the input file changes are pulled in automatically by {{site.data.keyword.bpshort}}. 
-
-Record the blueprint ID that needs to be updated. To list the blueprint IDs, run [get all the blueprint instances](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-list) command.
+Record the blueprint ID that needs to be updated. To list the blueprint IDs, run [listing blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-list) command.
 {: note}
 
 ## Updating a blueprint from the CLI
@@ -418,6 +416,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-update-nextsteps}
 
-After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is to [apply](/docs/schematics?topic=schematics-blueprint-apply).
+After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is to [apply](/docs/schematics?topic=schematics-blueprint-apply) the changes.
 
 

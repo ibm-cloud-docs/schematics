@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-18"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Listing blueprints
+# List blueprints
 {: #list-blueprint-cli}
 
 To list your blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
@@ -584,8 +584,8 @@ Authorization: Bearer <auth_token>
 For more information, about how to diagnose and resolve issues if the list job fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Next steps
-{: #bp-create-nextsteps}
+{: #bp-display-nextsteps}
 
-After displaying the list of blueprint in {{site.data.keyword.bpshort}}, the next step in displaying blueprint jobs is to refer to [list-blueprint-jobs](docs/schematics?topic=schematics-list-blueprint-jobs-cli&interface=api) API. 
+After displaying the list of blueprints in {{site.data.keyword.bpshort}}, refer to [list blueprint jobs](docs/schematics?topic=schematics-list-blueprint-jobs-cli) for details on displaying blueprint jobs.  
 
 
