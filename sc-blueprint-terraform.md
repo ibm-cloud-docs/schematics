@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-19"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -132,6 +132,6 @@ provider "ibm" {
 {: #bp-terraform-nextsteps}
 
 In this section you have learned about using Terraform modules with blueprints. 
-- Explore [understanding blueprint templates and configuration](/docs/schematics?topic=schematics-sc-blueprint-template) to create templates containing modules. 
+- Explore [understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) to create templates containing modules. 
 
 - Looking for blueprint samples using modules? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the `Readme` files of the examples for further customization and usage for each sample. 

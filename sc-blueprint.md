@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-19"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -37,7 +37,7 @@ Reuse is at the heart of {{site.data.keyword.bpshort}} blueprints. Publicly avai
 
 {{site.data.keyword.bpshort}} blueprints complements Terraform's IaC automation capabilities with:
 - [Composition](/docs/schematics?topic=schematics-define-blueprints): Build infrastructure architectures from an eco-system of reusable and maintained IBM Cloud architecture components written in Terraform
-- [Reusability](/docs/schematics?topic=schematics-sc-blueprint-template#blueprint-templates): Reuse templates (architectures) across environments, pipelines and teams
+- [Reusability](/docs/schematics?topic=schematics-blueprint-templates): Reuse templates (architectures) across environments, pipelines and teams
 - Scalability: Structure and manage large environments by linking modules and Terraform workspaces  
 - [Lifecycle](/docs/schematics?topic=schematics-workingwithblueprints): Cradle-to-grave operations model. Future: scheduled ops, drift detection, cost estimation, policy compliance  
 - Extensibility (future): Provisioning and configuration with RedHat Ansible              
@@ -51,6 +51,6 @@ IAC best practices, support the lifecycle of blueprint environments, cradle-to-g
 
 So far you learned a little about {{site.data.keyword.bpshort}} blueprints and its features. Following are the next steps to explore.
 
-- [Working with blueprints and environments](/docs/schematics?topic=schematics-workingwithblueprints) to understand how to use blueprints to manage the lifecycle of deploying and managing cloud environments.
-- See [understanding blueprint templates and configuration](/docs/schematics?topic=schematics-sc-blueprint-template) to dig into how to define cloud environments using versioned blueprint templates and inputs. 
+- [Working with blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints) to understand how to use blueprints to manage the lifecycle of deploying and managing cloud environments.
+- See [understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) to dig into how to define cloud environments using versioned blueprint templates and inputs. 
 - [Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand Beta limitations.

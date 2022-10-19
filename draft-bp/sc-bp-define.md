@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-19"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -39,7 +39,7 @@ Blueprint environments are be created from reusable user or {{site.data.keyword.
 
 Templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as `dev`, `stage`, and `production` with multiple target regions. Each environment being customized with its own input values. See the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) for more details. 
 
-For examples of blueprint templates and inputs, see the [{{site.data.keyword.bplong_notm}} repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint){: external}. Guidance to create or modify an existing template, will be found in the sections [understanding blueprint configurations](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-templates) and [blueprint template reference](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-templates).  
+For examples of blueprint templates and inputs, see the [{{site.data.keyword.bplong_notm}} repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint){: external}. Guidance to create or modify an existing template, will be found in the sections [understanding blueprint templates and configurations](/docs/schematics?topic=schematics-blueprint-templates) and [blueprint template reference](/docs/schematics?topic=schematics-bp-template-schema-yaml).  
 
 Change in blueprint environments is explicitly managed through version control. Template and input documents are all sourced from a version control system such as GitHub, GitLab or {{site.data.keyword.IBM_notm}} Catalog. 
 
@@ -48,7 +48,7 @@ The steps to create a blueprint template and define the versioned the inputs are
 
 ![Blueprint template and inputs](../images/sc-bp-define.svg){: caption="Blueprint template and inputs" caption-side="bottom"}
 
-1. Defining a cloud environment starts with a high-level reference architecture for the environment. Using the reference architecture as a guide, select the automation modules to implement the infrastructure layers of the architecture. Publicly available modules can be combined with private modules to create a custom architecture. Modules can be sourced from the public repositories containing {{site.data.keyword.IBM_notm}} and third-party authored modules, along with any custom developed modules from private repositories. Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-sc-blueprint-terraform) for details of how to work with Terraform root and child modules.
+1. Defining a cloud environment starts with a high-level reference architecture for the environment. Using the reference architecture as a guide, select the automation modules to implement the infrastructure layers of the architecture. Publicly available modules can be combined with private modules to create a custom architecture. Modules can be sourced from the public repositories containing {{site.data.keyword.IBM_notm}} and third-party authored modules, along with any custom developed modules from private repositories. Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) for details of how to work with Terraform root and child modules.
     - {{site.data.keyword.IBM_notm}} authored modules can be found in the [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} GitHub repository.
 2. Create and edit a blueprint template to implement the desired reference architecture from the selected modules. Review the sections [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) and [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml) for guidance on creating blueprint templates. 
     - Create and name a new blueprint template YAML file in your favorite editor. Example blueprint template YAML files can be found in the [Cloud-{{site.data.keyword.bpshort}}](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint) GitHub repository. Alternatively, download one of the existing template YAML files and use it as a basis for a new template.  

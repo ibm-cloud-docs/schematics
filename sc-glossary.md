@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-19"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -98,7 +98,7 @@ A blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources
 ### Blueprint modules
 {: #bpb5}
 
-Blueprint templates are composed from IaC automation modules that are implemented in HashiCorp Terraform. Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-sc-blueprint-terraform) for details on working with Terraform root and child modules. Examples of {{site.data.keyword.IBM_notm}} authored (child) modules can be found in the GitHub repository [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}.
+Blueprint templates are composed from IaC automation modules that are implemented in HashiCorp Terraform. Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) for details on working with Terraform root and child modules. Examples of {{site.data.keyword.IBM_notm}} authored (child) modules can be found in the GitHub repository [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}.
 {: shortdesc}
 
 ### Blueprint inputs

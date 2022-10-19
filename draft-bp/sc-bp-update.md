@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-19"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -51,12 +51,12 @@ The two-step process to update a blueprint environment is illustrated in the dia
 2. Update the blueprint configuration for the environment in {{site.data.keyword.bpshort}}. 
     - When using versioning, the new Git release tag or branch must be specified for the modified blueprint template and input value YAML files.
     - If no version or branch is specified, {{site.data.keyword.bpshort}} automatically checks the Git repository for a recent commit, and runs a `pull latest` to pull in any updates. 
-    - For more information on running this operation, see [update a blueprint configuration](/docs/schematics?topic=schematics-sc-blueprint-update).
+    - For more information on running this operation, see [update a blueprint configuration](/docs/schematics?topic=schematics-update-blueprint).
 3. {{site.data.keyword.bpshort}} validates the changes made to the configuration.   
 4. On a successful configuration update, {{site.data.keyword.bpshort}} automatically reinitializes the modules with any updated input values and updates to the module IaC code.  
 5. Apply the changes to the updated configuration. The changes are applied with the `blueprint run apply` command or UI Run Apply operation.
     - Based on your updated blueprint configuration, runs the IaC modules in dependency order to update the environment. In a future release the plan will be presented for review prior to apply. 
-    - For more information on running this operation, see [blueprint run apply](/docs/schematics?topic=schematics-sc-blueprint-apply).  
+    - For more information on running this operation, see [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint).  
 6. For each module, {{site.data.keyword.bpshort}} runs a Terraform Apply to create, modify, or delete cloud resources as determined by the configuration changes from the update. 
 7. On successful deployment of the updates, the blueprint output values are updated with any changed outputs.
 
