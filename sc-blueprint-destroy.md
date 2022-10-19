@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-18"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -15,15 +15,15 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Destroying a blueprint environment 
+# Destroy a blueprint environment 
 {: #destroy-blueprint}
 
-When a blueprint  environment is no longer required, it can be deleted which will terminate billing for all deployed resources. See [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint) to understand the process of deleting blueprint environments and the steps. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and then deletes the blueprint config in {{site.data.keyword.bpshort}}.
+When a blueprint  environment is no longer required, it can be deleted which will terminate billing for all deployed resources. See [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint) to understand the process of deleting blueprint environments and the steps. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and second deletes the blueprint config in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
-The cloud resources that are created by a blueprint are destroyed by using the `blueprint run destroy` command. The saved blueprint config can then be removed from {{site.data.keyword.bpshort}}. The delete can be performed after all resources are destroyed by using the [blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 
+The cloud resources that are created by a blueprint are destroyed by using the `blueprint run destroy` command. The saved blueprint config can then be removed from {{site.data.keyword.bpshort}}. The delete can be performed after all resources are destroyed by using the [blueprint run destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 
 
-For Terraform based modules, the destroy operation runs a Terraform destroy command for each module. This removes all cloud resources in reverse dependency order. 
+For Terraform based modules, the destroy operation runs a Terraform Destroy command for each module. This removes all cloud resources in reverse dependency order. 
 
 ## Destroying a blueprint environment from the UI 
 {: #destroy-blueprint-ui}
@@ -32,7 +32,7 @@ For Terraform based modules, the destroy operation runs a Terraform destroy comm
 You can destroy the cloud resources that are created from a blueprint config using the CLI with the [blueprint run destroy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete) command.
 
 ### Verifying blueprint environment destroy 
-{: #verify-bp-destory-ui}
+{: #verify-bp-destroy-ui}
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the destroy operation. 
 2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`, `Recent Job runs` of your environment. 
@@ -58,7 +58,7 @@ On successful completion, the destroy command returns **`fullfilment_success`**.
 For more information, review the [blueprint run destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy) command.
 
 ### Verifying blueprint run destroy success 
-{: #verify-bp-destory-cli}
+{: #verify-bp-destroy-cli}
 
 Verify that the blueprint environment resources are destroyed successfully. When you run destroy from the CLI, the command displays details of the modules containing the resources to be destroyed, and the status of {{site.data.keyword.bpshort}} jobs that run the Terraform destroy operations. Confirm that the user intends to destroy all resources. The command returns on completion.
 
@@ -97,7 +97,7 @@ Record the blueprint ID that is destroyed. To list the blueprint IDs, run [get a
 ### Verifying blueprint destroy from the API
 {: #bp-verify-display-api}
 
-Verify that the blueprint is destoryed successfully.
+Verify that the blueprint is destroyed successfully.
 {: shortdesc}
 
 **Example:**
@@ -292,4 +292,3 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=api) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [blueprint run apply](/docs/schematics?topic=schematics-runapply-blueprint&interface=cli) again using the same blueprint configuration.
 
-Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample. 

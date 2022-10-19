@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-18"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -16,7 +16,7 @@ subcollection: schematics
 {: beta}
 
 
-# Listing blueprint jobs
+# List blueprint jobs
 {: #list-blueprint-jobs-cli}
 
 To list your blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_ID>`. 
@@ -117,11 +117,11 @@ OK
 ```
 {: screen}
 
-The first section of the job output shows the overall execution status of the blueprint operation (job), such as, `create`, `apply`, `update`, `destroy`, or `delete`. 
+The first section of the job output shows the overall execution status of the blueprint operation (job), such as, `config create`, `run apply`, `config update`, `run destroy`, or `config delete`. 
 
-The second section has a detailed breakdown of the execution results at a Workspace level. 
+The second section has a detailed breakdown of the job execution results at a module level. 
 
-Blueprint operations are set by the child `module`. The jobs operate against each module (Workspace), under the control of a `blueprint` orchestration job. For the Terraform based modules, it is the {{site.data.keyword.bpshort}} Workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations set to deploy and configure cloud resources. A blueprint job failure is typically caused by a Module job failure and the failing module log must be reviewed to identify the cause of the job failure. 
+Blueprint operations are run separately against each `module` in a blueprint and the results aggregated as the status of the overall blueprint operation. The module jobs operate under the control of a `blueprint` orchestration job. A module job contain the results of the Terraform operations performed by that module to deploy and configure cloud resources. A blueprint job failure is typically caused by a failing module job. The failing module log must be reviewed to identify the cause of the blueprint job failure. 
 
 ### Blueprint job get summary log
 {: #blueprint-job-get-drilldown-cli} 
@@ -221,7 +221,7 @@ OK
 {: screen}
 
 
-## Listing blueprint jobs through UI
+## List blueprint jobs through UI
 {: #list-blueprint-jobs-ui}
 {: ui}
 

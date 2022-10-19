@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2022
 lastupdated: "2022-09-13"
 
-keywords: schematics reponsibilities, schematics high availability, schematics backup, schematics disaster recovery, schematics security, schematics ibm vs user
+keywords: schematics responsibilities, schematics high availability, schematics backup, schematics disaster recovery, schematics security, schematics ibm vs user
 subcollection: schematics
 
 ---

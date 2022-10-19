@@ -63,6 +63,7 @@ toc:
           label: Managing blueprints
           topics:
           - sc-blueprint-template.md
+          - sc-blueprint-terraform.md
           - sc-blueprint-create.md
           - sc-blueprint-apply.md
           - sc-blueprint-display.md

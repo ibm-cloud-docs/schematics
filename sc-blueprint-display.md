@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-18"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Listing blueprints
+# List blueprints
 {: #list-blueprint-cli}
 
 To list your blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
@@ -191,7 +191,7 @@ Key                     Value
 resource_group          -   
 region                  -   
 sample_var              -   
-boolian_var             -   
+boolean_var             -   
 list_any_flow_scalar    -   
 list_any_block_scalar   -   
 docker_ports            -   
@@ -241,7 +241,7 @@ docker_ports            [
                           }   
                         ]   
                            
-boolian_var             false   
+boolean_var             false   
                            
 MODULES
 
@@ -278,7 +278,7 @@ sample_var              $blueprint.sample_var
 image_id                ami-image   
 list_any_flow_scalar    $blueprint.list_any_flow_scalar   
 list_any_block_scalar   $blueprint.list_any_block_scalar   
-docker_ports            $workitem.terraform_module1.nested_complex   
+docker_ports            $module.terraform_module1.nested_complex   
                         
 OUTPUTS
 
@@ -360,7 +360,7 @@ Authorization: Bearer <auth_token>
         },
         {
             "name": "Blueprint FVT",
-            "description": "Deploys dev environtment instance in Toronto Region",
+            "description": "Deploys dev environment instance in Toronto Region",
             "resource_group": "f8ceaec00ee14de48ee802cf11202a81",
             "tags": [
                 "blueprint:Tor-Dev"
@@ -584,8 +584,8 @@ Authorization: Bearer <auth_token>
 For more information, about how to diagnose and resolve issues if the list job fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Next steps
-{: #bp-create-nextsteps}
+{: #bp-display-nextsteps}
 
-After displaying the list of blueprint in {{site.data.keyword.bpshort}}, the next step in displaying the blueprint jobs is to refer to [list-blueprint-jobs](docs/schematics?topic=schematics-list-blueprint-jobs-cli&interface=api) API in the Blueprint. 
+After displaying the list of blueprints in {{site.data.keyword.bpshort}}, refer to [list blueprint jobs](docs/schematics?topic=schematics-list-blueprint-jobs-cli) for details on displaying blueprint jobs.  
 
-Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample.
+

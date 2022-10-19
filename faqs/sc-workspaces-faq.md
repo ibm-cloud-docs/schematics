@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
 
@@ -27,7 +27,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} Workspac
 
 You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, see [Get token password](/apidocs/iam-identity-token-api#gettoken-password){: external}. You can see the following sample error message and the solution for the authentication error.
 ```text
-Error: Request failes with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
+Error: Request fails with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
 ```
 
 The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.

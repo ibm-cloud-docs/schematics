@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-17"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -71,13 +71,13 @@ The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schemati
 
 This example assumes, the user has access to a Pay-Go or Subscription account and has IAM access permissions to create resources in the Default resource group and also [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Additionally the user must also have permissions to create {{site.data.keyword.bpshort}} [Workspaces and Blueprints](/docs/schematics?topic=schematics-access). 
 
-The example uses the inputs `provisiong_rg=false` and `resource_group_name=Default` to reference the default resource group and provide this ID for the Cloud Object Storage instance creation. 
+The example uses the inputs `provisioning_rg=false` and `resource_group_name=Default` to reference the default resource group and provide this ID for the Cloud Object Storage instance creation. 
 
 If alternative input parameters are used to create a new resource group with a user-defined name or `Trial/Lite` accounts are used, the following errors can be observed. 
 
 - Trial accounts can have a single resource group. More resource groups cannot be created unless the account is upgraded to a paid account. In a trial account, a single `Default` resource group and more resource groups are not allowed.
 - In a shared paid account, the example can fail due to duplicate resource groups. If the sample blueprint template is deployed multiple times in the same account with the same documented input parameters from the readme file, the installation step fails. It occurs as the second and subsequent blueprints use the same resource group name as input. 
-- Delete and re-create the Blueprint by using a different `resource_group_name`.
+- Delete and re-create the blueprint by using a different `resource_group_name`.
     - In a shared user account, the resource group creation can fail due to insufficient IAM permissions to create resource groups. To create resource groups, a user needs [Account Management, editor or administrator permissions](/docs/account?topic=account-account-services#account-management-actions-roles). 
 - Creating the Cloud Object Storage instance, the following errors can occur in `Lite` or `Trial` accounts:
     - This plan requires a paid account. You can upgrade by adding a credit card to your account or you can select the `free plan` if it's available.
@@ -91,7 +91,7 @@ If alternative input parameters are used to create a new resource group with a u
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} Blueprint utilises IaC automation code modules that are written in HashiCorp Terraform. The time taken to create a resources is dependent on the resource type. Terraform automation modules are written not to return on initial resource creation, but to return only when the resource is fully initialized and available to be used by subsequent automation modules. This is different compared to the experience of creating resources through the UI. In the UI control is returned immediately and initialization continues in the background. With automation modules the perception is that they can take significantly longer to run. 
+{{site.data.keyword.bpshort}} blueprint utilizes IaC automation code modules that are written in HashiCorp Terraform. The time taken to create a resources is dependent on the resource type. Terraform automation modules are written not to return on initial resource creation, but to return only when the resource is fully initialized and available to be used by subsequent automation modules. This is different compared to the experience of creating resources through the UI. In the UI control is returned immediately and initialization continues in the background. With automation modules the perception is that they can take significantly longer to run. 
 
 ## How do you configure the version of Terraform to used?
 {: #faqs-bp-tf-version}
@@ -100,7 +100,7 @@ If alternative input parameters are used to create a new resource group with a u
 
 The version of Terraform used for an environment is user determined by the blueprint template `TF_VERSION` parameter. This parameter can be  used to control when the Terraform version for environment is updated to the next release or version.   
 
-The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terrform module code.   
+The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terraform module code.   
 
 During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://www.terraform.io/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation will be failed. 
 
@@ -139,7 +139,7 @@ For {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}}
 {: faq}
 {: support}
 
-The CLI uses geo specific API endpoints which direct job requests to the first available region within a geo. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config's targeted to `us-south` during creation, will be automatically rund on `us-east` if `us-south` is not available. 
+The CLI uses geo specific API endpoints which direct job requests to the first available region within a geo. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config's targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
 
 This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.
 
@@ -148,7 +148,7 @@ This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}
 {: faq}
 {: support}
 
-You cannot delete the {{site.data.keyword.bpshort}} service instance. Instead you can `destory` the cloud resources that are created by using {{site.data.keyword.bpshort}} Terraform and `delete` the {{site.data.keyword.bpshort}} objects such as Workspace, or an Action.
+You cannot delete the {{site.data.keyword.bpshort}} service instance. Instead you can `destroy` the cloud resources that are created by using {{site.data.keyword.bpshort}} Terraform and `delete` the {{site.data.keyword.bpshort}} objects such as Workspace, or an Action.
 {: shortdesc}
 
 {{site.data.keyword.bpshort}} service is provisioned for the following reasons.

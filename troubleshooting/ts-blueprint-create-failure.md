@@ -136,7 +136,7 @@ Invalid blueprint templates. Error - Blueprint json validation failed - Field `b
 ```
 {: screen}
 
-Correct the errors as identified in the validation messages. For more information about the syntax, see [Blueprint YAML schema definition](/docs/schematics?topic=schematics-bp-definition-schema-yaml). 
+Correct the errors as identified in the validation messages. For more information about the syntax, see [blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml). 
 {: tsResolve}
 
 Push the changes to template and input files to the Git repositories.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-19"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -12,54 +12,51 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the beta release.
+{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-# Overview
+# Working with blueprints and environments
 {: #work-with-blueprints}
 
-{{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) deployment and lifecycle management service for large-scale cloud environments. It uses the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks.  
+{{site.data.keyword.bplong}} blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac) (IaC) automation solution for large-scale cloud environments. It uses the analogy of a blueprint used in construction, to define and deploy cloud environments from reusable building blocks of Terraform code. See the section [blueprints overview](/docs/schematics?topic=schematics-blueprint-intro) for more background. A key feature of blueprints is support to take cloud environments through their operational life, cradle-to-grave. 
 
-{{site.data.keyword.bplong}} blueprint environments are deployed by using Terraform based IaC automation modules that are designed for the IBM Cloud, with the reference architecture and module usage defined by a blueprint template. The blueprint separation of automation module code from the template defines the architecture makes it possible for teams to easily build large and complex environments from reusable modular components. Then, continue to update these environments over their lifecycle, cradle-to-grave, using IAC practices and version of the templates and modules. 
+{{site.data.keyword.bpshort}} blueprints follow an operational lifecycle model. Cloud environments, hosted applications or services all follow a lifecycle from creation to end-of-life. The life of a blueprint environment starts with the initial definition of an infrastructure architecture and configuration. Then, onto deployment of the environment and resources. It will be updated and maintained through its operational life. Which might be hours to years. Finally, to end-of-life when it is torn down, the cloud resources are destroyed, billing gets terminated and the configuration is removed.  
+{: shortdesc}
 
-During the lifecycle of a blueprint environment, {{site.data.keyword.bpshort}} Blueprints manages change through the controlled application of changes and version of all elements of a blueprint. The template with infrastructure architecture and layout, the Terraform IaC automation modules that are used to deploy and configure cloud resources, and the configuration of the blueprint environment. 
+The different stages of working with the blueprint operational model come under four headings, `define`, `deploy`, `update and operate`, and `delete`. In software lifecycle terms these correspond to Day-0 define, Day-1 deploy, Day-2 operate, through to deletion of the environment.  
 
-Operations on blueprint environments follow the sequence:
+![{site.data.keyword.bpshort}} blueprints lifecycle stages](../images/bp-lifecycle.svg){: caption="{{{site.data.keyword.bpshort}} blueprints lifecycle stages" caption-side="bottom"}
+
+Each of these operational stages is supported by blueprint operations. For example, composing and editing the blueprint template, running {{site.data.keyword.bpshort}} blueprint operations, monitoring job execution and reviewing the results. 
+
+All updates and changes during these lifecycle stages are performed in a controlled sequence of steps:
 - Creating or updating the blueprint configuration with changes to the inputs, template or module versions
-- Planning the change to identify resource changes, additions, or deletions 
-- Running the plan to apply the changes 
-{: shortdesc}
+- Planning the change to identify resource changes, additions or deletions 
+- Running the plan to apply the changes to create, modify or delete resources
 
-## Lifecycle of cloud environments
-{: #lifecycle-of-iac}
 
-When you work with cloud environments, hosted applications, or services they all follow a lifecycle from creation to end-of-life. IaC managed cloud environments implicitly go through several lifecycle states. This starts with the initial definition of an IaC configuration and a set of environment inputs. Then, onto deployment of the environment, its infrastructure, and resources. The environment is maintained through its operational life, which might be hours to years. Finally, deletion when all associated resources are destroyed, billing gets terminated, and the environment and all configuration is removed.  
-{: shortdesc}
 
-{{site.data.keyword.bpshort}} Blueprints refers to these life stages as the `define`, `deploy`, `update and operate`, and `delete` lifecycle stages. 
+## Working with environments and the blueprint operational lifecycle 
+Explore the following sections to get into the details of working with blueprints and environments over their operational lifecycle.    
 
-The lifecycle stages of a blueprint environment are illustrated in the diagram. Each stage is composed of multiple blueprint tasks. For example, composing and editing the blueprint template, running {{site.data.keyword.bpshort}} blueprint operations, monitoring job execution, and reviewing the results. 
+### Defining blueprints
+[Defining blueprints](/docs/schematics?topic=schematics-define-blueprints): The infrastructure architecture for an environment is defined as a reusable blueprint template. Reusable modules implement the layers and components of the architecture from Terraform code. 
 
-![Life stages of {{site.data.keyword.bpshort}} Blueprints](../images/bp-life-stages.svg){: caption="Life stages of {{site.data.keyword.bpshort}} Blueprints" caption-side="bottom"}
+### Deploying blueprints
+[Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints): A blueprint configuration defines the environment to be deployed. In cookie cutter fashion, several environments can be created from the same blueprint template to deploy a range of environments such as dev, stage, and production. 
 
-The four life stages of working with {{site.data.keyword.bpshort}} Blueprints to deploy and manage cloud environments are outlined in the table.
+### Updating and operating blueprints
+[Updating and operating blueprints](/docs/schematics?topic=schematics-update-op-blueprints): During the operational life of a deployed environment, the templates, and inputs may be versioned and updated many times to satisfy changing application requirements. Changes will be applied to the environment to maintain platform currency and compliance as security policies evolve. Scheduled operations are run for compliance checks and drift detection. 
 
-| Stages | Description |
-| -- | -- |
-| Define | The reference architecture is specified as a reusable blueprint template YAML file by using an editor or IDE. The resulting template and inputs are saved in a version-controlled source code repository. |
-| Deploy | A blueprint configuration is created in {{site.data.keyword.bpshort}}. The configuration specifies the blueprint template YAML and input files, versions, and the source Git repositories to be used. The blueprint environment and its cloud resources are deployed by {{site.data.keyword.bpshort}} running the Terraform automation module code to create the resources. |
-| Update and Operate | The operational life of a deployed environment and its cloud resources might range from hours to years depends on its usage. During this time, the blueprint environment, templates, and inputs might update many times to satisfy changing application requirements. Changes need to be applied to the environment to maintain platform currency or compliance as security policies evolve. Scheduled operations might be run for compliance checks and drift detection on the environment. |
-| Delete | Finally the application or service that is hosted in the environment gets retired or rehosted into a new environment. Now, the environment is deleted by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. |
-{: caption="Stages of {{site.data.keyword.bpshort}} Blueprints" caption-side="bottom"}
+### Deleting blueprints
+[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints): Finally the application or service that is hosted in the environment gets retired or rehosted into a new environment. The environment is removed by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. 
 
-Each of these lifecycle stages of working with blueprint environments is explored in the following sections. 
-
-1. [Defining blueprint environments](/docs/schematics?topic=schematics-define-blueprints) 
-2. [Deploying blueprint environments](/docs/schematics?topic=schematics-deploy-blueprints)
-3. [Updating and operating blueprint environments](/docs/schematics?topic=schematics-update-blueprint)
-4. [Deleting blueprint environments](/docs/schematics?topic=schematics-delete-blueprints) 
   
 ## Next steps
 {: #working-bp-nextsteps}
 
-Start your journey of working with Blueprints with the section on [Defining blueprint environments](/docs/schematics?topic=schematics-define-blueprints). 
+Start your journey of working with blueprints with an [overview of blueprints](/docs/schematics?topic=schematics-blueprint-intro) and onto the first lifecycle stage of [defining blueprints](/docs/schematics?topic=schematics-define-blueprints). 
+
+Follow this up with:
+- [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) and environments. 
+- [Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand Beta limitations.

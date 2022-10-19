@@ -41,7 +41,7 @@ required_version = "~> 1.1"
 | `v0.12` | Use the [v0.13 upgrade guide](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-13){: external} your configuration file. The {{site.data.keyword.bpshort}} deprecated `Terraform v0.12`.|
 | `v0.13` | To the `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, see the [v0.14 upgrade guide](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-14){: external}.|
 | `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, see the [v0.15 upgrade guide](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-15){: external}.|
-| `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compactible with an earlier version `Terraform v0.15.5`.|
+| `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compatible with an earlier version `Terraform v0.15.5`.|
 {: caption="Terraform versions list" caption-side="bottom"}
 
 ## Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} workspace
