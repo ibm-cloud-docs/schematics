@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-19"
+lastupdated: "2022-10-20"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -129,7 +129,7 @@ ibmcloud schematics blueprint run destroy -id <blueprint_ID>
 ```
 {: pre}
 
-You need to run the `blueprint run destroy` command and then run the  `blueprint config delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-blueprint-delete).
+You need to run the `blueprint run destroy` command and then run the  `blueprint config delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprints).
 {: note}
 
 ```sh
