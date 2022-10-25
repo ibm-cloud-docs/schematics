@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-25"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -45,15 +45,20 @@ Blueprint commands have been renamed with the 1.12.3 release of the Schematics C
 
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
-| Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | Support planned for November 2022 | | 
-| The Terraform Plan operation is not supported for blueprints. | Support planned for year end | | 
+| Default values are not supported | Planned for November 2022 | |
+| Local values are not supported | Support planned as 'hidden inputs' in November 2022 | | 
+| No support for input value operators, e.g. merge | Planned for a 2023 release | |
+| Parallelism of 1 during job execution | Concurrent module jobs planned for 2023 release | |    
+| Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | UI support planned for November 2022 | | 
+| The Terraform Plan operation is not supported for blueprints. | Support planned for year end 2022 | | 
 | Run operations are performed as a single operation against all modules. A future 2023 release will support single module operations  | | | 
 | Created Cloud resources are not tagged with blueprint and Workspace IDs. | | | 
-| Only one input file is supported per blueprint configuration. | | |
-| Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources are destroyed to delete a blueprint.  | | |  
+| Only one input file is supported per blueprint configuration. | Multiple input files planned for a 2023 release | |
+| Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources must be destroyed to delete a blueprint.  | | |  
 | The Delete CLI command returns immediately at start of execution and does not wait for successful completion. | | | 
 | Operations must not be directly run against linked {{site.data.keyword.bpshort}} modules (Workspaces) by using the Workspace commands or UI. Operations must be run by using blueprint commands.    | | |
 | No blueprint configuration validation command. | Support planned for November 2022 | | 
+| Cost Estimation | Planned for Year End 2022 | | 
 | Only blueprint templates and modules in GitHub are formally supported. Testing is not complete for GitLab and other repositories. | Support planned for November 2022 | | 
 | Only blueprint templates and modules in public repositories are formally supported. Testing is not complete for private repositories. | Support planned for November 2022 | | 
 {: caption="Beta release limitations" caption-side="bottom"}

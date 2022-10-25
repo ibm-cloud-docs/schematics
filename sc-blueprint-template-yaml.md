@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-04"
+lastupdated: "2022-10-25"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -17,9 +17,12 @@ subcollection: schematics
 
 This document is the reference of the YAML schema that is used to describe the blueprint template YAML file.
 
-The template file defines all modules in the blueprint template. Every template contains a list of modules from which the infrastructure architecture is composed. 
+Blueprint templates are written in YAML with a minimum of syntax that specify the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. 
+{: shortdesc}
 
-Each template file has a configuration preface:
+A blueprint template consists of two major sections. A `global settings` section contains a default name and description for the environment, and settings related to the whole template. Also it defines the inputs the template requires, and any outputs it returns. This is followed by a `modules` section containing the module definitions. Dependencies are created between modules by interpolation of module input and output values.
+
+Each template file has a global settings preface:
 
 ```yaml
 
@@ -27,6 +30,8 @@ name: dev-blueprint
 type: "blueprint"
 schema_version: "1.0"
 description: "Project to provision Application Service."
+tags:
+  - "blueprint:dev"
 inputs:
   - name: resource_group
   - name: region
@@ -40,7 +45,7 @@ settings:
 ```
 {: pre}
 
-## Supporting setting parameters
+## Global settings
 {: #bp-parameters}
 
 Following are the supporting setting parameters that can be used to configure a template
@@ -99,6 +104,26 @@ description: "Project to provision Application Service."
 ```
 {: pre}
 
+### tags
+{: #bp-tags}
+
+Type: list
+
+Default: []
+
+A list of tags to be attached to all deployed cloud resources and the blueprint resource. All environments deployed using this template will have these tags. Additional tags can be specified at config create time specific to the environment to be deployed.   
+
+Example 
+```yaml
+ tags:
+  - "blueprint:dev"
+```
+{: pre}
+
+tags:
+  - "blueprint:dev"
+
+
 ### inputs
 {: #bp-inputs}
 
@@ -145,7 +170,8 @@ Default: []
 
 A list of the settings to be used by the template that is defined as key-value pairs. Each setting is identified by the key `name`.
 
-The only supported setting is `TF_VERSION`.
+{: pre}
+
 
 ### settings.TF_VERSION
 {: #bp-tf-version}
@@ -165,14 +191,32 @@ settings: # Master settings for all modules
 ```
 {: pre}
 
-### modules schema
+### settings.TF_LOGS
+{: #bp-tf-version}
+
+Type:       string
+
+Configure the Terraform logging level for the blueprint and provider. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage. 
+
+Example
+
+```yaml
+settings: # Master settings for all modules 
+  - name: TF_LOGS
+    value: "debug"
+```
+{: pre}
+
+
+
+## Module parameters
 {: #bp-modules-schema}
 
 The `modules` block defines the Terraform, and Ansible modules from which the solution is constructed. 
 
 Each module list entry is defined by a name, followed by the source for the module, inputs, and expected outputs. 
 
-Review the automation module metadata and readme file information for the [module](https://github.com/terraform-ibm-modules){: external} to guide defining the module block.     
+Review the automation module metadata and readme file information for the [modules](https://github.com/terraform-ibm-modules){: external} to guide defining the module block.     
 
 ```yaml
 modules:
@@ -230,6 +274,7 @@ Required: true
 String specifying the IaC type of the automation module. Only Terraform is supported at this time.   
 
 Options: `terraform`
+{: pre}
 
 ### modules.source options
 {: #bp-modules-sourceoptions}
@@ -245,7 +290,7 @@ source:
 ```
 {: pre}
 
-### modules.source.git.source_type
+### modules.source.source_type
 {: #bp-modules-source-type}
 
 Type: string
@@ -256,6 +301,9 @@ Type of Git source repository.
 
 Options: `github`, `gitlab` 
 
+Specifies the module source from a version control system, e.g. a git repository to IBM Catalog. The following source parameters must match the source_type. 
+{: pre}
+
 ### modules.source.git.git_repo_url
 {: #bp-modules-git-repo-url}
 
@@ -264,6 +312,7 @@ Type: url string
 Required: true
 
 URL for the automation module in its content repository. If the config exists in a sub directory the folder name is appended. 
+{: pre}
 
 ### modules.source.git.git_branch
 {: #bp-modules-git-branch}
@@ -273,6 +322,7 @@ Type: string
 Default: master
 
 If content is in Git, the branch containing the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. 
+{: pre}
 
 ### modules.source.git.git_release
 {: #bp-modules-git-release}
@@ -284,6 +334,7 @@ Default: latest
 If content is Git, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint config update` operation. 
 
 Options: `latest` or release in SemVer format 
+{: pre}
 
 ### modules.inputs options
 {: #bp-modules-inputs-options}
@@ -322,6 +373,7 @@ Type: string
 Required: true
 
 Name of variable to be passed to Terraform module or Ansible playbook. It must match the value in the Terraform template for the value to be passed at execution time to the module. 
+{: pre}
 
 ### modules.inputs.type
 {: #bp-modules-inputs-type}
@@ -397,6 +449,7 @@ Type: Boolean
 Default: false
 
 Flag specifying whether the value is a sensitive variable and must be masked in the output
+{: pre}
 
 ### module.outputs
 {: #bp-module-outputs}
@@ -422,7 +475,7 @@ Type:         list
 
 Default:      []
 
-The injectors block is an optional block to configure the parameters that are required by {{site.data.keyword.bpshort}} to inject additional files into the automation module source at execution time. The primary use with blueprint templates is to enable direct use of Terraform child modules, by the injection of `.tf` files containing `provider` and `terraform` blocks. 
+The injectors block is an optional block to configure the parameters that are required by {{site.data.keyword.bpshort}} to inject additional files into the automation module source at execution time. The primary use with blueprint templates is to enable direct use of Terraform child modules, by the injection of `.tf` files containing `provider` and `terraform` blocks. Review section [blueprints provider injection](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection) for guidance on the use of the injectors block. 
 
 ```yaml
 injectors:
@@ -447,6 +500,7 @@ Type: URL
 Required: true
 
 URL of the Git repository that contain the templating files used for injection. 
+{: pre}
 
 ### module.injectors.tft_name
 {: #bp-module-tft-name}
@@ -458,6 +512,7 @@ Required: true
 Name of the templating file to use
 
 Options: `ibm` or `kubernetes`
+{: pre}
 
 ### module.injectors.injection_type
 {: #bp-module-injection-type}
@@ -469,6 +524,7 @@ Required: true
 Two modes of injection are supported by Terraform. Definitions can be injected as extra files, only if it is believed that no conflict with any existing HCL statements. Alternatively they can be injected as [HCL override files](https://www.terraform.io/language/files/override){: external}.
 
 Options: `override` or `inject`
+{: pre}
 
 ### module.injectors.tft_parameters
 {: #bp-modules-tft-parameters}

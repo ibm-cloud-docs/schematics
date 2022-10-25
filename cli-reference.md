@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-25"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -151,7 +151,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
         }
     },
     "command_parameter": "<PLAYBOOK_NAME>",
-    “b  astion”: {},
+    “bastion”: {},
     “bastion_credentials”: {
 	    “metadata”: {}
     },
@@ -598,10 +598,10 @@ For more information about the flags see [Workspace get](/docs/schematics?topic=
 ### `ibmcloud schematics blueprint config create`
 {: #schematics-blueprint-create}
 
-Create a {{site.data.keyword.bpshort}} blueprintby using the `ibmcloud schematics blueprint config create` command. The blueprint is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the input files and optional override inputs.
+Create a {{site.data.keyword.bpshort}} blueprint by using the `ibmcloud schematics blueprint config create` command. The blueprint is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the input files and optional override inputs.
 {: shortdesc}
 
-For {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0` version.
+For {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3` version.
 {: important}
 
 **Syntax to create using command:**
@@ -628,7 +628,7 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--input-git-file` or `--if`| Optional | The input file name. |
 | `--input-git-branch` or `--ib`| Optional |The input file Git branch name, if not provided it defaults to main. In case the `--input-git-branch` and `--input-git-release` values are not provided, the command errors for one of the value to be provided.|
 | `--input-git-release` or `--ir`| Optional | The input file release tag. Exclusive with branch name.|
-| `--inputs` or `--in` | Optional | The input variables for the blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
+| `--inputs` or `--in` | Optional | The input variables for the blueprint. Only the `string` type is supported. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
 | `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
@@ -796,7 +796,7 @@ ibmcloud schematics blueprint run apply --id Blueprint_Basic.eaB.5cd9
 ### `ibmcloud schematics blueprint config update`
 {: #schematics-blueprint-update}
 
-You update the blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and blueprint template with the `ibmcloud schematics blueprint config update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics bluepeint install` after the update has been performed.
+You update the blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and blueprint template with the `ibmcloud schematics blueprint config update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics blueprint run apply` after the update has been performed.
 {: shortdesc}
 
 **`Syntax`**
@@ -1604,7 +1604,7 @@ ibmcloud schematics job get --id us-east.JOB.yourjob_ID_1231 --profile detailed
 ### `ibmcloud schematics job list`
 {: #schematics-list-job}
 
-Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran against a target hosts through {{site.data.keyword.bpshort}} action. The job displays a list of jobs with the status as `in_progess`, `success`, or `failed`.
+Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran against a target hosts through {{site.data.keyword.bpshort}} action. The job displays a list of jobs with the status as `in_progress`, `success`, or `failed`.
 {: shortdesc}
 
 **`Syntax`**
@@ -2341,7 +2341,7 @@ ibmcloud schematics workspace show --id myworkspace-a1aa1a1a-a11a-11 --address n
 ### `ibmcloud schematics workspace state mv`
 {: #schematics-wks_statemv}
 
-Moves an instance or resources from the Terraform state. For example, if you move an instance from the state, the {{site.data.keyword.bpshort}} Workspaces instance continues running, but `Terrfaorm plan` cannot  see that instance. You can use the Workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs) command.
+Moves an instance or resources from the Terraform state. For example, if you move an instance from the state, the {{site.data.keyword.bpshort}} Workspaces instance continues running, but `Terraform plan` cannot  see that instance. You can use the Workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs) command.
 {: shortdesc}
 
 ```sh
@@ -2371,7 +2371,7 @@ ibmcloud schematics workspace state mv --id myworkspace-a1aa1a1a-a11a-11 -s test
 ### `ibmcloud schematics workspace state rm`
 {: #schematics-wks_staterm}
 
-Removes an instance or resources from the Terraform state. For example, if you remove an instance from the state, the {{site.data.keyword.bpshort}} Workspaces instance continues running, but `Terrfaorm plan` cannot see that instance. You can use the Workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs) command.
+Removes an instance or resources from the Terraform state. For example, if you remove an instance from the state, the {{site.data.keyword.bpshort}} Workspaces instance continues running, but `Terraform plan` cannot see that instance. You can use the Workspace ID to retrieve the logs by using the [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs) command.
 {: shortdesc}
 
 ```sh

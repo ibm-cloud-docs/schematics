@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-25"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -145,7 +145,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in.
 
-    For {{site.data.keyword.bpshort}} blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.11.0` version.
+    For {{site.data.keyword.bpshort}} blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.3` version.
     {: note}
 
     For {{site.data.keyword.bpshort}} Agents, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.0` version.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-25"
 
 keywords: schematics
 subcollection: schematics
@@ -717,27 +717,23 @@ subcollection: schematics
 
 [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
 
+* [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-configuration)
+
 * [Blueprint template overview](/docs/schematics?topic=schematics-blueprint-templates#template-overview)
 
-* [Blueprint template YAML file](/docs/schematics?topic=schematics-blueprint-templates#blueprint-yaml-file)
+    * [Blueprint template YAML file](/docs/schematics?topic=schematics-blueprint-templates#blueprint-yaml-file)
 
-* [Input statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements)
+    * [Input statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements)
 
-* [Module statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module)
+    * [Module statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module)
 
-    * [Module Source](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-source)
+    * [Template outputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-output)
 
-    * [Module inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-inputs)
+    * [Template inputs](/docs/schematics?topic=schematics-blueprint-templates#template-inputs)
 
-    * [Module outputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-outputs)
+* [Input files](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-file)
 
-* [Output statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-output)
-
-* [template inputs](/docs/schematics?topic=schematics-blueprint-templates#template-inputs)
-
-    * [Input files](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-file)
-
-* [Configuration of inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
+* [Dynamic inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
 
 * [What's next](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
 
@@ -1709,7 +1705,7 @@ subcollection: schematics
 
 [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-template-schema-yaml)
 
-* [Supporting setting parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-parameters)
+* [Global settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-parameters)
 
     * [name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-name)
 
@@ -1719,6 +1715,8 @@ subcollection: schematics
 
     * [description](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-description)
 
+    * [tags](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tags)
+
     * [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs)
 
     * [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs)
@@ -1727,7 +1725,9 @@ subcollection: schematics
 
     * [settings.TF_VERSION](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tf-version)
 
-    * [modules schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema)
+    * [settings.TF_LOGS](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tf-version)
+
+* [Module parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema)
 
     * [modules.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-name)
 
@@ -1735,7 +1735,7 @@ subcollection: schematics
 
     * [modules.source options](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-sourceoptions)
 
-    * [modules.source.git.source_type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-source-type)
+    * [modules.source.source_type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-source-type)
 
     * [modules.source.git.git_repo_url](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-repo-url)
 
@@ -2014,7 +2014,7 @@ subcollection: schematics
 
 * [How do you securely pass input variables?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
 
-* [Why does the blueprint template, basic example, fail in the Install step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
+* [Why does the blueprint template, basic example, fail in the run apply step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 
 * [What is the time taken to create an IBM Kubernetes Service cluster and other resources?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -120,7 +120,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.11.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.3](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 
 ## June 2022
