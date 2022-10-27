@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-10-27"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -44,7 +44,7 @@ If the job is in a `pending` state, any type of stop signal causes the job to ca
 
 You can follow these steps to stop the {{site.data.keyword.bpshort}} Workspaces running job by using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the Workspace that you want to  the running job.
+1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to  the running job.
    
    You can stop or cancel the running job during a plan, an apply, or a destroy execution.
    {: note}
@@ -80,7 +80,7 @@ ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--stop
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The Workspace ID to update. |
+| `--id` or `-i` | Required | The workspace ID to update. |
 | `--job-id` or `--jid` | Required | The job ID of the job. |
 | `--interrupt` | Optional | Removes the job from the pending queue, if it is in pending state. Otherwise, sends an interrupt signal to the Terraform command.|
 | `--force-stop` or `--fs` | Optional | Sends a kill signal to the Terraform execution in the engine attempting to immediately stop the execution. |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-27"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -20,50 +20,49 @@ subcollection: schematics
 
 {{site.data.keyword.bplong}} blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. 
 
-Reusable [modules](/docs/schematics?topic=schematics-glossary#bpb5) implement the building blocks of an infrastructure architecture from well designed, tested and compliant Terraform code. [Templates](/docs/schematics?topic=schematics-glossary#bpb2) determine the architecture, specifying the modules required for the implementation and infrastructure topology. Publicly available modules can be mixed with third-party and user developed modules to create customized solutions. 
+
+## Blueprint configuration 
+ Cloud environments are deployed from a blueprint configuration, containing a blueprint template and customizable input values. [Templates](/docs/schematics?topic=schematics-glossary#bpb2) determine the infrastructure architecture, specifying the modules (building blocks) to deploy the cloud resources of an environment. The section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) illustrates how public modules can be combined with user developed modules to create custom solutions.  
 {: shortdesc} 
 
-Templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its deploy time configuration allows a single template to be reused many times to deploy a range of environments such as `dev`, `stage`, and `production`. Each environment is customized with its own input values, with all based on the same template.   
+Templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its deploy time configuration is illustrated in the figure. Here a template is reused many times to deploy a range of environments such as `dev`, `stage`, and `production`. Each environment is customized with its own input values, all based on the same template.   
 
+![Environments deployed from templates and inputs](/images/bp-largescale-env.svg){: caption="Environments deployed from templates and inputs" caption-side="bottom"}
 
-A blueprint and the environment and cloud resources to be deployed are defined by three versioned elements:
+A blueprint environment and the cloud resources to be deployed, are defined by three versioned elements:
 1. A blueprint template file specifying the resource topology, infrastructure architecture, IaC automation modules and dependencies.
-2. Input variables to configure and customize the blueprint template at deployment time.
+2. Input values to configure and customize the blueprint template at deployment time.
 3. Automation modules written in Terraform to deploy the desired cloud resources. 
 
-These elements and their relationships are shown in the diagram.  
+A blueprint configuration links a template with a set of inputs values to specify the environment and cloud resources. These elements and  relationships are illustrated in the figure.  
 
-![Understanding blueprints templates](/images/bp-definitions.svg){: caption="Understanding blueprints templates" caption-side="bottom"}
+![Blueprint configuration, templates and inputs](/images/bp-configuration.svg){: caption="Blueprint configuration, templates and inputs" caption-side="bottom"}
 
-A blueprint configuration defines the blueprint template YAML file to be used, its Git source location, input value files, document version information and any additional inputs.
-
-
-
-
+A blueprint configuration defines the blueprint template YAML file to be used and its Git source and version. The input value files, source and version. Plus an additional inputs required by the blueprint. The template file identifies the required Terraform modules. 
 
 
 
 ## Blueprint template overview
 {: #template-overview}
 
-Central to deploying a blueprint is the blueprint template. 
+The infrastructure architecture of a solution is defined by a blueprint template: 
 - Blueprint templates are written in YAML with a minimum of syntax that specify the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. 
 - The resource management and provisioning functionality of a {{site.data.keyword.bpshort}} blueprint is implemented by automation modules written for the familiar open source Terraform automation tool. 
 - Input variable files customize the reusable blueprint templates to create cloud environments.
 {: shortdesc}
 
-Input files, blueprint templates, and modules are all maintained in Git source control. A blueprint configuration defines these version controlled components on blueprint creation. The configuration defines the source of the versioned blueprint template in source control and the input files to customize the blueprint. Also additional parameters for naming the environment, access control and additional inputs. 
+Input files, blueprint templates, and modules are all maintained in Git source control. A blueprint configuration defines these version controlled components on blueprint creation. The configuration defines the source of the versioned blueprint template in source control and the input files to customize the blueprint. Also additional parameters for naming the blueprint, blueprint access control and additional inputs. 
 
-## Blueprint template YAML file
+### Blueprint template YAML file
 {: #blueprint-yaml-file}
 
-The diagram shows a simplified view of a blueprint template YAML file. It identifies the key elements of inputs and outputs, the choice of modules, and the dependencies and variable linkage between modules. Definitions follow standard YAML syntax. For more details, see the [blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml) reference.
+The text box shows a simplified view of a blueprint template YAML file. It identifies the key elements of inputs and outputs, the choice of modules, and the dependencies and variable linkage between modules. Definitions follow standard YAML syntax. For more details, see the [blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml) reference.
 {: shortdesc} 
 
 
 ```yaml
 name: "basic"
-description: "Basic 2 component blueprint, RG & COS, no API key"
+description: "Basic blueprint, RG & COS, no API key"
 inputs:
   - name: resource_group_name
 outputs:
@@ -71,7 +70,7 @@ outputs:
     value: $module.basic-cos-storage.outputs.cos_id
 modules:
   - name: basic-resource-group
-  - module_type: terraform
+    module_type: terraform
     source:
       source_type: github
       git: 
@@ -85,7 +84,8 @@ modules:
     outputs:
       - name: resource_group_name
       - name: resource_group_id
-- name: basic-cos-storage
+  - name: basic-cos-storage
+    module_type: terraform
     source:
       source_type: github
       git:
@@ -105,11 +105,11 @@ modules:
 ```
 {: codeblock}
 
-A blueprint template consists of a number of sections. An initial settings section contains a default name and description for the environment, and related settings. Also it defines the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) the template requires and any [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs) it generates and returns to the user through {{site.data.keyword.bpshort}}. This is followed by a `modules` section containing the [module definitions](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema). 
+A blueprint template consists of a two major sections. An global settings section which contains a default name and description for the environment, and related template settings. Also it defines the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) the template requires and any [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs) it generates and returns to the user through {{site.data.keyword.bpshort}}. This is followed by a list of `modules` containing the [module definitions](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema). 
 
 Dependencies are created between modules by interpolation of module input and output values. In the `basic-cos-storage` module definition above, the input `resource_group_id` specifies the interpolated value `$module.basic-resource-group.outputs.resource_group_id` which creates a dependency on the `resource_group_id` output value from the module `basic-resource-group`.
 
-## Input statements
+### Input statements
 {: #blueprint-input-statements}
 
 All variables required by a blueprint template must be defined in the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) section. Values can be statically defined in the template. If the value is omitted, it is assumed that the input is satisfied by a user defined input value from the blueprint configuration.
@@ -123,10 +123,10 @@ inputs:
 ```
 {: codeblock}
 
-## Module statements
+### Module statements
 {: #blueprint-module}
 
-Templates support the use of both Terraform [root modules](https://www.terraform.io/language/modules#the-root-module){: external} and Terraform [child](https://www.terraform.io/language/modules#child-modules){: external} modules. See the section [Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform). 
+Templates support the use of both Terraform [root modules](https://developer.hashicorp.com/terraform/language/modules#the-root-module){: external} and Terraform [child](https://developer.hashicorp.com/terraform/language/modules#child-modules){: external} modules. See the section [Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform). 
 
 [Module statements](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema) define the modules utilized by the template. Each statement defines the source repository for the automation modules, the inputs and outputs for passing of resource information between dependent modules. Typically they contain 3 statement blocks:
 1. source
@@ -134,9 +134,9 @@ Templates support the use of both Terraform [root modules](https://www.terraform
 3. outputs
 {: shortdesc} 
 
-Terraform root modules (configs and templates) with provider blocks can be used directly with the parameters described above. Terraform child modules require the addition of an [injector block](/docs/schematics?topic=schematics-schematics-blueprint-terraform#bp-provider-injection) to specify an IBM Cloud provider block. 
+Terraform root modules (configs and templates) with provider blocks can be used directly with the parameters described above. Terraform child modules require the addition of an [injector block](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection) to specify an IBM Cloud provider block. 
 
-### Module Source
+#### Module Source
 {: #blueprint-module-source}
 
 Blueprint modules are sourced from version controlled Git source repositories. Following IaC principles, versioned modules can be explicitly selected by release tags, branch, or by a relaxed latest commit approach. See [source](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-sourceoptions) schema reference.
@@ -144,17 +144,17 @@ Blueprint modules are sourced from version controlled Git source repositories. F
 
 
 ```yaml
-git:
-        source_type: github
-        git_repo_url: "https://github.ibm.com/steve-strutt/blueprint-examples-modules/tree/master/IBM-Storage"
-        git_release: 1.0.1
+    source_type: github
+    git:      
+      git_repo_url: "https://github.ibm.com/steve-strutt/blueprint-examples-modules/tree/master/IBM-Storage"
+      git_release: 1.0.1
 ```
 {: codeblock}
 
-### Module inputs
+#### Module inputs
 {: #blueprint-module-inputs}
 
-Module inputs are defined in the input block of a module and follow the same type convention as Terraform HCL. The supported types are the same as the [Terraform variable types](https://www.terraform.io/language/expressions/types). If the type is omitted the default is `string`. For an example showing data types represented in YAML, see [blueprint complex inputs](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} and the code snippet below.
+Module inputs are defined in the input block of a module and follow the same type convention as Terraform HCL. The supported types are the same as the [Terraform variable types](https://developer.hashicorp.com/terraform/language/expressions/types). If the type is omitted the default is `string`. For an example showing data types represented in YAML, see [blueprint complex inputs](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} and the code snippet below.
 {: shortdesc} 
 
 ```yaml
@@ -175,7 +175,7 @@ inputs: 
 ```
 {: codeblock}
 
-Four keywords define the variable attributes: `name`, `value`, `type`, and `secure`. These correspond with the [Terraform variable definitions](https://www.terraform.io/language/values/variables#arguments){: external}
+Four keywords define the variable attributes: `name`, `value`, `type`, and `secure`. These correspond with the [Terraform variable definitions](https://developer.hashicorp.com/terraform/language/values/variables#arguments){: external}
 
 Similar to Terraform, module inputs can be specified as static values or interpolated references to template inputs or other modules by using the `$` symbol as shown in the sample snippet. 
 
@@ -205,7 +205,7 @@ inputs:
 ```
 {: codeblock}
 
-### Module outputs
+#### Module outputs
 {: #blueprint-module-outputs}
 
 {{site.data.keyword.cloud_notm}} automation modules implemented in Terraform must contain HCL output statements to pass data and resource information to dependent modules. Check the readme and metadata for the [module](https://github.com/terraform-ibm-modules){: external} to determine the supported outputs and data types.
@@ -220,7 +220,7 @@ outputs:
 {: codeblock}
 
 
-## Output statements
+### Template outputs
 {: #blueprint-output}
 
 Values to be returned from a template are defined by [output statements](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs) and use the same interpolation syntax as module inputs.
@@ -233,19 +233,19 @@ outputs:
 ```
 {: codeblock}
 
-## template inputs
+### Template inputs
 {: #template-inputs}
 
 The inputs required by a template are defined in the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) section. Where no value is specified in the input section, a template accepts input values from two sources specified by the blueprint configuration at create time:
 {: shortdesc} 
 
 - Version controlled input variable YAML files
-- The *ad hoc* input variables, which are not version controlled 
+- *Dynmamic* input variables, which are not version controlled 
 
-### Input files
+## Input files
 {: #blueprint-input-file}
 
-Input files define the version controlled input values used for template customization. The variable type must match the module input type in the template template. For more information, see the [input file schema reference](/docs/schematics?topic=schematics-bp-input-schema-yaml).
+Input files define the version controlled input values used for template customization. The variable type must match the module input type in the template template. For more information on creating and using input files, see the [input file schema reference](/docs/schematics?topic=schematics-bp-input-schema-yaml) and [create a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config).
 {: shortdesc} 
 
 ```yaml
@@ -267,13 +267,13 @@ docker_ports: | 
 ```
 {: codeblock}
 
-## Configuration of inputs
+## Dynamic inputs
 {: #blueprint-dynamic-input}
 
-Dynamic inputs are set at blueprint config create time to pass inputs to dynamically customize the template and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository. API keys and SSH keys would typically be passed as dynamic inputs at creation time. See the [blueprint FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs) for using dynamic inputs to pass sensitive variables. 
+Dynamic inputs are set at [blueprint config create](/docs/schematics?topic=schematics-create-blueprint-config) time to pass inputs to dynamically customize the template and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository. API keys and SSH keys would typically be passed as dynamic inputs at config create time. See the [blueprint FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs) for using dynamic inputs to pass sensitive variables. 
 {: shortdesc} 
 
-Blueprint template only supports input variables of type `string` as dynamic inputs. 
+Blueprint templates only support input variables of type `string` as dynamic inputs. 
 
 Example of passing dynamic inputs at creation time. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-27"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -58,7 +58,7 @@ When you can [enable or restore a root key](/docs/schematics?topic=schematics-km
 The following details are stored when you create and use an {{site.data.keyword.bpshort}} workspace: 
 - Workspace details
 - Workspace variables
-- Terraform configuration files that your Workspace points to
+- Terraform configuration files that your workspace points to
 - Terraform state files
 - Terraform log files
 - User activity logs
@@ -94,13 +94,13 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 4. The {{site.data.keyword.bpshort}} engine starts the process for provisioning, modifying, or deleting {{site.data.keyword.cloud_notm}} resources.
 6. To protect customer data at rest, {{site.data.keyword.bplong_notm}} integrates with {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}}. {{site.data.keyword.bpshort}} uses the customer owned {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} and {{site.data.keyword.bpshort}} owned {{site.data.keyword.keymanagementserviceshort}} to generate and encrypt data encryption keys (DEK). This DEK is used to encrypt transactional data, such as logs, or the Terraform `tf.state` file at rest.
 7. Workspace transactional data is stored in an {{site.data.keyword.cos_full_notm}} bucket and encrypted by using [Server-Side Encryption with {{site.data.keyword.keymanagementserviceshort}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) at rest.  
-8. Workspace operational data, such as the Workspace variables and Terraform template information, is stored in {{site.data.keyword.cloudant}} and encrypted at rest by using the default service encryption. For more information, see [Security](/docs/Cloudant?topic=Cloudant-security).
+8. Workspace operational data, such as the workspace variables and Terraform template information, is stored in {{site.data.keyword.cloudant}} and encrypted at rest by using the default service encryption. For more information, see [Security](/docs/Cloudant?topic=Cloudant-security).
 
 
 ## How can I delete my information?
 {: #delete-data}
 
 To remove your data from {{site.data.keyword.bplong_notm}}, choose among the following options: 
-- **Delete the workspace**: When you delete your workspace, all data that is related to a Workspace is permanently deleted. 
+- **Delete the workspace**: When you delete your workspace, all data that is related to a workspace is permanently deleted. 
 - **Open an {{site.data.keyword.cloud_notm}} support case**: Contact IBM Support to remove your Workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-using-avatar). 
-- **End your {{site.data.keyword.cloud_notm}} subscription**: A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all Workspaces that are stored with IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the Workspace and all associated data are deleted. 
+- **End your {{site.data.keyword.cloud_notm}} subscription**: A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all Workspaces that are stored with IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated data are deleted. 

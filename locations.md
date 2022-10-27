@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-10-27"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -43,7 +43,7 @@ The location that you choose for your {{site.data.keyword.bpshort}} Workspaces d
 ## Where is my data stored?
 {: #where-is-data-stored}
 
-The location where your Workspace data is stored depends on the location where you create your workspace. For more information, see [Securing your data](/docs/schematics?topic=schematics-secure-data). 
+The location where your workspace data is stored depends on the location where you create your workspace. For more information, see [Securing your data](/docs/schematics?topic=schematics-secure-data). 
 
 ## Where are my {{site.data.keyword.cloud_notm}} resources provisioned?
 {: #where-are-resources-provisioned}

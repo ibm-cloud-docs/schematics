@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-27"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -18,12 +18,12 @@ subcollection: schematics
 # Create a blueprint configuration 
 {: #create-blueprint-config}
 
-Deploying a blueprint environment and cloud resources using a blueprint template is a two-step process. The first step is creating a blueprint configuration in {{site.data.keyword.bpshort}}, the second step deploys this configuration  with a `blueprint run apply` operation. See [Deploying blueprints](/docs/schematics?topic=sc-bp-deploy) for an overview of managing deployments, and change in blueprint environments.
+Deploying a blueprint environment and cloud resources using a blueprint template is a two-step process. The first step is creating a blueprint configuration in {{site.data.keyword.bpshort}}, the second step deploys this configuration  with a `blueprint run apply` operation. See [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of managing deployments, and change in blueprint environments.
 
 Creating a configuration takes as its input the blueprint template YAML and input YAML file that were created during the [defining blueprints](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage.  
 {: shortdesc} 
 
-The first step in deploying cloud resources is [creating a blueprint configuration](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-cli) in {{site.data.keyword.bpshort}}. This saves the blueprint configuration for future operations. The blueprint config specifies the Git source and release of the blueprint template, input files, and any input values that are used to create cloud resources. A blueprint module is created in {{site.data.keyword.bpshort}} for each module definition in the template. Each is initialized with the Terraform module source from the Git repository specified in the module definition, and module inputs.
+The first step in deploying cloud resources is [creating a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config) in {{site.data.keyword.bpshort}}. This saves the blueprint configuration for future operations. The blueprint config specifies the Git source and release of the blueprint template, input files, and any input values that are used to create cloud resources. A blueprint module is created in {{site.data.keyword.bpshort}} for each module definition in the template. Each is initialized with the Terraform module source from the Git repository specified in the module definition, and module inputs.
 
 The second [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step excutes the automation modules in dependency order and runs the module Terraform code to deploy cloud resources. 
 
@@ -35,12 +35,12 @@ The second [blueprint run apply](/docs/schematics?topic=schematics-apply-bluepri
 Create your blueprint config with the CLI. The Create command requires a name and the Git URL of a blueprint template and other arguments. For a complete listing of options, see [blueprint config create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
 {: shortdesc}
 
-To work with {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.11.0`.
+To work with {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3`.
 {: important}
 
 Before your begin:
 
-- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.11.0`.
+- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.3`.
 - Select the {{site.data.keyword.cloud_notm}} region that you want to use to manage your blueprint. For example, to set the region use [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
 - Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create blueprints.
 
@@ -49,7 +49,9 @@ The command example shown here creates a blueprint configuration in {{site.data.
 If your template file, e.g. `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a `subfolder` of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/<subfolder>`. 
 {: note}
 
-This example also demonstrates using inputs at create time to customize the deployment. In this example, the inputs `provision_rg` and `resource_group_name` are used to customize the deployment and demonstrate the use of inputs to modify module execution behavior. These additional inputs allow this blueprint config to be customized to a users account setup  where the user does not have IAM permissions to create resource groups. The input `provision_rg` enables or disables provisioning of a resource group. The input `resource_group_name` specifies the name of the resource group that must be created or the name of an existing group to be used.
+This example also demonstrates using dynamic inputs at create time to customize the deployment. In this example, the inputs `provision_rg` and `resource_group_name` are used to customize the deployment and demonstrate the use of inputs to modify module execution behavior. These additional inputs allow this blueprint config to be customized to a users account setup where the user does not have IAM permissions to create resource groups. The input `provision_rg` enables or disables provisioning of a resource group. The input `resource_group_name` specifies the name of the resource group that must be created or the name of an existing group to be used.
+
+Only `string` values are supported for dynamic inputs. 
 
 Where the user has the required IAM access to create resources groups, use the parameters from the 'create resource group' line. Where a user only has access to an existing group, use the parameters from the 'reuse resource group' line.  
 
@@ -138,7 +140,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 {: #create-blueprint-ui}
 {: ui}
 
-Currently, you can create a blueprint config from command line by using the [blueprint config create](/docs/schematics?topic=schematics-create-blueprint&interface=cli) command. Followed by the [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint) command to create cloud resources.
+Currently, you can create a blueprint config from command line by using the [blueprint config create](/docs/schematics?topic=schematics-create-blueprint-config). Followed by the [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint) command to create cloud resources.
 {: note}
 
 ### Verifying blueprint creation from the UI 

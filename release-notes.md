@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-27"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -114,13 +114,13 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [About {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding blueprint templates](/docs/schematics?topic=schematics-blueprint-templates) to configure the right schemas and use blueprint commands to deploy blueprints.
     - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprints.
-    - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
     - Deploy [{{site.data.keyword.bpshort}} blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
     - [Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.11.0](/docs/schematics?topic=schematics-cli_version-releases) released.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.3](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 
 ## June 2022
@@ -217,8 +217,8 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-apr1822}
 {: release-note}
 
-Support array of injectable Terraform blocks in create Workspace API
-:   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create Workspace API](/apidocs/schematics/schematics#create-workspace).
+Support array of injectable Terraform blocks in create workspace API
+:   The {{site.data.keyword.bpshort}} supports array of injectable Terraform block to inject the parameters with the values to an existing Terraform template to provision through [{{site.data.keyword.bpshort}} create workspace API](/apidocs/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.9.1](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -234,7 +234,7 @@ Support `.JSON` and `.tfvars` file extension for {{site.data.keyword.bpshort}} p
 :   The {{site.data.keyword.bpshort}} command line supports `.JSON` and `.tfvars` file extension in {{site.data.keyword.bpshort}} plan and apply commands.
 
 Enhance resources tabular data view for resources.
-:   The {{site.data.keyword.bpshort}} command line lists the provisioned resources from your Workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
+:   The {{site.data.keyword.bpshort}} command line lists the provisioned resources from your workspace in a tabular data view output with **Resource**, **Type**, **State**, **Resource group**, **URL**, and **Tags** fields. For example, use [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) command to list the resources provisioned in your workspace.
 
 Deprecate and warning message when using `ibmcloud terraform` command.
 :   The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as **`Alias 'terraform' will be deprecated. Use schematics or sch in your commands`**.
@@ -258,7 +258,7 @@ Support deleting {{site.data.keyword.bpshort}} data objects
 
 Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
 :   - Now you can create Actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
-:   - [List Workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
+:   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
 :   - [Get inventory definition](/apidocs/schematics/schematics#get-inventory) supports `detailed` profile type.
 
 Get job files API supports `plan_json` file type
@@ -360,7 +360,7 @@ About `compact` download
 :   You can download the relevant files from the Git repository for your workspaces. For more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
 
 About {{site.data.keyword.bpshort}} Job files
-:   You can now download the state-file at every job level along with the current state-file of a Workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
+:   You can now download the state-file at every job level along with the current state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
 
 ResourceQuery attribute deprecated 
 :   ResourceQuery attribute is replaced as [`resource_queries`](/apidocs/schematics/schematics#list-resource-query) in the API.
@@ -412,10 +412,10 @@ Bastion host enhancement in {{site.data.keyword.bpshort}} Actions API
 {{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
 :   You can now access the inventory username through the credentials parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
-{{site.data.keyword.bpshort}} introduces compact flag in the Workspace create and update API
+{{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
 :   You can now download the `subfolders` from the GIT repositories through {{site.data.keyword.bpshort}}. For more information, see [How can I download `subfolders` from the GIT repositories through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#compact-faq).
 
-Importance of location and URL endpoint in Workspace creation
+Importance of location and URL endpoint in workspace creation
 :   [Why do {{site.data.keyword.bpshort}} Workspaces create through API fails?](/docs/schematics?topic=schematics-wks-create-api).
 
 ## August 2021
@@ -432,7 +432,7 @@ Workspace update command enhancement
 :   The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bpshort}} Workspaces update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
 
 Terraform v1.0 support
-:   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-0).
+:   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0).
 
 {{site.data.keyword.bplong_notm}} support job queue logs enhancement
 :   For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
@@ -484,10 +484,10 @@ Support taint and untaint feature enhancement in {{site.data.keyword.bplong_notm
 Documentation support to deploy resources in specific region or across multiple region
 :   For more information, see [Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
 
-Documentation support to create Workspace by using {{site.data.keyword.bplong_notm}} resources
+Documentation support to create workspace by using {{site.data.keyword.bplong_notm}} resources
 :   For more information, see [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup).
 
-One page view to create Workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
+One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
 :   For more information about {{site.data.keyword.bplong_notm}} workspaces, creation, see [Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup).
 
 Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
@@ -588,7 +588,7 @@ Terraform commands command-line support
 :   {{site.data.keyword.bplong_notm}} supports Terraform command-line commands. For more information, see [Terraform command-line commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds).
 
 command-line Commands
-:   {{site.data.keyword.bplong_notm}} supports command-line Workspace and state commands such as [import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import), [show](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show), [state move](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv), [state remove](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm), [taint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint), and [`untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).
+:   {{site.data.keyword.bplong_notm}} supports command-line workspace and state commands such as [import](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import), [show](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show), [state move](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv), [state remove](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm), [taint](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint), and [`untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).
 
 ### 7 January 2021
 {: #schematics-jan072021}
@@ -611,7 +611,7 @@ Ansible Beta release
 :   {{site.data.keyword.bplong_notm}} supports and releases Ansible Beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA).
 
 Beta
-:   The open Beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Sai Vennam`](mailto:svennam@us.ibm.com), if you are interested in getting early access to this Beta offering.
+:   The open Beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Carl Swanson`](mailto:swansoca@us.ibm.com), if you are interested in getting early access to this Beta offering.
 
 ## November 2020
 {: #nov-2020}
@@ -639,11 +639,11 @@ Review the release notes for October 2020.
 Monitoring
 :   {{site.data.keyword.bplong_notm}} now supports monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.cloud_notm}} Monitoring. For more information about the monitoring {{site.data.keyword.bpshort}} Workspaces, see [Monitoring {{site.data.keyword.bpshort}} instances](/docs/schematics?topic=schematics-monitoring-instances).
 
-Files and resources for your Workspace actions
+Files and resources for your workspace actions
 :   {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository.
 
 Creating a deploy to {{site.data.keyword.bplong_notm}} link
-:   {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository so that other people can experiment to create Workspace by using {{site.data.keyword.bpshort}} without affecting your original code. For more information about deploy to {{site.data.keyword.cloud_notm}}, see [create deploy to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics).
+:   {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository so that other people can experiment to create workspace by using {{site.data.keyword.bpshort}} without affecting your original code. For more information about deploy to {{site.data.keyword.cloud_notm}}, see [create deploy to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics).
 
 ## September 2020
 {: #sept-2020}
@@ -656,7 +656,7 @@ Review the release notes for September 2020.
 {: release-note}
 
 `Bitbucket` supports private repository
-:   {{site.data.keyword.bplong_notm}} supports private bit bucket repository as a template repository source. All you need to use the URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for the URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`. If the Workspace name is different from your user name then you need to provide the Workspace name in this format. `https://<username>@bitbucket.org/<workspace_name>/tf_cloudless_sleepy/src/master`.
+:   {{site.data.keyword.bplong_notm}} supports private bit bucket repository as a template repository source. All you need to use the URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for the URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`. If the workspace name is different from your user name then you need to provide the workspace name in this format. `https://<username>@bitbucket.org/<workspace_name>/tf_cloudless_sleepy/src/master`.
 
 Support to override the default variable
 :   {{site.data.keyword.bplong_notm}} now supports to override the Terraform default variable store value. For more information about configuring to override the variable, see [Workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
@@ -691,7 +691,7 @@ Review the release notes for July 2020.
 {: release-note}
 
 Stop apply support
-:   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your Workspace from the console and the API. For more information, see [Managing resource life cycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apidocs/schematics/schematics#stop-a-schematics-apply-action) API.
+:   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource life cycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apidocs/schematics/schematics#stop-a-schematics-apply-action) API.
 
 New {{site.data.keyword.bpshort}} locations
 :   You can now create {{site.data.keyword.bpshort}} Workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region from the CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
@@ -734,7 +734,7 @@ Review the release notes for May 2020.
 {: release-note}
 
 New EU API endpoint
-:   You can now choose to create your {{site.data.keyword.bpshort}} Workspaces in the US or Europe. Depending on the location that you choose, your {{site.data.keyword.bpshort}} Actions run in either the US (`us-south` or `us-east`) or in Europe (`eu-de` or `eu-gb`). The location that you choose for your Workspace is independent from the location where you want to provision your resources. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
+:   You can now choose to create your {{site.data.keyword.bpshort}} Workspaces in the US or Europe. Depending on the location that you choose, your {{site.data.keyword.bpshort}} Actions run in either the US (`us-south` or `us-east`) or in Europe (`eu-de` or `eu-gb`). The location that you choose for your workspace is independent from the location where you want to provision your resources. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
 
 ## April 2020
 {: #april-2020}
@@ -750,5 +750,5 @@ Terraform v0.12 support
 :   You can now choose to run your infrastructure code with Terraform version 0.11 or 0.12. With Terraform version 0.12, the syntax for configuration files changed. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. To migrate your Terraform configuration files from version 0.11 to version 0.12, see [Migrating your Terraform configuration files from version 0.11 to version 0.12](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol).
 
 New Workspace creation flow
-:   The Workspace creation flow is now [a two-step process](/docs/schematics?topic=schematics-workspace-setup#create-workspace). First, you create the Workspace without connecting it to a GitHub or GitLab repository. Then, you add the details of your GitHub or GitLab repository, retrieve input variables, and let {{site.data.keyword.bpshort}} scan your Terraform configuration files for syntax errors. With the change of the Workspace creation flow, [new Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state) are introduced as well.
+:   The workspace creation flow is now [a two-step process](/docs/schematics?topic=schematics-workspace-setup#create-workspace). First, you create the workspace without connecting it to a GitHub or GitLab repository. Then, you add the details of your GitHub or GitLab repository, retrieve input variables, and let {{site.data.keyword.bpshort}} scan your Terraform configuration files for syntax errors. With the change of the workspace creation flow, [new workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state) are introduced as well.
 

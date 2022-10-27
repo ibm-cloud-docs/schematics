@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-27"
 
 keywords: blueprint run apply failure, terraform error, terraform fails, install fails,
 
@@ -73,7 +73,7 @@ Attention! Job ID: eu-gb.JOB.Blueprint-Basic-Example.0cebdb53 FULFILMENT_FAILED
 ```
 {: screen}
 
-Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a blueprint run apply failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or stand-alone Terraform usage. 
+Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a blueprint run apply failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} workspace or stand-alone Terraform usage. 
 {: tsResolve} 
 
 The blueprint run apply command indicates which module fails. Then, prompt to show a summary of the log for the failed Workspace.  
@@ -89,7 +89,7 @@ Review job failure log yes/no [y/N]>
 
 To help problem diagnosis reply `y` to the prompt to review the failure logs. The `blueprint run apply` CLI command output includes the last few lines of the Terraform Apply job log.  As Terraform fails on an error, frequently the last few lines of the Terraform apply log includes sufficient information to identify the cause of the Terraform failure. 
 
-If the log summary does not provide sufficient information, the `ibmcloud schematics logs` command to review the entire Terraform log for the failing Workspace is printed summary. 
+If the log summary does not provide sufficient information, the `ibmcloud schematics logs` command to review the entire Terraform log for the failing workspace is printed summary. 
 
 ```text
 Status               FAILED   
@@ -164,7 +164,7 @@ ibmcloud schematics blueprint run apply -id <blueprint_ID> 
 When you run the blueprint run apply command, it fails with message that the install of module fails. 
 {: tsSymptoms}
 
-Analysis of the Workspace logs indicates that the cause of the Terraform apply failure was due to an incorrect input value.  
+Analysis of the workspace logs indicates that the cause of the Terraform apply failure was due to an incorrect input value.  
 {: tsCauses}
 
 Update the input file source and push a new release to its Git source repository. 

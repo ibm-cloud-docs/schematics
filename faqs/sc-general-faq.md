@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-10-27"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -42,7 +42,7 @@ Infrastructure as Code (IaC) helps you codify your cloud environment so that you
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} Workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking `Apply plan` from the Workspace details page or running the `ibmcloud schematics apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
+{{site.data.keyword.bplong_notm}} Workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking `Apply plan` from the workspace details page or running the `ibmcloud schematics apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
 
 The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as `Alias Terraform are deprecated. Use schematics or sch` in your command.
 {: note}
@@ -301,7 +301,7 @@ If the version parameter is not declared in your `versions.tf` file, the current
 {: faq}
 {: support}
 
-Destroy delete the associated cloud resource from the workspace. Delete Workspace is to used to delete the workspace. The recommendation is to destroy the resource first from the workspace, and then set delete workspace. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
+Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first from the workspace, and then set delete workspace. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
 
 ## Can I delete and destroy operation as one step?
 {: #faq-delete-destroy-operation}

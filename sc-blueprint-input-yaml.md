@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-27"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, templates, yaml,
 
@@ -23,7 +23,7 @@ This document is the reference of the YAML schema used to describe a blueprint i
 A blueprint input file defines the [input variables](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements) required to customize the template to a specific use case. If a value is not defined, it is assumed that the input is satisfied by a user defined input value at blueprint config create time. These must be satisfied at create time by an input file or dynamic inputs. 
 {: shortdesc}  
 
-The type of an input variable is defined in the [input block](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-options) of the consuming Module in the template. The supported types are the same as the [Terraform variable types](https://www.terraform.io/language/expressions/types). If the type is omitted the default is `string`.
+The type of an input variable is defined in the [input block](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-options) of the consuming Module in the template. The supported types are the same as the [Terraform variable types](https://developer.hashicorp.com/terraform/language/expressions/types). If the type is omitted the default is `string`.
 
 ## Defining input values
 {: #define-input-value}

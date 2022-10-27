@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-10-27"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -26,7 +26,7 @@ When {{site.data.keyword.bpshort}} tries to run your script on the target resour
 To troubleshoot the error in the script, follow these steps:
 {: tsResolve}
 
-1. From the Workspace **Activity** page, select the {{site.data.keyword.bpshort}} apply action that failed.
+1. From the workspace **Activity** page, select the {{site.data.keyword.bpshort}} apply action that failed.
 2. Click **Jobs** to see the detailed log output. 
 3. In the log file, find the last action that {{site.data.keyword.bpshort}} started before the error occurs. For example, in the following log output, {{site.data.keyword.bpshort}} tried to run a copy script in the `instances_module` module by using the Terraform `null_resource`.
     ```text

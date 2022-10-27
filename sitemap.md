@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-27"
 
 keywords: schematics
 subcollection: schematics
@@ -211,13 +211,13 @@ subcollection: schematics
 
 * [Best practices of managing {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
 
-    * [What are the best practices that you must follow in creating a Workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
+    * [What are the best practices that you must follow in creating a workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
 
     * [How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
 
     * [How can you protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks-data)
 
-    * [How does {{site.data.keyword.bpshort}} protect the Workspace data through Terraform state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
+    * [How does {{site.data.keyword.bpshort}} protect the workspace data through Terraform state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
 * [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
 
@@ -357,7 +357,7 @@ subcollection: schematics
 
     * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
-        * Support array of injectable Terraform blocks in create Workspace API
+        * Support array of injectable Terraform blocks in create workspace API
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -475,9 +475,9 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
 
-        * {{site.data.keyword.bpshort}} introduces compact flag in the Workspace create and update API
+        * {{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
 
-        * Importance of location and URL endpoint in Workspace creation
+        * Importance of location and URL endpoint in workspace creation
 
 * [August 2021](/docs/schematics?topic=schematics-schematics-relnotes#aug-2021)
 
@@ -521,9 +521,9 @@ subcollection: schematics
 
         * Documentation support to deploy resources in specific region or across multiple region
 
-        * Documentation support to create Workspace by using {{site.data.keyword.bplong_notm}} resources
+        * Documentation support to create workspace by using {{site.data.keyword.bplong_notm}} resources
 
-        * One page view to create Workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
+        * One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
 
         * Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
 
@@ -617,7 +617,7 @@ subcollection: schematics
 
         * Monitoring
 
-        * Files and resources for your Workspace actions
+        * Files and resources for your workspace actions
 
         * Creating a deploy to {{site.data.keyword.bplong_notm}} link
 
@@ -717,27 +717,23 @@ subcollection: schematics
 
 [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
 
+* [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-configuration)
+
 * [Blueprint template overview](/docs/schematics?topic=schematics-blueprint-templates#template-overview)
 
-* [Blueprint template YAML file](/docs/schematics?topic=schematics-blueprint-templates#blueprint-yaml-file)
+    * [Blueprint template YAML file](/docs/schematics?topic=schematics-blueprint-templates#blueprint-yaml-file)
 
-* [Input statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements)
+    * [Input statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements)
 
-* [Module statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module)
+    * [Module statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module)
 
-    * [Module Source](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-source)
+    * [Template outputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-output)
 
-    * [Module inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-inputs)
+    * [Template inputs](/docs/schematics?topic=schematics-blueprint-templates#template-inputs)
 
-    * [Module outputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-outputs)
+* [Input files](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-file)
 
-* [Output statements](/docs/schematics?topic=schematics-blueprint-templates#blueprint-output)
-
-* [template inputs](/docs/schematics?topic=schematics-blueprint-templates#template-inputs)
-
-    * [Input files](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-file)
-
-* [Configuration of inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
+* [Dynamic inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
 
 * [What's next](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
 
@@ -916,13 +912,13 @@ subcollection: schematics
 
     * [Before you begin](/docs/schematics?topic=schematics-workspace-setup#prerequisites)
 
-    * [Creating the Workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
+    * [Creating the workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
 
-    * [Creating the Workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
+    * [Creating the workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
 
-    * [Creating the Workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
+    * [Creating the workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
 
-    * [Creating the Workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
+    * [Creating the workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
 
     * [Importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#import-template)
 
@@ -934,7 +930,7 @@ subcollection: schematics
 
 * [Planning your workspace](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan)
 
-    * [Designing your Workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
+    * [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
 
     * [How many Workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
 
@@ -1022,7 +1018,7 @@ subcollection: schematics
 
 * [Upgrading Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to14)
 
-* [Upgrade Terraform template from `v0.14` or `v0.15` to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
+* [Upgrade Terraform template from `v0.14` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
 
 [Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state#remote-state)
 
@@ -1196,9 +1192,9 @@ subcollection: schematics
 
 [Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
 
-* [Steps to Bind an existing Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
 
-* [Steps to Bind a new Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
 
 * [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 
@@ -1386,7 +1382,7 @@ subcollection: schematics
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
-{: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_{{sitedatakeywordbpfull_notm}}}
+{: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_}
 
 
 [Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
@@ -1442,7 +1438,7 @@ subcollection: schematics
 
 
 ## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
-{: #sitemap_importing__templates_into_the_{{sitedatakeywordcloud_notm}}_catalog}
+{: #sitemap_importing__templates_into_the__catalog}
 
 
 [Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
@@ -1709,7 +1705,7 @@ subcollection: schematics
 
 [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-template-schema-yaml)
 
-* [Supporting setting parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-parameters)
+* [Global settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-parameters)
 
     * [name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-name)
 
@@ -1719,6 +1715,8 @@ subcollection: schematics
 
     * [description](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-description)
 
+    * [tags](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tags)
+
     * [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs)
 
     * [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs)
@@ -1727,7 +1725,9 @@ subcollection: schematics
 
     * [settings.TF_VERSION](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tf-version)
 
-    * [modules schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema)
+    * [settings.TF_LOGS](/docs/schematics?topic=schematics-bp-template-schema-yaml#-logs)
+
+* [Module parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema)
 
     * [modules.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-name)
 
@@ -1735,7 +1735,7 @@ subcollection: schematics
 
     * [modules.source options](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-sourceoptions)
 
-    * [modules.source.git.source_type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-source-type)
+    * [modules.source.source_type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-source-type)
 
     * [modules.source.git.git_repo_url](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-repo-url)
 
@@ -1984,7 +1984,7 @@ subcollection: schematics
 
 * [What {{site.data.keyword.bpshort}} jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
-* [How can I see the Workspace job results and logs, for the workloads that ran on the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-job-logs)
+* [How can I see the workspace job results and logs, for the workloads that ran on the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-job-logs)
 
 * [How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-job-parallel)
 
@@ -1998,7 +1998,7 @@ subcollection: schematics
 
 * [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-region)
 
-* [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
+* [Can I have different region for {{site.data.keyword.bpshort}} workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
 
 * [Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
 
@@ -2014,7 +2014,7 @@ subcollection: schematics
 
 * [How do you securely pass input variables?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
 
-* [Why does the blueprint template, basic example, fail in the Install step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
+* [Why does the blueprint template, basic example, fail in the run apply step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 
 * [What is the time taken to create an IBM Kubernetes Service cluster and other resources?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
 
@@ -2094,31 +2094,31 @@ subcollection: schematics
 
 * [How do {{site.data.keyword.bpshort}} decide to remove the files from the Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
-* [How do you upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during Workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
+* [How do you upgrade the Terraform versions in {{site.data.keyword.bpshort}}? or Can I update the version during workspace recreation?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 
-* [How do I overcome the downtime updating the Workspace activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
+* [How do I overcome the downtime updating the workspace activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
 
 * [Why do the jobs delay in a queue when plan is generated?](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq)
 
-* [How do I `pull latest` code from the Workspace through command line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
+* [How do I `pull latest` code from the workspace through command line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
 
 * [What are the development tools and utilities used in the {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#schematics-tools)
 
-* [How can I create Workspace from command-line by using Git repositories and personal access token with full permission?](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
+* [How can I create workspace from command-line by using Git repositories and personal access token with full permission?](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
 
-* [How do you overcome the authorization issue when create or update a Workspace or a template?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
+* [How do you overcome the authorization issue when create or update a workspace or a template?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
 
 * [How can I access the {{site.data.keyword.bpshort}} services for test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
 * [How can you download `subfolder`s from the Git repositories through {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
-* [How do I resolve issue while trying to delete a Workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
+* [How do I resolve issue while trying to delete a workspace that was created for a cluster that no longer exists, deletion fails because of the cluster not found?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
 * [What is the best way to deploy a Helm chart to an existing cluster by using {{site.data.keyword.bpshort}} keeping credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
 * [How do you set the release tag through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#releasetag-warn-faq)
 
-* [Why you are getting 403 error instead of 404 error when providing an invalid Workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
+* [Why you are getting 403 error instead of 404 error when providing an invalid workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
 
 * [How can you enable Terraform debug through the `ibmcloud schematics` command line?](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
 
@@ -2134,7 +2134,7 @@ subcollection: schematics
 
 * [Can I set or manage keys for `ibm_kms_key` resource when {{site.data.keyword.bpshort}} Workspaces imports Terraform?](/docs/schematics?topic=schematics-workspaces-faq#kmskey-value-faq)
 
-* [Can you enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running Workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
+* [Can you enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
 
 * [How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` to fetch {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
 
@@ -2156,19 +2156,19 @@ subcollection: schematics
 
 * [Are the resources removed when remove the workspace is run?](/docs/schematics?topic=schematics-workspaces-faq#delete-resource-wks-faq)
 
-* [How can I update a Workspace that is created through payload in command line to resolve invalid payload issue?](/docs/schematics?topic=schematics-workspaces-faq#invalid-paylaod-cli)
+* [How can I update a workspace that is created through payload in command line to resolve invalid payload issue?](/docs/schematics?topic=schematics-workspaces-faq#invalid-paylaod-cli)
 
 * [Is the drift detection an automatic in the {{site.data.keyword.bplong_notm}}?](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq)
 
 * [Can I initiate the drift detection?](/docs/schematics?topic=schematics-workspaces-faq#drift-initiate-faq)
 
-* [Where can I see the status of the drift detection? Or How can I know whether the Workspace is in drift?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
+* [Where can I see the status of the drift detection? Or How can I know whether the workspace is in drift?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
 
 * [Can I `interrupt`, `force-stop`, or `terminate` the provisioning resources or a running job in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#stopping-job-faq)
 
 * [How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?](/docs/schematics?topic=schematics-workspaces-faq#postcartapi-job-faq)
 
-* [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
+* [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
 
 * [How do I fix the `CreateWorkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-27"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -26,12 +26,12 @@ Now {{site.data.keyword.bplong}} supports setting a custom value for parallelism
 ## Usage
 {: #parelleism-usage}
 
-You can pass Terraform command-line arguments `TF_CLI_ARGS` as an environment variables with the specific name such as `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} Workspaces for a customized experience. Terraform reads these environment variables and apply parallelism at runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://www.terraform.io/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}. 
+You can pass Terraform command-line arguments `TF_CLI_ARGS` as an environment variables with the specific name such as `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} Workspaces for a customized experience. Terraform reads these environment variables and apply parallelism at runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}. 
 
 ### Example using parallelism
 {: #parallelism-example}
 
-The code block is the sample payload for creating Workspace with parallelism passed as an environment variable.
+The code block is the sample payload for creating workspace with parallelism passed as an environment variable.
 
 ```json
 {
@@ -71,7 +71,7 @@ The code block is the sample payload for creating Workspace with parallelism pas
 ```
 {: codeblock}
 
-A sample `env_values` block in the payload to update environment variable by using variable update API. For more information, see [Update Workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs) API.
+A sample `env_values` block in the payload to update environment variable by using variable update API. For more information, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs) API.
 
 ```json
 "env_values": [
@@ -108,7 +108,7 @@ A sample `tf_values` block in the create payload.
 ## List of environment variables
 {: #list-special-env-vars}
 
-{{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information about special environment variables, see [Environment variables](https://www.terraform.io/cli/config/environment-variables). 
+{{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information about special environment variables, see [Environment variables](https://developer.hashicorp.com/terraform/cli/config/environment-variables). 
 
 | Variable | Description | Usage |
 | ----  | ----- | ----- |
