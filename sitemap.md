@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-25"
+lastupdated: "2022-10-27"
 
 keywords: schematics
 subcollection: schematics
@@ -1382,7 +1382,7 @@ subcollection: schematics
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
-{: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_{{sitedatakeywordbpfull_notm}}}
+{: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_}
 
 
 [Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
@@ -1438,7 +1438,7 @@ subcollection: schematics
 
 
 ## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
-{: #sitemap_importing__templates_into_the_{{sitedatakeywordcloud_notm}}_catalog}
+{: #sitemap_importing__templates_into_the__catalog}
 
 
 [Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
