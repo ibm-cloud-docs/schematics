@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-10-27"
 
 keywords: blueprint config create init failure, blueprint init error, create init fails,
 
@@ -23,7 +23,7 @@ content-type: troubleshoot
 When you create a blueprint config, it fails during initialization of the blueprint modules.  
 {: tsSymptoms}
 
-Blueprint environments are created in two steps. The first step retrieves, validates the blueprint template, and creates the configuration in {{site.data.keyword.bpshort}}. The second step creates the needed modules based on the module definitions in the template. This step clones the specified module source repos. An incorrectly specified repo URL results in a Workspace initialization failure. Other possible causes are the repository is private and an access token is not specified, or the access token is invalid. 
+Blueprint environments are created in two steps. The first step retrieves, validates the blueprint template, and creates the configuration in {{site.data.keyword.bpshort}}. The second step creates the needed modules based on the module definitions in the template. This step clones the specified module source repos. An incorrectly specified repo URL results in a workspace initialization failure. Other possible causes are the repository is private and an access token is not specified, or the access token is invalid. 
 {: tsCauses}
 
 Sample error

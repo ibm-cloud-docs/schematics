@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-10-27"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -154,7 +154,7 @@ The GitHub Server type parameter expects the authorization. You need to provide 
 {: #analyze-deployment}
 {: step}
 
-Observe the pipeline dashboard and view the status of your Workspace execution.
+Observe the pipeline dashboard and view the status of your workspace execution.
 {: shortdesc}
 
 1. During the update stage process, from the example of `ibm-cos-bucket` repository observe the `main.tf` file configuration with the `cos_instance` name and `bucket_name`. These details are updated in the {{site.data.keyword.bpshort}} Workspaces after the APPLY stage is passed.
@@ -164,7 +164,7 @@ Observe the pipeline dashboard and view the status of your Workspace execution.
 5. From the {{site.data.keyword.bpshort}} Workspaces, check that the resource name and bucket name are created successfully.
 6. Observe that the `APPLY` stage is passed and TEST stage is in `Running` state.
 7. Observe that the `TEST` stage is passed successfully.
-8. Now, you can edit your template in the configured repository and observe an automatic pull of your Workspace by the continuous delivery toolchain.
+8. Now, you can edit your template in the configured repository and observe an automatic pull of your workspace by the continuous delivery toolchain.
 
 ## Analyzing the {{site.data.keyword.bpshort}} workspace
 {: #analyze-workspace-process}
@@ -175,7 +175,7 @@ Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can v
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}.
 2. Select `Navigation Menu > {{site.data.keyword.bpshort}} > Workspaces > Resources` to observe the apply state of the resources in your workspace.
-3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the Workspace status.
+3. You can view the output from your working directory, or from the {{site.data.keyword.cloud_notm}} dashboard plan logs to view the workspace status.
 
 You successfully created the {{site.data.keyword.bpshort}} Workspaces and automated the end to end deployment by using the DevOps toolchain. 
 

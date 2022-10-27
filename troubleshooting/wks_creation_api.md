@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-10-27"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -17,7 +17,7 @@ content-type: troubleshoot
 # Why do {{site.data.keyword.bpshort}} Workspaces create through API/UI/CLI fails?
 {: #wks-create-api}
 
-The {{site.data.keyword.bpshort}} create Workspace fails when you attempt to create through API by using following CURL command.
+The {{site.data.keyword.bpshort}} create workspace fails when you attempt to create through API by using following CURL command.
 {: tsSymptoms}
 
 ```sh
@@ -26,7 +26,7 @@ curl --request POST --url https://cloud.ibm.com/schematics/workspaces -H "Author
 {: screen}
 
 
-When {{site.data.keyword.bpshort}} runs the CURL command, an error state {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the Workspace create is marked with `Bad request` message. 
+When {{site.data.keyword.bpshort}} runs the CURL command, an error state {{site.data.keyword.bpshort}} cannot find the complete information in the payload. And the workspace create is marked with `Bad request` message. 
 {: tsCauses}
 
 
@@ -47,5 +47,5 @@ Verify your CURL or the payload contains that the `location` and the `url` are p
 
 **`For example`**
 
-- For creating Workspace in `US` region: Use `location` as **`us-east`** or **`us-south`** and `url` as **`https://us-south.schematics.cloud.ibm.com/`** or **`https://us-east.schematics.cloud.ibm.com/`**. By default **`https://cloud.ibm.com/schematics/workspaces`** points to **`https://cloud.ibm.com/schematics/overview`** endpoint.
-- For Workspace in the `EU` region: Use `location` as **`eu-de`** or **`eu-gb`** and `url` as **`https://eu-de.schematics.cloud.ibm.com`** and **`https://eu-gb.schematics.cloud.ibm.com`** endpoint.
+- For creating workspace in `US` region: Use `location` as **`us-east`** or **`us-south`** and `url` as **`https://us-south.schematics.cloud.ibm.com/`** or **`https://us-east.schematics.cloud.ibm.com/`**. By default **`https://cloud.ibm.com/schematics/workspaces`** points to **`https://cloud.ibm.com/schematics/overview`** endpoint.
+- For workspace in the `EU` region: Use `location` as **`eu-de`** or **`eu-gb`** and `url` as **`https://eu-de.schematics.cloud.ibm.com`** and **`https://eu-gb.schematics.cloud.ibm.com`** endpoint.

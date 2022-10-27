@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-27"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -52,14 +52,14 @@ Developers need to check whether the variable or output parameter as a sensitive
 ## Best practices of managing {{site.data.keyword.bpshort}} Workspaces 
 {: #bp-workspaces}
 
-### What are the best practices that you must follow in creating a Workspace for the Terraform template?
+### What are the best practices that you must follow in creating a workspace for the Terraform template?
 {: #bp-security-wks}
 
-Follow these practices in creating a Workspace for the Terraform template.
+Follow these practices in creating a workspace for the Terraform template.
 - Check whether you have the [right permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspace. For more information about location and endpoint, see [Where is the information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
-- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the Workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
-- Do not use one Workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
+- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
+- Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 
 ### How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?
 {: #bp-security-leak-log}
@@ -69,14 +69,14 @@ You need to set the variable or output parameter as sensitive to make sure that 
 ### How can you protect the access to Workspaces and its data?
 {: #bp-security-wks-data}
 
-As the account owner or an authorized account administrator, you can assign {{site.data.keyword.iamlong}} (IAM) service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+As the account owner or an authorized account administrator, you can assign {{site.data.keyword.iamlong}} (IAM) service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
-Your Workspaces and Actions data store depends on the location where you create your Workspace or an Action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
+Your Workspaces and Actions data store depends on the location where you create your workspace or an Action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
-### How does {{site.data.keyword.bpshort}} protect the Workspace data through Terraform state file, or log files?
+### How does {{site.data.keyword.bpshort}} protect the workspace data through Terraform state file, or log files?
 {: #bp-protect-data}
 
-Follow these practices to protect your Workspace data through Terraform state file, or log files.
+Follow these practices to protect your workspace data through Terraform state file, or log files.
 - Use {{site.data.keyword.iamshort}} to control access to a {{site.data.keyword.bpshort}} Workspace, and related {{site.data.keyword.cloud_notm}} resources.
 - Secure the source repository for your Terraform template, including access control, security settings, collaboration, and version control.
 - Secure the {{site.data.keyword.cloud_notm}} resources that you create by using the security features that are provided by the resource offering.
@@ -95,19 +95,19 @@ You need to specify the right [roles and permissions](/docs/schematics?topic=sch
 Follow these practices in creating a {{site.data.keyword.bpshort}} Action for the Ansible template.
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace. For more information about location and endpoint, see [Where is the information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 - You cannot delete or stop a running job of your {{site.data.keyword.bpshort}} action. Wait for the job to complete, then change your settings, and click **Check action**, or **Run action** again.
-- As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+- As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an Action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
 ### How can you protect the access to Actions and its data?
 {: #bp-security-action-data}
 
-As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can set on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
-Your Workspaces and Actions data store depends on the location where you create your Workspace or an Action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
+Your Workspaces and Actions data store depends on the location where you create your workspace or an Action. For more information, see [securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data).
 
 ### How does {{site.data.keyword.bpshort}} protect the Action data through input credentials state file, or log files?
 {: #bp-security-protect}
 
-Follow these practices to protect your Workspace data through input credentials state file, or log files.
+Follow these practices to protect your workspace data through input credentials state file, or log files.
 - Use Cloud Identity and Access Management to control access to a {{site.data.keyword.bpshort}} Action.
 - Secure the source repository of your Terraform template, including access control, security settings, collaboration, and version control.
 - Use the provided tools of your {{site.data.keyword.cloud_notm}} resources to apply security fixes, access controls, and encryption to your resources.
@@ -131,7 +131,7 @@ Create an IAM access group for your users and assign service access policies to 
 ### Non-repudiation by using Activity tracker
 {: #bp-security-atracker}
 
-You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspace instance events, access, events, and access audit log. For more information, see [Auditing events](/docs/schematics?topic=schematics-at_events).
+You can use IBM Cloud® Activity Tracker to track and audit how users and applications interact with {{site.data.keyword.bplong_notm}}. You can generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspace instance events, access, events, and access audit log. For more information, see [Auditing events](/docs/schematics?topic=schematics-at_events).
 
 ### Data protection by using KMS
 {: #bp-security-data-protection}

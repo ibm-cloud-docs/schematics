@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-27"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -57,12 +57,12 @@ For Beta you can bind a `{{site.data.keyword.bpshort}} Workspace`, to the Agent.
 Currently, you cannot bind the `{{site.data.keyword.bpshort}} Action`, to the Agents. Therefore, you cannot run Ansible workload on the Agent.
 {: note}
 
-## How can I see the Workspace job results and logs, for the workloads that ran on the Agent?
+## How can I see the workspace job results and logs, for the workloads that ran on the Agent?
 {: #faqs-wks-job-logs}
 {: faq}
 {: support}
 
-The Workspace job logs are available in {{site.data.keyword.bpshort}} UI console.  You can also access the Workspace job logs by using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
+The workspace job logs are available in {{site.data.keyword.bpshort}} UI console.  You can also access the workspace job logs by using the {{site.data.keyword.bpshort}} workspace API, or CLI.
 
 ## How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?
 {: #faqs-job-parallel}
@@ -119,7 +119,7 @@ Yes, you can register Agent in a different resource group to what is provided in
 
 Yes, you can register an Agent in a different region to what is provided in the Agent service and infrastructure Workspaces.
 
-## Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents? 
+## Can I have different region for {{site.data.keyword.bpshort}} workspace and Agents? 
 {: #faqs-wks-agent-region}
 {: faq}
 {: support}
