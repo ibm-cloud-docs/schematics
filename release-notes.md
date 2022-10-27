@@ -611,7 +611,7 @@ Ansible Beta release
 :   {{site.data.keyword.bplong_notm}} supports and releases Ansible Beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA).
 
 Beta
-:   The open Beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Sai Vennam`](mailto:svennam@us.ibm.com), if you are interested in getting early access to this Beta offering.
+:   The open Beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Carl Swanson`](mailto:swansoca@us.ibm.com), if you are interested in getting early access to this Beta offering.
 
 ## November 2020
 {: #nov-2020}
