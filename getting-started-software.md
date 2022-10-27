@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-27"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -58,7 +58,7 @@ Use one of the IBM provided software templates to set up and configure a classic
 
 5. Accept the license agreement, and click **Install**. You are redirected to the {{site.data.keyword.bpshort}} Workspaces **Activity** page where you can monitor the progress of your VSI and PostgreSQL setup. Note that it takes a few minutes for the setup to complete. 
 6. Verify your virtual server and PostgreSQL setup. 
-    - From the Workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
+    - From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
     - Click the link to see the details of your instances. 
 7. Optional: Remove your {{site.data.keyword.bpshort}} Workspaces and all related {{site.data.keyword.cloud_notm}} resources. 
     - From the **Actions** menu, click **Delete**. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-17"
+lastupdated: "2022-10-27"
 
 keywords: schematics, automation, terraform
 
@@ -32,7 +32,7 @@ Grant access to {{site.data.keyword.bplong_notm}} by assigning {{site.data.keywo
 
 **Who must grant access to {{site.data.keyword.bplong_notm}}?**
 
-As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a Workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
+As the account owner or an authorized account administrator, you can assign IAM service access roles to your users. The IAM service access roles determine the actions that you can perform on an {{site.data.keyword.bplong_notm}} resource, such as a workspace or an action. To avoid assigning access policies to individual users, consider creating [IAM access groups](/docs/account?topic=account-groups).
 
 **Is access to {{site.data.keyword.bplong_notm}} sufficient to manage {{site.data.keyword.cloud_notm}} resources?**
 
@@ -45,9 +45,9 @@ Review the following table to see what permissions you need to work with {{site.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| `View Workspace` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `View Workspace activities` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `View Workspace logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View workspace` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View workspace activities` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View workspace logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `Create workspace` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `Update workspace` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `Delete workspace` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
@@ -55,7 +55,7 @@ Review the following table to see what permissions you need to work with {{site.
 | `View the readme of a template` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|
 | `Create Terraform execution plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `Apply a Terraform template` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Destroy Workspace resources` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Destroy workspace resources` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} Workspaces" caption-side="top"}
@@ -143,7 +143,7 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 ## Manage access tag in your account 
 {: #access-tag}
 
-You can now centrally manage access tags to the {{site.data.keyword.bpshort}} Workspaces in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your Workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account.
+You can now centrally manage access tags to the {{site.data.keyword.bpshort}} Workspaces in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account.
 
 - To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create). 
 - To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} Workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)

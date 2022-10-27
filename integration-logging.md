@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-27"
 
 keywords: logging schematics services, logging, integration services
 
@@ -21,7 +21,7 @@ subcollection: schematics
 ## Launching logging
 {: #logging-ui}
 
-You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your Workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} workspace. Complete these steps to launch and analyze the log.
+You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} workspace. Complete these steps to launch and analyze the log.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 

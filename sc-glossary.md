@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-19"
+lastupdated: "2022-10-27"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -64,7 +64,7 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 
 {{site.data.keyword.bplong}} blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac){: external} (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A craftsman builts the house from well defined components using the blueprint for guidance. 
 
-It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=workingwithblueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution architectures. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).   
+It builds on the {{site.data.keyword.bpshort}} workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=workingwithblueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution architectures. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).   
 {: shortdesc}
 
 ### Blueprint

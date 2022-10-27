@@ -54,7 +54,7 @@
       "Schematics authentication error",
       "IBM Cloud Schematics authentication error",
       "In Schematics get Request failes with status code: 400",
-      "authentication error when Schematics Workspace is created",
+      "authentication error when Schematics workspace is created",
       "Error: Request failes with status code: 400, BXNIMO137E: For the original authentication",
       "getting an authentication error in Schematics after creating the workspace",
       "authentication error after creating the Schematics workspace"

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-13"
+lastupdated: "2022-10-27"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -152,7 +152,7 @@ To authenticate with {{site.data.keyword.bplong_notm}}, you must provide an {{si
     | Input parameters | Values |
     | ----- | --- |
     | Header | `Authorization: bearer <iam_token>`: your Your {{site.data.keyword.cloud_notm}} IAM access token.|
-    | Path | `id <workspace_ID>`: The ID of the workspace. To retrieve the Workspace ID, run `ibmcloud schematics workspace list` |
+    | Path | `id <workspace_ID>`: The ID of the workspace. To retrieve the workspace ID, run `ibmcloud schematics workspace list` |
     {: caption="Input parameters to work with the {{site.data.keyword.bplong_notm}} API." caption-side="top"}
 
 5. Review the [{{site.data.keyword.bplong_notm}} API documentation](/apidocs/schematics/schematics#introduction){: external} to find a list of supported `APIs`.
@@ -164,7 +164,7 @@ Every {{site.data.keyword.iamlong}} (IAM) access token that is issued via the AP
 {: shortdesc}
 
 Before you begin, make sure that you have an {{site.data.keyword.cloud_notm}} IAM refresh token or an {{site.data.keyword.cloud_notm}} API key that you can use to request a new access token.
-- **Refresh token:** Follow the instructions in [Automating the Workspace creation and management process with the {{site.data.keyword.cloud_notm}} API](#cs_api).
+- **Refresh token:** Follow the instructions in [Automating the workspace creation and management process with the {{site.data.keyword.cloud_notm}} API](#cs_api).
 - **API key:** Retrieve your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/) API key as follows.
     1. From the menu bar, click **Manage** > **Access (IAM)**.
     2. Click the **Users** page and then select yourself.

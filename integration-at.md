@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-22"
+lastupdated: "2022-10-27"
 
 keywords: tracking schematics services, activity tracking, integration services
 
@@ -21,7 +21,7 @@ subcollection: schematics
 ## Launching activity tracking
 {: #audit-ui}
 
-Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspaces instance events, access, events, and access audit log. Use the audit log to reveal usage instance that would identify Workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cos_full_notm}} to retain your logs. Complete these steps to launch {{site.data.keyword.at_short}}.
+Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspaces instance events, access, events, and access audit log. Use the audit log to reveal usage instance that would identify workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cos_full_notm}} to retain your logs. Complete these steps to launch {{site.data.keyword.at_short}}.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 

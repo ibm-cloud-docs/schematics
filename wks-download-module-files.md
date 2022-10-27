@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-01"
+lastupdated: "2022-10-27"
 
 keywords: schematics remote host files, modules, private repository, netrc, terraform runtime process
 
@@ -108,5 +108,5 @@ ibmcloud schematics workspace new --file testexample.json
 ```
 {: pre}
 
-Run `ibmcloud schematics workspace get --id WORKSPACE_ID` command to analyze the success Workspace creation or use [user interface](https://cloud.ibm.com/schematics), to view all the files from the modules are cloned and used in your Workspace to provision.
+Run `ibmcloud schematics workspace get --id WORKSPACE_ID` command to analyze the success workspace creation or use [user interface](https://cloud.ibm.com/schematics), to view all the files from the modules are cloned and used in your workspace to provision.
 

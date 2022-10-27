@@ -357,7 +357,7 @@ subcollection: schematics
 
     * [18 April 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1822)
 
-        * Support array of injectable Terraform blocks in create Workspace API
+        * Support array of injectable Terraform blocks in create workspace API
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -475,9 +475,9 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
 
-        * {{site.data.keyword.bpshort}} introduces compact flag in the Workspace create and update API
+        * {{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
 
-        * Importance of location and URL endpoint in Workspace creation
+        * Importance of location and URL endpoint in workspace creation
 
 * [August 2021](/docs/schematics?topic=schematics-schematics-relnotes#aug-2021)
 
@@ -521,9 +521,9 @@ subcollection: schematics
 
         * Documentation support to deploy resources in specific region or across multiple region
 
-        * Documentation support to create Workspace by using {{site.data.keyword.bplong_notm}} resources
+        * Documentation support to create workspace by using {{site.data.keyword.bplong_notm}} resources
 
-        * One page view to create Workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
+        * One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
 
         * Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
 
@@ -617,7 +617,7 @@ subcollection: schematics
 
         * Monitoring
 
-        * Files and resources for your Workspace actions
+        * Files and resources for your workspace actions
 
         * Creating a deploy to {{site.data.keyword.bplong_notm}} link
 
@@ -912,13 +912,13 @@ subcollection: schematics
 
     * [Before you begin](/docs/schematics?topic=schematics-workspace-setup#prerequisites)
 
-    * [Creating the Workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
+    * [Creating the workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
 
-    * [Creating the Workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
+    * [Creating the workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
 
-    * [Creating the Workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
+    * [Creating the workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
 
-    * [Creating the Workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
+    * [Creating the workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
 
     * [Importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#import-template)
 
@@ -930,7 +930,7 @@ subcollection: schematics
 
 * [Planning your workspace](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan)
 
-    * [Designing your Workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
+    * [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
 
     * [How many Workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
 
@@ -1192,9 +1192,9 @@ subcollection: schematics
 
 [Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
 
-* [Steps to Bind an existing Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
 
-* [Steps to Bind a new Workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
 
 * [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 

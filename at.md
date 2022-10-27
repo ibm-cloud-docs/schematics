@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-26"
+lastupdated: "2022-10-27"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -31,7 +31,7 @@ The following lists of {{site.data.keyword.bpshort}} events are sent to {{site.d
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} Workspace by a user.|
+| `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} workspace by a user.|
 | `schematics.workspace.create` | An event is generated for a request to create a {{site.data.keyword.bpshort}} workspace. |
 | `schematics.workspace.update`| An event is generated for a request to update a {{site.data.keyword.bpshort}} workspace. |
 | `schematics.workspace.delete` | An event is generated for a request to delete a {{site.data.keyword.bpshort}} workspace. |
@@ -78,7 +78,7 @@ The following lists of {{site.data.keyword.bpshort}} events are sent to {{site.d
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a Workspace variable in the {{site.data.keyword.bpshort}} API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
+| `schematics.credentials.ready-to-use` |  Credentials passed by a user as a workspace variable in the {{site.data.keyword.bpshort}} API request is being sent to {{site.data.keyword.cos_full_notm}} to complete the user’s action.|
 {: caption="Other events" caption-side="bottom"}
 
 ## Viewing events
@@ -113,16 +113,16 @@ To monitor the service, [start the {{site.data.keyword.at_short}} UI](/docs/acti
 When you create your first workspace, the following events are created by a {{site.data.keyword.bpshort}} owned service ID and sent to {{site.data.keyword.at_full_notm}}.
 
 When you manage a workspace, the following events are created by the {{site.data.keyword.bpshort}} service:
-* An event with an action `schematics.instance.create`, when a first Workspace is created.
-* An event with an action `schematics.instance.update`, when a Workspace is modified.
-* An event with an action `schematics.instance.delete`, when a Workspace is deleted.
+* An event with an action `schematics.instance.create`, when a first workspace is created.
+* An event with an action `schematics.instance.update`, when a workspace is modified.
+* An event with an action `schematics.instance.delete`, when a workspace is deleted.
 
 The `initiatorId` of the request for these actions is set to a service ID that is owned by the {{site.data.keyword.bpshort}} service.
 
-In addition, when a Workspace is created, more events are also generated:
+In addition, when a workspace is created, more events are also generated:
 - Event with action `schematics.tag.attach` to report tagging of the workspace
-- Event with action `schematics.instance.create` to report the creation of the Workspace instance in your account
-- Event with action `schematics.instance.update` to report updates to the Workspace properties
+- Event with action `schematics.instance.create` to report the creation of the workspace instance in your account
+- Event with action `schematics.instance.update` to report updates to the workspace properties
 
 
 You can search by `target.id` to identify all events that report actions on a workspace. For example, you can use a query such as, `crn:v1:bluemix:public:schematics:eu-de:a/xxxxxx:xxxxxxx:workspace:eu-de.workspace.observability-workspace.xxxxxxxx`.
