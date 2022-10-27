@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-19"
+lastupdated: "2022-10-27"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -21,7 +21,7 @@ subcollection: schematics
 Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform is constantly evolving. Without maintenance and updates of the blueprint templates, inputs and modules, a deployed environment loses currency, compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation.   
 {: shortdesc}
 
-After the [deploy](/docs/schematics?topic=sc-bp-deploy) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the blueprint template, automation modules and inputs. See [updating blueprints](/docs/schematics?topic=schematics-update-op-blueprints) to understand more about the process of updating blueprint environments and the steps required to run regular updates. 
+After the [deploy](/docs/schematics?topic=schematics-deploy-blueprints) lifecycle stage of a cloud environment, the environment will continue to evolve through managed change that is implemented as updates to the blueprint template, automation modules and inputs. See [updating blueprints](/docs/schematics?topic=schematics-update-op-blueprints) to understand more about the process of updating blueprint environments and the steps required to run regular updates. 
 
 ## Update process
 {: #update-blueprint-process} 
@@ -416,6 +416,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-update-nextsteps}
 
-After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is to [apply](/docs/schematics?topic=schematics-blueprint-apply) the changes.
+After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is to [apply](/docs/schematics?topic=schematics-apply-blueprint) the changes.
 
 

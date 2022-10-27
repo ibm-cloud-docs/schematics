@@ -1018,7 +1018,7 @@ subcollection: schematics
 
 * [Upgrading Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to14)
 
-* [Upgrade Terraform template from `v0.14` or `v0.15` to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
+* [Upgrade Terraform template from `v0.14` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
 
 [Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state#remote-state)
 
@@ -1725,7 +1725,7 @@ subcollection: schematics
 
     * [settings.TF_VERSION](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tf-version)
 
-    * [settings.TF_LOGS](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tf-version)
+    * [settings.TF_LOGS](/docs/schematics?topic=schematics-bp-template-schema-yaml#-logs)
 
 * [Module parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema)
 

@@ -114,7 +114,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [About {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding blueprint templates](/docs/schematics?topic=schematics-blueprint-templates) to configure the right schemas and use blueprint commands to deploy blueprints.
     - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprints.
-    - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint#create-blueprint-ui), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
     - Deploy [{{site.data.keyword.bpshort}} blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
     - [Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
@@ -432,7 +432,7 @@ Workspace update command enhancement
 :   The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bpshort}} Workspaces update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
 
 Terraform v1.0 support
-:   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-0).
+:   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0).
 
 {{site.data.keyword.bplong_notm}} support job queue logs enhancement
 :   For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).

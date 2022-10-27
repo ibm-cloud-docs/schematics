@@ -42,7 +42,7 @@ If no region is specified in the `provider` block, {{site.data.keyword.bpshort}}
 ## Deploying services across regions
 {: #across-regions}
 
-You can add multiple multiple provider configurations to the `provider` block to specify the regions where you want to deploy your {{site.data.keyword.cloud_notm}} resources. For more information, see [Multiple Provider Instances](https://www.terraform.io/language/providers/configuration#alias-multiple-provider-configurations){: external}.
+You can add multiple multiple provider configurations to the `provider` block to specify the regions where you want to deploy your {{site.data.keyword.cloud_notm}} resources. For more information, see [Multiple Provider Instances](https://developer.hashicorp.com/terraform/language/providers/configuration#alias-multiple-provider-configurations){: external}.
 {: shortdesc}
 
 1. In the `provider` block of your Terraform configuration file or the `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. If you add more provider configurations, you must include an alias so that you can reference this provider from your resource definition in the Terraform configuration file. In the following example, the default provider configuration deploys resources in `us-south` while the provider configuration with the alias `east` deploys all resources in `us-east`.

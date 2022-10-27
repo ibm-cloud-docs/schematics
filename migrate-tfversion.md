@@ -37,17 +37,17 @@ required_version = "~> 1.1"
 
 |Current Version|	Recommendation|
 | ---| ---|
-| `v0.11` | Use the [`Terraform v0.12 checklist`](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-12#pre-upgrade-checklist){: external} command to detect and fix to be addressed by referring [v0.12 Upgrade Guide](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-12){: external} before upgrade to `v0.12`. {{site.data.keyword.bpshort}} deprecated `Terraform v0.11` and `Terraform v0.12`.|
+| `v0.11` | Use the [`Terraform v0.12 checklist`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-12#pre-upgrade-checklist){: external} command to detect and fix to be addressed by referring [v0.12 Upgrade Guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-12){: external} before upgrade to `v0.12`. {{site.data.keyword.bpshort}} deprecated `Terraform v0.11` and `Terraform v0.12`.|
 | `v0.12` | Use the [v0.13 upgrade guide](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-13){: external} your configuration file. The {{site.data.keyword.bpshort}} deprecated `Terraform v0.12`.|
-| `v0.13` | To the `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, see the [v0.14 upgrade guide](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-14){: external}.|
-| `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, see the [v0.15 upgrade guide](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-15){: external}.|
-| `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compatible with an earlier version `Terraform v0.15.5`.|
+| `v0.13` | To the `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, see the [v0.14 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-14){: external}.|
+| `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, see the [v0.15 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-15){: external}.|
+| `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compatible with an earlier version `Terraform v0.15.5`.|
 {: caption="Terraform versions list" caption-side="bottom"}
 
 ## Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} workspace
 {: #migrate-steps}
 
-Upgrading the {{site.data.keyword.bpshort}} workspace to use the version of the Terraform, can be required to use the current features in Terraform. You must carefully review the [Terraform upgrade guide](https://www.terraform.io/language/upgrade-guides) by using the next version. 
+Upgrading the {{site.data.keyword.bpshort}} workspace to use the version of the Terraform, can be required to use the current features in Terraform. You must carefully review the [Terraform upgrade guide](https://developer.hashicorp.com/terraform/language/upgrade-guides) by using the next version. 
 
 Use the following steps to upgrade to the current Terraform version in the {{site.data.keyword.bpshort}} workspace.
 
@@ -232,10 +232,10 @@ Check whether your Terraform template of the older version is provisioned perfec
    5. `ibmcloud schematics apply --id <workspace id>`.
    6. `ibmcloud schematics job get --id <job-id from apply> --json`.
 
-## Upgrade Terraform template from `v0.14` or `v0.15` to `v1.0`
+## Upgrade Terraform template from `v0.14` and higher to `v1.0`
 {: #upgrade-14-to10}
 
-You can upgrade the [`Terraform v0.14`](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://www.terraform.io/language/v1.1.x/upgrade-guides/0-15){: external} to `Terraform v1.0`, see [`Terraform v1.0` upgrade process](https://www.terraform.io/language/v1.1.x/upgrade-guides/1-0){: external}.
+You can upgrade the [`Terraform v0.14`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-15){: external} to `Terraform v1.0`, see [`Terraform v1.0` upgrade process](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external}.
 {: shortdesc}
 
 Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, see [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).

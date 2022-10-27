@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-19"
+lastupdated: "2022-10-27"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -25,7 +25,7 @@ subcollection: schematics
 
 The different stages of working with the blueprint operational model come under four headings, `define`, `deploy`, `update and operate`, and `delete`. In software lifecycle terms these correspond to Day-0 define, Day-1 deploy, Day-2 operate, through to deletion of the environment.  
 
-![{site.data.keyword.bpshort}} blueprints lifecycle stages](../images/bp-lifecycle.svg){: caption="{{{site.data.keyword.bpshort}} blueprints lifecycle stages" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} blueprints lifecycle stages](../images/bp-lifecycle.svg){: caption="{{{site.data.keyword.bpshort}} blueprints lifecycle stages" caption-side="bottom"}
 
 Each of these operational stages is supported by blueprint operations. For example, composing and editing the blueprint template, running {{site.data.keyword.bpshort}} blueprint operations, monitoring job execution and reviewing the results. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-25"
+lastupdated: "2022-10-27"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -192,7 +192,7 @@ settings: # Master settings for all modules
 {: pre}
 
 ### settings.TF_LOGS
-{: #bp-tf-version}
+{: #-logs}
 
 Type:       string
 
@@ -382,7 +382,7 @@ Type: YAML flow or block scalar
 
 Default: string 
 
-As templates work with Terraform configs and modules, Terraform variable [type constraints](https://www.terraform.io/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the module. The type can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or the Terraform `variables.tf` file.
+As templates work with Terraform configs and modules, Terraform variable [type constraints](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the module. The type can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or the Terraform `variables.tf` file.
 
 As complex Terraform types are typically represented as multi-line strings, YAML block syntax can be used.
 
@@ -458,7 +458,7 @@ Type:       list
 
 Default:    []  
 
-A list defines all the outputs that are returned by the module to be used as inputs to other modules or output from the blueprint. Each output is identified by the label `name`.  It must match an [output declaration](https://www.terraform.io/language/values/outputs){: external} in the Terraform template for the value to be retrieved at execution time from the module. The name can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or from inspecting the Terraform `.tf` files. 
+A list defines all the outputs that are returned by the module to be used as inputs to other modules or output from the blueprint. Each output is identified by the label `name`.  It must match an [output declaration](https://developer.hashicorp.com/terraform/language/values/outputs){: external} in the Terraform template for the value to be retrieved at execution time from the module. The name can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or from inspecting the Terraform `.tf` files. 
 
 Example
 ```yaml
@@ -521,7 +521,7 @@ Type: string
 
 Required: true
 
-Two modes of injection are supported by Terraform. Definitions can be injected as extra files, only if it is believed that no conflict with any existing HCL statements. Alternatively they can be injected as [HCL override files](https://www.terraform.io/language/files/override){: external}.
+Two modes of injection are supported by Terraform. Definitions can be injected as extra files, only if it is believed that no conflict with any existing HCL statements. Alternatively they can be injected as [HCL override files](https://developer.hashicorp.com/terraform/language/files/override){: external}.
 
 Options: `override` or `inject`
 {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-19"
+lastupdated: "2022-10-27"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -39,7 +39,7 @@ Reuse is at the heart of {{site.data.keyword.bpshort}} blueprints. Publicly avai
 - [Composition](/docs/schematics?topic=schematics-define-blueprints): Build infrastructure architectures from an eco-system of reusable and maintained IBM Cloud architecture components written in Terraform
 - [Reusability](/docs/schematics?topic=schematics-blueprint-templates): Reuse templates (architectures) across environments, pipelines and teams
 - Scalability: Structure and manage large environments by linking modules and Terraform workspaces  
-- [Lifecycle](/docs/schematics?topic=schematics-workingwithblueprints): Cradle-to-grave operations model. Future: scheduled ops, drift detection, cost estimation, policy compliance  
+- [Lifecycle](/docs/schematics?topic=schematics-work-with-blueprints): Cradle-to-grave operations model. Future: scheduled ops, drift detection, cost estimation, policy compliance  
 - Extensibility (future): Provisioning and configuration with RedHat Ansible              
 
 IAC best practices, support the lifecycle of blueprint environments, cradle-to-grave. Versioning and parameterized configuration, support controlled change to environments as requirements evolve, and templates and modules are maintained and updated to remain current and compliant.   

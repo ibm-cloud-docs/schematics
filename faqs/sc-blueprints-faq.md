@@ -35,7 +35,7 @@ In {{site.data.keyword.bpshort}} blueprints, the displayed name is not a unique 
 {: faq}
 {: support}
 
-Cloud resource deployment with {{site.data.keyword.bpshort}} blueprints is a two-step process, user driven process. Refer to [deploying blueprints](/docs/schematics?topic=workingwithblueprints#deploy-blueprints) for an overview of the deployment and resource provisioning process.  
+Cloud resource deployment with {{site.data.keyword.bpshort}} blueprints is a two-step process, user driven process. Refer to [deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of the deployment and resource provisioning process.  
 
 ## How do you view the blueprint provisioned resources in your cloud account?
 {: #faqs-bp-results}
@@ -102,7 +102,7 @@ The version of Terraform used for an environment is user determined by the bluep
 
 The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terraform module code.   
 
-During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://www.terraform.io/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation will be failed. 
+During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation will be failed. 
 
 ## Is it possible to specify the CLI parameters as a file?
 {: #faqs-bp-location-override}
