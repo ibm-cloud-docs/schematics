@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-28"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -181,7 +181,7 @@ Check that your Terraform template of the older version is provisioned without a
    5. `ibmcloud schematics apply --id <workspace id>`.
    6. `ibmcloud schematics job get --id <job-id from apply> --json`.
 
-You completed the upgrade successfully. See [Terraform template from v0.13 to v0.14](#upgrade-13-to14) to upgrade from Terraform `v0.13` to v0.14`.
+You completed the upgrade successfully. See [Terraform template from v0.13 to v0.14](#upgrade-13-to14) to upgrade from Terraform `v0.13` to `v0.14`.
 
 ## Upgrading Terraform template from v0.13 to v0.14 
 {: #upgrade-13-to14}
