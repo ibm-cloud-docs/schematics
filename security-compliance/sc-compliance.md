@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics, compliance
 
@@ -28,7 +28,7 @@ About GDPR and how {{site.data.keyword.bpshort}} adheres to it, see [General Dat
 ## Privacy shield
 {: #compliance-privacy}
 
-{{site.data.keyword.bpshort}} is privacy shield that is certified. For more information, see the [{{site.data.keyword.IBM_notm}} Privacy Shield Privacy Policy for Certified {{site.data.keyword.cloud_notm}} Services](https://www.ibm.com/privacy/privacy-shield).
+{{site.data.keyword.bpshort}} is privacy shield that is certified. For more information, see the [{{site.data.keyword.IBM_notm}} Privacy Shield Privacy Policy for Certified {{site.data.keyword.cloud_notm}} Services](https://www.ibm.com/us-en/privacy/privacy-shield){: external}.
 
 ## International Organization for Standardization (ISO)
 {: #international-organization-for-standardization-iso}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -92,7 +92,7 @@ modules:
 
 Two injection options are supported, inject or override. Definitions can be injected as additional files if its believed there is no conflict with any existing HCL statements. Alternatively they can be injected as [HCL override files](https://developer.hashicorp.com/terraform/language/files/override){: external}. Overrides is a feature that allows Terraform to override portions of an existing configuration. It is intended for use in those rare circumstances where it is necessary to override the original authors intent. With these provider definitions, override is used to ensure that if there is an existing `required_providers` statement in the module, it can be replaced without conflict. 
 
-The inputs to the mustache templates are defined in the `[tft_parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-tft-parameters)` section. Refer to the tft files in the [Cloud-Schematics/tf-templates/ibm](https://github.com/Cloud-Schematics/tf-templates/ibm){: external} folder to determine the supported input parameters for the Terraform language definitions. For the {{site.data.keyword.IBM}} Terraform provider the example required inputs are: 
+The inputs to the mustache templates are defined in the `[tft_parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-tft-parameters)` section. Refer to the tft files in the [Cloud-Schematics/tf-templates/ibm](https://github.com/Cloud-Schematics/tf-templates/tree/main/ibm){: external} folder to determine the supported input parameters for the Terraform language definitions. For the {{site.data.keyword.IBM}} Terraform provider the example required inputs are: 
 
 ```yaml
           - name: provider_version

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-31"
 
 keywords: blueprint config delete, delete blueprint, blueprint
 
@@ -81,7 +81,7 @@ OK
 
 During the delete operation that the status shows `In Progress`, when completed the status changes to `Normal`. The blueprint configuration and all the dependent cloud resources are now deleted. 
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
 ## Deleting a blueprint config from the UI 
 {: #delete-blueprint-ui}
@@ -296,7 +296,7 @@ Verify that the blueprint is deleted successfully as shown in the output.
 ```
 {: screen}
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
 ## Next steps
 {: #bp-delete-nextsteps}
