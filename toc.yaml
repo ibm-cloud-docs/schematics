@@ -158,14 +158,14 @@ toc:
       - topicgroup:
           label: API reference
           links:
-            - link:
-                label: IBM Cloud Schematics API
-                href: https://cloud.ibm.com/apidocs/schematics
+          - link:
+              label: IBM Cloud Schematics API
+              href: https://cloud.ibm.com/apidocs/schematics
       - topicgroup:
           label: Blueprint definitions reference
           topics:
-            - sc-blueprint-template-yaml.md
-            - sc-blueprint-input-yaml.md
+          - sc-blueprint-template-yaml.md
+          - sc-blueprint-input-yaml.md
       - sc-agent-beta-limitations.md
       - sc-blueprint-beta-limitation.md
       - sc-tools.md
@@ -181,21 +181,21 @@ toc:
           - topicgroup:
               label: Terraform
               links:
-                - link:
-                    label: Sample Terraform templates
-                    href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
-                - link:
-                    label: IBM Cloud provider for Terraform
-                    href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
-                - link:
-                     label: Terraform documentation
-                     href: https://www.terraform.io/docs/index.html
+              - link:
+                  label: Sample Terraform templates
+                  href: https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples
+              - link:
+                  label: IBM Cloud provider for Terraform
+                  href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+              - link:
+                  label: Terraform documentation
+                  href: https://www.terraform.io/docs/index.html
           - topicgroup:
               label: Ansible
               links:
-                - link:
-                    label: Ansible documentation
-                    href: https://docs.ansible.com/ansible/latest/index.html
+              - link:
+                  label: Ansible documentation
+                  href: https://docs.ansible.com/ansible/latest/index.html
   - navgroup:
       id: help
       topics:
