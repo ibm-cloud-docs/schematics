@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-10-31"
 
 keywords: deploy schematics blueprint, blueprint cli deployment, deploy schematics blueprint cli, 
 
@@ -205,7 +205,7 @@ OK
 
 The output shows that the Workspaces `basic-resource-group` and `basic-cos-storage` are now in `Active` status to indicate that the Terraform Apply run successfully and Terraform resources is created.
 
-Refer to [troubleshooting blueprint apply failures](/docs/schematics?topic=schematics-bp-install-fails) for details on debugging apply failures.
+Refer to [troubleshooting blueprint apply failures](/docs/schematics?topic=schematics-bp-apply-fails) for details on debugging apply failures.
 
 ## View blueprint job logs
 {: #view-schematics-blueprint-cli}
@@ -410,4 +410,4 @@ OK
 By completing this tutorial, you learned to deploy a cloud environment using {{site.data.keyword.bpshort}} blueprints.
 
 - Looking for blueprint samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. Check the example `Readme` files for further blueprint customization and usage scenarios for each sample. 
-- Looking for blueprint template and input file configuration Check out the [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-template).
+- Looking for blueprint template and input file configuration Check out the [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates).

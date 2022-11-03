@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -138,7 +138,7 @@ OK
 
 On successful completion the config update returns **`update_success`**. 
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
 ## Updating a blueprint environment from the UI 
 {: #update-blueprint-ui}
@@ -155,7 +155,7 @@ Currently, you can update the blueprint config from CLI by using the [config upd
 4. Click **Jobs history** tab view the result of the blueprint config update job and operations that are set against the resource modules.  
 5. Click **Settings** tab to view the summary of the updated blueprint.
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
 ## Updating a blueprint from the API
 {: #update-blueprint-api}
@@ -411,7 +411,7 @@ Verify that the blueprint update is success as shown in the output.
 ```
 {: screen}
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
 ## Next steps
 {: #bp-update-nextsteps}

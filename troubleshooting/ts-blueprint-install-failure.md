@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: blueprint run apply failure, terraform error, terraform fails, install fails,
 
@@ -18,13 +18,13 @@ content-type: troubleshoot
 {: beta}
 
 # Blueprint run apply fails 
-{: #bp-install-fails}
+{: #bp-apply-fails}
 
 Review the following sections to help debugging `blueprint run apply` failures. 
 
 
 ## Blueprint run apply fails with message "Install of module Failed"
-{: #bp-install-fails1}
+{: #bp-apply-fails1}
 
 When you run the `blueprint run apply` command, it fails with message that the install of a module fails.    
 {: tsSymptoms}
@@ -100,7 +100,7 @@ Workspace Logs CLI   ibmcloud schematics logs --id eu-gb.workspace.basic-cos-sto
 See troubleshooting {{site.data.keyword.bpshort}} apply errors for additional information on debugging Terraform Apply failures  
 
 ## blueprint run apply failure due to Terraform config coding error  
-{: #bp-install-fails2}
+{: #bp-apply-fails2}
 
 When you run the `blueprint run apply` command, it fails with message that the install of module fails. 
 {: tsSymptoms}
@@ -139,7 +139,7 @@ ibmcloud schematics blueprint run apply -id <blueprint_ID> 
 {: pre}
 
 ## blueprint run apply failure due to Terraform timeouts or transient failures 
-{: #bp-install-fails3}
+{: #bp-apply-fails3}
 
 When you run the blueprint run apply command, it fails with message that the install of module fails. 
 {: tsSymptoms}
@@ -159,7 +159,7 @@ ibmcloud schematics blueprint run apply -id <blueprint_ID> 
 {: pre}
 
 ## blueprint run apply failures that require changes to values in input files  
-{: #bp-install-fails4}
+{: #bp-apply-fails4}
 
 When you run the blueprint run apply command, it fails with message that the install of module fails. 
 {: tsSymptoms}
@@ -194,7 +194,7 @@ ibmcloud schematics blueprint run apply -id <blueprint_ID> 
 {: pre}
 
 ## blueprint run apply failures that require changes to dynamic inputs
-{: #bp-install-fails5}
+{: #bp-apply-fails5}
 
 When you run the blueprint run apply command, it fails with message that the install of module fails. 
 {: tsSymptoms}

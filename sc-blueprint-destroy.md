@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -285,7 +285,7 @@ refresh_token: <refresh_token>
 ```
 {: screen}
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-install-fails).
+For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
 ## Next steps
 {: #bp-destroy-nextsteps}

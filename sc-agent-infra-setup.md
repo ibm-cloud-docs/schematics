@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: schematics agents, agents, set up an agents
 
@@ -228,7 +228,7 @@ Before you begin
 
 Here are the list of commands used to create the Agent service.
 
-- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/blob/main/tarfiles/create_agent_service_workspace.json.json){: external} JSON file. For more information about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc).
+- Edit the Agent service using the following input variables in the [create Agent service workspace](https://github.com/Cloud-Schematics/schematics-agents/blob/main/tarfiles/create_agent_service_workspace.json){: external} JSON file. For more information about the input variables, refer to [Input variable for Agent service](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc).
     | Input variable | value |
     | --- | --- |
     | `cluster_id` | provide the recorded `cluster_id` from Agent infrastructure job log. |

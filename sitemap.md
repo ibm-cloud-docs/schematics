@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-10-31"
 
 keywords: schematics
 subcollection: schematics
@@ -2214,17 +2214,17 @@ subcollection: schematics
 
 [Blueprint config create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
-[Blueprint run apply fails](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails)
+[Blueprint run apply fails](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails)
 
-* [Blueprint run apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails1)
+* [Blueprint run apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails1)
 
-* [blueprint run apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails2)
+* [blueprint run apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails2)
 
-* [blueprint run apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails3)
+* [blueprint run apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails3)
 
-* [blueprint run apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails4)
+* [blueprint run apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails4)
 
-* [blueprint run apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-install-fails#bp-install-fails5)
+* [blueprint run apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails5)
 
 
 ### Troubleshooting Agents
