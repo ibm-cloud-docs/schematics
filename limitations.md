@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -43,19 +43,19 @@ With {{site.data.keyword.bplong_notm}}, you do not use a local `terraform.tfvars
 ### Is Terraform remote state supported in {{site.data.keyword.bpshort}}?
 {: #tf-remote-state}
 
-You can access workspace state information from other Workspaces by using the {{site.data.keyword.bpshort}} `ibm_schematics_output` data source that works similar to the `remote_state` data source in native Terraform. When you use the `remote_state` Terraform data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly.
+You can access workspace state information from other workspaces by using the {{site.data.keyword.bpshort}} `ibm_schematics_output` data source that works similar to the `remote_state` data source in native Terraform. When you use the `remote_state` Terraform data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly.
 
 For more information about how to use this data source, see [Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state). 
 
 ### Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?
 {: #local-remote-exec}
 
-The [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout) is set for `local-exec` and `remote-exec` users by using {{site.data.keyword.bplong_notm}} workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state fails. 
+The [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout) is set for `local-exec` and `remote-exec` users by using {{site.data.keyword.bplong_notm}} Workspace. You need to ensure the execution completes within 30 minutes. Otherwise, execution times out automatically and the apply state fails. 
 
 ## What is the use of refresh token header?
 {: #refresh-token}
 
-If the `destroyresource` flag is set to `true`, refresh token header configuration is required to delete all the {{site.data.keyword.cloud_notm}} resources, and the {{site.data.keyword.bpshort}} workspace. Following are the uses of refresh token header:
+If the `destroyresource` flag is set to `true`, refresh token header configuration is required to delete all the {{site.data.keyword.cloud_notm}} resources, and the {{site.data.keyword.bpshort}} Workspace. Following are the uses of refresh token header:
 - If the token is expired, you can use `refresh token` to get a new IAM access token, see [IAM access token](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens). 
 - The `refresh_token` parameter cannot be used to retrieve a new IAM access token. 
 - When the IAM access token is about to expire, use the [API key](/apidocs/iam-identity-token-api#create-api-key){: external} to create a new access token.

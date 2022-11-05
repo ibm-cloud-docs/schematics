@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-03"
+lastupdated: "2022-11-05"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -91,7 +91,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
         ibmcloud schematics command [arguments...] [command options]
 
     COMMANDS:
-        action, ac           Create and manage {{site.data.keyword.bpshort}} Actions. Action let you define the source control repository that contains your playbook yamls and so on. and pass environment-specific variables.
+        action, ac           Create and manage {{site.data.keyword.bpshort}} Actions. action let you define the source control repository that contains your playbook yamls and so on. and pass environment-specific variables.
         apply                Apply a plan to an workspace to deploy the latest version of your configuration.
         destroy              Destroy resources in an existing workspace. This action cannot be reversed.
         inventory, iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
@@ -104,7 +104,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
         resource-query, rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
         state                Advanced state management
         version              Report version information about the IBM Cloud Schematics CLI.
-        workspace, ws        Create and manage workspaces. Workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
+        workspace, ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
         help, h              Show help
 
         Enter `ibmcloud schematics help [command]` for more information about a command
@@ -145,7 +145,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in.
 
-    For {{site.data.keyword.bpshort}} blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.3` version.
+    For {{site.data.keyword.bpshort}} Blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.3` version.
     {: note}
 
     For {{site.data.keyword.bpshort}} Agents, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.0` version.

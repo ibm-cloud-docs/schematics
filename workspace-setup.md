@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -15,13 +15,13 @@ subcollection: schematics
 # Setting up workspaces
 {: #workspace-setup}
 
-With {{site.data.keyword.bplong}} workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
+With {{site.data.keyword.bplong}} Workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
 If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested Git repository structure.  
 {: note}
 
-## Creating Workspaces and importing your Terraform template
+## Creating workspaces and importing your Terraform template
 {: #create-workspace}
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -36,7 +36,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and Actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
 ### Creating the workspace from the console
@@ -65,8 +65,8 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
         - **Tags** as `my-tags`. Optional: Enter tags for your workspace. You can use the tags later to find your workspace faster.
-        - **Resource group** as `default` or other resource group for this Workspace. 
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace. Decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
+        - **Resource group** as `default` or other resource group for this workspace. 
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. Decide where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} jobs run and your workspace data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. If you select a geography, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. Note that the console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
         - Optional: Enter a descriptive name for your workspace.
         - Click `Next`.
     - Click `Create`. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
@@ -202,7 +202,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
     {: tip}
 
-6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
+6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
 
     | Type | Example |
     | --- | -- |
@@ -226,7 +226,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 
 refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-## Freezing and unfreezing Workspaces 
+## Freezing and unfreezing workspaces 
 {: #lock-workspace}
 
 As the {{site.data.keyword.cloud_notm}} account or an {{site.data.keyword.bplong_notm}} user who is assigned the **Manager** IAM service access role for {{site.data.keyword.bpshort}}, you can disable changes to a workspace (freeze) so that you cannot create a Terraform execution plan or run your infrastructure code to provision or modify your {{site.data.keyword.cloud_notm}} resources. 
@@ -273,7 +273,7 @@ You can use the {{site.data.keyword.bplong_notm}} to delete your workspace. Whil
 
 You can plan and design your workspace by following queries.
 - How to map workspace resource with the Git repository structure?
-- How many number of Workspaces that you need?
+- How many number of workspaces that you need?
 - How to reuse the configuration files across environments and workspaces?
 - How to control access and manage your workspaces?
 
@@ -282,7 +282,7 @@ You can plan and design your workspace by following queries.
 {: help}
 {: support}
 
-Plan out the organizational structure of your workspace to match the microservice and permission structure of your organization. These Workspaces uses Terraform templates from private or public Git repositories such as `GitHub`, `GitLab`, `Bitbucket`, and Azure DevOps. The table provides the format of the repositories source.
+Plan out the organizational structure of your workspace to match the microservice and permission structure of your organization. These workspaces uses Terraform templates from private or public Git repositories such as `GitHub`, `GitLab`, `Bitbucket`, and Azure DevOps. The table provides the format of the repositories source.
 {: shortdesc} 
 
 |Git repositories| URL|
@@ -293,15 +293,15 @@ Plan out the organizational structure of your workspace to match the microservic
 |`Azure DevOps`|`https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`  \n `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`|
 {: caption="Git repositories" caption-side="bottom"}
 
-### How many Workspaces do I need?
+### How many workspaces do I need?
 {: #plan-number-of-workspaces}
 
-To find out how many Workspaces you need in {{site.data.keyword.bplong_notm}}, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
+To find out how many workspaces you need in {{site.data.keyword.bplong_notm}}, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
 {: shortdesc}
 
-As a rule of thumb, consider creating separate Workspaces for each of your microservices and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separateWorkspace for each microservice component and development, staging, and production environment. With separate Workspaces for each microservice component and environment, you can develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices.
+As a rule of thumb, consider creating separate workspaces for each of your microservices and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separateworkspace for each microservice component and development, staging, and production environment. With separate workspaces for each microservice component and environment, you can develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices.
 
-Review the following image to see the number of Workspaces in {{site.data.keyword.bplong_notm}} for an app that consists of three microservices.
+Review the following image to see the number of workspaces in {{site.data.keyword.bplong_notm}} for an app that consists of three microservices.
 
 ![Workspace structure for {{site.data.keyword.bplong_notm}}](images/workspace-structure.png){: caption="Figure 1. workspace structure for {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
@@ -366,7 +366,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 3. Select the **Settings** tab. 
 4. In the **Summary** section, click **Enable continuous delivery**. 
 5. Configure your toolchain. 
-    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
+    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} Workspace.
     2. Select the type of source repository where your Terraform configuration files are stored. For Example GitHub. 
     3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are pre-populated based on your workspace configuration.
     4. Optional: Choose if you want to enable Git issues and code change tracking for your toolchain. 

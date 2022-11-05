@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-05"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Update a blueprint configuration
@@ -82,7 +82,7 @@ Record the blueprint ID that needs to be updated. To list the blueprint IDs, run
 {: #update-blueprint-cli}
 {: cli}
 
-Run the [`ibmcloud schematics blueprint config update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the blueprint configuration with the changes. It updates the blueprint and Workspaces with the updated input values.
+Run the [`ibmcloud schematics blueprint config update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the blueprint configuration with the changes. It updates the blueprint and workspaces with the updated input values.
 {: shortdesc} 
 
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
@@ -112,7 +112,7 @@ ibmcloud schematics blueprint config update --id Blueprint_Basic.eaB.5cd9 --inpu
 ### Verifying blueprint config update
 {: #verify-update}
 
-Verify that the blueprint config is updated successfully. When you update the config from the CLI, the command displays the details of the linked Workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializes the Workspaces. The command returns on completion.
+Verify that the blueprint config is updated successfully. When you update the config from the CLI, the command displays the details of the linked workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializes the workspaces. The command returns on completion.
 
 ```text
 Update blueprint  blueprint

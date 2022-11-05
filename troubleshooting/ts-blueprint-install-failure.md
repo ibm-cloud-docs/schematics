@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-05"
 
 keywords: blueprint run apply failure, terraform error, terraform fails, install fails,
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Blueprint run apply fails 
@@ -73,10 +73,10 @@ Attention! Job ID: eu-gb.JOB.Blueprint-Basic-Example.0cebdb53 FULFILMENT_FAILED
 ```
 {: screen}
 
-Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a blueprint run apply failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} workspace or stand-alone Terraform usage. 
+Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a blueprint run apply failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or stand-alone Terraform usage. 
 {: tsResolve} 
 
-The blueprint run apply command indicates which module fails. Then, prompt to show a summary of the log for the failed Workspace.  
+The blueprint run apply command indicates which module fails. Then, prompt to show a summary of the log for the failed workspace.  
 
 ```text
 Errors:

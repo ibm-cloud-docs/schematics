@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-05"
 
-keywords: schematics agents, agents, set up an agents
+keywords: schematics agents, agents, set up an agent
 
 subcollection: schematics
 
@@ -38,7 +38,7 @@ Before you begin, complete the following prerequisites.
 
 - You must have an [{{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription](https://cloud.ibm.com/registration){: external} account to proceed. For more information about managing your {{site.data.keyword.cloud_notm}}, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started).
 - Check whether you have the permissions to [provision VPC](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls), [{{site.data.keyword.containerlong_notm}} cluster](/docs/containers?topic=containers-access_reference#rbac_ref), and [logging service](/docs/log-analysis?topic=log-analysis-iam_manage_events) in a predefined resource group.
-- Check whether you have the [permissions](/docs/schematics?topic=schematics-access#workspace-permissions) to create a Schematics Workspaces.
+- Check whether you have the [permissions](/docs/schematics?topic=schematics-access#workspace-permissions) to create a workspace.
 - Create an IAM trusted ID. For more information, see [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile).
 
 ## Provision the Agent infrastructure through UI
@@ -53,7 +53,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
 - [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam)
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
-2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure Workspace.
+2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
     - In **Specify Template** section:
         - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure`.
         - **Personal access token** - `<leave it blank>`.
@@ -62,13 +62,13 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
     - In **Workspace details** section:
         - **Workspace name** as `schematics-agent-infra_workspace`.
         - **Tags** as `agents-infra`. 
-        - **Resource group** as `default` or other resource group for this Workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group.
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace. 
+        - **Resource group** as `default` or other resource group for this workspace. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group.
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. 
            If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
            {: note}
 
         - Click `Next`.
-        - Check the information entered are correct to create a Workspace.
+        - Check the information entered are correct to create a workspace.
     - Click `Create`.
 
 3. On successful creation of the `schematics-agent-infrastructure` Workspace, review and edit the following `Agent infrastructure` input variables in the workspace **Settings** page.
@@ -122,13 +122,13 @@ For Beta, the Agent service must be deployed in a newly provisioned Agent infras
     - In **Workspace details** section:
         - **Workspace name** as `schematics-agent-service`.
         - **Tags** as `agents-service`.
-        - **Resource group** as `default` or other resource group for this Workspace. 
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this Workspace.
+        - **Resource group** as `default` or other resource group for this workspace. 
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace.
             If the location used for Agent infrastructure and Agent service does not match, then the logs are not sent to LogDNA.
            {: note}
 
         - Click `Next`.
-        - Check the information entered are correct to create a Workspace.
+        - Check the information entered are correct to create a workspace.
     - Click `Create`.
 
 3. On successful creation of `schematics-agent-service` workspace, review, and edit the following Agent service input variables in the workspace **Settings** page.
@@ -186,13 +186,13 @@ Here are the list of commands used to provision the Agent infrastructure.
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud-Schematics Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
 - Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to upload the tar file.
    ```sh
-   ibmcloud schematics workspace upload  --id <provide yourWorkspace ID> --file </provide-path-where-tar-fileresides>/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
+   ibmcloud schematics workspace upload  --id <provide yourworkspace ID> --file </provide-path-where-tar-fileresides>/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
    ```
    {: pre}
 
 - Run [apply command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) to provision the Agent infrastructure.
    ```sh
-   ibmcloud schematics apply --id <Provide yourWorkspace ID>
+   ibmcloud schematics apply --id <Provide yourworkspace ID>
    ```
    {: pre}
 
@@ -207,7 +207,7 @@ Here are the list of commands used to provision the Agent infrastructure.
    {: pre} 
 
 - Optional: View the **Jobs** logs and **Resources** page and observe the workspace status as `ACTIVE` from [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external}.
-- If case of job failure, rectify the issue in the **Settings** page of the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external} and run `ibmcloud schematics refresh --id  <Provide yourWorkspace ID>` command.
+- If case of job failure, rectify the issue in the **Settings** page of the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external} and run `ibmcloud schematics refresh --id  <Provide yourworkspace ID>` command.
 - View the **Jobs** logs and **Resources** page to observe the workspace status as `ACTIVE`.
 
     Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, run apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
@@ -252,7 +252,7 @@ Here are the list of commands used to create the Agent service.
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud {{site.data.keyword.bpshort}} Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
 - Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) to upload the tar file.
    ```sh
-   ibmcloud schematics workspace upload  --id <provide yourWorkspace ID> --file </provide-path-where-tar-fileresides>/schematics-agents/tarfiles/agent-service-templates.tar --template <provide your template_id>
+   ibmcloud schematics workspace upload  --id <provide yourworkspace ID> --file </provide-path-where-tar-fileresides>/schematics-agents/tarfiles/agent-service-templates.tar --template <provide your template_id>
    ```
    {: pre} 
 

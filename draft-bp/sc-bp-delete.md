@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-20"
+lastupdated: "2022-11-05"
 
 keywords: schematics blueprints, delete blueprint, managed environments
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Deleting blueprints
@@ -29,11 +29,11 @@ The first step destroys all the deployed cloud resources, leaving the blueprint 
 
 1. In a future release blueprints will provide the option to preview the resources that will be deleted. 
 2. The user initiates a destroy of the cloud resources that belong to the blueprint environment. The `blueprint run destroy` operation iterates through all the blueprint modules, destroying resources in reverse dependency order to ensure that all cloud resources are cleanly removed. On resource destroy, all the modules return to an `Inactive` state to indicate that no cloud resources remain. For more information, see [Destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint). When the resources get destroyed, billing gets terminated.  
-    - Optional: A fresh instance of the environment can be deployed from the saved {{site.data.keyword.bplong}} blueprint configuration by running the [blueprint run apply](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-apply) operation to re-create the environment and cloud resources. 
+    - Optional: A fresh instance of the environment can be deployed from the saved {{site.data.keyword.bplong}} Blueprint configuration by running the [blueprint run apply](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-apply) operation to re-create the environment and cloud resources. 
 3. For each module, {{site.data.keyword.bpshort}} runs a Terraform Destroy to delete all the cloud resources created by the module.  
 4. The blueprint modules and blueprint configuration are deleted from {{site.data.keyword.bpshort}} using the delete operation. It is only enabled if all the resources are already destroyed and the modules are in an `Inactive` state. For more information, see [blueprint config delete](/docs/schematics?topic=schematics-schematics-blueprint-delete). 
 
-The {{site.data.keyword.bpshort}} blueprint environment and cloud resources are now deleted. 
+The blueprint environment and cloud resources are now deleted. 
 
 ## Next steps
 {: #delete-nextsteps}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 
@@ -242,7 +242,7 @@ The color coding indicates whether the job was successful or failed.
 
 The detailed view of the blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
 
-Blueprint operations are performed by child `module` jobs operating against each module (Workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} workspace jobs. Module (Workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
+Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
 4. Click on the name of a child job to review the job log.  
     - Optional: Click **Show more** to view the full job log. 
 

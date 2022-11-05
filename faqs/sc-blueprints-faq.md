@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -14,13 +14,13 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Blueprints
 {: #blueprints-faq}
 
-Answers to common questions about using {{site.data.keyword.bpshort}} blueprints are classified under the following sections.
+Answers to common questions about working with blueprints are classified under the following sections.
 {: shortdesc}
 
 ## Why do blueprint operations require a `blueprint ID`?
@@ -28,14 +28,14 @@ Answers to common questions about using {{site.data.keyword.bpshort}} blueprints
 {: faq}
 {: support}
 
-In {{site.data.keyword.bpshort}} blueprints, the displayed name is not a unique identifier. Only the blueprint ID that is generated at create time is unique. This unique blueprint ID is needed by the command line to identify the specific environment to be worked on. Blueprint IDs are unique globally and generated from the user supplied name at create time.  
+In {{site.data.keyword.bpshort}} Blueprints, the displayed name is not a unique identifier. Only the blueprint ID that is generated at create time is unique. This unique blueprint ID is needed by the command line to identify the specific environment to be worked on. Blueprint IDs are unique globally and generated from the user supplied name at create time.  
 
 ## How is resource provisioning performed?
 {: #faqs-bp-resource}
 {: faq}
 {: support}
 
-Cloud resource deployment with {{site.data.keyword.bpshort}} blueprints is a two-step process, user driven process. Refer to [deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of the deployment and resource provisioning process.  
+Cloud resource deployment with {{site.data.keyword.bpshort}} Blueprints is a two-step process, user driven process. Refer to [deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of the deployment and resource provisioning process.  
 
 ## How do you view the blueprint provisioned resources in your cloud account?
 {: #faqs-bp-results}
@@ -69,19 +69,11 @@ ibmcloud schematics blueprint config create  ......................   --inputs s
 
 The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) as used in the [tutorial](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) demonstrates the principles of deploying cloud resources by using two modules, which reference and create cloud resources. If the user has insufficient IAM access permissions to these resources, the Terraform Apply operations can fail, resulting in an Apply failure.   
 
-This example assumes, the user has access to a Pay-Go or Subscription account and has IAM access permissions to create resources in the Default resource group and also [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Additionally the user must also have permissions to create {{site.data.keyword.bpshort}} [Workspaces and Blueprints](/docs/schematics?topic=schematics-access). 
+This example assumes, the user has IAM access permissions to create resources in the default resource group and also [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Additionally the user must also have permissions to create {{site.data.keyword.bpshort}} [workspaces and blueprints](/docs/schematics?topic=schematics-access). 
 
-The example uses the inputs `provisioning_rg=false` and `resource_group_name=Default` to reference the default resource group and provide this ID for the Cloud Object Storage instance creation. 
 
-If alternative input parameters are used to create a new resource group with a user-defined name or `Trial/Lite` accounts are used, the following errors can be observed. 
-
-- Trial accounts can have a single resource group. More resource groups cannot be created unless the account is upgraded to a paid account. In a trial account, a single `Default` resource group exists, and more resource groups are not allowed.
-- In a shared paid account, the example can fail due to duplicate resource groups. If the sample blueprint template is deployed multiple times in the same account with the same documented input parameters from the readme file, the installation step fails. It occurs as the second and subsequent blueprints use the same resource group name as input. 
-- Delete and re-create the blueprint by using a different `resource_group_name`.
-    - In a shared user account, the resource group creation can fail due to insufficient IAM permissions to create resource groups. To create resource groups, a user needs [Account Management, editor or administrator permissions](/docs/account?topic=account-account-services#account-management-actions-roles). 
-- Creating the Cloud Object Storage instance, the following errors can occur in `Lite` or `Trial` accounts:
-    - This plan requires a paid account. You can upgrade by adding a credit card to your account or you can select the `free plan` if it's available.
-    - You can have one instance of a `Lite plan` per service. To create a new instance, either delete your existing `Lite plan` instance or select a paid plan.
+- Creating the Cloud Object Storage instance:
+    - You can have one instance of a `Lite plan` per service. To create a new instance, either delete your existing `Lite plan` COS instance or select a paid plan. 
 - Creating the Cloud Object Storage instance, the following error can occur if the user does not have the correct IAM permissions: 
     - `AccessDenied: Access Denied 	status code: 403`.
 
@@ -91,7 +83,7 @@ If alternative input parameters are used to create a new resource group with a u
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} blueprint utilizes IaC automation code modules that are written in Terraform HCL. The time taken to create resources is dependent on the resource type. Terraform automation modules are written not to return on initial resource creation, but to return only when the resource is fully initialized and available to be used by subsequent automation modules. This is different compared to the experience of creating resources through the UI. In the UI control is returned immediately and initialization continues in the background. With automation modules the perception is that they can take significantly longer to run. 
+{{site.data.keyword.bpshort}} Blueprint utilizes IaC automation code modules that are written in Terraform HCL. The time taken to create resources is dependent on the resource type. Terraform automation modules are written not to return on initial resource creation, but to return only when the resource is fully initialized and available to be used by subsequent automation modules. This is different compared to the experience of creating resources through the UI. In the UI control is returned immediately and initialization continues in the background. With automation modules the perception is that they can take significantly longer to run. 
 
 ## How do you configure the version of Terraform to used?
 {: #faqs-bp-tf-version}
@@ -111,7 +103,7 @@ During Apply operations Terraform programmatically determines the Terraform vers
 
 There two ways to create a blueprint configuration using the CLI.
 
-For {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3`.
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3`.
 {: important}
 
 1. Using a local file in JSON format.
@@ -141,14 +133,14 @@ For {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}}
 
 The CLI uses geo specific API endpoints which direct job requests to the first available region within a geo. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config's targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
 
-This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}} workspace creation page, you select `North America` region from the list.
+This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.
 
 ## Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?
 {: #faqs-bp-schematics-instance}
 {: faq}
 {: support}
 
-You cannot delete the {{site.data.keyword.bpshort}} service instance. Instead you can `destroy` the cloud resources that are created by using {{site.data.keyword.bpshort}} Terraform and `delete` the {{site.data.keyword.bpshort}} objects such as Workspace, or an Action.
+You cannot delete the {{site.data.keyword.bpshort}} service instance. Instead you can `destroy` the cloud resources that are created by using {{site.data.keyword.bpshort}} Terraform and `delete` the {{site.data.keyword.bpshort}} objects such as workspace, or an action.
 {: shortdesc}
 
 {{site.data.keyword.bpshort}} service is provisioned for the following reasons.

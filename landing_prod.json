@@ -1,10 +1,10 @@
 {
   "title": "IBM Cloud Schematics docs",
   "lastupdated": "2022-07-04",
-  "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
+  "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics Actions. Learn more about how Schematics works and the benefits of using the service. ",
   "section_devtools": {
-    "api": "/apidocs/schematics", 
-    "cli": "/docs/schematics?topic=schematics-schematics-cli-reference", 
+    "api": "/apidocs/schematics",
+    "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/schematics_action"
   },
   "section_learn": {
@@ -34,14 +34,14 @@
       "href": "/docs/schematics?topic=schematics-learn-about-schematics"
     },
     {
-      "title": "Browse Terrafom templates",
+      "title": "Browse Terraform templates",
       "description": "Explore the sample Terraform templates, onboard them to your private catalogs, and try them using Schematics.",
       "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template"
     },
     {
       "title": "Set up the Schematics CLI",
-      "description": "Install the Schematics CLI plug-in to automate Schematics actions in your IBM Cloud account.",
+      "description": "Install the Schematics CLI plug-in to run Schematics Actions in your IBM Cloud account.",
       "href": "/docs/schematics?topic=schematics-setup-cli"
-    } 
+    }
   ]
 }

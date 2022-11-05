@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-10"
+lastupdated: "2022-11-05"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -36,7 +36,7 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
     - **Resource Group** - Select your resource group and specific resources where you need to connect a Agent. Check you have the right permissions for the resource group.
 6. Click **Connect**.
     - The Agent status will change to **Ready to bind** status.
-       The **Ready to bind** status signifies that the Agent is ready for the next step to bind the Workspace. Wait 15-30 minutes to view the Agent status.
+       The **Ready to bind** status signifies that the Agent is ready for the next step to bind the workspace. Wait 15-30 minutes to view the Agent status.
        {: note}
 
 7. Optional: From your Agent instance you can click the `...` dots to perform the following operations.
@@ -150,5 +150,5 @@ Here are the list of CURL commands use to register and unregister the Agent. For
 {: #connect-nextsteps}
 
 You have completed the Agent connection to your {{site.data.keyword.bpshort}} service instance.
-- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-using-agent) to bind the Agent to your Workspace.
+- Now, you need to [Use an Agent](/docs/schematics?topic=schematics-using-agent) to bind the Agent to your workspace.
 - For any challenges in Agents installation or configuration, see [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent&interface=cli) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=cli).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-11"
+lastupdated: "2022-11-05"
 
 keywords: blueprint config create failure, blueprint download error, create fails,
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Blueprint config create fails 
@@ -61,7 +61,7 @@ Sample error
 FAILED
 Could not create the blueprint. Please verify that your request is correct. If the problem persists, contact IBM Cloud support.
 
-Invalid Blueprint templates. Error - Unable to find basic-blueprint1.yaml in the target repo
+Invalid blueprint templates. Error - Unable to find basic-blueprint1.yaml in the target repo
 ```
 {: screen}
 
@@ -124,7 +124,7 @@ Rerun the blueprint config create operation with all the needed inputs.
 When you create a configuration in {{site.data.keyword.bpshort}}, the create fails before the config is created with an error that the config contains invalid definitions.  
 {: tsSymptoms}
 
-The {{site.data.keyword.bpshort}} blueprint config create validates the syntax of the YAML blueprint template file. If the syntax is specified incorrectly the create fails. 
+The blueprint config create validates the syntax of the YAML blueprint template file. If the syntax is specified incorrectly the create fails. 
 {: tsCauses}
 
 Sample error 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -26,7 +26,7 @@ completion-time: 60m
 ## Description
 {: #workspace-desc}
 
-In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full}} in the {{site.data.keyword.bpshort}} workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you use `ibm_cos_bucket` Terraform template example.
+In this tutorial, you can learn to use your credentials and an API key to use a Terraform template of {{site.data.keyword.cos_full}} in the {{site.data.keyword.bpshort}} Workspace. Then, you also learn to automate the continuous deployment by using DevOps delivery pipeline. As part of the tutorial, you use `ibm_cos_bucket` Terraform template example.
 
 The `ibm_cos_bucket` example creates an instance of {{site.data.keyword.cos_full_notm}}, {{site.data.keyword.cloud}} Activity Tracker, and {{site.data.keyword.monitoringfull}}. 
 {: shortdesc}
@@ -39,7 +39,7 @@ Costs are incurred based on your resource usage. For more information about the 
 
 In this tutorial, you can:
 - Explore an IBM provided Terraform template to create an {{site.data.keyword.cloud_notm}} Object Storage instance that binds with the {{site.data.keyword.IBM_notm}} resource instance, and {{site.data.keyword.IBM_notm}} resource group.
-- Learn how to create an {{site.data.keyword.bplong_notm}} workspace.
+- Learn how to create an {{site.data.keyword.bplong_notm}} Workspace.
 - Learn to automate continuous deployment of a resource by using {{site.data.keyword.bplong_notm}} and DevOps toolchain.
 - Review the {{site.data.keyword.cloud_notm}} resources that you create.
 
@@ -72,7 +72,7 @@ Complete the following prerequisites for the tutorial:
 
 - If you do not have {{site.data.keyword.cloud_notm}} account, create an {{site.data.keyword.cloud_notm}} account, and pay as you use. For more information about managing {{site.data.keyword.cloud_notm}} account, see [Managing {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
 - Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and the [{{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin). For more information about command-line setup, see [{{site.data.keyword.bpshort}} command-line setup](/docs/schematics?topic=schematics-setup-cli).
-- Ensure you are assigned the needed permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} workspace. see [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
+- Ensure you are assigned the needed permissions in {{site.data.keyword.iamlong}} to create and work with {{site.data.keyword.bplong_notm}} Workspace. see [{{site.data.keyword.bpshort}} access](/docs/schematics?topic=schematics-access#access-roles) and to create an {{site.data.keyword.cos_full_notm}} service instance. 
 - Follow the instructions to ensure you are assigned the needed permissions in {{site.data.keyword.iamshort}} to create resources. For more information about create {{site.data.keyword.cos_full_notm}}, see [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-provision).
 
 ## Accessing the {{site.data.keyword.cloud_notm}} and GitHub
@@ -87,10 +87,10 @@ Complete these steps to access the {{site.data.keyword.cloud_notm}} and the Terr
 3. Open the Terraform template to [create an {{site.data.keyword.cos_full_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket){: external}.
 4. From the right side of the GitHub page, click `Fork` icon to create your own fork of the shared repository.
     
-    You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your {{site.data.keyword.bpshort}} workspace.
+    You need to copy the URL of the Terraform template of the GitHub or the GitLab Repository URL to create your {{site.data.keyword.bpshort}} Workspace.
     {: note}
 
-## Creating your {{site.data.keyword.bplong_notm}} workspace
+## Creating your {{site.data.keyword.bplong_notm}} Workspace
 {: #create-wkspace}
 {: step}
 
@@ -108,7 +108,7 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
 3. For the private repository, provide your **GitHub personal access token**. See the steps to fetch the [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 4. Select `terraform_v01.0` from the **Terraform version** drop-down.
 5. Click **Next**.
-6. In the **Workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
+6. In the **workspace details** section, enter your **Workspace name**, **Tags**, **Resource group**, **Location**, and **Description**.
 
    Ensure you provide the right resource group, and the location details where you want to create the workspace.
     {: note}
@@ -134,7 +134,7 @@ Click `...` to configure the variables as described in the table to authenticate
 {: #continuous-deployment}
 {: step}
 
-The `Enable continuous delivery` option automates the different Terraform actions to the {{site.data.keyword.bpshort}} workspace. Complete these steps to observe the automation of the end to end {{site.data.keyword.bpshort}} Workspaces deployment.
+The `Enable continuous delivery` option automates the different Terraform actions to the {{site.data.keyword.bpshort}} Workspace. Complete these steps to observe the automation of the end to end {{site.data.keyword.bpshort}} Workspaces deployment.
 
 The GitHub Server type parameter expects the authorization. You need to provide GitHub credentials and confirm the authorization.
 {: note}
@@ -166,7 +166,7 @@ Observe the pipeline dashboard and view the status of your workspace execution.
 7. Observe that the `TEST` stage is passed successfully.
 8. Now, you can edit your template in the configured repository and observe an automatic pull of your workspace by the continuous delivery toolchain.
 
-## Analyzing the {{site.data.keyword.bpshort}} workspace
+## Analyzing the {{site.data.keyword.bpshort}} Workspace
 {: #analyze-workspace-process}
 {: step}
 

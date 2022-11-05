@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2022
-lastupdated: "2022-09-23"
+lastupdated: "2022-11-05"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -39,6 +39,6 @@ Account owner can edit the location in {{site.data.keyword.cloud}} catalog setti
 **`Example`**
 
 - When the account owner restricts `us-east` location for the user in the catalog settings. 
-- If that user creates Workspaces and provisions the resources in `North America` region, where North America comprises of `us-east` and `us-south`. 
+- If that user creates workspaces and provisions the resources in `North America` region, where North America comprises of `us-east` and `us-south`. 
 - In this case, the user can view his resources are provisioned only in `us-south` but not in `us-east` region. 
 - The reason is that, the location visibility is restricted to the user by the account owner.

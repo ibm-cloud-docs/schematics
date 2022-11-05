@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 subcollection: schematics
 
@@ -20,7 +20,7 @@ Terraform on {{site.data.keyword.cloud}} enables predictable and consistent prov
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command-line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides predefined Terraform templates that you can install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
 
-Before you begin, make sure that you have the [required access](/docs/schematics?topic=schematics-access) to create and work with {{site.data.keyword.bplong_notm}} workspace.
+Before you begin, make sure that you have the [required access](/docs/schematics?topic=schematics-access) to create and work with {{site.data.keyword.bplong_notm}} Workspace.
 
 ## Example: Creating the {{site.data.keyword.bpshort}} Workspaces by using Terraform 
 {: #workspace-resource}
@@ -115,7 +115,7 @@ Complete the following steps to create the {{site.data.keyword.bpshort}} Workspa
     | `tags` | A list of tags that are associated with the workspace. |
     | `template_env_settings` | A list of environment variables that you want to apply during the execution of a Terraform action. |
     | `template_git_url` | The Git repository URL, where you have the configuration details to provision the resource. |
-    | `template_type` |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} workspace. |
+    | `template_type` |  Specify the Terraform version that you want to apply in {{site.data.keyword.bpshort}} Workspace. |
     {: caption="Supported parameters for creating {{site.data.keyword.bpshort}} Workspaces with Terraform." caption-side="top"}
 
 3. Initialize the Terraform CLI. 

@@ -60,7 +60,7 @@ toc:
           - setup-cli.md
           - setup-api.md
       - topicgroup:
-          label: Managing blueprints
+          label: Managing Blueprints
           topics:
           - sc-blueprint-template.md
           - sc-blueprint-terraform.md

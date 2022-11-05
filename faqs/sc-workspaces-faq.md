@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
-keywords: schematics faqs, infrastructure as code, iac, schematics Workspaces faq, Workspaces faq
+keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
 subcollection: schematics
 
@@ -87,7 +87,7 @@ You can follow the topics to upgrade from one Terraform version to another versi
 {: faq}
 {: support}
 
-The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [Workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} Workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
 
 ## Why do the jobs delay in a queue when plan is generated?
 {: #job-queue-faq}
@@ -106,7 +106,7 @@ Updating the {{site.data.keyword.bpshort}} Workspaces through command line need 
 You need to run `ibmcloud schematics workspace update --id <workspace-id>  --file <updatefile.json>`  command. The sample `updatefile.json` contains the name field with the value.
 ```json
 {
-    "name":"testWorkspace"
+    "name":"testworkspace"
 }
 ```
 
@@ -115,7 +115,7 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisions and Ansible Actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisions and Ansible actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
 ## How can I create workspace from command-line by using Git repositories and personal access token with full permission?
 {: #create-workspace-cli-tokens}
@@ -131,7 +131,7 @@ You need to check your [authentication](/docs/schematics?topic=schematics-setup-
 {: faq}
 {: support}
 
-You see authorization issues when the roles and permission access is insufficient while updating Workspace. For more information, see [Managing user access](/docs/schematics?topic=schematics-access).
+You see authorization issues when the roles and permission access is insufficient while updating workspace. For more information, see [Managing user access](/docs/schematics?topic=schematics-access).
 
 ## How can I access the {{site.data.keyword.bpshort}} services for test ID?
 {: #global-catalog-faq}
@@ -172,7 +172,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
 
 ```text
 2021/11/08 12:34:06 -----  New Action  -----
- 2021/11/08 12:34:06 Request: RepoURL=https://github.ibm.com/wh-hp-insights/hi-cloud-automation, WorkspaceSource=Schematics, Branch=2021.10, Release=, Folder=terraform-v2/workspace-hi-qa-automation-app
+ 2021/11/08 12:34:06 Request: RepoURL=https://github.ibm.com/wh-hp-insights/hi-cloud-automation, workspaceSource=Schematics, Branch=2021.10, Release=, Folder=terraform-v2/workspace-hi-qa-automation-app
  2021/11/08 12:34:06 Related Activity: action=UPDATE_WORKSPACE,processedBy=sandbox-6bcf8bffcd-rxbww_2478
  2021/11/08 12:34:06 Getting download command
  2021/11/08 12:34:11 Fatal, could not download repo, Failed to clone git repository, couldn't find remote ref "refs/heads/2021.10" (most likely invalid branch name is passed)
@@ -348,9 +348,9 @@ Error:
 Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
 ```
 
-You might have insufficient access for the Workspaces in specified location to fetch the instance. Do check the permission that is provided for your account and the locations where your instance need to be created. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+You might have insufficient access for the workspaces in specified location to fetch the instance. Do check the permission that is provided for your account and the locations where your instance need to be created. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
-## How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?
+## How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} Workspace?
 {: #gitlab-workspace-faq}
 {: faq}
 {: support}
@@ -518,7 +518,7 @@ Error
 
 The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environment. Therefore, you need to use [regional endpoints](/apidocs/schematics/schematics#api-endpoints) to point your location to a `eu-de` region. 
 
-## What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} workspace resources?
+## What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?
 {: #clicmdresource-job-faq}
 {: faq}
 {: support}
@@ -526,7 +526,7 @@ The {{site.data.keyword.bpshort}} global endpoint is defaulted to `us` environme
 Use the [`state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list) CLI command to view the same resources as in {{site.data.keyword.bplong_notm}} UI.
 
 
-## How do I fix the `CreateWorkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?
+## How do I fix the `CreateworkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?
 {: #locationres-job-faq}
 {: faq}
 {: support}

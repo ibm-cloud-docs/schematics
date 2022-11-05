@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -271,7 +271,7 @@ Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sur
 11. From the navigation, select **Resources** and verify that your resources are removed. 
 12. Optional: After you removed all your resources, remove your workspace. 
     1. Open the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external} and find the workspace that you want to remove. 
-    2. From the actions menu, click **Delete**. 
+    2. From the Actions menu, click **Delete**. 
     3. Select **Delete workspace**. 
     4. Confirm the deletion of your workspace by clicking **Delete**. 
 

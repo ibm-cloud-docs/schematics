@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -38,7 +38,7 @@ The location that you choose for your {{site.data.keyword.bpshort}} Workspaces d
 |Europe|{{site.data.keyword.bpshort}} Actions run in either the `eu-de` or `eu-gb` location.|
 |Frankfurt|{{site.data.keyword.bpshort}} Actions run in the `eu-de` location.|
 |London|{{site.data.keyword.bpshort}} Actions run in the `eu-gb` location.|
-{: caption="Regions where an Action is?" caption-side="bottom"}
+{: caption="Regions where an action is?" caption-side="bottom"}
 
 ## Where is my data stored?
 {: #where-is-data-stored}

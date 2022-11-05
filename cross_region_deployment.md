@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions
 {: #multi-region-deployment}
 
-{{site.data.keyword.bplong}} enables you to deploy resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you save and execute your {{site.data.keyword.bpshort}} `Workspaces` and `Actions` is independent of the region where your {{site.data.keyword.cloud_notm}} resources are deployed or configured.
+{{site.data.keyword.bplong}} enables you to deploy resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you save and execute your {{site.data.keyword.bpshort}} `workspaces` and `actions` is independent of the region where your {{site.data.keyword.cloud_notm}} resources are deployed or configured.
 
 {{site.data.keyword.bplong_notm}} executes your jobs from your selected {{site.data.keyword.bpshort}} region and remotely access the services to provision resources in the target regions determined by your Terraform templates. It is unaffected by network latency between regions. For example, If you create a workspace in `us-south`, you can use this workspace to provision services in any supported {{site.data.keyword.cloud_notm}} region, such as `us-east` or `eu-gb`. The location of your workspace determines where your workspace data is stored and where your workspace requests are run. For more information, see [Where is the information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 

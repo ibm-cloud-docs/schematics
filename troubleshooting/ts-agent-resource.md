@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics resource group not found, schematics resource crn error, schematics resource crn not found
 
@@ -38,7 +38,7 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{
 You do not have the needed permissions to use the resource group in {{site.data.keyword.iamlong}}, and provide the value for the `schematics_resource_crn` variable.
 {: tsCauses}
 
-Check whether you have access for the `Default` or `job-runner` resource group for creating {{site.data.keyword.bpshort}} workspace for the {{site.data.keyword.bpshort}} Agent infrastructure setup. Then, you need to provide the `schematics_resource_crn` value to create a VPE for {{site.data.keyword.bpshort}} service by using Terraform. When the VPE is created, the Agent running in your cluster, communicates to the {{site.data.keyword.bpshort}} service over {{site.data.keyword.cloud_notm}} private endpoint. To fetch the {{site.data.keyword.cloud_notm}} service instance value, run `ibmcloud resource service-instance schematics` command.
+Check whether you have access for the `Default` or `job-runner` resource group for creating {{site.data.keyword.bpshort}} Workspace for the {{site.data.keyword.bpshort}} Agent infrastructure setup. Then, you need to provide the `schematics_resource_crn` value to create a VPE for {{site.data.keyword.bpshort}} service by using Terraform. When the VPE is created, the Agent running in your cluster, communicates to the {{site.data.keyword.bpshort}} service over {{site.data.keyword.cloud_notm}} private endpoint. To fetch the {{site.data.keyword.cloud_notm}} service instance value, run `ibmcloud resource service-instance schematics` command.
 {: tsResolve}
 
 Example : To retrieve the service instance in all resource groups from your account.
