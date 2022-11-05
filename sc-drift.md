@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Detecting drift in {{site.data.keyword.bpshort}}
 {: #drift-note}
 
-{{site.data.keyword.bplong}} is the {{site.data.keyword.cloud_notm}} automation tool that enables users to deploy, manage, and manipulate infrastructure resources with Terraform based Workspaces by using known `declarative` Infrastructure as Code (IaC) concepts. However, when a Terraform config is deployed and resources that are created, it does not mean that the resources stay as declared by the config. Any change in the infrastructure state is called `drift`. It occurs when the configuration of your deployed infrastructure differs from the wanted state that is defined in your template configuration. 
+{{site.data.keyword.bplong}} is the {{site.data.keyword.cloud_notm}} automation tool that enables users to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces by using known `declarative` Infrastructure as Code (IaC) concepts. However, when a Terraform config is deployed and resources that are created, it does not mean that the resources stay as declared by the config. Any change in the infrastructure state is called `drift`. It occurs when the configuration of your deployed infrastructure differs from the wanted state that is defined in your template configuration. 
 
 Drift can occur for many reasons. The most frequent cause is changes that are applied manually outside of Terraform automation. The Terraform state file of your deployed workspace is no longer synchronized with your deployed infrastructure resources, and the workspace is said to be in drift.
 {: shortdesc}
@@ -38,13 +38,13 @@ Terraform cannot detect drift in resources and attributes that are not managed o
 ## Drift detection in {{site.data.keyword.cloud_notm}}
 {: #drift-in-ibm}
 
-Drift detection for your Terraform automation Workspaces is possible in {{site.data.keyword.bplong_notm}}. You can use following three methods to check the drift detection.
+Drift detection for your Terraform automation workspaces is possible in {{site.data.keyword.bplong_notm}}. You can use following three methods to check the drift detection.
 
 ## Drift detection through {{site.data.keyword.bpshort}} UI
 {: #drift-ui}
 {: ui}
 
-You can initiate drift detection for Workspaces from the {{site.data.keyword.bpshort}} Workspaces job page. It initiates a job to detect drift for the workspace and its deployed resources. During execution, the drift detection job is `in progress`, on completion it has a `failure` or `success`. To review the details of the drift job, you need to check the drift job log for the drift status.
+You can initiate drift detection for workspaces from the {{site.data.keyword.bpshort}} Workspaces job page. It initiates a job to detect drift for the workspace and its deployed resources. During execution, the drift detection job is `in progress`, on completion it has a `failure` or `success`. To review the details of the drift job, you need to check the drift job log for the drift status.
 
 ### Viewing detect drift through UI
 {: #drift-view-ui}
@@ -87,7 +87,7 @@ Use the following steps to view the drift job log.
 {: #drift-cli}
 {: cli}
 
-You can initiate detecting drift from the create Workspaces command. The drift detection initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. Instead, to know the details of the drift job, you need to check the drift job log for the drift status. Use the following commands to view the detect drift.
+You can initiate detecting drift from the create workspaces command. The drift detection initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. Instead, to know the details of the drift job, you need to check the drift job log for the drift status. Use the following commands to view the detect drift.
 {: shortdesc}
 
 ### Creating and viewing the detect drift through CLI
@@ -102,7 +102,7 @@ You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} 
 3. Run the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan).
 4. Fetch the [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 5. Run the [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply).
-6. Run the [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job) to create a job in {{site.data.keyword.bpshort}} workspace.
+6. Run the [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job) to create a job in {{site.data.keyword.bpshort}} Workspace.
 
     ```sh
     ibmcloud schematics job run --command-object workspace --command-object-id <workspace_id> --command-name drift
@@ -152,6 +152,6 @@ Review the CURL commands to create and view the drift through API.
 4. Run the [{{site.data.keyword.bpshort}} job plan](/apidocs/schematics/schematics#plan-workspace-command).
 5. Fetch the [`ibmcloud schematics job logs`](/apidocs/schematics/schematics#get-template-activity-log).
 6. Run the [`ibmcloud schematics apply`](/apidocs/schematics/schematics#apply-workspace-command).
-7. Run the [`ibmcloud schematics job run`](/apidocs/schematics/schematics#run-workspace-commands) to create a job in {{site.data.keyword.bpshort}} workspace.
+7. Run the [`ibmcloud schematics job run`](/apidocs/schematics/schematics#run-workspace-commands) to create a job in {{site.data.keyword.bpshort}} Workspace.
 8. Run the [`ibmcloud schematics workspace action`](/apidocs/schematics/schematics#create-job) to retrieve all activities of your workspace.
 9. Fetch the [`ibmcloud schematics job logs`](/apidocs/schematics/schematics#get-template-activity-log).

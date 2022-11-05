@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Glossary
 {: #glossary}
 
-This glossary provides terms and definitions for {{site.data.keyword.bpshort}} objects, such as `Action`, `Agent`, `Blueprint`, `Catalog`, `Inventory`, `Job`, `Template or Modules`, and `Workspace`.
+This glossary provides terms and definitions for {{site.data.keyword.bpshort}} objects, such as `action`, `Agent`, `Blueprint`, `Catalog`, `Inventory`, `Job`, `Template or Modules`, and `workspace`.
 {: shortdesc}
 
 The following cross-references are used in this glossary:
@@ -47,7 +47,7 @@ Method or service to bind {{site.data.keyword.bpshort}} Agents with {{site.data.
 A collection of Agent related microservices deployed on the Agent infrastructure. It is composed of the following microservices.
 - `Jobrunner` microservice
 - `Sandbox` microservice
-- `RuntimeWorkspace` Job
+- `Runtimeworkspace` Job
 {: shortdesc}
 
 ### Agent Infrastructure
@@ -62,9 +62,9 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 ## Blueprints
 {: #glossary-blueprint}
 
-{{site.data.keyword.bplong}} blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac){: external} (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A craftsman builts the house from well defined components using the blueprint for guidance. 
+{{site.data.keyword.bplong}} Blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac){: external} (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A craftsman builts the house from well defined components using the blueprint for guidance. 
 
-It builds on the {{site.data.keyword.bpshort}} workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution architectures. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).   
+It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution architectures. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).   
 {: shortdesc}
 
 ### Blueprint
@@ -150,7 +150,7 @@ A resource inventory defines a single {{site.data.keyword.cloud_notm}} resource 
 ## Jobs
 {: #glossary-job}
 
-A job maintains a record of the execution of tasks or operations for {{site.data.keyword.bpshort}} resources, `Workspaces`, `Actions`, `Blueprints`, and `Agents`.
+A job maintains a record of the execution of tasks or operations for {{site.data.keyword.bpshort}} `Workspaces`, `Actions`, `Blueprints`, `Agents` and resources.
 {: shortdesc}
 
 ## Templates or Modules

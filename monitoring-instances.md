@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -34,7 +34,7 @@ Complete these steps to view your services instances:
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com){: external} account by using your credentials.
 2. From the {{site.data.keyword.cloud_notm}} page, select `Navigation menu > Observability > Monitoring`.
-3. Click your instance to view the workspace and Action that you created. 
+3. Click your instance to view the workspace and action that you created. 
 
    For more information about how to create a service instance? see [Create service instance](#create-instance).
    {: note}
@@ -65,7 +65,7 @@ Complete these steps to create your services instance:
 9. Click `Configure platform metrics`, select the region and instance that you created to view the `Platform metrics` in the  `Region` column.
 10. Click `View Sysdig` icon to view your workspace and action that you created.
     
-    You can monitor the status of your Workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information about monitoring the status, see [Monitoring workspace](#launch-dashboard). To create a custom dashboard, see [Creating custom dashboard](#create-dashboard).
+    You can monitor the status of your workspaces state and action through the {{site.data.keyword.cloud_notm}} dashboards. For more information about monitoring the status, see [Monitoring workspace](#launch-dashboard). To create a custom dashboard, see [Creating custom dashboard](#create-dashboard).
     {: note}
 
 ## Creating custom dashboard
@@ -102,7 +102,7 @@ Complete these steps to create your custom dashboard:
 ### `ibm_schematics_workspace_count`
 {: #wkspace-count}
 
-The number of Workspaces state and actions count is stated in the table.
+The number of workspaces state and actions count is stated in the table.
 {: shortdesc}
 
 | Metadata | Description |
@@ -118,11 +118,11 @@ For the {{site.data.keyword.bpshort}} instance, following five different time se
 
 | Status | Query |
 | ------ | -------- |
-| Number of Workspaces created  | `Sum(ibm_schematics_workspace_count{})` |
-| Number of active Workspaces | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Active”}` |
-| Number of Workspaces in draft state |  `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Draft”}` |
-| Number of inactive Workspaces | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Inactive”}` |
-| Number of Workspaces deleted | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Template Error”}` |
+| Number of workspaces created  | `Sum(ibm_schematics_workspace_count{})` |
+| Number of active workspaces | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Active”}` |
+| Number of workspaces in draft state |  `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Draft”}` |
+| Number of inactive workspaces | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Inactive”}` |
+| Number of workspaces deleted | `ibm_schematics_workspace_count{ibm_schematics_workspace_status = ”Template Error”}` |
 {: caption="Workspace time series count" caption-side="bottom"}
 
 ### `ibm_schematics_workspace_actions_count`
@@ -158,7 +158,7 @@ You can create similar queries to fetch `apply`, `destroy`, and `plan` actions.
 ### `ibm_schematics_vulnerability_count`
 {: #wkspace-vulnerability-count}
 
-Average vulnerability count of the Workspaces is stated in the table.
+Average vulnerability count of the workspaces is stated in the table.
 {: shortdesc}
 
 | Metadata | Description |
@@ -174,5 +174,5 @@ For the {{site.data.keyword.bpshort}} instance, following time series counts and
 
 | Status | Query |
 | ------ | -------- |
-| Number of Workspaces currently managed  | `avg(avg(ibm_schematics_vulnerability_count))` |
-{: caption="Vulnerability count of {{site.data.keyword.bpshort}} workspace" caption-side="bottom"}
+| Number of workspaces currently managed  | `avg(avg(ibm_schematics_vulnerability_count))` |
+{: caption="Vulnerability count of {{site.data.keyword.bpshort}} Workspace" caption-side="bottom"}

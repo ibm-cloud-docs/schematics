@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-31"
+lastupdated: "2022-11-05"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Using Terraform modules with blueprint templates 
@@ -20,7 +20,7 @@ subcollection: schematics
 
 One of the use cases for blueprints is to compose infrastructure architectures directly from [Terraform modules](https://developer.hashicorp.com/terraform/language/modules#modules). 
 
- Blueprint templates can reuse existing Terraform modules from the [Terraform registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}, along with {{site.data.keyword.IBM_notm}} and user created modules from public and private libraries. Best practice implementations for {{site.data.keyword.IBM_notm}} Cloud are available as reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry. See the [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines) for creating user modules compliant with {{site.data.keyword.bpshort}} blueprints. 
+ Blueprint templates can reuse existing Terraform modules from the [Terraform registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}, along with {{site.data.keyword.IBM_notm}} and user created modules from public and private libraries. Best practice implementations for {{site.data.keyword.IBM_notm}} Cloud are available as reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry. See the [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines) for creating user modules compliant with {{site.data.keyword.bpshort}} Blueprints. 
  
  
  
@@ -41,7 +41,7 @@ A Terraform configuration consists of a root module as the main directory that c
 A root module can be used unchanged in a blueprint template, by referencing the module source repo and providing input values. It must contain an {{site.data.keyword.IBM_notm}} Cloud provider definition. 
 
 ## Child and reusable shared modules
-Sharing and reuse of child modules is at the heart of an effective IaC automation strategy and {{site.data.keyword.bpshort}} blueprints. 
+Sharing and reuse of child modules is at the heart of an effective IaC automation strategy and use of {{site.data.keyword.bpshort}} Blueprints. 
 
 Child module, is the term given to any module that is called by another module or root module. Child modules cannot be executed standalone and the naming distinguishes it from root modules which can be executed directly. Sharing and reuse builds on the Terraform support for loading child modules from shared public and private repositories and the Terraform registry. Remote loading enables the sharing of content by [publishing modules](https://developer.hashicorp.com/terraform/language/modules#published-modules){: external} for others to use, and to reuse published modules.  
 
@@ -51,7 +51,7 @@ Examples of {{site.data.keyword.IBM_notm}} authored (child) modules designed for
 
 ## Blueprints provider injection
 {: #bp-provider-injection}  
-To enable a reusable child module to be executed as a root module, {{site.data.keyword.bpshort}} blueprints injects the {{site.data.keyword.IBM_notm}} Cloud provider config and version information as `.tf` files into the Terraform working directory at run time. The same approach is used by [Terragrunt](https://terragrunt.gruntwork.io/docs/reference/config-blocks-and-attributes/#a-note-about-using-modules-from-the-registry){: external} to allow shared (child) modules to be executed directly as root modules.
+To enable a reusable child module to be executed as a root module, {{site.data.keyword.bpshort}} Blueprints injects the {{site.data.keyword.IBM_notm}} Cloud provider config and version information as `.tf` files into the Terraform working directory at run time. The same approach is used by [Terragrunt](https://terragrunt.gruntwork.io/docs/reference/config-blocks-and-attributes/#a-note-about-using-modules-from-the-registry){: external} to allow shared (child) modules to be executed directly as root modules.
 
 The contents of the Terraform working directory for a blueprint module with provider injection is illustrated.  
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -31,10 +31,10 @@ The following lists of {{site.data.keyword.bpshort}} events are sent to {{site.d
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} workspace by a user.|
-| `schematics.workspace.create` | An event is generated for a request to create a {{site.data.keyword.bpshort}} workspace. |
-| `schematics.workspace.update`| An event is generated for a request to update a {{site.data.keyword.bpshort}} workspace. |
-| `schematics.workspace.delete` | An event is generated for a request to delete a {{site.data.keyword.bpshort}} workspace. |
+| `schematics.workspace.read`| An event is generated for a request to view a {{site.data.keyword.bpshort}} Workspace by a user.|
+| `schematics.workspace.create` | An event is generated for a request to create a {{site.data.keyword.bpshort}} Workspace. |
+| `schematics.workspace.update`| An event is generated for a request to update a {{site.data.keyword.bpshort}} Workspace. |
+| `schematics.workspace.delete` | An event is generated for a request to delete a {{site.data.keyword.bpshort}} Workspace. |
 | `schematics.workspace-resources.create` | An event is generated when a Terraform execution apply is created for a workspace. |
 | `schematics.workspace-resources.plan` | An event is generated when a Terraform execution plan is created for a workspace. |
 | `schematics.workspace-resources.delete` | An event is generated for a request to delete the {{site.data.keyword.cloud_notm}} resources that are provisioned through a Terraform plan and the workspace.|
@@ -45,10 +45,10 @@ The following lists of {{site.data.keyword.bpshort}} events are sent to {{site.d
 
 | Action             | Description      | 
 | -------------------| -----------------|
-| `schematics.action.create` | A {{site.data.keyword.bpshort}} Action is created or failed to create. | 
-| `schematics.action.delete` | A {{site.data.keyword.bpshort}} Action was deleted or failed to delete. | 
-| `schematics.action.read`| A {{site.data.keyword.bpshort}} Action is viewed by a user.|
-| `schematics.action.update`| A {{site.data.keyword.bpshort}} Action is updated successfully or failed to update.|
+| `schematics.action.create` | A {{site.data.keyword.bpshort}} action is created or failed to create. | 
+| `schematics.action.delete` | A {{site.data.keyword.bpshort}} action was deleted or failed to delete. | 
+| `schematics.action.read`| A {{site.data.keyword.bpshort}} action is viewed by a user.|
+| `schematics.action.update`| A {{site.data.keyword.bpshort}} action is updated successfully or failed to update.|
 {: caption="Action events" caption-side="bottom"}
 
 ### Job events

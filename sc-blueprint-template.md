@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -12,13 +12,13 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Understanding blueprint templates and configuration
 {: #blueprint-templates}
 
-{{site.data.keyword.bplong}} blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. 
+{{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. 
 
 
 ## Blueprint configuration 
@@ -47,7 +47,7 @@ A blueprint configuration defines the blueprint template YAML file to be used an
 
 The infrastructure architecture of a solution is defined by a blueprint template: 
 - Blueprint templates are written in YAML with a minimum of syntax that specify the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. 
-- The resource management and provisioning functionality of a {{site.data.keyword.bpshort}} blueprint is implemented by automation modules written for the familiar open source Terraform automation tool. 
+- The resource management and provisioning functionality of a blueprint is implemented by automation modules written for the familiar open source Terraform automation tool. 
 - Input variable files customize the reusable blueprint templates to create cloud environments.
 {: shortdesc}
 
@@ -286,7 +286,7 @@ ibmcloud schematics blueprint config create -name <name> -resource_group <resour
 {: #bp-def-whatsnext}
 
 In this section you have learned about {{site.data.keyword.bpshort}} templates and configuration. Now you can: 
-- Explore [deploying {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-(/docs/schematics?topic=schematics-destroy-blueprint).
+- Explore [deploying {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-(/docs/schematics?topic=schematics-destroy-blueprint).
 
 - Refer to, [blueprint template YAML](/docs/schematics?topic=schematics-bp-template-schema-yaml) and [blueprint input YAML](/docs/schematics?topic=schematics-bp-input-schema-yaml) for more information about the parameters used in the YAML files.
 

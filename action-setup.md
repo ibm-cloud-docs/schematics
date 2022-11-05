@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-26"
+lastupdated: "2022-11-05"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -21,7 +21,7 @@ An [Ansible playbook](/docs/schematics?topic=schematics-getting-started-ansible)
 ## Creating and running the {{site.data.keyword.bpshort}} action
 {: #create-action}
 
-Create a {{site.data.keyword.bpshort}} Action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources. 
+Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources. 
 {: shortdesc}
 
 ### Prerequisites
@@ -44,7 +44,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     4. Select the **Location** where you want to create the action. The location determines where your action runs and action data are stored. You can choose a geography, such as `North America`, or a location, such as `Frankfurt` or `London`. If you select a geography, {{site.data.keyword.bpshort}} decides on a location within this geography based on availability. Be sure that you can store your action data in this location as you cannot change the location after the action is created. For more information, see [where is the information stored?](/docs/schematics?topic=schematics-secure-data#pi-location) Note that the location of your action is independent from the location of your {{site.data.keyword.cloud_notm}} resource where you want to run your Ansible playbook.
     5. Click **Create**. Your action is created with a `Normal` state, and you are directed to the `Details` section.
 3. In the **Ansible playbook** section, click **Edit icon** to import your Ansible playbook. 
-    1. Enter the **GitHub or GitLab repository URL** where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run. A {{site.data.keyword.bpshort}} Action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
+    1. Enter the **GitHub or GitLab repository URL** where your Ansible playbook is stored. The URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks, you must select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
         - Example for master branch - `https://github.com/myorg/myrepo`
         - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
         - Example for subdirectory - `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
@@ -55,7 +55,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     2. Optional, if you want to use a private GitHub repository, enter your personal access token. The personal access token is used to authenticate private GitHub repository to access your Ansible playbook. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}. If you need see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension) for cloning from the Git repository.
     3. Review the default Ansible version that is used to run your playbook. This version cannot be changed. If you use your own Ansible playbook, make sure that your playbook uses the specified Ansible version. For example, `Ansible v2.9.23`.
     4. Click **Retrieve playbooks** to connect to your repository and retrieve all Ansible playbooks from your Git repository.
-    5. Select the playbook that you want to run. A {{site.data.keyword.bpshort}} Action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook.
+    5. Select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook.
     6. Select the **Verbosity** level. The verbosity level determines the depth of information that is written to the logs when your Ansible playbook is executed. The supported values are `0 (Normal)`, `1 (verbose)`, `2 (More Verbose)`, `3 (Debug)`, `4 (Connection Debug`). For example, if you want to debug your playbook or want to include a detailed summary for each task that Ansible runs, select a high verbosity level. You can view the logs when your playbook runs. 
     7. Optional, click the **Advanced options** to define input variables that you want to pass to the playbook. Input variables must be entered in key-value pairs. If the variable contains sensitive information, enable the **Sensitive** option so that the value is hidden for the users after the action is created. If you use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}, all input variables can be found in the `readme.md` file. 
     8. Click **Save** to save the action details. 
@@ -95,7 +95,7 @@ If you no longer need your {{site.data.keyword.bpshort}} action, you can delete 
 {: shortdesc}
 
 1. From the [{{site.data.keyword.bpshort}} Actions dashboard](https://cloud.ibm.com/schematics/actions), find the action that you want to delete.
-2. From the actions menu, click **Delete**. 
+2. From the Actions menu, click **Delete**. 
 
 ## Action state
 {: #action-state-diagram}
@@ -115,7 +115,7 @@ Action state indicates the result of creating and processing an action that can 
 ### State diagram flow
 {: #state-diagram-flow}
 
-The following table represents the Actions state workflow.
+The following table represents the actions state workflow.
 
 | Action | State diagram | Description |
 | ---- | ---- | ---- |
@@ -146,6 +146,6 @@ Review the following status that can be assigned to a job:
 |`unreachable` |The total number of target hosts that might not be found or reached. |
 {: caption="Job status" caption-side="top"}
 
-When the Action job execution displays DEPRECATION WARNING message, you need to set the input variable as `ansible_python_interpreter = auto` as shown in the screen capture to avoid `DEPRECATION WARNING` message in the job.
+When the action job execution displays DEPRECATION WARNING message, you need to set the input variable as `ansible_python_interpreter = auto` as shown in the screen capture to avoid `DEPRECATION WARNING` message in the job.
 
 ![Configuring input variable to silence warning message](images/advanced_inputvariable.png "Embedded {{site.data.keyword.bpshort}} service flow"){: caption="Configuring input variable to silence warning message" caption-side="bottom"}

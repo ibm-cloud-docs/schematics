@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -55,7 +55,7 @@ When you can [enable or restore a root key](/docs/schematics?topic=schematics-km
 ## What are the details stored in {{site.data.keyword.bpshort}}?
 {: #pi-data}
 
-The following details are stored when you create and use an {{site.data.keyword.bpshort}} workspace: 
+The following details are stored when you create and use an {{site.data.keyword.bpshort}} Workspace: 
 - Workspace details
 - Workspace variables
 - Terraform configuration files that your workspace points to
@@ -102,5 +102,5 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 
 To remove your data from {{site.data.keyword.bplong_notm}}, choose among the following options: 
 - **Delete the workspace**: When you delete your workspace, all data that is related to a workspace is permanently deleted. 
-- **Open an {{site.data.keyword.cloud_notm}} support case**: Contact IBM Support to remove your Workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-using-avatar). 
-- **End your {{site.data.keyword.cloud_notm}} subscription**: A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all Workspaces that are stored with IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated data are deleted. 
+- **Open an {{site.data.keyword.cloud_notm}} support case**: Contact IBM Support to remove your workspaces and any associated data by opening a support case. For more information, see [Getting support](/docs/get-support?topic=get-support-using-avatar). 
+- **End your {{site.data.keyword.cloud_notm}} subscription**: A {{site.data.keyword.bpshort}} cleanup job runs multiple times a day to verify that all workspaces that are stored with IBM belong to an active {{site.data.keyword.cloud_notm}} account. If no active account is found, the workspace and all associated data are deleted. 

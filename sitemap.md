@@ -50,7 +50,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
 
-[Getting started: Large-scale cloud environments in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
+[Getting started: Using blueprints to deploy large-scale cloud environments](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
 
 * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
 
@@ -99,7 +99,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
 
-[{{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
+[{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
 
 * [Overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview)
 
@@ -215,17 +215,17 @@ subcollection: schematics
 
     * [How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak-log)
 
-    * [How can you protect the access to Workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks-data)
+    * [How can you protect the access to workspaces and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks-data)
 
     * [How does {{site.data.keyword.bpshort}} protect the workspace data through Terraform state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
 * [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
 
-    * [What are the best practices that you must follow in creating an Action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
+    * [What are the best practices that you must follow in creating an action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
 
-    * [How can you protect the access to Actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-action-data)
+    * [How can you protect the access to actions and its data?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-action-data)
 
-    * [How does {{site.data.keyword.bpshort}} protect the Action data through input credentials state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
+    * [How does {{site.data.keyword.bpshort}} protect the action data through input credentials state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-protect)
 
 * [Protecting data of {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect)
 
@@ -311,7 +311,7 @@ subcollection: schematics
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * {{site.data.keyword.bpshort}} blueprints Beta release in production.
+        * {{site.data.keyword.bpshort}} Blueprints Beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -693,7 +693,7 @@ subcollection: schematics
 
         * Terraform v0.12 support
 
-        * New Workspace creation flow
+        * New workspace creation flow
 
 
 ## Setting up the CLI and API
@@ -719,7 +719,7 @@ subcollection: schematics
 * [Table1](/docs/schematics?topic=schematics-setup-api#table1)
 
 
-## Managing blueprints
+## Managing Blueprints
 {: #sitemap_managing_blueprints}
 
 
@@ -916,7 +916,7 @@ subcollection: schematics
 
 [Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup#workspace-setup)
 
-* [Creating Workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
+* [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
 
     * [Before you begin](/docs/schematics?topic=schematics-workspace-setup#prerequisites)
 
@@ -932,7 +932,7 @@ subcollection: schematics
 
     * [Running your Terraform template in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-workspace-setup#run-template)
 
-* [Freezing and unfreezing Workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
+* [Freezing and unfreezing workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
 
 * [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
 
@@ -940,7 +940,7 @@ subcollection: schematics
 
     * [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
 
-    * [How many Workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
+    * [How many workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
 
     * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-github-structure)
 
@@ -1016,11 +1016,11 @@ subcollection: schematics
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 
-[Migrating Terraform version in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
+[Migrating Terraform version in {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
 * [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade)
 
-* [Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps)
+* [Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps)
 
 * [Upgrading Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-12-to13)
 
@@ -1032,7 +1032,7 @@ subcollection: schematics
 
 [Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-sol-overview#sol-overview)
 
-[Compact download for {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-compact-download#compact-download)
+[Compact download for {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-compact-download#compact-download)
 
 * [Using compact download](/docs/schematics?topic=schematics-compact-download#compact-active)
 
@@ -1405,9 +1405,9 @@ subcollection: schematics
 
 * [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
 
-* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
+* [Creating your {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
 
-* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
+* [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
 
 * [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
 
@@ -1432,7 +1432,7 @@ subcollection: schematics
 
 * [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
 
-* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
+* [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
 
 * [Configuring the variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-variables)
 
@@ -1440,7 +1440,7 @@ subcollection: schematics
 
 * [Analyzing the pipeline execution process](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-deployment)
 
-* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
+* [Analyzing the {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
 
 * [What's next?](/docs/schematics?topic=schematics-workspace-continuous-deployment#automate-what-next)
 
@@ -1479,10 +1479,6 @@ subcollection: schematics
 * [Create the blueprint configuration](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
 
     * [Syntax](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-syntax)
-
-    * [Create new resource group](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-blueprint-rg-cli)
-
-    * [Reuse existing resource group](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#reuse-blueprint-rg-cli)
 
     * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-output)
 
@@ -1793,11 +1789,11 @@ subcollection: schematics
     * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
 
 
-## Beta code for {{site.data.keyword.bpshort}} blueprints
+## Beta code for {{site.data.keyword.bpshort}} Blueprints
 {: #sitemap_beta_code_for__blueprints}
 
 
-[Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
+[Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
 
 * [Beta changes October 2022](/docs/schematics?topic=schematics-bp-beta-limitations#beta-changes-october-2022)
 
@@ -1976,7 +1972,7 @@ subcollection: schematics
 
 [Actions](/docs/schematics?topic=schematics-actions-faq#actions-faq)
 
-* [Why is my success Action job execution displays DEPRECATION WARNING message?](/docs/schematics?topic=schematics-actions-faq#deprecation-warn-faq)
+* [Why is my success action job execution displays DEPRECATION WARNING message?](/docs/schematics?topic=schematics-actions-faq#deprecation-warn-faq)
 
 * [How can I resolve that might not run action error while provisioning `WinRM` by using {{site.data.keyword.bpshort}} action?](/docs/schematics?topic=schematics-actions-faq#winrm-faq)
 
@@ -2002,11 +1998,11 @@ subcollection: schematics
 
 * [Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-rg)
 
-* [Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+* [Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
 
-* [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure Workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-region)
+* [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-region)
 
-* [Can I have different region for {{site.data.keyword.bpshort}} workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
+* [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
 
 * [Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
 
@@ -2146,7 +2142,7 @@ subcollection: schematics
 
 * [How do I overcome the `Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account` to fetch {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
 
-* [How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} workspace?](/docs/schematics?topic=schematics-workspaces-faq#gitlab-workspace-faq)
+* [How can I configure private (IBM) GitLab repository in {{site.data.keyword.bpshort}} Workspace?](/docs/schematics?topic=schematics-workspaces-faq#gitlab-workspace-faq)
 
 * [Does {{site.data.keyword.cloud_notm}} provider support manages IAM access groups in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#manageaccessgrp-iam-faq)
 
@@ -2176,9 +2172,9 @@ subcollection: schematics
 
 * [How can I `POST` Cart API with a location as `eu-de` region and resolve `Incorrect Location Input` error?](/docs/schematics?topic=schematics-workspaces-faq#postcartapi-job-faq)
 
-* [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
+* [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
 
-* [How do I fix the `CreateWorkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
+* [How do I fix the `CreateworkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
 
 
 ## Troubleshooting

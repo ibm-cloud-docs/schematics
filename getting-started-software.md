@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -45,7 +45,7 @@ Use one of the IBM provided software templates to set up and configure a classic
    Observe {{site.data.keyword.cloud_notm}} is specified in **Select your deployment target** and `Terraform Version 1.0.7` or `Terraform Version 2.0.0` is displayed in **Select a delivery method**.
    {: note}
 
-2. In the **Configure your workspace** section, enter **Name** for your {{site.data.keyword.bpshort}} workspace, select your **Resource group**, and the **Location** where you want to create the workspace.
+2. In the **Configure your workspace** section, enter **Name** for your {{site.data.keyword.bpshort}} Workspace, select your **Resource group**, and the **Location** where you want to create the workspace.
 3. Check **Override default Terraform version** to configure the template to support your Terraform version. 
 4. In the **Set the deployment values** section, enter the following information. 
     - Click **Yes** toggle button to enter value for **admin-password** as `user123`, and **db-user-password** as `user123` that you want to use to log in to your PostgreSQL instance. 

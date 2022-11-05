@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -58,7 +58,7 @@ The costs are incurred based on your resource usage. For more information about 
 In this tutorial, you will do the following: 
 - Learn how to use an IBM-provided Terraform template to create a Virtual Private Cloud (VPC) and provision an {{site.data.keyword.containerlong_notm}} cluster that runs on {{site.data.keyword.vsi_is_short}}. 
 - Create an {{site.data.keyword.cos_full_notm}} service instance and bind the service to your {{site.data.keyword.containerlong_notm}} cluster. 
-- Explore how to create an {{site.data.keyword.bplong_notm}} workspace.
+- Explore how to create an {{site.data.keyword.bplong_notm}} Workspace.
 - Create a Terraform execution plan and apply your Terraform template in {{site.data.keyword.cloud_notm}}.
 - Review the {{site.data.keyword.cloud}} resources that you create.
 
@@ -81,27 +81,27 @@ Before you begin, complete the following prerequisites.
 - [Create the {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
 - [Install the {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli). 
 - Make sure you set environment variables for [`IBMCLOUD_API_KEY`](/docs/cli?topic=cli-ibmcloud_env_var).
-- Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} workspace. 
+- Make sure that you are assigned the **Manager** service access role in {{site.data.keyword.iamshort}} for {{site.data.keyword.bpshort}} to create and work with a {{site.data.keyword.bpshort}} Workspace. 
 - Make sure that you are assigned the required [permissions](/docs/vpc?topic=vpc-iam-getting-started) to create VPC infrastructure resources. 
 - Follow the [steps](/docs/containers?topic=containers-clusters#cluster_prepare) to get the required permissions to create an {{site.data.keyword.containerlong_notm}} cluster and to prepare your account for your cluster setup. 
 - Make sure that you have the required permissions to create an instance of [{{site.data.keyword.keymanagementservicelong}}](/docs/key-protect?topic=key-protect-manage-access) and [{{site.data.keyword.cos_full_notm}}](/docs/cloud-object-storage?topic=cloud-object-storage-iam). 
 
-## Creating your {{site.data.keyword.bpshort}} workspace
+## Creating your {{site.data.keyword.bpshort}} Workspace
 {: #create-wkspace-for-cluster}
 {: step}
 
-Use the IBM-provided Terraform template to create and configure your {{site.data.keyword.bpshort}} workspace. 
+Use the IBM-provided Terraform template to create and configure your {{site.data.keyword.bpshort}} Workspace. 
 {: shortdesc}
 
 1. Review the [IBM-provided template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster){: external} to create an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure. 
     - **main.tf**: This file includes the Terraform code that you run in {{site.data.keyword.bpshort}}. Your Terraform code includes data sources and resources to create a VPC with subnets in two different zones, create an {{site.data.keyword.containerlong_notm}} cluster, and configure the cluster to bind an {{site.data.keyword.cos_full_notm}} service instance. 
     - **output.tf**: This file includes the content that you want to return after {{site.data.keyword.bpshort}} applied your Terraform template. In this case, you get the file path on your local machine where the cluster configuration and certificates are stored. You use these files to access your cluster later. 
-    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} workspace. 
+    - **variables.tf**: This file includes all the variables that you need to specify to run your Terraform template. You can use the default values that are provided, or override them when you create the {{site.data.keyword.bpshort}} Workspace. 
     - **versions.tf**: This file includes the Terraform version that this template requires. 
-2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} workspace. 
+2. Create a JSON file where you store the configuration of your {{site.data.keyword.bpshort}} Workspace. 
 
 
-## Creating your {{site.data.keyword.bplong_notm}} workspace
+## Creating your {{site.data.keyword.bplong_notm}} Workspace
 {: #create-tut-wks}
 {: step}
 
@@ -237,7 +237,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 
 Create a {{site.data.keyword.bpshort}} execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
 
-Your workspace must be in an `Active` state to perform a {{site.data.keyword.bpshort}} plan action. For more information about the workspace state, see [Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).
+Your workspace must be in an `Active` state to perform a {{site.data.keyword.bpshort}} plan action. For more information about the workspace state, see [workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).
 {: note}
 
 During the creation of the Terraform execution plan, you are not allowed to make any changes to your workspace.
@@ -300,7 +300,7 @@ During the creation of the Terraform execution plan, you are not allowed to make
     ```
     {: pre}
 
-    Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select **Navigation Menu -> {{site.data.keyword.bpshort}} -> Workspaces -> Resources** to observe the apply state of the resources in your workspace.
+    Alternatively, through the {{site.data.keyword.cloud_notm}} dashboard, you can view the status of the workspace. From the {{site.data.keyword.cloud_notm}}, select **Navigation Menu -> {{site.data.keyword.bpshort}} -> workspaces -> Resources** to observe the apply state of the resources in your workspace.
     {: note}
 
 6. Command to view the logs, and analyze the state of the workspace and resources creation.

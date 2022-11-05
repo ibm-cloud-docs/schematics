@@ -119,18 +119,18 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july0822}
 {: release-note}
 
-{{site.data.keyword.bpshort}} blueprints Beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} blueprints Beta releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} blueprints engagement.
+{{site.data.keyword.bpshort}} Blueprints Beta release in production.
+:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} Blueprints Beta releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints engagement.
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
     - [Use case](/docs/schematics?topic=schematics-get-started-blueprints).
-    - [About {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-blueprint-intro)
+    - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding blueprint templates](/docs/schematics?topic=schematics-blueprint-templates) to configure the right schemas and use blueprint commands to deploy blueprints.
     - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprints.
     - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
-    - Deploy [{{site.data.keyword.bpshort}} blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
+    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
-    - [Beta code for {{site.data.keyword.bpshort}} blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
+    - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.3](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -201,10 +201,10 @@ Review the release notes for April 2022.
 {: release-note}
 
 Support detecting drift
-:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note) for {{site.data.keyword.bpshort}} workspace. For more information, see viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
+:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note) for {{site.data.keyword.bpshort}} Workspace. For more information, see viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
 
 Support stopping or terminating the running job
-:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
+:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} Workspace. For more information, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
 Support more frequently asked questions (FAQs) 
 :  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq).
@@ -270,7 +270,7 @@ Support deleting {{site.data.keyword.bpshort}} data objects
 :   The {{site.data.keyword.bpshort}} supports [deleting {{site.data.keyword.bpshort}} data from UI, CLI, and API](/docs/schematics?topic=schematics-delete-schematics-data-intro) for workspace, action, and inventories objects.
 
 Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
-:   - Now you can create Actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
+:   - Now you can create actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
 :   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
 :   - [Get inventory definition](/apidocs/schematics/schematics#get-inventory) supports `detailed` profile type.
 
@@ -472,7 +472,7 @@ Review the release notes for July 2021.
 Terraform v0.15 support
 :   {{site.data.keyword.bplong_notm}} now supports Terraform v0.15 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14` or `0.15`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note Terraform v0.15 provides you to remote state data sources, cross-compatible between the `Terraform v0.14.x` and higher version to move between Terraform versions. Also, you can experience a unified console experience across all support platforms, and provides provider-based sensitivity and sensitive functions. For more information about Terraform v0.15 availability from HashiCorp Language, see [Terraform v0.15 general availability](https://www.hashicorp.com/blog/announcing-hashicorp-terraform-0-15-general-availability).
 Ansible v2.9.23 API and command-line support
-:   Ansible v2.9.23 and Ansible provisioner v2.3.3 are supported in the {{site.data.keyword.bplong_notm}} Action.
+:   Ansible v2.9.23 and Ansible provisioner v2.3.3 are supported in the {{site.data.keyword.bplong_notm}} action.
 
 ### 19 July 2021
 {: #schematics-jul192021}
@@ -501,7 +501,7 @@ Documentation support to create workspace by using {{site.data.keyword.bplong_no
 :   For more information, see [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup).
 
 One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
-:   For more information about {{site.data.keyword.bplong_notm}} workspaces, creation, see [Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup).
+:   For more information about {{site.data.keyword.bplong_notm}} Workspaces, creation, see [Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup).
 
 Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
 :   For more information, see [Stop an apply job](/apidocs/schematics/schematics#delete-workspace-activity) API.
@@ -672,7 +672,7 @@ Review the release notes for September 2020.
 :   {{site.data.keyword.bplong_notm}} supports private bit bucket repository as a template repository source. All you need to use the URL in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>` and for the URL with branch you need to use in this format `https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>`. If the workspace name is different from your user name then you need to provide the workspace name in this format. `https://<username>@bitbucket.org/<workspace_name>/tf_cloudless_sleepy/src/master`.
 
 Support to override the default variable
-:   {{site.data.keyword.bplong_notm}} now supports to override the Terraform default variable store value. For more information about configuring to override the variable, see [Workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
+:   {{site.data.keyword.bplong_notm}} now supports to override the Terraform default variable store value. For more information about configuring to override the variable, see [workspace update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update).
 
 ## August 2020
 {: #aug-2020}
@@ -691,7 +691,7 @@ Time out set for local-exec and remote-exec users
 :   If you run local-exec or remote-exec users, make sure the execution completes within 30 minutes. Otherwise execution times out automatically.
 
 `Bitbucket` is used as a template repository source
-:   {{site.data.keyword.bplong_notm}} supports public bit bucket repository as a template repository source. Private bit bucket repository needs a workaround. Download the files from the repository, then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.
+:   {{site.data.keyword.bplong_notm}} supports public bit bucket repository as a template repository source. Private bit bucket repository needs a workaround. Download the files from the repository, then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} Workspace.
 
 ## July 2020
 {: #jul-2020}
@@ -762,6 +762,6 @@ Review the release notes for April 2020.
 Terraform v0.12 support
 :   You can now choose to run your infrastructure code with Terraform version 0.11 or 0.12. With Terraform version 0.12, the syntax for configuration files changed. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. To migrate your Terraform configuration files from version 0.11 to version 0.12, see [Migrating your Terraform configuration files from version 0.11 to version 0.12](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol).
 
-New Workspace creation flow
+New workspace creation flow
 :   The workspace creation flow is now [a two-step process](/docs/schematics?topic=schematics-workspace-setup#create-workspace). First, you create the workspace without connecting it to a GitHub or GitLab repository. Then, you add the details of your GitHub or GitLab repository, retrieve input variables, and let {{site.data.keyword.bpshort}} scan your Terraform configuration files for syntax errors. With the change of the workspace creation flow, [new workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state) are introduced as well.
 

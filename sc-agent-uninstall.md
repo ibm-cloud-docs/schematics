@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
-keywords: schematics agents, agents, set up an agents
+keywords: schematics agents, agents, set up an agent
 
 subcollection: schematics
 
@@ -27,7 +27,7 @@ Decide if you want to delete the workspace and destroy the associated cloud reso
 ## Clean up Agent infrastructure
 {: #cleanup-agent-infra}
 
-1. From the [{{site.data.keyword.bpshort}} Workspace](https://cloud.ibm.com/schematics/workspaces/) page, open your Workspace. Enter your `<workspace_id_schematics-agent-infrastructure>` as part of the URL.
+1. From the [{{site.data.keyword.bpshort}} Workspace](https://cloud.ibm.com/schematics/workspaces/) page, open your workspace. Enter your `<workspace_id_schematics-agent-infrastructure>` as part of the URL.
 2. Select **Actions** > **Destroy resources** > **Type the name of workspace** > click **Destroy**.
 3. From the workspace `schematics-agent-infrastructure` page > **Jobs** tab
     - Wait for Terraform destroy job to complete. It takes about 10 to 15 minutes.
@@ -37,7 +37,7 @@ Decide if you want to delete the workspace and destroy the associated cloud reso
 ## Clean up Agent service
 {: #cleanup-agent-service}
 
-1. From the [{{site.data.keyword.bpshort}} Workspace](https://cloud.ibm.com/schematics/workspaces/) page, open your Workspace. Enter your `<workspace_id_schematics-agent-service-workspace>` as part of the URL.
+1. From the [{{site.data.keyword.bpshort}} Workspace](https://cloud.ibm.com/schematics/workspaces/) page, open your workspace. Enter your `<workspace_id_schematics-agent-service-workspace>` as part of the URL.
 2. Select **Actions** > **Destroy resources** > **Type the name of workspace** > click **Destroy**.
 3. From the workspace `schematics-agent-service-workspace` page > **Jobs** tab
     - Wait for Terraform destroy job to complete. It takes about 10 to 15 minutes.

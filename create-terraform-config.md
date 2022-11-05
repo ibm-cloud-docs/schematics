@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-11-05"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -162,9 +162,9 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 ## Managing resources in other account
 {: #manage-resource-account}
 
-You can create {{site.data.keyword.bpshort}} Workspaces in the {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in the target account. You can provision a resource in the target account only through command-line and API calls by using the target account's service ID with authentication, appropriate cross account authorization, or API key. To provision in the target account, you need to have a right permission of the source account.
+You can create workspaces in the {{site.data.keyword.cloud_notm}} source account and execute Terraform providing resources in the target account. You can provision a resource in the target account only through command-line and API calls by using the target account's service ID with authentication, appropriate cross account authorization, or API key. To provision in the target account, you need to have a right permission of the source account.
 
-Whereas in UI, the {{site.data.keyword.bpshort}} Workspaces use a user who are logged in identity for executing operations. Hence, you cannot provision the Terraform providing resources in the target account.
+Whereas in UI, workspaces use a user who are logged in identity for executing operations. Hence, you cannot provision the Terraform providing resources in the target account.
 {: important}
 
 ## Using `variable` blocks to customize resources
@@ -225,8 +225,8 @@ resource ibm_container_cluster "test_cluster" {
 ## Providing values to {{site.data.keyword.bplong_notm}} for the declared variables
 {: #declare-variable}
 
-You can provide the values after creating the Workspace for the {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. 
-- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; {{site.data.keyword.bpshort}} &gt; Workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
+You can provide the values after creating the workspace for the {{site.data.keyword.bplong_notm}} to use on Terraform actions, for the variables that are declared in the template. 
+- For `UI`, you can provide the values on the **{{site.data.keyword.cloud_notm}} &gt; {{site.data.keyword.bpshort}} &gt; workspace &gt; Settings page**. The `value` field is the `HCL` format value as provided in the `.tfvars` file.
 - For `CLI`, you can see create, or update the values for the [Complex data type](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update). Then, the `value` field must contain escaped string for the variable store, as shown in the example.
 - For `API`, you can see [create or update the values](/apidocs/schematics/schematics#createworkspace) in the field `template_data` &gt;  `variablestore`. The `value` field is the `HCL` format value as provided in the `.tfvars` file. It is always a JSON string for any type of the variable. 
 

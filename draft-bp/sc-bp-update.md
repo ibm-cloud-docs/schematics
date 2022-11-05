@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-19"
+lastupdated: "2022-11-05"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # Updating and operating blueprints
@@ -34,7 +34,7 @@ Managing a blueprint environment is an iterative cycle of applying changes to th
 
 After deployment, blueprint environments will continue to evolve through managed change, implemented as updates to the blueprint template, automation modules, and inputs.
 
-Changes to the environment are first prepared as version updates to the blueprint template and input files. The blueprint configuration is updated in {{site.data.keyword.bpshort}} with the updated template and input versions. These changes are then applied to the blueprint environment. This two-step process ensures controlled application of change first to the {{site.data.keyword.bpshort}} blueprint configuration and template, then second to the cloud resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied.
+Changes to the environment are first prepared as version updates to the blueprint template and input files. The blueprint configuration is updated in {{site.data.keyword.bpshort}} with the updated template and input versions. These changes are then applied to the blueprint environment. This two-step process ensures controlled application of change first to the blueprint configuration and template, then second to the cloud resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied.
 
 During this lifecycle stage, the blueprint environment will be updated many times. Changes are applied to the cloud resources to satisfy changing application requirements. Additionally to maintain platform currency and compliance as security policies evolve. Scheduled operations will run compliance checks, and run drift detection on the environment. 
 

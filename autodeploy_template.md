@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-12"
+lastupdated: "2022-11-05"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -52,7 +52,7 @@ You can add an image to your URL to create your `Deploy to {{site.data.keyword.c
 ### Adding the button in HTML
 {: #add-button-html}
 
-To add the button in an HTML page, such as a website, copy the following code into the page where you want to position the button. Replace `<deployment URL>` with the URL for the {{site.data.keyword.bpshort}} Action.
+To add the button in an HTML page, such as a website, copy the following code into the page where you want to position the button. Replace `<deployment URL>` with the URL for the {{site.data.keyword.bpshort}} action.
 {: shortdesc}
 
 ```html

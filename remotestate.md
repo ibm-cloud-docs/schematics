@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Managing cross-workspace state access with Terraform
 {: #remote-state}
 
-You can access information about the resources that you manage in a workspace from other Workspaces in your account by using the `ibm_schematics_output` data source.
+You can access information about the resources that you manage in a workspace from other workspaces in your account by using the `ibm_schematics_output` data source.
 {: shortdesc}
 
 As you manage your {{site.data.keyword.cloud}} resources with {{site.data.keyword.bplong_notm}}, you can access resource information across workspaces. The `remote_state` data source is not supported in {{site.data.keyword.bpshort}}. Instead, you can use the `ibm_schematics_output` data source to access the information. 
@@ -54,7 +54,7 @@ Similar to the `remote_state` data source, you can only access information that 
     - Find the workspace ID in the **Summary** section. 
 
     **From the CLI**:
-    - List available Workspaces in your account.
+    - List available workspaces in your account.
         ```sh
         ibmcloud schematics workspace list
         ```

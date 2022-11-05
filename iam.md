@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics, automation, terraform
 
@@ -15,10 +15,10 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} Workspaces and Actions. 
+Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} Workspaces and actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to the {{site.data.keyword.bpshort}} Workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
+As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
 
 
 
@@ -36,7 +36,7 @@ As the account owner or an authorized account administrator, you can assign IAM 
 
 **Is access to {{site.data.keyword.bplong_notm}} sufficient to manage {{site.data.keyword.cloud_notm}} resources?**
 
-No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete Workspaces and actions in {{site.data.keyword.bplong_notm}}. However, to manage other {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}, you must be assigned the IAM platform or service access role for the individual {{site.data.keyword.cloud_notm}} resource that you want to work with. see the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to work with your resource.
+No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces and actions in {{site.data.keyword.bplong_notm}}. However, to manage other {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}, you must be assigned the IAM platform or service access role for the individual {{site.data.keyword.cloud_notm}} resource that you want to work with. see the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to work with your resource.
 
 ### Workspace permissions
 {: #workspace-permissions}
@@ -81,15 +81,15 @@ Review the following table to see what permissions you need to work with {{site.
 {: caption="User permissions for {{site.data.keyword.bpshort}} Actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 ### Blueprint permissions
 {: #blueprint-permissions}
 
-Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} blueprint.
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Blueprint.
 
-In addition to the listed blueprints activities and permission, you must check whether you have related [Workspace permissions](#workspace-permissions) for `blueprint config create`, `blueprint run apply`, `blueprint config delete`, and `blueprint run destroy` activities to execute successfully.
+In addition to the listed blueprints activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `blueprint config create`, `blueprint run apply`, `blueprint config delete`, and `blueprint run destroy` activities to execute successfully.
 {: important} 
 
 | Activities | Reader | Writer | Manager | Account owner |
@@ -103,7 +103,7 @@ In addition to the listed blueprints activities and permission, you must check w
 | `blueprint run destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
-{: caption="User permissions for {{site.data.keyword.bpshort}} blueprint" caption-side="top"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} Blueprint" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### KMS permissions
@@ -131,7 +131,7 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups#create_ag) for each team. 
 
-3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and Workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} Workspaces and Actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
+3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} Workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
 
 4. [Assign access to your IAM access group](/docs/account?topic=account-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
     - Make sure to scope access of your group to the resource group that you created for this team. 

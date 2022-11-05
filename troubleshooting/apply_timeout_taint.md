@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -25,7 +25,7 @@ The {{site.data.keyword.terraform-provider_full_notm}} sets certain timeouts whe
 To avoid that a successfully provisioned resource is deleted and re-created, you must `untaint` the resource.
 {: tsResolve}
 
-1. List the Workspaces in your account and note the ID of the workspace that includes the failed resource. 
+1. List the workspaces in your account and note the ID of the workspace that includes the failed resource. 
     ```sh
     ibmcloud schematics workspace list
     ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, templates, yaml,
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
 # blueprint input file YAML Schema
@@ -39,7 +39,7 @@ region: us-south
 ## Complex input values
 {: #complex-input-value}
 
-{{site.data.keyword.bpshort}} blueprints has full support for all Terraform HCL complex data types. To retain compatibility with Terraform HCL and readability for Terraform users, complex variables are not represented directly in YAML as collections or lists, but retain their original HCL representation. Complex variables are represented as single or multi-line strings, as flow or block scalars.  
+{{site.data.keyword.bpshort}} Blueprints has full support for all Terraform HCL complex data types. To retain compatibility with Terraform HCL and readability for Terraform users, complex variables are not represented directly in YAML as collections or lists, but retain their original HCL representation. Complex variables are represented as single or multi-line strings, as flow or block scalars.  
 
 See the sample [blueprint complex inputs](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} contains several complex data types represented as YAML scalars. 
 {: shortdesc} 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -54,7 +54,7 @@ Agents service
 
 For Beta you can bind a `{{site.data.keyword.bpshort}} Workspace`, to the Agent. Therefore, you can run Terraform workload on the Agent.
 
-Currently, you cannot bind the `{{site.data.keyword.bpshort}} Action`, to the Agents. Therefore, you cannot run Ansible workload on the Agent.
+Currently, you cannot bind the `{{site.data.keyword.bpshort}} action`, to the Agents. Therefore, you cannot run Ansible workload on the Agent.
 {: note}
 
 ## How can I see the workspace job results and logs, for the workloads that ran on the Agent?
@@ -62,7 +62,7 @@ Currently, you cannot bind the `{{site.data.keyword.bpshort}} Action`, to the Ag
 {: faq}
 {: support}
 
-The workspace job logs are available in {{site.data.keyword.bpshort}} UI console.  You can also access the workspace job logs by using the {{site.data.keyword.bpshort}} workspace API, or CLI.
+The workspace job logs are available in {{site.data.keyword.bpshort}} UI console.  You can also access the workspace job logs by using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
 
 ## How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?
 {: #faqs-job-parallel}
@@ -105,21 +105,21 @@ You need to retry to provision an Agent infrastructure. Or, you can provide a va
 
 Yes, you can have a different resource group for {{site.data.keyword.bpshort}} Workspaces and an Agent.
 
-## Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure Workspaces? 
+## Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure workspaces? 
 {: #faqs-agent-register}
 {: faq}
 {: support}
 
-Yes, you can register Agent in a different resource group to what is provided in the Agent service and infrastructure Workspaces.
+Yes, you can register Agent in a different resource group to what is provided in the Agent service and infrastructure workspaces.
 
-## Can I register an Agent in a different region to what I provided in the Agent service and infrastructure Workspaces?
+## Can I register an Agent in a different region to what I provided in the Agent service and infrastructure workspaces?
 {: #faqs-agent-region}
 {: faq}
 {: support}
 
-Yes, you can register an Agent in a different region to what is provided in the Agent service and infrastructure Workspaces.
+Yes, you can register an Agent in a different region to what is provided in the Agent service and infrastructure workspaces.
 
-## Can I have different region for {{site.data.keyword.bpshort}} workspace and Agents? 
+## Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents? 
 {: #faqs-wks-agent-region}
 {: faq}
 {: support}
