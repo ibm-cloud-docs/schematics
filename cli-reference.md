@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-03"
+lastupdated: "2022-11-05"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -698,7 +698,7 @@ You need to replace the `<...>` placeholders with the actual values.
 
 ```json
 {
-    "name": "Blueprint test",
+    "name": "Blueprint Basic",
     "schema_version": "1.0.0",
     "source": {
         "source_type": "git_hub",
