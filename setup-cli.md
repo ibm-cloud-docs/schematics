@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-25"
+lastupdated: "2022-11-03"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -139,7 +139,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output: 
 
     ```text
-    schematics                      1.10.0        Update Available           false
+    schematics                      1.12.0        Update Available           false
     ```
     {: screen}
 
@@ -164,7 +164,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output for blueprints support: 
 
     ```text
-    schematics                      1.12.2        true
+    schematics                      1.12.3        true
     ```
     {: screen}
 
@@ -178,14 +178,14 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
     ```text
     Plugin Name                              schematics   
-    Plugin Version                           1.12.2   
+    Plugin Version                           1.12.3   
     Plugin SDK Version                       0.8.0   
     Minimal IBM Cloud CLI version required   0.15.1   
     Private endpoints supported              true   
 
     Commands:
-    schematics,sch                     IBM Cloud Schematics plug-in   
-    schematics,sch workspace,ws        Create and manage workspaces. Workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.   
+    schematics,sch                     Automate the deployment and management of IBM Cloud resources using Infrastructure as Code   
+    schematics,sch workspace,ws        Create and manage workspaces. workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.   
     schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.   
     schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.   
     schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.   
@@ -200,7 +200,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's   
     schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions   
     schematics,sch agents,ag           [Beta] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.   
-    schematics,sch blueprint,bp        [Beta] Create and manage blueprints
+    schematics,sch blueprint,bp        Deploy and manage large scale environments using reusable blueprint templates.
     ```
     {: screen}
 

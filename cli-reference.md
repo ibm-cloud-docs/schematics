@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -607,7 +607,7 @@ For {{site.data.keyword.bpshort}} blueprints, the [{{site.data.keyword.bpshort}}
 **Syntax to create using command:**
 
 ```sh
-ibmcloud schematics blueprint config create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
 ```
 {: pre}
 
@@ -620,6 +620,7 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | ----- | -------- | ------- |
 | `--name`or `-n`| Required | Name of the blueprint. |
 | `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
+| `description` or `--desc` | Optional | The description of the blueprint. |
 | `--bp-git-url` or `--bu` | Required | The blueprint Git URL. |
 | `--bp-git-file` or `--bf`| Required | The blueprint Git file name. |
 | `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name, if not provided defaults to main. In case the `--bp-git-branch` and `--bp-git-release` values are not provided, the command errors for one of the value to be provided.|
@@ -743,23 +744,24 @@ ibmcloud schematics blueprint config create --file createtest.json --github-toke
 **Output:**
 
 ```text
-Created blueprint ID: Blueprint_Basic.eaB.5cd9
+Created Blueprint ID: Blueprint-Basic.eaB.60e5
 
 Modules to be created
-SNO Type Name
-1 terraform basic-resource-group
-2 terraform basic-cos-storage
+SNO   Type        Name   
+1     terraform   tf_cloudless_sleepy_workitem1   
+      
+Blueprint job us-east.JOB.Blueprint-Basic.704e00f6 started at 2022-11-03 14:08:54
 
-Blueprint job running us-east.JOB.Blueprint_Basic.bb553ac5
-Waiting:0 Draft:0 Connecting:0 In Progress:0 Inactive:2 Active:0
-Failed:0
-Type Name Status Job ID
-Blueprint Blueprint_Basic CREATE_SUCCESS useast.JOB.Blueprint_Basic.bb553ac5
-terraform basic-resource-group INACTIVE
-terraform basic-cos-storage INACTIVE
+Module job execution status
+Waiting:0    In Progress:0    Success:0    Failed:0   
 
-Blueprint ID Blueprint_Basic.eaB.5cd9 create_success at 2022-08-03
-21:19:16
+Blueprint job us-east.JOB.Blueprint-basic.704e00f6 completed at 2022-11-03 14:10:00
+
+Module Type   Name                            Status           Job ID   
+Blueprint     Blueprint basic                   CREATE_SUCCESS   us-east.JOB.Blueprint-Basic.704e00f6   
+Workspace     tf_cloudless_sleepy_workitem1   INITIALISED         
+              
+Blueprint ID Blueprint-Basic.eaB.60e5 create_success at 2022-11-03 14:10:01
 OK
 ```
 {: screen}
@@ -784,7 +786,7 @@ ibmcloud schematics blueprint run apply --id BLUEPRINT_ID [--output OUTPUT]
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the blueprint.|
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} blueprints install flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints apply flags" caption-side="top"}
 
 **`Example`**
 
@@ -792,6 +794,29 @@ ibmcloud schematics blueprint run apply --id BLUEPRINT_ID [--output OUTPUT]
 ibmcloud schematics blueprint run apply --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
+
+**Output:**
+
+```text
+Modules to be applied
+SNO   Module Type   Name                            Status   
+1     Workspace     tf_cloudless_sleepy_workitem1   INITIALISED   
+      
+Blueprint job us-east.JOB.Blueprint-Basic.e353032d started at 2022-11-03 14:24:20
+
+Module job execution status
+Waiting:0    In Progress:0    Success:0    Failed:0   
+
+Blueprint job us-east.JOB.Blueprint-Basic.e353032d completed at 2022-11-03 14:26:05
+
+Module Type   Name                            Status               Job ID   
+Blueprint     Blueprint Basic                   FULFILMENT_SUCCESS   us-east.JOB.Blueprint-Basic.e353032d   
+Workspace     tf_cloudless_sleepy_workitem1   APPLIED                 
+              
+Blueprint ID Blueprint-Basic.eaB.60e5 fulfilment_success at 2022-11-03 14:26:07
+OK
+```
+{: screen}
 
 ### `ibmcloud schematics blueprint config update`
 {: #schematics-blueprint-update}
@@ -805,6 +830,7 @@ You update the blueprint configuration in {{site.data.keyword.bpshort}} with cha
 ibmcloud schematics blueprint config update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
 ```
 {: pre}
+
 
 **Command options:**
 
@@ -820,9 +846,20 @@ ibmcloud schematics blueprint config update --id BLUEPRINT_ID [--file CONFIG_FIL
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint config update -id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint config update -id Blueprint_Basic.eaB.5cd9 -f update.json
 ```
 {: pre}
+
+**Output**
+
+```text
+Update blueprint  Blueprint Basic
+
+Modules to be updated
+SNO   Module Type   Name                            Updates   
+1     Workspace     tf_cloudless_sleepy_workitem1   NA
+```
+{: screen}
 
 ### `ibmcloud schematics blueprint get`
 {: #schematics-blueprint-get}
@@ -853,6 +890,27 @@ ibmcloud schematics blueprint get --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
+**Output**
+
+```text
+BLUEPRINT          
+                
+Name            Blueprint Basic   
+ID              Blueprint-Basic.eaB.60e5   
+Description     Deploys dev envn update instance from Basic.   
+Status          UPDATE_INIT   
+Location        us-east   
+Creator         test@in.ibm.com   
+Last modified   2022-11-03T09:03:13.723Z   
+                
+MODULES
+
+SNO   Workspace Name                  Workspace ID                                               Status    Location   Updated   
+1     tf_cloudless_sleepy_workitem1   us-east.workspace.tf_cloudless_sleepy_workitem1.f6197267   APPLIED   us-east       
+      
+OK
+```
+{: screen}
 
 ### `ibmcloud schematics blueprint list`
 {: #schematics-blueprint-list}
@@ -880,14 +938,24 @@ ibmcloud schematics blueprint list [--profile PROFILE] [--limit LIMIT] [--offset
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint list 
+ibmcloud schematics blueprint list
 ```
 {: pre}
+
+**Output**
+
+```text
+Name            ID                       Status        Location   Creator                          Last modified   
+Blueprint Basic   Blueprint-Basic.eaB.60e5   UPDATE_INIT   us-east    test@in.ibm.com   2022-11-03 09:03:13   
+                                                       
+OK
+```
+{: screen}
 
 ### `ibmcloud schematics blueprint run destroy`
 {: #schematics-blueprint-destroy}
 
-Destroys all the resources associated with the modules in a blueprint. This action cannot be reversed. On Workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
+Deletes all the cloud resources associated with the modules in a blueprint. This action cannot be reversed. On Workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
 {: shortdesc}
 
 **`Syntax`**
@@ -912,6 +980,30 @@ ibmcloud schematics blueprint run destroy --id BLUEPRINT_ID [--no-prompt] [--out
 ibmcloud schematics blueprint run destroy -id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
+
+**Output**
+
+```text
+Modules to be destroyed
+SNO   Module Type   Name                            Status   
+1     Workspace     tf_cloudless_sleepy_workitem1   APPLIED
+
+Do you really want to destroy all the resources of blueprint Blueprint-Basic.eaB.60e5? [y/N]> y
+Blueprint job us-east.JOB.Blueprint-Basic.d67f9a28 started at 2022-11-03 14:47:36
+
+Module job execution status
+Waiting:0    In Progress:0    Success:0    Failed:0   
+
+Blueprint job us-east.JOB.Blueprint-Basic.d67f9a28 completed at 2022-11-03 14:49:14
+
+Module Type   Name                            Status               Job ID   
+Blueprint     Blueprint GSM                   FULFILMENT_SUCCESS   us-east.JOB.Blueprint-Basic.d67f9a28   
+Workspace     tf_cloudless_sleepy_workitem1   INITIALISED             
+              
+Blueprint ID Blueprint-Basic.eaB.60e5 fulfilment_success at 2022-11-03 14:49:15
+OK
+```
+{: screen}
 
 
 ### `ibmcloud schematics blueprint config delete`
@@ -944,6 +1036,22 @@ ibmcloud schematics blueprint config delete -id blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
+**Output**
+
+```text
+Modules to be deleted
+SNO   Module Type   Name                            Status   
+1     Workspace     tf_cloudless_sleepy_workitem1   INITIALISED   
+      
+Some of the modules are not in INACTIVE state. Do you really want to delete the blueprint ? [y/N]> y
+Job : us-east.JOB.Blueprint-Basic.2455efb8 Created
+
+Job Type: BLUEPRINT DELETE
+
+OK
+```
+{: screen}
+
 ### `ibmcloud schematics blueprint job get`
 {: #schematics-blueprint-job-get}
 
@@ -972,6 +1080,27 @@ ibmcloud schematics blueprint job get --id eu-de.JOB.Blueprint_Basic.c5e3c831
 ```
 {: pre}
 
+**Output**
+
+```text
+BLUEPRINT JOB DETAILS      
+Job ID                  us-east.JOB.Blueprint-Basic.80927efe   
+Blueprint ID            Blueprint-Basic.eaB.d1f9   
+Job Type                blueprint_create_init   
+Location                us-east   
+Start Time              2022-11-03 09:27:44   
+End Time                2022-11-03 09:28:37   
+Status                  Normal   
+                           
+SNO   Child Job               Module ID                                                  Job Status     Job ID   
+1     blueprint_create_init                                                              job_finished   us-east.JOB.Blueprint-Basic.80927efe   
+2     Module_apply            us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c   job_finished 
+
+Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> n
+OK
+```
+{: screen}
+
 ### `ibmcloud schematics blueprint job list`
 {: #schematics-blueprint-job-list}
 
@@ -998,9 +1127,21 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint job list --id blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint job list --id Blueprint-Basic.eaB.60e5
 ```
 {: pre}
+
+**Output**
+
+```text
+ID     Blueprint-Basic.eaB.60e5   
+JOBS      
+SNO   Job Type                Status   Start Time            Job ID   
+1     blueprint_install       Normal   2022-11-03 09:33:35   us-east.JOB.Blueprint-GSM.e353032d  
+2     blueprint_create_init   Normal   2022-11-03 09:27:44   us-east.JOB.Blueprint-GSM.704e00f6
+
+```
+{: screen}
 
 ### `ibmcloud schematics blueprint job logs`
 {: #schematics-blueprint-job-logs}
@@ -1025,9 +1166,25 @@ ibmcloud schematics blueprint job logs --id JOB_ID
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint_Basic.e4081308
+ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint-Basic.5028b66b
 ```
 {: pre}
+
+```text
+ 2022/11/03 09:33:39 -----  New blueprint Action  -----
+ 2022/11/03 09:33:39 Request: blueprintId=Blueprint-Basic.eaB.60e5, account=96ee4d5ceb9116e5924ba4a883362490, owner=test@in.ibm.com, requestID=b59d963a-367a-45a0-8f65-ac2cee1cbae8
+ 2022/11/03 09:33:40 Related Job:  jobID=us-east.JOB.Blueprint-Basic.5028b66b
+ 2022/11/03 09:33:52  --- Ready to execute the blueprint flow install command --- 
+ 2022/11/03 09:33:52 Processing Module Entry us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c
+ 2022/11/03 09:33:54 Module Status for ModuleID=us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c is INACTIVE
+ 2022/11/03 09:35:05 Install activity completed for module ModuleID=us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c
+ 2022/11/03 09:35:06 Status for module ModuleID=us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c is ACTIVE
+ 2022/11/03 09:35:08 ENVIRONMENT_INSTALL - ENVIRONMENT_SYSTEM_STATEENUM_FULFILMENT_SUCCESS
+ 2022/11/03 09:35:09  Done with the blueprint install flow job 
+
+OK
+```
+{: screen}
 
 ## Enable BYOK or KYOK commands
 {: #kms-commands}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-05"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 {: deprecated}
+
+## November 2022
+{: #schematics-nov22}
+
+Review the release notes for November 2022.
+{: shortdesc}
+
+### 03 November 2022
+{: #schematics-nov0322}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.3](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ## September 2022
 {: #schematics-sept22}
