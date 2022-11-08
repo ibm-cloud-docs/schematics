@@ -30,7 +30,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
 ```json
 "env_values":[
             {
-               "__netrc__":"[[example.com, user1, pass1][example1.com, user2 , pass2]]"
+               "__netrc__":"[['example.com', 'user1', 'pass1']['example1.com', 'user2' , 'pass2']]"
             }
          ],
 ```
