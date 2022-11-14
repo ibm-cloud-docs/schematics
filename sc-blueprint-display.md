@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-14"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -300,7 +300,7 @@ Here are the steps to display a blueprint by using UI.
 {: shortdesc}
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
-2. Click **Overview** to view the BLueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your blueprint. 
+2. Click **Overview** to view the Blueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your blueprint. 
     - Optional: From **Modules status** section, Click **View details** to view the module details.
     - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
 3. Click **Modules** tab to see the list of resource modules and their current status. 
