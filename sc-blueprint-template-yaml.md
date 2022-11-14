@@ -208,7 +208,7 @@ Example of a default value
 
 
 ### inputs.sensitive
-{: #bp-modules-inputs-secure}
+{: #bp-inputs-secure}
 
 Type: Boolean
 
@@ -259,7 +259,7 @@ Type: list
 
 Default: []
 
-A list of the global environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](https://cloud.ibm.com/docs/schematics?topic=schematics-set-parallelism). 
+A list of the global environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
 {: pre}
 
 
@@ -282,7 +282,7 @@ settings: # Master settings for all modules
 {: pre}
 
 #### settings.TF_LOGS
-{: #-logs}
+{: #bp-logs}
 
 Type:       string
 
@@ -444,22 +444,17 @@ Example
 ```
 {: pre}
 
-
-
 ### modules.settings
-{: #bp-settings}
+{: #bp-modules-settings}
 
 Type: list
 
 Default: []
 
-A list of the environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](https://cloud.ibm.com/docs/schematics?topic=schematics-set-parallelism). 
-
-{: pre}
-
+A list of the environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
 
 #### modules.settings.TF_VERSION
-{: #bp-tf-version}
+{: #bp-tf-modules-version}
 
 Type:       number
 
@@ -479,7 +474,7 @@ module:
 {: pre}
 
 #### modules.settings.TF_LOGS
-{: #-logs}
+{: #bp-modules-logs}
 
 Type:       string
 

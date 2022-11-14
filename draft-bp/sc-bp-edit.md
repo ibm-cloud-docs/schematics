@@ -43,7 +43,7 @@ Follow the Blueprints YAML language extension and blueprint schema [installation
 ### Select a template 
 {: #bp-select-template}
 
-Initially you can start by customizing the [sample template](https://github.com/Cloud-Schematics/blueprint-sample-template){: external} or use one of the deployable template examples in the [IBM Cloud Schematics GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. 
+Initially you can start by customizing the [sample template](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} or use one of the deployable template examples in the [IBM Cloud Schematics GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. 
 
 Alternatively work with your own template library in Github or Gitlab. These can be either public or private repos.  
 
@@ -81,7 +81,7 @@ With the extension and schema configured, VSCode will provide assisted editing f
 ### Blueprint usage and configuration documentation
 {: #bp-usage-config-doc}
 
-To customize the template and input file to deploy your own infrastructure, refer to the Blueprint documentation for an overview of [blueprint templates and configuration](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-templates&interface=ui). 
+To customize the template and input file to deploy your own infrastructure, refer to the Blueprint documentation for an overview of [blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates&interface=ui). 
 
 ### Push edited template 
 {: #bp-push-template}

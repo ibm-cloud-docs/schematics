@@ -1749,7 +1749,7 @@ subcollection: schematics
 
     * [inputs.default](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-default)
 
-    * [inputs.sensitive](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-secure)
+    * [inputs.sensitive](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-secure)
 
     * [inputs.max_length](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len)
 
@@ -1777,7 +1777,7 @@ subcollection: schematics
 
     * [modules.source.git.git_token](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-token)
 
-    * [modules.settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-settings)
+    * [modules.settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-settings)
 
     * [modules.inputs options](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-options)
 
