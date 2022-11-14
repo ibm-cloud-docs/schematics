@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-14"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -143,6 +143,97 @@ inputs:
 ```
 {: pre}
 
+
+### inputs.type
+{: #bp-inputs-type}
+
+Type: YAML flow or block scalar 
+
+Default: string 
+
+As templates work with Terraform configs and modules, Terraform variable [type constraints](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. 
+
+Complex Terraform types are typically represented as multi-line strings. They can be similarly rendered in YAML block syntax, using either the literal style is denoted by the “|” indicator, or the folded style is denoted by the “>” indicator.  
+
+Options: Any valid Terraform variable type
+
+Example
+```yaml
+- name: docker_ports
+  type: |
+    list(object({
+    internal = number
+    external = number
+    protocol = string
+  })
+
+```
+{: pre}
+
+
+### inputs.value
+{: #bp-inputs-value}
+
+Type: Any valid Terraform variable type
+
+Optional
+
+The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When not specified the value is sourced from the blueprint config inputs and input file at run time.  
+
+Example of statically defined local value 
+```yaml
+- name: provision_ats_instance
+  type: boolean            
+  value: false
+```
+{: pre}
+
+
+### inputs.default
+{: #bp-inputs-default}
+
+Type: Any valid Terraform variable type
+
+Optional
+
+A default value for the input. The default is used when no value is provided at run time from the blueprint configuration inputs and input file. The default type is as defined by the `inputs.type` option. 
+
+Example of a default value 
+```yaml
+- name: provision_ats_instance
+  type: boolean            
+  value: false
+```
+{: pre}
+
+
+### inputs.sensitive
+{: #bp-modules-inputs-secure}
+
+Type: Boolean
+
+Default: false
+
+Flag specifying whether the value is a sensitive variable and must be masked in the output
+{: pre}
+
+### inputs.max_length
+{: #bp-inputs-max-len}
+
+Type: Number
+
+Number specifying the maximum length of the input value. Attribute is used by the UI to perform validation.  
+{: pre}
+
+### inputs.min_length
+{: #bp-inputs-min-len}
+
+Type: Number
+
+Number specifying the minimum length of the input value. Attribute is used by the UI to perform validation.  
+{: pre}
+
+
 ### outputs
 {: #bp-outputs}
 
@@ -168,12 +259,11 @@ Type: list
 
 Default: []
 
-A list of the settings to be used by the template that is defined as key-value pairs. Each setting is identified by the key `name`.
-
+A list of the global environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](https://cloud.ibm.com/docs/schematics?topic=schematics-set-parallelism). 
 {: pre}
 
 
-### settings.TF_VERSION
+#### settings.TF_VERSION
 {: #bp-tf-version}
 
 Type:       number
@@ -191,12 +281,12 @@ settings: # Master settings for all modules
 ```
 {: pre}
 
-### settings.TF_LOGS
+#### settings.TF_LOGS
 {: #-logs}
 
 Type:       string
 
-Configure the Terraform logging level for the blueprint and provider. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage. 
+Configure the Terraform logging level for all modules. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage. 
 
 Example
 
@@ -225,8 +315,8 @@ modules:
     source:
       source_type: github
       git: 
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/master/IBM-ResourceGroup"
-        git_branch: master
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
+        git_branch: main
     inputs:
       - name: provision
         value: $blueprint.provision_rg
@@ -240,8 +330,8 @@ modules:
     source:
       source_type: github
       git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/master/IBM-Storage"
-        git_branch: master
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-Storage"
+        git_branch: main
     inputs:
       - name: cos_instance_name
         value: $blueprint.cos_instance_name
@@ -279,14 +369,13 @@ Options: `terraform`
 ### modules.source options
 {: #bp-modules-sourceoptions}
 
-The version control source library from where the Terraform config, or Ansible playbook are retrieved. 
+The version control source library where the Terraform config, or Ansible playbook are located. 
 
 ```yaml
 source:
   source_type: github
   git: 
-    git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/master/IBM-ResourceGroup"
-    git_branch: master
+    git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
 ```
 {: pre}
 
@@ -299,9 +388,9 @@ Required: true
 
 Type of Git source repository. 
 
-Options: `github`, `gitlab` 
+Options: `github`, `git`, `catalog` 
 
-Specifies the module source from a version control system, e.g. a git repository to IBM Catalog. The following source parameters must match the source_type. 
+Specifies the module source from a version control system, e.g. a Github or Gitlab repository, or IBM Cloud Catalog. The following source parameters must match the source_type. 
 {: pre}
 
 ### modules.source.git.git_repo_url
@@ -319,7 +408,7 @@ URL for the automation module in its content repository. If the config exists in
 
 Type: string
 
-Default: master
+Default: main
 
 If content is in Git, the branch containing the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. 
 {: pre}
@@ -331,10 +420,82 @@ Type: string
 
 Default: latest
 
-If content is Git, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint config update` operation. 
+If content type is `git`, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint config update` operation. 
 
 Options: `latest` or release in SemVer format 
 {: pre}
+
+
+### modules.source.git.git_token
+{: #bp-modules-git-token}
+
+Type: string
+
+Default: []
+
+Access templates in private Git repos by specifying the Git user token of the repo. The value for `git_token` can be sourced from the template inputs using the `$blueprint` token.  
+
+Example
+
+```yaml
+  git: 
+    git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
+    git_token: $blueprint.git_token
+```
+{: pre}
+
+
+
+### modules.settings
+{: #bp-settings}
+
+Type: list
+
+Default: []
+
+A list of the environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](https://cloud.ibm.com/docs/schematics?topic=schematics-set-parallelism). 
+
+{: pre}
+
+
+#### modules.settings.TF_VERSION
+{: #bp-tf-version}
+
+Type:       number
+
+The Terraform version to be used at module execution time can be set using TF_Version parameter. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the module supported version. Updating this value will change the Terraform version that is used on the next execution. 
+
+Options:    Terraform version in `SemVer` format 
+
+Example
+
+```yaml
+module:
+  -name: xxxxx
+    settings: # Master settings for all modules 
+      - name: TF_VERSION
+        value: 1.0 
+```
+{: pre}
+
+#### modules.settings.TF_LOGS
+{: #-logs}
+
+Type:       string
+
+Configure the Terraform logging level during module execution. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage. 
+
+Example
+
+```yaml
+module:
+  -name: xxxxx
+    settings: # Master settings for all modules 
+      - name: TF_LOGS
+        value: "debug"
+```
+{: pre}
+
 
 ### modules.inputs options
 {: #bp-modules-inputs-options}
@@ -356,12 +517,6 @@ inputs:
     value: $module.bp-vsi-resource-group.outputs.resource_group_id
   - name: docker_ports
     value: $blueprint.docker_ports
-    type: |
-      list(object({
-        internal = number
-        external = number
-        protocol = string
-      })
 ```
 {: pre}
 
@@ -375,32 +530,8 @@ Required: true
 Name of variable to be passed to Terraform module or Ansible playbook. It must match the value in the Terraform template for the value to be passed at execution time to the module. 
 {: pre}
 
-### modules.inputs.type
-{: #bp-modules-inputs-type}
+The module input type constraint must match the variable type in the Terraform config for the value to be passed successfully at execution time. The module input type is inherited from the blueprint inputs type. 
 
-Type: YAML flow or block scalar 
-
-Default: string 
-
-As templates work with Terraform configs and modules, Terraform variable [type constraints](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. The type constraint must match the variable type in the target config for the value to be passed successfully at execution time to the module. The type can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or the Terraform `variables.tf` file.
-
-As complex Terraform types are typically represented as multi-line strings, YAML block syntax can be used.
-
-Options: Any valid Terraform variable type
-
-Example
-```yaml
-- name: docker_ports
-  value: $blueprint.docker_ports
-  type: |
-    list(object({
-    internal = number
-    external = number
-    protocol = string
-  })
-
-```
-{: pre}
 
 ### modules.inputs.value
 {: #bp-modules-inputs-value}
@@ -410,13 +541,16 @@ Type: Any valid Terraform variable type
 Required: true
 
 The value field sources the input value for a module from three sources:
-- Statically defined values specified on the name value pair statement of the module, in yaml syntax
-- An input to the template defined in the settings prefix and sourced at run time from the [inputs](/docs/schematics?topic=schematics-glossary#bpi1) defined by the blueprint configuration. Identified by the $blueprint prefix
+- Statically defined values specified on the name value pair statement of the module, in YAML syntax
+- An input to the template defined in the settings prefix and sourced at run time from the [inputs](/docs/schematics?topic=schematics-glossary#bpi1) defined by the blueprint configuration. Identified by the `$blueprint` prefix
 - An output value from another module defined in the template file. 
     - Identified by the `$module` prefix and must be included in the output section of another module.
     - The format is the token, `$module` followed by the module name, the token `outputs`, followed by the module output name. 
+    - In the following style: `$module.<module_name>.outputs.<output_name>`
 
 The value type is as defined by the `modules.inputs.type` option. 
+
+Functions and operators on input values are not supported in blueprint schema 1.0.0. This is being considered for a future release. Values are passed as is from the source to the module input without manipulation.      
 
 Example of statically defined values 
 ```yaml
@@ -441,7 +575,7 @@ Example value sourced from an output statement on the module `IBM-Resource-Group
 ```
 {: pre}
 
-### modules.inputs.secure
+### modules.inputs.sensitive
 {: #bp-modules-inputs-secure}
 
 Type: Boolean

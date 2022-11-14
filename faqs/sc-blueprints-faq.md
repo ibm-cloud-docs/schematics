@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-14"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -22,6 +22,29 @@ content-type: faq
 
 Answers to common questions about working with blueprints are classified under the following sections.
 {: shortdesc}
+
+## Are variable operators and functions supported in blueprint templates?
+{: #faqs-bp-values}
+{: faq}
+{: support}
+
+The 1.0.0 release of the Blueprints schema supports a minimal set of variable operators. It is intentionally simple. The values passed between inputs and outputs are passed as is. Functions and variable operators are not supported in this release. 
+
+A future release intends to implement functions and operators. 
+
+## How are blueprint module dependencies and execution order determined?
+{: #faqs-bp-dependencies}
+{: faq}
+{: support}
+
+Dependencies between blueprint modules are created using the value references between module inputs and outputs. Similar to Terraform, a DAG (Directed Acyclic Graph) is generated from the dependencies and relationships to determine execution order. 
+
+# How do I edit and validate blueprint templates?
+{: #faqs-bp-editing}
+{: faq}
+{: support}
+
+Blueprint templates can be edited in any editor or IDE. Follow the instructions on how to use and configure VSCode to [edit templates and input files](/docs/schematics?topic=schematics-edit-blueprints). The [Red Hat YAML VSCode extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml){: external}  provides a framework for editing blueprint YAML files, using a [blueprint schema](https://github.com/Cloud-Schematics/vscode-blueprint-schema){: external} defined using [JSON-Schema](https://json-schema.org){: external} . 
 
 ## Why do blueprint operations require a `blueprint ID`?
 {: #faqs-bp-install}

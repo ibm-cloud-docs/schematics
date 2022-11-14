@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-14"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,14 +20,21 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
-{: deprecated}
+
+
 
 ## November 2022
 {: #schematics-nov22}
 
 Review the release notes for November 2022.
 {: shortdesc}
+
+### 14 November 2022
+{: #schematics-nov1422}
+{: release-note}
+{{site.data.keyword.bpshort}} Blueprints template schema changes. Templates now support meta-data attributes for template variable inputs. This includes, type, sensitive, max_length, min_length and default. Meta-data attributes of template inputs take precedence over any attributes specified on module inputs. Module meta-data attributes will be depreciated in a future release. 
+{: shortdesc}
+
 
 ### 03 November 2022
 {: #schematics-nov0322}
@@ -38,6 +45,9 @@ Release {{site.data.keyword.bpshort}} command-line plug-in.
 
 ## September 2022
 {: #schematics-sept22}
+
+{{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
+{: deprecated}
 
 Review the release notes for September 2022.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-14"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -598,11 +598,13 @@ For more information about the flags see [workspace get](/docs/schematics?topic=
 ### `ibmcloud schematics blueprint config create`
 {: #schematics-blueprint-create}
 
-Create a blueprint by using the `ibmcloud schematics blueprint config create` command. The blueprint is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the input files and optional override inputs.
+Create a blueprint config by using the `ibmcloud schematics blueprint config create` command. The blueprint config is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3` version.
 {: important}
+
+The config create command supports two modes of input. Either all parameters and flags specified on the command line. Or a file option that accepts the configuration as a JSON file from the local file system.     
 
 **Syntax to create using command:**
 
@@ -629,9 +631,9 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--input-git-file` or `--if`| Optional | The input file name. |
 | `--input-git-branch` or `--ib`| Optional |The input file Git branch name, if not provided it defaults to main. In case the `--input-git-branch` and `--input-git-release` values are not provided, the command errors for one of the value to be provided.|
 | `--input-git-release` or `--ir`| Optional | The input file release tag. Exclusive with branch name.|
-| `--inputs` or `--in` | Optional | The input variables for the blueprint. Only the `string` type is supported. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
+| `--inputs` or `--in` | Optional | The input variables for the blueprint. Only the `string` type is supported. Use of `--file` option if its required to pass complex variables as input. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
-| `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. |
+| `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. This approach supporting passing complex input variables. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint config create flags" caption-side="bottom"}
 
@@ -646,10 +648,10 @@ ibmcloud schematics blueprint config create -name blueprint_Basic -resource-grou
 #### Using a config file
 {: #bp-create-config}
 
-Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option.
+Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option. This approach supports passing complex input variables at create time.  
 {: shortdesc}
 
-You need to replace the `<...>` placeholders with the actual values.
+You need to replace the `<...>` placeholders with the actual values. To pass double quotes as required by Terraform for variables, double quotes must be correctly escaped in the JSON as `\\\"` .  
 {: note}
 
 **Syntax when using a config JSON file:**
@@ -673,6 +675,10 @@ You need to replace the `<...>` placeholders with the actual values.
     {
       "name" :  "api_key",
       "value": "<PROVIDE YOUR api_key VALUE>"
+    },
+    {
+      "name" :  "complex-list(any)",
+      "value": "[\\\"36\\\", \\\"mqm-grand\\\", \\\"madison-square-garden\\\"]"
     }
   ],
   "config": [
