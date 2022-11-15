@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-15"
 
 keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
 
@@ -47,7 +47,7 @@ Blueprint commands have been renamed with the 1.12.3 release of the Schematics C
 | --- |--- | --- | 
 | Default values are not supported | Planned for November 2022 | |
 | Local values are not supported | Support planned as 'hidden inputs' in November 2022 | | 
-| No support for input value operators, e.g. merge | Planned for a 2023 release | |
+| No support for input value operators, for example, merge | Planned for a 2023 release | |
 | Parallelism of 1 during job execution | Concurrent module jobs planned for 2023 release | |    
 | Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in.  | UI support planned for November 2022 | | 
 | The Terraform Plan operation is not supported for blueprints. | Support planned for year end 2022 | | 

@@ -771,15 +771,15 @@ subcollection: schematics
 
 [Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-terraform)
 
-* [Root modules and Terraform configurations](/docs/schematics?topic=schematics-blueprint-terraform#root-modules-and-terraform-configurations)
+* [Root modules and Terraform configurations](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-root-module-confg)
 
-* [Child and reusable shared modules](/docs/schematics?topic=schematics-blueprint-terraform#child-and-reusable-shared-modules)
+* [Child and reusable shared modules](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-reusable-module)
 
 * [Blueprints provider injection](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection)
 
-    * [Templating Terraform language statements](/docs/schematics?topic=schematics-blueprint-terraform#templating-terraform-language-statements)
+    * [Templating Terraform language statements](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-template-statement)
 
-    * [Configuring provider injection](/docs/schematics?topic=schematics-blueprint-terraform#configuring-provider-injection)
+    * [Configuring provider injection](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-provider-injection)
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-terraform#bp-terraform-nextsteps)
 
