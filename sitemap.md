@@ -136,9 +136,9 @@ subcollection: schematics
 
 [Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
 
-* [Creating templates, inputs and configuration](/docs/schematics?topic=schematics-define-blueprints#creating-templates,-inputs-and-configuration)
+* [Creating templates, inputs and configuration](/docs/schematics?topic=schematics-define-blueprints#define-templates-input)
 
-* [Steps to define a blueprint](/docs/schematics?topic=schematics-define-blueprints#steps-to-define-a-blueprint)
+* [Steps to define a blueprint](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps)
 
 * [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
 

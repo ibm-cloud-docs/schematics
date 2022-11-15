@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-15"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -35,6 +35,8 @@ A blueprint, the environment and cloud resources to be deployed are defined by t
 3. Reusable `modules` written in Terraform to implement the infrastructure architecture and deploy the desired cloud resources. 
 
 ## Creating templates, inputs and configuration
+{: #define-templates-input}
+
 Blueprint environments are be created from reusable user or {{site.data.keyword.IBM_notm}} authored blueprint templates. New templates can be authored to address specific application requirements. Either by creating a new template from scratch or modification of an existing template. 
 
 Templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as `dev`, `stage`, and `production` with multiple target regions. Each environment being customized with its own input values. See the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) for more details. 
@@ -44,6 +46,8 @@ For examples of blueprint templates and inputs, see the [{{site.data.keyword.bpl
 Change in blueprint environments is explicitly managed through version control. Template and input documents are all sourced from a version control system such as GitHub, GitLab or {{site.data.keyword.IBM_notm}} Catalog. 
 
 ## Steps to define a blueprint
+{: #define-blueprint-steps}
+
 The steps to create a blueprint template and define the versioned the inputs are illustrated in the diagram.
 
 ![Blueprint template and inputs](../images/sc-bp-define.svg){: caption="Blueprint template and inputs" caption-side="bottom"}
