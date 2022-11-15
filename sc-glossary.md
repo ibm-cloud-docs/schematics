@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-15"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -114,7 +114,7 @@ Blueprint inputs can be provided as:
 ### Blueprint input files
 {: #bpi2}
 
-Version-controlled input file (from a Git repository) to pass inputs to customize the blueprint template for a specific environment. The type of an input variable is defined meta data in the template file. 
+Version-controlled input file (from a Git repository) to pass inputs to customize the blueprint template for a specific environment. The type of an input variable is defined metadata in the template file. 
 {: shortdesc}
 
 ### Blueprint jobs

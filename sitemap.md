@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-15"
 
 keywords: schematics
 subcollection: schematics
@@ -116,7 +116,7 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
 
 
-## Working with blueprints
+## Working with Blueprints
 {: #sitemap_working_with_blueprints}
 
 
@@ -136,21 +136,35 @@ subcollection: schematics
 
 [Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
 
-* [Creating templates, inputs and configuration](/docs/schematics?topic=schematics-define-blueprints#creating-templates,-inputs-and-configuration)
+* [Creating templates, inputs and configuration](/docs/schematics?topic=schematics-define-blueprints#define-templates-input)
 
-* [Steps to define a blueprint](/docs/schematics?topic=schematics-define-blueprints#steps-to-define-a-blueprint)
+* [Steps to define a blueprint](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps)
 
 * [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
+
+[Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
+
+* [Configuring your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
+
+* [Create template repository and local clone](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-createtemplate)
+
+    * [Select a template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
+
+    * [Clone template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
+
+    * [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
+
+* [Editing in VSCode](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
+
+    * [Blueprint usage and configuration documentation](/docs/schematics?topic=schematics-edit-blueprints#bp-usage-config-doc)
+
+    * [Push edited template](/docs/schematics?topic=schematics-edit-blueprints#bp-push-template)
+
+* [Next steps](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-nextsteps)
 
 [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
-
-[Updating and operating blueprints](/docs/schematics?topic=schematics-update-op-blueprints#update-op-blueprints)
-
-* [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
-
-* [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
 
 [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
 
@@ -263,11 +277,21 @@ subcollection: schematics
 
     * Review the release notes for November 2022.
 
+    * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
+
+        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+
+    * [14 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1422)
+
+        * {{site.data.keyword.bpshort}} Blueprints template schema changes. 
+
     * [03 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0322)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
 * [September 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept22)
+
+    * {{site.data.keyword.bpshort}} deprecates `Python v3.6` and upgrades the {{site.data.keyword.bpshort}} Job image to use `Python v3.8` by mid of September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 
     * Review the release notes for September 2022.
 
@@ -747,15 +771,15 @@ subcollection: schematics
 
 [Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-terraform)
 
-* [Root modules and Terraform configurations](/docs/schematics?topic=schematics-blueprint-terraform#root-modules-and-terraform-configurations)
+* [Root modules and Terraform configurations](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-root-module-confg)
 
-* [Child and reusable shared modules](/docs/schematics?topic=schematics-blueprint-terraform#child-and-reusable-shared-modules)
+* [Child and reusable shared modules](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-reusable-module)
 
 * [Blueprints provider injection](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection)
 
-    * [Templating Terraform language statements](/docs/schematics?topic=schematics-blueprint-terraform#templating-terraform-language-statements)
+    * [Templating Terraform language statements](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-template-statement)
 
-    * [Configuring provider injection](/docs/schematics?topic=schematics-blueprint-terraform#configuring-provider-injection)
+    * [Configuring provider injection](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-provider-injection)
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-terraform#bp-terraform-nextsteps)
 
@@ -785,7 +809,7 @@ subcollection: schematics
 
     * [Verify blueprint run apply success](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-cli)
 
-* [Creating a blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-ui)
+* [Generate and apply a blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
 
     * [Verify blueprint apply operation from the UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
 
@@ -1321,11 +1345,11 @@ subcollection: schematics
 * [Specifying version constraints in Ansible](/docs/schematics?topic=schematics-version-constraints#version-constraints-ansible)
 
 
-## Setting up Terraform for {{site.data.keyword.bpshort}}
-{: #sitemap_setting_up_terraform_for_}
+## Using Terraform to configure {{site.data.keyword.bpshort}}
+{: #sitemap_using_terraform_to_configure_}
 
 
-[Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup#terraform-setup)
+[Using Terraform to configure {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup#terraform-setup)
 
 * [Example: Creating the {{site.data.keyword.bpshort}} Workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
 
@@ -1703,8 +1727,8 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## Blueprint definitions reference
-{: #sitemap_blueprint_definitions_reference}
+## Blueprint template reference
+{: #sitemap_blueprint_template_reference}
 
 
 [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-template-schema-yaml)
@@ -1723,13 +1747,21 @@ subcollection: schematics
 
     * [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs)
 
+    * [inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-type)
+
+    * [inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-value)
+
+    * [inputs.default](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-default)
+
+    * [inputs.sensitive](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-secure)
+
+    * [inputs.max_length](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len)
+
+    * [inputs.min_length](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-min-len)
+
     * [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs)
 
     * [settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-settings)
-
-    * [settings.TF_VERSION](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tf-version)
-
-    * [settings.TF_LOGS](/docs/schematics?topic=schematics-bp-template-schema-yaml#-logs)
 
 * [Module parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema)
 
@@ -1747,15 +1779,17 @@ subcollection: schematics
 
     * [modules.source.git.git_release](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-release)
 
+    * [modules.source.git.git_token](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-token)
+
+    * [modules.settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-settings)
+
     * [modules.inputs options](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-options)
 
     * [modules.inputs.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-name)
 
-    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-type)
-
     * [modules.inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value)
 
-    * [modules.inputs.secure](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-secure)
+    * [modules.inputs.sensitive](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-secure)
 
     * [module.outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-module-outputs)
 
@@ -1826,17 +1860,17 @@ subcollection: schematics
 [{{site.data.keyword.bpshort}} SDKs](/docs/schematics?topic=schematics-schematics-sdks#schematics-sdks)
 
 
-## Locations and service endpoints
-{: #sitemap_locations_and_service_endpoints}
+## {{site.data.keyword.bpshort}} service locations and endpoints
+{: #sitemap__service_locations_and_endpoints}
 
 
-[Locations and service endpoints](/docs/schematics?topic=schematics-locations#locations)
+[{{site.data.keyword.bpshort}} service locations and endpoints](/docs/schematics?topic=schematics-locations#locations)
 
-* [Where can I create {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
+* [Where can I create and run {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
 
 * [Where do my {{site.data.keyword.bpshort}} Actions run?](/docs/schematics?topic=schematics-locations#where-do-locations-run)
 
-* [Where is my data stored?](/docs/schematics?topic=schematics-locations#where-is-data-stored)
+* [Where is my {{site.data.keyword.bpshort}} and template data stored?](/docs/schematics?topic=schematics-locations#where-is-data-stored)
 
 * [Where are my {{site.data.keyword.cloud_notm}} resources provisioned?](/docs/schematics?topic=schematics-locations#where-are-resources-provisioned)
 
@@ -2009,6 +2043,12 @@ subcollection: schematics
 * [What is time set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
+
+* [Are variable operators and functions supported in blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-values)
+
+* [How are blueprint module dependencies and execution order determined?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-dependencies)
+
+[How do I edit and validate blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-editing)
 
 * [Why do blueprint operations require a `blueprint ID`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-14"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -40,8 +40,8 @@ Supported high availability features depend on the type of {{site.data.keyword.c
 ![High availability for {{site.data.keyword.cloud_notm}} resources](images/schematics-ha-roadmap.png){: caption="Figure 1. High availability for {{site.data.keyword.cloud_notm}} resources" caption-side="bottom"}
 
 1. **Single zone resources**: By default, your {{site.data.keyword.cloud_notm}} resource is deployed into one zone. This setup does not protect your workloads or data from a zonal or regional failure. 
-2. **Multiple resources across zones**: You can create multiple instances and spread these instances across zones, such as [multizone clusters in {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-ha_clusters#multizone) or a [Virtual Private Cloud with subnets in different zones](/docs/vpc?topic=solution-tutorials-vpc-multi-region#vpc-multi-region). This setup protects your workloads and data in case of a zonal failure. Note that this setup might not be available for your resource. 
-3. **Multiple resources across regions**: You can create multiple instances and spread these instances across regions, such as [multiple clusters in {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-ha_clusters#multiple_clusters). This setup provides the highest availability for your workloads and data in case of a zonal or regional failure. Note that this setup might not be available for your resource. 
+2. **Multiple resources across zones**: You can create multiple instances and spread these instances across zones, such as [multizone clusters in {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-ha_clusters#mz-clusters) or a [Virtual Private Cloud with subnets in different zones](/docs/vpc?topic=solution-tutorials-vpc-multi-region#vpc-multi-region). This setup protects your workloads and data in case of a zonal failure. Note that this setup might not be available for your resource. 
+3. **Multiple resources across regions**: You can create multiple instances and spread these instances across regions, such as [multiple clusters in {{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-ha_clusters#mz-clusters). This setup provides the highest availability for your workloads and data in case of a zonal or regional failure. Note that this setup might not be available for your resource. 
 
 
 

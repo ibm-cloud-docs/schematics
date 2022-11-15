@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-15"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -598,11 +598,13 @@ For more information about the flags see [workspace get](/docs/schematics?topic=
 ### `ibmcloud schematics blueprint config create`
 {: #schematics-blueprint-create}
 
-Create a blueprint by using the `ibmcloud schematics blueprint config create` command. The blueprint is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the input files and optional override inputs.
+Create a blueprint config by using the `ibmcloud schematics blueprint config create` command. The blueprint config is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3` version.
 {: important}
+
+The config create command supports two modes of input. Either all parameters and flags specified on the command line. Or a file option that accepts the configuration as a JSON file from the local file system.     
 
 **Syntax to create using command:**
 
@@ -629,9 +631,9 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 | `--input-git-file` or `--if`| Optional | The input file name. |
 | `--input-git-branch` or `--ib`| Optional |The input file Git branch name, if not provided it defaults to main. In case the `--input-git-branch` and `--input-git-release` values are not provided, the command errors for one of the value to be provided.|
 | `--input-git-release` or `--ir`| Optional | The input file release tag. Exclusive with branch name.|
-| `--inputs` or `--in` | Optional | The input variables for the blueprint. Only the `string` type is supported. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
+| `--inputs` or `--in` | Optional | The input variables for the blueprint. Only the `string` type is supported. Use of `--file` option if its required to pass complex variables as input. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
-| `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. |
+| `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. This approach supporting passing complex input variables. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint config create flags" caption-side="bottom"}
 
@@ -646,10 +648,10 @@ ibmcloud schematics blueprint config create -name blueprint_Basic -resource-grou
 #### Using a config file
 {: #bp-create-config}
 
-Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option.
+Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option. This approach supports passing complex input variables at create time.  
 {: shortdesc}
 
-You need to replace the `<...>` placeholders with the actual values.
+You need to replace the `<...>` placeholders with the actual values. To pass double quotes as required by Terraform for variables, double quotes must be correctly escaped in the JSON as `\\\"` .  
 {: note}
 
 **Syntax when using a config JSON file:**
@@ -673,6 +675,10 @@ You need to replace the `<...>` placeholders with the actual values.
     {
       "name" :  "api_key",
       "value": "<PROVIDE YOUR api_key VALUE>"
+    },
+    {
+      "name" :  "complex-list(any)",
+      "value": "[\\\"36\\\", \\\"mqm-grand\\\", \\\"madison-square-garden\\\"]"
     }
   ],
   "config": [
@@ -1195,7 +1201,7 @@ You can use your encryption keys from key management services (KMS), {{site.data
 ### Prerequisites
 {: #key-prerequisites}
 
-The key management system will list the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
+The key management system lists the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
 - You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
 - You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
@@ -1637,7 +1643,7 @@ ibmcloud schematics job run --command-object COMMAND_OBJECT_TYPE --command-objec
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} job run flags" caption-side="top"}
 
-If the action contains the playbook name, you need to add the playbook name, so that the action playbook name will take the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
+If the action contains the playbook name, you need to add the playbook name, so that the action playbook name takes the precedence. If you need to override the playbook name through the job, then, you have to create an action with the new playbook name.
 {: note}
 
 #### Using the payload file
@@ -1887,7 +1893,7 @@ ibmcloud schematics apply --id WORKSPACE_ID [--target RESOURCE1] [--target RESOU
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
-| `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file will not be created or updated. To target the creation of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
+| `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file is not created or updated. To target the creation of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
 | `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
