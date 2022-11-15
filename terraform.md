@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-15"
 
 subcollection: schematics
 
@@ -14,7 +14,7 @@ subcollection: schematics
 # Using Terraform to configure {{site.data.keyword.bpshort}} 
 {: #terraform-setup}
 
-Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services to rapidly build complex, multi-tier cloud environments following Infrastructure as Code (IaC) principles. Similarly, you can automate the provisioning, update, and deletion of your {{site.data.keyword.bplong_notm}} Workspace and Actions  instances using Terraform.
+Terraform on {{site.data.keyword.cloud}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} services to rapidly build complex, multitiered cloud environments following Infrastructure as Code (IaC) principles. Similarly, you can automate the provisioning, update, and deletion of your {{site.data.keyword.bplong_notm}} Workspace and Actions  instances using Terraform.
 {: shortdesc}
 
 Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command-line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides predefined Terraform templates that you can install from the {{site.data.keyword.cloud_notm}} catalog.
