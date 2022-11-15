@@ -283,7 +283,7 @@ subcollection: schematics
 
     * [14 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1422)
 
-        * {{site.data.keyword.bpshort}} Blueprints template schema changes. Templates now support meta-data attributes for template variable inputs. This includes, type, sensitive, max_length, min_length and default. Meta-data attributes of template inputs take precedence over any attributes specified on module inputs. Module meta-data attributes will be depreciated in a future release. 
+        * {{site.data.keyword.bpshort}} Blueprints template schema changes. Templates now support meta-data attributes for template variable inputs. This includes `type`, `sensitive`, `max_length`, `min_length`, and `default`. Meta-data attributes of template inputs take precedence over any attributes specified on module inputs. Module meta-data attributes gets depreciated in a future release. 
 
     * [03 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0322)
 
