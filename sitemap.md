@@ -809,7 +809,7 @@ subcollection: schematics
 
     * [Verify blueprint run apply success](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-cli)
 
-* [Creating a blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#create-blueprint-ui)
+* [Generate and apply a blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
 
     * [Verify blueprint apply operation from the UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
 
