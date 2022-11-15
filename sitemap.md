@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-15"
 
 keywords: schematics
 subcollection: schematics
@@ -276,6 +276,10 @@ subcollection: schematics
 * [November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov22)
 
     * Review the release notes for November 2022.
+
+    * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
+
+        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
 
     * [14 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1422)
 

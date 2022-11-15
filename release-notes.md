@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-15"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,21 +20,29 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
 
-
-
-
 ## November 2022
 {: #schematics-nov22}
 
 Review the release notes for November 2022.
 {: shortdesc}
 
+### 15 November 2022
+{: #schematics-nov1522}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+:    The agent beta releases [{{site.data.keyword.bpshort}} Agents v1.0.2](https://github.com/Cloud-Schematics/schematics-agents/releases/tag/v1.0.2){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with the following fixes:
+    - unknown certificate issues during repository cloning
+    - display the complete log information, log enhancements
+    - job status, and other minor bug fixes.
+{: shortdesc}
+
 ### 14 November 2022
 {: #schematics-nov1422}
 {: release-note}
+
 {{site.data.keyword.bpshort}} Blueprints template schema changes. Templates now support meta-data attributes for template variable inputs. This includes, type, sensitive, max_length, min_length and default. Meta-data attributes of template inputs take precedence over any attributes specified on module inputs. Module meta-data attributes will be depreciated in a future release. 
 {: shortdesc}
-
 
 ### 03 November 2022
 {: #schematics-nov0322}
