@@ -35,7 +35,7 @@ Release {{site.data.keyword.bpshort}} Agents GitHub repository.
     - Unknown certificate issues during repository cloning.
     - Display the complete log information, log enhancements.
     - Job status, and other minor bug fixes.
-{: shortdesc}
+
 
 ### 14 November 2022
 {: #schematics-nov1422}
@@ -43,7 +43,7 @@ Release {{site.data.keyword.bpshort}} Agents GitHub repository.
 
 {{site.data.keyword.bpshort}} Blueprints template schema changes.
 :    {{site.data.keyword.bpshort}} Blueprints templates now support metadata attributes for template variable inputs. This includes `type`, `sensitive`, `max_length`, `min_length`, and `default`. Metadata attributes of template inputs take precedence over any attributes specified on module inputs. Module metadata attributes gets depreciated in a future release. 
-{: shortdesc}
+
 
 ### 03 November 2022
 {: #schematics-nov0322}
