@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-11-16"
 
 keywords: schematics
 subcollection: schematics
@@ -283,7 +283,7 @@ subcollection: schematics
 
     * [14 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1422)
 
-        * {{site.data.keyword.bpshort}} Blueprints template schema changes. 
+        * {{site.data.keyword.bpshort}} Blueprints template schema changes.
 
     * [03 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0322)
 
