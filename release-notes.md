@@ -31,7 +31,7 @@ Review the release notes for November 2022.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} Agents GitHub repository.
-:    The agent beta releases [{{site.data.keyword.bpshort}} Agents v1.0.2](https://github.com/Cloud-Schematics/schematics-agents/releases/tag/v1.0.2){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with the following fixes:
+:    The agent beta releases [{{site.data.keyword.bpshort}} Agents v1.0.2](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with the following fixes:
     - Unknown certificate issues during repository cloning.
     - Display the complete log information, log enhancements.
     - Job status, and other minor bug fixes.
