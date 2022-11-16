@@ -41,7 +41,6 @@ toc:
                                                     - draft-bp/sc-bp-deploy.md
                                                     - draft-bp/sc-bp-update.md
                                                     - draft-bp/sc-bp-delete.md
-                                                    - draft-bp/sc-bp-ui-flow.md
                                   - topicgroup:
                                             label: Security and compliance
                                             topics:
