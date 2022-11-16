@@ -166,6 +166,12 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
 
+[Updating and operating blueprints](/docs/schematics?topic=schematics-update-op-blueprints#update-op-blueprints)
+
+* [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
+
+* [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
+
 [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
