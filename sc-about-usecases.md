@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -87,7 +87,7 @@ To get started with software deployment in {{site.data.keyword.bpshort}}, see th
 3. **Run the template**: When you run the template, {{site.data.keyword.bpshort}} uses the built-in Terraform, Ansible, Helm, OpenShift Operator, or Cloud Pak capabilities to install your software or spin up infrastructure resources. You can use your workspace to monitor the progress of your template execution. 
 
 ## Next steps
-{: #nextsteps-terminologies}
+{: #usecase-nextsteps}
 
 - Explore blueprint samples by using {{site.data.keyword.bpshort}} [tutorials](/docs/schematics?topic=schematics-provisioning-terraform-template).
 - Click [here](/docs/schematics?topic=schematics-how-it-works) to revisit the {{site.data.keyword.bpshort}} use cases.

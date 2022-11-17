@@ -250,7 +250,7 @@ The results of blueprint operations, `config create`, `run apply`, `config updat
 The color coding indicates whether the job was successful or failed. 
 
 ## Listing blueprint from the API
-{: #install-blueprint-api}
+{: #list-blueprint-api}
 {: api}
 
 
@@ -360,7 +360,7 @@ Verify that the blueprint jobs is success as shown in the output.
 For more information, about how to diagnose and resolve issues if the list job fails, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Next steps
-{: #bp-create-nextsteps}
+{: #bp-job-nextsteps}
 
 - After displaying the blueprint jobs in {{site.data.keyword.bpshort}}, the next step in updating the environment is to [update](/docs/schematics?topic=schematics-update-blueprint) the configuration.
 

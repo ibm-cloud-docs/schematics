@@ -81,7 +81,7 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
 
-* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#nextsteps-terminologies)
+* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#terminologies-nextsteps)
 
 [Usage of open source projects in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
@@ -113,7 +113,7 @@ subcollection: schematics
 
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
-* [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
+* [Next steps](/docs/schematics?topic=schematics-how-it-works#usecase-nextsteps)
 
 
 ## Working with Blueprints
@@ -799,13 +799,13 @@ subcollection: schematics
 
     * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-cli)
 
-* [Creating a blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
+* [Creating blueprint through UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
 
     * [Verifying blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
 
 * [Creating a blueprint from the API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
 
-    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-update-api)
+    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-create-api)
 
 * [Next steps](/docs/schematics?topic=schematics-create-blueprint-config#bp-create-nextsteps)
 
@@ -819,7 +819,7 @@ subcollection: schematics
 
     * [Verify blueprint apply operation from the UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
 
-* [Creating blueprint through API](/docs/schematics?topic=schematics-apply-blueprint#install-blueprint-api)
+* [Applying blueprint through API](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-api)
 
     * [Verify Blueprint apply job through API](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-api)
 
@@ -859,11 +859,11 @@ subcollection: schematics
 
 * [List blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs-ui)
 
-* [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#install-blueprint-api)
+* [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-api)
 
     * [Verifying blueprint job results from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-verify-jobs-api)
 
-* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-create-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-job-nextsteps)
 
 [Update a blueprint configuration](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
@@ -1193,7 +1193,7 @@ subcollection: schematics
 
 * [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
 
-    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#key-prerequisites)
+    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
 
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-ui)
 
@@ -1240,7 +1240,7 @@ subcollection: schematics
 
 * [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 
-* [Next steps](/docs/schematics?topic=schematics-using-agent#connect-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-using-agent#agent-using-nextsteps)
 
 [Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-uninstall-agent#uninstall-agent)
 
@@ -1468,7 +1468,7 @@ subcollection: schematics
 
 * [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
 
-* [Configuring the variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-variables)
+* [Configuring variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-the-variables)
 
 * [Automating the continuous deployment process](/docs/schematics?topic=schematics-workspace-continuous-deployment#continuous-deployment)
 
