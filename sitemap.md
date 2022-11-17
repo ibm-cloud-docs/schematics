@@ -815,9 +815,13 @@ subcollection: schematics
 
     * [Verify blueprint run apply success](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-cli)
 
-* [Generate and apply a blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
+* [Generate and apply blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
 
     * [Verify blueprint apply operation from the UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
+
+* [Creating blueprint through API](/docs/schematics?topic=schematics-apply-blueprint#install-blueprint-api)
+
+    * [Verify Blueprint apply job through API](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-api)
 
 * [Next steps](/docs/schematics?topic=schematics-apply-blueprint#bp-apply-nextsteps)
 

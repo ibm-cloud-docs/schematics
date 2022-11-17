@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-11-17"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -140,7 +140,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 {: #create-blueprint-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Click **Schematics** > **Blueprints** > **Create Blueprint**.
     - In **Blueprint Details** section:
         - **Name** `<Provide unique name for your blueprint>`.

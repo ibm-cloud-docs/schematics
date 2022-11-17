@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-17"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -52,7 +52,7 @@ You can use {{site.data.keyword.bpshort}} to provision the Agent infrastructure 
 - [LogDNA](/docs/log-analysis?topic=log-analysis-iam)
 - [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam)
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external} with the following inputs to create an Agent infrastructure workspace.
     - In **Specify Template** section:
         - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/infrastructure`.
@@ -112,7 +112,7 @@ You can use {{site.data.keyword.bpshort}} to deploy the Agent services on the Ag
 For Beta, the Agent service must be deployed in a newly provisioned Agent infrastructure.
 {: note}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/).
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Navigate to **Schematics** > **Workspaces** > [**Create workspace**](https://cloud.ibm.com/schematics/workspaces/create){: external}.
     - In **Specify Template** section:
         - **GitHub, GitLab or `Bitbucket` repository URL** - `https://github.com/Cloud-Schematics/schematics-agents/tree/main/templates/service`.
