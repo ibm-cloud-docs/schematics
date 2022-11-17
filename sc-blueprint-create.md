@@ -155,7 +155,7 @@ You can follow these steps to create the {{site.data.keyword.bpshort}} Blueprint
         - **Repository URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example`.
         - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`.
         - Check the information that is entered are correct to create a blueprint.
-        - Click **Next and save as draft**. Observe the Blueprint ID the blueprint is in `Draft` Status.
+        - Click **Next and save as draft**. Observe the Blueprint ID is created and is in `Draft` Status.
            Validation takes few seconds to fetch the input variables from the blueprint configuration file.
            {: note}
 

@@ -52,19 +52,25 @@ subcollection: schematics
 
 [Getting started: Using blueprints to deploy large-scale cloud environments](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
 
-* [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
+* [Deploy blueprint through UI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-ui)
 
-* [Select a blueprint template](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
+    * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq-ui)
 
-* [Creating a blueprint in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
+    * [Creating a blueprint in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create-ui)
 
-    * [Syntax](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-syntax)
+    * [Applying the blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-apply-ui)
 
-    * [Output](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-create-output)
+    * [Listing the blueprint](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-list-ui)
 
-* [Installing the blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-install)
+* [Deploy blueprint through CLI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-cli)
 
-    * [Output](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-install-output)
+    * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
+
+    * [Select a blueprint template](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
+
+    * [Creating a blueprint in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
+
+    * [Applying the blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-install)
 
 * [Next steps](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-nextsteps)
 
