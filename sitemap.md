@@ -791,7 +791,7 @@ subcollection: schematics
 
 [Create a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-config)
 
-* [Creating a blueprint configuration from the CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
+* [Creating a blueprint configuration through CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
 
     * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-rg-cli)
 
@@ -801,23 +801,23 @@ subcollection: schematics
 
 * [Creating blueprint through UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
 
-    * [Verifying blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
+    * [Verifying blueprint creation through UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
 
-* [Creating a blueprint from the API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
+* [Creating a blueprint through API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
 
-    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-create-api)
+    * [Verifying blueprint create through API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-create-api)
 
 * [Next steps](/docs/schematics?topic=schematics-create-blueprint-config#bp-create-nextsteps)
 
 [Apply changes to a blueprint environment](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint)
 
-* [Running a blueprint apply from the CLI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-cli)
+* [Running a blueprint apply through CLI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-cli)
 
     * [Verify blueprint run apply success](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-cli)
 
-* [Generate and apply blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
+* [Generate and apply blueprint environment through UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
 
-    * [Verify blueprint apply operation from the UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
+    * [Verify blueprint apply operation through UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
 
 * [Applying blueprint through API](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-api)
 
@@ -859,9 +859,9 @@ subcollection: schematics
 
 * [List blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs-ui)
 
-* [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-api)
+* [Listing blueprint through API](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-api)
 
-    * [Verifying blueprint job results from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-verify-jobs-api)
+    * [Verifying blueprint job results through API](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-verify-jobs-api)
 
 * [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-job-nextsteps)
 
@@ -875,49 +875,49 @@ subcollection: schematics
 
     * [Explicit versioning](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-strict)
 
-* [Updating a blueprint from the CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
+* [Updating a blueprint through CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
     * [Verifying blueprint config update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
 
-* [Updating a blueprint environment from the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
+* [Updating a blueprint environment through UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
 
-    * [Verify blueprint config update from the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
+    * [Verify blueprint config update through UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
-* [Updating a blueprint from the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
+* [Updating a blueprint through API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
-    * [Verify blueprint config create from the API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
+    * [Verify blueprint config create through API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
 
 * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
 
 [Destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint)
 
-* [Destroying a blueprint environment from the UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
+* [Destroying a blueprint environment through UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
 
     * [Verifying blueprint environment destroy](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destroy-ui)
 
-* [Destroying a blueprint environment from the CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
+* [Destroying a blueprint environment through CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
 
     * [Verifying blueprint run destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destroy-cli)
 
-* [Destroying blueprint environment from the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
+* [Destroying blueprint environment through API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
 
-    * [Verifying blueprint destroy from the API](/docs/schematics?topic=schematics-destroy-blueprint#bp-verify-display-api)
+    * [Verifying blueprint destroy through API](/docs/schematics?topic=schematics-destroy-blueprint#bp-verify-display-api)
 
 * [Next steps](/docs/schematics?topic=schematics-destroy-blueprint#bp-destroy-nextsteps)
 
 [Delete a blueprint configuration](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint)
 
-* [Deleting a blueprint config from the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
+* [Deleting a blueprint config through CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
 
     * [Verifying blueprint config deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-cli)
 
-* [Deleting a blueprint config from the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
+* [Deleting a blueprint config through UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
 
     * [Verifying blueprint config deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
 
-* [Deleting blueprint from the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
+* [Deleting blueprint through API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
-    * [Verifying blueprint delete from the API](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-api)
+    * [Verifying blueprint delete through API](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
 
@@ -956,9 +956,9 @@ subcollection: schematics
 
     * [Creating the workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
 
-    * [Creating the workspace from the CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
+    * [Creating the workspace through CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
 
-    * [Creating the workspace from the API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
+    * [Creating the workspace through API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
 
     * [Creating the workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
 

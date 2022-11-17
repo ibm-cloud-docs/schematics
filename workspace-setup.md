@@ -71,7 +71,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         - Click `Next`.
     - Click `Create`. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
 
-### Creating the workspace from the CLI
+### Creating the workspace through CLI
 {: #create-workspace-cli}
 {: cli}
 
@@ -142,7 +142,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
 4. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-### Creating the workspace from the API
+### Creating the workspace through API
 {: #create-workspace-api}
 {: api}
 

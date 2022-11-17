@@ -25,7 +25,7 @@ The cloud resources that are created by a blueprint are destroyed by using the `
 
 For Terraform based modules, the destroy operation runs a Terraform Destroy command for each module. This removes all cloud resources in reverse dependency order. 
 
-## Destroying a blueprint environment from the UI 
+## Destroying a blueprint environment through UI 
 {: #destroy-blueprint-ui}
 {: ui}
 
@@ -45,7 +45,7 @@ You can follow these steps to destroy the {{site.data.keyword.bpshort}} Blueprin
 3. Click **Modules** tab to see the list of resource modules in an `Inactive` state.
 4. Click **Jobs history** tab view the result of the destroy job and operations that were run by the automation modules.  
 
-## Destroying a blueprint environment from the CLI
+## Destroying a blueprint environment through CLI
 {: #destroy-blueprint-cli}
 {: cli}
 
@@ -66,7 +66,7 @@ For more information, review the [blueprint run destroy](/docs/schematics?topic=
 ### Verifying blueprint run destroy success 
 {: #verify-bp-destroy-cli}
 
-Verify that the blueprint environment resources are destroyed successfully. When you run destroy from the CLI, the command displays details of the modules containing the resources to be destroyed, and the status of {{site.data.keyword.bpshort}} jobs that run the Terraform destroy operations. Confirm that the user intends to destroy all resources. The command returns on completion.
+Verify that the blueprint environment resources are destroyed successfully. When you run destroy through CLI, the command displays details of the modules containing the resources to be destroyed, and the status of {{site.data.keyword.bpshort}} jobs that run the Terraform destroy operations. Confirm that the user intends to destroy all resources. The command returns on completion.
 
 ```text
 Modules to be destroyed
@@ -92,7 +92,7 @@ OK
 
 On successful completion, destroy command returns `fulfillment_success`. Successful command completion and the status of the modules as `Inactive` indicates that resources in all modules are destroyed.
 
-## Destroying blueprint environment from the API
+## Destroying blueprint environment through API
 {: #destroy-blueprint-api}
 {: api}
 
@@ -100,7 +100,7 @@ Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrie
 
 Record the blueprint ID that is destroyed. To list the blueprint IDs, run [get all the blueprints](/apidocs/schematics/schematics#list-blueprint) command.
 
-### Verifying blueprint destroy from the API
+### Verifying blueprint destroy through API
 {: #bp-verify-display-api}
 
 Verify that the blueprint is destroyed successfully.

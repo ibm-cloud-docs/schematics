@@ -26,7 +26,7 @@ Deleting the blueprint configuration is the second step required to completely d
 This behavior of disallowing delete when modules cannot be returned to an `Inactive` state due to a {{site.data.keyword.bpshort}} or Terraform error can be overridden using the `-force-delete` flag to allow deletion.  
 {: shortdesc}
 
-## Deleting a blueprint config from the CLI
+## Deleting a blueprint config through CLI
 {: #delete-blueprint-cli}
 {: cli}
 
@@ -83,7 +83,7 @@ During the delete operation that the status shows `In Progress`, when completed 
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
-## Deleting a blueprint config from the UI 
+## Deleting a blueprint config through UI 
 {: #delete-blueprint-ui}
 {: ui}
 
@@ -100,7 +100,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} Blueprint
 
 1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}, see that the deleted blueprint is not displayed.
 
-## Deleting blueprint from the API
+## Deleting blueprint through API
 {: #delete-blueprint-api}
 {: api}
 
@@ -127,7 +127,7 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-### Verifying blueprint delete from the API
+### Verifying blueprint delete through API
 {: #verify-bp-delete-api}
 
 Verify that the blueprint is deleted successfully as shown in the output.

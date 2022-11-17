@@ -28,7 +28,7 @@ The first step in deploying cloud resources is [creating a blueprint configurati
 The second [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step excutes the automation modules in dependency order and runs the module Terraform code to deploy cloud resources. 
 
 
-## Creating a blueprint configuration from the CLI 
+## Creating a blueprint configuration through CLI 
 {: #create-blueprint-cli}
 {: cli}
 
@@ -107,7 +107,7 @@ ibmcloud schematics blueprint config create -name Blueprint_Basic -resourcegroup
 ### Verifying blueprint config creation 
 {: #verify-blueprint-create-cli}
 
-Verify that the blueprint configuration was created successfully. When you create the configuration from the CLI, the command displays details of the blueprint modules to be created, and continuously updates the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command only returns on completion.
+Verify that the blueprint configuration was created successfully. When you create the configuration through CLI, the command displays details of the blueprint modules to be created, and continuously updates the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command only returns on completion.
 
 ```text
 Created blueprint ID: Blueprint_Basic.eaB.5cd9
@@ -174,7 +174,7 @@ You can follow these steps to create the {{site.data.keyword.bpshort}} Blueprint
         - Click **Save draft** only if you need to edit the input variables.
 3. Click **Create Blueprint** that redirects to your blueprint page. 
 
-### Verifying blueprint creation from the UI 
+### Verifying blueprint creation through UI 
 {: #verify-blueprint-create-ui}
 
 Here the steps to verify your blueprint creation.
@@ -188,7 +188,7 @@ Here the steps to verify your blueprint creation.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
-## Creating a blueprint from the API
+## Creating a blueprint through API
 {: #create-blueprint-api}
 {: api}
 
@@ -248,7 +248,7 @@ Authorization: Bearer
 ```
 {: codeblock}
 
-### Verifying blueprint create from the API
+### Verifying blueprint create through API
 {: #verify-bp-create-api}
 
 Verify that the blueprint is created successfully as shown in the output.

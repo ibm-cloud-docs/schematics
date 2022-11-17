@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -48,12 +48,12 @@ Similar to the `remote_state` data source, you can only access information that 
 
 2. Retrieve the ID of the VPC workspace that you created. 
 
-    **From the console**:
+    **Through console**:
     - From the [workspace dashboard ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/schematics/workspaces), select the VPC workspace.
     - Select the **Settings** tab.
     - Find the workspace ID in the **Summary** section. 
 
-    **From the CLI**:
+    **Through CLI**:
     - List available workspaces in your account.
         ```sh
         ibmcloud schematics workspace list
