@@ -78,7 +78,7 @@ ibmcloud schematics blueprint config update --id <blueprint_ID> --input-git-rele
 Record the blueprint ID that needs to be updated. To list the blueprint IDs, run [listing blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-list) command.
 {: note}
 
-## Updating a blueprint from the CLI
+## Updating a blueprint through CLI
 {: #update-blueprint-cli}
 {: cli}
 
@@ -112,7 +112,7 @@ ibmcloud schematics blueprint config update --id Blueprint_Basic.eaB.5cd9 --inpu
 ### Verifying blueprint config update
 {: #verify-update}
 
-Verify that the blueprint config is updated successfully. When you update the config from the CLI, the command displays the details of the linked workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializes the workspaces. The command returns on completion.
+Verify that the blueprint config is updated successfully. When you update the config through CLI, the command displays the details of the linked workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializes the workspaces. The command returns on completion.
 
 ```text
 Update blueprint  blueprint
@@ -140,7 +140,7 @@ On successful completion the config update returns **`update_success`**.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
-## Updating a blueprint environment from the UI 
+## Updating a blueprint environment through UI 
 {: #update-blueprint-ui}
 {: ui}
 
@@ -164,7 +164,7 @@ You can follow these steps to update the {{site.data.keyword.bpshort}} Blueprint
     - Click **Update**.
 6. Click **Apply** to initiate the blueprint.
 
-### Verify blueprint config update from the UI
+### Verify blueprint config update through UI
 {: #verify-bp-update-ui}
 
 You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
@@ -183,7 +183,7 @@ You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints 
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
-## Updating a blueprint from the API
+## Updating a blueprint through API
 {: #update-blueprint-api}
 {: api}
 
@@ -246,7 +246,7 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-### Verify blueprint config create from the API
+### Verify blueprint config create through API
 {: #verify-bp-update-api}
 
 Verify that the blueprint update is success as shown in the output.

@@ -249,7 +249,7 @@ The results of blueprint operations, `config create`, `run apply`, `config updat
 
 The color coding indicates whether the job was successful or failed. 
 
-## Listing blueprint from the API
+## Listing blueprint through API
 {: #list-blueprint-api}
 {: api}
 
@@ -270,7 +270,7 @@ Authorization: Bearer <auth_token>
 ```
 {: codeblock}
 
-### Verifying blueprint job results from the API 
+### Verifying blueprint job results through API 
 {: #bp-verify-jobs-api}
 
 Verify that the blueprint jobs is success as shown in the output.

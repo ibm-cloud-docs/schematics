@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-17"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -724,7 +724,7 @@ Stop apply support
 :   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource life cycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apidocs/schematics/schematics#stop-a-schematics-apply-action) API.
 
 New {{site.data.keyword.bpshort}} locations
-:   You can now create {{site.data.keyword.bpshort}} Workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region from the CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+:   You can now create {{site.data.keyword.bpshort}} Workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region through CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
 ## June 2020
 {: #jun-2020}
