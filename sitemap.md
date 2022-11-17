@@ -825,45 +825,45 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-apply-blueprint#bp-apply-nextsteps)
 
-[List blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
+[List blueprints](/docs/schematics?topic=schematics-list-blueprint#list-blueprint)
 
-* [Listing blueprints through UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
+* [Listing blueprints through UI](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-ui)
 
-* [Listing blueprints through CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
+* [Listing blueprints through CLI](/docs/schematics?topic=schematics-list-blueprint#listing-bp-cli)
 
-    * [Displaying blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
+    * [Listing blueprints](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-cli)
 
-    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary)
+    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-summary)
 
-    * [Blueprint display outputs](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-outputs-cli)
+    * [Blueprint display outputs](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-outputs-cli)
 
-    * [Blueprint display summary CLI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
+    * [Blueprint display summary CLI](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-summary-cli)
 
-* [Displaying a blueprint through API](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-api)
+* [Displaying blueprint through API](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-api)
 
-* [Next steps](/docs/schematics?topic=schematics-list-blueprint-cli#bp-display-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-list-blueprint#bp-display-nextsteps)
 
-[List blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
+[List blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs)
 
-* [Viewing blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
+* [Viewing blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-ui)
 
-* [Listing blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-cli)
+* [Listing blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-cli)
 
-* [Viewing blueprint job results through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#view-blueprint-job-get-cli)
+* [Viewing blueprint job results through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs#view-blueprint-job-get-cli)
 
-    * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
+    * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-cli)
 
-    * [Blueprint job get summary log](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-drilldown-cli)
+    * [Blueprint job get summary log](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-drilldown-cli)
 
-    * [Viewing blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
+    * [Viewing blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-log-cli)
 
-* [List blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
+* [List blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs-ui)
 
-* [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#install-blueprint-api)
+* [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#install-blueprint-api)
 
-    * [Verifying blueprint job results from the API](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#bp-verify-jobs-api)
+    * [Verifying blueprint job results from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-verify-jobs-api)
 
-* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#bp-create-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-create-nextsteps)
 
 [Update a blueprint configuration](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 

@@ -15,9 +15,8 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-
 # List blueprint jobs
-{: #list-blueprint-jobs-cli}
+{: #list-blueprint-jobs}
 
 To list your blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_ID>`. 
 {: shortdesc}
@@ -27,6 +26,9 @@ For all the blueprint commands, syntax, and option flag details, see [blueprint 
 
 ## Viewing blueprint job results through UI
 {: #blueprint-job-get-ui}
+{: ui}
+
+You can follow these steps to view the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
 2. Click **Jobs history** tab view that the job logs for all blueprint and module operations.

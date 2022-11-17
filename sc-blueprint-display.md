@@ -16,7 +16,7 @@ subcollection: schematics
 {: beta}
 
 # List blueprints
-{: #list-blueprint-cli}
+{: #list-blueprint}
 
 To list your blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
 {: shortdesc}
@@ -71,8 +71,7 @@ OK
 ```
 {: screen}
 
-
-### Displaying blueprints
+### Listing blueprints
 {: #display-blueprint-cli}
 
 To display the details of a blueprint and its configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
@@ -309,8 +308,7 @@ OK
 ```
 {: screen}
 
-
-## Displaying a blueprint through API 
+## Displaying blueprint through API 
 {: #display-blueprint-api}
 {: api}
 
