@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-17"
 
 keywords: schematics
 subcollection: schematics
@@ -823,7 +823,9 @@ subcollection: schematics
 
 [List blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
 
-* [Listing blueprints via CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
+* [Listing blueprints through UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
+
+* [Listing blueprints through CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
 
     * [Displaying blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
 
@@ -833,13 +835,13 @@ subcollection: schematics
 
     * [Blueprint display summary CLI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
 
-* [Displaying a blueprint through UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
-
 * [Displaying a blueprint through API](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-api)
 
 * [Next steps](/docs/schematics?topic=schematics-list-blueprint-cli#bp-display-nextsteps)
 
 [List blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
+
+* [Viewing blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
 
 * [Listing blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-cli)
 
@@ -852,8 +854,6 @@ subcollection: schematics
     * [Viewing blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
 
 * [List blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
-
-* [Viewing blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
 
 * [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#install-blueprint-api)
 

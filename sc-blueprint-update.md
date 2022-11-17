@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -144,16 +144,42 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 {: #update-blueprint-ui}
 {: ui}
 
-Currently, you can update the blueprint config from CLI by using the [config update](#update-blueprint-cli) to update the blueprint configuration and then run the [Apply](/docs/schematics?topic=schematics-apply-blueprint) command to deploy the changes.
+You can follow these steps to update the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+
+1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click the blueprint name that you want to edit.
+2. Click the blueprint **Name** that you need to edit.
+3. Click **Variables** tab to view your **Inputs** tab.
+4. Click **Edit** option in **Inputs Source**:
+    - **Input file GIT URL**  - `<Edit the GIT URL>`.
+    - **Personal access token (private repositories only)** - `<Provide your Git personal access token, only for private Git repos>`.
+    - Click **Update**.
+5. Click **Settings** tab.
+    - In **Details** section, click **Edit**.
+       - **Name** - Edit the blueprint name.
+       - **Description** - Edit the description.
+       - Click **Update**.
+    - In **Blueprint Source** section, click **Edit**.
+       - **Respository URL** - `<Edit the GIT URL>`.
+       - **Personal access token (private repositories only)** - `<Provide your Git personal access token, only for private Git repos>`.
+    - Click **Update**.
+6. Click **Apply** to initiate the blueprint.
 
 ### Verify blueprint config update from the UI
 {: #verify-bp-update-ui}
 
-1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the update operation. 
-2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` must show the summary details of the blueprint config update job. 
-3. Click **Modules** tab to see the status of the resource modules. 
-4. Click **Jobs history** tab view the result of the blueprint config update job and operations that are set against the resource modules.  
-5. Click **Settings** tab to view the summary of the updated blueprint.
+You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+
+1. From the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external}. Click your blueprint name to view the blueprint details.
+2. Click **Overview** to view the blueprint summary, that includes `Modules status`, `Variables summary`, `Blueprint Details` and `Recent Job runs` of your blueprint. 
+    - Optional: From **Modules status** section, Click **View details** to view the module details.
+    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
+3. Click **Modules** tab to see the list of modules and their current status. 
+    - Optional: Click **Show details** to view the module details.
+    - Optional: Click **Name** that takes to the modules `Workspace` page. 
+4. Click **Resources** tab to view the list of resources provisioned status by the blueprint.
+5. Click **Variables** tab to view your **Inputs** and **Outputs** variables and values. Optional: you can edit the input variable and click **Save variables**.
+6. Click **Jobs history** tab view the job logs of the blueprint and module activities.
+7. Click **Settings** tab to view the configuration settings of the blueprint.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 

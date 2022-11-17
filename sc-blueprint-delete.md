@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: blueprint config delete, delete blueprint, blueprint
 
@@ -87,12 +87,18 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 {: #delete-blueprint-ui}
 {: ui}
 
-You can delete a blueprint from the command line by using the [config delete](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete).
+You can follow these steps to delete the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+
+1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click the blueprint name that you want to delete.
+2. Click **Actions** tab.
+3. Select **Delete blueprint** option.
+4. Type your blueprint name in **Delete blueprint** text box.
+5. Click **Delete blueprint** button.
 
 ### Verifying blueprint config deletion 
 {: #verify-bp-deletion-ui}
 
-After deletion, the blueprint is not displayed in the UI. 
+1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}, see that the deleted blueprint is not displayed.
 
 ## Deleting blueprint from the API
 {: #delete-blueprint-api}

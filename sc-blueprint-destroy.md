@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -29,7 +29,13 @@ For Terraform based modules, the destroy operation runs a Terraform Destroy comm
 {: #destroy-blueprint-ui}
 {: ui}
 
-You can destroy the cloud resources that are created from a blueprint config using the CLI with the [blueprint run destroy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-delete) command.
+You can follow these steps to destroy the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+
+1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click the blueprint name that you want to destroy.
+2. Click **Actions** tab.
+3. Select **Destroy resources** to delete the resources associated with this blueprint.
+4. Type the resource name in **Destroy resources** text box.
+5. Click **Destroy** button.
 
 ### Verifying blueprint environment destroy 
 {: #verify-bp-destroy-ui}
