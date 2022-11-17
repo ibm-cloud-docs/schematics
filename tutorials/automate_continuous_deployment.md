@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: automate continuous deployment using schematics, automate continuous deployment of resource using schematics and devops toolchain, continuous deployment of resources
 
@@ -115,8 +115,8 @@ Complete these steps to create the {{site.data.keyword.bplong_notm}} and the Ter
 
 7. Click **Next** and then click **Create** to create {{site.data.keyword.bpshort}} Workspaces successfully.
 
-## Configuring the variables
-{: #configure-variables}
+## Configuring variables
+{: #configure-the-variables}
 {: step}
 
 Click `...` to configure the variables as described in the table to authenticate your credentials and save the changes.

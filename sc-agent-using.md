@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -84,7 +84,7 @@ Related workspace: name=<prefix>-003-cos-module, sourcerelease=(not specified), 
 - You can also configure, and operate on your cloud cluster resources without any time, network, or software restrictions.
 
 ## Next steps
-{: #connect-nextsteps}
+{: #agent-using-nextsteps}
 
 You have completed the entire {{site.data.keyword.bpshort}} Agent set up and working flow.
 - Looking for Agents samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics?q=Agent&type=all&language=&sort=){: external}.

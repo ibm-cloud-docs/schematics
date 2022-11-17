@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-17"
 
 keywords: schematics
 subcollection: schematics
@@ -81,7 +81,7 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
 
-* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#nextsteps-terminologies)
+* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#terminologies-nextsteps)
 
 [Usage of open source projects in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
@@ -113,7 +113,7 @@ subcollection: schematics
 
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
-* [Next steps](/docs/schematics?topic=schematics-how-it-works#nextsteps-terminologies)
+* [Next steps](/docs/schematics?topic=schematics-how-it-works#usecase-nextsteps)
 
 
 ## Working with Blueprints
@@ -799,13 +799,13 @@ subcollection: schematics
 
     * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-cli)
 
-* [Creating a blueprint from the UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
+* [Creating blueprint through UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
 
     * [Verifying blueprint creation from the UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
 
 * [Creating a blueprint from the API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
 
-    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-update-api)
+    * [Verifying blueprint create from the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-create-api)
 
 * [Next steps](/docs/schematics?topic=schematics-create-blueprint-config#bp-create-nextsteps)
 
@@ -815,51 +815,55 @@ subcollection: schematics
 
     * [Verify blueprint run apply success](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-cli)
 
-* [Generate and apply a blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
+* [Generate and apply blueprint environment from the UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
 
     * [Verify blueprint apply operation from the UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
 
+* [Applying blueprint through API](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-api)
+
+    * [Verify Blueprint apply job through API](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-api)
+
 * [Next steps](/docs/schematics?topic=schematics-apply-blueprint#bp-apply-nextsteps)
 
-[List blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#list-blueprint-cli)
+[List blueprints](/docs/schematics?topic=schematics-list-blueprint#list-blueprint)
 
-* [Listing blueprints via CLI](/docs/schematics?topic=schematics-list-blueprint-cli#listing-bp-cli)
+* [Listing blueprints through UI](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-ui)
 
-    * [Displaying blueprints](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-cli)
+* [Listing blueprints through CLI](/docs/schematics?topic=schematics-list-blueprint#listing-bp-cli)
 
-    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary)
+    * [Listing blueprints](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-cli)
 
-    * [Blueprint display outputs](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-outputs-cli)
+    * [Blueprint display summary](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-summary)
 
-    * [Blueprint display summary CLI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-summary-cli)
+    * [Blueprint display outputs](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-outputs-cli)
 
-* [Displaying a blueprint through UI](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-ui)
+    * [Blueprint display summary CLI](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-summary-cli)
 
-* [Displaying a blueprint through API](/docs/schematics?topic=schematics-list-blueprint-cli#display-blueprint-api)
+* [Displaying blueprint through API](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-api)
 
-* [Next steps](/docs/schematics?topic=schematics-list-blueprint-cli#bp-display-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-list-blueprint#bp-display-nextsteps)
 
-[List blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-cli)
+[List blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs)
 
-* [Listing blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-cli)
+* [Viewing blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-ui)
 
-* [Viewing blueprint job results through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#view-blueprint-job-get-cli)
+* [Listing blueprint jobs through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-cli)
 
-    * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-cli)
+* [Viewing blueprint job results through CLI](/docs/schematics?topic=schematics-list-blueprint-jobs#view-blueprint-job-get-cli)
 
-    * [Blueprint job get summary log](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-drilldown-cli)
+    * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-cli)
 
-    * [Viewing blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-log-cli)
+    * [Blueprint job get summary log](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-drilldown-cli)
 
-* [List blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#list-blueprint-jobs-ui)
+    * [Viewing blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-log-cli)
 
-* [Viewing blueprint job results through UI](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#blueprint-job-get-ui)
+* [List blueprint jobs through UI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs-ui)
 
-* [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#install-blueprint-api)
+* [Listing blueprint from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-api)
 
-    * [Verifying blueprint job results from the API](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#bp-verify-jobs-api)
+    * [Verifying blueprint job results from the API](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-verify-jobs-api)
 
-* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs-cli#bp-create-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-job-nextsteps)
 
 [Update a blueprint configuration](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
 
@@ -1189,7 +1193,7 @@ subcollection: schematics
 
 * [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
 
-    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#key-prerequisites)
+    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
 
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-ui)
 
@@ -1236,7 +1240,7 @@ subcollection: schematics
 
 * [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 
-* [Next steps](/docs/schematics?topic=schematics-using-agent#connect-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-using-agent#agent-using-nextsteps)
 
 [Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-uninstall-agent#uninstall-agent)
 
@@ -1464,7 +1468,7 @@ subcollection: schematics
 
 * [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
 
-* [Configuring the variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-variables)
+* [Configuring variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-the-variables)
 
 * [Automating the continuous deployment process](/docs/schematics?topic=schematics-workspace-continuous-deployment#continuous-deployment)
 

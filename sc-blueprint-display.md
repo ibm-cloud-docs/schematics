@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-17"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -16,7 +16,7 @@ subcollection: schematics
 {: beta}
 
 # List blueprints
-{: #list-blueprint-cli}
+{: #list-blueprint}
 
 To list your blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
 {: shortdesc}
@@ -24,7 +24,25 @@ To list your blueprints with the CLI, use the `ibmcloud schematics blueprint lis
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
-## Listing blueprints via CLI
+## Listing blueprints through UI 
+{: #display-blueprint-ui}
+{: ui}
+
+You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+
+1. From the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external}. Click your blueprint name to view the blueprint details.
+2. Click **Overview** to view the blueprint summary, that includes `Modules status`, `Variables summary`, `Blueprint Details` and `Recent Job runs` of your blueprint. 
+    - Optional: From **Modules status** section, Click **View details** to view the module details.
+    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
+3. Click **Modules** tab to see the list of modules and their current status. 
+    - Optional: Click **Show details** to view the module details.
+    - Optional: Click **Name** that takes to the modules `Workspace` page. 
+4. Click **Resources** tab to view the list of resources provisioned status by the blueprint.
+5. Click **Variables** tab to view your **Inputs** and **Outputs** variables and values. Optional: you can edit the input variable and click **Save variables**.
+6. Click **Jobs history** tab view the job logs of the blueprint and module activities.
+7. Click **Settings** tab to view the configuration settings of the blueprint.
+
+## Listing blueprints through CLI
 {: #listing-bp-cli}
 {: cli}
 
@@ -53,8 +71,7 @@ OK
 ```
 {: screen}
 
-
-### Displaying blueprints
+### Listing blueprints
 {: #display-blueprint-cli}
 
 To display the details of a blueprint and its configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
@@ -99,7 +116,6 @@ SNO   Workspace Name      Workspace ID                                    Status
 OK
 ```
 {: screen}
-
 
 ### Blueprint display outputs
 {: #display-blueprint-outputs-cli}
@@ -292,26 +308,7 @@ OK
 ```
 {: screen}
 
-## Displaying a blueprint through UI 
-{: #display-blueprint-ui}
-{: ui}
-
-Here are the steps to display a blueprint by using UI.
-{: shortdesc}
-
-1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
-2. Click **Overview** to view the Blueprint summary, including `Modules`, `Variables`, `Details` and `Recent Job runs` of your blueprint. 
-    - Optional: From **Modules status** section, Click **View details** to view the module details.
-    - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
-3. Click **Modules** tab to see the list of resource modules and their current status. 
-    - Optional: Click on **Show details** to view the module details.
-    - Optional: Click on the module name to be taken to the modules' `Workspace` page. 
-4. Click **Resource** tab to view the resources provisioned by the blueprint.
-5. Click **Variables** tab to view your **Inputs** and **Outputs** variables and values.
-6. Click **Jobs history** tab view the job logs for all blueprint and module operations.
-7. Click **Settings** tab to view the configuration settings for the blueprint.
-
-## Displaying a blueprint through API 
+## Displaying blueprint through API 
 {: #display-blueprint-api}
 {: api}
 

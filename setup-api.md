@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -165,7 +165,7 @@ Every {{site.data.keyword.iamlong}} (IAM) access token that is issued via the AP
 
 Before you begin, make sure that you have an {{site.data.keyword.cloud_notm}} IAM refresh token or an {{site.data.keyword.cloud_notm}} API key that you can use to request a new access token.
 - **Refresh token:** Follow the instructions in [Automating the workspace creation and management process with the {{site.data.keyword.cloud_notm}} API](#cs_api).
-- **API key:** Retrieve your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/) API key as follows.
+- **API key:** Retrieve your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} API key as follows.
     1. From the menu bar, click **Manage** > **Access (IAM)**.
     2. Click the **Users** page and then select yourself.
     3. In the **API keys** pane, click **Create an {{site.data.keyword.cloud_notm}} API key**.

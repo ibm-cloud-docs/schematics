@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-11-17"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -136,11 +136,13 @@ On successful completion, the config create returns **`create_success`** and the
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
-## Creating a blueprint from the UI 
+## Creating blueprint through UI 
 {: #create-blueprint-ui}
 {: ui}
 
-1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/)
+You can follow these steps to create the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Click **Schematics** > **Blueprints** > **Create Blueprint**.
     - In **Blueprint Details** section:
         - **Name** `<Provide unique name for your blueprint>`.
@@ -247,7 +249,7 @@ Authorization: Bearer
 {: codeblock}
 
 ### Verifying blueprint create from the API
-{: #verify-bp-update-api}
+{: #verify-bp-create-api}
 
 Verify that the blueprint is created successfully as shown in the output.
 {: shortdesc}
@@ -388,5 +390,3 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 {: #bp-create-nextsteps}
 
 The next step in deploying the cloud resources that are defined by the blueprint configuration is to [apply](/docs/schematics?topic=schematics-apply-blueprint) the blueprint config. 
-
-

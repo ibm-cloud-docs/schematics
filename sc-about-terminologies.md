@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: schematics terminologies, infrastructure as code, iac, terminologies, terminology 
 
@@ -35,7 +35,7 @@ Learn the basic concepts of the technology behind {{site.data.keyword.bplong_not
 
 
 ## Next steps
-{: #nextsteps-terminologies}
+{: #terminologies-nextsteps}
 
 - Do you want to know how these objects works in {{site.data.keyword.bpshort}}? Then, you need to explore these [use cases](/docs/schematics?topic=schematics-how-it-works).
 - Click [here](/docs/schematics?topic=schematics-learn-schematics-term) to revisit the {{site.data.keyword.bpshort}} terminologies.

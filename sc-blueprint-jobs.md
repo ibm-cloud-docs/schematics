@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-17"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -15,15 +15,31 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
 {: beta}
 
-
 # List blueprint jobs
-{: #list-blueprint-jobs-cli}
+{: #list-blueprint-jobs}
 
 To list your blueprint jobs with the CLI, use the `ibmcloud schematics blueprint job list` command. The commands are interactive and prompt the user to drill down deeper into the job results. The command takes as input the `<blueprint_ID>`. 
 {: shortdesc}
 
 For all the blueprint commands, syntax, and option flag details, see [blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
+
+## Viewing blueprint job results through UI
+{: #blueprint-job-get-ui}
+{: ui}
+
+You can follow these steps to view the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+
+1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
+2. Click **Jobs history** tab view that the job logs for all blueprint and module operations.
+3. Click the job to `expand` or `collapse` arrow on the right side. 
+
+    The detailed view of the blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
+
+    Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
+
+4. Click on the name of a child job to review the job log.  
+    - Optional: Click **Show more** to view the full job log. 
 
 ## Listing blueprint jobs through CLI
 {: #list-blueprint-cli}
@@ -233,21 +249,8 @@ The results of blueprint operations, `config create`, `run apply`, `config updat
 
 The color coding indicates whether the job was successful or failed. 
 
-## Viewing blueprint job results through UI
-{: #blueprint-job-get-ui}
-
-1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
-2. Click **Jobs history** tab view that the job logs for all blueprint and module operations.
-3. Click the job to `expand` or `collapse` arrow on the right side. 
-
-The detailed view of the blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
-
-Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
-4. Click on the name of a child job to review the job log.  
-    - Optional: Click **Show more** to view the full job log. 
-
 ## Listing blueprint from the API
-{: #install-blueprint-api}
+{: #list-blueprint-api}
 {: api}
 
 
@@ -357,7 +360,7 @@ Verify that the blueprint jobs is success as shown in the output.
 For more information, about how to diagnose and resolve issues if the list job fails, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Next steps
-{: #bp-create-nextsteps}
+{: #bp-job-nextsteps}
 
 - After displaying the blueprint jobs in {{site.data.keyword.bpshort}}, the next step in updating the environment is to [update](/docs/schematics?topic=schematics-update-blueprint) the configuration.
 
