@@ -26,6 +26,8 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for November 2022.
 {: shortdesc}
 
+
+
 ### 15 November 2022
 {: #schematics-nov1522}
 {: release-note}
