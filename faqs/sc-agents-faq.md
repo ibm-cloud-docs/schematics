@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the Beta release.
+{{site.data.keyword.bpshort}} Agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
 # Agents
@@ -43,8 +43,8 @@ Agents infrastructure
 - Cost of IBM Log Analysis services.
 
 Agents service
-- There is no cost that is involved with running the Agent Service for Beta.
-   Agent Services are a priced service, post Beta.
+- There is no cost that is involved with running the Agent Service for beta.
+   Agent Services are a priced service, post beta.
    {: note}
 
 ## What {{site.data.keyword.bpshort}} jobs can I run in my Agent?
@@ -52,7 +52,7 @@ Agents service
 {: faq}
 {: support}
 
-For Beta you can bind a `{{site.data.keyword.bpshort}} Workspace`, to the Agent. Therefore, you can run Terraform workload on the Agent.
+For beta you can bind a `{{site.data.keyword.bpshort}} Workspace`, to the Agent. Therefore, you can run Terraform workload on the Agent.
 
 Currently, you cannot bind the `{{site.data.keyword.bpshort}} action`, to the Agents. Therefore, you cannot run Ansible workload on the Agent.
 {: note}

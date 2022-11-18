@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-11-18"
 
 keywords: schematics
 subcollection: schematics
@@ -341,13 +341,13 @@ subcollection: schematics
 
     * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 
-        * {{site.data.keyword.bpshort}} Agents Beta release in production.
+        * {{site.data.keyword.bpshort}} Agents beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
 
-        * {{site.data.keyword.bpshort}} Blueprints Beta release in production.
+        * {{site.data.keyword.bpshort}} Blueprints beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -613,7 +613,7 @@ subcollection: schematics
 
     * [12 February 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb122021)
 
-        * Ansible open Beta release
+        * Ansible open beta release
 
 * [January 2021](/docs/schematics?topic=schematics-schematics-relnotes#jan-2021)
 
@@ -641,7 +641,7 @@ subcollection: schematics
 
     * [9 December 2020](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec92020)
 
-        * Ansible Beta release
+        * Ansible beta release
 
         * Beta
 

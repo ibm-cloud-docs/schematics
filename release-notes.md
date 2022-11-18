@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-11-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -119,8 +119,8 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july1122}
 {: release-note}
 
-{{site.data.keyword.bpshort}} Agents Beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents Beta releases.
+{{site.data.keyword.bpshort}} Agents beta release in production.
+:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
     - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
@@ -129,7 +129,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
     - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent) to clean up the Agent infrastructure and Agent services.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on Agents.
-    - [Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the Agents Beta level code and provide feedback.
+    - [Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the Agents beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -138,8 +138,8 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july0822}
 {: release-note}
 
-{{site.data.keyword.bpshort}} Blueprints Beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} Blueprints Beta releases.
+{{site.data.keyword.bpshort}} Blueprints beta release in production.
+:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} Blueprints beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints engagement.
     - [Getting started](/docs/schematics?topic=schematics-getting-started).
     - [Use case](/docs/schematics?topic=schematics-get-started-blueprints).
@@ -149,7 +149,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
     - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
-    - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents Beta level code and provide feedback.
+    - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.3](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -593,8 +593,8 @@ Allowed file extensions in {{site.data.keyword.bpshort}}
 {: #schematics-feb122021}
 {: release-note}
 
-Ansible open Beta release
-:   {{site.data.keyword.bplong_notm}} supports and releases Ansible open Beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics) blog.
+Ansible open beta release
+:   {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and customers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics) blog.
 
 ## January 2021
 {: #jan-2021}
@@ -639,11 +639,11 @@ Review the release notes for December 2020.
 {: #schematics-dec92020}
 {: release-note}
 
-Ansible Beta release
-:   {{site.data.keyword.bplong_notm}} supports and releases Ansible Beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA).
+Ansible beta release
+:   {{site.data.keyword.bplong_notm}} supports and releases Ansible beta version for the IBMers. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible) and watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA).
 
 Beta
-:   The open Beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Carl Swanson`](mailto:swansoca@us.ibm.com), if you are interested in getting early access to this Beta offering.
+:   The open beta release of Ansible support is now available in {{site.data.keyword.bplong_notm}} to IBM users. Contact your {{site.data.keyword.bplong_notm}} Technical Offering Manager [`Carl Swanson`](mailto:swansoca@us.ibm.com), if you are interested in getting early access to this beta offering.
 
 ## November 2020
 {: #nov-2020}
