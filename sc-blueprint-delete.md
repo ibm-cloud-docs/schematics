@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-11-18"
 
 keywords: blueprint config delete, delete blueprint, blueprint
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations) for the Beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Delete a blueprint configuration
@@ -30,7 +30,7 @@ This behavior of disallowing delete when modules cannot be returned to an `Inact
 {: #delete-blueprint-cli}
 {: cli}
 
-For more information, see [blueprint config delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint config delete` command run. 
+For more information, see [blueprint config delete](https://cloud.ibm.com/docs/schematics?topic=schematics-delete-blueprint) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint config delete` command run. 
 
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
@@ -57,7 +57,7 @@ OK
 ### Verifying blueprint config deletion 
 {: #verify-bp-delete-cli}
 
-During the Beta, the config delete CLI command does not wait for successful job completion and returns immediately. 
+During the beta, the config delete CLI command does not wait for successful job completion and returns immediately. 
 
 The status of the config delete operation can be monitored by using the `blueprint job get` command. The following command runs a `blueprint job get` for the JOB ID `eu-gb.JOB.Blueprint-Basic-Example.f2d388d3`. The job ID is displayed in the config delete output. 
 

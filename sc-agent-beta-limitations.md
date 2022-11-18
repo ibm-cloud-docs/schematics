@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-15"
+lastupdated: "2022-11-18"
 
-keywords: schematics agent, agent, Beta release, agent Beta release
+keywords: schematics agent, agent, beta release, agent beta release
 
 subcollection: schematics
 
@@ -17,9 +17,9 @@ subcollection: schematics
 
 The Agent level of code is considered beta code as there will be changes in function and capabilities between now and the General Availability (GA) date.
 
-Although Agent usage has no cost involved during Beta, it will have a cost eventually in the GA timeframe. You will be updated in the documentation with the usage and the charges.
+Although Agent usage has no cost involved during beta, it will have a cost eventually in the GA timeframe. You will be updated in the documentation with the usage and the charges.
 
-Join our Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Agents Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03M925E8BH){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, refer to the [steps to join Agents Beta Slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack) channel.
+Join our beta program, post a question in the [{{site.data.keyword.bplong_notm}} Agents beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03M925E8BH){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, refer to the [steps to join Agents beta Slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack) channel.
 
 Join the `#tmp-agents-beta-2022` slack channel and post a message including the following information.
 
@@ -35,12 +35,12 @@ You can come back any time to your created thread to add information, ask questi
 ## Beta release limitations for Agent
 {: #sc-agent-beta-limitation}
 
-There will be multiple Beta releases in short window period, this requires the users to update the Agent infrastructure and Agent services in your environment.
+There will be multiple beta releases in short window period, this requires the users to update the Agent infrastructure and Agent services in your environment.
 {: note}
 
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
-| UI capabilities are not final and will be updated throughout the Beta process.| | |
+| UI capabilities are not final and will be updated throughout the beta process.| | |
 | Support for drift detection is not available in Agents.| | |
 | Support to [store or persist user-defined](/docs/schematics?topic=schematics-general-faq#persist-file) files is not available in Agents.| | |
 | Agents supports only `Terraform v1.0` or higher Terraform version. | | |
@@ -57,11 +57,11 @@ There will be multiple Beta releases in short window period, this requires the u
 ### Steps to join public slack
 {: #sc-agent-join-slack}
 
-Following steps allows you to join the {{site.data.keyword.bpshort}} Agents Beta public Slack channel.
+Following steps allows you to join the {{site.data.keyword.bpshort}} Agents beta public Slack channel.
 - Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page is opened.
-- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Agents Beta**.
-- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Agents Beta public Slack channel**
+- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Agents beta**.
+- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Agents beta public Slack channel**
 - Click **Next**.
 - Click **Submit case**. Wait for 10 - 15 minutes to get an access.

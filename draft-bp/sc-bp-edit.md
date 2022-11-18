@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-18"
 
 keywords: schematics blueprints template, blueprints yaml, editing, edit, vscode, yaml 
 
@@ -88,7 +88,7 @@ To customize the template and input file to deploy your own infrastructure, refe
 
 After editing the template push it back to the Git repo to make it available to be deployed by Schematics. 
 
-Click on the “Source Control” button in the Activity Bar. It’s located on the side of VS Code’s client. Alternatively, you can use the keyboard shortcut “Ctrl+Shift+G” or "Ctrl+Shift+G" on MacOS to open the “Source Control” screen.
+Click on the “Source Control” button in the Activity Bar. It’s located on the side of VS Code’s client. Alternatively, you can use the keyboard shortcut `Ctrl+Shift+G` or `Ctrl+Shift+G` on `MacOS` to open the `Source Control` screen.
 
 - Enter a commit message
 - Click **Commit**

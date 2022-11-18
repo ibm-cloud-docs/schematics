@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-11-18"
 
-keywords: schematics blueprint, blueprint, Beta release, blueprint Beta release
+keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
 subcollection: schematics
 
@@ -18,7 +18,7 @@ subcollection: schematics
 The {{site.data.keyword.bpshort}} Blueprints level of code is considered beta code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
 {: shortdesc}
 
-Join the Beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints Beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join blueprints Beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.
+Join the beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join blueprints beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.
 
 Join the `#tmp-blueprints-beta-2022` slack channel and post a message include the following information.
 
@@ -78,11 +78,11 @@ Blueprint commands have been renamed with the 1.12.3 release of the Schematics C
 ### Steps to join public slack
 {: #sc-bp-join-slack}
 
-Following steps asks you to join the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel.
+Following steps asks you to join the {{site.data.keyword.bpshort}} Blueprints beta public Slack channel.
 - Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page is opened.
-- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Blueprints Beta**.
-- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Blueprints Beta public Slack channel**
+- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Blueprints beta**.
+- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Blueprints beta public Slack channel**
 - Click **Next**.
 - Click **Submit case**. Wait for 10 - 15 minutes to get access.
