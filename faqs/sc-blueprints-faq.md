@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-19"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Blueprints
@@ -52,6 +52,21 @@ Blueprint templates can be edited in any editor or IDE. Follow the instructions 
 {: support}
 
 In {{site.data.keyword.bpshort}} Blueprints, the displayed name is not a unique identifier. Only the blueprint ID that is generated at create time is unique. This unique blueprint ID is needed by the command line to identify the specific environment to be worked on. Blueprint IDs are unique globally and generated from the user supplied name at create time.  
+
+## What URL format is used for referencing blueprint templates and input files?
+{: #faqs-bp-url}
+{: faq}
+{: support}
+
+The Blueprints UI uses the Git path syntax to specifying the URLs to your template and input YAML files. All information to reference the file in the Git repo, its branch and sub-folder must be specified as part of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. 
+
+The link can point to the template file in the main branch, any other branch, or a subdirectory. The URL must include the template file name and the `blob/branch/` pattern for the full path. 
+    
+- Example for main: https://github.com/myorg/myrepo/blob/main/blueprint.yaml    
+- Example for other branches: https://github.com/myorg/myrepo/blob/mybranch/blueprint.yaml
+- Example for subdirectory: https://github.com/mnorg/myrepo/blob/mybranch/mysubdirectory/blueprint.yaml
+
+The required URLs can be copied directly from the Github or Gitlab UIs. For example with Github, on the `Code` tab hover over the template or input file you require the URL for. Right click with your mouse to bring up the context menu and select `Copy Link`, or `Copy Link Address`. The copied URL link can be pasted into the blueprint URL entry field. 
 
 ## How is resource provisioning performed?
 {: #faqs-bp-resource}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-19"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Destroy a blueprint environment 
@@ -31,10 +31,10 @@ For Terraform based modules, the destroy operation runs a Terraform Destroy comm
 
 You can follow these steps to destroy the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click the blueprint name that you want to destroy.
+1. From the [Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click the name of the blueprint that you want to destroy.
 2. Click **Actions** tab.
 3. Select **Destroy resources** to delete the resources associated with this blueprint.
-4. Type the resource name in **Destroy resources** text box.
+4. Type the `<name>` in **Destroy resources** text box.
 5. Click **Destroy** button.
 
 ### Verifying blueprint environment destroy 

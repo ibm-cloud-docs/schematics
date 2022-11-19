@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-19"
 
 keywords: schematics
 subcollection: schematics
@@ -2067,6 +2067,8 @@ subcollection: schematics
 [How do I edit and validate blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-editing)
 
 * [Why do blueprint operations require a `blueprint ID`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
+
+* [What URL format is used for referencing blueprint templates and input files?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url)
 
 * [How is resource provisioning performed?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
 

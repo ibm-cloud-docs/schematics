@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-19"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Create a blueprint configuration 
@@ -145,34 +145,37 @@ You can follow these steps to create the {{site.data.keyword.bpshort}} Blueprint
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Click **Schematics** > **Blueprints** > **Create Blueprint**.
     - In **Blueprint Details** section:
-        - **Name** `<Provide unique name for your blueprint>`.
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this blueprint.
+        - **Name** `<Provide a unique name for your blueprint>`.
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this blueprint. The location determines where your Schematics jobs run and your blueprint data is stored. You can choose between a geography, such as North America, or a metro city, such as Frankfurt or London. 
         - **Resource group** as `Default` or other resource group for this blueprint. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group.
-        - **Tags** as `<Provide the tag name for your blueprint>`.
+        - **Tags** as `<Additional tags>`. These tags are additional to any specified by the blueprint template and are attached to the blueprint itself and all created resources. 
         - **Description** for the blueprint. Supports maximum character range from `0 - 2048`.
         - Click **Next**.
     - In **Blueprint URL** section:
-        - **Repository URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example`.
-        - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`.
-        - Check the information that is entered are correct to create a blueprint.
-        - Click **Next and save as draft**. Observe the Blueprint ID is created and is in `Draft` Status.
+        - **Repository URL** - `<Valid GitHub or GitLab repository URL for your blueprint template YAML file>`. The URL includes the full path to the blueprint template file. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. 
+
+        The link points to the template file in the main branch, another branch, and any subdirectory. The URL must include the template file name and the `blob/branch/` pattern for the full path. Refer to the [blueprint FAQs](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for more information. 
+
+        - **Personal access token** - `<Git personal access token for the repo>`. This is only required for templates stored in private Git repos. Otherwise left empty.  
+        - Check the information that is entered are correct to create your blueprint config.
+        - Click **Next and save as draft**. Observe the Blueprint ID is created and is in `Draft` state.
            Validation takes few seconds to fetch the input variables from the blueprint configuration file.
            {: note}
 
     - In **Input Variables** section:
-        - Select **Import input file** drop down only when you want to import the new `.yaml` file for the blueprint.
+        - Select **Import input file** drop down only when you want to import an `input.yaml` file containing versioned input values for the blueprint.
             - In **Import input file (Optional)** section:
-               -  **Input file GIT URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`.
-               - **Source name** - Used to display from which source name the value is imported.
+               -  **Input file GIT URL** - `Valid GitHub or GitLab repository URL for your blueprint input values YAML file>`, for example `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-input.yaml`.
+               - **Source name** - Unique identifier for this input file. The file name is selected by default when you click on the field. 
                - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`.
                - Click **Import values**.
-        - Observe that the input variables from the blueprint `.yaml` file are imported. Optionally, you can edit the variables.
+        - Observe that the input variables from the `input.yaml` file are imported. Optionally, you can edit the variables.
            Enter variable values into the table by typing them in or by importing them. Prefilled values if any were pulled from the Blueprint definition, but can be changed. If there is a dropdown, select value from the dropdown.
            {: important}
 
         - Click **Done editing**, if the editing is done.
         - Click **Save draft** only if you need to edit the input variables.
-3. Click **Create Blueprint** that redirects to your blueprint page. 
+3. Click **Create Blueprint** that redirects to your blueprint overview page. 
 
 ### Verifying blueprint creation through UI 
 {: #verify-blueprint-create-ui}

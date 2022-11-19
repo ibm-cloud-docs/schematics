@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-19"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -120,7 +120,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: release-note}
 
 {{site.data.keyword.bpshort}} Agents beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [Beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta releases.
+:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
     - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
