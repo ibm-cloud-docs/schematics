@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-19"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [Beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Update a blueprint configuration
@@ -146,23 +146,24 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 You can follow these steps to update the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click the blueprint name that you want to edit.
-2. Click the blueprint **Name** that you need to edit.
-3. Click **Variables** tab to view your **Inputs** tab.
-4. Click **Edit** option in **Inputs Source**:
-    - **Input file GIT URL**  - `<Edit the GIT URL>`.
+1. From the [Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click the blueprint name that you want to edit.
+2. Click **Variables** tab to view your **Inputs** tab.
+3. Click **Edit** option in **Inputs Source**:
+    - The source of the input variables can be changed to a different input file, version or branch
+    - **Input file GIT URL**  - `<New or edited input file Git URL>`.
     - **Personal access token (private repositories only)** - `<Provide your Git personal access token, only for private Git repos>`.
     - Click **Update**.
-5. Click **Settings** tab.
+4. Click **Settings** tab.
     - In **Details** section, click **Edit**.
        - **Name** - Edit the blueprint name.
        - **Description** - Edit the description.
        - Click **Update**.
     - In **Blueprint Source** section, click **Edit**.
-       - **Respository URL** - `<Edit the GIT URL>`.
+       - The source of the template YAML file to refer to a different version or Git branch containing a revised version of the template. 
+       - **Respository URL** - `<Edit the GIT URL>`. Refer to the [blueprint FAQs](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for more information on the URL format. 
        - **Personal access token (private repositories only)** - `<Provide your Git personal access token, only for private Git repos>`.
     - Click **Update**.
-6. Click **Apply** to initiate the blueprint.
+5. Click **Generate Plan** to confirm the changes to the blueprint config.
 
 ### Verify blueprint config update through UI
 {: #verify-bp-update-ui}
