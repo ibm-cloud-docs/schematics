@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-20"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -26,14 +26,17 @@ subcollection: schematics
 
 {{site.data.keyword.bplong}} Blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac) (IaC) automation solution for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A craftsman builds the house from well defined components using the blueprint for guidance.      
 
-In a similar fashion, {{site.data.keyword.bpshort}} Blueprints enables users to define and deploy cloud environments from reusable and well defined building blocks of [Terraform](https://www.terraform.io) automation code. Reusable modules implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. Templates determine the architecture, specifying the modules required for the implementation and infrastructure topology. 
+In a similar fashion, {{site.data.keyword.bpshort}} Blueprints enables users to define and deploy cloud environments from reusable and well defined building blocks of [Terraform](https://www.terraform.io) automation code. Reusable modules implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. Blueprint templates determine the architecture, specifying the modules required for the implementation and infrastructure topology. 
 
-Reuse is at the heart of {{site.data.keyword.bpshort}} Blueprints. Publicly available modules designed for IBM Cloud can be combined with third-party and user developed modules to create customized solutions. Templates are reusable across environments with separately maintained configurations, supporting dev, stage and prod pipelines and reuse across organizations. 
+Reuse is at the heart of {{site.data.keyword.bpshort}} Blueprints. Publicly available modules designed for IBM Cloud can be combined with third-party and user developed modules to create customized solutions. Blueprint templates are reusable across environments with separately maintained input configurations, supporting dev, stage and prod pipelines and reuse across organizations. 
 {: shortdesc} 
 
 
 ![Large-scale environments by using Terraform and blueprints](/images/bp-largescale-env.svg){: caption="Large-scale environments using Terraform and blueprints" caption-side="bottom"}
 
+A blueprint template defines the architecture of the environment to be deployed and the modules from which it will be constructed. When an environment is deployed, an input file passes the values that customize the template for the intended usage. In this example the input files would typically determine the scaling of the deployed infrastructure for the dev, stage and proc environments.      
+
+## Features
 
 {{site.data.keyword.bpshort}} Blueprints complements Terraform's IaC automation capabilities with:
 - [Composition](/docs/schematics?topic=schematics-define-blueprints): Build infrastructure architectures from an eco-system of reusable and maintained IBM Cloud architecture components written in Terraform
@@ -44,7 +47,7 @@ Reuse is at the heart of {{site.data.keyword.bpshort}} Blueprints. Publicly avai
 
 IAC best practices, support the lifecycle of blueprint environments, cradle-to-grave. Versioning and parameterized configuration, support controlled change to environments as requirements evolve, and templates and modules are maintained and updated to remain current and compliant.   
 
-![{{site.data.keyword.bpshort}} Blueprints overview](/images/blueprints-v2-Overview.svg){: caption="{{site.data.keyword.bpshort}} Blueprints overview" caption-side="bottom"}
+
 
 ## Next steps
 {: #nextsteps-bp-arch}
