@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-20"
 
 keywords: blueprint config delete, delete blueprint, blueprint
 
@@ -30,7 +30,7 @@ This behavior of disallowing delete when modules cannot be returned to an `Inact
 {: #delete-blueprint-cli}
 {: cli}
 
-For more information, see [blueprint config delete](https://cloud.ibm.com/docs/schematics?topic=schematics-delete-blueprint) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint config delete` command run. 
+For more information, see [blueprint config delete](/docs/schematics?topic=schematics-delete-blueprint) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint config delete` command run. 
 
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
