@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-20"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -583,6 +583,6 @@ For more information, about how to diagnose and resolve issues if the list job f
 ## Next steps
 {: #bp-display-nextsteps}
 
-After displaying the list of blueprints in {{site.data.keyword.bpshort}}, refer to [list blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs-cli) for details on displaying blueprint jobs.  
+After displaying the list of blueprints in {{site.data.keyword.bpshort}}, refer to [list blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs) for details on displaying blueprint jobs.  
 
 
