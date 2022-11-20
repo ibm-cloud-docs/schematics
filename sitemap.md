@@ -291,6 +291,8 @@ subcollection: schematics
 
     * Review the release notes for November 2022.
 
+    * Release {{site.data.keyword.bpshort}} command-line plug-in.
+
     * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
 
         * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
