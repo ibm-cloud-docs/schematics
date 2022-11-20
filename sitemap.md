@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-20"
 
 keywords: schematics
 subcollection: schematics
@@ -108,6 +108,8 @@ subcollection: schematics
 [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
 
 * [Overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview)
+
+* [Features](/docs/schematics?topic=schematics-blueprint-intro#features)
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-intro#nextsteps-bp-arch)
 
