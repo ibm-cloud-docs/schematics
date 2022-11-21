@@ -111,7 +111,7 @@ subcollection: schematics
 
 * [Overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview)
 
-* [Features](/docs/schematics?topic=schematics-blueprint-intro#features)
+* [Features](/docs/schematics?topic=schematics-blueprint-intro#blueprint-features)
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-intro#nextsteps-bp-arch)
 
