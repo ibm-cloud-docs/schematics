@@ -111,7 +111,7 @@ subcollection: schematics
 
 * [Overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview)
 
-* [Features](/docs/schematics?topic=schematics-blueprint-intro#features)
+* [Features](/docs/schematics?topic=schematics-blueprint-intro#blueprint-features)
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-intro#nextsteps-bp-arch)
 
@@ -293,7 +293,9 @@ subcollection: schematics
 
     * Review the release notes for November 2022.
 
-    * Release {{site.data.keyword.bpshort}} command-line plug-in.
+    * [18 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
     * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
 
@@ -1703,7 +1705,7 @@ subcollection: schematics
 
     * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
 
-* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state)
+* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
 
     * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
 

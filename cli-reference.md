@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-20"
+lastupdated: "2022-11-21"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2461,7 +2461,7 @@ ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /
 {: pre}
 
 ## Terraform state file commands
-{: #state file-cmds}
+{: #state-file-cmds}
 
 Review the commands that you can use to work with the Terraform state file (`terraform.tfstate`) for a workspace.
 {: shortdesc}
