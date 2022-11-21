@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-20"
+lastupdated: "2022-11-21"
 
 keywords: blueprint config delete, delete blueprint, blueprint
 
@@ -36,20 +36,23 @@ For all the blueprint commands, syntax, and option flag details, see [blueprints
 {: important}
 
 ```sh
-ibmcloud schematics blueprint config delete --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint config delete --id Blueprint_Basic.eaB.08d1
 ```
 {: pre}
 
 Output
 
 ```text
-SNO Type Name Status
-1 terraform basic-resource-group INACTIVE
-2 terraform basic-cos-storage INACTIVE
+Modules to be deleted
+SNO   Module Type   Name                   Status   
+1     Workspace     basic-resource-group   INITIALISED   
+2     Workspace     basic-cos-storage      INITIALISED   
+      
+Do you really want to delete the blueprint ? [y/N]> y
+Job : us-east.JOB.Blueprint_Basic.992e4c2d Created
 
-Do you really want to delete the Blueprint ? [y/N]> y
-Job : us-east.JOB.Blueprint_Basic.cbe0591e Created
 Job Type: BLUEPRINT DELETE
+
 OK
 ```
 {: screen}
@@ -62,19 +65,39 @@ During the beta, the config delete CLI command does not wait for successful job 
 The status of the config delete operation can be monitored by using the `blueprint job get` command. The following command runs a `blueprint job get` for the JOB ID `eu-gb.JOB.Blueprint-Basic-Example.f2d388d3`. The job ID is displayed in the config delete output. 
 
 ```sh
-ibmcloud schematics blueprint job get --id us-east.JOB.Blueprint_Basic.e4081308
+ibmcloud schematics blueprint job get --id us-east.JOB.Blueprint_Basic.992e4c2d
 ```
 {: pre}
 
 
 ```text
-ID                      us-east.JOB.Blueprint_Basic.e4081308   
-Blueprint ID            Blueprint_Basic.eaB.5cd9   
+BLUEPRINT JOB DETAILS      
+Job ID                  us-east.JOB.Blueprint_Basic.992e4c2d   
+Blueprint ID            Blueprint_Basic.eaB.08d1   
 Job Type                blueprint_delete   
-Location                us-east
-Start Time              2022-08-03 15:51:12
-End Time                2022-08-03 15:54:11    
+Location                us-east   
+Start Time              2022-11-18 11:22:03   
+End Time                2022-11-18 11:22:44   
+Status                  Normal   
                            
+SNO   Child Job          Module ID   Job Status     Job ID   
+1     blueprint_delete               job_finished   us-east.JOB.Blueprint_Basic.992e4c2d   
+                         
+Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> 1
+                 
+Module ID        
+Status        job_finished   
+Log Summary   (last few lines)..........   
+               2022/11/18 11:22:06 -----  New blueprint Action  -----   
+               2022/11/18 11:22:06 Request: blueprintId=Blueprint_Basic.eaB.08d1, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=schematics@in.ibm.com, requestID=1d7ee769-71f1-45f0-93f9-c0cd159e4117   
+               2022/11/18 11:22:07 Related Job:  jobID=us-east.JOB.Blueprint_Basic.992e4c2d   
+               2022/11/18 11:22:18  --- Ready to execute the blueprint flow delete command ---    
+               2022/11/18 11:22:22 Invoke delete blueprint module component - us-east.workspace.basic-cos-storage.99a35e10   
+               2022/11/18 11:22:33 Invoke delete blueprint module component - us-east.workspace.basic-resource-group.99503dea   
+               2022/11/18 11:22:44 Done with the blueprint delete flow job   
+                 
+                 
+Use ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint_Basic.992e4c2d to review the full job output 
 OK
 ```
 {: screen}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-21"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -55,11 +55,11 @@ ibmcloud schematics blueprint job list -id <blueprint_ID>
 The list command returns the list of jobs that runs for this blueprint. This example does not follow the interactive prompt. 
 
 ```text        
-ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
+ID     Blueprint_Basic.eaB.08d1   
 JOBS      
 SNO   Job Type                Status   Start Time            Job ID   
-1     blueprint_apply       Normal   2022-07-08 13:54:31   us-south.JOB.Blueprint_Complex.357fc181   
-2     blueprint_create_init   Normal   2022-07-08 11:03:10   us-south.JOB.Blueprint_Complex.57b42827   
+1     blueprint_install       Normal   2022-11-18 10:33:41   us-east.JOB.Blueprint_Basic.a14e1e36   
+2     blueprint_create_init   Normal   2022-11-18 10:28:30   us-east.JOB.Blueprint_Basic.4cad1d5b   
       
 Enter Job sequence number to get the blueprint job summary.(or enter no/n to ignore)> 
 ```
@@ -68,26 +68,27 @@ Enter Job sequence number to get the blueprint job summary.(or enter no/n to ign
 Following the interactive prompts, you can drill down into the details of a specific blueprint job, then drill down to review the log summary for the operations set at a module level. Enter the sequence number of the job listed in the prior lines to drill down to the next level. 
 
 ```text                 
-ID     us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
+ID     Blueprint_Basic.eaB.08d1   
 JOBS      
 SNO   Job Type                Status   Start Time            Job ID   
-1     blueprint_apply       Normal   2022-07-08 13:54:31   us-south.JOB.Blueprint_Complex.357fc181   
-2     blueprint_create_init   Normal   2022-07-08 11:03:10   us-south.JOB.Blueprint_Complex.57b42827   
+1     blueprint_install       Normal   2022-11-18 10:33:41   us-east.JOB.Blueprint_Basic.a14e1e36   
+2     blueprint_create_init   Normal   2022-11-18 10:28:30   us-east.JOB.Blueprint_Basic.4cad1d5b   
       
 Enter Job sequence number to get the blueprint job summary.(or enter no/n to ignore)> 1
 BLUEPRINT JOB DETAILS      
-Job ID                  us-south.JOB.Blueprint_Complex.357fc181   
-Job Type                blueprint_apply   
+Job ID                  us-east.JOB.Blueprint_Basic.a14e1e36   
+Job Type                blueprint_install   
 Status                  Normal   
-Start Time              2022-07-08 13:54:31   
-End Time                2022-07-08 13:56:42   
+Start Time              2022-11-18 10:33:41   
+End Time                2022-11-18 10:37:17   
                            
-SNO   Child Job           Module ID                                       Job Status     Job ID   
-1     blueprint_apply                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
-2     Module_apply        us-south.workspace.terraform_module1.6cef8e6d   job_finished   67a110742e5e3f336262ca3ab994048f   
-3     Module_apply        us-south.workspace.terraform_module2.875fda22   job_finished   dced88881344254af903fac251731ed2   
+SNO   Child Job           Module ID                                         Job Status     Job ID   
+1     blueprint_install                                                     job_finished   us-east.JOB.Blueprint_Basic.a14e1e36   
+2     Module_apply        us-east.workspace.basic-resource-group.99503dea   job_finished   de32dba8d99cbfc10bd41e619032237e   
+3     Module_apply        us-east.workspace.basic-cos-storage.99a35e10      job_finished   a7326e407a3621dcbead909caf3cdf70   
                           
 Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> 
+OK
 ```
 {: screen}
 
@@ -147,47 +148,42 @@ The example here shows job summary output, following the interactive prompt to r
 
 ```text          
 BLUEPRINT JOB DETAILS      
-Job ID                  us-south.JOB.Blueprint_Complex.357fc181   
-Blueprint ID            us-south.ENVIRONMENT.Blueprint_Complex.5448a1c0   
-Job Type                blueprint_apply   
-Location                us-south   
-Start Time              2022-07-08 13:54:31   
-End Time                2022-07-08 13:56:42   
+Job ID                  us-east.JOB.Blueprint_Basic.a14e1e36   
+Job Type                blueprint_install   
 Status                  Normal   
+Start Time              2022-11-18 10:33:41   
+End Time                2022-11-18 10:37:17   
                            
-SNO   Child Job           Module ID                                       Job Status     Job ID   
-1     blueprint_apply                                                   job_finished   us-south.JOB.Blueprint_Complex.357fc181   
-2     Module_apply        us-south.workspace.terraform_module1.6cef8e6d   job_finished   67a110742e5e3f336262ca3ab994048f   
-3     Module_apply        us-south.workspace.terraform_module2.875fda22   job_finished   dced88881344254af903fac251731ed2   
+SNO   Child Job           Module ID                                         Job Status     Job ID   
+1     blueprint_install                                                     job_finished   us-east.JOB.Blueprint_Basic.a14e1e36   
+2     Module_apply        us-east.workspace.basic-resource-group.99503dea   job_finished   de32dba8d99cbfc10bd41e619032237e   
+3     Module_apply        us-east.workspace.basic-cos-storage.99a35e10      job_finished   a7326e407a3621dcbead909caf3cdf70   
                           
 Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> 2
                  
-Module ID     us-south.workspace.terraform_module1.6cef8e6d   
+Module ID     us-east.workspace.basic-resource-group.99503dea   
 Status        job_finished   
 Log Summary   (last few lines)..........   
-              7/08 13:55:22 Terraform apply |   {   
-               2022/07/08 13:55:22 Terraform apply |     "external" = 9901   
-               2022/07/08 13:55:22 Terraform apply |     "internal" = 9901   
-               2022/07/08 13:55:22 Terraform apply |     "protocol" = "ldp"   
-               2022/07/08 13:55:22 Terraform apply |   },   
-               2022/07/08 13:55:22 Terraform apply | ])   
-               2022/07/08 13:55:22 Terraform apply | test_tuple = [   
-               2022/07/08 13:55:22 Terraform apply |   "hello",   
-               2022/07/08 13:55:22 Terraform apply |   "hi",   
-               2022/07/08 13:55:22 Terraform apply |   34.5,   
-               2022/07/08 13:55:22 Terraform apply |   false,   
-               2022/07/08 13:55:22 Terraform apply | ]   
-               2022/07/08 13:55:22 Command finished successfully.   
+              orm Refresh  -----   
                   
-               2022/07/08 13:55:22 -----  Terraform OUTPUT  -----   
+               2022/11/18 10:34:55 Starting command: terraform1.0 refresh -state=terraform.tfstate -var-file=schematics.tfvars -no-color   
+               2022/11/18 10:34:55 Starting command: terraform1.0 refresh -state=terraform.tfstate -var-file=schematics.tfvars -no-color   
+               2022/11/18 10:35:06 Terraform refresh |    
+               2022/11/18 10:35:06 Terraform refresh | Outputs:   
+               2022/11/18 10:35:06 Terraform refresh |    
+               2022/11/18 10:35:06 Terraform refresh | resource_group_id = "aac37f57b20142dba1a435c70aeb12df"   
+               2022/11/18 10:35:06 Terraform refresh | resource_group_name = "Default"   
+               2022/11/18 10:35:06 Command finished successfully.   
                   
-               2022/07/08 13:55:22 Starting command: terraform1.0 output -no-color -json   
-               2022/07/08 13:55:22 Starting command: terraform1.0 output -no-color -json   
-               2022/07/08 13:55:23 Command finished successfully.   
-               2022/07/08 13:55:28 Done with the workspace action   
+               2022/11/18 10:35:06 -----  Terraform OUTPUT  -----   
+                  
+               2022/11/18 10:35:06 Starting command: terraform1.0 output -no-color -json   
+               2022/11/18 10:35:06 Starting command: terraform1.0 output -no-color -json   
+               2022/11/18 10:35:08 Command finished successfully.   
+               2022/11/18 10:35:14 Done with the workspace action   
                  
                  
-Use ibmcloud schematics logs --id us-south.workspace.terraform_module1.6cef8e6d --act-id 67a110742e5e3f336262ca3ab994048f to review the full job output 
+Use ibmcloud schematics logs --id us-east.workspace.basic-resource-group.99503dea --act-id de32dba8d99cbfc10bd41e619032237e to review the full job output 
 OK
 ```
 {: screen}
@@ -217,20 +213,20 @@ ibmcloud schematics blueprint job logs -id <job_id>
 Output
 
 ```text        
- 2022/07/08 13:54:34 -----  New Environment Action  -----
- 2022/07/08 13:54:34 Request: environmentId=us-south.ENVIRONMENT.Blueprint_Complex.5448a1c0, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=geetha_sathyamurthy@in.ibm.com, requestID=6aa7b2c7-565f-418d-9596-70d6edf08d05
- 2022/07/08 13:54:34 Related Job:  jobID=us-south.JOB.Blueprint_Complex.357fc181
- 2022/07/08 13:54:44  --- Ready to execute the environment flow apply command --- 
- 2022/07/08 13:54:44 Processing WorkItem Entry us-south.workspace.terraform_module1.6cef8e6d
- 2022/07/08 13:54:44 Work Item Status for WorkItemID=us-south.workspace.terraform_module1.6cef8e6d is INACTIVE
- 2022/07/08 13:55:34 apply activity completed for workitem WorkItemID=us-south.workspace.terraform_module1.6cef8e6d
- 2022/07/08 13:55:34 Status for workitem WorkItemID=us-south.workspace.terraform_module1.6cef8e6d is ACTIVE
- 2022/07/08 13:55:37 Processing WorkItem Entry us-south.workspace.terraform_module2.875fda22
- 2022/07/08 13:55:38 Work Item Status for WorkItemID=us-south.workspace.terraform_module2.875fda22 is INACTIVE
- 2022/07/08 13:56:38 apply activity completed for workitem WorkItemID=us-south.workspace.terraform_module2.875fda22
- 2022/07/08 13:56:38 Status for workitem WorkItemID=us-south.workspace.terraform_module2.875fda22 is ACTIVE
- 2022/07/08 13:56:40 ENVIRONMENT_apply - ENVIRONMENT_SYSTEM_STATEENUM_FULFILMENT_SUCCESS
- 2022/07/08 13:56:42  Done with the environment apply flow job 
+ 2022/11/18 10:33:45 -----  New blueprint Action  -----
+ 2022/11/18 10:33:45 Request: blueprintId=Blueprint_Basic.eaB.08d1, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=schematics@in.ibm.com, requestID=1f97fde7-4921-4a46-bb29-296fbe25df44
+ 2022/11/18 10:33:45 Related Job:  jobID=us-east.JOB.Blueprint_Basic.a14e1e36
+ 2022/11/18 10:33:57  --- Ready to execute the blueprint flow install command --- 
+ 2022/11/18 10:33:57 Processing Module Entry us-east.workspace.basic-resource-group.99503dea
+ 2022/11/18 10:33:59 Module Status for ModuleID=us-east.workspace.basic-resource-group.99503dea is INACTIVE
+ 2022/11/18 10:35:26 Install activity completed for module ModuleID=us-east.workspace.basic-resource-group.99503dea
+ 2022/11/18 10:35:28 Status for module ModuleID=us-east.workspace.basic-resource-group.99503dea is ACTIVE
+ 2022/11/18 10:35:30 Processing Module Entry us-east.workspace.basic-cos-storage.99a35e10
+ 2022/11/18 10:35:31 Module Status for ModuleID=us-east.workspace.basic-cos-storage.99a35e10 is INACTIVE
+ 2022/11/18 10:37:11 Install activity completed for module ModuleID=us-east.workspace.basic-cos-storage.99a35e10
+ 2022/11/18 10:37:13 Status for module ModuleID=us-east.workspace.basic-cos-storage.99a35e10 is ACTIVE
+ 2022/11/18 10:37:16 ENVIRONMENT_INSTALL - ENVIRONMENT_SYSTEM_STATEENUM_FULFILMENT_SUCCESS
+ 2022/11/18 10:37:17  Done with the blueprint install flow job 
 
 OK
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-20"
+lastupdated: "2022-11-21"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -63,10 +63,10 @@ On successful completion the list command returns a list of blueprints.
 The command lists all the environments created in the CLI region. 
 
 ```text
-Name                        ID                                                   Status   Location   Creator                   Last modified   
-Blueprint Basic Example     eu-gb.BLUEPRINT.Blueprint-Basic-Example.f612085f     Normal   eu-gb      steve_strutt@uk.ibm.com   2022-07-03T14:09:02.354Z   
-blueprints-complex-inputs   eu-gb.BLUEPRINT.blueprints-complex-inputs.7312c775   Normal   eu-gb      steve_strutt@uk.ibm.com   2022-07-04T13:01:50.313Z   
-                                                                                          
+sundeepmulampaka@Sundeeps-MacBook-Pro blueprint % ibmcloud schematics blueprint list
+Name                                        ID                                                   Source Type   Status               Location   Creator                   Last modified     
+Blueprint_Basic                             Blueprint_Basic.eaB.08d1                             GitHub        fulfilment_success   us-east    schematics@in.ibm.com       2022-11-18 10:37:20   
+                                                                                                               
 OK
 ```
 {: screen}
@@ -100,18 +100,19 @@ On successful completion the get command returns summary details of the blueprin
 ```text
 BLUEPRINT          
                 
-Name            Blueprint_Complex   
-ID              us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
-Status          Normal   
-Location        us-south   
-Creator         geetha_sathyamurthy@in.ibm.com   
-Last modified   2022-07-08T13:56:43.994Z   
+Name            Blueprint_Basic   
+ID              Blueprint_Basic.eaB.08d1   
+Description     Simple blueprint to demonstrate module linking   
+Status          fulfilment_success   
+Location        us-east   
+Creator         schematics@in.ibm.com   
+Last modified   2022-11-18T10:37:20.163Z   
                 
 MODULES
 
-SNO   Workspace Name      Workspace ID                                    Status   Location   Updated   
-1     terraform_module1   us-south.workspace.terraform_module1.6cef8e6d   ACTIVE   us-south      
-2     terraform_module2   us-south.workspace.terraform_module2.875fda22   ACTIVE   us-south      
+SNO   Workspace Name         Workspace ID                                      Status    Location   Updated   
+1     basic-resource-group   us-east.workspace.basic-resource-group.99503dea   APPLIED   us-east       
+2     basic-cos-storage      us-east.workspace.basic-cos-storage.99a35e10      APPLIED   us-east       
       
 OK
 ```
@@ -135,34 +136,27 @@ On successful completion the get command returns the summary details of the blue
 **Output:**
 
 ```text
-BLUEPRINT
-
-Name            Blueprint_Complex
-ID              us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
-Status          Normal   
-Location        us-south   
-Creator         geetha_sathyamurthy@in.ibm.com   
-Last modified   2022-07-08T13:56:43.994Z   
+BLUEPRINT          
+                
+Name            Blueprint_Basic   
+ID              Blueprint_Basic.eaB.08d1   
+Description     Simple blueprint to demonstrate module linking   
+Status          fulfilment_success   
+Location        us-east   
+Creator         schematics@in.ibm.com   
+Last modified   2022-11-18T10:37:20.163Z   
                 
 MODULES
 
-SNO   Workspace Name      Workspace ID                                    Status   Location   Updated   
-1     terraform_module1   us-south.workspace.terraform_module1.6cef8e6d   ACTIVE   us-south      
-2     terraform_module2   us-south.workspace.terraform_module2.875fda22   ACTIVE   us-south      
+SNO   Workspace Name         Workspace ID                                      Status    Location   Updated   
+1     basic-resource-group   us-east.workspace.basic-resource-group.99503dea   APPLIED   us-east       
+2     basic-cos-storage      us-east.workspace.basic-cos-storage.99a35e10      APPLIED   us-east       
       
 BLUEPRINT OUTPUTS
 
-Key                Value   
-blueprint-output   [{   
-                     external = 9900   
-                     internal = 9900   
-                     protocol = "tcp"   
-                     }, {   
-                     external = 9901   
-                     internal = 9901   
-                     protocol = "ldp"   
-                   }]   
-                      
+Key      Value   
+cos_id   088afa58-0693-4a8d-b0e1-523e9d5325cf   
+            
 OK
 ```
 {: screen}
@@ -187,124 +181,82 @@ On successful completion the get command returns a detailed listing of the bluep
 ```text
 BLUEPRINT          
                 
-Name            Blueprint_Complex   
-ID              us-south.BLUEPRINT.Blueprint_Complex.5448a1c0   
-Status          Normal   
-Location        us-south   
-Creator         geetha_sathyamurthy@in.ibm.com   
-Last modified   2022-07-08T13:56:43.994Z   
+Name            Blueprint_Basic   
+ID              Blueprint_Basic.eaB.08d1   
+Description     Simple blueprint to demonstrate module linking   
+Status          fulfilment_success   
+Location        us-east   
+Creator         schematics@in.ibm.com   
+Last modified   2022-11-18T10:37:20.163Z   
                 
 BLUEPRINT
                    
-Name            Blueprint_Complex   
-Git Repo URL    https://github.com/Cloud-Schematics/blueprint-complex-inputs   
-Git Repo File   complex-blueprint.yaml   
-Release         latest   
+Name            Blueprint_Basic   
+Description     Simple blueprint to demonstrate module linking   
+Git Repo URL    https://github.com/Cloud-Schematics/blueprint-basic-example   
+Git Repo File   basic-blueprint.yaml   
+Git Branch      main   
                 
 BLUEPRINT INPUTS
 
-Key                     Value   
-resource_group          -   
-region                  -   
-sample_var              -   
-boolean_var             -   
-list_any_flow_scalar    -   
-list_any_block_scalar   -   
-docker_ports            -   
-                           
+Key                 Value   
+cos_instance_name   Blueprint-basic   
+cos_storage_plan    lite   
+                       
 BLUEPRINT OUTPUTS
 
-Key                Value   
-blueprint-output   [{   
-                     external = 9900   
-                     internal = 9900   
-                     protocol = "tcp"   
-                     }, {   
-                     external = 9901   
-                     internal = 9901   
-                     protocol = "ldp"   
-                   }]   
-                      
+Key      Value   
+cos_id   088afa58-0693-4a8d-b0e1-523e9d5325cf   
+            
 INPUT FILE
                    
-Git Repo URL    https://github.com/Cloud-Schematics/blueprint-complex-inputs   
-Git Repo File   complex-input.yaml   
+Git Repo URL    https://github.com/Cloud-Schematics/blueprint-basic-example   
+Git Repo File   basic-input.yaml   
 Git Branch      main   
                 
 INPUTS
 
-Key                     Value   
-resource_group          default   
-region                  eu-de   
-sample_var              testconfig_input_demo   
-list_any_flow_scalar    ["36", "mqm-grand", "madison-circle-garden"]   
-list_any_block_scalar   [   
-                            "36",    
-                            "mqm-grand",    
-                            "madison-circle-garden"   
-                        ]   
-                           
-docker_ports            [   
-                          {   
-                            internal = 9900   
-                            external = 9900   
-                            protocol = "tcp"   
-                          },   
-                          {   
-                            internal = 9901   
-                            external = 9901   
-                            protocol = "ldp"   
-                          }   
-                        ]   
-                           
-boolean_var             false   
-                           
+Key                 Value   
+cos_instance_name   Blueprint-basic   
+cos_storage_plan    lite   
+                       
 MODULES
 
-terraform_module1      
-Git Repo URL        https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/tf-inputs-outputs   
+basic-resource-group      
+Git Repo URL           https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup   
+Git Repo Branch        main   
+                       
+INPUTS
+
+Key   Value   
+      
+OUTPUTS
+
+Key   
+resource_group_name   
+resource_group_id   
+   
+   
+basic-cos-storage      
+Git Repo URL        https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-Storage   
 Git Repo Branch     main   
                     
 INPUTS
 
-Key                     Value   
-TF_VERSION              1.0   
-sample_var              $blueprint.sample_var   
-image_id                ami-image   
-list_any_flow_scalar    $blueprint.list_any_flow_scalar   
-list_any_block_scalar   $blueprint.list_any_block_scalar   
-docker_ports            $blueprint.docker_ports   
-                        
+Key                   Value   
+cos_instance_name     $blueprint.cos_instance_name   
+cos_storage_plan      $blueprint.cos_storage_plan   
+cos_single_site_loc   ams03   
+resource_group_id     $module.basic-resource-group.outputs.resource_group_id   
+                      
 OUTPUTS
 
 Key   
-nested_complex   
-test_tuple   
-   
-   
-terraform_module2      
-Git Repo URL        https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/tf-inputs-outputs   
-Git Repo Branch     main   
-                    
-INPUTS
-
-Key                     Value   
-TF_VERSION              1.0   
-sample_var              $blueprint.sample_var   
-image_id                ami-image   
-list_any_flow_scalar    $blueprint.list_any_flow_scalar   
-list_any_block_scalar   $blueprint.list_any_block_scalar   
-docker_ports            $module.terraform_module1.nested_complex   
-                        
-OUTPUTS
-
-Key   
-nested_complex   
-test_tuple   
+cos_id   
+cos_crn   
    
    
 OK
-
 ```
 {: screen}
 
