@@ -640,7 +640,7 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint config create -name blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
+ibmcloud schematics blueprint config create -name blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
 
@@ -749,24 +749,26 @@ ibmcloud schematics blueprint config create --file createtest.json --github-toke
 **Output:**
 
 ```text
-Created Blueprint ID: Blueprint-Basic.eaB.60e5
+Created blueprint ID: blueprint_Basic.eaB.435a
 
 Modules to be created
-SNO   Type        Name   
-1     terraform   tf_cloudless_sleepy_workitem1   
+SNO   Module Type   Name   
+1     Workspace     basic-resource-group   
+2     Workspace     basic-cos-storage   
       
-Blueprint job us-east.JOB.Blueprint-Basic.704e00f6 started at 2022-11-03 14:08:54
+Blueprint job us-east.JOB.blueprint_Basic.0a0ed5b5 started at 2022-11-21 11:48:46
 
 Module job execution status
-Waiting:0    In Progress:0    Success:0    Failed:0   
+Waiting:0    In Progress:0    Success:2    Failed:0   
 
-Blueprint job us-east.JOB.Blueprint-basic.704e00f6 completed at 2022-11-03 14:10:00
+Blueprint job us-east.JOB.blueprint_Basic.0a0ed5b5 completed at 2022-11-21 11:50:25
 
-Module Type   Name                            Status           Job ID   
-Blueprint     Blueprint basic                   CREATE_SUCCESS   us-east.JOB.Blueprint-Basic.704e00f6   
-Workspace     tf_cloudless_sleepy_workitem1   INITIALISED         
+Module Type   Name                   Status           Job ID   
+Blueprint     blueprint_Basic        CREATE_SUCCESS   us-east.JOB.blueprint_Basic.0a0ed5b5   
+Workspace     basic-resource-group   INITIALISED         
+Workspace     basic-cos-storage      INITIALISED         
               
-Blueprint ID Blueprint-Basic.eaB.60e5 create_success at 2022-11-03 14:10:01
+Blueprint ID blueprint_Basic.eaB.435a create_success at 2022-11-21 11:50:26
 OK
 ```
 {: screen}
@@ -804,21 +806,23 @@ ibmcloud schematics blueprint run apply --id Blueprint_Basic.eaB.5cd9
 
 ```text
 Modules to be applied
-SNO   Module Type   Name                            Status   
-1     Workspace     tf_cloudless_sleepy_workitem1   INITIALISED   
+SNO   Module Type   Name                   Status   
+1     Workspace     basic-resource-group   INITIALISED   
+2     Workspace     basic-cos-storage      INITIALISED   
       
-Blueprint job us-east.JOB.Blueprint-Basic.e353032d started at 2022-11-03 14:24:20
+Blueprint job us-east.JOB.blueprint_Basic.c1f2164f started at 2022-11-21 12:15:25
 
 Module job execution status
-Waiting:0    In Progress:0    Success:0    Failed:0   
+Waiting:0    In Progress:0    Success:2    Failed:0   
 
-Blueprint job us-east.JOB.Blueprint-Basic.e353032d completed at 2022-11-03 14:26:05
+Blueprint job us-east.JOB.blueprint_Basic.c1f2164f completed at 2022-11-21 12:18:54
 
-Module Type   Name                            Status               Job ID   
-Blueprint     Blueprint Basic                   FULFILMENT_SUCCESS   us-east.JOB.Blueprint-Basic.e353032d   
-Workspace     tf_cloudless_sleepy_workitem1   APPLIED                 
+Module Type   Name                   Status               Job ID   
+Blueprint     blueprint_Basic        FULFILMENT_SUCCESS   us-east.JOB.blueprint_Basic.c1f2164f   
+Workspace     basic-resource-group   APPLIED                 
+Workspace     basic-cos-storage      APPLIED                 
               
-Blueprint ID Blueprint-Basic.eaB.60e5 fulfilment_success at 2022-11-03 14:26:07
+Blueprint ID blueprint_Basic.eaB.435a fulfilment_success at 2022-11-21 12:18:55
 OK
 ```
 {: screen}
@@ -858,11 +862,27 @@ ibmcloud schematics blueprint config update -id Blueprint_Basic.eaB.5cd9 -f upda
 **Output**
 
 ```text
-Update blueprint  Blueprint Basic
+Update blueprint  blueprint_Basic
 
 Modules to be updated
-SNO   Module Type   Name                            Updates   
-1     Workspace     tf_cloudless_sleepy_workitem1   NA
+SNO   Module Type   Name                   Updates   
+1     Workspace     basic-resource-group   NA   
+2     Workspace     basic-cos-storage      Updating   
+      
+Blueprint job us-east.JOB.blueprint_Basic.0862fea7 started at 2022-11-21 12:13:24
+
+Module job execution status
+Waiting:0    In Progress:0    Success:0    Failed:0   
+
+Blueprint job us-east.JOB.blueprint_Basic.0862fea7 completed at 2022-11-21 12:14:53
+
+Module Type   Name                   Status           Job ID   
+Blueprint     blueprint_Basic        UPDATE_SUCCESS   us-east.JOB.blueprint_Basic.0862fea7   
+Workspace     basic-resource-group   INITIALISED         
+Workspace     basic-cos-storage      INITIALISED         
+              
+Blueprint ID blueprint_Basic.eaB.435a update_success at 2022-11-21 12:14:55
+OK
 ```
 {: screen}
 
@@ -900,18 +920,19 @@ ibmcloud schematics blueprint get --id Blueprint_Basic.eaB.5cd9
 ```text
 BLUEPRINT          
                 
-Name            Blueprint Basic   
-ID              Blueprint-Basic.eaB.60e5   
-Description     Deploys dev envn update instance from Basic.   
-Status          UPDATE_INIT   
+Name            Blueprint Basic Json   
+ID              blueprint_Basic.eaB.435a   
+Description     Deploys a simple two module blueprint Updated   
+Status          create_success   
 Location        us-east   
 Creator         test@in.ibm.com   
-Last modified   2022-11-03T09:03:13.723Z   
+Last modified   2022-11-21T08:24:23.197Z   
                 
 MODULES
 
-SNO   Workspace Name                  Workspace ID                                               Status    Location   Updated   
-1     tf_cloudless_sleepy_workitem1   us-east.workspace.tf_cloudless_sleepy_workitem1.f6197267   APPLIED   us-east       
+SNO   Workspace Name         Workspace ID                                      Status        Location   Updated   
+1     basic-resource-group   us-east.workspace.basic-resource-group.3a89a5f1   INITIALISED   us-east       
+2     basic-cos-storage      us-east.workspace.basic-cos-storage.c775f80a      INITIALISED   us-east       
       
 OK
 ```
@@ -951,7 +972,7 @@ ibmcloud schematics blueprint list
 
 ```text
 Name              ID                         Source Type   Status               Location   Creator           Last modified   
-Blueprint Basic   Blueprint-Basic.eaB.d1f9   GitHub        fulfilment_success   us-east    test@in.ibm.com   2022-11-03 09:35:12   
+Blueprint Basic   blueprint_Basic.eaB.435a   GitHub        fulfilment_success   us-east    test@in.ibm.com   2022-11-21T10:45:57.329Z   
                                                            
 OK
 ```
@@ -982,7 +1003,7 @@ ibmcloud schematics blueprint run destroy --id BLUEPRINT_ID [--no-prompt] [--out
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint run destroy -id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint run destroy -id blueprint_Basic.eaB.435a
 ```
 {: pre}
 
@@ -990,22 +1011,24 @@ ibmcloud schematics blueprint run destroy -id Blueprint_Basic.eaB.5cd9
 
 ```text
 Modules to be destroyed
-SNO   Module Type   Name                            Status   
-1     Workspace     tf_cloudless_sleepy_workitem1   APPLIED
-
-Do you really want to destroy all the resources of blueprint Blueprint-Basic.eaB.60e5? [y/N]> y
-Blueprint job us-east.JOB.Blueprint-Basic.d67f9a28 started at 2022-11-03 14:47:36
+SNO   Module Type   Name                   Status   
+1     Workspace     basic-resource-group   APPLIED   
+2     Workspace     basic-cos-storage      APPLIED   
+      
+Do you really want to destroy all the resources of blueprint blueprint_Basic.eaB.435a? [y/N]> y
+Blueprint job us-east.JOB.Blueprint-Basic-Json.59bf17a8 started at 2022-11-21 12:47:26
 
 Module job execution status
-Waiting:0    In Progress:0    Success:0    Failed:0   
+Waiting:0    In Progress:0    Success:2    Failed:0   
 
-Blueprint job us-east.JOB.Blueprint-Basic.d67f9a28 completed at 2022-11-03 14:49:14
+Blueprint job us-east.JOB.Blueprint-Basic-Json.59bf17a8 completed at 2022-11-21 12:50:55
 
-Module Type   Name                            Status               Job ID   
-Blueprint     Blueprint GSM                   FULFILMENT_SUCCESS   us-east.JOB.Blueprint-Basic.d67f9a28   
-Workspace     tf_cloudless_sleepy_workitem1   INITIALISED             
+Module Type   Name                   Status               Job ID   
+Blueprint     Blueprint Basic Json   FULFILMENT_SUCCESS   us-east.JOB.Blueprint-Basic-Json.59bf17a8   
+Workspace     basic-resource-group   INITIALISED             
+Workspace     basic-cos-storage      INITIALISED             
               
-Blueprint ID Blueprint-Basic.eaB.60e5 fulfilment_success at 2022-11-03 14:49:15
+Blueprint ID blueprint_Basic.eaB.435a fulfilment_success at 2022-11-21 12:50:56
 OK
 ```
 {: screen}
@@ -1045,11 +1068,12 @@ ibmcloud schematics blueprint config delete -id blueprint_Basic.eaB.5cd9
 
 ```text
 Modules to be deleted
-SNO   Module Type   Name                            Status   
-1     Workspace     tf_cloudless_sleepy_workitem1   INITIALISED   
+SNO   Module Type   Name                   Status   
+1     Workspace     basic-resource-group   INITIALISED   
+2     Workspace     basic-cos-storage      INITIALISED   
       
-Some of the modules are not in INACTIVE state. Do you really want to delete the blueprint ? [y/N]> y
-Job : us-east.JOB.Blueprint-Basic.2455efb8 Created
+Do you really want to delete the blueprint ? [y/N]> y
+Job : us-east.JOB.Blueprint-Basic-Json.c64c45a1 Created
 
 Job Type: BLUEPRINT DELETE
 
@@ -1081,7 +1105,7 @@ ibmcloud schematics blueprint job get --id JOB_ID [--output OUTPUT]
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint job get --id eu-de.JOB.Blueprint_Basic.c5e3c831
+ibmcloud schematics blueprint job get --id us-east.JOB.Blueprint-Basic-Json.c64c45a1
 ```
 {: pre}
 
@@ -1089,20 +1113,30 @@ ibmcloud schematics blueprint job get --id eu-de.JOB.Blueprint_Basic.c5e3c831
 
 ```text
 BLUEPRINT JOB DETAILS      
-Job ID                  us-east.JOB.Blueprint-Basic.80927efe   
-Blueprint ID            Blueprint-Basic.eaB.d1f9   
-Job Type                blueprint_create_init   
+Job ID                  us-east.JOB.Blueprint-Basic-Json.c64c45a1   
+Blueprint ID            blueprint_Basic.eaB.435a   
+Job Type                blueprint_delete   
 Location                us-east   
-Start Time              2022-11-03 09:27:44   
-End Time                2022-11-03 09:28:37   
-Status                  Normal   
+Start Time              2022-11-21 07:25:32   
+End Time                0001-01-01 00:00:00   
+Status                  In Progress   
                            
-SNO   Child Job               Module ID                                                  Job Status     Job ID   
-1     blueprint_create_init                                                              job_finished   us-east.JOB.Blueprint-Basic.80927efe   
-2     Module_apply            us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c   job_finished 
-
-Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> n
+SNO   Child Job          Module ID   Job Status        Job ID   
+1     blueprint_delete               job_in_progress   us-east.JOB.Blueprint-Basic-Json.c64c45a1   
+                         
+Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> 1
+                 
+Module ID        
+Status        job_in_progress   
+Log Summary   (last few lines)..........   
+               2022/11/21 07:25:35 -----  New blueprint Action  -----   
+               2022/11/21 07:25:35 Request: blueprintId=blueprint_Basic.eaB.435a, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=test@in.ibm.com, requestID=a2a9922b-5a79-4700-88e3-efb2d3194fa9   
+               2022/11/21 07:25:36 Related Job:  jobID=us-east.JOB.Blueprint-Basic-Json.c64c45a1   
+                 
+                 
+Use ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint-Basic-Json.c64c45a1 to review the full job output 
 OK
+Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> N
 ```
 {: screen}
 
@@ -1132,49 +1166,53 @@ ibmcloud schematics blueprint job list --id BLUEPRINT_ID [--limit LIMIT] [--offs
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint job list --id Blueprint-Basic.eaB.60e5
+ibmcloud schematics blueprint job list --id Blueprint-Basic-Json.eaB.937a
 ```
 {: pre}
 
 **Output**
 
 ```text
-    ID     Blueprint-Basic.eaB.d1f9   
-    JOBS      
-    SNO   Job Type                Status   Start Time            Job ID   
-    1     blueprint_install       Normal   2022-11-03 09:33:35   us-east.JOB.Blueprint-Basic.5028b66b   
-    2     blueprint_create_init   Normal   2022-11-03 09:27:44   us-east.JOB.Blueprint-Basic.80927efe   
-        
-    Enter Job sequence number to get the blueprint job summary.(or enter no/n to ignore)> 1
-    BLUEPRINT JOB DETAILS      
-    Job ID                  us-east.JOB.Blueprint-Basic.5028b66b   
-    Job Type                blueprint_install   
-    Status                  Normal   
-    Start Time              2022-11-03 09:33:35   
-    End Time                2022-11-03 09:35:09   
-                            
-    SNO   Child Job           Module ID                                                  Job Status     Job ID   
-    1     blueprint_install                                                              job_finished   us-east.JOB.Blueprint-Basic.5028b66b   
-    2     Module_apply        us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c   job_finished   813f2759b7d8efa6780f1ed37b1d9bd6   
-                            
-    Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> 2
-                    
-    Module ID     us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c   
-    Status        job_finished   
-    Log Summary   (last few lines)..........   
-                UG] checking for provisioner in "."   
-                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [DEBUG] checking for provisioner in "/go/bin"   
-                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [DEBUG] checking for provisioner in "/home/nobody/.terraform.d/plugins"   
-                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [DEBUG] found provisioner "terraform-provisioner-ansible_v2.3.3"   
-                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [WARN] found legacy provisioner "terraform-provisioner-safe-local-exec"   
-                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [WARN] found legacy provisioner "terraform-provisioner-safe-remote-exec"   
-                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory   
-                2022/11/03 09:34:51 Command finished successfully.   
-                2022/11/03 09:34:56 Done with the workspace action   
-                    
-                    
-    Use ibmcloud schematics logs --id us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c --act-id 813f2759b7d8efa6780f1ed37b1d9bd6 to review the full job output 
-    OK
+ID     Blueprint-Basic-Json.eaB.937a   
+JOBS      
+SNO   Job Type                Status   Start Time            Job ID   
+1     blueprint_create_init   Normal   2022-11-21 08:22:47   us-east.JOB.Blueprint-Basic-Json.af289c3f   
+      
+Enter Job sequence number to get the blueprint job summary.(or enter no/n to ignore)> 1
+BLUEPRINT JOB DETAILS      
+Job ID                  us-east.JOB.Blueprint-Basic-Json.af289c3f   
+Job Type                blueprint_create_init   
+Status                  Normal   
+Start Time              2022-11-21 08:22:47   
+End Time                2022-11-21 08:24:15   
+                           
+SNO   Child Job               Module ID                                         Job Status     Job ID   
+1     blueprint_create_init                                                     job_finished   us-east.JOB.Blueprint-Basic-Json.af289c3f   
+2     Module_apply            us-east.workspace.basic-resource-group.3a89a5f1   job_finished      
+3     Module_apply            us-east.workspace.basic-cos-storage.c775f80a      job_finished      
+                              
+Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> 1
+                 
+Module ID        
+Status        job_finished   
+Log Summary   (last few lines)..........   
+              =Blueprint-Basic-Json.eaB.937a, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=test@in.ibm.com, requestID=f0d63272-974a-44a7-acc1-e18a99b75a9b   
+               2022/11/21 08:22:51 Related Job:  jobID=us-east.JOB.Blueprint-Basic-Json.af289c3f   
+               2022/11/21 08:23:05  --- Ready to execute the blueprint flow init command ---    
+               2022/11/21 08:23:09 Status of create/update module request for moduleID  is 201   
+               2022/11/21 08:23:15 Status of module for moduleID  is DRAFT   
+               2022/11/21 08:23:27 Status of module for moduleID  is CONNECTING   
+               2022/11/21 08:23:38 Status of module for moduleID  is INACTIVE   
+               2022/11/21 08:23:45 Status of create/update module request for moduleID  is 201   
+               2022/11/21 08:23:50 Status of module for moduleID  is DRAFT   
+               2022/11/21 08:24:02 Status of module for moduleID  is CONNECTING   
+               2022/11/21 08:24:14 Status of module for moduleID  is INACTIVE   
+               2022/11/21 08:24:15  ENVIRONMENT_INIT - ENVIRONMENT_SYSTEM_STATEENUM_CREATE_SUCCESS    
+               2022/11/21 08:24:15 Done with the blueprint init flow job   
+                 
+                 
+Use ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint-Basic-Json.af289c3f to review the full job output 
+OK
 ```
 {: screen}
 
@@ -1202,23 +1240,28 @@ ibmcloud schematics blueprint job logs --id JOB_ID
 **`Example`**
 
 ```sh
-ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint-Basic.5028b66b
+ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint-Basic-Json.af289c3f
 ```
 {: pre}
 
 ```text
- 2022/11/03 09:33:39 -----  New blueprint Action  -----
- 2022/11/03 09:33:39 Request: blueprintId=Blueprint-Basic.eaB.d1f9, account=96ee4d5ceb9116e5924ba4a883362490, owner=geetha_sathyamurthy@in.ibm.com, requestID=b59d963a-367a-45a0-8f65-ac2cee1cbae8
- 2022/11/03 09:33:40 Related Job:  jobID=us-east.JOB.Blueprint-Basic.5028b66b
- 2022/11/03 09:33:52  --- Ready to execute the blueprint flow install command --- 
- 2022/11/03 09:33:52 Processing Module Entry us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c
- 2022/11/03 09:33:54 Module Status for ModuleID=us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c is INACTIVE
- 2022/11/03 09:35:05 Install activity completed for module ModuleID=us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c
- 2022/11/03 09:35:06 Status for module ModuleID=us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c is ACTIVE
- 2022/11/03 09:35:08 ENVIRONMENT_INSTALL - ENVIRONMENT_SYSTEM_STATEENUM_FULFILMENT_SUCCESS
- 2022/11/03 09:35:09  Done with the blueprint install flow job 
+ 2022/11/21 08:22:51 -----  New blueprint Action  -----
+ 2022/11/21 08:22:51 Request: blueprintId=Blueprint-Basic-Json.eaB.937a, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=test@in.ibm.com, requestID=f0d63272-974a-44a7-acc1-e18a99b75a9b
+ 2022/11/21 08:22:51 Related Job:  jobID=us-east.JOB.Blueprint-Basic-Json.af289c3f
+ 2022/11/21 08:23:05  --- Ready to execute the blueprint flow init command --- 
+ 2022/11/21 08:23:09 Status of create/update module request for moduleID  is 201
+ 2022/11/21 08:23:15 Status of module for moduleID  is DRAFT
+ 2022/11/21 08:23:27 Status of module for moduleID  is CONNECTING
+ 2022/11/21 08:23:38 Status of module for moduleID  is INACTIVE
+ 2022/11/21 08:23:45 Status of create/update module request for moduleID  is 201
+ 2022/11/21 08:23:50 Status of module for moduleID  is DRAFT
+ 2022/11/21 08:24:02 Status of module for moduleID  is CONNECTING
+ 2022/11/21 08:24:14 Status of module for moduleID  is INACTIVE
+ 2022/11/21 08:24:15  ENVIRONMENT_INIT - ENVIRONMENT_SYSTEM_STATEENUM_CREATE_SUCCESS 
+ 2022/11/21 08:24:15 Done with the blueprint init flow job
 
 OK
+
 ```
 {: screen}
 
