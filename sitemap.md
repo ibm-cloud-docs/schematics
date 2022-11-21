@@ -1705,7 +1705,7 @@ subcollection: schematics
 
     * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
 
-* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state)
+* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
 
     * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
 
