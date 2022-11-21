@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-21"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -100,6 +100,17 @@ You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints 
 5. Click **Variables** tab to view your **Inputs** and **Outputs** variables and values. Optional: you can edit the input variable and click **Save variables**.
 6. Click **Jobs history** tab view the job logs of the blueprint and module activities.
 7. Click **Settings** tab to view the configuration settings of the blueprint.
+
+### Next steps
+{: #get-started-blueprints-nextsteps-ui}
+
+You have now deployed a blueprint and created a multi-workspace environment. Optionally, you can clean up the deployed blueprint by using [destroy](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui) and [delete](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui).
+
+For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprints).
+{: note}
+
+- Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
+- Looking for template samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint&type=all&language=&sort=){: external}. 
 
 ## Deploy blueprint through CLI
 {: #deploy-bp-cli}
@@ -217,7 +228,7 @@ OK
 In the UI view the provisioned blueprint and modules. 
 - From the [Blueprints list](https://cloud.ibm.com/schematics/blueprints){: external}, select the provisioned blueprint to view the created  and cloud resources. 
 
-## Next steps
+### Next steps
 {: #get-started-blueprints-nextsteps}
 
 You have now deployed a Blueprint and created a multi-workspace environment.

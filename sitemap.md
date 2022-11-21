@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-20"
+lastupdated: "2022-11-21"
 
 keywords: schematics
 subcollection: schematics
@@ -62,6 +62,8 @@ subcollection: schematics
 
     * [Listing the blueprint](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-list-ui)
 
+    * [Next steps](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-nextsteps-ui)
+
 * [Deploy blueprint through CLI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-cli)
 
     * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
@@ -72,7 +74,7 @@ subcollection: schematics
 
     * [Applying the blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-install)
 
-* [Next steps](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-nextsteps)
+    * [Next steps](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-nextsteps)
 
 
 ## About
