@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-20"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -609,7 +609,7 @@ The config create command supports two modes of input. Either all parameters and
 **Syntax to create using command:**
 
 ```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
+ibmcloud schematics blueprint config create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
 ```
 {: pre}
 
@@ -643,7 +643,6 @@ If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml`
 ibmcloud schematics blueprint config create -name blueprint_Basic -resource-group default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-branch main -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-branch main -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
-
 
 #### Using a config file
 {: #bp-create-config}
@@ -951,9 +950,9 @@ ibmcloud schematics blueprint list
 **Output**
 
 ```text
-Name            ID                       Status        Location   Creator                          Last modified   
-Blueprint Basic   Blueprint-Basic.eaB.60e5   UPDATE_INIT   us-east    test@in.ibm.com   2022-11-03 09:03:13   
-                                                       
+Name              ID                         Source Type   Status               Location   Creator           Last modified   
+Blueprint Basic   Blueprint-Basic.eaB.d1f9   GitHub        fulfilment_success   us-east    test@in.ibm.com   2022-11-03 09:35:12   
+                                                           
 OK
 ```
 {: screen}
@@ -1140,14 +1139,45 @@ ibmcloud schematics blueprint job list --id Blueprint-Basic.eaB.60e5
 **Output**
 
 ```text
-ID     Blueprint-Basic.eaB.60e5   
-JOBS      
-SNO   Job Type                Status   Start Time            Job ID   
-1     blueprint_install       Normal   2022-11-03 09:33:35   us-east.JOB.Blueprint-GSM.e353032d  
-2     blueprint_create_init   Normal   2022-11-03 09:27:44   us-east.JOB.Blueprint-GSM.704e00f6
-
+    ID     Blueprint-Basic.eaB.d1f9   
+    JOBS      
+    SNO   Job Type                Status   Start Time            Job ID   
+    1     blueprint_install       Normal   2022-11-03 09:33:35   us-east.JOB.Blueprint-Basic.5028b66b   
+    2     blueprint_create_init   Normal   2022-11-03 09:27:44   us-east.JOB.Blueprint-Basic.80927efe   
+        
+    Enter Job sequence number to get the blueprint job summary.(or enter no/n to ignore)> 1
+    BLUEPRINT JOB DETAILS      
+    Job ID                  us-east.JOB.Blueprint-Basic.5028b66b   
+    Job Type                blueprint_install   
+    Status                  Normal   
+    Start Time              2022-11-03 09:33:35   
+    End Time                2022-11-03 09:35:09   
+                            
+    SNO   Child Job           Module ID                                                  Job Status     Job ID   
+    1     blueprint_install                                                              job_finished   us-east.JOB.Blueprint-Basic.5028b66b   
+    2     Module_apply        us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c   job_finished   813f2759b7d8efa6780f1ed37b1d9bd6   
+                            
+    Enter Job sequence number to get blueprint child job output summary(or enter no/n to ignore)> 2
+                    
+    Module ID     us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c   
+    Status        job_finished   
+    Log Summary   (last few lines)..........   
+                UG] checking for provisioner in "."   
+                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [DEBUG] checking for provisioner in "/go/bin"   
+                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [DEBUG] checking for provisioner in "/home/nobody/.terraform.d/plugins"   
+                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [DEBUG] found provisioner "terraform-provisioner-ansible_v2.3.3"   
+                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [WARN] found legacy provisioner "terraform-provisioner-safe-local-exec"   
+                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [WARN] found legacy provisioner "terraform-provisioner-safe-remote-exec"   
+                2022/11/03 09:34:51 Terraform output | 2022/11/03 09:34:51 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory   
+                2022/11/03 09:34:51 Command finished successfully.   
+                2022/11/03 09:34:56 Done with the workspace action   
+                    
+                    
+    Use ibmcloud schematics logs --id us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c --act-id 813f2759b7d8efa6780f1ed37b1d9bd6 to review the full job output 
+    OK
 ```
 {: screen}
+
 
 ### `ibmcloud schematics blueprint job logs`
 {: #schematics-blueprint-job-logs}
@@ -1178,7 +1208,7 @@ ibmcloud schematics blueprint job logs --id us-east.JOB.Blueprint-Basic.5028b66b
 
 ```text
  2022/11/03 09:33:39 -----  New blueprint Action  -----
- 2022/11/03 09:33:39 Request: blueprintId=Blueprint-Basic.eaB.60e5, account=96ee4d5ceb9116e5924ba4a883362490, owner=test@in.ibm.com, requestID=b59d963a-367a-45a0-8f65-ac2cee1cbae8
+ 2022/11/03 09:33:39 Request: blueprintId=Blueprint-Basic.eaB.d1f9, account=96ee4d5ceb9116e5924ba4a883362490, owner=geetha_sathyamurthy@in.ibm.com, requestID=b59d963a-367a-45a0-8f65-ac2cee1cbae8
  2022/11/03 09:33:40 Related Job:  jobID=us-east.JOB.Blueprint-Basic.5028b66b
  2022/11/03 09:33:52  --- Ready to execute the blueprint flow install command --- 
  2022/11/03 09:33:52 Processing Module Entry us-east.workspace.tf_cloudless_sleepy_workitem1.48372f7c
