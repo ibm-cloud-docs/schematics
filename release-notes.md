@@ -32,11 +32,8 @@ Review the release notes for November 2022.
 
 
 
-
-
 Release {{site.data.keyword.bpshort}} command-line plug-in.
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.4](/docs/schematics?topic=schematics-cli_version-releases) released.
-
 
 ### 15 November 2022
 {: #schematics-nov1522}
