@@ -76,12 +76,14 @@ You can follow these steps to generate plan and apply the {{site.data.keyword.bp
 2. Click **Schematics** > **Blueprints**.
 3. Select your `<Blueprint_ID>`.
 4. Click **Generate plan** to initiate the modules that are configured in the blueprint.
+    
     Generate plan execution takes few seconds. Once generated check if the plan is correct. You can see the **Resource summary**, and **Jobs history** that displays the `blueprint_create_init` and the respective module job details. If **Generate plan** fails, you can update the blueprint.
     {: note}
 
-5. Click **Apply plan** to provision the resources configured in your modules. You can observe the `In progress` staus.
-    The apply plan exection takes few minutes based on the resources. The execution jobs show history of all blueprint, module activities, and the logs of the jobs. If **Apply plan** fails, you can update the blueprint.
-    {: note}
+5. Click **Apply plan** to provision the resources configured in your modules. You can observe the `In progress` status.
+
+     The apply plan exection takes few minutes based on the resources. The execution jobs show history of all blueprint, module activities, and the logs of the jobs. If **Apply plan** fails, you can update the blueprint.
+     {: note}
 
 ### Listing the blueprint
 {: #get-started-bp-list-ui}
