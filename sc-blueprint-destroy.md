@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-21"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -55,7 +55,7 @@ For all the blueprint commands, syntax, and option flag details, see [blueprints
 {: important}
 
 ```sh
-ibmcloud schematics blueprint run destroy --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint run destroy --id Blueprint_Basic.eaB.08d1
 ```
 {: pre}
 
@@ -70,22 +70,24 @@ Verify that the blueprint environment resources are destroyed successfully. When
 
 ```text
 Modules to be destroyed
-SNO Type Name Status
-1 terraform basic-resource-group ACTIVE
-2 terraform basic-cos-storage ACTIVE
+SNO   Module Type   Name                   Status   
+1     Workspace     basic-resource-group   APPLIED   
+2     Workspace     basic-cos-storage      APPLIED   
+      
+Do you really want to destroy all the resources of blueprint Blueprint_Basic.eaB.08d1? [y/N]> y
+Blueprint job us-east.JOB.Blueprint_Basic.d5486e24 started at 2022-11-18 16:44:52
 
-Do you really want to destroy all the resources of blueprint
-Blueprint_Basic.eaB.5cd9? [y/N]> y
-Blueprint job running us-east.JOB.Blueprint_Basic.f69f5bf2
-Waiting:0 Draft:0 Connecting:0 In Progress:0 Inactive:2 Active:0
-Failed:0
-Type Name Status Job ID
-Blueprint Blueprint_Basic FULFILMENT_SUCCESS useast.JOB.Blueprint_Basic.f69f5bf2
-terraform basic-resource-group INACTIVE
-terraform basic-cos-storage INACTIVE
+Module job execution status
+Waiting:0    In Progress:0    Success:2    Failed:0   
 
-Blueprint ID Blueprint_Basic.eaB.5cd9 fulfilment_success at 2022-08-04
-17:48:36
+Blueprint job us-east.JOB.Blueprint_Basic.d5486e24 completed at 2022-11-18 16:48:22
+
+Module Type   Name                   Status               Job ID   
+Blueprint     Blueprint_Basic        FULFILMENT_SUCCESS   us-east.JOB.Blueprint_Basic.d5486e24   
+Workspace     basic-resource-group   INITIALISED             
+Workspace     basic-cos-storage      INITIALISED             
+              
+Blueprint ID Blueprint_Basic.eaB.08d1 fulfilment_success at 2022-11-18 16:48:23
 OK
 ```
 {: screen}

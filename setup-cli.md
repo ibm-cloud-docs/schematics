@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-21"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -141,13 +141,13 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output: 
 
     ```text
-    schematics                      1.12.3       Update Available           false
+    schematics                      1.12.3        Update Available           false
     ```
     {: screen}
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in.
 
-    For {{site.data.keyword.bpshort}} Blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.3` version.
+    For {{site.data.keyword.bpshort}} Blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.4` version.
     {: note}
 
     For {{site.data.keyword.bpshort}} Agents, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.0` version.
@@ -202,7 +202,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's   
     schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions   
     schematics,sch agents,ag           [Beta] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.   
-    schematics,sch blueprint,bp        Deploy and manage large scale environments using reusable blueprint templates.
+    schematics,sch blueprint,bp        Deploy and manage large scale environments using reusable blueprint templates. 
     ```
     {: screen}
 

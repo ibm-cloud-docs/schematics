@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-21"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -105,7 +105,7 @@ ibmcloud schematics blueprint config update -name Blueprint_Basic -resource-grou
 On successful completion the config update returns `update_success`. For more information, see [Update command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) and refer the specified example.
 
 ```sh
-ibmcloud schematics blueprint config update --id Blueprint_Basic.eaB.5cd9 --inputs resource_group_name=basic-rg-demo-pre
+ibmcloud schematics blueprint config update --id Blueprint_Basic.eaB.08d1 --inputs resource_group_name=basic-rg-demo-pre
 ```
 {: pre}
 
@@ -115,24 +115,12 @@ ibmcloud schematics blueprint config update --id Blueprint_Basic.eaB.5cd9 --inpu
 Verify that the blueprint config is updated successfully. When you update the config through CLI, the command displays the details of the linked workspaces to be updated. And continuously updates the status of the progress of the {{site.data.keyword.bpshort}} jobs initializes the workspaces. The command returns on completion.
 
 ```text
-Update blueprint  blueprint
+Update blueprint  Blueprint_Basic
 
 Modules to be updated
 SNO   Module Type   Name                   Updates   
-1     Workspace     basic-resource-group   Updating   
+1     Workspace     basic-resource-group   NA   
 2     Workspace     basic-cos-storage      NA   
-      
-Blueprint job running us-east.JOB.Blueprint_Basic.e4081308
-
-Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:0    Active:0    Failed:0   
-
-Module Type   Name                   Status           Job ID   
-Blueprint     blueprint              UPDATE_SUCCESS   us-east.JOB.Blueprint_Basic.e4081308   
-Workspace     basic-resource-group   INACTIVE            
-Workspace     basic-cos-storage      INACTIVE            
-              
-Blueprint ID Blueprint_Basic.eaB.5cd9 update_success at 2022-08-15 13:19:27
-OK
 ```
 {: screen}
 

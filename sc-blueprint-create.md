@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-21"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -35,12 +35,12 @@ The second [blueprint run apply](/docs/schematics?topic=schematics-apply-bluepri
 Create your blueprint config with the CLI. The Create command requires a name and the Git URL of a blueprint template and other arguments. For a complete listing of options, see [blueprint config create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
 {: shortdesc}
 
-To work with {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3`.
+To work with {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.4`.
 {: important}
 
 Before your begin:
 
-- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.3`.
+- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.4`.
 - Select the {{site.data.keyword.cloud_notm}} region that you want to use to manage your blueprint. For example, to set the region use [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
 - Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create blueprints.
 
@@ -74,7 +74,7 @@ It is assumed that the user has IAM permissions to create resource groups. Synta
 Full `blueprint config create` command syntax:
 
 ```sh
-ibmcloud schematics blueprint config create -name Blueprint_Basic -resource-group default \
+ibmcloud schematics blueprint config create -name Blueprint_Basic -resource-group Default \
 -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml \
 -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
 -inputs provision_rg=true,resource_group_name=my_resource_group
@@ -95,7 +95,7 @@ Where a user does not have permissions to create a new resource group and only h
 Full `blueprint config create` command syntax:
 
 ```sh
-ibmcloud schematics blueprint config create -name Blueprint_Basic -resourcegroup default \
+ibmcloud schematics blueprint config create -name Blueprint_Basic -resourcegroup Default \
 -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-file basic-blueprint.yaml \
 -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
 -inputs provision_rg=false,resource_group_name=default
@@ -110,24 +110,26 @@ ibmcloud schematics blueprint config create -name Blueprint_Basic -resourcegroup
 Verify that the blueprint configuration was created successfully. When you create the configuration through CLI, the command displays details of the blueprint modules to be created, and continuously updates the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command only returns on completion.
 
 ```text
-Created blueprint ID: Blueprint_Basic.eaB.5cd9
+Created blueprint ID: Blueprint_Basic.eaB.08d1
 
 Modules to be created
-SNO Type Name
-1 terraform basic-resource-group
-2 terraform basic-cos-storage
+SNO   Module Type   Name   
+1     Workspace     basic-resource-group   
+2     Workspace     basic-cos-storage   
+      
+Blueprint job us-east.JOB.Blueprint_Basic.4cad1d5b started at 2022-11-18 15:58:34
 
-Blueprint job running us-east.JOB.Blueprint_Basic.bb553ac5
-Waiting:0 Draft:0 Connecting:0 In Progress:0 Inactive:2 Active:0
-Failed:0
-Type Name Status Job ID
-Blueprint Blueprint_Basic CREATE_SUCCESS useast.JOB.Blueprint_Basic.bb553ac5
-terraform basic-resource-group INACTIVE
-terraform basic-cos-storage INACTIVE
+Module job execution status
+Waiting:0    In Progress:0    Success:2    Failed:0   
 
-Blueprint ID Blueprint_Basic.eaB.5cd9 create_success at 2022-08-03
-21:19:16
+Blueprint job us-east.JOB.Blueprint_Basic.4cad1d5b completed at 2022-11-18 16:00:02
 
+Module Type   Name                   Status           Job ID   
+Blueprint     Blueprint_Basic        CREATE_SUCCESS   us-east.JOB.Blueprint_Basic.4cad1d5b   
+Workspace     basic-resource-group   INITIALISED         
+Workspace     basic-cos-storage      INITIALISED         
+              
+Blueprint ID Blueprint_Basic.eaB.08d1 create_success at 2022-11-18 16:00:03
 OK
 ```
 {: screen}
