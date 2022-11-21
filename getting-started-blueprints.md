@@ -81,9 +81,9 @@ You can follow these steps to generate plan and apply the {{site.data.keyword.bp
     {: note}
 
 5. Click **Apply plan** to provision the resources configured in your modules. You can observe the `In progress` status.
-
-     The apply plan exection takes few minutes based on the resources. The execution jobs show history of all blueprint, module activities, and the logs of the jobs. If **Apply plan** fails, you can update the blueprint.
-     {: note}
+    
+    The apply plan exection takes few minutes based on the resources. The execution jobs show history of all blueprint, module activities, and the logs of the jobs. If **Apply plan** fails, you can update the blueprint.
+    {: note}
 
 ### Listing the blueprint
 {: #get-started-bp-list-ui}
