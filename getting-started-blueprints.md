@@ -104,7 +104,7 @@ You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints 
 ### Next steps
 {: #get-started-blueprints-nextsteps-ui}
 
-You have now deployed a blueprint and created a multi-workspace environment. Optionally, you can clean up the deployed blueprint by using [destroy](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui) and [delete](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui).
+You have now deployed a blueprint and created a multi-workspace environment. Optionally, you can clean up the deployed blueprint by using [destroy](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui) the resources and [delete](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui) the blueprint.
 
 For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprints).
 {: note}
