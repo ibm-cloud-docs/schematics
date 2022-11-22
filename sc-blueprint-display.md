@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-22"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -49,7 +49,7 @@ You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints 
 Lists all the blueprints.
 {: shortdesc}
 
-**`Syntax`**
+Syntax
 
 ```sh
 ibmcloud schematics blueprint list
@@ -58,7 +58,7 @@ ibmcloud schematics blueprint list
 
 On successful completion the list command returns a list of blueprints.  
 
-**Output:**
+Output
 
 The command lists all the environments created in the CLI region. 
 
@@ -86,14 +86,14 @@ For a complete listing of options, see the [ibmcloud schematics blueprint get](/
 ### Blueprint display summary 
 {: #display-blueprint-summary}
 
-**`Syntax`**
+Syntax
 
 ```sh
 ibmcloud schematics blueprint get -id <blueprint_ID>
 ```
 {: pre}
 
-**Output:**
+Output
 
 On successful completion the get command returns summary details of the blueprint and module status.  
 
@@ -124,7 +124,7 @@ OK
 Displays the blueprint with the summary information.
 {: shortdesc}
 
-**`Syntax`**
+Syntax
 
 ```sh
 ibmcloud schematics blueprint get -id <blueprint_ID> -level outputs
@@ -133,7 +133,7 @@ ibmcloud schematics blueprint get -id <blueprint_ID> -level outputs
 
 On successful completion the get command returns the summary details of the blueprint and the output values defined by the template.  
 
-**Output:**
+Output
 
 ```text
 BLUEPRINT          
@@ -169,7 +169,7 @@ This example shows the returned computed value for the output variable `blueprin
 Displays the output with the module level.
 {: shortdesc}
 
-**`Syntax`**
+Syntax
 
 ```sh
 ibmcloud schematics blueprint get -id <blueprint_ID> -level modules
@@ -280,7 +280,7 @@ Authorization: Bearer <auth_token>
 ```
 {: codeblock}
 
-**`Output`**
+Output
 
 ```text
 {
@@ -351,7 +351,7 @@ Authorization: Bearer <auth_token>
 ```
 {: codeblock}
 
-**`Output`**
+Output
 
 ```text
 {

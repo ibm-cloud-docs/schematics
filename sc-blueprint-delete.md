@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-22"
 
 keywords: blueprint config delete, delete blueprint, blueprint
 
@@ -133,7 +133,7 @@ You need to run `blueprint run destroy` command and then run `blueprint config d
 
 Record the blueprint ID that needs to be deleted. To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
-**Example:**
+Example
 
 ```json
 POST /v2/jobs/ HTTP/1.1
@@ -156,7 +156,7 @@ refresh_token: <refresh_token>
 Verify that the blueprint is deleted successfully as shown in the output.
 {: shortdesc}
 
-**Output:**
+Output
 
 ```text
 {

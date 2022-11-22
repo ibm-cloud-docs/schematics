@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-22"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -272,7 +272,7 @@ Authorization: Bearer <auth_token>
 Verify that the blueprint jobs is success as shown in the output.
 {: shortdesc}
 
-**Output:**
+Output
 
 ```text
 {

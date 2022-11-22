@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-22"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -36,7 +36,7 @@ Follow the steps to configure the {{site.data.keyword.bpshort}} resource based o
 Account owner can edit the location in {{site.data.keyword.cloud}} catalog settings only after `30 minutes`. As the catalog settings created once are valid for `30 minutes`.
 {: important}
 
-**`Example`**
+Example
 
 - When the account owner restricts `us-east` location for the user in the catalog settings. 
 - If that user creates workspaces and provisions the resources in `North America` region, where North America comprises of `us-east` and `us-south`. 
