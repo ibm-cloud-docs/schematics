@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-22"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -108,7 +108,7 @@ Record the blueprint ID that is destroyed. To list the blueprint IDs, run [get a
 Verify that the blueprint is destroyed successfully.
 {: shortdesc}
 
-**Example:**
+Example
 
 ```json
 POST /v2/jobs/ HTTP/1.1
@@ -125,7 +125,7 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-**Output:**
+Output
 
 ```text
 {

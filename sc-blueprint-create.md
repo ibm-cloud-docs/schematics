@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-22"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -259,7 +259,7 @@ Authorization: Bearer
 Verify that the blueprint is created successfully as shown in the output.
 {: shortdesc}
 
-**Output:**
+Output
 
 ```text
 {

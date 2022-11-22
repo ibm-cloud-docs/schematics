@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-22"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -62,9 +62,9 @@ The Blueprints UI uses the Git path syntax to specifying the URLs to your templa
 
 The link can point to the template file in the main branch, any other branch, or a subdirectory. The URL must include the template file name and the `blob/branch/` pattern for the full path. 
     
-- Example for main: https://github.com/myorg/myrepo/blob/main/blueprint.yaml    
-- Example for other branches: https://github.com/myorg/myrepo/blob/mybranch/blueprint.yaml
-- Example for subdirectory: https://github.com/mnorg/myrepo/blob/mybranch/mysubdirectory/blueprint.yaml
+- Example for [main blueprint.yam](https://github.com/myorg/myrepo/blob/main/blueprint.yaml){: external}    
+- Example for [blueprint.yaml in branches](https://github.com/myorg/myrepo/blob/mybranch/blueprint.yaml){: external}
+- Example for [blueprint.yaml in subdirectory](https://github.com/mnorg/myrepo/blob/mybranch/mysubdirectory/blueprint.yaml){: external}
 
 The required URLs can be copied directly from the Github or Gitlab UIs. For example with Github, on the `Code` tab hover over the template or input file you require the URL for. Right click with your mouse to bring up the context menu and select `Copy Link`, or `Copy Link Address`. The copied URL link can be pasted into the blueprint URL entry field. 
 

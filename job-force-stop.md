@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-22"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -69,14 +69,14 @@ You can follow these steps to stop the {{site.data.keyword.bpshort}} Workspaces 
 Stops a running job for {{site.data.keyword.bplong_notm}} Workspaces.
 {: shortdesc}
 
-**`Syntax`**
+Syntax
 
 ```sh
 ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--stop] [--force-stop] [--terminate] [--no-prompt]
 ```
 {: pre}
 
-**Command options:**
+Command options
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
@@ -88,7 +88,7 @@ ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--stop
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive mode. |
 {: caption="{{site.data.keyword.bpshort}} job stop flags" caption-side="bottom"}
 
-**`Example`**
+Example
 
 ```sh
 ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --force-stop --job-id <JOB_ID>
@@ -118,14 +118,14 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
 2. Use the syntax and example to interrupt the running job.
 
-    **Syntax**
+    Syntax
 
     ```curl
     curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=interrupt -H "Authorization: <iam_token>"
     ```
     {: codeblock}
 
-    **Example**
+    Example
 
     ```curl
     curl -X DELETE https://schematics.cloud.ibm.com/v2/jobs/{job_id}?signal=interrupt -H "Authorization: <iam_token>"
@@ -134,7 +134,7 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
 
 3. Use the example to `force-stop` the running job.
    
-   **Example**
+   Example
 
    ```curl
    curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=force-stop -H "Authorization: <iam_token>"
@@ -143,7 +143,7 @@ You can use following CURL commands to stop a running job for {{site.data.keywor
 
 4. Use the example to `terminate` the running job.
    
-   **Example**
+   Example
 
    ```curl
    curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/<wks_id>/actions/{job_id}?signal=force-stop -H "Authorization: <iam_token>"

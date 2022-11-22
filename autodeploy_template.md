@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-22"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -29,13 +29,15 @@ For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible
 2. Copy the Git repository URL, such as `https://github.com/Cloud-Schematics/ansible-app-deploy`.
 3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} Actions create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
 
-    **`Syntax`**
+    Syntax
+    
     ```text
     https://cloud.ibm.com/schematics/actions/create?name=<action_name>&repository=<git_repository_url>
     ```
     {: codeblock}
 
-    **Example**
+    Example
+
     ```text
     https://cloud.ibm.com/schematics/actions/create?name=ansible-app-deploy&repository=https://github.com/Cloud-Schematics/ansible-app-deploy
     ```

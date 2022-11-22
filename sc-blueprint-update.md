@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-22"
 
 keywords: blueprint config update, update blueprint, blueprint
 
@@ -183,7 +183,7 @@ Blueprint update API runs `blueprint config update` `API`, to perform the change
 
 To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 
-**Example:**
+Example
 
 ```json
 PUT /v2/blueprints/Blueprint-Basic-Test.eaB.bbb9/ HTTP/1.1
@@ -241,7 +241,7 @@ refresh_token: <refresh_token>
 Verify that the blueprint update is success as shown in the output.
 {: shortdesc}
 
-**Output:**
+Output
 
 ```text
 {
