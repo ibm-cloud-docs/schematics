@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-23"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -284,54 +284,99 @@ Output
 
 ```text
 {
-    "total_count": 2,
+    "total_count": 3,
     "limit": 100,
     "offset": 0,
     "blueprints": [
         {
-            "name": "Blueprint Basic Test",
-            "description": "Deploys a simple two module blueprint",
+            "name": "Blueprint Basic Json",
+            "description": "Deploys a simple two module blueprint Updated",
+            "source_type": "git_hub",
+            "source": {
+                "source_type": "",
+                "git": {},
+                "catalog": {},
+                "cos_bucket": {}
+            },
             "resource_group": "aac37f57b20142dba1a435c70aeb12df",
-            "location": "us-south",
-            "id": "Blueprint-Basic-Test.soB.9403",
-            "account": "1f7277194bb748cdb1d35fd8fb85a7cb",
-            "created_at": "2022-09-15T07:04:10.477299538Z",
-            "created_by": "smulampa@in.ibm.com",
-            "updated_at": "0001-01-01T00:00:00Z",
-            "sys_lock": {
-                "sys_locked_at": "0001-01-01T00:00:00Z"
-            },
-            "user_state": {
-                "state": "Environment_Create_Init",
-                "set_at": "0001-01-01T00:00:00Z"
-            },
-            "state": {}
-        },
-        {
-            "name": "Blueprint FVT",
-            "description": "Deploys dev environment instance in Toronto Region",
-            "resource_group": "f8ceaec00ee14de48ee802cf11202a81",
-            "tags": [
-                "blueprint:Tor-Dev"
-            ],
             "location": "us-east",
-            "id": "Blueprint-FVT.eaB.b629",
+            "id": "Blueprint-Basic-Json.eaB.937a",
             "account": "1f7277194bb748cdb1d35fd8fb85a7cb",
-            "created_at": "2022-09-08T14:15:26.005648449Z",
-            "created_by": "Nishu.Bharti1@ibm.com",
-            "updated_at": "2022-09-08T14:17:19.002748955Z",
+            "created_at": "2022-11-21T08:22:40.34093899Z",
+            "created_by": "test@in.ibm.com",
+            "updated_at": "2022-11-21T10:45:57.329556962Z",
+            "updated_by": "test@in.ibm.com",
             "sys_lock": {
                 "sys_locked_at": "0001-01-01T00:00:00Z"
             },
             "user_state": {
-                "state": "Environment_Create_Init",
                 "set_at": "0001-01-01T00:00:00Z"
             },
             "state": {
-                "status_code": "CREATE_SUCCESS"
+                "status_code": "UPDATE_INIT",
+                "config_status": "CONFIG_DRAFT",
+                "plan_status": "PLAN"
             }
-        }
-        }
+        },
+        {
+            "name": "Blueprint Basic Json",
+            "description": "Deploys a simple two module blueprint",
+            "source_type": "git_hub",
+            "source": {
+                "source_type": "",
+                "git": {},
+                "catalog": {},
+                "cos_bucket": {}
+            },
+            "resource_group": "aac37f57b20142dba1a435c70aeb12df",
+            "location": "us-east",
+            "id": "Blueprint-Basic-Json.eaB.c234",
+            "account": "1f7277194bb748cdb1d35fd8fb85a7cb",
+            "created_at": "2022-11-21T06:26:30.521761577Z",
+            "created_by": "test@in.ibm.com",
+            "updated_at": "2022-11-21T06:36:05.159936827Z",
+            "sys_lock": {
+                "sys_locked_at": "0001-01-01T00:00:00Z"
+            },
+            "user_state": {
+                "set_at": "0001-01-01T00:00:00Z"
+            },
+            "state": {
+                "status_code": "FULFILMENT_SUCCESS",
+                "config_status": "CONFIG_DRAFT",
+                "plan_status": "PLANNED",
+                "run_status": "RUN_APPLY_COMPLETE"
+            }
+        },
+        {
+            "name": "Blueprint Basic Test API",
+            "description": "Deploys a simple two module blueprint",
+            "source_type": "git_hub",
+            "source": {
+                "source_type": "",
+                "git": {},
+                "catalog": {},
+                "cos_bucket": {}
+            },
+            "resource_group": "aac37f57b20142dba1a435c70aeb12df",
+            "location": "us-south",
+            "id": "Blueprint-Basic-Test-API.soB.5a2a",
+            "account": "1f7277194bb748cdb1d35fd8fb85a7cb",
+            "created_at": "2022-11-23T13:57:35.042946592Z",
+            "created_by": "test@in.ibm.com",
+            "updated_at": "2022-11-23T13:57:33.71320227Z",
+            "sys_lock": {
+                "sys_locked_at": "0001-01-01T00:00:00Z"
+            },
+            "user_state": {
+                "set_at": "0001-01-01T00:00:00Z"
+            },
+            "state": {
+                "status_code": "CREATE_INIT",
+                "config_status": "CONFIG_DRAFT",
+                "plan_status": "PLAN_NONE"
+            }
+        },
     ]
 }
 ```
@@ -343,7 +388,7 @@ This API lists the detailed information with respect to the blueprint ID.
 Example
 
 ```json
-GET /v2/blueprints/Blueprint-Basic-Test.eaB.bbb9/ HTTP/1.1
+GET /v2/blueprints/Blueprint-Basic-Test-API.soB.347a/ HTTP/1.1
 Host: schematics.cloud.ibm.com
 Content-Type: application/json
 Authorization: Bearer <auth_token>
@@ -355,12 +400,15 @@ Output
 
 ```text
 {
-    "name": "Blueprint Basic Test",
+    "name": "Blueprint Basic Test API",
     "source": {
         "source_type": "git_hub",
         "git": {
             "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
-            "git_repo_folder": "basic-blueprint.yaml"
+            "git_repo_folder": "basic-blueprint.yaml",
+            "git_branch": "main",
+            "git_commit": "68ce0e62f2e1b33c2341fc35fb125ffe998128d6",
+            "git_commit_timestamp": "2022-11-15 11:08:48 +0000 UTC"
         },
         "catalog": {},
         "cos_bucket": {}
@@ -372,23 +420,17 @@ Output
                 "git": {
                     "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
                     "git_repo_folder": "basic-input.yaml",
-                    "git_branch": "master"
+                    "git_branch": "main",
+                    "git_commit": "68ce0e62f2e1b33c2341fc35fb125ffe998128d6",
+                    "git_commit_timestamp": "2022-11-15 11:08:48 +0000 UTC"
                 },
                 "catalog": {},
                 "cos_bucket": {}
             },
             "inputs": [
                 {
-                    "name": "resource_group_name",
-                    "value": "Default"
-                },
-                {
-                    "name": "provision_rg",
-                    "value": "false"
-                },
-                {
                     "name": "cos_instance_name",
-                    "value": "mycos-test-msk"
+                    "value": "mycos4"
                 },
                 {
                     "name": "cos_storage_plan",
@@ -399,23 +441,21 @@ Output
     ],
     "description": "Deploys a simple two module blueprint",
     "resource_group": "aac37f57b20142dba1a435c70aeb12df",
-    "location": "us-east",
+    "location": "us-south",
     "inputs": [
         {
-            "name": "resource_group_name",
-            "metadata": {}
-        },
-        {
-            "name": "provision_rg",
-            "metadata": {}
-        },
-        {
             "name": "cos_instance_name",
-            "metadata": {}
+            "value": "mycos4",
+            "metadata": {
+                "source": "userinput"
+            }
         },
         {
             "name": "cos_storage_plan",
-            "metadata": {}
+            "value": "standard",
+            "metadata": {
+                "source": "userinput"
+            }
         }
     ],
     "settings": [
@@ -439,7 +479,7 @@ Output
             "source": {
                 "source_type": "git_hub",
                 "git": {
-                    "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup",
+                    "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup",
                     "git_branch": "main"
                 },
                 "catalog": {},
@@ -447,22 +487,14 @@ Output
             },
             "created_at": "0001-01-01T00:00:00Z",
             "updated_at": "0001-01-01T00:00:00Z",
-            "inputs": [
-                {
-                    "name": "provision",
-                    "value": "$blueprint.provision_rg"
-                },
-                {
-                    "name": "name",
-                    "value": "$blueprint.resource_group_name"
-                }
-            ],
             "outputs": [
                 {
-                    "name": "resource_group_name"
+                    "name": "resource_group_name",
+                    "metadata": {}
                 },
                 {
-                    "name": "resource_group_id"
+                    "name": "resource_group_id",
+                    "metadata": {}
                 }
             ],
             "last_job": {}
@@ -470,7 +502,6 @@ Output
         {
             "module_type": "terraform",
             "name": "basic-cos-storage",
-            "layer": "DB",
             "source": {
                 "source_type": "git_hub",
                 "git": {
@@ -485,47 +516,56 @@ Output
             "inputs": [
                 {
                     "name": "cos_instance_name",
-                    "value": "$blueprint.cos_instance_name"
+                    "value": "$blueprint.cos_instance_name",
+                    "metadata": {}
                 },
                 {
                     "name": "cos_storage_plan",
-                    "value": "$blueprint.cos_storage_plan"
+                    "value": "$blueprint.cos_storage_plan",
+                    "metadata": {}
                 },
                 {
                     "name": "cos_single_site_loc",
-                    "value": "ams03"
+                    "value": "ams03",
+                    "metadata": {}
                 },
                 {
                     "name": "resource_group_id",
-                    "value": "$module.basic-resource-group.outputs.resource_group_id"
+                    "value": "$module.basic-resource-group.outputs.resource_group_id",
+                    "metadata": {}
                 }
             ],
             "outputs": [
                 {
-                    "name": "cos_id"
+                    "name": "cos_id",
+                    "metadata": {}
                 },
                 {
-                    "name": "cos_crn"
+                    "name": "cos_crn",
+                    "metadata": {}
                 }
             ],
             "last_job": {}
         }
     ],
     "flow": {},
-    "blueprint_ID": "Blueprint-Basic-Test.eaB.bbb9",
-    "crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:blueprint:Blueprint-Basic-Test.eaB.e03e",
+    "blueprint_id": "Blueprint-Basic-Test-API.soB.347a",
+    "crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:blueprint:Blueprint-Basic-Test-API.soB.347a",
     "account": "1f7277194bb748cdb1d35fd8fb85a7cb",
-    "created_at": "2022-09-19T10:33:13.029985037Z",
-    "created_by": "smulampa@in.ibm.com",
-    "updated_at": "0001-01-01T00:00:00Z",
+    "created_at": "2022-11-23T14:32:45.897540037Z",
+    "created_by": "test@in.ibm.com",
+    "updated_at": "2022-11-23T14:32:45.897540037Z",
     "sys_lock": {
         "sys_locked_at": "0001-01-01T00:00:00Z"
     },
     "user_state": {
-        "state": "Environment_Create_Init",
         "set_at": "0001-01-01T00:00:00Z"
     },
-    "state": {}
+    "state": {
+        "status_code": "CREATE_INIT",
+        "config_status": "CONFIG_DRAFT",
+        "plan_status": "PLAN_NONE"
+    }
 }
 ```
 {: screen}

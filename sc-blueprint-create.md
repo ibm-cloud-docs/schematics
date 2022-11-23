@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-23"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -211,7 +211,7 @@ Content-Type: application/json
 Authorization: Bearer 
 
 {
-    "name": "Blueprint Basic Test",
+    "name": "Blueprint Basic Test API",
     "schema_version": "1.0.0",
     "source": {
         "source_type": "git_hub",
@@ -263,128 +263,172 @@ Output
 
 ```text
 {
-    “name”: “Blueprint Basic Example”,
-    “source”: {
-        “source_type”: “git_hub”,
-        “git”: {
-            “git_repo_url”: “https://github.com/KshamaG/blueprint-basic-example”,
-            “git_repo_folder”: “basic-blueprint.yaml”
+    "name": "Blueprint Basic Test API",
+    "source": {
+        "source_type": "git_hub",
+        "git": {
+            "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
+            "git_repo_folder": "basic-blueprint.yaml",
+            "git_branch": "main",
+            "git_commit": "68ce0e62f2e1b33c2341fc35fb125ffe998128d6",
+            "git_commit_timestamp": "2022-11-15 11:08:48 +0000 UTC"
         },
-        “catalog”: {},
-        “cos_bucket”: {}
+        "catalog": {},
+        "cos_bucket": {}
     },
-    “config”: [
+    "config": [
         {
-            “source”: {
-                “source_type”: “git_hub”,
-                “git”: {
-                    “git_repo_url”: “https://github.com/KshamaG/blueprint-basic-example”,
-                    “git_repo_folder”: “basic-input.yaml”,
-                    “git_branch”: “master”
+            "source": {
+                "source_type": "git_hub",
+                "git": {
+                    "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
+                    "git_repo_folder": "basic-input.yaml",
+                    "git_branch": "main",
+                    "git_commit": "68ce0e62f2e1b33c2341fc35fb125ffe998128d6",
+                    "git_commit_timestamp": "2022-11-15 11:08:48 +0000 UTC"
                 },
-                “catalog”: {},
-                “cos_bucket”: {}
+                "catalog": {},
+                "cos_bucket": {}
             },
-            “inputs”: [
+            "inputs": [
                 {
-                    “name”: “resource_group_name”,
-                    “value”: “bp-rg-test1"
+                    "name": "cos_instance_name",
+                    "value": "mycos4"
                 },
                 {
-                    “name”: “provision_rg”,
-                    “value”: “true”
-                },
-                {
-                    “name”: “cos_instance_name”,
-                    “value”: “bp-cos-test1"
+                    "name": "cos_storage_plan",
+                    "value": "standard"
                 }
             ]
         }
     ],
-    “description”: “Deploys a simple two module blueprint”,
-    “resource_group”: “aac37f57b20142dba1a435c70aeb12df”,
-    “location”: “us-south”,
-    “inputs”: [
+    "description": "Deploys a simple two module blueprint",
+    "resource_group": "aac37f57b20142dba1a435c70aeb12df",
+    "location": "us-south",
+    "inputs": [
         {
-            “name”: “resource_group_name”,
-            “metadata”: {}
+            "name": "cos_instance_name",
+            "value": "mycos4",
+            "metadata": {
+                "source": "userinput"
+            }
         },
         {
-            “name”: “provision_rg”,
-            “metadata”: {}
-        },
-        {
-            “name”: “cos_instance_name”,
-            “metadata”: {}
+            "name": "cos_storage_plan",
+            "value": "standard",
+            "metadata": {
+                "source": "userinput"
+            }
         }
     ],
-    “settings”: [
+    "settings": [
         {
-            “name”: “TF_VERSION”,
-            “value”: “1.0”,
-            “metadata”: {}
+            "name": "TF_VERSION",
+            "value": "1.0",
+            "metadata": {}
         }
     ],
-    “outputs”: [
+    "outputs": [
         {
-            “name”: “cos_id”,
-            “value”: “$module.basic-cos-storage-test1.outputs.cos_id”,
-            “metadata”: {}
+            "name": "cos_id",
+            "value": "$module.basic-cos-storage.outputs.cos_id",
+            "metadata": {}
         }
     ],
-    “modules”: [
+    "modules": [
         {
-            “module_type”: “terraform”,
-            “name”: “basic-resource-group-test1”,
-            “layer”: “RG”,
-            “source”: {
-                “source_type”: “git_hub”,
-                “git”: {
-                    “git_repo_url”: “https://github.com/Cloud-Schematics/blueprint-basic-example/tree/master/IBM-ResourceGroup”,
-                    “git_branch”: “master”
+            "module_type": "terraform",
+            "name": "basic-resource-group",
+            "source": {
+                "source_type": "git_hub",
+                "git": {
+                    "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup",
+                    "git_branch": "main"
                 },
-                “catalog”: {},
-                “cos_bucket”: {}
+                "catalog": {},
+                "cos_bucket": {}
             },
-            “created_at”: “0001-01-01T00:00:00Z”,
-            “updated_at”: “0001-01-01T00:00:00Z”,
-            “inputs”: [
+            "created_at": "0001-01-01T00:00:00Z",
+            "updated_at": "0001-01-01T00:00:00Z",
+            "outputs": [
                 {
-                    “name”: “provision”,
-                    “value”: “$blueprint.provision_rg”
+                    "name": "resource_group_name",
+                    "metadata": {}
                 },
                 {
-                    “name”: “name”,
-                    “value”: “$blueprint.resource_group_name”
+                    "name": "resource_group_id",
+                    "metadata": {}
                 }
             ],
-            “outputs”: [
-                {
-                    “name”: “resource_group_name”
-                },
-                {
-                    “name”: “resource_group_id”
-                }
-            ],
-            “last_job”: {}
+            "last_job": {}
         },
         {
-    ........,
-    “flow”: {},
-    “blueprint_ID”: “blueprint-basic-testdev-test.soB.13f7",
-    “crn”: “crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:blueprint:blueprint-basic-testdev-smulampa.soB.13f7",
-    “account”: “1f7277194bb748cdb1d35fd8fb85a7cb”,
-    “created_at”: “2022-09-14T08:00:32.029373639Z”,
-    “created_by”: “test@in.ibm.com”,
-    “updated_at”: “0001-01-01T00:00:00Z”,
-    “sys_lock”: {
-        “sys_locked_at”: “0001-01-01T00:00:00Z”
+            "module_type": "terraform",
+            "name": "basic-cos-storage",
+            "source": {
+                "source_type": "git_hub",
+                "git": {
+                    "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-Storage",
+                    "git_branch": "main"
+                },
+                "catalog": {},
+                "cos_bucket": {}
+            },
+            "created_at": "0001-01-01T00:00:00Z",
+            "updated_at": "0001-01-01T00:00:00Z",
+            "inputs": [
+                {
+                    "name": "cos_instance_name",
+                    "value": "$blueprint.cos_instance_name",
+                    "metadata": {}
+                },
+                {
+                    "name": "cos_storage_plan",
+                    "value": "$blueprint.cos_storage_plan",
+                    "metadata": {}
+                },
+                {
+                    "name": "cos_single_site_loc",
+                    "value": "ams03",
+                    "metadata": {}
+                },
+                {
+                    "name": "resource_group_id",
+                    "value": "$module.basic-resource-group.outputs.resource_group_id",
+                    "metadata": {}
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "cos_id",
+                    "metadata": {}
+                },
+                {
+                    "name": "cos_crn",
+                    "metadata": {}
+                }
+            ],
+            "last_job": {}
+        }
+    ],
+    "flow": {},
+    "blueprint_id": "Blueprint-Basic-Test-API.soB.347a",
+    "crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:blueprint:Blueprint-Basic-Test-API.soB.347a",
+    "account": "1f7277194bb748cdb1d35fd8fb85a7cb",
+    "created_at": "2022-11-23T14:32:45.897540037Z",
+    "created_by": "test@in.ibm.com",
+    "updated_at": "2022-11-23T14:32:45.897540037Z",
+    "sys_lock": {
+        "sys_locked_at": "0001-01-01T00:00:00Z"
     },
-    “user_state”: {
-        “state”: “Environment_Create_Init”,
-        “set_at”: “0001-01-01T00:00:00Z”
+    "user_state": {
+        "set_at": "0001-01-01T00:00:00Z"
     },
-    “state”: {}
+    "state": {
+        "status_code": "CREATE_INIT",
+        "config_status": "CONFIG_DRAFT",
+        "plan_status": "PLAN_NONE"
+    }
 }
 ```
 {: screen}
