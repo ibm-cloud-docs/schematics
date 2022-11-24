@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-24"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -170,23 +170,27 @@ ibmcloud schematics blueprint config create --name Blueprint_Complex --resource-
 {: #get-started-bp-create-output}
 
 ```text
-Created blueprint ID: us-south.BLUEPRINT.blueprints-complex-inputs.17a2b552
+Created blueprint ID: Blueprint_Complex.eaB.5670
 
 Modules to be created
-SNO   Type        Name   
-1     Workspace   terraform_module1   
-2     Workspace   terraform_module2   
+SNO   Module Type   Name   
+1     Workspace     terraform_module1   
+2     Workspace     terraform_module2   
       
-Blueprint job running us-south.JOB.blueprints-complex-inputs.9dec1c46
+Blueprint job us-east.JOB.Blueprint_Complex.eeb09213 started at 2022-11-24 09:58:46
 
-Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:2    Active:0    Failed:0   
+Module job execution status
+Waiting:0    In Progress:0    Success:2    Failed:0   
 
-Type        Name                        Status           Job ID   
-Blueprint   blueprints-complex-inputs   CREATE_SUCCESS   us-south.JOB.blueprints-complex-inputs.9dec1c46   
-Workspace   terraform_module1           INACTIVE            
-Workspace   terraform_module2           INACTIVE            
-            
-Blueprint ID us-south.BLUEPRINT.blueprints-complex-inputs.17a2b552 create_success at Mon Jul  4 13:49:07 BST 2022
+Blueprint job us-east.JOB.Blueprint_Complex.eeb09213 completed at 2022-11-24 10:00:14
+
+Module Type   Name                Status           Job ID   
+Blueprint     Blueprint_Complex   CREATE_SUCCESS   us-east.JOB.Blueprint_Complex.eeb09213   
+Workspace     terraform_module1   INITIALISED         
+Workspace     terraform_module2   INITIALISED         
+              
+Blueprint ID Blueprint_Complex.eaB.5670 create_success at 2022-11-24 10:00:15
+OK
 ```
 {: screen}
 
@@ -208,21 +212,24 @@ ibmcloud schematics blueprint run apply -id <blueprint_ID>
 {: #get-started-bp-install-output}
 
 ```text
-Modules to be installed
-SNO   Type        Name                Status   
-1     Workspace   terraform_module1   INACTIVE   
-2     Workspace   terraform_module2   INACTIVE   
+Modules to be applied
+SNO   Module Type   Name                Status   
+1     Workspace     terraform_module1   INITIALISED   
+2     Workspace     terraform_module2   INITIALISED   
       
-Blueprint job running eu-gb.JOB.blueprints-complex-inputs.44624c19
+Blueprint job us-east.JOB.Blueprint_Complex.23a60fdb started at 2022-11-24 10:03:19
 
-Waiting:0    Draft:0    Connecting:0    In Progress:0    Inactive:0    Active:2    Failed:0   
+Module job execution status
+Waiting:0    In Progress:0    Success:2    Failed:0   
 
-Type        Name                        Status               Job ID   
-Blueprint   blueprints-complex-inputs   FULFILMENT_SUCCESS   eu-gb.JOB.blueprints-complex-inputs.44624c19   
-Workspace   terraform_module1           ACTIVE                  
-Workspace   terraform_module2           ACTIVE                  
-            
-Blueprint ID eu-gb.BLUEPRINT.blueprints-complex-inputs.7312c775 fulfilment_success at Mon Jul  4 14:01:58 BST 2022
+Blueprint job us-east.JOB.Blueprint_Complex.23a60fdb completed at 2022-11-24 10:05:57
+
+Module Type   Name                Status               Job ID   
+Blueprint     Blueprint_Complex   FULFILMENT_SUCCESS   us-east.JOB.Blueprint_Complex.23a60fdb   
+Workspace     terraform_module1   APPLIED                 
+Workspace     terraform_module2   APPLIED                 
+              
+Blueprint ID Blueprint_Complex.eaB.5670 fulfilment_success at 2022-11-24 10:05:58
 OK
 ```
 {: screen}
