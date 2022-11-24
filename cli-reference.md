@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -162,7 +162,7 @@ Syntax
     "source_type": "GitHub"
 }
 ```
-{: codeblock}
+{: pre}
 
 ```sh
 ibmcloud schematics action create --file <FILE_NAME>
