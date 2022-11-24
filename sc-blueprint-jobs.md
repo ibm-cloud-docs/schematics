@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-23"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -258,7 +258,7 @@ Blueprint create API runs `blueprint run apply`, and `blueprint jobs` `APIs` tog
 Example
 
 ```json
-GET /v2/jobs/us-east.JOB.Blueprint-Basic-Test.29bba543/ HTTP/1.1
+GET /v2/jobs/us-south.JOB.Blueprint-Basic-Test-API.b1a7c5b8/ HTTP/1.1
 Host: schematics.cloud.ibm.com
 Content-Type: application/json
 Authorization: Bearer <auth_token>
@@ -276,18 +276,18 @@ Output
 
 ```text
 {
-    "id": "us-east.JOB.Blueprint-Basic-Test.29bba543",
-    "name": "JOB.Blueprint-Basic-Test.blueprint_create_init.1663235859012",
+    "id": "us-south.JOB.Blueprint-Basic-Test-API.b1a7c5b8",
+    "name": "JOB.Blueprint-Basic-Test-API.blueprint_install.1669214160013",
     "description": "Deploys a simple two module blueprint",
     "command_object": "blueprint",
-    "command_object_id": "Blueprint-Basic-Test.eaB.bbb9",
-    "command_name": "blueprint_create_init",
-    "location": "us-east",
+    "command_object_id": "Blueprint-Basic-Test-API.soB.347a",
+    "command_name": "blueprint_install",
+    "location": "us-south",
     "resource_group": "aac37f57b20142dba1a435c70aeb12df",
-    "submitted_at": "2022-09-15T09:57:39.011795189Z",
-    "submitted_by": "smulampa@in.ibm.com",
-    "start_at": "2022-09-15T09:57:39.011790195Z",
-    "end_at": "2022-09-15T09:58:48.146982565Z",
+    "submitted_at": "2022-11-23T14:36:00.013519689Z",
+    "submitted_by": "test@in.ibm.com",
+    "start_at": "2022-11-23T14:36:00.013512412Z",
+    "end_at": "2022-11-23T14:39:03.495863886Z",
     "status": {
         "workspace_job_status": {
             "flow_status": {
@@ -296,10 +296,10 @@ Output
             "updated_at": "0001-01-01T00:00:00Z"
         },
         "action_job_status": {
-            "action_name": "Blueprint Basic Test",
+            "action_name": "Blueprint Basic Test API",
             "status_code": "job_pending",
             "status_message": "Job created and pending to start",
-            "updated_at": "2022-09-15T09:57:39.011800186Z"
+            "updated_at": "2022-11-23T14:36:00.013526696Z"
         },
         "system_job_status": {
             "updated_at": "0001-01-01T00:00:00Z"
@@ -308,19 +308,21 @@ Output
             "status_code": "job_finished",
             "workitems": [
                 {
-                    "workspace_id": "us-east.workspace.basic-resource-group.d92dd0b6",
+                    "workspace_id": "us-south.workspace.basic-resource-group.483b1ea2",
                     "workspace_name": "basic-resource-group",
+                    "job_id": "a1dc8ad75a0e779796c0d2a97e12e9b1",
                     "status_code": "job_finished",
-                    "updated_at": "2022-09-15T09:58:17.599926716Z"
+                    "updated_at": "2022-11-23T14:36:16.567915615Z"
                 },
                 {
-                    "workspace_id": "us-east.workspace.basic-cos-storage.8e3e7448",
+                    "workspace_id": "us-south.workspace.basic-cos-storage.535f45d6",
                     "workspace_name": "basic-cos-storage",
+                    "job_id": "a9c02050ed5b8d06e524757016beebae",
                     "status_code": "job_finished",
-                    "updated_at": "2022-09-15T09:58:46.838327639Z"
+                    "updated_at": "2022-11-23T14:37:27.596469934Z"
                 }
             ],
-            "updated_at": "0001-01-01T00:00:00Z"
+            "updated_at": "2022-11-23T14:39:03.495851031Z"
         }
     },
     "log_summary": {
@@ -332,14 +334,15 @@ Output
             "workitems_completed": 2,
             "workitems": [
                 {
-                    "workspace_id": "us-east.workspace.basic-resource-group.d92dd0b6",
-                    "job_id": "554aceeabf87d9b1b8f9c55c41432e17",
-                    "log_url": "https://schematics.cloud.ibm.com/v1/workspaces/us-east.workspace.basic-resource-group.d92dd0b6/runtime_data/IBM-ResourceGroup-61535f6c-5cfd-40/log_store/actions/554aceeabf87d9b1b8f9c55c41432e17"
+                    "workspace_id": "us-south.workspace.basic-resource-group.483b1ea2",
+                    "job_id": "a1dc8ad75a0e779796c0d2a97e12e9b1",
+                    "log_url": "https://schematics.cloud.ibm.com/v1/workspaces/us-south.workspace.basic-resource-group.483b1ea2/runtime_data/IBM-DefaultResourceGroup-f3ffa820-efbb-4f/log_store/actions/a1dc8ad75a0e779796c0d2a97e12e9b1"
                 },
                 {
-                    "workspace_id": "us-east.workspace.basic-cos-storage.8e3e7448",
-                    "job_id": "4f90836a3291d4949851e7b678d1f4ee",
-                    "log_url": "https://schematics.cloud.ibm.com/v1/workspaces/us-east.workspace.basic-cos-storage.8e3e7448/runtime_data/IBM-Storage-38af0396-64ed-48/log_store/actions/4f90836a3291d4949851e7b678d1f4ee"
+                    "workspace_id": "us-south.workspace.basic-cos-storage.535f45d6",
+                    "job_id": "a9c02050ed5b8d06e524757016beebae",
+                    "resources_add": 3,
+                    "log_url": "https://schematics.cloud.ibm.com/v1/workspaces/us-south.workspace.basic-cos-storage.535f45d6/runtime_data/IBM-Storage-08ca6efb-7af6-40/log_store/actions/a9c02050ed5b8d06e524757016beebae"
                 }
             ]
         },
