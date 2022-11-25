@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-25"
 
 keywords: schematics
 subcollection: schematics
@@ -293,7 +293,7 @@ subcollection: schematics
 
     * Review the release notes for November 2022.
 
-    * [18 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
+    * [30 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
@@ -1352,11 +1352,11 @@ subcollection: schematics
     * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-apicategory)
 
 
-## Specifying version constraints in {{site.data.keyword.bpshort}}
-{: #sitemap_specifying_version_constraints_in_}
+## Specifying version constraints
+{: #sitemap_specifying_version_constraints}
 
 
-[Specifying version constraints in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-version-constraints#version-constraints)
+[Specifying version constraints](/docs/schematics?topic=schematics-version-constraints#version-constraints)
 
 * [Overview of {{site.data.keyword.bpshort}} images and packaged Terraform providers](/docs/schematics?topic=schematics-version-constraints#schematics-image-ov)
 
@@ -1437,11 +1437,11 @@ subcollection: schematics
 [Opening needed IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
 
 
-## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
-{: #sitemap_creating_an__cluster_on_vpc_infrastructure_with_}
+## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure
+{: #sitemap_creating_an__cluster_on_vpc_infrastructure}
 
 
-[Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
+[Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
 
 * [Description](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-desc)
 
@@ -1555,16 +1555,16 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
 
 
-## Deploying a VPC environment on IBM Cloud by using Bastion host
-{: #sitemap_deploying-a-vpc-environment-on-ibm-cloud-by-using-bastion-host}
+## Deploying a VPC environment with bastion host on IBM Cloud
+{: #sitemap_deploying-a-vpc-environment-with-bastion-host-on-ibm-cloud}
 
-[Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
+[Deploying a VPC environment with bastion host on IBM Cloud](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 
 
-## Deploying multitiered VPC on IBM Cloud by using Bastion host
-{: #sitemap_deploying-multitiered-vpc-on-ibm-cloud-by-using-bastion-host}
+## Deploying a multi-tiered VPC with bastion host on IBM Cloud
+{: #sitemap_deploying-a-multi-tiered-vpc-with-bastion-host-on-ibm-cloud}
 
-[Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
+[Deploying a multi-tiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
 
 
 ## CLI reference
@@ -1864,11 +1864,11 @@ subcollection: schematics
     * [Steps to join public slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-slack)
 
 
-## {{site.data.keyword.bpshort}} runtime tools
-{: #sitemap__runtime_tools}
+## Runtime environment tools
+{: #sitemap_runtime_environment_tools}
 
 
-[{{site.data.keyword.bpshort}} runtime tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
+[Runtime environment tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
 
 * [Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-job)
 
@@ -1884,11 +1884,11 @@ subcollection: schematics
 [{{site.data.keyword.bpshort}} SDKs](/docs/schematics?topic=schematics-schematics-sdks#schematics-sdks)
 
 
-## {{site.data.keyword.bpshort}} service locations and endpoints
-{: #sitemap__service_locations_and_endpoints}
+## Service locations and endpoints
+{: #sitemap_service_locations_and_endpoints}
 
 
-[{{site.data.keyword.bpshort}} service locations and endpoints](/docs/schematics?topic=schematics-locations#locations)
+[Service locations and endpoints](/docs/schematics?topic=schematics-locations#locations)
 
 * [Where can I create and run {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
 
@@ -1979,11 +1979,11 @@ subcollection: schematics
     * [Workspace](/docs/schematics?topic=schematics-glossary#wksw1)
 
 
-## {{site.data.keyword.bplong_notm}} notices and information
-{: #sitemap__notices_and_information}
+## Notices and information
+{: #sitemap_notices_and_information}
 
 
-[{{site.data.keyword.bplong_notm}} notices and information](/docs/schematics?topic=schematics-schematics-notices#schematics-notices)
+[Notices and information](/docs/schematics?topic=schematics-schematics-notices#schematics-notices)
 
 * [Creative Commons Attribution 3.0](/docs/schematics?topic=schematics-schematics-notices#CC-BY-3.0)
 
@@ -2067,6 +2067,8 @@ subcollection: schematics
 * [What is time set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
+
+* [What Git repositories are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
 
 * [Are variable operators and functions supported in blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-values)
 

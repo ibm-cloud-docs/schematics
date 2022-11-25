@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-25"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -23,6 +23,19 @@ content-type: faq
 Answers to common questions about working with blueprints are classified under the following sections.
 {: shortdesc}
 
+## What Git repositories are supported by Blueprints?
+{: #faqs-bp-repos}
+{: faq}
+{: support}
+
+|  Repository <br />  | Template <br /> Public repo | Template <br />Private repo | Module <br />Public repo | Module <br />private repo | Comment <br />  |
+| --- |--- | --- | --- | --- | --- |
+| Github | Yes | Git token | Yes | Git token | 
+| Gitlab | Yes | Git token | Yes | Git token | 
+| IBM Gitlab | Yes | Git token | Yes | Git token | IAM token planned Dec 2022 
+| Terraform.io | No | No | Yes | NA |
+
+
 ## Are variable operators and functions supported in blueprint templates?
 {: #faqs-bp-values}
 {: faq}
@@ -37,7 +50,7 @@ A future release intends to implement functions and operators.
 {: faq}
 {: support}
 
-Dependencies between blueprint modules are created using the value references between module inputs and outputs. Similar to Terraform, a DAG (Directed Acyclic Graph) is generated from the dependencies and relationships to determine execution order. 
+Dependencies between blueprint modules are created using the value references between module inputs and outputs. Similar to Terraform, a DAG (Directed Acyclic Graph) is generated from the dependencies and relationships to determine execution order. Dependencies are created using '$module' references. 
 
 # How do I edit and validate blueprint templates?
 {: #faqs-bp-editing}
@@ -73,7 +86,7 @@ The required URLs can be copied directly from the Github or Gitlab UIs. For exam
 {: faq}
 {: support}
 
-Cloud resource deployment with {{site.data.keyword.bpshort}} Blueprints is a two-step process, user driven process. Refer to [deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of the deployment and resource provisioning process.  
+Cloud resource deployment with {{site.data.keyword.bpshort}} Blueprints is a two-step process, user driven process. Config create, Plan and Apply. Refer to [deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of the deployment and resource provisioning process.  
 
 ## How do you view the blueprint provisioned resources in your cloud account?
 {: #faqs-bp-results}

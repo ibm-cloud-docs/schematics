@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-25"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -17,7 +17,7 @@ completion-time: 60m
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure with {{site.data.keyword.bpfull_notm}}
+# Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure
 {: #provisioning-terraform-template}
 {: toc-content-type="tutorial"}
 {: toc-services="schematics, containers, key-protect"}

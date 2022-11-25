@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-11-25"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.bpshort}} service locations and endpoints
+# Service locations and endpoints
 {: #locations} 
 
 Review the {{site.data.keyword.bplong_notm}} supported locations and how {{site.data.keyword.bpshort}} differentiates between the user data and template storage location, and the deployment region of your {{site.data.keyword.cloud}} resources.
