@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-25"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -24,7 +24,7 @@ One of the use cases for blueprints is to compose infrastructure architectures d
  
  The combination of {{site.data.keyword.IBM_notm}} and user modules from public and private repos to create a custom template is illustrated in the figure.   
 
-![Custom templates with public and private modules](/images/bp-terraform-modules.svg){: caption="Custom templates with public and private modules" caption-side="bottom"}
+![Custom templates with public and private modules](/images/new/bp-terraform-modules.svg){: caption="Custom templates with public and private modules" caption-side="bottom"}
 
 The template determines the architecture, specifying the modules required for the implementation and their source repositories. As illustrated publicly available module functionality can be combined with third-party and user developed modules to create customized solutions. 
 
@@ -56,7 +56,7 @@ To enable a reusable child module to be executed as a root module, {{site.data.k
 
 The contents of the Terraform working directory for a blueprint module with provider injection is illustrated.  
 
-![Blueprint provider injection](/images/bp-injection.svg){: caption="Blueprint provider injection" caption-side="bottom"}
+![Blueprint provider injection](/images/new/bp-injection.svg){: caption="Blueprint provider injection" caption-side="bottom"}
  
 The `main.tf` and `variables.tf` files are loaded from the module repo. The provider config is defined by an `injectors` block in the template module definition. This block defines the templated `.tf` files that contain the additional config statements. It also defines the specification of the additional Terraform language constructs that will be injected into the Terraform working directory. 
 

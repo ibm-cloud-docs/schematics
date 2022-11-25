@@ -31,7 +31,7 @@ In a similar fashion, {{site.data.keyword.bpshort}} Blueprints enables users to 
 Reuse is at the heart of {{site.data.keyword.bpshort}} Blueprints. Publicly available modules designed for IBM Cloud can be combined with third-party and user developed modules to create customized solutions. Blueprint templates are reusable across environments with separately maintained input configurations, supporting dev, stage and prod pipelines and reuse across organizations. 
 {: shortdesc} 
 
-![Large-scale environments by using Terraform and blueprints](/images/bp-largescale-env.svg){: caption="Large-scale environments using Terraform and blueprints" caption-side="bottom"}
+![Large-scale environments by using Terraform and blueprints](/images/new/bp-largescale-env.svg){: caption="Large-scale environments using Terraform and blueprints" caption-side="bottom"}
 
 A blueprint template defines the architecture of the environment to be deployed and the modules from which it will be constructed. When an environment is deployed, an input file passes the values that customize the template for the intended usage. In this example the input files would typically determine the scaling of the deployed infrastructure for the dev, stage and proc environments.      
 
@@ -46,7 +46,7 @@ A blueprint template defines the architecture of the environment to be deployed 
 
 IaC best practices, support the lifecycle of blueprint environments, cradle-to-grave. Versioning and parameterized configuration, support controlled change to environments as requirements evolve, and templates and modules are maintained and updated to remain current and compliant.   
 
-![{{site.data.keyword.bpshort}} Blueprints overview](/images/bp-features.svg){: caption="{{site.data.keyword.bpshort}} Blueprints overview" caption-side="bottom"} 
+![{{site.data.keyword.bpshort}} Blueprints overview](/images/new/bp-features.svg){: caption="{{site.data.keyword.bpshort}} Blueprints overview" caption-side="bottom"} 
 
 ## Next steps
 {: #nextsteps-bp-arch}

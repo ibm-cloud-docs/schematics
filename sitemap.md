@@ -91,7 +91,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#terminologies-nextsteps)
 
-[Usage of open source projects in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
+[Open-source tools in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 

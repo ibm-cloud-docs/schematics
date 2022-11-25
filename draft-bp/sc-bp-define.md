@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-25"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -27,7 +27,7 @@ Reuse is at the heart of {{site.data.keyword.bpshort}} Blueprints. {{site.data.k
 As illustrated, templates are reusable across environments with separately maintained [input configurations](/docs/schematics?topic=schematics-glossary#bpi1), supporting dev, stage and prod pipelines and reuse across organizations. 
 {: shortdesc} 
 
-![Environments deployed from reusable blueprints](../images/bp-largescale-env.svg){: caption="Environments deployed from reusable blueprints" caption-side="bottom"}
+![Environments deployed from reusable blueprints](../images/new/bp-largescale-env.svg){: caption="Environments deployed from reusable blueprints" caption-side="bottom"}
 
 A blueprint, the environment and cloud resources to be deployed are defined by three versioned elements:
 1. A reusable `blueprint template` to represent the reference infrastructure architecture, the IaC automation modules to be used and the cloud resources that are to be deployed.
@@ -50,7 +50,7 @@ Change in blueprint environments is explicitly managed through version control. 
 
 The steps to create a blueprint template and define the versioned the inputs are illustrated in the diagram.
 
-![Blueprint template and inputs](../images/sc-bp-define.svg){: caption="Blueprint template and inputs" caption-side="bottom"}
+![Blueprint template and inputs](../images/new/sc-bp-define.svg){: caption="Blueprint template and inputs" caption-side="bottom"}
 
 1. Defining a cloud environment starts with a high-level reference architecture for the environment. Using the reference architecture as a guide, select the automation modules to implement the infrastructure layers of the architecture. Publicly available modules can be combined with private modules to create a custom architecture. Modules can be sourced from the public repositories containing {{site.data.keyword.IBM_notm}} and third-party authored modules, along with any custom developed modules from private repositories. Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) for details of how to work with Terraform root and child modules.
     - {{site.data.keyword.IBM_notm}} authored modules can be found in the [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} GitHub repository.
