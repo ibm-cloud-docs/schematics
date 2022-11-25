@@ -165,7 +165,7 @@ Example
     internal = number
     external = number
     protocol = string
-  })
+  }))
 
 ```
 {: pre}
@@ -202,7 +202,7 @@ Example of a default value
 ```yaml
 - name: provision_ats_instance
   type: boolean            
-  value: false
+  default: false
 ```
 {: pre}
 
