@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-11-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -26,7 +26,7 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for November 2022.
 {: shortdesc}
 
-### 18 November 2022
+### 30 November 2022
 {: #schematics-nov1822}
 {: release-note}
 

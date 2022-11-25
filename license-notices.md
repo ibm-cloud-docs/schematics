@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-25"
 
 keywords: schematics license, schematics notices, schematics license notices
 
@@ -12,7 +12,7 @@ subcollection: satellite
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.bplong_notm}} notices and information
+# Notices and information
 {: #schematics-notices}
 
 The following notices are included in this document:

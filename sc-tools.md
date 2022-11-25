@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-25"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -12,8 +12,11 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.bpshort}} runtime tools
+# Runtime environment tools
 {: #sch-utilities}
+
+{{site.data.keyword.bpshort}} includes several utilities and executables in its worker job images. 
+
 
 {{site.data.keyword.bpshort}} deprecates `Python v3.6` support and upgrades the {{site.data.keyword.bpshort}} Job image to support `Python v3.8` from 21 September 2022. For more information, see [{{site.data.keyword.bpshort}} announcement](https://cloud.ibm.com/status/announcement?component=schematics){: external} tools.
 

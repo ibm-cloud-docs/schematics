@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-15"
+lastupdated: "2022-11-25"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -400,8 +400,20 @@ Type: url string
 
 Required: true
 
-URL for the automation module in its content repository. If the config exists in a sub directory the folder name is appended. 
+URL for the Terraform module or config in its content repository. This is the full path to the module, in the root folder of the repo or the path to a module in sub-folder in the repo. Multiple modules/configs can exist in sub-folders of the repo.  
+
+Blueprints supports a short cut using the Git path syntax to specifying the URL to your module including the branch. 
+
+Example
+
+```yaml
+  git: 
+    git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
+```
 {: pre}
+
+
+
 
 ### modules.source.git.git_branch
 {: #bp-modules-git-branch}
@@ -410,7 +422,7 @@ Type: string
 
 Default: main
 
-If content is in Git, the branch containing the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. 
+If content is in Git, the branch containing the revision of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. 
 {: pre}
 
 ### modules.source.git.git_release

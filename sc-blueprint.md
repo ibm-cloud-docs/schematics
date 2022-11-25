@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-24"
+lastupdated: "2022-11-25"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -42,12 +42,11 @@ A blueprint template defines the architecture of the environment to be deployed 
 - [Composition](/docs/schematics?topic=schematics-define-blueprints): Build infrastructure architectures from an eco-system of reusable and maintained IBM Cloud architecture components written in Terraform
 - [Reusability](/docs/schematics?topic=schematics-blueprint-templates): Reuse templates (architectures) across environments, pipelines and teams
 - Scalability: Structure and manage large environments by linking modules and Terraform workspaces  
-- [Lifecycle](/docs/schematics?topic=schematics-work-with-blueprints): Cradle-to-grave operations model. Future: scheduled ops, drift detection, cost estimation, policy compliance  
-- Extensibility (future): Provisioning and configuration with RedHat Ansible              
+- [Lifecycle](/docs/schematics?topic=schematics-work-with-blueprints): Cradle-to-grave operations model. Future: scheduled ops, drift detection, cost estimation, policy compliance               
 
-IAC best practices, support the lifecycle of blueprint environments, cradle-to-grave. Versioning and parameterized configuration, support controlled change to environments as requirements evolve, and templates and modules are maintained and updated to remain current and compliant.   
+IaC best practices, support the lifecycle of blueprint environments, cradle-to-grave. Versioning and parameterized configuration, support controlled change to environments as requirements evolve, and templates and modules are maintained and updated to remain current and compliant.   
 
-
+![{{site.data.keyword.bpshort}} Blueprints overview](/images/bp-features.svg){: caption="{{site.data.keyword.bpshort}} Blueprints overview" caption-side="bottom"} 
 
 ## Next steps
 {: #nextsteps-bp-arch}
