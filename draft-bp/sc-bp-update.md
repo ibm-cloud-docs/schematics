@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-11-25"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -44,7 +44,7 @@ Review the section on blueprint version management to understand how to manage c
 
 The two-step process to update a blueprint environment is illustrated in the diagram.
 
-![Blueprint config update flow](../images/sc-bp-update.svg){: caption="Blueprint config update flow" caption-side="bottom"}
+![Blueprint config update flow](../images/new/sc-bp-update.svg){: caption="Blueprint config update flow" caption-side="bottom"}
 
 1. Edit the blueprint template, and the input YAML files to implement the proposed changes to the environment. 
     - Push the updated blueprint template and input files to your Git repositories. If needed, create a new Git version release tag for version management. 

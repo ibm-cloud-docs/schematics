@@ -2,9 +2,9 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-25"
 
-keywords: schematics , hybrid, multicloud, RACI
+keywords: schematics , hybrid, multi-cloud, RACI
 
 subcollection: schematics 
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Shared responsibilities for using {{site.data.keyword.bplong_notm}}
+# Your responsibilities when using {{site.data.keyword.bpshort_notm}}
 {: #sc-responsibilities}
 
 Learn about the management responsibilities and terms and conditions that you have when you use {{site.data.keyword.bplong}}. For a high-level view of the service types in {{site.data.keyword.cloud_notm}} and the breakdown of responsibilities between you as the customer and {{site.data.keyword.IBM_notm}} for each type, see [Shared responsibilities for {{site.data.keyword.cloud_notm}} offerings](/docs/overview?topic=overview-shared-responsibilities).
