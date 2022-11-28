@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-28"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -562,7 +562,7 @@ Review the release notes for April 2021.
 {: release-note}
 
 Ansible support in {{site.data.keyword.bplong_notm}} is now generally available
-:   Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multi-tiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
+:   Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multitiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
 
 ## March 2021
 {: #march-2021}
