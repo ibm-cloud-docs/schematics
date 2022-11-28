@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-28"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -15,10 +15,10 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# Updating and operating blueprints
+# Maintaining blueprints
 {: #update-op-blueprints}
 
-Updating and operating a cloud environment is about managing continual change. Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform are constantly evolving. Without maintenance and updates of the blueprint templates, inputs and automation module code, a deployed environment loses currency and compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation. 
+Maintaining a cloud environment is about managing continual change. Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform are constantly evolving. Without maintenance and updates of the blueprint templates, inputs and automation module code, a deployed environment loses currency and compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation. 
 {: shortdesc}
 
 Change occurs for many reasons:

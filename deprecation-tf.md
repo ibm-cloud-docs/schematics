@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-28"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}
+# Deprecating Terraform versions 
 {: #deprecate-tf-version}
 
 {{site.data.keyword.bplong}} continues to update the service with the latest version of Terraform provider support, and accordingly deprecates the older versions of Terraform provider. {{site.data.keyword.bpshort}} has an ongoing plan for deprecating older versions of Terraform that can enable you to be prepared to migrate to the latest versions of Terraform providers. This is a tentative timeline for the deprecation of Terraform versions.

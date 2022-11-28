@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-28"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Stopping or terminating the running job
+# Stopping or terminating running jobs
 {: #interrupt-job}
 
 After invoking a job on a {{site.data.keyword.bpshort}} Workspaces like a `plan`, an `apply`, or a `destroy`. You may want to stop the running job, or want to stop provisioning resources. Stopping, cancel a job helps you to know whether the job is stuck, or if the job has lot of wait time. {{site.data.keyword.bpshort}} allows users to `interrupt`, `force-stop`, or `terminate` the running job.

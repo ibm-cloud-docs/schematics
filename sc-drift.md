@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-28"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Detecting drift in {{site.data.keyword.bpshort}}
+# Detecting drift in workspaces
 {: #drift-note}
 
 {{site.data.keyword.bplong}} is the {{site.data.keyword.cloud_notm}} automation tool that enables users to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces by using known `declarative` Infrastructure as Code (IaC) concepts. However, when a Terraform config is deployed and resources that are created, it does not mean that the resources stay as declared by the config. Any change in the infrastructure state is called `drift`. It occurs when the configuration of your deployed infrastructure differs from the wanted state that is defined in your template configuration. 

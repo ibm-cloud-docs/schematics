@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-28"
 
 keywords: access global catalog, catalog visibility, staging environment
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Assigning access through {{site.data.keyword.cloud_notm}} Catalog
+# Location based access
 {: #access-ibm-cloud-catalog}
 
 ## Manage location settings in catalog

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-11-28"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -12,16 +12,27 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Managing cross-workspace state access with Terraform
+# Remote state and cross-workspace access
 {: #remote-state}
 
-You can access information about the resources that you manage in a workspace from other workspaces in your account by using the `ibm_schematics_output` data source.
+{{site.data.keyword.cloud}} provides built in [remote-state](https://developer.hashicorp.com/terraform/language/state/remote){: external} management for Terraform. Terraform state files are automatically preserved between runs and are accessible by {{site.data.keyword.cloud}} commands and operations. {{site.data.keyword.cloud}} remote-state management enables team work and workspace shared operations, with built in state locking preventing concurrent operations against the same state file. 
+
+The built in workspace remote-state management supports a number of {{site.data.keyword.bpshort}} use cases: 
+- The sharing of resource information between workspaces. This allows your infrastructure to be broken down into smaller components, with read-only resource information passed between environments using {{site.data.keyword.bpshort}} remote-state data sources. Discrete environments linked by data sources allows responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces as read-only resources. 
+- Integration of Terraform and Ansible operations with [Actions](https://test.cloud.ibm.com/docs/schematics?topic=schematics-action-setup). Workspace resource information can be directly passed as an Ansible [dynamic inventory](docs/schematics?topic=schematics-inventories-setup#dynamic-inv) without the need for manual host inventory creation or use of inventory scripts.     
+- Management of large-scale IaC environments. [Blueprints](/docs/schematics?topic=schematics-blueprint-intro) enables large environments to be composed from modular Terraform environments by the [direct passing of values](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-outputs) and state information between deployed modules.  
 {: shortdesc}
 
-As you manage your {{site.data.keyword.cloud}} resources with {{site.data.keyword.bplong_notm}}, you can access resource information across workspaces. The `remote_state` data source is not supported in {{site.data.keyword.bpshort}}. Instead, you can use the `ibm_schematics_output` data source to access the information. 
 
-**How is the `ibm_schematics_output` data source different from the `remote_state` data source?** </br>
-When you use the `remote_state` data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_output` data source, you automatically have access to the built-in {{site.data.keyword.bplong_notm}} backend and can access workspace information directly.
+## Accessing workspace state and outputs
+{: #data-sources}
+
+You can access information about the resources that you manage in a workspace from other workspaces in your account by using the [`ibm_schematics_output`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_output){: external} and [`ibm_schematics_state`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_state){: external} data sources.
+
+{{site.data.keyword.cloud}} uses the `local` built-in Terraform state support and does not use Terraform [backend](https://developer.hashicorp.com/terraform/language/settings/backends/configuration){: external} support. No additional configuration is required within your Terraform configs to enable {{site.data.keyword.cloud}} remote state management. {{site.data.keyword.bpshort}} does not use the Terraform `remote_state` data source, instead you use the `ibm_schematics_output` data source to access the information. 
+
+**How is the `ibm_schematics_state` data source different from the `remote_state` data source?** </br>
+When you use the Terraform `remote_state` data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_state` data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly.
 
 **What do I need to do to access resource information in other workspaces?** </br>
 Similar to the `remote_state` data source, you can only access information that you configured as output values in your Terraform template. For example, let's say you have a workspace that you used to provision a VPC. To access the VPC ID, you must define the ID as an output variable in your Terraform configuration file.

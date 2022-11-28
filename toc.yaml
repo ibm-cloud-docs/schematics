@@ -27,6 +27,7 @@ toc:
                                             label: About
                                             topics:
                                                     - sc-about-capabilities.md
+                                                    - sc-about-infrastructure-as-code.md
                                                     - sc-about-terminologies.md
                                                     - sc-about-opensourceproj.md
                                                     - sc-about-agent.md
