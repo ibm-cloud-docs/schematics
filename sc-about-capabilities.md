@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-29"
 
 keywords: schematics capabilities, schematics benefits, why use schematics, capabilities
 
@@ -21,11 +21,11 @@ Building on open-source Ansible, Terraform and related technologies, {{site.data
 ## {{site.data.keyword.bpshort}} benefits
 {: #learn-benefits}
 
-Review the [IaC capabilities]()(/docs/schematics?topic=schematics-infrastructure-as-code) that {{site.data.keyword.bpshort}} provides for you as you explore {{site.data.keyword.cloud_notm}} automation.
+Review the [IaC capabilities](/docs/schematics?topic=schematics-infrastructure-as-code) that {{site.data.keyword.bpshort}} provides for you as you explore {{site.data.keyword.cloud_notm}} automation.
 {: shortdesc}
 
 | Capability | Description |
-|--------|-------------------------------|
+|------|-------|
 |Model your {{site.data.keyword.cloud_notm}} stacks| Use high-level scripting languages to declare all the cloud resources in your stack, and define their configurations. Instead of learning the cloud API or command-line to work with a specific resource, you can use Ansible playbooks and Terraform configuration files to specify the required state and configuration of a cloud resource. Then, you use {{site.data.keyword.bpshort}} to rapidly build, configure, and replicate the resources in your cloud environments.|
 |Use open technologies | {{site.data.keyword.bpshort}} integrates open source projects, such as Terraform and Ansible, for you to natively automate the provisioning, configuration, and management of your cloud stacks. You do not need to install the open source projects on your machine or learn their API and command-line. You need to simply point {{site.data.keyword.bpshort}} to your IaC code repository and let {{site.data.keyword.bpshort}} run the specified tasks. |
 |Automate cloud infrastructure deployments| Use Terraform and blueprint templates to codify and configure your cloud resources, and use {{site.data.keyword.bpshort}} Workspaces to reliably, predictably and consistently provision your resources across cloud environments. Terraform help you standardize your Cloud stacks, automate the lifecycle of the individual resource, and apply access and version control to the template, so that you can achieve compliance and rapidly troubleshoot the issues. |
