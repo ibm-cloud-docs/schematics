@@ -18,7 +18,8 @@ subcollection: schematics
 # Reusing blueprints and pipelines
 {: #blueprint-reuse-pipelines}
 
-{{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied.  
+{{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied.
+{: shortdesc}
 
 This building analogy also applies to reuse across environments. A builder may build an entire street of houses from the same blueprint drawing. Each house customized by its choice of color, lighting and styling, but all built to the same design.    
 
@@ -26,12 +27,12 @@ Feuse supports a number of usecases:
 - Sharing an approved architecture across teams within a business
 - Deploying instances across multiple regions to create a highly resilient application deployment
 - Software delivery pipelines
-{: shortdesc} 
 
 ## Reuse across environments
 {: #blueprint-reuse} 
 
-A blueprint template (house design) is similarly reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-glossary#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments. 
+A blueprint template (house design) is similarly reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-glossary#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments.
+{: shortdesc}
 
 ![Environments deployed from reusable blueprint template](/images/new/bp-reuse.svg){: caption="Environments deployed from reusable blueprint template" caption-side="bottom"}
 
@@ -45,3 +46,4 @@ For details on how to configure blueprints refer to the section [Understanding b
 {: #blueprint-pipelines} 
 
 Reuse supports the creation of software delivery deployment pipelines. Here the same or similar environment configurations are required to support the stages of a delivery pipeline to ensure that application code is tested in an environment that is as close to production as possible. 
+{: shortdesc}

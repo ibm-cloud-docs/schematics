@@ -289,6 +289,10 @@ subcollection: schematics
 
     * Review the release notes for November 2022.
 
+    * [29 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov2922)
+
+        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+
     * [18 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in.
@@ -765,7 +769,7 @@ subcollection: schematics
 
 [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
 
-* [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-configuration)
+* [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-temp-confg)
 
 * [Blueprint template overview](/docs/schematics?topic=schematics-blueprint-templates#template-overview)
 
@@ -783,7 +787,7 @@ subcollection: schematics
 
 * [Dynamic inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
 
-* [What's next](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
+* [What's next?](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
 
 [Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-terraform)
 
