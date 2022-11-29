@@ -23,7 +23,7 @@ subcollection: schematics
 
 This building analogy also applies to reuse across environments. A builder may build an entire street of houses from the same blueprint drawing. Each house customized by its choice of color, lighting and styling, but all built to the same design.    
 
-Reuse supports a number of usecases:
+Feuse supports a number of usecases:
 - Sharing an approved architecture across teams within a business
 - Deploying instances across multiple regions to create a highly resilient application deployment
 - Software delivery pipelines
@@ -31,12 +31,12 @@ Reuse supports a number of usecases:
 
 ## Reuse across environments
 {: #blueprint-reuse} 
-A blueprint template (house design) is similarly reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-glossary#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments. 
 
+A blueprint template (house design) is similarly reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-glossary#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments. 
 
 ![Environments deployed from reusable blueprint template](/images/new/bp-reuse.svg){: caption="Environments deployed from reusable blueprint template" caption-side="bottom"}
 
-Separate input files for the dev, stage and prod define the customizations, for instance, scale, configuration and region for each environment.    
+Separate input files for the dev, stage and prod define the customizations, for example, scale, configuration and region for each environment.    
 
 Each blueprint environment is uniquely defined by its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The configuration defines the template, its location and version, plus the inputs to customize a template for the target environment. The separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as `dev`, `stage`, and `production` with multiple target regions. 
 

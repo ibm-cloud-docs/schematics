@@ -87,6 +87,22 @@ subcollection: schematics
 
 * [Next steps about {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics#nextstep-capabilities)
 
+[What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code#infrastructure-as-code)
+
+* [Benefits of Infrastructure as Code](/docs/schematics?topic=schematics-infrastructure-as-code#iac-benefits)
+
+* [Best Practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices)
+
+    * [Codifying everything in IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-codify)
+
+    * [Minimize documentation](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-docs)
+
+    * [Testing](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-testings)
+
+    * [Modular Infrastructure](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity)
+
+* [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
+
 [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
 
 * [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#terminologies-nextsteps)
@@ -161,6 +177,17 @@ subcollection: schematics
 * [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
 
 * [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
+
+[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
+
+
+## Internal adopters
+{: #sitemap_internal_adopters}
+
+
+[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics</staging>){: external}
 
 
 ## Security and compliance
