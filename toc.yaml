@@ -43,15 +43,6 @@ toc:
                                                     - sc-bp-update.md
                                                     - sc-bp-delete.md
                                   - topicgroup:
-                                            label: Internal adopters
-                                            topics:
-                                                    - internal-adopters/sc-stage-guidelines.md
-                                                    - internal-adopters/service-to-service-authorization.md
-                                                    - internal-adopters/embedded-schematics.md
-                                                    - link:
-                                                              label: IBM Cloud Schematics internal_v1.0 API
-                                                              href: https://test.cloud.ibm.com/apidocs/schematics</staging>
-                                  - topicgroup:
                                             label: Security and compliance
                                             topics:
                                                     - security-compliance/sc-security.md
@@ -102,10 +93,6 @@ toc:
                                                     - job-download-file.md
                                                     - job-force-stop.md
                                   - topicgroup:
-                                            label: Examples
-                                            topics:
-                                                    - usecase-ov.md</hidden>
-                                  - topicgroup:
                                             label: Managing Actions
                                             topics:
                                                     - action-setup.md
@@ -136,7 +123,6 @@ toc:
                                             topics:
                                                     - monitoring-instances.md
                                                     - at.md
-                                  - access.md<hidden>
                                   - job-queue.md
                                   - delete-schematics-data.md
                                   - version-constraints.md
