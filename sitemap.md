@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-29"
 
 keywords: schematics
 subcollection: schematics
@@ -168,26 +168,6 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
 
-[Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
-
-* [Configuring your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
-
-* [Create template repository and local clone](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-createtemplate)
-
-    * [Select a template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
-
-    * [Clone template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
-
-    * [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
-
-* [Editing in VSCode](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
-
-    * [Blueprint usage and configuration documentation](/docs/schematics?topic=schematics-edit-blueprints#bp-usage-config-doc)
-
-    * [Push edited template](/docs/schematics?topic=schematics-edit-blueprints#bp-push-template)
-
-* [Next steps](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-nextsteps)
-
 [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
@@ -198,9 +178,12 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
 
-[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
 
-* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
+## Internal adopters
+{: #sitemap_internal_adopters}
+
+
+[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics</staging>){: external}
 
 
 ## Security and compliance
@@ -819,6 +802,32 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-terraform#bp-terraform-nextsteps)
 
+[Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse-pipelines)
+
+* [Reuse across environments](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse)
+
+* [Deployment pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-pipelines)
+
+[Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
+
+* [Configuring your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
+
+* [Create template repository and local clone](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-createtemplate)
+
+    * [Select a template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
+
+    * [Clone template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
+
+    * [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
+
+* [Editing in VSCode](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
+
+    * [Blueprint usage and configuration documentation](/docs/schematics?topic=schematics-edit-blueprints#bp-usage-config-doc)
+
+    * [Push edited template](/docs/schematics?topic=schematics-edit-blueprints#bp-push-template)
+
+* [Next steps](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-nextsteps)
+
 [Create a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-config)
 
 * [Creating a blueprint configuration through CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
@@ -1122,9 +1131,10 @@ subcollection: schematics
 
     * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job#stop-jobs-api)
 
-[Location based access](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
 
-* [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
+## Examples
+{: #sitemap_examples}
+
 
 
 ## Managing Actions

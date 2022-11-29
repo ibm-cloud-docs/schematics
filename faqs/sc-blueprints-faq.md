@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-29"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -71,13 +71,13 @@ In {{site.data.keyword.bpshort}} Blueprints, the displayed name is not a unique 
 {: faq}
 {: support}
 
-The Blueprints UI uses the Git path syntax to specifying the URLs to your template and input YAML files. All information to reference the file in the Git repo, its branch and sub-folder must be specified as part of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. 
+The Blueprints UI uses the Git path syntax to specifying the URLs to your template and input YAML files. All information to reference the file in the Git repo, its branch and sub-folder must be specified as part of the URL. This includes the template or input file name. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. 
 
-The link can point to the template file in the main branch, any other branch, or a subdirectory. The URL must include the template file name and the `blob/branch/` pattern for the full path. 
+The link can point to the template file in the main branch, any other branch, or a subdirectory. The URL must include the template file name and **must use** the `blob/branch/` pattern for the full path. 
     
-- Example for [main blueprint.yam](https://github.com/myorg/myrepo/blob/main/blueprint.yaml){: external}    
-- Example for [blueprint.yaml in branches](https://github.com/myorg/myrepo/blob/mybranch/blueprint.yaml){: external}
-- Example for [blueprint.yaml in subdirectory](https://github.com/mnorg/myrepo/blob/mybranch/mysubdirectory/blueprint.yaml){: external}
+- Example for **main blueprint.yaml** - `https://github.com/myorg/myrepo/blob/main/blueprint.yaml`     
+- Example for **blueprint.yaml in branches** - `https://github.com/myorg/myrepo/blob/mybranch/blueprint.yaml`
+- Example for **blueprint.yaml in subdirectory** - `https://github.com/mnorg/myrepo/blob/mybranch/mysubdirectory/blueprint.yaml` 
 
 The required URLs can be copied directly from the Github or Gitlab UIs. For example with Github, on the `Code` tab hover over the template or input file you require the URL for. Right click with your mouse to bring up the context menu and select `Copy Link`, or `Copy Link Address`. The copied URL link can be pasted into the blueprint URL entry field. 
 

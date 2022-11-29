@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-29"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -25,7 +25,7 @@ subcollection: schematics
 
 The different stages of working with the blueprint lifecycle come under four headings, `define`, `deploy`, `maintain`, and `delete`. In software lifecycle terms these correspond to Day-0 define, Day-1 deploy, Day-2 operate, through to deletion of the environment.  
 
-![{{site.data.keyword.bpshort}} Blueprints lifecycle stages](../images/new/bp-lifecycle.svg){: caption="{{{site.data.keyword.bpshort}} Blueprints lifecycle stages" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Blueprints lifecycle stages](/images/new/bp-lifecycle.svg){: caption="{{{site.data.keyword.bpshort}} Blueprints lifecycle stages" caption-side="bottom"}
 
 Each of these life stages is supported by blueprint operations. For example, composing and editing the blueprint template, running blueprint operations, monitoring job execution and reviewing the results. 
 

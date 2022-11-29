@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-29"
 
 keywords: schematics blueprints, delete blueprint, managed environments
 
@@ -25,7 +25,7 @@ Deleting a blueprint environment is currently a two-step process, resource delet
 
 The first step destroys all the deployed cloud resources, leaving the blueprint configuration in place. The second step, deletes the blueprint configuration from {{site.data.keyword.bpshort}}. This flow is illustrated in the diagram. 
 
-![Deleting a blueprint environment](../images/new/sc-bp-delete.svg){: caption="Deleting a blueprint environment" caption-side="bottom"}
+![Deleting a blueprint environment](/images/new/sc-bp-delete.svg){: caption="Deleting a blueprint environment" caption-side="bottom"}
 
 1. In a future release blueprints will provide the option to preview the resources that will be deleted. 
 2. The user initiates a destroy of the cloud resources that belong to the blueprint environment. The `blueprint run destroy` operation iterates through all the blueprint modules, destroying resources in reverse dependency order to ensure that all cloud resources are cleanly removed. On resource destroy, all the modules return to an `Inactive` state to indicate that no cloud resources remain. For more information, see [Destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint). When the resources get destroyed, billing gets terminated.  

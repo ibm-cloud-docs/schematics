@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-29"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -82,8 +82,6 @@ Breaking down infrastructure into [modules](https://github.com/terraform-ibm-mod
 ## Next steps
 {: #iac-nextsteps}
 
-Now you understand more about IaC, why not review the use of IaC in {{site.data.keyword.bpshort_notm}}?
-{: shortdesc}
-
+Now you understand more about IaC, why not review the use of IaC in {{site.data.keyword.bpshort}}: 
 - Learn more about the [Open-source tools in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects)
 - Explore these [use cases](/docs/schematics?topic=schematics-how-it-works).

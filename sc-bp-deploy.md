@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-29"
 
 keywords: schematics blueprints, deploy blueprint, managed environments
 
@@ -25,7 +25,7 @@ Deploying a blueprint environment by using a blueprint template and input values
 
 The deployment steps are illustrated in the diagram.
 
-![blueprint deployment](../images/new/sc-bp-deploy.svg){: caption="blueprint deployment" caption-side="bottom"}
+![blueprint deployment](/images/new/sc-bp-deploy.svg){: caption="blueprint deployment" caption-side="bottom"}
 
 1. Prepare the configuration for the blueprint. The configuration specifies the source of the blueprint template in Git, the input files to customize the environment instance and version information.  
 2. Create and save the blueprint configuration in {{site.data.keyword.bpshort}}. For more information, see the section [Creating a blueprint config](/docs/schematics?topic=schematics-create-blueprint-config).

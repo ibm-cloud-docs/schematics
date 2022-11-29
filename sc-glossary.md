@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-29"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -86,7 +86,7 @@ A [blueprint template](/docs/schematics?topic=schematics-blueprint-templates) de
 ### Blueprint configuration
 {: #bpb3}
 
-A blueprint configuration is the initial settings that the user provides to create a blueprint in {{site.data.keyword.bpshort}}. The configuration defines the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) YAML file to be used, its Git source location, [input files](/docs/schematics?topic=schematics-glossary#bpi2), file version information, and additional inputs.  
+A `blueprint configuration` is the initial definition that the user provides to create a blueprint in {{site.data.keyword.bpshort}}. The configuration defines the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) YAML file to be used, its Git source location. Also the [input files](/docs/schematics?topic=schematics-glossary#bpi2) that will be used to customize the template, file version information, and any additional required inputs.  
 {: shortdesc}
 
 ### Blueprint environment

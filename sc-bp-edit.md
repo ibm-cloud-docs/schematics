@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-29"
 
 keywords: schematics blueprints template, blueprints yaml, editing, edit, vscode, yaml 
 

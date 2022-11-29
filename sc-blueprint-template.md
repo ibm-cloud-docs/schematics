@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-29"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -27,7 +27,9 @@ subcollection: schematics
 
 Templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its deploy time configuration is illustrated in the figure. Here a template is reused many times to deploy a range of environments such as `dev`, `stage`, and `production`. Each environment is customized with its own input values, all based on the same template.   
 
-![Environments deployed from templates and inputs](/images/new/bp-largescale-env.svg){: caption="Environments deployed from templates and inputs" caption-side="bottom"}
+![Blueprint templates, modules and inputs define environment](/images/new/bp-overview.svg){: caption="Blueprint templates, modules and inputs define environment" caption-side="bottom"}
+
+A blueprint template determines the architecture. It specifies the modules required for the implementation, infrastructure topology and data dependencies between modules. {{site.data.keyword.bpshort}} deploys the modules as discrete environments, managing their lifecycle and the passing of resource information between modules.  
 
 A blueprint environment and the cloud resources to be deployed, are defined by three versioned elements:
 1. A blueprint template file specifying the resource topology, infrastructure architecture, IaC automation modules and dependencies.
@@ -38,7 +40,7 @@ A blueprint configuration links a template with a set of inputs values to specif
 
 ![Blueprint configuration, templates and inputs](/images/new/bp-configuration.svg){: caption="Blueprint configuration, templates and inputs" caption-side="bottom"}
 
-A blueprint configuration defines the blueprint template YAML file to be used and its Git source and version. The input value files, source and version. Plus an additional inputs required by the blueprint. The template file identifies the required Terraform modules. 
+A blueprint configuration defines the blueprint template YAML file to be used and its Git source and version. The input files, source and version. Plus an additional inputs required by the blueprint. The template file identifies the required Terraform modules. 
 
 
 
