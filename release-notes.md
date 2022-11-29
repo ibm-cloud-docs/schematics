@@ -31,10 +31,10 @@ Review the release notes for November 2022.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} Agents GitHub repository.
-:   {{site.data.keyword.bpshort}} enhances its documentation about 
-    - [What is Infrastructure as Code (IaC) with respect to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-infrastructure-as-code)?, 
-    - [relationship between {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-sc-relationship), and 
-    - [reusing blueprints and pipelines](#blueprint-reuse-pipelines).
+:   {{site.data.keyword.bpshort}} enhances its documentation with 
+    - [What is Infrastructure as Code (IaC) with respect to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-infrastructure-as-code)?.
+    - [Relationship between {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-sc-relationship).
+    - [Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines).
 
 ### 18 November 2022
 {: #schematics-nov1822}
