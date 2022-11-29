@@ -292,7 +292,7 @@ subcollection: schematics
 
     * Review the release notes for November 2022.
 
-    * [30 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
+    * [18 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
