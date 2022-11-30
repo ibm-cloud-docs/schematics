@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-11-30"
 
 keywords: schematics
 subcollection: schematics
@@ -101,6 +101,14 @@ subcollection: schematics
 
     * [Modular Infrastructure](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity)
 
+    * [Declarative vs. imperative approaches to IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative)
+
+    * [Declarative Terraform and lifecycle management](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative-lifecycle)
+
+    * [Impotence](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
+
+    * [Immutablity](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
+
 * [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
 
 [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
@@ -159,6 +167,12 @@ subcollection: schematics
     * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#deleting-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
+
+[Scaling environments](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling)
+
+* [Remote state data sources](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-remotestate)
+
+* [Orchestration and modules](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-orchestration)
 
 [Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
 
@@ -1585,10 +1599,10 @@ subcollection: schematics
 [Deploying a VPC environment with bastion host on IBM Cloud](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 
 
-## Deploying a multitiered VPC with bastion host on IBM Cloud
-{: #sitemap_deploying-a-multitiered-vpc-with-bastion-host-on-ibm-cloud}
+## Deploying a multi-tiered VPC with bastion host on IBM Cloud
+{: #sitemap_deploying-a-multi-tiered-vpc-with-bastion-host-on-ibm-cloud}
 
-[Deploying a multitiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
+[Deploying a multi-tiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
 
 
 ## CLI reference

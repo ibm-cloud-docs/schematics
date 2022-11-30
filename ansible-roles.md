@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-11-30"
 
 keywords: schematics ansible roles, schematics action, create schematics galaxy, ansible playbooks
 
@@ -100,3 +100,4 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
 
 For more information about Ansible playbook examples, see that [IBM provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
 {: tip}
+

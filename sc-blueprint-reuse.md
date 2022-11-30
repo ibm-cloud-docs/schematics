@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-11-30"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -23,7 +23,7 @@ subcollection: schematics
 
 This building analogy also applies to reuse across environments. A builder may build an entire street of houses from the same blueprint drawing. Each house customized by its choice of color, lighting and styling, but all built to the same design.    
 
-Feuse supports a number of usecases:
+Reuse supports a number of usecases:
 - Sharing an approved architecture across teams within a business
 - Deploying instances across multiple regions to create a highly resilient application deployment
 - Software delivery pipelines

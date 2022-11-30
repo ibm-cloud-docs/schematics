@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-11-30"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -78,6 +78,38 @@ Breaking down infrastructure into [modules](https://github.com/terraform-ibm-mod
 - Composition from reusable modules lowers the skills barrier to IaC adoption.
 - Changes are easier to make and test at a module level.
 - The risk of change reduces as configuration changes are localized.
+
+### Declarative vs. imperative approaches to IaC
+{: #iac-declarative}
+With adopting IaC, an aspect to consider is what approach your tooling takes. There are two different styles, declarative or imperative, also sometimes described as procedural. 
+
+A declarative approach defines the desired state of the system, including the resources you need and any properties they should have, and the tool will configure it for you. The tool itself will determine the operations to get to the desired state from any starting point. 
+
+An imperative approach instead defines the specific commands needed to achieve the desired configuration, and those commands then need to be executed in the correct order.  
+
+Chef is thought of as an imperative tool. Terraform is classed as declarative. Ansible is declarative but also can be used with imperative commands. 
+
+### Declarative Terraform and lifecycle management
+{: #iac-declarative-lifecycle}
+
+{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention. 
+
+### Impotence
+{: #iac-idempotence}
+A benefit of the declarative approached used by Terraform and Ansible is idempotence. A process that is idempotent can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same.  This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}.  
+
+How you use a tool and the modules used both have an impact on idempotency. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. Configuration drift from the desired state may occur. With Terraform this is most likely when `null-resources` are used to extend provider functionality with custom scripts.
+
+Immutability is an IaC practice that minimizes this risk. 
+ 
+
+### Immutablity
+{: #iac-immutability}
+Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed. The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of operations. Changes that make it harder to debug and resolve issues, and increase support costs.  
+
+All changes should be made through the {{site.data.keyword.bpshort}} IaC configuration, and redeploy the resources when there is a need for an update. 
+
+
 
 ## Next steps
 {: #iac-nextsteps}

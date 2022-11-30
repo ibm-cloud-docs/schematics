@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-11-30"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -49,8 +49,11 @@ Blueprints is built around [IaC best practices](/docs/schematics?topic=schematic
 
 - [Modular composition](/docs/schematics?topic=schematics-blueprint-terraform): Build infrastructure architectures from an eco-system of reusable IBM Cloud automation modules written in Terraform
 - [Reusability](/docs/schematics?topic=schematics-blueprint-reuse-pipelines): Reuse templates and modules across environments, pipelines and teams
-- Scalability: Scale environments by linking discrete modular environments as the layers and components of large and complex application architectures.
-- [Lifecycle](/docs/schematics?topic=schematics-work-with-blueprints): Manage environments cradle-to-grave, from initial creation, through maintenance and ops to final decommissioning. Future: scheduled ops, drift detection, cost estimation, policy compliance.
+- [Scalability](/docs/schematics?topic=schematics-blueprint-scaling): Scale environments by linking discrete modular environments as the layers and components of large and complex application architectures using dependencies.      
+- [Lifecycle](/docs/schematics?topic=schematics-work-with-blueprints): Manage environments cradle-to-grave, from initial creation, through maintenance and ops to final decommissioning. Future: scheduled ops, drift detection, cost estimation, policy compliance               
+
+  
+
 
 ## Next steps
 {: #nextsteps-bp-arch}
