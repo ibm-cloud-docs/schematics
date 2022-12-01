@@ -81,21 +81,21 @@ subcollection: schematics
 {: #sitemap_about}
 
 
-[{{site.data.keyword.bpshort}} overview](/docs/schematics?topic=schematics-overview#overview)
+[{{site.data.keyword.bpshort}} overview](/docs/schematics?topic=schematics-about-schematics#about-schematics)
 
-* [IaC automation as-a-service](/docs/schematics?topic=schematics-overview#sc-IaCaas)
+* [IaC automation as-a-service](/docs/schematics?topic=schematics-about-schematics#sc-IaCaas)
 
-* [Schematics IaC offerings](/docs/schematics?topic=schematics-overview#sc-offerings)
+* [Schematics IaC offerings](/docs/schematics?topic=schematics-about-schematics#sc-offerings)
 
-    * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-overview#sc-blueprints)
+    * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-about-schematics#sc-blueprints)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-overview#sc-workspaces)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-about-schematics#sc-workspaces)
 
-    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-overview#sc-actions)
+    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-about-schematics#sc-actions)
 
-    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-overview#sc-agents)
+    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-about-schematics#sc-agents)
 
-* [Benefits of using Schematics](/docs/schematics?topic=schematics-overview#sc-benefits)
+* [Benefits of using Schematics](/docs/schematics?topic=schematics-about-schematics#sc-benefits)
 
 [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code#infrastructure-as-code)
 
@@ -121,7 +121,15 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
 
-[Open-source IaC in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
+[Choosing your IaC tool](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
+
+* [What is Provisioning?](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-provisioning)
+
+* [What is Configuration management?](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm)
+
+* [How to choose your IaC tool](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-choosing)
+
+    * [Understanding Schematics features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
