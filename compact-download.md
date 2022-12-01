@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-28"
 
 keywords: compact, subdirectory, schematics, download, directory
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Compact download for {{site.data.keyword.bpshort}} Workspace
+# Compact config repo download
 {: #compact-download}
 
 {{site.data.keyword.bpshort}} Workspaces act as a container of a Terraform template with the input data, output state, jobs, and job log files. The workspace uses the Git URL of the Terraform template. For example, if the user provides the URL `https://github.com/terraform-ibm-modules/terraform-ibm-database/tree/main/examples/simple-etcd` to download and securely store the template files. The default execution of the {{site.data.keyword.bpshort}} is to download the whole Git repository and to save securely. {{site.data.keyword.bpshort}} assumes that the Terraform templates have relative references to modules, script, or data files that reside in other folders in the repository. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-11-28"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -14,7 +14,7 @@ subcollection: schematics
 
 
 
-# Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}
+# Managing {{site.data.keyword.cloud_notm}} resources with workspaces
 {: #manage-lifecycle}
 
 Deploy, modify, and remove {{site.data.keyword.cloud}} resources by changing the infrastructure code in your Terraform template and by using {{site.data.keyword.bplong_notm}} to apply the template in your {{site.data.keyword.cloud_notm}} account. 

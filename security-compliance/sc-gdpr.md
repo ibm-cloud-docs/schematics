@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-28"
 
 keywords: audit access ibm schematics, supported classifications of personal data, personal data, sensitive personal data, restrictions on processing, encrypt data, data locations, service security, delete data
 
@@ -52,7 +52,7 @@ For more information about how your data is encrypted in {{site.data.keyword.bps
 ## Data locations
 {: #data-locations}
 
-Locations where {{site.data.keyword.bpshort}} processes personal data are made available, and kept up to date. For more information about data locations, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
+Locations where {{site.data.keyword.bpshort}} processes personal data are made available, and kept up-to-date. For more information about data locations, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
 
 ## Service security
 {: #service-security}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-28"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Supporting Terraform environment variables in {{site.data.keyword.bplong_notm}}
+# Using environment variables with workspaces
 {: #set-parallelism}
 
 Terraform uses various environment variables to customize different aspects of its behavior. These environment variables are used to increase the output verbosity for debugging or rarely used in runtime. 

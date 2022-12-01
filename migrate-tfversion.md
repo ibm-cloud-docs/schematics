@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-28"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating Terraform version in {{site.data.keyword.bpshort}} Workspace
+# Migrating Terraform versions  
 {: #migrating-terraform-version}
 
 The driver to migrate might come from business factors such as cost reduction, or consolidation. You also might want to migrate to be more cloud native or adopt new technologies. Regardless of the reason, migration can be as simple as migrating a Terraform version in variable file. Or it can be as complex as migrating a piece of your application to a more complex environment where you need to migrate an entire template with all the underlying components.

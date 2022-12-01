@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-28"
 
 keywords: download job files, job files, schematics job
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Download {{site.data.keyword.bpshort}} Job files
+# Downloading workspace job files
 {: #job-download}
 
 {{site.data.keyword.bpshort}} Job maintains a record of an automation run. You can use the `job-id` to view your job status, download job logs, and download the output files.

@@ -26,21 +26,23 @@ toc:
                                   - topicgroup:
                                             label: About
                                             topics:
-                                                    - sc-about-capabilities.md
-                                                    - sc-about-terminologies.md
-                                                    - sc-about-opensourceproj.md
+                                                    - sc-about-overview.md
+                                                    - sc-about-infrastructure-as-code.md
+                                                    - sc-about-iac-opensource.md
+                                                    - workspaces/sc-about-workspaces.md</staging>
                                                     - sc-about-agent.md
-                                                    - sc-blueprint.md
+                                                    - sc-about-blueprint.md
                                                     - sc-about-usecases.md
                                   - topicgroup:
-                                            label: Working with Blueprints
+                                            label: Understanding Blueprints
                                             topics:
-                                                    - draft-bp/workingwithblueprints.md
-                                                    - draft-bp/sc-bp-define.md
-                                                    - draft-bp/sc-bp-edit.md
-                                                    - draft-bp/sc-bp-deploy.md
-                                                    - draft-bp/sc-bp-update.md
-                                                    - draft-bp/sc-bp-delete.md
+                                                    - sc-bp-workingwith.md
+                                                    - sc-bp-scaling.md
+                                                    - sc-bp-define.md
+                                                    - sc-bp-deploy.md
+                                                    - sc-bp-update.md
+                                                    - sc-bp-delete.md
+                                                    - sc-bp-ui-flow.md</hidden>
                                   - topicgroup:
                                             label: Security and compliance
                                             topics:
@@ -65,6 +67,8 @@ toc:
                                             topics:
                                                     - sc-blueprint-template.md
                                                     - sc-blueprint-terraform.md
+                                                    - sc-blueprint-reuse.md
+                                                    - sc-bp-edit.md
                                                     - sc-blueprint-create.md
                                                     - sc-blueprint-apply.md
                                                     - sc-blueprint-display.md
@@ -89,7 +93,6 @@ toc:
                                                     - compact-download.md
                                                     - job-download-file.md
                                                     - job-force-stop.md
-                                                    - access.md
                                   - topicgroup:
                                             label: Managing Actions
                                             topics:

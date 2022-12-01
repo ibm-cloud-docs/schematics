@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-29"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -26,7 +26,17 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for November 2022.
 {: shortdesc}
 
-### 30 November 2022
+### 29 November 2022
+{: #schematics-nov2922}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+:   {{site.data.keyword.bpshort}} enhances its documentation with 
+    - [What is Infrastructure as Code (IaC) with respect to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-infrastructure-as-code)?.
+    - [Relationship between {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-sc-relationship).
+    - [Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines).
+
+### 18 November 2022
 {: #schematics-nov1822}
 {: release-note}
 
@@ -562,7 +572,7 @@ Review the release notes for April 2021.
 {: release-note}
 
 Ansible support in {{site.data.keyword.bplong_notm}} is now generally available
-:   Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multi-tiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
+:   Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multitiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
 
 ## March 2021
 {: #march-2021}

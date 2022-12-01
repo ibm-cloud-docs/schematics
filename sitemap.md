@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-12-01"
 
 keywords: schematics
 subcollection: schematics
@@ -81,17 +81,47 @@ subcollection: schematics
 {: #sitemap_about}
 
 
-[{{site.data.keyword.bpshort}} capabilities](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
+[{{site.data.keyword.bpshort}} overview](/docs/schematics?topic=schematics-overview#overview)
 
-* [{{site.data.keyword.bpshort}} benefits](/docs/schematics?topic=schematics-learn-about-schematics#learn-benefits)
+* [IaC automation as-a-service](/docs/schematics?topic=schematics-overview#sc-IaCaas)
 
-* [Next steps about {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics#nextstep-capabilities)
+* [Schematics IaC offerings](/docs/schematics?topic=schematics-overview#sc-offerings)
 
-[{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
+    * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-overview#sc-blueprints)
 
-* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#terminologies-nextsteps)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-overview#sc-workspaces)
 
-[Open-source tools in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
+    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-overview#sc-actions)
+
+    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-overview#sc-agents)
+
+* [Benefits of using Schematics](/docs/schematics?topic=schematics-overview#sc-benefits)
+
+[What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code#infrastructure-as-code)
+
+* [Benefits of Infrastructure as Code](/docs/schematics?topic=schematics-infrastructure-as-code#iac-benefits)
+
+* [Best Practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices)
+
+    * [Codifying everything in IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-codify)
+
+    * [Minimize documentation](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-docs)
+
+    * [Testing](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-testings)
+
+    * [Modular Infrastructure](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity)
+
+    * [Declarative vs. imperative approaches to IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative)
+
+    * [Declarative Terraform and lifecycle management](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative-lifecycle)
+
+    * [Impotence](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
+
+    * [Immutablity](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
+
+* [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
+
+[Open-source IaC in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
@@ -126,23 +156,31 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#usecase-nextsteps)
 
 
-## Working with Blueprints
-{: #sitemap_working_with_blueprints}
+## Understanding Blueprints
+{: #sitemap_understanding_blueprints}
 
 
-[Working with blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+[Understanding Blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
 
-* [Working with environments and the blueprint operational lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#working-with-environments-and-the-blueprint-operational-lifecycle)
+* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infrastructure-lifecycle)
+
+* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#working-with-environments-and-the-blueprint-lifecycle)
 
     * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#defining-blueprints)
 
     * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#deploying-blueprints)
 
-    * [Updating and operating blueprints](/docs/schematics?topic=schematics-work-with-blueprints#updating-and-operating-blueprints)
+    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#maintaining-blueprints)
 
     * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#deleting-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
+
+[Scaling environments](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling)
+
+* [Remote state data sources](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-remotestate)
+
+* [Orchestration and modules](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-orchestration)
 
 [Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
 
@@ -152,31 +190,11 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
 
-[Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
-
-* [Configuring your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
-
-* [Create template repository and local clone](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-createtemplate)
-
-    * [Select a template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
-
-    * [Clone template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
-
-    * [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
-
-* [Editing in VSCode](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
-
-    * [Blueprint usage and configuration documentation](/docs/schematics?topic=schematics-edit-blueprints#bp-usage-config-doc)
-
-    * [Push edited template](/docs/schematics?topic=schematics-edit-blueprints#bp-push-template)
-
-* [Next steps](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-nextsteps)
-
 [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
 
-[Updating and operating blueprints](/docs/schematics?topic=schematics-update-op-blueprints#update-op-blueprints)
+[Maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints#update-op-blueprints)
 
 * [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
 
@@ -293,7 +311,11 @@ subcollection: schematics
 
     * Review the release notes for November 2022.
 
-    * [30 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
+    * [29 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov2922)
+
+        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+
+    * [18 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
@@ -769,7 +791,7 @@ subcollection: schematics
 
 [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
 
-* [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-configuration)
+* [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-temp-confg)
 
 * [Blueprint template overview](/docs/schematics?topic=schematics-blueprint-templates#template-overview)
 
@@ -787,7 +809,7 @@ subcollection: schematics
 
 * [Dynamic inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
 
-* [What's next](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
+* [What's next?](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
 
 [Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-terraform)
 
@@ -802,6 +824,32 @@ subcollection: schematics
     * [Configuring provider injection](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-provider-injection)
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-terraform#bp-terraform-nextsteps)
+
+[Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse-pipelines)
+
+* [Reuse across environments](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse)
+
+* [Deployment pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-pipelines)
+
+[Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
+
+* [Configuring your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
+
+* [Create template repository and local clone](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-createtemplate)
+
+    * [Select a template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
+
+    * [Clone template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
+
+    * [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
+
+* [Editing in VSCode](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
+
+    * [Blueprint usage and configuration documentation](/docs/schematics?topic=schematics-edit-blueprints#bp-usage-config-doc)
+
+    * [Push edited template](/docs/schematics?topic=schematics-edit-blueprints#bp-push-template)
+
+* [Next steps](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-nextsteps)
 
 [Create a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-config)
 
@@ -1010,7 +1058,7 @@ subcollection: schematics
 
 * [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs)
 
-[Supporting Terraform environment variables in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-set-parallelism#set-parallelism)
+[Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism#set-parallelism)
 
 * [Usage](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage)
 
@@ -1018,7 +1066,7 @@ subcollection: schematics
 
 * [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars)
 
-[Detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note#drift-note)
+[Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
 
 * [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
 
@@ -1034,11 +1082,11 @@ subcollection: schematics
 
 * [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
 
-[Supporting to download modules from private remote host](/docs/schematics?topic=schematics-download-modules-pvt-git#download-modules-pvt-git)
+[Using private repos for modules](/docs/schematics?topic=schematics-download-modules-pvt-git#download-modules-pvt-git)
 
 * [Usage of private module template](/docs/schematics?topic=schematics-download-modules-pvt-git#netrc-example)
 
-[Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
+[Managing {{site.data.keyword.cloud_notm}} resources with workspaces](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
 
 * [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources)
 
@@ -1056,7 +1104,7 @@ subcollection: schematics
 
 * [Deploying services across regions](/docs/schematics?topic=schematics-multi-region-deployment#across-regions)
 
-[Deprecating Terraform versions in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
+[Deprecating Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
 
 * [Phases](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
 
@@ -1064,7 +1112,7 @@ subcollection: schematics
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 
-[Migrating Terraform version in {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
+[Migrating Terraform versions](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
 * [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade)
 
@@ -1076,21 +1124,23 @@ subcollection: schematics
 
 * [Upgrade Terraform template from `v0.14` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
 
-[Managing cross-workspace state access with Terraform](/docs/schematics?topic=schematics-remote-state#remote-state)
+[Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
 
-[Sample solutions for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-sol-overview#sol-overview)
+* [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
 
-[Compact download for {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-compact-download#compact-download)
+[Sample Terraform solutions](/docs/schematics?topic=schematics-sol-overview#sol-overview)
+
+[Compact config repo download](/docs/schematics?topic=schematics-compact-download#compact-download)
 
 * [Using compact download](/docs/schematics?topic=schematics-compact-download#compact-active)
 
 * [Note](/docs/schematics?topic=schematics-compact-download#compact-note)
 
-[Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download#job-download)
+[Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 
 * [Note](/docs/schematics?topic=schematics-job-download#job-note)
 
-[Stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job#interrupt-job)
+[Stopping or terminating running jobs](/docs/schematics?topic=schematics-interrupt-job#interrupt-job)
 
 * [Stopping job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types)
 
@@ -1103,10 +1153,6 @@ subcollection: schematics
 * [Stopping a running job through API](/docs/schematics?topic=schematics-interrupt-job#stop-job-api)
 
     * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job#stop-jobs-api)
-
-[Assigning access through {{site.data.keyword.cloud_notm}} Catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
-
-* [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
 
 
 ## Managing Actions
@@ -1304,13 +1350,13 @@ subcollection: schematics
     * [Creating a workspace](/docs/schematics?topic=schematics-at_events#at_analyze_1)
 
 
-## Executing process of the {{site.data.keyword.bpshort}} job queue
-{: #sitemap_executing_process_of_the__job_queue}
+## Job queuing in {{site.data.keyword.bpshort}}
+{: #sitemap_job_queuing_in_}
 
 
-[Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#job-queue-process)
+[Job queuing in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-job-queue-process#job-queue-process)
 
-* [About job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue)
+* [About the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue)
 
 * [Functioning of job queue](/docs/schematics?topic=schematics-job-queue-process#functions-job-queue)
 

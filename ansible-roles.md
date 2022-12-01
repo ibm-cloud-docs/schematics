@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-30"
+lastupdated: "2022-11-30"
 
 keywords: schematics ansible roles, schematics action, create schematics galaxy, ansible playbooks
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Creating Ansible roles and galaxy
 {: #ansible-roles-galaxy}
  
-An [Ansible role](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html){: external} can be used to separate one significant Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
+An [Ansible role](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html){: external} can be used to separate one significant Ansible playbook into smaller reusable pieces called roles. A role defines a set of tasks that you want to run on your target hosts. To run these tasks on your hosts, you must reference the role in your Ansible playbook. 
 
 [Ansible Galaxy](https://docs.ansible.com/ansible/2.7/reference_appendices/galaxy.html) is a repository for Ansible roles that are available to drop directly into your Playbooks to streamline your automation projects. A new sysadmin might start automating with Ansible in a matter of a few hours.
 {: shortdesc}
@@ -63,7 +63,7 @@ To streamline your Ansible playbook, you can decide to separate out playbook tas
     ```
     {: codeblock}
 
-For more information about other files and conditions that you can add to your role, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html#role-directory-structure){: external}.
+For more information about other files and conditions that you can add to your role, see the [Ansible documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html#role-directory-structure){: external}.
 
 ## Installing roles from Ansible Galaxy
 {: #requirements-file}
@@ -100,3 +100,4 @@ You can choose to use existing roles from [Ansible Galaxy](https://galaxy.ansibl
 
 For more information about Ansible playbook examples, see that [IBM provided Ansible playbook](https://github.com/Cloud-Schematics/ansible-kubectl){: external}
 {: tip}
+

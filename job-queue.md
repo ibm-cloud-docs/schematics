@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-28"
 
 keywords: schematics job queue, job queue process, pending queue, schematics pending queue
 
@@ -12,13 +12,13 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Executing process of the {{site.data.keyword.bpshort}} job queue
+# Job queuing in {{site.data.keyword.bpshort}}
 {: #job-queue-process}
 
-## About job queue
+## About the {{site.data.keyword.bpshort}} job queue
 {: #about-job-queue}
 
-When a user generates plan, as a shared service {{site.data.keyword.bpshort}} queues all the user's jobs into a single job queue. Your jobs reside in a queue until scheduled to run in an environment. {{site.data.keyword.bpshort}} job queues use a scheduler to equitably available to the users.
+When a user runs a {{site.data.keyword.bpshort}} operation, jobs are queued on a  a shared service queue. A job remains in the queue until workers are available in the targeted regions to execute the job. Scheduling policies are applied to jobs to ensure the service is equitably available to all users.
 
 ## Functioning of job queue
 {: #functions-job-queue}

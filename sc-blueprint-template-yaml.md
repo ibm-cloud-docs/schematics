@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-11-28"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -165,7 +165,7 @@ Example
     internal = number
     external = number
     protocol = string
-  })
+  }))
 
 ```
 {: pre}
@@ -202,7 +202,7 @@ Example of a default value
 ```yaml
 - name: provision_ats_instance
   type: boolean            
-  value: false
+  default: false
 ```
 {: pre}
 
@@ -402,7 +402,7 @@ Required: true
 
 URL for the Terraform module or config in its content repository. This is the full path to the module, in the root folder of the repo or the path to a module in sub-folder in the repo. Multiple modules/configs can exist in sub-folders of the repo.  
 
-Blueprints supports a short cut using the Git path syntax to specifying the URL to your module including the branch. 
+Blueprints supports a shortcut using the Git path syntax to specifying the URL to your module including the branch. 
 
 Example
 
@@ -411,9 +411,6 @@ Example
     git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
 ```
 {: pre}
-
-
-
 
 ### modules.source.git.git_branch
 {: #bp-modules-git-branch}
