@@ -95,7 +95,7 @@ subcollection: schematics
 
     * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-overview#sc-agents)
 
-* [Benefits of using Schematics](/docs/schematics?topic=schematics-overview#benefits-of-using-schematics)
+* [Benefits of using Schematics](/docs/schematics?topic=schematics-overview#sc-benefits)
 
 [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code#infrastructure-as-code)
 
