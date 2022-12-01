@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-30"
+lastupdated: "2022-12-01"
 
 keywords: schematics
 subcollection: schematics
@@ -81,11 +81,21 @@ subcollection: schematics
 {: #sitemap_about}
 
 
-[{{site.data.keyword.bpshort}} capabilities](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
+[{{site.data.keyword.bpshort}} overview](/docs/schematics?topic=schematics-overview#overview)
 
-* [{{site.data.keyword.bpshort}} benefits](/docs/schematics?topic=schematics-learn-about-schematics#learn-benefits)
+* [IaC automation as-a-service](/docs/schematics?topic=schematics-overview#sc-IaCaas)
 
-* [Next steps about {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics#nextstep-capabilities)
+* [Schematics IaC offerings](/docs/schematics?topic=schematics-overview#sc-offerings)
+
+    * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-overview#sc-blueprints)
+
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-overview#sc-workspaces)
+
+    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-overview#sc-actions)
+
+    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-overview#sc-agents)
+
+* [Benefits of using Schematics](/docs/schematics?topic=schematics-overview#benefits-of-using-schematics)
 
 [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code#infrastructure-as-code)
 
@@ -111,11 +121,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-infrastructure-as-code#iac-nextsteps)
 
-[{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term#learn-schematics-term)
-
-* [Next steps](/docs/schematics?topic=schematics-learn-schematics-term#terminologies-nextsteps)
-
-[Open-source tools in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
+[Open-source IaC in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-schematics-open-projects#schematics-open-projects)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
@@ -150,11 +156,13 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#usecase-nextsteps)
 
 
-## Working with Blueprints
-{: #sitemap_working_with_blueprints}
+## Understanding Blueprints
+{: #sitemap_understanding_blueprints}
 
 
-[Working with blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+[Understanding Blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+
+* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infrastructure-lifecycle)
 
 * [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#working-with-environments-and-the-blueprint-lifecycle)
 

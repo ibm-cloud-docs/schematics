@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-01"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Open-source tools in {{site.data.keyword.bpshort}} 
+# Open-source IaC in {{site.data.keyword.bpshort}} 
 {: #schematics-open-projects}
 
 {{site.data.keyword.bpshort}} leverages open-source tools and projects, including Terraform, Ansible, {{site.data.keyword.openshiftshort}}, Operators, Helm to deliver these capabilities to you as a managed service. Rather than installing each tool on your machine, you declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and {{site.data.keyword.bpshort}} will run these tasks for you.

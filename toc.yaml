@@ -26,16 +26,15 @@ toc:
                                   - topicgroup:
                                             label: About
                                             topics:
-                                                    - sc-about-capabilities.md
+                                                    - sc-about-overview.md
                                                     - sc-about-infrastructure-as-code.md
-                                                    - sc-about-terminologies.md
-                                                    - sc-about-relationship.md
-                                                    - sc-about-opensourceproj.md
+                                                    - sc-about-iac-opensource.md
+                                                    - workspaces/sc-about-workspaces.md</staging>
                                                     - sc-about-agent.md
-                                                    - sc-blueprint.md
+                                                    - sc-about-blueprint.md
                                                     - sc-about-usecases.md
                                   - topicgroup:
-                                            label: Working with Blueprints
+                                            label: Understanding Blueprints
                                             topics:
                                                     - sc-bp-workingwith.md
                                                     - sc-bp-scaling.md
@@ -43,6 +42,7 @@ toc:
                                                     - sc-bp-deploy.md
                                                     - sc-bp-update.md
                                                     - sc-bp-delete.md
+                                                    - sc-bp-ui-flow.md</hidden>
                                   - topicgroup:
                                             label: Security and compliance
                                             topics:

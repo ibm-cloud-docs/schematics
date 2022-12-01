@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-01"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -134,36 +134,36 @@ Blueprints follow a lifecycle approach to deploying and managing {{site.data.key
 ## Catalog
 {: #glossa-catalog}
 
-An enterprise platform for the built-in Terraform, Ansible, Helm, CloudPak, and Operator capabilities in {{site.data.keyword.bpshort}} to set up an IaC.
+A collection of automation templates that can be ordered from {{site.data.keyword.cloud_notm}}. You can onboard your Terraform automation to the {{site.data.keyword.cloud_notm}} catalog, and share the catalog of templates in a controlled manner with your team by using IAM permissions and policies. 
+
+{{site.data.keyword.cloud_notm}} catalog already supports a collection of {{site.data.keyword.IBM_notm}} owned and Third party developed automation in the catalog. The automation is used to provision infrastructure and softwares by using Helm charts, Kubernetes Operators, OVA images, `Cloudpak` automation. {{site.data.keyword.bpshort}} Workspaces are used to run these automation.|
 {: shortdesc}
 
 ## Inventories
 {: #glossa-inventory}
 
-The collection of hosts that you can run your Ansible playbook.
+A collection of cloud resources that are used as target for running the Ansible playbooks, modules, or roles. 
 {: shortdesc}
 
 ### Resource inventory
 {: #rir1}
 
-A resource inventory defines a single {{site.data.keyword.cloud_notm}} resource or a group of resources against which you want to run Ansible playbooks, modules, or roles when the {{site.data.keyword.bpshort}} Actions are used.
+A resource inventory can be defined by using a static inventory file, or dynamically retrieve to your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} Workspaces in your {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 ## Jobs
 {: #glossary-job}
 
-A job maintains a record of the execution of tasks or operations for {{site.data.keyword.bpshort}} `Workspaces`, `Actions`, `Blueprints`, `Agents` and resources.
+A job maintains a record of the execution of tasks or operations for {{site.data.keyword.bpshort}} `Workspaces`, `Actions`, `Blueprints`, `Agents` and resources. You can see these job records appearing in the context of `action`, `Blueprint`, and `workspace`. The job record describes the status of the Job, inputs used to run the job, outputs produced by the job and the console logs.
 {: shortdesc}
 
 ## Templates or Modules
 {: #glossary-template}
 
-Contains the list of ansible playbooks to set cloud operations on target hosts.
+Automation code written for provisioning and configuring a cloud infrastructure by using Terraform, Ansible, Helm, Operators, and so on., in the IaC language. </br> You can use {{site.data.keyword.bpshort}} to run the automation templates by using workspaces or Actions. 
 {: shortdesc}
 
-The template displays the data sources to use the templates to generate strings for other Terraform resources in IaC.
-
-Modules are a container for multiple resources or templates that are used together in IaC.
+Modules are reusable IaC automation code that can be used to assemble an automation template
 
 ## Workspaces
 {: #glossary-workspace}
