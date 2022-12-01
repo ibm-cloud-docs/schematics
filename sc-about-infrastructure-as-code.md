@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-30"
+lastupdated: "2022-12-01"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -15,12 +15,15 @@ subcollection: schematics
 # What is Infrastructure as Code?
 {: #infrastructure-as-code}
 
-In simple terms, Infrastructure as Code (IaC) is using code to manage and provision infrastructure in a descriptive model instead of manual processes.
+In simple terms, Infrastructure as Code (IaC) is using code to manage and provision infrastructure (networks, virtual machines, load-balancers, clusters, services and connection topology) in a descriptive model instead of manual processes.
 {: shortdesc}
 
 With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad-hoc configuration changes.
 
 {{site.data.keyword.bpshort}} utilizes open-source Ansible and Terraform to provide a powerful set of IaC tools as a service to program your cloud infrastructure. With {{site.data.keyword.bpshort}} you can use this rich set of IaC automation capabilities to build stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
+
+
+
 
 ## Benefits of Infrastructure as Code
 {: #iac-benefits}

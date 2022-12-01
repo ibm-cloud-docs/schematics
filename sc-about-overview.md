@@ -13,20 +13,22 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.bpshort}} overview 
-{: #overview} 
+{: #about-schematics} 
 
-{{site.data.keyword.bpshort}} is an IBM Cloud service, that delivers [Infrastructure as Code](/docs/schematics?topic=schematics-schematics-infrastructure-as-code) (IaC) tools as a service. You can use the capabilities of {{site.data.keyword.bpshort}} to consistently deploy and manage your cloud infrastructure environments. From a single pane of glass, you can run end-to-end automation to build one or more stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
+{{site.data.keyword.bpshort}} is an IBM Cloud service, that delivers [Infrastructure as Code](/docs/schematics?topic=schematics-infrastructure-as-code) (IaC) tools as a service. You can use the capabilities of {{site.data.keyword.bpshort}} to consistently deploy and manage your cloud infrastructure environments. From a single pane of glass, you can run end-to-end automation to build one or more stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
 {: shortdesc}
 
 ## IaC automation as-a-service
 {: #sc-IaCaas} 
 
-Building on open-source Ansible, Terraform and related technologies like Git and Helm, {{site.data.keyword.bplong}} provides a powerful set of [IaC](/docs/schematics?topic=schematics-schematics-infrastructure-as-code) tools as a service to program your cloud infrastructure.
+Building on open-source [Ansible](https://www.ansible.com/){: external}, [Terraform](https://www.terraform.io/){: external} and related technologies like Git and Helm, {{site.data.keyword.bplong}} provides a powerful set of [IaC](/docs/schematics?topic=schematics-infrastructure-as-code) tools as a service to program your cloud infrastructure.
 
 An IaC approach to infrastructure provisioning and automation improves consistency, speeds deployments, reduces manual errors, and avoids undocumented or ad-hoc configuration changes.
 
 With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad-hoc configuration changes.
-Review the section on [What is Infrastructure as Code?](/docs/schematics?topic=schematics-schematics-infrastructure-as-code) to learn more about the core IaC principles and best practices that you can adopt when using {{site.data.keyword.bpshort}}. 
+Review the section on [IaC best practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices) to learn more about the core IaC principles and best practices that you can adopt when using {{site.data.keyword.bpshort}}. 
+
+
 
 
 ## Schematics IaC offerings

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-01"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -197,7 +197,7 @@ Enhanced FAQ documentation
 {: release-note}
 
 Enhance {{site.data.keyword.bpshort}} getting started section
-:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [{{site.data.keyword.bpshort}} Capabilities](/docs/schematics?topic=schematics-learn-about-schematics), [{{site.data.keyword.bpshort}} terminologies](/docs/schematics?topic=schematics-learn-schematics-term), [Using open source](/docs/schematics?topic=schematics-schematics-open-projects) tools, and [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works)
+:   Enhanced {{site.data.keyword.bpshort}} documentation to explain about the [Using open source](/docs/schematics?topic=schematics-schematics-open-projects) tools, and [{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works)
 
 
 
