@@ -270,6 +270,7 @@ docker_ports: | 
 ```
 {: codeblock}
 
+
 ## Dynamic inputs
 {: #blueprint-dynamic-input}
 
