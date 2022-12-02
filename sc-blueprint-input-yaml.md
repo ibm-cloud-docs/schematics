@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-12-02"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, templates, yaml,
 
@@ -39,7 +39,7 @@ region: us-south
 ## Complex input values
 {: #complex-input-value}
 
-{{site.data.keyword.bpshort}} Blueprints has full support for all Terraform HCL complex data types. To retain compatibility with Terraform HCL and readability for Terraform users, complex variables are not represented directly in YAML as collections or lists, but retain their original HCL representation. Complex variables are represented as single or multi-line strings, as flow or block scalars.  
+{{site.data.keyword.bpshort}} Blueprints has full support for all Terraform HCL complex data types. To retain compatibility with Terraform HCL and readability for Terraform users, complex variables are not represented directly in YAML as collections or lists, but retain their original HCL representation. Complex variables are represented as single or multi-line strings, as flow or block scalars. 
 
 See the sample [blueprint complex inputs](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} contains several complex data types represented as YAML scalars. 
 {: shortdesc} 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-01"
+lastupdated: "2022-12-02"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -18,7 +18,7 @@ subcollection: schematics
 In simple terms, Infrastructure as Code (IaC) is using code to manage and provision infrastructure (networks, virtual machines, load-balancers, clusters, services and connection topology) in a descriptive model instead of manual processes.
 {: shortdesc}
 
-With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad-hoc configuration changes.
+With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad hoc configuration changes.
 
 {{site.data.keyword.bpshort}} utilizes open-source Ansible and Terraform to provide a powerful set of IaC tools as a service to program your cloud infrastructure. With {{site.data.keyword.bpshort}} you can use this rich set of IaC automation capabilities to build stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
 
@@ -82,37 +82,37 @@ Breaking down infrastructure into [modules](https://github.com/terraform-ibm-mod
 - Changes are easier to make and test at a module level.
 - The risk of change reduces as configuration changes are localized.
 
-### Declarative vs. imperative approaches to IaC
+### Declarative versus imperative approaches to IaC
 {: #iac-declarative}
+
 With adopting IaC, an aspect to consider is what approach your tooling takes. There are two different styles, declarative or imperative, also sometimes described as procedural. 
 
 A declarative approach defines the desired state of the system, including the resources you need and any properties they should have, and the tool will configure it for you. The tool itself will determine the operations to get to the desired state from any starting point. 
 
-An imperative approach instead defines the specific commands needed to achieve the desired configuration, and those commands then need to be executed in the correct order.  
+An imperative approach instead defines the specific commands needed to achieve the desired configuration, and those commands then need to be executed in the correct order. 
 
 Chef is thought of as an imperative tool. Terraform is classed as declarative. Ansible is declarative but also can be used with imperative commands. 
 
 ### Declarative Terraform and lifecycle management
 {: #iac-declarative-lifecycle}
 
-{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention. 
+{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention. Idempotent property task executes multiple time with the same end result.
 
 ### Impotence
 {: #iac-idempotence}
-A benefit of the declarative approached used by Terraform and Ansible is idempotence. A process that is idempotent can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same.  This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}.  
+
+A benefit of the declarative approached used by Terraform and Ansible is idempotence. Idempotent task can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 
 
 How you use a tool and the modules used both have an impact on idempotency. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. Configuration drift from the desired state may occur. With Terraform this is most likely when `null-resources` are used to extend provider functionality with custom scripts.
 
 Immutability is an IaC practice that minimizes this risk. 
  
-
 ### Immutablity
 {: #iac-immutability}
-Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed. The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of operations. Changes that make it harder to debug and resolve issues, and increase support costs.  
+
+Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed. The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of operations. Changes that make it harder to debug and resolve issues, and increase support costs. 
 
 All changes should be made through the {{site.data.keyword.bpshort}} IaC configuration, and redeploy the resources when there is a need for an update. 
-
-
 
 ## Next steps
 {: #iac-nextsteps}

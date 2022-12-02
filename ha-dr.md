@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-14"
+lastupdated: "2022-12-02"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -28,7 +28,7 @@ High availability is a core discipline in an IT infrastructure to keep your reso
 
 **Who is responsible to set up high availability for my resources?**
 
-While {{site.data.keyword.bplong_notm}} is responsible to ensure that your workspace information is available, backed up, and replicated across multiple regions so that information can be recovered after a failure, {{site.data.keyword.bpshort}} does not set up high availability for your {{site.data.keyword.cloud_notm}} resources. Instead, you must understand the features that each resource offering provides to decide what level of availability is the right one for your needs. Then, you use {{site.data.keyword.bplong_notm}} to provision and configure your {{site.data.keyword.cloud_notm}} resources in a highly available setup.  
+While {{site.data.keyword.bplong_notm}} is responsible to ensure that your workspace information is available, backed up, and replicated across multiple regions so that information can be recovered after a failure, {{site.data.keyword.bpshort}} does not set up high availability for your {{site.data.keyword.cloud_notm}} resources. Instead, you must understand the features that each resource offering provides to decide what level of availability is the right one for your needs. Then, you use {{site.data.keyword.bplong_notm}} to provision and configure your {{site.data.keyword.cloud_notm}} resources in a highly available setup. 
 
 **How can I implement high availability for my resources?**
 

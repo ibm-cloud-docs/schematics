@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-02"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate
 
@@ -21,7 +21,7 @@ Review the following limitations for {{site.data.keyword.bplong_notm}}.
 ## Differences to native Terraform
 {: #terraform-vs-schematics}
 
-If you used native Terraform before and plan to migrate your Terraform templates to {{site.data.keyword.bplong_notm}}, make sure that you understand the differences between the services to adjust your template.  
+If you used native Terraform before and plan to migrate your Terraform templates to {{site.data.keyword.bplong_notm}}, make sure that you understand the differences between the services to adjust your template. 
 {: shortdesc}
 
 ### Do I need to provide an {{site.data.keyword.cloud_notm}} API key in the `provider` block?

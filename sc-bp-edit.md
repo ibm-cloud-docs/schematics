@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-02"
 
 keywords: schematics blueprints template, blueprints yaml, editing, edit, vscode, yaml 
 
@@ -33,7 +33,7 @@ YAML language and blueprint schema support:
 ## Configuring your VSCode environment
 {: #bp-config-vscode}
 
-Follow the Blueprints YAML language extension and blueprint schema [installation and configuration instructions](https://github.com/Cloud-Schematics/vscode-blueprint-schema){: external} to install the extension and schema.      
+Follow the Blueprints YAML language extension and blueprint schema [installation and configuration instructions](https://github.com/Cloud-Schematics/vscode-blueprint-schema){: external} to install the extension and schema.     
 
 ## Create template repository and local clone
 {: #bp-edit-createtemplate}
@@ -45,12 +45,12 @@ Follow the Blueprints YAML language extension and blueprint schema [installation
 
 Initially you can start by customizing the [sample template](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} or use one of the deployable template examples in the [IBM Cloud Schematics GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. 
 
-Alternatively work with your own template library in Github or Gitlab. These can be either public or private repos.  
+Alternatively work with your own template library in Github or Gitlab. These can be either public or private repos. 
 
 ### Clone template repo in Git
 {: #bp-clone-repo}
 
-Create a copy of the source template in your own Git repository or version control system. These instructions refer to use with Github where both the template and input file are stored in the same repo. Separate repo's can be used to version the template and inputs independently.  
+Create a copy of the source template in your own Git repository or version control system. These instructions refer to use with Github where both the template and input file are stored in the same repo. Separate repo's can be used to version the template and inputs independently. 
 
 - Navigate to the main page of the source template repository  
 - Click **Use this template/repository** 
@@ -73,7 +73,7 @@ Clone your new template repository to your local machine for editing:
 - Open the local folder containing the template repo contents as a new VSCode workspace
 - Optionally rename the template and input files for your blueprint. 
 - Select the blueprint template YAML file for editing
-- Just above the top of the file contents, the selected schema is displayed.  
+- Just above the top of the file contents, the selected schema is displayed. 
 - Select the blueprint input YAML file for editing
 
 With the extension and schema configured, VSCode will provide assisted editing for blueprint templates.

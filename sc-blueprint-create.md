@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-12-02"
 
 keywords: blueprint config create, create blueprint, blueprint
 
@@ -20,7 +20,7 @@ subcollection: schematics
 
 Deploying a blueprint environment and cloud resources using a blueprint template is a two-step process. The first step is creating a blueprint configuration in {{site.data.keyword.bpshort}}, the second step deploys this configuration  with a `blueprint run apply` operation. See [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of managing deployments, and change in blueprint environments.
 
-Creating a configuration takes as its input the blueprint template YAML and input YAML file that were created during the [defining blueprints](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage.  
+Creating a configuration takes as its input the blueprint template YAML and input YAML file that were created during the [defining blueprints](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage. 
 {: shortdesc} 
 
 The first step in deploying cloud resources is [creating a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config) in {{site.data.keyword.bpshort}}. This saves the blueprint configuration for future operations. The blueprint config specifies the Git source and release of the blueprint template, input files, and any input values that are used to create cloud resources. A blueprint module is created in {{site.data.keyword.bpshort}} for each module definition in the template. Each is initialized with the Terraform module source from the Git repository specified in the module definition, and module inputs.
@@ -53,7 +53,7 @@ This example also demonstrates using dynamic inputs at create time to customize 
 
 Only `string` values are supported for dynamic inputs. 
 
-Where the user has the required IAM access to create resources groups, use the parameters from the 'create resource group' line. Where a user only has access to an existing group, use the parameters from the 'reuse resource group' line.  
+Where the user has the required IAM access to create resources groups, use the parameters from the 'create resource group' line. Where a user only has access to an existing group, use the parameters from the 'reuse resource group' line. 
 
 | Operation | IAM permissions | `provision_rg` |  `resource_group_name` | 
 | -- | -- | -- | -- |
@@ -158,7 +158,7 @@ You can follow these steps to create the {{site.data.keyword.bpshort}} Blueprint
 
         The link points to the template file in the main branch, another branch, and any subdirectory. The URL must include the template file name and the `blob/branch/` pattern for the full path. Refer to the [blueprint FAQs](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for more information. 
 
-        - **Personal access token** - `<Git personal access token for the repo>`. This is only required for templates stored in private Git repos. Otherwise left empty.  
+        - **Personal access token** - `<Git personal access token for the repo>`. This is only required for templates stored in private Git repos. Otherwise left empty. 
         - Check the information that is entered are correct to create your blueprint config.
         - Click **Next and save as draft**. Observe the Blueprint ID is created and is in `Draft` state.
            Validation takes few seconds to fetch the input variables from the blueprint configuration file.
@@ -188,7 +188,7 @@ Here the steps to verify your blueprint creation.
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
 2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` must show the summary details of the blueprint config create job. 
 3. Click **Modules** tab to see the status of the resource modules in an `Inactive` state.
-4. Click **Jobs history** tab view the result of the blueprint config create job and operations that are performed against the resource modules.  
+4. Click **Jobs history** tab view the result of the blueprint config create job and operations that are performed against the resource modules. 
 5. Click **Settings** tab to view the summary of the new blueprint configuration.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).

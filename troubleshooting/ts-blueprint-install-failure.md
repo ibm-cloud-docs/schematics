@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-12-02"
 
 keywords: blueprint run apply failure, terraform error, terraform fails, install fails,
 
@@ -58,7 +58,7 @@ Review job failure log yes/no [y/N]> y
 
 Workspace Name       basic-cos-storage   
 Workspace ID         eu-gb.workspace.basic-cos-storage.7378a905   
-Log Summary          (last few lines)..........   
+Log Summary          (last few lines)..........  
                      :12 Terraform apply |   with ibm_cos_bucket.standard-ams03,   
                       2022/07/02 17:57:12 Terraform apply |   on main.tf line 64, in resource "ibm_cos_bucket" "standard-ams03":   
                       2022/07/02 17:57:12 Terraform apply |   64: resource "ibm_cos_bucket" "standard-ams03" {   
@@ -76,7 +76,7 @@ Attention! Job ID: eu-gb.JOB.Blueprint-Basic-Example.0cebdb53 FULFILMENT_FAILED
 Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a blueprint run apply failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or stand-alone Terraform usage. 
 {: tsResolve} 
 
-The blueprint run apply command indicates which module fails. Then, prompt to show a summary of the log for the failed workspace.  
+The blueprint run apply command indicates which module fails. Then, prompt to show a summary of the log for the failed workspace. 
 
 ```text
 Errors:
@@ -105,7 +105,7 @@ See troubleshooting {{site.data.keyword.bpshort}} apply errors for additional in
 When you run the `blueprint run apply` command, it fails with message that the install of module fails. 
 {: tsSymptoms}
 
-The analysis of the module logs indicate that the modules Terraform config has a coding error, which caused the Terraform apply failure.  
+The analysis of the module logs indicate that the modules Terraform config has a coding error, which caused the Terraform apply failure. 
 {: tsCauses}
 
 Correct the Terraform config error at source and push a new release to its Git source repository. 
@@ -164,7 +164,7 @@ ibmcloud schematics blueprint run apply -id <blueprint_ID> 
 When you run the blueprint run apply command, it fails with message that the install of module fails. 
 {: tsSymptoms}
 
-Analysis of the workspace logs indicates that the cause of the Terraform apply failure was due to an incorrect input value.  
+Analysis of the workspace logs indicates that the cause of the Terraform apply failure was due to an incorrect input value. 
 {: tsCauses}
 
 Update the input file source and push a new release to its Git source repository. 

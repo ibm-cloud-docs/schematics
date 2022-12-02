@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-02"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -98,7 +98,7 @@ Prepare your VSI or test machine by configuring your routing table for the {{sit
 ## Virtual Private Endpoints Gateways for {{site.data.keyword.bpshort}}
 {: #endpoint-setup}
 
-A service instance can have a private network endpoint, a public network endpoint, or both.  After your account is enabled for VPC and you connect {{site.data.keyword.bpshort}} service on the private network from Virtual Private Endpoint Gateways.
+A service instance can have a private network endpoint, a public network endpoint, or both. After your account is enabled for VPC and you connect {{site.data.keyword.bpshort}} service on the private network from Virtual Private Endpoint Gateways.
 {: shortdesc}
 
     - **Public:** A service endpoint on the {{site.data.keyword.cloud_notm}} public network.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-02"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -18,14 +18,14 @@ subcollection: schematics
 # Defining blueprints
 {: #define-blueprints}
 
-{{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied.  
+{{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied. 
 
 [Templates](/docs/schematics?topic=schematics-glossary#bpb2) determine the architecture, specifying the modules required for the implementation and infrastructure topology. Reusable [modules](/docs/schematics?topic=schematics-glossary#bpb5) implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. 
 {: shortdesc} 
 
 ![Blueprint templates, modules and inputs define environment](/images/new/bp-overview.svg){: caption="Blueprint templates, modules and inputs define environment" caption-side="bottom"}
 
-A blueprint template determines the architecture. It specifies the modules required for the implementation, infrastructure topology and data dependencies between modules. {{site.data.keyword.bpshort}} deploys the modules as discrete environments, managing their lifecycle and the passing of resource information between modules.    
+A blueprint template determines the architecture. It specifies the modules required for the implementation, infrastructure topology and data dependencies between modules. {{site.data.keyword.bpshort}} deploys the modules as discrete environments, managing their lifecycle and the passing of resource information between modules.   
 
 
 When deploying a blueprint, the environment and cloud resources to be deployed are defined by three versioned elements:
@@ -66,7 +66,7 @@ The steps to create a blueprint template and define the versioned the inputs are
     - Again in your favorite editor, create and name a new blueprint input YAML file. Alternatively follow the instructions for [editing templates in VSCode](/docs/schematics?topic=schematics-edit-blueprints). 
     - Using the template inputs as a guide, populate the input file with environment-specific input key-value pairs. The variable type of the input value matches that defined in the template YAML file.
     - Inputs defining secrets or sensitive values are left with null-values. Sensitive values are specified when the blueprint configuration is created in {{site.data.keyword.bpshort}}.
-5. Push the blueprint input YAML file to a Git repo. As required, create a Git version release tag for version management. If the template is intended for reuse across multiple environments, the blueprint input file should be versioned in a separate repo to the template.  
+5. Push the blueprint input YAML file to a Git repo. As required, create a Git version release tag for version management. If the template is intended for reuse across multiple environments, the blueprint input file should be versioned in a separate repo to the template. 
 
 ## Next steps
 {: #define-nextsteps}

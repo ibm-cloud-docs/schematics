@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-02"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -109,7 +109,7 @@ Sensitive values can be exported as environment variables and shell variable sub
 
 ```sh
 export user_ssh_key="ssh xxx"
-ibmcloud schematics blueprint config create  ......................   --inputs sshkey=$user_ssh_key
+ibmcloud schematics blueprint config create  ......................  --inputs sshkey=$user_ssh_key
 ```
 {: pre}
 
@@ -118,7 +118,7 @@ ibmcloud schematics blueprint config create  ......................   --inputs s
 {: faq}
 {: support}
 
-The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) as used in the [tutorial](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) demonstrates the principles of deploying cloud resources by using two modules, which reference and create cloud resources. If the user has insufficient IAM access permissions to these resources, the Terraform Apply operations can fail, resulting in an Apply failure.   
+The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) as used in the [tutorial](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) demonstrates the principles of deploying cloud resources by using two modules, which reference and create cloud resources. If the user has insufficient IAM access permissions to these resources, the Terraform Apply operations can fail, resulting in an Apply failure.  
 
 This example assumes, the user has IAM access permissions to create resources in the default resource group and also [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Additionally the user must also have permissions to create {{site.data.keyword.bpshort}} [workspaces and blueprints](/docs/schematics?topic=schematics-access). 
 
@@ -141,9 +141,9 @@ This example assumes, the user has IAM access permissions to create resources in
 {: faq}
 {: support}
 
-The version of Terraform used for an environment is user determined by the blueprint template `TF_VERSION` parameter. This parameter can be  used to control when the Terraform version for environment is updated to the next release or version.   
+The version of Terraform used for an environment is user determined by the blueprint template `TF_VERSION` parameter. This parameter can be  used to control when the Terraform version for environment is updated to the next release or version.  
 
-The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terraform module code.   
+The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terraform module code.  
 
 During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation will be failed. 
 

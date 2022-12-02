@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-12-01"
+lastupdated: "2022-12-02"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -64,7 +64,7 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 
 {{site.data.keyword.bplong}} Blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac){: external} (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A builder builds the house from well-defined components using the blueprint for guidance. 
 
-It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution architectures. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).   
+It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution architectures. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).  
 {: shortdesc}
 
 ### Blueprint
@@ -80,25 +80,25 @@ A blueprint is created with a [blueprint configuration](/docs/schematics?topic=s
 ### Blueprint template
 {: #bpb2}
 
-A [blueprint template](/docs/schematics?topic=schematics-blueprint-templates) defines the infrastructure architecture, topology, and cloud resources for a solution architecture. The template implements the desired architecture from reusable [modules](/docs/schematics?topic=schematics-glossary#bpb5) that are written in Terraform. Template files are written to a [YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml) and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. Template files versioned and sourced from a version control system, GitHub or GitLab.   
+A [blueprint template](/docs/schematics?topic=schematics-blueprint-templates) defines the infrastructure architecture, topology, and cloud resources for a solution architecture. The template implements the desired architecture from reusable [modules](/docs/schematics?topic=schematics-glossary#bpb5) that are written in Terraform. Template files are written to a [YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml) and specify the Terraform [automation modules](/docs/schematics?topic=schematics-glossary#bpb5) to be used, their versions, Git source libraries, and the relationships and dependencies between modules. Template files versioned and sourced from a version control system, GitHub or GitLab.  
 {: shortdesc}
 
 ### Blueprint configuration
 {: #bpb3}
 
-A `blueprint configuration` is the initial definition that the user provides to create a blueprint in {{site.data.keyword.bpshort}}. The configuration defines the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) YAML file to be used, its Git source location. Also the [input files](/docs/schematics?topic=schematics-glossary#bpi2) that will be used to customize the template, file version information, and any additional required inputs.  
+A `blueprint configuration` is the initial definition that the user provides to create a blueprint in {{site.data.keyword.bpshort}}. The configuration defines the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) YAML file to be used, its Git source location. Also the [input files](/docs/schematics?topic=schematics-glossary#bpi2) that will be used to customize the template, file version information, and any additional required inputs. 
 {: shortdesc}
 
 ### Blueprint environment
 {: #bpb4}
 
-A blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources that are created from a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) and the inputs that are specified by a [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3).  
+A blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources that are created from a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) and the inputs that are specified by a [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). 
 {: shortdesc}
 
 ### Blueprint modules
 {: #bpb5}
 
-Blueprint templates are composed from IaC automation modules. Modules perform the work of deploying Cloud resources using open-source IaC tools. Initial support is for modules written in Terraform with additional IaC tools planned. Tools like Redhat Ansible and Helm, may be utilized today as blueprint modules using a Terraform wrapper.  
+Blueprint templates are composed from IaC automation modules. Modules perform the work of deploying Cloud resources using open-source IaC tools. Initial support is for modules written in Terraform with additional IaC tools planned. Tools like Redhat Ansible and Helm, may be utilized today as blueprint modules using a Terraform wrapper. 
 
 Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) for details on working with Terraform root and child modules. Examples of {{site.data.keyword.IBM_notm}} authored (child) modules that can be used with Blueprints can be found in the GitHub repository [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}.
 {: shortdesc}

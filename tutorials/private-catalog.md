@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-02"
 
 keywords: schematics, automation, terraform
 
@@ -121,7 +121,7 @@ To upload a Terraform template to a private catalog, you must first compress all
 
 Create a release in your source code repository to deliver and manage versions of your software. You can create new releases with release notes.
 
-1. Find your existing repository in GitHub to upload your `TGZ` file.  
+1. Find your existing repository in GitHub to upload your `TGZ` file. 
 2. Open the GitHub release page for your repository by appending `/releases` to your repository URL as shown in the following example. 
     ```sh
     https://github.com/<gh_org>/<gh_repo>/releases
@@ -146,7 +146,7 @@ Create a release in your source code repository to deliver and manage versions o
     1. From the **Private catalogs** page, select the private catalog that you created.
     2. Click **Add**. 
     3. Enter the URL to your `TGZ` file that you verified earlier. 
-    4. Click **Add**.  
+    4. Click **Add**. 
 3. From the **Version list** of your product, select the product that you uploaded.
 4. Go to the **Configure product** tab.
     1. In the **Configure the deployment details** section, click **Add deployment values**. The Terraform configuration files in your `TGZ` file are automatically scanned for any input variables that are defined in the template. 

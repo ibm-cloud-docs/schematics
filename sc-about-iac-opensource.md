@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-01"
+lastupdated: "2022-12-02"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -16,16 +16,16 @@ subcollection: schematics
 {: #schematics-open-projects}
 
 
-The choice of IaC tool matters. Some tools are a better fit for the task in hand.  In many cases the use of different tools for configuration management and provisioning is the most effective choice. The section below, [Understanding {{site.data.keyword.bpshort}} features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping) identifies the mapping of Ansible and Terraform, along with operators and Helm to related {{site.data.keyword.bpshort}} features. 
+The choice of IaC tool matters. Some tools are a better fit for the task in hand. Often the use of different tools for configuration management and provisioning is the most effective choice. The section below, [Understanding {{site.data.keyword.bpshort}} features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping) identifies the mapping of Ansible and Terraform, along with operators and Helm to related {{site.data.keyword.bpshort}} features. 
 
 But what is provisioning and configuration management? 
 
 ## What is Provisioning?
 {: #sc-iac-provisioning}
 
-Provisioning is the process of setting up IT infrastructure. It can also refer to the steps required to manage access to data and resources, and make them available to users and systems. Once something has been provisioned, the next step is configuration.  [Red Hat](https://www.redhat.com/en/topics/automation/what-is-provisioning){: external} 
+Provisioning is the process of setting up IT infrastructure. It can also refer to the steps required to manage access to data and resources, and make them available to users and systems. Once something has been provisioned, the next step is configuration. [Red Hat](https://www.redhat.com/en/topics/automation/what-is-provisioning){: external} 
 
-Provisioning tools (including Terraform and Ansible) provision infrastructure such as servers (VMs), load balancers, databases, networking configuration, etc. They leave configuration to configuration tools.
+Provisioning tools (including Terraform and Ansible) provision infrastructure such as servers (VMs), load balancers, databases, networking configuration, and so on. They leave configuration to configuration tools.
 
 “Provisioning” often implies it is an initial task. 
 
@@ -42,7 +42,7 @@ Config management usually happens repeatedly.
 ## How to choose your IaC tool
 {: #sc-iac-choosing}
 
-Some tools are a better fit for the task in hand for provisioning or configuration management. The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths.  
+Some tools are a better fit for the task in hand for provisioning or configuration management. The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
 
 {{site.data.keyword.cloud_notm}} leverages Terraform and Ansible, and other open-source tools including {{site.data.keyword.openshiftshort}}, Operators and Helm to deliver IaC as a managed service. Rather than limiting you to a single tool, {{site.data.keyword.bpshort}} allows you to use the tool and approach best suited to the task. You declare the tasks that you want to run and {{site.data.keyword.bpshort}} will run the tasks for you.
 

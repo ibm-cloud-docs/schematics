@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-02"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -62,7 +62,7 @@ Currently, you cannot bind the `{{site.data.keyword.bpshort}} action`, to the Ag
 {: faq}
 {: support}
 
-The workspace job logs are available in {{site.data.keyword.bpshort}} UI console.  You can also access the workspace job logs by using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
+The workspace job logs are available in {{site.data.keyword.bpshort}} UI console. You can also access the workspace job logs by using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
 
 ## How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?
 {: #faqs-job-parallel}

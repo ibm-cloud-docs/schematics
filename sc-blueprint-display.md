@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-12-02"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -56,7 +56,7 @@ ibmcloud schematics blueprint list
 ```
 {: pre}
 
-On successful completion the list command returns a list of blueprints.  
+On successful completion the list command returns a list of blueprints. 
 
 Output
 
@@ -95,7 +95,7 @@ ibmcloud schematics blueprint get -id <blueprint_ID>
 
 Output
 
-On successful completion the get command returns summary details of the blueprint and module status.  
+On successful completion the get command returns summary details of the blueprint and module status. 
 
 ```text
 BLUEPRINT          
@@ -131,7 +131,7 @@ ibmcloud schematics blueprint get -id <blueprint_ID> -level outputs
 ```
 {: pre}
 
-On successful completion the get command returns the summary details of the blueprint and the output values defined by the template.  
+On successful completion the get command returns the summary details of the blueprint and the output values defined by the template. 
 
 Output
 
@@ -575,6 +575,6 @@ For more information, about how to diagnose and resolve issues if the list job f
 ## Next steps
 {: #bp-display-nextsteps}
 
-After displaying the list of blueprints in {{site.data.keyword.bpshort}}, refer to [list blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs) for details on displaying blueprint jobs.  
+After displaying the list of blueprints in {{site.data.keyword.bpshort}}, refer to [list blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs) for details on displaying blueprint jobs. 
 
 

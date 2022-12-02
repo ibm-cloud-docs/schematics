@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-12-02"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, terraform API, setting up schematics api, api
 
@@ -185,7 +185,7 @@ Use the following steps if you want to create an {{site.data.keyword.cloud_notm}
     | Input parameters | Values |
     | ---- | --- |
     | Header | :`Content-Type: application/x-www-form-urlencoded`:`Authorization: Basic Yng6Yng=` </br></br>  `Yng6Yng=` equals the URL-encoded authorization for the username **bx** and the password **bx**. |
-    | Body when using the refresh token |:`grant_type: refresh_token`:`response_type: cloud_iam uaa`:`refresh_token:` Your {{site.data.keyword.cloud_notm}} IAM refresh token. :`uaa_client_ID: cf`:`uaa_client_secret:`:`bss_account:` Your {{site.data.keyword.cloud_notm}} account ID.  </br></br> Add the `uaa_client_secret` key with no value specified. |
+    | Body when using the refresh token |:`grant_type: refresh_token`:`response_type: cloud_iam uaa`:`refresh_token:` Your {{site.data.keyword.cloud_notm}} IAM refresh token. :`uaa_client_ID: cf`:`uaa_client_secret:`:`bss_account:` Your {{site.data.keyword.cloud_notm}} account ID. </br></br> Add the `uaa_client_secret` key with no value specified. |
     | Body when using the {{site.data.keyword.cloud_notm}} API key | :`grant_type: urn:ibm:params:oauth:grant-type:apikey`:`response_type: cloud_iam uaa`:`apikey:` Your {{site.data.keyword.cloud_notm}} API key. :`uaa_client_ID: cf`:`uaa_client_secret:`  Add the `uaa_client_secret` key with no value specified. |
     {: caption="Input parameters for a new {{site.data.keyword.cloud_notm}} IAM token." caption-side="top"}
 

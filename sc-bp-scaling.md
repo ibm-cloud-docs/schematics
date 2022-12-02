@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-30"
+lastupdated: "2022-12-02"
 
 keywords: schematics blueprints, reusable, scaling, large, large-scale, reuse, modules
 
@@ -34,18 +34,18 @@ The two approaches  commonly employed to improve the scaling and management of l
 - Linking environments (workspaces) using Terraform remote-state data sources. 
 
 - Using an orchestration framework like the open-source [Terragrunt](
-https://terragrunt.gruntwork.io/){: external)  tool to manage the deployment and dependency management of linked Terraform workspaces.  
+https://terragrunt.gruntwork.io/){: external)  tool to manage the deployment and dependency management of linked Terraform workspaces. 
 
 
-Schematics Blueprints takes the orchestration approach to scaling environments. This builds on the IaC best practice of modular architectures and the IBM Cloud module library.  
+Schematics Blueprints takes the orchestration approach to scaling environments. This builds on the IaC best practice of modular architectures and the IBM Cloud module library. 
 
 
 ## Remote state data sources
 {: #blueprint-scaling-remotestate}
 
-[Remote-state data sources](/docs/schematics?topic=schematics-remote-state) as implemented in Terraform and Schematics have an important role in enabling sharing of resource information between Terraform workspaces.  
+[Remote-state data sources](/docs/schematics?topic=schematics-remote-state) as implemented in Terraform and Schematics have an important role in enabling sharing of resource information between Terraform workspaces. 
 
-These data sources allow responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces (and teams) as read-only resources. They also allow for common infrastructure resources to be shared between environments and teams without risk of unintended change.  
+These data sources allow responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces (and teams) as read-only resources. They also allow for common infrastructure resources to be shared between environments and teams without risk of unintended change. 
 
 The downside is that the use of remote_state data sources has an impact on the reusability of modules across environments. Modules are specific to the remote-state they expect to receive as input and are dependent on the remote_state already existing. Additionally there is a lack of visibility of the remote-state dependency, no clear dependency management or sequencing of module deployments. 
 

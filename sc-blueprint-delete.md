@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-12-02"
 
 keywords: blueprint config delete, delete blueprint, blueprint
 
@@ -23,7 +23,7 @@ When a blueprint  environment is no longer required, it can be deleted which wil
 
 Deleting the blueprint configuration is the second step required to completely delete a blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, the config can only be deleted when cloud resources in all the blueprint modules have been deleted and the modules are in `Inactive` state. The first step is to run the [blueprint run destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) command to destroy the resources in the blueprint environment and remove the environment. 
 
-This behavior of disallowing delete when modules cannot be returned to an `Inactive` state due to a {{site.data.keyword.bpshort}} or Terraform error can be overridden using the `-force-delete` flag to allow deletion.  
+This behavior of disallowing delete when modules cannot be returned to an `Inactive` state due to a {{site.data.keyword.bpshort}} or Terraform error can be overridden using the `-force-delete` flag to allow deletion. 
 {: shortdesc}
 
 ## Deleting a blueprint config through CLI
@@ -87,7 +87,7 @@ Enter Job sequence number to get blueprint child job output summary(or enter no/
                  
 Module ID        
 Status        job_finished   
-Log Summary   (last few lines)..........   
+Log Summary   (last few lines)..........  
                2022/11/18 11:22:06 -----  New blueprint Action  -----   
                2022/11/18 11:22:06 Request: blueprintId=Blueprint_Basic.eaB.08d1, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=schematics@in.ibm.com, requestID=1d7ee769-71f1-45f0-93f9-c0cd159e4117   
                2022/11/18 11:22:07 Related Job:  jobID=us-east.JOB.Blueprint_Basic.992e4c2d   

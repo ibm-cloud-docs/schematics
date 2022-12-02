@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-12-02"
 
 keywords: blueprint config create init failure, blueprint init error, create init fails,
 
@@ -20,7 +20,7 @@ content-type: troubleshoot
 # Blueprint config create fails in the create_init step
 {: #bp-create-init-fails}
 
-When you create a blueprint config, it fails during initialization of the blueprint modules.  
+When you create a blueprint config, it fails during initialization of the blueprint modules. 
 {: tsSymptoms}
 
 Blueprint environments are created in two steps. The first step retrieves, validates the blueprint template, and creates the configuration in {{site.data.keyword.bpshort}}. The second step creates the needed modules based on the module definitions in the template. This step clones the specified module source repos. An incorrectly specified repo URL results in a workspace initialization failure. Other possible causes are the repository is private and an access token is not specified, or the access token is invalid. 
@@ -50,7 +50,7 @@ OK
 ```
 {: screen} 
 
-The job status shows as `create_failed`. Additionally the Terraform job status shows as `NA` indicating that {{site.data.keyword.bpshort}} failed to create the modules and no logs are available.  
+The job status shows as `create_failed`. Additionally the Terraform job status shows as `NA` indicating that {{site.data.keyword.bpshort}} failed to create the modules and no logs are available. 
 
 
 Review the error messages from the log of the failing blueprint job, the blueprint module definitions, and Git repositories to determine the cause of the initialization failure.  

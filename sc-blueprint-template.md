@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-30"
+lastupdated: "2022-12-02"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -24,21 +24,21 @@ subcollection: schematics
 ## Blueprint configuration 
 {: #blueprint-temp-confg}
 
-Cloud environments are deployed from a blueprint configuration, specifying a blueprint template and customizable input values that define parameters like its region or compute capacity.  [Templates](/docs/schematics?topic=schematics-glossary#bpb2) determine the infrastructure architecture, specifying the modules (building blocks) to deploy the cloud resources of an environment. The section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) illustrates how public modules can be combined with user developed modules to create custom solutions.  
+Cloud environments are deployed from a blueprint configuration, specifying a blueprint template and customizable input values that define parameters like its region or compute capacity. [Templates](/docs/schematics?topic=schematics-glossary#bpb2) determine the infrastructure architecture, specifying the modules (building blocks) to deploy the cloud resources of an environment. The section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) illustrates how public modules can be combined with user developed modules to create custom solutions. 
 {: shortdesc} 
 
-Templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its deploy time configuration is illustrated in the figure. Here a template is reused many times to deploy a range of environments such as `dev`, `stage`, and `production`. Each environment is customized with its own input values, all based on the same template.   
+Templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its deploy time configuration is illustrated in the figure. Here a template is reused many times to deploy a range of environments such as `dev`, `stage`, and `production`. Each environment is customized with its own input values, all based on the same template.  
 
-![Blueprint template, modules and inputs define environments](/images/new/reuse.svg){: caption="Blueprint template, modules and inputs define environments" caption-side="bottom"}
+![Blueprint template, modules and inputs define environments](/images/new/bp-reuse.svg){: caption="Blueprint template, modules and inputs define environments" caption-side="bottom"}
 
-The blueprint template determines the architecture. It specifies the modules required for the implementation, infrastructure topology and data dependencies between modules. {{site.data.keyword.bpshort}} deploys the modules as discrete environments, managing their lifecycle and the passing of resource dependency information between modules.  
+The blueprint template determines the architecture. It specifies the modules required for the implementation, infrastructure topology and data dependencies between modules. {{site.data.keyword.bpshort}} deploys the modules as discrete environments, managing their lifecycle and the passing of resource dependency information between modules. 
 
 The blueprint environment and the cloud resources to be deployed, are defined by three versioned elements:
 1. A blueprint template file specifying the resource topology, infrastructure architecture, IaC automation modules and dependencies.
 2. Input values to configure and customize the blueprint template at deployment time.
 3. Automation modules written in Terraform to deploy the desired cloud resources. 
 
-A blueprint config links a template with the set of inputs values to customize the environment and cloud resources for its target use. The config its relationship to a template and input files are illustrated in the figure below.  
+A blueprint config links a template with the set of inputs values to customize the environment and cloud resources for its target use. The config its relationship to a template and input files are illustrated in the figure below. 
 
 ## Blueprint template overview
 {: #template-overview}
@@ -49,13 +49,13 @@ The infrastructure architecture of a solution is defined by a blueprint template
 - Input variable files customize the reusable blueprint templates to create cloud environments.
 {: shortdesc}
 
-This structure and relationship between inputs, modules and template are illustrated in the figure.  
+This structure and relationship between inputs, modules and template are illustrated in the figure. 
 
 ![Blueprint config linking a template and inputs](/images/new/bp-configuration.svg){: caption="Blueprint config linking a template and inputs" caption-side="bottom"}
 
 The blueprint config defines the source of the versioned blueprint template in source control and the input files to customize the blueprint. Also additional parameters for naming the blueprint, blueprint access control and additional inputs. 
 
-The template file contains module definitions specifying the required Terraform modules and their source location. The definitions define the dependencies between modules for passing resource data. These also define the deployment order to ensure that resource dependencies are satisfied prior to module provisioning.    
+The template file contains module definitions specifying the required Terraform modules and their source location. The definitions define the dependencies between modules for passing resource data. These also define the deployment order to ensure that resource dependencies are satisfied before module provisions.
 
 ### Blueprint template YAML file
 {: #blueprint-yaml-file}
@@ -112,7 +112,7 @@ A blueprint template consists of a two major sections. An global settings sectio
 
 Dependencies are created between modules by interpolation of module input and output values. In the `basic-cos-storage` module definition above, the input `resource_group_id` specifies the interpolated value `$module.basic-resource-group.outputs.resource_group_id` which creates a dependency on the `resource_group_id` output value from the module `basic-resource-group`.
 
-The IaC best practice of modular architectures implemented by Schematics Blueprints builds on a [strong set of module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines){: external} that support composition of modules. Also the best practice module implementations for {{site.data.keyword.IBM_notm}} Cloud available as reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry.   
+The IaC best practice of modular architectures implemented by Schematics Blueprints builds on a [strong set of module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines){: external} that support composition of modules. Also the best practice module implementations for {{site.data.keyword.IBM_notm}} Cloud available as reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry.  
 
 ### Input statements
 {: #blueprint-input-statements}

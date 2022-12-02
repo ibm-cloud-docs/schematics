@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-02"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -139,9 +139,9 @@ Review the following status that can be assigned to a job:
 
 |Status|Description|
 |-----|---------|
-|`ok` |The total number of target hosts where the Ansible playbook ran.  |
+|`ok` |The total number of target hosts where the Ansible playbook ran. |
 |`changed` | The total number of target hosts that were accessed and changed. |
-|`failed` |The total number of target hosts where the Ansible playbook might not be successfully ran.  |
+|`failed` |The total number of target hosts where the Ansible playbook might not be successfully ran. |
 |`skipped` |The total number of target hosts that were accessed but might not be updated as changes are applied to the hosts.|
 |`unreachable` |The total number of target hosts that might not be found or reached. |
 {: caption="Job status" caption-side="top"}

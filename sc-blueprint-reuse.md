@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-30"
+lastupdated: "2022-12-02"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -21,7 +21,7 @@ subcollection: schematics
 {{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied.
 {: shortdesc}
 
-This building analogy also applies to reuse across environments. A builder may build an entire street of houses from the same blueprint drawing. Each house customized by its choice of color, lighting and styling, but all built to the same design.    
+This building analogy also applies to reuse across environments. A builder may build an entire street of houses from the same blueprint drawing. Each house customized by its choice of color, lighting and styling, but all built to the same design.   
 
 Reuse supports a number of usecases:
 - Sharing an approved architecture across teams within a business
@@ -36,11 +36,11 @@ A blueprint template (house design) is similarly reusable across environments, u
 
 ![Environments deployed from reusable blueprint template](/images/new/bp-reuse.svg){: caption="Environments deployed from reusable blueprint template" caption-side="bottom"}
 
-Separate input files for the dev, stage and prod define the customizations, for example, scale, configuration and region for each environment.    
+Separate input files for the dev, stage and prod define the customizations, for example, scale, configuration and region for each environment.   
 
 Each blueprint environment is uniquely defined by its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The configuration defines the template, its location and version, plus the inputs to customize a template for the target environment. The separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as `dev`, `stage`, and `production` with multiple target regions. 
 
-For details on how to configure blueprints refer to the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates).  
+For details on how to configure blueprints refer to the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates). 
 
 ## Deployment pipelines
 {: #blueprint-pipelines} 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-02"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -111,7 +111,7 @@ Type: list
 
 Default: []
 
-A list of tags to be attached to all deployed cloud resources and the blueprint resource. All environments deployed using this template will have these tags. Additional tags can be specified at config create time specific to the environment to be deployed.   
+A list of tags to be attached to all deployed cloud resources and the blueprint resource. All environments deployed using this template will have these tags. Additional tags can be specified at config create time specific to the environment to be deployed.  
 
 Example 
 ```yaml
@@ -153,7 +153,7 @@ Default: string
 
 As templates work with Terraform configs and modules, Terraform variable [type constraints](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. 
 
-Complex Terraform types are typically represented as multi-line strings. They can be similarly rendered in YAML block syntax, using either the literal style is denoted by the “|” indicator, or the folded style is denoted by the “>” indicator.  
+Complex Terraform types are typically represented as multi-line strings. They can be similarly rendered in YAML block syntax, using either the literal style is denoted by the “|” indicator, or the folded style is denoted by the “>” indicator. 
 
 Options: Any valid Terraform variable type
 
@@ -178,7 +178,7 @@ Type: Any valid Terraform variable type
 
 Optional
 
-The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When not specified the value is sourced from the blueprint config inputs and input file at run time.  
+The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When not specified the value is sourced from the blueprint config inputs and input file at run time. 
 
 Example of statically defined local value 
 ```yaml
@@ -222,7 +222,7 @@ Flag specifying whether the value is a sensitive variable and must be masked in 
 
 Type: Number
 
-Number specifying the maximum length of the input value. Attribute is used by the UI to perform validation.  
+Number specifying the maximum length of the input value. Attribute is used by the UI to perform validation. 
 {: pre}
 
 ### inputs.min_length
@@ -230,7 +230,7 @@ Number specifying the maximum length of the input value. Attribute is used by th
 
 Type: Number
 
-Number specifying the minimum length of the input value. Attribute is used by the UI to perform validation.  
+Number specifying the minimum length of the input value. Attribute is used by the UI to perform validation. 
 {: pre}
 
 
@@ -259,7 +259,7 @@ Type: list
 
 Default: []
 
-A list of the global environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
+A list of the global environment-variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
 {: pre}
 
 
@@ -306,7 +306,7 @@ The `modules` block defines the Terraform, and Ansible modules from which the so
 
 Each module list entry is defined by a name, followed by the source for the module, inputs, and expected outputs. 
 
-Review the automation module metadata and readme file information for the [modules](https://github.com/terraform-ibm-modules){: external} to guide defining the module block.     
+Review the automation module metadata and readme file information for the [modules](https://github.com/terraform-ibm-modules){: external} to guide defining the module block.    
 
 ```yaml
 modules:
@@ -361,7 +361,7 @@ Type: string
 
 Required: true
 
-String specifying the IaC type of the automation module. Only Terraform is supported at this time.   
+String specifying the IaC type of the automation module. Only Terraform is supported at this time.  
 
 Options: `terraform`
 {: pre}
@@ -400,7 +400,7 @@ Type: url string
 
 Required: true
 
-URL for the Terraform module or config in its content repository. This is the full path to the module, in the root folder of the repo or the path to a module in sub-folder in the repo. Multiple modules/configs can exist in sub-folders of the repo.  
+URL for the Terraform module or config in its content repository. This is the full path to the module, in the root folder of the repo or the path to a module in sub-folder in the repo. Multiple modules/configs can exist in sub-folders of the repo. 
 
 Blueprints supports a shortcut using the Git path syntax to specifying the URL to your module including the branch. 
 
@@ -442,7 +442,7 @@ Type: string
 
 Default: []
 
-Access templates in private Git repos by specifying the Git user token of the repo. The value for `git_token` can be sourced from the template inputs using the `$blueprint` token.  
+Access templates in private Git repos by specifying the Git user token of the repo. The value for `git_token` can be sourced from the template inputs using the `$blueprint` token. 
 
 Example
 
@@ -460,7 +460,7 @@ Type: list
 
 Default: []
 
-A list of the environment-variables (env-vars) to be made available in the module execution environment at run time.  They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
+A list of the environment-variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
 
 #### modules.settings.TF_VERSION
 {: #bp-tf-modules-version}
@@ -554,7 +554,7 @@ The value field sources the input value for a module from three sources:
 
 The value type is as defined by the `modules.inputs.type` option. 
 
-Functions and operators on input values are not supported in blueprint schema 1.0.0. This is being considered for a future release. Values are passed as is from the source to the module input without manipulation.      
+Functions and operators on input values are not supported in blueprint schema 1.0.0. This is being considered for a future release. Values are passed as is from the source to the module input without manipulation.     
 
 Example of statically defined values 
 ```yaml
@@ -596,7 +596,7 @@ Type:       list
 
 Default:    []  
 
-A list defines all the outputs that are returned by the module to be used as inputs to other modules or output from the blueprint. Each output is identified by the label `name`.  It must match an [output declaration](https://developer.hashicorp.com/terraform/language/values/outputs){: external} in the Terraform template for the value to be retrieved at execution time from the module. The name can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or from inspecting the Terraform `.tf` files. 
+A list defines all the outputs that are returned by the module to be used as inputs to other modules or output from the blueprint. Each output is identified by the label `name`. It must match an [output declaration](https://developer.hashicorp.com/terraform/language/values/outputs){: external} in the Terraform template for the value to be retrieved at execution time from the module. The name can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or from inspecting the Terraform `.tf` files. 
 
 Example
 ```yaml
@@ -671,7 +671,7 @@ Type: list
 
 Required: true
 
-A list that defines the templating inputs as name-value pairs. At this time, only static values are supported.  
+A list that defines the templating inputs as name-value pairs. At this time, only static values are supported. 
  
 Example
 ```yaml

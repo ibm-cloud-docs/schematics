@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-12-02"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -20,7 +20,7 @@ Learn how to create Terraform templates that are well-structured, reusable, and 
 
 A Terraform template consists of one or more Terraform configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](/docs/schematics?topic=schematics-create-tf-config#configure-provider) and [add resources to your Terraform configuration file](/docs/schematics?topic=schematics-create-tf-config#configure-resources). Optionally, you can use [input variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables) to customize your resources.
 
-You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format.  
+You can write your Terraform configuration file by using HashiCorp Configuration Language (HCL) or JSON format. 
 
 Before you start creating your Terraform template, make sure to review the [{{site.data.keyword.bplong_notm}} limitations](/docs/schematics?topic=schematics-schematics-limitations). 
 {: tip}
@@ -39,7 +39,7 @@ The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with t
 
 **Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?**
 
-If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}.  
+If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}. 
 
 **Can I provide an API key for a service ID?**
 
@@ -118,9 +118,9 @@ resource ibm_is_vpc "vpc" {
 Review the options that you have to reference existing resources in other resource blocks of your Terraform configuration file. 
 {: shortdesc}
 
-The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two types of objects, data sources and resources. You can use both objects to reference resources in other resource blocks.  
+The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two types of objects, data sources and resources. You can use both objects to reference resources in other resource blocks. 
 
-- **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file.  </br>
+- **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform configuration file. </br>
 
     Example of an infrastructure code. 
     ```terraform
@@ -179,7 +179,7 @@ You can decide to declare your variables within the same Terraform configuration
 
 **What information do I need to include in my variable declaration?**
 
-When you declare an input variable, you must provide a name for your variable and the data type according to the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value.  \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string`, and `HCL` format for complex variables.
+When you declare an input variable, you must provide a name for your variable and the data type according to the Terraform version. You can optionally provide default value for your variable. When input variables are imported into {{site.data.keyword.bpshort}} and a default value is specified, you can choose to overwrite the default value. \n {{site.data.keyword.bplong_notm}} accepts the values as a string for primitive types such as `bool`, `number`, `string`, and `HCL` format for complex variables.
 - `Terraform v0.12` supports **string, list, map, `bool`, number, and complex data types such as list(type), map(type), object({attribute name=type,.}), set(type), tuple([type])**.
 
 **Is there a character limit for input variables?** 

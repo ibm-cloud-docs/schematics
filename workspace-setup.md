@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-12-02"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -18,7 +18,7 @@ subcollection: schematics
 With {{site.data.keyword.bplong}} Workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
-If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested Git repository structure.  
+If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested Git repository structure. 
 {: note}
 
 ## Creating workspaces and importing your Terraform template
@@ -49,7 +49,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         - **GitHub, GitLab or `Bitbucket` repository URL** - `<provide your Terraform template Git repository URL`.
         - **Personal access token** - `<leave it blank>`.
         - Terraform Version - `terraform_v1.0`. You need to select Terraform version 1.0 or greater version. For example, if your Terraform templates is created by using Terraform v1.0, select the `Terraform version` parameter as **terraform_v1.0**. 
-          You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0. When you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
+          You can select `Terraform_v1.1` to use Terraform version 1.1, `terraform_v1.0` to use Terraform version 1.0. When you specify `terraform_v1.1`means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release.
           {: note}
 
           {{site.data.keyword.bpshort}} supports the latest release of `Terraform v1.1`, through `terraform_v1.0`. The Terraform template must use the version constraint, such as `>` or `>=` or `~>` for the `required_version` of Terraform, to automatically pick the latest version.
@@ -187,7 +187,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #import-template}
 {: ui}
 
-If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API.  
+If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 {: tip}
 
 1. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. 
@@ -361,7 +361,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
     2. Select the {{site.data.keyword.cloud_notm}} region where you want to create the service.
     3. Select a pricing plan.
     4. Enter a name for your service instance, select a resource group, and enter any tags that you want to associate with your service instance.
-    5. Click **Create** to create the service instance in your account.  
+    5. Click **Create** to create the service instance in your account. 
 2. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select a workspace. 
 3. Select the **Settings** tab. 
 4. In the **Summary** section, click **Enable continuous delivery**. 
@@ -390,9 +390,9 @@ Review the states that a workspace can have in the following table. You might no
 | ------- | ---------------------------- |
 | `Active` | After you successfully ran your infrastructure code with {{site.data.keyword.bplong_notm}} by applying your Terraform execution plan, the state of your workspace changes to **Active**. |
 | `Connecting` | {{site.data.keyword.bpshort}} tries to connect to the template in your source repo. If successfully connected, the template is downloaded and metadata, such as input parameters, is extracted. After the template is downloaded, the state of the workspace changes to **Scanning**. |
-| `Draft` | The workspace is created without a reference to a `GitHub`, `GitLab`, or `Bitbucket` repository.   |
+| `Draft` | The workspace is created without a reference to a `GitHub`, `GitLab`, or `Bitbucket` repository.  |
 | `Failed` | If errors occur during the execution of your infrastructure code in {{site.data.keyword.bplong_notm}}, your workspace state is set to **Failed**. To troubleshoot errors, open the logs on the workspace **Activity** page. |
-| `Inactive` | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply job to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed.  |
+| `Inactive` | The {{site.data.keyword.bpshort}} template was scanned successfully and the workspace creation is complete. You can now start running {{site.data.keyword.bpshort}} plan and apply job to provision the {{site.data.keyword.cloud_notm}} resources that you specified in your template. If you have an **Active** workspace and decide to remove all your resources, your workspace is set to **Inactive** after all your resources are removed. |
 | `Inprogress` | When you instruct {{site.data.keyword.bplong_notm}} to run your infrastructure code by applying your Terraform execution plan, the state of your workspace changes to `Inprogress`. |
 | `Scanning` | The download of the {{site.data.keyword.bpshort}} template is complete and vulnerability scanning started. If the scan is successful, the workspace state changes to **Inactive**. If errors in your template are found, the state changes to **Template Error**. |
 | `Stopped` | The {{site.data.keyword.bpshort}} plan, apply, or destroy job are stopped manually. |

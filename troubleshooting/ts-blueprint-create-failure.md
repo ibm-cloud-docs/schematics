@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-12-02"
 
 keywords: blueprint config create failure, blueprint download error, create fails,
 
@@ -65,7 +65,7 @@ Invalid blueprint templates. Error - Unable to find basic-blueprint1.yaml in the
 ```
 {: screen}
 
-Check that the template file and input files that are identified in the error message exist in the target repository and are correctly specified on the config create.  
+Check that the template file and input files that are identified in the error message exist in the target repository and are correctly specified on the config create. 
 {: tsResolve} 
 
 Rerun the config create operation with the correct file name.

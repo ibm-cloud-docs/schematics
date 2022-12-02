@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-02"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -39,7 +39,7 @@ Review the commands that you want to create, update, list, delete, and work with
 
 {{site.data.keyword.bplong_notm}} supports inventory host groups to group the applications hostname such as web server, database server, Operating System, region, or network. 
 
-A host group is a collection of hosts that you can run your Ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `development` workspace, or against all hosts with a `webserver` tag in your `development` workspace.  The host groups can be defined by using **Static inventory** or **Dynamic inventory** method. 
+A host group is a collection of hosts that you can run your Ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `development` workspace, or against all hosts with a `webserver` tag in your `development` workspace. The host groups can be defined by using **Static inventory** or **Dynamic inventory** method. 
 
 **Static inventory** allows to create the collection of hosts that you can run your Ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `dev` workspace, or against all hosts with a `webserver` tag in your `dev` workspace. You can also add multiple conditional target resources for your workspaces to run. 
 
@@ -179,7 +179,7 @@ ibmcloud schematics action create --file sample.json
 #### Using the interactive mode
 {: #create-action-interactive}
 
-Instead of entering the command options or using a payload file, you can use the command's interactive mode to create an action. By default, the action is created with minimal user input. To add more information to your action, you can update the action later.  
+Instead of entering the command options or using a payload file, you can use the command's interactive mode to create an action. By default, the action is created with minimal user input. To add more information to your action, you can update the action later. 
 {: shortdesc}
 
 1. Initiate the interactive mode by running the command without command options. 
@@ -607,7 +607,7 @@ Create a blueprint config by using the `ibmcloud schematics blueprint config cre
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3` version.
 {: important}
 
-The config create command supports two modes of input. Either all parameters and flags specified on the command line. Or a file option that accepts the configuration as a JSON file from the local file system.     
+The config create command supports two modes of input. Either all parameters and flags specified on the command line. Or a file option that accepts the configuration as a JSON file from the local file system.    
 
 **Syntax to create using command:**
 
@@ -650,10 +650,10 @@ ibmcloud schematics blueprint config create -name blueprint_Basic -resource-grou
 #### Using a config file
 {: #bp-create-config}
 
-Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option. This approach supports passing complex input variables at create time.  
+Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option. This approach supports passing complex input variables at create time. 
 {: shortdesc}
 
-You need to replace the `<...>` placeholders with the actual values. To pass double quotes as required by Terraform for variables, double quotes must be correctly escaped in the JSON as `\\\"` .  
+You need to replace the `<...>` placeholders with the actual values. To pass double quotes as required by Terraform for variables, double quotes must be correctly escaped in the JSON as `\\\"` . 
 {: note}
 
 **Syntax when using a config JSON file:**
@@ -1131,7 +1131,7 @@ Enter Job sequence number to get blueprint child job output summary(or enter no/
                  
 Module ID        
 Status        job_in_progress   
-Log Summary   (last few lines)..........   
+Log Summary   (last few lines)..........  
                2022/11/21 07:25:35 -----  New blueprint Action  -----   
                2022/11/21 07:25:35 Request: blueprintId=blueprint_Basic.eaB.435a, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=test@in.ibm.com, requestID=a2a9922b-5a79-4700-88e3-efb2d3194fa9   
                2022/11/21 07:25:36 Related Job:  jobID=us-east.JOB.Blueprint-Basic-Json.c64c45a1   
@@ -1198,7 +1198,7 @@ Enter Job sequence number to get blueprint child job output summary(or enter no/
                  
 Module ID        
 Status        job_finished   
-Log Summary   (last few lines)..........   
+Log Summary   (last few lines)..........  
               =Blueprint-Basic-Json.eaB.937a, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=test@in.ibm.com, requestID=f0d63272-974a-44a7-acc1-e18a99b75a9b   
                2022/11/21 08:22:51 Related Job:  jobID=us-east.JOB.Blueprint-Basic-Json.af289c3f   
                2022/11/21 08:23:05  --- Ready to execute the blueprint flow init command ---    
@@ -1600,7 +1600,7 @@ Command options
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The ID of the resource inventory for which you want to list detailed information.  |
+| `--id` or `-i` | Required | The ID of the resource inventory for which you want to list detailed information. |
 | `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 | `--no-prompt` | Optional | Set this flag to retrieve details of an inventory without an interactive command-line session. |
@@ -1707,7 +1707,7 @@ Command options
 | `--command-object` or `-c` | Required | The name of the {{site.data.keyword.bpshort}} automation resource. Currently, only `action` is supported. |
 | `--command-object-id` or `-cid` | Required | The ID of the {{site.data.keyword.bpshort}} Actions where you want to run the job. |
 | `--command-name,` or `-n` | Required | The command that you want to run for your action. Supported values are `ansible_playbook_check`, and `ansible_playbook_run`.|
-| `--playbook-name` or `-pn` | Optional | The name of the Ansible playbook that you want to run.  |
+| `--playbook-name` or `-pn` | Optional | The name of the Ansible playbook that you want to run. |
 | `--command-options` or `-co` | Optional | The command-line options for the command.|
 | `--input` or `--in` | Optional | The input variables for an action. This flag can be set multiple times, and must be in a format `--inputs test=testvalue`.|
 |`--input-file` or `--if`|Optional | Input variables for an action. Provide the JSON file path that contains input variables.|
@@ -1893,7 +1893,7 @@ Command options
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ | 
-| `--id` or `-i` | Required | The ID of the job for which you want to retrieve detailed logs.  |
+| `--id` or `-i` | Required | The ID of the job for which you want to retrieve detailed logs. |
 | `--log-prefix` or `--lp` | Optional | Adds the prefix of command executed in the job logs. |
 | `--log-header` or `--lh` | Optional |  Used to convert command headers in the job logs in the {{site.data.keyword.bpshort}} format. |
 | `--no-prompt` | Optional | Set this flag to run the command without an interactive command-line session. |
@@ -1912,7 +1912,7 @@ ibmcloud schematics job logs --id us-east.JOB.yourjob_ID_1231
 Delete a job for a {{site.data.keyword.bpshort}} action. 
 {: shortdesc}
 
-You cannot delete or stop a running job. To remove a job, you must wait for the job to complete.  
+You cannot delete or stop a running job. To remove a job, you must wait for the job to complete. 
 {: note}
 
 Syntax
@@ -2143,7 +2143,7 @@ Command options
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
 | `--name` or `-n` | Required | The unique name for a resource query. |
-| `--type` or `-t` | Optional | The type of resource that you want to retrieve. Supported values are `vsi`.  |
+| `--type` or `-t` | Optional | The type of resource that you want to retrieve. Supported values are `vsi`. |
 |`--query-file` or `-f` | Optional | The path to the JSON file where you specified the details of your resource query. To find a list of supported queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries). |
 | `--file` or `-f` | Optional | The path to the JSON file that specifies the details of the resource query that you want to create. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
@@ -2271,7 +2271,7 @@ Command options
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | The ID of the resource query that you want to retrieve.  |
+| `--id` or `-i` | Required | The ID of the resource query that you want to retrieve. |
 | `--profile` or `-p` | Optional | The depth of information that you want to retrieve. Supported values are `detailed` and `summary`. The default value is `summary`.|
 | `--output` or `-o` | Optional | Specify the output format. Only `JSON` format is supported.|
 | `--no-prompt` | Optional | Set this flag to retrieve a resource query without an interactive command-line session. |
@@ -2518,7 +2518,7 @@ You can import an existing Terraform state file during the creation of your work
 ### `ibmcloud schematics state pull`
 {: #state-pull}
 
-Show the content of the Terraform state file (`terraform.tfstate`) for a specific Terraform template of your workspace.  
+Show the content of the Terraform state file (`terraform.tfstate`) for a specific Terraform template of your workspace. 
 {: shortdesc}	
 
 Syntax
@@ -3013,7 +3013,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 | Parameter | Required / Optional | Description |
 | -- | -- | -- |
 | `workspace_name` | Optional | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).|
-| `terraform_version` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template.  {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. |
+| `terraform_version` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. |
 | `location` | Optional | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run `ibmcloud target --output json` and look at the `region` field. To target a different region, run `ibmcloud target -r <region>`. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted. |
 | `description` | Optional | Enter a description for your workspace. |
 | `template_repo.url` | Optional | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. |
@@ -3073,7 +3073,7 @@ ibmcloud schematics refresh --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics state list`
 {: #state-list}
 
-List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform state file (`terraform.tfstate`).  
+List the `Name`, `Type`, `URL`, and `Taint Status` of the {{site.data.keyword.cloud_notm}} resources that are documented in your Terraform state file (`terraform.tfstate`). 
 {: shortdesc}	
 
 `Taint Status` returns **tainted** for (true) or **blank** for (false).
@@ -3123,7 +3123,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
-| `--options` or `-o` | Optional | Enter the option flag that you want to show.  |
+| `--options` or `-o` | Optional | Enter the option flag that you want to show. |
 | `--address` or `-adr` | Required | Enter the address of the resource to mark as taint.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces taint flags" caption-side="top"}
 
@@ -3156,7 +3156,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
-| `--options` or `-o` | Optional | Enter the option flag that you want to show.  |
+| `--options` or `-o` | Optional | Enter the option flag that you want to show. |
 | `--address` or `-adr` | Optional | Enter the address of the resource to mark as untaint.|
 {: caption="{{site.data.keyword.bpshort}} Workspaces untaint flags" caption-side="top"}
 
@@ -3267,7 +3267,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 | `resource_group` | Optional | Enter the resource group where you want to provision your workspace. |
 | `workspace_status` | Optional | Freeze or unfreeze a workspace. If a workspace is frozen, changes to the workspace are disabled. |
 | `template_repo.url` | Optional | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. |
-| `template_repo.branch` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored.  Now, in template repository, you can also update URL with more parameters as shown in the block. |
+| `template_repo.branch` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored. Now, in template repository, you can also update URL with more parameters as shown in the block. |
 | `template_repo.datafolder` | Optional | Enter the GitHub or GitLab branch where your Terraform configuration files are stored. |
 | `template_repo.release` | Optional | Enter the GitHub or GitLab release that points to your Terraform configuration files. |
 | `github_source_repo_url` | Optional | Enter the link to your GitHub repository. The link can point to the `master` branch, a different branch, or a subdirectory. |

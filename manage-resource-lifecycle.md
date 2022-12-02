@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-02"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -34,7 +34,7 @@ To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.ke
 ## Deploying your resources
 {: #deploy-resources}
 
-Run your infrastructure code to provision, or modify your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}.  
+Run your infrastructure code to provision, or modify your {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}. 
 {: shortdesc}
 
 **Before you begin**: 
@@ -46,7 +46,7 @@ Run your infrastructure code to provision, or modify your {{site.data.keyword.cl
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that points to the Terraform template that you want to apply. 
 2. Select the **Settings** tab.
 3. In the **Summary** section, click **Pull latest** to get the latest version of your Terraform template from the linked GitHub source repository. If you provided your Terraform template by uploading a tape archive file (`.tar`), you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to provide a new version of your template.
-4. Optional: Review the variables that you set for your workspace. The values of your variables are used every time that you reference the variable in your Terraform template. Make sure that your variables use the correct values.  
+4. Optional: Review the variables that you set for your workspace. The values of your variables are used every time that you reference the variable in your Terraform template. Make sure that your variables use the correct values. 
 5. Click **Generate plan** to create a Terraform execution plan. This action equals the `terraform plan` command. After you click this button, the workspace **Activity** page opens and {{site.data.keyword.bpshort}} starts to compare the state of the resources that you already provisioned in your {{site.data.keyword.cloud_notm}} account with the resources that you want to provision with your Terraform template. 
 6. Click **View log** to review the log files of your execution plan. The execution plan includes a summary of {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state that you described in your Terraform template. If you have syntax errors in your Terraform configuration files, you can review the error message in the log file. 
 7. Review available service plans and pricing information for each of the {{site.data.keyword.cloud_notm}} resources that {{site.data.keyword.bpshort}} is about to create or change. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first. 
@@ -61,11 +61,11 @@ Run your infrastructure code to provision, or modify your {{site.data.keyword.cl
 ## Updating your resources
 {: #update-resources}
 
-To update {{site.data.keyword.cloud_notm}} resources, you must first change the infrastructure code in your Terraform template before you can run your code in {{site.data.keyword.bplong_notm}}.   
+To update {{site.data.keyword.cloud_notm}} resources, you must first change the infrastructure code in your Terraform template before you can run your code in {{site.data.keyword.bplong_notm}}.  
 {: shortdesc}
 
 **What changes can I make to my resources?** </br>
-You can choose to add, modify, or remove infrastructure code in your Terraform template in GitHub, or update variable values from the workspace dashboard in {{site.data.keyword.bplong_notm}}.  
+You can choose to add, modify, or remove infrastructure code in your Terraform template in GitHub, or update variable values from the workspace dashboard in {{site.data.keyword.bplong_notm}}. 
 
 Depending on how you change the configuration of existing resources, {{site.data.keyword.bplong_notm}} might not be able to update your resource. Instead, {{site.data.keyword.bplong_notm}} might decide to apply the change, the resource must be removed, and a new resource must be created. If your resource must be removed, make sure that you do not interrupt a working environment, or delete data. 
 {: note}
@@ -111,7 +111,7 @@ After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by
 To create a deviation report and view the changes between the infrastructure and platform services that you specified in your Terraform configuration files and the resources that exist in your {{site.data.keyword.cloud_notm}} account, you can use Terraform execution plans. A Terraform execution plan summarizes what actions {{site.data.keyword.bpshort}} needs to take to provision the cloud environment that is described in your Terraform configuration files. These actions can include adding, modifying, or removing {{site.data.keyword.cloud_notm}} resources.
 
 **What deviations cannot be detected?**</br>
-A Terraform execution plan is based on the Terraform state file that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} Workspaces,  by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan.  
+A Terraform execution plan is based on the Terraform state file that was created when you ran your first {{site.data.keyword.bpshort}} apply action. Resources that you provisioned in other {{site.data.keyword.bpshort}} Workspaces,  by using automation tools such as Ansible or Chef, or that you added without {{site.data.keyword.bpshort}} are not considered and not included in the Terraform execution plan. 
 
 **To view deviations between the resources in your {{site.data.keyword.cloud_notm}} account and your Terraform configuration**: 
 
@@ -229,7 +229,7 @@ Although the state file is updated before new changes to your {{site.data.keywor
 **Are my resources removed when I remove the workspace** </br>
 Removing the workspace from {{site.data.keyword.bplong_notm}} does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you remove the workspace before you removed your resources, you must manually remove all your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard. 
 
-Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sure that you backed up your data before you remove a resource. If you choose to remove the infrastructure code, or comment out the resource in your Terraform configuration file, make sure to thoroughly review the log file of your execution plan to verify that all your resources are included in the removal.    
+Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sure that you backed up your data before you remove a resource. If you choose to remove the infrastructure code, or comment out the resource in your Terraform configuration file, make sure to thoroughly review the log file of your execution plan to verify that all your resources are included in the removal.   
 {: important}
 
 **To remove your resources by deleting the infrastructure code from your Terraform template**: 

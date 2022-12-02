@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-01"
+lastupdated: "2022-12-02"
 
 keywords: schematics
 subcollection: schematics
@@ -111,7 +111,7 @@ subcollection: schematics
 
     * [Modular Infrastructure](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity)
 
-    * [Declarative vs. imperative approaches to IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative)
+    * [Declarative versus imperative approaches to IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative)
 
     * [Declarative Terraform and lifecycle management](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative-lifecycle)
 
@@ -1615,10 +1615,10 @@ subcollection: schematics
 [Deploying a VPC environment with bastion host on IBM Cloud](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 
 
-## Deploying a multi-tiered VPC with bastion host on IBM Cloud
-{: #sitemap_deploying-a-multi-tiered-vpc-with-bastion-host-on-ibm-cloud}
+## Deploying a multitiered VPC with bastion host on IBM Cloud
+{: #sitemap_deploying-a-multitiered-vpc-with-bastion-host-on-ibm-cloud}
 
-[Deploying a multi-tiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
+[Deploying a multitiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
 
 
 ## CLI reference

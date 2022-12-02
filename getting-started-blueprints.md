@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-24"
+lastupdated: "2022-12-02"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -132,7 +132,7 @@ For more information about the difference between destroy and config delete, see
 Use one of the [sample blueprints](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} to create a scalable blueprint cloud environment, created from multiple blueprint modules. 
 {: shortdesc}
 
-This sample blueprint is a simple scenario using two modules to demonstrate linking and resource data flows between the modules. No cloud resources are created by this example.  
+This sample blueprint is a simple scenario using two modules to demonstrate linking and resource data flows between the modules. No cloud resources are created by this example. 
 
 ### Creating a blueprint in {{site.data.keyword.bpshort}}
 {: #get-started-blueprints-create}
