@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -18,9 +18,9 @@ subcollection: schematics
 # Defining blueprints
 {: #define-blueprints}
 
-{{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied. 
+{{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) automation solution for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied. Return to the [overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview) section for an introduction to Blueprints. 
 
-[Templates](/docs/schematics?topic=schematics-glossary#bpb2) determine the architecture, specifying the modules required for the implementation and infrastructure topology. Reusable [modules](/docs/schematics?topic=schematics-glossary#bpb5) implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. 
+A blueprint [template](/docs/schematics?topic=schematics-glossary#bpb2) determines the architecture and infrastructure topology to be deployed.  Reusable Terraform [modules](/docs/schematics?topic=schematics-glossary#bpb5) implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. 
 {: shortdesc} 
 
 ![Blueprint templates, modules and inputs define environment](/images/new/bp-overview.svg){: caption="Blueprint templates, modules and inputs define environment" caption-side="bottom"}
@@ -28,7 +28,7 @@ subcollection: schematics
 A blueprint template determines the architecture. It specifies the modules required for the implementation, infrastructure topology and data dependencies between modules. {{site.data.keyword.bpshort}} deploys the modules as discrete environments, managing their lifecycle and the passing of resource information between modules.   
 
 
-When deploying a blueprint, the environment and cloud resources to be deployed are defined by three versioned elements:
+A blueprint environment and cloud resources to be deployed are defined by three versioned elements:
 1. A reusable `blueprint template` to represent the reference infrastructure architecture, the IaC automation modules to be used and the cloud resources that are to be deployed.
 2. Versioned `blueprint inputs` to customize a blueprint template for the specific environment to be deployed.
 3. Reusable `modules` written in Terraform to implement the infrastructure architecture and deploy the desired cloud resources. 
@@ -54,7 +54,7 @@ The steps to create a blueprint template and define the versioned the inputs are
 1. Defining a cloud environment starts with a high-level reference architecture for the environment. Using the reference architecture as a guide, select the automation modules to implement the infrastructure layers of the architecture. Publicly available modules can be combined with private modules to create a custom architecture. Modules can be sourced from the public repositories containing {{site.data.keyword.IBM_notm}} and third-party authored modules, along with any custom developed modules from private repositories. Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) for details of how to work with Terraform root and child modules.
     - {{site.data.keyword.IBM_notm}} authored modules can be found in the [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} GitHub repository.
 2. Create and edit a blueprint template to implement the desired reference architecture from the selected modules. Review the sections [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) and [blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml) for guidance on creating blueprint templates. 
-    - Create and name a new blueprint template YAML file in your favorite editor. Alternatively follow the instructions for [editing templates in VSCode](/docs/schematics?topic=schematics-edit-blueprints). 
+    - Create and name a new blueprint template YAML file in your favorite editor. [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints) is recommended, as it provides blueprint template syntax validation and autocomplete.   
     - Example blueprint template YAML files can be found in the [Cloud-{{site.data.keyword.bpshort}}](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint) GitHub repository. Alternatively, download one of the existing template YAML files and use it as a basis for a new template.  
     - Review the module metadata and readme file information for the selected [modules](https://github.com/terraform-ibm-modules){: external} to guide writing the template blueprint [module definitions](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema). 
     - Define the variable dependencies between modules to pass the resource dependency data for provisioned resources.

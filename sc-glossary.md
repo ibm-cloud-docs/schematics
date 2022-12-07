@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -64,13 +64,13 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 
 {{site.data.keyword.bplong}} Blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac){: external} (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A builder builds the house from well-defined components using the blueprint for guidance. 
 
-It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments from solution architectures. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).  
+It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-glossary#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2).  
 {: shortdesc}
 
 ### Blueprint
 {: #bpb1}
 
-A blueprint is the resource in {{site.data.keyword.bpshort}} a user works with to manage the environment and cloud resources created from a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) and config. The blueprint resource in {{site.data.keyword.bpshort}} records the details of the template and the specific [configuration](/docs/schematics?topic=schematics-glossary#bpb3) details. All operations against the deployed cloud resources are performed using the blueprint resource or ID. 
+A blueprint is the resource in {{site.data.keyword.bpshort}} a user works with to manage the group of modular environments and cloud resources created from a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) and config. The blueprint resource in {{site.data.keyword.bpshort}} records the details of the template and the specific [configuration](/docs/schematics?topic=schematics-glossary#bpb3) details. All operations against the deployed cloud resources and modules are performed using the blueprint resource or ID. 
 
 The blueprint (resource) maintains the record of operations run, job status, the cloud resources deployed, and the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2). It defines the infrastructure architecture and the unique input values that are used to configure the environment.
 

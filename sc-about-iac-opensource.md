@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -29,7 +29,7 @@ Provisioning tools (including Terraform and Ansible) provision infrastructure su
 
 “Provisioning” often implies it is an initial task. 
 
-## What is Configuration management?
+## What is Configuration Management?
 {: #sc-iac-cm}
 
 Configuration management is a systems engineering process for establishing and maintaining computer systems, servers, and software in a desired, consistent performance — state. Managing IT system configurations involves defining a system’s desired state — like server configuration — then building and maintaining those systems. [Wikipedia](https://en.wikipedia.org/wiki/Configuration_management){: external}

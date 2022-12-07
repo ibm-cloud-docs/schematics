@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-07"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -31,7 +31,7 @@ You can specify your resource inventory by using a [static inventory file](#stat
 3. Select the **Define manually** tab.
 4. In the **File** field, enter the target hosts where you want to run the Ansible playbook. Make sure to specify your hosts in an `INI` syntax. For a sample syntax, see [File format](#inv-file-format). Review the [limitations](#inv-file-limitation) to ensure that your inventory definition is supported in {{site.data.keyword.bpshort}}.
 5. Click **Create inventory**.
-6. Follow the [steps](/docs/schematics?topic=schematics-action-setup#create-action) to create a {{site.data.keyword.bpshort}} Actions and use the resource inventory that you created.
+6. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create a {{site.data.keyword.bpshort}} Actions and use the resource inventory that you created.
 
 
 ### File format
@@ -85,7 +85,7 @@ Dynamic resource inventories references {{site.data.keyword.cloud_notm}} resourc
 7. Repeat step 4-6 to add more host groups.
 8. From the table list, select the host groups that you want to include in your resource inventory.
 9. Click **Create inventory**. 
-10. Follow the [steps](/docs/schematics?topic=schematics-action-setup#create-action) to create the {{site.data.keyword.bpshort}} Actions and use the resource inventory that you created. 
+10. Follow the [steps](/docs/schematics?topic=schematics-action-working#create-action) to create the {{site.data.keyword.bpshort}} Actions and use the resource inventory that you created. 
 
 ### Supported resource queries
 {: #supported-queries}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-20"
+lastupdated: "2022-12-07"
 
 keywords: dbaas data protection, tier 1 physical platforms, secure access control, data loss, corruption, byok, encryption, protection 
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Security
 {: #security}
 
-Use the powerful tools of {{site.data.keyword.bplong}} to build and spin up your {{site.data.keyword.cloud_notm}} environment, automate cloud resource operations, install software, and run multitiered apps on your cloud resources. The {{site.data.keyword.bplong_notm}} also ensures that your data stays secure and protected.
+Use the powerful tools of {{site.data.keyword.bplong}} to build and spin up your {{site.data.keyword.cloud_notm}} environment, automate cloud resource operations, install software, and run multi-tiered apps on your cloud resources. The {{site.data.keyword.bplong_notm}} also ensures that your data stays secure and protected.
 
 ## Secure access control
 {: #secure-access-control}

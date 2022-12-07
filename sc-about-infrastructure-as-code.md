@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -98,7 +98,7 @@ Chef is thought of as an imperative tool. Terraform is classed as declarative. A
 
 {{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention. Idempotent property task executes multiple time with the same end result.
 
-### Impotence
+### Idempotence
 {: #iac-idempotence}
 
 A benefit of the declarative approached used by Terraform and Ansible is idempotence. Idempotent task can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 

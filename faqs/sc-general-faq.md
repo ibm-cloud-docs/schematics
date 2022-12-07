@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-12-07"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -29,7 +29,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} are clas
 
 To do so, {{site.data.keyword.bpshort}} uses open source projects, such as Terraform, Ansible, Red Hat OpenShift, Operators, and Helm, and delivers these capabilities to you as a managed service. Rather than installing each open source project on your system, and learn the API or CLI. You can declare the tasks that you want to run in {{site.data.keyword.cloud_notm}} and watch {{site.data.keyword.bpshort}} run these tasks for you.
 
-For more information about how {{site.data.keyword.bpshort}} Works, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-learn-about-schematics).
+For more information about how {{site.data.keyword.bpshort}} Works, see [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-about-schematics).
 
 ## What is Infrastructure as Code?
 {: #what-is-iac}

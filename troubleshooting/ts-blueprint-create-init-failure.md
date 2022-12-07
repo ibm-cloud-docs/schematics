@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
-keywords: blueprint config create init failure, blueprint init error, create init fails,
+keywords: blueprint create init failure, blueprint init error, create init fails,
 
 subcollection: schematics
 
@@ -17,7 +17,7 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# Blueprint config create fails in the create_init step
+# blueprint create fails in the create_init step
 {: #bp-create-init-fails}
 
 When you create a blueprint config, it fails during initialization of the blueprint modules. 
@@ -65,18 +65,18 @@ Correct the cause of the failure. Most typically it is an invalid module repo UR
 - Update the blueprint module statements to specify the correct Git repo URL
 - Push the new release of the blueprint template to its Git source repository. With an updated release tag if needed.
 
-If you use the blueprint template current version, run the `ibmcloud schematics blueprint config update` command to refresh the blueprint configuration that is stored by {{site.data.keyword.bpshort}} with the update to the blueprint template. 
+If you use the blueprint template current version, run the `ibmcloud schematics blueprint update` command to refresh the blueprint configuration that is stored by {{site.data.keyword.bpshort}} with the update to the blueprint template. 
 
 
 ```sh
-ibmcloud schematics blueprint config update -id <blueprint_ID> 
+ibmcloud schematics blueprint update -id <blueprint_ID> 
 ```
 {: pre}
 
 If explicit blueprint template versioning is used with release tags for each template release, the blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new release tag.  
 
 ```sh
-ibmcloud schematics blueprint config update --id <blueprint_ID> --bp-git-release x.y.z  
+ibmcloud schematics blueprint update --id <blueprint_ID> --bp-git-release x.y.z  
 ```
 {: pre}
 
@@ -103,6 +103,6 @@ OK
 ```
 {: screen}
 
-On successful completion the config update returns **`update_success`**. All modules must be initialized to `Inactive` state and deployment of the environment can continue with [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint). 
+On successful completion the config update returns **`update_success`**. All modules must be initialized to `Inactive` state and deployment of the environment can continue with [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint). 
 
 If the update job fails, repeat problem diagnosis, and resolution until update completes successfully and all modules are in an `Inactive` state.

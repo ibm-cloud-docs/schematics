@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-07"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -12,7 +12,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started: Infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}
+# Using Workspaces to deploy infrastructure and cloud services
 {: #get-started-terraform}
 
 Use one of the IBM provided templates to create an [{{site.data.keyword.cos_full}}](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage){: external} service instance that you can use to store your data in {{site.data.keyword.cloud_notm}}. 

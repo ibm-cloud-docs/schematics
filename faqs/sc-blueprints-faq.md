@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -103,13 +103,13 @@ All cloud resources created by a blueprint configuration are automatically tagge
 {: faq}
 {: support}
 
-Sensitive input variables like API Keys or SSH Keys must not be saved in blueprint input files due to the risk of security exposure from a Git repository. To avoid accidental exposure, sensitive inputs must be passed as dynamic inputs at blueprint config create time by using the CLI `--inputs` flag. 
+Sensitive input variables like API Keys or SSH Keys must not be saved in blueprint input files due to the risk of security exposure from a Git repository. To avoid accidental exposure, sensitive inputs must be passed as dynamic inputs at blueprint create time by using the CLI `--inputs` flag. 
 
-Sensitive values can be exported as environment variables and shell variable substitution that is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint config create` command by using `--inputs sshkey=$user_ssh_key`
+Sensitive values can be exported as environment variables and shell variable substitution that is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command by using `--inputs sshkey=$user_ssh_key`
 
 ```sh
 export user_ssh_key="ssh xxx"
-ibmcloud schematics blueprint config create  ......................  --inputs sshkey=$user_ssh_key
+ibmcloud schematics blueprint create  ......................  --inputs sshkey=$user_ssh_key
 ```
 {: pre}
 
@@ -162,7 +162,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
    Example
 
    ```sh
-   ibmcloud schematics blueprint config create --file payload_complex.json
+   ibmcloud schematics blueprint create --file payload_complex.json
    ```
    {: pre}
 
@@ -171,7 +171,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
    Example
 
    ```sh
-   ibmcloud schematics blueprint config create --name bp-useast-basic1 --resource-group Default --bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --bp-git-file basic-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --input-git-file basic-input.yaml --input-git-branch main --inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1
+   ibmcloud schematics blueprint create --name bp-useast-basic1 --resource-group Default --bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --bp-git-file basic-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --input-git-file basic-input.yaml --input-git-branch main --inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1
    ```
    {: pre}
 

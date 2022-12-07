@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics blueprints, deploy blueprint, managed environments
 
@@ -34,7 +34,7 @@ The deployment steps are illustrated in the diagram.
 4. {{site.data.keyword.bpshort}} automatically initializes its dependencies. The set of blueprint automation modules defined by the template is initialized to manage the cloud resources of the environment. Each module in the UI or CLI represents an automation module in the blueprint template. 
     - The saved blueprint configuration can be reviewed before environment and resource deployment. 
     - This step is performed internally. In a future release the resulting plan results will be presented for review.    
-5. Deploy the blueprint with the `blueprint run apply` command or UI Run Apply operation. For more information, see the section [Apply blueprint](/docs/schematics?topic=schematics-apply-blueprint). 
+5. Deploy the blueprint with the `blueprint apply` command or UI Run Apply operation. For more information, see the section [Apply blueprint](/docs/schematics?topic=schematics-apply-blueprint). 
     - Based on your blueprint configuration, {{site.data.keyword.bpshort}} creates an internal deployment plan and runs the IaC module code in dependency order to create the environment and resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied. 
 6. For each module, {{site.data.keyword.bpshort}} runs a Terraform Apply to create cloud resources. 
 7. After all the modules are applied, {{site.data.keyword.bpshort}} returns the blueprint outputs. 

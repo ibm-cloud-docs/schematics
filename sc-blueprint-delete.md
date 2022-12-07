@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
-keywords: blueprint config delete, delete blueprint, blueprint
+keywords: blueprint delete, delete blueprint, blueprint
 
 subcollection: schematics
 
@@ -30,13 +30,13 @@ This behavior of disallowing delete when modules cannot be returned to an `Inact
 {: #delete-blueprint-cli}
 {: cli}
 
-For more information, see [blueprint config delete](/docs/schematics?topic=schematics-delete-blueprint) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint config delete` command run. 
+For more information, see [blueprint delete](/docs/schematics?topic=schematics-delete-blueprint) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint delete` command run. 
 
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ```sh
-ibmcloud schematics blueprint config delete --id Blueprint_Basic.eaB.08d1
+ibmcloud schematics blueprint delete --id Blueprint_Basic.eaB.08d1
 ```
 {: pre}
 
@@ -129,7 +129,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} Blueprint
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Delete a blueprint config](/apidocs/schematics/schematics#delete-blueprint) by using API. 
 
-You need to run `blueprint run destroy` command and then run `blueprint config delete` command. For more information, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint) configuration.
+You need to run `blueprint run destroy` command and then run `blueprint delete` command. For more information, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint) configuration.
 
 Record the blueprint ID that needs to be deleted. To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 

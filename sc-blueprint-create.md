@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
-keywords: blueprint config create, create blueprint, blueprint
+keywords: blueprint create, create blueprint, blueprint
 
 subcollection: schematics
 
@@ -18,21 +18,21 @@ subcollection: schematics
 # Create a blueprint configuration 
 {: #create-blueprint-config}
 
-Deploying a blueprint environment and cloud resources using a blueprint template is a two-step process. The first step is creating a blueprint configuration in {{site.data.keyword.bpshort}}, the second step deploys this configuration  with a `blueprint run apply` operation. See [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of managing deployments, and change in blueprint environments.
+Deploying a blueprint environment and cloud resources using a blueprint template is a two-step process. The first step is creating a blueprint configuration in {{site.data.keyword.bpshort}}, the second step deploys this configuration  with a `blueprint apply` operation. See [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) for an overview of managing deployments, and change in blueprint environments.
 
 Creating a configuration takes as its input the blueprint template YAML and input YAML file that were created during the [defining blueprints](/docs/schematics?topic=schematics-define-blueprints) lifecycle stage. 
 {: shortdesc} 
 
 The first step in deploying cloud resources is [creating a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config) in {{site.data.keyword.bpshort}}. This saves the blueprint configuration for future operations. The blueprint config specifies the Git source and release of the blueprint template, input files, and any input values that are used to create cloud resources. A blueprint module is created in {{site.data.keyword.bpshort}} for each module definition in the template. Each is initialized with the Terraform module source from the Git repository specified in the module definition, and module inputs.
 
-The second [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step excutes the automation modules in dependency order and runs the module Terraform code to deploy cloud resources. 
+The second [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step excutes the automation modules in dependency order and runs the module Terraform code to deploy cloud resources. 
 
 
 ## Creating a blueprint configuration through CLI 
 {: #create-blueprint-cli}
 {: cli}
 
-Create your blueprint config with the CLI. The Create command requires a name and the Git URL of a blueprint template and other arguments. For a complete listing of options, see [blueprint config create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
+Create your blueprint config with the CLI. The Create command requires a name and the Git URL of a blueprint template and other arguments. For a complete listing of options, see [blueprint create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
 {: shortdesc}
 
 To work with {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.4`.
@@ -71,17 +71,17 @@ It is assumed that the user has IAM permissions to create resource groups. Synta
 
 `-inputs provision_rg=true,resource_group_name=my_resource_group`
 
-Full `blueprint config create` command syntax:
+Full `blueprint create` command syntax:
 
 ```sh
-ibmcloud schematics blueprint config create -name Blueprint_Basic -resource-group Default \
+ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default \
 -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml \
 -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
 -inputs provision_rg=true,resource_group_name=my_resource_group
 ```
 {: pre}
 
-On successful completion, the config create returns **`create_success`** and the unique ID of the blueprint. This ID is needed as input for all future operations against this environment. For more information, see [blueprint config create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
+On successful completion, the config create returns **`create_success`** and the unique ID of the blueprint. This ID is needed as input for all future operations against this environment. For more information, see [blueprint create](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command.
 
 
 
@@ -92,10 +92,10 @@ Where a user does not have permissions to create a new resource group and only h
 
 `-inputs provision_rg=false,resource_group_name=default`
 
-Full `blueprint config create` command syntax:
+Full `blueprint create` command syntax:
 
 ```sh
-ibmcloud schematics blueprint config create -name Blueprint_Basic -resourcegroup Default \
+ibmcloud schematics blueprint create -name Blueprint_Basic -resourcegroup Default \
 -bp-git-url https://github.com/Cloud-Schematics/blueprint-basicexample -bp-git-file basic-blueprint.yaml \
 -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
 -inputs provision_rg=false,resource_group_name=default
@@ -186,9 +186,9 @@ Here the steps to verify your blueprint creation.
 {: shortdesc}
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
-2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` must show the summary details of the blueprint config create job. 
+2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` must show the summary details of the blueprint create job. 
 3. Click **Modules** tab to see the status of the resource modules in an `Inactive` state.
-4. Click **Jobs history** tab view the result of the blueprint config create job and operations that are performed against the resource modules. 
+4. Click **Jobs history** tab view the result of the blueprint create job and operations that are performed against the resource modules. 
 5. Click **Settings** tab to view the summary of the new blueprint configuration.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
@@ -199,7 +199,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Create a blueprint config](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-The blueprint config create API runs `blueprint config create`, and `blueprint jobs` `APIs` together, to run create blueprint operations.
+The blueprint create API runs `blueprint create`, and `blueprint jobs` `APIs` together, to run create blueprint operations.
 {: important}
 
 Example

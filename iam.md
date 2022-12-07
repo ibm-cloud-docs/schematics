@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics, automation, terraform
 
@@ -89,17 +89,17 @@ Review the following table to see what permissions you need to work with {{site.
 
 Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Blueprint.
 
-In addition to the listed blueprints activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `blueprint config create`, `blueprint run apply`, `blueprint config delete`, and `blueprint run destroy` activities to execute successfully.
+In addition to the listed blueprints activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `blueprint create`, `blueprint apply`, `blueprint delete`, and `blueprint run destroy` activities to execute successfully.
 {: important} 
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
 | `View blueprint` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `View blueprint logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint config create` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint config update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint config delete`| | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint run apply` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `blueprint create` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `blueprint update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `blueprint delete`| | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `blueprint apply` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `blueprint run destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}

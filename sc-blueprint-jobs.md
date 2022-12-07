@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -250,9 +250,9 @@ The color coding indicates whether the job was successful or failed.
 {: api}
 
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about blueprint config update, refer to, [Installing blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about blueprint update, refer to, [Installing blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-Blueprint create API runs `blueprint run apply`, and `blueprint jobs` `APIs` together, to perform the config create, and blueprint run apply operations.
+Blueprint create API runs `blueprint apply`, and `blueprint jobs` `APIs` together, to perform the config create, and blueprint apply operations.
 {: important}
 
 Example

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics capabilities, schematics overview, benefits
 
@@ -42,7 +42,7 @@ The four core {{site.data.keyword.bpshort}} offerings are:
 ### {{site.data.keyword.bpshort}} Blueprints
 {: #sc-blueprints}
 
-{{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. Blueprints takes cloud environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
+{{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. Blueprints takes large environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
 {: shortdesc} 
 
 It enables users to define and deploy cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. For more information about Blueprints and its features, see [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
@@ -57,7 +57,7 @@ Organize your Terraform templates and control the access to run infrastructure c
 ### {{site.data.keyword.bpshort}} Actions
 {: #sc-actions}
 
-With {{site.data.keyword.bpshort}} Actions, use Ansible playbooks to perform complex day-2 operations on your cloud resources, cloud environment, and app workloads. Whether you want to deploy multitiered apps, start or stop virtual servers or clusters, rotate keys, backup and restore app data, perform security scans, manage database schemas, or manage users, simply specify the tasks that you want to run in your playbook, and let {{site.data.keyword.bpshort}} securely connect and complete the tasks.For more information about managing {{site.data.keyword.bpshort}} Actions and its features, see [managing Actions](/docs/schematics?topic=schematics-workspace-setup).
+With {{site.data.keyword.bpshort}} Actions, use Ansible playbooks to perform complex day-2 operations on your cloud resources, cloud environment, and app workloads. Whether you want to deploy multi-tiered apps, start or stop virtual servers or clusters, rotate keys, backup and restore app data, perform security scans, manage database schemas, or manage users, simply specify the tasks that you want to run in your playbook, and let {{site.data.keyword.bpshort}} securely connect and complete the tasks.For more information about managing {{site.data.keyword.bpshort}} Actions and its features, see [managing Actions](/docs/schematics?topic=schematics-workspace-setup).
 {: shortdesc}
 
 ### {{site.data.keyword.bpshort}} Agents

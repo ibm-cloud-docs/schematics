@@ -30,6 +30,7 @@ toc:
                                                     - sc-about-infrastructure-as-code.md
                                                     - sc-about-iac-opensource.md
                                                     - workspaces/sc-about-workspaces.md
+                                                    - sc-about-actions.md
                                                     - sc-about-agent.md
                                                     - sc-about-blueprint.md
                                                     - sc-about-usecases.md
@@ -96,7 +97,7 @@ toc:
                                   - topicgroup:
                                             label: Managing Actions
                                             topics:
-                                                    - action-setup.md
+                                                    - action-working.md
                                                     - ansible-roles.md
                                                     - create-ansible-playbook.md
                                                     - autodeploy_actionsamples.md
@@ -148,7 +149,7 @@ toc:
                                             label: Deploying a VPC environment with bastion host on IBM Cloud
                                             href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
                                   - link:
-                                            label: Deploying a multitiered VPC with bastion host on IBM Cloud
+                                            label: Deploying a multi-tiered VPC with bastion host on IBM Cloud
                                             href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
                 - navgroup:
                           id: reference

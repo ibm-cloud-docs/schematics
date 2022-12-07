@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -274,7 +274,7 @@ docker_ports: | 
 ## Dynamic inputs
 {: #blueprint-dynamic-input}
 
-Dynamic inputs are set at [blueprint config create](/docs/schematics?topic=schematics-create-blueprint-config) time to pass inputs to dynamically customize the template and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository. API keys and SSH keys would typically be passed as dynamic inputs at config create time. See the [blueprint FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs) for using dynamic inputs to pass sensitive variables. 
+Dynamic inputs are set at [blueprint create](/docs/schematics?topic=schematics-create-blueprint-config) time to pass inputs to dynamically customize the template and over ride inputs from an a version controlled input file sourced from a Git repo. They can be used to pass input values that would be a security exposure if written to a Git repository. API keys and SSH keys would typically be passed as dynamic inputs at config create time. See the [blueprint FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs) for using dynamic inputs to pass sensitive variables. 
 {: shortdesc} 
 
 Blueprint templates only support input variables of type `string` as dynamic inputs. 
@@ -282,7 +282,7 @@ Blueprint templates only support input variables of type `string` as dynamic inp
 Example of passing dynamic inputs at creation time. 
 
 ```sh
-ibmcloud schematics blueprint config create -name <name> -resource_group <resource_group> -bp_git_url <blueprint_url> -input_git_url <input_url> -inputs provision_rg=<value>,resource_group_name=<value>
+ibmcloud schematics blueprint create -name <name> -resource_group <resource_group> -bp_git_url <blueprint_url> -input_git_url <input_url> -inputs provision_rg=<value>,resource_group_name=<value>
 ```
 {: pre} 
 

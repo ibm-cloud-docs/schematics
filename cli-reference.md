@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -598,10 +598,10 @@ For more information about the flags see [workspace get](/docs/schematics?topic=
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-### `ibmcloud schematics blueprint config create`
+### `ibmcloud schematics blueprint create`
 {: #schematics-blueprint-create}
 
-Create a blueprint config by using the `ibmcloud schematics blueprint config create` command. The blueprint config is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
+Create a blueprint config by using the `ibmcloud schematics blueprint create` command. The blueprint config is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3` version.
@@ -612,7 +612,7 @@ The config create command supports two modes of input. Either all parameters and
 **Syntax to create using command:**
 
 ```sh
-ibmcloud schematics blueprint config create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
 ```
 {: pre}
 
@@ -638,19 +638,19 @@ Command options
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
 | `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. This approach supporting passing complex input variables. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} blueprint config create flags" caption-side="bottom"}
+{: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint config create -name blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
+ibmcloud schematics blueprint create -name blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
 
 #### Using a config file
 {: #bp-create-config}
 
-Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint config create. Pass the file name to the command by using the `--file` command option. This approach supports passing complex input variables at create time. 
+Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint create. Pass the file name to the command by using the `--file` command option. This approach supports passing complex input variables at create time. 
 {: shortdesc}
 
 You need to replace the `<...>` placeholders with the actual values. To pass double quotes as required by Terraform for variables, double quotes must be correctly escaped in the JSON as `\\\"` . 
@@ -745,7 +745,7 @@ Example
 {: codeblock}
 
 ```sh
-ibmcloud schematics blueprint config create --file createtest.json --github-token <ENTER YOUR GIT TOKEN>
+ibmcloud schematics blueprint create --file createtest.json --github-token <ENTER YOUR GIT TOKEN>
 ```
 {: pre}
 
@@ -777,7 +777,7 @@ OK
 {: screen}
 
 
-### `ibmcloud schematics blueprint run apply`
+### `ibmcloud schematics blueprint apply`
 {: #schematics-blueprint-apply}
 
 The apply command creates the cloud resources defined by the blueprint template. Apply performs Terraform `Apply` operations for each module, using the Terraform configuration specified in the blueprint template to create the cloud resources.
@@ -786,7 +786,7 @@ The apply command creates the cloud resources defined by the blueprint template.
 Syntax
 
 ```sh
-ibmcloud schematics blueprint run apply --id BLUEPRINT_ID [--output OUTPUT]
+ibmcloud schematics blueprint apply --id BLUEPRINT_ID [--output OUTPUT]
 ```
 {: pre}
 
@@ -801,7 +801,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics blueprint run apply --id Blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint apply --id Blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 
@@ -830,16 +830,16 @@ OK
 ```
 {: screen}
 
-### `ibmcloud schematics blueprint config update`
+### `ibmcloud schematics blueprint update`
 {: #schematics-blueprint-update}
 
-You update the blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and blueprint template with the `ibmcloud schematics blueprint config update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics blueprint run apply` after the update has been performed.
+You update the blueprint configuration in {{site.data.keyword.bpshort}} with changes to the inputs and blueprint template with the `ibmcloud schematics blueprint update` command. Changes are only applied to the deployed resources by running the the `ibmcloud schematics blueprint apply` after the update has been performed.
 {: shortdesc}
 
 Syntax
 
 ```sh
-ibmcloud schematics blueprint config update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
+ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
 ```
 {: pre}
 
@@ -858,7 +858,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics blueprint config update -id Blueprint_Basic.eaB.5cd9 -f update.json
+ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9 -f update.json
 ```
 {: pre}
 
@@ -1037,7 +1037,7 @@ OK
 {: screen}
 
 
-### `ibmcloud schematics blueprint config delete`
+### `ibmcloud schematics blueprint delete`
 {: #schematics-blueprint-delete}
 
 Delete a blueprint. A blueprint can only be deleted once all resources have been destroyed using the `destroy` command and workspaces are in `Inactive` state. For more information about the difference between destroy and delete command, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup&interface=ui#del-workspace).
@@ -1046,7 +1046,7 @@ Delete a blueprint. A blueprint can only be deleted once all resources have been
 Syntax
 
 ```sh
-ibmcloud schematics blueprint config delete --id BLUEPRINT_ID [—force-delete] [--no-prompt] [--output OUTPUT]
+ibmcloud schematics blueprint delete --id BLUEPRINT_ID [—force-delete] [--no-prompt] [--output OUTPUT]
 ```
 {: pre}
 
@@ -1058,12 +1058,12 @@ Command options
 | `--force-delete` or `--fd` | Optional | Force deletes the blueprint including the active module. This action cannot be reversed.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} blueprint config delete flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprint delete flags" caption-side="top"}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint config delete -id blueprint_Basic.eaB.5cd9
+ibmcloud schematics blueprint delete -id blueprint_Basic.eaB.5cd9
 ```
 {: pre}
 

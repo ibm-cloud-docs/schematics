@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -429,7 +429,7 @@ Type: string
 
 Default: latest
 
-If content type is `git`, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint config update` operation. 
+If content type is `git`, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint update` operation. 
 
 Options: `latest` or release in SemVer format 
 {: pre}

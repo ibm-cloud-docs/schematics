@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -284,5 +284,5 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=api) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint) again using the same blueprint configuration.
+After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=api) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint) again using the same blueprint configuration.
 

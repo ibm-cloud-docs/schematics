@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
@@ -33,10 +33,10 @@ You can come back anytime to your created thread to add information, ask questio
 
 ## Beta changes October 2022
 Blueprint commands have been renamed with the 1.12.3 release of the Schematics CLI Plugin 
-- `blueprint create` > `blueprint config create`
-- `blueprint update` > `blueprint config update`
-- `blueprint delete` > `blueprint config delete`
-- `blueprint apply` > `blueprint run apply`
+- `blueprint create` > `blueprint create`
+- `blueprint update` > `blueprint update`
+- `blueprint delete` > `blueprint delete`
+- `blueprint apply` > `blueprint apply`
 - `blueprint destroy` > `blueprint run destroy` 
 
 

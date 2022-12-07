@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-07"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -12,13 +12,13 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started: Using blueprints to deploy large-scale cloud environments 
+# Using Blueprints to deploy large-scale cloud environments 
 {: #get-started-blueprints}
 
-Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external} to deploy a blueprint with multiple linked modules.
+Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external} to deploy a blueprint linking multiple module environments. 
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} Blueprints support deploying and managing large-scale application environments using solution architecture definitions created from building blocks of open source IaC Code. Building on open source Infrastructure as Code (IaC) automation, blueprints scales infrastructure deployments by linking multiple workspaces to create large-scale environments.  
+{{site.data.keyword.bplong_notm}} Blueprints supports deploying and managing large-scale application environments using solution architecture definitions composed from building blocks of open source IaC Code. Building on open source Infrastructure as Code (IaC) automation, Blueprints scales infrastructure deployments by linking multiple environments to create large-scale application architectures.   
 
 ## Deploy blueprint through UI
 {: #deploy-bp-ui}
@@ -138,7 +138,7 @@ This sample blueprint is a simple scenario using two modules to demonstrate link
 {: #get-started-blueprints-create}
 {: step}
 
-Create your blueprint by using the [`ibmcloud schematics blueprint config create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command. 
+Create your blueprint by using the [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) command. 
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3` version.
 {: important}
@@ -158,11 +158,11 @@ Default   aac37f57b20142dba1a435c70aeb12df   true            ACTIVE
 ```
 {: pre}
 
-In the `blueprint config create` command, replace `<default-resource-group-name>` with the name of the default resource group. 
+In the `blueprint create` command, replace `<default-resource-group-name>` with the name of the default resource group. 
 
 
 ```sh
-ibmcloud schematics blueprint config create --name Blueprint_Complex --resource-group <default-resource-group-name> --bp-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --bp-git-file complex-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --input-git-file complex-input.yaml --input-git-branch main --inputs region=eu-de,sample_var=testconfig_input_demo
+ibmcloud schematics blueprint create --name Blueprint_Complex --resource-group <default-resource-group-name> --bp-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --bp-git-file complex-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --input-git-file complex-input.yaml --input-git-branch main --inputs region=eu-de,sample_var=testconfig_input_demo
 ```
 {: pre}
 
@@ -201,10 +201,10 @@ Record the ID of the blueprint to use in the later commands.
 {: #get-started-blueprints-install}
 {: step}
 
-Use the [`ibmcloud schematics blueprint run apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply) command to perform Terraform apply operations by using the Terraform configurations specified in the blueprint template. This operation will create cloud resources. Insert the ID saved from the [output of the create](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli) command.
+Use the [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply) command to perform Terraform apply operations by using the Terraform configurations specified in the blueprint template. This operation will create cloud resources. Insert the ID saved from the [output of the create](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli) command.
 
 ```sh
-ibmcloud schematics blueprint run apply -id <blueprint_ID>
+ibmcloud schematics blueprint apply -id <blueprint_ID>
 ```
 {: pre}
 
@@ -249,11 +249,11 @@ ibmcloud schematics blueprint run destroy -id <blueprint_ID>
 ```
 {: pre}
 
-You need to run the `blueprint run destroy` command and then run the  `blueprint config delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprints).
+You need to run the `blueprint run destroy` command and then run the  `blueprint delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprints).
 {: note}
 
 ```sh
-ibmcloud schematics blueprint config delete -id <blueprint_ID>
+ibmcloud schematics blueprint delete -id <blueprint_ID>
 ```
 {: pre}
 
