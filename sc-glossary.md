@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-08"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -92,7 +92,7 @@ A `blueprint configuration` is the initial definition that the user provides to 
 ### Blueprint environment
 {: #bpb4}
 
-A blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources that are created from a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) and the inputs that are specified by a [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). 
+A blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources that are created from a [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) and the inputs that are specified by a [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). It is composed of smaller linked modular environments.  
 {: shortdesc}
 
 ### Blueprint modules
@@ -101,6 +101,8 @@ A blueprint environment is the set of {{site.data.keyword.cloud_notm}} resources
 Blueprint templates are composed from IaC automation modules. Modules perform the work of deploying Cloud resources using open-source IaC tools. Initial support is for modules written in Terraform with additional IaC tools planned. Tools like Redhat Ansible and Helm, may be utilized today as blueprint modules using a Terraform wrapper. 
 
 Refer to the section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) for details on working with Terraform root and child modules. Examples of {{site.data.keyword.IBM_notm}} authored (child) modules that can be used with Blueprints can be found in the GitHub repository [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}.
+
+Each module in a template is deployed as an independent environment, managed by Blueprints as part of the overall application architecture. 
 {: shortdesc}
 
 ### Blueprint inputs

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-08"
 
 keywords: schematics actions, actions, schematics
 
@@ -33,9 +33,12 @@ Ansible does not use agents or a custom security infrastructure that must be pre
 
 ![Configuration Management with Actions and Ansible](/images/new/bp-actions.svg){: caption="Configuration Management with Actions and Ansible" caption-side="bottom"}
 
-Using your supplied playbooks, {{site.data.keyword.bpshort}} runs the Ansible engine to execute your playbook. Ansible, tasks, roles and playbooks can perform provisioning tasks via the IBM Cloud APIs, or configuration of compute instances (virtual servers) using SSH. Server configuration is performed via SSH over the public network. To maintain security for your environment, use of a bastion host to provide a secure gateway to your compute infrastructure is strongly encouraged.     
+Using your supplied playbooks, {{site.data.keyword.bpshort}} runs the Ansible engine to execute your playbook. Ansible, tasks, roles and playbooks can perform provisioning tasks via the IBM Cloud APIs via HTTPS, or configuration of compute instances (virtual servers) using SSH. Server configuration is performed via SSH over the public network. To maintain security for your environment, use of a bastion host to provide a secure gateway to your compute infrastructure is strongly encouraged.     
 
-It is a user responsibility to ensure suitable network policies are in place for their cloud environment to allow {{site.data.keyword.bpshort}} to connect via SSH to their environment. Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts are available in the [Cloud-Schematics repo](https://github.com/orgs/Cloud-Schematics/repositories?q=bastion&type=all&language=&sort=){: external}. Follow the tutorial [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/) for guidance creating a suitable network configuration. 
+It is your responsibility as a user to ensure suitable network policies are in place for their cloud environment to allow {{site.data.keyword.bpshort}} to connect via SSH to your environment. 
+{: note}
+
+Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts are available in the [Cloud-Schematics repo](https://github.com/orgs/Cloud-Schematics/repositories?q=bastion&type=all&language=&sort=){: external}. Follow the tutorial [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/) for guidance on creating a suitable network configuration. 
 
 ## Using Actions
 {: #sc-actions-use}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-08"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -598,21 +598,26 @@ For more information about the flags see [workspace get](/docs/schematics?topic=
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-### `ibmcloud schematics blueprint create`
-{: #schematics-blueprint-create}
+### `ibmcloud schematics blueprint create - flag options`
+{: #schematics-blueprint-createflag}
 
-Create a blueprint config by using the `ibmcloud schematics blueprint create` command. The blueprint config is created from a user provided configuration that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
+Create a blueprint config by using the `ibmcloud schematics blueprint create` command. The blueprint config is created from a user provided configuration via the command line that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
+
+The config create command supports two modes of input. Either all parameters and flags specified on the command line, described in this section. This mode only supports passing input variables as simple strings.  
+
+Or using a file option that accepts the configuration as a JSON file from the local file system in the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. The file mode supports passing complex input variables at create time. 
 {: shortdesc}
 
-For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3` version.
+
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.4` version.
 {: important}
 
-The config create command supports two modes of input. Either all parameters and flags specified on the command line. Or a file option that accepts the configuration as a JSON file from the local file system.    
+  
 
-**Syntax to create using command:**
+**Syntax to create using command with flag options:**
 
 ```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
 ```
 {: pre}
 
@@ -636,7 +641,6 @@ Command options
 | `--input-git-release` or `--ir`| Optional | The input file release tag. Exclusive with branch name.|
 | `--inputs` or `--in` | Optional | The input variables for the blueprint. Only the `string` type is supported. Use of `--file` option if its required to pass complex variables as input. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
-| `--file` or `-f` | Optional | Config JSON file to create the blueprint. Exclusive with other options. This approach supporting passing complex input variables. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
 
@@ -646,6 +650,46 @@ Example
 ibmcloud schematics blueprint create -name blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
 ```
 {: pre}
+
+
+### `ibmcloud schematics blueprint create - file option`
+{: #schematics-blueprint-createfile}
+
+
+Create a blueprint config by using the `ibmcloud schematics blueprint create -file` command. The blueprint config is created from a user provided configuration supplied as a JSON file that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
+{: shortdesc}
+
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.4` version.
+{: important}
+ 
+
+**Syntax to create using command with file option:**
+
+```sh
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --file CONFIG_FILE_PATH [--output OUTPUT]
+```
+{: pre}
+
+If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a `subfolder` of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/<sub-folder>/basic-blueprint.yaml`. Review the [URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for more examples.  
+{: note}
+
+Command options
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------- |
+| `--name`or `-n`| Required | Name of the blueprint. |
+| `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
+| `description` or `--desc` | Optional | The description of the blueprint. |
+| `--file` or `-f` | Optional | Path and file name for a config JSON file to create the blueprint. Exclusive with other options. This approach supporting passing complex input variables. |
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+{: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
+
+Example
+
+```sh
+ibmcloud schematics blueprint create -name blueprint_Basic -resource-group Default -file config.json
+{: pre}
+
 
 #### Using a config file
 {: #bp-create-config}
@@ -2748,7 +2792,9 @@ ibmcloud schematics workspace get --id myworkspace-a1aa1a1a-a11a-11 --json
 ### `ibmcloud schematics workspace import`
 {: #schematics-workspace-import}
 
-You can import the existing resource with an valid address from the workspace ID and import it into your Terraform state. You need to ensure one resource can be imported to only one Terraform resource address. Otherwise, you may see unwanted behavior from {{site.data.keyword.bpshort}}.
+You can import an existing resource with an valid resource address into your Workspace state file. You need to ensure that the resource is only imported once and to a single Workspace. Otherwise, you may see unwanted behavior if the resource is defined in multiple workspaces. Review the [Terraform documentation](https://developer.hashicorp.com/terraform/cli/commands/import#usage){: external} for details on how to use the `import` command. 
+
+
 {: shortdesc}
 
 Syntax
@@ -2763,17 +2809,20 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The unique identifier of the workspace for which you want to import an instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command. |
-| `--options` or `-o` | Required | The command-line flags. |
+| `--options` or `-o` | Required | The command-line flags, e.g. `-var-file xxxxx/tf`. |
 | `--address` or `-adr` | Required | Provide the address of the resource name you want to import.|
 | `--resourceID` or `-rid` | Required | Provide the resource ID that you need to import in the file. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces import flags" caption-side="top"}
 
+Use the option `-options -var-file=schematics.tfvars` to tell Schematics to import the resource with the saved workspace variables.  
+
+
 Example
 
 ```sh
-ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.accgrp --resourceID AccessGroupId-xxxxxx-xxxx-xxx-xxx-xxxx
+ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.accgrp --resourceID AccessGroupId-xxxxxx-xxxx-xxx-xxx-xxxx -o -var-file=schematics.tfvars
 ```
 {: pre}
 

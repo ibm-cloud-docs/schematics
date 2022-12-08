@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-08"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -165,7 +165,7 @@ Example
     internal = number
     external = number
     protocol = string
-  }))
+  })
 
 ```
 {: pre}

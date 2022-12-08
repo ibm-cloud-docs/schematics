@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-08"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -27,7 +27,7 @@ subcollection: schematics
 {{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) automation solution for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, the major building blocks and standard components. Using the blueprint for guidance, a builder can confidently build the house from the set of well-defined components.
 {: shortdesc}
 
-In a similar fashion, {{site.data.keyword.bpshort}} Blueprints enables users to define and deploy complex cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. This builds on the IaC best practice of [modular architectures](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity). It [scales]((/docs/schematics?topic=schematics-blueprint-scaling) the Terraform deployment model, connecting modular environments, as the layers and components of large infrastructure architectures.
+In a similar fashion, {{site.data.keyword.bpshort}} Blueprints enables users to define and deploy complex cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. This builds on the IaC best practice of [modular architectures](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity). It [scales the Terraform deployment model](/docs/schematics?topic=schematics-blueprint-scaling), connecting modular environments, as the layers and components of large infrastructure architectures.
 
 ![Deploying modular large-scale environments with Blueprints](/images/new/bp-overview.svg){: caption="Deploying modular large-scale environments with Blueprints" caption-side="bottom"}
 

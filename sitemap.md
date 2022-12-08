@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-08"
 
 keywords: schematics
 subcollection: schematics
@@ -1617,8 +1617,6 @@ subcollection: schematics
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
 
-* [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
-
 * [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
     * [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps)
@@ -1655,135 +1653,11 @@ subcollection: schematics
 
 * [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 
-    * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
+    * [`ibmcloud schematics blueprint create - flag options`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-createflag)
 
-    * [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply)
-
-    * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
-
-    * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get)
-
-    * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
-
-    * [`ibmcloud schematics blueprint run destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
-
-    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
-
-    * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
-
-    * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-list)
-
-    * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
-
-* [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
-
-    * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
-
-    * [`ibmcloud schematics kms instance ls`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-list)
-
-    * [`ibmcloud schematics kms enable`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-enable)
-
-    * [`ibmcloud schematics kms info`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-info)
-
-* [General commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-general-commands)
-
-    * [`ibmcloud schematics help`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-help-cmd)
-
-    * [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version)
-
-* [Inventories commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
-
-    * [`ibmcloud schematics inventory create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv)
-
-    * [`ibmcloud schematics inventory delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-inventory)
-
-    * [`ibmcloud schematics inventory get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-inv)
-
-    * [`ibmcloud schematics inventory list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-inv)
-
-    * [`ibmcloud schematics inventory update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-inv)
-
-* [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
-
-    * [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job)
-
-    * [`ibmcloud schematics job update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-job)
-
-    * [`ibmcloud schematics job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-job)
-
-    * [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job)
-
-    * [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
-
-    * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
-
-* [Resource management commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
-
-    * [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply)
-
-    * [`ibmcloud schematics destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy)
-
-    * [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs)
-
-    * [`ibmcloud schematics output`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-output2)
-
-    * [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan)
-
-* [Resource query commands](/docs/schematics?topic=schematics-schematics-cli-reference#rq-commands)
-
-    * [`ibmcloud schematics resource query create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq)
-
-    * [`ibmcloud schematics resource query delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-resource-query)
-
-    * [`ibmcloud schematics resource query get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-rq)
-
-    * [`ibmcloud schematics resource query list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-rq)
-
-    * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
-
-* [Stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
-
-    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
-
-* [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
-
-    * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
-
-* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
-
-    * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
-
-    * [`ibmcloud schematics workspace state show`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show)
-
-    * [`ibmcloud schematics workspace state mv`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv)
-
-    * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
-
-* [Workspaces commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
-
-    * [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action)
-
-    * [`ibmcloud schematics workspace delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete)
-
-    * [`ibmcloud schematics workspace get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get)
-
-    * [`ibmcloud schematics workspace import`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import)
+    * [`ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-createfile)
 
     * [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list)
-
-    * [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new)
-
-    * [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh)
-
-    * [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list)
-
-    * [`ibmcloud schematics workspace taint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint)
-
-    * [`ibmcloud schematics workspace untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint)
-
-    * [`ibmcloud schematics workspace update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update)
-
-    * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload)
 
 [CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
