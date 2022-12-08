@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-02"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -501,7 +501,7 @@ Here are the list of CURL commands used to provision the Agent Service:
     ```
    {: pre}
 
-5.  Run [apply command](/apidocs/schematics/schematics#apply-workspace-command) to provision an Agent service.
+5. Run [apply command](/apidocs/schematics/schematics#apply-workspace-command) to provision an Agent service.
     ```curl
         curl -X PUT \
         https://schematics.cloud.ibm.com/v1/workspaces/{w_id}/apply \

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-07"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -12,20 +12,22 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Setting up {{site.data.keyword.bpshort}} Actions
-{: #action-setup}
+# Working with {{site.data.keyword.bpshort}} Actions
+{: #action-working}
 
-An [Ansible playbook](/docs/schematics?topic=schematics-getting-started-ansible) is a set of instructions or automation tasks that you can configure to run on a single target, or a group of target hosts. You can run your automation tasks in the order in which you want them to run managed operations on the {{site.data.keyword.cloud}} resource.
+{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multi-tiered apps to your cloud infrastructure. 
 {: shortdesc}
 
-## Creating and running the {{site.data.keyword.bpshort}} action
+Review the section [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions) for the background to Actions and Red Hat Ansible. 
+
+## Creating and running a {{site.data.keyword.bpshort}} action
 {: #create-action}
 
 Create a {{site.data.keyword.bpshort}} action and specify the Ansible playbook that you want to run against your {{site.data.keyword.cloud_notm}} resources. 
 {: shortdesc}
 
 ### Prerequisites
-{: #action-setup-prereq}
+{: #action-working-prereq}
 
 - Create an Ansible playbook and store the playbook in a GitHub or GitLab repository. Or you can try to use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics?q=topic%3Aansible-playbook){: external}. 
 - Make sure that you have the [right permissions](/docs/schematics?topic=schematics-access) to create the {{site.data.keyword.bpshort}} action. 
@@ -34,7 +36,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: note}
 
 ### To create an action
-{: #create-action-setup}
+{: #create-action-working}
 
 1. From the [{{site.data.keyword.bpshort}} Actions dashboard](https://cloud.ibm.com/schematics/actions), click **Create action**.
 2. Configure your action. 
@@ -88,7 +90,7 @@ You can monitor the progress of an action by reviewing the logs on the **Jobs** 
 In the console, there is no limit set to display the job logs. Every `30 seconds` the job logs gets automatically refreshed. You can use [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job) command to view the complete job logs of your action.
 {: note}
 
-## Deleting a {{site.data.keyword.bpshort}} action
+## Deleting an action
 {: #delete-ansible-actions}
 
 If you no longer need your {{site.data.keyword.bpshort}} action, you can delete it. Deleting an action removes the Ansible playbook and your action data. However, any configurations on your target hosts you made by using the action are not removed. 
@@ -124,7 +126,7 @@ The following table represents the actions state workflow.
 | **Update** | ![Update action](images/updateaction.png "Update action state diagram") | When the user clicks an existing action to update the template repository, immediately action goes to `pending` state. If the template processing is success, action goes to the `Normal` state. If the user tries to set the template repository to disable, action goes to the `Disabled` state. Finally, if the template processing fails, action goes to `Critical` state.|
 {: caption="Action state workflow" caption-side="top"}
 
-## Reviewing the {{site.data.keyword.bpshort}} Actions job details
+## Reviewing Actions job details
 {: #action-jobs}
 
 Use the {{site.data.keyword.bpshort}} Actions job details to find a history of all {{site.data.keyword.bpshort}} internal activities. Activities such as downloading your Ansible playbook or verifying your playbook, and to see the Ansible logs for the playbook that you ran on your target hosts. 
@@ -139,9 +141,9 @@ Review the following status that can be assigned to a job:
 
 |Status|Description|
 |-----|---------|
-|`ok` |The total number of target hosts where the Ansible playbook ran.  |
+|`ok` |The total number of target hosts where the Ansible playbook ran. |
 |`changed` | The total number of target hosts that were accessed and changed. |
-|`failed` |The total number of target hosts where the Ansible playbook might not be successfully ran.  |
+|`failed` |The total number of target hosts where the Ansible playbook might not be successfully ran. |
 |`skipped` |The total number of target hosts that were accessed but might not be updated as changes are applied to the hosts.|
 |`unreachable` |The total number of target hosts that might not be found or reached. |
 {: caption="Job status" caption-side="top"}

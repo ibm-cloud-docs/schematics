@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-02"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -93,7 +93,7 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components,
 3. All user-initiated actions, such as creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. RabbitMQ forwards requests to the {{site.data.keyword.bpshort}} engine to execute the action. 
 4. The {{site.data.keyword.bpshort}} engine starts the process for provisioning, modifying, or deleting {{site.data.keyword.cloud_notm}} resources.
 6. To protect customer data at rest, {{site.data.keyword.bplong_notm}} integrates with {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}}. {{site.data.keyword.bpshort}} uses the customer owned {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} and {{site.data.keyword.bpshort}} owned {{site.data.keyword.keymanagementserviceshort}} to generate and encrypt data encryption keys (DEK). This DEK is used to encrypt transactional data, such as logs, or the Terraform `tf.state` file at rest.
-7. Workspace transactional data is stored in an {{site.data.keyword.cos_full_notm}} bucket and encrypted by using [Server-Side Encryption with {{site.data.keyword.keymanagementserviceshort}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) at rest.  
+7. Workspace transactional data is stored in an {{site.data.keyword.cos_full_notm}} bucket and encrypted by using [Server-Side Encryption with {{site.data.keyword.keymanagementserviceshort}}](/docs/cloud-object-storage?topic=cloud-object-storage-encryption) at rest. 
 8. Workspace operational data, such as the workspace variables and Terraform template information, is stored in {{site.data.keyword.cloudant}} and encrypted at rest by using the default service encryption. For more information, see [Security](/docs/Cloudant?topic=Cloudant-security).
 
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-12-07"
 
-keywords: blueprint config create failure, blueprint download error, create fails,
+keywords: blueprint create failure, blueprint download error, create fails,
 
 subcollection: schematics
 
@@ -17,12 +17,12 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# Blueprint config create fails 
+# blueprint create fails 
 {: #bp-create-fails}
 
-Review the following sections to help debugging blueprint run apply failures. 
+Review the following sections to help debugging blueprint apply failures. 
 
-## Blueprint config create fails with an invalid blueprint template: failed to clone Git repository error
+## blueprint create fails with an invalid blueprint template: failed to clone Git repository error
 {: #bp-create-fails1}
 
 When you create a blueprint configuration, the create fails with an error that the template, or input repositories cannot be cloned or found. 
@@ -44,7 +44,7 @@ Invalid blueprint templates. Error - Failed to clone git repository, repository 
 Check that the source repositories for the templates and input files are correctly specified, the referenced files and repository exists and is accessible with Git tokens specified whether necessary.
 {: tsResolve} 
 
-Rerun the blueprint config create operation with the correct repository reference.
+Rerun the blueprint create operation with the correct repository reference.
 
 ## Blueprint create fails with an invalid blueprint template: unable to find file error
 {: #bp-create-fails2}
@@ -65,7 +65,7 @@ Invalid blueprint templates. Error - Unable to find basic-blueprint1.yaml in the
 ```
 {: screen}
 
-Check that the template file and input files that are identified in the error message exist in the target repository and are correctly specified on the config create.  
+Check that the template file and input files that are identified in the error message exist in the target repository and are correctly specified on the config create. 
 {: tsResolve} 
 
 Rerun the config create operation with the correct file name.
@@ -116,7 +116,7 @@ Invalid blueprint templates. Error - Blueprint json validation failed - Field `c
 The blueprint template is expecting more input values that are not specified in any of the input files or passed as dynamic inputs. The error output lists name of the expected missing or invalid input. Check the template readme file to determine the needed dynamic inputs or add the input to an input file.
 {: tsResolve} 
 
-Rerun the blueprint config create operation with all the needed inputs. 
+Rerun the blueprint create operation with all the needed inputs. 
 
 ## Blueprint create fails with the error blueprint JSON validation failed - field missing or invalid
 {: #bp-create-fails5}
@@ -124,7 +124,7 @@ Rerun the blueprint config create operation with all the needed inputs.
 When you create a configuration in {{site.data.keyword.bpshort}}, the create fails before the config is created with an error that the config contains invalid definitions.  
 {: tsSymptoms}
 
-The blueprint config create validates the syntax of the YAML blueprint template file. If the syntax is specified incorrectly the create fails. 
+The blueprint create validates the syntax of the YAML blueprint template file. If the syntax is specified incorrectly the create fails. 
 {: tsCauses}
 
 Sample error 
@@ -141,4 +141,4 @@ Correct the errors as identified in the validation messages. For more informatio
 
 Push the changes to template and input files to the Git repositories.
 
-Rerun the blueprint config create operation with the corrected syntax.
+Rerun the blueprint create operation with the corrected syntax.

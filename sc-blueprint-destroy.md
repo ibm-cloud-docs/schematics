@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-12-07"
 
 keywords: blueprint run destroy, destroy blueprint, blueprint
 
@@ -43,7 +43,7 @@ You can follow these steps to destroy the {{site.data.keyword.bpshort}} Blueprin
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the destroy operation. 
 2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`, `Recent Job runs` of your environment. 
 3. Click **Modules** tab to see the list of resource modules in an `Inactive` state.
-4. Click **Jobs history** tab view the result of the destroy job and operations that were run by the automation modules.  
+4. Click **Jobs history** tab view the result of the destroy job and operations that were run by the automation modules. 
 
 ## Destroying a blueprint environment through CLI
 {: #destroy-blueprint-cli}
@@ -284,5 +284,5 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-destroy-nextsteps}
 
-After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=api) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint) again using the same blueprint configuration.
+After the cloud resources are destroyed, the blueprint can be [deleted](/docs/schematics?topic=schematics-delete-blueprint&interface=api) from {{site.data.keyword.bpshort}}. Alternatively ,the cloud environment can be re-constituted and the resources re-created by running [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint) again using the same blueprint configuration.
 

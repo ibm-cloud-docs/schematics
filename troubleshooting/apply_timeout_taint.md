@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-02"
 
 keywords: schematics, schematics timeout, terraform timeout, tainted resources, untaint, taint
 
@@ -57,7 +57,7 @@ To avoid that a successfully provisioned resource is deleted and re-created, you
     ```
     {: pre}
 
-7. Retrieve the Terraform state file for your workspace again and verify that your resource is marked as [`untainted`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint).  
+7. Retrieve the Terraform state file for your workspace again and verify that your resource is marked as [`untainted`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint). 
     ```sh
     ibmcloud schematics state pull --id <workspace_ID> --template <template_ID>
     ```

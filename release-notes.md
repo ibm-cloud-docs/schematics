@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-01"
+lastupdated: "2022-12-07"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -400,7 +400,7 @@ Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in you
 :   To create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
 
 Support `WinRM` in user interface
-:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-setup#create-action-setup) for {{site.data.keyword.bpshort}} Actions.
+:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-working#create-action-working) for {{site.data.keyword.bpshort}} Actions.
 
 Global catalog settings for {{site.data.keyword.bpshort}} Workspaces location
 : You can now, manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
@@ -572,7 +572,7 @@ Review the release notes for April 2021.
 {: release-note}
 
 Ansible support in {{site.data.keyword.bplong_notm}} is now generally available
-:   Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multitiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
+:   Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multi-tiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
 
 ## March 2021
 {: #march-2021}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-25"
+lastupdated: "2022-12-02"
 
 keywords: schematics license, schematics notices, schematics license notices
 
@@ -29,7 +29,7 @@ The following notices are included in this document:
 ## Creative Commons Attribution 3.0
 {: #CC-BY-3.0}
 
-The Program includes some or all the following works licensed under the Creative Commons.  \n
+The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by/3.0/legalcode. 
 
 - `GO GOPHER` [google/golang](https://storage.googleapis.com/golang/go1.14.2.linux-amd64.tar.gz)
@@ -41,7 +41,7 @@ The URL to the license is https://creativecommons.org/licenses/by/3.0/legalcode.
 ## Creative Commons Attribution 4.0
 {: #CC-BY-4.0}
 
-The Program includes some or all the following works licensed under the Creative Commons.  \n
+The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by/4.0/legalcode. 
 
 `SWAGGER PETSTORE` [go-openapi/validate](https://github.com/go-openapi/validate/releases/tag/v0.19.8)
@@ -49,7 +49,7 @@ The URL to the license is https://creativecommons.org/licenses/by/4.0/legalcode.
 ## Creative Commons Attribution Share Alike 1.0 Generic
 {: #CC-BY-SA-1.0}
 
-The Program includes some or all the following works licensed under the Creative Commons.  \n
+The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by-sa/1.0/legalcode. 
 
 RUSSIAN TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-validate/releases/tag/v0.1.0)
@@ -57,7 +57,7 @@ RUSSIAN TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-valida
 ## Creative Commons Attributions Share Alike 2.0 Generic
 {: #CC-BY-SA-2.0}
 
-The Program includes some or all the following works licensed under the Creative Commons.  \n
+The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by-sa/2.0/legalcode. 
 
 JAPANESE TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-validate/releases/tag/v0.1.0)
@@ -65,7 +65,7 @@ JAPANESE TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-valid
 ## Creative Commons Attribution 2.5 Generic
 {: #CC-BY-SA-2.5}
 
-The Program includes some or all the following works licensed under the Creative Commons.  \n
+The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by-sa/2.5/legalcode. 
 
 CHINESE TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-validate/releases/tag/v0.1.0)
@@ -73,7 +73,7 @@ CHINESE TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-valida
 ## Creative Commons Attribution Share Alike 3.0 Generic
 {: #CC-BY-SA-3.0}
 
-The Program includes some or all the following works licensed under the Creative Commons.  \n
+The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by-sa/3.0/legalcode. 
 
 VIETNAMESE TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-validate/releases/tag/v0.1.0)
@@ -81,7 +81,7 @@ VIETNAMESE TEXT [protoc-gen-validate](https://github.com/bufbuild/protoc-gen-val
 ## Creative Commons Attribution Share Alike 4.0 Generic
 {: #CC-BY-SA-4.0}
 
-The Program includes some or all the following works licensed under the Creative Commons.  \n
+The Program includes some or all the following works licensed under the Creative Commons. \n
 The URL to the license is https://creativecommons.org/licenses/by-sa/4.0/legalcode. 
 
 - HYDRATION [facebook/react](https://github.com/facebook/react/releases)

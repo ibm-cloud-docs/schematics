@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-07"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -26,7 +26,7 @@ The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ab
 
 The following are the primary drivers to create the {{site.data.keyword.bplong_notm}} Agents.
 
-- Use [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics) and [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) to deploy and configure hybrid cloud resources such as private cloud resources, private data center resources, and other public cloud resources.
+- Use [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics) and [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) to deploy and configure hybrid cloud resources such as private cloud resources, private data center resources, and other public cloud resources.
 - Use {{site.data.keyword.bpshort}} to securely connect and manage hybrid cloud infrastructure by using [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about), [Ansible](/docs/schematics?topic=schematics-getting-started-ansible), and other automation tools to perform the deployment, configurations, and the day-2 operations.
 - Use to reduce your wait time in a shared {{site.data.keyword.bpshort}} queue to run your automation.
 - Use a dedicated infrastructure to run your automation and the ability to scale up or scale down the capacity depending on your automation workloads.
@@ -38,7 +38,7 @@ The following are the primary drivers to create the {{site.data.keyword.bplong_n
 
 The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and how it functions in {{site.data.keyword.bpshort}}.
 
-![{{site.data.keyword.bpshort}} Agent Architecture](images/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Agent Architecture](images/new/sc_agents_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
 1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
 2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary#agentsa2) to create your cluster infrastructure.

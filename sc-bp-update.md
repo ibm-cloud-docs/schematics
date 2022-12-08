@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-07"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -27,7 +27,7 @@ Change occurs for many reasons:
 - As the platform evolves, {{site.data.keyword.IBM}} authored automation modules are refreshed to support new service features, maintain currency and to address evolving security compliance requirements.
 - Changes are also expected in the application environment to reflect new user requirements, scaling up or down, rotation of API keys, certificates and more. 
 
-Managing a blueprint environment is an iterative cycle of applying changes to the deployed environment to maintain currency and compliance.   
+Managing a blueprint environment is an iterative cycle of applying changes to the deployed environment to maintain currency and compliance.  
 
 ## Updating blueprint environments
 {: #update-multistep}
@@ -44,19 +44,20 @@ Review the section on blueprint version management to understand how to manage c
 
 The two-step process to update a blueprint environment is illustrated in the diagram.
 
-![Blueprint config update flow](/images/new/sc-bp-update.svg){: caption="Blueprint config update flow" caption-side="bottom"}
+![blueprint update flow](/images/new/sc-bp-update.svg){: caption="blueprint update flow" caption-side="bottom"}
 
 1. Edit the blueprint template, and the input YAML files to implement the proposed changes to the environment. 
+    - You can use any text editor. [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints) is recommended, as it provides blueprint template syntax validation and autocomplete.    
     - Push the updated blueprint template and input files to your Git repositories. If needed, create a new Git version release tag for version management. 
 2. Update the blueprint configuration for the environment in {{site.data.keyword.bpshort}}. 
     - When using versioning, the new Git release tag or branch must be specified for the modified blueprint template and input value YAML files.
     - If no version or branch is specified, {{site.data.keyword.bpshort}} automatically checks the Git repository for a recent commit, and runs a `pull latest` to pull in any updates. 
     - For more information on running this operation, see [update a blueprint configuration](/docs/schematics?topic=schematics-update-blueprint).
-3. {{site.data.keyword.bpshort}} validates the changes made to the configuration.   
-4. On a successful configuration update, {{site.data.keyword.bpshort}} automatically reinitializes the modules with any updated input values and updates to the module IaC code.  
-5. Apply the changes to the updated configuration. The changes are applied with the `blueprint run apply` command or UI Run Apply operation.
+3. {{site.data.keyword.bpshort}} validates the changes made to the configuration.  
+4. On a successful config update, {{site.data.keyword.bpshort}} automatically reinitializes the modules with any updated input values and updates to the module IaC code.  
+5. Apply the changes to the updated configuration. The changes are applied with the `blueprint apply` command or UI Run Apply operation.
     - Based on your updated blueprint configuration, runs the IaC modules in dependency order to update the environment. In a future release the plan will be presented for review before apply. 
-    - For more information on running this operation, see [blueprint run apply](/docs/schematics?topic=schematics-apply-blueprint).  
+    - For more information on running this operation, see [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint).  
 6. For each module, {{site.data.keyword.bpshort}} runs a Terraform Apply to create, modify, or delete cloud resources as determined by the configuration changes from the update. 
 7. On successful deployment of the updates, the blueprint output values are updated with any changed outputs.
 

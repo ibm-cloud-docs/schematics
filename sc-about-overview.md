@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-01"
+lastupdated: "2022-12-07"
 
 keywords: schematics capabilities, schematics overview, benefits
 
@@ -23,12 +23,10 @@ subcollection: schematics
 
 Building on open-source [Ansible](https://www.ansible.com/){: external}, [Terraform](https://www.terraform.io/){: external} and related technologies like Git and Helm, {{site.data.keyword.bplong}} provides a powerful set of [IaC](/docs/schematics?topic=schematics-infrastructure-as-code) tools as a service to program your cloud infrastructure.
 
-An IaC approach to infrastructure provisioning and automation improves consistency, speeds deployments, reduces manual errors, and avoids undocumented or ad-hoc configuration changes.
+An IaC approach to infrastructure provisioning and automation improves consistency, speeds deployments, reduces manual errors, and avoids undocumented or ad hoc configuration changes.
 
-With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad-hoc configuration changes.
+With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad hoc configuration changes.
 Review the section on [IaC best practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices) to learn more about the core IaC principles and best practices that you can adopt when using {{site.data.keyword.bpshort}}. 
-
-
 
 
 ## Schematics IaC offerings
@@ -44,7 +42,7 @@ The four core {{site.data.keyword.bpshort}} offerings are:
 ### {{site.data.keyword.bpshort}} Blueprints
 {: #sc-blueprints}
 
-{{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. Blueprints takes cloud environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
+{{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. Blueprints takes large environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
 {: shortdesc} 
 
 It enables users to define and deploy cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. For more information about Blueprints and its features, see [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-12-07"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -69,7 +69,7 @@ The {{site.data.keyword.bpshort}} Actions instance and resources are overloaded 
 
 - Check the user jobs and all jobs logs. For more information, see [log commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
 - Wait for a minute and check your configuration and execute the action again.
-- Check you have the required permissions such as [IAM access or key](/docs/schematics?topic=schematics-action-setup).
+- Check you have the required permissions such as [IAM access or key](/docs/schematics?topic=schematics-action-working).
 - Check the firewall IP are enabled.
 - Check if your [{{site.data.keyword.cloud_notm}} environment notification](/docs/get-support?topic=get-support-viewing-notifications){: external} is in maintenance.
 

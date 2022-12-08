@@ -29,7 +29,8 @@ toc:
                                                     - sc-about-overview.md
                                                     - sc-about-infrastructure-as-code.md
                                                     - sc-about-iac-opensource.md
-                                                    - workspaces/sc-about-workspaces.md</staging>
+                                                    - workspaces/sc-about-workspaces.md
+                                                    - sc-about-actions.md
                                                     - sc-about-agent.md
                                                     - sc-about-blueprint.md
                                                     - sc-about-usecases.md
@@ -42,7 +43,7 @@ toc:
                                                     - sc-bp-deploy.md
                                                     - sc-bp-update.md
                                                     - sc-bp-delete.md
-                                                    - sc-bp-ui-flow.md</hidden>
+                                                    - sc-bp-ui-flow.md
                                   - topicgroup:
                                             label: Security and compliance
                                             topics:
@@ -96,7 +97,7 @@ toc:
                                   - topicgroup:
                                             label: Managing Actions
                                             topics:
-                                                    - action-setup.md
+                                                    - action-working.md
                                                     - ansible-roles.md
                                                     - create-ansible-playbook.md
                                                     - autodeploy_actionsamples.md

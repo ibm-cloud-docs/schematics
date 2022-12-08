@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-02"
 
 keywords: schematics resource group not found, schematics resource crn error, schematics resource crn not found
 
@@ -70,6 +70,6 @@ Created by:            iam-ServiceId-69153c99-6bc5-4246-a497-16bxxxxx272
 Updated at:            2021-09-29T08:19:35Z   
 Last Operation:                        
                        Status    create succeeded      
-                       Message   Instance provisioning is completed.      
+                       Message   Instance provisioning is completed.     
 ```
 {: screen}

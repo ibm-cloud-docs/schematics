@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-07"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -36,9 +36,9 @@ You can follow these steps to view the {{site.data.keyword.bpshort}} Blueprints 
 
     The detailed view of the blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
 
-    Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job.  For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
+    Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job. For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
 
-4. Click on the name of a child job to review the job log.  
+4. Click on the name of a child job to review the job log. 
     - Optional: Click **Show more** to view the full job log. 
 
 ## Listing blueprint jobs through CLI
@@ -98,7 +98,7 @@ OK
 
 Review the following section for the `blueprint job get` command for an explanation of the job output. 
 
-To view the summary details of a blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and prompts the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy`, and `Delete` operations are set. It can also be retrieved by using the `blueprint job list` command.  
+To view the summary details of a blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and prompts the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy`, and `Delete` operations are set. It can also be retrieved by using the `blueprint job list` command. 
 {: shortdesc}
 
 ```sh
@@ -112,7 +112,7 @@ On successful completion, job get command returns the summary detail for the blu
 ### Blueprint job get 
 {: #blueprint-job-get-cli} 
 
-The example here shows job summary output without following the interactive prompt.  
+The example here shows job summary output without following the interactive prompt. 
 
 ```text          
 BLUEPRINT JOB DETAILS      
@@ -163,7 +163,7 @@ Enter Job sequence number to get blueprint child job output summary(or enter no/
                  
 Module ID     us-east.workspace.basic-resource-group.99503dea   
 Status        job_finished   
-Log Summary   (last few lines)..........   
+Log Summary   (last few lines)..........  
               orm Refresh  -----   
                   
                2022/11/18 10:34:55 Starting command: terraform1.0 refresh -state=terraform.tfstate -var-file=schematics.tfvars -no-color   
@@ -173,13 +173,13 @@ Log Summary   (last few lines)..........
                2022/11/18 10:35:06 Terraform refresh |    
                2022/11/18 10:35:06 Terraform refresh | resource_group_id = "aac37f57b20142dba1a435c70aeb12df"   
                2022/11/18 10:35:06 Terraform refresh | resource_group_name = "Default"   
-               2022/11/18 10:35:06 Command finished successfully.   
+               2022/11/18 10:35:06 Command finished successfully.  
                   
                2022/11/18 10:35:06 -----  Terraform OUTPUT  -----   
                   
                2022/11/18 10:35:06 Starting command: terraform1.0 output -no-color -json   
                2022/11/18 10:35:06 Starting command: terraform1.0 output -no-color -json   
-               2022/11/18 10:35:08 Command finished successfully.   
+               2022/11/18 10:35:08 Command finished successfully.  
                2022/11/18 10:35:14 Done with the workspace action   
                  
                  
@@ -188,7 +188,7 @@ OK
 ```
 {: screen}
 
-Only the last 15 lines of a child job log are shown. On Terraform failures, these lines typically return sufficient error information to identify the Terraform error causes the blueprint job failure.  
+Only the last 15 lines of a child job log are shown. On Terraform failures, these lines typically return sufficient error information to identify the Terraform error causes the blueprint job failure. 
 
 If wanted to review the **full** job log output for a child job. The CLI command views the full job log for a child job that is shown at the end of the get job output. Cut and paste into your command line to view the full log. 
 
@@ -199,7 +199,7 @@ The two types of blueprint child job are, `blueprint` and `module`.
 
 Full `module` job logs can be reviewed with the `schematics logs` command as in the previous section. 
 
-To view the full `blueprint` orchestration job log with the CLI, use the `ibmcloud schematics blueprint job logs` command. This command provides more detail than the summary log with the `blueprint job get` command. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy`, and `Delete` commands ran. It can also be retrieved by using the `blueprint job list` command.  
+To view the full `blueprint` orchestration job log with the CLI, use the `ibmcloud schematics blueprint job logs` command. This command provides more detail than the summary log with the `blueprint job get` command. The command takes as input the `job_id`. The `job_id` is displayed when the `Create`, `Apply`, `Update`, `Destroy`, and `Delete` commands ran. It can also be retrieved by using the `blueprint job list` command. 
 {: shortdesc}
 
 The syntax is given in the code block.
@@ -250,9 +250,9 @@ The color coding indicates whether the job was successful or failed.
 {: api}
 
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about blueprint config update, refer to, [Installing blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about blueprint update, refer to, [Installing blueprint](/apidocs/schematics/schematics#create-blueprint) by using API.
 
-Blueprint create API runs `blueprint run apply`, and `blueprint jobs` `APIs` together, to perform the config create, and blueprint run apply operations.
+Blueprint create API runs `blueprint apply`, and `blueprint jobs` `APIs` together, to perform the config create, and blueprint apply operations.
 {: important}
 
 Example

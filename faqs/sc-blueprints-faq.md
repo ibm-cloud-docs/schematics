@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-29"
+lastupdated: "2022-12-07"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -103,13 +103,13 @@ All cloud resources created by a blueprint configuration are automatically tagge
 {: faq}
 {: support}
 
-Sensitive input variables like API Keys or SSH Keys must not be saved in blueprint input files due to the risk of security exposure from a Git repository. To avoid accidental exposure, sensitive inputs must be passed as dynamic inputs at blueprint config create time by using the CLI `--inputs` flag. 
+Sensitive input variables like API Keys or SSH Keys must not be saved in blueprint input files due to the risk of security exposure from a Git repository. To avoid accidental exposure, sensitive inputs must be passed as dynamic inputs at blueprint create time by using the CLI `--inputs` flag. 
 
-Sensitive values can be exported as environment variables and shell variable substitution that is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint config create` command by using `--inputs sshkey=$user_ssh_key`
+Sensitive values can be exported as environment variables and shell variable substitution that is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command by using `--inputs sshkey=$user_ssh_key`
 
 ```sh
 export user_ssh_key="ssh xxx"
-ibmcloud schematics blueprint config create  ......................   --inputs sshkey=$user_ssh_key
+ibmcloud schematics blueprint create  ......................  --inputs sshkey=$user_ssh_key
 ```
 {: pre}
 
@@ -118,7 +118,7 @@ ibmcloud schematics blueprint config create  ......................   --inputs s
 {: faq}
 {: support}
 
-The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) as used in the [tutorial](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) demonstrates the principles of deploying cloud resources by using two modules, which reference and create cloud resources. If the user has insufficient IAM access permissions to these resources, the Terraform Apply operations can fail, resulting in an Apply failure.   
+The [blueprints-basic-example](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) as used in the [tutorial](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) demonstrates the principles of deploying cloud resources by using two modules, which reference and create cloud resources. If the user has insufficient IAM access permissions to these resources, the Terraform Apply operations can fail, resulting in an Apply failure.  
 
 This example assumes, the user has IAM access permissions to create resources in the default resource group and also [Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-iam) instances. Additionally the user must also have permissions to create {{site.data.keyword.bpshort}} [workspaces and blueprints](/docs/schematics?topic=schematics-access). 
 
@@ -141,9 +141,9 @@ This example assumes, the user has IAM access permissions to create resources in
 {: faq}
 {: support}
 
-The version of Terraform used for an environment is user determined by the blueprint template `TF_VERSION` parameter. This parameter can be  used to control when the Terraform version for environment is updated to the next release or version.   
+The version of Terraform used for an environment is user determined by the blueprint template `TF_VERSION` parameter. This parameter can be  used to control when the Terraform version for environment is updated to the next release or version.  
 
-The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terraform module code.   
+The Terraform version in use and allowable for modules is constrained by the value of `required_ version` in the Terraform module code.  
 
 During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation will be failed. 
 
@@ -162,7 +162,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
    Example
 
    ```sh
-   ibmcloud schematics blueprint config create --file payload_complex.json
+   ibmcloud schematics blueprint create --file payload_complex.json
    ```
    {: pre}
 
@@ -171,7 +171,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
    Example
 
    ```sh
-   ibmcloud schematics blueprint config create --name bp-useast-basic1 --resource-group Default --bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --bp-git-file basic-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --input-git-file basic-input.yaml --input-git-branch main --inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1
+   ibmcloud schematics blueprint create --name bp-useast-basic1 --resource-group Default --bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --bp-git-file basic-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example --input-git-file basic-input.yaml --input-git-branch main --inputs provision_rg=true,resource_group_name=bp-useast-rg1,cos_instance_name=bp-useast-cos1
    ```
    {: pre}
 

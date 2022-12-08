@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-12-07"
 
-keywords: blueprint config delete, delete blueprint, blueprint
+keywords: blueprint delete, delete blueprint, blueprint
 
 subcollection: schematics
 
@@ -23,20 +23,20 @@ When a blueprint  environment is no longer required, it can be deleted which wil
 
 Deleting the blueprint configuration is the second step required to completely delete a blueprint from {{site.data.keyword.bpshort}}. To protect from accidental deletion, the config can only be deleted when cloud resources in all the blueprint modules have been deleted and the modules are in `Inactive` state. The first step is to run the [blueprint run destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=ui) command to destroy the resources in the blueprint environment and remove the environment. 
 
-This behavior of disallowing delete when modules cannot be returned to an `Inactive` state due to a {{site.data.keyword.bpshort}} or Terraform error can be overridden using the `-force-delete` flag to allow deletion.  
+This behavior of disallowing delete when modules cannot be returned to an `Inactive` state due to a {{site.data.keyword.bpshort}} or Terraform error can be overridden using the `-force-delete` flag to allow deletion. 
 {: shortdesc}
 
 ## Deleting a blueprint config through CLI
 {: #delete-blueprint-cli}
 {: cli}
 
-For more information, see [blueprint config delete](/docs/schematics?topic=schematics-delete-blueprint) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint config delete` command run. 
+For more information, see [blueprint delete](/docs/schematics?topic=schematics-delete-blueprint) command. The `blueprint run destroy` command must have been run first to destroy the resources, only then can the `blueprint delete` command run. 
 
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ```sh
-ibmcloud schematics blueprint config delete --id Blueprint_Basic.eaB.08d1
+ibmcloud schematics blueprint delete --id Blueprint_Basic.eaB.08d1
 ```
 {: pre}
 
@@ -87,7 +87,7 @@ Enter Job sequence number to get blueprint child job output summary(or enter no/
                  
 Module ID        
 Status        job_finished   
-Log Summary   (last few lines)..........   
+Log Summary   (last few lines)..........  
                2022/11/18 11:22:06 -----  New blueprint Action  -----   
                2022/11/18 11:22:06 Request: blueprintId=Blueprint_Basic.eaB.08d1, account=1f7277194bb748cdb1d35fd8fb85a7cb, owner=schematics@in.ibm.com, requestID=1d7ee769-71f1-45f0-93f9-c0cd159e4117   
                2022/11/18 11:22:07 Related Job:  jobID=us-east.JOB.Blueprint_Basic.992e4c2d   
@@ -129,7 +129,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} Blueprint
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Delete a blueprint config](/apidocs/schematics/schematics#delete-blueprint) by using API. 
 
-You need to run `blueprint run destroy` command and then run `blueprint config delete` command. For more information, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint) configuration.
+You need to run `blueprint run destroy` command and then run `blueprint delete` command. For more information, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint) configuration.
 
 Record the blueprint ID that needs to be deleted. To list the blueprint ID, run [get all the blueprint instances](/apidocs/schematics/schematics#list-blueprint) command.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-17"
+lastupdated: "2022-12-02"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -37,7 +37,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 
 8. Analyze the configuration and click **Create**.
 
-    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs.  For more information about viewing logs, see [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
+    If the create is successful you can view logs of your {{site.data.keyword.bpshort}} service instance in the Log Analysis instance that is configured to receive platform service logs. For more information about viewing logs, see [Viewing logs](/docs/log-analysis?topic=log-analysis-view_logs).
     {: important}
 
 9. In the list of instance name, click `Configure` to view `Select an {{site.data.keyword.la_full_notm}} instance to receive platform logs` page to retrieve the instance summary details and click `Open Dashboard` to view your services.
@@ -138,7 +138,7 @@ Follow these steps to launch key management system and encrypt your keys with {{
 Follow the steps to integrate root keys with {{site.data.keyword.bpshort}} to encrypt the data through command-line.
 
 1. [Download and install command-line](/docs/cli?topic=cli-install-ibmcloud-cli).
-2.  List all the KMS instance in your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} instances.
+2. List all the KMS instance in your {{site.data.keyword.cloud_notm}} account to find your {{site.data.keyword.keymanagementserviceshort}} or {{site.data.keyword.hscrypto}} instances.
     ```sh
     ibmcloud schematics kms instance ls --location LOCATION_NAME --scheme ENCRYPTION_SCHEME
     ```

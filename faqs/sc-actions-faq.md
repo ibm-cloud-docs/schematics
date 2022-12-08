@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-07"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -55,7 +55,7 @@ In the action settings page you, need to set the input variable as `ansible_pyth
 ```
 {: screen}
 
-WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} Actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} Actions support [WinRM](/docs/schematics?topic=schematics-action-setup).
+WinRM is not supported by {{site.data.keyword.bpshort}} Terraform Ansible provisioner. Alternatively you can use the {{site.data.keyword.bpshort}} Actions to run the Ansible playbooks with WinRM. The {{site.data.keyword.bpshort}} Actions support [WinRM](/docs/schematics?topic=schematics-action-working).
 
 ## When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?
 {: #new-versions}

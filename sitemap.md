@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-01"
+lastupdated: "2022-12-08"
 
 keywords: schematics
 subcollection: schematics
@@ -24,7 +24,7 @@ subcollection: schematics
 
 [Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
 
-[Getting started: Infrastructure and cloud service deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
+[Using Workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-terraform#prereq)
 
@@ -34,7 +34,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
-[Getting started: Configuration management in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
+[Using Agents to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
 * [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
 
@@ -42,7 +42,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-getting-started-ansible#ansible-whats-next)
 
-[Getting started: Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
+[Software deployment in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-get-started-software#get-started-software)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-software#vsi-postgres-prereq)
 
@@ -50,7 +50,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
 
-[Getting started: Using blueprints to deploy large-scale cloud environments](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
+[Using Blueprints to deploy large-scale cloud environments](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
 
 * [Deploy blueprint through UI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-ui)
 
@@ -111,11 +111,11 @@ subcollection: schematics
 
     * [Modular Infrastructure](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity)
 
-    * [Declarative vs. imperative approaches to IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative)
+    * [Declarative versus imperative approaches to IaC](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative)
 
     * [Declarative Terraform and lifecycle management](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative-lifecycle)
 
-    * [Impotence](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
+    * [Idempotence](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
 
     * [Immutablity](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
 
@@ -125,13 +125,21 @@ subcollection: schematics
 
 * [What is Provisioning?](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-provisioning)
 
-* [What is Configuration management?](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm)
+* [What is Configuration Management?](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm)
 
 * [How to choose your IaC tool](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-choosing)
 
     * [Understanding Schematics features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
+
+[{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
+
+* [Architecture](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
+
+* [Using Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-use)
+
+* [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
 
 [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
 
@@ -153,7 +161,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-intro#nextsteps-bp-arch)
 
-[{{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
+[Understanding {{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
 
 * [Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
 
@@ -947,15 +955,15 @@ subcollection: schematics
 
 * [Updating a blueprint through CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
-    * [Verifying blueprint config update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
+    * [Verifying blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
 
 * [Updating a blueprint environment through UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
 
-    * [Verify blueprint config update through UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
+    * [Verify blueprint update through UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
 
 * [Updating a blueprint through API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
 
-    * [Verify blueprint config create through API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
+    * [Verify blueprint create through API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
 
 * [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
 
@@ -1166,24 +1174,6 @@ subcollection: schematics
 ## Managing Actions
 {: #sitemap_managing_actions}
 
-
-[Setting up {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-setup#action-setup)
-
-* [Creating and running the {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-setup#create-action)
-
-    * [Prerequisites](/docs/schematics?topic=schematics-action-setup#action-setup-prereq)
-
-    * [To create an action](/docs/schematics?topic=schematics-action-setup#create-action-setup)
-
-* [Editing the {{site.data.keyword.bpshort}} Actions settings](/docs/schematics?topic=schematics-action-setup#action-settings)
-
-* [Deleting a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-setup#delete-ansible-actions)
-
-* [Action state](/docs/schematics?topic=schematics-action-setup#action-state-diagram)
-
-    * [State diagram flow](/docs/schematics?topic=schematics-action-setup#state-diagram-flow)
-
-* [Reviewing the {{site.data.keyword.bpshort}} Actions job details](/docs/schematics?topic=schematics-action-setup#action-jobs)
 
 [Creating Ansible roles and galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#ansible-roles-galaxy)
 
@@ -1627,8 +1617,6 @@ subcollection: schematics
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
 
-* [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
-
 * [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
     * [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps)
@@ -1665,135 +1653,11 @@ subcollection: schematics
 
 * [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 
-    * [`ibmcloud schematics blueprint config create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
+    * [`ibmcloud schematics blueprint create - flag options`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-createflag)
 
-    * [`ibmcloud schematics blueprint run apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply)
-
-    * [`ibmcloud schematics blueprint config update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
-
-    * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get)
-
-    * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
-
-    * [`ibmcloud schematics blueprint run destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
-
-    * [`ibmcloud schematics blueprint config delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
-
-    * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
-
-    * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-list)
-
-    * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
-
-* [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
-
-    * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
-
-    * [`ibmcloud schematics kms instance ls`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-list)
-
-    * [`ibmcloud schematics kms enable`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-enable)
-
-    * [`ibmcloud schematics kms info`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-info)
-
-* [General commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-general-commands)
-
-    * [`ibmcloud schematics help`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-help-cmd)
-
-    * [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version)
-
-* [Inventories commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
-
-    * [`ibmcloud schematics inventory create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv)
-
-    * [`ibmcloud schematics inventory delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-inventory)
-
-    * [`ibmcloud schematics inventory get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-inv)
-
-    * [`ibmcloud schematics inventory list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-inv)
-
-    * [`ibmcloud schematics inventory update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-inv)
-
-* [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
-
-    * [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job)
-
-    * [`ibmcloud schematics job update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-job)
-
-    * [`ibmcloud schematics job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-job)
-
-    * [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job)
-
-    * [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
-
-    * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
-
-* [Resource management commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
-
-    * [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply)
-
-    * [`ibmcloud schematics destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy)
-
-    * [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs)
-
-    * [`ibmcloud schematics output`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-output2)
-
-    * [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan)
-
-* [Resource query commands](/docs/schematics?topic=schematics-schematics-cli-reference#rq-commands)
-
-    * [`ibmcloud schematics resource query create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq)
-
-    * [`ibmcloud schematics resource query delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-resource-query)
-
-    * [`ibmcloud schematics resource query get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-rq)
-
-    * [`ibmcloud schematics resource query list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-rq)
-
-    * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
-
-* [Stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
-
-    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
-
-* [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
-
-    * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
-
-* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
-
-    * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
-
-    * [`ibmcloud schematics workspace state show`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show)
-
-    * [`ibmcloud schematics workspace state mv`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv)
-
-    * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
-
-* [Workspaces commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
-
-    * [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action)
-
-    * [`ibmcloud schematics workspace delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete)
-
-    * [`ibmcloud schematics workspace get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get)
-
-    * [`ibmcloud schematics workspace import`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import)
+    * [`ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-createfile)
 
     * [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list)
-
-    * [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new)
-
-    * [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh)
-
-    * [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list)
-
-    * [`ibmcloud schematics workspace taint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint)
-
-    * [`ibmcloud schematics workspace untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint)
-
-    * [`ibmcloud schematics workspace update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update)
-
-    * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload)
 
 [CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
@@ -2326,9 +2190,9 @@ subcollection: schematics
 {: #sitemap_troubleshooting_blueprints}
 
 
-[Blueprint config create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
+[blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
 
-* [Blueprint config create fails with an invalid blueprint template: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
+* [blueprint create fails with an invalid blueprint template: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
 
 * [Blueprint create fails with an invalid blueprint template: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
 
@@ -2338,19 +2202,19 @@ subcollection: schematics
 
 * [Blueprint create fails with the error blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails5)
 
-[Blueprint config create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
+[blueprint create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
-[Blueprint run apply fails](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails)
+[blueprint apply fails](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails)
 
-* [Blueprint run apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails1)
+* [blueprint apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails1)
 
-* [blueprint run apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails2)
+* [blueprint apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails2)
 
-* [blueprint run apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails3)
+* [blueprint apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails3)
 
-* [blueprint run apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails4)
+* [blueprint apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails4)
 
-* [blueprint run apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails5)
+* [blueprint apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails5)
 
 
 ### Troubleshooting Agents
