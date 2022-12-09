@@ -19,7 +19,7 @@ subcollection: schematics
 
 The built in workspace remote-state management supports a number of {{site.data.keyword.bpshort}} use cases: 
 - The sharing of resource information between workspaces. This allows your infrastructure to be broken down into smaller components, with read-only resource information passed between environments using {{site.data.keyword.bpshort}} remote-state data sources. Discrete environments linked by data sources allows responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces as read-only resources. 
-- Integration of Terraform and Ansible operations with [Actions](/docs/schematics?topic=schematics-action-working). Workspace resource information can be directly passed as an Ansible [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup&interface=ui#dynamic-inv) without the need for manual host inventory creation or use of inventory scripts.    
+- Integration of Terraform and Ansible operations with [Actions](/docs/schematics?topic=schematics-action-working). Workspace resource information can be directly passed as an Ansible [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv) without the need for manual host inventory creation or use of inventory scripts.    
 - Management of large-scale IaC environments. [Blueprints](/docs/schematics?topic=schematics-blueprint-intro) enables large environments to be composed from modular Terraform environments by the [direct passing of values](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-outputs) and state information between deployed modules. 
 {: shortdesc}
 
