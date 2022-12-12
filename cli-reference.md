@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-08"
+lastupdated: "2022-12-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1311,6 +1311,14 @@ OK
 
 ```
 {: screen}
+
+## Policy commands
+{: #policy-cmd}
+
+{{site.data.keyword.bpshort}} Policy is a [beta feature]() that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Policies]() in the beta release.
+{: beta}
+
+
 
 ## Enable BYOK or KYOK commands
 {: #kms-commands}
