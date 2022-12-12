@@ -323,13 +323,21 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov22)
+
+    * Review the release notes for December 2022.
+
+    * [13 December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1322)
+
+        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+
 * [November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov22)
 
     * Review the release notes for November 2022.
 
     * [29 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov2922)
 
-        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+        * Enhance {{site.data.keyword.bpshort}} documentation
 
     * [18 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1822)
 
@@ -1983,6 +1991,8 @@ subcollection: schematics
 * [Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
 
 * [What is time set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
+
+* [Why does the Terraform plan or apply fails to download the needed plugins if the agent is behind a firewall or private network?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-proxy)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 

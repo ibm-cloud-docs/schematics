@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -129,7 +129,7 @@ If an Agent is running in Sydney, but Agent having us-south, or eu-de as an endp
 ## Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?
 {: #faqs-agent-jr-logs}
 {: faq}
-{: support}f
+{: support}
 
 The following steps allow the JR logs and provide the request ID:
 - Get the `logdna_name` from outputs: section of your jobs logs in the Agent infrastructure workspace.
@@ -142,3 +142,31 @@ The following steps allow the JR logs and provide the request ID:
 {: support}
 
 The default time set to deploy the cloud resources is `30 minutes` for an Agent. For more information, see [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
+
+## Why does the Terraform plan or apply fails to download the needed plugins if the agent is behind a firewall or private network?
+{: #faqs-agent-proxy}
+{: faq}
+{: support}
+
+You need to configure following two environment variables in the workspace payload to resolve the failure.
+- The `TF_NETWORK_MIRROR_URL` location where custom Terraform providers are hosted.
+- The `TF_NETWORK_MIRROR_PROVIDER_NAME` provider name that is downloaded from the custom location. This is an optional variable. It is defaulted to all providers.
+
+{{site.data.keyword.bpshort}} job micro service inspects the environment variables. If these two environment variables are present then a custom configuration file with the following contents are generated.
+
+```json
+provider_installation {
+  network_mirror {
+    url = "${TF_NETWORK_MIRROR_URL}"
+    include = ["${TF_NETWORK_MIRROR_PROVIDER_NAME}"]
+  }
+}
+```
+{: pre}
+
+Sets a new environment variable to point to this generated cutsom config file
+
+```sh
+export TF_CLI_CONFIG_FILE=/home/appuser/terraform-custom.config
+```
+{: pre}
