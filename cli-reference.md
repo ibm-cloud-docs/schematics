@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-12"
+lastupdated: "2022-12-13"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1311,12 +1311,6 @@ OK
 
 ```
 {: screen}
-
-## Policy commands
-{: #policy-cmd}
-
-The {{site.data.keyword.bpshort}} Policy is a beta feature that is available for evaluation and testing purposes. It is not intended for production usage.
-{: beta}
 
 
 
