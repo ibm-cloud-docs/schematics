@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,6 +20,19 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
 {: shortdesc}
 
+## December 2022
+{: #schematics-nov22}
+
+Review the release notes for December 2022.
+{: shortdesc}
+
+### 13 December 2022
+{: #schematics-dec1322}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+:   The agent beta releases [{{site.data.keyword.bpshort}} Agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with support to [download the providers by using proxy](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-proxy).
+
 ## November 2022
 {: #schematics-nov22}
 
@@ -30,7 +43,7 @@ Review the release notes for November 2022.
 {: #schematics-nov2922}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+Enhance {{site.data.keyword.bpshort}} documentation
 :   {{site.data.keyword.bpshort}} enhances its documentation with 
     - [What is Infrastructure as Code (IaC) with respect to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-infrastructure-as-code)?.
     - [Relationship between {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-sc-relationship).
