@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-08"
+lastupdated: "2022-12-15"
 
 keywords: schematics actions, actions, schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} Actions
 {: #sc-actions}
 
-{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multi-tiered apps to your cloud infrastructure. 
+{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure. 
 {: shortdesc}
 
 To get started with [Configuration Management]({: /docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm}) in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 
@@ -27,7 +27,7 @@ To get started with [Configuration Management]({: /docs/schematics?topic=schemat
 
 [Ansible](https://www.ansible.com/){: external} is a [configuration management and provisioning tool](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping). The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
 
- It is designed to automate the configuration, operation, and management of cloud environments, and to deploy multi-tiered app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
+ It is designed to automate the configuration, operation, and management of cloud environments, and to deploy multitiered app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
 
 Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-13"
+lastupdated: "2022-12-15"
 
 keywords: schematics
 subcollection: schematics
@@ -1356,6 +1356,15 @@ subcollection: schematics
     * [Creating a workspace](/docs/schematics?topic=schematics-at_events#at_analyze_1)
 
 
+## Location based access
+{: #sitemap_location_based_access}
+
+
+[Location based access](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
+
+* [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
+
+
 ## Job queuing in {{site.data.keyword.bpshort}}
 {: #sitemap_job_queuing_in_}
 
@@ -1613,10 +1622,10 @@ subcollection: schematics
 [Deploying a VPC environment with bastion host on IBM Cloud](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
 
 
-## Deploying a multi-tiered VPC with bastion host on IBM Cloud
-{: #sitemap_deploying-a-multi-tiered-vpc-with-bastion-host-on-ibm-cloud}
+## Deploying a multitiered VPC with bastion host on IBM Cloud
+{: #sitemap_deploying-a-multitiered-vpc-with-bastion-host-on-ibm-cloud}
 
-[Deploying a multi-tiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
+[Deploying a multitiered VPC with bastion host on IBM Cloud](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
 
 
 ## CLI reference

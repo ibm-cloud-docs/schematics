@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-13"
+lastupdated: "2022-12-15"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2811,7 +2811,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The unique identifier of the workspace for which you want to import an instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command. |
-| `--options` or `-o` | Required | The command-line flags, e.g. `-var-file xxxxx/tf`. |
+| `--options` or `-o` | Required | The command-line flags. For example `-var-file xxxxx/tf`. |
 | `--address` or `-adr` | Required | Provide the address of the resource name you want to import.|
 | `--resourceID` or `-rid` | Required | Provide the resource ID that you need to import in the file. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
