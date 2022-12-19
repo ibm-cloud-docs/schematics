@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-19"
+lastupdated: "2022-12-19"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -568,3 +568,18 @@ provider "ibm" {
 }
 ```
 {: codeblock}
+
+## How can i encrypt sensitive value in terraform state file while using schematics?
+{: #encrypt-state-file}
+{: faq}
+{: support}
+
+No, you cannot the encrypt the sensitive value in state file using schematics due to the default behaviour of the Terraform. For more information the [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in statefile.
+
+Example to download the terraform state file of schematics workspace by CLI
+
+``` sh
+ibmcloud schematics state pull --id WORKSPACE_ID--template TEMPLATE_ID
+```
+{: pre}
+

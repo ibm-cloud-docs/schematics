@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-19"
 
 keywords: schematics
 subcollection: schematics
@@ -2180,6 +2180,8 @@ subcollection: schematics
 * [What CLI command is used to view the resources as in the {{site.data.keyword.bpshort}} Workspace resources?](/docs/schematics?topic=schematics-workspaces-faq#clicmdresource-job-faq)
 
 * [How do I fix the `CreateworkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
+
+* [How can i encrypt sensitive value in terraform state file while using schematics?](/docs/schematics?topic=schematics-workspaces-faq#encrypt-state-file)
 
 
 ## Troubleshooting
