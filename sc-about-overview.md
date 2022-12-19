@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-19"
 
 keywords: schematics capabilities, schematics overview, benefits
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.bpshort}} overview 
-{: #about-schematics} 
+{: #learn-about-schematics} 
 
 {{site.data.keyword.bpshort}} is an IBM Cloud service, that delivers [Infrastructure as Code](/docs/schematics?topic=schematics-infrastructure-as-code) (IaC) tools as a service. You can use the capabilities of {{site.data.keyword.bpshort}} to consistently deploy and manage your cloud infrastructure environments. From a single pane of glass, you can run end-to-end automation to build one or more stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
 {: shortdesc}

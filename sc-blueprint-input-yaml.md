@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-19"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, templates, yaml,
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# blueprint input file YAML Schema
+# Blueprints input file YAML Schema
 {: #bp-input-schema-yaml}
 
 This document is the reference of the YAML schema used to describe a blueprint input YAML file containing the blueprint input variables required by a template. 

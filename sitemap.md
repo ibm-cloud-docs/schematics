@@ -81,21 +81,21 @@ subcollection: schematics
 {: #sitemap_about}
 
 
-[{{site.data.keyword.bpshort}} overview](/docs/schematics?topic=schematics-about-schematics#about-schematics)
+[{{site.data.keyword.bpshort}} overview](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
 
-* [IaC automation as-a-service](/docs/schematics?topic=schematics-about-schematics#sc-IaCaas)
+* [IaC automation as-a-service](/docs/schematics?topic=schematics-learn-about-schematics#sc-IaCaas)
 
-* [Schematics IaC offerings](/docs/schematics?topic=schematics-about-schematics#sc-offerings)
+* [Schematics IaC offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings)
 
-    * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-about-schematics#sc-blueprints)
+    * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-learn-about-schematics#sc-blueprints)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-about-schematics#sc-workspaces)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sc-workspaces)
 
-    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-about-schematics#sc-actions)
+    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions)
 
-    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-about-schematics#sc-agents)
+    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
-* [Benefits of using Schematics](/docs/schematics?topic=schematics-about-schematics#sc-benefits)
+* [Benefits of using Schematics](/docs/schematics?topic=schematics-learn-about-schematics#sc-benefits)
 
 [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code#infrastructure-as-code)
 
@@ -330,6 +330,10 @@ subcollection: schematics
     * [13 December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1322)
 
         * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+
+        * Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
 * [November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov22)
 
@@ -849,11 +853,27 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-terraform#bp-terraform-nextsteps)
 
-[Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse-pipelines)
+[Blueprint reuse and customization](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse-pipelines)
 
 * [Reuse across environments](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse)
 
 * [Deployment pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-pipelines)
+
+* [Customization best practice](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization-bp)
+
+    * [Blueprint customization](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization)
+
+* [Customizing blueprint environments](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization-layers)
+
+    * [Usage scenarios](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#usage-scenarios)
+
+* [Blueprint input value precedence](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-input-precedence)
+
+[Blueprint versioning](/docs/schematics?topic=schematics-blueprint-versioning#blueprint-versioning)
+
+* [Relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-relaxed)
+
+* [Explicit versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-strict)
 
 [Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
 
@@ -955,12 +975,6 @@ subcollection: schematics
 
 * [Update process](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-process)
 
-* [Explicit and relaxed versioning](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-versioning)
-
-    * [Relaxed versioning](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-relaxed)
-
-    * [Explicit versioning](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-strict)
-
 * [Updating a blueprint through CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
 
     * [Verifying blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
@@ -1006,6 +1020,43 @@ subcollection: schematics
     * [Verifying blueprint delete through API](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-api)
 
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
+
+[Creating blueprints via the CLI using a config file](/docs/schematics?topic=schematics-create-blueprint-file#create-blueprint-file)
+
+[Using environment variables with blueprints](/docs/schematics?topic=schematics-bp-env-vars#bp-env-vars)
+
+* [Blueprints usage](/docs/schematics?topic=schematics-bp-env-vars#usage)
+
+
+## Managing Workspaces New
+{: #sitemap_managing_workspaces_new}
+
+
+
+### Creating workspace
+{: #sitemap_creating_workspace}
+
+
+
+### Managing workspace resources
+{: #sitemap_managing_workspace_resources}
+
+
+[Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
+
+* [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
+
+* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
+
+* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
+
+    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
+
+* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
+
+    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
+
+* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
 
 
 ## Managing Workspaces
@@ -1634,6 +1685,8 @@ subcollection: schematics
 
 [{{site.data.keyword.bplong_notm}} CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-cli-reference)
 
+* [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#cli-prerequisites)
+
 * [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
     * [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps)
@@ -1670,11 +1723,137 @@ subcollection: schematics
 
 * [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 
-    * [`ibmcloud schematics blueprint create - flag options`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-createflag)
+    * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
 
-    * [`ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-createfile)
+    * [`ibmcloud schematics blueprint create - JSON config file option`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-createfile)
+
+    * [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply)
+
+    * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
+
+    * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get)
+
+    * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
+
+    * [`ibmcloud schematics blueprint run destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
+
+    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
+
+    * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
+
+    * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-list)
+
+    * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
+
+* [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
+
+    * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
+
+    * [`ibmcloud schematics kms instance ls`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-list)
+
+    * [`ibmcloud schematics kms enable`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-enable)
+
+    * [`ibmcloud schematics kms info`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-kms-info)
+
+* [General commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-general-commands)
+
+    * [`ibmcloud schematics help`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-help-cmd)
+
+    * [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version)
+
+* [Inventories commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
+
+    * [`ibmcloud schematics inventory create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv)
+
+    * [`ibmcloud schematics inventory delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-inventory)
+
+    * [`ibmcloud schematics inventory get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-inv)
+
+    * [`ibmcloud schematics inventory list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-inv)
+
+    * [`ibmcloud schematics inventory update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-inv)
+
+* [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
+
+    * [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job)
+
+    * [`ibmcloud schematics job update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-job)
+
+    * [`ibmcloud schematics job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-job)
+
+    * [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job)
+
+    * [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
+
+    * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
+
+* [Resource management commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
+
+    * [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply)
+
+    * [`ibmcloud schematics destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy)
+
+    * [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs)
+
+    * [`ibmcloud schematics output`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-output2)
+
+    * [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan)
+
+* [Resource query commands](/docs/schematics?topic=schematics-schematics-cli-reference#rq-commands)
+
+    * [`ibmcloud schematics resource query create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq)
+
+    * [`ibmcloud schematics resource query delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-resource-query)
+
+    * [`ibmcloud schematics resource query get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-rq)
+
+    * [`ibmcloud schematics resource query list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-rq)
+
+    * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
+
+* [Stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
+
+    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
+
+* [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
+
+    * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
+
+* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
+
+    * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
+
+    * [`ibmcloud schematics workspace state show`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show)
+
+    * [`ibmcloud schematics workspace state mv`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv)
+
+    * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
+
+* [Workspaces commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
+
+    * [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action)
+
+    * [`ibmcloud schematics workspace delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete)
+
+    * [`ibmcloud schematics workspace get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get)
+
+    * [`ibmcloud schematics workspace import`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-import)
 
     * [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list)
+
+    * [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new)
+
+    * [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh)
+
+    * [`ibmcloud schematics state list`](/docs/schematics?topic=schematics-schematics-cli-reference#state-list)
+
+    * [`ibmcloud schematics workspace taint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint)
+
+    * [`ibmcloud schematics workspace untaint`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-untaint)
+
+    * [`ibmcloud schematics workspace update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update)
+
+    * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload)
 
 [CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
@@ -1705,18 +1884,6 @@ subcollection: schematics
     * [tags](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tags)
 
     * [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs)
-
-    * [inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-type)
-
-    * [inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-value)
-
-    * [inputs.default](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-default)
-
-    * [inputs.sensitive](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-secure)
-
-    * [inputs.max_length](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len)
-
-    * [inputs.min_length](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-min-len)
 
     * [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs)
 
@@ -1762,7 +1929,7 @@ subcollection: schematics
 
     * [module.injectors.tft_parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-tft-parameters)
 
-[blueprint input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml#bp-input-schema-yaml)
+[Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml#bp-input-schema-yaml)
 
 * [Defining input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#define-input-value)
 
@@ -2013,6 +2180,8 @@ subcollection: schematics
 
 [How do I edit and validate blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-editing)
 
+[Why do blueprints get the error `Length for variable <variable name> greater than the given length`](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-length)
+
 * [Why do blueprint operations require a `blueprint ID`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
 * [What URL format is used for referencing blueprint templates and input files?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url)
@@ -2029,7 +2198,7 @@ subcollection: schematics
 
 * [How do you configure the version of Terraform to used?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
 
-* [Is it possible to specify the CLI parameters as a file?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-location-override)
+* [Is it possible to specify the CLI parameters as a file?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-cli-file)
 
 * [When you create a blueprint config in the `us-south` target region, why is the blueprint job ID indicating `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
 

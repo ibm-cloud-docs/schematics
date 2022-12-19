@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-19"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -598,80 +598,74 @@ For more information about the flags see [workspace get](/docs/schematics?topic=
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-### `ibmcloud schematics blueprint create - flag options`
-{: #schematics-blueprint-createflag}
+### `ibmcloud schematics blueprint create`
+{: #schematics-blueprint-create}
 
-Create a blueprint config by using the `ibmcloud schematics blueprint create` command. The blueprint config is created from a user provided configuration via the command line that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
+Create a blueprint config from the command line using the `ibmcloud schematics blueprint create` command. Creating a blueprint config is the first step to deploy a blueprint environment. The blueprint config is created from user provided parameters via the command line that specifies the source of the blueprint template in a Git repository, and input values sourced from Git hosted input files and locally sourced input values.
 
-The config create command supports two modes of input. Either all parameters and flags specified on the command line, described in this section. This mode only supports passing input variables as simple strings.  
+The create command supports passing all required parameters via options on the CLI and passing input values from local files. 
 
-Or using a file option that accepts the configuration as a JSON file from the local file system in the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. The file mode supports passing complex input variables at create time. 
+A separate file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. These two usage modes are mutually exclusive. 
 {: shortdesc}
 
-
-For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.4` version.
+For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.5` version.
 {: important}
 
-  
+Refer to the section on [Creating Blueprints](https://cloud.ibm.com/docs/schematics?topic=schematics-create-blueprint-config&interface=cli) for examples of command syntax and output.   
 
-**Syntax to create using command with flag options:**
+
+
+**Syntax to create blueprint config using CLI parameters:**
 
 ```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [-—input-file INPUT_FILE] [--github-token GITHUB_TOKEN] [--output OUTPUT]
 ```
 {: pre}
-
-If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a `subfolder` of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/<subfolder>`. 
-{: note}
 
 Command options
 
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------- |
-| `--name`or `-n`| Required | Name of the blueprint. |
+| `--name` or `-n`| Required | Name of the blueprint. Delimited by double quotes if the name contains spaces. For example `-name "my blueprint"`|
 | `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
-| `description` or `--desc` | Optional | The description of the blueprint. |
-| `--bp-git-url` or `--bu` | Required | The blueprint Git URL. |
-| `--bp-git-file` or `--bf`| Required | The blueprint Git file name. |
-| `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name, if not provided defaults to main. In case the `--bp-git-branch` and `--bp-git-release` values are not provided, the command errors for one of the value to be provided.|
-| `--bp-git-release` or `--br`| Optional | The blueprint Git release tag. Exclusive with branch name.|
-| `--input-git-url` or `--iu`| Optional | The input Git URL.|
-| `--input-git-file` or `--if`| Optional | The input file name. |
-| `--input-git-branch` or `--ib`| Optional |The input file Git branch name, if not provided it defaults to main. In case the `--input-git-branch` and `--input-git-release` values are not provided, the command errors for one of the value to be provided.|
-| `--input-git-release` or `--ir`| Optional | The input file release tag. Exclusive with branch name.|
-| `--inputs` or `--in` | Optional | The input variables for the blueprint. Only the `string` type is supported. Use of `--file` option if its required to pass complex variables as input. Pass multiple inputs as comma separated. For example, `--options -inputs test=value,test1=value1`.|
+| `description` or `--desc` | Optional | The description of the blueprint. Delimited by double quotes if the description contains spaces. For example `-description "my blueprint example"`|
+| `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template . e.g. `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
+| `--bp-git-file` or `--bf`| Required | The blueprint template file name, including the file extension and any subfolders. For example `-bp-git-file <subfolder>/basic-blueprint.yaml`   |
+| `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name. Mutually exclusive with the `-bp-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-bp-git-branch devhardening`|
+| `--bp-git-release` or `--br`| Optional | A Git release tag identifying the version of the template file. Mutually exclusive with the `-bp-git-branch` option. For example `-bp-git-release 1.4.2`|
+| `--input-git-url` or `--igu`| Optional | The input Git URL. This is the URL of the repository containing the blueprint input file . e.g. `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
+| `--input-git-file` or `--igf`| Optional | The input file name, including extension and any subfolders. For example `-input-git-file <subfolder>/basic-input.yaml`. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
+| `--input-git-branch` or `--igb`| Optional |The input file Git branch name. Mutually exclusive with the `-input-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-input-git-branch nextdrop` |
+| `--input-git-release` or `--igr`| Optional | A Git release tag identifying the version of the input file. Mutually exclusive with the `-input-git-branch` option. For example `-input-git-release 1.0.5` |
+| `--inputs` or `--in` | Optional | The input variables for the blueprint. This flag can be used multiple times. For example, '-inputs foo=bar -inputs foo1=bar1'. This flag only supports simple strings without spaces. This option can be combined with the `--input-file` option to provide a complete set of simple and complex values.  |
+| `--input-file` or `--if` | Optional | The input variables for the blueprint from a local YAML file. The path and name to a local YAML file containing input values. This input method supports passing complex Terraform values, that are split across lines, containing spaces and special characters. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. Variable format is the same as used for `--input-git-file`. This option can be used for local testing of the Git input file or overrides on the Git input file. |
 | `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
-| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint create -name blueprint_Basic -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml -inputs provision_rg=true,resource_group_name=mynewrgdemo
+ibmcloud schematics blueprint create -name "blueprint basic" -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file example/basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file example/basic-input.yaml -inputs provision_rg=true -inputs resource_group_name=mynewrgdemo -input-file input.yaml 
 ```
 {: pre}
 
 
-### `ibmcloud schematics blueprint create - file option`
+### `ibmcloud schematics blueprint create - JSON config file option`
 {: #schematics-blueprint-createfile}
 
-
-Create a blueprint config by using the `ibmcloud schematics blueprint create -file` command. The blueprint config is created from a user provided configuration supplied as a JSON file that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs.
+Create a blueprint config by using the `ibmcloud schematics blueprint create -file` command. The blueprint config is created from a user provided configuration supplied as a JSON file that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs. This file operation passes the configuration directly to the Schematics API and uses the API syntax. Refer to the section [Creating blueprints via the CLI using a JSON config file](/docs/schematics?topic=schematics-create-blueprint-file) and the [Schematics API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint){: external}, for details of the configuration file format and usage. 
 {: shortdesc}
 
-For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.4` version.
-{: important}
- 
 
-**Syntax to create using command with file option:**
+**Syntax to create using the JSON config file option:**
 
 ```sh
 ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --file CONFIG_FILE_PATH [--output OUTPUT]
 ```
 {: pre}
 
-If your definition file `basic-blueprint.yaml` and input file `basic-input.yaml` are stored in a `subfolder` of the Git repository, then you need to provide complete path of the URL. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/<sub-folder>/basic-blueprint.yaml`. Review the [URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for more examples.  
-{: note}
+Refer to the section [Creating blueprints via the CLI using a JSON config file](/docs/schematics?topic=schematics-create-blueprint-file) and the [Schematics API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint){: external}, for details of the configuration file format and usage. 
 
 Command options
 
@@ -680,7 +674,7 @@ Command options
 | `--name`or `-n`| Required | Name of the blueprint. |
 | `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
 | `description` or `--desc` | Optional | The description of the blueprint. |
-| `--file` or `-f` | Optional | Path and file name for a config JSON file to create the blueprint. Exclusive with other options. This approach supporting passing complex input variables. |
+| `--file` or `-f` | Optional | Local path and file name for a config JSON file to create the blueprint. See [Creating blueprints via the CLI using a config file](/docs/schematics?topic=schematics-create-blueprint-file) Exclusive with other options. This approach supports passing complex input variables. |
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
 
@@ -688,137 +682,9 @@ Example
 
 ```sh
 ibmcloud schematics blueprint create -name blueprint_Basic -resource-group Default -file config.json
-{: pre}
-
-
-#### Using a config file
-{: #bp-create-config}
-
-Alternative to use command line parameters, you can provide a config JSON file to specify the parameters for the blueprint create. Pass the file name to the command by using the `--file` command option. This approach supports passing complex input variables at create time. 
-{: shortdesc}
-
-You need to replace the `<...>` placeholders with the actual values. To pass double quotes as required by Terraform for variables, double quotes must be correctly escaped in the JSON as `\\\"` . 
-{: note}
-
-**Syntax when using a config JSON file:**
-```json
-{
-  "name": "<PROVIDE BLUEPRINT NAME>",
-  "schema_version": "<blueprint template VERSION>",
-  "source": {
-    "source_type": "<BLUEPRINT TEMPLATE REPOSITORY, FOR EXAMPLE, `git_hub`>",
-    "git": {
-      "git_repo_url": "<BLUEPRINT INPUT FILE ABSOLUTE PATH>",
-      "git_repo_folder": "<blueprint template FILE>",
-      "git_branch": "main"
-    }
-  },
-  "inputs" :[
-    {
-      "name": "region",
-      "value": "us-east"
-    },
-    {
-      "name" :  "api_key",
-      "value": "<PROVIDE YOUR api_key VALUE>"
-    },
-    {
-      "name" :  "complex-list(any)",
-      "value": "[\\\"36\\\", \\\"mqm-grand\\\", \\\"madison-square-garden\\\"]"
-    }
-  ],
-  "config": [
-    {
-      "source": {
-        "source_type": "<BLUEPRINT TEMPLATE REPOSITORY, FOR EXAMPLE, `git_hub`>",
-        "git": {
-          "git_repo_url": "<BLUEPRINT TEMPLATE ABSOLUTE PATH>",
-          "git_repo_folder": "<BLUEPRINT INPUT FILE>",
-          "git_branch": "master"
-        }
-      }
-    }
-  ],
-  "description": "<ENTER THE DESCRIPTION>",
-  "resource_group": "<ENTER YOUR RESOURCE GROUP THAT HAS BLUEPRINT PERMISSIONS>"
-}
-
-```
-{: codeblock}
-
-Example
-
-```json
-{
-    "name": "Blueprint Basic",
-    "schema_version": "1.0.0",
-    "source": {
-        "source_type": "git_hub",
-        "git": {
-            "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
-            "git_repo_folder": "basic-blueprint.yaml",
-            "git_branch": "main"
-        }
-    },
-    "config": [
-        {
-            "source": {
-                "source_type": "git_hub",
-                "git": {
-                    "git_repo_url": "https://github.com/Cloud-Schematics/blueprint-basic-example",
-                    "git_repo_folder": "basic-input.yaml",
-                    "git_branch": "main"
-                }
-            }
-        }
-    ],
-    "inputs": [
-        {
-            "name": "provision_rg",
-            "value": "true"
-        },
-        {
-            "name": "resource_group_name",
-            "value": "myrg4"
-        }
-    ],
-    "description": "Deploys a simple two module blueprint",
-    "resource_group": "Default"
-}
-```
-{: codeblock}
-
-```sh
-ibmcloud schematics blueprint create --file createtest.json --github-token <ENTER YOUR GIT TOKEN>
 ```
 {: pre}
 
-Output
-
-```text
-Created blueprint ID: blueprint_Basic.eaB.435a
-
-Modules to be created
-SNO   Module Type   Name   
-1     Workspace     basic-resource-group   
-2     Workspace     basic-cos-storage   
-      
-Blueprint job us-east.JOB.blueprint_Basic.0a0ed5b5 started at 2022-11-21 11:48:46
-
-Module job execution status
-Waiting:0    In Progress:0    Success:2    Failed:0   
-
-Blueprint job us-east.JOB.blueprint_Basic.0a0ed5b5 completed at 2022-11-21 11:50:25
-
-Module Type   Name                   Status           Job ID   
-Blueprint     blueprint_Basic        CREATE_SUCCESS   us-east.JOB.blueprint_Basic.0a0ed5b5   
-Workspace     basic-resource-group   INITIALISED         
-Workspace     basic-cos-storage      INITIALISED         
-              
-Blueprint ID blueprint_Basic.eaB.435a create_success at 2022-11-21 11:50:26
-OK
-```
-{: screen}
 
 
 ### `ibmcloud schematics blueprint apply`
@@ -883,7 +749,7 @@ You update the blueprint configuration in {{site.data.keyword.bpshort}} with cha
 Syntax
 
 ```sh
-ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--input INPUT_VARIABLES_LIST] [--github-token GITHUB_TOKEN] [--output OUTPUT]
+ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--inputs INPUT_VARIABLE] [--github-token GITHUB_TOKEN] [--output OUTPUT] [-input-file inputs.yaml]
 ```
 {: pre}
 
@@ -893,16 +759,16 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the blueprint.|
-| `--file` or `-f` | Optional | The path to the JSON file containing the definition of the blueprint to update. |
-| `--input` or `--in` | Optional | Input variables for the blueprint. Pass multiple inputs as comma separated. For example, `--options -inputs test=testvalue,test1=testvalue1`.|
+| `--inputs` or `--in` | Optional | Update values for input variables. This flag can be used multiple times. For example, '-inputs foo=bar -inputs foo1=bar1'. This flag only supports simple strings without spaces. This option can be combined with the `--input-file` option. |
+| `--input-file` or `--if` | Optional | Update values for input variables for the blueprint from a local YAML file. The path and name to a local YAML file containing input values. This input method supports passing complex Terraform values, that are split across lines, containing spaces and special characters. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
 | `--github-token` or `-g` | Optional | The GitHub token value to access private Git repository.|
-| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprints config update flags" caption-side="top"}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9 -f update.json
+ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9 -inputs foo1=bar1 
 ```
 {: pre}
 
