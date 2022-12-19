@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-19"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -32,6 +32,11 @@ Review the release notes for December 2022.
 
 Release {{site.data.keyword.bpshort}} Agents GitHub repository.
 :   The agent beta releases [{{site.data.keyword.bpshort}} Agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with support to [download the providers by using proxy](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-proxy).
+
+Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
+
+Release {{site.data.keyword.bpshort}} command-line plug-in.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.5](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ## November 2022
 {: #schematics-nov22}

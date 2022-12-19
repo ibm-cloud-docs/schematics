@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-19"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -35,45 +35,6 @@ Update supports modification of:
 - Blueprint template YAML file 
 - Blueprint input file
 - Additional inputs  
-
-Run the [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update) command to refresh the blueprint configuration that is stored by {{site.data.keyword.bpshort}} with updates to the blueprint template and IaC code in the module source repositories. 
-
-## Explicit and relaxed versioning
-{: #update-blueprint-versioning}
-
-Blueprints supports two update approaches for changes to templates and modules. Either a relaxed 'development' mode where the current version of a template or module is always pulled, or a 'production' mode where an explicit version is specified. 
-
-### Relaxed versioning
-{: #update-blueprint-relaxed} 
-
-In some development environments, or where IaC code and blueprint templates are being developed, versioning of IaC definitions is not needed. 
-
-Blueprints defaults to always pull the current template, inputs, or modules on an update operation if no versioning is specified. Alternatively template and module statements can use the `git_release` option `latest`. When `latest` is in effect, {{site.data.keyword.bpshort}} identifies if the blueprint template, or module Git repositories are updated, and runs a `pull latest` to update the blueprint configuration. 
-
-```sh
-ibmcloud schematics blueprint update -id <blueprint_ID> 
-```
-{: pre}
-
-### Explicit versioning
-{: #update-blueprint-strict} 
-
-If explicit blueprint versioning is used with Git release tags for each blueprint template release, the blueprint configuration is only updated if a new release tag is specified on the Update operation. 
- 
-
-```sh
-ibmcloud schematics blueprint update --id <blueprint_ID> --bp-git-release x.y.z 
-```
-{: pre}
-
-Update the input file source and push a new release to its Git source repository. 
-
-If explicit input file version is used with release tags for each input file release, the blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
-
-```sh
-ibmcloud schematics blueprint update --id <blueprint_ID> --input-git-release x.y.z  
-```
-{: pre} 
 
 Record the blueprint ID that needs to be updated. To list the blueprint IDs, run [listing blueprints](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-list) command.
 {: note}

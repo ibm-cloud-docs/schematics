@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-19"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -58,6 +58,16 @@ Dependencies between blueprint modules are created using the value references be
 {: support}
 
 Blueprint templates can be edited in any editor or IDE. Follow the instructions on how to use and configure VSCode to [edit templates and input files](/docs/schematics?topic=schematics-edit-blueprints). The [Red Hat YAML VSCode extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml){: external}  provides a framework for editing blueprint YAML files, using a [blueprint schema](https://github.com/Cloud-Schematics/vscode-blueprint-schema){: external} defined using [JSON-Schema](https://json-schema.org){: external} . 
+
+# Why do blueprints get the error `Length for variable <variable name> greater than the given length`  
+{: #faqs-bp-length}
+{: faq}
+{: support}
+
+The default size of values that can be passed to Blueprints as inputs is set to 1KB. If the expected size is greater than 1KB, the  [`max_length` inputs meta-data](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-max-len) can be defined to set the length that Blueprints should accept.  
+
+ A value larger than 1KB or the specified length will result in the error `Length for variable <variable name> greater than the given length`   
+
 
 ## Why do blueprint operations require a `blueprint ID`?
 {: #faqs-bp-install}
@@ -148,11 +158,11 @@ The Terraform version in use and allowable for modules is constrained by the val
 During Apply operations Terraform programmatically determines the Terraform version that is supported by the automation modules, looking for a `terraform` block with a [`required_version`](https://developer.hashicorp.com/terraform/language/settings#specifying-a-required-terraform-version){: external} parameter. If the module `required_version` constraint does not support the desired template version, the operation will be failed. 
 
 ## Is it possible to specify the CLI parameters as a file?
-{: #faqs-bp-location-override}
+{: #faqs-bp-cli-file}
 {: faq}
 {: support}
 
-There two ways to create a blueprint configuration using the CLI.
+A number of ways to create a blueprint configuration using the CLI.
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.3`.
 {: important}

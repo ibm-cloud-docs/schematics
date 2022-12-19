@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-08"
+lastupdated: "2022-12-19"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -131,7 +131,7 @@ Type: list
 
 Default: []
 
-A list defines all the inputs that are required by the template. Inputs are specified in the [`input file`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as input values when the blueprint is created in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. 
+A list defines all the inputs that are required by the template. Inputs are specified in the [`input file`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as input values when the blueprint is created in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. To understand how Blueprints determines the value for a defined input, review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-input-precedence).
 
 Example
 
@@ -144,7 +144,7 @@ inputs:
 {: pre}
 
 
-### inputs.type
+#### inputs.type
 {: #bp-inputs-type}
 
 Type: YAML flow or block scalar 
@@ -159,55 +159,60 @@ Options: Any valid Terraform variable type
 
 Example
 ```yaml
-- name: docker_ports
-  type: |
-    list(object({
-    internal = number
-    external = number
-    protocol = string
-  })
+    - name: docker_ports
+      type: |
+        list(object({
+        internal = number
+        external = number
+        protocol = string
+        })
 
 ```
 {: pre}
 
 
-### inputs.value
+#### inputs.value
 {: #bp-inputs-value}
 
 Type: Any valid Terraform variable type
 
-Optional
+Optional - mutually exclusive with the default key
 
-The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When not specified the value is sourced from the blueprint config inputs and input file at run time. 
+The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When not specified the value is sourced from the blueprint config inputs and input file at run time. Review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-input-precedence) to understand input processing. 
 
 Example of statically defined local value 
 ```yaml
-- name: provision_ats_instance
-  type: boolean            
-  value: false
+    - name: provision_ats_instance
+      type: boolean            
+      value: false
 ```
 {: pre}
 
 
-### inputs.default
+#### inputs.default
 {: #bp-inputs-default}
 
 Type: Any valid Terraform variable type
 
-Optional
+Optional - mutually exclusive with the value key
 
-A default value for the input. The default is used when no value is provided at run time from the blueprint configuration inputs and input file. The default type is as defined by the `inputs.type` option. 
+A default value for the input. The default is used when no value is provided at run time from the blueprint configuration input file or dynamic (override) inputs. The default type is as defined by the `inputs.type` option. 
 
 Example of a default value 
 ```yaml
-- name: provision_ats_instance
-  type: boolean            
-  default: false
+    - name: place_instance
+      type: list(any)         
+      default: |
+      [
+      "36", 
+      "mqm-grand", 
+      "madison-square-garden"
+      ]
 ```
 {: pre}
 
 
-### inputs.sensitive
+#### inputs.sensitive
 {: #bp-inputs-secure}
 
 Type: Boolean
@@ -217,20 +222,43 @@ Default: false
 Flag specifying whether the value is a sensitive variable and must be masked in the output
 {: pre}
 
-### inputs.max_length
+Example
+
+```yaml
+    - name: ssh_key
+      sensitive: true            
+```
+{: pre}
+
+
+#### inputs.max_length
 {: #bp-inputs-max-len}
 
 Type: Number
 
-Number specifying the maximum length of the input value. Attribute is used by the UI to perform validation. 
+Number specifying the maximum length of the input value. Attribute is used by the UI to perform validation and to signify the expected length of the value.  
 {: pre}
 
-### inputs.min_length
+If `max_length` is not specified, the default maximum length of a variable value allowed by Blueprints is 1KB. A value larger than 1000 bytes, or the specified length will result in the error `Length for variable <variable name> greater than the given length`   
+
+Example
+
+```yaml
+    - name: provision_ats_instance
+      max_length: 10000            
+```
+{: pre}
+
+
+
+#### inputs.min_length
 {: #bp-inputs-min-len}
 
 Type: Number
 
-Number specifying the minimum length of the input value. Attribute is used by the UI to perform validation. 
+Optional
+
+Number specifying the minimum length of the input value. Attribute is used by the UI to perform input validation. 
 {: pre}
 
 
@@ -241,6 +269,8 @@ Type: list
 
 Default: [] 
  
+Optional
+
 A list defines all the outputs that are returned by the template to the user. Each output is identified by a key-value pair. 
 
 Example
@@ -259,8 +289,12 @@ Type: list
 
 Default: []
 
-A list of the global environment-variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
+Optional
+
+A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
 {: pre}
+
+Settings defined at this level apply to all modules. Additionally settings can also be set at the module level. 
 
 
 #### settings.TF_VERSION
@@ -268,7 +302,11 @@ A list of the global environment-variables (env-vars) to be made available in th
 
 Type:       number
 
+Optional
+
 Blueprint templates set the Terraform version to be used at module execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
+
+When not specified the required Terraform version is determined by inspecting the TF module code for a `required_version` definition. Based on the specified version or range of versions, Blueprints will used the most recent version of Terraform supported by Schematics. 
 
 Options:    Terraform version in `SemVer` format 
 
@@ -285,6 +323,8 @@ settings: # Master settings for all modules
 {: #bp-logs}
 
 Type:       string
+
+Optional 
 
 Configure the Terraform logging level for all modules. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage. 
 

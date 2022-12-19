@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-15"
+lastupdated: "2022-12-19"
 
 keywords: schematics actions, actions, schematics
 
@@ -31,7 +31,7 @@ To get started with [Configuration Management]({: /docs/schematics?topic=schemat
 
 Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
 
-![Configuration Management with Actions and Ansible](/images/new/bp-actions.svg){: caption="Configuration Management with Actions and Ansible" caption-side="bottom"}
+![Configuration Management with Actions and Ansible](/images/new/sc-actions.svg){: caption="Configuration Management with Actions and Ansible" caption-side="bottom"}
 
 Using your supplied playbooks, {{site.data.keyword.bpshort}} runs the Ansible engine to execute your playbook. Ansible, tasks, roles and playbooks can perform provisioning tasks via the IBM Cloud APIs via HTTPS, or configuration of compute instances (virtual servers) using SSH. Server configuration is performed via SSH over the public network. To maintain security for your environment, use of a bastion host to provide a secure gateway to your compute infrastructure is strongly encouraged.     
 

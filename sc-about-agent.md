@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-19"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -26,7 +26,7 @@ The {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ab
 
 The following are the primary drivers to create the {{site.data.keyword.bplong_notm}} Agents.
 
-- Use [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-about-schematics) and [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) to deploy and configure hybrid cloud resources such as private cloud resources, private data center resources, and other public cloud resources.
+- Use [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics) and [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started) to deploy and configure hybrid cloud resources such as private cloud resources, private data center resources, and other public cloud resources.
 - Use {{site.data.keyword.bpshort}} to securely connect and manage hybrid cloud infrastructure by using [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about), [Ansible](/docs/schematics?topic=schematics-getting-started-ansible), and other automation tools to perform the deployment, configurations, and the day-2 operations.
 - Use to reduce your wait time in a shared {{site.data.keyword.bpshort}} queue to run your automation.
 - Use a dedicated infrastructure to run your automation and the ability to scale up or scale down the capacity depending on your automation workloads.
