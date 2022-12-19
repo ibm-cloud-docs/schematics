@@ -2,14 +2,14 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-12-15"
 
 ---
 
 # Source files for customer-facing documentation
 {: #readme-sourcefile}
 
-Customer-facing documentation: https://cloud.ibm.com/docs/schematics
+Customer-facing documentation: /docs/schematics
 
 
 ## How to open issues

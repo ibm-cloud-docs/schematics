@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-15"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Working with {{site.data.keyword.bpshort}} Actions
 {: #action-working}
 
-{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multi-tiered apps to your cloud infrastructure. 
+{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure. 
 {: shortdesc}
 
 Review the section [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions) for the background to Actions and Red Hat Ansible. 

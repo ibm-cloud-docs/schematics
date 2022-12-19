@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-15"
 
 keywords: schematics capabilities, schematics overview, benefits
 
@@ -57,7 +57,7 @@ Organize your Terraform templates and control the access to run infrastructure c
 ### {{site.data.keyword.bpshort}} Actions
 {: #sc-actions}
 
-With {{site.data.keyword.bpshort}} Actions, use Ansible playbooks to perform complex day-2 operations on your cloud resources, cloud environment, and app workloads. Whether you want to deploy multi-tiered apps, start or stop virtual servers or clusters, rotate keys, backup and restore app data, perform security scans, manage database schemas, or manage users, simply specify the tasks that you want to run in your playbook, and let {{site.data.keyword.bpshort}} securely connect and complete the tasks.For more information about managing {{site.data.keyword.bpshort}} Actions and its features, see [managing Actions](/docs/schematics?topic=schematics-workspace-setup).
+With {{site.data.keyword.bpshort}} Actions, use Ansible playbooks to perform complex day-2 operations on your cloud resources, cloud environment, and app workloads. Whether you want to deploy multitiered apps, start or stop virtual servers or clusters, rotate keys, backup and restore app data, perform security scans, manage database schemas, or manage users, simply specify the tasks that you want to run in your playbook, and let {{site.data.keyword.bpshort}} securely connect and complete the tasks.For more information about managing {{site.data.keyword.bpshort}} Actions and its features, see [managing Actions](/docs/schematics?topic=schematics-workspace-setup).
 {: shortdesc}
 
 ### {{site.data.keyword.bpshort}} Agents
