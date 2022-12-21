@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-19"
+lastupdated: "2022-12-21"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -61,7 +61,7 @@ Enhance {{site.data.keyword.bpshort}} documentation
 
 
 Release {{site.data.keyword.bpshort}} command-line plug-in.
-:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.4](/docs/schematics?topic=schematics-cli_version-releases) released.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.5](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 15 November 2022
 {: #schematics-nov1522}

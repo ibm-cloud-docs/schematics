@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-08"
+lastupdated: "2022-12-21"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -27,15 +27,15 @@ subcollection: schematics
 {{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) automation solution for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, the major building blocks and standard components. Using the blueprint for guidance, a builder can confidently build the house from the set of well-defined components.
 {: shortdesc}
 
-In a similar fashion, {{site.data.keyword.bpshort}} Blueprints enables users to define and deploy complex cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. This builds on the IaC best practice of [modular architectures](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity). It [scales the Terraform deployment model](/docs/schematics?topic=schematics-blueprint-scaling), connecting modular environments, as the layers and components of large infrastructure architectures.
+In the same way, {{site.data.keyword.bpshort}} Blueprints enables users to define and deploy complex cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. This builds on the IaC best practice of [modular architectures](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity). It [scales the Terraform deployment model](/docs/schematics?topic=schematics-blueprint-scaling), connecting modular IaC environments, as the layers and components of large infrastructure architectures.
 
 ![Deploying modular large-scale environments with Blueprints](/images/new/bp-overview.svg){: caption="Deploying modular large-scale environments with Blueprints" caption-side="bottom"}
 
-A blueprint template determines the architecture, specifying the modules required for the implementation and infrastructure topology. Blueprint operations create large and complex infrastructures out of the smaller modular environments, linked by the sharing and passing of resource information. 
+A blueprint template determines the infrastructure architecture, specifying the modules required for the implementation, the infrastructure topology and relationships between modules. Inputs customize the template for the target deployment. Blueprint operations build up the infrastructure by deploying the smaller modular environments defined by the template. Blueprints linking the module environments by the sharing and passing of resource information. 
 
 Reuse and maintainability are key features to deploy at scale. Publicly available modules designed for {{site.data.keyword.cloud}} can be [combined with third-party and user developed modules](/docs/schematics?topic=schematics-blueprint-terraform) to create customized solutions. Separately maintained input configurations, ensure reusability as blueprint templates can be configured at deploy time to create customized dev, stage and prod pipelines, or repeatable application deployments.  
 
-The modular approach to composition and configuration also eases the task of maintaining and updating large environments. Blueprint operations update environments on request through configuration of module versions, rather than by code change. IBM module libraries are regularly refreshed and versioned to maintain platform compatibility and meet current compliance requirements. Module [semantic versioning](https://semver.org/){: external} identifies the scope of any changes, allowing environments to be automatically refreshed with minor patches and revisions, while maintaining user control over major feature enhancements.  
+This modular approach to composition and configuration also eases the task of maintaining and updating large environments. Blueprint operations update environments on request through configuration of module versions, rather than by code change. IBM module libraries are regularly refreshed and versioned to maintain platform compatibility and meet current compliance requirements. Module [semantic versioning](https://semver.org/){: external} identifies the scope of any changes, allowing environments to be automatically refreshed with minor patches and revisions, while maintaining user control over major feature enhancements.  
 
 ## Features
 {: #blueprint-features}
@@ -48,7 +48,7 @@ Blueprints is built around [IaC best practices](/docs/schematics?topic=schematic
 {{site.data.keyword.bpshort}} Blueprints complements Terraform with IaC based environment management capabilities:
 
 - [Modular composition](/docs/schematics?topic=schematics-blueprint-terraform): Build infrastructure architectures from an eco-system of reusable IBM Cloud automation modules written in Terraform
-- [Reusability](/docs/schematics?topic=schematics-blueprint-reuse-pipelines): Reuse templates and modules across environments, pipelines and teams
+- [Reusability](/docs/schematics?topic=schematics-blueprint-reuse-pipelines): Share and reuse templates and modules across environments, pipelines and teams
 - [Scalability](/docs/schematics?topic=schematics-blueprint-scaling): Scale environments by linking discrete modular environments as the layers and components of large and complex application architectures using dependencies.     
 - [Lifecycle](/docs/schematics?topic=schematics-work-with-blueprints): Manage environments cradle-to-grave, from initial creation, through maintenance and ops to final decommissioning. Future: scheduled ops, drift detection, cost estimation, policy compliance               
 

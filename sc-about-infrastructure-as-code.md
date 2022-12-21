@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -96,23 +96,23 @@ Chef is thought of as an imperative tool. Terraform is classed as declarative. A
 ### Declarative Terraform and lifecycle management
 {: #iac-declarative-lifecycle}
 
-{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention. Idempotent property task executes multiple time with the same end result.
+{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention. 
 
 ### Idempotence
 {: #iac-idempotence}
 
-A benefit of the declarative approached used by Terraform and Ansible is idempotence. Idempotent task can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 
+A benefit of the declarative approached used by Terraform and Ansible is idempotence. Idempotent tasks can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 
 
-How you use a tool and the modules used both have an impact on idempotency. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. Configuration drift from the desired state may occur. With Terraform this is most likely when `null-resources` are used to extend provider functionality with custom scripts.
+How you use a tool and the modules used both have an impact on idempotency. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. In which case, the configuration may drift from the desired target state. With Terraform this form of drift is most likely when `null-resources` are used to extend provider functionality with custom scripts which are not idempotent.
 
-Immutability is an IaC practice that minimizes this risk. 
+Immutability is an IaC practice that minimizes the risk of drift from the target state. 
  
 ### Immutablity
 {: #iac-immutability}
 
-Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed. The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of operations. Changes that make it harder to debug and resolve issues, and increase support costs. 
+Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed (using scripts). The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of automated operations. Changes that make it harder to debug and resolve issues, and increase support costs. 
 
-All changes should be made through the {{site.data.keyword.bpshort}} IaC configuration, and redeploy the resources when there is a need for an update. 
+To ensure immutability and eliminate drift, all changes should be made through the {{site.data.keyword.bpshort}} IaC configuration, and resources like VSIs should be redeployed when they need updating. 
 
 ## Next steps
 {: #iac-nextsteps}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-19"
+lastupdated: "2022-12-21"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -123,7 +123,7 @@ ibmcloud schematics blueprint create  ......................  --inputs sshkey=$u
 ```
 {: pre}
 
-## Why does the blueprint template, basic example, fail in the run apply step?
+## Why does the blueprint template, basic example, fail in the apply step?
 {: #faqs-bp-basic-example}
 {: faq}
 {: support}

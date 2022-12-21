@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: schematics blueprints, delete blueprint, managed environments
 
@@ -28,7 +28,7 @@ The first step destroys all the deployed cloud resources, leaving the blueprint 
 ![Deleting a blueprint environment](/images/new/sc-bp-delete.svg){: caption="Deleting a blueprint environment" caption-side="bottom"}
 
 1. In a future release blueprints will provide the option to preview the resources that will be deleted. 
-2. The user initiates a destroy of the cloud resources that belong to the blueprint environment. The `blueprint run destroy` operation iterates through all the blueprint modules, destroying resources in reverse dependency order to ensure that all cloud resources are cleanly removed. On resource destroy, all the modules return to an `Inactive` state to indicate that no cloud resources remain. For more information, see [Destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint). When the resources get destroyed, billing gets terminated.  
+2. The user initiates a destroy of the cloud resources that belong to the blueprint environment. The `blueprint destroy` operation iterates through all the blueprint modules, destroying resources in reverse dependency order to ensure that all cloud resources are cleanly removed. On resource destroy, all the modules return to an `Inactive` state to indicate that no cloud resources remain. For more information, see [Destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint). When the resources get destroyed, billing gets terminated.  
     - Optional: A fresh instance of the environment can be deployed from the saved {{site.data.keyword.bplong}} Blueprint configuration by running the [blueprint apply](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-blueprint-apply) operation to re-create the environment and cloud resources. 
 3. For each module, {{site.data.keyword.bpshort}} runs a Terraform Destroy to delete all the cloud resources created by the module. 
 4. The blueprint modules and blueprint configuration are deleted from {{site.data.keyword.bpshort}} using the delete operation. It is only enabled if all the resources are already destroyed and the modules are in an `Inactive` state. For more information, see [blueprint delete](/docs/schematics?topic=schematics-delete-blueprint). 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-19"
+lastupdated: "2022-12-21"
 
 keywords: schematics
 subcollection: schematics
@@ -853,39 +853,53 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-blueprint-terraform#bp-terraform-nextsteps)
 
-[Blueprint reuse and customization](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse-pipelines)
+[Reuse and customization](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse-pipelines)
 
 * [Reuse across environments](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-reuse)
 
-* [Deployment pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-pipelines)
+    * [Deployment pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-pipelines)
 
 * [Customization best practice](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization-bp)
 
     * [Blueprint customization](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization)
 
-* [Customizing blueprint environments](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization-layers)
+* [Customizing environments with inputs](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization-layers)
 
-    * [Usage scenarios](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#usage-scenarios)
+* [Using versioned inputs](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#using-versioned-inputs)
 
 * [Blueprint input value precedence](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-input-precedence)
 
-[Blueprint versioning](/docs/schematics?topic=schematics-blueprint-versioning#blueprint-versioning)
+    * [No value](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#no-value)
+
+    * [Default value](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#default-value)
+
+    * [Specified value](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#specified-value)
+
+[Versioning blueprint environments](/docs/schematics?topic=schematics-blueprint-versioning#blueprint-versioning)
 
 * [Relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-relaxed)
 
+    * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#creating-environments-using-relaxed-versioning)
+
+    * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#updating-an-un-versioned-environment)
+
+    * [Migrating to a versioned configuration](/docs/schematics?topic=schematics-blueprint-versioning#migrating-to-a-versioned-configuration)
+
 * [Explicit versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-strict)
+
+    * [Specifying versioning at create time](/docs/schematics?topic=schematics-blueprint-versioning#specifying-versioning-at-create-time)
+
+    * [Specifying versions at update time](/docs/schematics?topic=schematics-blueprint-versioning#specifying-versions-at-update-time)
 
 [Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
 
-* [Configuring your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
+* [Configure your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
 
-* [Create template repository and local clone](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-createtemplate)
+* [Sourcing a blueprint template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
 
-    * [Select a template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
+* [Clone source template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
 
-    * [Clone template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
-
-    * [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
+* [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
 
 * [Editing in VSCode](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
 
@@ -897,19 +911,15 @@ subcollection: schematics
 
 [Create a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-config)
 
-* [Creating a blueprint configuration through CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
-
-    * [Create new resource group](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-rg-cli)
-
-    * [Reuse existing resource group](/docs/schematics?topic=schematics-create-blueprint-config#reuse-blueprint-rg-cli)
+* [Creating a blueprint configuration through the CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
 
     * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-cli)
 
-* [Creating blueprint through UI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-ui)
+* [Creating a blueprint configurating using the UI](/docs/schematics?topic=schematics-create-blueprint-config#bp-ui-create)
 
-    * [Verifying blueprint creation through UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
+    * [Verifying blueprint config creation through UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
 
-* [Creating a blueprint through API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
+* [Creating a blueprint configuration using the API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
 
     * [Verifying blueprint create through API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-create-api)
 
@@ -997,7 +1007,7 @@ subcollection: schematics
 
 * [Destroying a blueprint environment through CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
 
-    * [Verifying blueprint run destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destroy-cli)
+    * [Verifying blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destroy-cli)
 
 * [Destroying blueprint environment through API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
 
@@ -1015,7 +1025,7 @@ subcollection: schematics
 
     * [Verifying blueprint config deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
 
-* [Deleting blueprint through API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
+* [Deleting a blueprint config using the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
 
     * [Verifying blueprint delete through API](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-api)
 
@@ -1735,7 +1745,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
 
-    * [`ibmcloud schematics blueprint run destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
+    * [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
 
     * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
 
@@ -2204,7 +2214,7 @@ subcollection: schematics
 
 * [How do you securely pass input variables?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
 
-* [Why does the blueprint template, basic example, fail in the run apply step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
+* [Why does the blueprint template, basic example, fail in the apply step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 
 * [What is the time taken to create an IBM Kubernetes Service cluster and other resources?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
 

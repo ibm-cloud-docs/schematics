@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-19"
+lastupdated: "2022-12-21"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -706,7 +706,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the blueprint.|
 | `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="blueprints run apply flags" caption-side="top"}
+{: caption="blueprints apply flags" caption-side="top"}
 
 Example
 
@@ -891,7 +891,7 @@ OK
 ```
 {: screen}
 
-### `ibmcloud schematics blueprint run destroy`
+### `ibmcloud schematics blueprint destroy`
 {: #schematics-blueprint-destroy}
 
 Destroys all the resources associated with the modules in a blueprint. This action cannot be reversed. On workspaces {{site.data.keyword.bpshort}} performs a Terraform Destroy operation.
@@ -900,7 +900,7 @@ Destroys all the resources associated with the modules in a blueprint. This acti
 Syntax
 
 ```sh
-ibmcloud schematics blueprint run destroy --id BLUEPRINT_ID [--no-prompt] [--output OUTPUT]
+ibmcloud schematics blueprint destroy --id BLUEPRINT_ID [--no-prompt] [--output OUTPUT]
 ```
 {: pre}
 
@@ -911,12 +911,12 @@ Command options
 | `--id` or `-i`| Required | The ID of the blueprint.|
 | `--no-prompt` | Optional |Set this flag to stop interactive command-line session. |
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} blueprints run destroy flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} blueprints destroy flags" caption-side="top"}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint run destroy -id blueprint_Basic.eaB.435a
+ibmcloud schematics blueprint destroy -id blueprint_Basic.eaB.435a
 ```
 {: pre}
 

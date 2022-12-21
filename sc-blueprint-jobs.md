@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -134,7 +134,7 @@ OK
 ```
 {: screen}
 
-The first section of the job output shows the overall execution status of the blueprint operation (job), such as, `config create`, `run apply`, `config update`, `run destroy`, or `config delete`. 
+The first section of the job output shows the overall execution status of the blueprint operation (job), such as, `create`, `apply`, `config update`, `destroy`, or `delete`. 
 
 The second section has a detailed breakdown of the job execution results at a module level. 
 
@@ -237,7 +237,7 @@ OK
 {: #list-blueprint-jobs-ui}
 {: ui}
 
-The results of blueprint operations, `config create`, `run apply`, `config update`, `run destroy`, and `config delete` can be reviewed on the **Jobs history** page of a blueprint. 
+The results of blueprint operations, `create`, `apply`, `config update`, `destroy`, and `delete` can be reviewed on the **Jobs history** page of a blueprint. 
 
 1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the blueprint details.
 2. Click **Overview** to view the blueprint summary that includes `Recent Job runs` of your blueprint. 

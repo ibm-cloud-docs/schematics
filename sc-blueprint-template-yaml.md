@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-19"
+lastupdated: "2022-12-21"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -428,7 +428,7 @@ Required: true
 
 Type of Git source repository. 
 
-Options: `github`, `git`, `catalog` 
+Options: `git`, `catalog` 
 
 Specifies the module source from a version control system, for example, a Github or Gitlab repository, or IBM Cloud Catalog. The following source parameters must match the source_type. 
 {: pre}

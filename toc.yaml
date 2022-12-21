@@ -69,8 +69,8 @@ toc:
                                                     - sc-blueprint-template.md
                                                     - sc-blueprint-terraform.md
                                                     - sc-blueprint-reuse.md
-                                                    - sc-bp-versioning.md
-                                                    - sc-bp-edit.md
+                                                    - sc-blueprint-versioning.md
+                                                    - sc-blueprint-edit.md
                                                     - sc-blueprint-create.md
                                                     - sc-blueprint-apply.md
                                                     - sc-blueprint-display.md

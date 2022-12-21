@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: blueprint apply failure, terraform error, terraform fails, install fails,
 
@@ -148,7 +148,7 @@ Analysis of the logs indicates that the modules Terraform apply operation that i
 {: tsCauses}
 
 
-No user action must be necessary to recover and the `run apply` operation can be retried. 
+No user action must be necessary to recover and the `apply` operation can be retried. 
 {: tsResolve} 
 
 Run the `ibmcloud schematics blueprint apply` command to rerun the failed Terraform Apply operation and complete all operations against all modules.  

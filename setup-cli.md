@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-21"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -72,7 +72,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     Listing installed plug-ins...
 
     Plugin Name                             Version   Status             Private endpoints supported   
-    schematics                              1.12.4                        true  
+    schematics                              1.12.5                        true  
     ```
     {: screen}
 
@@ -147,7 +147,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
 4. Update the {{site.data.keyword.bpshort}} command-line plug-in.
 
-    For {{site.data.keyword.bpshort}} Blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.4` version.
+    For {{site.data.keyword.bpshort}} Blueprints, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.5` version.
     {: note}
 
     For {{site.data.keyword.bpshort}} Agents, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.0` version.
@@ -166,7 +166,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output for blueprints support: 
 
     ```text
-    schematics                      1.12.4        true
+    schematics                      1.12.5        true
     ```
     {: screen}
 
@@ -180,7 +180,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
     ```text
     Plugin Name                              schematics   
-    Plugin Version                           1.12.4   
+    Plugin Version                           1.12.5   
     Plugin SDK Version                       0.8.0   
     Minimal IBM Cloud CLI version required   0.15.1   
     Private endpoints supported              true   

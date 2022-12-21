@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
-keywords: blueprint run destroy, destroy blueprint, blueprint
+keywords: blueprint destroy, destroy blueprint, blueprint
 
 subcollection: schematics
 
@@ -18,10 +18,10 @@ subcollection: schematics
 # Destroy a blueprint environment 
 {: #destroy-blueprint}
 
-When a blueprint  environment is no longer required, it can be deleted which will terminate billing for all deployed resources. See [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint) to understand the process of deleting blueprint environments and the steps. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and second deletes the blueprint config in {{site.data.keyword.bpshort}}.
+When a blueprint environment is no longer required, it can be deleted which will terminate billing for all deployed resources. Deleting a blueprint environment is a two-stage process that first destroys all the associated cloud resources and second deletes the blueprint config in {{site.data.keyword.bpshort}}. See [Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint) to understand the process of deleting blueprint environments. 
 {: shortdesc}
 
-The cloud resources that are created by a blueprint are destroyed by using the `blueprint run destroy` command. The saved blueprint config can then be removed from {{site.data.keyword.bpshort}}. The delete can be performed after all resources are destroyed by using the [blueprint run destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 
+The cloud resources that are created by a blueprint are destroyed by using the `blueprint destroy` command. The saved blueprint config can then be removed from {{site.data.keyword.bpshort}}. The delete can be performed after all resources are destroyed by using the [blueprint destroy](/docs/schematics?topic=schematics-destroy-blueprint&interface=cli) command. 
 
 For Terraform based modules, the destroy operation runs a Terraform Destroy command for each module. This removes all cloud resources in reverse dependency order. 
 
@@ -49,24 +49,24 @@ You can follow these steps to destroy the {{site.data.keyword.bpshort}} Blueprin
 {: #destroy-blueprint-cli}
 {: cli}
 
-The following command runs a `blueprint run destroy` for the environment with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
+The following command runs a `blueprint destroy` for the environment with the ID `eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936`
 
 For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
 {: important}
 
 ```sh
-ibmcloud schematics blueprint run destroy --id Blueprint_Basic.eaB.08d1
+ibmcloud schematics blueprint destroy --id Blueprint_Basic.eaB.08d1
 ```
 {: pre}
 
 On successful completion, the destroy command returns **`fullfilment_success`**. 
 
-For more information, review the [blueprint run destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy) command.
+For more information, review the [blueprint destroy](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy) command.
 
-### Verifying blueprint run destroy success 
+### Verifying blueprint destroy success 
 {: #verify-bp-destroy-cli}
 
-Verify that the blueprint environment resources are destroyed successfully. When you run destroy through CLI, the command displays details of the modules containing the resources to be destroyed, and the status of {{site.data.keyword.bpshort}} jobs that run the Terraform destroy operations. Confirm that the user intends to destroy all resources. The command returns on completion.
+Verify that the blueprint environment resources are destroyed successfully. When you destroy through CLI, the command displays details of the modules containing the resources to be destroyed, and the status of {{site.data.keyword.bpshort}} jobs that run the Terraform destroy operations. Confirm that the user intends to destroy all resources. The command returns on completion.
 
 ```text
 Modules to be destroyed

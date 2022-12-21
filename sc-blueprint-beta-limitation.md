@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
@@ -37,7 +37,7 @@ Blueprint commands have been renamed with the 1.12.3 release of the Schematics C
 - `blueprint update` > `blueprint update`
 - `blueprint delete` > `blueprint delete`
 - `blueprint apply` > `blueprint apply`
-- `blueprint destroy` > `blueprint run destroy` 
+- `blueprint destroy` > `blueprint destroy` 
 
 
 ## Beta release limitations 
@@ -71,7 +71,7 @@ Blueprint commands have been renamed with the 1.12.3 release of the Schematics C
 
 | Issue | Resolved | Date |
 | --- |--- | --- | 
-| Run apply, run destroy, and config deletes return the generic message **`fullfilment_success`** on successful completion. | | | 
+| apply, destroy, and deletes return the generic message **`fullfilment_success`** on successful completion. | | | 
 | JSON output option not supported on commands. | | |   
 {: caption="Beta release known issues" caption-side="bottom"}
 
