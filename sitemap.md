@@ -1038,37 +1038,6 @@ subcollection: schematics
 * [Blueprints usage](/docs/schematics?topic=schematics-bp-env-vars#usage)
 
 
-## Managing Workspaces New
-{: #sitemap_managing_workspaces_new}
-
-
-
-### Creating workspace
-{: #sitemap_creating_workspace}
-
-
-
-### Managing workspace resources
-{: #sitemap_managing_workspace_resources}
-
-
-[Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
-
-* [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
-
-* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
-
-* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
-
-    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
-
-* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
-
-    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
-
-* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
-
-
 ## Managing Workspaces
 {: #sitemap_managing_workspaces}
 
