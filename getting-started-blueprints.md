@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -245,11 +245,11 @@ You have now deployed a Blueprint and created a multi-workspace environment.
 Optionally, you can clean up the deployed blueprint with the following commands:
 
 ```sh
-ibmcloud schematics blueprint run destroy -id <blueprint_ID>
+ibmcloud schematics blueprint destroy -id <blueprint_ID>
 ```
 {: pre}
 
-You need to run the `blueprint run destroy` command and then run the  `blueprint delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprints).
+You need to run the `blueprint destroy` command and then run the  `blueprint delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprints).
 {: note}
 
 ```sh

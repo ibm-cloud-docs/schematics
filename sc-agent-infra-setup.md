@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-21"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -210,7 +210,7 @@ Here are the list of commands used to provision the Agent infrastructure.
 - If case of job failure, rectify the issue in the **Settings** page of the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/workspaces){: external} and run `ibmcloud schematics refresh --id  <Provide yourworkspace ID>` command.
 - View the **Jobs** logs and **Resources** page to observe the workspace status as `ACTIVE`.
 
-    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, run apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
+    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
     {: important}
 
 - Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output) provisioned.
@@ -421,7 +421,7 @@ Here are the list of CURL commands used to provision the Agent infrastructure:
     ```
    {: pre}
 
-    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, run apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
+    Record the `cluster_id` and `logdna_name` from the `Outputs:` section of the Jobs log. This information are used while deploying the Agent service. If you do not observe `cluster_id` details in the Jobs log, ensure you {{site.data.keyword.cloud_notm}} has right permission to create a `VPC Infrastructure`, and `Kubernetes cluster` service access. Then, apply command to refresh your workspace](/apidocs/schematics/schematics#refresh-workspace-command).
     {: important}
 
 7. Review the output to view the [Agent infrastructure resource](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output) provisioned.

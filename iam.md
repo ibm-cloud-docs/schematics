@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: schematics, automation, terraform
 
@@ -89,7 +89,7 @@ Review the following table to see what permissions you need to work with {{site.
 
 Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Blueprint.
 
-In addition to the listed blueprints activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `blueprint create`, `blueprint apply`, `blueprint delete`, and `blueprint run destroy` activities to execute successfully.
+In addition to the listed blueprints activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `blueprint create`, `blueprint apply`, `blueprint delete`, and `blueprint destroy` activities to execute successfully.
 {: important} 
 
 | Activities | Reader | Writer | Manager | Account owner |
@@ -100,7 +100,7 @@ In addition to the listed blueprints activities and permission, you must check w
 | `blueprint update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `blueprint delete`| | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `blueprint apply` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint run destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `blueprint destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} Blueprint" caption-side="top"}

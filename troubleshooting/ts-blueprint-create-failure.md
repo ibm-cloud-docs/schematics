@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-21"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -28,7 +28,7 @@ Review the following sections to help debugging blueprint apply failures.
 When you create a blueprint configuration, the create fails with an error that the template, or input repositories cannot be cloned or found. 
 {: tsSymptoms}
 
-When you create the configuration, {{site.data.keyword.bpshort}} attempts to download the input files and blueprint template from the Git repositories that are specified on the config create and validate the YAML schema. 
+When you create the configuration, {{site.data.keyword.bpshort}} attempts to download the input files and blueprint template from the Git repositories that are specified on the create and validate the YAML schema. 
 {: tsCauses}
 
 Sample error
@@ -52,7 +52,7 @@ Rerun the blueprint create operation with the correct repository reference.
 When you create the configuration, the create fails before the config is created with an error that the template, or input files cannot be found.
 {: tsSymptoms}
 
-When you create the configuration, {{site.data.keyword.bpshort}} attempts to download the input files, and template from the Git repositories that are specified on the config create and validate the YAML schema. The repository was located, but the template or input files cannot be found. 
+When you create the configuration, {{site.data.keyword.bpshort}} attempts to download the input files, and template from the Git repositories that are specified on the create and validate the YAML schema. The repository was located, but the template or input files cannot be found. 
 {: tsCauses}
 
 Sample error
@@ -68,7 +68,7 @@ Invalid blueprint templates. Error - Unable to find basic-blueprint1.yaml in the
 Check that the template file and input files that are identified in the error message exist in the target repository and are correctly specified on the config create. 
 {: tsResolve} 
 
-Rerun the config create operation with the correct file name.
+Rerun the create operation with the correct file name.
 
 ## Blueprint create fails with the requested resource group as invalid
 {: #bp-create-fails3}
@@ -76,7 +76,7 @@ Rerun the config create operation with the correct file name.
 When you create the configuration, the create fails before the config is created with an error that the requested resource group ID is invalid or needed permissions.  
 {: tsSymptoms}
 
-On creation, blueprints are assigned to the {{site.data.keyword.bpshort}} management resource group passed on the config create. If the group is invalid or the user does not have the correct {{site.data.keyword.bpshort}} IAM permissions for the group the create operation will fail.
+On creation, blueprints are assigned to the {{site.data.keyword.bpshort}} management resource group passed on the create. If the group is invalid or the user does not have the correct {{site.data.keyword.bpshort}} IAM permissions for the group the create operation will fail.
 {: tsCauses}
 
 Sample error
