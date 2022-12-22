@@ -98,7 +98,7 @@ toc:
                                                               label: Managing workspace resources
                                                               topics:
                                                                       - sc-drift.md
-                                                                      - remotestate.md</hidden>
+                                                                      - remotestate.md
                                   - topicgroup:
                                             label: Managing Workspaces
                                             topics:

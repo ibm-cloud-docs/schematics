@@ -1066,6 +1066,10 @@ subcollection: schematics
 
 * [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
 
+[Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
+
+* [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
+
 
 ## Managing Workspaces
 {: #sitemap_managing_workspaces}
