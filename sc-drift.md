@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-12-22"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -53,7 +53,7 @@ Use the following steps to view the drift job log.
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want check for drift. 
 2. Select and open your workspace.
-3. Click **Actions** tab.
+3. Select the **Actions** drop down list.
 4. Select **Detect drift** option to initiate the detect drift job. 
 5. During execution, the status shows `in progress` moving to a `success` or a job `failure` status on completion. 
 6. The drift status can be determined by reviewing the output of the job logon when the job is in a `success` state. A sample success job execution with detected drift is shown in the screen capture.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-22"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -15,22 +15,17 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# List blueprints
+# Displaying blueprints
 {: #list-blueprint}
 
-To list your blueprints with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
-{: shortdesc}
 
-For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
-{: important}
-
-## Listing blueprints through UI 
+## Displaying blueprints using the UI 
 {: #display-blueprint-ui}
 {: ui}
 
-You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints by using {{site.data.keyword.cloud_notm}} console.
+You can follow these steps to list the blueprints in your account using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.cloud_notm}} Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click your blueprint name to view the blueprint details.
+1. From the [Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}. Click your blueprint name to view the blueprint details.
 2. Click **Overview** to view the blueprint summary, that includes `Modules status`, `Variables summary`, `Blueprint Details` and `Recent Job runs` of your blueprint. 
     - Optional: From **Modules status** section, Click **View details** to view the module details.
     - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
@@ -42,12 +37,15 @@ You can follow these steps to list the {{site.data.keyword.bpshort}} Blueprints 
 6. Click **Jobs history** tab view the job logs of the blueprint and module activities.
 7. Click **Settings** tab to view the configuration settings of the blueprint.
 
-## Listing blueprints through CLI
+## Displaying blueprints using the CLI
 {: #listing-bp-cli}
 {: cli}
 
-Lists all the blueprints.
+To list the blueprints available in your account with the CLI, use the `ibmcloud schematics blueprint list` command. This command requires no arguments. It is region specific and will only list blueprints in the selected CLI region. 
 {: shortdesc}
+
+For all the blueprint commands, syntax, and option flag details, see [blueprints commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd).
+{: important}
 
 Syntax
 
@@ -65,25 +63,25 @@ The command lists all the environments created in the CLI region.
 ```text
 sundeepmulampaka@Sundeeps-MacBook-Pro blueprint % ibmcloud schematics blueprint list
 Name                                        ID                                                   Source Type   Status               Location   Creator                   Last modified     
-Blueprint_Basic                             Blueprint_Basic.eaB.08d1                             GitHub        fulfilment_success   us-east    schematics@in.ibm.com       2022-11-18 10:37:20   
+Blueprint_Basic                             Blueprint_Basic.eaB.08d1                             GitHub        job_finished   us-east    schematics@in.ibm.com       2022-11-18 10:37:20   
                                                                                                                
 OK
 ```
 {: screen}
 
-### Listing blueprints
+### Displaying blueprint details
 {: #display-blueprint-cli}
 
 To display the details of a blueprint and its configuration with the CLI, use the `ibmcloud schematics blueprint get` command. Four levels of detail are supported with the `--level` option. 
-- `summary` blueprint run status
-- `detailed` blueprint configuration, settings and source URLs. 
-- `modules` Detailed listing of the blueprint template, modules and variables
-- `outputs` Output variables returned by the blueprint template on deploying cloud resources.
+- `summary` displays the blueprint status
+- `detailed` displays the blueprint configuration, settings and source URLs. 
+- `modules` A detailed listing of the blueprint template, modules and input values
+- `outputs` Displays the output variables returned by the blueprint template on deploying cloud resources.
 
 For a complete listing of options, see the [ibmcloud schematics blueprint get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get) command.
 {: shortdesc}
 
-### Blueprint display summary 
+### Get blueprint summary 
 {: #display-blueprint-summary}
 
 Syntax
@@ -95,7 +93,7 @@ ibmcloud schematics blueprint get -id <blueprint_ID>
 
 Output
 
-On successful completion the get command returns summary details of the blueprint and module status. 
+On successful completion the get command returns summary details of the blueprint status and the module deployment status. 
 
 ```text
 BLUEPRINT          
@@ -103,7 +101,7 @@ BLUEPRINT
 Name            Blueprint_Basic   
 ID              Blueprint_Basic.eaB.08d1   
 Description     Simple blueprint to demonstrate module linking   
-Status          fulfilment_success   
+Status          job_finished   
 Location        us-east   
 Creator         schematics@in.ibm.com   
 Last modified   2022-11-18T10:37:20.163Z   
@@ -118,10 +116,10 @@ OK
 ```
 {: screen}
 
-### Blueprint display outputs
+### Get blueprint outputs
 {: #display-blueprint-outputs-cli}
 
-Displays the blueprint with the summary information.
+Displays the output variables returned by the blueprint template after deploying cloud resources with the apply command.  
 {: shortdesc}
 
 Syntax
@@ -131,7 +129,7 @@ ibmcloud schematics blueprint get -id <blueprint_ID> -level outputs
 ```
 {: pre}
 
-On successful completion the get command returns the summary details of the blueprint and the output values defined by the template. 
+On successful completion the get command returns the summary details of the blueprint and the output values defined by the template. The output values are returned after the summary information at the bottom of the screen. 
 
 Output
 
@@ -141,7 +139,7 @@ BLUEPRINT
 Name            Blueprint_Basic   
 ID              Blueprint_Basic.eaB.08d1   
 Description     Simple blueprint to demonstrate module linking   
-Status          fulfilment_success   
+Status          job_finished   
 Location        us-east   
 Creator         schematics@in.ibm.com   
 Last modified   2022-11-18T10:37:20.163Z   
@@ -161,12 +159,12 @@ OK
 ```
 {: screen}
 
-This example shows the returned computed value for the output variable `blueprint-output`  
+This example shows the blueprint returned the value for the output variable `cos_id`. In this example the resource id for the COS instance created by the blueprint.   
 
-### Blueprint display summary CLI
+### Get blueprint module details
 {: #display-blueprint-summary-cli}
 
-Displays the output with the module level.
+Returns a detail view of the blueprint template, the modules and input and output variables. 
 {: shortdesc}
 
 Syntax
@@ -184,7 +182,7 @@ BLUEPRINT
 Name            Blueprint_Basic   
 ID              Blueprint_Basic.eaB.08d1   
 Description     Simple blueprint to demonstrate module linking   
-Status          fulfilment_success   
+Status          job_finished   
 Location        us-east   
 Creator         schematics@in.ibm.com   
 Last modified   2022-11-18T10:37:20.163Z   
@@ -260,7 +258,7 @@ OK
 ```
 {: screen}
 
-## Displaying blueprint through API 
+## Displaying blueprint using the API 
 {: #display-blueprint-api}
 {: api}
 
@@ -342,7 +340,7 @@ Output
                 "set_at": "0001-01-01T00:00:00Z"
             },
             "state": {
-                "status_code": "FULFILMENT_SUCCESS",
+                "status_code": "job_finished",
                 "config_status": "CONFIG_DRAFT",
                 "plan_status": "PLANNED",
                 "run_status": "RUN_APPLY_COMPLETE"

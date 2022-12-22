@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-22"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -16,7 +16,7 @@ subcollection: schematics
 {: beta}
 
 # Reuse and customization 
-{: #blueprint-reuse-pipelines}
+{: #blueprint-reuse}
 
 {{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied.
 {: shortdesc}
@@ -29,7 +29,7 @@ Blueprint template reuse supports a number of usecases:
 - Software delivery pipelines, dev, stage, prod
 
 ## Reuse across environments
-{: #blueprint-reuse} 
+{: #blueprint-reuse-env} 
 
 A blueprint template (house design) is reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-glossary#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments.
 {: shortdesc}

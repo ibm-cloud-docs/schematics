@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-05"
+lastupdated: "2022-12-22"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -58,7 +58,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using IBM Cloud Console.
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/actions){: external}, select the actions that you want to delete.
-2. Click **Actions** tab and select **Delete** option.
+2. Click Select the **Actions** drop down list and select **Delete** option.
 3. Type your actions name in **Type `action_name` to confirm** text box.
 4. Click **Delete** button.
 

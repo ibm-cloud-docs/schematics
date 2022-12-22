@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-22"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -731,11 +731,11 @@ Waiting:0    In Progress:0    Success:2    Failed:0
 Blueprint job us-east.JOB.blueprint_Basic.c1f2164f completed at 2022-11-21 12:18:54
 
 Module Type   Name                   Status               Job ID   
-Blueprint     blueprint_Basic        FULFILMENT_SUCCESS   us-east.JOB.blueprint_Basic.c1f2164f   
+Blueprint     blueprint_Basic        job_finished   us-east.JOB.blueprint_Basic.c1f2164f   
 Workspace     basic-resource-group   APPLIED                 
 Workspace     basic-cos-storage      APPLIED                 
               
-Blueprint ID blueprint_Basic.eaB.435a fulfilment_success at 2022-11-21 12:18:55
+Blueprint ID blueprint_Basic.eaB.435a job_finished at 2022-11-21 12:18:55
 OK
 ```
 {: screen}
@@ -885,7 +885,7 @@ Output
 
 ```text
 Name              ID                         Source Type   Status               Location   Creator           Last modified   
-Blueprint Basic   blueprint_Basic.eaB.435a   GitHub        fulfilment_success   us-east    test@in.ibm.com   2022-11-21T10:45:57.329Z   
+Blueprint Basic   blueprint_Basic.eaB.435a   GitHub        job_finished   us-east    test@in.ibm.com   2022-11-21T10:45:57.329Z   
                                                            
 OK
 ```
@@ -937,11 +937,11 @@ Waiting:0    In Progress:0    Success:2    Failed:0
 Blueprint job us-east.JOB.Blueprint-Basic-Json.59bf17a8 completed at 2022-11-21 12:50:55
 
 Module Type   Name                   Status               Job ID   
-Blueprint     Blueprint Basic Json   FULFILMENT_SUCCESS   us-east.JOB.Blueprint-Basic-Json.59bf17a8   
+Blueprint     Blueprint Basic Json   job_finished   us-east.JOB.Blueprint-Basic-Json.59bf17a8   
 Workspace     basic-resource-group   INITIALISED             
 Workspace     basic-cos-storage      INITIALISED             
               
-Blueprint ID blueprint_Basic.eaB.435a fulfilment_success at 2022-11-21 12:50:56
+Blueprint ID blueprint_Basic.eaB.435a job_finished at 2022-11-21 12:50:56
 OK
 ```
 {: screen}

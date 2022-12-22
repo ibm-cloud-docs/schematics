@@ -72,14 +72,33 @@ toc:
                                                     - sc-blueprint-versioning.md
                                                     - sc-blueprint-edit.md
                                                     - sc-blueprint-create.md
+                                                    - sc-blueprint-update.md
                                                     - sc-blueprint-apply.md
                                                     - sc-blueprint-display.md
                                                     - sc-blueprint-jobs.md
-                                                    - sc-blueprint-update.md
                                                     - sc-blueprint-destroy.md
                                                     - sc-blueprint-delete.md
-                                                    - sc-bp-create-file.md
-                                                    - sc-bp-env-vars.md
+                                                    - sc-blueprint-create-file.md
+                                                    - sc-blueprint-env-vars.md
+                                  - topicgroup:
+                                            label: Managing Workspaces New
+                                            topics:
+                                                    - topicgroup:
+                                                              label: Creating workspace
+                                                              topics:
+                                                                      - workspaces/sc-workspaces-create.md
+                                                    - workspaces/sc-workspaces-plan.md
+                                                    - workspaces/sc-workspaces-deploy.md
+                                                    - workspaces/sc-workspaces-update.md
+                                                    - workspaces/sc-workspaces-display.md
+                                                    - workspaces/sc-workspaces-freezing.md
+                                                    - workspaces/sc-workspaces-destroy.md
+                                                    - workspaces/sc-workspaces-delete.md
+                                                    - topicgroup:
+                                                              label: Managing workspace resources
+                                                              topics:
+                                                                      - sc-drift.md
+                                                                      - remotestate.md</hidden>
                                   - topicgroup:
                                             label: Managing Workspaces
                                             topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-22"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -52,7 +52,7 @@ Enhance {{site.data.keyword.bpshort}} documentation
 :   {{site.data.keyword.bpshort}} enhances its documentation with 
     - [What is Infrastructure as Code (IaC) with respect to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-infrastructure-as-code)?.
     - [Relationship between {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-sc-relationship).
-    - [Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse-pipelines).
+    - [Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse).
 
 ### 18 November 2022
 {: #schematics-nov1822}

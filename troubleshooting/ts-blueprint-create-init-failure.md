@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-22"
 
 keywords: blueprint create init failure, blueprint init error, create init fails,
 
@@ -81,7 +81,7 @@ ibmcloud schematics blueprint update --id <blueprint_ID> --bp-git-release x.y.zÂ
 {: pre}
 
 
-Verify that the blueprint config is updated successfully. When you update the config through CLI. The command displays details of the modules to be updated, and continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command returns on completion.
+Verify that the blueprint config is updated successfully. When you update the config using theCLI. The command displays details of the modules to be updated, and continuously updating status of the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command returns on completion.
 
 ```text
 Update blueprint ID: eu-de.BLUEPRINT.Blueprint-Basic-Example.21735936
