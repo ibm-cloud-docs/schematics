@@ -1755,16 +1755,6 @@ subcollection: schematics
 
 * [Policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#policy-cmd)
 
-    * [`ibmcloud schematics policy create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create)
-
-    * [`ibmcloud schematics policy get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-get)
-
-    * [`ibmcloud schematics policy list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-list)
-
-    * [`ibmcloud schematics policy update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-update)
-
-    * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
-
 * [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
     * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
