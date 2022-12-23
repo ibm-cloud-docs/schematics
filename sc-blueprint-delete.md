@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-22"
+lastupdated: "2022-12-23"
 
 keywords: blueprint delete, delete blueprint, blueprint
 
@@ -26,7 +26,7 @@ Deleting the blueprint configuration is the second step required to completely d
 This behavior can be overridden using the `-force-delete` flag when modules cannot be returned to an `Inactive` state due to a {{site.data.keyword.bpshort}} or Terraform error. 
 {: shortdesc}
 
-## Deleting a blueprint config using theCLI
+## Deleting a blueprint config using the CLI
 {: #delete-blueprint-cli}
 {: cli}
 
@@ -106,7 +106,7 @@ During the delete operation that the status shows `In Progress`, when completed 
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-apply-fails).
 
-## Deleting a blueprint config using theUI 
+## Deleting a blueprint config using the UI 
 {: #delete-blueprint-ui}
 {: ui}
 
@@ -150,7 +150,7 @@ refresh_token: <refresh_token>
 ```
 {: codeblock}
 
-### Verifying blueprint delete using theAPI
+### Verifying blueprint delete using the API
 {: #verify-bp-delete-api}
 
 Verify that the blueprint is deleted successfully as shown in the output.
@@ -165,7 +165,7 @@ Output
     "command_name": "blueprint_delete",
     "id": "us-south.JOB.Blueprint-Basic-Test-API.58700253",
     "name": "JOB.Blueprint-Basic-Test-API.blueprint_delete.1669215421598",
-    "description": "Deploys a simple two module blueprint succesfully Updated",
+    "description": "Deploys a simple two module blueprint successfully Updated",
     "location": "us-south",
     "resource_group": "aac37f57b20142dba1a435c70aeb12df",
     "submitted_at": "2022-11-23T14:57:01.598150765Z",

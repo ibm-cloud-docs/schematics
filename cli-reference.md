@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-22"
+lastupdated: "2022-12-23"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -605,7 +605,7 @@ Create a blueprint config from the command line using the `ibmcloud schematics b
 
 The create command supports passing all required parameters via options on the CLI and passing input values from local files. 
 
-A separate file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. These two usage modes are mutually exclusive. 
+A experimental file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. These two usage modes are mutually exclusive. 
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.5` version.
@@ -649,43 +649,6 @@ Example
 ibmcloud schematics blueprint create -name "blueprint basic" -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file example/basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file example/basic-input.yaml -inputs provision_rg=true -inputs resource_group_name=mynewrgdemo -input-file input.yaml 
 ```
 {: pre}
-
-
-### `ibmcloud schematics blueprint create - JSON config file option`
-{: #schematics-blueprint-createfile}
-
-Create a blueprint config by using the `ibmcloud schematics blueprint create -file` command. The blueprint config is created from a user provided configuration supplied as a JSON file that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs. This file operation passes the configuration directly to the Schematics API and uses the API syntax. Refer to the section [Creating blueprints via the CLI using a JSON config file](/docs/schematics?topic=schematics-create-blueprint-file) and the [Schematics API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint){: external}, for details of the configuration file format and usage. 
-{: shortdesc}
-
-
-**Syntax to create using the JSON config file option:**
-
-```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --file CONFIG_FILE_PATH [--output OUTPUT]
-```
-{: pre}
-
-Refer to the section [Creating blueprints via the CLI using a JSON config file](/docs/schematics?topic=schematics-create-blueprint-file) and the [Schematics API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint){: external}, for details of the configuration file format and usage. 
-
-Command options
-
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------- |
-| `--name`or `-n`| Required | Name of the blueprint. |
-| `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
-| `description` or `--desc` | Optional | The description of the blueprint. |
-| `--file` or `-f` | Optional | Local path and file name for a config JSON file to create the blueprint. See [Creating blueprints via the CLI using a config file](/docs/schematics?topic=schematics-create-blueprint-file) Exclusive with other options. This approach supports passing complex input variables. |
-| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
-
-Example
-
-```sh
-ibmcloud schematics blueprint create -name blueprint_Basic -resource-group Default -file config.json
-```
-{: pre}
-
-
 
 ### `ibmcloud schematics blueprint apply`
 {: #schematics-blueprint-apply}
@@ -868,7 +831,6 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary` or `ids`. The default value is **summary**. |
 | `--limit` or `-l` | Optional | The maximum number of blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`.|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-22"
+lastupdated: "2022-12-23"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -67,7 +67,7 @@ On successful completion, the config create returns **`create_success`** and the
 ### Verifying blueprint config creation 
 {: #verify-blueprint-create-cli}
 
-Verify that the blueprint configuration was created successfully. When you create the configuration using theCLI, the command displays details of the blueprint modules to be created, and continuously updates the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command only returns on completion.
+Verify that the blueprint configuration was created successfully. When you create the configuration using the CLI, the command displays details of the blueprint modules to be created, and continuously updates the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command only returns on completion.
 
 ```text
 Created blueprint ID: Blueprint_Basic.eaB.08d1
@@ -99,7 +99,7 @@ On successful completion, the config create returns **`create_success`** and the
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 
-## Creating a blueprint configurating using the UI 
+## Creating a blueprint configuration using the UI 
 {: #bp-ui-create}
 
 You can follow these steps to create a blueprint config using {{site.data.keyword.cloud_notm}} console.
@@ -211,7 +211,7 @@ Authorization: Bearer
 ```
 {: codeblock}
 
-### Verifying blueprint create using theAPI
+### Verifying blueprint create using the API
 {: #verify-bp-create-api}
 
 Verify that the blueprint is created successfully as shown in the output.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-22"
+lastupdated: "2022-12-23"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -31,9 +31,9 @@ You can follow these steps to list the blueprints in your account using {{site.d
     - Optional: From **Variables summary** section, Click **View details** to view the variable summary.
 3. Click **Modules** tab to see the list of modules and their current status. 
     - Optional: Click **Show details** to view the module details.
-    - Optional: Click **Name** that takes to the modules `Workspace` page. 
+    - Optional: Click **Name** to go to the modules `Workspace` page. 
 4. Click **Resources** tab to view the list of resources provisioned status by the blueprint.
-5. Click **Variables** tab to view your **Inputs** and **Outputs** variables and values. Optional: you can edit the input variable and click **Save variables**.
+5. Click **Variables** tab to view your **Inputs** and **Outputs** variables and values. Optional: you can edit the input variables and click **Save variables**.
 6. Click **Jobs history** tab view the job logs of the blueprint and module activities.
 7. Click **Settings** tab to view the configuration settings of the blueprint.
 

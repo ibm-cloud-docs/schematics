@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-23"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -35,8 +35,7 @@ Relaxed versioning is in effect if a blueprint configuration is created without 
 ```sh
 ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default \
 -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml \
--input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml \
--inputs provision_rg=true,resource_group_name=my_resource_group
+-input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml 
 ```
 {: pre}
 
@@ -65,38 +64,32 @@ An un-versioned environment can be updated to versioned.
 
 1. Add [Git release tags](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository){: external} to the Git repos to create a versioned release.   
 2. Update the blueprint configuration or template with version and branch information. The flags `bp-git-release`, `bp-git-branch` and the corresponding input file definitions: 
-
-```sh
-ibmcloud schematics blueprint update -id <blueprint_ID> -bp-git-release <x.y.z> -input-git-release <x.y.z>
-```
-{: pre}
-
+    ```sh
+    ibmcloud schematics blueprint update -id <blueprint_ID> -bp-git-release <x.y.z> -input-git-release <x.y.z>
+    ```
 3. Similarly version information can be added to the blueprint template to control module version selection. 
 
-Sample template module definition with versioning:
-```yaml
-source:
-  source_type: github
-  git: 
-    git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
-    git_release: "1.2.4"
-```
-{: pre}
+    Sample template module definition updated with module version information:
+    ```yaml
+    source:
+      source_type: github
+      git: 
+        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup"
+        git_release: "1.2.4"
+    ```
+    {: pre}
 
 ## Explicit versioning
 {: #update-blueprint-strict} 
 
-
-
 ### Specifying versioning at create time
 
-An un-versioned environment can be updated to versioned. 
+Template and input file versions are specified at create time using the flags `bp-git-release`, `bp-git-branch` and the corresponding input file flags: 
 
 ```sh
 ibmcloud schematics blueprint create -name Blueprint_Basic -resource-group Default \
 -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file basic-blueprint.yaml --bp-git-release <x.y.z>\
--input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml --input-git-release <x.y.z>\
--inputs provision_rg=true,resource_group_name=my_resource_group
+-input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file basic-input.yaml --input-git-release <x.y.z>
 ```
 {: pre}
 
@@ -129,7 +122,7 @@ ibmcloud schematics blueprint update --id <blueprint_ID> --bp-git-branch <produc
 
 Update the input file source and push a new release to its Git source repository. 
 
-If explicit input file version is used with release tags for each input file release, the blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
+Similarly, if explicit input file version is used with release tags for each input file release, the blueprint configuration must be updated in {{site.data.keyword.bpshort}} with the new input file release tag.  
 
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_ID> --input-git-release x.y.z  

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-22"
+lastupdated: "2022-12-23"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -133,7 +133,7 @@ OK
 ```
 {: screen}
 
-The first section of the job output shows the overall execution status of the blueprint operation (job), such as, create, apply, update, destroy, or delete. The second section has a detailed breakdown of the job execution results for all the 'child' jobs executed by Schematics as part of this operation.   
+The first section of the job output shows the overall execution status of the blueprint operation (job), such as, create, apply, update, destroy, or delete. The second section has a detailed breakdown of the job execution results for all the 'child' jobs executed by {{site.data.keyword.bpshort}}as part of this operation.   
 
 Blueprint operations run under the control of a blueprint orchestration job. This is listed first in the job results list. Update, Apply and Destroy operations on modules are performed under the control of this blueprint orchestration job. Each module job listed contains the results of the Terraform operation performed against that module to deploy and configure cloud resources. 
 
@@ -241,7 +241,7 @@ OK
 {: screen}
 
 
-## List blueprint jobs using theUI
+## List blueprint jobs using the UI
 {: #list-blueprint-jobs-ui}
 {: ui}
 

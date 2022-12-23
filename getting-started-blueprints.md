@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-22"
+lastupdated: "2022-12-23"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -40,7 +40,7 @@ Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/o
         - **Description** for the blueprint. Supports maximum character range from `0 - 2048`.
         - Click **Next**.
     - In **Blueprint URL** section:
-        - **Repository URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
+        - **Repository URL** - `<Provide your valid GitHub or GitLab repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
         - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`.
         - Check the information that is entered are correct to create a blueprint.
         - Click **Next and save as draft**. Observe that a blueprint is created with a Blueprint ID and is in `Draft` Status.
@@ -50,7 +50,7 @@ Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/o
     - In **Input Variables** section:
         - Select **Import input file** drop down only when you want to import the new `inputs` YAML file for the blueprint.
             - In **Import input file (Optional)** section:
-               -  **Input file GIT URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-input.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
+               -  **Input file GIT URL** - `<Provide your valid GitHub or GitLab repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-input.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
                - **Source name** - Used to set the source name the input file values are identified by in the UI. 
                - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`.
                - Click **Import values**.
@@ -66,7 +66,7 @@ Use one of the {{site.data.keyword.IBM}} provided [samples](https://github.com/o
 {: #get-started-blueprints-apply-ui}
 {: step}
 
-You can follow these steps to generate a plan and apply a blueprint using {{site.data.keyword.cloud_notm}} console.
+You can follow these steps to generate a plan and apply a blueprint using the {{site.data.keyword.cloud_notm}} console.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Click **Schematics** > **Blueprints**.
@@ -76,9 +76,9 @@ You can follow these steps to generate a plan and apply a blueprint using {{site
     Generate plan execution can take few a minutes to execute. Once generated check if the plan is correct. You can see the **Resource summary**, and **Jobs history** that displays the `blueprint_create_init` and the respective module job details. If **Generate plan** fails, review the job logs to identify the cause of the failure. As required to resolve the failure, modify the template and update the blueprint configuration with the revised template and any input values. Then re-run Generate Plan.
     {: note}
 
-5. Click **Apply plan** to provision the resources configured in your modules. You can observe the `In progress` status.
+5. Click **Apply plan** to provision the resources configured in your modules. The blueprint will show an `In progress` status.
     
-    The apply plan execution takes a few minutes based on the resources. The execution jobs show the history of all blueprint, module activities, and the logs of the jobs. If **Apply plan** fails, review the module job logs for information relating to the Terraform execution errors. As required to resolve the failure, modify the template and update the blueprint configuration with the revised template and any input values. Then re-run Apply Plan.
+    The apply plan execution takes a few minutes based on the resources. The execution jobs show the history of all blueprint, module activities, and the logs of the jobs. If **Apply plan** fails, review the module job logs for information relating to the Terraform execution errors. As required to resolve the failure, modify the template and update the blueprint configuration with the revised template and any input values. Then re-run Generate Plan.
     {: note}
 
 ### Displaying the blueprint

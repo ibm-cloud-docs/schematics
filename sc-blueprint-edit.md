@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-23"
 
 keywords: schematics blueprints template, blueprints yaml, editing, edit, vscode, yaml 
 
@@ -44,7 +44,7 @@ Install the YAML extension and blueprint schema. Follow the Blueprints YAML lang
 ## Sourcing a blueprint template 
 {: #bp-select-template}
 
-Initially you can start by customizing the [sample template](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} or use one of the deployable template examples in the [IBM Cloud Schematics GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. 
+Initially you can start by customizing the [sample template](https://github.com/Cloud-Schematics/blueprint-basic-example){: external} or use one of the deployable template examples in the [IBM Cloud {{site.data.keyword.bpshort}}GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external}. 
 
 ## Clone source template repo in Git
 {: #bp-clone-repo}
@@ -53,7 +53,7 @@ Create a copy of the source template in your own Git repository or version contr
 
 Alternatively work with your own template library in Github or Gitlab. These can be either public or private repos. 
 
-Instructions to clone one of the [IBM Cloud Schematics GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external} examples:
+Instructions to clone one of the [IBM Cloud {{site.data.keyword.bpshort}}GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories/?q=topic:blueprint){: external} examples:
 
 - Navigate to the main page of the source template repository  
 - Click **Use this template/repository** 
