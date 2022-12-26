@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-23"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Maintaining blueprints
 {: #update-op-blueprints}
 
-Maintaining a cloud environment is about managing continual change. Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform are constantly evolving. Without maintenance and updates of the blueprint templates, inputs and automation module code, a deployed environment loses currency and compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation. 
+Maintaining a cloud environment is about managing continual change. Cloud environments are not static. User infrastructure requirements change and the {{site.data.keyword.cloud}} platform is constantly evolving. Without maintenance and updates of the blueprint templates, inputs and automation module code, a deployed environment will lose currency and compliance, and will cease to be manageable through {{site.data.keyword.bpshort}} automation. 
 {: shortdesc}
 
 Change occurs for many reasons:
@@ -44,7 +44,7 @@ Review the section on blueprint version management to understand how to manage c
 
 The two-step process to update a blueprint environment is illustrated in the diagram.
 
-![blueprint update flow](/images/new/sc-bp-update.svg){: caption="blueprint update flow" caption-side="bottom"}
+![blueprint update flow](/images/new/bp-update.svg){: caption="blueprint update flow" caption-side="bottom"}
 
 1. Edit the blueprint template, and the input YAML files to implement the proposed changes to the environment. 
     - You can use any text editor. [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints) is recommended, as it provides blueprint template syntax validation and autocomplete.    

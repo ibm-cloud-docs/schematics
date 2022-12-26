@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-23"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -605,7 +605,7 @@ Create a blueprint config from the command line using the `ibmcloud schematics b
 
 The create command supports passing all required parameters via options on the CLI and passing input values from local files. 
 
-A separate file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. These two usage modes are mutually exclusive. 
+A experimental file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. These two usage modes are mutually exclusive. 
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.5` version.
@@ -649,43 +649,6 @@ Example
 ibmcloud schematics blueprint create -name "blueprint basic" -resource-group Default -bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -bp-git-file example/basic-blueprint.yaml -input-git-url https://github.com/Cloud-Schematics/blueprint-basic-example -input-git-file example/basic-input.yaml -inputs provision_rg=true -inputs resource_group_name=mynewrgdemo -input-file input.yaml 
 ```
 {: pre}
-
-
-### `ibmcloud schematics blueprint create - JSON config file option`
-{: #schematics-blueprint-createfile}
-
-Create a blueprint config by using the `ibmcloud schematics blueprint create -file` command. The blueprint config is created from a user provided configuration supplied as a JSON file that specifies the source of the blueprint template in a Git repository, the source of any input files and optional override inputs. This file operation passes the configuration directly to the Schematics API and uses the API syntax. Refer to the section [Creating blueprints via the CLI using a JSON config file](/docs/schematics?topic=schematics-create-blueprint-file) and the [Schematics API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint){: external}, for details of the configuration file format and usage. 
-{: shortdesc}
-
-
-**Syntax to create using the JSON config file option:**
-
-```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --file CONFIG_FILE_PATH [--output OUTPUT]
-```
-{: pre}
-
-Refer to the section [Creating blueprints via the CLI using a JSON config file](/docs/schematics?topic=schematics-create-blueprint-file) and the [Schematics API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint){: external}, for details of the configuration file format and usage. 
-
-Command options
-
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------- |
-| `--name`or `-n`| Required | Name of the blueprint. |
-| `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
-| `description` or `--desc` | Optional | The description of the blueprint. |
-| `--file` or `-f` | Optional | Local path and file name for a config JSON file to create the blueprint. See [Creating blueprints via the CLI using a config file](/docs/schematics?topic=schematics-create-blueprint-file) Exclusive with other options. This approach supports passing complex input variables. |
-| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
-
-Example
-
-```sh
-ibmcloud schematics blueprint create -name blueprint_Basic -resource-group Default -file config.json
-```
-{: pre}
-
-
 
 ### `ibmcloud schematics blueprint apply`
 {: #schematics-blueprint-apply}
@@ -731,11 +694,11 @@ Waiting:0    In Progress:0    Success:2    Failed:0
 Blueprint job us-east.JOB.blueprint_Basic.c1f2164f completed at 2022-11-21 12:18:54
 
 Module Type   Name                   Status               Job ID   
-Blueprint     blueprint_Basic        FULFILMENT_SUCCESS   us-east.JOB.blueprint_Basic.c1f2164f   
+Blueprint     blueprint_Basic        job_finished   us-east.JOB.blueprint_Basic.c1f2164f   
 Workspace     basic-resource-group   APPLIED                 
 Workspace     basic-cos-storage      APPLIED                 
               
-Blueprint ID blueprint_Basic.eaB.435a fulfilment_success at 2022-11-21 12:18:55
+Blueprint ID blueprint_Basic.eaB.435a job_finished at 2022-11-21 12:18:55
 OK
 ```
 {: screen}
@@ -868,7 +831,6 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary` or `ids`. The default value is **summary**. |
 | `--limit` or `-l` | Optional | The maximum number of blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`.|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
@@ -885,7 +847,7 @@ Output
 
 ```text
 Name              ID                         Source Type   Status               Location   Creator           Last modified   
-Blueprint Basic   blueprint_Basic.eaB.435a   GitHub        fulfilment_success   us-east    test@in.ibm.com   2022-11-21T10:45:57.329Z   
+Blueprint Basic   blueprint_Basic.eaB.435a   GitHub        job_finished   us-east    test@in.ibm.com   2022-11-21T10:45:57.329Z   
                                                            
 OK
 ```
@@ -937,11 +899,11 @@ Waiting:0    In Progress:0    Success:2    Failed:0
 Blueprint job us-east.JOB.Blueprint-Basic-Json.59bf17a8 completed at 2022-11-21 12:50:55
 
 Module Type   Name                   Status               Job ID   
-Blueprint     Blueprint Basic Json   FULFILMENT_SUCCESS   us-east.JOB.Blueprint-Basic-Json.59bf17a8   
+Blueprint     Blueprint Basic Json   job_finished   us-east.JOB.Blueprint-Basic-Json.59bf17a8   
 Workspace     basic-resource-group   INITIALISED             
 Workspace     basic-cos-storage      INITIALISED             
               
-Blueprint ID blueprint_Basic.eaB.435a fulfilment_success at 2022-11-21 12:50:56
+Blueprint ID blueprint_Basic.eaB.435a job_finished at 2022-11-21 12:50:56
 OK
 ```
 {: screen}
@@ -1184,234 +1146,7 @@ OK
 {{site.data.keyword.bpshort}} Policy is a beta feature that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-### `ibmcloud schematics policy create`
-{: #schematics-policy-create}
 
-Create an policy by using {{site.data.keyword.bpshort}}. Policy helps you to run workspace jobs on your infrastructure. 
-{: shortdesc}
-
-Syntax
-
-```sh
-ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
-```
-{: pre}
-
-Command options
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--name` or `-n` | Required | The unique name of the agent. |
-| `--kind` or `-K` | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
-| `--location` or `-l` | Optional | Geographic locations supported by {{site.data.keyword.bpshort}} service. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
-| `--description` or `-d` | Optional |  The description of {{site.data.keyword.bpshort}} customization policy. |
-| `--resource-group` or `-r` | Required | Resource group name or ID for the policy. |
-| `--tags` or `-t`| Optional | Policy tags can be used multiple times and search the agent related resources faster. |
-| `--file` or `f` | Optional | Path to the JSON file containing the definition of the policy. |
-| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-| `--no-prompt` | Optional |  Set this flag to run the command without user prompts. |
-{: caption="{{site.data.keyword.bpshort}} policy create flags" caption-side="bottom"}
-
-#### Using the payload file
-{: #policy-create-payload}
-
-You can provide a payload file to specify certain parameters for the `policy create` command. Then, you pass the file name to the command by using the `--file` command option.
-{: shortdesc}
-
-You need to replace the `<...>` placeholders with the actual values. For example, `"<SELECTOR_KIND>"` as `"ids"`.
-{: note}
-
-Syntax
-
-```json
-{
-	"policy_target": {
-		"selector_kind": "<SELECTOR_KIND>",
-		"selector_ids": [
-			"<SELECTOR_ID>"
-		]
-	},
-	"policy_parameter": {
-		"agent_assignment_policy_parameter": {
-			"selector_kind": "<SELECTOR_KIND>",
-			"selector_scope": [{
-				"kind": "<WORKSPACE>",
-				"tags": [
-					"dev:<ENVIRONMENT>",
-					"demo"
-				],
-				"resource_groups": [
-					"<RESOURCE_GROUP>"
-				],
-				"locations": [
-					"<LOCATION>"
-				]
-			}]
-		}
-	}
-}
-```
-{: codeblock}
-
-Example
-
-```json
-{
-	"policy_target": {
-		"selector_kind": "ids",
-		"selector_ids": [
-			"demo-agent-one"
-		]
-	},
-	"policy_parameter": {
-		"agent_assignment_policy_parameter": {
-			"selector_kind": "scoped",
-			"selector_scope": [{
-				"kind": "workspace",
-				"tags": [
-					"dev:test",
-					"demo"
-				],
-				"resource_groups": [
-					"test"
-				],
-				"locations": [
-					"us-south"
-				]
-			}]
-		}
-	}
-}
-```
-{: codeblock}
-
-```sh
-ibmcloud schematics policy create --name policy-101 --kind agent_assignment_policy --location us-south --resource-group Default -f policy.json
-```
-{: pre}
-
-### `ibmcloud schematics policy get`
-{: #schematics-policy-get}
-
-Retrieves an policy by using {{site.data.keyword.bpshort}}.
-{: shortdesc}
-
-Syntax
-
-```sh
-ibmcloud schematics policy get --id POLICY_ID [--profile PROFILE] [--output OUTPUT]
-```
-{: pre}
-
-Command options
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--id` or `-i` | Required | ID of the policy. |
-| `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary`, `detailed`, or `ids`. Defaults to `summary`. |
-| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} policy get flags" caption-side="top"}
-
-Example
-
-```sh
-ibmcloud schematics policy get --id policy-101.soP.282e
-```
-{: pre}
-
-### `ibmcloud schematics policy list`
-{: #schematics-policy-list}
-
-Lists all the policies. Defaults to show the policy list.
-{: shortdesc}
-
-Syntax
-
-```sh
-ibmcloud schematics policy list [--profile PROFILE] [--output OUTPUT] [--limit LIMIT] [--offset OFFSET]
-```
-{: pre}
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--profile` or `-r` | Optional | Geographic region supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`.|
-| `--limit` or `-l` | Optional |  Maximum number of policies to list. Ignored if a negative number is set. The number must be a positive integer between 1 and 200. The default value is `-1`.|
-| `--offset`or `-m`| Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
-| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Policy list flags" caption-side="top"}
-
-Example
-
-```sh
-ibmcloud schematics policy list 
-```
-{: pre}
-
-### `ibmcloud schematics policy update`
-{: #schematics-policy-update}
-
-Update all the policies. Changes are only applied to the deployed resources by running the the `ibmcloud schematics policy update` after the update has been performed.
-{: shortdesc}
-
-Syntax
-
-```sh
-ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
-```
-{: pre}
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-|   `--id` or `-i` | Required | ID of the policy. |
-|   `--kind` or `-k` | Optional | Policy kind for managing and deriving policy decision. Supported is 'agent_assignment_policy'. |
-|   `--location` or `-l` | Optional | Geographic locations supported by Schematics service. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
-|   `--description` or `-d` | Optional |  The description of Schematics customization policy. |
-|   `--resource-group` or `-r` | Optional |  Resource group name or ID for the policy. |
-|   `--tags` or `-t` | Optional |     Policy tags. This flag can be used multiple times and search the agent related resources faster. |
-|   `--file` or `-f`  | Optional |    Path to the JSON file containing the definition of the policy. |
-|   `--output` or `-o`  | Optional |  Specify output format, only `JSON` is supported. |
-|   `--no-prompt`  | Optional |       Set this flag to stop interactive CLI session i.e. prompting user for input a field value on terminal. |
-{: caption="{{site.data.keyword.bpshort}} policy update flags" caption-side="top"}
-
-Example
-
-```sh
-ibmcloud schematics policy update --id policy-msk.soP.5c65 --description PolicyDescriptionUpdated
-POLICY DETAILS
-Name         ID                    Description                Kind                      Location   Resource Group   CRN   Target   Tags   
-policy-msk   policy-msk.soP.5c65   PolicyDescriptionUpdated   agent_assignment_policy   us-south   Default                            
-                                   
-OK
-```
-{: pre}
-
-### `ibmcloud schematics policy delete`
-{: #schematics-policy-delete}
-
-Delete a policy by using {{site.data.keyword.bpshort}}.
-{: shortdesc}
-
-Syntax
-
-```sh
-ibmcloud schematics policy delete [--id POLICY_ID]
-```
-{: pre}
-
-Command options
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--id` or `-i` | Required | ID of the policy. |
-| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
-{: caption="{{site.data.keyword.bpshort}} policy delete flags" caption-side="top"}
-
-Example
-
-```sh
-ibmcloud schematics policy delete --id policy-101.soP.282e
-```
-{: pre}
 
 ## Enable BYOK or KYOK commands
 {: #kms-commands}

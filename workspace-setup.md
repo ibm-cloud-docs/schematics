@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-22"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -263,7 +263,7 @@ You can use the {{site.data.keyword.bplong_notm}} to delete your workspace. Whil
     {: caption="Delete workspace and destroy the resources" caption-side="bottom"}
 
 2. Select the workspace that you want to delete.
-3. Click **Actions** tab.
+3. Select the **Actions** drop down list.
 4. Select the **Delete workspace** option.
 5. Type the workspace name in the **Type workspace name to confirm** text box.
 6. Click the **Delete** button.

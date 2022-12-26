@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-23"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -67,7 +67,7 @@ On successful completion, the config create returns **`create_success`** and the
 ### Verifying blueprint config creation 
 {: #verify-blueprint-create-cli}
 
-Verify that the blueprint configuration was created successfully. When you create the configuration through CLI, the command displays details of the blueprint modules to be created, and continuously updates the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command only returns on completion.
+Verify that the blueprint configuration was created successfully. When you create the configuration using the CLI, the command displays details of the blueprint modules to be created, and continuously updates the progress of the {{site.data.keyword.bpshort}} jobs initializing the modules. The command only returns on completion.
 
 ```text
 Created blueprint ID: Blueprint_Basic.eaB.08d1
@@ -99,14 +99,14 @@ On successful completion, the config create returns **`create_success`** and the
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 
-## Creating a blueprint configurating using the UI 
+## Creating a blueprint configuration using the UI 
 {: #bp-ui-create}
 
 You can follow these steps to create a blueprint config using {{site.data.keyword.cloud_notm}} console.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Click on **Schematics** in the navigator pane, then click **Blueprints** 
-3. On the Blueprints list page, click the **Create Blueprint** button
+2. Click on **Schematics** in the left hand navigator pane, then click **Blueprints** 
+3. On the [Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external}, click the **Create Blueprint** button
     - In **Blueprint Details** section:
         - **Name** `<Provide unique name for your blueprint>`.
         - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this blueprint.
@@ -115,7 +115,7 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
         - **Description** for the blueprint. Supports maximum character range from `0 - 2048`.
         - Click **Next**.
     - In **Blueprint URL** section:
-        - **Repository URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example`.
+        - **Repository URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
         - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`.
         - Check the information that is entered are correct to create a blueprint.
         - Click **Next and save as draft**. Observe that a blueprint is created with a Blueprint ID and is in `Draft` Status.
@@ -125,8 +125,8 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
     - In **Input Variables** section:
         - Select **Import input file** drop down only when you want to import the new `inputs` YAML file for the blueprint.
             - In **Import input file (Optional)** section:
-               -  **Input file GIT URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`.
-               - **Source name** - Used to display from which source name the value is imported.
+               -  **Input file GIT URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-input.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
+               - **Source name** - Used to set the source name the input file values are identified by in the UI. 
                - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`.
                - Click **Import values**.
         - Observe that the input variables from the `inputs.yaml` file are imported. Optionally, you can edit the variables.
@@ -135,21 +135,21 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
 
         - Click **Done editing**, if the editing is done.
         - Click **Save draft** only if you need to save the draft to continue edit the input variables again later.
-3. Click **Create Blueprint** that will redirect to the blueprint overview page. 
+4. Click **Create Blueprint** that will redirect to the blueprint overview page. 
 
-### Verifying blueprint config creation through UI 
+### Verifying blueprint config creation using the UI 
 {: #verify-blueprint-create-ui}
 
-Here are the steps to verify your blueprint config creation.
+Here are the steps to verify your blueprint config creation was successful.
 {: shortdesc}
 
-1. Click your blueprint that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
-2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` must show the summary details of the blueprint create job. 
-3. Click **Modules** tab to see the status of the resource modules in an `Inactive` state.
-4. Click **Jobs history** tab view the result of the blueprint create job and operations that are performed against the resource modules. 
+1. Click your blueprint that is listed in the [Blueprints dashboard](https://cloud.ibm.com/schematics/blueprints){: external} to view the results of the create operation. 
+2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` will show the summary details of the blueprint create job. 
+3. Click **Modules** tab to see the status of the resource modules. These will be in an `Initialised` state, indicating that the module workspaces have been created, but no resources created. 
+4. Click **Jobs history** tab view the result of the blueprint create job and the operations that are performed against the resource modules. 
 5. Click **Settings** tab to view the summary of the new blueprint configuration.
 
-For more information, see [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
+For more information, see the [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails).
 
 ## Creating a blueprint configuration using the API
 {: #create-blueprint-api}
@@ -211,7 +211,7 @@ Authorization: Bearer
 ```
 {: codeblock}
 
-### Verifying blueprint create through API
+### Verifying blueprint create using the API
 {: #verify-bp-create-api}
 
 Verify that the blueprint is created successfully as shown in the output.

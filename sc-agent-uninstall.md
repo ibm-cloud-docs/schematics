@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-22"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -28,7 +28,7 @@ Decide if you want to delete the workspace and destroy the associated cloud reso
 {: #cleanup-agent-infra}
 
 1. From the [{{site.data.keyword.bpshort}} Workspace](https://cloud.ibm.com/schematics/workspaces/) page, open your workspace. Enter your `<workspace_id_schematics-agent-infrastructure>` as part of the URL.
-2. Select **Actions** > **Destroy resources** > **Type the name of workspace** > click **Destroy**.
+2. Select the **Actions** drop down list> **Destroy resources** > **Type the name of workspace** > click **Destroy**.
 3. From the workspace `schematics-agent-infrastructure` page > **Jobs** tab
     - Wait for Terraform destroy job to complete. It takes about 10 to 15 minutes.
     - From the workspace `schematics-agent-infrastructure` page, click **Jobs** to view a message as `Destroy successful`. 

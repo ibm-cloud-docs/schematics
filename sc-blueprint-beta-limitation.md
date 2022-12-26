@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-23"
 
 keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
@@ -32,7 +32,7 @@ You can come back anytime to your created thread to add information, ask questio
 {: important}
 
 ## Beta changes October 2022
-Blueprint commands have been renamed with the 1.12.3 release of the Schematics CLI Plugin 
+Blueprint commands have been renamed with the 1.12.3 release of the {{site.data.keyword.bpshort}}CLI Plugin 
 - `blueprint create` > `blueprint create`
 - `blueprint update` > `blueprint update`
 - `blueprint delete` > `blueprint delete`
@@ -45,16 +45,16 @@ Blueprint commands have been renamed with the 1.12.3 release of the Schematics C
 
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
-| Default values | Planned for December 2022 | |
+| Default values | Planned for December 2022 | Delivered Dec 2022 |
 | Large input value sizes up to Terraform limit of 4MB | Planned for December 2022 | |
 | Local values | Local support planned for 2023 | |
 | Input value operators, for example: merge, concat | Planned for a 2023 release | |
 | Performance optimization - Parallel job execution for plan and apply | Concurrent module jobs planned for 2023 release | | 
 | Performance optimization - Plan and Apply only run against changed modules | Planned for 2023 release | | 
-| Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in. | UI support planned for December 2022 | | 
+| Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in. | UI support planned for December 2022 | Delivered Dec 2022 | 
 | The Terraform Plan (all) operation for blueprint template. | Support planned for December 2022 | | 
 | Run operations are performed as a single operation against all modules (plan + apply).|  A future 2023 release will support single module operations  | | 
-| Created Cloud resources tagged with blueprint, catalog and workspace IDs. | Planned for December 2022  | | 
+| Created Cloud resources tagged with blueprint, catalog and workspace IDs. | Planned for December 2022  | Delivered Dec 2022 | 
 | Only one input file is supported per blueprint configuration. | Multiple input files planned for a 2023 release | |
 | Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources must be destroyed to delete a blueprint. | | |  
 | The Delete CLI command returns immediately at start of execution and does not wait for successful completion. | | | 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-23"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -32,7 +32,7 @@ Templates support the use of both Terraform [root modules](https://developer.has
 {: shortdesc}
 
 ## Root modules and Terraform configurations
-{: #blueprint-root-module-confg}
+{: #blueprint-root-module-config}
 
 A root module is the root of an executable Terraform configuration. A root module, also known as a Terraform config or Terraform template and can be run directly by the Terraform command line binary or {{site.data.keyword.bpshort}}. 
 
@@ -65,7 +65,7 @@ The two files `ibm_tft_provider_override.tf` and `ibm_tft_versions_override.tf` 
 ### Templating Terraform language statements
 {: #blueprint-template-statement}
 
-Schematics blueprint templates use [mustache templates](https://mustache.github.io/){: external} to create Terraform language statements. These are injected as `.tf` files in the Terraform working directory at run time. The templates are retrieved from the Git repo defined in the injectors block. Provider injection examples are provided in the [Cloud-Schematics/tf-templates](https://github.com/Cloud-Schematics/tf-templates){: external} GitHub repo. 
+{{site.data.keyword.bpshort}}blueprint templates use [mustache templates](https://mustache.github.io/){: external} to create Terraform language statements. These are injected as `.tf` files in the Terraform working directory at run time. The templates are retrieved from the Git repo defined in the injectors block. Provider injection examples are provided in the [Cloud-Schematics/tf-templates](https://github.com/Cloud-Schematics/tf-templates){: external} GitHub repo. 
 
 The repo folder contains the files to be injected, which contain the mustache templates. The `ibm` folder contains the two template files for injecting and configuring the {{site.data.keyword.IBM_notm}} Cloud provider and setting the `provider_version` to be used.  
 

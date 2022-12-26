@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-19"
+lastupdated: "2022-12-22"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -61,7 +61,7 @@ Use one of the IBM provided software templates to set up and configure a classic
     - From the workspace **Resources** page, find the virtual server and PostgreSQL instance that were created for you. 
     - Click the link to see the details of your instances. 
 7. Optional: Remove your {{site.data.keyword.bpshort}} Workspaces and all related {{site.data.keyword.cloud_notm}} resources. 
-    - From the **Actions** menu, click **Delete**. 
+    - Select the **Actions** drop down list, click **Delete**. 
     - Select the **Delete workspace** and **Delete all associated resources** option.
     - Enter the name of your workspace, and click **Delete**. 
 

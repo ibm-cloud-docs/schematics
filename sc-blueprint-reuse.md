@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-23"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -16,7 +16,7 @@ subcollection: schematics
 {: beta}
 
 # Reuse and customization 
-{: #blueprint-reuse-pipelines}
+{: #blueprint-reuse}
 
 {{site.data.keyword.bplong}} Blueprints utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied.
 {: shortdesc}
@@ -29,7 +29,7 @@ Blueprint template reuse supports a number of usecases:
 - Software delivery pipelines, dev, stage, prod
 
 ## Reuse across environments
-{: #blueprint-reuse} 
+{: #blueprint-reuse-env} 
 
 A blueprint template (house design) is reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-glossary#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments.
 {: shortdesc}
@@ -48,7 +48,7 @@ For details on how to configure a blueprint refer to the section [Understanding 
 Reuse supports the creation of software delivery deployment pipelines. Here the same or similar environment configurations are required to support the stages of a delivery pipeline to ensure that application code is tested in an environment that is as close to production as possible. 
 {: shortdesc}
 
-The prior figure illustrates the reuse of a template across the stages of a delivery pipeline. A single template provides a common architecture pattern against which application code can be developed and tested in production like environments. The configuration for each environment is provided by the inputs, customizing each stage of the pipeline, adjusting for scaling, region and  networking etc.
+The prior figure illustrates the reuse of a template across the stages of a delivery pipeline. A single template provides a common architecture pattern against which application code can be developed and tested in production like environments. The configuration for each environment is provided by the inputs, customizing each stage of the pipeline, adjusting for scaling, region and  networking.
 
 ## Customization best practice
 {: #blueprint-customization-bp} 
@@ -73,7 +73,7 @@ Blueprints is built around reuse. Blueprints' implements layers of configuration
     - Dynamic (override) inputs. Typically sensitive input values, like API or SSH keys that should not be maintained in a version control system. In unregulated or development environments, all inputs can be supplied as dynamic inputs. 
 
 
-Selection of template and input file versions is defined on initial creation of the blueprint config for the environment in Schematics. Review the section on [blueprint versioning](/docs/schematics?topic=schematics-blueprint-versioning). The omission of template and input file version information at config create time allows for a ‘relaxed’ usage mode. Where any changes to the template or input files are automatically pulled in if Schematics detects a change in the source repository. 
+Selection of template and input file versions is defined on initial creation of the blueprint config for the environment in Schematics. Review the section on [blueprint versioning](/docs/schematics?topic=schematics-blueprint-versioning). The omission of template and input file version information at config create time allows for a ‘relaxed’ usage mode. Where any changes to the template or input files are automatically pulled in if {{site.data.keyword.bpshort}}detects a change in the source repository. 
 
 
 ## Customizing environments with inputs
@@ -81,22 +81,22 @@ Selection of template and input file versions is defined on initial creation of 
 
 As described, blueprint templates support environment customization and versioning at multiple levels. User customizable values are defined as `inputs` at the blueprint template level. 
 
-The selection of inputs is determined in the following precedence order (higher to lower):
-
-- Dynamic (override) inputs
-  - User provided via CLI or UI, un-versioned
-  - Value optionally specified
-  - Usage: SSH and API keys
-
-- Blueprint input files
-  - From VCS, version controlled by Git tag, branch or un-versioned (pull-latest).
-  - Value optionally specified in inputs YAML file.
-  - Usage: Environment scaling, region, network and security configuration. 
+The selection of inputs is determined in the following precedence order, lower to higher: 
 
 - Blueprint template    
   - From VCS, version controlled by Git tag, branch or un-versioned (pull-latest). 
-  - Input definition:  Default value or no value specified in template YAML file. 
-  - Usage: Opinionated implementation of an application architecture.  
+  - Input definition:  **Default** value or **no value** specified in template YAML file. 
+  - Usage: Opinionated implementation of an application architecture. 
+
+- Blueprint input files
+  - From VCS, version controlled by Git tag, branch or un-versioned (pull-latest).
+  - Value **optionally** specified in inputs YAML file.
+  - Usage: Environment scaling, region, network and security configuration. 
+
+ - Dynamic (override) inputs
+  - User provided via CLI or UI, un-versioned
+  - Value **optionally** specified
+  - Usage: SSH and API keys
 
 Inputs that are not satisfied at any level will result in an error at blueprint config create time. 
 

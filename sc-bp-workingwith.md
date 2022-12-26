@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-02"
+lastupdated: "2022-12-23"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -20,7 +20,7 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. It uses the analogy of a blueprint used in construction, to define and deploy cloud environments from reusable modules of Terraform code. Blueprint operations take cloud environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
 
-Review the section [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro) for more background. A key feature of Blueprints is support to take cloud environments through their life, creation to final removal. 
+Review the section [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro) for more background. A key feature of Blueprints is support to take cloud environments through their life, from creation to final removal. 
 
 Blueprints enables users to define and deploy cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. This builds on the IaC best practice of [modular architectures](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity), where reusable modules implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code.
 
@@ -35,7 +35,7 @@ The different stages of working with the blueprint lifecycle come under four hea
 
 Each of these life stages is supported by blueprint operations. For example, composing and editing the blueprint template, running blueprint operations, monitoring job execution and reviewing the results. 
 
-All updates and changes during these lifecycle stages are performed in a controlled sequence of steps:
+All updates and changes to environments during these lifecycle stages are performed in a controlled sequence of steps:
 - Creating or updating the blueprint configuration with changes to the inputs, template or module versions
 - Planning the change to identify resource changes, additions or deletions 
 - Running the plan to apply the changes to create, modify or delete resources
