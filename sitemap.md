@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-23"
+lastupdated: "2022-12-27"
 
 keywords: schematics
 subcollection: schematics
@@ -319,7 +319,9 @@ subcollection: schematics
 
     * [How are API requests to the service isolated from other API requests?](/docs/schematics?topic=schematics-compute-isolation#workload-api-isolation)
 
-    * [How are the workloads isolated from other tenants?](/docs/schematics?topic=schematics-compute-isolation#workload-tenant-isolation)
+    * [How is the information in {{site.data.keyword.cloudant}} and {{site.data.keyword.cos_full_notm}} isolated from other tenant data?](/docs/schematics?topic=schematics-compute-isolation#workload-info-isolation)
+
+    * [How are cloud resources isolated from other tenants?](/docs/schematics?topic=schematics-compute-isolation#workload-tenant-isolation)
 
 
 ## Release notes
@@ -1551,15 +1553,15 @@ subcollection: schematics
 
     * [Adding Virtual Private Endpoint Gateways for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-private-endpoints#endpoint-add)
 
-[Securing your data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#secure-data)
+[Securing your data with encryption](/docs/schematics?topic=schematics-secure-data#secure-data)
 
-* [How your data is stored and encrypted in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#data-storage)
+* [How your data is stored and encrypted in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage)
 
     * [Key deletion or disable](/docs/schematics?topic=schematics-secure-data#key-delete)
 
     * [Key enable or restore](/docs/schematics?topic=schematics-secure-data#key-enable)
 
-* [What are the details stored in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#pi-data)
+* [What technical information is stored in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-secure-data#ti-data)
 
 * [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
@@ -1892,7 +1894,7 @@ subcollection: schematics
 
 [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-template-schema-yaml)
 
-* [Global settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-parameters)
+* [Global preface](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-parameters)
 
     * [name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-name)
 
@@ -1934,9 +1936,9 @@ subcollection: schematics
 
     * [modules.inputs.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-name)
 
-    * [modules.inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value)
+    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#modulesinputstype)
 
-    * [modules.inputs.sensitive](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-secure)
+    * [modules.inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value)
 
     * [module.outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-module-outputs)
 

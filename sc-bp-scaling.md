@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-23"
+lastupdated: "2022-12-27"
 
 keywords: schematics blueprints, reusable, scaling, large, large-scale, reuse, modules
 
@@ -42,23 +42,25 @@ The two approaches commonly employed of breaking large architectures down into s
 ## Remote state data sources
 {: #blueprint-scaling-remotestate}
 
-[Remote-state data sources](/docs/schematics?topic=schematics-remote-state) as implemented in Terraform and {{site.data.keyword.bpshort}}have an important role in enabling sharing of resource information between Terraform workspaces and teams. 
+[Remote-state data sources](/docs/schematics?topic=schematics-remote-state) as implemented in Terraform and {{site.data.keyword.bpshort}} play an important role in enabling sharing of resource information between Terraform workspaces and teams. 
 
-Data sources allow responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces (and teams) as read-only resources. Common infrastructure resources, like the components of a network backbone, can be shared between environments and teams without risk of unintended change. 
+Data sources allow responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces (and teams) as read-only resources. Using data sources, common infrastructure resources like the components of a network backbone, can be shared between environments and teams without risk of unintended change. 
 
 One of the downsides of embedding remote_state data sources into Terraform automation code is the impact on the reusability of the modules across environments. Modules are specific to the remote-state they expect to receive as input and are dependent on the remote_state already existing. 
 
-More importantly for large environments, there is a lack of visibility of the remote-state dependency between workspaces. Consequently there is no clear dependency management, sequencing of module deployments or notification of dependency changes.  
+More importantly for large environments, there is a lack of visibility of the remote-state dependency between workspaces. Consequently there is no dependency management, sequencing of module deployments or notification of dependency changes.  
 
-The solution is orchestration to manage the dependencies. 
+The solution is to externalize the dependencies and use orchestration.  
 
 
 ## Orchestration and modules
 {: #blueprint-scaling-orchestration}
 
-The alternative to data sources, is to make the passing of resource information between environments and workspaces explicit. Resource dependency data is externalized at the workspace level. With an orchestration framework performing dependency management and the passing of resource data between workspaces. This is the approach to scaling adopted by open source solutions like [Terragrunt](https://terragrunt.gruntwork.io/){: external) and other IaC automation frameworks including {{site.data.keyword.bpshort}} Blueprints.     
+The alternative to data sources, is to make the passing of resource information between environments and workspaces explicit. Resource dependencies between workspaces are externalized at the workspace level. Here an orchestration framework performs dependency management, determining execution order and the passing of resource data between workspaces. This is the approach to scaling adopted by open source solutions like [Terragrunt](https://terragrunt.gruntwork.io/){: external) and other IaC automation frameworks including {{site.data.keyword.bpshort}} Blueprints.     
 
-{{site.data.keyword.bpshort}} Blueprints enables scaling using an orchestration framework that enables complex infrastructures to composed from smaller deployable modules. The framework allows a group of discrete modular environments to be deployed and managed by a user as a whole. A blueprint template defines the composition and structure of the larger solution environment by defining dependencies between modules and deployed modular environments. 
+{{site.data.keyword.bpshort}} Blueprints uses an orchestration framework to enable scaling that allows complex infrastructures to composed from smaller deployable modules. The framework allows a group of discrete modular environments to be deployed and managed by a user as a whole. A blueprint template defines the composition and structure of the larger solution environment by defining dependencies between modules and deployed modular environments. The modules specify their dependencies as inputs, that are satisfied at execution time by the orchestrator.  
+
+This approach to module composition by {{site.data.keyword.bpshort}} Blueprints builds on the [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines){: external}. These guidelines support composition though well defined module input and output definitions for passing resource dependency data that are compatible across modules. The {{site.data.keyword.IBM_notm}} Cloud reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry adhere to these guidelines to support composition. 
 
 The use of blueprint templates to compose and deploy large-scale environments from modules is discussed in more detail in these sections:
 - [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates)
