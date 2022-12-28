@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-22"
+lastupdated: "2022-12-27"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Deleting {{site.data.keyword.bpshort}} data
 {: #delete-schematics-data-intro}
 
-{{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in IBM Cloud Object Storage. This data-at-rest is encrypted using the envelope encryption technique. As the IBM Cloud account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described. 
+{{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in IBM Cloud Object Storage. This data-at-rest is encrypted using AES GCM 256 with an envelope encryption technique. As the IBM Cloud account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described. 
 
 When you delete these {{site.data.keyword.bpshort}} objects, the corresponding data in IBM Cloud Object Storage is marked for deletion. The soft delete option enable you to recover the {{site.data.keyword.bpshort}} data by raising a [support ticket](/docs/schematics?topic=schematics-schematics-help). Further, your data will automatically be purged after 7 days of soft delete.  
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-19"
+lastupdated: "2022-12-27"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -113,6 +113,7 @@ A sample `tf_values` block in the create payload.
 | Variable | Description | Usage |
 | ----  | ----- | ----- |
 | `TF_LOG` | The detailed logs that appear on standard error. Support values are **TRACE, DEBUG, INFO, WARN, or ERROR** | `"TF_LOG": "TRACE"` |
+| `TF_LOG_PROVIDER` | For debugging Terraform provider issues, see [Managing Log Output](https://developer.hashicorp.com/terraform/plugin/log/managing){: external}. | `"TF_LOG_PROVIDER": "TRACE"` |
 | `TF_INPUT` | Command to disable prompts for entering the input value. The default value is **false** or **0**.| `"TF_INPUT": "0"` |
 | `TF_CLI_ARGS` and `TF_CLI_ARGS_name` | The `TF_CLI_ARGS` specify additional arguments to the command-line. This allows easier automation in cloud infrastructure environments. Also to modify the default behavior of the Terraform on your own system. `TF_CLI_ARGS` and `TF_CLI_ARGS_name` is only for non content catalog.| `"TF_CLI_ARGS_apply": "-parallelism=20"`|
 | `TF_REGISTRY_DISCOVERY_RETRY` | Set the maximum number of request retries the remote registry client can attempt for client connection errors.| `"TF_REGISTRY_DISCOVERY_RETRY": "10"`|

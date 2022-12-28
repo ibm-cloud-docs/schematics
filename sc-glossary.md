@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-12-23"
+lastupdated: "2022-12-27"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -86,7 +86,7 @@ A [blueprint template](/docs/schematics?topic=schematics-blueprint-templates) de
 ### Blueprint configuration
 {: #bpb3}
 
-A `blueprint configuration` is the initial definition that the user provides to create a blueprint in {{site.data.keyword.bpshort}}. The configuration defines the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) YAML file to be used, its Git source location. Also the [input files](/docs/schematics?topic=schematics-glossary#bpi2) that will be used to customize the template, file version information, and any additional required inputs. 
+A `blueprint configuration` is the initial definition that the user provides to create a blueprint. The configuration defines the [blueprint template](/docs/schematics?topic=schematics-glossary#bpb2) YAML file to be used, its Git source location. Also any [input files](/docs/schematics?topic=schematics-glossary#bpi2) that will be used to customize the template, file version information, and additional dynamic (override) inputs. 
 {: shortdesc}
 
 ### Blueprint environment
@@ -111,7 +111,7 @@ Each module in a template is deployed as an independent environment, managed by 
 A blueprint template, optionally declares a set of input variables that can be used to customize the blueprint template, while deploying or managing a blueprint environment.  The template metadata for the input variables include the following: variable name, variable type, default value, variable description, sensitive, readonly, hidden. 
 
 Blueprint inputs can be provided as:
-- User-defined input, provided via the {{site.data.keyword.bpshort}}API, CLI or UI at config create time. They can be used to pass input values that would be a security exposure if written to a Git repository.
+- User-defined input, provided via the {{site.data.keyword.bpshort}} API, CLI or UI at config create time. They can be used to pass input values that would be a security exposure if written to a Git repository.
 - Version-controlled [blueprint input file](/docs/schematics?topic=schematics-glossary#bpi2) (from a Git repository)
 {: shortdesc}
 

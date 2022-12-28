@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-23"
+lastupdated: "2022-12-27"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -107,13 +107,12 @@ modules:
       - name: cos_crn
 ```
 {: codeblock}
-</br>
 
-A blueprint template consists of a two major sections. An global section which contains a default name and description for the environment, and related template settings. Also it defines the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) the template requires and any [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs) it generates and returns to the user through {{site.data.keyword.bpshort}}. This is followed by a list of `modules` containing the [module definitions](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema). 
+A blueprint template consists of two major sections. An global section which contains a default name and description for the environment, and related global template settings. This section also defines the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) the template requires and any [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs) it generates and returns to the user through {{site.data.keyword.bpshort}}. This is followed by a list of `modules` containing the [module definitions](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema) that deploy the layers and components of the infrastructure. 
 
-Dependencies are created between modules by interpolation of module input and output values. In the `basic-cos-storage` module definition above, the input `resource_group_id` specifies the interpolated value `$module.basic-resource-group.outputs.resource_group_id` which creates a dependency on the `resource_group_id` output value from the module `basic-resource-group`.
+Resource dependencies between modules are defined by interpolation of module input and output values. In the `basic-cos-storage` module definition above, the input `resource_group_id` specifies the interpolated value `$module.basic-resource-group.outputs.resource_group_id`, which creates a dependency on the `resource_group_id` output value from the module `basic-resource-group`.
 
-The IaC best practice of modular architectures implemented by {{site.data.keyword.bpshort}} Blueprints builds on a [strong set of module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines){: external}. These support composition of modules though use of clearly documented module input and output definitions. The {{site.data.keyword.IBM_notm}} Cloud reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry adhere to these guidelines to support composition. 
+The IaC best practice of modular architectures implemented by {{site.data.keyword.bpshort}} Blueprints builds on [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines){: external}. These guidelines support composition though well defined module input and output definitions that are compatible across modules. The {{site.data.keyword.IBM_notm}} Cloud reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry adhere to these guidelines to support composition. 
 
 ### Template inputs
 {: #blueprint-input-statements}

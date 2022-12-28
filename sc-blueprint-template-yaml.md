@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-21"
+lastupdated: "2022-12-27"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -17,25 +17,30 @@ subcollection: schematics
 
 This document is the reference of the YAML schema that is used to describe the blueprint template YAML file.
 
-Blueprint templates are written in YAML with a minimum of syntax that specify the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. 
+Blueprint templates are written in YAML with a minimum of syntax that specify the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. Template editing and schema validation is supported in [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints). 
 {: shortdesc}
 
-A blueprint template consists of two major sections. A `global settings` section contains a default name and description for the environment, and settings related to the whole template. Also it defines the inputs the template requires, and any outputs it returns. This is followed by a `modules` section containing the module definitions. Dependencies are created between modules by interpolation of module input and output values.
+A blueprint template consists of two sections. A global section contains a default name and description for the environment, and settings related to the whole template. Also it defines the inputs the template requires, and any outputs it returns. This is followed by a modules section containing the module definitions. Resource dependencies are created between modules by interpolation of module input and output values.
 
-Each template file has a global settings preface:
+Refer to the section [Understanding blueprint templates and configuration](https://test.cloud.ibm.com/docs/schematics?topic=schematics-blueprint-templates) for an overview of the template structure. 
+
+
+Each template file has a global preface:
 
 ```yaml
-
 name: dev-blueprint
 type: "blueprint"
 schema_version: "1.0"
 description: "Project to provision Application Service."
 tags:
-  - "blueprint:dev"
+  - "blueprint:trial_dev"
 inputs:
   - name: resource_group
+    type: string
   - name: region
+    type: string
   - name: api_key
+    type: string
 outputs:
   - name: service-url
     value: $module.bp-vsi-vpc-app.outputs.app_url
@@ -45,10 +50,10 @@ settings:
 ```
 {: pre}
 
-## Global settings
+## Global preface
 {: #bp-parameters}
 
-Following are the supporting setting parameters that can be used to configure a template
+Following are the supporting parameters that can be used to configure a template
 
 ### name
 {: #bp-name}
@@ -57,7 +62,7 @@ Type:       string
 
 Required:   true
 
-Name that is used to identify the blueprint template in use 
+An identifier for this blueprint template. The name given to a blueprint environment is defined at create time.  
 
 ### type
 {: #bp-type}
@@ -66,7 +71,7 @@ Type:       string
 
 Required:   true
 
-Required file type identifier 
+Required blueprint template file type identifier.  
 
 Value: `blueprint`
 
@@ -77,7 +82,7 @@ Type: number
 
 Required: true
 
-Schema version used by this file. 
+Blueprint schema version used by this template definition. Only 1.0 is in effect at this time.  
 
 Options: 1.0
 
@@ -96,7 +101,7 @@ Type: string
 
 Default: []
 
-A string used to describe the template to provide users with more information about its usage and the solution it describes.
+A string used to describe the template to provide users with more information about its usage and the solution it describes. This is internal to the template. The blueprint environment description is defined at create time.  
 
 Example 
 ```yaml
@@ -111,17 +116,16 @@ Type: list
 
 Default: []
 
-A list of tags to be attached to all deployed cloud resources and the blueprint resource. All environments deployed using this template will have these tags. Additional tags can be specified at config create time specific to the environment to be deployed.  
+An optional list of user tags to be attached to all deployed cloud resources, workspaces and the blueprint resource created using this template. These tags are additional to any tags defined at the module level or on the Terraform IaC resource definitions. All environments deployed using this template will have these tags. Environment specific tags can be specified at config create time, to uniquely identify the instance of environment deployed, e.g dev, stage, prod. 
+
+An immutable service tag with the `blueprint_id` for an environment is attached to all deployed resources and can be used to identify all resources associated with the environment.      
 
 Example 
 ```yaml
  tags:
-  - "blueprint:dev"
+  - "blueprint:trial_dev"
 ```
 {: pre}
-
-tags:
-  - "blueprint:dev"
 
 
 ### inputs
@@ -131,15 +135,18 @@ Type: list
 
 Default: []
 
-A list defines all the inputs that are required by the template. Inputs are specified in the [`input file`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as input values when the blueprint is created in {{site.data.keyword.bpshort}}. Inputs are defined with a `name:` key. To understand how Blueprints determines the value for a defined input, review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-input-precedence).
+A list defining all the inputs that are required to configure the template. Inputs are specified in the [`input file`](/docs/schematics?topic=schematics-bp-input-schema-yaml) file or as dynamic input values when the blueprint is created. Inputs are defined with a `name` key. To understand how Blueprints determines the value for a template input, review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-input-precedence).
 
 Example
 
 ```yaml
 inputs:
     - name: resource_group
+      type: string
     - name: region
+      type: string
     - name: api_key
+      type: string
 ```
 {: pre}
 
@@ -153,7 +160,9 @@ Default: string
 
 As templates work with Terraform configs and modules, Terraform variable [type constraints](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. 
 
-Complex Terraform types are typically represented as multi-line strings. They can be similarly rendered in YAML block syntax, using either the literal style is denoted by the “|” indicator, or the folded style is denoted by the “>” indicator. 
+Type definitions are required to set the variable type of inputs passed to modules at runtime.     
+
+Complex Terraform types are typically represented as multi-line strings, as they are in HCL. They can be similarly rendered in YAML block syntax, using either the literal style is denoted by the “|” indicator, or the folded style is denoted by the “>” indicator. Refer to the section [defining complex inputs](/docs/schematics?topic=schematics-bp-input-schema-yaml#complex-input-value) for detail on the YAML block syntax. 
 
 Options: Any valid Terraform variable type
 
@@ -166,7 +175,6 @@ Example
         external = number
         protocol = string
         })
-
 ```
 {: pre}
 
@@ -178,9 +186,9 @@ Type: Any valid Terraform variable type
 
 Optional - mutually exclusive with the default key
 
-The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When not specified the value is sourced from the blueprint config inputs and input file at run time. Review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-input-precedence) to understand input processing. 
+The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When no value keyword is specified, the value is sourced from the blueprint config inputs and input file at run time. Review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-input-precedence) to understand input processing and sourcing of inputs.  
 
-Example of statically defined local value 
+Example of a statically defined local value 
 ```yaml
     - name: provision_ats_instance
       type: boolean            
@@ -206,7 +214,7 @@ Example of a default value
       [
       "36", 
       "mqm-grand", 
-      "madison-square-garden"
+      "madison-square-gardens"
       ]
 ```
 {: pre}
@@ -219,7 +227,7 @@ Type: Boolean
 
 Default: false
 
-Flag specifying whether the value is a sensitive variable and must be masked in the output
+Flag specifying whether the value is a sensitive variable and must be masked in any displayed output via the UI or CLI. The sensitive attribute for an input can only be set via the template. It cannot optionally be set at create time.  
 {: pre}
 
 Example
@@ -236,15 +244,15 @@ Example
 
 Type: Number
 
-Number specifying the maximum length of the input value. Attribute is used by the UI to perform validation and to signify the expected length of the value.  
+Number specifying the maximum length of the input value. This attribute is used by the CLI and UI to perform validation and to signify the expected length of the value.  
 {: pre}
 
-If `max_length` is not specified, the default maximum length of a variable value allowed by Blueprints is 1KB. A value larger than 1000 bytes, or the specified length will result in the error `Length for variable <variable name> greater than the given length`   
+If `max_length` is not specified, the default maximum length of a variable value allowed by Blueprints is 1000 bytes. A value larger than 1000 bytes, or the specified length will result in the error `Length for variable <variable name> greater than the given length`   
 
 Example
 
 ```yaml
-    - name: provision_ats_instance
+    - name: json_override
       max_length: 10000            
 ```
 {: pre}
@@ -271,7 +279,9 @@ Default: []
  
 Optional
 
-A list defines all the outputs that are returned by the template to the user. Each output is identified by a key-value pair. 
+A list defining all the outputs that are returned by the template to the user. Each output is identified by a key-value pair. 
+
+Refer to the section [modules inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value) for details on defining the `$module` interpolation to pass output values.  
 
 Example
 
@@ -291,10 +301,12 @@ Default: []
 
 Optional
 
-A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
+Environment variables are used to modify the behavior and execution of Terraform and Ansible without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
+
+A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. 
 {: pre}
 
-Settings defined at this level apply to all modules. Additionally settings can also be set at the module level. 
+Settings defined at this level apply to all modules. Additionally env-var settings can also be set at the module level. 
 
 
 #### settings.TF_VERSION
@@ -326,14 +338,14 @@ Type:       string
 
 Optional 
 
-Configure the Terraform logging level for all modules. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage. 
+Configure the Terraform logging level for all modules. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage and [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism)
 
 Example
 
 ```yaml
 settings: # Master settings for all modules 
   - name: TF_LOGS
-    value: "debug"
+    value: "DEBUG"
 ```
 {: pre}
 
@@ -376,8 +388,10 @@ modules:
       - name: cos_instance_name
         value: $blueprint.cos_instance_name
       - name: cos_single_site_loc
+        type: string
         value: "ams03"
       - name: resource_group_id
+        type: string
         value: $module.bp-vsi-resource-group.outputs.resource_group_id
     outputs:
       - name: cos_id
@@ -392,7 +406,7 @@ Type: string
 
 Required: true
 
-The name that is used within {{site.data.keyword.bpshort}} to identify the blueprint module created to manage the resources  created by the Terraform config or module specified on the `modules.source.git.git_url` statement. 
+The name that is used within {{site.data.keyword.bpshort}} to identify the blueprint module created to manage the resources created by the Terraform config or module specified on the `modules.source.git.git_url` statement. This name is used as the module identifier in all interpolation references, UI and CLI outputs. 
 
 ### modules.module_type
 {: #bp-modules-moduletype}
@@ -441,8 +455,10 @@ Type: url string
 Required: true
 
 URL for the Terraform module or config in its content repository. This is the full path to the module, in the root folder of the repo or the path to a module in sub-folder in the repo. Multiple modules/configs can exist in sub-folders of the repo. 
+`"https://github.com/Cloud-Schematics/blueprint-example-modules/IBM-ResourceGroup"`
 
-Blueprints supports a shortcut using the Git path syntax to specifying the URL to your module including the branch. 
+Blueprints supports using the Git object path syntax to specifying the URL to your module, using the `tree/<branch>` syntax, including the branch and sub-folders. 
+`https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-ResourceGroup`
 
 Example
 
@@ -459,7 +475,7 @@ Type: string
 
 Default: main
 
-If content is in Git, the branch containing the revision of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. 
+If content is in Git, the branch containing the revision of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. It can be omitted if the branch is specified via the `git_repo_url`. 
 {: pre}
 
 ### modules.source.git.git_release
@@ -467,11 +483,11 @@ If content is in Git, the branch containing the revision of the Terraform config
 
 Type: string
 
-Default: latest
+Default: `implicitly latest`
 
 If content type is `git`, the release tag of the version of the Terraform config or module to be used. This option is mutually exclusive with the `git_branch` option. If not specified, {{site.data.keyword.bpshort}} will default to always pulling the latest commit during a `blueprint update` operation. 
 
-Options: `latest` or release in SemVer format 
+Value:  Release in SemVer format 
 {: pre}
 
 
@@ -500,22 +516,29 @@ Type: list
 
 Default: []
 
-A list of the environment-variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. More env-vars can be found in the [{{site.data.keyword.bpshort}} docs](/docs/schematics?topic=schematics-set-parallelism). 
+Optional
+
+Environment variables are used to modify the behavior and execution of Terraform and Ansible without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
+
+A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. 
+{: pre}
 
 #### modules.settings.TF_VERSION
-{: #bp-tf-modules-version}
+{: #bp-modules-tf-version}
 
 Type:       number
 
-The Terraform version to be used at module execution time can be set using TF_Version parameter. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the module supported version. Updating this value will change the Terraform version that is used on the next execution. 
+Optional
 
-Options:    Terraform version in `SemVer` format 
+Blueprint templates set the Terraform version to be used at module execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
+
+When not specified the required Terraform version is determined by inspecting the TF module code for a `required_version` definition. Based on the specified version or range of versions, Blueprints will used the most recent version of Terraform supported by Schematics. 
+
+Value:    Terraform version in `SemVer` format 
 
 Example
 
 ```yaml
-module:
-  -name: xxxxx
     settings: # Master settings for all modules 
       - name: TF_VERSION
         value: 1.0 
@@ -527,16 +550,16 @@ module:
 
 Type:       string
 
-Configure the Terraform logging level during module execution. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage. 
+Optional 
+
+Configure the Terraform logging level for this module. See [Debugging Terraform](https://developer.hashicorp.com/terraform/internals/debugging){: external} for detailed usage and [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism)
 
 Example
 
 ```yaml
-module:
-  -name: xxxxx
     settings: # Master settings for all modules 
       - name: TF_LOGS
-        value: "debug"
+        value: "DEBUG"
 ```
 {: pre}
 
@@ -554,10 +577,11 @@ A list that defines all the inputs that are required by the module.
 inputs:
   - name: list_any_flow_scalar
     value: $blueprint.list_any_flow_scalar
-    type: list(any)
   - name: cos_single_site_loc
+    type: string
     value: "ams03"
   - name: resource_group_id
+    type: string
     value: $module.bp-vsi-resource-group.outputs.resource_group_id
   - name: docker_ports
     value: $blueprint.docker_ports
@@ -574,7 +598,26 @@ Required: true
 Name of variable to be passed to Terraform module or Ansible playbook. It must match the value in the Terraform template for the value to be passed at execution time to the module. 
 {: pre}
 
-The module input type constraint must match the variable type in the Terraform config for the value to be passed successfully at execution time. The module input type is inherited from the blueprint inputs type. 
+The module input type constraint must match the variable type in the Terraform config for the value to be passed successfully at execution time. 
+
+### modules.inputs.type
+
+The value type is as determined by the `modules.inputs.type` option. Refer to the [inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-type) section for details of how to specify input types. 
+
+The type definition is only required for statically defined module input values or `$module` references. The type definition is ignored for values sourced from the template input section, as these already have a type definition on the template input.  
+
+Example type definition for an input interpolated from the module IBM-Resource-Group using `$module`. 
+```yaml
+    - name: docker_ports
+      type: |
+        list(object({
+        internal = number
+        external = number
+        protocol = string
+        })
+      value:  $module.App-deploy.outputs.docker_ports  
+```
+{: pre}
 
 
 ### modules.inputs.value
@@ -584,49 +627,56 @@ Type: Any valid Terraform variable type
 
 Required: true
 
-The value field sources the input value for a module from three sources:
+The value field sources the input value for a module from one of three sources:
 - Statically defined values specified on the name value pair statement of the module, in YAML syntax
-- An input to the template defined in the settings prefix and sourced at run time from the [inputs](/docs/schematics?topic=schematics-glossary#bpi1) defined by the blueprint configuration. Identified by the `$blueprint` prefix
+- An input to the template defined in the global preface section and sourced at run time from the inputs defined in the blueprint configuration. 
 - An output value from another module defined in the template file. 
-    - Identified by the `$module` prefix and must be included in the output section of another module.
-    - The format is the token, `$module` followed by the module name, the token `outputs`, followed by the module output name. 
-    - In the following style: `$module.<module_name>.outputs.<output_name>`
 
-The value type is as defined by the `modules.inputs.type` option. 
+Functions and operators on input values are not supported in blueprint schema 1.0.0. This is being considered for a future release. Values are passed as is from the source to the module input without manipulation.
 
-Functions and operators on input values are not supported in blueprint schema 1.0.0. This is being considered for a future release. Values are passed as is from the source to the module input without manipulation.     
+The value type is as determined by the `modules.inputs.type` option. 
+
+#### Statically defined values 
+
+Type definition IS required to set the type passed to Terraform. 
 
 Example of statically defined values 
 ```yaml
-- name: provision_ats_instance
-  type: boolean            
-  value: false
+    - name: provision_ats_instance
+      type: boolean            
+      value: false
 ```
 {: pre}
+
+#### Template input
+
+Identified by the `$blueprint` prefix. Appended with the template input name. 
+
+Type definition is NOT required to set the type passed to Terraform. 
 
 Example value sourced from an input statement in the template `inputs` section
 ```yaml
-- name: logdna_sts_region
-  type: string
-  value: $blueprint.region
+    - name: logdna_sts_region
+      value: $blueprint.region
 ```
 {: pre}
 
-Example value sourced from an output statement on the module `IBM-Resource-Group`. 
+#### Module reference
+
+A resource output value from another module defined in the template file. Required to pass resource dependency information between modules.   
+
+  - Identified by the `$module` prefix. 
+  - The format is the token, `$module` followed by the name of the module sourcing the output value, the token `outputs`, followed by the source module output name. 
+  - In the following style: `$module.<module_name>.outputs.<output_name>`
+   
+Type definition IS required to set the type passed to Terraform.    
+
+Example value sourced from an output `resource_group_name` on the module `IBM-Resource-Group`. 
 ```yaml
-- name: resource_group_name            
+- name: resource_group_name
+  type: string            
   value: $module.IBM-Resource-Group.outputs.resource_group_name
 ```
-{: pre}
-
-### modules.inputs.sensitive
-{: #bp-modules-inputs-secure}
-
-Type: Boolean
-
-Default: false
-
-Flag specifying whether the value is a sensitive variable and must be masked in the output
 {: pre}
 
 ### module.outputs
@@ -636,13 +686,13 @@ Type:       list
 
 Default:    []  
 
-A list defines all the outputs that are returned by the module to be used as inputs to other modules or output from the blueprint. Each output is identified by the label `name`. It must match an [output declaration](https://developer.hashicorp.com/terraform/language/values/outputs){: external} in the Terraform template for the value to be retrieved at execution time from the module. The name can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or from inspecting the Terraform `.tf` files. 
+A list defining all the outputs that are returned by the module to be used as inputs to other modules or output from the blueprint. Each output is identified by the label `name`. It must match an [output declaration](https://developer.hashicorp.com/terraform/language/values/outputs){: external} in the Terraform template for the value to be retrieved at execution time from the module. The name can be copied from the [module metadata](https://github.com/terraform-ibm-modules){: external} or from inspecting the Terraform `.tf` files. 
 
 Example
 ```yaml
-outputs:
-    - name: log_analysis_instance_name
-    - name: sysdig_instance_name
+    outputs:
+        - name: log_analysis_instance_name
+        - name: sysdig_instance_name
 ```
 {: pre}
 
@@ -656,17 +706,17 @@ Default:      []
 The injectors block is an optional block to configure the parameters that are required by {{site.data.keyword.bpshort}} to inject additional files into the automation module source at execution time. The primary use with blueprint templates is to enable direct use of Terraform child modules, by the injection of `.tf` files containing `provider` and `terraform` blocks. Review section [blueprints provider injection](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection) for guidance on the use of the injectors block. 
 
 ```yaml
-injectors:
-  - tft_git_url: "https://github.com/Cloud-Schematics/tf-templates"
-    tft_name: "ibm"
-    injection_type: override
-    tft_parameters:
-    - name: provider_version
-      value: 1.42.3
-    - name: provider_source
-      value: IBM-Cloud/ibm
-    - name: region
-      value: us-south
+    injectors:
+      - tft_git_url: "https://github.com/Cloud-Schematics/tf-templates"
+        tft_name: "ibm"
+        injection_type: override
+        tft_parameters:
+        - name: provider_version
+          value: 1.42.3
+        - name: provider_source
+          value: IBM-Cloud/ibm
+        - name: region
+          value: us-south
 ```
 {: pre}
 
@@ -715,11 +765,11 @@ A list that defines the templating inputs as name-value pairs. At this time, onl
  
 Example
 ```yaml
-- name: provider_version
-  value: 1.42.3
-- name: provider_source
-  value: IBM-Cloud/ibm
-- name: region
-  value: us-south
+    - name: provider_version
+      value: 1.42.3
+    - name: provider_source
+      value: IBM-Cloud/ibm
+    - name: region
+      value: us-south
 ```
 {: pre}
