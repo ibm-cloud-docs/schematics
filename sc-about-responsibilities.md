@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020, 2022
-lastupdated: "2022-11-28"
+lastupdated: "2022-06-27"
 
 keywords: schematics , hybrid, multi-cloud, RACI
 

@@ -17,9 +17,9 @@ subcollection: schematics
 {: #create-blueprint-file}
 
 Alternative to creating a blueprint via the CLI using parameters and flags, a JSON config file can be provided to pass blueprint create API parameters directly. This is a direct interface via the API and the JSON file format is not guaranteed to remain compatible on API changes. Use the CLI With parameters and flags if long term compatibility is required. The CLI `-input-file` parameter provides an alternative way to pass complex input values as a YAML file and will retain long term compatibility.    
-{: shortdesc}
 
 The blueprint config is created from a user provided configuration supplied as a JSON file that specifies the source of the blueprint template in a Git repository, the source of any input files and optional dynamic or override inputs. The file operation passes the configuration directly to the {{site.data.keyword.bpshort}} API and uses the API parameter definitions. The definition of the config file uses the [{{site.data.keyword.bpshort}} API payload](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint), which differs from to the `schematics blueprint create` CLI syntax.  
+{: shortdesc}
 
 
 ## Using a config file
@@ -78,19 +78,22 @@ OK
 ```
 {: screen}
 
+
+
+
 ## Defining a JSON config file
 {: #bp-create-configJSON}
 
 A sample JSON config file is provided here. Replace the `<...>` placeholders with the actual values. To pass double quotes as required by Terraform for variables, double quotes must be correctly escaped in the JSON as `\\\"` . 
 {: note}
 
-Refer to the [{{site.data.keyword.bpshort}}IBM API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint) for details of the API payload.
-{: shortdesc}
+Refer to the [{{site.data.keyword.bpshort}}IBM API Docs](https://cloud.ibm.com/apidocs/schematics/schematics#create-blueprint) for details of the API payload. 
 
 - The location of the blueprint template is defined using the `source` block.
 - The location of the blueprint input files is defined by the `config` block. 
 
 Example config JSON files can be found in the folder 'test' for many of the blueprint examples in the [Cloud-{{site.data.keyword.bpshort}}Github repos](https://github.com/Cloud-Schematics){: external}
+
 
 **Config JSON file syntax:**
 ```json
@@ -179,3 +182,4 @@ Example
 }
 ```
 {: codeblock}
+
