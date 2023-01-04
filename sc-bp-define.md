@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -38,7 +38,7 @@ A blueprint environment and the cloud resources to be deployed are defined by th
 
 Blueprint environments can be created from reusable user or {{site.data.keyword.IBM_notm}} authored blueprint templates. New templates can be authored to address specific application requirements. Either by creating a new template from scratch, or by modifying existing templates. 
 
-Templates are [reusable across multiple environments](/docs/schematics?topic=schematics-blueprint-reuse-pipelines), with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as dev, stage, and production with multiple target regions. Each environment being customized with its own input values. See the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) for more details. 
+Templates are [reusable across multiple environments](/docs/schematics?topic=schematics-define-blueprints#define-templates-input), with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as dev, stage, and production with multiple target regions. Each environment being customized with its own input values. See the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) for more details. 
 
 For examples of blueprint templates and inputs, see the [{{site.data.keyword.bplong_notm}} repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint){: external}. Creation and editing of blueprints can be performed in [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints). Refer to the sections [understanding blueprint templates and configurations](/docs/schematics?topic=schematics-blueprint-templates) and [blueprint template reference](/docs/schematics?topic=schematics-bp-template-schema-yaml) for guidance to the blueprint syntax when creating or modifying a template.   
 
@@ -58,12 +58,12 @@ The steps to create a blueprint template and define the versioned inputs are ill
     - Working blueprint examples and template YAML files can be found in the [Cloud-{{site.data.keyword.bpshort}}](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint) GitHub repository. Or work from the [sample template](https://github.com/Cloud-Schematics/blueprint-sample-template/){: external}.   
     - Review the module metadata and readme file information for the selected [modules](https://github.com/terraform-ibm-modules){: external} to guide writing the template blueprint [module definitions](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema). 
     - Define the [variable dependencies](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value) between modules to pass the resource dependency data for provisioned resources.
-    - Specify the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) the template requires, guided by the inputs required for module configuration. Review the section on [Customizing environments with inputs](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization-layers) to determine which inputs will be defined in the input file or specified as defaults. The input values are specified in step 4. 
+    - Specify the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) the template requires, guided by the inputs required for module configuration. Review the section on [Customizing environments with inputs](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps) to determine which inputs will be defined in the input file or specified as defaults. The input values are specified in step 4. 
     - Specify the template [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs) that are to be returned when the environment is deployed. The values returned are typically an application URL or the IDs of provisioned resources. 
     - Optional: Create a readme file to document the template, inputs, and outputs. Best practice is to include an image of the reference architecture. 
 3. Push the completed blueprint template to a Git repo. If needed, create a Git version release tag for blueprint version management. [Semantic versioning](https://semver.org/){: external} is strongly recommended. 
 4. Customize your template with a versioned blueprint input file to configure it for your use case. 
-   - Review the section on [Customizing environments with inputs](/docs/schematics?topic=schematics-blueprint-reuse-pipelines#blueprint-customization-layers) to determine which inputs will be defined in the input file. Undefined inputs, must either have a template default or be specified at runtime by a dynamic input. 
+   - Review the section on [Customizing environments with inputs](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps) to determine which inputs will be defined in the input file. Undefined inputs, must either have a template default or be specified at runtime by a dynamic input. 
     - Review the sections [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) and [blueprint input YAML schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the syntax to define blueprint input files.  
     - Again in your favorite editor, create and name a new blueprint input YAML file. Alternatively follow the instructions for [editing templates in VSCode](/docs/schematics?topic=schematics-edit-blueprints). 
     - Using the template inputs as a guide, populate the input file with environment-specific input key-value pairs. The variable type of the input value must match that defined in the template YAML file.

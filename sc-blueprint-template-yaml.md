@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -22,7 +22,7 @@ Blueprint templates are written in YAML with a minimum of syntax that specify th
 
 A blueprint template consists of two sections. A global section contains a default name and description for the environment, and settings related to the whole template. Also it defines the inputs the template requires, and any outputs it returns. This is followed by a modules section containing the module definitions. Resource dependencies are created between modules by interpolation of module input and output values.
 
-Refer to the section [Understanding blueprint templates and configuration](https://test.cloud.ibm.com/docs/schematics?topic=schematics-blueprint-templates) for an overview of the template structure. 
+Refer to the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) for an overview of the template structure. 
 
 
 Each template file has a global preface:

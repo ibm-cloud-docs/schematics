@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -98,10 +98,10 @@ Command options
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | A unique name for the action. |
 | `--description` or `-d` | Optional | The short description for an action.|
-| `--location,` or `-l` | Required | The geography or location where you want to create the action, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. The geography or location determines where your action runs and where your action data is stored. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Make sure that you can store data in this location as you cannot change the location after the action is created.|
+| `--location` or `-l` | Required | The geography or location where you want to create the action, such as `us-south`, `us-east`, `eu-de`, or `eu-gb`. The geography or location determines where your action runs and where your action data is stored. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). Make sure that you can store data in this location as you cannot change the location after the action is created.|
 | `--resource-group` or `-r` | Required | The name of the resource group where you want to create the action. |
 | `--template` or `-tr` | Optional | The URL to the Git repository where your Ansible playbook is stored.|
-| `--playbook-name or --pn` | Optional| The name of the Ansible playbook. |
+| `--playbook-name` or `--pn` | Optional| The name of the Ansible playbook. |
 | `--credentials` or `-C` | Optional | The file path to the private SSH key that you want to use to access your target host, such as `~/.ssh/id_rsa`. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls.|
 | `--credential-json` or `--cj` | Optional | Provide path of JSON file that contains credential JSON payload to access the target host. |
 | `--bastion` or `-b` | Optional | The IP address of the bastion host.|
@@ -125,6 +125,7 @@ ibmcloud schematics action create --name start-vsi --location us-south --resourc
 ```
 {: pre}
 
+
 #### Using a payload file
 {: #create-action-payload}
 
@@ -142,8 +143,8 @@ Syntax
     "description": "<DESCRIPTION>",
     "location": "<LOCATION>",
     "resource_group": "<RESOURCE_GROUP>",
-    “bastion_connection_type”: “ssh”,
-    “inventory_connection_type”: “winrm”,
+    "bastion_connection_type": "ssh",
+    "inventory_connection_type": "winrm", 
     "source": {
         "source_type" : "git",
         "git" : {
@@ -151,9 +152,9 @@ Syntax
         }
     },
     "command_parameter": "<PLAYBOOK_NAME>",
-    “bastion”: {},
-    “bastion_credentials”: {
-	    “metadata”: {}
+    "bastion": {},
+    "bastion_credentials": {
+	    "metadata": {}
     },
     "tags": [
         "<ACTION_TAGS>"
@@ -407,7 +408,7 @@ ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WO
 
 
 ### `ibmcloud schematics agents get`
-{: #schematics-agent-get}
+{: #schematics-agents-get}
 
 Retrieves the {{site.data.keyword.bpshort}} Agent.
 
@@ -434,7 +435,7 @@ ibmcloud schematics agents get
 {: pre}
 
 ### `ibmcloud schematics agents list`
-{: #schematics-agent-list}
+{: #schematics-agents-list}
 
 Lists all the Agents. Defaults to show the registered agents.
 
@@ -605,14 +606,13 @@ Create a blueprint config from the command line using the `ibmcloud schematics b
 
 The create command supports passing all required parameters via options on the CLI and passing input values from local files. 
 
-A experimental file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. These two usage modes are mutually exclusive. 
+A experimental file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [`ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) section. These two usage modes are mutually exclusive. 
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.5` version.
 {: important}
 
-Refer to the section on [Creating Blueprints](https://cloud.ibm.com/docs/schematics?topic=schematics-create-blueprint-config&interface=cli) for examples of command syntax and output.   
-
+Refer to the section on [Creating Blueprints](/docs/schematics?topic=schematics-create-blueprint-config&interface=cli) for examples of command syntax and output.
 
 
 **Syntax to create blueprint config using CLI parameters:**
@@ -629,11 +629,11 @@ Command options
 | `--name` or `-n`| Required | Name of the blueprint. Delimited by double quotes if the name contains spaces. For example `-name "my blueprint"`|
 | `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
 | `description` or `--desc` | Optional | The description of the blueprint. Delimited by double quotes if the description contains spaces. For example `-description "my blueprint example"`|
-| `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template . e.g. `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
+| `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template. For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
 | `--bp-git-file` or `--bf`| Required | The blueprint template file name, including the file extension and any subfolders. For example `-bp-git-file <subfolder>/basic-blueprint.yaml`   |
 | `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name. Mutually exclusive with the `-bp-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-bp-git-branch devhardening`|
 | `--bp-git-release` or `--br`| Optional | A Git release tag identifying the version of the template file. Mutually exclusive with the `-bp-git-branch` option. For example `-bp-git-release 1.4.2`|
-| `--input-git-url` or `--igu`| Optional | The input Git URL. This is the URL of the repository containing the blueprint input file . e.g. `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
+| `--input-git-url` or `--igu`| Optional | The input Git URL. This is the URL of the repository containing the blueprint input file . For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
 | `--input-git-file` or `--igf`| Optional | The input file name, including extension and any subfolders. For example `-input-git-file <subfolder>/basic-input.yaml`. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
 | `--input-git-branch` or `--igb`| Optional |The input file Git branch name. Mutually exclusive with the `-input-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-input-git-branch nextdrop` |
 | `--input-git-release` or `--igr`| Optional | A Git release tag identifying the version of the input file. Mutually exclusive with the `-input-git-branch` option. For example `-input-git-release 1.0.5` |
@@ -1907,7 +1907,7 @@ ibmcloud schematics destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ib
 {: #schematics-logs}
 
 Retrieve the Terraform log files for a {{site.data.keyword.bpshort}} Workspaces or a specific action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
-{: shortdesc}	
+{: shortdesc}
 
 Syntax
 
@@ -2036,7 +2036,7 @@ Command options
 You can provide a payload file to specify certain parameters for the `resource_query create` command. Then, you pass the file name to the command by using the `--file` command option. For a list of supported resource queries, see [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries).
 {: shortdesc} 
 
-You need to replace the `<...>` placeholders with the actual values. For example, `"<WORKSPACE_ID"` as "us-east.workspace.ID1231".
+You need to replace the `<...>` placeholders with the actual values. For example, `"<WORKSPACE_ID"` as `us-east.workspace.ID1231`.
 {: note}
 
 Syntax
@@ -2408,7 +2408,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -2439,7 +2439,7 @@ ibmcloud schematics workspace state show --id WORKSPACE_ID  --address ADDRESS [-
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -2468,7 +2468,7 @@ ibmcloud schematics workspace state mv --id WORKSPACE_ID --source SOURCE  --dest
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -2498,7 +2498,7 @@ ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options OPTIONS] --a
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -2898,7 +2898,7 @@ You need to replace the `<...>` placeholders with the actual values. For example
 | Parameter | Required / Optional | Description |
 | -- | -- | -- |
 | `workspace_name` | Optional | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace).|
-| `terraform_version` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30  to 45 days` of HashiCorp Configuration Language (HCL) release. |
+| `terraform_version` | Optional | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v1.1` to use Terraform version 1.1,`terraform_v1.0` to use Terraform version 1.0, and similarly, `terraform_v0.15`, `terraform_v0.14`, `terraform_v0.13`, `terraform_v0.12`. For example, when you specify `terraform_v1.1` means users can have template that are of Terraform `v1.1.0`, `v1.1.1`, or `v1.1.2`, so on. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30 to 45 days` of HashiCorp Configuration Language (HCL) release. |
 | `location` | Optional | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. If you do not enter a location, {{site.data.keyword.bpshort}} determines the location based on the {{site.data.keyword.cloud_notm}} region that you targeted. To view the region that you targeted, run `ibmcloud target --output json` and look at the `region` field. To target a different region, run `ibmcloud target -r <region>`. If you enter a location, make sure that the location matches the {{site.data.keyword.cloud_notm}} region that you targeted. |
 | `description` | Optional | Enter a description for your workspace. |
 | `template_repo.url` | Optional | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. |
@@ -3208,7 +3208,7 @@ ibmcloud schematics workspace upload  --id WORKSPACE_ID --file FILE_NAME --templ
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -3225,7 +3225,6 @@ Example
 
 ```sh
 ibmcloud schematics workspace upload --id myworkspace-a1aa1a1a-a11a-11 --file /Users/myuser/Documents/mytar/vpc.tar --template 25111111-0000-4c
-
 ```
 {: pre}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-19"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics capabilities, schematics overview, benefits
 
@@ -29,7 +29,7 @@ With IaC, configuration files define your infrastructure, which also makes it ea
 Review the section on [IaC best practices](/docs/schematics?topic=schematics-infrastructure-as-code#iac-best-practices) to learn more about the core IaC principles and best practices that you can adopt when using {{site.data.keyword.bpshort}}. 
 
 
-## Schematics IaC offerings
+## {{site.data.keyword.bpshort}} IaC offerings
 {: #sc-offerings}
 
 {{site.data.keyword.bpshort}} builds on open-source Ansible and Terraform to provide a powerful set of IaC tools as a service to program your cloud infrastructure. With {{site.data.keyword.bpshort}} you can use this rich set of IaC automation capabilities to build stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.

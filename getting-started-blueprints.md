@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -152,11 +152,11 @@ Default   aac37f57b20142dba1a435c70aeb12df   true            ACTIVE
 ```
 {: pre}
 
-In the `blueprint create` command, replace `<default-resource-group-name>` with the name of the default resource group. 
+In the `blueprint create` command, replace `DEFAULT-RESOURCE-GROUP-NAME` with the name of the default resource group. 
 
 
 ```sh
-ibmcloud schematics blueprint create --name Blueprint_Complex --resource-group <default-resource-group-name> --bp-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --bp-git-file complex-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --input-git-file complex-input.yaml --input-git-branch main --inputs region=eu-de,sample_var=testconfig_input_demo
+ibmcloud schematics blueprint create --name Blueprint_Complex --resource-group DEFAULT-RESOURCE-GROUP-NAME --bp-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --bp-git-file complex-blueprint.yaml --bp-git-branch main --input-git-url https://github.com/Cloud-Schematics/blueprint-complex-inputs --input-git-file complex-input.yaml --input-git-branch main --inputs region=eu-de,sample_var=testconfig_input_demo
 ```
 {: pre}
 

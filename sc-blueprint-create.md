@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -101,6 +101,7 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 
 ## Creating a blueprint configuration using the UI 
 {: #bp-ui-create}
+{: ui}
 
 You can follow these steps to create a blueprint config using {{site.data.keyword.cloud_notm}} console.
 
