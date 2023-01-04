@@ -629,7 +629,7 @@ Command options
 | `--name` or `-n`| Required | Name of the blueprint. Delimited by double quotes if the name contains spaces. For example `-name "my blueprint"`|
 | `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
 | `description` or `--desc` | Optional | The description of the blueprint. Delimited by double quotes if the description contains spaces. For example `-description "my blueprint example"`|
-| `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template . e.g. `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
+| `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template. For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
 | `--bp-git-file` or `--bf`| Required | The blueprint template file name, including the file extension and any subfolders. For example `-bp-git-file <subfolder>/basic-blueprint.yaml`   |
 | `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name. Mutually exclusive with the `-bp-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-bp-git-branch devhardening`|
 | `--bp-git-release` or `--br`| Optional | A Git release tag identifying the version of the template file. Mutually exclusive with the `-bp-git-branch` option. For example `-bp-git-release 1.4.2`|
