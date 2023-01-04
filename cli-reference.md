@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1907,7 +1907,7 @@ ibmcloud schematics destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ib
 {: #schematics-logs}
 
 Retrieve the Terraform log files for a {{site.data.keyword.bpshort}} Workspaces or a specific action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
-{: shortdesc}	
+{: shortdesc}
 
 Syntax
 
@@ -2408,7 +2408,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID --template TEMPLATE_ID
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -2439,7 +2439,7 @@ ibmcloud schematics workspace state show --id WORKSPACE_ID  --address ADDRESS [-
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -2468,7 +2468,7 @@ ibmcloud schematics workspace state mv --id WORKSPACE_ID --source SOURCE  --dest
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -2498,7 +2498,7 @@ ibmcloud schematics workspace state rm --id WORKSPACE_ID [--options OPTIONS] --a
 ```
 {: pre}
 
-</br>
+
 
 Command options
 
@@ -3208,7 +3208,7 @@ ibmcloud schematics workspace upload  --id WORKSPACE_ID --file FILE_NAME --templ
 ```
 {: pre}
 
-</br>
+
 
 Command options
 

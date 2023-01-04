@@ -219,13 +219,6 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
 
 
-## Internal adopters
-{: #sitemap_internal_adopters}
-
-
-[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics</staging>){: external}
-
-
 ## Security and compliance
 {: #sitemap_security_and_compliance}
 
