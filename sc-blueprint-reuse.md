@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -77,44 +77,44 @@ Selection of template and input file versions is defined on initial creation of 
 
 
 ## Customizing environments with inputs
-{: #blueprint-customization-layers} 
+{: #blueprint-customization-layers}
 
 As described, blueprint templates support environment customization and versioning at multiple levels. User customizable values are defined as `inputs` at the blueprint template level. 
 
 The selection of inputs is determined in the following precedence order, lower to higher: 
 
-- Blueprint template    
-  - From VCS, version controlled by Git tag, branch or un-versioned (pull-latest). 
-  - Input definition:  **Default** value or **no value** specified in template YAML file. 
-  - Usage: Opinionated implementation of an application architecture. 
+- Blueprint template
+   - From VCS, version controlled by Git tag, branch or un-versioned (pull-latest). 
+   - Input definition:  **Default** value or **no value** specified in template YAML file. 
+   - Usage: Opinionated implementation of an application architecture. 
 
 - Blueprint input files
-  - From VCS, version controlled by Git tag, branch or un-versioned (pull-latest).
-  - Value **optionally** specified in inputs YAML file.
-  - Usage: Environment scaling, region, network and security configuration. 
+   - From VCS, version controlled by Git tag, branch or un-versioned (pull-latest).
+   - Value **optionally** specified in inputs YAML file.
+   - Usage: Environment scaling, region, network and security configuration. 
 
- - Dynamic (override) inputs
-  - User provided via CLI or UI, un-versioned
-  - Value **optionally** specified
-  - Usage: SSH and API keys
+- Dynamic (override) inputs
+   - User provided via CLI or UI, un-versioned
+   - Value **optionally** specified
+   - Usage: SSH and API keys
 
 Inputs that are not satisfied at any level will result in an error at blueprint config create time. 
 
-## Using versioned inputs 
+## Using versioned inputs
+{: #bp-version-input}
 
 Blueprints uses versioning of templates and input files to manage infrastructure change. 
 Review the section on [blueprint versioning](/docs/schematics?topic=schematics-blueprint-versioning) to understand how Blueprints versioning can be used. 
 
-The use of input versioning is summarized in the table: 
+The use of input versioning is summarized in the table. 
 
 | Blueprint layer	| Development and unregulated environments	|  Regulated environments | 
 | --- | --- | --- 
 | Dynamic (override) inputs	| Any input, no version control. Override values specified in input file	| Sensitive values only | 
 | Input files	Optional, un-versioned	Versioned (tag or branch) | 
 | Templates	| Un-versioned |	Versioned (tag or branch) | 
-| Modules	| Un-versioned | 	Versioned (tag) | 
-
-
+| Modules	| Un-versioned | 	Versioned (tag) |
+{: caption="Usage of input version" caption-side="bottom"}
 
 ## Blueprint input value precedence 
 {: #blueprint-input-precedence} 
@@ -129,18 +129,22 @@ A template input can have one of three value definitions:
 Blueprints loads input values in the following order with later sources taking precedence over earlier ones:
 
 ### No value
+{: #bp-precedence-novalue}
+
 - Blueprint template input  - no value: one of the following is **mandatory**   
 - Blueprint input file value 
 - Blueprint (override) input value 
 
 ### Default value
+{: #bp-precedence-defaultvalue}
+
 - Blueprint template input  - default value, one of the following is optional   
 - Blueprint input file 
 - Blueprint (override) input value 
 
 ### Specified value
+{: #bp-precedence-specifiedvalue}
+
 - Blueprint template input  - value intended for settings of values internal to the template. Can be optionally overridden by one of the following during template development.  
 - Blueprint input file 
 - Blueprint (override) input value 
-
-

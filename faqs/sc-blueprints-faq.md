@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -130,7 +130,7 @@ ibmcloud schematics blueprint create  ......................  --inputs sshkey=$u
 {: pre}
 
 ### Via the CLI using an input file
-Dynamic inputs can be passed via the CLI using `-input-file` flag to pass values stored in a local YAML file. Refer to the [create CLI documentation](https://test.cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for more details.  
+Dynamic inputs can be passed via the CLI using `-input-file` flag to pass values stored in a local YAML file. Refer to the [create CLI documentation](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for more details.  
 
 
 ## Why does the blueprint template, basic example, fail in the apply step?

@@ -121,6 +121,7 @@ toc:
                                             topics:
                                                     - action-working.md
                                                     - ansible-roles.md
+                                                    - action-setup.md
                                                     - create-ansible-playbook.md
                                                     - autodeploy_actionsamples.md
                                                     - autodeploy_template.md

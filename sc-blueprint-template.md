@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -117,7 +117,7 @@ The IaC best practice of modular architectures implemented by {{site.data.keywor
 ### Template inputs
 {: #blueprint-input-statements}
 
-All variables required by a blueprint template must be defined in the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) section. Values can be statically defined in the template. If the value is omitted, it is assumed that the input is satisfied by a user defined input value from the blueprint configuration. Refer to the section [Customizing environments with inputs](https://cloud.ibm.com/docs/schematics?topic=schematics-blueprint-reuse-pipelines&interface=ui#blueprint-customization-layers) for guidance on defining inputs. 
+All variables required by a blueprint template must be defined in the [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs) section. Values can be statically defined in the template. If the value is omitted, it is assumed that the input is satisfied by a user defined input value from the blueprint configuration. Refer to the section [Customizing environments with inputs](/docs/schematics?topic=schematics-define-blueprints#define-templates-input) for guidance on defining inputs. 
 {: shortdesc}  
 
  Template inputs follow the same type convention as Terraform HCL. The supported types are the same as the [Terraform variable types](https://developer.hashicorp.com/terraform/language/expressions/types). If the type is omitted the default is `string`. For an example showing data types represented in YAML, see [blueprint complex inputs](https://github.com/Cloud-Schematics/blueprint-complex-inputs){: external} and the code snippet below.

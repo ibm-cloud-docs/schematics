@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-01-31"
+  years: 2017, 2023
+lastupdated: "2023-01-04"
 
 keywords: schematics help, schematics support, schematics troubleshooting, schematics errors, schematics slack
 
@@ -25,5 +25,3 @@ If you have problems or questions when you use {{site.data.keyword.bplong_notm}}
 * Subscribe to the Terraform channel on [Reddit](https://www.reddit.com/r/Terraform/){: external}.
 * Get help from the open source community by searching information on the internet or by asking questions in forums and on websites that support these tools.
 * You can also contact IBM Support by opening a case. To learn about opening an IBM support case, or about support levels and case severities, see [Contacting support](/docs/get-support?topic=get-support-using-avatar). 
-
-

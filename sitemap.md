@@ -83,7 +83,7 @@ subcollection: schematics
 
 * [IaC automation as-a-service](/docs/schematics?topic=schematics-learn-about-schematics#sc-IaCaas)
 
-* [Schematics IaC offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings)
+* [{{site.data.keyword.bpshort}} IaC offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings)
 
     * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-learn-about-schematics#sc-blueprints)
 
@@ -323,7 +323,7 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
-* [December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov22)
+* [December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec22)
 
     * Review the release notes for December 2022.
 
@@ -863,15 +863,15 @@ subcollection: schematics
 
 * [Customizing environments with inputs](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-customization-layers)
 
-* [Using versioned inputs](/docs/schematics?topic=schematics-blueprint-reuse#using-versioned-inputs)
+* [Using versioned inputs](/docs/schematics?topic=schematics-blueprint-reuse#bp-version-input)
 
 * [Blueprint input value precedence](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-input-precedence)
 
-    * [No value](/docs/schematics?topic=schematics-blueprint-reuse#no-value)
+    * [No value](/docs/schematics?topic=schematics-blueprint-reuse#bp-precedence-novalue)
 
-    * [Default value](/docs/schematics?topic=schematics-blueprint-reuse#default-value)
+    * [Default value](/docs/schematics?topic=schematics-blueprint-reuse#bp-precedence-defaultvalue)
 
-    * [Specified value](/docs/schematics?topic=schematics-blueprint-reuse#specified-value)
+    * [Specified value](/docs/schematics?topic=schematics-blueprint-reuse#bp-precedence-specifiedvalue)
 
 [Versioning blueprint environments](/docs/schematics?topic=schematics-blueprint-versioning#blueprint-versioning)
 
@@ -1255,6 +1255,24 @@ subcollection: schematics
 * [Creating your own roles in Ansible](/docs/schematics?topic=schematics-ansible-roles-galaxy#main-file)
 
 * [Installing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file)
+
+[Working with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-working#action-working)
+
+* [Creating and running a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working#create-action)
+
+    * [Prerequisites](/docs/schematics?topic=schematics-action-working#action-working-prereq)
+
+    * [To create an action](/docs/schematics?topic=schematics-action-working#create-action-working)
+
+* [Editing the {{site.data.keyword.bpshort}} Actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
+
+* [Deleting an action](/docs/schematics?topic=schematics-action-working#delete-ansible-actions)
+
+* [Action state](/docs/schematics?topic=schematics-action-working#action-state-diagram)
+
+    * [State diagram flow](/docs/schematics?topic=schematics-action-working#state-diagram-flow)
+
+* [Reviewing Actions job details](/docs/schematics?topic=schematics-action-working#action-jobs)
 
 [Creating an Ansible playbook](/docs/schematics?topic=schematics-create-playbook#create-playbook)
 
@@ -1723,9 +1741,9 @@ subcollection: schematics
 
     * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
 
-    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
+    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
 
-    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list)
+    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-list)
 
     * [`ibmcloud schematics agent register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
 

@@ -408,7 +408,7 @@ ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WO
 
 
 ### `ibmcloud schematics agents get`
-{: #schematics-agent-get}
+{: #schematics-agents-get}
 
 Retrieves the {{site.data.keyword.bpshort}} Agent.
 
@@ -435,7 +435,7 @@ ibmcloud schematics agents get
 {: pre}
 
 ### `ibmcloud schematics agents list`
-{: #schematics-agent-list}
+{: #schematics-agents-list}
 
 Lists all the Agents. Defaults to show the registered agents.
 
@@ -606,14 +606,13 @@ Create a blueprint config from the command line using the `ibmcloud schematics b
 
 The create command supports passing all required parameters via options on the CLI and passing input values from local files. 
 
-A experimental file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-blueprint-createfile) section. These two usage modes are mutually exclusive. 
+A experimental file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [`ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) section. These two usage modes are mutually exclusive. 
 {: shortdesc}
 
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.5` version.
 {: important}
 
-Refer to the section on [Creating Blueprints](https://cloud.ibm.com/docs/schematics?topic=schematics-create-blueprint-config&interface=cli) for examples of command syntax and output.   
-
+Refer to the section on [Creating Blueprints](/docs/schematics?topic=schematics-create-blueprint-config&interface=cli) for examples of command syntax and output.
 
 
 **Syntax to create blueprint config using CLI parameters:**
