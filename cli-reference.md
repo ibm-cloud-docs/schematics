@@ -142,8 +142,8 @@ Syntax
     "description": "<DESCRIPTION>",
     "location": "<LOCATION>",
     "resource_group": "<RESOURCE_GROUP>",
-    “bastion_connection_type”: “ssh”,
-    “inventory_connection_type”: “winrm”,
+    "bastion_connection_type": "ssh",
+    "inventory_connection_type": "winrm", 
     "source": {
         "source_type" : "git",
         "git" : {
@@ -151,9 +151,9 @@ Syntax
         }
     },
     "command_parameter": "<PLAYBOOK_NAME>",
-    “bastion”: {},
-    “bastion_credentials”: {
-	    “metadata”: {}
+    "bastion": {},
+    "bastion_credentials": {
+	    "metadata": {}
     },
     "tags": [
         "<ACTION_TAGS>"
