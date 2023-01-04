@@ -125,6 +125,7 @@ ibmcloud schematics action create --name start-vsi --location us-south --resourc
 ```
 {: pre}
 
+
 #### Using a payload file
 {: #create-action-payload}
 
