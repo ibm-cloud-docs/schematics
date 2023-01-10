@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-05"
+lastupdated: "2023-01-10"
 
 keywords: schematics
 subcollection: schematics
@@ -1153,9 +1153,11 @@ subcollection: schematics
 
 * [Usage](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage)
 
-    * [Example using parallelism](/docs/schematics?topic=schematics-set-parallelism#parallelism-example)
+    * [Passing TF_CLI_ARGS](/docs/schematics?topic=schematics-set-parallelism#passing-tf_cli_args)
 
-* [List of environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars)
+    * [Example setting parallelism or TF_LOGS](/docs/schematics?topic=schematics-set-parallelism#parallelism-example)
+
+* [List of Terraform environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars)
 
 [Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
 
@@ -1203,17 +1205,17 @@ subcollection: schematics
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 
-[Migrating Terraform versions](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
+[Updating Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
-* [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade)
+* [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
 
-* [Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps)
+    * [Updating the Workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
 
-* [Upgrading Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-12-to13)
+* [Upgrading the Terraform template version 0.x to 1.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
 
-* [Upgrading Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to14)
+* [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
 
-* [Upgrade Terraform template from `v0.14` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
+* [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
 
 [Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
 
