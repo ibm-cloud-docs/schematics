@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-10"
+lastupdated: "2023-01-12"
 
 keywords: schematics
 subcollection: schematics
@@ -1048,6 +1048,26 @@ subcollection: schematics
 ### Creating workspace
 {: #sitemap_creating_workspace}
 
+
+[Displaying workspace](/docs/schematics?topic=schematics-sch-display-wks#sch-display-wks)
+
+* [Before you begin](/docs/schematics?topic=schematics-sch-display-wks#prerequisites)
+
+* [Displaying the workspace through UI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-ui)
+
+    * [Verifying workspace display](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-ui)
+
+* [Displaying the workspace through CLI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-cli)
+
+    * [Verifying workspace list](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-cli)
+
+* [Displaying the workspace list through API](/docs/schematics?topic=schematics-sch-display-wks#list-wks-api)
+
+    * [verifying workspace update:](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-api)
+
+* [Displaying the workspace list with Terraform](/docs/schematics?topic=schematics-sch-display-wks#list-wks-terraform)
+
+* [Next steps](/docs/schematics?topic=schematics-sch-display-wks#sch-list-wks-nextsteps)
 
 
 ### Managing workspace resources
