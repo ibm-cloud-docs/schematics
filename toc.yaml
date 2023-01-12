@@ -43,7 +43,6 @@ toc:
                                                     - sc-bp-deploy.md
                                                     - sc-bp-update.md
                                                     - sc-bp-delete.md
-                                  
                                   - topicgroup:
                                             label: Security and compliance
                                             topics:

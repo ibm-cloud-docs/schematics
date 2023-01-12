@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-28"
+  years: 2017, 2023
+lastupdated: "2023-01-10"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -13,18 +13,33 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migrating Terraform versions  
+# Updating Terraform version  
 {: #migrating-terraform-version}
 
-The driver to migrate might come from business factors such as cost reduction, or consolidation. You also might want to migrate to be more cloud native or adopt new technologies. Regardless of the reason, migration can be as simple as migrating a Terraform version in variable file. Or it can be as complex as migrating a piece of your application to a more complex environment where you need to migrate an entire template with all the underlying components.
+The open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with new versions of Terraform and Helm, and the supporting Terraform providers. Over time it is necessary for long lived workspace environments to be upgraded to utilize the latest version of Terraform as older versions are depreciated and go out of support.    
 {: shortdesc}
 
-## Upgrading the Terraform template version 
-{: #terraform-version-upgrade}
+All {{site.data.keyword.bpshort}} users are encourage to regularly upgrade to the latest Terraform version to ensure continuity of operations and support. {{site.data.keyword.bpshort}} follows the Hashicorp support model for Terraform releases and depreciates versions to the in line with Hashicorp. 
 
-The table summarizes the recommendations to upgrade to the current Terraform version. {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and also plans to make releases available after `30-45 days` of HashiCorp Configuration Language (HCL) release. The Terraform template must use the version constraint, such as, `>`, `>=`, or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, to automatically pick the current provider version.
+Terraform V1.0 was a major release for Terraform, marking the transition to a stable 1.x release. Hashicorp made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), that for core features, no additional changes are required to upgrade through the 1.x releases. 
 
-{{site.data.keyword.bpshort}} supports all the releases of `terraform_v1.x`. {{site.data.keyword.bpshort}} plans to make all the releases of Terraform `n-1` versions available after 30 - 45 days after HCL release.
+```
+In short, we aim to make upgrades between v1.x releases straightforward, requiring no changes to your configuration, no extra commands to run upgrade steps, and no changes to any automation you've set up around Terraform.
+
+The Terraform v1.x series will be actively maintained for at least 18 months after v1.0.
+```
+
+Upgrade at the 1.x releases requires no specific {{site.data.keyword.bpshort}} workspace actions. Review the Terraform [upgrade guides](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides){: external} for release specific changes that might require TF config/template updates.  
+
+
+## Upgrading the Terraform template version 1.x and above
+{: #terraform-version-upgrade1x}
+
+Since Terraform 1.0, {{site.data.keyword.bpshort}} Workspaces can be updated to more recent 1.x releases, via a simple change to the Workspace version. To update from 0.x releases refer to section [Upgrading the Terraform template version 0.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
+
+
+{{site.data.keyword.bpshort}} supports `Terraform_v1.x` and plans to make releases available `30-45 days` after general availability. It is recommended that Terraform templates use a version range constraint, such as, `>`, `>=`, or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, that allows upgrade for minor and patch releases. This allows {{site.data.keyword.bpshort}} to automatically adopt the latest patch or minor release of Terraform version as set by the Workspace version.   
+
 ```terraform
 terraform {
 required_version = "~> 1.1"
@@ -32,38 +47,65 @@ required_version = "~> 1.1"
 ```
 {: pre}
 
-{{site.data.keyword.bplong_notm}} suggests that use Terraform templates of `terraform_v1.0` and higher version.
-{: note}
+### Updating the Workspace Terraform 1.x version
+{: #terraform-version-upgrade1x-process}
 
-|Current Version|	Recommendation|
-| ---| ---|
-| `v0.11` | Use the [`Terraform v0.12 checklist`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-12#pre-upgrade-checklist){: external} command to detect and fix to be addressed by referring [v0.12 Upgrade Guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-12){: external} before upgrade to `v0.12`. {{site.data.keyword.bpshort}} deprecated `Terraform v0.11` and `Terraform v0.12`.|
-| `v0.12` | Use the [v0.13 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-13){: external} your configuration file. The {{site.data.keyword.bpshort}} deprecated `Terraform v0.12`.|
-| `v0.13` | To the `Terraform v0.14` upgrade, you must run the `terraform apply` with `Terraform v0.13` to complete its state format upgrades. If you get any errors, see the [v0.14 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-14){: external}.|
-| `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-1){: external} version and you must run the `terraform apply` with `Terraform v0.14`. If you get any errors, see the [v0.15 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-15){: external}.|
-| `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external} version, you must run the `terraform apply` with `terraform v0.15`. `Terraform v1.0` is a continuation of the `v0.15` series, hence `v1.0.0` and later are directly backward-compatible with an earlier version `Terraform v0.15.5`.|
+The in use version of Terraform for a Workspace can be updated via the {{site.data.keyword.bpshort}} Workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}.
+
+
+The workspace terraform version parameter is of the form `terraform_v1.1` or `terraform_v1.2`
+
+1. Select the workspace to be updated and verify that it is in `Normal` state and that a Plan operation does not generate any proposed resource changes. Save the `workspace_id` and note the region the workspace is hosted in. This is the prefix to the `workspace_id`. 
+2. Update the Workspace terraform version using the IBM Cloud CLI:
+   - Login to the IBM Cloud CLI with `ibmcloud login` 
+   - Set the CLI target region with `ibmcloud target -r <region>` to be the same as the workspace you are updating. 
+   - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens` 
+   - Copy the token data and insert in to the following command text, replacing the string `<token-data>`, set `<terraform_version>` to the required Terraform version and the `<workspace_id>`:  
+   - Execute the following `cURL` command: 
+    ```sh
+    curl --request PUT --url https://schematics.cloud.ibm.com/v1/workspaces/<workspace_id> -H  "Authorization: Bearer <token-data>" -d '{"template_data":[{"type":"<terraform_version>"}]}'
+    ```
+    {: pre}
+3. Verify in the Workspace settings page the TF version is now set to the desired version. 
+4. Run a Generate Plan operation against the workspace. Validate that the command runs successfully without error and no unexpected messages are logged. The Plan should result in no proposed changes to the resources.  
+5. Run a Apply Plan operation against the workspace. Validate that the command runs successfully without error and no unexpected messages are logged.
+6. You have now successfully upgraded. 
+
+
+## Upgrading the Terraform template version 0.x to 1.x
+{: #terraform-version-upgrade0x}
+
+At 0.x releases, Terraform version upgrade is a stepwise process, upgrading through each release. Upgrading does not support upgrading across multiple releases and must be performed, release by release. Some updates will require execution of Terraform `upgrade` commands to modify the config files also changes to the Terraform state file. These steps cannot be performed within {{site.data.keyword.bpshort}}. Workspace Terraform templates must be upgraded using a local copy of Terraform. Follow the steps below for upgrading the 0.x releases. 
+
+| Version |	Recommendation|
+| --- | --- |
+| `v0.12` | Review the [v0.13 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-13){: external} and follow the instructions [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-schematics-migrating-terraform-version#migrate-steps12). {{site.data.keyword.bpshort}} has deprecated `Terraform v0.12`.|
+| `v0.13` | For the `Terraform v0.14` upgrade, you must run `terraform apply` with `Terraform v0.14` to complete its state format upgrades. If you get any errors, see the [v0.14 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-14){: external}. Follow the instructions upgrade-13-to10|
+| `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-1){: external} version. Review the [v0.15 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-15){: external}.|
+| `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external} version. Review the [v1.0 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external}.|
 {: caption="Terraform versions list" caption-side="bottom"}
 
-## Upgrading `Terraform v0.12 to v0.13` in {{site.data.keyword.bpshort}} Workspace
-{: #migrate-steps}
+## Upgrading a Terraform v0.12 Workspace to v0.13 
+{: #migrate-steps12}
 
-Upgrading the {{site.data.keyword.bpshort}} Workspace to use the version of the Terraform, can be required to use the current features in Terraform. You must carefully review the [Terraform upgrade guide](https://developer.hashicorp.com/terraform/language/upgrade-guides) by using the next version. 
+Upgrading a `v0.12` Workspace to use the `v0.13` version of Terraform is a multi-step task. You must carefully review the [Terraform upgrade guide](https://developer.hashicorp.com/terraform/language/upgrade-guides) for the related version upgrade. 
 
 Use the following steps to upgrade to the current Terraform version in the {{site.data.keyword.bpshort}} Workspace.
 
 1. Upgrade the Terraform configuration files to use the newer syntax and semantics.
-2. Migrate the Terraform state file to be compatible with the newer version. {{site.data.keyword.bpshort}} does not support built in upgrade of the Terraform version. Therefore, you need to follow these steps.
+2. Migrate the Terraform state file to be compatible with the newer version. {{site.data.keyword.bpshort}} does not support built in modification the Terraform state file. Therefore, you need to follow these steps.
 
    1. Prepare the upgraded version of Terraform configuration files and [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds), in your local machine.
-   2. [Create the {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) with the new Terraform configuration files and Terraform state file.
+   2. [Create the new {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) with the new Terraform configuration files and Terraform state file.
    3. [Delete the older workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) without destroying the resources.
 
-The following are the detailed steps to upgrade:
+The following are the detailed steps to upgrade from 0.12 to 0.13:
 
-1. A prerequisites, check whether {{site.data.keyword.bpshort}} Workspaces is created, plan is generated, and applied a job for your resources by using `Terraform v0.12`. Check the Terraform configuration files and Terraform state file, are in a consistent state for `Terraform v0.12`.
-2. Download or clone the Git repository that is used by your `Terraform v0.12` {{site.data.keyword.bpshort}} Workspaces to your local machine.
-3. Change directory to your cloned repository and upgrade your repository to `Terraform v0.13` by running `Terraform v0.13upgrade` command. For more information, see [Upgrading to `Terraform v0.13` documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-13){: external}. The upgrade command generates a `versions.tf` file.
-4. Edit `versions.tf` file to deselect the source parameter and add `source = "IBM-Cloud/ibm"` as shown in the code block.
+1. Check whether your {{site.data.keyword.bpshort}} workspaces at `v0.12` has resources, the last apply was successful and the workspace is in `normal` state. Verify the Terraform configuration files and Terraform state file, are in a consistent state for `Terraform v0.12`.
+2. Download or clone the Git repository that is used by your `Terraform v0.12` {{site.data.keyword.bpshort}} workspace to your local machine.
+3. Install Terraform 0.13 on your local machine. 
+4. Change directory to your cloned repository and upgrade your config files to `Terraform v0.13` by running the `Terraform v0.13upgrade` command. For more information, see [Upgrading to `Terraform v0.13` documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-13){: external}. The upgrade command generates a `versions.tf` file with a `terraform` configuration block. 
+5. Edit the `versions.tf` file to set the source paramater to `source = "IBM-Cloud/ibm"` as shown in the code block.
 
     `versions.tf` file
 
@@ -87,64 +129,24 @@ The following are the detailed steps to upgrade:
     ```
     {: codeblock}
 
-5. Download the Terraform state file from the existing {{site.data.keyword.bpshort}} Workspace, by using [{{site.data.keyword.bpshort}} state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
+6. Download the Terraform state file from the existing {{site.data.keyword.bpshort}} Workspace, by using [{{site.data.keyword.bpshort}} state pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.
 
-    When, the workspace is created with the `tfstate` {{site.data.keyword.bpshort}} considers as a secure file. Also, you cannot pull the created `tfstate` file through UI. You need to use command line to [pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) the state file and [create workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+    When, the workspace is created with the `tfstate` {{site.data.keyword.bpshort}} considers it as a secure file. Also, you cannot pull the created `tfstate` file through UI. You need to use the command line to [pull](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) the state file and [create workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
     {: important}
+    
+    Copy the downloaded state file as `terraform.tfstate` into the Terraform execution folder. 
 
-6. Run the state replace provider command in command-line to update the Terraform version.
+7. Run the state replace provider command in on the command-line to update the IBM Cloud provider version in the state file. 
     ```sh
     terraform state replace-provider registry.terraform.io/-/ibm registry.terraform.io/ibm-cloud/ibm.
     ```
     {: pre}
 
-7. Verify that the updates are made to the `terraform.tfstate` file with Terraform version update from `0.12` to `>= 0.13` and provider that is updated as `registry.terraform.io/ibm-cloud/ibm`.
-8.	Push the upgraded `version.tf` to your Git repository.
-9.	Create the {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) through command-line from the updated Git repository.
-    
-    The Terraform files are present in Git repository, but the state file is present in your local file system.
-    {: note}
+8. Verify that the updates are made to the `terraform.tfstate` file with Terraform version update from `0.12` to `>= 0.13` and the provider that is updated as `registry.terraform.io/ibm-cloud/ibm`.
 
-10. Generate a [plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) and to view your workspace with the resources are now using the `Terraform v0.13`.
-11. [Optional] you can delete the {{site.data.keyword.bpshort}} Workspaces that points to `Terraform v0.12`. 
-
-    Do not destroy the resources that are used by your old workspace.
-    {: note}
-
-## Upgrading Terraform template from v0.12 to v0.13 
-{: #upgrade-12-to13}
-
-Use the following steps to upgrade from the `Terraform v0.12` to `Terraform v0.13`.
-{: shortdesc}
-
-Check that your Terraform template of the older version is provisioned without any errors before upgrade. For more information, see [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
-{: note}
-
-1. From the Terraform template `v0.12` Git repository, clone to a new GitHub repository.
-2. From the new GitHub working directory, run `terraform v0.13upgrade` from command-line. The upgrade command generates a `versions.tf` file.
-3. Edit `versions.tf` in the generated files, and add `source = "IBM-Cloud/ibm"` in the provider block as shown in the code block.
-    ```terraform
-      required_providers {
-      ibm = {
-        # TF-UPGRADE-TODO
-        #
-        # No source detected for this provider. You must add a source address
-        # in the following format:
-        #
-        source = "IBM-Cloud/ibm"
-        #
-        # For more information, see the provider source documentation:
-        #
-      }
-      }
-      required_version = ">= 0.13"
-    ```
-    {: codeblock}
-
-4. Push the `versions.tf` changes to the GitHub repository.
-5. Pull the state file from the `Terraform v0.12` workspace by running `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`.
-6. Copy the content of state pull result in `state.json` file.
-7. Create or update `workspace.json` as shown in the code block.
+9.	Push the upgraded TF config files and `version.tf` back to your Git repository.
+10. Copy the content of modified `terraform.tfstate` file to `state.json` file.
+11. Create or update a `workspace.json` file as shown in the code block.
 
     ```json
     {
@@ -167,76 +169,40 @@ Check that your Terraform template of the older version is provisioned without a
     ```
     {: codeblock}
 
-8. Run these commands through command-line
-   1. `ibmcloud schematics workspace new --file workspace.json --state state.json`.
-   2. `ibmcloud schematics workspace get --id  <workspace-id> --json`.
+12. Run these commands through command-line to create a new Terraform `v0.13` workspace 
+   -  `ibmcloud schematics workspace new --file workspace.json --state state.json`.
+   -  `ibmcloud schematics workspace get --id  <workspace-id> --json`.
         If your workspace status is not `inactive`, wait for few seconds and retry the command.
         {: note}
 
-   3. `ibmcloud schematics plan id <workspace id>`.
-   4. `ibmcloud schematics job get --id <job-id form plan> --json`.
+   - `ibmcloud schematics plan id <workspace id>`.
+   - `ibmcloud schematics job get --id <job-id form plan> --json`.
         If your workspace plan status is not `success`, wait for few seconds and retry the command.
         {: note}
    
-   5. `ibmcloud schematics apply --id <workspace id>`.
-   6. `ibmcloud schematics job get --id <job-id from apply> --json`.
+   - `ibmcloud schematics apply --id <workspace id>`.
+   - `ibmcloud schematics job get --id <job-id from apply> --json`.
 
-You completed the upgrade successfully. See [Terraform template from v0.13 to v0.14](#upgrade-13-to14) to upgrade from Terraform `v0.13` to `v0.14`.
+    
+13. [Optional] you can delete the {{site.data.keyword.bpshort}} workspace that uses `Terraform v0.12`. 
 
-## Upgrading Terraform template from v0.13 to v0.14 
-{: #upgrade-13-to14}
+    Do not destroy the resources that are used by your old workspace.
+    {: note}
 
-Use the following steps to upgrade from the `Terraform v0.13` to `Terraform v0.14`.
-{: shortdesc}
 
-Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, see [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
-{: note}
 
-1. From your Terraform template `v0.13` Git repository, clone to a new GitHub repository.
-2. Pull the state file from the Terraform `v0.13` workspace by running `ibmcloud schematics state pull --id <WORKSPACE_ID> --template <TEMPLATE_ID>`.
-3. Copy the content of state pull result in `state.json` file.
-4. Create or update `workspace.json` as shown in the code block.
 
-    ```json
-     {
-       "name": "gb",
-       "type": [
-           "terraform_v0.14"
-       ],
-       "description": "migration workspace",
-       "template_repo": {
-           "url": "https://github.com/xxxxxx/migration-testing"
-       },
-       "workspace_status" : {
-           "frozen": false
-       },
-       "template_data": [{
-           "folder": ".",
-           "type": "terraform_v0.14"
-       }]
-      }
-     ```
-     {: codeblock}
+## Upgrade Terraform template from `v0.13` and higher to `v1.0`
+{: #upgrade-13-to10}
 
-5. Run these commands through command-line
-   1. `ibmcloud schematics workspace new --file workspace.json --state state.json`.
-   2. `ibmcloud schematics workspace get --id  <workspace-id> --json`.
-        If your workspace status is not `inactive`, wait for few seconds and retry the command.
-        {: note}
+Versions 0.13 through 0.15 require a stepwise upgrade, 0.13 to 0.14, 0.14 to 0.15, 0.15 to 1.0.  
 
-   3. `ibmcloud schematics plan id <workspace id>`.
-   4. `ibmcloud schematics job get --id <job-id form plan> --json`.
-        If your workspace plan status is not `success`, wait for few seconds and retry the command.
-        {: note}
-   
-   5. `ibmcloud schematics apply --id <workspace id>`.
-   6. `ibmcloud schematics job get --id <job-id from apply> --json`.
+The process is the same for each version step. It is mandatory that a Terraform Apply is run after each version change. This updates the Terraform state file with schema changes related to that version and that version only. After successfully upgrading a single version, the next version update can be performed.   
 
-## Upgrade Terraform template from `v0.14` and higher to `v1.0`
-{: #upgrade-14-to10}
+1. Read the Terraform [upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides){: external} for the release and implement any required config changes.  
+2. Follow the process outlined in [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process) to upgrade a single version to the target version.  
+3. Verify in the Workspace settings page the TF version is now set to the desired version. 
+4. Run a Generate Plan operation against the workspace. Validate that the command runs successfully without error and no unexpected messages are logged. The Plan should result in no proposed changes to the resources.  
+5. Run a Apply Plan operation against the workspace. This step is **mandatory** to perform a Terraform state file update. Validate that the command runs successfully without error and no unexpected messages are logged.
+6. You have now successfully upgraded a single version step. 
 
-You can upgrade the [`Terraform v0.14`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-14){: external} and [`Terraform v0.15`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-15){: external} to `Terraform v1.0`, see [`Terraform v1.0` upgrade process](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external}.
-{: shortdesc}
-
-Check whether your Terraform template of the older version is provisioned perfectly without any errors before upgrade. For more information, see [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
-{: note}

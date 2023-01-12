@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-01-10"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -16,22 +16,29 @@ subcollection: schematics
 # Using environment variables with workspaces
 {: #set-parallelism}
 
-Terraform uses various environment variables to customize different aspects of its behavior. These environment variables are used to increase the output verbosity for debugging or rarely used in runtime. 
+Terraform uses various environment variables to customize different aspects of its behavior. For example these environment variables are used to increase the output verbosity for debugging or to set rarely used in runtime parameters. 
 
-Parallelism is one of the environment variable with a number flag range between `1 and 256`, the default value is `10`. Parallelism is used to fix infrastructure providers that error on concurrent operations or use during non-standard rate limiting, when you execute `terraform plan` and `terraform apply` at runtime.
+Parallelism is one of the environment variable with a number flag range between `1 and 256`, the default value is `10`. Parallelism is used to configure infrastructure providers that error on concurrent operations or use during non-standard rate limiting, when you execute `terraform plan` and `terraform apply` at runtime.
 
-Now {{site.data.keyword.bplong}} supports setting a custom value for parallelism.
 {: shortdesc}
 
 ## Usage
 {: #parelleism-usage}
 
-You can pass Terraform command-line arguments `TF_CLI_ARGS` as an environment variables with the specific name such as `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} Workspaces for a customized experience. Terraform reads these environment variables and apply parallelism at runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}. 
 
-### Example using parallelism
+### Passing TF_CLI_ARGS
+You can pass Terraform command-line arguments `TF_CLI_ARGS` as environment variables, like `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} Workspaces to customize operations. 
+
+Terraform reads these environment variables and applies them runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}. 
+
+### Example setting parallelism or TF_LOGS 
 {: #parallelism-example}
 
-The code block is the sample payload for creating workspace with parallelism passed as an environment variable.
+The examples shown here can be used to set any environment variable to be passed to Terraform. 
+
+#### Setting parallelism at create time
+{: #parallelism-example-create}
+The code block is the sample payload for creating workspace with the Schematics [Create API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace){: external} with parallelism passed as an environment variable.
 
 ```json
 {
@@ -71,7 +78,10 @@ The code block is the sample payload for creating workspace with parallelism pas
 ```
 {: codeblock}
 
-A sample `env_values` block in the payload to update environment variable by using variable update API. For more information, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs) API.
+#### Setting parallelism after create
+{: #parallelism-example-update}
+
+A sample `env_values` block in the payload to update environment variables using the Schematics Workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}. For a more detailed example, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs){: external} API.
 
 ```json
 "env_values": [
@@ -91,7 +101,10 @@ A sample `env_values` block in the payload to update environment variable by usi
 ```
 {: codeblock}
 
-For content catalog Terraform workspaces, you can pass a special variable `TF_PARALLELISM` in `tf_values` to set parallelism.
+#### Setting parallelism for Catalog users
+{: #parallelism-example-catalog}
+
+For IBM Catalog generated Terraform workspaces, you can pass a special variable `TF_PARALLELISM` in `tf_values` to set parallelism.
 
 A sample `tf_values` block in the create payload.
 
@@ -105,7 +118,7 @@ A sample `tf_values` block in the create payload.
 ```
 {: codeblock}
 
-## List of environment variables
+## List of Terraform environment variables
 {: #list-special-env-vars}
 
 {{site.data.keyword.bplong_notm}} supports following environment variables for debugging purpose. For more information about special environment variables, see [Environment variables](https://developer.hashicorp.com/terraform/cli/config/environment-variables). 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-01-10"
 
 keywords: schematics blueprints, reusable, scaling, large, large-scale, reuse, modules
 
@@ -56,11 +56,16 @@ The solution is to externalize the dependencies and use orchestration.
 ## Orchestration and modules
 {: #blueprint-scaling-orchestration}
 
-The alternative to data sources, is to make the passing of resource information between environments and workspaces explicit. Resource dependencies between workspaces are externalized at the workspace level. Here an orchestration framework performs dependency management, determining execution order and the passing of resource data between workspaces. This is the approach to scaling adopted by open source solutions like [Terragrunt](https://terragrunt.gruntwork.io/){: external) and other IaC automation frameworks including {{site.data.keyword.bpshort}} Blueprints.     
+The alternative to data sources, is to make the passing of resource information between environments and workspaces explicit. Resource dependencies between workspaces are externalized at the workspace level. Here an orchestration framework performs dependency management, determining execution order and the passing of resource data between workspaces. This is the approach to scaling adopted by open source solutions like [Terragrunt](https://terragrunt.gruntwork.io/){: external) and other IaC automation frameworks, including {{site.data.keyword.bpshort}} Blueprints.     
 
 {{site.data.keyword.bpshort}} Blueprints uses an orchestration framework to enable scaling that allows complex infrastructures to composed from smaller deployable modules. The framework allows a group of discrete modular environments to be deployed and managed by a user as a whole. A blueprint template defines the composition and structure of the larger solution environment by defining dependencies between modules and deployed modular environments. The modules specify their dependencies as inputs, that are satisfied at execution time by the orchestrator.  
 
-This approach to module composition by {{site.data.keyword.bpshort}} Blueprints builds on the [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines){: external}. These guidelines support composition though well defined module input and output definitions for passing resource dependency data that are compatible across modules. The {{site.data.keyword.IBM_notm}} Cloud reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry adhere to these guidelines to support composition. 
+This design principle for clearly defined interfaces between IaC modules follows the standard programming paradigm for reusable modules. The use of data-sources is not encouraged with blueprints as this exposes the internal module implementation and creates implementation specific dependencies between modules. Dependencies which are difficult to manage using semantic versioning.     
+
+The blueprint approach to module composition by {{site.data.keyword.bpshort}} Blueprints builds on the [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines){: external}. These guidelines support composition though well defined module input and output definitions for passing resource dependency data that are compatible across modules. The {{site.data.keyword.IBM_notm}} Cloud reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry adhere to these guidelines to support composition. 
+
+
+
 
 The use of blueprint templates to compose and deploy large-scale environments from modules is discussed in more detail in these sections:
 - [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates)

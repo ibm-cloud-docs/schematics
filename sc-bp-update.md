@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-10"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -23,7 +23,7 @@ Maintaining a cloud environment is about managing continual change. Cloud enviro
 
 Change occurs for many reasons:
 - The {{site.data.keyword.cloud}} platform is constantly adding features, and depreciating end-of-life services. It also maintains the currency of services, for example {{site.data.keyword.containerlong}} and the databases {{site.data.keyword.databases-for-redis_full}} and {{site.data.keyword.databases-for-mongodb_full}} continually move to new versions. 
-- Alongside, the open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with the new versions of Terraform and Helm, and the supporting Terraform providers.
+- Alongside, the open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with new versions of Terraform and Helm, and the supporting Terraform providers.
 - As the platform evolves, {{site.data.keyword.IBM}} authored automation modules are refreshed to support new service features, maintain currency and to address evolving security compliance requirements.
 - Changes are also expected in the application environment to reflect new user requirements, scaling up or down, rotation of API keys, certificates and more. 
 

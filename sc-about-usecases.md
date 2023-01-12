@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-01-10"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -37,7 +37,7 @@ To get started with infrastructure deployment in {{site.data.keyword.bpshort}}, 
 
 [Terraform](https://www.terraform.io/){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using a high-level scripting language. Your specification is stored in a Terraform configuration file. The complexity of using `APIs`, provisioning, and managing your cloud resources is removed from the user. The cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider. And what `APIs` to invoke with a certain cloud resource? IBM's plug-in is called the [{{site.data.keyword.terraform-provider_full_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 
-To use the capabilities of the {{site.data.keyword.terraform-provider_full_notm}}, you create a {{site.data.keyword.bpshort}} Workspaces that points to the Terraform configuration files that you want to provision. The plug-in analyzes the resources that you specified and determines the order in which these resources including any dependencies that must be provisioned. Review the following image for the detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} Workspaces. 
+To use the capabilities of the {{site.data.keyword.terraform-provider_full_notm}}, you create a workspace that points to the Terraform configuration files that you want to provision. The plug-in analyzes the resources that you specified and determines the order in which these resources including any dependencies that must be provisioned. Review the following image for the detailed information about how to run Terraform configuration files with {{site.data.keyword.bpshort}} Workspaces. 
 
 ![Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform](images/schematics_flow.png){: caption="Figure 1. Provisioning {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} and Terraform" caption-side="bottom"}
 
