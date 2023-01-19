@@ -879,9 +879,9 @@ subcollection: schematics
 
     * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#creating-environments-using-relaxed-versioning)
 
-    * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#updating-an-un-versioned-environment)
+    * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#bp-un-versioned-env)
 
-    * [Migrating to a versioned configuration](/docs/schematics?topic=schematics-blueprint-versioning#migrating-to-a-versioned-configuration)
+    * [Migrating to a versioned configuration](/docs/schematics?topic=schematics-blueprint-versioning#bp-versioned-env)
 
 * [Explicit versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-strict)
 
