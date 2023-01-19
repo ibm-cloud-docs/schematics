@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-18"
+lastupdated: "2023-01-19"
 
 keywords: schematics
 subcollection: schematics
@@ -1051,7 +1051,7 @@ subcollection: schematics
 
 [Displaying workspace](/docs/schematics?topic=schematics-sch-display-wks#sch-display-wks)
 
-* [Before you begin](/docs/schematics?topic=schematics-sch-display-wks#prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-sch-display-wks#display-prerequisites)
 
 * [Displaying the workspace through UI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-ui)
 
@@ -1775,7 +1775,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
 
-    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
+    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
 
 * [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 

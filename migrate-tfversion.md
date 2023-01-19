@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-10"
+lastupdated: "2023-01-19"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -156,7 +156,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
        ],
        "description": "migration workspace",
        "template_repo": {
-           "url": "https://github.com/xxxxxx/migration-testing"
+           "url": "https://github.com/test/migration-testingrepo"
        },
        "workspace_status" : {
            "frozen": false
