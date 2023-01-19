@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-19"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -49,6 +49,8 @@ source:
 {: pre}
 
 ### Updating an un-versioned environment
+{: #bp-un-versioned-env}
+
 Blueprints defaults to always pull the current (latest) template, inputs, or modules on an update operation if no version information is specified in the blueprint config at create time. When `latest` is in effect, {{site.data.keyword.bpshort}} identifies if the blueprint template, or module Git repositories, or input files are updated, and runs a `pull latest` to update the blueprint configuration. 
 
 ```sh
@@ -58,6 +60,7 @@ ibmcloud schematics blueprint update -id <blueprint_ID> 
 
 
 ### Migrating to a versioned configuration
+{: #bp-versioned-env}
 
 An un-versioned environment can be updated to versioned. 
 
@@ -127,4 +130,4 @@ Similarly, if explicit input file version is used with release tags for each inp
 ```sh
 ibmcloud schematics blueprint update --id <blueprint_ID> --input-git-release x.y.z  
 ```
-{: pre} 
+{: pre}

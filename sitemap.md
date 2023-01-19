@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-18"
+lastupdated: "2023-01-19"
 
 keywords: schematics
 subcollection: schematics
@@ -879,9 +879,9 @@ subcollection: schematics
 
     * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#creating-environments-using-relaxed-versioning)
 
-    * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#updating-an-un-versioned-environment)
+    * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#bp-un-versioned-env)
 
-    * [Migrating to a versioned configuration](/docs/schematics?topic=schematics-blueprint-versioning#migrating-to-a-versioned-configuration)
+    * [Migrating to a versioned configuration](/docs/schematics?topic=schematics-blueprint-versioning#bp-versioned-env)
 
 * [Explicit versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-strict)
 
@@ -1038,61 +1038,6 @@ subcollection: schematics
 [Using environment variables with blueprints](/docs/schematics?topic=schematics-bp-env-vars#bp-env-vars)
 
 * [Blueprints usage](/docs/schematics?topic=schematics-bp-env-vars#usage)
-
-
-## Managing Workspaces New
-{: #sitemap_managing_workspaces_new}
-
-
-
-### Creating workspace
-{: #sitemap_creating_workspace}
-
-
-[Displaying workspace](/docs/schematics?topic=schematics-sch-display-wks#sch-display-wks)
-
-* [Before you begin](/docs/schematics?topic=schematics-sch-display-wks#prerequisites)
-
-* [Displaying the workspace through UI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-ui)
-
-    * [Verifying workspace display](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-ui)
-
-* [Displaying the workspace through CLI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-cli)
-
-    * [Verifying workspace list](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-cli)
-
-* [Displaying the workspace list through API](/docs/schematics?topic=schematics-sch-display-wks#list-wks-api)
-
-    * [verifying workspace update:](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-api)
-
-* [Displaying the workspace list with Terraform](/docs/schematics?topic=schematics-sch-display-wks#list-wks-terraform)
-
-* [Next steps](/docs/schematics?topic=schematics-sch-display-wks#sch-list-wks-nextsteps)
-
-
-### Managing workspace resources
-{: #sitemap_managing_workspace_resources}
-
-
-[Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
-
-* [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
-
-* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
-
-* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
-
-    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
-
-* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
-
-    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
-
-* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
-
-[Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
-
-* [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
 
 
 ## Managing Workspaces
@@ -1775,7 +1720,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
 
-    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
+    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
 
 * [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 

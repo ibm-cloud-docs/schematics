@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-01-19"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -578,7 +578,7 @@ ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH
 {: pre}
 
 ### `ibmcloud schematics workspace get with Agent`
-{: #schematics-agents-get}
+{: #schematics-agent-get}
 
 Retrieve the details of an existing workspace, including the values of all input variables and {{site.data.keyword.bpshort}} Agent.	
 {: shortdesc}

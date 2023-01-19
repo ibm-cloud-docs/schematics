@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-10"
+lastupdated: "2023-01-19"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -61,11 +61,13 @@ The workspace terraform version parameter is of the form `terraform_v1.1` or `te
    - Set the CLI target region with `ibmcloud target -r <region>` to be the same as the workspace you are updating. 
    - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens` 
    - Copy the token data and insert in to the following command text, replacing the string `<token-data>`, set `<terraform_version>` to the required Terraform version and the `<workspace_id>`:  
-   - Execute the following `cURL` command: 
+   - Execute the following `cURL` command:
+   
     ```sh
     curl --request PUT --url https://schematics.cloud.ibm.com/v1/workspaces/<workspace_id> -H  "Authorization: Bearer <token-data>" -d '{"template_data":[{"type":"<terraform_version>"}]}'
     ```
     {: pre}
+
 3. Verify in the Workspace settings page the TF version is now set to the desired version. 
 4. Run a Generate Plan operation against the workspace. Validate that the command runs successfully without error and no unexpected messages are logged. The Plan should result in no proposed changes to the resources.  
 5. Run a Apply Plan operation against the workspace. Validate that the command runs successfully without error and no unexpected messages are logged.
@@ -156,7 +158,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
        ],
        "description": "migration workspace",
        "template_repo": {
-           "url": "https://github.com/xxxxxx/migration-testing"
+           "url": "https://github.com/test/migration-testingrepo"
        },
        "workspace_status" : {
            "frozen": false
