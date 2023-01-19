@@ -1040,61 +1040,6 @@ subcollection: schematics
 * [Blueprints usage](/docs/schematics?topic=schematics-bp-env-vars#usage)
 
 
-## Managing Workspaces New
-{: #sitemap_managing_workspaces_new}
-
-
-
-### Creating workspace
-{: #sitemap_creating_workspace}
-
-
-[Displaying workspace](/docs/schematics?topic=schematics-sch-display-wks#sch-display-wks)
-
-* [Before you begin](/docs/schematics?topic=schematics-sch-display-wks#display-prerequisites)
-
-* [Displaying the workspace through UI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-ui)
-
-    * [Verifying workspace display](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-ui)
-
-* [Displaying the workspace through CLI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-cli)
-
-    * [Verifying workspace list](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-cli)
-
-* [Displaying the workspace list through API](/docs/schematics?topic=schematics-sch-display-wks#list-wks-api)
-
-    * [verifying workspace update:](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-api)
-
-* [Displaying the workspace list with Terraform](/docs/schematics?topic=schematics-sch-display-wks#list-wks-terraform)
-
-* [Next steps](/docs/schematics?topic=schematics-sch-display-wks#sch-list-wks-nextsteps)
-
-
-### Managing workspace resources
-{: #sitemap_managing_workspace_resources}
-
-
-[Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
-
-* [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
-
-* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
-
-* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
-
-    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
-
-* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
-
-    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
-
-* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
-
-[Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
-
-* [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
-
-
 ## Managing Workspaces
 {: #sitemap_managing_workspaces}
 
