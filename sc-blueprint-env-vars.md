@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-01-25"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -24,8 +24,3 @@ Refer to the section [Using environment variables with workspaces](/docs/schemat
 {: #usage}
 
 When using Blueprints, environment variables to modify Terraform and Ansible execution are configured using the `settings` parameters in the blueprint YAML template. Refer to the [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-settings) specification for details on setting env-vars at the global blueprint level or the module level. 
-
-
-
-
-
