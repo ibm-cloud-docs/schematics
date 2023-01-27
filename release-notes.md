@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-01-27"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -17,8 +17,10 @@ content-type: release-note
 # Release notes
 {: #schematics-relnotes}
 
-Use the release notes to learn about the current changes to the {{site.data.keyword.bpshort}} documentation that are grouped by month.
+Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
+
+
 
 ## December 2022
 {: #schematics-dec22}
