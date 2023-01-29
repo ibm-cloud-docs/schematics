@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-01-25"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -62,7 +62,7 @@ The workspace terraform version parameter is of the form `terraform_v1.1` or `te
    - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens` 
    - Copy the token data and insert in to the following command text, replacing the string `<token-data>`, set `<terraform_version>` to the required Terraform version and the `<workspace_id>`:  
    - Execute the following `cURL` command:
-   
+
     ```sh
     curl --request PUT --url https://schematics.cloud.ibm.com/v1/workspaces/<workspace_id> -H  "Authorization: Bearer <token-data>" -d '{"template_data":[{"type":"<terraform_version>"}]}'
     ```
@@ -158,7 +158,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
        ],
        "description": "migration workspace",
        "template_repo": {
-           "url": "https://github.com/test/migration-testingrepo"
+           "url": "<Provide your Git repository link>"
        },
        "workspace_status" : {
            "frozen": false
@@ -170,29 +170,26 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
      }
     ```
     {: codeblock}
-
+    
 12. Run these commands through command-line to create a new Terraform `v0.13` workspace 
-   -  `ibmcloud schematics workspace new --file workspace.json --state state.json`.
-   -  `ibmcloud schematics workspace get --id  <workspace-id> --json`.
+    -  `ibmcloud schematics workspace new --file workspace.json --state state.json`.
+    -  `ibmcloud schematics workspace get --id  <workspace-id> --json`.
         If your workspace status is not `inactive`, wait for few seconds and retry the command.
         {: note}
 
-   - `ibmcloud schematics plan id <workspace id>`.
-   - `ibmcloud schematics job get --id <job-id form plan> --json`.
+    - `ibmcloud schematics plan id <workspace id>`.
+    - `ibmcloud schematics job get --id <job-id form plan> --json`.
         If your workspace plan status is not `success`, wait for few seconds and retry the command.
         {: note}
    
-   - `ibmcloud schematics apply --id <workspace id>`.
-   - `ibmcloud schematics job get --id <job-id from apply> --json`.
+    - `ibmcloud schematics apply --id <workspace id>`.
+    - `ibmcloud schematics job get --id <job-id from apply> --json`.
 
     
 13. [Optional] you can delete the {{site.data.keyword.bpshort}} workspace that uses `Terraform v0.12`. 
 
     Do not destroy the resources that are used by your old workspace.
     {: note}
-
-
-
 
 ## Upgrade Terraform template from `v0.13` and higher to `v1.0`
 {: #upgrade-13-to10}
