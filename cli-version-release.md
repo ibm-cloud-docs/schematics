@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-19"
+  years: 2017, 2023
+lastupdated: "2023-01-31"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,6 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.12.6 | 30 Jan 2023 | Enhanced complex input support through blueprint `yaml` file. Fixes related to blueprint status output in the blueprint list table, index out of range for workspace action output, refresh token issue for long running `blueprint jobs`, and spinner panic fixes in `get blueprint`. |
 | 1.12.5 | 18 Dec 2022 | Blueprint subcommand usage, revert to original usage of `blueprint create`, `blueprint apply` etc. Support for specifying complex inputs via a local YAML file using `-input-file` option.  
 | 1.12.3 | 18 Nov 2022 |  Fixed blueprint subcommand usage, support `source type` in the blueprint list table. |
 | 1.12.3 | 3 Nov 2022 |  Enhanced blueprint commands, CLI with the latest SDK update, and the workspace action command update. |

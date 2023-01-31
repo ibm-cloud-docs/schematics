@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-27"
+lastupdated: "2023-01-31"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -19,6 +19,20 @@ content-type: release-note
 
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
+
+
+## January 2023
+{: #schematics-jan23}
+
+Review the release notes for January 2023.
+{: shortdesc}
+
+### 30 January 2023
+{: #schematics-jan3023}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.6](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 
 
