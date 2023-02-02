@@ -33,19 +33,13 @@
       "are multiple Terraform provider version supported",
       "what is supported terraform version"
     ],
-    "createworkspace-generate-tokens": [
-      "how to create IAM access token for Schematics",
-      "how to generate IAM access in Schematics",
-      "what tool to acess Schematics",
-      "create IAM access token in Schematics",
-      "create API keys for Schematics",
-      "where to get API key in Schematics",
+    "workspace-auth": [
+      "IAM access in Schematics",
       "need IAM access for Schematics",
-      "How to get a new IAM acess token",
-      "looking for API key for Schematics",
-      "API key to create a new Schematics access token",
-      "generate IAM access token when client id bx is used",
-      "IAM access in Schematics when client id bx"
+      "Schematics access roles and permissions",
+      "what IAM access policy to use in Schematics",
+      "What IAM policies are needed for schematics",
+      "what permissions you need to work with Schematics"
     ],
     "createworkspace-authentication-error": [
       "Authentication error in Schematics",

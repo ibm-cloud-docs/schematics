@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-02-02"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1987,8 +1987,9 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that you want to scan. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
+| `--var-file` or `-vf`| Optional |  Path to variables definition file that are ending with `.tfvars` or `.json`. This flag can be used multiple times. |
+| `--json` or `-j` | Deprecated | Prints the output in the JSON format. Use `--output` JSON instead.|
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
-| `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} output flags" caption-side="top"}
 
 Example
