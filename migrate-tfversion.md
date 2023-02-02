@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-25"
+lastupdated: "2023-02-02"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -150,27 +150,27 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
 10. Copy the content of modified `terraform.tfstate` file to `state.json` file.
 11. Create or update a `workspace.json` file as shown in the code block.
 
-    ```json
-    {
-       "name": "gb",
-       "type": [
-           "terraform_v0.13"
-       ],
-       "description": "migration workspace",
-       "template_repo": {
-           "url": "<Provide your Git repository link>"
-       },
-       "workspace_status" : {
-           "frozen": false
-       },
-       "template_data": [{
-           "folder": ".",
-           "type": "terraform_v0.13"
-       }]
-     }
-    ```
-    {: codeblock}
-    
+        ```json
+        {
+        "name": "gb",
+        "type": [
+            "terraform_v0.13"
+        ],
+        "description": "migration workspace",
+        "template_repo": {
+            "url": "Provide your Git repository link"
+        },
+        "workspace_status" : {
+            "frozen": false
+        },
+        "template_data": [{
+            "folder": ".",
+            "type": "terraform_v0.13"
+        }]
+        }
+        ```
+        {: codeblock}
+
 12. Run these commands through command-line to create a new Terraform `v0.13` workspace 
     -  `ibmcloud schematics workspace new --file workspace.json --state state.json`.
     -  `ibmcloud schematics workspace get --id  <workspace-id> --json`.
@@ -204,4 +204,3 @@ The process is the same for each version step. It is mandatory that a Terraform 
 4. Run a Generate Plan operation against the workspace. Validate that the command runs successfully without error and no unexpected messages are logged. The Plan should result in no proposed changes to the resources.  
 5. Run a Apply Plan operation against the workspace. This step is **mandatory** to perform a Terraform state file update. Validate that the command runs successfully without error and no unexpected messages are logged.
 6. You have now successfully upgraded a single version step. 
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-02-02"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -186,7 +186,7 @@ Type: Any valid Terraform variable type
 
 Optional - mutually exclusive with the default key
 
-The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When no value keyword is specified, the value is sourced from the blueprint config inputs and input file at run time. Review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-input-precedence) to understand input processing and sourcing of inputs.  
+The value keyword is only used where it is desired to define a static value to be used by the template. It is equivalent to specifying a local variable. When no value keyword is specified, the value is sourced from the blueprint config inputs and input file at run time. Review the section on [input precedence](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-input-precedence) to understand input processing and sourcing of inputs.
 
 Example of a statically defined local value 
 ```yaml
