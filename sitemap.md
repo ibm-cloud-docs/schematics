@@ -143,7 +143,7 @@ subcollection: schematics
 
 * [Usage of an Agent](/docs/schematics?topic=schematics-agents-intro#agent-usage)
 
-* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#agents-architecture)
+* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#about-agents-architecture)
 
 * [Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-augmenting)
 
