@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-31"
+lastupdated: "2023-02-03"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -34,7 +34,7 @@ The following are the primary drivers to create the {{site.data.keyword.bplong_n
 - Use your software, and versions in conjunction with automation engine provided by the {{site.data.keyword.bpshort}} runtime.
 
 ## {{site.data.keyword.bpshort}} Agent architecture
-{: #agents-architecture}
+{: #about-agents-architecture}
 
 The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and how it functions in {{site.data.keyword.bpshort}}.
 
