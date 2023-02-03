@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-31"
+lastupdated: "2023-02-03"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,6 +20,18 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
 
+## February 2023
+{: #schematics-feb23}
+
+Review the release notes for February 2023.
+{: shortdesc}
+
+### 3 February 2023
+{: #schematics-feb0323}
+{: release-note}
+
+Enhancement in {{site.data.keyword.bpshort}} protect its services with context-based restrictions
+:   {{site.data.keyword.bpshort}} protects its services with context-based restrictions through network zones and network rules. For more information, see [Protecting {{site.data.keyword.bpshort}} services with context-based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
 
 ## January 2023
 {: #schematics-jan23}

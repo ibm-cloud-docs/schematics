@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-21"
+  years: 2017, 2023
+lastupdated: "2023-02-03"
 
 keywords: schematics actions, actions, schematics
 
@@ -33,7 +33,7 @@ Ansible does not use agents or a custom security infrastructure that must be pre
 
 ![Configuration Management with Actions and Ansible](/images/new/sc-actions.svg){: caption="Configuration Management with Actions and Ansible" caption-side="bottom"}
 
-Using your supplied playbooks, {{site.data.keyword.bpshort}} runs the Ansible engine to execute your playbook. Ansible, tasks, roles and playbooks can perform provisioning tasks via the IBM Cloud APIs via HTTPS, or configuration of compute instances (virtual servers) using SSH. Server configuration is performed via SSH over the public network. To maintain security for your environment, use of a bastion host to provide a secure gateway to your compute infrastructure is strongly encouraged.     
+Using your supplied playbooks, {{site.data.keyword.bpshort}} runs the Ansible engine to execute your playbook. Ansible, tasks, roles and playbooks can perform provisioning tasks via the {{site.data.keyword.cloud_notm}} APIs via HTTPS, or configuration of compute instances (virtual servers) using SSH. Server configuration is performed via SSH over the public network. To maintain security for your environment, use of a bastion host to provide a secure gateway to your compute infrastructure is strongly encouraged.     
 
 It is your responsibility as a user to ensure suitable network policies are in place for their cloud environment to allow {{site.data.keyword.bpshort}} to connect via SSH to your environment. 
 {: note}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-02-03"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -25,7 +25,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 {: #data-storage}
 
 
-All data, user inputs and the data generated at runtime during execution of Terraform or Ansible automation code is stored in {{site.data.keyword.cos_full_notm}}. Data is encrypted at rest with AES GCM 256 encryption using an [envelope encryption](/docs/key-protect?topic=key-protect-envelope-encryption) technique with IBM Cloud managed root keys. {{site.data.keyword.keymanagementserviceshort}} managed root keys are secured by `FIPS 140-2 Level 3` certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. 
+All data, user inputs and the data generated at runtime during execution of Terraform or Ansible automation code is stored in {{site.data.keyword.cos_full_notm}}. Data is encrypted at rest with AES GCM 256 encryption using an [envelope encryption](/docs/key-protect?topic=key-protect-envelope-encryption) technique with {{site.data.keyword.cloud_notm}} managed root keys. {{site.data.keyword.keymanagementserviceshort}} managed root keys are secured by `FIPS 140-2 Level 3` certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}. 
 
 {{site.data.keyword.bpshort}} supports three types of root key management:
 

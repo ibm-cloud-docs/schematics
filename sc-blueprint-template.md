@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-02-03"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -161,7 +161,7 @@ Templates support the use of both Terraform [root modules](https://developer.has
 3. outputs
 {: shortdesc} 
 
-Terraform root modules (configs and templates) with provider blocks can be used directly with the parameters described above. Terraform child modules require the addition of an [injector block](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection) to specify an IBM Cloud provider block. 
+Terraform root modules (configs and templates) with provider blocks can be used directly with the parameters described above. Terraform child modules require the addition of an [injector block](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection) to specify an {{site.data.keyword.cloud_notm}} provider block. 
 
 #### Module Source
 {: #blueprint-module-source}

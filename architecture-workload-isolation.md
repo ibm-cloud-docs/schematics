@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-02-03"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
@@ -27,7 +27,7 @@ The following {{site.data.keyword.bpshort}} architecture image depicts:
 - Main {{site.data.keyword.bpshort}} components.
 - The interaction between service components.
 - Key Management services used. 
-- Usage of IBM Cloud observability services.
+- Usage of {{site.data.keyword.cloud}} observability services.
 - The role of runtime jobs to interact with {{site.data.keyword.cloud_notm}} `APIs`, private cloud such as `vSphere`, `Kubernetes`, and other public cloud providers such as `AWS`, `Google`, so on.
 {: shortdesc}
 

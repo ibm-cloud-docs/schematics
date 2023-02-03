@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-10"
+lastupdated: "2023-02-03"
 
 keywords: schematics blueprints, reusable, scaling, large, large-scale, reuse, modules
 
@@ -36,7 +36,7 @@ The two approaches commonly employed of breaking large architectures down into s
 - Using an orchestration framework like the open-source [Terragrunt](https://terragrunt.gruntwork.io/){: external) tool to manage the deployment and dependency management of linked Terraform workspaces. 
 
 
-{{site.data.keyword.bpshort}} Blueprints takes the orchestration approach to scaling environments. This builds on the IaC best practice of modular architectures and the reusable modules in the IBM Cloud module library. The benefits and challenges of these two approaches to scaling are discussed in the following sections. 
+{{site.data.keyword.bpshort}} Blueprints takes the orchestration approach to scaling environments. This builds on the IaC best practice of modular architectures and the reusable modules in the {{site.data.keyword.cloud_notm}} module library. The benefits and challenges of these two approaches to scaling are discussed in the following sections. 
 
 
 ## Remote state data sources
