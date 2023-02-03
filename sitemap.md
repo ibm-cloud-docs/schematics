@@ -349,7 +349,7 @@ subcollection: schematics
 
     * [3 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0323)
 
-        * Enhancement in {{site.data.keyword.bpshort}} protect its services with context-based restrictions
+        * Enhancement in {{site.data.keyword.bpshort}} to protect its services with context-based restrictions
 
 * [January 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan23)
 
