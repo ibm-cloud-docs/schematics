@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-02-03"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -50,7 +50,7 @@ These features are illustrated under the four headings below.
 
 {{site.data.keyword.bpshort}} Blueprints complements Terraform with IaC based environment management capabilities:
 
-- [Modular composition](/docs/schematics?topic=schematics-blueprint-terraform): Build infrastructure architectures from an eco-system of reusable IBM Cloud automation modules written in Terraform
+- [Modular composition](/docs/schematics?topic=schematics-blueprint-terraform): Build infrastructure architectures from an eco-system of reusable {{site.data.keyword.cloud_notm}} automation modules written in Terraform
 - [Scalability](/docs/schematics?topic=schematics-blueprint-scaling): Scale environments by linking discrete modular environments as the layers and components of large and complex application architectures using dependencies.
 - [Reusability](/docs/schematics?topic=schematics-blueprint-reuse): Share and reuse templates and modules across environments, pipelines and teams     
 - [Lifecycle](/docs/schematics?topic=schematics-work-with-blueprints): Manage environments cradle-to-grave, from initial creation, through maintenance and ops to final decommissioning. 

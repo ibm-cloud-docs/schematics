@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-02-03"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -15,11 +15,11 @@ subcollection: schematics
 # Deleting {{site.data.keyword.bpshort}} data
 {: #delete-schematics-data-intro}
 
-{{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in IBM Cloud Object Storage. This data-at-rest is encrypted using AES GCM 256 with an envelope encryption technique. As the IBM Cloud account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described. 
+{{site.data.keyword.bplong}} stores your data in a highly available and secure environment. All your data such as automation code, input configuration data, input credentials, and the runtime data are stored in {{site.data.keyword.cos_short}}. This data-at-rest is encrypted using AES GCM 256 with an envelope encryption technique. As the {{site.data.keyword.cloud_notm}} account owner, you can control access to the {{site.data.keyword.bplong}} objects in your account. You can choose to delete your data, by using the {{site.data.keyword.bpshort}} API, UI, or CLI as described. 
 
-When you delete these {{site.data.keyword.bpshort}} objects, the corresponding data in IBM Cloud Object Storage is marked for deletion. The soft delete option enable you to recover the {{site.data.keyword.bpshort}} data by raising a [support ticket](/docs/schematics?topic=schematics-schematics-help). Further, your data will automatically be purged after 7 days of soft delete.  
+When you delete these {{site.data.keyword.bpshort}} objects, the corresponding data in {{site.data.keyword.cos_short}} is marked for deletion. The soft delete option enable you to recover the {{site.data.keyword.bpshort}} data by raising a [support ticket](/docs/schematics?topic=schematics-schematics-help). Further, your data will automatically be purged after 7 days of soft delete.  
 
-Also, {{site.data.keyword.bpshort}} service maintains a backup copy of your data in a separate IBM Cloud Object Storage bucket. This backup copy is automatically overwritten, every 30 days. Hence, all backup copy of your data will be purged in 30 days.
+Also, {{site.data.keyword.bpshort}} service maintains a backup copy of your data in a separate {{site.data.keyword.cos_short}} bucket. This backup copy is automatically overwritten, every 30 days. Hence, all backup copy of your data will be purged in 30 days.
 
 
 
@@ -29,15 +29,15 @@ Also, {{site.data.keyword.bpshort}} service maintains a backup copy of your data
 The scope of deletion is limited to data stored in {{site.data.keyword.bpshort}} service and its backup.
 
 Following points does not include in the scope of deletion of {{site.data.keyword.bpshort}} objects.
-- The deletion or removal of the IBM Cloud resources that were provisioned by using {{site.data.keyword.bpshort}}.
-- The data stored by the IBM Cloud resources provisioned by the {{site.data.keyword.bpshort}}.  
-- At the time of {{site.data.keyword.bpshort}} object deletion, you will be provided with the option to destroy the Cloud resources. However, it is suggested to independently confirm and destroy the Cloud resources from the Cloud Services. You can explore the list of Cloud resources, from the [IBM Cloud resource list](https://cloud.ibm.com/resources){: external} page.
+- The deletion or removal of the {{site.data.keyword.cloud_notm}} resources that were provisioned by using {{site.data.keyword.bpshort}}.
+- The data stored by the {{site.data.keyword.cloud_notm}} resources provisioned by the {{site.data.keyword.bpshort}}.  
+- At the time of {{site.data.keyword.bpshort}} object deletion, you will be provided with the option to destroy the Cloud resources. However, it is suggested to independently confirm and destroy the Cloud resources from the Cloud Services. You can explore the list of Cloud resources, from the [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external} page.
 
 ## Deleting {{site.data.keyword.bpshort}} objects from UI
 {: #delete-schematics-data-ui}
 {: ui}
 
-You can delete {{site.data.keyword.bpshort}} objects by using IBM Cloud console. Following {{site.data.keyword.bpshort}} objects are used to store your data and helps to delete the {{site.data.keyword.bplong}} objects.
+You can delete {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} console. Following {{site.data.keyword.bpshort}} objects are used to store your data and helps to delete the {{site.data.keyword.bplong}} objects.
 
 You must have [Manager role](/docs/schematics?topic=schematics-access#access-roles) to delete from these {{site.data.keyword.bplong}} objects.
 {: important}
@@ -55,7 +55,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 ### Actions
 {: #delete-schematics-data-actionscategory}
 
-You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using IBM Cloud Console.
+You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} Console.
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/actions){: external}, select the actions that you want to delete.
 2. Click Select the **Actions** drop down list and select **Delete** option.
@@ -65,7 +65,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 ### Inventories
 {: #delete-schematics-data-invcategory}
 
-You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using IBM Cloud Console.
+You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} Console.
 
 1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/inventories){: external}, select the inventories that you want to delete.
 2. Click `...` dots against the inventory you want to delete and click **Delete**.
@@ -86,7 +86,7 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
-1. Install the [IBM Cloud CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 2. Run `ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} Workspaces list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command.
 3. Run `ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} Workspaces delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) command.
 
@@ -95,7 +95,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
-1. Install the [IBM Cloud CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 2. Run `ibmcloud schematics action list` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} Actions list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-action) command.
 3. Run `ibmcloud schematics action delete --id ACTION_ID [--force]` to delete an action. For more information about {{site.data.keyword.bpshort}} Actions delete, see [{{site.data.keyword.bpshort}} Actions delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-action) command.
 
@@ -105,7 +105,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
-1. Install the [IBM Cloud CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
+1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
 2. Run `ibmcloud schematics inventory list [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]` to list and select the inventory ID that you want to delete. For more information about listing the inventories, see [{{site.data.keyword.bpshort}} inventory list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-inv) command.
 3. Run `ibmcloud schematics inventory delete --id ACTION_ID` to delete an inventory. For more information about {{site.data.keyword.bpshort}} inventory delete, see [{{site.data.keyword.bpshort}} inventory delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-inventory) command.
 

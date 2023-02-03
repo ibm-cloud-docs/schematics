@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-02"
+  years: 2017, 2023
+lastupdated: "2023-02-03"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -52,9 +52,9 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
 2. From the {{site.data.keyword.cloud_notm}} page, select **Navigation menu** > **{{site.data.keyword.bpshort}}**.
 3. Select **Integrations** in the side navigation pane.
-4. Select your location and click **Connect** > **Activity tracking**. You are redirected to the IBM Cloud Activity Tracker service form.
+4. Select your location and click **Connect** > **Activity tracking**. You are redirected to the {{site.data.keyword.cloudaccesstraillong_notm}} service form.
 
-   In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for IBM Cloud Activity Tracker to view the IBM Cloud Activity Tracker service form.
+   In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.cloudaccesstraillong_notm}} to view the {{site.data.keyword.cloudaccesstraillong_notm}} service form.
    {: note}
 
 5. Analyze the configuration and click **Create**.
@@ -76,7 +76,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 3. Select **Integration** in the side navigation pane.
 4. Select your location and click **Connect** > **Monitoring**. You are redirected to the {{site.data.keyword.cloud_notm}} Monitoring form.
    
-   In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for IBM Cloud Monitoring view the IBM Cloud Monitoring service form.
+   In case you are redirected to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, search for {{site.data.keyword.monitoringlong}} to view the {{site.data.keyword.monitoringlong_notm}} service form.
    {: note}
 
 5. Analyze the configuration and click **Create**.

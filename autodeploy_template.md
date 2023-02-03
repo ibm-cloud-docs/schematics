@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-22"
+  years: 2017, 2023
+lastupdated: "2023-02-03"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -19,7 +19,7 @@ subcollection: schematics
 Use the instructions to create a button that opens the {{site.data.keyword.bpshort}} Actions create page and pre-populates an action name and the GitHub repository URL that stores your Ansible playbook. You can use the button to create {{site.data.keyword.bpshort}} Actions more quickly.
 {: shortdesc}
 
-For a sample button, see the `Deploy to IBM Cloud` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
+For a sample button, see the `Deploy to {{site.data.keyword.cloud_notm}}` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
 {: tip}
 
 ## Creating the deployment URL
@@ -59,7 +59,7 @@ To add the button in an HTML page, such as a website, copy the following code in
 
 ```html
 <a href="<deployment URL>" target="_blank">
-  <img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to IBM Cloud button">
+  <img src="https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg" alt="Deploy to {{site.data.keyword.cloud_notm}} button">
 </a>
 ```
 {: codeblock}
@@ -70,7 +70,7 @@ To add the button in an HTML page, such as a website, copy the following code in
 To add the button into a Markdown file, such as in a repositories readme file, use the following syntax. Replace `<deployment URL>` with the URL for the deployment link.
 
 ```markdown
-[![Deploy to IBM Cloud button](https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg)](<deployment URL>)
+[![Deploy to {{site.data.keyword.cloud_notm}} button](https://cloud.ibm.com/media/docs/images/icons/Deploy_to_cloud.svg)](<deployment URL>)
 ```
 {: codeblock}
 

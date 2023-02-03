@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-02-03"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -56,8 +56,8 @@ The in use version of Terraform for a Workspace can be updated via the {{site.da
 The workspace terraform version parameter is of the form `terraform_v1.1` or `terraform_v1.2`
 
 1. Select the workspace to be updated and verify that it is in `Normal` state and that a Plan operation does not generate any proposed resource changes. Save the `workspace_id` and note the region the workspace is hosted in. This is the prefix to the `workspace_id`. 
-2. Update the Workspace terraform version using the IBM Cloud CLI:
-   - Login to the IBM Cloud CLI with `ibmcloud login` 
+2. Update the Workspace terraform version using the {{site.data.keyword.cloud_notm}} CLI:
+   - Login to the {{site.data.keyword.cloud_notm}} CLI with `ibmcloud login` 
    - Set the CLI target region with `ibmcloud target -r <region>` to be the same as the workspace you are updating. 
    - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens` 
    - Copy the token data and insert in to the following command text, replacing the string `<token-data>`, set `<terraform_version>` to the required Terraform version and the `<workspace_id>`:  
@@ -138,7 +138,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
     
     Copy the downloaded state file as `terraform.tfstate` into the Terraform execution folder. 
 
-7. Run the state replace provider command in on the command-line to update the IBM Cloud provider version in the state file. 
+7. Run the state replace provider command in on the command-line to update the {{site.data.keyword.cloud_notm}} provider version in the state file. 
     ```sh
     terraform state replace-provider registry.terraform.io/-/ibm registry.terraform.io/ibm-cloud/ibm.
     ```
