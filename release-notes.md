@@ -30,7 +30,7 @@ Review the release notes for February 2023.
 {: #schematics-feb0323}
 {: release-note}
 
-Enhancement in {{site.data.keyword.bpshort}} protect its services with context-based restrictions
+Enhancement in {{site.data.keyword.bpshort}} to protect its services with context-based restrictions
 :   {{site.data.keyword.bpshort}} protects its services with context-based restrictions through network zones and network rules. For more information, see [Protecting {{site.data.keyword.bpshort}} services with context-based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
 
 ## January 2023
