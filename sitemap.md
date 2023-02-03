@@ -243,6 +243,26 @@ subcollection: schematics
 
     * [Available goals for {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-manage-security-compliance#schematics-available-goals)
 
+[Protecting {{site.data.keyword.bpshort}} services with context-based restrictions](/docs/schematics?topic=schematics-access-control-cbr#access-control-cbr)
+
+* [Managing CBR settings](/docs/schematics?topic=schematics-access-control-cbr#manage-cbr-settings)
+
+* [Overview](/docs/schematics?topic=schematics-access-control-cbr#cbr-overview)
+
+* [Understanding network zones](/docs/schematics?topic=schematics-access-control-cbr#cbr-network-zones)
+
+    * [Creating network zones by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-zones-api)
+
+    * [Creating network zones by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-zone-ui)
+
+* [Understanding network rules](/docs/schematics?topic=schematics-access-control-cbr#cbr-network-rules)
+
+    * [Create network rules by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-rules-api)
+
+    * [Creating network rules by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-rules-ui)
+
+* [Next steps](/docs/schematics?topic=schematics-access-control-cbr#cbr-next-steps)
+
 [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
 
 [General Data Protection Regulation (GDPR)](/docs/schematics?topic=schematics-general-data-protection-regulation-gdpr#general-data-protection-regulation-gdpr)
