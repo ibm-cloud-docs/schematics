@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-22"
+  years: 2017, 2023
+lastupdated: "2023-02-07"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -76,11 +76,11 @@ The allowed extension list is continuously monitored and updated in every releas
 
 You can follow the topics to upgrade from one Terraform version to another version
 
-- [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade)
-- [Upgrade Terraform version in {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps)
-- [Upgrade Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-12-to13)
-- [Upgrade Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to14)
-- [Upgrade Terraform template from v0.14 to v1.0](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-14-to10)
+- [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
+- [Upgrade Terraform version in {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
+- [Upgrade Terraform template from v0.12 to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
+- [Upgrade Terraform template from v0.13 to v0.14](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
+- [Upgrade Terraform template from v0.14 to v1.0](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
 
 ## How do I overcome the downtime updating the workspace activities? 
 {: #impact-downtime-workspace}
@@ -569,12 +569,12 @@ provider "ibm" {
 ```
 {: codeblock}
 
-## How can i encrypt sensitive value in terraform state file while using schematics?
+## How can I encrypt sensitive value in Terraform state file when using {{site.data.keyword.bpshort}}?
 {: #encrypt-state-file}
 {: faq}
 {: support}
 
-No, currently terraform do not support this feature due to its default behaviour. As a result you cannot encrypt the sensitive value in state file using schematics. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in statefile.
+No, currently Terraform do not support this feature due to its default behaviour. As a result you cannot encrypt the sensitive value in state file using schematics. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in state file.
 
 Example to download the terraform state file:
 
@@ -582,4 +582,18 @@ Example to download the terraform state file:
 ibmcloud schematics state pull --id WORKSPACE_ID--template TEMPLATE_ID
 ```
 {: pre}
+
+## Why is {{site.data.keyword.bpshort}} workspace list variable defined by using API throws 400 error?
+{: #wks-list-var}
+{: faq}
+{: support}
+
+The {{site.data.keyword.bpshort}} workspace list variables store value should always be a HCL string. The `value` field must contain escaped string for the variable store for the list, map, or complex variable. For more information, see [Providing values to {{site.data.keyword.bpshort}} for the declared variables](/docs/schematics?topic=schematics-create-tf-config#declare-variable).
+
+## Why is the Terraform version (`TF_VERSION`) updated through `JSON` file is not working?
+{: #tf-version-update}
+{: faq}
+{: support}
+
+ Currently, the workaround is to pass the `TF_VERSION` while updating the variable store. Then the {{site.data.keyword.bpshort}} will auto detect what is specified in the Terraform version block in the `TF` files. This is the default behaviour. The fact is that `v1.3.0` selects and suggests the version is not defined or has no upper limit. For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
 

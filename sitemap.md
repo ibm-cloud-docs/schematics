@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-07"
 
 keywords: schematics
 subcollection: schematics
@@ -2393,7 +2393,11 @@ subcollection: schematics
 
 * [How do I fix the `CreateworkspaceWithContext failed Bad request` error in creating {{site.data.keyword.bpshort}} resource to `eu-de` region by using Terraform?](/docs/schematics?topic=schematics-workspaces-faq#locationres-job-faq)
 
-* [How can i encrypt sensitive value in terraform state file while using schematics?](/docs/schematics?topic=schematics-workspaces-faq#encrypt-state-file)
+* [How can I encrypt sensitive value in Terraform state file when using {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#encrypt-state-file)
+
+* [Why is {{site.data.keyword.bpshort}} workspace list variable defined by using API throws 400 error?](/docs/schematics?topic=schematics-workspaces-faq#wks-list-var)
+
+* [Why is the Terraform version (`TF_VERSION`) updated through `JSON` file is not working?](/docs/schematics?topic=schematics-workspaces-faq#tf-version-update)
 
 
 ## Troubleshooting
