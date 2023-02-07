@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-07"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -81,7 +81,7 @@ At 0.x releases, Terraform version upgrade is a stepwise process, upgrading thro
 
 | Version |	Recommendation|
 | --- | --- |
-| `v0.12` | Review the [v0.13 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-13){: external} and follow the instructions [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-schematics-migrating-terraform-version#migrate-steps12). {{site.data.keyword.bpshort}} has deprecated `Terraform v0.12`.|
+| `v0.12` | Review the [v0.13 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-13){: external} and follow the instructions [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12). {{site.data.keyword.bpshort}} has deprecated `Terraform v0.12`.|
 | `v0.13` | For the `Terraform v0.14` upgrade, you must run `terraform apply` with `Terraform v0.14` to complete its state format upgrades. If you get any errors, see the [v0.14 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-14){: external}. Follow the instructions upgrade-13-to10|
 | `v0.14` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-1){: external} version. Review the [v0.15 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-15){: external}.|
 | `v0.15` | You can upgrade directly to the [`Terraform v1.0`](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external} version. Review the [v1.0 upgrade guide](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0){: external}.|
