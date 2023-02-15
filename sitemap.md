@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-15"
 
 keywords: schematics
 subcollection: schematics
@@ -1232,6 +1232,8 @@ subcollection: schematics
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 
+* [Workspace job execution](/docs/schematics?topic=schematics-job-download#wks-job-execution)
+
 * [Note](/docs/schematics?topic=schematics-job-download#job-note)
 
 [Stopping or terminating running jobs](/docs/schematics?topic=schematics-interrupt-job#interrupt-job)
@@ -2395,9 +2397,15 @@ subcollection: schematics
 
 * [How can I encrypt sensitive value in Terraform state file when using {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#encrypt-state-file)
 
-* [Why is {{site.data.keyword.bpshort}} workspace list variable defined by using API throws 400 error?](/docs/schematics?topic=schematics-workspaces-faq#wks-list-var)
+* [Why is {{site.data.keyword.bpshort}} workspace list variable defined by using CLI throws 400 error?](/docs/schematics?topic=schematics-workspaces-faq#wks-list-var)
 
 * [Why is the Terraform version (`TF_VERSION`) updated through `JSON` file is not working?](/docs/schematics?topic=schematics-workspaces-faq#tf-version-update)
+
+* [In each workspace job trigger the previously created resources gets force replaced with the new values. Can I reset or start with the new Terraform state file with each trigger?](/docs/schematics?topic=schematics-workspaces-faq#wks-job-trigger)
+
+* [Can I bootstrap a {{site.data.keyword.bpshort}} Workspace with an existing Terraform state that are created elsewhere?](/docs/schematics?topic=schematics-workspaces-faq#tf-state-argument)
+
+* [What is the maximum length of characters that the {{site.data.keyword.bpshort}} Workspace name variable supports?](/docs/schematics?topic=schematics-workspaces-faq#wks-name-maxlength)
 
 
 ## Troubleshooting
@@ -2427,9 +2435,9 @@ subcollection: schematics
 {: #sitemap_troubleshooting_blueprints}
 
 
-[blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
+[Blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
 
-* [blueprint create fails with an invalid blueprint template: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
+* [Blueprint create fails with an invalid blueprint template: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
 
 * [Blueprint create fails with an invalid blueprint template: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
 

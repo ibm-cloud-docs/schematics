@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-21"
+  years: 2017, 2023
+lastupdated: "2023-02-15"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -17,12 +17,12 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# blueprint create fails 
+# Blueprint create fails 
 {: #bp-create-fails}
 
 Review the following sections to help debugging blueprint apply failures. 
 
-## blueprint create fails with an invalid blueprint template: failed to clone Git repository error
+## Blueprint create fails with an invalid blueprint template: failed to clone Git repository error
 {: #bp-create-fails1}
 
 When you create a blueprint configuration, the create fails with an error that the template, or input repositories cannot be cloned or found. 

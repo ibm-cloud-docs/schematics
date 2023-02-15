@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-15"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -583,7 +583,7 @@ ibmcloud schematics state pull --id WORKSPACE_ID--template TEMPLATE_ID
 ```
 {: pre}
 
-## Why is {{site.data.keyword.bpshort}} workspace list variable defined by using API throws 400 error?
+## Why is {{site.data.keyword.bpshort}} workspace list variable defined by using CLI throws 400 error?
 {: #wks-list-var}
 {: faq}
 {: support}
@@ -596,4 +596,26 @@ The {{site.data.keyword.bpshort}} workspace list variables store value should al
 {: support}
 
  Currently, the workaround is to pass the `TF_VERSION` while updating the variable store. Then the {{site.data.keyword.bpshort}} will auto detect what is specified in the Terraform version block in the `TF` files. This is the default behaviour. The fact is that `v1.3.0` selects and suggests the version is not defined or has no upper limit. For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
+
+## In each workspace job trigger the previously created resources gets force replaced with the new values. Can I reset or start with the new Terraform state file with each trigger?
+{: #wks-job-trigger}
+{: faq}
+{: support}
+
+No, you need to only create new workspace. For more information, see [Workspace job execution](/docs/schematics?topic=schematics-job-download#wks-job-execution).
+
+## Can I bootstrap a {{site.data.keyword.bpshort}} Workspace with an existing Terraform state that are created elsewhere?
+{: #tf-state-argument}
+{: faq}
+{: support}
+
+Yes, you can use `--state` flag option through the [ibmcloud schematics workspace new](https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+
+## What is the maximum length of characters that the {{site.data.keyword.bpshort}} Workspace name variable supports?
+{: #wks-name-maxlength}
+{: faq}
+{: support}
+
+The maximum length of characters that the {{site.data.keyword.bpshort}} Workspace name variable supports is 1 MB.
+
 
