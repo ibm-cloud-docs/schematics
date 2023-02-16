@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-15"
+lastupdated: "2023-02-16"
 
 keywords: schematics
 subcollection: schematics
@@ -346,6 +346,10 @@ subcollection: schematics
 * [February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb23)
 
     * Review the release notes for February 2023.
+
+    * [16 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2023)
+
+        * {{site.data.keyword.bpshort}} allowed IP address for `US`, `EU Central`, and `UK South` region are updated
 
     * [3 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0323)
 
