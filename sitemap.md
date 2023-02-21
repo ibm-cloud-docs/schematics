@@ -1996,7 +1996,7 @@ subcollection: schematics
 
 [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
 
-* [Beta changes October 2022](/docs/schematics?topic=schematics-bp-beta-limitations#beta-changes-october-2022)
+* [Beta changes October 2022](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-changes-oct)
 
 * [Beta release limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation)
 
