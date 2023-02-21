@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-21"
 
 keywords: schematics
 subcollection: schematics
@@ -2215,7 +2215,7 @@ subcollection: schematics
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
-* [What Git repositories are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
+* [What are the Git repositories that are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
 
 * [Are variable operators and functions supported in blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-values)
 
