@@ -1786,8 +1786,6 @@ subcollection: schematics
 
     * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
 
-* [Policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#policy-cmd)
-
 * [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
     * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)

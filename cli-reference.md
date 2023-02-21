@@ -721,7 +721,7 @@ You update the blueprint configuration in {{site.data.keyword.bpshort}} with cha
 Syntax
 
 ```sh
-ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--inputs INPUT_VARIABLE] [--github-token GITHUB_TOKEN] [--output OUTPUT] [-input-file inputs.yaml]
+ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [[--inputs INPUT_VARIABLES_LIST]] [--input-file BLUEPRINT_INPUT_FILE] [--output OUTPUT]
 ```
 {: pre}
 
@@ -732,15 +732,15 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the blueprint.|
 | `--inputs` or `--in` | Optional | Update values for input variables. This flag can be used multiple times. For example, '-inputs foo=bar -inputs foo1=bar1'. This flag only supports simple strings without spaces. This option can be combined with the `--input-file` option. |
+| `--file` or `-f` | Optional |  The config path to the JSON file containing the template of the blueprint to update.|
 | `--input-file` or `--if` | Optional | Update values for input variables for the blueprint from a local YAML file. The path and name to a local YAML file containing input values. This input method supports passing complex Terraform values, that are split across lines, containing spaces and special characters. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
-| `--github-token` or `-g` | Optional | The GitHub token value to access private Git repository.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprints config update flags" caption-side="top"}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9 -inputs foo1=bar1 
+ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9 -inputs key1=value1 
 ```
 {: pre}
 
@@ -840,6 +840,7 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
+| `--profile` or `-p`| Optional |  The level of details to return. Valid values are `summary` and `ids`. Default value is `summary`.|
 | `--limit` or `-l` | Optional | The maximum number of blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`.|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
@@ -1148,12 +1149,6 @@ OK
 
 ```
 {: screen}
-
-## Policy commands
-{: #policy-cmd}
-
-{{site.data.keyword.bpshort}} Policy is a beta feature that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
-{: beta}
 
 
 
