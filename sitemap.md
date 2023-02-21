@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-21"
 
 keywords: schematics
 subcollection: schematics
@@ -1786,8 +1786,6 @@ subcollection: schematics
 
     * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
 
-* [Policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#policy-cmd)
-
 * [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
     * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
@@ -1998,7 +1996,7 @@ subcollection: schematics
 
 [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
 
-* [Beta changes October 2022](/docs/schematics?topic=schematics-bp-beta-limitations#beta-changes-october-2022)
+* [Beta changes October 2022](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-changes-oct)
 
 * [Beta release limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation)
 
@@ -2215,7 +2213,7 @@ subcollection: schematics
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
-* [What Git repositories are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
+* [What are the Git repositories that are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
 
 * [Are variable operators and functions supported in blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-values)
 

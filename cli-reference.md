@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-15"
+lastupdated: "2023-02-21"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -604,7 +604,7 @@ For more information about the flags see [workspace get](/docs/schematics?topic=
 
 Create a blueprint config from the command line using the `ibmcloud schematics blueprint create` command. Creating a blueprint config is the first step to deploy a blueprint environment. The blueprint config is created from user provided parameters via the command line that specifies the source of the blueprint template in a Git repository, and input values sourced from Git hosted input files and locally sourced input values.
 
-The create command supports passing all required parameters via options on the CLI and passing input values from local files. 
+The create command supports passing all required parameters through CLI and passing input values from local files. 
 
 A experimental file option is provided to create a blueprint config from a configuration provided as a JSON file from the local file system. Refer to the [`ibmcloud schematics blueprint create - file option`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) section. These two usage modes are mutually exclusive. 
 {: shortdesc}
@@ -612,13 +612,18 @@ A experimental file option is provided to create a blueprint config from a confi
 For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.5` version.
 {: important}
 
-Refer to the section on [Creating Blueprints](/docs/schematics?topic=schematics-create-blueprint-config&interface=cli) for examples of command syntax and output.
+Refer to the section on [Creating Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for examples of command syntax and output.
 
+Before your begin:
+
+- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.5`.
+- Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create blueprints.
 
 **Syntax to create blueprint config using CLI parameters:**
 
 ```sh
-ibmcloud schematics blueprint create --name BLUEPRINT_NAME --resource-group RESOURCE_GROUP [--description BLUEPRINT_DESCRIPTION] --bp-git-url BLUEPRINT_GIT_URL -—bp-git-file BLUEPRINT_GIT_FILE [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] --input-git-url INPUT_GIT_URL -—input-git-file INPUT_GIT_FILE [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [-—input-file INPUT_FILE] [--github-token GITHUB_TOKEN] [--output OUTPUT]
+ibmcloud schematics blueprint create --name BLUEPRINT_NAME [--resource-group RESOURCE_GROUP] [--description BLUEPRINT_DESCRIPTION] [--location BLUEPRINT_LOCATION] [--source-type BLUEPRINT_SOURCE_TYPE] --bp-git-url BLUEPRINT_GIT_URL [-—bp-git-file BLUEPRINT_GIT_FILE] [--bp-git-branch BLUEPRINT_GIT_BRANCH] [--bp-git-release BLUEPRINT_GIT_RELEASE] [--input-git-url INPUT_GIT_URL] [-—input-git-file INPUT_GIT_FILE] [--input-file BLUEPRINT_INPUT_FILE] [--input-git-branch INPUT_GIT_BRANCH] [--input-git-release INPUT_GIT_RELEASE] [--inputs BLUEPRINT_INPUT_LIST] [--bp-git-token BLUEPRINT_GIT_TOKEN] [--input-git-token BLUEPRINT_INPUT_GIT_TOKEN] | --file CONFIG_FILE_PATH [--output OUTPUT]
 ```
 {: pre}
 
@@ -628,18 +633,22 @@ Command options
 | ----- | -------- | ------- |
 | `--name` or `-n`| Required | Name of the blueprint. Delimited by double quotes if the name contains spaces. For example `-name "my blueprint"`|
 | `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
-| `description` or `--desc` | Optional | The description of the blueprint. Delimited by double quotes if the description contains spaces. For example `-description "my blueprint example"`|
+| `--description` or `--desc` | Optional | The description of the blueprint. Delimited by double quotes if the description contains spaces. For example `-description "my blueprint example"`|
+| `--location` or `-l` |  Optional |  The location of blueprint. Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. |
+| `--source-type` or `-s`| Optional |  The blueprint source type. Valid values are `git_hub`, `ibm_cloud_catalog`.|
 | `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template. For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
 | `--bp-git-file` or `--bf`| Required | The blueprint template file name, including the file extension and any subfolders. For example `-bp-git-file <subfolder>/basic-blueprint.yaml`   |
 | `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name. Mutually exclusive with the `-bp-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-bp-git-branch devhardening`|
 | `--bp-git-release` or `--br`| Optional | A Git release tag identifying the version of the template file. Mutually exclusive with the `-bp-git-branch` option. For example `-bp-git-release 1.4.2`|
+|  `--bp-git-token` or `--bg` | Optional | The GitHub token value to access the private Git repository. |
 | `--input-git-url` or `--igu`| Optional | The input Git URL. This is the URL of the repository containing the blueprint input file . For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
 | `--input-git-file` or `--igf`| Optional | The input file name, including extension and any subfolders. For example `-input-git-file <subfolder>/basic-input.yaml`. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
 | `--input-git-branch` or `--igb`| Optional |The input file Git branch name. Mutually exclusive with the `-input-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-input-git-branch nextdrop` |
 | `--input-git-release` or `--igr`| Optional | A Git release tag identifying the version of the input file. Mutually exclusive with the `-input-git-branch` option. For example `-input-git-release 1.0.5` |
-| `--inputs` or `--in` | Optional | The input variables for the blueprint. This flag can be used multiple times. For example, '-inputs foo=bar -inputs foo1=bar1'. This flag only supports simple strings without spaces. This option can be combined with the `--input-file` option to provide a complete set of simple and complex values.  |
+| `--input-git-token` or `--ig` | Optional | A GitHub token value to access the private input Git repository.|
+| `--inputs` or `--in` | Optional | The input variables for the blueprint. This flag can be used multiple times. For example, '-inputs key=value -inputs key1=value1'. This flag only supports simple strings without spaces. This option can be combined with the `--input-file` option to provide a complete set of simple and complex values.  |
 | `--input-file` or `--if` | Optional | The input variables for the blueprint from a local YAML file. The path and name to a local YAML file containing input values. This input method supports passing complex Terraform values, that are split across lines, containing spaces and special characters. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. Variable format is the same as used for `--input-git-file`. This option can be used for local testing of the Git input file or overrides on the Git input file. |
-| `--github-token` or `-g` | Optional | The GitHub token value to access the private Git repository. |
+| `--file` or `-f` | Optional | The path to the JSON file containing the configuration of the blueprint.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprint create flags" caption-side="bottom"}
 
@@ -712,7 +721,7 @@ You update the blueprint configuration in {{site.data.keyword.bpshort}} with cha
 Syntax
 
 ```sh
-ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [--inputs INPUT_VARIABLE] [--github-token GITHUB_TOKEN] [--output OUTPUT] [-input-file inputs.yaml]
+ibmcloud schematics blueprint update --id BLUEPRINT_ID [--file CONFIG_FILE_PATH] [[--inputs INPUT_VARIABLES_LIST]] [--input-file BLUEPRINT_INPUT_FILE] [--output OUTPUT]
 ```
 {: pre}
 
@@ -723,15 +732,15 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the blueprint.|
 | `--inputs` or `--in` | Optional | Update values for input variables. This flag can be used multiple times. For example, '-inputs foo=bar -inputs foo1=bar1'. This flag only supports simple strings without spaces. This option can be combined with the `--input-file` option. |
+| `--file` or `-f` | Optional |  The config path to the JSON file containing the template of the blueprint to update.|
 | `--input-file` or `--if` | Optional | Update values for input variables for the blueprint from a local YAML file. The path and name to a local YAML file containing input values. This input method supports passing complex Terraform values, that are split across lines, containing spaces and special characters. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
-| `--github-token` or `-g` | Optional | The GitHub token value to access private Git repository.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
 {: caption="{{site.data.keyword.bpshort}} blueprints config update flags" caption-side="top"}
 
 Example
 
 ```sh
-ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9 -inputs foo1=bar1 
+ibmcloud schematics blueprint update -id Blueprint_Basic.eaB.5cd9 -inputs key1=value1 
 ```
 {: pre}
 
@@ -831,6 +840,7 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
+| `--profile` or `-p`| Optional |  The level of details to return. Valid values are `summary` and `ids`. Default value is `summary`.|
 | `--limit` or `-l` | Optional | The maximum number of blueprints to list. Ignored if a negative number is set. Maximum number to list is `200`, the default is `-1`.|
 | `--offset` or `-m` | Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
 | `--output` or  `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
@@ -1139,12 +1149,6 @@ OK
 
 ```
 {: screen}
-
-## Policy commands
-{: #policy-cmd}
-
-{{site.data.keyword.bpshort}} Policy is a beta feature that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
-{: beta}
 
 
 

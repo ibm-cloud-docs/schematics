@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-02-21"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -23,18 +23,18 @@ content-type: faq
 Answers to common questions about working with blueprints are classified under the following sections.
 {: shortdesc}
 
-## What Git repositories are supported by Blueprints?
+## What are the Git repositories that are supported by Blueprints?
 {: #faqs-bp-repos}
 {: faq}
 {: support}
 
 |  Repository <br />  | Template <br /> Public repo | Template <br />Private repo | Module <br />Public repo | Module <br />private repo | Comment <br />  |
 | --- |--- | --- | --- | --- | --- |
-| Github | Yes | Git token | Yes | Git token | 
-| Gitlab | Yes | Git token | Yes | Git token | 
-| IBM Gitlab | Yes | Git token | Yes | Git token | IAM token planned Dec 2022 
+| GitHub | Yes | Git token | Yes | Git token | 
+| GitLab | Yes | Git token | Yes | Git token | 
+| IBM GitLab | Yes | Git token | Yes | Git token | IAM token planned Dec 2022 
 | Terraform.io | No | No | Yes | NA |
-
+{: caption="Supported Git repositories" caption-side="top"}}
 
 ## Are variable operators and functions supported in blueprint templates?
 {: #faqs-bp-values}
@@ -204,7 +204,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 
 The CLI uses geo specific API endpoints which direct job requests to the first available region within a geo. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config's targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
 
-This behavior is similar in UI, for example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.
+This behavior is similar in the UI. For example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.
 
 ## Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?
 {: #faqs-bp-schematics-instance}

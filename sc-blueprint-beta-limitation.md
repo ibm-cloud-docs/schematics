@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-27"
+  years: 2017, 2023
+lastupdated: "2023-02-21"
 
 keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
@@ -18,9 +18,11 @@ subcollection: schematics
 The {{site.data.keyword.bpshort}} Blueprints level of code is considered beta code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
 {: shortdesc}
 
-Join the beta program, post a question in the [{{site.data.keyword.bplong_notm}} Blueprints beta 2022 Slack](https://ibm-cloud-schematics.slack.com/archives/C03MPHXKYRZ){: external}, and engage with the {{site.data.keyword.bpshort}} team. For any challenges, see the [steps to join blueprints beta Slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack) channel.
 
-Join the `#tmp-blueprints-beta-2022` slack channel and post a message include the following information.
+
+Join the beta program, post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team.
+
+Join the `#schematics-users` slack channel and post a message include the following information.
 
 - Your name
 - email address
@@ -32,6 +34,8 @@ You can come back anytime to your created thread to add information, ask questio
 {: important}
 
 ## Beta changes October 2022
+{: #bp-beta-changes-oct}
+
 Blueprint commands have been renamed with the 1.12.3 release of the {{site.data.keyword.bpshort}} CLI Plugin 
 - `blueprint create` > `blueprint create`
 - `blueprint update` > `blueprint update`
