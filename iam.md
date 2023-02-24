@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-21"
+  years: 2017, 2023
+lastupdated: "2023-02-24"
 
 keywords: schematics, automation, terraform
 
@@ -84,6 +84,8 @@ Review the following table to see what permissions you need to work with {{site.
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
+
+
 ### Blueprint permissions
 {: #blueprint-permissions}
 
@@ -121,6 +123,7 @@ Review the following table to see what permissions you need to work with {{site.
 {: caption="User permissions for {{site.data.keyword.bpshort}} KMS" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
+
 ## Setting up access for your users
 {: #access-setup}
 
@@ -149,10 +152,3 @@ You can now centrally manage access tags to the {{site.data.keyword.bpshort}} Wo
 - To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} Workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
 
 For more information about managing access tags, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).
-
-
-
-
-
-
-

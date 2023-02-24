@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-21"
+lastupdated: "2023-02-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -2657,7 +2657,7 @@ Command options
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces import flags" caption-side="top"}
 
-Use the option `-options -var-file=schematics.tfvars` to tell Schematics to import the resource with the saved workspace variables.  
+Use the option `-options -var-file=schematics.tfvars` to tell {{site.data.keyword.bpshort}} to import the resource with the saved workspace variables.  
 
 
 Example

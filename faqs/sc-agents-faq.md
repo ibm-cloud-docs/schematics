@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-12"
+  years: 2017, 2023
+lastupdated: "2023-02-24"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -170,3 +170,6 @@ Sets a new environment variable to point to this generated cutsom config file
 export TF_CLI_CONFIG_FILE=/home/appuser/terraform-custom.config
 ```
 {: pre}
+
+****
+
