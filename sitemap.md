@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-27"
 
 keywords: schematics
 subcollection: schematics
@@ -350,6 +350,10 @@ subcollection: schematics
     * [16 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2023)
 
         * {{site.data.keyword.bpshort}} allowed IP address for `US`, `EU Central`, and `UK South` region are updated
+
+    * [7 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0723)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
     * [3 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0323)
 
@@ -1360,8 +1364,8 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
-## Managing Agents
-{: #sitemap_managing_agents}
+## Managing Agents Beta
+{: #sitemap_managing_agents_beta}
 
 
 [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
@@ -1745,6 +1749,8 @@ subcollection: schematics
     * [`ibmcloud schematics action delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-action)
 
     * [`ibmcloud schematics action upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-upload-action)
+
+* [Agent commands](/docs/schematics?topic=schematics-schematics-cli-reference#agent-cmd)
 
 * [Agents commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 

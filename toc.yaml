@@ -118,7 +118,7 @@ toc:
                                                     - integration-at.md
                                                     - integration-kms.md
                                   - topicgroup:
-                                            label: Managing Agents
+                                            label: Managing Agents Beta
                                             topics:
                                                     - sc-agent-infra-setup.md
                                                     - sc-agent-connect.md

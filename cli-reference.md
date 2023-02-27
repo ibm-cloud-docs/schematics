@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-27"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -371,18 +371,23 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 {: pre}
 
 
-## Agents commands
-{: #agents-cmd}
+## Agent commands
+{: #agent-cmd}
 
 {{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
 
 
+## Agents commands
+{: #agents-cmd}
+
+
+
 ### `ibmcloud schematics agents bind-workspaces`
 {: #schematics-agents-bind-wks}
 
-Create a policy for binding workspace(s) to the Agent on {{site.data.keyword.bplong_notm}}.
+Create a policy for binding workspace(s) to the agent on {{site.data.keyword.bplong_notm}}.
 
 Syntax
 

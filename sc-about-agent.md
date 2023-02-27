@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-27"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -14,6 +14,8 @@ subcollection: schematics
 
 # {{site.data.keyword.bpshort}} Agents
 {: #agents-intro}
+
+
 
 {{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
 {: beta}
