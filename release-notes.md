@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-24"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,8 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for February 2023.
 {: shortdesc}
+
+
 
 ### 16 February 2023
 {: #schematics-feb2023}
@@ -199,7 +201,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
     - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent) to clean up the Agent infrastructure and Agent services.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on Agents.
-    - [Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the Agents beta level code and provide feedback.
+    - [Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
