@@ -116,14 +116,7 @@ toc:
                                                     - integration-logging.md
                                                     - integration-monitor.md
                                                     - integration-at.md
-                                                    - integration-kms.md<staging>
-                                  - topicgroup:
-                                            label: Managing Agents Beta
-                                            topics:
-                                                    - sc-agent-infra-setup.md
-                                                    - sc-agent-connect.md
-                                                    - sc-agent-using.md
-                                                    - sc-agent-uninstall.md
+                                                    - integration-kms.md
                                   - topicgroup:
                                             label: Logging and monitoring
                                             topics:
