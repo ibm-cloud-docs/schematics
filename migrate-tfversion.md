@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-07"
+lastupdated: "2023-02-28"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -21,16 +21,14 @@ The open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve,
 
 All {{site.data.keyword.bpshort}} users are encourage to regularly upgrade to the latest Terraform version to ensure continuity of operations and support. {{site.data.keyword.bpshort}} follows the Hashicorp support model for Terraform releases and depreciates versions to the in line with Hashicorp. 
 
-Terraform V1.0 was a major release for Terraform, marking the transition to a stable 1.x release. Hashicorp made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), that for core features, no additional changes are required to upgrade through the 1.x releases. 
+Terraform v1.0 was a major release for Terraform, marking the transition to a stable 1.x release. Hashicorp made [compatibility promises for the 1.x releases](https://developer.hashicorp.com/terraform/language/v1-compatibility-promises), that for core features, no additional changes are required to upgrade through the 1.x releases. 
 
-```
-In short, we aim to make upgrades between v1.x releases straightforward, requiring no changes to your configuration, no extra commands to run upgrade steps, and no changes to any automation you've set up around Terraform.
+In short, you aim to make upgrades between v1.x releases straightforward, requiring no changes to your configuration, no extra commands to run upgrade steps, and no changes to any automation you've set up around Terraform.
 
-The Terraform v1.x series will be actively maintained for at least 18 months after v1.0.
-```
+The Terraform v1.x series actively maintains for at least 18 months after v1.0.
+{: note}
 
 Upgrade at the 1.x releases requires no specific {{site.data.keyword.bpshort}} workspace actions. Review the Terraform [upgrade guides](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides){: external} for release specific changes that might require TF config/template updates.  
-
 
 ## Upgrading the Terraform template version 1.x and above
 {: #terraform-version-upgrade1x}

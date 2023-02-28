@@ -174,19 +174,19 @@ subcollection: schematics
 {: #sitemap_understanding_blueprints}
 
 
-[Understanding Blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+[Understanding blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
 
-* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infrastructure-lifecycle)
+* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infra-lifecycle)
 
-* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#working-with-environments-and-the-blueprint-lifecycle)
+* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#bp-working-env)
 
-    * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#defining-blueprints)
+    * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-define)
 
-    * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#deploying-blueprints)
+    * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-deploy)
 
-    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#maintaining-blueprints)
+    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-maintain)
 
-    * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#deleting-blueprints)
+    * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-delete)
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
 
@@ -921,7 +921,7 @@ subcollection: schematics
 
 * [Relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-relaxed)
 
-    * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#creating-environments-using-relaxed-versioning)
+    * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#bp-relaxed-version)
 
     * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#bp-un-versioned-env)
 
@@ -929,9 +929,9 @@ subcollection: schematics
 
 * [Explicit versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-strict)
 
-    * [Specifying versioning at create time](/docs/schematics?topic=schematics-blueprint-versioning#specifying-versioning-at-create-time)
+    * [Specifying versioning at create time](/docs/schematics?topic=schematics-blueprint-versioning#bp-version-create-time)
 
-    * [Specifying versions at update time](/docs/schematics?topic=schematics-blueprint-versioning#specifying-versions-at-update-time)
+    * [Specifying versions at update time](/docs/schematics?topic=schematics-blueprint-versioning#bp-version-update-time)
 
 [Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
 
@@ -1162,7 +1162,7 @@ subcollection: schematics
 
 * [Usage](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage)
 
-    * [Passing TF_CLI_ARGS](/docs/schematics?topic=schematics-set-parallelism#passing-tf_cli_args)
+    * [Passing TF_CLI_ARGS](/docs/schematics?topic=schematics-set-parallelism#passing-cli-args)
 
     * [Example setting parallelism or TF_LOGS](/docs/schematics?topic=schematics-set-parallelism#parallelism-example)
 
@@ -1950,7 +1950,7 @@ subcollection: schematics
 
     * [modules.inputs.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-name)
 
-    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#modulesinputstype)
+    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#module-inputs-type)
 
     * [modules.inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value)
 
@@ -2223,7 +2223,7 @@ subcollection: schematics
 
 * [How do I edit and validate blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-editing)
 
-* [Why do blueprints get the error 'Length for variable <variable name> greater than the given length'](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-length)
+* [Why do blueprints get the error 'Length for variable `variable name` greater than the given length'?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-length)
 
 * [Why do blueprint operations require a `blueprint ID`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
@@ -2234,12 +2234,6 @@ subcollection: schematics
 * [How do you view the blueprint provisioned resources in your cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
 
 * [How do you securely pass input variables?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
-
-    * [Via the UI as dynamic inputs](/docs/schematics?topic=schematics-blueprints-faq#via-the-ui-as-dynamic-inputs)
-
-    * [Via the CLI passed as environment variables](/docs/schematics?topic=schematics-blueprints-faq#via-the-cli-passed-as-environment-variables)
-
-    * [Via the CLI using an input file](/docs/schematics?topic=schematics-blueprints-faq#via-the-cli-using-an-input-file)
 
 * [Why does the blueprint template, basic example, fail in the apply step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 

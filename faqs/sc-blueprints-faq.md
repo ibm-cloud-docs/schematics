@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-21"
+lastupdated: "2023-02-28"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -28,7 +28,7 @@ Answers to common questions about working with blueprints are classified under t
 {: faq}
 {: support}
 
-|  Repository <br />  | Template <br /> Public repo | Template <br />Private repo | Module <br />Public repo | Module <br />private repo | Comment <br />  |
+|  Repository </br>  | Template </br> Public repo | Template </br>Private repo | Module </br>Public repo | Module </br>private repo | Comment </br>  |
 | --- |--- | --- | --- | --- | --- |
 | GitHub | Yes | Git token | Yes | Git token | 
 | GitLab | Yes | Git token | Yes | Git token | 
@@ -59,7 +59,7 @@ Dependencies between blueprint modules are created using the value references be
 
 Blueprint templates can be edited in any editor or IDE. Follow the instructions on how to use and configure VSCode to [edit templates and input files](/docs/schematics?topic=schematics-edit-blueprints). The [Red Hat YAML VSCode extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml){: external}  provides a framework for editing blueprint YAML files, using a [blueprint schema](https://github.com/Cloud-Schematics/vscode-blueprint-schema){: external} defined using [JSON-Schema](https://json-schema.org){: external} . 
 
-## Why do blueprints get the error 'Length for variable <variable name> greater than the given length'  
+## Why do blueprints get the error 'Length for variable `variable name` greater than the given length'?  
 {: #faqs-bp-length}
 {: faq}
 {: support}
@@ -117,21 +117,23 @@ All cloud resources created by a blueprint configuration are automatically tagge
 
 Sensitive input variables like API Keys or SSH Keys should not be saved in blueprint input files due to the risk of security exposure from a Git repository. To avoid accidental exposure, pass sensitive values as dynamic inputs at blueprint create time. 
 
-### Via the UI as dynamic inputs
-In the UI enter sensitive values as override inputs on the inputs definition page.  
+- Through the UI as dynamic inputs
 
-### Via the CLI passed as environment variables
-Dynamic inputs can be specified via the CLI using `--inputs` flag to pass string values. Sensitive values can be exported as environment variables and shell variable substitution is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command by using `--inputs sshkey=$user_ssh_key`
+   In the UI enter sensitive values as override inputs on the inputs definition page.  
 
-```sh
-export user_ssh_key="ssh xxx"
-ibmcloud schematics blueprint create  ......................  --inputs sshkey=$user_ssh_key
-```
-{: pre}
+- Through the CLI passed as environment variables
+   
+   Dynamic inputs can be specified via the CLI using `--inputs` flag to pass string values. Sensitive values can be exported as environment variables and shell variable substitution is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command by using `--inputs sshkey=$user_ssh_key`
 
-### Via the CLI using an input file
-Dynamic inputs can be passed via the CLI using `-input-file` flag to pass values stored in a local YAML file. Refer to the [create CLI documentation](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for more details.  
+    ```sh
+    export user_ssh_key="ssh xxx"
+    ibmcloud schematics blueprint create  ......................  --inputs sshkey=$user_ssh_key
+    ```
+    {: pre}
 
+- Through the CLI using an input file
+
+   Dynamic inputs can be passed via the CLI using `-input-file` flag to pass values stored in a local YAML file. Refer to the [create CLI documentation](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for more details.  
 
 ## Why does the blueprint template, basic example, fail in the apply step?
 {: #faqs-bp-basic-example}

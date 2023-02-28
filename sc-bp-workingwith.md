@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-02-28"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# Understanding Blueprints and environments
+# Understanding blueprints and environments
 {: #work-with-blueprints}
 
 {{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. It uses the analogy of a blueprint used in construction, to define and deploy cloud environments from reusable modules of Terraform code. Blueprint operations take cloud environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
@@ -26,6 +26,8 @@ Blueprints enables users to define and deploy cloud environments using modules o
 
 
 ## Cloud infrastructure lifecycle 
+{: #cloud-infra-lifecycle}
+
 {{site.data.keyword.bpshort}} Blueprints follows an lifecycle operations model. Cloud environments, hosted applications or services all follow a lifecycle from creation to end-of-life. The life of a blueprint environment starts with the initial definition of an infrastructure architecture and configuration. Then, onto deployment of the environment and resources. It will be updated and maintained through its operational life. Which might be hours to years. Finally, to end-of-life when it is torn down, the cloud resources are destroyed, billing gets terminated and the configuration is removed. 
 {: shortdesc}
 
@@ -40,23 +42,30 @@ All updates and changes to environments during these lifecycle stages are perfor
 - Planning the change to identify resource changes, additions or deletions 
 - Running the plan to apply the changes to create, modify or delete resources
 
-
-
 ## Working with environments and the blueprint lifecycle 
+{: #bp-working-env}
+
 Explore the following sections to get into the details of working with blueprints and environments over their lifecycle.   
 
 ### Defining blueprints
+{: #bp-define}
+
 [Defining blueprints](/docs/schematics?topic=schematics-define-blueprints): The infrastructure architecture for an environment is defined as a reusable blueprint template. Reusable modules implement the layers and components of the architecture from Terraform code. 
 
 ### Deploying blueprints
+{: #bp-deploy}
+
 [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints): A blueprint configuration defines the environment to be deployed. In cookie cutter fashion, several environments can be created from the same blueprint template to deploy a range of environments such as dev, stage, and production. 
 
 ### Maintaining blueprints
+{: #bp-maintain}
+
 [Maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints): During the operational life of a deployed environment, the templates, and inputs may be versioned and updated many times to satisfy changing application requirements. Changes will be applied to the environment to maintain platform currency and compliance as security policies evolve. Scheduled operations are run for compliance checks and drift detection. 
 
 ### Deleting blueprints
-[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints): Finally the application or service that is hosted in the environment gets retired or rehosted into a new environment. The environment is removed by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. 
+{: #bp-delete}
 
+[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints): Finally the application or service that is hosted in the environment gets retired or rehosted into a new environment. The environment is removed by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. 
   
 ## Next steps
 {: #working-bp-nextsteps}
