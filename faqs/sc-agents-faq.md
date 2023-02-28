@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-28"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -17,142 +17,165 @@ content-type: faq
 {{site.data.keyword.bpshort}} Agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
-# Agents
+# Agent
 {: #faqs-agent}
 
-Answers to common questions about the {{site.data.keyword.bplong_notm}} Agents are classified into following sections.
+Answers to common questions about the Agent for {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
 
-## Can I install more than one Agent service on the Agent infrastructure?
-{: #faqs-agent-install}
+## What are the new updates in the agent beta-1 release?
+{: #faqs-agent-update}
 {: faq}
 {: support}
 
-You can install more than one Agent Service onto different clusters, but not the same cluster. Installing a second Agent into the same cluster is not supported and fails with the namespace collision error. There is no need for a second Agent service on the Agent infrastructure, such as Kubernetes cluster, LogDNA.
+The following are the features in Agent beta-1 release.
+- Improvements to the agent deployment experience through CLI.
+- Support to run Ansible playbooks on the agent.
+- Dynamic assignment of workspace or action jobs to the agent.
 
 ## What is the cost of installing the {{site.data.keyword.bpshort}} Agent?
 {: #faqs-agent-cost}
 {: faq}
 {: support}
 
-The cost break-up for the {{site.data.keyword.bpshort}} Agents is as follows:
-
-Agents infrastructure
+The following are the cost break-up for the {{site.data.keyword.bpshort}} Agent.
+Pre-requisite: Agent infrastructure
 - Cost of VPC infrastructure elements such as, subnet, public gateways.
-- Cost of IBM Kubernetes Service (cluster) on VPC, with three node worker pool.
-- Cost of IBM Log Analysis services.
+- Cost of IBM Kubernetes Service (cluster) on VPC, with three-node worker pool.
+- Cost of IBM Cloud Object Storage
 
-Agents service
-- There is no cost that is involved with running the Agent Service for beta.
-   Agent Services are a priced service, post beta.
-   {: note}
+Agent beta-1 service
+- There is no cost that are involved in running the agent service. 
+- Post beta, the agent services may be a priced service.
 
-## What {{site.data.keyword.bpshort}} jobs can I run in my Agent?
+## Can I install more than one {{site.data.keyword.bpshort}} Agent on a cluster?
+{: #faqs-agent-install}
+{: faq}
+{: support}
+
+You can install only one agent on a Kubernetes cluster on {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_full}} on {{site.data.keyword.cloud_notm}}. You can agent on to different clusters.
+
+You cannot install more than one agent in a single Kubernetes cluster. You get a failure with namespace conflict error.
+
+## What type of Schematics jobs can I run in my Agent?
 {: #faqs-agent-jobs}
 {: faq}
 {: support}
 
-For beta you can bind a `{{site.data.keyword.bpshort}} Workspace`, to the Agent. Therefore, you can run Terraform workload on the Agent.
+You can run {{site.data.keyword.bpshort}} Workspace jobs or Terraform workload on an Agent. You can also run {{site.data.keyword.bpshort}} Action jobs or Ansible playbooks on an Agent. 
 
-Currently, you cannot bind the `{{site.data.keyword.bpshort}} action`, to the Agents. Therefore, you cannot run Ansible workload on the Agent.
-{: note}
-
-## How can I see the workspace job results and logs, for the workloads that ran on the Agent?
-{: #faqs-wks-job-logs}
+## How can I see the {{site.data.keyword.bpshort}} job results and logs, for the workloads running on an agent?
+{: #faqs-agent-workload}
 {: faq}
 {: support}
 
-The workspace job logs are available in {{site.data.keyword.bpshort}} UI console. You can also access the workspace job logs by using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
+The workspace job or action job logs are available in {{site.data.keyword.bpshort}} UI console. You can also access these job logs using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
 
-## How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?
-{: #faqs-job-parallel}
+## How many {{site.data.keyword.bpshort}} jobs can run in parallel in the Agent?
+{: #faqs-agent-parallel}
 {: faq}
 {: support}
 
-Currently, the {{site.data.keyword.bpshort}} Agent runs three {{site.data.keyword.bpshort}} jobs in parallel. The rest of the jobs are queued in your cluster.
-You can customize the Agent service deployment to increase the number of job PODs instead increase the number of parallel jobs.
-You must also monitor the resources in the Agent Infrastructure. The number of the workers in the worker pool must be increased to run more jobs, in parallel.
+Currently, an agent runs three {{site.data.keyword.bpshort}} jobs in parallel. The rest of the jobs are queued in your cluster.
+In future, you can customize an agent to increase the number of job Pods, in order to increase the number of parallel jobs. You must also monitor the resources in the Kubernetes cluster. 
 
-## While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What must I do next? 
-{: #faqs-auth-error}
+## What is the minimum cluster configuration required in Agent release?
+{: #faqs-agent-min-cluster}
 {: faq}
 {: support}
 
-```text
-Error: Authentication failed, Unable to refresh auth token: Request failed with status code: 400, BXNIM0439E: Transaction-Id:[OHptc2Y-6a6f4800b8a346228482d76cd040942c] Session 'C-bdc1fbe8-4445-4fd1-ac23-4e54ae3831f9' is invalidated due to inactivity.. Try again later
- 2022/06/21 11:24:18 Terraform apply |
- 2022/06/21 11:24:18 Terraform apply |   with module.vpc_cluster[0].ibm_container_vpc_cluster.cluster[0],
- 2022/06/21 11:24:18 Terraform apply |   on cluster/main.tf line 5, in resource "ibm_container_vpc_cluster" "cluster":
- 2022/06/21 11:24:18 Terraform apply |    5: resource "ibm_container_vpc_cluster" "cluster" {
-```
-{: screen}
+The agent needs {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_full}}  Service with minimum three worker nodes, with a flavor of `b4x16` or higher.
 
-`Root cause` is when provisioning the Agent infrastructure, the API key is an optional input. If you did not provide the API key, {{site.data.keyword.bpshort}} uses your IAM token as the user credentials to provision the Agent infrastructure. The Agent Infrastructure can take a long time to complete the provisioning. Sometimes, the IAM token would expire before the provisioning completes. An expired IAM token is one possible cause of this Authentication failure.
-
-You need to retry to provision an Agent infrastructure. Or, you can provide a valid API key to provision the Agent infrastructure. 
-
-## What is the difference between `agent-location` and `location` input variable flag in Agents service?
-{: #faqs-agent-location}
+## How many workspaces can be assigned to an agent?
+{: #faqs-agent-min-wks}
 {: faq}
 {: support}
 
-`--agent-location` is a variable that specifies the region of the cluster where the Agent service is deployed. For example, `us-south`. Whereas `--location` is a needed variable that specifies the geographic locations that are supported by {{site.data.keyword.bpshort}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing.
+Currently, you can assign any number of workspaces to an agent. The workspace jobs are queued to run on the agent or based on the agent selection policy.
+The agent periodically polls the {{site.data.keyword.bpshort}} for jobs to run polling interval of one minute. By default, the agent runs only three jobs in parallel. The remaining jobs are kept in queue.
 
-## Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agent?
-{: #faqs-agent-rg}
+## How many jobs can run in parallel on an agent?
+{: #faqs-agent-min-job}
 {: faq}
 {: support}
 
-Yes, you can have a different resource group for {{site.data.keyword.bpshort}} Workspaces and an Agent.
+- Schematics Agent can perform three Git download jobs in parallel.
+- Schematics Agent can run three Workspace jobs (Terraform commands), in parallel.
+- Schematics Agent can run three Action jobs (Ansible playbook), in parallel.
 
-## Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure workspaces? 
+## What is the default polling interval for an agent?
+{: #faqs-agent-poll-interval}
+{: faq}
+{: support}
+
+{{site.data.keyword.bpshort}} maintains a queue of jobs that must be delivered to an agent. The agent will poll for {{site.data.keyword.bpshort}} Jobs, every one minute by default.
+
+## What is the difference between agent-location and location input variable flag in Agent service?
+{: #faqs-agent-diff-location}
+{: faq}
+{: support}
+
+The `--agent-location` is a variable that specifies the region of the cluster where an agent service is deployed. For example, `us-south`. 
+The `--location` is a variable that specifies the region supported by {{site.data.keyword.bpshort}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. The agent polls {{site.data.keyword.bpshort}} service instance from this location, for workspace or action jobs for processing.
+
+## Can an agent run {{site.data.keyword.bpshort}} Job from different resource group?
+{: #faqs-agent-diff-rg}
+{: faq}
+{: support}
+
+Yes, an ggent can run {{site.data.keyword.bpshort}} Jobs related to workspace or actions, from all or any resource group, in an account.
+
+## Can an agent run {{site.data.keyword.bpshort}} Job from different region?
+{: #faqs-agent-diff-region}
+{: faq}
+{: support}
+
+The Agent periodically polls the regional endpoint of the {{site.data.keyword.bpshort}} service instance, to fetch and run jobs. It can connect to only one regional endpoint (home). For example, if an agent is deployed on a cluster in Sydney and has been configured to use the {{site.data.keyword.bpshort}} `eu-de` regional endpoint as it’s home location. The agent polls for jobs in `eu-de` region. Hence, the workspace or action for Sydney must be created in the `eu-de` region.
+
+## Can I register one agent with multiple accounts?
 {: #faqs-agent-register}
 {: faq}
 {: support}
 
-Yes, you can register Agent in a different resource group to what is provided in the Agent service and infrastructure workspaces.
+You cannot register an agent with multiple account in the beta release.
 
-## Can I register an Agent in a different region to what I provided in the Agent service and infrastructure workspaces?
-{: #faqs-agent-region}
+## Can jobs of an existing workspace configured to run on an agent?
+{: #faqs-agent-conf}
 {: faq}
 {: support}
 
-Yes, you can register an Agent in a different region to what is provided in the Agent service and infrastructure workspaces.
+Yes, if your workspace has the right values with the tags, resource-group, location. {{site.data.keyword.bpshort}} uses an `agent-selection-policy` to automatically assign the jobs to run on the target agent.
+For example, If you have an existing workspace: `wks-0120` with `tag=dev`, and you want the workspace to run on `Agent-1`. Create an `agent-selection-policy` with the rule to pick `Agent-1` when the `tag == dev`.  Subsequently, the workspace job such as plan, apply, update, and so on automatically routes to `Agent-1`.
 
-## Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents? 
-{: #faqs-wks-agent-region}
+## What are the identity and permissions are needed to deploy an agent?
+{: #faqs-agent-permission}
 {: faq}
 {: support}
 
-If an Agent is running in Sydney, but Agent having us-south, or eu-de as an endpoint. Workspaces must be created in the same region, where the {{site.data.keyword.bpshort}} endpoint is configures. Because {{site.data.keyword.bpshort}} picks the jobs to run based on the {{site.data.keyword.bpshort}} endpoint configuration.
+Agent recommends using a service ID and API key to provision the pre-requisite the {{site.data.keyword.cloud_notm}} resources such as {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and {{site.data.keyword.cos_full_notm}} bucket.
 
-## Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?
-{: #faqs-agent-jr-logs}
+Following are the maximum permission and roles that services should have to deploy an agent.
+
+| Resources | Service role | Platform role |
+| --- | --- | --- |
+| {{site.data.keyword.containerlong_notm}} | Manager | Viewer |
+| Resource Group |  | Administrator |
+| {{site.data.keyword.redhat_openshift_notm}} or {{site.data.keyword.containershort_notm}} | Object Writer | Administrator |
+| {{site.data.keyword.cos_full_notm}} | Object Writer ++ | Administrator ++ |
+| {{site.data.keyword.cos_full_notm}} bucket | Object Writer + Writer | Administrator |
+{: caption="Permission to deploy an agent" caption-side="top"}
+
+## When my agent is deployed in a private network. How can I configure mirror site for the Terraform plug-ins?
+{: #faqs-agent-pvt-network}
 {: faq}
 {: support}
 
-The following steps allow the JR logs and provide the request ID:
-- Get the `logdna_name` from outputs: section of your jobs logs in the Agent infrastructure workspace.
-- After your job is run and `failed`, or `succeeded`. If you want the {{site.data.keyword.bpshort}} team to debug the backend logs of the Agent, you can filter the logDNA logs with the request ID from the jobs log.
-- The logDNA sends to your mail. You can save the logs with that filter and send the file to {{site.data.keyword.bpshort}} team.
-
-## What is time set to deploy the cloud resources?
-{: #faqs-agent-limit}
-{: faq}
-{: support}
-
-The default time set to deploy the cloud resources is `30 minutes` for an Agent. For more information, see [time out](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
-
-## Why does the Terraform plan or apply fails to download the needed plugins if the agent is behind a firewall or private network?
-{: #faqs-agent-proxy}
-{: faq}
-{: support}
-
-You need to configure following two environment variables in the workspace payload to resolve the failure.
+By default, {{site.data.keyword.bpshort}} Job running the Terraform CLI attempts to download the Terraform plug-ins or Terraform modules from the Internet or public network.  
+If an Agent is running in a private network, you can add the following two environment variables in the workspace payload to setup the mirror site.
 - The `TF_NETWORK_MIRROR_URL` location where custom Terraform providers are hosted.
 - The `TF_NETWORK_MIRROR_PROVIDER_NAME` provider name that is downloaded from the custom location. This is an optional variable. It is defaulted to all providers.
 
-{{site.data.keyword.bpshort}} job micro service inspects the environment variables. If these two environment variables are present then a custom configuration file with the following contents are generated.
+{{site.data.keyword.bpshort}} job use the environment variables to auto generate the following custom configuration file.
 
 ```json
 provider_installation {
@@ -171,5 +194,4 @@ export TF_CLI_CONFIG_FILE=/home/appuser/terraform-custom.config
 ```
 {: pre}
 
-****
-
+</staging>

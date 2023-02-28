@@ -116,7 +116,7 @@ toc:
                                                     - integration-logging.md
                                                     - integration-monitor.md
                                                     - integration-at.md
-                                                    - integration-kms.md
+                                                    - integration-kms.md<staging>
                                   - topicgroup:
                                             label: Managing Agents Beta
                                             topics:

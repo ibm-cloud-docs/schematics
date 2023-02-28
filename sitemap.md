@@ -1353,16 +1353,6 @@ subcollection: schematics
 
 * [Launching activity tracking](/docs/schematics?topic=schematics-at-integration#audit-ui)
 
-[KMS integration for BYOK or KYOK](/docs/schematics?topic=schematics-kms-integration#kms-integration)
-
-* [Launching key management](/docs/schematics?topic=schematics-kms-integration#key-mgt-ui)
-
-    * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
-
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-ui)
-
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
-
 
 ## Managing Agents Beta
 {: #sitemap_managing_agents_beta}
@@ -2187,35 +2177,41 @@ subcollection: schematics
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
-[Agents](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
+[Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
-* [Can I install more than one Agent service on the Agent infrastructure?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+* [What are the new updates in the agent beta-1 release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
 
 * [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
-* [What {{site.data.keyword.bpshort}} jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
+* [Can I install more than one {{site.data.keyword.bpshort}} Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
-* [How can I see the workspace job results and logs, for the workloads that ran on the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-job-logs)
+* [What type of Schematics jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
-* [How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-job-parallel)
+* [How can I see the {{site.data.keyword.bpshort}} job results and logs, for the workloads running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
 
-* [While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What must I do next?](/docs/schematics?topic=schematics-faqs-agent#faqs-auth-error)
+* [How many {{site.data.keyword.bpshort}} jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
 
-* [What is the difference between `agent-location` and `location` input variable flag in Agents service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-location)
+* [What is the minimum cluster configuration required in Agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster)
 
-* [Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-rg)
+* [How many workspaces can be assigned to an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-wks)
 
-* [Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+* [How many jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-job)
 
-* [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-region)
+* [What is the default polling interval for an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
 
-* [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
+* [What is the difference between agent-location and location input variable flag in Agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
 
-* [Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
+* [Can an agent run {{site.data.keyword.bpshort}} Job from different resource group?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
 
-* [What is time set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
+* [Can an agent run {{site.data.keyword.bpshort}} Job from different region?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
 
-* [Why does the Terraform plan or apply fails to download the needed plugins if the agent is behind a firewall or private network?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-proxy)
+* [Can I register one agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+
+* [Can jobs of an existing workspace configured to run on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
+
+* [What are the identity and permissions are needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
+
+* [When my agent is deployed in a private network. How can I configure mirror site for the Terraform plug-ins?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-pvt-network)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
