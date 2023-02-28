@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-10"
+lastupdated: "2023-02-28"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -18,15 +18,14 @@ subcollection: schematics
 # Using Terraform modules with blueprint templates 
 {: #blueprint-terraform}    
 
-One of the use cases for blueprints is to compose infrastructure architectures directly from [Terraform modules](https://developer.hashicorp.com/terraform/language/modules#modules). 
-
-
+One of the use cases for blueprints is to compose infrastructure architectures directly from [Terraform modules](https://developer.hashicorp.com/terraform/language/modules#modules).
+{: shortdesc}
 
 Blueprint templates can reuse existing Terraform modules from the [Terraform registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}, along with {{site.data.keyword.IBM_notm}} and user created modules from public and private libraries. Best practice implementations for {{site.data.keyword.IBM_notm}} Cloud are available as reusable Terraform modules in the [terraform-ibm-modules](https://github.com/terraform-ibm-modules){: external} GitHub repo and the Terraform registry. 
 
 The section [Orchestration and modules](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-orchestration) describes the design philosophy of the design and usage of modules within the Blueprints orchestration framework. See the [IBM module authoring guidelines](https://terraform-ibm-modules.github.io/documentation/#/implementation-guidelines) for creating user modules compliant with {{site.data.keyword.bpshort}} Blueprints. 
  
- The combination of {{site.data.keyword.IBM_notm}} and user modules from public and private repos to create a custom template is illustrated in the figure.  
+The combination of {{site.data.keyword.IBM_notm}} and user modules from public and private repos to create a custom template is illustrated in the figure.  
 
 ![Custom templates with public and private modules](/images/new/bp-terraform-modules.svg){: caption="Custom templates with public and private modules" caption-side="bottom"}
 
@@ -115,7 +114,7 @@ The inputs to the mustache templates are defined in the `[tft_parameters](/docs/
 
 With the example inputs, the generated output files are: 
 
-**tf_ibm_versions_override.tf**
+tf_ibm_versions_override.tf
 
 ```yaml
 terraform {
@@ -129,7 +128,7 @@ terraform {
 ```
 {: pre}
 
-**tf_ibm_provider_override.tf**
+tf_ibm_provider_override.tf
 
 ```yaml
 provider "ibm" {
