@@ -1556,6 +1556,8 @@ subcollection: schematics
 
     * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
 
+    * [Agent permissions](/docs/schematics?topic=schematics-access#agent-permissions)
+
     * [Blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions)
 
     * [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
