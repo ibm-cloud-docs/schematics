@@ -131,11 +131,11 @@ Following are the maximum permission and roles that services should have to depl
 
 | Resources | Service role | Platform role |
 | --- | --- | --- |
-| {{site.data.keyword.containerlong_notm}} | Manager | Viewer |
-| Resource Group |  | Administrator |
-| {{site.data.keyword.redhat_openshift_notm}} or {{site.data.keyword.containershort_notm}} | Object Writer | Administrator |
-| {{site.data.keyword.cos_full_notm}} | Object Writer ++ | Administrator ++ |
-| {{site.data.keyword.cos_full_notm}} bucket | Object Writer + Writer | Administrator |
+| `{{site.data.keyword.containerlong_notm}}` | Manager | Viewer |
+| `Resource Group` |  | Administrator |
+| `{{site.data.keyword.redhat_openshift_notm}}` or `{{site.data.keyword.containershort_notm}} `| Object Writer | Administrator |
+| `{{site.data.keyword.cos_full_notm}}` | Object Writer ++ | Administrator ++ |
+| `{{site.data.keyword.cos_full_notm}} bucket` | Object Writer + Writer | Administrator |
 {: caption="Permission to deploy an agent" caption-side="top"}
 
 ### Blueprint permissions
