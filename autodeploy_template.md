@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-03-01"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -19,7 +19,7 @@ subcollection: schematics
 Use the instructions to create a button that opens the {{site.data.keyword.bpshort}} Actions create page and pre-populates an action name and the GitHub repository URL that stores your Ansible playbook. You can use the button to create {{site.data.keyword.bpshort}} Actions more quickly.
 {: shortdesc}
 
-For a sample button, see the `Deploy to {{site.data.keyword.cloud_notm}}` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
+For a sample button, see the `Deploy to {{site.data.keyword.cloud}}` button on the [Sample Ansible playbook for {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
 {: tip}
 
 ## Creating the deployment URL
@@ -79,4 +79,3 @@ To add the button into a Markdown file, such as in a repositories readme file, u
 
 Explore the [{{site.data.keyword.bpshort}} samples templates](/docs/schematics?topic=schematics-sample_actiontemplates) to deploy in your {{site.data.keyword.cloud_notm}} account.
 Looking for more code examples? Check out the [samples for {{site.data.keyword.bplong_notm}} GitHub repositories](https://github.com/Cloud-Schematics?q=Ansible&type=all&language=&sort=){: external}.
-

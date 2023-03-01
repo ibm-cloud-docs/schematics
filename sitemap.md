@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-28"
+lastupdated: "2023-03-01"
 
 keywords: schematics
 subcollection: schematics
@@ -1362,6 +1362,60 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-ui)
 
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
+
+
+## Managing Agents Beta
+{: #sitemap_managing_agents_beta}
+
+
+[Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
+
+* [Prerequisites](/docs/schematics?topic=schematics-agents-setup#agents-setup-prereq)
+
+* [Provision the Agent infrastructure through UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui)
+
+    * [Expected outcome](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output)
+
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc)
+
+* [Provision the Agent infrastructure through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-cli)
+
+    * [Deploying the Agent services through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-cli)
+
+* [Provision the Agent infrastructure through API](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-api)
+
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-api)
+
+* [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
+
+[Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent#register-agent)
+
+* [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
+
+* [Connecting Agent through API](/docs/schematics?topic=schematics-register-agent#register-api)
+
+* [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
+
+[Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
+
+* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+
+* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+
+* [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
+
+* [Next steps](/docs/schematics?topic=schematics-using-agent#agent-using-nextsteps)
+
+[Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-uninstall-agent#uninstall-agent)
+
+* [Clean up Agent infrastructure](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-infra)
+
+* [Clean up Agent service](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-service)
+
+
+### Customizing Agents
+{: #sitemap_customizing_agents}
+
 
 
 ## Logging and monitoring
