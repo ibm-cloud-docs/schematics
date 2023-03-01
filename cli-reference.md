@@ -370,7 +370,6 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 ```
 {: pre}
 
-
 ## Agent commands
 {: #agent-cmd}
 
