@@ -90,12 +90,36 @@ Review the following table to see what permissions you need to work with {{site.
 {: #agent-permissions}
 
 The following are the different permissions that you need to experience the {{site.data.keyword.bpshort}} agent.
-- Permission to use an agent 
-- Permission to work with Schematics
-- Permission to deploy an agent 
+- Permission to deploy an agent
+- Permission for agent to connect with {{site.data.keyword.bpshort}}
+- Permission to users to manage agents
 
-#### Permission to use an agent
-{: #agent-use-permission}
+#### Permission to deploy an agent
+{: #agent-deploy-permission}
+
+Agent recommends to use a service ID and API key to provision the pre-requisite the {{site.data.keyword.cloud_notm}} resources such as {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and {{site.data.keyword.cos_full_notm}} bucket.
+
+Following are the maximum permission and roles that services should have to deploy an agent.
+
+| Resources | Service role | Platform role |
+| --- | --- | --- |
+| `{{site.data.keyword.containerlong_notm}}` | Manager | Viewer |
+| `Resource Group` |  | Administrator |
+| `{{site.data.keyword.redhat_openshift_notm}}` or `{{site.data.keyword.containershort_notm}}`| Object Writer | Administrator |
+| `{{site.data.keyword.cos_full_notm}}` | Object Writer ++ | Administrator ++ |
+| `{{site.data.keyword.cos_full_notm}} bucket` | Object Writer + Writer | Administrator |
+{: caption="Permissions to deploy an agent" caption-side="top"}
+
+#### Permission for agent to connect with {{site.data.keyword.bpshort}}
+{: #agent-schematics-connect}
+
+The following permission are needed for an agent to connect with {{site.data.keyword.bpshort}}.
+
+- You need to have administrator access, when you are accessing the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
+- You need full permission to access the {{site.data.keyword.bpshort}} Workspace from other {{site.data.keyword.cloud_notm}} account.
+
+#### Permission to users to manage agents
+{: #agent-manage-permission}
 
 Review the following table to see what identity and permissions you need to use the {{site.data.keyword.bpshort}} Agent.
 
@@ -113,30 +137,6 @@ In addition to the listed agent activities and permission, you must check whethe
 | `Agent plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `Agent update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: caption="User permissions for {{site.data.keyword.bpshort}} Agent" caption-side="top"}
-
-#### Permission to work with {{site.data.keyword.bpshort}} Agent
-{: #agent-use-permission}
-
-The following permission are needed to work with the {{site.data.keyword.bpshort}} Agent.
-
-- You need to have administrator access, when you are accessing the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
-- You need full permission to access the {{site.data.keyword.bpshort}} Workspace from other {{site.data.keyword.cloud_notm}} account.
-
-#### Permission to deploy an agent
-{: #agent-deploy-permission}
-
-Agent recommends to use a service ID and API key to provision the pre-requisite the {{site.data.keyword.cloud_notm}} resources such as {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and {{site.data.keyword.cos_full_notm}} bucket.
-
-Following are the maximum permission and roles that services should have to deploy an agent.
-
-| Resources | Service role | Platform role |
-| --- | --- | --- |
-| `{{site.data.keyword.containerlong_notm}}` | Manager | Viewer |
-| `Resource Group` |  | Administrator |
-| `{{site.data.keyword.redhat_openshift_notm}}` or `{{site.data.keyword.containershort_notm}} `| Object Writer | Administrator |
-| `{{site.data.keyword.cos_full_notm}}` | Object Writer ++ | Administrator ++ |
-| `{{site.data.keyword.cos_full_notm}} bucket` | Object Writer + Writer | Administrator |
-{: caption="Permission to deploy an agent" caption-side="top"}
 
 ### Blueprint permissions
 {: #blueprint-permissions}

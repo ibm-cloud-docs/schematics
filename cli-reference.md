@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-03-01"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -382,8 +382,6 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 ## Agents commands
 {: #agents-cmd}
 
-
-
 ### `ibmcloud schematics agents bind-workspaces`
 {: #schematics-agents-bind-wks}
 
@@ -468,7 +466,7 @@ ibmcloud schematics agents list
 {: pre}
 
 
-### `ibmcloud schematics agent register`
+### `ibmcloud schematics agents register`
 {: #schematics-agent-register}
 
 Register the Agent with {{site.data.keyword.bpshort}} to run your workspace jobs on your Agent infrastructure. For more information about Agent infrastructure, see [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).

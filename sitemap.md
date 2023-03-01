@@ -1413,11 +1413,6 @@ subcollection: schematics
 * [Clean up Agent service](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-service)
 
 
-### Customizing Agents
-{: #sitemap_customizing_agents}
-
-
-
 ## Logging and monitoring
 {: #sitemap_logging_and_monitoring}
 
@@ -1767,7 +1762,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-list)
 
-    * [`ibmcloud schematics agent register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
+    * [`ibmcloud schematics agents register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
 
     * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
 
