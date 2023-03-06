@@ -29,7 +29,7 @@ toc:
                                                     - sc-about-overview.md
                                                     - sc-about-infrastructure-as-code.md
                                                     - sc-about-iac-opensource.md
-                                                    - workspaces/sc-about-workspaces.md
+                                                    - sc-about-workspaces.md
                                                     - sc-about-actions.md
                                                     - sc-about-agent.md
                                                     - sc-about-blueprint.md
