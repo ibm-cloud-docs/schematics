@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-01"
 
 keywords: schematics, automation, terraform
 
@@ -81,10 +81,63 @@ Review the following table to see what permissions you need to work with {{site.
 {: caption="User permissions for {{site.data.keyword.bpshort}} Actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Agent is a beta-1 feature that are available for evaluation and testing purposes. It is not intended for production usage.
 {: beta}
 
+### Agent permissions
+{: #agent-permissions}
 
+The following are the different permissions that you need to experience the {{site.data.keyword.bpshort}} agent.
+- Permission to deploy an agent
+- Permission for agent to connect with {{site.data.keyword.bpshort}}
+- Permission to users to manage agents
+
+#### Permission to deploy an agent
+{: #agent-deploy-permission}
+
+Agent recommends to use a service ID and API key to provision the pre-requisite the {{site.data.keyword.cloud_notm}} resources such as {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and {{site.data.keyword.cos_full_notm}} bucket.
+
+Following are the maximum permission and roles that services should have to deploy an agent.
+
+| Resources | Service role | Platform role |
+| --- | --- | --- |
+| `{{site.data.keyword.containerlong_notm}}` | Manager | Viewer |
+| `Resource Group` |  | Administrator |
+| `{{site.data.keyword.redhat_openshift_notm}}` or `{{site.data.keyword.containershort_notm}}`| Object Writer | Administrator |
+| `{{site.data.keyword.cos_full_notm}}` | Object Writer ++ | Administrator ++ |
+| `{{site.data.keyword.cos_full_notm}} bucket` | Object Writer + Writer | Administrator |
+{: caption="Permissions to deploy an agent" caption-side="top"}
+
+#### Permission for agent to connect with {{site.data.keyword.bpshort}}
+{: #agent-schematics-connect}
+
+The following permission are needed for an agent to connect with {{site.data.keyword.bpshort}}.
+
+- You need to have administrator access, when you are accessing the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
+- You need full permission to access the {{site.data.keyword.bpshort}} Workspace from other {{site.data.keyword.cloud_notm}} account.
+
+#### Permission to users to manage agents
+{: #agent-manage-permission}
+
+Review the following table to see what identity and permissions you need to use the {{site.data.keyword.bpshort}} Agent.
+
+In addition to the listed agent activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `agent create`, `agent plan`, `agent apply`, `agent delete`, and `agent destroy` activities to execute successfully.
+{: important} 
+
+| Activities | Reader | Writer | Manager | Account owner |
+|-----|-----|-----|-----|--------|
+| `View agents` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View agent logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Agent apply` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Agent create` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Agent delete`| | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Agent destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Agent plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `Agent update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+{: caption="User permissions for {{site.data.keyword.bpshort}} Agent" caption-side="top"}
+
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{: beta}
 
 ### Blueprint permissions
 {: #blueprint-permissions}

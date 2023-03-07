@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-07"
 
 keywords: schematics
 subcollection: schematics
@@ -174,19 +174,19 @@ subcollection: schematics
 {: #sitemap_understanding_blueprints}
 
 
-[Understanding Blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+[Understanding blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
 
-* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infrastructure-lifecycle)
+* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infra-lifecycle)
 
-* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#working-with-environments-and-the-blueprint-lifecycle)
+* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#bp-working-env)
 
-    * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#defining-blueprints)
+    * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-define)
 
-    * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#deploying-blueprints)
+    * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-deploy)
 
-    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#maintaining-blueprints)
+    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-maintain)
 
-    * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#deleting-blueprints)
+    * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-delete)
 
 * [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
 
@@ -350,6 +350,10 @@ subcollection: schematics
     * [16 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb2023)
 
         * {{site.data.keyword.bpshort}} allowed IP address for `US`, `EU Central`, and `UK South` region are updated
+
+    * [7 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0723)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
     * [3 February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0323)
 
@@ -917,7 +921,7 @@ subcollection: schematics
 
 * [Relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-relaxed)
 
-    * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#creating-environments-using-relaxed-versioning)
+    * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#bp-relaxed-version)
 
     * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#bp-un-versioned-env)
 
@@ -925,9 +929,9 @@ subcollection: schematics
 
 * [Explicit versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-strict)
 
-    * [Specifying versioning at create time](/docs/schematics?topic=schematics-blueprint-versioning#specifying-versioning-at-create-time)
+    * [Specifying versioning at create time](/docs/schematics?topic=schematics-blueprint-versioning#bp-version-create-time)
 
-    * [Specifying versions at update time](/docs/schematics?topic=schematics-blueprint-versioning#specifying-versions-at-update-time)
+    * [Specifying versions at update time](/docs/schematics?topic=schematics-blueprint-versioning#bp-version-update-time)
 
 [Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
 
@@ -1158,7 +1162,7 @@ subcollection: schematics
 
 * [Usage](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage)
 
-    * [Passing TF_CLI_ARGS](/docs/schematics?topic=schematics-set-parallelism#passing-tf_cli_args)
+    * [Passing TF_CLI_ARGS](/docs/schematics?topic=schematics-set-parallelism#passing-cli-args)
 
     * [Example setting parallelism or TF_LOGS](/docs/schematics?topic=schematics-set-parallelism#parallelism-example)
 
@@ -1360,8 +1364,8 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
-## Managing Agents
-{: #sitemap_managing_agents}
+## Managing Agents Beta
+{: #sitemap_managing_agents_beta}
 
 
 [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
@@ -1546,6 +1550,8 @@ subcollection: schematics
     * [Workspace permissions](/docs/schematics?topic=schematics-access#workspace-permissions)
 
     * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
+
+    * [Agent permissions](/docs/schematics?topic=schematics-access#agent-permissions)
 
     * [Blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions)
 
@@ -1746,6 +1752,8 @@ subcollection: schematics
 
     * [`ibmcloud schematics action upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-upload-action)
 
+* [Agent commands](/docs/schematics?topic=schematics-schematics-cli-reference#agent-cmd)
+
 * [Agents commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
     * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
@@ -1754,7 +1762,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-list)
 
-    * [`ibmcloud schematics agent register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
+    * [`ibmcloud schematics agents register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
 
     * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
 
@@ -1954,7 +1962,7 @@ subcollection: schematics
 
     * [modules.inputs.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-name)
 
-    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#modulesinputstype)
+    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#module-inputs-type)
 
     * [modules.inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value)
 
@@ -2181,36 +2189,6 @@ subcollection: schematics
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
-[Agents](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
-
-* [Can I install more than one Agent service on the Agent infrastructure?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
-
-* [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
-
-* [What {{site.data.keyword.bpshort}} jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
-
-* [How can I see the workspace job results and logs, for the workloads that ran on the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-job-logs)
-
-* [How many {{site.data.keyword.bpshort}} Jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-job-parallel)
-
-* [While provisioning the Agent infrastructure, I see the following error message. What is the root cause? and What must I do next?](/docs/schematics?topic=schematics-faqs-agent#faqs-auth-error)
-
-* [What is the difference between `agent-location` and `location` input variable flag in Agents service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-location)
-
-* [Can I have a different resource group for {{site.data.keyword.bpshort}} Workspaces and a Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-rg)
-
-* [Can I register an Agent in a different resource group to what I provided in the Agent service and infrastructure workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
-
-* [Can I register an Agent in a different region to what I provided in the Agent service and infrastructure workspaces?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-region)
-
-* [Can I have different region for {{site.data.keyword.bpshort}} Workspace and Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-wks-agent-region)
-
-* [Can I know the steps to get the `Jobrunner` (JR) logs to provide the request ID?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jr-logs)
-
-* [What is time set to deploy the cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-limit)
-
-* [Why does the Terraform plan or apply fails to download the needed plugins if the agent is behind a firewall or private network?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-proxy)
-
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
 * [What are the Git repositories that are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
@@ -2221,7 +2199,7 @@ subcollection: schematics
 
 * [How do I edit and validate blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-editing)
 
-* [Why do blueprints get the error 'Length for variable <variable name> greater than the given length'](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-length)
+* [Why do blueprints get the error 'Length for variable `variable name` greater than the given length'?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-length)
 
 * [Why do blueprint operations require a `blueprint ID`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
 
@@ -2232,12 +2210,6 @@ subcollection: schematics
 * [How do you view the blueprint provisioned resources in your cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
 
 * [How do you securely pass input variables?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
-
-    * [Via the UI as dynamic inputs](/docs/schematics?topic=schematics-blueprints-faq#via-the-ui-as-dynamic-inputs)
-
-    * [Via the CLI passed as environment variables](/docs/schematics?topic=schematics-blueprints-faq#via-the-cli-passed-as-environment-variables)
-
-    * [Via the CLI using an input file](/docs/schematics?topic=schematics-blueprints-faq#via-the-cli-using-an-input-file)
 
 * [Why does the blueprint template, basic example, fail in the apply step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
 

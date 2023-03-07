@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-28"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -601,6 +601,7 @@ Name of variable to be passed to Terraform module or Ansible playbook. It must m
 The module input type constraint must match the variable type in the Terraform config for the value to be passed successfully at execution time. 
 
 ### modules.inputs.type
+{: #module-inputs-type}
 
 The value type is as determined by the `modules.inputs.type` option. Refer to the [inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs-type) section for details of how to specify input types. 
 
@@ -619,7 +620,6 @@ Example type definition for an input interpolated from the module IBM-Resource-G
 ```
 {: pre}
 
-
 ### modules.inputs.value
 {: #bp-modules-inputs-value}
 
@@ -637,6 +637,7 @@ Functions and operators on input values are not supported in blueprint schema 1.
 The value type is as determined by the `modules.inputs.type` option. 
 
 #### Statically defined values 
+{: #stat-value}
 
 Type definition IS required to set the type passed to Terraform. 
 
@@ -649,6 +650,7 @@ Example of statically defined values
 {: pre}
 
 #### Template input
+{: #mod-template-input}
 
 Identified by the `$blueprint` prefix. Appended with the template input name. 
 
@@ -662,16 +664,18 @@ Example value sourced from an input statement in the template `inputs` section
 {: pre}
 
 #### Module reference
+{: #mod-reference}
 
 A resource output value from another module defined in the template file. Required to pass resource dependency information between modules.   
 
-  - Identified by the `$module` prefix. 
-  - The format is the token, `$module` followed by the name of the module sourcing the output value, the token `outputs`, followed by the source module output name. 
-  - In the following style: `$module.<module_name>.outputs.<output_name>`
+- Identified by the `$module` prefix. 
+- The format is the token, `$module` followed by the name of the module sourcing the output value, the token `outputs`, followed by the source module output name. 
+- In the following style: `$module.<module_name>.outputs.<output_name>`
    
-Type definition IS required to set the type passed to Terraform.    
+Type definition is required to set the type passed to Terraform.    
 
-Example value sourced from an output `resource_group_name` on the module `IBM-Resource-Group`. 
+Example value sourced from an output `resource_group_name` on the module `IBM-Resource-Group`.
+
 ```yaml
 - name: resource_group_name
   type: string            
@@ -764,6 +768,7 @@ Required: true
 A list that defines the templating inputs as name-value pairs. At this time, only static values are supported. 
  
 Example
+
 ```yaml
     - name: provider_version
       value: 1.42.3

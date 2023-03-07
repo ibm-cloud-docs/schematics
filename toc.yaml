@@ -29,7 +29,7 @@ toc:
                                                     - sc-about-overview.md
                                                     - sc-about-infrastructure-as-code.md
                                                     - sc-about-iac-opensource.md
-                                                    - workspaces/sc-about-workspaces.md
+                                                    - sc-about-workspaces.md
                                                     - sc-about-actions.md
                                                     - sc-about-agent.md
                                                     - sc-about-blueprint.md
@@ -118,7 +118,7 @@ toc:
                                                     - integration-at.md
                                                     - integration-kms.md
                                   - topicgroup:
-                                            label: Managing Agents
+                                            label: Managing Agents Beta
                                             topics:
                                                     - sc-agent-infra-setup.md
                                                     - sc-agent-connect.md

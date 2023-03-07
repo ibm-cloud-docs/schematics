@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-19"
+lastupdated: "2023-03-01"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Versioning blueprint environments 
@@ -29,6 +29,7 @@ Blueprints defaults to always pull the current (latest) template, inputs, or mod
 
 
 ### Creating environments using relaxed versioning
+{: #bp-relaxed-version}
 
 Relaxed versioning is in effect if a blueprint configuration is created without Git version or branch information. To create an environment that does not use versioning, the create command omits the `bp-git-release`, `bp-git-branch` and the corresponding input file definitions:
 
@@ -51,19 +52,18 @@ source:
 ### Updating an un-versioned environment
 {: #bp-un-versioned-env}
 
-Blueprints defaults to always pull the current (latest) template, inputs, or modules on an update operation if no version information is specified in the blueprint config at create time. When `latest` is in effect, {{site.data.keyword.bpshort}} identifies if the blueprint template, or module Git repositories, or input files are updated, and runs a `pull latest` to update the blueprint configuration. 
+Blueprints defaults to always pull the current (latest) template, inputs, or modules on an update operation if no version information is specified in the blueprint config at create time. When `latest` is in effect, {{site.data.keyword.bpshort}} identifies if the blueprint template, or module Git repositories, or input files are updated, and runs a `pull latest` to update the blueprint configuration.
+{: shortdesc}
 
 ```sh
 ibmcloud schematics blueprint update -id <blueprint_ID> 
 ```
 {: pre}
 
-
 ### Migrating to a versioned configuration
 {: #bp-versioned-env}
 
 An un-versioned environment can be updated to versioned. 
-
 
 1. Add [Git release tags](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository){: external} to the Git repos to create a versioned release.   
 2. Update the blueprint configuration or template with version and branch information. The flags `bp-git-release`, `bp-git-branch` and the corresponding input file definitions: 
@@ -86,6 +86,7 @@ An un-versioned environment can be updated to versioned.
 {: #update-blueprint-strict} 
 
 ### Specifying versioning at create time
+{: #bp-version-create-time}
 
 Template and input file versions are specified at create time using the flags `bp-git-release`, `bp-git-branch` and the corresponding input file flags: 
 
@@ -108,6 +109,7 @@ source:
 
 
 ### Specifying versions at update time
+{: #bp-version-update-time}
 
 If explicit blueprint versioning is used with Git release tags or branches for each blueprint template release, the blueprint configuration is only updated if a new release tag or branch is specified on the Update operation. The following examples illustrate using Git release or branch to update a template. 
 

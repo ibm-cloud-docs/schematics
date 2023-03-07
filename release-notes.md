@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-27"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -34,6 +34,13 @@ Review the release notes for February 2023.
 
 {{site.data.keyword.bpshort}} allowed IP address for `US`, `EU Central`, and `UK South` region are updated
 :   {{site.data.keyword.bpshort}} lists the [`US`, `EU Central`, and `UK South` region](/docs/schematics?topic=schematics-allowed-ipaddresses) allowed IP addresses to support `US`, `EU Central`, and `UK South` region endpoints.
+
+### 7 February 2023
+{: #schematics-feb0723}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.7](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ### 3 February 2023
 {: #schematics-feb0323}

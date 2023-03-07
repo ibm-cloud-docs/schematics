@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-07"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -370,19 +370,21 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 ```
 {: pre}
 
+## Agent commands
+{: #agent-cmd}
 
-## Agents commands
-{: #agents-cmd}
-
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
 
 
+## Agents commands
+{: #agents-cmd}
+
 ### `ibmcloud schematics agents bind-workspaces`
 {: #schematics-agents-bind-wks}
 
-Create a policy for binding workspace(s) to the Agent on {{site.data.keyword.bplong_notm}}.
+Create a policy for binding workspace(s) to the agent on {{site.data.keyword.bplong_notm}}.
 
 Syntax
 
@@ -463,7 +465,7 @@ ibmcloud schematics agents list
 {: pre}
 
 
-### `ibmcloud schematics agent register`
+### `ibmcloud schematics agents register`
 {: #schematics-agent-register}
 
 Register the Agent with {{site.data.keyword.bpshort}} to run your workspace jobs on your Agent infrastructure. For more information about Agent infrastructure, see [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
@@ -596,7 +598,7 @@ For more information about the flags see [workspace get](/docs/schematics?topic=
 ## Blueprint commands
 {: #blueprints-cmd}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 ### `ibmcloud schematics blueprint create`
@@ -617,7 +619,7 @@ Refer to the section on [Creating Blueprints](/docs/schematics?topic=schematics-
 Before your begin:
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.5`.
-- Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. For more information, see [FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region).
 - Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create blueprints.
 
 **Syntax to create blueprint config using CLI parameters:**
@@ -634,7 +636,7 @@ Command options
 | `--name` or `-n`| Required | Name of the blueprint. Delimited by double quotes if the name contains spaces. For example `-name "my blueprint"`|
 | `--resource-group` or `-r` | Required | The management resource group for the blueprint.|
 | `--description` or `--desc` | Optional | The description of the blueprint. Delimited by double quotes if the description contains spaces. For example `-description "my blueprint example"`|
-| `--location` or `-l` |  Optional |  The location of blueprint. Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. |
+| `--location` or `-l` |  Optional |  The location of blueprint. Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region through [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. |
 | `--source-type` or `-s`| Optional |  The blueprint source type. Valid values are `git_hub`, `ibm_cloud_catalog`.|
 | `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template. For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
 | `--bp-git-file` or `--bf`| Required | The blueprint template file name, including the file extension and any subfolders. For example `-bp-git-file <subfolder>/basic-blueprint.yaml`   |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-07"
+  years: 2017, 2023
+lastupdated: "2023-02-28"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -14,7 +14,6 @@ subcollection: schematics
 
 # Choosing your IaC tool  
 {: #schematics-open-projects}
-
 
 The choice of IaC tool matters. Some tools are a better fit for the task in hand. Often the use of different tools for configuration management and provisioning is the most effective choice. The section below, [Understanding {{site.data.keyword.bpshort}} features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping) identifies the mapping of Ansible and Terraform, along with operators and Helm to related {{site.data.keyword.bpshort}} features. 
 

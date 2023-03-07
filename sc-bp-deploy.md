@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-03-01"
 
 keywords: schematics blueprints, deploy blueprint, managed environments
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Deploying blueprints
@@ -20,6 +20,7 @@ subcollection: schematics
 
 Deploying a blueprint environment using a blueprint template and input values is a two-step operation. The two-step process ensures controlled application of change first to the stored blueprint configuration, then secondly to the cloud resources. In a future release a plan step will be added to allow preview of all resource changes before deploying.  
 {: shortdesc} 
+
 1. **Create the blueprint configuration in {{site.data.keyword.bpshort}}:** This first step creates and saves a blueprint configuration in {{site.data.keyword.bpshort}}. The configuration specifies the blueprint template used to create the reference architecture and the inputs that will we used. {{site.data.keyword.bpshort}} retrieves the user specified blueprint template from its Git repo, input values and performs validation. The automation modules defined in the template are imported from their source repositories. The required {{site.data.keyword.bpshort}} linked modules are initialized to manage deployment of the IaC modules and creation of cloud resources in the next step.
 2. **Apply the blueprint configuration:** {{site.data.keyword.bpshort}} runs the IaC module automation code in dependency order to create the environment and cloud resources. This step runs a Terraform Apply operation for each module to create the resources as specified by the blueprint template.      
 

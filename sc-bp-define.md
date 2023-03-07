@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-03-01"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Defining blueprints
@@ -64,10 +64,10 @@ The steps to create a blueprint template and define the versioned inputs are ill
 3. Push the completed blueprint template to a Git repo. If needed, create a Git version release tag for blueprint version management. [Semantic versioning](https://semver.org/){: external} is strongly recommended. 
 4. Customize your template with a versioned blueprint input file to configure it for your use case. 
    - Review the section on [Customizing environments with inputs](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps) to determine which inputs will be defined in the input file. Undefined inputs, must either have a template default or be specified at runtime by a dynamic input. 
-    - Review the sections [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) and [blueprint input YAML schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the syntax to define blueprint input files.  
-    - Again in your favorite editor, create and name a new blueprint input YAML file. Alternatively follow the instructions for [editing templates in VSCode](/docs/schematics?topic=schematics-edit-blueprints). 
-    - Using the template inputs as a guide, populate the input file with environment-specific input key-value pairs. The variable type of the input value must match that defined in the template YAML file.
-    - It is recommended that inputs defining secrets or sensitive values are omitted from the input file. Then specified when the blueprint configuration is created in {{site.data.keyword.bpshort}}.
+   - Review the sections [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) and [blueprint input YAML schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the syntax to define blueprint input files.
+   - Again in your favorite editor, create and name a new blueprint input YAML file. Alternatively follow the instructions for [editing templates in VSCode](/docs/schematics?topic=schematics-edit-blueprints).
+   - Using the template inputs as a guide, populate the input file with environment-specific input key-value pairs. The variable type of the input value must match that defined in the template YAML file.
+   - It is recommended that inputs defining secrets or sensitive values are omitted from the input file.Then specified when the blueprint configuration is created in {{site.data.keyword.bpshort}}.
 5. Push the blueprint input YAML file to a Git repo. As required, create a Git version release tag for version management. If input file is to be versioned and updated separately to the template file, the blueprint input file should be versioned in a separate repo to the template.  
 
 ## Next steps

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-03-01"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 # Displaying blueprint jobs
@@ -197,6 +197,8 @@ The CLI command to view the **full** job log for a child job, is printed at the 
 Blueprint job logs provide detail about the execution of blueprint operations and the full execution logs for Terraform and Ansible operations on modules. Blueprints has two classes of child jobs, a `blueprint` orchestration job and a number of `module` jobs running the Terraform or Ansible automation tasks. 
 
 #### Module job logs
+{: #blueprint-mod-job-log}
+
 Module job logs provide the detailed output of Terraform and Ansible operations and the primary source for identifying provisioning failures. The full `module` job log containing the Terraform and Ansible execution logs can be reviewed with the `schematics logs` command 
 
 ```ssh
@@ -207,6 +209,8 @@ ibmcloud schematics logs --id us-east.workspace.basic-resource-group.99503dea --
 The `job_id` for a module job displayed when the Create, Apply, Update, Destroy, and Delete commands ran. Or using the `blueprint job list` or `blueprint job get` commands as shown previously.  
 
 #### Blueprint orchestration job logs  
+{: #blueprint-orchestration-log}
+
 To view the `blueprint` orchestration job log with the CLI, use the `ibmcloud schematics blueprint job logs` command. This command provides more detail than the summary log with the `blueprint job get` command. The command takes as input the `job_id`. The `job_id` is displayed when the Create, Apply, Update, Destroy, and Delete commands ran. 
 {: shortdesc}
 
