@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2022
-lastupdated: "2022-12-27"
+  years: 2016, 2023
+lastupdated: "2023-03-07"
 
 keywords: glossary, IBM Cloud schematics glossary, terms, definitions, schematics glossary
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Glossary
+# Glossary terms for {{site.data.keyword.bpshort}}
 {: #glossary}
 
 This glossary provides terms and definitions for {{site.data.keyword.bpshort}} objects, such as `action`, `Agent`, `Blueprint`, `Catalog`, `Inventory`, `Job`, `Template or Modules`, and `workspace`.

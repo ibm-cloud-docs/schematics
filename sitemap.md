@@ -2069,11 +2069,11 @@ subcollection: schematics
 * [What is the use of refresh token header?](/docs/schematics?topic=schematics-schematics-limitations#refresh-token)
 
 
-## Glossary
-{: #sitemap_glossary}
+## Glossary terms for {{site.data.keyword.bpshort}}
+{: #sitemap_glossary_terms_for_}
 
 
-[Glossary](/docs/schematics?topic=schematics-glossary#glossary)
+[Glossary terms for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-glossary#glossary)
 
 * [Actions](/docs/schematics?topic=schematics-glossary#glossary-actions)
 
