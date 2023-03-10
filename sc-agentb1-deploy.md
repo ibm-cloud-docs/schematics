@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-08"
+lastupdated: "2023-03-10"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -23,15 +23,14 @@ subcollection: schematics
 
 Deploying an agent involves the following steps:
 
-- Configure your network so that your agent can communicate with your {{site.data.keyword.cloud_notm}} infrastructure setup through create an agent.
+- Configure your network so that your agent communicate with your {{site.data.keyword.cloud_notm}} infrastructure setup through [ibmcloud schematics agent create](docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-create).
 - Deploys your agent by invoking [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) commands.
-- Choose a service endpoint that your agent uses to communicate with {{site.data.keyword.bpshort}} Workspace.
-- Activate your agent.
+- Chooses a service endpoint that your agent uses to communicate with {{site.data.keyword.bpshort}} Workspace.
+- Activates your agent.
 
 ## Deploying an agent through the CLI 
 {: #deploy-agent-cli}
 {: cli}
-
 
 ### Verifying an agent through the CLI
 {: #verify-agent-create-ui}
@@ -40,12 +39,10 @@ Deploying an agent involves the following steps:
 {: #create-agent-api}
 {: api}
 
-
-
 ### Verifying an agent through the API
 {: #verify-agent-create-api}
 
 ## Next steps
 {: #agent-create-nextsteps}
 
-The next step is to deploy an agent.
+The next step is to delete an agent.
