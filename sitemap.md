@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-10"
+lastupdated: "2023-03-15"
 
 keywords: schematics
 subcollection: schematics
@@ -1547,6 +1547,14 @@ subcollection: schematics
 
 * [Overview of {{site.data.keyword.bpshort}} service access roles and required permissions](/docs/schematics?topic=schematics-access#access-roles)
 
+* [{{site.data.keyword.bpshort}} Platform roles and service roles](/docs/schematics?topic=schematics-access#iam-platform-svc-roles)
+
+    * [Platform roles](/docs/schematics?topic=schematics-access#iam-platform-roles)
+
+    * [Service roles](/docs/schematics?topic=schematics-access#iam-service-roles)
+
+* [Roles and permissions about {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-access#iam-roles-permission-schematics)
+
     * [Workspace permissions](/docs/schematics?topic=schematics-access#workspace-permissions)
 
     * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
@@ -2285,6 +2293,12 @@ subcollection: schematics
 
 * [Can I delete and destroy operation as one step?](/docs/schematics?topic=schematics-general-faq#faq-delete-destroy-operation)
 
+* [What is a resource group and how does it help me organize my team?](/docs/schematics?topic=schematics-general-faq#faq-rg-team)
+
+* [What is the benefit by using IAM access group?](/docs/schematics?topic=schematics-general-faq#faq-iam-accessgrp-benefit)
+
+* [What are steps to create and restrict the fine-grained and classic personal access token (PAT).](/docs/schematics?topic=schematics-general-faq#faq-pat)
+
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
 * [How do you overcome the authentication error when {{site.data.keyword.bpshort}} Workspaces is created by using API?](/docs/schematics?topic=schematics-workspaces-faq#createworkspace-authentication-error)
@@ -2420,6 +2434,10 @@ subcollection: schematics
 * [Blueprint create fails with the error blueprint JSON validation failed: field missing or invalid in config](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails4)
 
 * [Blueprint create fails with the error blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails5)
+
+* [Why is {{site.data.keyword.bpshort}} not able to clone the private GitHub repository?](/docs/schematics?topic=schematics-bp-create-fails#tsg-privategithub)
+
+* [Why is {{site.data.keyword.bpshort}} not able to clone the public GitHub repository?](/docs/schematics?topic=schematics-bp-create-fails#tsg-publicgithub)
 
 [blueprint create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
