@@ -2297,7 +2297,7 @@ subcollection: schematics
 
 * [What is the benefit by using IAM access group?](/docs/schematics?topic=schematics-general-faq#faq-iam-accessgrp-benefit)
 
-* [What are steps to create and restrict the fine-grained and classic personal access token (PAT).](/docs/schematics?topic=schematics-general-faq#faq-pat)
+* [What are the steps to create and restrict the fine-grained and classic personal access token (PAT).](/docs/schematics?topic=schematics-general-faq#faq-pat)
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 

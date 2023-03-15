@@ -334,7 +334,7 @@ The following image shows how you can leverage IAM access groups and resource gr
 2. The IAM access group is assigned access to resources within a specific resource group. For example, access group A receives editor permissions for all resources in resource group A, but only viewer permissions for the resources in resource group B.
 3. The account owner or an authorized administrator adds users to the IAM access group. All users automatically inherit the permissions of the IAM access group.
 
-## What are steps to create and restrict the fine-grained and classic personal access token (PAT).
+## What are the steps to create and restrict the fine-grained and classic personal access token (PAT).
 {: #faq-pat}
 {: faq}
 {: support}
