@@ -15,7 +15,7 @@ subcollection: schematics
 # Deploying agent
 {: #deploy-agent-overview}
 
-{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
+{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
 {: beta}
 
 {{site.data.keyword.bplong}} Agent extends {{site.data.keyword.bpshort}} ability to work directly with your private cloud infrastructure on your private network. 
@@ -70,11 +70,13 @@ Authorization: Bearer
     "agent_location": "us-south",
     "agent_infrastructure": {
         "infra_type": "ibm_kubernetes",
-        "cluster_id": "c6ja7vtf0afldib61l20",
-        "cluster_resource_group": "Default",
-        "cos_instance_name": "schmagent-dev-infra-cos",
-        "cos_bucket_name": "schematics-agents-bucket",
-        "cos_resource_group": "Default"
+        "cluster_id": "<enter your cluster ID>",
+        "cluster_resource_group": "<enter your cluster resource group",
+        "cos_instance_name": "<enter your COS instance name>",
+        "cos_bucket_name": "<enter your COS bucket name>",
+        "cos_bucket_region": "<enter your COS bucket region>",
+        "cos_resource_group": "<enter your COS resource group>"
+
     },
     "user_state": {
         "state": "enable"
@@ -93,7 +95,32 @@ Verify that the agent is created successfully as shown in the output.
 Output
 
 ```text
-
+{
+    "name": "agent-beta1-testing",
+    "description": "Create Agent",
+    "resource_group": "ba8818923fe846e6a8fb5c6d72075768",
+    "tags": [
+        "env:prod",
+        "mytest"
+    ],
+    "version": "v1.0.0",
+    "schematics_location": "us-south",
+    "agent_location": "us-south",
+    "user_state": {
+        "state": "enable",
+        "set_by": "geetha_sathyamurthy@in.ibm.com",
+        "set_at": "2023-03-16T06:12:13.684097462Z"
+    },
+    "agent_crn": "crn:v1:bluemix:public:schematics:us-south:a/c19ef85117044059a3be5e45d6dc1cf6:347160c0-dca9-49e8-a292-9c980c7f8c47:agent:agent-beta1-testing.soA.748e",
+    "id": "agent-beta1-testing.soA.748e",
+    "created_at": "2023-03-16T06:12:13.684112846Z",
+    "creation_by": "geetha_sathyamurthy@in.ibm.com",
+    "updated_at": "0001-01-01T00:00:00Z",
+    "system_state": {
+        "status_code": "draft"
+    },
+    "agent_kpi": {}
+}
 ```
 {: screen}
 
