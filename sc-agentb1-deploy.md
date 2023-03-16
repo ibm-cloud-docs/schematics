@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-16"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -47,8 +47,55 @@ The pre-requisite to deploy an Agent is as follows:
 {: #create-agent-api}
 {: api}
 
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, see [Create a agent](apidocs/schematics/schematics_internal_v1#create-agent-data) by using API.
+
+Example
+
+```json
+POST /v2/agents HTTP/1.1
+Host: schematics.cloud.ibm.com
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "name": "agent-beta1-testing",
+    "description": "Create Agent",
+    "resource_group": "Default",
+    "tags": [
+        "env:prod",
+        "mytest"
+    ],
+    "version": "v1.0.0",
+    "schematics_location": "us-south",
+    "agent_location": "us-south",
+    "agent_infrastructure": {
+        "infra_type": "ibm_kubernetes",
+        "cluster_id": "c6ja7vtf0afldib61l20",
+        "cluster_resource_group": "Default",
+        "cos_instance_name": "schmagent-dev-infra-cos",
+        "cos_bucket_name": "schematics-agents-bucket",
+        "cos_resource_group": "Default"
+    },
+    "user_state": {
+        "state": "enable"
+    }
+}
+```
+{: codeblock}
+
+
 ### Verifying an agent through the API
 {: #verify-agent-create-api}
+
+Verify that the agent is created successfully as shown in the output.
+{: shortdesc}
+
+Output
+
+```text
+
+```
+{: screen}
 
 ## Next steps
 {: #agent-create-nextsteps}

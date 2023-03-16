@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-16"
 
 keywords: schematics, automation, terraform
 
@@ -224,7 +224,6 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
     - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies. 
     - The resource group of the {{site.data.keyword.bpshort}} Workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
     - For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy. 
-
 
 ## Manage access tag in your account 
 {: #access-tag}

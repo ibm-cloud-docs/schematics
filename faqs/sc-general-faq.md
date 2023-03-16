@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-03-16"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -334,7 +334,7 @@ The following image shows how you can leverage IAM access groups and resource gr
 2. The IAM access group is assigned access to resources within a specific resource group. For example, access group A receives editor permissions for all resources in resource group A, but only viewer permissions for the resources in resource group B.
 3. The account owner or an authorized administrator adds users to the IAM access group. All users automatically inherit the permissions of the IAM access group.
 
-## What are the steps to create and restrict the fine-grained and classic personal access token (PAT).
+## What are the steps to create and restrict the fine-grained and classic personal access tokens (PAT).
 {: #faq-pat}
 {: faq}
 {: support}
