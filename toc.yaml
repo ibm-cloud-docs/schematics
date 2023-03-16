@@ -31,7 +31,7 @@ toc:
                                                     - sc-about-iac-opensource.md
                                                     - sc-about-workspaces.md
                                                     - sc-about-actions.md
-                                                    - sc-about-agent.md
+                                                    - sc-about-agentb1.md
                                                     - sc-about-blueprint.md
                                                     - sc-about-usecases.md
                                   - topicgroup:
@@ -118,12 +118,18 @@ toc:
                                                     - integration-at.md
                                                     - integration-kms.md
                                   - topicgroup:
-                                            label: Managing Agents Beta
+                                            label: Managing Agent Beta-1
                                             topics:
-                                                    - sc-agent-infra-setup.md
-                                                    - sc-agent-connect.md
-                                                    - sc-agent-using.md
-                                                    - sc-agent-uninstall.md
+                                                   - sc-agentb1-plan.md
+                                                   - sc-agentb1-deploy.md
+                                                   - sc-agentb1-display.md
+                                                   - sc-agentb1-delete.md
+                                                   - topicgroup:
+                                                              label: Using Agent
+                                                              topics:
+                                                                      - sc-agentb1-policy.md
+                                                                      - sc-agentb1-health.md
+
                                   - topicgroup:
                                             label: Logging and monitoring
                                             topics:
@@ -175,7 +181,6 @@ toc:
                                             topics:
                                                     - sc-blueprint-template-yaml.md
                                                     - sc-blueprint-input-yaml.md
-                                  - sc-agent-beta-limitations.md
                                   - sc-blueprint-beta-limitation.md
                                   - sc-tools.md
                                   - schematics-sdk.md
@@ -183,7 +188,16 @@ toc:
                                   - limitations.md
                                   - sc-glossary.md
                                   - license-notices.md
-                                  - sc-agent-trustedprofile.md
+                                  - topicgroup:
+                                            label: Agent beta-0
+                                            topics:
+                                                    - sc-about-agent.md
+                                                    - sc-agent-architecture.md
+                                                    - sc-agent-beta-limitations.md
+                                                    - sc-agent-infra-setup.md
+                                                    - sc-agent-trustedprofile.md
+                                                    - sc-agent-uninstall.md
+                                                    - sc-agent-using.md
                                   - topicgroup:
                                             label: Related links
                                             topics:

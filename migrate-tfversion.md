@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-28"
+lastupdated: "2023-03-16"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -57,7 +57,7 @@ The workspace terraform version parameter is of the form `terraform_v1.1` or `te
 2. Update the Workspace terraform version using the {{site.data.keyword.cloud_notm}} CLI:
    - Login to the {{site.data.keyword.cloud_notm}} CLI with `ibmcloud login` 
    - Set the CLI target region with `ibmcloud target -r <region>` to be the same as the workspace you are updating. 
-   - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens` 
+   - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens`.
    - Copy the token data and insert in to the following command text, replacing the string `<token-data>`, set `<terraform_version>` to the required Terraform version and the `<workspace_id>`:  
    - Execute the following `cURL` command:
 

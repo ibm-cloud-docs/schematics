@@ -117,7 +117,7 @@ Review the following table to see what permissions you need to work with {{site.
 ### Agent permissions
 {: #agent-permissions}
 
-The following are the different permissions that you need to implement the {{site.data.keyword.bpshort}} agent.
+The following are the different permissions that you an user need to create and deploy  the {{site.data.keyword.bpshort}} agent.
 - Permission to deploy an agent
 - Permission for agent to connect with {{site.data.keyword.bpshort}}
 - Permission to users to manage agents
@@ -136,22 +136,23 @@ Following are the maximum permission and roles that services should have to depl
 | `{{site.data.keyword.redhat_openshift_notm}}` or `{{site.data.keyword.containershort_notm}}`| Object Writer | Administrator |
 | `{{site.data.keyword.cos_full_notm}}` | Object Writer ++ | Administrator ++ |
 | `{{site.data.keyword.cos_full_notm}} bucket` | Object Writer + Writer | Administrator |
+| `{{site.data.keyword.bpshort}}` | Manager | Operator |
 {: caption="Permissions to deploy an agent" caption-side="top"}
 
 #### Permission for agent to connect with {{site.data.keyword.bpshort}}
 {: #agent-schematics-connect}
 
-The following permission are needed for an agent to connect with {{site.data.keyword.bpshort}}.
+Consider the following access are provided for an agent to connect with {{site.data.keyword.bpshort}}.
 
-- You need to have administrator access, when you are accessing the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
-- You need full permission to access the {{site.data.keyword.bpshort}} Workspace from other {{site.data.keyword.cloud_notm}} account.
+- You need administrator permission to access the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
+- You need Manager service role access, Operator role permission, and [assign access to the trusted profile](docs/account?topic=account-create-trusted-profile&interface=ui#tp-access) to connect.
 
-#### Permission to users to manage agents
+#### Permission for users to manage agents
 {: #agent-manage-permission}
 
 Review the following table to see what identity and permissions you need to use the {{site.data.keyword.bpshort}} Agent.
 
-In addition to the listed agent activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `agent create`, `agent plan`, `agent apply`, `agent delete`, and `agent destroy` activities to execute successfully.
+In addition to the listed agent activities and permission, you must ensure you have permissions to run `agent create`, `agent plan`, `agent apply`, `agent delete`, and `agent destroy` activities to execute successfully.
 {: important} 
 
 | Activities | Reader | Writer | Manager | Account owner |
@@ -165,6 +166,7 @@ In addition to the listed agent activities and permission, you must check whethe
 | `Agent plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `Agent update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: caption="User permissions for {{site.data.keyword.bpshort}} Agent" caption-side="top"}
+
 
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}

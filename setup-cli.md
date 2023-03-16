@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-16"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -153,7 +153,8 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     For {{site.data.keyword.bpshort}} Agents, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.0` version.
     {: note}
     
-    
+    For {{site.data.keyword.bpshort}} Agent beta-1, the {{site.data.keyword.bpshort}} plug-in version must be greater than the `1.12.7` version.
+    {: note}
 
     ```sh
     ibmcloud plugin update schematics
