@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-03-17"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -371,7 +371,7 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 {: pre}
 
 
-## Agent beta1 commands
+## Agent beta-1 commands
 {: #agent-beta1-cmds}
 
 {{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.

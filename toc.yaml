@@ -193,11 +193,11 @@ toc:
                                             topics:
                                                     - sc-about-agent.md
                                                     - sc-agent-architecture.md
-                                                    - sc-agent-beta-limitations.md
                                                     - sc-agent-infra-setup.md
                                                     - sc-agent-trustedprofile.md
                                                     - sc-agent-uninstall.md
                                                     - sc-agent-using.md
+                                                    - sc-agent-beta-limitations.md
                                   - topicgroup:
                                             label: Related links
                                             topics:

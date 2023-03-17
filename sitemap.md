@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-03-17"
 
 keywords: schematics
 subcollection: schematics
@@ -1403,6 +1403,14 @@ subcollection: schematics
 {: #sitemap_using_agent}
 
 
+[Managing network policies](/docs/schematics?topic=schematics-agent-networkpolicy#agent-networkpolicy)
+
+* [Restricting properties](/docs/schematics?topic=schematics-agent-networkpolicy#networkpolicy-restrict)
+
+* [Default network policies](/docs/schematics?topic=schematics-agent-networkpolicy#networkpolicy-default)
+
+* [Workspaces or Actions attributes used to dynamically select Agent](/docs/schematics?topic=schematics-agent-networkpolicy#policy-dynamic-attribute)
+
 [Managing agent health](/docs/schematics?topic=schematics-agent-health#agent-health)
 
 * [List agent health using the CLI](/docs/schematics?topic=schematics-agent-health#health-agentb1-cli)
@@ -1757,7 +1765,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics action upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-upload-action)
 
-* [Agent beta1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agent-beta1-cmds)
+* [Agent beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agent-beta1-cmds)
 
     * [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
@@ -2175,7 +2183,7 @@ subcollection: schematics
 {: #sitemap_agent_beta-0}
 
 
-[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
+[About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
 
 * [Usage of an Agent](/docs/schematics?topic=schematics-agents-intro#agent-usage)
 
@@ -2186,14 +2194,6 @@ subcollection: schematics
 * [Setting up an Agent](/docs/schematics?topic=schematics-agents-intro#setting-agent)
 
 * [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
-
-[Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
-
-* [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
-
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
-
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
 
 [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
 
@@ -2234,6 +2234,14 @@ subcollection: schematics
 * [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
 
 * [Next steps](/docs/schematics?topic=schematics-using-agent#agent-using-nextsteps)
+
+[Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
+
+* [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
 
 
 ## Related links
