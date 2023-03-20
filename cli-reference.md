@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-20"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -622,7 +622,7 @@ ibmcloud schematics agent update --id <AGENT_ID>
 ```
 {: pre}
 
-</staging>
+
 
 ## Blueprint commands
 {: #blueprints-cmd}
