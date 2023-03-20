@@ -27,7 +27,7 @@ The {{site.data.keyword.bplong}} Agent creates a terraform based automation to c
 {: #health-agentb1-cli}
 {: cli}
 
-To view the agent health available by using the CLI, use the `ibmcloud schematics agent health` command. This command requires `agent_id` arguments. It is region specific and will only list agents in the selected CLI region. 
+To view the agent health by using the CLI, use the `ibmcloud schematics agent health` command. This command requires `agent_id` arguments. It is region specific and will only list agents in the selected CLI region. 
 {: shortdesc}
 
 For all the agent commands, syntax, and option flag details, see [agent beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health).

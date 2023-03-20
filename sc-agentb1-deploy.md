@@ -25,9 +25,8 @@ Consider the following steps to deploy the {{site.data.keyword.bpshort}} agent e
 
 - Agent create: Initializes the {{site.data.keyword.bpshort}} information for an agent to deploy.
 - Agent deploy: Creates {{site.data.keyword.bpshort}} Workspace, invokes [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan), and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) commands.
-- Create a policy for the agent
-- Check the health of an agent 
-- Define the policy for the agent
+- [Define the policy for the agent](/docs/schematics?topic=schematics-policy-manage&interface=ui).
+- [Check the health of an agent](/docs/schematics?topic=schematics-agent-health&interface=cli).
 
 ## Before your begin
 {: #deploy-prereq}
@@ -51,7 +50,7 @@ To work with {{site.data.keyword.bpshort}} Agent, the [{{site.data.keyword.bpsho
 Example
 
 ```sh
-ibmcloud schematics agent create --name testagentname --location us-sourth --agent-location us-south --version 0.0.1 --infra-type ibm_kubernetes --cluster-id cfgh000000000vfq2ugp0 --cluster-resource-group Default --cos-instance-name agents-cos-instancename --cos-bucket agent-cos-bucketname --cos-location us-south --resource-group Default
+ibmcloud schematics agent create --name testagentname --location us-south --agent-location us-south --version 0.0.1 --infra-type ibm_kubernetes --cluster-id cfgh000000000vfq2ugp0 --cluster-resource-group Default --cos-instance-name agents-cos-instancename --cos-bucket agent-cos-bucketname --cos-location us-south --resource-group Default
 ```
 {: pre}
 
@@ -79,6 +78,20 @@ Example
 ibmcloud schematics agent deploy --id magent.soA.94f1 
 ```
 {: pre}
+
+Output
+
+```text
+{
+    "workspace_id": "us-south.workspace.agent-testagentname",
+    "job_id": ".ACTIVITY.3fe6a2e3",
+    "updated_at": "2023-03-19T15:55:30.8050000",
+    "updated_by": "test@in.ibm.com",
+    "status_code": "PENDING",
+    "status_message": "Triggered deployment"
+}
+```
+{: screen}
 
 
 ## Deploying an agent through the API
@@ -193,7 +206,7 @@ Output
 ```
 {: screen}
 
-### Verifying an agent
+## Verifying an agent
 {: #verify-agent}
 
 1. The _agent deploy_ command creates a workspace in your {{site.data.keyword.cloud_notm}} account.

@@ -1368,7 +1368,7 @@ subcollection: schematics
 
 * [Deploying an agent through the API](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-api)
 
-    * [Verifying an agent](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent)
+* [Verifying an agent](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview#agent-create-nextsteps)
 
@@ -1376,58 +1376,44 @@ subcollection: schematics
 
 * [Displaying an agent using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-cli)
 
-    * [Verifying an agent display](/docs/schematics?topic=schematics-display-agentb1-overview#verify-agentb1-display-cli)
-
-* [Displaying an agent config using the UI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-ui)
-
-    * [Verifying agent display](/docs/schematics?topic=schematics-display-agentb1-overview#verify-agentb1-display-ui)
-
 * [Displaying an agent using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
 
 [Deleting agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
 * [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-cli)
 
-    * [Verifying an agent deletion](/docs/schematics?topic=schematics-delete-agent-overview#verify-agentb1-delete-cli)
-
-* [Deleting an agent config using the UI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-ui)
-
-    * [Verifying agent deletion](/docs/schematics?topic=schematics-delete-agent-overview#verify-agentb1-deletion-ui)
-
 * [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-api)
-
-    * [Verifying agent deletion through API](/docs/schematics?topic=schematics-delete-agent-overview#verify-agentb1-deletion-api)
 
 
 ### Using Agent
 {: #sitemap_using_agent}
 
 
-[Managing account policies](/docs/schematics?topic=schematics-policy-manager#policy-manager)
+[Managing policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
 
-* [Components](/docs/schematics?topic=schematics-policy-manager#policy-components)
+* [Components](/docs/schematics?topic=schematics-policy-manage#policy-components)
 
-    * [Policy execution engine](/docs/schematics?topic=schematics-policy-manager#policy-exe-engine)
+    * [Policy execution engine](/docs/schematics?topic=schematics-policy-manage#policy-exe-engine)
 
-    * [Policy kind](/docs/schematics?topic=schematics-policy-manager#policy-kind)
+    * [Policy kind](/docs/schematics?topic=schematics-policy-manage#policy-kind)
 
-* [Agent policy commands using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-policycmd-cli)
+* [Agent policy commands using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-policycmd-cli)
 
-    * [Example to create policy using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-createpolicy-cli)
+    * [Example to create policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
 
-    * [Example to get policy using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-getpolicy-cli)
+    * [Example to get policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-cli)
 
-    * [Example to update policy using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-updatepolicy-cli)
+    * [Example to update policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-cli)
 
-* [Agent policy command using API](/docs/schematics?topic=schematics-policy-manager#agentb1-policydm-api)
+* [Agent policy command using API](/docs/schematics?topic=schematics-policy-manage#agentb1-policydm-api)
 
-    * [Example to create policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-createpolicy-api)
+    * [Example to create policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-api)
 
-    * [Example to get policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-getpolicy-api)
+    * [Example to get policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-api)
 
-    * [Example to update policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-updatepolicy-api)
+    * [Example to update policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-api)
 
-    * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-searchpolicy-api)
+    * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
 
 [Managing agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 
@@ -1789,7 +1775,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics agent create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-create)
 
-    * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan)
+    * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
 
     * [`ibmcloud schematics agent get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
 

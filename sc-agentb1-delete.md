@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-03-20"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -25,62 +25,23 @@ When an agent is no longer required, it can be deleted which will terminate bill
 {: #delete-agentb1-cli}
 {: cli}
 
-### Verifying an agent deletion 
-{: #verify-agentb1-delete-cli}
+To view the agent delete by using the CLI, use the `ibmcloud schematics agent delete` command. This command requires `agent_id` arguments. For the agent delete command, syntax, and option flag details, see [agent delete](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-delete) command.
+{: shortdesc}
 
-The delete CLI command does not wait for successful job completion and returns immediately. 
+Before deleting an agent or a workspace created during agent deployment, you need to destroy the resources of the workspace. For more information about workspace destroy, see [deleting workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
+{: important}
 
-The status of the delete operation can be monitored by using the `agent job get` command. The following command runs a `agent job get` for the JOB ID. The job ID is displayed in the delete output. 
+```sh
+ibmcloud schematics agent delete --id AGENT_ID 
+```
+{: pre}
 
-## Deleting an agent config using the UI 
-{: #delete-agentb1-ui}
-{: ui}
-
-
-### Verifying agent deletion 
-{: #verify-agentb1-deletion-ui}
 
 ## Deleting an agent using the API
 {: #delete-agentb1-api}
 {: api}
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. 
-
-Syntax
-
-```curl
-curl -X DELETE https://us-east.schematics.cloud.ibm.com/v2/agents/<enter your agent ID> \
-    -H 'Authorization: <enter your authorization token>' \
-    -H 'X-Feature-Agents: true' \
-    -H 'refresh_token: <enter your refresh token>'
-```
-{: codeblock}
-
-```curl
-curl -X DELETE https://us-east.schematics.cloud.ibm.com/v2/agents/agent-beta1-testing.soA.748e \
-    -H 'Authorization: ' \
-    -H 'X-Feature-Agents: true' \
-    -H 'refresh_token: '
-```
-{: codeblock}
-
-
-### Verifying agent deletion through API
-{: #verify-agentb1-deletion-api}
-
-You can retrieve the agent ID that are deleted by using _agent get_ API. 
-{: shortdesc}
-
-Syntax
-
-```json
-GET /v2/agents/<agent ID>/ HTTP/1.1
-Host: schematics.cloud.ibm.com
-Content-Type: application/json
-Authorization: Bearer <auth_token>
-
-```
-{: codeblock}
 
 Example
 

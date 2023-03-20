@@ -448,7 +448,7 @@ ibmcloud schematics agent create --name agenttestcli --location us-south --agent
 {: pre}
 
 ### `ibmcloud schematics agent delete`
-{: #schematics-agent-plan}
+{: #schematics-agent-delete}
 
 Uninstall an agent.
 

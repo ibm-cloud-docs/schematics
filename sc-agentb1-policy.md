@@ -17,8 +17,8 @@ subcollection: schematics
 
 
 
-# Managing account policies
-{: #policy-manager}
+# Managing policies
+{: #policy-manage}
 
 {{site.date.keyword.bpshort}} account policies allows you to create rules or criteria to define the behavior, schedule, or the constraint for the {{site.data.keyword.bpshort}} core capabilities.
 {: shortdesc}

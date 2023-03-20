@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-03-20"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -25,18 +25,17 @@ When an agent is no longer required, it can be retrieved, analyzed to delete. Yo
 {: #display-agentb1-cli}
 {: cli}
 
-### Verifying an agent display 
-{: #verify-agentb1-display-cli}
+To view the agent by using the CLI, use the `ibmcloud schematics agent get` command. This command requires `agent_id` arguments.
+{: shortdesc}
 
-The display CLI command retrieves the agent information.
+To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agents-get).
+{: important}
 
-## Displaying an agent config using the UI 
-{: #display-agentb1-ui}
-{: ui}
+```sh
+ibmcloud schematics agent get --id AGENT_ID 
+```
+{: pre}
 
-
-### Verifying agent display 
-{: #verify-agentb1-display-ui}
 
 ## Displaying an agent using the API
 {: #display-agentb1-api}
@@ -47,7 +46,7 @@ Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrie
 Example
 
 ```json
-GET /v2/agents/ HTTP/1.1
+LIST /v2/agents/ HTTP/1.1
 Host: schematics.cloud.ibm.com
 Content-Type: application/json
 Authorization: Bearer <auth_token>
@@ -91,17 +90,6 @@ Output
 {: screen}
 
 The _agent list_ get lists the detailed information with respect to an agent ID.
-
-Syntax
-
-```json
-GET /v2/agents/<agent ID>/ HTTP/1.1
-Host: schematics.cloud.ibm.com
-Content-Type: application/json
-Authorization: Bearer <auth_token>
-
-```
-{: codeblock}
 
 Example
 
