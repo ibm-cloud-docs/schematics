@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-03-20"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -42,7 +42,7 @@ Consider the following pre-requisite steps to deploy an agent.
 {: #deploy-agent-cli}
 {: cli}
 
-Create your agent config with the CLI. For a complete listing of _agent create_ options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
+Create your agent by using CLI. Create For a complete listing of _agent create_ options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
 {: shortdesc}
 
 To work with {{site.data.keyword.bpshort}} Agent, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.7`.
@@ -51,7 +51,7 @@ To work with {{site.data.keyword.bpshort}} Agent, the [{{site.data.keyword.bpsho
 Example
 
 ```sh
-$ ibmcloud schematics agent create --name mycli-agent-test-z --location us-south --agent-location us-south --version 0.0.1 --infra-type ibm_kubernetes --cluster-id cfgh0u420l88vfq2ugp0 --cluster-resource-group Default --cos-instance-name agents-stage-cluster --cos-bucket agent-stage-test-bucket --cos-location us-east --resource-group Default
+ibmcloud schematics agent create --name testagentname --location us-sourth --agent-location us-south --version 0.0.1 --infra-type ibm_kubernetes --cluster-id cfgh000000000vfq2ugp0 --cluster-resource-group Default --cos-instance-name agents-cos-instancename --cos-bucket agent-cos-bucketname --cos-location us-south --resource-group Default
 ```
 {: pre}
 
@@ -194,7 +194,7 @@ Output
 {: screen}
 
 ### Verifying an agent
-{: #verify-agent-create-api}
+{: #verify-agent}
 
 1. The _agent deploy_ command creates a workspace in your {{site.data.keyword.cloud_notm}} account.
     - Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.

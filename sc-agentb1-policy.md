@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-20"
 
 keywords: schematics agent, agent policy, policies
 
@@ -15,34 +15,101 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
-# Managing network policies
-{: #agent-networkpolicy}
 
-{{site.data.keyword.bpshort}} Agents contain the network policies to secure the runtime pods communication. It communicates with other pods and the external endpoints. The incoming and outgoing network traffic is allowed or restricted based on the protocol, port, source, and destination IP addresses.
+
+# Managing account policies
+{: #policy-manager}
+
+{{site.date.keyword.bpshort}} account policies allows you to create rules or criteria to define the behavior, schedule,or the constraint for {{site.data.keyword.bpshort}} core capabilities.
 {: shortdesc}
 
-## Restricting properties
-{: #networkpolicy-restrict}
+## Components
+{: #policy-components}
 
-The network policies restrict the traffic to the pods that contains the following properties.
-- Legitimate pod-to-pod connections are allowed when explicitly allowed.
-- When needed pod `egress` traffic is allowed.
-{: shortdesc}
+The following are the major components of the {{site.data.keyword.bpshort}} policy solution.
 
-## Default network policies
-{: #networkpolicy-default}
+### Policy execution engine
+{: #policy-exe-engine}
 
-Following are the default properties that are applied with the {{site.data.keyword.bpshort}} Agent deployment.
-{: shortdesc}
+Policy execution engine provides an interface for other microservices to evaluate the applicable policy or policies and to make decisions. Policy execution engine is implemented as datajob gRPC service.
 
-| Policy | Description |
-| --- | --- |
-| `Deny-all-sandbox` | `Namespace:schematics-sandbox`, denies all the `ingress` and `egress` traffic. |
-| `Deny-all-runtime` | `Namespace:schematics-runtime`, denies all the `ingress` and `egress` traffic. |
-| `Whitelist-sandbox` | `Namespace:schematics-sandbox`, allowed list, and needed ports for `ingress = 3000`, and for `egress TCP = 80, 443, 5986, 22, 53` or `egress UDP = 53, 443`.|
-| `Whitelist-ingress-job-ports` | `Namespace:schematics-runtime`, allowed and needed ports for `ingress = 3002`.|
-| `Whitelist-runtime-gen-ports` | `Namespace:schematics-runtime`, allowed and needed ports for `ingress = 3002`, and for `egress TCP = 80, 443, 5986, 22, 53, 8080, 10250, 9092, 9093` or `egress UDP = 53, 443, 10250, 9092, 9093`.|
-{: caption="Default network policies" caption-side="bottom"}
+### Policy kind
+{: #policy-kind}
+
+Policy kind is based on core capability and the operations for these capabilities such as assignment, enablement, purge, scheduling. Policy kind helps in organinsing policies and identifying the unique policy parameter schema which will be evaluated by respective policy manager during policy evaluation.
+
+The following are the planned or the supported kind.
+
+- agent_assignment_policy
+- job_purge_policy
+- workspace_drift_scheduler_policy
+- workspace_control_enablement_policy
+
+### Policy manager
+{: #policy-mgr}
+
+Policy manager is responsible to read and evaluate the policy data. There is a separate policy manager per policy kind to evaluate the policy parameter as policy paramater schema varies for each policy kind. Refer the syntax of the policy data model. Each state of the policy date value can be `active`, `inactive`, or `draft`. 
+
+Policy Data model
+
+```json
+{
+    "name": "",
+    "description":"",
+    "id": "",
+    "crn": "",
+    "account": "",
+    "created_at": "",
+    "created_by": "",
+    "updated_at": "",
+    "resource_group" : "",
+    "tags" : ["", ""],
+    "location": "",
+    "state": "",
+    "policy_kind": "",
+    "policy_target" : {}
+    "policy_parameter" : {}
+}
+```
+{: pre}
+
+`policy_kind` is one of policy kinds.
+`policy_target` is set of criteria for selecting schematics data. `policy_target` expression contains one of the following
+
+```json
+{
+    "tags" : [],
+    "resource_groups": [],
+    "locations" : []
+}
+OR
+{
+    "ids": []
+}
+```
+{: pre}
+
+`policy_parameter` evaluation determines decision which is shared through PDP interface for consumption by PEP modules in {{site.data.keyword.bpshort}}. The `policy_parameter` schema varies based on the `policy_kind`.
+
+`agent_assignment_policy` contains one of the following
+
+```json
+{
+    "tags" : [""], 
+    "types" : [""],
+    "resource_groups": [""],
+    "locations" : []
+}
+OR
+{
+    "ids": []
+} 
+```
+{: pre}
+
+`job_purge_policy`  : TBD
+`workspace_drift_scheduler_policy` : TBD
+`workspace_control_enablement_policy` : TBD
 
 ## Workspaces or Actions attributes used to dynamically select Agent
 {: #policy-dynamic-attribute}

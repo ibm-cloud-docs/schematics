@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-20"
 
 keywords: schematics
 subcollection: schematics
@@ -1368,7 +1368,7 @@ subcollection: schematics
 
 * [Deploying an agent through the API](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-api)
 
-    * [Verifying an agent](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-create-api)
+    * [Verifying an agent](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview#agent-create-nextsteps)
 
@@ -1403,13 +1403,17 @@ subcollection: schematics
 {: #sitemap_using_agent}
 
 
-[Managing network policies](/docs/schematics?topic=schematics-agent-networkpolicy#agent-networkpolicy)
+[Managing account policies](/docs/schematics?topic=schematics-policy-manager#policy-manager)
 
-* [Restricting properties](/docs/schematics?topic=schematics-agent-networkpolicy#networkpolicy-restrict)
+* [Components](/docs/schematics?topic=schematics-policy-manager#policy-components)
 
-* [Default network policies](/docs/schematics?topic=schematics-agent-networkpolicy#networkpolicy-default)
+    * [Policy execution engine](/docs/schematics?topic=schematics-policy-manager#policy-exe-engine)
 
-* [Workspaces or Actions attributes used to dynamically select Agent](/docs/schematics?topic=schematics-agent-networkpolicy#policy-dynamic-attribute)
+    * [Policy kind](/docs/schematics?topic=schematics-policy-manager#policy-kind)
+
+    * [Policy manager](/docs/schematics?topic=schematics-policy-manager#policy-mgr)
+
+* [Workspaces or Actions attributes used to dynamically select Agent](/docs/schematics?topic=schematics-policy-manager#policy-dynamic-attribute)
 
 [Managing agent health](/docs/schematics?topic=schematics-agent-health#agent-health)
 
@@ -2214,6 +2218,14 @@ subcollection: schematics
     * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-api)
 
 * [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
+
+[Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent#register-agent)
+
+* [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
+
+* [Connecting Agent through API](/docs/schematics?topic=schematics-register-agent#register-api)
+
+* [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
 
 [Create `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile#agent-trusted-profile)
 

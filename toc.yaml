@@ -194,6 +194,7 @@ toc:
                                                     - sc-about-agent.md
                                                     - sc-agent-architecture.md
                                                     - sc-agent-infra-setup.md
+                                                    - sc-agent-connect.md
                                                     - sc-agent-trustedprofile.md
                                                     - sc-agent-uninstall.md
                                                     - sc-agent-using.md
