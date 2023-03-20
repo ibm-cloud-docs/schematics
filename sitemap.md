@@ -1411,15 +1411,29 @@ subcollection: schematics
 
     * [Policy kind](/docs/schematics?topic=schematics-policy-manager#policy-kind)
 
-    * [Policy manager](/docs/schematics?topic=schematics-policy-manager#policy-mgr)
+* [Agent policy commands using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-policycmd-cli)
 
-* [Workspaces or Actions attributes used to dynamically select Agent](/docs/schematics?topic=schematics-policy-manager#policy-dynamic-attribute)
+    * [Example to create policy using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-createpolicy-cli)
 
-[Managing agent health](/docs/schematics?topic=schematics-agent-health#agent-health)
+    * [Example to get policy using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-getpolicy-cli)
 
-* [List agent health using the CLI](/docs/schematics?topic=schematics-agent-health#health-agentb1-cli)
+    * [Example to update policy using CLI](/docs/schematics?topic=schematics-policy-manager#agentb1-updatepolicy-cli)
 
-* [List agent health using the API](/docs/schematics?topic=schematics-agent-health#health-agentb1-api)
+* [Agent policy command using API](/docs/schematics?topic=schematics-policy-manager#agentb1-policydm-api)
+
+    * [Example to create policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-createpolicy-api)
+
+    * [Example to get policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-getpolicy-api)
+
+    * [Example to update policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-updatepolicy-api)
+
+    * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manager#agentb1-searchpolicy-api)
+
+[Managing agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
+
+* [List agent health using CLI](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-cli)
+
+* [List agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
 
 
 ## Logging and monitoring

@@ -20,7 +20,7 @@ subcollection: schematics
 # Managing account policies
 {: #policy-manager}
 
-{{site.date.keyword.bpshort}} account policies allows you to create rules or criteria to define the behavior, schedule,or the constraint for {{site.data.keyword.bpshort}} core capabilities.
+{{site.date.keyword.bpshort}} account policies allows you to create rules or criteria to define the behavior, schedule, or the constraint for the {{site.data.keyword.bpshort}} core capabilities.
 {: shortdesc}
 
 ## Components
@@ -36,7 +36,7 @@ Policy execution engine provides an interface for other microservices to evaluat
 ### Policy kind
 {: #policy-kind}
 
-Policy kind is based on core capability and the operations for these capabilities such as assignment, enablement, purge, scheduling. Policy kind helps in organinsing policies and identifying the unique policy parameter schema which will be evaluated by respective policy manager during policy evaluation.
+Policy kind is based on core capability and the operations for these capabilities such as assignment, enablement, purge, schedule. Policy kind helps in organinsing policies and identifying the unique policy parameter schema evaluated through a respective policy manager during policy evaluation.
 
 The following are the planned or the supported kind.
 
@@ -45,83 +45,183 @@ The following are the planned or the supported kind.
 - workspace_drift_scheduler_policy
 - workspace_control_enablement_policy
 
-### Policy manager
-{: #policy-mgr}
 
-Policy manager is responsible to read and evaluate the policy data. There is a separate policy manager per policy kind to evaluate the policy parameter as policy paramater schema varies for each policy kind. Refer the syntax of the policy data model. Each state of the policy date value can be `active`, `inactive`, or `draft`. 
 
-Policy Data model
 
-```json
-{
-    "name": "",
-    "description":"",
-    "id": "",
-    "crn": "",
-    "account": "",
-    "created_at": "",
-    "created_by": "",
-    "updated_at": "",
-    "resource_group" : "",
-    "tags" : ["", ""],
-    "location": "",
-    "state": "",
-    "policy_kind": "",
-    "policy_target" : {}
-    "policy_parameter" : {}
-}
+## Agent policy commands using CLI
+{: #agentb1-policycmd-cli}
+{: cli}
+
+Create your agent policy with the CLI. For a complete listing of agent policy command with the options, see [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) command.
+{: shortdesc}
+
+Before your begin:
+
+- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.7`.
+- Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create agent policy.
+
+### Example to create policy using CLI
+{: #agentb1-createpolicy-cli}
+
+```sh
+ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION --resource-group RESOURCE_GROUP
 ```
 {: pre}
 
-`policy_kind` is one of policy kinds.
-`policy_target` is set of criteria for selecting schematics data. `policy_target` expression contains one of the following
+### Example to get policy using CLI
+{: #agentb1-getpolicy-cli}
 
-```json
-{
-    "tags" : [],
-    "resource_groups": [],
-    "locations" : []
-}
-OR
-{
-    "ids": []
-}
+```sh
+ibmcloud schematics policy get --id POLICY_ID 
 ```
 {: pre}
 
-`policy_parameter` evaluation determines decision which is shared through PDP interface for consumption by PEP modules in {{site.data.keyword.bpshort}}. The `policy_parameter` schema varies based on the `policy_kind`.
+### Example to update policy using CLI
+{: #agentb1-updatepolicy-cli}
 
-`agent_assignment_policy` contains one of the following
-
-```json
-{
-    "tags" : [""], 
-    "types" : [""],
-    "resource_groups": [""],
-    "locations" : []
-}
-OR
-{
-    "ids": []
-} 
+```sh
+ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location LOCATION  --resource-group RESOURCE_GROUP
 ```
 {: pre}
 
-`job_purge_policy`  : TBD
-`workspace_drift_scheduler_policy` : TBD
-`workspace_control_enablement_policy` : TBD
+## Agent policy command using API
+{: #agentb1-policydm-api}
+{: api}
 
-## Workspaces or Actions attributes used to dynamically select Agent
-{: #policy-dynamic-attribute}
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about agent policy API, see [agent policy APIs](/apidocs/schematics/schematics) job status.
+{: shortdesc}
 
-The following attributes of the {{site.data.keyword.bpshort}} Workspace or {{site.data.keyword.bpshort}} Action are used to dynamically select the agent instance.
+### Example to create policy using API
+{: #agentb1-createpolicy-api}
 
-- Resource group
-- Location
-- Tags
+```json
+POST /v2/settings/policies HTTP/1.1
+Host: schematics.cloud.ibm.com
+Content-Type: application/json
+Authorization: Bearer <auth_token>
+{
+    "name": "policy-1",
+    "description": "Policy for job execution of secured workspaces on agent1",
+    "resource_group": "Default",
+    "tags": [
+      "policy:secured-job"
+    ],
+    "location": "us-south",
+    "kind": "agent_assignment_policy",
+    "target": {
+      "selector_kind": "ids",
+      "selector_ids": [
+        "agent5.8442"
+      ]
+    },
+    "parameter": {
+      "agent_assignment_policy_parameter": {
+        "selector_kind": "scoped",
+        "selector_scope": [
+          {
+            "kind": "workspace",
+            "tags": [
+              "env:dev",
+              "k8s"
+            ],
+            "resource_groups": [
+              "test"
+            ],
+            "locations": [
+              "us-south"
+            ]
+          }
+        ]
+      }
+    }
+  }
+```
+{: pre}
 
-The `Agent assignment policy` for an agent instance describes how an Agent is selected to run a Workspace job or Action job. For more information about {{site.data.keyword.bpshort}} policy, see [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#policy-cmd).
+### Example to get policy using API
+{: #agentb1-getpolicy-api}
 
-Example
+```json
+GET /v2/settings/policies/<your policy_id> HTTP/1.1
+Host: schematics.cloud.ibm.com
+Content-Type: application/json
+X-ENABLE-POLICIES: true
+Authorization: Bearer <auth_token>
+```
+{: pre}
 
-If your organization has three different network isolation zones (such as `Dev`, `HR-Stage`, and `HR-Prod`) and you have installed three agents (one each, for the three network isolation zone). You have defined an `agent-assignment-policy` for the agent running in `Dev`, with the selector as `tags=dev`. All workspaces that have `tags=dev` automatically bounds to the `Dev` agent. In other words, the `Dev` agent is used to download Terraform templates (from the Git repository), to run Terraform jobs. Similarly, the `agent-assignment-policy` can include other attributes of the workspaces, in order to control the location of the job execution.
+### Example to update policy using API
+{: #agentb1-updatepolicy-api}
+
+```json
+PATCH /v2/settings/policies/<your policy_id> HTTP/1.1
+Host: schematics.cloud.ibm.com
+Content-Type: application/json
+X-ENABLE-POLICIES: true
+Authorization: Bearer <auth_token>
+{
+    "name": "policy-1",
+    "description": "updated Policy for job execution of secured workspaces on agent1",
+    "resource_group": "Default",
+    "tags": [
+      "policy:secured-job"
+    ],
+    "location": "us-south",
+    "kind": "agent_assignment_policy",
+    "target": {
+      "selector_kind": "ids",
+      "selector_ids": [
+        "agent5.13a6"
+      ]
+    },
+    "parameter": {
+      "agent_assignment_policy_parameter": {
+        "selector_kind": "scoped",
+        "selector_scope": [
+          {
+            "kind": "action",
+            "tags": [
+              "env:dev",
+              "k8s"
+            ],
+            "resource_groups": [
+              "dummy_resource_group"
+            ],
+            "locations": [
+              "us-south"
+            ]
+          }
+        ]
+      }
+    }
+  }
+```
+{: pre}
+
+### Example to search policy using API
+{: #agentb1-searchpolicy-api}
+
+```json
+POST /v2/settings/policies/search HTTP/1.1
+Host: schematics.cloud.ibm.com
+Content-Type: application/json
+Authorization: Bearer <auth_token>
+{
+   "parameter": {
+            "kind": "workspace",
+            "tags": [
+              "env:dev",
+              "k8s"
+            ],
+            "resource_groups": [
+              "test"
+            ],
+            "locations": [
+              "us-south"
+            ]
+          },
+    "target": "action" 
+  }
+```
+{: pre}
