@@ -183,6 +183,7 @@ toc:
                                                     - sc-blueprint-template-yaml.md
                                                     - sc-blueprint-input-yaml.md
                                   - sc-blueprint-beta-limitation.md
+                                  - sc-agentbeta1-limitations.md
                                   - sc-tools.md
                                   - schematics-sdk.md
                                   - locations.md

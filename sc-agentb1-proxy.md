@@ -37,9 +37,7 @@ Consider the following steps before you setup the proxy server.
 ## Configuring proxy server
 {: #proxy-configure}
 
-1. From the [Kubernetes clusters console](https://cloud.ibm.com/kubernetes/clusters){: external}.
-    - Click three dots against your cluster. 
-    - Click **Kubernetes dashboard**.
+1. From the [Kubernetes clusters console](https://cloud.ibm.com/kubernetes/clusters){: external}. Click **Kubernetes dashboard**
 2. Switch to your **runtime** namespace from the drop down box.
 3. Click **Config Maps** to edit the `job12` configmap resource `YAML` specification file. Add `HTTPS/HTTP` proxy as stated.
     - Add `HTTPS/HTTP` proxy entries to `kubectl.kubernetes.io/last-applied-configuration` annotation.

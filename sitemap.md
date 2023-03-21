@@ -331,6 +331,10 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar23)
+
+    * Review the release notes for March 2023.
+
 * [February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb23)
 
     * Review the release notes for February 2023.
@@ -2055,6 +2059,19 @@ subcollection: schematics
     * [Steps to join public slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-slack)
 
 
+## Beta-1 code for {{site.data.keyword.bpshort}} Agent
+{: #sitemap_beta-1_code_for_agent}
+
+
+[Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
+
+* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
+
+
 ## Runtime environment tools
 {: #sitemap_runtime_environment_tools}
 
@@ -2556,7 +2573,7 @@ subcollection: schematics
 
 [How can you provide value to `schematics_resource_crn` variable?](/docs/schematics?topic=schematics-agent-crn-not-found#agent-crn-not-found)
 
-[Why are your getting create endpoint gateway that is failed with wrong number of segments in CRN?](/docs/schematics?topic=schematics-agent-endpoint-error#agent-endpoint-error)
+[Why are you getting create endpoint gateway failure with wrong number of segments in CRN?](/docs/schematics?topic=schematics-agent-endpoint-error#agent-endpoint-error)
 
 [Troubleshooting errors](/docs/schematics?topic=schematics-handling-error#handling-error)
 

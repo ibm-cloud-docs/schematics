@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-03-21"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -19,6 +19,14 @@ content-type: release-note
 
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
+
+## March 2023
+{: #schematics-mar23}
+
+Review the release notes for March 2023.
+{: shortdesc}
+
+
 
 ## February 2023
 {: #schematics-feb23}

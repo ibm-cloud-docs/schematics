@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-03-21"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,6 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.12.8 | 22 Mar 2023 | [{{site.data.keyword.bpshort}} agent beta-1](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agent-beta1-cmds) and [policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#policy-cmd) CLI commands are available in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.7 | 07 Feb 2023 | Bug fix to disable `API_AGENT_ATTACHMENT` in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.6 | 30 Jan 2023 | Enhanced complex input support through blueprint `yaml` file. Fixes related to blueprint status output in the blueprint list table, index out of range for workspace action output, refresh token issue for long running `blueprint jobs`, and spinner panic fixes in `get blueprint`. |
 | 1.12.5 | 18 Dec 2022 | Blueprint subcommand usage, revert to original usage of `blueprint create`, `blueprint apply` etc. Support for specifying complex inputs via a local YAML file using `-input-file` option.  
