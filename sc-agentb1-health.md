@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 
 keywords: schematics agent health, agent health, health
 
@@ -21,7 +21,7 @@ subcollection: schematics
 The {{site.data.keyword.bplong}} Agent creates a terraform based automation to check the health of an installed agent. Following are the evidences that the {{site.data.keyword.bpshort}} Agent health fetches to a user.
 - Agent health can fetch details only once your _agent deploy_ is successful. 
 - Agent health displays the job status of your deployed agent that are up and running. 
-- Agent registration with {{site.data.keyword.bpshort}} is successful.
+- Agent registration with {{site.data.keyword.bpshort}} is successful or unsuccessful.
 
 ## List agent health using CLI
 {: #health-agentb1-cli}

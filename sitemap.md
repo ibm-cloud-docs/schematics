@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 
 keywords: schematics
 subcollection: schematics
@@ -1421,6 +1421,14 @@ subcollection: schematics
 
 * [List agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
 
+[Setting proxy server for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-agent-overview)
+
+* [Before you begin](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-prereq)
+
+* [Configuring proxy server](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-configure)
+
+* [Verifying proxy server](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-verify)
+
 
 ## Logging and monitoring
 {: #sitemap_logging_and_monitoring}
@@ -1488,7 +1496,7 @@ subcollection: schematics
 
 
 ## Deleting {{site.data.keyword.bpshort}} data
-{: #sitemap_deleting__data}
+{: #sitemap_deleting_data}
 
 
 [Deleting {{site.data.keyword.bpshort}} data](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-intro)
@@ -1616,7 +1624,7 @@ subcollection: schematics
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure
-{: #sitemap_creating_an__cluster_on_vpc_infrastructure}
+{: #sitemap_creating_an_cluster_on_vpc_infrastructure}
 
 
 [Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-terraform-template)
@@ -1641,7 +1649,7 @@ subcollection: schematics
 
 
 ## Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain
-{: #sitemap_setting_up_continuous_deployment_with__and_devops_toolchain}
+{: #sitemap_setting_up_continuous_deployment_with_and_devops_toolchain}
 
 
 [Setting up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain](/docs/schematics?topic=schematics-workspace-continuous-deployment#workspace-continuous-deployment)
@@ -1672,7 +1680,7 @@ subcollection: schematics
 
 
 ## Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog
-{: #sitemap_importing__templates_into_the__catalog}
+{: #sitemap_importing_templates_into_the_catalog}
 
 
 [Importing {{site.data.keyword.bpshort}} templates into the {{site.data.keyword.cloud_notm}} catalog](/docs/schematics?topic=schematics-private-catalog#private-catalog)
@@ -1695,7 +1703,7 @@ subcollection: schematics
 
 
 ## Deploying a {{site.data.keyword.bpshort}} blueprint using the command line
-{: #sitemap_deploying_a__blueprint_using_the_command_line}
+{: #sitemap_deploying_a_blueprint_using_the_command_line}
 
 
 [Deploying a {{site.data.keyword.bpshort}} blueprint using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
@@ -2031,7 +2039,7 @@ subcollection: schematics
 
 
 ## Beta code for {{site.data.keyword.bpshort}} Blueprints
-{: #sitemap_beta_code_for__blueprints}
+{: #sitemap_beta_code_for_blueprints}
 
 
 [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)

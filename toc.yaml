@@ -129,6 +129,7 @@ toc:
                                                               topics:
                                                                       - sc-agentb1-policy.md
                                                                       - sc-agentb1-health.md
+                                                                      - sc-agentb1-proxy.md
 
                                   - topicgroup:
                                             label: Logging and monitoring
