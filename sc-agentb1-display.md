@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -31,11 +31,55 @@ To view the agent by using the CLI, use the `ibmcloud schematics agent get` comm
 To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agents-get).
 {: important}
 
+Example
+
 ```sh
-ibmcloud schematics agent get --id AGENT_ID 
+ibmcloud schematics agent get --id gsmmar2cliv2-agent-test.deA.391b
 ```
 {: pre}
 
+Output
+
+```text
+Retrieving agent...
+OK
+                    
+ID               gsmmar2cliv2-agent-test.deA.391b   
+Name             gsmmar2cliv2-agent-test   
+Status           ACTIVE   
+Version             
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default   
+                 
+Recent Job   Job ID                             Status                             Last modified   
+PRS          .ACTIVITY.64d87b58                 Triggered pre-requisite scanning   0001-01-01T00:00:00.000Z   
+DEPLOY       .ACTIVITY.9f4e2a83                 Triggered deployment               0001-01-01T00:00:00.000Z   
+HEALTH       852b6992c5aab753b159d3fa3204168e   Job Success                         2023-03-21T12:25:25.183Z 
+```
+{: screen}
+
+Example to view the list of agents in your account.
+
+```sh
+ibmcloud schematics agent list
+```
+{: pre}
+
+Output
+
+```text
+Retrieving agents...
+OK
+Name                      ID                                 Version   Description    Resource Group   Agent Location   Schematics location   Status   Tags               Agent health   
+agent-harini-test-eu      agent-harini-test-eu.deA.509c                Create Agent   Default          us-south         eu-de                 Active   Env:stage, beta1      
+gsmmar2cli-agent-test     gsmmar2cli-agent-test.deA.ea4f     0.0.1                    Default          eu-de            eu-de                 Active                         
+gsmmar2cliv2-agent-test   gsmmar2cliv2-agent-test.deA.391b                            Default          us-south         eu-de                 Active                         
+                          
+Showing 1-3 of 3 items
+
+```
+{: screen}
 
 ## Displaying an agent using the API
 {: #display-agentb1-api}
@@ -43,7 +87,7 @@ ibmcloud schematics agent get --id AGENT_ID
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. 
 
-Example
+Example to list all the agents in your account.
 
 ```json
 LIST /v2/agents/ HTTP/1.1
@@ -89,7 +133,7 @@ Output
 ```
 {: screen}
 
-The _agent list_ get lists the detailed information with respect to an agent ID.
+The _agent get_ displayed the detailed information based on your agent ID.
 
 Example
 

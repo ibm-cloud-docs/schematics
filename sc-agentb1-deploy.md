@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -23,8 +23,8 @@ subcollection: schematics
 
 Consider the following steps to deploy the {{site.data.keyword.bpshort}} agent each time.
 
-- Agent create: Initializes the {{site.data.keyword.bpshort}} information for an agent to deploy.
-- Agent deploy: Creates {{site.data.keyword.bpshort}} Workspace, invokes [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan), and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) commands.
+- [Create an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#deploy-agent-cli), initializes the {{site.data.keyword.bpshort}} information for an agent to deploy.
+- [Deploy an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) through API, creates {{site.data.keyword.bpshort}} Workspace, by invoking [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan), and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) commands.
 - [Define the policy for the agent](/docs/schematics?topic=schematics-policy-manage&interface=ui).
 - [Check the health of an agent](/docs/schematics?topic=schematics-agent-health&interface=cli).
 
@@ -50,7 +50,7 @@ To work with {{site.data.keyword.bpshort}} Agent, the [{{site.data.keyword.bpsho
 Example
 
 ```sh
-ibmcloud schematics agent create --name testagentname --location us-south --agent-location us-south --version 0.0.1 --infra-type ibm_kubernetes --cluster-id cfgh000000000vfq2ugp0 --cluster-resource-group Default --cos-instance-name agents-cos-instancename --cos-bucket agent-cos-bucketname --cos-location us-south --resource-group Default
+ibmcloud schematics agent create --name gsmmar2cliv2-agent-test --location eu-de --agent-location us-south --version 0.0.1 --infra-type ibm_kubernetes --cluster-id cgcnl5f20077ild56eng --cluster-resource-group Default --cos-instance-name agent-cos-storage --cos-bucket agent-cos-bucket --cos-location jp-tok --resource-group Default
 ```
 {: pre}
 
@@ -60,39 +60,91 @@ Output
 Creating agent...
 OK
                     
-ID               magent.soA.94f1   
-Name             magent   
+ID               gsmmar2cliv2-agent-test.deA.391b   
+Name             gsmmar2cliv2-agent-test   
 Status           ACTIVE   
 Version          0.0.1   
-Location         us-south   
+Location         eu-de   
 Agent Location   us-south   
-Resource Group   Default 
+Resource Group   b9b7892b87734a8b814342a6adef361d  
 ```
 {: screen}
 
-Now, you can use the `agent ID` to call an _agent deploy_ command to create the {{site.data.keyword.bpshort}} workspace. The _agent deploy_ inturn invokes _agent plan_, and _agent apply_ command to setup an agent.
+Now, you can use the `agent ID` to call an _agent plan_ command. _agent plan_ command does the prerequisites check for the pre-created agent before install.
 
 Example
 
 ```sh
-ibmcloud schematics agent deploy --id magent.soA.94f1 
+ibmcloud schematics agent plan --id gsmmar2cliv2-agent-test.deA.391b  
 ```
 {: pre}
 
 Output
 
 ```text
-{
-    "workspace_id": "us-south.workspace.agent-testagentname",
-    "job_id": ".ACTIVITY.3fe6a2e3",
-    "updated_at": "2023-03-19T15:55:30.8050000",
-    "updated_by": "test@in.ibm.com",
-    "status_code": "PENDING",
-    "status_message": "Triggered deployment"
-}
+Running plan...
+Plan ID: .ACTIVITY.5a78e7a5
+
+
+                                   
+Agent settings                  
+ID                              gsmmar2cliv2-agent-test.deA.391b   
+Name                            gsmmar2cliv2-agent-test   
+Version                            
+Location                        eu-de   
+Agent Location                  us-south   
+Resource Group                  Default   
+User status                     ACTIVE   
+System status                   draft   
+Agents Jobs                     
+Plan Job                        
+Job ID                          .ACTIVITY.5a78e7a5   
+Job status                      PENDING   
+Job last validation timestamp   0001-01-01T00:00:00.000Z   
+Job output                      Triggered pre-requisite scanning   
+Job log URL                     https://eu-de.schematics.test.cloud.ibm.com/v1/workspaces/eu-de.workspace.gsmmar2cliv2-agent-test-prs.30e0d302/runtime_data/353c2b14-aa75-40/log_store   
+                                   
+OK
 ```
 {: screen}
 
+Now, you can use the `agent ID` to call an _agent apply_ command to deploy the agent, or upgrade the agent for force deploy.
+
+Example
+
+```sh
+ibmcloud schematics agent apply --id gsmmar2cliv2-agent-test.deA.391b  
+```
+{: pre}
+
+Output
+
+```text
+Running apply...
+Apply ID: .ACTIVITY.fc7a33f3
+
+
+                                   
+Agent settings                  
+ID                              gsmmar2cliv2-agent-test.deA.391b   
+Name                            gsmmar2cliv2-agent-test   
+Version                            
+Location                        eu-de   
+Agent Location                  us-south   
+Resource Group                  Default   
+User status                     ACTIVE   
+System status                   draft   
+Agents Jobs                     
+Deploy Job                      
+Job ID                          .ACTIVITY.fc7a33f3   
+Job status                      PENDING   
+Job last validation timestamp   2023-03-21T11:49:19.577Z   
+Job output                      Triggered deployment   
+Job log URL                     https://eu-de.schematics.test.cloud.ibm.com/v1/workspaces/eu-de.workspace.gsmmar2cliv2-agent-test-deploy.89fa2a8e/runtime_data/87794039-fc82-47/log_store   
+                                   
+OK
+```
+{: screen}
 
 ## Deploying an agent through the API
 {: #create-agent-api}

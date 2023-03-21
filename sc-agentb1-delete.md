@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -31,11 +31,22 @@ To view the agent delete by using the CLI, use the `ibmcloud schematics agent de
 Before deleting an agent or a workspace created during agent deployment, you need to destroy the resources of the workspace. For more information about workspace destroy, see [deleting workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
 {: important}
 
+Example
+
 ```sh
-ibmcloud schematics agent delete --id AGENT_ID 
+ibmcloud schematics agent delete --id gsmmar2cliv2-agent-test.deA.391b 
 ```
 {: pre}
 
+Output
+
+```text
+Do you really want to delete the agent gsmmar2cliv2-agent-test.deA.391b? [y/N]> y
+Deleting Agent...
+Agent gsmmar2cliv2-agent-test.deA.391b deleted successfully
+OK
+```
+{: screen}
 
 ## Deleting an agent using the API
 {: #delete-agentb1-api}

@@ -38,6 +38,25 @@ ibmcloud schematics agent health --id <Provide your agent_ID> [--output OUTPUT]
 ```
 {: pre}
 
+```text
+Validating agent health...
+Health ID: .ACTIVITY.85353750
+
+
+runtime error: invalid memory address or nil pointer dereference
+geethasathyamurthy@Geethas-MacBook-Pro agentb1bnppstagetesting % vi createpolicy.json
+geethasathyamurthy@Geethas-MacBook-Pro agentb1bnppstagetesting % ibmcloud schematics workspace list
+Retrieving workspaces...
+OK
+Name                             ID                                                        Description   Version   Status   Frozen   
+gsmmar2cliv2-agent-test-prs      eu-de.workspace.gsmmar2cliv2-agent-test-prs.30e0d302                              FAILED   False   
+gsmmar2cliv2-agent-test-health   eu-de.workspace.gsmmar2cliv2-agent-test-health.7ff086ed                           FAILED   False   
+gsmmar2cliv2-agent-test-deploy   eu-de.workspace.gsmmar2cliv2-agent-test-deploy.89fa2a8e                           FAILED   False   
+                                 
+Showing 1-3 of 3 items
+```
+{: screen}
+
 ## List agent health using API
 {: #health-agentb1-api}
 {: api}
