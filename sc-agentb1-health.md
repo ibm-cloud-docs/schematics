@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 keywords: schematics agent health, agent health, health
 
@@ -15,19 +15,19 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
-# Managing agent health
+# Monitoring agent health
 {: #agentb1-health}
 
-The {{site.data.keyword.bplong}} Agent creates a terraform based automation to check the health of an installed agent. Following are the evidences that the {{site.data.keyword.bpshort}} Agent health fetches to a user.
+{{site.data.keyword.bplong}} Agents run an automated task to check the health of installed agents. Following details can be are the evidences that the health check returns to a user.
 - Agent health can fetch details only once your _agent deploy_ is successful. 
 - Agent health displays the job status of your deployed agent that are up and running. 
-- Agent registration with {{site.data.keyword.bpshort}} is successful or unsuccessful.
+- Agent creation is successful or unsuccessful.
 
-## List agent health using CLI
+## Monitoring agent health using the CLI
 {: #health-agentb1-cli}
 {: cli}
 
-To view the agent health by using the CLI, use the `ibmcloud schematics agent health` command. This command requires `agent_id` arguments. It is region specific and will only list agents in the selected CLI region. 
+To review the health of an agent using the CLI, use the `ibmcloud schematics agent health` command. This command requires the `agent_id` as an input argument. It is region specific and will only retrieve details of agents in the selected CLI region. 
 {: shortdesc}
 
 For all the agent commands, syntax, and option flag details, see [agent beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health).
@@ -42,8 +42,6 @@ ibmcloud schematics agent health --id <Provide your agent_ID> [--output OUTPUT]
 Validating agent health...
 Health ID: .ACTIVITY.85353750
 
-
-runtime error: invalid memory address or nil pointer dereference
 geethasathyamurthy@Geethas-MacBook-Pro agentb1bnppstagetesting % vi createpolicy.json
 geethasathyamurthy@Geethas-MacBook-Pro agentb1bnppstagetesting % ibmcloud schematics workspace list
 Retrieving workspaces...
@@ -57,11 +55,11 @@ Showing 1-3 of 3 items
 ```
 {: screen}
 
-## List agent health using API
+## Monitoring agent health using API
 {: #health-agentb1-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about agent health API, see [get an agent health check](/apidocs/schematics/schematics_internal_v1#get-health-check-agent-job) job status. Agent health API displays the job status of your deployed agent.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about agent health API, see [get an agent health check](/apidocs/schematics/schematics_internal_v1#get-health-check-agent-job) job status. The agent health API displays the health status of your deployed agent.
 {: shortdesc}
 
 Example

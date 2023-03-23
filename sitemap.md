@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 keywords: schematics
 subcollection: schematics
@@ -1360,29 +1360,27 @@ subcollection: schematics
 {: #sitemap_managing_agent_beta-1}
 
 
-[Planning agent](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
+[Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
 
 * [Next steps](/docs/schematics?topic=schematics-plan-agent-overview#agent-plan-nextsteps)
 
-[Deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-overview)
+[Deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-overview)
 
 * [Before your begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
 
-* [Deploying an agent through the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-cli)
+* [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-cli)
 
-* [Deploying an agent through the API](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-api)
-
-* [Verifying an agent](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent)
+* [Deploying an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-api)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview#agent-create-nextsteps)
 
-[Displaying agent](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
+[Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
-* [Displaying an agent using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-cli)
+* [Displaying an agent configuration using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-cli)
 
-* [Displaying an agent using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
+* [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
 
-[Deleting agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
+[Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
 * [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-cli)
 
@@ -1419,11 +1417,11 @@ subcollection: schematics
 
     * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
 
-[Managing agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
+[Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 
-* [List agent health using CLI](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-cli)
+* [Monitoring agent health using the CLI](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-cli)
 
-* [List agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
+* [Monitoring agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
 
 [Setting proxy server for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-agent-overview)
 
