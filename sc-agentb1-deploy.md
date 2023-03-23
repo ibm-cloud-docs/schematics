@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -122,9 +122,6 @@ Output
 ```text
 Running apply...
 Apply ID: .ACTIVITY.fc7a33f3
-
-
-                                   
 Agent settings                  
 ID                              gsmmar2cliv2-agent-test.deA.391b   
 Name                            gsmmar2cliv2-agent-test   
