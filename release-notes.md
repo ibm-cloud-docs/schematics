@@ -26,6 +26,27 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2023.
 {: shortdesc}
 
+### 22 March 2023
+{: #schematics-mar2223}
+{: release-note}
+
+{{site.data.keyword.bpshort}} Agent beta-1 release.
+:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
+    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro).
+    - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
+    - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 
+      - [planning](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli)
+      - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli)
+      - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
+    - You can also [use an agent policy](/docs/schematics?topic=schematics-policy-manage&interface=cli), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
+    - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent) for any challenges and questions on agent.
+    - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta-1 level code and provide feedback.
+
+Release {{site.data.keyword.bpshort}} command-line plug-in.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.8](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 
 
 ## February 2023

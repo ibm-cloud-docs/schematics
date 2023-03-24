@@ -335,6 +335,12 @@ subcollection: schematics
 
     * Review the release notes for March 2023.
 
+    * [22 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2223)
+
+        * {{site.data.keyword.bpshort}} Agent beta-1 release.
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in.
+
 * [February 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb23)
 
     * Review the release notes for February 2023.
