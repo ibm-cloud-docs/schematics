@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -372,15 +372,16 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 
 
 ## Agent beta-1 commands
-{: #agent-beta1-cmds}
+{: #agents-cmd}
 
-{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
 ### `ibmcloud schematics agent apply`
 {: #schematics-agent-apply}
 
-Deploy or upgrades an agent for force deploy.
+Deploy or upgrade an agent to force deploy. For more information about the steps to use apply command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+{: shortdesc}
 
 Syntax
 
@@ -401,14 +402,15 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics agent apply
+ibmcloud schematics agent apply --id <provide your agent id>
 ```
 {: pre}
 
 ### `ibmcloud schematics agent create`
 {: #schematics-agent-create}
 
-Create an agent by using {{site.data.keyword.bpshort}}. Agent help you to run your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
+Create an agent by using {{site.data.keyword.bpshort}}. Agent help you to run your workspace jobs on your infrastructure. For more information about the steps to use create command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+{: shortdesc}
 
 Syntax
 
@@ -450,7 +452,7 @@ ibmcloud schematics agent create --name agenttestcli --location us-south --agent
 ### `ibmcloud schematics agent delete`
 {: #schematics-agent-delete}
 
-Uninstall an agent.
+Uninstall an agent. For more information about the steps to use delete command, see [deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli).
 
 Syntax
 
@@ -466,7 +468,7 @@ Command options
 | `--id` or `-i`| Required | The ID of an agent. |
 | `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
 | `--no-prompt` | Optional | Set this flag to stop interactive CLI session such as, prompting user for input a field value on terminal. |
-{: caption="{{site.data.keyword.bpshort}} agent plan flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} agent delete flags" caption-side="top"}
 
 Example
 
@@ -479,7 +481,7 @@ ibmcloud schematics agent delete --id <AGENT_ID>
 ### `ibmcloud schematics agent get`
 {: #schematics-agents-get}
 
-Retrieves the details of an agent. Agents help you to fetch your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
+Retrieves the details of an agent. Agents help you to fetch your workspace jobs on your infrastructure. For more information about the steps to use get command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
 
 Syntax
 
@@ -509,7 +511,8 @@ ibmcloud schematics agent get --id <Provide your agent ID>
 ### `ibmcloud schematics agent health`
 {: #schematics-agent-health}
 
-Performs the post deployment validation of an agent.
+Performs the post deployment validation of an agent. For more information about the steps to use health command, see [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
+{: shortdesc}
 
 Syntax
 
@@ -524,7 +527,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the agent. |
 | `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent plan flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} agent health flags" caption-side="top"}
 
 Example
 
@@ -536,7 +539,7 @@ ibmcloud schematics agent health --id <AGENT_ID>
 ### `ibmcloud schematics agent list`
 {: #schematics-agent-list}
 
-Lists the agents. Defaults to show the registered agents.
+Lists the agents. Defaults to show the registered agents. For more information about the steps to use list command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
 
 Syntax
 
@@ -566,7 +569,8 @@ ibmcloud schematics agent list
 ### `ibmcloud schematics agent plan`
 {: #schematics-agent-plan}
 
-Checks for the pre-requisites of the pre-created agent before install. Generates an agent plan by using {{site.data.keyword.bpshort}}.
+Checks for the pre-requisites of the pre-created agent before install. Generates an agent plan by using {{site.data.keyword.bpshort}}. For more information about the steps to use plan command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+{: shortdesc}
 
 Syntax
 
@@ -593,7 +597,7 @@ ibmcloud schematics agent plan
 ### `ibmcloud schematics agent update`
 {: #schematics-agent-update}
 
-Update an agent.
+Update an agent. For more information about the steps to use apply command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 
 Syntax
 
@@ -3517,7 +3521,7 @@ Create the `TAR` file of your template repo by using the `TAR` command given `ta
 
 
 ## Agents beta-0 commands
-{: #agents-cmd}
+{: #agents-beta0-cmd}
 
 {{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}

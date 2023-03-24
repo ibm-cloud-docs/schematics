@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-23"
+lastupdated: "2023-03-24"
 
 keywords: schematics
 subcollection: schematics
@@ -1779,7 +1779,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics action upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-upload-action)
 
-* [Agent beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agent-beta1-cmds)
+* [Agent beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
     * [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
@@ -1941,7 +1941,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload)
 
-* [Agents beta-0 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
+* [Agents beta-0 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd)
 
     * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
 
