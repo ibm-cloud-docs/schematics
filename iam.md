@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-03-16"
 
 keywords: schematics, automation, terraform
 
@@ -18,9 +18,7 @@ subcollection: schematics
 Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} Workspaces and actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud_notm}} account owner, you want to ensure that you control user access to workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
-
-
+As the {{site.data.keyword.cloud}} account owner, you need to ensure that you control user access to {{site.data.keyword.bpshort}} Workspaces and the Actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to the resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
 
 ## Overview of {{site.data.keyword.bpshort}} service access roles and required permissions
 {: #access-roles}
@@ -37,6 +35,38 @@ As the account owner or an authorized account administrator, you can assign IAM 
 **Is access to {{site.data.keyword.bplong_notm}} sufficient to manage {{site.data.keyword.cloud_notm}} resources?**
 
 No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role, you can view, create, update, or delete workspaces and actions in {{site.data.keyword.bplong_notm}}. However, to manage other {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}, you must be assigned the IAM platform or service access role for the individual {{site.data.keyword.cloud_notm}} resource that you want to work with. see the [documentation](/docs/home/alldocs) for your resource to determine the access policies that you need to work with your resource.
+
+## {{site.data.keyword.bpshort}} Platform roles and service roles
+{: #iam-platform-svc-roles}
+
+The user roles exist at both the platform (account) and service level. If you are unsure about what a platfor or a service role allows a user to do remember that plaform roles interact mainly with {{site.data.keyword.cloud_notm}} services like the [resource controller](/docs/account?topic=account-overview) or {{site.data.keyword.iamshort}}. Roles inside of a service, on the other hand, interact mainly with the relevant API, which in this case is the {{site.data.keyword.bpshort}} API. 
+
+### Platform roles
+{: #iam-platform-roles}
+
+Platform roles be assigned over an entire account, over particular service instances, or within objects inside of a service instance.
+
+* **Administrator**: Has the full spectrum of rights over a particular action and its child actions. It includes the right to invite new users and assign roles over the object (only administrators can assign roles). Note that administrators do not have service roles by default. They can, however, assign roles to themselves.
+* **Editor**: Can view, create, and delete instances at the account level, except invite new users, manage the account, and assign access policies. Has limited use for actions within a service instance, beyond the ability to view them.
+* **Operator**: Can view instances at the account level, but cannot edit them. Has limited use for actions within a service instance, beyond the ability to view them.
+* **Viewer**: Can view instances at the account level, but cannot edit them. Has limited use for actions within a service instance, beyond the ability to view them.
+
+### Service roles
+{: #iam-service-roles}
+
+While an account-level role gives a user particular permissions over service instances by default, roles can also be assigned over a particular service instance. Service roles can be applied to the three first class objects within a service instance: the **instance** as a whole, particular **workspace**, and **action**. However, these permissions can be assigned more granularly where necessary. For example giving a user the _Manager_ role over only a particular workspace or resource and some lesser level of permission over the instance as a whole.
+
+Service roles can be assigned per-instance or for all instances in an account.
+{: note}
+
+* **Reader**: You can perform read-only actions within a service such as viewing service-specific resources. For example, read the action definition, KMS settings, workspace details, agent configuration settings, and so on.
+* **Writer**: You can perform create, edit, and read service specific resources operation. For example, create and update workspace, action, agent, blueprint, and so on.
+* **Manager**: In addition to writer acess, you have complete privilege as defined by the service. A _Manager_, for example, has all of the permissions that a _Reader_ has and more.
+
+## Roles and permissions about {{site.data.keyword.bpshort}} offerings 
+{: #iam-roles-permission-schematics}
+
+The list provides the details about the roles and permission needed for the [{{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings).
 
 ### Workspace permissions
 {: #workspace-permissions}
@@ -87,7 +117,7 @@ Review the following table to see what permissions you need to work with {{site.
 ### Agent permissions
 {: #agent-permissions}
 
-The following are the different permissions that you need to experience the {{site.data.keyword.bpshort}} agent.
+The following are the different permissions that you an user need to create and deploy  the {{site.data.keyword.bpshort}} agent.
 - Permission to deploy an agent
 - Permission for agent to connect with {{site.data.keyword.bpshort}}
 - Permission to users to manage agents
@@ -106,22 +136,23 @@ Following are the maximum permission and roles that services should have to depl
 | `{{site.data.keyword.redhat_openshift_notm}}` or `{{site.data.keyword.containershort_notm}}`| Object Writer | Administrator |
 | `{{site.data.keyword.cos_full_notm}}` | Object Writer ++ | Administrator ++ |
 | `{{site.data.keyword.cos_full_notm}} bucket` | Object Writer + Writer | Administrator |
+| `{{site.data.keyword.bpshort}}` | Manager | Operator |
 {: caption="Permissions to deploy an agent" caption-side="top"}
 
 #### Permission for agent to connect with {{site.data.keyword.bpshort}}
 {: #agent-schematics-connect}
 
-The following permission are needed for an agent to connect with {{site.data.keyword.bpshort}}.
+Consider the following access are provided for an agent to connect with {{site.data.keyword.bpshort}}.
 
-- You need to have administrator access, when you are accessing the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
-- You need full permission to access the {{site.data.keyword.bpshort}} Workspace from other {{site.data.keyword.cloud_notm}} account.
+- You need administrator permission to access the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
+- You need Manager service role access, Operator role permission, and [assign access to the trusted profile](docs/account?topic=account-create-trusted-profile&interface=ui#tp-access) to connect.
 
-#### Permission to users to manage agents
+#### Permission for users to manage agents
 {: #agent-manage-permission}
 
 Review the following table to see what identity and permissions you need to use the {{site.data.keyword.bpshort}} Agent.
 
-In addition to the listed agent activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `agent create`, `agent plan`, `agent apply`, `agent delete`, and `agent destroy` activities to execute successfully.
+In addition to the listed agent activities and permission, you must ensure you have permissions to run `agent create`, `agent plan`, `agent apply`, `agent delete`, and `agent destroy` activities to execute successfully.
 {: important} 
 
 | Activities | Reader | Writer | Manager | Account owner |
@@ -135,6 +166,7 @@ In addition to the listed agent activities and permission, you must check whethe
 | `Agent plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 | `Agent update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
 {: caption="User permissions for {{site.data.keyword.bpshort}} Agent" caption-side="top"}
+
 
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
@@ -194,7 +226,6 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
     - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies. 
     - The resource group of the {{site.data.keyword.bpshort}} Workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
     - For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy. 
-
 
 ## Manage access tag in your account 
 {: #access-tag}

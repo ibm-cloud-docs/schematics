@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-03-24"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -19,6 +19,35 @@ content-type: release-note
 
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
+
+## March 2023
+{: #schematics-mar23}
+
+Review the release notes for March 2023.
+{: shortdesc}
+
+### 22 March 2023
+{: #schematics-mar2223}
+{: release-note}
+
+{{site.data.keyword.bpshort}} Agent beta-1 release.
+:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
+    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro).
+    - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
+    - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 
+      - [planning](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli)
+      - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli)
+      - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
+    - You can also [use an agent policy](/docs/schematics?topic=schematics-policy-manage&interface=cli), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
+    - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent) for any challenges and questions on agent.
+    - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta-1 level code and provide feedback.
+
+Release {{site.data.keyword.bpshort}} command-line plug-in.
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.8](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+
 
 ## February 2023
 {: #schematics-feb23}
@@ -202,7 +231,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
-    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Install [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup) through UI.
     - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.

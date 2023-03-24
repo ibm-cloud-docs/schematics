@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-19"
+  years: 2017, 2023
+lastupdated: "2023-03-16"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -309,3 +309,46 @@ Destroy delete the associated cloud resource from the workspace. Delete workspac
 {: support}
 
 No, you cannot delete and destroy operation in one step. It is the [process](/docs/schematics?topic=schematics-workspace-setup#del-workspace) that you need to follow to destroy first and delete.
+
+## What is a resource group and how does it help me organize my team?
+{: #faq-rg-team}
+{: faq}
+{: support}
+
+Assigning access to a particular {{site.data.keyword.cloud_notm}} service is a good way of allowing a user to work with a specific service in your account. However, when you build production workloads in the cloud, you most likely have multiple {{site.data.keyword.cloud_notm}} services and resources that are used by different teams. With resource groups, you can organize multiple services in your account and bundle them under one common view and billing process. To allow your team to work with these resources, you can assign IAM access policies to a resource group that allows them to view and manage the resources within a resource group. 
+
+For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} Workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B. 
+
+## What is the benefit by using IAM access group?
+{: #faq-iam-accessgrp-benefit}
+{: faq}
+{: support}
+
+To minimize the number of IAM access policies you need to assign to an individual user, you can create an [IAM access group](/docs/account?topic=account-groups) for each team, and assign them all necessary permissions to work with the resources in a resource group. 
+
+The following image shows how you can leverage IAM access groups and resource groups to organize permissions in your {{site.data.keyword.cloud_notm}} account. 
+
+<img src="../images/schematics-user-flow-rg.png" alt="Using resource groups and IAM access groups to organize access to {{site.data.keyword.bplong_notm}}" width="900" style="width: 900px; border-style: none"/>
+
+1. The account owner or an authorized administrator defines a team and creates an IAM access group for each team. 
+2. The IAM access group is assigned access to resources within a specific resource group. For example, access group A receives editor permissions for all resources in resource group A, but only viewer permissions for the resources in resource group B.
+3. The account owner or an authorized administrator adds users to the IAM access group. All users automatically inherit the permissions of the IAM access group.
+
+## What are the steps to create and restrict the fine-grained and classic personal access tokens (PAT).
+{: #faq-pat}
+{: faq}
+{: support}
+
+To invoke the GitHub API and establish Git connections over HTTPs, and for creating quick scripts and testing integrations PAT are used. For more information, see [about PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#about-personal-access-tokens){: external}.
+{: shortdesc}
+
+GitHub currently supports two types of personal access tokens, organization owners can set a policy to restrict the access of personal access tokens to their organization.: 
+- fine-grained personal access tokens  
+- personal access tokens (classic). GitHub recommends that you use fine-grained personal access tokens instead of personal access tokens (classic) whenever possible.
+
+The following are the steps to create and restrict the PAT tokens.
+
+- [Create fine-grained personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token){: external}.
+- [Restrict access by fine-grained personal access tokens](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-fine-grained-personal-access-tokens){: external}.
+- [Create personal access tokens (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic){: external}.
+- [Restrict access by personal access tokens (classic)](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-personal-access-tokens-classic){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-03-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -370,110 +370,23 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 ```
 {: pre}
 
-## Agent commands
-{: #agent-cmd}
 
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
-{: beta}
-
-
-
-## Agents commands
+## Agent beta-1 commands
 {: #agents-cmd}
 
-### `ibmcloud schematics agents bind-workspaces`
-{: #schematics-agents-bind-wks}
+{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{: beta}
 
-Create a policy for binding workspace(s) to the agent on {{site.data.keyword.bplong_notm}}.
+### `ibmcloud schematics agent apply`
+{: #schematics-agent-apply}
 
-Syntax
-
-```sh
-ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WORKSPACE_ID [--workspace-id WORKSPACE_ID] [--file FILE] [--output OUTPUT] [--no-prompt]
-```
-{; pre}
-
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------- |
-| `--agent-id` or `--aid` | Required | ID of the Agent.|
-| `--workspace-id` | Required | Workspace ID to bind the Agent. This flag can be used multiple times to bind multiple workspace IDs.|
-| `--file` or `-f`| Optional | Path to the JSON file containing the definition of the policy. |
-| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
-{: caption="{{site.data.keyword.bpshort}} Agent bind flags" caption-side="bottom"}
-
-Example
-```sh
-ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WORKSPACE_ID
-```
-{: pre}
-
-
-### `ibmcloud schematics agents get`
-{: #schematics-agents-get}
-
-Retrieves the {{site.data.keyword.bpshort}} Agent.
+Deploy or upgrade an agent to force deploy. For more information about the steps to use apply command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+{: shortdesc}
 
 Syntax
 
 ```sh
-ibmcloud schematics agents get --id AGENT_ID [--profile PROFILE] [--output OUTPUT] [--no-prompt]
-```
-{: pre}
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--id` or `-i` | Required | Geographic region supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`.|
-| `--profile` or `p` | Optional |  Set this flag to filter Agents. Valid values are `all`, `saved`, and `new`. If not set defaults to `saved`. |
-| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
-| `--no-prompt` | Optional |  Set this flag to update an inventory without an interactive command-line session.|
-{: caption="{{site.data.keyword.bpshort}} Agent get flags" caption-side="top"}
-
-Example
-
-```sh
-ibmcloud schematics agents get 
-```
-{: pre}
-
-### `ibmcloud schematics agents list`
-{: #schematics-agents-list}
-
-Lists all the Agents. Defaults to show the registered agents.
-
-Syntax
-
-```sh
-ibmcloud schematics agents list [--region REGION] [--filter NEW] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT_FORMAT]
-```
-{: pre}
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--region` or `-r` | Optional | Geographic region supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`.|
-| `--filter`  | Optional | Set this flag to filter Agents. Valid values are `all`, `saved`, and `new`. If not set defaults to `saved`. |
-| `--limit` or `-l` | Optional |  Maximum number of workspaces to list. Ignored if a negative number is set. The number must be a positive integer between 1 and 200. The default value is `-1`.|
-| `--offset`or `-m`| Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
-| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-{: caption="{{site.data.keyword.bpshort}} Agent list flags" caption-side="top"}
-
-Example
-
-```sh
-ibmcloud schematics agents list 
-```
-{: pre}
-
-
-### `ibmcloud schematics agents register`
-{: #schematics-agent-register}
-
-Register the Agent with {{site.data.keyword.bpshort}} to run your workspace jobs on your Agent infrastructure. For more information about Agent infrastructure, see [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
-
-Syntax
-
-```sh
-ibmcloud schematics agents register --name AGENT_NAME --profile-id PROFILE_ID --agent-location AGENT_LOCATION --location LOCATION [--description DESCRIPTION] [--resource-group RESOURCE_GROUP] [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics agent apply --id AGENT_ID [--force-redeploy] [--output OUTPUT]
 ```
 {: pre}
 
@@ -481,119 +394,239 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--name` or `-n` | Required | Unique name of the Agent. |
-| `--profile-id` | Required | IAM [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile), used by the Agent instance.|
-| `--agent-location` | Required | Specify the region of the cluster where Agent service is deployed. For example, `us-south`. |
-| `--location` or `-l` | Required | Geographic locations supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing.|
-| `--description` or `-d` | Optional | Short description of the Agent.|
-| `--resource-group` or `-r` | Optional |  Resource group for the Agent.|
-| `--tags` or `-t`| Optional | Agent tags. This flag can be used multiple times and search the Agent related resources faster.|
-| `--file` or `-f`| Optional | Path to the JSON file containing the definition of the Agent.|
-| `--output` or `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
-{: caption="{{site.data.keyword.bpshort}} Agent register flags" caption-side="top"}
+| `--id` or `-i`| Required | The ID of an agent. |
+| `--force-redeploy` or `-f` | Optional | Force redeploys an Agent. |
+| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+{: caption="{{site.data.keyword.bpshort}} agent apply flags" caption-side="top"}
 
 Example
 
 ```sh
-ibmcloud schematics agents register 
+ibmcloud schematics agent apply --id <provide your agent id>
 ```
 {: pre}
 
+### `ibmcloud schematics agent create`
+{: #schematics-agent-create}
 
-### `ibmcloud schematics agents unregister`
-{: #schematics-agents-unregister}
-
-Unregister the {{site.data.keyword.bpshort}} Agent.
-
-Syntax
-
-```sh
-ibmcloud schematics agents unregister --id AGENT_ID [--no-prompt]
-```
-{: pre}
-
-| Flag | Required / Optional | Description |
-| ----- | -------- | ------- |
-| `--id` or `-i`| Required | ID of the Agent.|
-| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
-{: caption="{{site.data.keyword.bpshort}} Agent unregister flags" caption-side="bottom"}
-
-Example
-```sh
-ibmcloud schematics agents unregister --id AGENT_ID
-```
-{: pre}
-
-
-### `ibmcloud schematics agents update`
-{: #schematics-agent-update}
-
-Updates the {{site.data.keyword.bpshort}} Agent.
-
-Syntax
-
-```sh
-ibmcloud schematics agents update --id AGENT_ID [--description DESCRIPTION] [--user-state USER_STATE] [--tags TAGS] [--profile-id PROFILE_ID] [--file FILE] [--output OUTPUT] [--no-prompt]
-```
-{: pre}
-
-| Flag | Required / Optional |Description |
-| ----- | -------- | ------ |
-| `--id` or `-i`| Required | ID of the agent.|
-| `--tags` or `-t`| Optional | Agent tags. This flag can be used multiple times to search the specific Agent related resources.|
-| `--description` or `-d` | Optional | Short description of the agent.|
-| `--user-state` | Optional | User defined status of the Agent. It can be either `enable`, or `disable`.|
-| `--profile-id` | Optional | IAM [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile), used by the Agent instance.|
-| `--file` or `-f` | Optional| Path to the JSON file containing the definition of the Agent.|
-| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
-| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
-{: caption="{{site.data.keyword.bpshort}} Agent update flags" caption-side="top"}
-
-Example
-
-```sh
-ibmcloud schematics agents update --id AGENT_ID
-```
-{: pre}
-
-### `ibmcloud schematics workspace new with Agent`
-{: #schematics-agent-new}
-
-Create the {{site.data.keyword.bpshort}} Workspace to work with your Terraform configuration and bind your Agent to the new workspace. 
-
-Syntax
-
-```sh
-ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [--agent-id AGENT_ID]  [--github-token GITHUB_TOKEN] [--output OUTPUT] [--json]
-```
-{: pre}
-
-For more information about the flags see [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-new) command.
-{: note}
-
-Example
-
-```sh
-ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH 
-```
-{: pre}
-
-### `ibmcloud schematics workspace get with Agent`
-{: #schematics-agent-get}
-
-Retrieve the details of an existing workspace, including the values of all input variables and {{site.data.keyword.bpshort}} Agent.	
+Create an agent by using {{site.data.keyword.bpshort}}. Agent help you to run your workspace jobs on your infrastructure. For more information about the steps to use create command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 {: shortdesc}
 
 Syntax
 
 ```sh
-ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
+ibmcloud schematics agent create --name AGENT_NAME --location LOCATION --agent-location AGENT_LOCATION --version VERSION --infra-type INFRA_TYPE --cluster-id CLUSTER_ID --cluster-resource-group CLUSTER_RESOURCE_GROUP --cos-id COS_ID --cos-bucket COS_BUCKET --cos-location COS_LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--plan-only] [--plan-apply] [--tags TAGS] [--file FILE] [--output OUTPUT]
 ```
 {: pre}
 
-For more information about the flags see [workspace get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-get) command.
-{: note}
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--name` or `-n` | Required | The unique name of an agent. |
+| `--location` or `-l` | Required | Geographic locations supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
+| `--agent-location` or `--al` | Required | Specify the location where agent is deployed in the user environment. For example, `ap-north`. |
+| `--version` or `-v` | Required | Specify the version of an agent. |
+| `--infra-type` or `-i` | Required | Specify the type of the target agent infrastructure. Supported values are `ibm-kubernetes`, `ibm-openshift`, or `ibm-satellite`.|
+| `--clusterid` or `-k` | Required | The ID of the Kubernetes cluster for deploying an Agent.|
+| `--cluster-resource-group` or `--kr` | Required | The resource group name of the cluster. |
+| `--cos-id` or `--oi` | Required | The ID of the COS instance. |
+| `--cos-bucket` or `-b` | Required |  The ID or the name of the COS bucket. |
+| `--cos-location` or `--ol` | Required | Specify the region of the COS bucket. For example, `global`.|
+| `--resource-group` or `-r` | Required | Resource group name or ID for the agent. |
+| `--description` or `-d` | Optional |The short description of the agent. |
+| `--plan-only` | Optional | Run plan command, after creating the agent.|
+| `--plan-apply` | Optional | Run plan and apply command, after creating the agent.|
+| `--tags` or `-t`| Optional | Agent tags. This flag can be used multiple times and search an agent related resources faster. |
+| `--file` or `f` | Optional | Path to the JSON file containing the definition of an agent. |
+| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+{: caption="{{site.data.keyword.bpshort}} agent create flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent create --name agenttestcli --location us-south --agent-location us-south --version v1.0.0 --infra-type ibm_kubernetes --cluster-id c6ja7vtf0afldib61l20 --cluster-resource-group Default --cos-id COSForAgentLogging --cos-bucket agentlogs --cos-location us-south --resource-group Default
+```
+{: pre}
+
+### `ibmcloud schematics agent delete`
+{: #schematics-agent-delete}
+
+Uninstall an agent. For more information about the steps to use delete command, see [deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli).
+
+Syntax
+
+```sh
+ibmcloud schematics agent delete --id AGENT_ID [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i`| Required | The ID of an agent. |
+| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+| `--no-prompt` | Optional | Set this flag to stop interactive CLI session such as, prompting user for input a field value on terminal. |
+{: caption="{{site.data.keyword.bpshort}} agent delete flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent delete --id <AGENT_ID>
+```
+{: pre}
+
+
+### `ibmcloud schematics agent get`
+{: #schematics-agents-get}
+
+Retrieves the details of an agent. Agents help you to fetch your workspace jobs on your infrastructure. For more information about the steps to use get command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
+
+Syntax
+
+```sh
+ibmcloud schematics agent get --id AGENT_ID [--verbose VERBOSE] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required | ID of the agent. |
+| `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary`, `detailed`, or `ids`. Defaults to `summary`. |
+| `--verbose` or `-v` | Optional | Sets the verbosity level to get the relevant details about an agent. Valid values are `all`, `assignment-policy`, `prs-result`, `deploy-result`, `health-result`. The default value is `all`. |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
+| `--no-prompt` | Optional | Set this flag to stop interactive CLI session such as, prompting user for input a field value on terminal. |
+{: caption="{{site.data.keyword.bpshort}} agent get flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent get --id <Provide your agent ID>
+```
+{: pre}
+
+### `ibmcloud schematics agent health`
+{: #schematics-agent-health}
+
+Performs the post deployment validation of an agent. For more information about the steps to use health command, see [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics agent health --id AGENT_ID [--output OUTPUT]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i`| Required | The ID of the agent. |
+| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+{: caption="{{site.data.keyword.bpshort}} agent health flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent health --id <AGENT_ID>
+```
+{: pre}
+
+### `ibmcloud schematics agent list`
+{: #schematics-agent-list}
+
+Lists the agents. Defaults to show the registered agents. For more information about the steps to use list command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
+
+Syntax
+
+```sh
+ibmcloud schematics agent list [--location LOCATION] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT_FORMAT
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--location` or `-l` | Optional |  Geographic locations supported by {{site.data.keyword.bplong_notm}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. |
+| `--filter` | Optional | Set this flag to filter agents. Valid values are `all`, `saved`, or `new`. If unset defaults to `saved`. |
+| `--limit` or `-lm` | Optional | Maximum number of agents to list. Ignored if a negative number is set. Maximum limit is 200, (default is -1). |
+| `--offset` or `-m`| Optional | Offset in list. Ignored if a negative number is set (default: -1). |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
+{: caption="{{site.data.keyword.bpshort}} agent list flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent list
+```
+{: pre}
+
+### `ibmcloud schematics agent plan`
+{: #schematics-agent-plan}
+
+Checks for the pre-requisites of the pre-created agent before install. Generates an agent plan by using {{site.data.keyword.bpshort}}. For more information about the steps to use plan command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics agent plan --id AGENT_ID [--output OUTPUT] 
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i`| Required | The ID of the agent. |
+| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+{: caption="{{site.data.keyword.bpshort}} agent plan flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent plan
+```
+{: pre}
+
+### `ibmcloud schematics agent update`
+{: #schematics-agent-update}
+
+Update an agent. For more information about the steps to use apply command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+
+Syntax
+
+```sh
+ibmcloud schematics agent update --id AGENT_ID [--description DESCRIPTION] [--user-state USER_STATE] [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------ |
+| `--id` or `-i`| Required | The ID of an agent. |
+| `--tags` or `-t` | Optional | Agent tags. This flag can be used multiple times, and search the agent related resources faster.|
+| `--description` or `-d` | Optional | Short description of an agent.|
+| `--user-state` or `-s` | Optional | User defined status of an agent. Valid values are `enable`, `disable`. |
+| `--file` or `-f` | Optional | Path to the `JSON` file that contains the definition of the agent.|
+| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
+{: caption="{{site.data.keyword.bpshort}} agent update flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agent update --id <AGENT_ID>
+```
+{: pre}
+
+
 
 ## Blueprint commands
 {: #blueprints-cmd}
@@ -1152,7 +1185,240 @@ OK
 ```
 {: screen}
 
+## Policy commands
+{: #policy-cmd}
 
+{{site.data.keyword.bpshort}} Policy is a beta feature that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{: beta}
+
+### `ibmcloud schematics policy create`
+{: #schematics-policy-create}
+
+Create a policy using {{site.data.keyword.bpshort}} to select one or more {{site.data.keyword.bpshort}} objects (such as, Workspaces, Action, Blueprint) to deliver targeted {{site.data.keyword.bpshort}} feature. 
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--name` or `-n` | Required | The unique name of the agent. |
+| `--kind` or `-K` | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
+| `--location` or `-l` | Optional | Geographic locations supported by {{site.data.keyword.bpshort}} service. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
+| `--description` or `-d` | Optional |  The description of {{site.data.keyword.bpshort}} customization policy. |
+| `--resource-group` or `-r` | Required | Resource group name or ID for the policy. |
+| `--tags` or `-t`| Optional | Policy tags can be used multiple times and search the agent related resources faster. |
+| `--file` or `f` | Optional | Path to the JSON file containing the definition of the policy. |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
+| `--no-prompt` | Optional |  Set this flag to run the command without user prompts. |
+{: caption="{{site.data.keyword.bpshort}} policy create flags" caption-side="bottom"}
+
+#### Using the payload file
+{: #policy-create-payload}
+
+You can provide a payload file to specify certain parameters for the `policy create` command. Then, you pass the file name to the command by using the `--file` command option.
+{: shortdesc}
+
+You need to replace the `<...>` placeholders with the actual values. For example, `"<SELECTOR_KIND>"` as `"ids"`.
+{: note}
+
+Syntax
+
+```json
+{
+	"policy_target": {
+		"selector_kind": "<SELECTOR_KIND>",
+		"selector_ids": [
+			"<SELECTOR_ID>"
+		]
+	},
+	"policy_parameter": {
+		"agent_assignment_policy_parameter": {
+			"selector_kind": "<SELECTOR_KIND>",
+			"selector_scope": [{
+				"kind": "<WORKSPACE>",
+				"tags": [
+					"dev:<ENVIRONMENT>",
+					"demo"
+				],
+				"resource_groups": [
+					"<RESOURCE_GROUP>"
+				],
+				"locations": [
+					"<LOCATION>"
+				]
+			}]
+		}
+	}
+}
+```
+{: codeblock}
+
+Example
+
+```json
+{
+	"policy_target": {
+		"selector_kind": "ids",
+		"selector_ids": [
+			"demo-agent-one"
+		]
+	},
+	"policy_parameter": {
+		"agent_assignment_policy_parameter": {
+			"selector_kind": "scoped",
+			"selector_scope": [{
+				"kind": "workspace",
+				"tags": [
+					"dev:test",
+					"demo"
+				],
+				"resource_groups": [
+					"test"
+				],
+				"locations": [
+					"us-south"
+				]
+			}]
+		}
+	}
+}
+```
+{: codeblock}
+
+```sh
+ibmcloud schematics policy create --name policy-101 --kind agent_assignment_policy --location us-south --resource-group Default -f policy.json
+```
+{: pre}
+
+### `ibmcloud schematics policy get`
+{: #schematics-policy-get}
+
+Retrieve the detailed information of an existing {{site.data.keyword.bpshort}} policy by using policy ID.
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics policy get --id POLICY_ID [--profile PROFILE] [--output OUTPUT]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required | ID of the policy. |
+| `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary`, `detailed`, or `ids`. Defaults to `summary`. |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
+{: caption="{{site.data.keyword.bpshort}} policy get flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics policy get --id policy-101.soP.282e
+```
+{: pre}
+
+### `ibmcloud schematics policy list`
+{: #schematics-policy-list}
+
+Retrieve a list of all policies in your {{site.data.keyword.cloud_notm}} account.
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics policy list [--profile PROFILE] [--output OUTPUT] [--limit LIMIT] [--offset OFFSET]
+```
+{: pre}
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--profile` or `-r` | Optional | Geographic region supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`.|
+| `--limit` or `-l` | Optional |  Maximum number of policies to list. Ignored if a negative number is set. The number must be a positive integer between 1 and 200. The default value is `-1`.|
+| `--offset`or `-m`| Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
+| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+{: caption="{{site.data.keyword.bpshort}} Policy list flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics policy list 
+```
+{: pre}
+
+### `ibmcloud schematics policy update`
+{: #schematics-policy-update}
+
+Update the information of an existing policy by using policy ID. Changes are applied to the description by running the `ibmcloud schematics policy update` command.
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+|   `--id` or `-i` | Required | ID of the policy. |
+|   `--kind` or `-k` | Optional | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
+|   `--location` or `-l` | Optional | Geographic locations supported by {{site.data.keyword.bpshort}} service. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
+|   `--description` or `-d` | Optional |  The description of {{site.data.keyword.bpshort}} customization policy. |
+|   `--resource-group` or `-r` | Optional |  Resource group name or ID for the policy. |
+|   `--tags` or `-t` | Optional |     Policy tags. This flag can be used multiple times and search the agent related resources faster. |
+|   `--file` or `-f`  | Optional |    Path to the JSON file containing the definition of the policy. |
+|   `--output` or `-o`  | Optional |  Specify output format, only `JSON` is supported. |
+|   `--no-prompt`  | Optional |       Set this flag to stop interactive CLI session, such as prompting user for input a field value on terminal. |
+{: caption="{{site.data.keyword.bpshort}} policy update flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics policy update --id policy-msk.soP.5c65 --description PolicyDescriptionUpdated
+POLICY DETAILS
+Name         ID                    Description                Kind                      Location   Resource Group   CRN   Target   Tags   
+policy-msk   policy-msk.soP.5c65   PolicyDescriptionUpdated   agent_assignment_policy   us-south   Default                            
+                                   
+OK
+```
+{: pre}
+
+### `ibmcloud schematics policy delete`
+{: #schematics-policy-delete}
+
+Delete a {{site.data.keyword.bpshort}} policy.
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics policy delete [--id POLICY_ID]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required | ID of the policy. |
+| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
+{: caption="{{site.data.keyword.bpshort}} policy delete flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics policy delete --id policy-101.soP.282e
+```
+{: pre}
 
 ## Enable BYOK or KYOK commands
 {: #kms-commands}
@@ -3252,3 +3518,224 @@ Create the `TAR` file of your template repo by using the `TAR` command given `ta
 ]
 ```
 {: pre}
+
+
+## Agents beta-0 commands
+{: #agents-beta0-cmd}
+
+{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{: beta}
+
+### `ibmcloud schematics agents bind-workspaces`
+{: #schematics-agents-bind-wks}
+
+Create a policy for binding workspace(s) to the agent on {{site.data.keyword.bplong_notm}}.
+
+Syntax
+
+```sh
+ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WORKSPACE_ID [--workspace-id WORKSPACE_ID] [--file FILE] [--output OUTPUT] [--no-prompt]
+```
+{; pre}
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------- |
+| `--agent-id` or `--aid` | Required | ID of the Agent.|
+| `--workspace-id` | Required | Workspace ID to bind the Agent. This flag can be used multiple times to bind multiple workspace IDs.|
+| `--file` or `-f`| Optional | Path to the JSON file containing the definition of the policy. |
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
+{: caption="{{site.data.keyword.bpshort}} Agent bind flags" caption-side="bottom"}
+
+Example
+```sh
+ibmcloud schematics agents bind-workspaces --agent-id AGENT_ID --workspace-id WORKSPACE_ID
+```
+{: pre}
+
+
+### `ibmcloud schematics agents get`
+{: #schematics-agents-get}
+
+Retrieves the {{site.data.keyword.bpshort}} Agent.
+
+Syntax
+
+```sh
+ibmcloud schematics agents get --id AGENT_ID [--profile PROFILE] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i` | Required | Geographic region supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`.|
+| `--profile` or `p` | Optional |  Set this flag to filter Agents. Valid values are `all`, `saved`, and `new`. If not set defaults to `saved`. |
+| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
+| `--no-prompt` | Optional |  Set this flag to update an inventory without an interactive command-line session.|
+{: caption="{{site.data.keyword.bpshort}} Agent get flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agents get 
+```
+{: pre}
+
+### `ibmcloud schematics agents list`
+{: #schematics-agents-list}
+
+Lists all the Agents. Defaults to show the registered agents.
+
+Syntax
+
+```sh
+ibmcloud schematics agents list [--region REGION] [--filter NEW] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT_FORMAT]
+```
+{: pre}
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--region` or `-r` | Optional | Geographic region supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`.|
+| `--filter`  | Optional | Set this flag to filter Agents. Valid values are `all`, `saved`, and `new`. If not set defaults to `saved`. |
+| `--limit` or `-l` | Optional |  Maximum number of workspaces to list. Ignored if a negative number is set. The number must be a positive integer between 1 and 200. The default value is `-1`.|
+| `--offset`or `-m`| Optional | Offset in list. Ignored if a negative number is set. The default value is `-1`.|
+| `--output` or `-o` |  Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+{: caption="{{site.data.keyword.bpshort}} Agent list flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agents list 
+```
+{: pre}
+
+
+### `ibmcloud schematics agents register`
+{: #schematics-agent-register}
+
+Register the Agent with {{site.data.keyword.bpshort}} to run your workspace jobs on your Agent infrastructure. For more information about Agent infrastructure, see [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
+
+Syntax
+
+```sh
+ibmcloud schematics agents register --name AGENT_NAME --profile-id PROFILE_ID --agent-location AGENT_LOCATION --location LOCATION [--description DESCRIPTION] [--resource-group RESOURCE_GROUP] [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+Command options
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--name` or `-n` | Required | Unique name of the Agent. |
+| `--profile-id` | Required | IAM [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile), used by the Agent instance.|
+| `--agent-location` | Required | Specify the region of the cluster where Agent service is deployed. For example, `us-south`. |
+| `--location` or `-l` | Required | Geographic locations supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing.|
+| `--description` or `-d` | Optional | Short description of the Agent.|
+| `--resource-group` or `-r` | Optional |  Resource group for the Agent.|
+| `--tags` or `-t`| Optional | Agent tags. This flag can be used multiple times and search the Agent related resources faster.|
+| `--file` or `-f`| Optional | Path to the JSON file containing the definition of the Agent.|
+| `--output` or `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
+{: caption="{{site.data.keyword.bpshort}} Agent register flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agents register 
+```
+{: pre}
+
+
+### `ibmcloud schematics agents unregister`
+{: #schematics-agents-unregister}
+
+Unregister the {{site.data.keyword.bpshort}} Agent.
+
+Syntax
+
+```sh
+ibmcloud schematics agents unregister --id AGENT_ID [--no-prompt]
+```
+{: pre}
+
+| Flag | Required / Optional | Description |
+| ----- | -------- | ------- |
+| `--id` or `-i`| Required | ID of the Agent.|
+| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
+{: caption="{{site.data.keyword.bpshort}} Agent unregister flags" caption-side="bottom"}
+
+Example
+```sh
+ibmcloud schematics agents unregister --id AGENT_ID
+```
+{: pre}
+
+
+### `ibmcloud schematics agents update`
+{: #schematics-agent-update}
+
+Updates the {{site.data.keyword.bpshort}} Agent.
+
+Syntax
+
+```sh
+ibmcloud schematics agents update --id AGENT_ID [--description DESCRIPTION] [--user-state USER_STATE] [--tags TAGS] [--profile-id PROFILE_ID] [--file FILE] [--output OUTPUT] [--no-prompt]
+```
+{: pre}
+
+| Flag | Required / Optional |Description |
+| ----- | -------- | ------ |
+| `--id` or `-i`| Required | ID of the agent.|
+| `--tags` or `-t`| Optional | Agent tags. This flag can be used multiple times to search the specific Agent related resources.|
+| `--description` or `-d` | Optional | Short description of the agent.|
+| `--user-state` | Optional | User defined status of the Agent. It can be either `enable`, or `disable`.|
+| `--profile-id` | Optional | IAM [Trusted Profile ID](/docs/schematics?topic=schematics-agent-trusted-profile), used by the Agent instance.|
+| `--file` or `-f` | Optional| Path to the JSON file containing the definition of the Agent.|
+| `--output` or  `-o` | Optional |Returns the command-line output in JSON format. Currently only `JSON` file format is supported.|
+| `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
+{: caption="{{site.data.keyword.bpshort}} Agent update flags" caption-side="top"}
+
+Example
+
+```sh
+ibmcloud schematics agents update --id AGENT_ID
+```
+{: pre}
+
+### `ibmcloud schematics workspace new with Agent`
+{: #schematics-agent-new}
+
+Create the {{site.data.keyword.bpshort}} Workspace to work with your Terraform configuration and bind your Agent to the new workspace. 
+
+Syntax
+
+```sh
+ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH  [--agent-id AGENT_ID]  [--github-token GITHUB_TOKEN] [--output OUTPUT] [--json]
+```
+{: pre}
+
+For more information about the flags see [workspace new](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-new) command.
+{: note}
+
+Example
+
+```sh
+ibmcloud schematics workspace new  --file FILE_NAME  --state STATE_FILE_PATH 
+```
+{: pre}
+
+### `ibmcloud schematics workspace get with Agent`
+{: #schematics-agent-get}
+
+Retrieve the details of an existing workspace, including the values of all input variables and {{site.data.keyword.bpshort}} Agent.	
+{: shortdesc}
+
+Syntax
+
+```sh
+ibmcloud schematics workspace get --id WORKSPACE_ID [--output OUTPUT][--json]
+```
+{: pre}
+
+For more information about the flags see [workspace get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-workspace-get) command.
+{: note}

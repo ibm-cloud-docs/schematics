@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-03-15"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -142,3 +142,34 @@ Correct the errors as identified in the validation messages. For more informatio
 Push the changes to template and input files to the Git repositories.
 
 Rerun the blueprint create operation with the corrected syntax.
+
+## Why is {{site.data.keyword.bpshort}} not able to clone the private GitHub repository?
+{: #tsg-privategithub}
+{: troubleshoot}
+{: support}
+
+{{site.data.keyword.bpshort}} isn't able to clone the private GitHub repository, and you are seeing the following error message: `Failed to clone git repository, repository not found (check url, also check the scope 'repo' of the personal access token if SCHEMATICSGITTOKEN is used)`
+{: tsSymptoms}
+
+You didn't provide the correct GitHub token, or you didn't provide a GitHub token altogether.
+{: tsCauses}
+
+Provide a [GitHub token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external} and check to see whether the correct GitHub token has been provided in the `github_token` parameter in the create workspace or create blueprint API.
+{: tsResolve}
+
+## Why is {{site.data.keyword.bpshort}} not able to clone the public GitHub repository?
+{: #tsg-publicgithub}
+{: troubleshoot}
+{: support}
+
+{{site.data.keyword.bpshort}} isn't able to clone the public GitHub repository, and you are seeing one of the following error messages:
+
+* `Fatal, could not download repo, Failed to clone git repository, authentication required (or the git url is incorrect). Problems found with the Repository. Please Rectify and Retry`
+* `Template error: Failed to clone git repository, authentication required (or the git url is incorrect)`
+{: tsSymptoms}
+
+You didn't provide the correct GitHub URL, or you provided a GitHub token, which is not required to clone a public repository. A GitHub access token is only required to access a private repository.
+{: tsCauses}
+
+Do not provide a GitHub token, and check to see whether the GitHub token was provided in the `github_token` parameter while creating a workspace or blueprint by using the public repository.
+{: tsResolve}

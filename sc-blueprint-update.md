@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-03-15"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -100,7 +100,7 @@ You can follow these steps to update the {{site.data.keyword.bpshort}} Blueprint
 3. Click **Edit** option in **Inputs Source**:
     - The source of the input variables can be changed to a different input file, version or branch
     - **Input file GIT URL**  - `<New or edited input file Git URL>`.
-    - **Personal access token (private repositories only)** - `<Provide your Git personal access token, only for private Git repos>`.
+    - **Personal access token (private repositories only)** - `<Provide your Git personal access token, only for private Git repos>`. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}.
     - Click **Update**.
 4. Click **Settings** tab.
     - In **Details** section, click **Edit**.
