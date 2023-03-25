@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-03-25"
 
 keywords: schematics
 subcollection: schematics
@@ -138,6 +138,14 @@ subcollection: schematics
 * [Using Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-use)
 
 * [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
+
+[{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
+
+* [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
+
+* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
+
+* [Next steps](/docs/schematics?topic=schematics-agentb1-about-intro#nextsteps-agentb1-arch)
 
 [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
 
@@ -1374,9 +1382,15 @@ subcollection: schematics
 
 * [Before your begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
 
-* [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-cli)
+* [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
 
-* [Deploying an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-api)
+* [Verifying pre-requisite for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
+
+* [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#apply-agent-cli)
+
+* [Verifying the agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#d-agent-cli)
+
+* [Creating an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-api)
 
 * [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview#agent-create-nextsteps)
 
@@ -1397,31 +1411,31 @@ subcollection: schematics
 {: #sitemap_using_agent}
 
 
-[Managing policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
+* [Managing network policies](/docs/schematics?topic=schematics-agent-networkpolicy#agent-networkpolicy)
 
-* [Components](/docs/schematics?topic=schematics-policy-manage#policy-components)
+* [Restricting properties](/docs/schematics?topic=schematics-agent-networkpolicy#networkpolicy-restrict)
 
-    * [Policy execution engine](/docs/schematics?topic=schematics-policy-manage#policy-exe-engine)
+* [Default network policies](/docs/schematics?topic=schematics-agent-networkpolicy#networkpolicy-default)
 
-    * [Policy kind](/docs/schematics?topic=schematics-policy-manage#policy-kind)
+[Managing agent assignment policy](/docs/schematics?topic=schematics-agent-networkpolicy#policy-manage)
 
-* [Agent policy commands using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-policycmd-cli)
+* [Agent policy commands using CLI](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-policycmd-cli)
 
-    * [Example to create policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
+    * [Example to create policy using CLI](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-createpolicy-cli)
 
-    * [Example to get policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-cli)
+    * [Example to get policy using CLI](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-getpolicy-cli)
 
-    * [Example to update policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-cli)
+    * [Example to update policy using CLI](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-updatepolicy-cli)
 
-* [Agent policy command using API](/docs/schematics?topic=schematics-policy-manage#agentb1-policydm-api)
+* [Agent policy command using API](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-policydm-api)
 
-    * [Example to create policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-api)
+    * [Example to create policy using API](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-createpolicy-api)
 
-    * [Example to get policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-api)
+    * [Example to get policy using API](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-getpolicy-api)
 
-    * [Example to update policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-api)
+    * [Example to update policy using API](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-updatepolicy-api)
 
-    * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
+    * [Example to search policy using API](/docs/schematics?topic=schematics-agent-networkpolicy#agentb1-searchpolicy-api)
 
 [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 

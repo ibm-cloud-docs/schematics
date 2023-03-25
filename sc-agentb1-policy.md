@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-25"
 
 keywords: schematics agent, agent policy, policies
 
@@ -15,35 +15,66 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
+<hidden>
 
+## Managing network policies
+{: #agent-networkpolicy}
 
-# Managing policies
-{: #policy-manage}
-
-{{site.date.keyword.bpshort}} account policies allows you to create rules or criteria to define the behavior, schedule, or the constraint for the {{site.data.keyword.bpshort}} core capabilities.
+{{site.data.keyword.bpshort}} Agent contain the network policies to secure the runtime pods communication. It communicates with other pods and the external endpoints. The incoming and outgoing network traffic is allowed or restricted based on the protocol, port, source, and destination IP addresses.
 {: shortdesc}
 
-## Components
-{: #policy-components}
+## Restricting properties
+{: #networkpolicy-restrict}
 
-The following are the major components of the {{site.data.keyword.bpshort}} policy solution.
+The network policies restrict the traffic to the pods that contains the following properties.
+- Legitimate pod-to-pod connections are allowed when explicitly allowed.
+- When needed pod `egress` traffic is allowed.
+{: shortdesc}
 
-### Policy execution engine
-{: #policy-exe-engine}
+## Default network policies
+{: #networkpolicy-default}
 
-Policy execution engine provides an interface for other microservices to evaluate the applicable policy or policies and to make decisions. Policy execution engine is implemented as datajob gRPC service.
+Following are the default properties that are applied with the {{site.data.keyword.bpshort}} Agent deployment.
+{: shortdesc}
 
-### Policy kind
-{: #policy-kind}
+| Policy | Description |
+| --- | --- |
+| `Deny-all-sandbox` | `Namespace:schematics-sandbox`, denies all the `ingress` and `egress` traffic. |
+| `Deny-all-runtime` | `Namespace:schematics-runtime`, denies all the `ingress` and `egress` traffic. |
+| `Whitelist-sandbox` | `Namespace:schematics-sandbox`, allowed list, and needed ports for `ingress = 3000`, and for `egress TCP = 80, 443, 5986, 22, 53` or `egress UDP = 53, 443`.|
+| `Whitelist-ingress-job-ports` | `Namespace:schematics-runtime`, allowed and needed ports for `ingress = 3002`.|
+| `Whitelist-runtime-gen-ports` | `Namespace:schematics-runtime`, allowed and needed ports for `ingress = 3002`, and for `egress TCP = 80, 443, 5986, 22, 53, 8080, 10250, 9092, 9093` or `egress UDP = 53, 443, 10250, 9092, 9093`.|
+{: caption="Default network policies" caption-side="bottom"}
 
-Policy kind is based on core capability and the operations for these capabilities such as assignment, enablement, purge, schedule. Policy kind helps in organinsing policies and identifying the unique policy parameter schema evaluated through a respective policy manager during policy evaluation.
 
-The following are the planned or the supported kind.
+# Managing agent assignment policy
+{: #policy-manage}
 
-- agent_assignment_policy
-- job_purge_policy
-- workspace_drift_scheduler_policy
-- workspace_control_enablement_policy
+Agents for {{site.date.keyword.bplong}} extend its ability to work directly with your cloud
+infrastructure on your private network or in any network isolation zones. You can deploy
+multiple agents in your {{site.date.keyword.cloud_notm}} account, each catering to the different network isolation zones. For example, based on the following factory your cloud infrastructure can be spread across or partitioned.
+- multiple cloud regions (region-1, region-2, region-3)
+- multiple VPC zones for the application layer, data layer, management layer
+- multiple cloud-vendors or on-premises vendors, or
+- multiple department-wise information technology zones, in your organization such as `HR`, `Finance`, `Manufacturing`, and so on.
+{: shortdesc}
+
+The agents are deployed in each partition or network isolation zone in order to, run the
+Terraform or Ansible automation, for the local or private Cloud resources. The agent
+assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the workspace job or an action job to the agent.
+
+You can create, update, and delete the `agent assignment policy` by using the {{site.data.keyword.bpshort}} CLI for [agent policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create).
+
+The `agent-assignment-policy` for an agent is defined by using the following attributes of the
+workspace or an action. The `selector` attribute can be a combination of the following flags.
+- `tags` – workspaces or actions with the matching tags are selected.
+- `location` – workspaces or actions with the matching location are selected.
+- `resource-group` - workspaces or actions with the matching resource-group are selected.
+
+If the selector for `agent-1` selects tags=[`dev`], resource-group=[`rg-2`]
+{{site.data.keyword.bpshort}} automatically routes the workspace jobs such as Git download, Terraform
+plan, apply, destroy jobs of all the workspaces that matches the `tags`, and `resource-group` criteria to the `agent-1`.
+{: example}
 
 
 
