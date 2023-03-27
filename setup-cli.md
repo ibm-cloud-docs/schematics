@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-03-27"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -72,7 +72,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     Listing installed plug-ins...
 
     Plugin Name                             Version   Status             Private endpoints supported   
-    schematics                              1.12.5                        true  
+    schematics                              1.12.8                        true  
     ```
     {: screen}
 
@@ -92,7 +92,8 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
 
     COMMANDS:
     action, ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
-    agents, ag           [Beta] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.
+    agent, ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.
+    agents, ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.
     apply                Apply a plan to an workspace to deploy the latest version of your configuration.
     blueprint, bp        Deploy and manage large scale environments using reusable blueprint templates.
     destroy              Destroy resources in an existing workspace. This action cannot be reversed.
@@ -102,6 +103,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     logs                 Show details about actions that ran against an workspace.
     output               Get all the output values from your workspace; (ex. result of terraform output command
     plan                 Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
+    policy, plcy         [Beta] Create and manage policies.
     refresh              Refresh the workspace with latest version of your workspace configuration.
     resource-query, rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
     state                Advanced state management
@@ -141,7 +143,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output: 
 
     ```text
-    schematics                      1.12.5        Update Available           false
+    schematics                      1.12.7        Update Available           false
     ```
     {: screen}
 
@@ -169,7 +171,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output for blueprints support: 
 
     ```text
-    schematics                      1.12.7        true
+    schematics                      1.12.8        true
     ```
     {: screen}
 
@@ -183,7 +185,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
     ```text
     Plugin Name                              schematics[sch]   
-    Plugin Version                           1.12.7   
+    Plugin Version                           1.12.8   
     Plugin SDK Version                       0.8.0   
     Minimal IBM Cloud CLI version required   0.15.1   
     Private endpoints supported              true   
@@ -206,7 +208,8 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions   
     schematics,sch agents,ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.   
     schematics,sch blueprint,bp        Deploy and manage large scale environments using reusable blueprint templates.   
-    schematics,sch agent,ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.
+    schematics,sch agent,ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.   
+    schematics,sch policy,plcy         [Beta] Create and manage policies.
     ```
     {: screen}
 
@@ -232,6 +235,7 @@ Uninstall the {{site.data.keyword.bplong_notm}} plug-in to remove the {{site.dat
     {: screen}
 
 2. Verify that the {{site.data.keyword.bplong_notm}} command-line plug-in is uninstalled successfully.
+    
     ```sh
     ibmcloud plugin list | grep schematics
     ```

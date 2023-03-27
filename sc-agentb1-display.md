@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-23"
+lastupdated: "2023-03-27"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -21,45 +21,14 @@ subcollection: schematics
 You can view an agent with a specific agent ID to view the detailed configuration information. You can also list all the agents that are created in your account by using the command _agent list_.
 {: shortdesc}
 
-## Displaying an agent configuration using the CLI
-{: #display-agentb1-cli}
+## Displaying the list of agents using CLI
+{: #display-agentb1-list-cli}
 {: cli}
 
-To view an agent configuration using the CLI, use the `ibmcloud schematics agent get` command. This command requires `agent_id` as an input argument.
+You can display the list of agents in your account by using the [agent list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list) CLI command.
 {: shortdesc}
 
-To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agents-get).
-{: important}
-
 Example
-
-```sh
-ibmcloud schematics agent get --id gsmmar2cliv2-agent-test.deA.391b
-```
-{: pre}
-
-Output
-
-```text
-Retrieving agent...
-OK
-                    
-ID               gsmmar2cliv2-agent-test.deA.391b   
-Name             gsmmar2cliv2-agent-test   
-Status           ACTIVE   
-Version             
-Location         eu-de   
-Agent Location   us-south   
-Resource Group   Default   
-                 
-Recent Job   Job ID                             Status                             Last modified   
-PRS          .ACTIVITY.64d87b58                 Triggered pre-requisite scanning   0001-01-01T00:00:00.000Z   
-DEPLOY       .ACTIVITY.9f4e2a83                 Triggered deployment               0001-01-01T00:00:00.000Z   
-HEALTH       852b6992c5aab753b159d3fa3204168e   Job Success                         2023-03-21T12:25:25.183Z 
-```
-{: screen}
-
-Example to view the list of agents in your account.
 
 ```sh
 ibmcloud schematics agent list
@@ -71,13 +40,56 @@ Output
 ```text
 Retrieving agents...
 OK
-Name                      ID                                 Version   Description    Resource Group   Agent Location   Schematics location   Status   Tags               Agent health   
-agent-harini-test-eu      agent-harini-test-eu.deA.509c                Create Agent   Default          us-south         eu-de                 Active   Env:stage, beta1      
-gsmmar2cli-agent-test     gsmmar2cli-agent-test.deA.ea4f     0.0.1                    Default          eu-de            eu-de                 Active                         
-gsmmar2cliv2-agent-test   gsmmar2cliv2-agent-test.deA.391b                            Default          us-south         eu-de                 Active                         
-                          
-Showing 1-3 of 3 items
+Name                              ID                                         Version   Description                                   Resource Group   Agent Location   Schematics location   Status   Tags               Agent health   
+Agent-UI-Final-Testing            Agent-UI-Final-Testing.deA.3dfb                                                                    cli-testing      eu-de                                  Active                         
+Vishwa-CLI-Testing                Vishwa-CLI-Testing.deA.ef99                                                                        cli-testing      eu-de                                  Active                         
+agent-5-multipod                  agent-5-multipod.deA.3d58                            Srikar testing multiple pods in agent-5 ...   job-runner       eu-de                                  Active   agent_register        
+agent-prod-testing-api-mar-24-2   agent-prod-testing-api-mar-24-2.deA.ca07   1.6.0     Create Agent                                  Default          us-south         eu-de                 Active   env:prod, mytest      
+agent-testing-prod-cli-mar-27-2   agent-testing-prod-cli-mar-27-2.deA.727f   v1.0.0                                                  Default          us-south         eu-de                 Active                         
+agent-testing-prod-cli-mar-27-3   agent-testing-prod-cli-mar-27-3.deA.fd13                                                           Default          us-south         eu-de                 Active                         
+agent-testing-prod-cli-mar-27-4   agent-testing-prod-cli-mar-27-4.deA.acd4                                                           Default          us-south         eu-de                 Active                         
+agent-testing-prod-cli-mar-27     agent-testing-prod-cli-mar-27.deA.3f7e                                                             Default          us-south         eu-de                 Active                         
+gsmmar27v1cli-agent-test          gsmmar27v1cli-agent-test.deA.6288                                                                  Default          eu-de            eu-de                 Active                         
+gsmmar27v2cli-agent-test          gsmmar27v2cli-agent-test.deA.afcc                                                                  Default          eu-de            eu-de                 Active                         
+gsmmar27v3cli-agent-test          gsmmar27v3cli-agent-test.deA.4b56                                                                  Default          eu-de            eu-de                 Active                         
+                                  
+Showing 1-11 of 11 items
+```
+{: screen}
 
+## Displaying an agent configuration using CLI
+{: #display-agentb1-get-cli}
+{: cli}
+
+You can view the configuration of a single agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get) command. This command requires `agent_id` as an input argument.
+{: shortdesc}
+
+To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agents-get).
+{: important}
+
+Example
+
+```sh
+ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97 
+```
+{: pre}
+
+Output
+
+```text
+Retrieving agent...
+OK
+                    
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
+Name             agent-testing-prod-cli-mar-27-5   
+Status           ACTIVE   
+Version          1.0.0   
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default   
+                 
+Recent Job   Job ID               Status                 Last modified   
+DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2023-03-27T12:25:01.239Z 
 ```
 {: screen}
 

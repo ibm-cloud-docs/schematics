@@ -1374,7 +1374,7 @@ subcollection: schematics
 {: #sitemap_managing_agent_beta-1}
 
 
-[Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
+[Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview385548)
 
 * [Next steps](/docs/schematics?topic=schematics-plan-agent-overview#agent-plan-nextsteps)
 
@@ -1396,15 +1396,21 @@ subcollection: schematics
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
-* [Displaying an agent configuration using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-cli)
+* [Displaying the list of agents using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
+
+* [Displaying an agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
 
 * [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
+* [Disabling an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#disable-agentb1-cli)
+
 * [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-cli)
 
 * [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-api)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-agent-overview#agent-delete-nextstep)
 
 
 ### Using Agent
@@ -1413,13 +1419,15 @@ subcollection: schematics
 
 [Managing agent assignment policy](/docs/schematics?topic=schematics-policy-manage#policy-manage)
 
-* [Agent policy commands using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-policycmd-cli)
+* [Creating an agent policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
 
-    * [Example to create policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
+* [Displaying the list of policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-listpolicy-cli)
 
-    * [Example to get policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-cli)
+* [Displaying an policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-cli)
 
-    * [Example to update policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-cli)
+* [Updating an agent policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-cli)
+
+* [Deleting an policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-deletepolicy-cli)
 
 * [Agent policy command using API](/docs/schematics?topic=schematics-policy-manage#agentb1-policydm-api)
 
@@ -2321,6 +2329,46 @@ subcollection: schematics
 * [When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions)
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
+
+[Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
+
+* [What are the new updates in the agent beta-1 release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
+
+* [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
+
+* [Can I install more than one {{site.data.keyword.bpshort}} Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+
+* [What type of Schematics jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
+
+* [How can I see the {{site.data.keyword.bpshort}} job results and logs, for the workloads running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
+
+* [How many {{site.data.keyword.bpshort}} jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
+
+* [What is the minimum cluster configuration required in Agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster)
+
+* [How many workspaces can be assigned to an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-wks)
+
+* [How many jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-job)
+
+* [What is the default polling interval for an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
+
+* [What is the difference between agent-location and location input variable flag in Agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
+
+* [Can an agent run {{site.data.keyword.bpshort}} Job from different resource group?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
+
+* [Can an agent run {{site.data.keyword.bpshort}} Job from different region?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
+
+* [Can I register one agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+
+* [Can jobs of an existing workspace configured to run on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
+
+* [What are the identity and permissions needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
+
+* [When my agent is deployed in a private network. How can I configure mirror site for the Terraform plug-ins?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-pvt-network)
+
+* [Can I inject the self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
+
+* [List the attributes that {{site.data.keyword.bpshort}} Workspaces or Actions attributes used to dynamically select an agent](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
