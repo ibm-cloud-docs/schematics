@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-03-27"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -40,7 +40,7 @@ Review the release notes for March 2023.
       - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli)
       - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli)
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
-    - You can also [use an agent policy](/docs/schematics?topic=schematics-policy-manage&interface=cli), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
+    - You can also [use an agent policy](/docs/schematics?topic=schematics-policy-manage), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent) for any challenges and questions on agent.
     - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta-1 level code and provide feedback.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-27"
 
 keywords: schematics agent, agent policy, policies
 
@@ -17,33 +17,34 @@ subcollection: schematics
 
 
 
-# Managing policies
+# Managing agent assignment policy
 {: #policy-manage}
 
-{{site.date.keyword.bpshort}} account policies allows you to create rules or criteria to define the behavior, schedule, or the constraint for the {{site.data.keyword.bpshort}} core capabilities.
+Agents for {{site.date.keyword.bplong}} extend its ability to work directly with your cloud
+infrastructure on your private network or in any network isolation zones. You can deploy
+multiple agents in your {{site.date.keyword.cloud_notm}} account, each catering to the different network isolation zones. For example, based on the following factory your cloud infrastructure can be spread across or partitioned.
+- multiple cloud regions (region-1, region-2, region-3)
+- multiple VPC zones for the application layer, data layer, management layer
+- multiple cloud-vendors or on-premises vendors, or
+- multiple department-wise information technology zones, in your organization such as `HR`, `Finance`, `Manufacturing`, and so on.
 {: shortdesc}
 
-## Components
-{: #policy-components}
+The agents are deployed in each partition or network isolation zone in order to, run the
+Terraform or Ansible automation, for the local or private Cloud resources. The agent
+assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the workspace job or an action job to the agent.
 
-The following are the major components of the {{site.data.keyword.bpshort}} policy solution.
+You can create, update, and delete the `agent assignment policy` by using the {{site.data.keyword.bpshort}} CLI for [agent policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create).
 
-### Policy execution engine
-{: #policy-exe-engine}
+The `agent-assignment-policy` for an agent is defined by using the following attributes of the
+workspace or an action. The `selector` attribute can be a combination of the following flags.
+- `tags` – workspaces or actions with the matching tags are selected.
+- `location` – workspaces or actions with the matching location are selected.
+- `resource-group` - workspaces or actions with the matching resource-group are selected.
 
-Policy execution engine provides an interface for other microservices to evaluate the applicable policy or policies and to make decisions. Policy execution engine is implemented as datajob gRPC service.
-
-### Policy kind
-{: #policy-kind}
-
-Policy kind is based on core capability and the operations for these capabilities such as assignment, enablement, purge, schedule. Policy kind helps in organinsing policies and identifying the unique policy parameter schema evaluated through a respective policy manager during policy evaluation.
-
-The following are the planned or the supported kind.
-
-- agent_assignment_policy
-- job_purge_policy
-- workspace_drift_scheduler_policy
-- workspace_control_enablement_policy
+If the selector for `agent-1` selects tags=[`dev`], resource-group=[`rg-2`]
+{{site.data.keyword.bpshort}} automatically routes the workspace jobs such as Git download, Terraform
+plan, apply, destroy jobs of all the workspaces that matches the `tags`, and `resource-group` criteria to the `agent-1`.
+{: example}
 
 
 

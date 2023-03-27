@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-23"
+lastupdated: "2023-03-25"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -18,36 +18,36 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
 {: beta}
 
-{{site.data.keyword.bplong}} Agents extend {{site.data.keyword.bpshort}}'s ability to work directly with your private cloud infrastructure on your private network. Deploying an agent is a multi-step process. 
+Agents for {{site.data.keyword.bplong}} extend its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. Deploying an agent is a multi-step process. 
 {: shortdesc}
 
 Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} agent. 
 
-- [Create an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#deploy-agent-cli) to manage deploying the agent. This step initializes an {{site.data.keyword.bpshort}} definition with the information required to deploy your agent using {{site.data.keyword.bpshort}} _agent plan_ and _agent apply_ operations. 
-- [Deploy the agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) using the CLI or API, by invoking the [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) commands.
-- [Define the agent policies](/docs/schematics?topic=schematics-policy-manage&interface=ui).
-- [Check the health of the agent](/docs/schematics?topic=schematics-agent-health&interface=cli).
+1. [Create an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#deploy-agent-cli) to manage the agent deployment.
+    This step initializes your {{site.data.keyword.bpshort}} instance with the agent configuration that will subsequently be used to deploy an agent.
+2. [Deploy the agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) by using the [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) CLI commands or the corresponding APIs.
 
 ## Before your begin
 {: #deploy-prereq}
 
-Complete the following pre-requisite steps to deploy your agent.
+Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview), and gather the following information as an input to deploy your agent.
+{: shortdesc}
+
+- The `cluster ID`, `cluster resource group` of your Kubernetes cluster.
+- the `COS instance name`, `COS bucket name`, `COS bucket region`, and `COS resource group` of your {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.objectstorageshort}} bucket.
 
 - Select an existing [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters), [{{site.data.keyword.vpc_full}}](/docs/openshift?topic=openshift-cluster-create-vpc-gen2&interface=ui) cluster, or {{site.data.keyword.redhat_openshift_full}} cluster ID to host the agent deployment. Record the following key information about the cluster for later use, `cluster ID`, `cluster resource group`.
 - Select existing resources such as an {{site.data.keyword.cos_full_notm}} instance and {{site.data.keyword.objectstorageshort}} bucket for the specified region. Record the following key information about the COS resources for later use, `COS instance name`, `COS bucket name`, `COS bucket region`, `COS resource group`.
 - If deploying your agent using the {{site.data.keyword.bpshort}} API, generate the necessary [IAM authorization token](docs/account?topic=account-serviceauth&interface=ui#auth-cli) and refresh tokens to authenticate the API request.   
 
-
-## Deploying an agent using the CLI 
-{: #deploy-agent-cli}
+## Creating an agent definition using the CLI 
+{: #create-agent-cli}
 {: cli}
 
-Create the agent definition using the CLI. 
-
-For a complete listing of _agent create_ options, see the [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
+As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with all the input configuration that are used while deploying the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
 {: shortdesc}
 
-To deploy a {{site.data.keyword.bpshort}} agent, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.7`.
+To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.7`.
 {: important}
 
 Example
@@ -75,8 +75,11 @@ Resource Group   b9b7892b87734a8b814342a6adef361d
 
 Record the `Agent ID` for use in subsequent commands.  
 
-After creating the agent definition, the agent can be deployed using the _agent plan_ and _agent apply_ 
-commands. The _agent plan_ command performs prerequisite checks on the agent definition and enviromnment before deployment. The command takes the `Agent ID` as input. 
+## Verifying pre-requisite for agent deployment using the CLI
+{: #verify-agent-cli}
+{: cli}
+
+You can verify the agent definition by using the agent plan command, to perform pre-requisite check of the target agent infrastructure. The command takes the `Agent ID` as input. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
@@ -91,8 +94,6 @@ Output
 Running plan...
 Plan ID: .ACTIVITY.5a78e7a5
 
-
-                                   
 Agent settings                  
 ID                              gsmmar2cliv2-agent-test.deA.391b   
 Name                            gsmmar2cliv2-agent-test   
@@ -114,9 +115,12 @@ OK
 ```
 {: screen}
 
-Now, use the `agent ID` with the _agent apply_ command to deploy the agent, or upgrade an existing deployment using the force deploy option.
+## Deploying an agent using the CLI
+{: #apply-agent-cli}
+{: cli}
 
-Example
+You can use the agent definition to deploy the agent by using the `agent apply` command. The `agent apply` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the force deploy option.
+{: shortdesc}
 
 ```sh
 ibmcloud schematics agent apply --id gsmmar2cliv2-agent-test.deA.391b  
@@ -149,7 +153,29 @@ OK
 ```
 {: screen}
 
-## Deploying an agent using the {{site.data.keyword.bpshort}} API
+## Verifying the agent deployment using the CLI
+{: #d-agent-cli}
+{: cli}
+
+You can use the agent definition to verify the health of the recently deployed agent using the `agent health` command. The `agent health` command takes the `Agent ID` as input. The output of the `agent health` command displays the list of relevant Kubernetes and agent health property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+
+Example
+
+```sh
+ibmcloud schematics agent health --id gsmmar2cliv2-agent-test.deA.391b  
+```
+{: pre}
+
+Output
+
+```text
+OK
+```
+{: screen}
+
+In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard for your cluster to view the status and logs of the agent related microservices, its Pods, Deployment, Configmap, and Cluster bindings in the namespaces such as `schematics-agent-observe`, `schematics-job-runtime`, `schematics-runtime`.
+
+## Creating an agent using the {{site.data.keyword.bpshort}} API
 {: #create-agent-api}
 {: api}
 
@@ -264,14 +290,7 @@ Output
 ## Next steps
 {: #agent-create-nextsteps}
 
-When your agent is up and running, you can perform the following administration tasks:
-1. Access the Kubernetes dashboard to view the services that are created.
-    - Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-    - Access **Kubernetes** > **Clusters**.
-    - Click [...] three dots against your cluster name.
-    - Click **Kubernete dashboard**.
-    - Click the **Namespaces** drop down to view the set of namespaces by name schematics. For example, `schematics-agent-observe`, `schematics-job-runtime`, `schematics-runtime`, and so on.
-    - In each namespace, you can view the **Workloads** > **Deployments**, **Jobs**, **Pods**, **Replica Sets**, and **Cluster** binding information.
+The next step is to [create and manage agent assignment policy](/docs/schematics?topic=schematics-agent-assignment-policy) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git download jobs, Workspaceor Terraform jobs, and the Action or Ansible jobs to an agent.
 
 You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
 
