@@ -49,42 +49,191 @@ plan, apply, destroy jobs of all the workspaces that matches the `tags`, and `re
 
 
 
-## Agent policy commands using CLI
-{: #agentb1-policycmd-cli}
+## Creating an agent policy using CLI
+{: #agentb1-createpolicy-cli}
 {: cli}
 
-Create your agent policy with the CLI. For a complete listing of agent policy command with the options, see [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) command.
+Create your agent policy by using the CLI. For the complete list of an agent policy command with the options, see [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) command.
 {: shortdesc}
 
 Before your begin:
 
-- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.7`.
+- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.8`.
 - Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
 - Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create agent policy.
 
-### Example to create policy using CLI
-{: #agentb1-createpolicy-cli}
+Example
 
 ```sh
-ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION --resource-group RESOURCE_GROUP
+ibmcloud schematics policy create --name agent-policy-testing-cli-mar-27 --kind agent_assignment_policy --location eu-de --resource-group Default --tags workspace-policy:prod
 ```
 {: pre}
 
-### Example to get policy using CLI
+Output
+
+```text
+Creating policy...
+                    
+ID               agent-policy-testing-cli-mar-27.deP.c737   
+Name             agent-policy-testing-cli-mar-27   
+Description         
+Kind             agent_assignment_policy   
+Location         eu-de   
+Resource Group   aac37f57b20142dba1a435c70aeb12df   
+Target              
+Tags             [TAGS]   
+                  - workspace-policy:prod
+```
+{: screen}
+
+## Displaying the list of policy using CLI
+{: #agentb1-listpolicy-cli}
+{: cli}
+
+You can dispaly the list of policy in your account by using the [policy list](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-list) command.
+
+Example
+
+```sh
+ibmcloud schematics policy list
+```
+{: pre}
+
+Output
+
+```text
+Retrieving policies...
+OK
+Name                                          ID                                                     Description                                   Kind   Tags   
+agent-policy-testing-cli-mar-27               agent-policy-testing-cli-mar-27.deP.c737                                                                    workspace-policy:prod   
+policy-023e7204-c33d-49b8-a9f3-695ff085290d   policy-023e7204-c33d-49b8-a9f3-695ff085290d.gbP.8b3c   Created agent-assignment-policy for the ...             
+policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb   policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb.deP.796d   Created agent-assignment-policy for the ...             
+policy-08aa34da-d89d-4f9c-92d5-bf9b9c1624b0   policy-08aa34da-d89d-4f9c-92d5-bf9b9c1624b0.gbP.c061   Created agent-assignment-policy for the ...             
+policy-0d47dbea-264b-43c1-8c44-d519d9a04df1   policy-0d47dbea-264b-43c1-8c44-d519d9a04df1.deP.efb1   Created agent-assignment-policy for the ...             
+policy-110e7b82-26cc-4a0a-9594-4fdd41a7487d   policy-110e7b82-26cc-4a0a-9594-4fdd41a7487d.deP.0f96   Created agent-assignment-policy for the ...             
+policy-203863db-46ef-422f-aba7-62520ec36dfc   policy-203863db-46ef-422f-aba7-62520ec36dfc.deP.050a   Created agent-assignment-policy for the ...             
+policy-39b076a0-34f2-4f76-9562-cecfd1822353   policy-39b076a0-34f2-4f76-9562-cecfd1822353.deP.df8e   Created agent-assignment-policy for the ...             
+policy-4a480058-1851-4a06-8700-e31eef7fbeac   policy-4a480058-1851-4a06-8700-e31eef7fbeac.gbP.f473   Created agent-assignment-policy for the ...             
+policy-5613f1fb-03bc-47db-94e7-12aed2243828   policy-5613f1fb-03bc-47db-94e7-12aed2243828.gbP.cec6   Created agent-assignment-policy for the ...             
+policy-5e8c1128-9dbe-4a57-9e94-1862bd2db5b8   policy-5e8c1128-9dbe-4a57-9e94-1862bd2db5b8.gbP.2550   Created agent-assignment-policy for the ...             
+policy-61437bd4-0b7b-439d-b8a3-5ff091de5a01   policy-61437bd4-0b7b-439d-b8a3-5ff091de5a01.gbP.b393   Created agent-assignment-policy for the ...             
+policy-6da22456-6cce-4c44-a397-a8a677377d96   policy-6da22456-6cce-4c44-a397-a8a677377d96.gbP.338c   Created agent-assignment-policy for the ...             
+policy-7b699887-5c97-4795-8dba-6158f6674944   policy-7b699887-5c97-4795-8dba-6158f6674944.deP.45c7   Created agent-assignment-policy for the ...             
+policy-7cb53b8a-1f65-402d-adeb-4d4863978d05   policy-7cb53b8a-1f65-402d-adeb-4d4863978d05.deP.9b71   Created agent-assignment-policy for the ...             
+policy-a1c11bcb-c550-4d84-bd34-e8323b2856eb   policy-a1c11bcb-c550-4d84-bd34-e8323b2856eb.deP.74c2   Created agent-assignment-policy for the ...             
+policy-bf94e2e4-89f2-4fe8-b4c7-c809507bbcb2   policy-bf94e2e4-89f2-4fe8-b4c7-c809507bbcb2.gbP.dd2e   Created agent-assignment-policy for the ...             
+policy-e53a1fa9-6393-48ec-8566-84288770072b   policy-e53a1fa9-6393-48ec-8566-84288770072b.gbP.020d   Created agent-assignment-policy for the ...             
+policy-ed3c4ebb-6df5-4898-9070-fcdb1af55778   policy-ed3c4ebb-6df5-4898-9070-fcdb1af55778.deP.1809   Created agent-assignment-policy for the ...             
+policy-f60ca5c5-d7d3-4b1c-91de-7d8e04b6c4b3   policy-f60ca5c5-d7d3-4b1c-91de-7d8e04b6c4b3.deP.808e   Created agent-assignment-policy for the ...             
+policy-fd7349d5-de33-4fbc-87de-3be75018271a   policy-fd7349d5-de33-4fbc-87de-3be75018271a.deP.08dc   Created agent-assignment-policy for the ...             
+                                                                                                     
+Showing 1-29 of 29 items
+```
+{: screen}
+
+## Displaying an policy using CLI
 {: #agentb1-getpolicy-cli}
+{: cli}
+
+You can view the configuration of a single agent policy by using the [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
+
+Example
 
 ```sh
-ibmcloud schematics policy get --id POLICY_ID 
+ibmcloud schematics policy get agent-policy-testing-cli-mar-27.deP.c737
 ```
 {: pre}
 
-### Example to update policy using CLI
+Output
+
+```text
+Enter id> agent-policy-testing-cli-mar-27.deP.c737
+Retrieving policy...
+                    
+ID               agent-policy-testing-cli-mar-27.deP.c737   
+Name             agent-policy-testing-cli-mar-27   
+Description         
+Kind             agent_assignment_policy   
+Location         eu-de   
+Resource Group   aac37f57b20142dba1a435c70aeb12df   
+Target              
+Tags             [TAGS]   
+                  - workspace-policy:prod
+```
+{: screen}
+
+
+## Updating an agent policy using CLI
 {: #agentb1-updatepolicy-cli}
+{: cli}
+
+You can update an agent policy to set a tags, description based on the `AGENT_ID` input argument.
 
 ```sh
-ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location LOCATION  --resource-group RESOURCE_GROUP
+ibmcloud schematics policy update --id agent-policy-testing-cli-mar-27.deP.c737 --kind agent_assignment_policy --resource-group Default --tags workspace-policy:prod --description testing-policy-cli --tags newtag
 ```
 {: pre}
+
+```sh
+Updating policy...
+                    
+ID               agent-policy-testing-cli-mar-27.deP.c737   
+Name             agent-policy-testing-cli-mar-27   
+Description      testing-policy-cli   
+Kind             agent_assignment_policy   
+Location         eu-de   
+Resource Group   Default   
+Target              
+Tags             [TAGS]   
+                  - workspace-policy:prod	   
+                  - newtag
+```
+{: screen}
+
+You can retrieve an updated policy to observe the updation.
+
+Example
+
+```sh
+ibmcloud schematics policy get --id agent-policy-testing-cli-mar-27.deP.c737
+```
+{: pre}
+
+Output
+
+```text
+Retrieving policy...
+                    
+ID               agent-policy-testing-cli-mar-27.deP.c737   
+Name             agent-policy-testing-cli-mar-27   
+Description      testing-policy-cli   
+Kind             agent_assignment_policy   
+Location         eu-de   
+Resource Group   Default   
+Target              
+Tags             [TAGS]   
+                  - workspace-policy:prod	   
+                  - newtag	   
+                    
+```
+{: screen}
+
+## Deleting an policy using CLI
+{: #agentb1-deletepolicy-cli}
+{: cli}
+
+You can [delete a policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-delete) by using `AGENT_ID` input argument.
+
+```sh
+ibmcloud schematics policy delete --id agent-policy-testing-cli-mar-27.deP.c737 
+```
+{: pre}
+
+```sh
+Do you really want to delete the policy? [y/N]> y
+Initiating policy delete...
+```
+{: screen}
 
 ## Agent policy command using API
 {: #agentb1-policydm-api}

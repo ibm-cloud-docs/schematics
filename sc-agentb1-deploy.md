@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-25"
+lastupdated: "2023-03-27"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -53,7 +53,7 @@ To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_n
 Example
 
 ```sh
-ibmcloud schematics agent create --name gsmmar2cliv2-agent-test --location eu-de --agent-location us-south --version 0.0.1 --infra-type ibm_kubernetes --cluster-id cgcnl5f20077ild56eng --cluster-resource-group Default --cos-instance-name agent-cos-storage --cos-bucket agent-cos-bucket --cos-location jp-tok --resource-group Default
+ibmcloud schematics agent create --name agent-testing-prod-cli-mar-27-5 --location eu-de --agent-location us-south --version 1.0.0 --infra-type ibm_kubernetes --cluster-id cb1c2dus01uf9mc0hkbg --cluster-resource-group  job-runner --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-east --resource-group Default
 ```
 {: pre}
 
@@ -63,17 +63,40 @@ Output
 Creating agent...
 OK
                     
-ID               gsmmar2cliv2-agent-test.deA.391b   
-Name             gsmmar2cliv2-agent-test   
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
+Name             agent-testing-prod-cli-mar-27-5   
 Status           ACTIVE   
-Version          0.0.1   
+Version          1.0.0   
 Location         eu-de   
 Agent Location   us-south   
-Resource Group   b9b7892b87734a8b814342a6adef361d  
+Resource Group   aac37f57b20142dba1a435c70aeb12df 
 ```
 {: screen}
 
-Record the `Agent ID` for use in subsequent commands.  
+Record the `Agent ID` for use in subsequent commands. Optionally, you can invoke agent get command.
+
+Example
+
+```sh
+ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97 
+```
+{: pre}
+
+Output
+
+```text
+Retrieving agent...
+OK
+                    
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
+Name             agent-testing-prod-cli-mar-27-5   
+Status           ACTIVE   
+Version          1.0.0   
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default 
+```
+{: screen}
 
 ## Verifying pre-requisite for agent deployment using the CLI
 {: #verify-agent-cli}
@@ -84,34 +107,41 @@ You can verify the agent definition by using the agent plan command, to perform 
 Example
 
 ```sh
-ibmcloud schematics agent plan --id gsmmar2cliv2-agent-test.deA.391b  
+ibmcloud schematics agent plan --id agent-testing-prod-cli-mar-27-5.deA.dc97  
 ```
 {: pre}
 
 Output
 
 ```text
-Running plan...
-Plan ID: .ACTIVITY.5a78e7a5
+Initiating agent plan...
+Job ID	.ACTIVITY.600cadf9
+```
+{: screen}
 
-Agent settings                  
-ID                              gsmmar2cliv2-agent-test.deA.391b   
-Name                            gsmmar2cliv2-agent-test   
-Version                            
-Location                        eu-de   
-Agent Location                  us-south   
-Resource Group                  Default   
-User status                     ACTIVE   
-System status                   draft   
-Agents Jobs                     
-Plan Job                        
-Job ID                          .ACTIVITY.5a78e7a5   
-Job status                      PENDING   
-Job last validation timestamp   0001-01-01T00:00:00.000Z   
-Job output                      Triggered pre-requisite scanning   
-Job log URL                     https://eu-de.schematics.test.cloud.ibm.com/v1/workspaces/eu-de.workspace.gsmmar2cliv2-agent-test-prs.30e0d302/runtime_data/353c2b14-aa75-40/log_store   
-                                   
+Example
+
+```sh
+ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97   
+```
+{: pre}
+
+Output
+
+```text
+Retrieving agent...
 OK
+                    
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97    
+Name             agent-testing-prod-cli-mar-27-5   
+Status           ACTIVE   
+Version             
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default   
+                 
+Recent Job   Job ID               Status                             Last modified   
+PRS          .ACTIVITY.600cadf9   Triggered pre-requisite scanning   0001-01-01T00:00:00.000Z 
 ```
 {: screen}
 
@@ -123,33 +153,41 @@ You can use the agent definition to deploy the agent by using the `agent apply` 
 {: shortdesc}
 
 ```sh
-ibmcloud schematics agent apply --id gsmmar2cliv2-agent-test.deA.391b  
+ibmcloud schematics agent apply --id agent-testing-prod-cli-mar-27-5.deA.dc97  
 ```
 {: pre}
 
 Output
 
 ```text
-Running apply...
-Apply ID: .ACTIVITY.fc7a33f3
-Agent settings                  
-ID                              gsmmar2cliv2-agent-test.deA.391b   
-Name                            gsmmar2cliv2-agent-test   
-Version                            
-Location                        eu-de   
-Agent Location                  us-south   
-Resource Group                  Default   
-User status                     ACTIVE   
-System status                   draft   
-Agents Jobs                     
-Deploy Job                      
-Job ID                          .ACTIVITY.fc7a33f3   
-Job status                      PENDING   
-Job last validation timestamp   2023-03-21T11:49:19.577Z   
-Job output                      Triggered deployment   
-Job log URL                     https://eu-de.schematics.test.cloud.ibm.com/v1/workspaces/eu-de.workspace.gsmmar2cliv2-agent-test-deploy.89fa2a8e/runtime_data/87794039-fc82-47/log_store   
-                                   
+Initiating agent apply...
+Job ID	.ACTIVITY.465e9716
+```
+{: screen}
+
+Example
+
+```sh
+ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97 
+```
+{: pre}
+
+Output
+
+```text
+Retrieving agent...
 OK
+                    
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
+Name             agent-testing-prod-cli-mar-27-5   
+Status           ACTIVE   
+Version          1.0.0   
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default   
+                 
+Recent Job   Job ID               Status                 Last modified   
+DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2023-03-27T12:25:01.239Z 
 ```
 {: screen}
 
@@ -162,14 +200,68 @@ You can use the agent definition to verify the health of the recently deployed a
 Example
 
 ```sh
-ibmcloud schematics agent health --id gsmmar2cliv2-agent-test.deA.391b  
+ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97 
 ```
 {: pre}
 
 Output
 
 ```text
+Retrieving agent...
 OK
+                    
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
+Name             agent-testing-prod-cli-mar-27-5   
+Status           ACTIVE   
+Version             
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default   
+                 
+Recent Job   Job ID               Status                 Last modified   
+DEPLOY       .ACTIVITY.465e9716   Triggered deployment   0001-01-01T00:00:00.000Z 
+```
+{: screen}
+
+Example
+
+```sh
+ibmcloud schematics agent health --id agent-testing-prod-cli-mar-27-5.deA.dc97  
+```
+{: pre}
+
+Output
+
+```text
+Initiating agent health...
+Job ID	.ACTIVITY.f6f77588
+```
+{: screen}
+
+Example
+
+```sh
+ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97  
+```
+{: pre}
+
+Output
+
+```text
+Retrieving agent...
+OK
+                    
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
+Name             agent-testing-prod-cli-mar-27-5   
+Status           ACTIVE   
+Version             
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default   
+                 
+Recent Job   Job ID                             Status                   Last modified   
+DEPLOY       f5c6987ce53032547b6d5d5f870dfe5f   Job Success               0001-01-01T00:00:00.000Z   
+HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2023-03-27T12:31:15.326Z 
 ```
 {: screen}
 
