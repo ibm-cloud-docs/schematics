@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-03-28"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -36,7 +36,7 @@ Review the release notes for March 2023.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro).
     - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
     - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 
-      - [planning](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [preparing for agent deploymen](/docs/schematics?topic=schematics-plan-agent-overview)
       - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli)
       - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli)
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-03-28"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -192,3 +192,9 @@ Output
 }
 ```
 {: screen}
+
+## Next steps
+{: #agent-delete-nextsteps}
+
+- You can see [update an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update), and [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.

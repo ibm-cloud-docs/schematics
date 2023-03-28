@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-03-28"
 
 keywords: schematics
 subcollection: schematics
@@ -1374,7 +1374,7 @@ subcollection: schematics
 {: #sitemap_managing_agent_beta-1}
 
 
-[Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview385548)
+[Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
 
 * [Next steps](/docs/schematics?topic=schematics-plan-agent-overview#agent-plan-nextsteps)
 
@@ -1401,6 +1401,8 @@ subcollection: schematics
 * [Displaying an agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
 
 * [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
+
+* [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview#agent-delete-nextsteps)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
