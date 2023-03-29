@@ -353,6 +353,8 @@ subcollection: schematics
 
         * IAM allowed IP addresses replaced with context based restrictions.
 
+        * The `terraform.tfstate` state file size maximum limit is less than 2 MB.
+
     * [22 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2223)
 
         * {{site.data.keyword.bpshort}} Agent beta-1 release.
