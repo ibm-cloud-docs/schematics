@@ -26,13 +26,29 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2023.
 {: shortdesc}
 
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+### 30 March 2023
+{: #schematics-mar3023}
+{: release-note}
+
+Release configuring Kubernetes cluster for an agent.
+:   The {{site.data.keyword.bpshort}} releases documentation on [configuring Kubernetes cluster for an agent](/docs/schematics?topic=schematics-configure-k8s-cluster) related to network policies, Terraform and Ansible runtime-job, agent sandbox allowlist, agent job-runner configuration, agent runtime configuration for Ansible, and agent runtime configuration for Terraform.
+
+Enhancement of {{site.data.keyword.bpshort}} worker runtime.
+:   The {{site.data.keyword.bpshort}} releases documentation on [{{site.data.keyword.bpshort}} worker runtime](/docs/schematics?topic=schematics-sch-utilities) for `runtime-terraform-job`, and `runtime-ansible-job` images.
+
+IAM allowed IP addresses replaced with context based restrictions.
+:   Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
+
 ### 22 March 2023
 {: #schematics-mar2223}
 {: release-note}
 
 {{site.data.keyword.bpshort}} Agent beta-1 release.
-:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
+:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta1-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro).
     - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
     - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 

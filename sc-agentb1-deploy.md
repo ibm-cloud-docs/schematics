@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -12,11 +12,14 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
 # Deploying agents
 {: #deploy-agent-overview}
-
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
-{: beta}
 
 Agents for {{site.data.keyword.bplong}} extend its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. Deploying an agent is a multi-step process. 
 {: shortdesc}
@@ -36,9 +39,9 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 - The `cluster ID`, `cluster resource group` of your Kubernetes cluster.
 - the `COS instance name`, `COS bucket name`, `COS bucket region`, and `COS resource group` of your {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.objectstorageshort}} bucket.
 
-- Select an existing [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters), [{{site.data.keyword.vpc_full}}](/docs/openshift?topic=openshift-cluster-create-vpc-gen2&interface=ui) cluster, or {{site.data.keyword.redhat_openshift_full}} cluster ID to host the agent deployment. Record the following key information about the cluster for later use, `cluster ID`, `cluster resource group`.
+- Select an existing [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters) or [{{site.data.keyword.redhat_openshift_full}}](/docs/openshift?topic=openshift-cluster-create-vpc-gen2&interface=ui) cluster to host the agent deployment. Record the following key information about the cluster for later use, `cluster ID`, `cluster resource group`.
 - Select existing resources such as an {{site.data.keyword.cos_full_notm}} instance and {{site.data.keyword.objectstorageshort}} bucket for the specified region. Record the following key information about the COS resources for later use, `COS instance name`, `COS bucket name`, `COS bucket region`, `COS resource group`.
-- If deploying your agent using the {{site.data.keyword.bpshort}} API, generate the necessary [IAM authorization token](docs/account?topic=account-serviceauth&interface=ui#auth-cli) and refresh tokens to authenticate the API request.   
+- If deploying your agent using the {{site.data.keyword.bpshort}} API, follow the instructions [Invoking IBM Cloud service APIs](docs/account?topic=account-iamapikeysforservices) to generate the necessary IAM authorization token and refresh tokens to authenticate the API request.   
 
 ## Creating an agent definition using the CLI 
 {: #create-agent-cli}
@@ -53,7 +56,7 @@ To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_n
 Example
 
 ```sh
-ibmcloud schematics agent create --name agent-testing-prod-cli-mar-27-5 --location eu-de --agent-location us-south --version 1.0.0 --infra-type ibm_kubernetes --cluster-id cb1c2dus01uf9mc0hkbg --cluster-resource-group  job-runner --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-east --resource-group Default
+ibmcloud schematics agent create --name agent-testing-prod-cli-mar-27-5 --location eu-de --agent-location jp-tok --version 1.0.0 --infra-type ibm_kubernetes --cluster-id cb1c2dus01uf9mc0hkbg --cluster-resource-group  job-runner --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-east --resource-group Default
 ```
 {: pre}
 
@@ -68,7 +71,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   aac37f57b20142dba1a435c70aeb12df 
 ```
 {: screen}
@@ -93,7 +96,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default 
 ```
 {: screen}
@@ -137,7 +140,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                             Last modified   
@@ -183,7 +186,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                 Last modified   
@@ -215,7 +218,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                 Last modified   
@@ -256,7 +259,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID                             Status                   Last modified   
@@ -291,7 +294,7 @@ Example
     ],
     "version": "v1.0.0",
     "schematics_location": "us-south",
-    "agent_location": "us-south",
+    "agent_location": "jp-tok",
     "agent_infrastructure": {
         "infra_type": "ibm_kubernetes",
         "cluster_id": "cg3fgvad0dak571op4g0",
@@ -324,7 +327,7 @@ Output
       ],
       "version": "v1.0.0",
       "schematics_location": "us-south",
-      "agent_location": "us-south",
+      "agent_location": "jp-tok",
       "user_state": {
           "state": "enable",
           "set_by": "geetha_sathyamurthy@in.ibm.com",

@@ -12,7 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
 {: beta}
 
 # Monitoring agent health
@@ -67,7 +70,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID                             Status                   Last modified   
@@ -88,7 +91,6 @@ The following table describes the list of agent and Kubernetes health properties
 | job-runner | Health of the job orchestrator pods in an agent. |
 | log-collector | Health of the log collector pods in an agent. |
 {: caption="{{site.data.keyword.bpshort}} Agent health properties" caption-side="top"}
-
 
 ## Monitoring agent health using API
 {: #health-agentb1-api}

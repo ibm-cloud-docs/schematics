@@ -141,9 +141,9 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
 
-* [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
-
 * [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
+
+* [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
 
 * [Next steps](/docs/schematics?topic=schematics-agentb1-about-intro#nextsteps-agentb1-arch)
 
@@ -342,6 +342,16 @@ subcollection: schematics
 * [March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar23)
 
     * Review the release notes for March 2023.
+
+    * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+
+    * [30 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3023)
+
+        * Release configuring Kubernetes cluster for an agent.
+
+        * Enhancement of {{site.data.keyword.bpshort}} worker runtime.
+
+        * IAM allowed IP addresses replaced with context based restrictions.
 
     * [22 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2223)
 
@@ -840,11 +850,11 @@ subcollection: schematics
         * New workspace creation flow
 
 
-## Setting up the CLI and API
-{: #sitemap_setting_up_the_cli_and_api}
+## Preparing to use the CLI and API
+{: #sitemap_preparing_to_use_the_cli_and_api}
 
 
-[Setting up the CLI](/docs/schematics?topic=schematics-setup-cli#setup-cli)
+[Preparing to use the CLI](/docs/schematics?topic=schematics-setup-cli#setup-cli)
 
 * [Installing the {{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli)
 
@@ -854,13 +864,11 @@ subcollection: schematics
 
 * [Uninstalling the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli#uninstall-schematics-plugin)
 
-[Setting up the API](/docs/schematics?topic=schematics-setup-api#setup-api)
+[Preparing to use the API](/docs/schematics?topic=schematics-setup-api#setup-api)
 
-* [Automating deployments with the API](/docs/schematics?topic=schematics-setup-api#cs_api)
+* [Working with the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-setup-api#cs_api)
 
-* [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
-
-* [Table1](/docs/schematics?topic=schematics-setup-api#table1)
+* [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
 
 
 ## Managing Blueprints
@@ -1396,6 +1404,8 @@ subcollection: schematics
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
+* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-ui)
+
 * [Displaying the list of agents using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
 
 * [Displaying an agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
@@ -1440,6 +1450,20 @@ subcollection: schematics
     * [Example to update policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-api)
 
     * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
+
+[Configuring Kubernetes cluster for agent](/docs/schematics?topic=schematics-configure-k8s-cluster#configure-k8s-cluster)
+
+* [Default network policies](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-network-policy)
+
+* [Default Terraform and Ansible runtime-job](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-runtime-job)
+
+* [Default agent sandbox allowed list](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-sandbox-allowlist)
+
+* [Default agent job-runner configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-job-runner-config)
+
+* [Default agent runtime configuration for Terraform](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-terraform)
+
+* [Default agent runtime configuration for Ansible](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-ansible)
 
 [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 
@@ -1650,7 +1674,9 @@ subcollection: schematics
 
 * [How can I delete my information?](/docs/schematics?topic=schematics-secure-data#delete-data)
 
-[Opening needed IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
+[Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
+
+* [{{site.data.keyword.bpshort}} IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses#ipaddresses)
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure
@@ -2089,26 +2115,24 @@ subcollection: schematics
 {: #sitemap_beta-1_code_for_agent}
 
 
-[Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
+[Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#agent-beta1-limitations)
 
-* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
+* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta-limitation)
 
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-join-public-slack)
 
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
-
-
-## Runtime environment tools
-{: #sitemap_runtime_environment_tools}
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-join-slack)
 
 
-[Runtime environment tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
+## {{site.data.keyword.bpshort}} worker runtime
+{: #sitemap__worker_runtime}
 
-* [Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-job)
 
-* [Terraform-runtime-agent-job image used by {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-agent-job)
+[{{site.data.keyword.bpshort}} worker runtime](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
 
-* [Ansible-runtime-job image used by {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sch-utilities#Ansible-runtime-job)
+* [Runtime-terraform-job image](/docs/schematics?topic=schematics-sch-utilities#sch-runtime-tf-job)
+
+* [Runtime-ansible-job image](/docs/schematics?topic=schematics-sch-utilities#sch-runtime-ansible-job)
 
 
 ## {{site.data.keyword.bpshort}} SDKs

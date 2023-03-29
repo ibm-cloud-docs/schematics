@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent, agent, beta-1 release, agent beta-1 release
 
@@ -12,8 +12,11 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
 # Beta-1 code for {{site.data.keyword.bpshort}} Agent
-{: #agent-beta-limitations}
+{: #agent-beta1-limitations}
 
 The agent level of code is considered beta-1 code as there will be changes in function and capabilities between now and the General Availability (GA) date.
 

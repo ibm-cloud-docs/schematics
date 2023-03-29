@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -12,13 +12,19 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
 # Setting proxy server for {{site.data.keyword.bpshort}} Agent
 {: #proxy-agent-overview}
 
  A proxy server is an information system or application that acts as an intermediary for clients requesting information system resources such as files, connections, web pages, or services from other servers. Client requests established through an initial connection to the proxy server are evaluated to manage complexity and to provide additional protection by limiting direct connectivity.
  {: shortdesc}
 
- Schematics Agent organisation policies supports proxy server which cannot allow direct access to internet connectivity. You can use an HTTP or HTTPS proxy.  
+ Schematics Agent organisation policies supports proxy server which cannot allow direct access to internet connectivity. You can use an HTTP or HTTPS proxy.
 
 Configuring Kubernetes cluster to use these proxies can be as simple as setting standard environment variables in configuration or JSON files. This can be done during an cluster installation or configured after installation.
 
