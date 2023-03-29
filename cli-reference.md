@@ -374,7 +374,10 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 ## Agent beta-1 commands
 {: #agents-cmd}
 
-{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
 {: beta}
 
 ### `ibmcloud schematics agent apply`

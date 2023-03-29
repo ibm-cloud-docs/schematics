@@ -26,12 +26,15 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2023.
 {: shortdesc}
 
+{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+{: attention}
+
 ### 22 March 2023
 {: #schematics-mar2223}
 {: release-note}
 
 {{site.data.keyword.bpshort}} Agent beta-1 release.
-:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
+:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta1-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro).
     - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).

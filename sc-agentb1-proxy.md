@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -11,6 +11,12 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
 
 # Setting proxy server for {{site.data.keyword.bpshort}} Agent
 {: #proxy-agent-overview}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-28"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -12,14 +12,27 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
 # Displaying agents
 {: #display-agentb1-overview}
 
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
-{: beta}
-
 You can view an agent with a specific agent ID to view the detailed configuration information. You can also list all the agents that are created in your account by using the command _agent list_.
 {: shortdesc}
+
+## Displaying the list of agents using UI
+{: #display-agentb1-get-ui}
+{: ui}
+
+Currently, you can only create an {{site.data.keyword.bpshort}} Agent via CLI. Follow the steps to view the list of agents that are deployed in your account through [CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli) and [API](/apidocs/schematics/schematics#create-agent-data).
+
+   1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+   2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
+   3. Select your Agent from the list, and use the `...` dots to perform **Delete Agent** operation.
 
 ## Displaying the list of agents using CLI
 {: #display-agentb1-list-cli}

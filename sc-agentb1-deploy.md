@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-27"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -12,11 +12,14 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
 # Deploying agents
 {: #deploy-agent-overview}
-
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
-{: beta}
 
 Agents for {{site.data.keyword.bplong}} extend its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. Deploying an agent is a multi-step process. 
 {: shortdesc}
@@ -35,10 +38,6 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 
 - The `cluster ID`, `cluster resource group` of your Kubernetes cluster.
 - the `COS instance name`, `COS bucket name`, `COS bucket region`, and `COS resource group` of your {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.objectstorageshort}} bucket.
-
-- Select an existing [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters), [{{site.data.keyword.vpc_full}}](/docs/openshift?topic=openshift-cluster-create-vpc-gen2&interface=ui) cluster, or {{site.data.keyword.redhat_openshift_full}} cluster ID to host the agent deployment. Record the following key information about the cluster for later use, `cluster ID`, `cluster resource group`.
-- Select existing resources such as an {{site.data.keyword.cos_full_notm}} instance and {{site.data.keyword.objectstorageshort}} bucket for the specified region. Record the following key information about the COS resources for later use, `COS instance name`, `COS bucket name`, `COS bucket region`, `COS resource group`.
-- If deploying your agent using the {{site.data.keyword.bpshort}} API, generate the necessary [IAM authorization token](docs/account?topic=account-serviceauth&interface=ui#auth-cli) and refresh tokens to authenticate the API request.   
 
 ## Creating an agent definition using the CLI 
 {: #create-agent-cli}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-25"
+lastupdated: "2023-03-29"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -12,11 +12,14 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
 # {{site.data.keyword.bpshort}} Agent
 {: #agentb1-about-intro}
-
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation) in the beta release.
-{: beta}
 
 {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private cloud network. Use Agents located on your private network to provision, configure and access your cloud or on-premises services and cluster resources, managed by your own network access policies. Eliminate execution time limits and enable Terraform and Ansible to access and work with private network resources, and in future use software utilities of your own choosing.
 {: shortdesc}

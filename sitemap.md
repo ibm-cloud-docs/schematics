@@ -343,6 +343,8 @@ subcollection: schematics
 
     * Review the release notes for March 2023.
 
+    * {{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+
     * [22 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2223)
 
         * {{site.data.keyword.bpshort}} Agent beta-1 release.
@@ -1396,6 +1398,8 @@ subcollection: schematics
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
+* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-ui)
+
 * [Displaying the list of agents using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
 
 * [Displaying an agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
@@ -2089,13 +2093,13 @@ subcollection: schematics
 {: #sitemap_beta-1_code_for_agent}
 
 
-[Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
+[Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#agent-beta1-limitations)
 
-* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
+* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta-limitation)
 
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-join-public-slack)
 
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-join-slack)
 
 
 ## Runtime environment tools
