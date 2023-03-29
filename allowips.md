@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-29"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -13,22 +13,23 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Opening needed IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall
+# Firewall access - allowed IP addresses 
 {: #allowed-ipaddresses}
 
-By default all IP addresses can be used to log in to the {{site.data.keyword.cloud}} console and access your {{site.data.keyword.bpshort}} Workspace. In the {{site.data.keyword.iamlong}} (IAM) console, you can generate a firewall [by creating an allowlist by specifying which IP addresses have access](/docs/account?topic=account-ips), and all other IP addresses are restricted. If you use an IAM firewall, you must add the CIDRs of the {{site.data.keyword.bpshort}} for the zones in the region where your cluster is located to the allowlist. You must allow these CIDRs ranges, so that {{site.data.keyword.bpshort}} Service to manage the {{site.data.keyword.bpshort}} resources.
-{: shortdesc}
+Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr). {: note}
 
-You can use these steps to change the IAM allowlist for the user whose credentials are used for the cluster's region and resource group infrastructure permissions. If you have the credentials, you can change your own IAM allowlist settings. If you do not have credentials, but you are assigned the `Editor` or `Administrator` of the {{site.data.keyword.cloud_notm}} IAM platform role for the user management service. Then, you can update the restricted IP addresses for the credentials owner.
+Performing post-configuration of deployed resources using Terraform and Ansible requires IP network access to the resources private cloud network zones. Typically these private networks will be protected using a firewall or VPC access control policies. To allow the {{site.data.keyword.bpshort}} hosted instances of Terraform and Ansible to access these zones, firewall or VPC access policies must be configured to permit access to the {{site.data.keyword.bpshort}} originating IP addresses. 
 
-1. Log in to the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/login){: external}.
-2. From the menu bar click `Manage > Access (IAM)`, and select **Users**.
-3. Select your username.
-4. From the **User details** page, access IP address restrictions section.
-5. For Classic infrastructure, enter the CIDRs of the zones in the region where your cluster is located.
+Typically post-configuration is performed via SSH as illustrated with [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions) performing configuration operations over SSH using Ansible. With Ansible a bastion host must be configured to enable secure SSH access. Refer to the [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview) documentation for details of the required VPC network configuration and bastion host setup. 
 
-You must allow all the zones within the region that your resource is in. For example, you must allow all `US` region IP addresses to support both the `us-east` and `us-south` region endpoints.
-{: note}
+## {{site.data.keyword.bpshort}} IP addresses 
+{: #ipaddresses}
+
+The following tables document the public IP addresses used by Schematics that must be allowed access to private network resources to perform post-configuration.  
+
+At run time {{site.data.keyword.bpshort}} dynamically selects a worker node and region to execute the job. The job may run on any of the defined IP addresses within a geography. For instance in the US using any of the us-south and us-east IP addresses, or for Europe using any of the eu-gb or eu-de addresses. {: note}
+
+
 
 | Region | Zone | Public IP addresses | Private IP addresses |
 | --- | --- | --- | --- |

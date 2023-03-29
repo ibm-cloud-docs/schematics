@@ -59,7 +59,7 @@ toc:
                           id: howto
                           topics:
                                   - topicgroup:
-                                            label: Setting up the CLI and API
+                                            label: Preparing to use the CLI and API
                                             topics:
                                                     - setup-cli.md
                                                     - setup-api.md

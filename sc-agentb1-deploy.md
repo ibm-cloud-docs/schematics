@@ -39,6 +39,10 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 - The `cluster ID`, `cluster resource group` of your Kubernetes cluster.
 - the `COS instance name`, `COS bucket name`, `COS bucket region`, and `COS resource group` of your {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.objectstorageshort}} bucket.
 
+- Select an existing [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters) or [{{site.data.keyword.redhat_openshift_full}}](/docs/openshift?topic=openshift-cluster-create-vpc-gen2&interface=ui) cluster to host the agent deployment. Record the following key information about the cluster for later use, `cluster ID`, `cluster resource group`.
+- Select existing resources such as an {{site.data.keyword.cos_full_notm}} instance and {{site.data.keyword.objectstorageshort}} bucket for the specified region. Record the following key information about the COS resources for later use, `COS instance name`, `COS bucket name`, `COS bucket region`, `COS resource group`.
+- If deploying your agent using the {{site.data.keyword.bpshort}} API, follow the instructions [Invoking IBM Cloud service APIs](docs/account?topic=account-iamapikeysforservices) to generate the necessary IAM authorization token and refresh tokens to authenticate the API request.   
+
 ## Creating an agent definition using the CLI 
 {: #create-agent-cli}
 {: cli}

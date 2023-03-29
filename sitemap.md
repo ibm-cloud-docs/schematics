@@ -842,11 +842,11 @@ subcollection: schematics
         * New workspace creation flow
 
 
-## Setting up the CLI and API
-{: #sitemap_setting_up_the_cli_and_api}
+## Preparing to use the CLI and API
+{: #sitemap_preparing_to_use_the_cli_and_api}
 
 
-[Setting up the CLI](/docs/schematics?topic=schematics-setup-cli#setup-cli)
+[Preparing to use the CLI](/docs/schematics?topic=schematics-setup-cli#setup-cli)
 
 * [Installing the {{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli)
 
@@ -856,13 +856,11 @@ subcollection: schematics
 
 * [Uninstalling the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli#uninstall-schematics-plugin)
 
-[Setting up the API](/docs/schematics?topic=schematics-setup-api#setup-api)
+[Preparing to use the API](/docs/schematics?topic=schematics-setup-api#setup-api)
 
-* [Automating deployments with the API](/docs/schematics?topic=schematics-setup-api#cs_api)
+* [Working with the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-setup-api#cs_api)
 
-* [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new refresh tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
-
-* [Table1](/docs/schematics?topic=schematics-setup-api#table1)
+* [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
 
 
 ## Managing Blueprints
@@ -1654,7 +1652,9 @@ subcollection: schematics
 
 * [How can I delete my information?](/docs/schematics?topic=schematics-secure-data#delete-data)
 
-[Opening needed IP addresses for {{site.data.keyword.bpfull_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
+[Firewall access - allowed IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses#allowed-ipaddresses)
+
+* [{{site.data.keyword.bpshort}} IP addresses](/docs/schematics?topic=schematics-allowed-ipaddresses#ipaddresses)
 
 
 ## Creating an {{site.data.keyword.containerlong_notm}} cluster on VPC infrastructure
