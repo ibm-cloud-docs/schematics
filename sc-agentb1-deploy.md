@@ -56,7 +56,7 @@ To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_n
 Example
 
 ```sh
-ibmcloud schematics agent create --name agent-testing-prod-cli-mar-27-5 --location eu-de --agent-location us-south --version 1.0.0 --infra-type ibm_kubernetes --cluster-id cb1c2dus01uf9mc0hkbg --cluster-resource-group  job-runner --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-east --resource-group Default
+ibmcloud schematics agent create --name agent-testing-prod-cli-mar-27-5 --location eu-de --agent-location jp-tok --version 1.0.0 --infra-type ibm_kubernetes --cluster-id cb1c2dus01uf9mc0hkbg --cluster-resource-group  job-runner --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-east --resource-group Default
 ```
 {: pre}
 
@@ -71,7 +71,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   aac37f57b20142dba1a435c70aeb12df 
 ```
 {: screen}
@@ -96,7 +96,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default 
 ```
 {: screen}
@@ -140,7 +140,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                             Last modified   
@@ -186,7 +186,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                 Last modified   
@@ -218,7 +218,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                 Last modified   
@@ -259,7 +259,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID                             Status                   Last modified   
@@ -294,7 +294,7 @@ Example
     ],
     "version": "v1.0.0",
     "schematics_location": "us-south",
-    "agent_location": "us-south",
+    "agent_location": "jp-tok",
     "agent_infrastructure": {
         "infra_type": "ibm_kubernetes",
         "cluster_id": "cg3fgvad0dak571op4g0",
@@ -327,7 +327,7 @@ Output
       ],
       "version": "v1.0.0",
       "schematics_location": "us-south",
-      "agent_location": "us-south",
+      "agent_location": "jp-tok",
       "user_state": {
           "state": "enable",
           "set_by": "geetha_sathyamurthy@in.ibm.com",

@@ -29,6 +29,19 @@ Review the release notes for March 2023.
 {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
+### 30 March 2023
+{: #schematics-mar3023}
+{: release-note}
+
+Release configuring Kubernetes cluster for an agent.
+:   The {{site.data.keyword.bpshort}} releases documentation on [configuring Kubernetes cluster for an agent](/docs/schematics?topic=schematics-configure-k8s-cluster) related to network policies, Terraform and Ansible runtime-job, agent sandbox allowlist, agent job-runner configuration, agent runtime configuration for Ansible, and agent runtime configuration for Terraform.
+
+Enhancement of {{site.data.keyword.bpshort}} worker runtime.
+:   The {{site.data.keyword.bpshort}} releases documentation on [{{site.data.keyword.bpshort}} worker runtime](/docs/schematics?topic=schematics-sch-utilities) for `runtime-terraform-job`, and `runtime-ansible-job` images.
+
+IAM allowed IP addresses replaced with context based restrictions.
+:   Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
+
 ### 22 March 2023
 {: #schematics-mar2223}
 {: release-note}

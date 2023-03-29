@@ -55,7 +55,6 @@ The following table enlists the preinstalled software and tools in the {{site.da
 | `Python libraries` |	netaddr	| -do-	| Red Hat OpenShift CLI for your Terraform automation. It is recommended to use the Terraform provider plugins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
 {: caption="{{site.data.keyword.bpshort}} runtime terrafom job image" caption-side="top"}
 
-
 ## Runtime-ansible-job image
 {: #sch-runtime-ansible-job}
 

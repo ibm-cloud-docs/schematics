@@ -61,7 +61,7 @@ agent-prod-testing-api-mar-24-2   agent-prod-testing-api-mar-24-2.deA.ca07   1.6
 agent-testing-prod-cli-mar-27-2   agent-testing-prod-cli-mar-27-2.deA.727f   v1.0.0                                                  Default          us-south         eu-de                 Active                         
 agent-testing-prod-cli-mar-27-3   agent-testing-prod-cli-mar-27-3.deA.fd13                                                           Default          us-south         eu-de                 Active                         
 agent-testing-prod-cli-mar-27-4   agent-testing-prod-cli-mar-27-4.deA.acd4                                                           Default          us-south         eu-de                 Active                         
-agent-testing-prod-cli-mar-27     agent-testing-prod-cli-mar-27.deA.3f7e                                                             Default          us-south         eu-de                 Active                         
+agent-testing-prod-cli-mar-27     agent-testing-prod-cli-mar-27.deA.3f7e                                                             Default          jp-tok         eu-de                 Active                         
 gsmmar27v1cli-agent-test          gsmmar27v1cli-agent-test.deA.6288                                                                  Default          eu-de            eu-de                 Active                         
 gsmmar27v2cli-agent-test          gsmmar27v2cli-agent-test.deA.afcc                                                                  Default          eu-de            eu-de                 Active                         
 gsmmar27v3cli-agent-test          gsmmar27v3cli-agent-test.deA.4b56                                                                  Default          eu-de            eu-de                 Active                         
@@ -98,7 +98,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                 Last modified   
@@ -136,10 +136,10 @@ Output
     ],
     "version": "v1.0.0",
     "schematics_location": "us-south",
-    "agent_location": "us-south",
+    "agent_location": "jp-tok",
     "user_state": {
         "state": "enable",
-        "set_by": "geetha_sathyamurthy@in.ibm.com",
+        "set_by": "test@in.ibm.com",
         "set_at": "2023-03-16T06:12:13.684097462Z"
     },
     "agent_crn": "crn:v1:bluemix:public:schematics:us-south:a/c19ef85117044059a3be5e45d6dc1cf6:347160c0-dca9-49e8-a292-9c980c7f8c47:agent:agent-beta1-testing.soA.748e",
@@ -187,12 +187,12 @@ Output
     "agent_location": "us-south",
     "user_state": {
         "state": "enable",
-        "set_by": "geetha_sathyamurthy@in.ibm.com",
+        "set_by": "test@in.ibm.com",
         "set_at": "2023-03-16T06:12:13.684097462Z"
     },
     "agent_crn": "crn:v1:bluemix:public:schematics:us-south:a/c19ef85117044059a3be5e45d6dc1cf6:347160c0-dca9-49e8-a292-9c980c7f8c47:agent:agent-beta1-testing.soA.748e",
     "created_at": "2023-03-16T06:12:13.684112846Z",
-    "creation_by": "geetha_sathyamurthy@in.ibm.com",
+    "creation_by": "test@in.ibm.com",
     "updated_at": "0001-01-01T00:00:00Z",
     "system_state": {
         "status_code": "draft"

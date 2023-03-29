@@ -70,7 +70,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   us-south   
+Agent Location   jp-tok   
 Resource Group   Default   
                  
 Recent Job   Job ID                             Status                   Last modified   
@@ -91,7 +91,6 @@ The following table describes the list of agent and Kubernetes health properties
 | job-runner | Health of the job orchestrator pods in an agent. |
 | log-collector | Health of the log collector pods in an agent. |
 {: caption="{{site.data.keyword.bpshort}} Agent health properties" caption-side="top"}
-
 
 ## Monitoring agent health using API
 {: #health-agentb1-api}

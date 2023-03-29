@@ -49,7 +49,7 @@ The following are configured by default Kubernetes deployment configuration appl
 | --- | --- |
 | `resource-limits` |	Resource limit setting for the Terraform and Ansible jobs are `cpu = 500m`, and `memory = 1Gi`. |
 | `replicas` | Number of Terraform and Ansible job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
-{: caption="Default Terraform and Ansible runtime-job" caption-side="top"}
+{: caption="Default Terraform and Ansible runtime-job" caption-side="top"} 
 
 ## Default agent sandbox allowed list
 {: #agent-sandbox-allowlist}
@@ -99,5 +99,3 @@ The following are the default agent runtime configuration for Ansible runtime.
 | `ANSIBLE_JOB_BLACKLISTEXTN` |	The blocked file extensions from the Git repositories.</br>`.php5`, `.pht`, `.phtml`, `.shtml`, `.asa`, `.asax`, `.swf`, `.xap`, `.tfstate`, `.tfstate.backup`, `.exe`.|
 | `JOB_IMAGEEXTN` |	The allowed image file extensions from the Git repositories.</br>`.tif`, `.tiff`, `.gif`, `.png`, `.bmp`, `.jpg`, `.jpeg`, `.so`. |
 {: caption="Default agent runtime configuration for Ansible" caption-side="top"}
-
-

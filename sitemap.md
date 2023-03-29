@@ -345,6 +345,14 @@ subcollection: schematics
 
     * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 
+    * [30 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3023)
+
+        * Release configuring Kubernetes cluster for an agent.
+
+        * Enhancement of {{site.data.keyword.bpshort}} worker runtime.
+
+        * IAM allowed IP addresses replaced with context based restrictions.
+
     * [22 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2223)
 
         * {{site.data.keyword.bpshort}} Agent beta-1 release.
@@ -1442,6 +1450,20 @@ subcollection: schematics
     * [Example to update policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-api)
 
     * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
+
+[Configuring Kubernetes cluster for agent](/docs/schematics?topic=schematics-configure-k8s-cluster#configure-k8s-cluster)
+
+* [Default network policies](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-network-policy)
+
+* [Default Terraform and Ansible runtime-job](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-runtime-job)
+
+* [Default agent sandbox allowed list](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-sandbox-allowlist)
+
+* [Default agent job-runner configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-job-runner-config)
+
+* [Default agent runtime configuration for Terraform](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-terraform)
+
+* [Default agent runtime configuration for Ansible](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-ansible)
 
 [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 
