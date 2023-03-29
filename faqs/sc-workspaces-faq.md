@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-15"
+lastupdated: "2023-03-29"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -618,4 +618,9 @@ Yes, you can use `--state` flag option through the [ibmcloud schematics workspac
 
 The maximum length of characters that the {{site.data.keyword.bpshort}} Workspace name variable supports is 1 MB.
 
+## What is the maximum length of a characters that the workspace can extract for the new file-name from an existing `terraform.tfstate` file?
+{: #wks-statefile-limit}
+{: faq}
+{: support}
 
+When you create workspace from an existing Terraform state file. The workspace file name must contain the file size of less than 2 MB. Greater than 2 MB state file size is not supported in the {{site.data.keyword.bpshort}} workspace.
