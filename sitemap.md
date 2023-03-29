@@ -2588,7 +2588,7 @@ subcollection: schematics
 
 [Why do {{site.data.keyword.bpshort}} Workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
 
-[Workspace fails](/docs/schematics?topic=schematics-wks-failure#wks-failure)
+[Workspace failures](/docs/schematics?topic=schematics-wks-failure#wks-failure)
 
 * [Workspace create fails with message `Request Entity Too Large`](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1)
 

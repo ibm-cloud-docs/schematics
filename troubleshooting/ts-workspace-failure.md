@@ -15,7 +15,7 @@ content-type: troubleshoot
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Workspace fails 
+# Workspace failures
 {: #wks-failure}
 
 Review the following sections to help debugging `workspace new` failures. 
