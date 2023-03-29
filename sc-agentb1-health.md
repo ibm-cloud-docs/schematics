@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-23"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent health, agent health, health
 
@@ -18,42 +18,77 @@ subcollection: schematics
 # Monitoring agent health
 {: #agentb1-health}
 
-{{site.data.keyword.bplong}} Agents run an automated task to check the health of installed agents. Following details can be are the evidences that the health check returns to a user.
-- Agent health can fetch details only once your _agent deploy_ is successful. 
-- Agent health displays the job status of your deployed agent that are up and running. 
-- Agent creation is successful or unsuccessful.
+Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. Typically, the agent is remotely deployed in the Kubernetes cluster in your {{site.data.keyword.cloud_notm}} account.   
+{: shortdesc}
+
+You would be interested in knowing about the health of an agent 
+- immediately after the agent deployment, and 
+- while the agent is in-use. 
 
 ## Monitoring agent health using the CLI
 {: #health-agentb1-cli}
 {: cli}
 
-To review the health of an agent using the CLI, use the `ibmcloud schematics agent health` command. This command requires the `agent_id` as an input argument. It is region specific and will only retrieve details of agents in the selected CLI region. 
+You can review the health of an agent by using the CLI, use the [agent health](docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health) command. This command requires the `AGENT_ID` as an input argument.
 {: shortdesc}
 
-For all the agent commands, syntax, and option flag details, see [agent beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health).
-{: important}
+The output of an agent health command displays the list of relevant Kubernetes and agent health property names, the expected value, actual value, and the result as PASS or FAIL.
+
+Example
 
 ```sh
-ibmcloud schematics agent health --id <Provide your agent_ID> [--output OUTPUT]
+ibmcloud schematics agent health --id agent-testing-prod-cli-mar-27-5.deA.dc97  
 ```
 {: pre}
 
-```text
-Validating agent health...
-Health ID: .ACTIVITY.85353750
+Output
 
-geethasathyamurthy@Geethas-MacBook-Pro agentb1bnppstagetesting % vi createpolicy.json
-geethasathyamurthy@Geethas-MacBook-Pro agentb1bnppstagetesting % ibmcloud schematics workspace list
-Retrieving workspaces...
-OK
-Name                             ID                                                        Description   Version   Status   Frozen   
-gsmmar2cliv2-agent-test-prs      eu-de.workspace.gsmmar2cliv2-agent-test-prs.30e0d302                              FAILED   False   
-gsmmar2cliv2-agent-test-health   eu-de.workspace.gsmmar2cliv2-agent-test-health.7ff086ed                           FAILED   False   
-gsmmar2cliv2-agent-test-deploy   eu-de.workspace.gsmmar2cliv2-agent-test-deploy.89fa2a8e                           FAILED   False   
-                                 
-Showing 1-3 of 3 items
+```text
+Initiating agent health...
+Job ID	.ACTIVITY.f6f77588
 ```
 {: screen}
+
+Example
+
+```sh
+ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97  
+```
+{: pre}
+
+Output
+
+```text
+Retrieving agent...
+OK
+                    
+ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
+Name             agent-testing-prod-cli-mar-27-5   
+Status           ACTIVE   
+Version             
+Location         eu-de   
+Agent Location   us-south   
+Resource Group   Default   
+                 
+Recent Job   Job ID                             Status                   Last modified   
+DEPLOY       f5c6987ce53032547b6d5d5f870dfe5f   Job Success               0001-01-01T00:00:00.000Z   
+HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2023-03-27T12:31:15.326Z 
+```
+{: screen}
+
+## Health properties
+{: #agent-health-property}
+
+The following table describes the list of agent and Kubernetes health properties.
+
+| Property name | Description |
+| --- | --- |
+| runtime | Health of the Terraform and Ansilbe job pods in an agent. |
+| sandbox | Health of the Sandbox job pods in an agent, that are used to download Git repositories. |
+| job-runner | Health of the job orchestrator pods in an agent. |
+| log-collector | Health of the log collector pods in an agent. |
+{: caption="{{site.data.keyword.bpshort}} Agent health properties" caption-side="top"}
+
 
 ## Monitoring agent health using API
 {: #health-agentb1-api}
@@ -100,3 +135,9 @@ Health Check Completed
 ```
 {: screen}
 
+## Next steps
+{: #agent-health-nextstep}
+
+- When an agent health has deteriorated, you can review and update an agent and Kubernetes configuration as described in [configuring cluster and an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.

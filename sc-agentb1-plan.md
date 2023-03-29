@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-28"
+lastupdated: "2023-03-29"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -35,7 +35,7 @@ Review and complete the tasks below to prepare your {{site.data.keyword.cloud_no
 - **{{site.data.keyword.cloud_notm}} CLI:** Use the latest version of {{site.data.keyword.cloud_notm}} CLI and the [{{site.data.keyword.bpshort}} CLI v1.12.8](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) or higher plugin to install an agent. For more information about plugin installation, see [installing {{site.data.keyword.bpshort}} CLI plugin](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
 
 You can deploy only one agent instance in a single Kubernetes cluster. You can create and deploy multiple agents in a single {{site.data.keyword.cloud_notm}} account on different Kubernetes cluster. Each catering to different network isolation zones in your Cloud environment.
-{: shortdesc}
+{: note}
 
 In the Beta release, an agent can connect to only one {{site.data.keyword.cloud_notm}} account. It cannot be shared with other accounts.
 

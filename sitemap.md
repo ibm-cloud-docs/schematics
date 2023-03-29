@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-28"
+lastupdated: "2023-03-29"
 
 keywords: schematics
 subcollection: schematics
@@ -1445,7 +1445,11 @@ subcollection: schematics
 
 * [Monitoring agent health using the CLI](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-cli)
 
+* [Health properties](/docs/schematics?topic=schematics-agentb1-health#agent-health-property)
+
 * [Monitoring agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
+
+* [Next steps](/docs/schematics?topic=schematics-agentb1-health#agent-health-nextstep)
 
 [Setting proxy server for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-agent-overview)
 
@@ -2570,6 +2574,8 @@ subcollection: schematics
 
 * [What is the maximum length of characters that the {{site.data.keyword.bpshort}} Workspace name variable supports?](/docs/schematics?topic=schematics-workspaces-faq#wks-name-maxlength)
 
+* [What is the maximum length of a characters that the workspace can extract for the new file-name from an existing `terraform.tfstate` file?](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit)
+
 
 ## Troubleshooting
 {: #sitemap_troubleshooting}
@@ -2616,17 +2622,17 @@ subcollection: schematics
 
 [blueprint create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
-[blueprint apply fails](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails)
+[Blueprint apply fails](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails)
 
-* [blueprint apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails1)
+* [Blueprint apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails1)
 
-* [blueprint apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails2)
+* [Blueprint apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails2)
 
-* [blueprint apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails3)
+* [Blueprint apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails3)
 
-* [blueprint apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails4)
+* [Blueprint apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails4)
 
-* [blueprint apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails5)
+* [Blueprint apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails5)
 
 
 ### Troubleshooting Agents

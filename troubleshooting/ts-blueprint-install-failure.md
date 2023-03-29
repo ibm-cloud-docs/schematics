@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-03-29"
 
 keywords: blueprint apply failure, terraform error, terraform fails, install fails,
 
@@ -17,13 +17,13 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# blueprint apply fails 
+# Blueprint apply fails 
 {: #bp-apply-fails}
 
 Review the following sections to help debugging `blueprint apply` failures. 
 
 
-## blueprint apply fails with message "Install of module Failed"
+## Blueprint apply fails with message "Install of module Failed"
 {: #bp-apply-fails1}
 
 When you run the `blueprint apply` command, it fails with message that the install of a module fails.    
@@ -99,7 +99,7 @@ Workspace Logs CLI   ibmcloud schematics logs --id eu-gb.workspace.basic-cos-sto
 
 See troubleshooting {{site.data.keyword.bpshort}} apply errors for additional information on debugging Terraform Apply failures  
 
-## blueprint apply failure due to Terraform config coding error  
+## Blueprint apply failure due to Terraform config coding error  
 {: #bp-apply-fails2}
 
 When you run the `blueprint apply` command, it fails with message that the install of module fails. 
@@ -138,7 +138,7 @@ ibmcloud schematics blueprint apply -id <blueprint_ID> 
 ```
 {: pre}
 
-## blueprint apply failure due to Terraform timeouts or transient failures 
+## Blueprint apply failure due to Terraform timeouts or transient failures 
 {: #bp-apply-fails3}
 
 When you run the blueprint apply command, it fails with message that the install of module fails. 
@@ -158,7 +158,7 @@ ibmcloud schematics blueprint apply -id <blueprint_ID> 
 ```
 {: pre}
 
-## blueprint apply failures that require changes to values in input files  
+## Blueprint apply failures that require changes to values in input files  
 {: #bp-apply-fails4}
 
 When you run the blueprint apply command, it fails with message that the install of module fails. 
@@ -193,7 +193,7 @@ ibmcloud schematics blueprint apply -id <blueprint_ID> 
 ```
 {: pre}
 
-## blueprint apply failures that require changes to dynamic inputs
+## Blueprint apply failures that require changes to dynamic inputs
 {: #bp-apply-fails5}
 
 When you run the blueprint apply command, it fails with message that the install of module fails. 
