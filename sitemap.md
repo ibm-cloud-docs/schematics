@@ -2102,17 +2102,15 @@ subcollection: schematics
     * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-join-slack)
 
 
-## Runtime environment tools
-{: #sitemap_runtime_environment_tools}
+## {{site.data.keyword.bpshort}} worker runtime
+{: #sitemap__worker_runtime}
 
 
-[Runtime environment tools](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
+[{{site.data.keyword.bpshort}} worker runtime](/docs/schematics?topic=schematics-sch-utilities#sch-utilities)
 
-* [Terraform-runtime-job image used by {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-job)
+* [Runtime-terraform-job image](/docs/schematics?topic=schematics-sch-utilities#sch-runtime-tf-job)
 
-* [Terraform-runtime-agent-job image used by {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-sch-utilities#terraform-runtime-agent-job)
-
-* [Ansible-runtime-job image used by {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sch-utilities#Ansible-runtime-job)
+* [Runtime-ansible-job image](/docs/schematics?topic=schematics-sch-utilities#sch-runtime-ansible-job)
 
 
 ## {{site.data.keyword.bpshort}} SDKs

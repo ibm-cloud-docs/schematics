@@ -23,7 +23,7 @@ subcollection: schematics
 # Managing agent assignment policy
 {: #policy-manage}
 
-Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. You can deploy multiple agents in your {{site.date.keyword.cloud_notm}} account, each catering to the different network isolation zones. For example, based on the following factory your cloud infrastructure can be spread across or partitioned.
+Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. You can deploy multiple agents in your {{site.data.keyword.cloud_notm}} account, each catering to the different network isolation zones. For example, based on the following factory your cloud infrastructure can be spread across or partitioned.
 - multiple cloud regions (region-1, region-2, region-3)
 - multiple VPC zones for the application layer, data layer, management layer
 - multiple cloud-vendors or on-premises vendors, or
