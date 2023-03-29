@@ -15,7 +15,7 @@ content-type: troubleshoot
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Workspace fails 
+# Workspace failures
 {: #wks-failure}
 
 Review the following sections to help debugging `workspace new` failures. 
@@ -42,5 +42,5 @@ Message:
 ```
 {: screen}
 
-Check the size of an existing `terraform.tfstate` file size. Rerun the workspace create operation with a size that is less than 2 MB state file.
+The `terraform.tfstate` file size must be less than 2 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 2 MB. Greater than 2 MB state file size is not supported in the {{site.data.keyword.bpshort}}. Rerun the workspace create operation with a size that is less than 2 MB state file.
 {: tsResolve} 

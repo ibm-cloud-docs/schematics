@@ -237,16 +237,14 @@ toc:
                                             label: Troubleshooting
                                             topics:
                                                     - topicgroup:
-                                                              label: Troubleshooting Schematics apply errors
+                                                              label: Troubleshooting Schematics workspace errors
                                                               topics:
+                                                                      - troubleshooting/wks_creation_api.md
+                                                                      - troubleshooting/ts-workspace-failure.md
                                                                       - troubleshooting/apply_nullresource.md
                                                                       - troubleshooting/apply_timeout-taint.md
                                                                       - troubleshooting/apply_resource_group.md
                                                                       - troubleshooting/apply_500_errors.md
-                                                    - topicgroup:
-                                                              label: Troubleshooting Schematics create errors
-                                                              topics:
-                                                                      - troubleshooting/wks_creation_api.md
                                                     - topicgroup:
                                                               label: Troubleshooting blueprints
                                                               topics:
