@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) release delivers a simplified Agents installation process.
+{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) delivers a simplified Agents installation process.
 {: attention}
 
 {{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
@@ -21,7 +21,17 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} Agent
 {: #agentb1-about-intro}
 
-{{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private cloud network. Use Agents located on your private network to provision, configure and access your cloud or on-premises services and cluster resources, managed by your own network access policies. Eliminate execution time limits and enable Terraform and Ansible to access and work with private network resources, and in future use software utilities of your own choosing.
+Agents for the {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private cloud network or in any network isolation zones. The agents are deployed in the Kubernetes clusters in your private network, and is able to access your private cloud resources.
+{: shortdesc}
+
+It is important to note that {{site.data.keyword.bplong_notm}} do not have direct access to an agent or any private cloud resources.The agent always initiates the communication with {{site.data.keyword.bpshort}} service, and polls for jobs that must be run on an agent. You are in control of the agent resources, its network policies, and of underlying Kubernetes cluster.
+{: note}
+
+Note: Schematics identifies your agent using a Trusted Profile identity provided by the Kubernetes cluster that it runs on.  This identity is dynamically created, when the agent is created & deployed.   The Trusted Profile identity guarantees that no one can spoof your Agent’s identity, and steal data from Schematics.  
+You are in control of the access permissions defined for this Trusted Profile identity, using IAM Access Policies. 
+
+
+Use Agents located on your private network to provision, configure and access your cloud or on-premises services and cluster resources, managed by your own network access policies. Eliminate execution time limits and enable Terraform and Ansible to access and work with private network resources, and in future use software utilities of your own choosing.
 {: shortdesc}
 
 The agent runtime includes `Terraform`, `Terraform CLI v1.0.11`, `Terraform CLI v1.1.5`, `Ansible`, and additional micro-services. For more information about the software utilities included in the agent runtime, see [{{site.data.keyword.bpshort}} runtime deployment utilities](/docs/schematics?topic=schematics-sch-utilities).
