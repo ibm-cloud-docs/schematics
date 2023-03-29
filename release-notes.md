@@ -26,7 +26,7 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for March 2023.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} Agent [beta-1](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) delivers a simplified Agents installation process.
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
 ### 22 March 2023
