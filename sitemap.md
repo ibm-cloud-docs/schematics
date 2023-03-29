@@ -2574,7 +2574,7 @@ subcollection: schematics
 
 * [What is the maximum length of characters that the {{site.data.keyword.bpshort}} Workspace name variable supports?](/docs/schematics?topic=schematics-workspaces-faq#wks-name-maxlength)
 
-* [What is the maximum length of a characters that the workspace can extract for the new file-name from an existing `terraform.tfstate` file?](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit)
+* [What is the `terraform.tfstate` file size that the {{site.data.keyword.bpshort}} accepts for workspace creation?](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit)
 
 
 ## Troubleshooting
@@ -2582,22 +2582,21 @@ subcollection: schematics
 
 
 
-### Troubleshooting Schematics apply errors
-{: #sitemap_troubleshooting_schematics_apply_errors}
+### Troubleshooting Schematics workspace errors
+{: #sitemap_troubleshooting_schematics_workspace_errors}
 
+
+[Why do {{site.data.keyword.bpshort}} Workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
+
+[Workspace fails](/docs/schematics?topic=schematics-wks-failure#wks-failure)
+
+* [Workspace create fails with message `Request Entity Too Large`](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1)
 
 [How can you find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
 
 [Why can't {{site.data.keyword.bpshort}} find your resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
 
 [Why are you getting 5xx HTTP errors?](/docs/schematics?topic=schematics-server-errors#server-errors)
-
-
-### Troubleshooting Schematics create errors
-{: #sitemap_troubleshooting_schematics_create_errors}
-
-
-[Why do {{site.data.keyword.bpshort}} Workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
 
 
 ### Troubleshooting blueprints
