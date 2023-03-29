@@ -141,9 +141,9 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
 
-* [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
-
 * [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
+
+* [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
 
 * [Next steps](/docs/schematics?topic=schematics-agentb1-about-intro#nextsteps-agentb1-arch)
 
