@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-31"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -21,7 +21,7 @@ subcollection: schematics
 # Configuring Kubernetes cluster for agent
 {: #configure-k8s-cluster}
 
-Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. The agent is deployed in your Kubernetes cluster, on {{site.data.keyword.cloud}}. 
+Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. The agent is deployed in a Kubernetes cluster on {{site.data.keyword.cloud}}. 
 {: shortdesc}
 
 When an agent is deployed in your cluster, by default the following configurations are automatically applied to the cluster.
@@ -54,7 +54,7 @@ The following are configured by default Kubernetes deployment configuration appl
 ## Default agent sandbox allowed list
 {: #agent-sandbox-allowlist}
 
-The following are the default agent sandbox allowlist configuration.
+The following is the default agent sandbox file type and size allowlist configuration.
 
 | Parameter |	Description |
 | -- | -- |
@@ -68,18 +68,18 @@ The following are the default agent sandbox allowlist configuration.
 ## Default agent job-runner configuration
 {: #agent-job-runner-config}
 
-The following are the default agent job-runner configuration.
+The following is the default agent job-runner configuration.
 
 | Parameter	| Description |
 | --- | --- |
-|  `JR_MAXJOBS`|	Number of parallel jobs the Terraform or Ansible job run by an agent. |
+|  `JR_MAXJOBS`|	Number of concurrent Terraform or Ansible jobs that can be run by an agent. |
 | `resource-limits` | Resource limit setting for the Terraform and Ansible jobs are `cpu = 500m`, and `memory = 1Gi`. |
 {: caption="Default agent job-runner" caption-side="top"}
 
 ## Default agent runtime configuration for Terraform 
 {: #agent-runtime-config-terraform}
 
-The following are the default agent runtime configuration for Terraform runtime.
+The following is the default agent runtime configuration for the Terraform runtime.
 
 | Parameter	| Description |
 | --- | --- |
@@ -91,7 +91,7 @@ The following are the default agent runtime configuration for Terraform runtime.
 ## Default agent runtime configuration for Ansible
 {: #agent-runtime-config-ansible}
 
-The following are the default agent runtime configuration for Ansible runtime.
+The following is the default agent runtime configuration for the Ansible runtime.
 
 | Parameter	| Description |
 | --- | --- |

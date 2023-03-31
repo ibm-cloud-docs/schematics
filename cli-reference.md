@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-31"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -426,22 +426,22 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--name` or `-n` | Required | The unique name of an agent. |
-| `--location` or `-l` | Required | Geographic locations supported by {{site.data.keyword.bpshort}} service such as, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
-| `--agent-location` or `--al` | Required | Specify the location where agent is deployed in the user environment. For example, `ap-north`. |
-| `--version` or `-v` | Required | Specify the version of an agent. |
+| `--name` or `-n` | Required | The unique name of an agent. Must be descriptive of the agent role, location and usage.  |
+| `--location` or `-l` | Required | The {{site.data.keyword.bpshort}}  location the agent where the agent will be defined, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for execution. |
+| `--agent-location` or `--al` | Required | Specify the location (region) where the agent is to be deployed in the user environment. For example, `jp-tok`. |
+| `--version` or `-v` | Required | Specify the version of the agent. |
 | `--infra-type` or `-i` | Required | Specify the type of the target agent infrastructure. Supported values are `ibm-kubernetes`, `ibm-openshift`, or `ibm-satellite`.|
 | `--clusterid` or `-k` | Required | The ID of the Kubernetes cluster for deploying an Agent.|
-| `--cluster-resource-group` or `--kr` | Required | The resource group name of the cluster. |
+| `--cluster-resource-group` or `--kr` | Required | The name of the clusters' resource group. |
 | `--cos-id` or `--oi` | Required | The ID of the COS instance. |
 | `--cos-bucket` or `-b` | Required |  The ID or the name of the COS bucket. |
 | `--cos-location` or `--ol` | Required | Specify the region of the COS bucket. For example, `global`.|
-| `--resource-group` or `-r` | Required | Resource group name or ID for the agent. |
-| `--description` or `-d` | Optional |The short description of the agent. |
+| `--resource-group` or `-r` | Required | Resource group name or ID the agent will be associated with. |
+| `--description` or `-d` | Optional | A description that identifies the agent usage, and the network zones and resources the agent is able to access. |
 | `--plan-only` | Optional | Run plan command, after creating the agent.|
 | `--plan-apply` | Optional | Run plan and apply command, after creating the agent.|
-| `--tags` or `-t`| Optional | Agent tags. This flag can be used multiple times and search an agent related resources faster. |
-| `--file` or `f` | Optional | Path to the JSON file containing the definition of an agent. |
+| `--tags` or `-t`| Optional | Agent tags. This flag can be repeated multiple times. Tags allow for faster and easier search for agent related resources. |
+| `--file` or `f` | Optional | Path to a JSON file containing the definition of an agent. |
 | `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
 {: caption="{{site.data.keyword.bpshort}} agent create flags" caption-side="top"}
 

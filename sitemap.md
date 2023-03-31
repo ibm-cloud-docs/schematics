@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-03-31"
 
 keywords: schematics
 subcollection: schematics
@@ -1394,7 +1394,7 @@ subcollection: schematics
 
 * [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
 
-* [Verifying pre-requisite for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
+* [Verifying pre-requisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
 
 * [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#apply-agent-cli)
 
@@ -1408,9 +1408,9 @@ subcollection: schematics
 
 * [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-ui)
 
-* [Displaying the list of agents using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
+* [Displaying the list of agents using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
 
-* [Displaying an agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
+* [Displaying agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
 
 * [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
 

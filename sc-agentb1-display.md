@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-31"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -21,20 +21,20 @@ subcollection: schematics
 # Displaying agents
 {: #display-agentb1-overview}
 
-You can view an agent with a specific agent ID to view the detailed configuration information. You can also list all the agents that are created in your account by using the command _agent list_.
+You can view an agent with a specific agent ID to retrieve the detailed configuration information. You can also list all the agents that are created in your account by using the command _agent list_.
 {: shortdesc}
 
 ## Displaying the list of agents using UI
 {: #display-agentb1-get-ui}
 {: ui}
 
-Currently, you can only create an {{site.data.keyword.bpshort}} Agent via CLI. Follow the steps to view the list of agents that are deployed in your account through [CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli) and [API](/apidocs/schematics/schematics#create-agent-data).
+Currently, you can only create an {{site.data.keyword.bpshort}} Agent via CLI or API. Follow the steps to view the list of agents that are deployed in your account through [CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli) and [API](/apidocs/schematics/schematics#create-agent-data).
 
    1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
    2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
    3. Select your Agent from the list, and use the `...` dots to perform **Delete Agent** operation.
 
-## Displaying the list of agents using CLI
+## Displaying the list of agents using the CLI
 {: #display-agentb1-list-cli}
 {: cli}
 
@@ -70,7 +70,7 @@ Showing 1-11 of 11 items
 ```
 {: screen}
 
-## Displaying an agent configuration using CLI
+## Displaying agent configuration using CLI
 {: #display-agentb1-get-cli}
 {: cli}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-31"
 
 keywords: schematics agent health, agent health, health
 
@@ -24,8 +24,8 @@ subcollection: schematics
 Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. Typically, the agent is remotely deployed in the Kubernetes cluster in your {{site.data.keyword.cloud_notm}} account.   
 {: shortdesc}
 
-You would be interested in knowing about the health of an agent 
-- immediately after the agent deployment, and 
+You would be interested in knowing about the health of an agent: 
+- immediately after the agent deployment 
 - while the agent is in-use. 
 
 ## Monitoring agent health using the CLI

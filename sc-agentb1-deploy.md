@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-30"
+lastupdated: "2023-03-31"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -21,7 +21,7 @@ subcollection: schematics
 # Deploying agents
 {: #deploy-agent-overview}
 
-Agents for {{site.data.keyword.bplong}} extend its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. Deploying an agent is a multi-step process. 
+Agents for {{site.data.keyword.bplong}} extend its ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. 
 {: shortdesc}
 
 Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} agent. 
@@ -36,6 +36,7 @@ Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} a
 Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview), and gather the following information as an input to deploy your agent.
 {: shortdesc}
 
+- A short description of the network zones and infrastructure accessible to the agent. 
 - The `cluster ID`, `cluster resource group` of your Kubernetes cluster.
 - the `COS instance name`, `COS bucket name`, `COS bucket region`, and `COS resource group` of your {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.objectstorageshort}} bucket.
 
@@ -43,10 +44,10 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 {: #create-agent-cli}
 {: cli}
 
-As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with all the input configuration that are used while deploying the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
+As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with the configuration that will be used to deploy the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
 {: shortdesc}
 
-To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.7`.
+To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.8`.
 {: important}
 
 Example
@@ -72,7 +73,7 @@ Resource Group   aac37f57b20142dba1a435c70aeb12df
 ```
 {: screen}
 
-Record the `Agent ID` for use in subsequent commands. Optionally, you can invoke agent get command.
+Record the `Agent ID` for use in subsequent commands. To display the agent details you can use the agent get command.
 
 Example
 
@@ -97,11 +98,11 @@ Resource Group   Default
 ```
 {: screen}
 
-## Verifying pre-requisite for agent deployment using the CLI
+## Verifying pre-requisites for agent deployment using the CLI
 {: #verify-agent-cli}
 {: cli}
 
-You can verify the agent definition by using the agent plan command, to perform pre-requisite check of the target agent infrastructure. The command takes the `Agent ID` as input. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+You can verify the agent definition by using the agent plan command, to perform the pre-requisite check of the target agent infrastructure. The command takes the `Agent ID` as input. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
@@ -195,32 +196,6 @@ DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2023-03-27T12:25:01.239
 {: cli}
 
 You can use the agent definition to verify the health of the recently deployed agent using the `agent health` command. The `agent health` command takes the `Agent ID` as input. The output of the `agent health` command displays the list of relevant Kubernetes and agent health property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
-
-Example
-
-```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97 
-```
-{: pre}
-
-Output
-
-```text
-Retrieving agent...
-OK
-                    
-ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
-Name             agent-testing-prod-cli-mar-27-5   
-Status           ACTIVE   
-Version             
-Location         eu-de   
-Agent Location   jp-tok   
-Resource Group   Default   
-                 
-Recent Job   Job ID               Status                 Last modified   
-DEPLOY       .ACTIVITY.465e9716   Triggered deployment   0001-01-01T00:00:00.000Z 
-```
-{: screen}
 
 Example
 
@@ -381,7 +356,7 @@ Output
 ## Next steps
 {: #agent-create-nextsteps}
 
-The next step is to [create and manage agent assignment policy](/docs/schematics?topic=schematics-agent-assignment-policy) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git download jobs, Workspaceor Terraform jobs, and the Action or Ansible jobs to an agent.
+The next step is to [create and manage agent assignment policy](/docs/schematics?topic=schematics-agent-assignment-policy) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and the Action or Ansible jobs to an agent.
 
 You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
 
