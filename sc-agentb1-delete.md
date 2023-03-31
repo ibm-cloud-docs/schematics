@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-31"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -21,7 +21,7 @@ subcollection: schematics
 # Deleting an agent
 {: #delete-agent-overview}
 
-When an agent is no longer required, you can do one of the following to either cordon off the agent or uninstall the agent.
+When an agent is no longer required, you can do one of the following to either:
 - Disable the agent 
 - Delete the agent 
 
@@ -29,7 +29,7 @@ When an agent is no longer required, you can do one of the following to either c
 {: #disable-agentb1-cli}
 {: cli}
 
-You can disable or cordon off an agent using the [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) command. This command requires an `AGENT_ID` as input argument, and the `USER_STATE` as **disable**. Once the agent is disabled, the workspace or action jobs are not routed to that agent, the existing jobs runs to completion. The agent assignment policy for the  agent is automatically disabled.
+You can disable and stop it from executing future jobs using the [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) command. This command requires an `AGENT_ID` as input argument, and the `USER_STATE` as **disable**. Once the agent is disabled, the workspace or action jobs are not routed to that agent, the existing jobs runs to completion. The agent assignment policy for the  agent is automatically disabled.
 
 Example
 
@@ -77,7 +77,7 @@ When the agent is deleted, you can expect:
 - All the information about the agent in the {{site.data.keyword.bpshort}} instance, of your {{site.data.keyword.cloud_notm}} account are deleted.
 
 When the agent is deleted, the following will not happen:
-- The Kubernetes cluster will not be destroyed.
+- The Kubernetes cluster will not be destroyed. The cluster will continue to incur cost until it is deleted. 
 - The {{site.data.keyword.objectstorageshort}} instance and the {{site.data.keyword.objectstorageshort}} bucket will not be destroyed.
 - The agent assignment policy for the agent is not deleted.
 
@@ -114,5 +114,5 @@ Output
 ## Next steps
 {: #agent-delete-nextstep}
 
-- You can continue to view the [list of agents](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli), and the [agent assignment policy](/docs/schematics?topic=schematics-policy-manage&interface=cli).
+- You can view the [list of agents](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli), and the [agent assignment policy](/docs/schematics?topic=schematics-policy-manage&interface=cli).
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.

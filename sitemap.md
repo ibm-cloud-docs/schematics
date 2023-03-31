@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-31"
 
 keywords: schematics
 subcollection: schematics
@@ -352,6 +352,8 @@ subcollection: schematics
         * Enhancement of {{site.data.keyword.bpshort}} worker runtime.
 
         * IAM allowed IP addresses replaced with context based restrictions.
+
+        * The `terraform.tfstate` state file size maximum limit is less than 2 MB.
 
     * [22 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar2223)
 
@@ -1392,7 +1394,7 @@ subcollection: schematics
 
 * [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
 
-* [Verifying pre-requisite for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
+* [Verifying pre-requisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
 
 * [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#apply-agent-cli)
 
@@ -1406,9 +1408,9 @@ subcollection: schematics
 
 * [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-ui)
 
-* [Displaying the list of agents using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
+* [Displaying the list of agents using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
 
-* [Displaying an agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
+* [Displaying agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
 
 * [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
 
@@ -1474,14 +1476,6 @@ subcollection: schematics
 * [Monitoring agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-agentb1-health#agent-health-nextstep)
-
-[Setting proxy server for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-agent-overview)
-
-* [Before you begin](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-prereq)
-
-* [Configuring proxy server](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-configure)
-
-* [Verifying proxy server](/docs/schematics?topic=schematics-proxy-agent-overview#proxy-verify)
 
 
 ## Logging and monitoring

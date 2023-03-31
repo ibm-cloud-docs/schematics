@@ -42,6 +42,9 @@ Enhancement of {{site.data.keyword.bpshort}} worker runtime.
 IAM allowed IP addresses replaced with context based restrictions.
 :   Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
 
+The `terraform.tfstate` state file size maximum limit is less than 2 MB.
+:   The {{site.data.keyword.bpshort}} Workspace creation by using `terraform.tfstate` file fails due to the limitation in state file size. Documentation includes [FAQ](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit), [troubleshooting guide](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1), and a note in [schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) --state argument.
+
 ### 22 March 2023
 {: #schematics-mar2223}
 {: release-note}
