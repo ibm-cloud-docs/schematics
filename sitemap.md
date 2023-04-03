@@ -345,7 +345,7 @@ subcollection: schematics
 
     * Review the release notes for March 2023.
 
-    * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+    * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 
     * [30 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3023)
 
