@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-02"
+  years: 2017, 2023
+lastupdated: "2023-04-03"
 
 keywords: schematics remote host files, modules, private repository, netrc, terraform runtime process
 
@@ -63,7 +63,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
       "type": "<terraform_version>",
       "env_values": [
         {
-          "__netrc__":"[[`<git repository>`,`<git username>`,`<git_password>`]]"
+          "__netrc__":"[['<git repository>','<git username>','<git_password>']]"
         }
       ]
     }
@@ -93,7 +93,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
       "type": "terraform_v1.0",
       "env_values": [
         {
-          "__netrc__":"[[`github.com`,`testuser`,`ghp_x0000000xxxxxxxx000000efZxxxxxxxV`]]"
+          "__netrc__":"[['github.com','testuser','ghp_x0000000xxxxxxxx000000efZxxxxxxxV']]"
         }
       ]
     }
