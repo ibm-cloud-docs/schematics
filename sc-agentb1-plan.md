@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-31"
+lastupdated: "2023-04-03"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
 {{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
@@ -28,7 +28,7 @@ Agents for {{site.data.keyword.bplong}} extends its ability to work directly wit
 
 Review and complete the tasks below to prepare your {{site.data.keyword.cloud_notm}} environment to deploy a new agent.
 
-- **Account and networks:** An agent provides {{site.data.keyword.bpshort}} Schematics the ability to run Terraform and Ansible jobs within a target account and the accounts private network. Network policies must be configured to allow the cluster the agent is deployed on to communicate back to Schematics, also to {{site.data.keyword.cloud}} APIs, services and for instance to a users private Git or Vault instances. 
+- **Account and networks:** An agent provides {{site.data.keyword.bpshort}} Schematics the ability to run Terraform and Ansible jobs within a target account and the accounts private network. Network policies must be configured to allow the cluster the agent is deployed on to communicate back to Schematics, also to {{site.data.keyword.cloud}} APIs, services and for instance to a users private Git or Vault instances. Refer to the section on [Planning agent network access and configuration](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-network-config) for more details. 
    - Record information about the allowed network zones and access.    
 - **Kubernetes cluster:** A {{site.data.keyword.bpshort}} agent can be deployed on any existing private or public infrastructure such as [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters), [{{site.data.keyword.vpc_full}}](/docs/openshift?topic=openshift-cluster-create-vpc-gen2&interface=ui), or [{{site.data.keyword.redhat_openshift_full}}](/openshift?topic=openshift-clusters) clusters. You can use an existing cluster or provision a new cluster with the following minimum configuration.
    - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four Terraform or Ansible automation jobs in parallel.
@@ -40,10 +40,33 @@ Review and complete the tasks below to prepare your {{site.data.keyword.cloud_no
     - When deploying an agent in another, or using a `ServiceID` or `APIKey`, you must ensure that the account administrator has granted the required permission for all the services enlisted in [permission to deploy an agent](/docs/schematics?topic=schematics-access#agent-permissions).
 - **{{site.data.keyword.cloud_notm}} CLI:** Use the latest version of {{site.data.keyword.cloud_notm}} CLI and the [{{site.data.keyword.bpshort}} CLI v1.12.8](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) or higher plugin to install an agent. For more information about plugin installation, see [installing {{site.data.keyword.bpshort}} CLI plugin](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
 
-You can deploy only one agent instance in a Kubernetes cluster. To deploy multiple agents in a single {{site.data.keyword.cloud_notm}} account, they must be on a different Kubernetes cluster. Each agent and cluster catering to different network isolation zones in your Cloud environment.
+You can deploy only one agent instance in a Kubernetes cluster. To deploy multiple agents in a single {{site.data.keyword.cloud_notm}} account, they must be on a different Kubernetes cluster. Each agent and cluster caters to different network isolation zones in your Cloud environment.
 {: note}
 
-In this Beta release, an agent can only be associated with and run jobs for one {{site.data.keyword.cloud_notm}} account. Agents cannot be shared with other accounts or run jobs for multiple accounts. 
+In this Beta release, an agent can only be associated with and run jobs for one {{site.data.keyword.cloud_notm}} account. Agents cannot be shared with other accounts or run jobs for multiple accounts. The diagram represents association of agents with a {{site.data.keyword.bpshort}} instance. Here multiple agents for a single account are associated with a single {{site.data.keyword.bpshort}} instance.
+
+![Agent association with {{site.data.keyword.bpshort}} instances](images/new/sc-agents-world.svg){: caption="Agent association with {{site.data.keyword.bpshort}} instances" caption-side="bottom"}
+
+This image is an artistic representation and does not reflect actual political or geographic boundaries. {: note}
+
+
+## Planning agent network access and configuration
+{: #agentb1-network-config}
+
+{{site.data.keyword.bpshort}} Agents enable Terraform and Ansible jobs to be executed on your private network with direct access to work with resources on your private network and data centers. The following diagram illustrates a possible agent deployment model on a cluster in an environment with multiple VPCs connected via a transit gateway. 
+
+![{{site.data.keyword.bpshort}} Agents connectivity](images/new/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} Agents connectivity" caption-side="bottom"}
+
+To work with private resources, your cloud environment must be configured to allow the agents cluster access to any required resources. Typically Terraform uses HTTPS to perform service configuration over port 443. Whereas Ansible uses SSH via port 22 to perform post provisioning VSI configuration.   
+
+VPC Security Group or Access Control List policies must be configured to allow the agent cluster to access {{site.data.keyword.cloud}} APIs using HTTPS and any target VSIs using SSH. 
+
+Access to data center resources can be configured through the use of [Direct Link](docs/dl?topic=dl-dl-about) or a VPN connection.   
+
+With agents you are responsible for the network security policies for the Kubernetes cluster and any VPC Security Group or Access Control List policies for the running agent and therefore the ability of the Terraform and Ansible automations’ to access to your private cloud resources.
+
+## Agent capacity planning 
+{: #agentb1-capacity-planning}
 
 You are advised to monitor the resource usage for the {{site.data.keyword.bpshort}} Agent pods to scale the worker nodes in the Kubernetes cluster. In the Beta-1 release, you can use the **Kubernetes dashboard** or [kubectl](/docs/containers?topic=containers-cs_cli_install#kubectl) commands to make changes to:   
     - the number of concurrent Terraform, and Ansible jobs.

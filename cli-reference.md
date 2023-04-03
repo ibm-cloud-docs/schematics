@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-31"
+lastupdated: "2023-04-03"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -374,7 +374,7 @@ ibmcloud schematics action upload --id us.ACTION.testphase1.2eddf83a --file <FIL
 ## Agent beta-1 commands
 {: #agents-cmd}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
 {{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
@@ -2507,21 +2507,23 @@ ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory1231
 ## Stop commands
 {: #stop-cmds}
 
-After invoking a job on a {{site.data.keyword.bpshort}} Workspaces like a `plan`, an `apply`, or a `destroy`. You may want to stop the running job, or want to stop provisioning resources. Stopping, or cancel a job helps you to know whether the job is stuck, does the job has lot of wait time? {{site.data.keyword.bpshort}} allows users to `force-stop`, `interrupt`, or `terminate` the running job. 
+After invoking a Workspaces job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
+
+{{site.data.keyword.bpshort}} provides a number of options to allows users to `(gracefully) stop`, `force-stop`, or `terminate` the running job in order of immediacy and impact of the stop operation. 
 {: shortdesc}
 
-Review the commands to `force-stop`, `interrupt`, or `terminate` job stop command.
+Review the commands to `(gracefully) stop`, `force-stop` or `terminate` jobs. 
 
 ### `ibmcloud schematics workspace job stop`
 {: #schematics-stop-job}
 
-Stops a running action or a job in {{site.data.keyword.bplong_notm}} Workspaces.
+Stops a running action or a job in {{site.data.keyword.bplong_notm}} Workspaces by sending and interrupt signal to Terraform to 
 {: shortdesc}
 
 Syntax
 
 ```sh
-ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--cancel] [--force-stop] [--terminate]
+ibmcloud schematics workspace job stop --id WORKSPACE_ID --job-id JOB_ID [--stop] [--force-stop] [--terminate]
 ```
 {: pre}
 
@@ -2531,7 +2533,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required | The workspace ID to update. |
 | `--job-id` or `--jid` | Required | The job ID of the job. |
-| `--interrupt,` | Optional | Removes the job from the pending queue.|
+| `--stop,` | Optional | Removes the job from the pending queue.|
 | `--force-stop` or `--fs` | Optional | Sends a kill signal to the Terraform execution in the engine, also attempts to immediately stop the execution. |
 | `--terminate` or `-t` | Optional | Abruptly kills the engine, marks the job as stopped, and unlocks your workspace. Data is not saved using this flag. |
 {: caption="{{site.data.keyword.bpshort}} job stop flags" caption-side="bottom"}
@@ -2539,12 +2541,12 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --force-stop --job-id <JOB_ID>
+ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --stop --job-id <JOB_ID>
 ```
 {: pre}
 
 ```sh
-ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --interrupt --job-id <JOB_ID>
+ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --force-stop --job-id <JOB_ID>
 ```
 {: pre}
 

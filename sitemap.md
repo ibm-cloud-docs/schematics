@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-31"
+lastupdated: "2023-04-03"
 
 keywords: schematics
 subcollection: schematics
@@ -139,9 +139,11 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
 
-[{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
+[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
 
 * [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
+
+* [{{site.data.keyword.bpshort}} Agent networking](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-networking)
 
 * [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
 
@@ -343,7 +345,7 @@ subcollection: schematics
 
     * Review the release notes for March 2023.
 
-    * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+    * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 
     * [30 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3023)
 
@@ -1262,13 +1264,13 @@ subcollection: schematics
 
 [Stopping or terminating running jobs](/docs/schematics?topic=schematics-interrupt-job#interrupt-job)
 
-* [Stopping job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types)
+* [Stop job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types)
 
 * [Canceling a job](/docs/schematics?topic=schematics-interrupt-job#cancelling)
 
-* [Stopping a running job through UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui)
+* [Stopping a running job using the UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui)
 
-* [Stopping a running job through CLI](/docs/schematics?topic=schematics-interrupt-job#stop-job-cli)
+* [Stopping a running job using the CLI](/docs/schematics?topic=schematics-interrupt-job#stop-job-cli)
 
 * [Stopping a running job through API](/docs/schematics?topic=schematics-interrupt-job#stop-job-api)
 
@@ -1385,6 +1387,10 @@ subcollection: schematics
 
 
 [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
+
+* [Planning agent network access and configuration](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-network-config)
+
+* [Agent capacity planning](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-capacity-planning)
 
 * [Next steps](/docs/schematics?topic=schematics-plan-agent-overview#agent-plan-nextsteps)
 
