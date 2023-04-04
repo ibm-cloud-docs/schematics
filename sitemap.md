@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-04"
 
 keywords: schematics
 subcollection: schematics
@@ -1465,13 +1465,19 @@ subcollection: schematics
 
 * [Default Terraform and Ansible runtime-job](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-runtime-job)
 
-* [Default agent sandbox allowed list](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-sandbox-allowlist)
+* [Agent job-runner configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-job-runner-config)
 
-* [Default agent job-runner configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-job-runner-config)
+* [Sandbox configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-sandbox)
 
-* [Default agent runtime configuration for Terraform](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-terraform)
+* [{{site.data.keyword.bpshort}} agents controller manager](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-agent-controller-manager)
 
-* [Default agent runtime configuration for Ansible](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-ansible)
+* [Agent sandbox allowed list](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-sandbox-allowlist)
+
+* [Agent runtime configuration for Terraform](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-terraform)
+
+* [Agent runtime configuration for Ansible](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-ansible)
+
+* [Editing default agent namespace configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg)
 
 [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 
