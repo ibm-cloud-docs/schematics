@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-04"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -155,7 +155,7 @@ For example, If you have an existing workspace: `wks-0120` with `tag=dev`, and y
 {: faq}
 {: support}
 
-Agent recommends to deploy an agent, connect with {{site.data.keyword.bpshort}}, and users to manage agents. For more information about identity and permissions, see [agent permission](/docs/schematics?topic=schematics-access#agent-permissions) 
+Agent recommends to deploy an agent, connect with {{site.data.keyword.bpshort}}, and users to manage agents. For more information about identity and permissions, see [agent permission](/docs/schematics?topic=schematics-access#agent-permissions).
 
 ## When my agent is deployed in a private network. How can I configure mirror site for the Terraform plug-ins?
 {: #faqs-agent-pvt-network}
@@ -164,6 +164,8 @@ Agent recommends to deploy an agent, connect with {{site.data.keyword.bpshort}},
 
 By default, {{site.data.keyword.bpshort}} Job running the Terraform CLI attempts to download the Terraform plug-ins or Terraform modules from the Internet or public network.  
 If an Agent is running in a private network, you can add the following two environment variables in the workspace payload to setup the mirror site.
+{: shortdesc}
+
 - The `TF_NETWORK_MIRROR_URL` location where custom Terraform providers are hosted.
 - The `TF_NETWORK_MIRROR_PROVIDER_NAME` provider name that is downloaded from the custom location. This is an optional variable. It is defaulted to all providers.
 
@@ -223,6 +225,8 @@ The `agent-runtime-deployment-certs.yaml` file updates the certificates and appe
 
 ## List the attributes that {{site.data.keyword.bpshort}} Workspaces or Actions attributes used to dynamically select an agent
 {: #agent-dynamic-attribute}
+{: faq}
+{: support}
 
 The following attributes of the {{site.data.keyword.bpshort}} Workspace or {{site.data.keyword.bpshort}} Action are used to dynamically select the agent instance.
 {: shortdesc}
@@ -237,3 +241,20 @@ Example
 
 If your organization has three different network isolation zones (such as `Dev`, `HR-Stage`, and `HR-Prod`) and you have installed three agents (one each, for the three network isolation zone). You have defined an `agent-assignment-policy` for the agent running in `Dev`, with the selector as `tags=dev`. All workspaces that have `tags=dev` automatically bounds to the `Dev` agent. In other words, the `Dev` agent is used to download Terraform templates (from the Git repository), to run Terraform jobs. Similarly, the `agent-assignment-policy` can include other attributes of the workspaces, in order to control the location of the job execution.
 
+## How can I enable debug mode in an agent?
+{: #faqs-agent-debugmode}
+{: faq}
+{: support}
+
+You can follow these steps to enable or disable the debug mode of an agent.
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
+2. Click **Kubernetes** from the left hand navigator pane, then click **Clusters** 
+3. On the **Kubernetes Clusters** page, click your **cluster** > **Kubernetes dashboard**.
+    - Click the **default** drop down to view the list of **Namespaces**:
+        - In the drop down, type the **{{site.data.keyword.bpshort}}-job-runtime** Namespaces.
+        - Click **Config Map** from the **Config and Storage**.
+        - From the **Config Maps** page. Click the three dots against **schematics-jobrunner-config**.
+        - Click **Edit** to view the **Edit a resource** page with the **YAML**, and **JSON** tabs.
+        - You can now edit the `JR_LOGGERLEVEL` parameter for job-runner microservice logging. By default the value is `-1` that indicated disable debug, to enable you need to edit `JR_LOGGERLEVEL` as `0`.
+        - Click **Update** to apply your edits.
