@@ -126,15 +126,15 @@ The following is the default agent runtime configuration for the Ansible runtime
 ## Editing default agent namespace configuration
 {: #edit-agent-namespace-confg}
 
-From the Kubernetes clusters console, click your cluster.
+You can follow these steps to edit the default configuration of an agent namespace.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Click **Kubernetes** from the left hand navigator pane, then click **Clusters** 
 3. On the **Kubernetes Clusters** page, click your **cluster** > **Kubernetes dashboard**.
     - Click the **default** drop down to view the list of **Namespaces**:
         - In the drop down, type the **{{site.data.keyword.bpshort}}-runtime** Namespaces to view the Workload Status, Deployments, Pods, Replica sets, and so on.
-        - From the **Deployments** panel. Right click the three dots against **runtime-ansible-job**.
-        - Click **Edit** to view the **Edit the resource** page with the **YAML**, and **JSON** tabs.
+        - From the **Deployments** panel. Click the three dots against **runtime-ansible-job**.
+        - Click **Edit** to view the **Edit a resource** page with the **YAML**, and **JSON** tabs.
         - You can now view the parameters and reconfigure to customize your agent configuration.
         - Click **Update** to apply your edits.
 4. Similarly, you can edit the configuration for all the agent namespaces to customize.

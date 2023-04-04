@@ -2406,6 +2406,8 @@ subcollection: schematics
 
 * [List the attributes that {{site.data.keyword.bpshort}} Workspaces or Actions attributes used to dynamically select an agent](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
+* [How can I enable debug mode in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-debugmode)
+
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
 * [What are the Git repositories that are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
