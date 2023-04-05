@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-04"
+lastupdated: "2023-04-05"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -42,6 +42,9 @@ The following network policies are configured automatically to the Kubernetes cl
 | `Whitelist-runtime-egress-gen-ports` |  `Namespace:schematics-runtime`, allowed and needed ports for `ingress = 3002`, and for `egress TCP = 80`, `443`, `5986`, `22`, `53`, `8080`, `10250`, `9092`, `9093`, or `egress UDP = 53`, `443`, `10250`, `9093`, `9093`. |
 {: caption="Network policies" caption-side="top"}
 
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
+
 ## Default Terraform and Ansible runtime-job
 {: #k8s-cluster-runtime-job}
 
@@ -52,6 +55,9 @@ The following are configured by default Kubernetes deployment configuration appl
 | `resource-limits` |	Resource limit setting for the Terraform and Ansible jobs are `cpu = 500m`, and `memory = 1Gi`. |
 | `replicas` | Number of Terraform and Ansible job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
 {: caption="Terraform and Ansible runtime-job" caption-side="top"} 
+
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
 
 ## Agent job-runner configuration
 {: #agent-job-runner-config}
@@ -64,6 +70,9 @@ The following is the default agent `schematics-job-runner` configuration.
 | `replicas` | Number of job pods. `replica = 1`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
 {: caption="Default agent job-runner" caption-side="top"}
 
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
+
 ## Sandbox configuration
 {: #k8s-cluster-sandbox}
 
@@ -75,6 +84,9 @@ Following resource limits and replicas are the default configuration applied for
 | `replicas` | Number of job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
 {: caption="Sandbox deployments" caption-side="top"} 
 
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
+
 ## {{site.data.keyword.bpshort}} agents controller manager
 {: #k8s-cluster-agent-controller-manager}
 
@@ -84,7 +96,10 @@ Following resource limits and replicas are the default configuration applied in 
 | --- | --- |
 | `resource-limits` |	Resource limit setting for the Terraform and Ansible jobs are `cpu = 500m`, and `memory = 25Mi`. |
 | `replicas` | Number of job pods. `replica = 1`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
-{: caption="{{site.data.keyword.bpshort}} agent controller manager deployments" caption-side="top"} 
+{: caption="{{site.data.keyword.bpshort}} agent controller manager deployments" caption-side="top"}
+
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
 
 ## Agent sandbox allowed list
 {: #agent-sandbox-allowlist}
@@ -100,6 +115,9 @@ Following are the default agent sandbox file type and size allowlist configurati
 | `SANDBOX_MAX_FILE_SIZE` |	Maximum size of a file that is allowed from the Git repositories is 2 MB. (Yet to be implemented) |
 {: caption="Default agent sandboc allowlist configuration" caption-side="top"}
 
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
+
 ## Agent runtime configuration for Terraform 
 {: #agent-runtime-config-terraform}
 
@@ -112,6 +130,9 @@ The following is the default agent runtime configuration for the Terraform runti
 | `JOB_IMAGEEXTN` |	The allowed image file extensions from the Git repositories.</br>`.tif`, `.tiff`, `.gif`, `.png`, `.bmp`, `.jpg`, `.jpeg`, `.so`. |
 {: caption="Default agent runtime configuration for Terraform" caption-side="top"}
 
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
+
 ## Agent runtime configuration for Ansible
 {: #agent-runtime-config-ansible}
 
@@ -122,6 +143,9 @@ The following is the default agent runtime configuration for the Ansible runtime
 | `ANSIBLE_JOB_WHITELISTEXTN` |	The allowed file extensions from the Git repositories that includes the dependent module repository.</br>`.tf`, `.tfvars`, `.md`, `.yaml`, `.sh`, `.txt`, `.yml`, `.html`, `.gitignore`, `.tf.json`, `license`, `.js`, `.pub`, `.service`, `_rsa`, `.py`, `.json`, `.tpl`, `.cfg`, `.ps1`, `.j2`, `.zip`, `.conf`, `.crt`, `.key`, `.der`, `.jacl`, `.properties`, `.cer`, `.pem`, `.tmpl`, `.netrc`.|
 | `ANSIBLE_JOB_BLACKLISTEXTN` |	The blocked file extensions from the Git repositories.</br>`.php5`, `.pht`, `.phtml`, `.shtml`, `.asa`, `.asax`, `.swf`, `.xap`, `.tfstate`, `.tfstate.backup`, `.exe`.|
 {: caption="Default agent runtime configuration for Ansible" caption-side="top"}
+
+You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+{: note}
 
 ## Editing default agent namespace configuration
 {: #edit-agent-namespace-confg}
