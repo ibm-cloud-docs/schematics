@@ -161,4 +161,5 @@ You can follow these steps to edit the default configuration of an agent namespa
         - Click **Edit** to view the **Edit a resource** page with the **YAML**, and **JSON** tabs.
         - You can now view the parameters and reconfigure to customize your agent configuration.
         - Click **Update** to apply your edits.
+        - Restart the deployment and check if all the pods are in running state.
 4. Similarly, you can edit the configuration for all the agent namespaces to customize.
