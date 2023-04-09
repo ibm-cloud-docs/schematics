@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -412,7 +412,7 @@ ibmcloud schematics agent apply --id <provide your agent id>
 ### `ibmcloud schematics agent create`
 {: #schematics-agent-create}
 
-Create an agent by using {{site.data.keyword.bpshort}}. Agent help you to run your workspace jobs on your infrastructure. For more information about the steps to use create command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+Create an agent by using {{site.data.keyword.bpshort}}. Agents help you run your Terraform or Ansible jobs on your infrastructure. For more information about the steps to use create command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 {: shortdesc}
 
 Syntax
@@ -427,15 +427,14 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of an agent. Must be descriptive of the agent role, location and usage.  |
-| `--location` or `-l` | Required | The {{site.data.keyword.bpshort}}  location the agent where the agent will be defined, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for execution. |
-| `--agent-location` or `--al` | Required | Specify the location (region) where the agent is to be deployed in the user environment. For example, `jp-tok`. |
-| `--version` or `-v` | Required | Specify the version of the agent. |
+| `--location` or `-l` | Required | The {{site.data.keyword.bpshort}} location where the agent will be defined, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for execution. |
+| `--agent-location` or `--al` | Required | A descriptive user defined label to identify where the agent is deployed in the user environment. This could be a Cloud region or a user data center.  For example, `London MZR`. |
+| `--version` or `-v` | Required | A user defined label specifying the version of the agent. |
 | `--infra-type` or `-i` | Required | Specify the type of the target agent infrastructure. Supported values are `ibm-kubernetes`, `ibm-openshift`, or `ibm-satellite`.|
 | `--clusterid` or `-k` | Required | The ID of the Kubernetes cluster for deploying an Agent.|
 | `--cluster-resource-group` or `--kr` | Required | The name of the clusters' resource group. |
 | `--cos-id` or `--oi` | Required | The ID of the COS instance. |
 | `--cos-bucket` or `-b` | Required |  The ID or the name of the COS bucket. |
-| `--cos-location` or `--ol` | Required | Specify the region of the COS bucket. For example, `global`.|
 | `--resource-group` or `-r` | Required | Resource group name or ID the agent will be associated with. |
 | `--description` or `-d` | Optional | A description that identifies the agent usage, and the network zones and resources the agent is able to access. |
 | `--plan-only` | Optional | Run plan command, after creating the agent.|
@@ -1203,7 +1202,7 @@ Create a policy using {{site.data.keyword.bpshort}} to select one or more {{site
 Syntax
 
 ```sh
-ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--target-file FILE] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -1211,13 +1210,13 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--name` or `-n` | Required | The unique name of the agent. |
+| `--name` or `-n` | Required | The unique name of the policy. |
 | `--kind` or `-K` | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
-| `--location` or `-l` | Optional | Geographic locations supported by {{site.data.keyword.bpshort}} service. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
-| `--description` or `-d` | Optional |  The description of {{site.data.keyword.bpshort}} customization policy. |
+| `--location` or `-l` | Optional | Geographic location of {{site.data.keyword.bpshort}} service where the agent is defined. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
+| `--description` or `-d` | Optional |  The description of the {{site.data.keyword.bpshort}} policy. |
 | `--resource-group` or `-r` | Required | Resource group name or ID for the policy. |
-| `--tags` or `-t`| Optional | Policy tags can be used multiple times and search the agent related resources faster. |
-| `--file` or `f` | Optional | Path to the JSON file containing the definition of the policy. |
+| `--tags` or `-t`| Optional | Tags can be used multiple times to search for and locate agent policies faster. |
+| `--target-file` or `tf` | Optional | Path to the JSON file containing the definition of the policy. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
 | `--no-prompt` | Optional |  Set this flag to run the command without user prompts. |
 {: caption="{{site.data.keyword.bpshort}} policy create flags" caption-side="bottom"}
@@ -1225,7 +1224,7 @@ Command options
 #### Using the payload file
 {: #policy-create-payload}
 
-You can provide a payload file to specify certain parameters for the `policy create` command. Then, you pass the file name to the command by using the `--file` command option.
+You can provide a payload file to specify certain parameters for the `policy create` command. Then, you pass the file name to the command by using the `--target-file` command option.
 {: shortdesc}
 
 You need to replace the `<...>` placeholders with the actual values. For example, `"<SELECTOR_KIND>"` as `"ids"`.
@@ -1235,13 +1234,13 @@ Syntax
 
 ```json
 {
-	"policy_target": {
+	"target": {
 		"selector_kind": "<SELECTOR_KIND>",
 		"selector_ids": [
 			"<SELECTOR_ID>"
 		]
 	},
-	"policy_parameter": {
+	"parameter": {
 		"agent_assignment_policy_parameter": {
 			"selector_kind": "<SELECTOR_KIND>",
 			"selector_scope": [{
@@ -1267,13 +1266,13 @@ Example
 
 ```json
 {
-	"policy_target": {
+	"target": {
 		"selector_kind": "ids",
 		"selector_ids": [
 			"demo-agent-one"
 		]
 	},
-	"policy_parameter": {
+	"parameter": {
 		"agent_assignment_policy_parameter": {
 			"selector_kind": "scoped",
 			"selector_scope": [{
@@ -1296,7 +1295,7 @@ Example
 {: codeblock}
 
 ```sh
-ibmcloud schematics policy create --name policy-101 --kind agent_assignment_policy --location us-south --resource-group Default -f policy.json
+ibmcloud schematics policy create --name policy-101 --kind agent_assignment_policy --location us-south --resource-group Default --target-file policy.json
 ```
 {: pre}
 
@@ -1366,7 +1365,7 @@ Update the information of an existing policy by using policy ID. Changes are app
 Syntax
 
 ```sh
-ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--target-file FILE] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -1377,8 +1376,8 @@ ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location L
 |   `--location` or `-l` | Optional | Geographic locations supported by {{site.data.keyword.bpshort}} service. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
 |   `--description` or `-d` | Optional |  The description of {{site.data.keyword.bpshort}} customization policy. |
 |   `--resource-group` or `-r` | Optional |  Resource group name or ID for the policy. |
-|   `--tags` or `-t` | Optional |     Policy tags. This flag can be used multiple times and search the agent related resources faster. |
-|   `--file` or `-f`  | Optional |    Path to the JSON file containing the definition of the policy. |
+|   `--tags` or `-t` | Optional |     Policy tags. This flag can be used multiple times to search for and locate agent policies faster. |
+|   `--target-file` or `-tf`  | Optional |    Path to the JSON file containing the definition of the policy. |
 |   `--output` or `-o`  | Optional |  Specify output format, only `JSON` is supported. |
 |   `--no-prompt`  | Optional |       Set this flag to stop interactive CLI session, such as prompting user for input a field value on terminal. |
 {: caption="{{site.data.keyword.bpshort}} policy update flags" caption-side="top"}

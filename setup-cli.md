@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-09"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -72,7 +72,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     Listing installed plug-ins...
 
     Plugin Name                             Version   Status             Private endpoints supported   
-    schematics                              1.12.8                        true  
+    schematics                              1.12.9                        true  
     ```
     {: screen}
 
@@ -171,7 +171,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output for blueprints support: 
 
     ```text
-    schematics                      1.12.8        true
+    schematics                      1.12.9        true
     ```
     {: screen}
 
