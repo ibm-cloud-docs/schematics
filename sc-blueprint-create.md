@@ -130,7 +130,7 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
                - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}.
                - Click **Import values**.
         - Observe that the input variables from the `inputs.yaml` file are imported. Optionally, you can edit the variables.
-           Enter variable values into the table by typing them in or by importing them. Prefilled default values, if any, were pulled from the blueprint template, but can be changed. If there is a dropdown, select a value from the dropdown.
+           Enter variable values into the table by typing them in or by importing them. For the default values, if any, were pulled from the blueprint template, but can be changed. If there is a dropdown, select a value from the dropdown.
            {: important}
 
         - Click **Done editing**, if the editing is done.

@@ -248,7 +248,7 @@ In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard fo
 {: #create-agent-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} via the API. For more information, see [Create a agent](apidocs/schematics/schematics_internal_v1#create-agent-data) using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} via the API. For more information, see [Create a agent](/apidocs/schematics/schematics_internal_v1#create-agent-data) using API.
 
 Example
 
@@ -359,7 +359,7 @@ Output
 ## Next steps
 {: #agent-create-nextsteps}
 
-The next step is to [create an agent assignment policy](/docs/schematics?topic=schematics-agent-assignment-policy) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
+The next step is to [create an agent assignment policy](/docs/schematics?topic=schematics-policy-manage) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
 
 You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-09"
+  years: 2017, 2023
+lastupdated: "2023-04-09"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -29,7 +29,7 @@ The built in workspace remote-state management supports a number of {{site.data.
 
 You can access information about the resources that you manage in a workspace from other workspaces in your account by using the [`ibm_schematics_output`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_output){: external} and [`ibm_schematics_state`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_state){: external} data sources.
 
-{{site.data.keyword.cloud}} uses the `local` built-in Terraform state support and does not use Terraform [backend](https://developer.hashicorp.com/terraform/language/settings/backends/configuration){: external} support. No additional configuration is required within your Terraform configs to enable {{site.data.keyword.cloud}} remote state management. {{site.data.keyword.bpshort}} does not use the Terraform `remote_state` data source, instead you use the `ibm_schematics_output` data source to access the information. 
+{{site.data.keyword.cloud}} uses the `local` built-in Terraform state support and does not use Terraform [backend](https://developer.hashicorp.com/terraform/language/settings/backends/configuration){: external} support. No additional configuration is required within your `Terraform configs` to enable {{site.data.keyword.cloud}} remote state management. {{site.data.keyword.bpshort}} does not use the Terraform `remote_state` data source, instead you use the `ibm_schematics_output` data source to access the information. 
 
 **How is the `ibm_schematics_state` data source different from the `remote_state` data source?** </br>
 When you use the Terraform `remote_state` data source, you must configure a Terraform remote backend to connect to your Terraform workspaces. With the `ibm_schematics_state` data source, you automatically have access to the built-in {{site.data.keyword.bpshort}} backend and can access workspace information directly.

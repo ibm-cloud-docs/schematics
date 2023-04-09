@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-09"
 
 keywords: schematics, automation, terraform
 
@@ -145,7 +145,7 @@ Following are the maximum permission and roles that services should have to depl
 Consider the following access are provided for an agent to connect with {{site.data.keyword.bpshort}}.
 
 - You need administrator permission to access the resources such as {{site.data.keyword.containerlong_notm}}, {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and so on.
-- You need Manager service role access, Operator role permission, and [assign access to the trusted profile](docs/account?topic=account-create-trusted-profile&interface=ui#tp-access) to connect.
+- You need Manager service role access, Operator role permission, and [assign access to the trusted profile](/docs/account?topic=account-create-trusted-profile&interface=ui#tp-access) to connect.
 
 #### Permission for users to manage agents
 {: #agent-manage-permission}

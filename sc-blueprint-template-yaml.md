@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-28"
+lastupdated: "2023-04-09"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -158,7 +158,7 @@ Type: YAML flow or block scalar
 
 Default: string 
 
-As templates work with Terraform configs and modules, Terraform variable [type constraints](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. 
+As templates work with `Terraform configs` and modules, Terraform variable [type constraints](https://developer.hashicorp.com/terraform/language/expressions/type-constraints#type-constraints){: external} are used to set the type validation for blueprints inputs. 
 
 Type definitions are required to set the variable type of inputs passed to modules at runtime.     
 

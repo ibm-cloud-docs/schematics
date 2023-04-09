@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -60,7 +60,7 @@ The `terraform.tfstate` state file size maximum limit is less than 2 MB.
       - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli)
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
     - You can also [use an agent assignment policy](/docs/schematics?topic=schematics-policy-manage), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
-    - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent) for any challenges and questions on agent.
+    - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agent.
     - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta-1 level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in.
@@ -123,7 +123,7 @@ Review the release notes for December 2022.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} Agents GitHub repository.
-:   The agent beta releases [{{site.data.keyword.bpshort}} Agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with support to [download the providers by using proxy](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-proxy).
+:   The agent beta releases [{{site.data.keyword.bpshort}} Agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository.
 
 Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
 
@@ -572,7 +572,7 @@ Bastion host enhancement in {{site.data.keyword.bpshort}} Actions API
 :   You can now access the inventory username through the credentials parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
 {{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
-:   You can now download the `subfolders` from the GIT repositories through {{site.data.keyword.bpshort}}. For more information, see [How can I download `subfolders` from the GIT repositories through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#compact-faq).
+:   You can now download the `sub directory` from the GIT repositories through {{site.data.keyword.bpshort}}. For more information, see [How can I download `sub directory` from the GIT repositories through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#compact-faq).
 
 Importance of location and URL endpoint in workspace creation
 :   [Why do {{site.data.keyword.bpshort}} Workspaces create through API fails?](/docs/schematics?topic=schematics-wks-create-api).

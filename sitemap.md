@@ -1851,7 +1851,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
 
-    * [`ibmcloud schematics agent get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
+    * [`ibmcloud schematics agent get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
 
     * [`ibmcloud schematics agent health`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health)
 
@@ -2017,7 +2017,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
 
-    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update)
+    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update)
 
     * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
 

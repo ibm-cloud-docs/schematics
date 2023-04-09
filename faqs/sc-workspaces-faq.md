@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-09"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -609,7 +609,7 @@ No, you need to only create new workspace. For more information, see [Workspace 
 {: faq}
 {: support}
 
-Yes, you can use `--state` flag option through the [ibmcloud schematics workspace new](https://cloud.ibm.com/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+Yes, you can use `--state` flag option through the [ibmcloud schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 
 ## What is the maximum length of characters that the {{site.data.keyword.bpshort}} Workspace name variable supports?
 {: #wks-name-maxlength}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics agent health, agent health, health
 
@@ -32,7 +32,7 @@ You would be interested in knowing about the health of an agent:
 {: #health-agentb1-cli}
 {: cli}
 
-You can review the health of an agent by using the CLI, use the [agent health](docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health) command. This command requires the `AGENT_ID` as an input argument.
+You can review the health of an agent by using the CLI, use the [agent health](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health) command. This command requires the `AGENT_ID` as an input argument.
 {: shortdesc}
 
 The output of an agent health command displays the list of relevant Kubernetes and agent health property names, the expected value, actual value, and the result as PASS or FAIL.

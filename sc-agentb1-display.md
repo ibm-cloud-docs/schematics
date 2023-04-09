@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -74,10 +74,10 @@ Showing 1-11 of 11 items
 {: #display-agentb1-get-cli}
 {: cli}
 
-You can view the configuration of a single agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get) command. This command requires `agent_id` as an input argument.
+You can view the configuration of a single agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) command. This command requires `agent_id` as an input argument.
 {: shortdesc}
 
-To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agents-get).
+To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-get).
 {: important}
 
 Example
@@ -209,5 +209,5 @@ Output
 ## Next steps
 {: #agent-delete-nextsteps}
 
-- You can see [update an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update), and [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
+- You can see [update an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update), and [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.

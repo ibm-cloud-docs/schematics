@@ -481,7 +481,7 @@ ibmcloud schematics agent delete --id <AGENT_ID>
 
 
 ### `ibmcloud schematics agent get`
-{: #schematics-agents-get}
+{: #schematics-agent-get}
 
 Retrieves the details of an agent. Agents help you to fetch your workspace jobs on your infrastructure. For more information about the steps to use get command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
 
@@ -674,12 +674,12 @@ Command options
 | `--location` or `-l` |  Optional |  The location of blueprint. Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region through [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. |
 | `--source-type` or `-s`| Optional |  The blueprint source type. Valid values are `git_hub`, `ibm_cloud_catalog`.|
 | `--bp-git-url` or `--bu` | Required | The blueprint Git URL. This is the URL of the repository containing the blueprint template. For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
-| `--bp-git-file` or `--bf`| Required | The blueprint template file name, including the file extension and any subfolders. For example `-bp-git-file <subfolder>/basic-blueprint.yaml`   |
+| `--bp-git-file` or `--bf`| Required | The blueprint template file name, including the file extension and any sub directory. For example `-bp-git-file <subfolder>/basic-blueprint.yaml`   |
 | `--bp-git-branch` or `--bb`| Optional | The blueprint Git branch name. Mutually exclusive with the `-bp-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-bp-git-branch devhardening`|
 | `--bp-git-release` or `--br`| Optional | A Git release tag identifying the version of the template file. Mutually exclusive with the `-bp-git-branch` option. For example `-bp-git-release 1.4.2`|
 |  `--bp-git-token` or `--bg` | Optional | The GitHub token value to access the private Git repository. |
 | `--input-git-url` or `--igu`| Optional | The input Git URL. This is the URL of the repository containing the blueprint input file . For example `-bp-git-url https://github.com/Cloud-Schematics/blueprint-basic-example` |
-| `--input-git-file` or `--igf`| Optional | The input file name, including extension and any subfolders. For example `-input-git-file <subfolder>/basic-input.yaml`. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
+| `--input-git-file` or `--igf`| Optional | The input file name, including extension and any sub directory. For example `-input-git-file <subfolder>/basic-input.yaml`. Refer to [Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml) for the file format. |
 | `--input-git-branch` or `--igb`| Optional |The input file Git branch name. Mutually exclusive with the `-input-git-release` option. If both options are not specified, the branch defaults to `main`. For example `-input-git-branch nextdrop` |
 | `--input-git-release` or `--igr`| Optional | A Git release tag identifying the version of the input file. Mutually exclusive with the `-input-git-branch` option. For example `-input-git-release 1.0.5` |
 | `--input-git-token` or `--ig` | Optional | A GitHub token value to access the private input Git repository.|
@@ -3673,7 +3673,7 @@ ibmcloud schematics agents unregister --id AGENT_ID
 
 
 ### `ibmcloud schematics agents update`
-{: #schematics-agent-update}
+{: #schematics-agents-update}
 
 Updates the {{site.data.keyword.bpshort}} Agent.
 
