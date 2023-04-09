@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -64,7 +64,7 @@ The following are some of the benefits of using agents with the {{site.data.keyw
 - **Agent extends the benefits of {{site.data.keyword.bpshort}} to securely manage hybrid cloud infrastructure by using [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about), [Ansible](/docs/schematics?topic=schematics-getting-started-ansible), and other automation tools:** To perform deployment, configuration, and day-2 operations in a consistent manner – using a single pane of glass.
 - **While your {{site.data.keyword.bpshort}} jobs are waiting in a shared queue for multiple tenants:** the corresponding jobs that run on the agents will not wait in any queue, and starts sooner. In other words, the workload from other tenants do not affect your performance and response time.
 - **If your automation needs special software or versions, and require more capacity (CPU, memory) to run:** The multi-tenanted {{site.data.keyword.bpshort}} service will not be able to handle it. Agents can be deployed and configured to use dedicated infrastructure to run your automation that can be scaled up or down depending on the capacity needs. In addition, Agent images can be extended to include or use your own automation software and versions in conjunction with automation engine provided by the {{site.data.keyword.bpshort}} runtime.
-- **The multi-tenanted {{site.data.keyword.bpshort}} service uses network access policies:** that cater to all its tenants, hence cannot be tuned to a single tenant requirements. Agents enables you to implement fine gained control over your network access policies to access your private network resources. You can configure the [ingress or egress](/docs/containers?topic=containers-vpc-kube-policies) rules and [VPC security policies](docs/vpc?topic=vpc-security-in-your-vpc&interface=ui) that are used by Agents to connect to your hybrid cloud infrastructure.
+- **The multi-tenanted {{site.data.keyword.bpshort}} service uses network access policies:** that cater to all its tenants, hence cannot be tuned to a single tenant requirements. Agents enables you to implement fine gained control over your network access policies to access your private network resources. You can configure the [ingress or egress](/docs/containers?topic=containers-vpc-kube-policies) rules and [VPC security policies](/docs/vpc?topic=vpc-security-in-your-vpc&interface=ui) that are used by Agents to connect to your hybrid cloud infrastructure.
 
 ## Next steps
 {: #nextsteps-agentb1-arch}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-04"
+lastupdated: "2023-04-09"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -235,7 +235,7 @@ The following attributes of the {{site.data.keyword.bpshort}} Workspace or {{sit
 - Location
 - Tags
 
-The [Agent assignment policy](/docs/schematics?topic=schematics-policy-manager) for an agent instance describes how an Agent is selected to run a Workspace job or Action job.
+The [Agent assignment policy](/docs/schematics?topic=schematics-policy-manage) for an agent instance describes how an Agent is selected to run a Workspace job or Action job.
 
 Example
 

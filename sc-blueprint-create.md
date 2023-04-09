@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-15"
+lastupdated: "2023-04-09"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -43,7 +43,7 @@ To work with {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.
 Before your begin:
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.5`.
-- Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your blueprint. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
 - Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create blueprints.
 
 The command example shown here creates a blueprint configuration in {{site.data.keyword.bpshort}}, with the template file `basic-blueprint.yaml` and input file `basic-input.yaml` from the source Git repository `https://github.com/Cloud-Schematics/blueprint-basic-example`. With this basic two module example, the first module reads the existing default resource group and the second, creates a Cloud Object Storage (COS) instance and bucket in the default resource group. 
@@ -130,7 +130,7 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
                - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}.
                - Click **Import values**.
         - Observe that the input variables from the `inputs.yaml` file are imported. Optionally, you can edit the variables.
-           Enter variable values into the table by typing them in or by importing them. Prefilled default values, if any, were pulled from the blueprint template, but can be changed. If there is a dropdown, select a value from the dropdown.
+           Enter variable values into the table by typing them in or by importing them. For the default values, if any, were pulled from the blueprint template, but can be changed. If there is a dropdown, select a value from the dropdown.
            {: important}
 
         - Click **Done editing**, if the editing is done.

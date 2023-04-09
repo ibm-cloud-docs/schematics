@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-09"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -66,7 +66,7 @@ Blueprints is built around reuse. Blueprints' implements layers of configuration
     - User customizable inputs are externalized for configuration as `inputs`. Default template input values allow for use with minimal user configuration.
     - Versioning is defined by Git release tags and branches.
     - Template version selection is managed by Git release tags specified at blueprint config create time.      
-- **Inputs**: Inputs customize a template for a target environment: dev, stage, prod or regions. They provide configuration for scaling, region and networking etc. Blueprints' supports two layers of input customization. Versioned input files for controlled change of environment specific configuration and un-versioned dynamic (override) inputs. 
+- **Inputs**: Inputs customize a template for a target environment: dev, stage, prod or regions. They provide configuration for scaling, region and networking and so on. Blueprints' supports two layers of input customization. Versioned input files for controlled change of environment specific configuration and un-versioned dynamic (override) inputs. 
     - Versioned input files. These provide versioned control over environment configuration parameters in production and regulated environments. Versioned input files are optional and for less regulated development environments all parameters can be configured by dynamic (override) inputs. 
       - Versioning is defined by Git release tags and branches.   
       - Input file version selection is managed by Git release tags specified at blueprint config create time.  

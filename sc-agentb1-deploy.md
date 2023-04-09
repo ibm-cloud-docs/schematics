@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -27,18 +27,18 @@ Agents for {{site.data.keyword.bplong}} extend its ability to work directly with
 Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} agent. 
 
 1. [Create an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#deploy-agent-cli) to manage the agent deployment.
-    This step initializes your {{site.data.keyword.bpshort}} instance with the agent configuration that will subsequently be used to deploy an agent.
-2. [Deploy the agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) by using the [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) CLI commands or the corresponding APIs.
+    This step initializes {{site.data.keyword.bpshort}} with the agent configuration that will subsequently be used to deploy your agent to its target location. 
+2. [Deploy the agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) using the [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) CLI commands or the corresponding APIs.
 
 ## Before your begin
 {: #deploy-prereq}
 
-Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview), and gather the following information as an input to deploy your agent.
+Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview), and gather the following information as an input to deploy your agent to your target location. 
 {: shortdesc}
 
 - A short description of the network zones and infrastructure accessible to the agent. 
-- The `cluster ID`, `cluster resource group` of your Kubernetes cluster.
-- the `COS instance name`, `COS bucket name`, `COS bucket region`, and `COS resource group` of your {{site.data.keyword.cos_full_notm}} and {{site.data.keyword.objectstorageshort}} bucket.
+- The `cluster ID`, `cluster resource group` and `region` of the Kubernetes cluster the agent will deployed on.
+- the `COS instance name`, `COS bucket name` of the {{site.data.keyword.objectstorageshort}} bucket used for agent temporary data storage. The resource group and region of the COS instance and bucket must be the same as the cluster. 
 
 ## Creating an agent definition using the CLI 
 {: #create-agent-cli}
@@ -47,15 +47,18 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with the configuration that will be used to deploy the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
 {: shortdesc}
 
-To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.8`.
+To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.9`.
 {: important}
 
-Example
+Select the {{site.data.keyword.cloud_notm}} region where you wish to define and manage your agent from. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. This must be the same region as the `location` specified on the `agent create` command. 
+
+Example `agent create` syntax. The text between <> should be replaced with your values:
 
 ```sh
-ibmcloud schematics agent create --name agent-testing-prod-cli-mar-27-5 --location eu-de --agent-location jp-tok --version 1.0.0 --infra-type ibm_kubernetes --cluster-id cb1c2dus01uf9mc0hkbg --cluster-resource-group  job-runner --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-east --resource-group Default
+ibmcloud schematics agent create --name <agent-testing-prod-cli-mar-27-5> --location <eu-de> --agent-location <Frankfurt MZR> --version <1.0.0> --infra-type <ibm_kubernetes> --cluster-id <cb1c2dus01uf9mc0hkbg> --cluster-resource-group  <job-runner> --cos-instance-name <COSForAgentLogging> --cos-bucket <agentlogs> --cos-location <eu-de> --resource-group <Default>
 ```
 {: pre}
+
 
 Output
 
@@ -68,7 +71,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   jp-tok   
+Agent Location   Frankfurt MZR  
 Resource Group   aac37f57b20142dba1a435c70aeb12df 
 ```
 {: screen}
@@ -93,7 +96,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   jp-tok   
+Agent Location   Frankfurt MZR  
 Resource Group   Default 
 ```
 {: screen}
@@ -102,7 +105,7 @@ Resource Group   Default
 {: #verify-agent-cli}
 {: cli}
 
-You can verify the agent definition by using the agent plan command, to perform the pre-requisite check of the target agent infrastructure. The command takes the `Agent ID` as input. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+You can verify the agent definition and cluster availability using the agent plan command. This performs a pre-requisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
@@ -137,7 +140,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   jp-tok   
+Agent Location   Frankfurt MZR  
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                             Last modified   
@@ -149,7 +152,7 @@ PRS          .ACTIVITY.600cadf9   Triggered pre-requisite scanning   0001-01-01T
 {: #apply-agent-cli}
 {: cli}
 
-You can use the agent definition to deploy the agent by using the `agent apply` command. The `agent apply` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the force deploy option.
+You use the agent definition to deploy the agent with the `agent apply` command. The `agent apply` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the force deploy option.
 {: shortdesc}
 
 ```sh
@@ -183,7 +186,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
-Agent Location   jp-tok   
+Agent Location   Frankfurt MZR  
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                 Last modified   
@@ -195,7 +198,7 @@ DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2023-03-27T12:25:01.239
 {: #d-agent-cli}
 {: cli}
 
-You can use the agent definition to verify the health of the recently deployed agent using the `agent health` command. The `agent health` command takes the `Agent ID` as input. The output of the `agent health` command displays the list of relevant Kubernetes and agent health property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+You can verify the health of the recently deployed agent using the `agent health` command. The command takes the `Agent ID` as input. The output displays the list of relevant Kubernetes and agent health property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
@@ -230,7 +233,7 @@ Name             agent-testing-prod-cli-mar-27-5
 Status           ACTIVE   
 Version             
 Location         eu-de   
-Agent Location   jp-tok   
+Agent Location   Frankfurt MZR  
 Resource Group   Default   
                  
 Recent Job   Job ID                             Status                   Last modified   
@@ -245,7 +248,7 @@ In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard fo
 {: #create-agent-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} via the API. For more information, see [Create a agent](apidocs/schematics/schematics_internal_v1#create-agent-data) using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} via the API. For more information, see [Create a agent](/apidocs/schematics/schematics_internal_v1#create-agent-data) using API.
 
 Example
 
@@ -264,15 +267,15 @@ Example
         "mytest"
     ],
     "version": "v1.0.0",
-    "schematics_location": "us-south",
-    "agent_location": "jp-tok",
+    "schematics_location": "eu-de",
+    "agent_location": "Frankfurt MZR",
     "agent_infrastructure": {
         "infra_type": "ibm_kubernetes",
         "cluster_id": "cg3fgvad0dak571op4g0",
         "cluster_resource_group": "Default",
         "cos_instance_name": "agent-beta-1-cos-instance",
         "cos_bucket_name": "agent-beta-1-cos-bucket",
-        "cos_bucket_region": "us-east",
+        "cos_bucket_region": "eu-de",
         "cos_resource_group": "Default"
     },
     "user_state": {
@@ -297,14 +300,14 @@ Output
           "mytest"
       ],
       "version": "v1.0.0",
-      "schematics_location": "us-south",
-      "agent_location": "jp-tok",
+      "schematics_location": "eu-de",
+      "agent_location": "Frankfurt MZR",
       "user_state": {
           "state": "enable",
           "set_by": "geetha_sathyamurthy@in.ibm.com",
           "set_at": "2023-03-16T18:08:18.399224788Z"
       },
-      "agent_crn": "crn:v1:bluemix:public:schematics:us-south:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:agent:agentb1-gsmforvpc-mar17.soA.115c",
+      "agent_crn": "crn:v1:bluemix:public:schematics:eu-de:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:agent:agentb1-gsmforvpc-mar17.soA.115c",
       "id": "agentb1-gsmforvpc-mar17.soA.115c",
       "created_at": "2023-03-16T18:08:18.39924616Z",
       "creation_by": "geetha_sathyamurthy@in.ibm.com",
@@ -343,7 +346,7 @@ Output
 
 ```text
 {
-    "workspace_id": "us-south.workspace.agentb1-gsmforvpc-mar17-deploy.13a324df",
+    "workspace_id": "eu-de.workspace.agentb1-gsmforvpc-mar17-deploy.13a324df",
     "job_id": ".ACTIVITY.7f40fdc0",
     "updated_at": "2023-03-16T18:13:27.217864196Z",
     "updated_by": "geetha_sathyamurthy@in.ibm.com",
@@ -356,7 +359,7 @@ Output
 ## Next steps
 {: #agent-create-nextsteps}
 
-The next step is to [create and manage agent assignment policy](/docs/schematics?topic=schematics-agent-assignment-policy) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and the Action or Ansible jobs to an agent.
+The next step is to [create an agent assignment policy](/docs/schematics?topic=schematics-policy-manage) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
 
 You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
 

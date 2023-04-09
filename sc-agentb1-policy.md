@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics agent, agent policy, policies
 
@@ -20,31 +20,24 @@ subcollection: schematics
 
 
 
-# Managing agent assignment policy
+# Agent assignment policies
 {: #policy-manage}
 
-Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. You can deploy multiple agents in your {{site.data.keyword.cloud_notm}} account, each catering to the different network isolation zones. For example, based on the following factory your cloud infrastructure can be spread across or partitioned.
-- multiple cloud regions (region-1, region-2, region-3)
-- multiple VPC zones for the application layer, data layer, management layer
-- multiple cloud-vendors or on-premises vendors, or
-- multiple department-wise information technology zones, in your organization such as `HR`, `Finance`, `Manufacturing`, and so on.
+Assignment policies tell {{site.data.keyword.bpshort}} which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. For example agents may exist in any of the following isolated zones:
+- cloud regions (region-1, region-2, region-3)
+- VPC zones for the application layer, data layer, management layer
+- cloud-vendors or on-premises
+- departmental zones, in your organization such as `HR`, `Finance`, `Manufacturing`
 {: shortdesc}
 
-The agents are deployed in each partition or network isolation zone in order to, run the
-Terraform or Ansible automation, for the local or private Cloud resources. The agent
-assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the workspace job or an action job to the agent.
+You can create, update, and delete an `agent assignment policy` by using the {{site.data.keyword.bpshort}} [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) CLI. 
 
-You can create, update, and delete the `agent assignment policy` by using the {{site.data.keyword.bpshort}} CLI for [agent policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create).
+The `agent-assignment-policy` for an agent is defined by using the following attributes of a workspace or an action. The selection attributes can be a combination of the following flags:
+- `tags` – workspaces or actions with matching user tags are selected.
+- `locations` – workspaces or actions in the matching {{site.data.keyword.bpshort}} location are selected.
+- `resource-groups` - workspaces or actions with the matching resource-group are selected.
 
-The `agent-assignment-policy` for an agent is defined by using the following attributes of the
-workspace or an action. The `selector` attribute can be a combination of the following flags.
-- `tags` – workspaces or actions with the matching tags are selected.
-- `location` – workspaces or actions with the matching location are selected.
-- `resource-group` - workspaces or actions with the matching resource-group are selected.
-
-If the selector for `agent-1` selects tags=[`dev`], resource-group=[`rg-2`]
-{{site.data.keyword.bpshort}} automatically routes the workspace jobs such as Git download, Terraform
-plan, apply, destroy jobs of all the workspaces that matches the `tags`, and `resource-group` criteria to the `agent-1`.
+If the selector for `agent-1` selects tags=[`dev`] and resource-group=[`rg-2`], {{site.data.keyword.bpshort}} automatically routes the workspace jobs such as Git download, Terraform plan, apply, destroy jobs for all workspaces that match the `tags`, and `resource-group` criteria, to execute on `agent-1`.
 {: example}
 
 
@@ -54,19 +47,97 @@ plan, apply, destroy jobs of all the workspaces that matches the `tags`, and `re
 {: #agentb1-createpolicy-cli}
 {: cli}
 
-Create your agent policy by using the CLI. For the complete list of an agent policy command with the options, see [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) command.
+Create your agent policy using the CLI. For the complete list of agent policy options, see the [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) doc.
 {: shortdesc}
 
 Before your begin:
 
-- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.8`.
-- Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
-- Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create agent policy.
+- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version to be `1.12.9` or higher.
+- Select the {{site.data.keyword.cloud_notm}} region where the agent is defined. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
+- Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create an agent policy.
+- Create an agent policy target file 
+
+### Defining a JSON policy target file
+{: #agent-policy-json}
+
+A sample JSON policy target file is provided here. Replace the `<...>` placeholders with your actual values. 
+
+- The target agent jobs are to be executed on is defined using the `target` block.
+- The assignment parameters for selecting workspace jobs to execute is defined by the `parameter` block. 
+
+Policy JSON files can be edited in any editor or IDE. They must be valid JSON.  
+ 
+
+**Policy JSON file syntax:**
+```json
+{
+    "target": {
+		"selector_kind": "ids",
+		"selector_ids": [
+			"<agent id>"
+		]
+	},
+	"parameter": {
+		"agent_assignment_policy_parameter": {
+			"selector_kind": "scoped",
+			"selector_scope": [{
+				"kind": "workspace",
+				"tags": [
+					"<user_tag>"
+				],
+				"resource_groups": [
+					"<resource_group>"
+				],
+				"locations": [
+					"<region>"
+				]
+			}]
+		}
+	}
+}
+
+```
+{: codeblock}
+
+Example
+
+```json
+{
+    "target": {
+		"selector_kind": "ids",
+		"selector_ids": [
+			"agent-prod-live.deA.e055"
+		]
+	},
+	"parameter": {
+		"agent_assignment_policy_parameter": {
+			"selector_kind": "scoped",
+			"selector_scope": [{
+				"kind": "workspace",
+				"tags": [
+					"live-prod"
+				],
+				"resource_groups": [
+					"Default"
+				],
+				"locations": [
+					"eu-de"
+				]
+			}]
+		}
+	}
+}
+```
+{: codeblock}
+
+### Create agent policy
+{: #agent-policy-CLI}
+
 
 Example
 
 ```sh
-ibmcloud schematics policy create --name agent-policy-testing-cli-mar-27 --kind agent_assignment_policy --location eu-de --resource-group Default --tags workspace-policy:prod
+ibmcloud schematics policy create --name agent-policy-testing-cli-mar-27 --kind agent_assignment_policy --location eu-de --resource-group Default --target-file policy.json
 ```
 {: pre}
 
@@ -91,7 +162,7 @@ Tags             [TAGS]
 {: #agentb1-listpolicy-cli}
 {: cli}
 
-You can dispaly the list of policy in your account by using the [policy list](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-list) command.
+You can display the list of policies in your account using the [policy list](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-list) command.
 
 Example
 
@@ -108,27 +179,10 @@ OK
 Name                                          ID                                                     Description                                   Kind   Tags   
 agent-policy-testing-cli-mar-27               agent-policy-testing-cli-mar-27.deP.c737                                                                    workspace-policy:prod   
 policy-023e7204-c33d-49b8-a9f3-695ff085290d   policy-023e7204-c33d-49b8-a9f3-695ff085290d.gbP.8b3c   Created agent-assignment-policy for the ...             
-policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb   policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb.deP.796d   Created agent-assignment-policy for the ...             
-policy-08aa34da-d89d-4f9c-92d5-bf9b9c1624b0   policy-08aa34da-d89d-4f9c-92d5-bf9b9c1624b0.gbP.c061   Created agent-assignment-policy for the ...             
-policy-0d47dbea-264b-43c1-8c44-d519d9a04df1   policy-0d47dbea-264b-43c1-8c44-d519d9a04df1.deP.efb1   Created agent-assignment-policy for the ...             
-policy-110e7b82-26cc-4a0a-9594-4fdd41a7487d   policy-110e7b82-26cc-4a0a-9594-4fdd41a7487d.deP.0f96   Created agent-assignment-policy for the ...             
-policy-203863db-46ef-422f-aba7-62520ec36dfc   policy-203863db-46ef-422f-aba7-62520ec36dfc.deP.050a   Created agent-assignment-policy for the ...             
-policy-39b076a0-34f2-4f76-9562-cecfd1822353   policy-39b076a0-34f2-4f76-9562-cecfd1822353.deP.df8e   Created agent-assignment-policy for the ...             
-policy-4a480058-1851-4a06-8700-e31eef7fbeac   policy-4a480058-1851-4a06-8700-e31eef7fbeac.gbP.f473   Created agent-assignment-policy for the ...             
-policy-5613f1fb-03bc-47db-94e7-12aed2243828   policy-5613f1fb-03bc-47db-94e7-12aed2243828.gbP.cec6   Created agent-assignment-policy for the ...             
-policy-5e8c1128-9dbe-4a57-9e94-1862bd2db5b8   policy-5e8c1128-9dbe-4a57-9e94-1862bd2db5b8.gbP.2550   Created agent-assignment-policy for the ...             
-policy-61437bd4-0b7b-439d-b8a3-5ff091de5a01   policy-61437bd4-0b7b-439d-b8a3-5ff091de5a01.gbP.b393   Created agent-assignment-policy for the ...             
-policy-6da22456-6cce-4c44-a397-a8a677377d96   policy-6da22456-6cce-4c44-a397-a8a677377d96.gbP.338c   Created agent-assignment-policy for the ...             
-policy-7b699887-5c97-4795-8dba-6158f6674944   policy-7b699887-5c97-4795-8dba-6158f6674944.deP.45c7   Created agent-assignment-policy for the ...             
-policy-7cb53b8a-1f65-402d-adeb-4d4863978d05   policy-7cb53b8a-1f65-402d-adeb-4d4863978d05.deP.9b71   Created agent-assignment-policy for the ...             
-policy-a1c11bcb-c550-4d84-bd34-e8323b2856eb   policy-a1c11bcb-c550-4d84-bd34-e8323b2856eb.deP.74c2   Created agent-assignment-policy for the ...             
-policy-bf94e2e4-89f2-4fe8-b4c7-c809507bbcb2   policy-bf94e2e4-89f2-4fe8-b4c7-c809507bbcb2.gbP.dd2e   Created agent-assignment-policy for the ...             
-policy-e53a1fa9-6393-48ec-8566-84288770072b   policy-e53a1fa9-6393-48ec-8566-84288770072b.gbP.020d   Created agent-assignment-policy for the ...             
-policy-ed3c4ebb-6df5-4898-9070-fcdb1af55778   policy-ed3c4ebb-6df5-4898-9070-fcdb1af55778.deP.1809   Created agent-assignment-policy for the ...             
-policy-f60ca5c5-d7d3-4b1c-91de-7d8e04b6c4b3   policy-f60ca5c5-d7d3-4b1c-91de-7d8e04b6c4b3.deP.808e   Created agent-assignment-policy for the ...             
-policy-fd7349d5-de33-4fbc-87de-3be75018271a   policy-fd7349d5-de33-4fbc-87de-3be75018271a.deP.08dc   Created agent-assignment-policy for the ...             
+policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb   policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb.deP.796d   Created agent-assignment-policy for 
+
                                                                                                      
-Showing 1-29 of 29 items
+Showing 1-3 of 3 items
 ```
 {: screen}
 
@@ -136,7 +190,7 @@ Showing 1-29 of 29 items
 {: #agentb1-getpolicy-cli}
 {: cli}
 
-You can view the configuration of a single agent policy by using the [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
+You can view the configuration of a single agent policy by using [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
 
 Example
 
@@ -168,7 +222,7 @@ Tags             [TAGS]
 {: #agentb1-updatepolicy-cli}
 {: cli}
 
-You can update an agent policy to set a tags, description based on the `AGENT_ID` input argument.
+You can update an agent policy to set tags, or description using the `AGENT_ID` input argument.
 
 ```sh
 ibmcloud schematics policy update --id agent-policy-testing-cli-mar-27.deP.c737 --kind agent_assignment_policy --resource-group Default --tags workspace-policy:prod --description testing-policy-cli --tags newtag

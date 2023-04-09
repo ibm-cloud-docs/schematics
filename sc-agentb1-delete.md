@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-09"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -29,7 +29,7 @@ When an agent is no longer required, you can do one of the following to either:
 {: #disable-agentb1-cli}
 {: cli}
 
-You can disable and stop it from executing future jobs using the [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) command. This command requires an `AGENT_ID` as input argument, and the `USER_STATE` as **disable**. Once the agent is disabled, the workspace or action jobs are not routed to that agent, the existing jobs runs to completion. The agent assignment policy for the  agent is automatically disabled.
+You can disable and stop it from executing future jobs using the [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update) command. This command requires an `AGENT_ID` as input argument, and the `USER_STATE` as **disable**. Once the agent is disabled, the workspace or action jobs are not routed to that agent, the existing jobs runs to completion. The agent assignment policy for the  agent is automatically disabled.
 
 Example
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-04"
+lastupdated: "2023-04-09"
 
 keywords: schematics
 subcollection: schematics
@@ -1437,9 +1437,13 @@ subcollection: schematics
 {: #sitemap_using_agent}
 
 
-[Managing agent assignment policy](/docs/schematics?topic=schematics-policy-manage#policy-manage)
+[Agent assignment policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
 
 * [Creating an agent policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
+
+    * [Defining a JSON policy target file](/docs/schematics?topic=schematics-policy-manage#agent-policy-json)
+
+    * [Create agent policy](/docs/schematics?topic=schematics-policy-manage#agent-policy-CLI)
 
 * [Displaying the list of policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-listpolicy-cli)
 
@@ -1847,7 +1851,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
 
-    * [`ibmcloud schematics agent get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
+    * [`ibmcloud schematics agent get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
 
     * [`ibmcloud schematics agent health`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health)
 
@@ -2013,7 +2017,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
 
-    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update)
+    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update)
 
     * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
 
