@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-10"
 
 keywords: schematics agent, agent policy, policies
 
@@ -37,13 +37,13 @@ The `agent-assignment-policy` for an agent is defined by using the following att
 - `locations` – workspaces or actions in the matching {{site.data.keyword.bpshort}} location are selected.
 - `resource-groups` - workspaces or actions with the matching resource-group are selected.
 
-If the selector for `agent-1` selects tags=[`dev`] and resource-group=[`rg-2`], {{site.data.keyword.bpshort}} automatically routes the workspace jobs such as Git download, Terraform plan, apply, destroy jobs for all workspaces that match the `tags`, and `resource-group` criteria, to execute on `agent-1`.
+If the selection policy for `agent-1` specified tags=[`dev`] and resource-group=[`rg-2`], {{site.data.keyword.bpshort}} automatically routes workspace jobs including Git download, Terraform plan, apply, destroy jobs for all workspaces that match the `tags`, and `resource-group` criteria, to execute on `agent-1`.
 {: example}
 
 
 
 
-## Creating an agent policy using CLI
+## Creating an agent policy using the CLI
 {: #agentb1-createpolicy-cli}
 {: cli}
 
@@ -158,7 +158,7 @@ Tags             [TAGS]
 ```
 {: screen}
 
-## Displaying the list of policy using CLI
+## Listing all policies using the CLI
 {: #agentb1-listpolicy-cli}
 {: cli}
 
@@ -186,11 +186,11 @@ Showing 1-3 of 3 items
 ```
 {: screen}
 
-## Displaying an policy using CLI
+## Displaying a policy using the CLI
 {: #agentb1-getpolicy-cli}
 {: cli}
 
-You can view the configuration of a single agent policy by using [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
+You can view the configuration of a single agent policy with the [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
 
 Example
 
@@ -218,14 +218,14 @@ Tags             [TAGS]
 {: screen}
 
 
-## Updating an agent policy using CLI
+## Updating an agent policy using the CLI
 {: #agentb1-updatepolicy-cli}
 {: cli}
 
-You can update an agent policy to set tags, or description using the `AGENT_ID` input argument.
+You can update an agent policy to set tags, or description, referencing the agent with the `AGENT_ID` input argument.
 
 ```sh
-ibmcloud schematics policy update --id agent-policy-testing-cli-mar-27.deP.c737 --kind agent_assignment_policy --resource-group Default --tags workspace-policy:prod --description testing-policy-cli --tags newtag
+ibmcloud schematics policy update --id agent-policy-testing-cli-mar-27.deP.c737 --kind agent_assignment_policy --resource-group Default --tags workspace-policy:prod --description testing-policy-cli --tags jobtag
 ```
 {: pre}
 
@@ -241,11 +241,11 @@ Resource Group   Default
 Target              
 Tags             [TAGS]   
                   - workspace-policy:prod	   
-                  - newtag
+                  - jobtag
 ```
 {: screen}
 
-You can retrieve an updated policy to observe the updation.
+After updating, retrieve the policy to confirm the changes. 
 
 Example
 
@@ -268,16 +268,16 @@ Resource Group   Default
 Target              
 Tags             [TAGS]   
                   - workspace-policy:prod	   
-                  - newtag	   
+                  - jobtag	   
                     
 ```
 {: screen}
 
-## Deleting an policy using CLI
+## Deleting a policy using the CLI
 {: #agentb1-deletepolicy-cli}
 {: cli}
 
-You can [delete a policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-delete) by using `AGENT_ID` input argument.
+You can [delete a policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-delete), passing the `AGENT_ID` input argument.
 
 ```sh
 ibmcloud schematics policy delete --id agent-policy-testing-cli-mar-27.deP.c737 
@@ -290,14 +290,14 @@ Initiating policy delete...
 ```
 {: screen}
 
-## Agent policy command using API
+## Agent policy creation using the API
 {: #agentb1-policydm-api}
 {: api}
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about agent policy API, see [agent policy APIs](/apidocs/schematics/schematics) job status.
 {: shortdesc}
 
-### Example to create policy using API
+### Example to create a policy using the API
 {: #agentb1-createpolicy-api}
 
 ```json
@@ -344,7 +344,7 @@ Authorization: Bearer <auth_token>
 ```
 {: pre}
 
-### Example to get policy using API
+### Example to get a policy using the API
 {: #agentb1-getpolicy-api}
 
 ```json
@@ -356,7 +356,7 @@ Authorization: Bearer <auth_token>
 ```
 {: pre}
 
-### Example to update policy using API
+### Example to update a policy using the API
 {: #agentb1-updatepolicy-api}
 
 ```json
@@ -404,7 +404,7 @@ Authorization: Bearer <auth_token>
 ```
 {: pre}
 
-### Example to search policy using API
+### Example to find policies using the API
 {: #agentb1-searchpolicy-api}
 
 ```json
@@ -430,3 +430,23 @@ Authorization: Bearer <auth_token>
   }
 ```
 {: pre}
+
+
+## Next steps
+{: #agent-policy-nextsteps}
+
+You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansible jobs. Any workspaces or actions that match the defined selection policy will be executed on the agent. 
+
+After execution the workspace or action job logs will contain a header indicating the agent the job was executed on.  
+
+
+```text
+2023/04/08 15:22:07 [1m-----  New Workspace Action  -----[21m[0m
+2023/04/08 15:22:07 Request: activitId=e3fcfdfdb13b07a1c60176e4b95c41ba, account=, owner=steve_strutt@uk.ibm.com, requestID=0a8a3428-b461-4dd0-8104-e859d68d35f6, OrchestratorID=orchestrator-5c8585dc74-6z9s5, agentID=agent-test-da.deA.e055, agentName=agent-test-da, jobRunnerID=jobrunner-5d99b5cfb7-p5xcz
+2023/04/08 15:22:07 Related Workspace: name=myworkspace, agentID=agent-test-da.deA.e055 sourcerelease=(not specified), sourceurl=https://github.com/stevestrutt/multitier-vpc-bastion-host, branch=(not specified), folder=.
+2023/04/08 15:22:07  --- Ready to execute the command on Agent agent-test-da.deA.e055 ---
+```
+
+You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
+
+When the agent is no longer required, it can be removed following the steps in [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui).
