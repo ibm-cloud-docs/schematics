@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-05"
+lastupdated: "2023-04-10"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -15,21 +15,21 @@ subcollection: schematics
 {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
-{{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
+{{site.data.keyword.bpshort}} Agents are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
 {: beta}
 
-# Configuring Kubernetes cluster for agent
+# Agent and Kubernetes configuration 
 {: #configure-k8s-cluster}
 
-Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. The agent is deployed in a Kubernetes cluster on {{site.data.keyword.cloud}}. 
+Agents extend {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. Customization of a deployed agent is performed through configuration options set on the Kubernetes cluster. 
 {: shortdesc}
 
-When an agent is deployed in your cluster, by default the following configurations are automatically applied to the cluster.
+When an agent is deployed, by default the following configuration options are applied on the cluster.
 
 ## Default network policies
 {: #k8s-cluster-network-policy}
 
-The following network policies are configured automatically to the Kubernetes cluster.
+The following network policies are configured to control network traffic on the cluster.
 
 | Policy  |	Description |
 | --- | --- |
@@ -42,13 +42,13 @@ The following network policies are configured automatically to the Kubernetes cl
 | `Whitelist-runtime-egress-gen-ports` |  `Namespace:schematics-runtime`, allowed and needed ports for `ingress = 3002`, and for `egress TCP = 80`, `443`, `5986`, `22`, `53`, `8080`, `10250`, `9092`, `9093`, or `egress UDP = 53`, `443`, `10250`, `9093`, `9093`. |
 {: caption="Network policies" caption-side="top"}
 
-You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+You can customize the network policies by following the steps [editing the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}
 
 ## Default Terraform and Ansible runtime-job
 {: #k8s-cluster-runtime-job}
 
-The following are configured by default Kubernetes deployment configuration applied for the Terraform and Ansible runtime-job.
+Following resource limits and replicas are the default configuration applied to the Terraform and Ansible runtime-job namespace.
 
 | Parameter	| Description |
 | --- | --- |
@@ -62,7 +62,7 @@ You can customize by following the steps to [edit the default configuration](/do
 ## Agent job-runner configuration
 {: #agent-job-runner-config}
 
-The following is the default agent `schematics-job-runner` configuration.
+The following resource limits and replicas are the default configuration applied to the `schematics-job-runner` namespace
 
 | Parameter	| Description |
 | --- | --- |
@@ -70,13 +70,13 @@ The following is the default agent `schematics-job-runner` configuration.
 | `replicas` | Number of job pods. `replica = 1`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
 {: caption="Default agent job-runner" caption-side="top"}
 
-You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+You can customize the job-runner configuration following the steps, [editing the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}
 
 ## Sandbox configuration
 {: #k8s-cluster-sandbox}
 
-Following resource limits and replicas are the default configuration applied for `schematics-sandbox` namespace.
+Following resource limits and replicas are the default configuration applied to the `schematics-sandbox` namespace.
 
 | Parameter	| Description |
 | --- | --- |
@@ -84,13 +84,13 @@ Following resource limits and replicas are the default configuration applied for
 | `replicas` | Number of job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
 {: caption="Sandbox deployments" caption-side="top"} 
 
-You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
+You can customize the sandbox configuring following the steps, [editing the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}
 
 ## {{site.data.keyword.bpshort}} agents controller manager
 {: #k8s-cluster-agent-controller-manager}
 
-Following resource limits and replicas are the default configuration applied in the `schematics-agents-observe` namespace.
+The following resource limits and replicas are the default configuration applied in the `schematics-agents-observe` namespace.
 
 | Parameter	| Description |
 | --- | --- |
@@ -104,7 +104,7 @@ You can customize by following the steps to [edit the default configuration](/do
 ## Agent sandbox allowed list
 {: #agent-sandbox-allowlist}
 
-Following are the default agent sandbox file type and size allowlist configuration.
+Following are the default agent sandbox file type and size allowlist configuration set for the `schematics-sandbox` namespace. 
 
 | Parameter |	Description |
 | -- | -- |
@@ -121,7 +121,7 @@ You can customize by following the steps to [edit the default configuration](/do
 ## Agent runtime configuration for Terraform 
 {: #agent-runtime-config-terraform}
 
-The following is the default agent runtime configuration for the Terraform runtime.
+The following parameters are the default agent runtime configuration for the Terraform runtime.
 
 | Parameter	| Description |
 | --- | --- |
@@ -136,7 +136,7 @@ You can customize by following the steps to [edit the default configuration](/do
 ## Agent runtime configuration for Ansible
 {: #agent-runtime-config-ansible}
 
-The following is the default agent runtime configuration for the Ansible runtime.
+The following parameters are the default agent runtime configuration for the Ansible runtime.
 
 | Parameter	| Description |
 | --- | --- |
@@ -147,7 +147,7 @@ The following is the default agent runtime configuration for the Ansible runtime
 You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}
 
-## Editing default agent namespace configuration
+## Editing the agent namespace configurations
 {: #edit-agent-namespace-confg}
 
 You can follow these steps to edit the default configuration of an agent namespace.

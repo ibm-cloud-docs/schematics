@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-10"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
-{{site.data.keyword.bpshort}} Agent is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
+{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
 {: beta}
 
 # Deploying agents
@@ -242,7 +242,7 @@ HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2023-03
 ```
 {: screen}
 
-In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard for your cluster to view the status and logs of the agent related microservices, its Pods, Deployment, Configmap, and Cluster bindings in the namespaces such as `schematics-agent-observe`, `schematics-job-runtime`, `schematics-runtime`.
+In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard for your cluster to view the status and logs of the agent related microservices, its Pods, Deployment, Configmap, and Cluster bindings in the namespaces, `schematics-agent-observe`, `schematics-sandbox`, `schematics-runtime` and `schematics-job-runtime`
 
 ## Creating an agent using the {{site.data.keyword.bpshort}} API
 {: #create-agent-api}
@@ -274,9 +274,7 @@ Example
         "cluster_id": "cg3fgvad0dak571op4g0",
         "cluster_resource_group": "Default",
         "cos_instance_name": "agent-beta-1-cos-instance",
-        "cos_bucket_name": "agent-beta-1-cos-bucket",
-        "cos_bucket_region": "eu-de",
-        "cos_resource_group": "Default"
+        "cos_bucket_name": "agent-beta-1-cos-bucket"
     },
     "user_state": {
         "state": "enable"

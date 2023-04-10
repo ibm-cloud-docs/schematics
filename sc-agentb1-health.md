@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-10"
 
 keywords: schematics agent health, agent health, health
 
@@ -15,7 +15,7 @@ subcollection: schematics
 {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
-{{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
+{{site.data.keyword.bpshort}} Agents  are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
 {: beta}
 
 # Monitoring agent health
@@ -32,7 +32,7 @@ You would be interested in knowing about the health of an agent:
 {: #health-agentb1-cli}
 {: cli}
 
-You can review the health of an agent by using the CLI, use the [agent health](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health) command. This command requires the `AGENT_ID` as an input argument.
+To review the health of an agent by using the CLI, use the [agent health](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health) command. This command requires the `AGENT_ID` as an input argument.
 {: shortdesc}
 
 The output of an agent health command displays the list of relevant Kubernetes and agent health property names, the expected value, actual value, and the result as PASS or FAIL.
@@ -86,7 +86,7 @@ The following table describes the list of agent and Kubernetes health properties
 
 | Property name | Description |
 | --- | --- |
-| runtime | Health of the Terraform and Ansilbe job pods in an agent. |
+| runtime | Health of the Terraform and Ansible job pods in an agent. |
 | sandbox | Health of the Sandbox job pods in an agent, that are used to download Git repositories. |
 | job-runner | Health of the job orchestrator pods in an agent. |
 | log-collector | Health of the log collector pods in an agent. |
@@ -140,6 +140,6 @@ Health Check Completed
 ## Next steps
 {: #agent-health-nextstep}
 
-- When an agent health has deteriorated, you can review and update an agent and Kubernetes configuration as described in [configuring cluster and an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+- When agent health deteriorates, you can review the current deployment and update the agent and the Kubernetes configuration as described in [Deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 
-- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for many common questions.

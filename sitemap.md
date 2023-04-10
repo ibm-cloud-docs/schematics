@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-10"
 
 keywords: schematics
 subcollection: schematics
@@ -854,11 +854,11 @@ subcollection: schematics
         * New workspace creation flow
 
 
-## Preparing to use the CLI and API
-{: #sitemap_preparing_to_use_the_cli_and_api}
+## Configuring the CLI and API
+{: #sitemap_configuring_the_cli_and_api}
 
 
-[Preparing to use the CLI](/docs/schematics?topic=schematics-setup-cli#setup-cli)
+[Setting up the CLI](/docs/schematics?topic=schematics-setup-cli#setup-cli)
 
 * [Installing the {{site.data.keyword.cloud_notm}} command-line](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli)
 
@@ -868,7 +868,7 @@ subcollection: schematics
 
 * [Uninstalling the {{site.data.keyword.bplong_notm}} command-line plug-in](/docs/schematics?topic=schematics-setup-cli#uninstall-schematics-plugin)
 
-[Preparing to use the API](/docs/schematics?topic=schematics-setup-api#setup-api)
+[Setting up the API](/docs/schematics?topic=schematics-setup-api#setup-api)
 
 * [Working with the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-setup-api#cs_api)
 
@@ -1433,37 +1433,39 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-delete-agent-overview#agent-delete-nextstep)
 
 
-### Using Agent
-{: #sitemap_using_agent}
+### Using Agents
+{: #sitemap_using_agents}
 
 
 [Agent assignment policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
 
-* [Creating an agent policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
+* [Creating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
 
     * [Defining a JSON policy target file](/docs/schematics?topic=schematics-policy-manage#agent-policy-json)
 
     * [Create agent policy](/docs/schematics?topic=schematics-policy-manage#agent-policy-CLI)
 
-* [Displaying the list of policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-listpolicy-cli)
+* [Listing all policies using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-listpolicy-cli)
 
-* [Displaying an policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-cli)
+* [Displaying a policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-cli)
 
-* [Updating an agent policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-cli)
+* [Updating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-cli)
 
-* [Deleting an policy using CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-deletepolicy-cli)
+* [Deleting a policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-deletepolicy-cli)
 
-* [Agent policy command using API](/docs/schematics?topic=schematics-policy-manage#agentb1-policydm-api)
+* [Agent policy creation using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-policydm-api)
 
-    * [Example to create policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-api)
+    * [Example to create a policy using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-api)
 
-    * [Example to get policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-api)
+    * [Example to get a policy using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-api)
 
-    * [Example to update policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-api)
+    * [Example to update a policy using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-api)
 
-    * [Example to search policy using API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
+    * [Example to find policies using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
 
-[Configuring Kubernetes cluster for agent](/docs/schematics?topic=schematics-configure-k8s-cluster#configure-k8s-cluster)
+* [Next steps](/docs/schematics?topic=schematics-policy-manage#agent-policy-nextsteps)
+
+[Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#configure-k8s-cluster)
 
 * [Default network policies](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-network-policy)
 
@@ -1481,7 +1483,7 @@ subcollection: schematics
 
 * [Agent runtime configuration for Ansible](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-runtime-config-ansible)
 
-* [Editing default agent namespace configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg)
+* [Editing the agent namespace configurations](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg)
 
 [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 

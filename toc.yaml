@@ -59,7 +59,7 @@ toc:
                           id: howto
                           topics:
                                   - topicgroup:
-                                            label: Preparing to use the CLI and API
+                                            label: Configuring the CLI and API
                                             topics:
                                                     - setup-cli.md
                                                     - setup-api.md
@@ -125,7 +125,7 @@ toc:
                                                    - sc-agentb1-display.md
                                                    - sc-agentb1-delete.md
                                                    - topicgroup:
-                                                              label: Using Agent
+                                                              label: Using Agents
                                                               topics:
                                                                       - sc-agentb1-policy.md
                                                                       - sc-agentb1-confg-k8s-cluster.md

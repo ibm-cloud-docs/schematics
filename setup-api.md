@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-10"
 
 keywords: schematics api, schematics command-line, schematics commands, terraform commands, cli, setting up, api
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Preparing to use the API
+# Setting up the API
 {: #setup-api}
 
 You can use the {{site.data.keyword.bplong}} API to automate {{site.data.keyword.bpshort}} capabilities in {{site.data.keyword.cloud_notm}}. To use the CLI, see [Preparing to use the CLI](/docs/schematics?topic=schematics-setup-cli).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-10"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -12,10 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Preparing to use the CLI 
+# Setting up the CLI 
 {: #setup-cli}
 
-Use the {{site.data.keyword.bplong_notm}} command-line plug-in to automate the infrastructure provisioning process, the configuration of your {{site.data.keyword.cloud_notm}} resources, and the deployment of app workloads in {{site.data.keyword.cloud_notm}}. The {{site.data.keyword.bpfull}} command-line extends the support of following multiple platform architectures inline with the {{site.data.keyword.cloud}} command line interface (CLI).
+Use the {{site.data.keyword.bplong_notm}} command-line plug-in to automate the infrastructure provisioning process, the configuration of your resources, and the deployment of app workloads. The {{site.data.keyword.bpfull}} command-line supports the following platform architectures:
 
 - Mac OS X 64-bit
 - Mac OS arm64
@@ -51,7 +51,7 @@ Install the required command-line to start using {{site.data.keyword.bplong_notm
 ## Installing the {{site.data.keyword.bplong_notm}} command-line plug-in
 {: #install-schematics-plugin}
 
-Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operations, configuration management, and infrastructure deployments in {{site.data.keyword.cloud_notm}}. 
+Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operations, configuration management, and infrastructure deployments. 
 {: shortdesc}
 
 1. Install the {{site.data.keyword.cloud_notm}} command-line plug-in for {{site.data.keyword.bpshort}}.
