@@ -12,10 +12,11 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Remote state and cross-workspace access
-{: #remote-state}
+# Working with Teraform state file
+{: #wksremote-state}
 
-{{site.data.keyword.cloud}} provides built in [remote-state](https://developer.hashicorp.com/terraform/language/state/remote){: external} management for Terraform. Terraform state files are automatically preserved between runs and are accessible by {{site.data.keyword.cloud}} commands and operations. {{site.data.keyword.cloud}} remote-state management enables team work and workspace shared operations, with built in state locking preventing concurrent operations against the same state file. 
+{{site.data.keyword.cloud}} provides built in [remote-state](https://developer.hashicorp.com/terraform/language/state/remote){: external} management for Terraform. Terraform state files are automatically preserved between runs and are accessible by {{site.data.keyword.cloud}} commands and operations. {{site.data.keyword.cloud}} remote-state management enables team work and workspace shared operations, with built in state locking preventing concurrent operations against the same state file.
+{: shortdesc}
 
 The built in workspace remote-state management supports a number of {{site.data.keyword.bpshort}} use cases: 
 - The sharing of resource information between workspaces. This allows your infrastructure to be broken down into smaller components, with read-only resource information passed between environments using {{site.data.keyword.bpshort}} remote-state data sources. Discrete environments linked by data sources allows responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces as read-only resources. 
@@ -24,7 +25,7 @@ The built in workspace remote-state management supports a number of {{site.data.
 {: shortdesc}
 
 ## Accessing workspace state and outputs
-{: #data-sources}
+{: #wksdata-sources}
 
 You can access information about the resources that you manage in a workspace from other workspaces in your account by using the [`ibm_schematics_output`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_output){: external} and [`ibm_schematics_state`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_state){: external} data sources.
 
@@ -100,7 +101,7 @@ Similar to the `remote_state` data source, you can only access information that 
     ```
     {: codeblock}
 
-    | ![Idea icon](images/idea.png) | Understanding the configuration file components |
+    | ![Idea icon](../images/idea.png) | Understanding the configuration file components |
     | -- | -- |
     | `data.ibm_schematics_workspace.workspace_id` | Enter the ID of the VPC workspace where you defined the output values that you want to access. You need this data source to retrieve the template ID of the workspace in the `ibm_schematics_output` data source. |
     | `data.ibm_schematics_output.workspace_id` | Enter the ID of the VPC workspace where you defined the output values that you want to access. |
