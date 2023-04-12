@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-28"
+lastupdated: "2023-04-12"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -62,6 +62,6 @@ Some tools are a better fit for the task in hand for provisioning or configurati
 ## Next steps
 {: #nextsteps-technologies}
 
-- Learn more about the [terminology](/docs/schematics?topic=schematics-glossary) used in {{site.data.keyword.bpshort}}.
+- Learn more about the [terminology](/docs/schematics?topic=schematics-sch-terms) used in {{site.data.keyword.bpshort}}.
 - Do you want to know how these open-source tools are used in {{site.data.keyword.bpshort}}? Explore these [use cases](/docs/schematics?topic=schematics-how-it-works).
 - Visit [What is Infrastructure as Code?](/docs/schematics?topic=schematics-infrastructure-as-code) to understand more about Infrastructure as code and its best practices. 

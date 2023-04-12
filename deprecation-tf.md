@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-04-12"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -63,3 +63,28 @@ Follow these steps to continue working with the latest versions of Terraform in 
 
 Now you are at a latest version of the Terraform provider, and can continue by using the {{site.data.keyword.bplong_notm}} Workspaces as usual.
 
+
+------
+</staging>
+
+## Schedule (New)
+{: #new-schedule}
+
+{{site.data.keyword.bpshort}} follows a rolling update policy inline with HashiCorp Configuration Language (HCL) Terraform release cycle. {{site.data.keyword.bpshort}} maintains at least the latest two major releases in line with HCL support and end-of-life policy https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy {: external}.
+{: shortdesc}
+
+You are recommended always to migrate from your current in use version of Terraform to the latest available version and to remain on HCL supported Terraform versions. You can see the latest version of the Terraform in the drop down list of the [{{site.data.keyword.bpshort}} Workspaces](https://cloud.ibm.com/schematics/workspaces/create){: external} configuration page. 
+
+{{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution. The depreciation timeline might change over time to meet your business needs.
+
+|Versions | Phase 1: Restrict workspace creation (End of marketing)|    Phase 2: Restrict workspace execution (End of support)|      End of HCL end maintenance and security support|
+| -- | -- | --| --|
+| Terraform v0.15 | July 2022  |	December 2023	|	July 2021 |
+| Terraform v1.0 |	Sept 2023 |   December 2023	|	May 2022 |
+| Terraform v1.1 |  Sept 2023	|	  December 2023	|	Sept 2022 |
+| Terraform v1.2 |  Sept 2023	|	  December 2023	|	March 2023 |
+| Terraform v1.3 |  Earliest March 2024	|  Earliest	July 2024	|	Expected before end 2023 |
+| Terraform v1.4 |	Earliest Sept 2024  |  Earliest December 2023 |	Expected before end 2024 |
+{: caption="Deprecation timeline as on 12th April, 2023." caption-side="top"}
+
+</staging>

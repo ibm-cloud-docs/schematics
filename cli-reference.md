@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -418,7 +418,7 @@ Create an agent by using {{site.data.keyword.bpshort}}. Agents help you run your
 Syntax
 
 ```sh
-ibmcloud schematics agent create --name AGENT_NAME --location LOCATION --agent-location AGENT_LOCATION --version VERSION --infra-type INFRA_TYPE --cluster-id CLUSTER_ID --cluster-resource-group CLUSTER_RESOURCE_GROUP --cos-id COS_ID --cos-bucket COS_BUCKET --cos-location COS_LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--plan-only] [--plan-apply] [--tags TAGS] [--file FILE] [--output OUTPUT]
+ibmcloud schematics agent create --name AGENT_NAME --location LOCATION --agent-location AGENT_LOCATION --version VERSION --infra-type INFRA_TYPE --cluster-id CLUSTER_ID --cluster-resource-group CLUSTER_RESOURCE_GROUP --cos-instance-name COS_INSTANCE_NAME --cos-bucket COS_BUCKET --cos-location COS_LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--plan-only] [--plan-apply] [--tags TAGS] [--file FILE] [--output OUTPUT]
 ```
 {: pre}
 
@@ -433,7 +433,7 @@ Command options
 | `--infra-type` or `-i` | Required | Specify the type of the target agent infrastructure. Supported values are `ibm-kubernetes`, `ibm-openshift`, or `ibm-satellite`.|
 | `--clusterid` or `-k` | Required | The ID of the Kubernetes cluster for deploying an Agent.|
 | `--cluster-resource-group` or `--kr` | Required | The name of the clusters' resource group. |
-| `--cos-id` or `--oi` | Required | The ID of the COS instance. |
+| `--cos-instance-name` or `--on` | Required | The name of the COS instance. |
 | `--cos-bucket` or `-b` | Required |  The ID or the name of the COS bucket. |
 | `--resource-group` or `-r` | Required | Resource group name or ID the agent will be associated with. |
 | `--description` or `-d` | Optional | A description that identifies the agent usage, and the network zones and resources the agent is able to access. |
@@ -447,7 +447,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics agent create --name agenttestcli --location us-south --agent-location us-south --version v1.0.0 --infra-type ibm_kubernetes --cluster-id c6ja7vtf0afldib61l20 --cluster-resource-group Default --cos-id COSForAgentLogging --cos-bucket agentlogs --cos-location us-south --resource-group Default
+ibmcloud schematics agent create --name agenttestcli --location us-south --agent-location us-south --version v1.0.0 --infra-type ibm_kubernetes --cluster-id c6ja7vtf0afldib61l20 --cluster-resource-group Default --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-south --resource-group Default
 ```
 {: pre}
 

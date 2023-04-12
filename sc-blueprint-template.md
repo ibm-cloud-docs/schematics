@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-12"
 
 keywords: schematics blueprints infrastructure, blueprints schema, schema definitions, definitions, yaml
 
@@ -24,10 +24,10 @@ subcollection: schematics
 ## Blueprint configuration 
 {: #blueprint-temp-config}
 
-Cloud environments are deployed from a blueprint configuration, specifying a blueprint template and customizable input values that define parameters like its region or compute capacity. [Templates](/docs/schematics?topic=schematics-glossary#bpb2) determine the infrastructure architecture, specifying the modules (building blocks) to deploy the cloud resources of an environment. The section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) illustrates how public modules can be combined with user developed modules to create custom solutions. 
+Cloud environments are deployed from a blueprint configuration, specifying a blueprint template and customizable input values that define parameters like its region or compute capacity. [Templates](/docs/schematics?topic=schematics-sch-terms#bpb2) determine the infrastructure architecture, specifying the modules (building blocks) to deploy the cloud resources of an environment. The section [using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) illustrates how public modules can be combined with user developed modules to create custom solutions. 
 {: shortdesc} 
 
-Well designed templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its deploy time configuration is illustrated in the figure. Here a template is reused many times to deploy a range of environments such as dev, stage, and production. Each environment is customized with its own input values, all based on the same template. This is illustrated in the following figure. 
+Well designed templates are reusable across multiple environments, with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-sch-terms#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-sch-terms#bpb3) and inputs. This separation of template from its deploy time configuration is illustrated in the figure. Here a template is reused many times to deploy a range of environments such as dev, stage, and production. Each environment is customized with its own input values, all based on the same template. This is illustrated in the following figure. 
 
 ![Blueprint template, modules and inputs define environments](/images/new/bp-reuse.svg){: caption="Blueprint template, modules and inputs define environments" caption-side="bottom"}
 

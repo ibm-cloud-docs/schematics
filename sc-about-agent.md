@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-12"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -41,7 +41,7 @@ The diagram represents the {{site.data.keyword.bpshort}} Agent architecture, and
 ![{{site.data.keyword.bpshort}} Agent Architecture](images/new/sc_agentb0_architecture.svg){: caption="{{site.data.keyword.bpshort}} Agent architecture and its components" caption-side="bottom"}
 
 1. As the {{site.data.keyword.bpshort}} Agents user, now you can extend the {{site.data.keyword.bpshort}} ability to reach your cloud infrastructure from your {{site.data.keyword.cloud_notm}} account. 
-2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-glossary#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-glossary#agentsa2) to create your cluster infrastructure.
+2. Configure the {{site.data.keyword.bpshort}} Agent by using an [Agents infrastructure workspace](/docs/schematics?topic=schematics-sch-terms#agentsa3) and an [Agents service workspace](/docs/schematics?topic=schematics-sch-terms#agentsa2) to create your cluster infrastructure.
 3. Integrate the {{site.data.keyword.bpshort}} private endpoint with the {{site.data.keyword.bpshort}} service to provision, configure, and monitor your application through {{site.data.keyword.bpshort}} Agent.
 4. Manage the tools and softwares through Agents services containing the micro-services.
 

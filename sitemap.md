@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-12"
 
 keywords: schematics
 subcollection: schematics
@@ -1232,6 +1232,8 @@ subcollection: schematics
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 
+* [Schedule (New)](/docs/schematics?topic=schematics-deprecate-tf-version#new-schedule)
+
 [Updating Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
 * [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
@@ -2188,65 +2190,65 @@ subcollection: schematics
 * [What is the use of refresh token header?](/docs/schematics?topic=schematics-schematics-limitations#refresh-token)
 
 
-## Glossary terms for {{site.data.keyword.bpshort}}
-{: #sitemap_glossary_terms_for_}
+## {{site.data.keyword.bpshort}} terminology
+{: #sitemap__terminology}
 
 
-[Glossary terms for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-glossary#glossary)
+[{{site.data.keyword.bpshort}} terminology](/docs/schematics?topic=schematics-sch-terms#sch-terms)
 
-* [Actions](/docs/schematics?topic=schematics-glossary#glossary-actions)
+* [Actions](/docs/schematics?topic=schematics-sch-terms#sch-terms-actions)
 
-* [Agents](/docs/schematics?topic=schematics-glossary#glossary-agents)
+* [Agents](/docs/schematics?topic=schematics-sch-terms#sch-terms-agents)
 
-    * [Agent](/docs/schematics?topic=schematics-glossary#agentsa1)
+    * [Agent](/docs/schematics?topic=schematics-sch-terms#agentsa1)
 
-    * [Agent service](/docs/schematics?topic=schematics-glossary#agentsa2)
+    * [Agent service](/docs/schematics?topic=schematics-sch-terms#agentsa2)
 
-    * [Agent Infrastructure](/docs/schematics?topic=schematics-glossary#agentsa3)
+    * [Agent Infrastructure](/docs/schematics?topic=schematics-sch-terms#agentsa3)
 
-* [Blueprints](/docs/schematics?topic=schematics-glossary#glossary-blueprint)
+* [Blueprints](/docs/schematics?topic=schematics-sch-terms#sch-terms-blueprint)
 
-    * [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1)
+    * [Blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1)
 
-    * [Blueprint template](/docs/schematics?topic=schematics-glossary#bpb2)
+    * [Blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2)
 
-    * [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3)
+    * [Blueprint configuration](/docs/schematics?topic=schematics-sch-terms#bpb3)
 
-    * [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4)
+    * [Blueprint environment](/docs/schematics?topic=schematics-sch-terms#bpb4)
 
-    * [Blueprint modules](/docs/schematics?topic=schematics-glossary#bpb5)
+    * [Blueprint modules](/docs/schematics?topic=schematics-sch-terms#bpb5)
 
-    * [Blueprint inputs](/docs/schematics?topic=schematics-glossary#bpi1)
+    * [Blueprint inputs](/docs/schematics?topic=schematics-sch-terms#bpi1)
 
-    * [Blueprint input files](/docs/schematics?topic=schematics-glossary#bpi2)
+    * [Blueprint input files](/docs/schematics?topic=schematics-sch-terms#bpi2)
 
-    * [Blueprint jobs](/docs/schematics?topic=schematics-glossary#bpj1)
+    * [Blueprint jobs](/docs/schematics?topic=schematics-sch-terms#bpj1)
 
-    * [Blueprint lifecycle](/docs/schematics?topic=schematics-glossary#bpl1)
+    * [Blueprint lifecycle](/docs/schematics?topic=schematics-sch-terms#bpl1)
 
-* [Catalog](/docs/schematics?topic=schematics-glossary#glossa-catalog)
+* [Catalog](/docs/schematics?topic=schematics-sch-terms#sch-terms-catalog)
 
-* [Inventories](/docs/schematics?topic=schematics-glossary#glossa-inventory)
+* [Inventories](/docs/schematics?topic=schematics-sch-terms#sch-terms-inventory)
 
-    * [Resource inventory](/docs/schematics?topic=schematics-glossary#rir1)
+    * [Resource inventory](/docs/schematics?topic=schematics-sch-terms#rir1)
 
-* [Jobs](/docs/schematics?topic=schematics-glossary#glossary-job)
+* [Jobs](/docs/schematics?topic=schematics-sch-terms#sch-terms-job)
 
-* [Templates or Modules](/docs/schematics?topic=schematics-glossary#glossary-template)
+* [Templates or Modules](/docs/schematics?topic=schematics-sch-terms#sch-terms-template)
 
-* [Workspaces](/docs/schematics?topic=schematics-glossary#glossary-workspace)
+* [Workspaces](/docs/schematics?topic=schematics-sch-terms#sch-terms-workspace)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-glossary#wkss1)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-terms#wkss1)
 
-    * [Jobs](/docs/schematics?topic=schematics-glossary#wksj1)
+    * [Jobs](/docs/schematics?topic=schematics-sch-terms#wksj1)
 
-    * [Resources](/docs/schematics?topic=schematics-glossary#wksr1)
+    * [Resources](/docs/schematics?topic=schematics-sch-terms#wksr1)
 
-    * [Readme file](/docs/schematics?topic=schematics-glossary#wksr2)
+    * [Readme file](/docs/schematics?topic=schematics-sch-terms#wksr2)
 
-    * [Settings](/docs/schematics?topic=schematics-glossary#wkss2)
+    * [Settings](/docs/schematics?topic=schematics-sch-terms#wkss2)
 
-    * [Workspace](/docs/schematics?topic=schematics-glossary#wksw1)
+    * [Workspace](/docs/schematics?topic=schematics-sch-terms#wksw1)
 
 
 ## Notices and information
