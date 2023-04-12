@@ -63,8 +63,6 @@ Follow these steps to continue working with the latest versions of Terraform in 
 
 Now you are at a latest version of the Terraform provider, and can continue by using the {{site.data.keyword.bplong_notm}} Workspaces as usual.
 
-
-------
 </staging>
 
 ## Schedule (New)
