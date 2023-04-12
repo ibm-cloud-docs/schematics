@@ -65,7 +65,7 @@ Now you are at a latest version of the Terraform provider, and can continue by u
 
 </staging>
 
-## Schedule (New)
+## Schedule draft
 {: #new-schedule}
 
 {{site.data.keyword.bpshort}} follows a rolling update policy inline with HashiCorp Configuration Language (HCL) Terraform release cycle. {{site.data.keyword.bpshort}} maintains at least the latest two major releases in line with HCL support and end-of-life policy https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy {: external}.

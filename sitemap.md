@@ -1232,7 +1232,7 @@ subcollection: schematics
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 
-* [Schedule (New)](/docs/schematics?topic=schematics-deprecate-tf-version#new-schedule)
+* [Schedule draft](/docs/schematics?topic=schematics-deprecate-tf-version#new-schedule)
 
 [Updating Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
