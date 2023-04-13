@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-13"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -170,7 +170,7 @@ Follow the steps to view the deployment of Agent service workspace.
 {: #agents-setup-infra-cli}
 {: cli}
 
-Before your begin
+Before you begin
 - Setup your [CLI](/docs/schematics?topic=schematics-setup-cli).
 - Install [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
 - You have the right permission to create [VPC infrastructure](/docs/vpc?topic=vpc-iam-getting-started), [IKS](/docs/containers?topic=containers-access_reference) cluster, [LogDNA](/docs/log-analysis?topic=log-analysis-iam), and [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.

@@ -64,7 +64,7 @@ subcollection: schematics
 
 * [Deploy a blueprint using the CLI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-cli)
 
-    * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
+    * [Before you begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
 
     * [Select a blueprint template](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
 
@@ -1396,7 +1396,7 @@ subcollection: schematics
 
 [Deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-overview)
 
-* [Before your begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
 
 * [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
 
