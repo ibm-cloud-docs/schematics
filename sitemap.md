@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-04-13"
 
 keywords: schematics
 subcollection: schematics
@@ -1231,8 +1231,6 @@ subcollection: schematics
 * [Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline)
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
-
-* [Schedule draft](/docs/schematics?topic=schematics-deprecate-tf-version#new-schedule)
 
 [Updating Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
