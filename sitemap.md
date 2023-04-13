@@ -341,11 +341,17 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr23)
+
+    * Review the release notes for April 2023.
+
+    * [6 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr623)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
 * [March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar23)
 
     * Review the release notes for March 2023.
-
-    * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 
     * [30 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3023)
 
