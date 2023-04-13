@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-13"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,14 +20,30 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
 
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+## April 2023
+{: #schematics-apr23}
+
+Review the release notes for April 2023.
+{: shortdesc}
+
+
+
+### 6 April 2023
+{: #schematics-apr623}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.9](/docs/schematics?topic=schematics-cli_version-releases) released.
+
 ## March 2023
 {: #schematics-mar23}
 
 Review the release notes for March 2023.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
 
 ### 30 March 2023
 {: #schematics-mar3023}

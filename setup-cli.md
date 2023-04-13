@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-12"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -185,7 +185,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
 
     ```text
     Plugin Name                              schematics[sch]   
-    Plugin Version                           1.12.8   
+    Plugin Version                           1.12.9   
     Plugin SDK Version                       0.8.0   
     Minimal IBM Cloud CLI version required   0.15.1   
     Private endpoints supported              true   
@@ -209,7 +209,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     schematics,sch agents,ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.   
     schematics,sch blueprint,bp        Deploy and manage large scale environments using reusable blueprint templates.   
     schematics,sch agent,ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.   
-    schematics,sch policy,plcy         [Beta] Create and manage policies.
+    schematics,sch policy,plcy         [Beta] Create and manage policies
     ```
     {: screen}
 

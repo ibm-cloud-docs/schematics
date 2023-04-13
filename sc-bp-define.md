@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-12"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -20,7 +20,7 @@ subcollection: schematics
 
 {{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) automation solution for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied. Return to the [overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview) section for an introduction to Blueprints. 
 
-A blueprint [template](/docs/schematics?topic=schematics-glossary#bpb2) determines the architecture and infrastructure topology to be deployed.  Reusable Terraform [modules](/docs/schematics?topic=schematics-glossary#bpb5) implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. The definition of an architecture using modules and deployment as linked environments is illustrated. 
+A blueprint [template](/docs/schematics?topic=schematics-sch-terms#bpb2) determines the architecture and infrastructure topology to be deployed.  Reusable Terraform [modules](/docs/schematics?topic=schematics-sch-terms#bpb5) implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. The definition of an architecture using modules and deployment as linked environments is illustrated. 
 {: shortdesc} 
 
 ![Blueprint templates, modules and inputs define environment](/images/new/bp-overview.svg){: caption="Blueprint templates, modules and inputs define environment" caption-side="bottom"}
@@ -38,7 +38,7 @@ A blueprint environment and the cloud resources to be deployed are defined by th
 
 Blueprint environments can be created from reusable user or {{site.data.keyword.IBM_notm}} authored blueprint templates. New templates can be authored to address specific application requirements. Either by creating a new template from scratch, or by modifying existing templates. 
 
-Templates are [reusable across multiple environments](/docs/schematics?topic=schematics-define-blueprints#define-templates-input), with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-glossary#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3) and inputs. This separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as dev, stage, and production with multiple target regions. Each environment being customized with its own input values. See the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) for more details. 
+Templates are [reusable across multiple environments](/docs/schematics?topic=schematics-define-blueprints#define-templates-input), with the customizable input values maintained separately from the template as [inputs](/docs/schematics?topic=schematics-sch-terms#bpi1). In cookie cutter fashion, several environments can be created from the same blueprint template. Each environment has its own [blueprint configuration](/docs/schematics?topic=schematics-sch-terms#bpb3) and inputs. This separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as dev, stage, and production with multiple target regions. Each environment being customized with its own input values. See the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) for more details. 
 
 For examples of blueprint templates and inputs, see the [{{site.data.keyword.bplong_notm}} repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint){: external}. Creation and editing of blueprints can be performed in [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints). Refer to the sections [understanding blueprint templates and configurations](/docs/schematics?topic=schematics-blueprint-templates) and [blueprint template reference](/docs/schematics?topic=schematics-bp-template-schema-yaml) for guidance to the blueprint syntax when creating or modifying a template.   
 

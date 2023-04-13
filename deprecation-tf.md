@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-02"
+lastupdated: "2023-04-13"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -62,4 +62,5 @@ Follow these steps to continue working with the latest versions of Terraform in 
 3. **Verification**: You can verify that the workspaces are properly migrated by accessing the list of Terraform version that the target version you want to access in {{site.data.keyword.bpshort}} Workspace. Then run the [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the migrated Terraform version works properly.
 
 Now you are at a latest version of the Terraform provider, and can continue by using the {{site.data.keyword.bplong_notm}} Workspaces as usual.
+
 

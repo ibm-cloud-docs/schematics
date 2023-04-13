@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-12"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -31,14 +31,14 @@ Blueprint template reuse supports a number of usecases:
 ## Reuse across environments
 {: #blueprint-reuse-env} 
 
-A blueprint template (house design) is reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-glossary#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments.
+A blueprint template (house design) is reusable across environments, using a separately maintained [input configuration](/docs/schematics?topic=schematics-sch-terms#bpi1) to define the customizations for the target environment and usage. The figure illustrates this with deploying dev, stage and prod environments.
 {: shortdesc}
 
 ![Environments deployed from reusable blueprint template](/images/new/bp-reuse.svg){: caption="Environments deployed from reusable blueprint template" caption-side="bottom"}
 
 A common reusable template defines the architecture, with separate input files for the dev, stage and prod for define the customizations. For example, the scale, configuration and region for each environment. All based off the same template. 
 
-Each blueprint environment is uniquely defined by its own [blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3). The configuration defines the template, its location and version, plus the inputs to customize a template for the target environment. The separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as dev, stage, and production with multiple target regions. 
+Each blueprint environment is uniquely defined by its own [blueprint configuration](/docs/schematics?topic=schematics-sch-terms#bpb3). The configuration defines the template, its location and version, plus the inputs to customize a template for the target environment. The separation of template from its runtime configuration allows a single template to be reused many times to deploy a range of environments such as dev, stage, and production with multiple target regions. 
 
 For details on how to configure a blueprint refer to the section [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates). 
 

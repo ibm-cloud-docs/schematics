@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-13"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -112,7 +112,7 @@ For more information about the difference between destroy and config delete, see
 {: #deploy-bp-cli}
 {: cli}
 
-### Before your begin
+### Before you begin
 {: #get-started-blueprints-prereq}
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.5` version.

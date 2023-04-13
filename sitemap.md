@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-13"
 
 keywords: schematics
 subcollection: schematics
@@ -64,7 +64,7 @@ subcollection: schematics
 
 * [Deploy a blueprint using the CLI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-cli)
 
-    * [Before your begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
+    * [Before you begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
 
     * [Select a blueprint template](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
 
@@ -341,11 +341,17 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr23)
+
+    * Review the release notes for April 2023.
+
+    * [6 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr623)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
 * [March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar23)
 
     * Review the release notes for March 2023.
-
-    * {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment.. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 
     * [30 March 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-mar3023)
 
@@ -1396,7 +1402,7 @@ subcollection: schematics
 
 [Deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-overview)
 
-* [Before your begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
+* [Before you begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
 
 * [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
 
@@ -2188,65 +2194,65 @@ subcollection: schematics
 * [What is the use of refresh token header?](/docs/schematics?topic=schematics-schematics-limitations#refresh-token)
 
 
-## Glossary terms for {{site.data.keyword.bpshort}}
-{: #sitemap_glossary_terms_for_}
+## {{site.data.keyword.bpshort}} terminology
+{: #sitemap__terminology}
 
 
-[Glossary terms for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-glossary#glossary)
+[{{site.data.keyword.bpshort}} terminology](/docs/schematics?topic=schematics-sch-terms#sch-terms)
 
-* [Actions](/docs/schematics?topic=schematics-glossary#glossary-actions)
+* [Actions](/docs/schematics?topic=schematics-sch-terms#sch-terms-actions)
 
-* [Agents](/docs/schematics?topic=schematics-glossary#glossary-agents)
+* [Agents](/docs/schematics?topic=schematics-sch-terms#sch-terms-agents)
 
-    * [Agent](/docs/schematics?topic=schematics-glossary#agentsa1)
+    * [Agent](/docs/schematics?topic=schematics-sch-terms#agentsa1)
 
-    * [Agent service](/docs/schematics?topic=schematics-glossary#agentsa2)
+    * [Agent service](/docs/schematics?topic=schematics-sch-terms#agentsa2)
 
-    * [Agent Infrastructure](/docs/schematics?topic=schematics-glossary#agentsa3)
+    * [Agent Infrastructure](/docs/schematics?topic=schematics-sch-terms#agentsa3)
 
-* [Blueprints](/docs/schematics?topic=schematics-glossary#glossary-blueprint)
+* [Blueprints](/docs/schematics?topic=schematics-sch-terms#sch-terms-blueprint)
 
-    * [Blueprint](/docs/schematics?topic=schematics-glossary#bpb1)
+    * [Blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1)
 
-    * [Blueprint template](/docs/schematics?topic=schematics-glossary#bpb2)
+    * [Blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2)
 
-    * [Blueprint configuration](/docs/schematics?topic=schematics-glossary#bpb3)
+    * [Blueprint configuration](/docs/schematics?topic=schematics-sch-terms#bpb3)
 
-    * [Blueprint environment](/docs/schematics?topic=schematics-glossary#bpb4)
+    * [Blueprint environment](/docs/schematics?topic=schematics-sch-terms#bpb4)
 
-    * [Blueprint modules](/docs/schematics?topic=schematics-glossary#bpb5)
+    * [Blueprint modules](/docs/schematics?topic=schematics-sch-terms#bpb5)
 
-    * [Blueprint inputs](/docs/schematics?topic=schematics-glossary#bpi1)
+    * [Blueprint inputs](/docs/schematics?topic=schematics-sch-terms#bpi1)
 
-    * [Blueprint input files](/docs/schematics?topic=schematics-glossary#bpi2)
+    * [Blueprint input files](/docs/schematics?topic=schematics-sch-terms#bpi2)
 
-    * [Blueprint jobs](/docs/schematics?topic=schematics-glossary#bpj1)
+    * [Blueprint jobs](/docs/schematics?topic=schematics-sch-terms#bpj1)
 
-    * [Blueprint lifecycle](/docs/schematics?topic=schematics-glossary#bpl1)
+    * [Blueprint lifecycle](/docs/schematics?topic=schematics-sch-terms#bpl1)
 
-* [Catalog](/docs/schematics?topic=schematics-glossary#glossa-catalog)
+* [Catalog](/docs/schematics?topic=schematics-sch-terms#sch-terms-catalog)
 
-* [Inventories](/docs/schematics?topic=schematics-glossary#glossa-inventory)
+* [Inventories](/docs/schematics?topic=schematics-sch-terms#sch-terms-inventory)
 
-    * [Resource inventory](/docs/schematics?topic=schematics-glossary#rir1)
+    * [Resource inventory](/docs/schematics?topic=schematics-sch-terms#rir1)
 
-* [Jobs](/docs/schematics?topic=schematics-glossary#glossary-job)
+* [Jobs](/docs/schematics?topic=schematics-sch-terms#sch-terms-job)
 
-* [Templates or Modules](/docs/schematics?topic=schematics-glossary#glossary-template)
+* [Templates or Modules](/docs/schematics?topic=schematics-sch-terms#sch-terms-template)
 
-* [Workspaces](/docs/schematics?topic=schematics-glossary#glossary-workspace)
+* [Workspaces](/docs/schematics?topic=schematics-sch-terms#sch-terms-workspace)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-glossary#wkss1)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-terms#wkss1)
 
-    * [Jobs](/docs/schematics?topic=schematics-glossary#wksj1)
+    * [Jobs](/docs/schematics?topic=schematics-sch-terms#wksj1)
 
-    * [Resources](/docs/schematics?topic=schematics-glossary#wksr1)
+    * [Resources](/docs/schematics?topic=schematics-sch-terms#wksr1)
 
-    * [Readme file](/docs/schematics?topic=schematics-glossary#wksr2)
+    * [Readme file](/docs/schematics?topic=schematics-sch-terms#wksr2)
 
-    * [Settings](/docs/schematics?topic=schematics-glossary#wkss2)
+    * [Settings](/docs/schematics?topic=schematics-sch-terms#wkss2)
 
-    * [Workspace](/docs/schematics?topic=schematics-glossary#wksw1)
+    * [Workspace](/docs/schematics?topic=schematics-sch-terms#wksw1)
 
 
 ## Notices and information

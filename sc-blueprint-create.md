@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-13"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -40,7 +40,7 @@ Create your blueprint config with the CLI. The Create command requires a name an
 To work with {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.5`.
 {: important}
 
-Before your begin:
+Before you begin:
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.5`.
 - Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your blueprint. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-13"
 
 keywords: schematics agent, agent policy, policies
 
@@ -50,7 +50,7 @@ If the selection policy for `agent-1` specified tags=[`dev`] and resource-group=
 Create your agent policy using the CLI. For the complete list of agent policy options, see the [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) doc.
 {: shortdesc}
 
-Before your begin:
+Before you begin:
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version to be `1.12.9` or higher.
 - Select the {{site.data.keyword.cloud_notm}} region where the agent is defined. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.

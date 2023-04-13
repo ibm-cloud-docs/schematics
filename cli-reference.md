@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-13"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -418,7 +418,7 @@ Create an agent by using {{site.data.keyword.bpshort}}. Agents help you run your
 Syntax
 
 ```sh
-ibmcloud schematics agent create --name AGENT_NAME --location LOCATION --agent-location AGENT_LOCATION --version VERSION --infra-type INFRA_TYPE --cluster-id CLUSTER_ID --cluster-resource-group CLUSTER_RESOURCE_GROUP --cos-id COS_ID --cos-bucket COS_BUCKET --cos-location COS_LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--plan-only] [--plan-apply] [--tags TAGS] [--file FILE] [--output OUTPUT]
+ibmcloud schematics agent create --name AGENT_NAME --location LOCATION --agent-location AGENT_LOCATION --version VERSION --infra-type INFRA_TYPE --cluster-id CLUSTER_ID --cluster-resource-group CLUSTER_RESOURCE_GROUP --cos-instance-name COS_INSTANCE_NAME --cos-bucket COS_BUCKET --cos-location COS_LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--plan-only] [--plan-apply] [--tags TAGS] [--file FILE] [--output OUTPUT]
 ```
 {: pre}
 
@@ -433,7 +433,7 @@ Command options
 | `--infra-type` or `-i` | Required | Specify the type of the target agent infrastructure. Supported values are `ibm-kubernetes`, `ibm-openshift`, or `ibm-satellite`.|
 | `--clusterid` or `-k` | Required | The ID of the Kubernetes cluster for deploying an Agent.|
 | `--cluster-resource-group` or `--kr` | Required | The name of the clusters' resource group. |
-| `--cos-id` or `--oi` | Required | The ID of the COS instance. |
+| `--cos-instance-name` or `--on` | Required | The name of the COS instance. |
 | `--cos-bucket` or `-b` | Required |  The ID or the name of the COS bucket. |
 | `--resource-group` or `-r` | Required | Resource group name or ID the agent will be associated with. |
 | `--description` or `-d` | Optional | A description that identifies the agent usage, and the network zones and resources the agent is able to access. |
@@ -447,7 +447,7 @@ Command options
 Example
 
 ```sh
-ibmcloud schematics agent create --name agenttestcli --location us-south --agent-location us-south --version v1.0.0 --infra-type ibm_kubernetes --cluster-id c6ja7vtf0afldib61l20 --cluster-resource-group Default --cos-id COSForAgentLogging --cos-bucket agentlogs --cos-location us-south --resource-group Default
+ibmcloud schematics agent create --name agenttestcli --location us-south --agent-location us-south --version v1.0.0 --infra-type ibm_kubernetes --cluster-id c6ja7vtf0afldib61l20 --cluster-resource-group Default --cos-instance-name COSForAgentLogging --cos-bucket agentlogs --cos-location us-south --resource-group Default
 ```
 {: pre}
 
@@ -459,7 +459,7 @@ Uninstall an agent. For more information about the steps to use delete command, 
 Syntax
 
 ```sh
-ibmcloud schematics agent delete --id AGENT_ID [--output OUTPUT] [--no-prompt]
+ibmcloud schematics agent delete --id AGENT_ID [--force]
 ```
 {: pre}
 
@@ -467,9 +467,8 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of an agent. |
-| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
-| `--no-prompt` | Optional | Set this flag to stop interactive CLI session such as, prompting user for input a field value on terminal. |
+| `--id` | Required | The ID of an agent. |
+| `--force` or `-f` | Optional | The force action without confirmation. |
 {: caption="{{site.data.keyword.bpshort}} agent delete flags" caption-side="top"}
 
 Example
@@ -488,7 +487,7 @@ Retrieves the details of an agent. Agents help you to fetch your workspace jobs 
 Syntax
 
 ```sh
-ibmcloud schematics agent get --id AGENT_ID [--verbose VERBOSE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics agent get --id AGENT_ID [--output OUTPUT]
 ```
 {: pre}
 
@@ -496,11 +495,8 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | ID of the agent. |
-| `--profile` or `-p` | Optional | Level of details to return. Valid values are `summary`, `detailed`, or `ids`. Defaults to `summary`. |
-| `--verbose` or `-v` | Optional | Sets the verbosity level to get the relevant details about an agent. Valid values are `all`, `assignment-policy`, `prs-result`, `deploy-result`, `health-result`. The default value is `all`. |
+| `--id` | Required | The ID of an agent. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-| `--no-prompt` | Optional | Set this flag to stop interactive CLI session such as, prompting user for input a field value on terminal. |
 {: caption="{{site.data.keyword.bpshort}} agent get flags" caption-side="top"}
 
 Example
@@ -527,8 +523,8 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i`| Required | The ID of the agent. |
-| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+| `--id`| Required | The ID of an agent. |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
 {: caption="{{site.data.keyword.bpshort}} agent health flags" caption-side="top"}
 
 Example
@@ -546,7 +542,7 @@ Lists the agents. Defaults to show the registered agents. For more information a
 Syntax
 
 ```sh
-ibmcloud schematics agent list [--location LOCATION] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT_FORMAT
+ibmcloud schematics agent list [--location LOCATION] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT_FORMAT]
 ```
 {: pre}
 
@@ -555,7 +551,6 @@ Command options
 | Flag | Required / Optional | Description |
 | ----- | -------- | ------ |
 | `--location` or `-l` | Optional |  Geographic locations supported by {{site.data.keyword.bplong_notm}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. |
-| `--filter` | Optional | Set this flag to filter agents. Valid values are `all`, `saved`, or `new`. If unset defaults to `saved`. |
 | `--limit` or `-lm` | Optional | Maximum number of agents to list. Ignored if a negative number is set. Maximum limit is 200, (default is -1). |
 | `--offset` or `-m`| Optional | Offset in list. Ignored if a negative number is set (default: -1). |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
@@ -651,7 +646,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 
 Refer to the section on [Creating Blueprints](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for examples of command syntax and output.
 
-Before your begin:
+Before you begin:
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version that is greater than the `1.12.5`.
 - Select the {{site.data.keyword.cloud_notm}} region that you wish to use to manage your {{site.data.keyword.bpshort}}. Set the region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. For more information, see [FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region).
@@ -1202,7 +1197,7 @@ Create a policy using {{site.data.keyword.bpshort}} to select one or more {{site
 Syntax
 
 ```sh
-ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--target-file FILE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics policy create --name POLICY_NAME --kind POLICY_KIND --location LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--target-file TARGET_FILE] [--tags TAGS] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -1365,7 +1360,7 @@ Update the information of an existing policy by using policy ID. Changes are app
 Syntax
 
 ```sh
-ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location LOCATION [--description DESCRIPTION] --resource-group RESOURCE_GROUP [--tags TAGS] [--target-file FILE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics policy update --id POLICY_ID [--kind POLICY_KIND] [--description DESCRIPTION] [--resource-group RESOURCE_GROUP] [--tags TAGS] [--file FILE] [--output OUTPUT]
 ```
 {: pre}
 
@@ -1373,13 +1368,11 @@ ibmcloud schematics policy update --id POLICY_ID --kind POLICY_KIND --location L
 | ----- | -------- | ------ |
 |   `--id` or `-i` | Required | ID of the policy. |
 |   `--kind` or `-k` | Optional | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
-|   `--location` or `-l` | Optional | Geographic locations supported by {{site.data.keyword.bpshort}} service. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
 |   `--description` or `-d` | Optional |  The description of {{site.data.keyword.bpshort}} customization policy. |
 |   `--resource-group` or `-r` | Optional |  Resource group name or ID for the policy. |
 |   `--tags` or `-t` | Optional |     Policy tags. This flag can be used multiple times to search for and locate agent policies faster. |
-|   `--target-file` or `-tf`  | Optional |    Path to the JSON file containing the definition of the policy. |
+|   `--file` or `-f`  | Optional |    Path to the `JSON` file containing the definition of the policy. |
 |   `--output` or `-o`  | Optional |  Specify output format, only `JSON` is supported. |
-|   `--no-prompt`  | Optional |       Set this flag to stop interactive CLI session, such as prompting user for input a field value on terminal. |
 {: caption="{{site.data.keyword.bpshort}} policy update flags" caption-side="top"}
 
 Example
@@ -1387,8 +1380,8 @@ Example
 ```sh
 ibmcloud schematics policy update --id policy-msk.soP.5c65 --description PolicyDescriptionUpdated
 POLICY DETAILS
-Name         ID                    Description                Kind                      Location   Resource Group   CRN   Target   Tags   
-policy-msk   policy-msk.soP.5c65   PolicyDescriptionUpdated   agent_assignment_policy   us-south   Default                            
+Name         ID                    Description                Kind                     Resource Group   CRN   Target   Tags   
+policy-msk   policy-msk.soP.5c65   PolicyDescriptionUpdated   agent_assignment_policy     Default                            
                                    
 OK
 ```
@@ -1403,7 +1396,7 @@ Delete a {{site.data.keyword.bpshort}} policy.
 Syntax
 
 ```sh
-ibmcloud schematics policy delete [--id POLICY_ID]
+ibmcloud schematics policy delete --id POLICY_ID [--force]
 ```
 {: pre}
 
@@ -1411,8 +1404,8 @@ Command options
 
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
-| `--id` or `-i` | Required | ID of the policy. |
-| `--no-prompt` | Optional | Set this flag to run the command without user prompts. |
+| `--id` or `-i` | Required | The ID of the policy. |
+| `--force` or `-f` | Optional | The force action without confirmation. |
 {: caption="{{site.data.keyword.bpshort}} policy delete flags" caption-side="top"}
 
 Example
@@ -2997,9 +2990,9 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--file` or `-f` | Optional | The relative path to a JSON file on your local machine that is used to configure your workspace. For more information about the sample JSON file with the details, see [JSON file create template](/docs/schematics?topic=schematics-schematics-cli-reference#json-file-create-template).|
-| `--state` | Optional | The relative path to an existing Terraform state file on your local machine. To create the Terraform state file: **1.** Show the content of an existing Terraform state file by using the [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command. **2.** Copy the content of the state file from your command-line output in to a file on your local machine that is named `terraform.tfstate`. **3.** Use the relative path to the file in the `--state` command parameter. **Note** The {{site.data.keyword.bpshort}} Workspace supports the `terraform.tfstate` file size of less than 2 MB.|
+| `--state` | Optional | The relative path to an existing Terraform state file on your local machine. To create the Terraform state file: </br> **1.** Show the content of an existing Terraform state file by using the [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull) command.</br> **2.** Copy the content of the state file from your command-line output in to a file on your local machine that is named `terraform.tfstate`. </br> **3.** Use the relative path to the file in the `--state` command parameter. **Note** The {{site.data.keyword.bpshort}} Workspace supports the `terraform.tfstate` file size of less than 2 MB.|
 | `--github-token` or `-g` | Optional |  Enter the functional personal access tokens for HTTPS Git operations. For example, `--github-token ${FUNCTIONAL_GIT_KEY}`.|
-| `--agent-id` or `--aid` | Optional | **New** ID of the Agent to bind your new workspace. Agents help you to run your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).|
+| `--agent-id` or `--aid` | Optional | The ID of an Agent where your workspace is created. The agent help you to run your workspace jobs on your infrastructure. For more information, see [{{site.data.keyword.bpshort}} Agents beta-1](/docs/schematics?topic=schematics-agentb1-about-intro) or see [{{site.data.keyword.bpshort}} Agents beta-0](/docs/schematics?topic=schematics-agents-intro).|
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
 {: caption="{{site.data.keyword.bpshort}} Workspaces create flags" caption-side="top"}
