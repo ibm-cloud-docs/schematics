@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-04-14"
 
 keywords: schematics agent, agent policy, policies
 
@@ -435,7 +435,14 @@ Authorization: Bearer <auth_token>
 ## Next steps
 {: #agent-policy-nextsteps}
 
-You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansible jobs. Any workspaces or actions that match the defined selection policy will be executed on the agent. 
+You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansible jobs. The agent will execute any jobs for workspaces or actions that match the defined selection policy parameters:
+- resource group
+- location
+- tags
+
+Note at this time, tags must be set at workspace or action create time. Any changes to tags performed via the {{site.data.keyword.bpshort}} UI will not be detected or considered during policy evaluation. 
+{: attention}
+
 
 After execution the workspace or action job logs will contain a header indicating the agent the job was executed on.  
 
