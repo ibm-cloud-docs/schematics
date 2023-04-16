@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Planning your workspace
+# Preparing workspace
 {: #workspaces-plan}
 
 You can plan and design your workspace by following queries.
