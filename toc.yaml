@@ -80,7 +80,6 @@ toc:
                                                     - sc-blueprint-delete.md
                                                     - sc-blueprint-create-file.md
                                                     - sc-blueprint-env-vars.md
-                                                    - job-force-stop.md
                                   - topicgroup:
                                             label: Managing Actions
                                             topics:

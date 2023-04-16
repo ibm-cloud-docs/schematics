@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-02"
+  years: 2017, 2023
+lastupdated: "2023-04-16"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -198,18 +198,7 @@ A Terraform execution plan is based on the Terraform state file that was created
 
 7. Optional: Apply the changes in your cloud environment by clicking **Apply plan**. 
 
-## Reviewing resource and deployment details
-{: #review-logs}
 
-View the details of the {{site.data.keyword.bplong_notm}} deployments and the {{site.data.keyword.cloud_notm}} resources that you currently manage with {{site.data.keyword.bplong_notm}}.
-{: shortdesc}
-
-1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to inspect.
-2. From the navigation, select **Activity** to find a summary of activities in your workspace.
-3. Review the logs of previous Terraform execution plans and the plans that you applied. 
-4. From the navigation, select **Resources** to review the state of the {{site.data.keyword.cloud_notm}} resources that you created with this workspace. 
-5. To review who made a change to your Terraform template, go to the source repository in GitHub that is linked to your workspace, and use the built-in capabilities such as the commit history and pull requests to review changes.
-6. To review events that {{site.data.keyword.bpshort}} sent to {{site.data.keyword.at_full_notm}}, see [{{site.data.keyword.at_full_notm}} events](/docs/schematics?topic=schematics-at_events). 
 
 ## Removing your resources
 {: #destroy-resources}

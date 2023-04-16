@@ -1107,20 +1107,6 @@ subcollection: schematics
 
 * [Blueprints usage](/docs/schematics?topic=schematics-bp-env-vars#usage)
 
-[Stopping or terminating running jobs](/docs/schematics?topic=schematics-interrupt-job#interrupt-job)
-
-* [Stop job types](/docs/schematics?topic=schematics-interrupt-job#interrupt-types)
-
-* [Canceling a job](/docs/schematics?topic=schematics-interrupt-job#cancelling)
-
-* [Stopping a running job using the UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui)
-
-* [Stopping a running job using the CLI](/docs/schematics?topic=schematics-interrupt-job#stop-job-cli)
-
-* [Stopping a running job through API](/docs/schematics?topic=schematics-interrupt-job#stop-job-api)
-
-    * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job#stop-jobs-api)
-
 
 ## Managing Actions
 {: #sitemap_managing_actions}
