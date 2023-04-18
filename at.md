@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-05"
+  years: 2017, 2023
+lastupdated: "2023-04-18"
 
 keywords: schematics activity tracker events, schematics events, schematics audit, schematics audit events, schematics audit logs
 
@@ -70,7 +70,7 @@ The following lists of {{site.data.keyword.bpshort}} events are sent to {{site.d
 | `schematics.shareddatas.create` | A {{site.data.keyword.bpshort}} shared data set was created or failed to create. |
 | `schematics.shareddatas.delete` | A {{site.data.keyword.bpshort}} shared data set was deleted or failed to delete. |
 | `schematics.shareddatas.update` | A {{site.data.keyword.bpshort}} shared data set was updated or failed to updated. |
-{: caption="Shareddata events" caption-side="bottom"}
+{: caption="`Shareddata events`" caption-side="bottom"}
 
 
 ### Other events

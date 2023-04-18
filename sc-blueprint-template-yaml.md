@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-18"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -17,7 +17,7 @@ subcollection: schematics
 
 This document is the reference of the YAML schema that is used to describe the blueprint template YAML file.
 
-Blueprint templates are written in YAML with a minimum of syntax that specify the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. Template editing and schema validation is supported in [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints). 
+Blueprint templates are written in YAML with a minimum of syntax that specify the automation modules to be used, their versions, source libraries, and relationships for passing resource dependency data between modules. Template editing and schema validation is supported in [`VSCode` with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints). 
 {: shortdesc}
 
 A blueprint template consists of two sections. A global section contains a default name and description for the environment, and settings related to the whole template. Also it defines the inputs the template requires, and any outputs it returns. This is followed by a modules section containing the module definitions. Resource dependencies are created between modules by interpolation of module input and output values.
@@ -75,7 +75,7 @@ Required blueprint template file type identifier.
 
 Value: `blueprint`
 
-### schema_version
+### `schema_version`
 {: #bp-schema-version}
 
 Type: number
@@ -530,7 +530,7 @@ Type:       number
 
 Optional
 
-Blueprint templates set the Terraform version to be used at module execution time based on the value of TF_Version. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
+Blueprint templates set the Terraform version to be used at module execution time based on the value of `TF_Version`. This value can be used to pin the version of Terraform used by {{site.data.keyword.bpshort}} to remain compatible with the template supported version. Updating this value will change the Terraform version that is used on the next execution. 
 
 When not specified the required Terraform version is determined by inspecting the TF module code for a `required_version` definition. Based on the specified version or range of versions, Blueprints will used the most recent version of Terraform supported by Schematics. 
 
@@ -731,7 +731,7 @@ Type: URL
 
 Required: true
 
-URL of the Git repository that contain the templating files used for injection. 
+URL of the Git repository that contain the template files used for injection. 
 {: pre}
 
 ### module.injectors.tft_name
@@ -741,7 +741,7 @@ Type: string
 
 Required: true
 
-Name of the templating file to use
+Name of the template file to use
 
 Options: `ibm` or `kubernetes`
 {: pre}

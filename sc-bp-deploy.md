@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: schematics blueprints, deploy blueprint, managed environments
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Deploying blueprints
 {: #deploy-blueprints}
 
-Deploying a blueprint environment using a blueprint template and input values is a two-step operation. The two-step process ensures controlled application of change first to the stored blueprint configuration, then secondly to the cloud resources. In a future release a plan step will be added to allow preview of all resource changes before deploying.  
+Deploying a blueprint environment using a blueprint template and input values is a two-step operation. The two-step process ensures controlled application of change first to the stored blueprint configuration, then to the cloud resources. In a future release a plan step will be added to allow preview of all resource changes before deploying.  
 {: shortdesc} 
 
 1. **Create the blueprint configuration in {{site.data.keyword.bpshort}}:** This first step creates and saves a blueprint configuration in {{site.data.keyword.bpshort}}. The configuration specifies the blueprint template used to create the reference architecture and the inputs that will we used. {{site.data.keyword.bpshort}} retrieves the user specified blueprint template from its Git repo, input values and performs validation. The automation modules defined in the template are imported from their source repositories. The required {{site.data.keyword.bpshort}} linked modules are initialized to manage deployment of the IaC modules and creation of cloud resources in the next step.
@@ -46,4 +46,4 @@ The deployment steps are illustrated in the diagram.
 
 The next stage of working with blueprint is [Maintaining blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints).
 
-Explore deploying [{{site.data.keyword.bpshort}}blueprints by using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
+Explore deploying [{{site.data.keyword.bpshort}} blueprints by using the command-line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.

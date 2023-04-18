@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-04-18"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -23,7 +23,7 @@ subcollection: schematics
 
 This building analogy also applies to reuse across environments. A builder may build an entire street of houses from the same blueprint drawing. Each house customized by its choice of color, lighting and styling, but all built to the same design.   
 
-Blueprint template reuse supports a number of usecases:
+Blueprint template reuse supports a number of usecase:
 - Sharing an approved architecture across teams within a business
 - Deploying instances across multiple regions to create a highly resilient application deployment
 - Software delivery pipelines, dev, stage, prod
@@ -53,7 +53,7 @@ The prior figure illustrates the reuse of a template across the stages of a deli
 ## Customization best practice
 {: #blueprint-customization-bp} 
 
-Blueprints best practice is to for templates to be reusable across the instances of an application environment, from dev to stage and production. This is an outcome of [IaC modular architecture best practice](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity), where the reliability of reusable components increases through testing and hardening via reuse.  External configuration of templates customizes a deployment for a blueprint environment. customization is performed by separately defined, and versioned blueprint input configurations, with hardcoding of specific configurations avoided within the template itself. The template itself being maintained and versioned separately to the environment specific customization.  
+Blueprints best practice is to for templates to be reusable across the instances of an application environment, from dev to stage and production. This is an outcome of [IaC modular architecture best practice](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity), where the reliability of reusable components increases through testing and hardening via reuse.  External configuration of templates customizes a deployment for a blueprint environment. customization is performed by separately define, and updated version blueprint input configurations, with hardcoding of specific configurations avoided within the template itself. The template itself being maintained and versioned separately to the environment specific customization.  
 
 
 ### Blueprint customization
@@ -73,7 +73,7 @@ Blueprints is built around reuse. Blueprints' implements layers of configuration
     - Dynamic (override) inputs. Typically sensitive input values, like API or SSH keys that should not be maintained in a version control system. In unregulated or development environments, all inputs can be supplied as dynamic inputs. 
 
 
-Selection of template and input file versions is defined on initial creation of the blueprint config for the environment in Schematics. Review the section on [blueprint versioning](/docs/schematics?topic=schematics-blueprint-versioning). The omission of template and input file version information at config create time allows for a ‘relaxed’ usage mode. Where any changes to the template or input files are automatically pulled in if {{site.data.keyword.bpshort}}detects a change in the source repository. 
+Selection of template and input file versions is defined on initial creation of the blueprint config for the environment in Schematics. Review the section on [blueprint versioning](/docs/schematics?topic=schematics-blueprint-versioning). The omission of template and input file version information at config create time allows for a ‘relaxed’ usage mode. Where any changes to the template or input files are automatically pulled in if {{site.data.keyword.bpshort}} detects a change in the source repository. 
 
 
 ## Customizing environments with inputs

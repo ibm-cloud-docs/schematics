@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-21"
+lastupdated: "2023-04-18"
 
 keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
@@ -52,7 +52,7 @@ Blueprint commands have been renamed with the 1.12.3 release of the {{site.data.
 | Default values | Planned for December 2022 | Delivered Dec 2022 |
 | Large input value sizes up to Terraform limit of 4MB | Planned for December 2022 | |
 | Local values | Local support planned for 2023 | |
-| Input value operators, for example: merge, concat | Planned for a 2023 release | |
+| Input value operators, for example: merge, concatenate | Planned for a 2023 release | |
 | Performance optimization - Parallel job execution for plan and apply | Concurrent module jobs planned for 2023 release | | 
 | Performance optimization - Plan and Apply only run against changed modules | Planned for 2023 release | | 
 | Blueprint operations are only supported by using the {{site.data.keyword.cloud_notm}} CLI plug-in. | UI support planned for December 2022 | Delivered Dec 2022 | 
@@ -63,7 +63,7 @@ Blueprint commands have been renamed with the 1.12.3 release of the {{site.data.
 | Cloud resources that are created on deploy, cannot be left in place when an environment is deleted. At this time all resources must be destroyed to delete a blueprint. | | |  
 | The Delete CLI command returns immediately at start of execution and does not wait for successful completion. | | | 
 | Operations must not be directly run against linked {{site.data.keyword.bpshort}} modules (workspaces) by using the workspace commands or UI. Operations must be run by using blueprint commands. | | |
-| Blueprint configuration validation command. | Support planned for November 2022 | VSCode language extension delivered in November 2022  | 
+| Blueprint configuration validation command. | Support planned for November 2022 | VScode language extension delivered in November 2022  | 
 | Cost Estimation in CLI and UI | Planned for 2023 release | | 
 | Only blueprint templates and modules in GitHub are formally supported. Testing is not complete for GitLab and other repositories. | Planned  November  2022 | Delivered November 2022 | 
 | Only blueprint templates and modules in public repositories are formally supported. Testing is not complete for private repositories using Git tokens. | Planned in November 2022 | Delivered November 2022 | 

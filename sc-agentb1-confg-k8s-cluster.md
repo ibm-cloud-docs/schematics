@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-18"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -113,7 +113,7 @@ Following are the default agent sandbox file type and size allowlist configurati
 | `SANDBOX_BLACKLISTEXTN` |	From the Git repositories following are the blocked file extensions. </br> `.php5`, `.pht`, `.phtml`, `.shtml`, `.asa`, `.asax`, `.swf`, `.xap`, `.tfstate`, `.tfstate.backup`, `.exe`.|
 | `SANDBOX_IMAGEEXTN` |	From the Git repositories following are the allowed image file extensions. </br> `.tif`, `.tiff`, `.gif`, `.png`, `.bmp`, `.jpg`, `.jpeg`, `.so`. |
 | `SANDBOX_MAX_FILE_SIZE` |	Maximum size of a file that is allowed from the Git repositories is 2 MB. (Yet to be implemented) |
-{: caption="Default agent sandboc allowlist configuration" caption-side="top"}
+{: caption="Default agent sandbox allowlist configuration" caption-side="top"}
 
 You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}

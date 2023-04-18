@@ -113,7 +113,7 @@ subcollection: schematics
 
     * [Declarative Terraform and lifecycle management](/docs/schematics?topic=schematics-infrastructure-as-code#iac-declarative-lifecycle)
 
-    * [Idempotence](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
+    * [`Idempotence`](/docs/schematics?topic=schematics-infrastructure-as-code#iac-idempotence)
 
     * [Immutablity](/docs/schematics?topic=schematics-infrastructure-as-code#iac-immutability)
 
@@ -697,7 +697,7 @@ subcollection: schematics
 
     * [30 June 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jun302021)
 
-        * Support taint and untaint feature enhancement in {{site.data.keyword.bplong_notm}}
+        * Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_notm}}
 
         * Documentation support to deploy resources in specific region or across multiple region
 
@@ -967,7 +967,7 @@ subcollection: schematics
 
 [Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
 
-* [Configure your VSCode environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
+* [Configure your `VSCode` environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
 
 * [Sourcing a blueprint template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
 
@@ -975,7 +975,7 @@ subcollection: schematics
 
 * [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
 
-* [Editing in VSCode](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
+* [Editing in `VSCode`](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
 
     * [Blueprint usage and configuration documentation](/docs/schematics?topic=schematics-edit-blueprints#bp-usage-config-doc)
 
@@ -1538,7 +1538,7 @@ subcollection: schematics
 
 * [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
 
-* [Verifying pre-requisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
+* [Verifying prerequisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
 
 * [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#apply-agent-cli)
 
@@ -2185,7 +2185,7 @@ subcollection: schematics
 
     * [type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-type)
 
-    * [schema_version](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-schema-version)
+    * [`schema_version`](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-schema-version)
 
     * [description](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-description)
 
@@ -2795,7 +2795,7 @@ subcollection: schematics
 
 * [Why is {{site.data.keyword.bpshort}} not able to clone the public GitHub repository?](/docs/schematics?topic=schematics-bp-create-fails#tsg-publicgithub)
 
-[blueprint create fails in the create_init step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
+[blueprint create fails in the `create_init` step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
 
 [Blueprint apply fails](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails)
 

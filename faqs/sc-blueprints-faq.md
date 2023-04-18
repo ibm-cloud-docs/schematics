@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -57,7 +57,7 @@ Dependencies between blueprint modules are created using the value references be
 {: faq}
 {: support}
 
-Blueprint templates can be edited in any editor or IDE. Follow the instructions on how to use and configure VSCode to [edit templates and input files](/docs/schematics?topic=schematics-edit-blueprints). The [Red Hat YAML VSCode extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml){: external}  provides a framework for editing blueprint YAML files, using a [blueprint schema](https://github.com/Cloud-Schematics/vscode-blueprint-schema){: external} defined using [JSON-Schema](https://json-schema.org){: external} . 
+Blueprint templates can be edited in any editor or IDE. Follow the instructions on how to use and configure `VSCode` to [edit templates and input files](/docs/schematics?topic=schematics-edit-blueprints). The [Red Hat YAML `VSCode` extension](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml){: external}  provides a framework for editing blueprint YAML files, using a [blueprint schema](https://github.com/Cloud-Schematics/vscode-blueprint-schema){: external} defined using [JSON-Schema](https://json-schema.org){: external} . 
 
 ## Why do blueprints get the error 'Length for variable `variable name` greater than the given length'?  
 {: #faqs-bp-length}
@@ -91,7 +91,7 @@ The link can point to the template file in the main branch, any other branch, or
 - Example for **blueprint.yaml in branches** - `https://github.com/myorg/myrepo/blob/mybranch/blueprint.yaml`
 - Example for **blueprint.yaml in subdirectory** - `https://github.com/mnorg/myrepo/blob/mybranch/mysubdirectory/blueprint.yaml` 
 
-The required URLs to the files can be copied directly from the Github or Gitlab UIs. For example with Github, on the `Code` tab hover over the template or input file you require the URL for. Right click with your mouse to bring up the context menu and select `Copy Link`, or `Copy Link Address`. The copied URL link can be pasted into the blueprint URL entry field. 
+The required URLs to the files can be copied directly from the Github or Gitlab UI. For example with Github, on the `Code` tab hover over the template or input file you require the URL for. Right click with your mouse to bring up the context menu and select `Copy Link`, or `Copy Link Address`. The copied URL link can be pasted into the blueprint URL entry field. 
 
 ## How is resource provisioning performed?
 {: #faqs-bp-resource}
@@ -204,7 +204,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 {: faq}
 {: support}
 
-The CLI uses geo specific API endpoints which direct job requests to the first available region within a geo. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config's targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
+The CLI uses geographic specific API endpoints which direct job requests to the first available region within a geography. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
 
 This behavior is similar in the UI. For example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.
 

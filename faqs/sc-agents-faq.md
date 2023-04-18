@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -80,7 +80,7 @@ The workspace job or action job logs are available in {{site.data.keyword.bpshor
 {: support}
 
 Currently, an agent runs three {{site.data.keyword.bpshort}} jobs in parallel. The rest of the jobs are queued in your cluster.
-In future, you can customize an agent to increase the number of job Pods, in order to increase the number of parallel jobs. You must also monitor the resources in the Kubernetes cluster. 
+In future, you can customize an agent to increase the number of job Pods, to increase the number of parallel jobs. You must also monitor the resources in the Kubernetes cluster. 
 
 ## What is the minimum cluster configuration required in Agent release?
 {: #faqs-agent-min-cluster}
@@ -126,7 +126,7 @@ The `--location` is a variable that specifies the region supported by {{site.dat
 {: faq}
 {: support}
 
-Yes, an ggent can run {{site.data.keyword.bpshort}} Jobs related to workspace or actions, from all or any resource group, in an account.
+Yes, an agent can run {{site.data.keyword.bpshort}} Jobs related to workspace or actions, from all or any resource group, in an account.
 
 ## Can an agent run {{site.data.keyword.bpshort}} Job from different region?
 {: #faqs-agent-diff-region}
@@ -181,7 +181,7 @@ provider_installation {
 ```
 {: pre}
 
-Sets a new environment variable to point to this generated cutsom config file
+Sets a new environment variable to point to this generated custom config file
 
 ```sh
 export TF_CLI_CONFIG_FILE=/home/appuser/terraform-custom.config
@@ -239,7 +239,7 @@ The [Agent assignment policy](/docs/schematics?topic=schematics-policy-manage) f
 
 Example
 
-If your organization has three different network isolation zones (such as `Dev`, `HR-Stage`, and `HR-Prod`) and you have installed three agents (one each, for the three network isolation zone). You have defined an `agent-assignment-policy` for the agent running in `Dev`, with the selector as `tags=dev`. All workspaces that have `tags=dev` automatically bounds to the `Dev` agent. In other words, the `Dev` agent is used to download Terraform templates (from the Git repository), to run Terraform jobs. Similarly, the `agent-assignment-policy` can include other attributes of the workspaces, in order to control the location of the job execution.
+If your organization has three different network isolation zones (such as `Dev`, `HR-Stage`, and `HR-Prod`) and you have installed three agents (one each, for the three network isolation zone). You have defined an `agent-assignment-policy` for the agent running in `Dev`, with the selector as `tags=dev`. All workspaces that have `tags=dev` automatically bounds to the `Dev` agent. In other words, the `Dev` agent is used to download Terraform templates (from the Git repository), to run Terraform jobs. Similarly, the `agent-assignment-policy` can include other attributes of the workspaces, to control the location of the job execution.
 
 ## How can I enable debug mode in an agent?
 {: #faqs-agent-debugmode}

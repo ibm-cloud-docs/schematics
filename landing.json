@@ -1,6 +1,6 @@
 {
   "title": "IBM Cloud Schematics docs",
-  "lastupdated": "2023-03-20",
+  "lastupdated": "2023-04-18",
   "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics Actions. Learn more about how Schematics works and the benefits of using the service. ",
   "section_devtools": {
     "api": "/apidocs/schematics",
@@ -44,7 +44,7 @@
       "href": "/docs/schematics?topic=schematics-learn-about-schematics"
     },
     {
-      "title": "Browse Terrafom templates",
+      "title": "Browse Terraform templates",
       "description": "Explore the sample Terraform templates, onboard them to your private catalogs, and try them using Schematics.",
       "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template"
     },

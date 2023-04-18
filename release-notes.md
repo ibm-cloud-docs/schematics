@@ -668,7 +668,7 @@ Review the release notes for June 2021.
 {: #schematics-jun302021}
 {: release-note}
 
-Support taint and untaint feature enhancement in {{site.data.keyword.bplong_notm}}
+Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_notm}}
 :   You can run `ibmcloud schematics state list` command to view the tainted status of your resources. For more information, see [about taint and `untaint` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) and see [Time out errors with {{site.data.keyword.bplong_notm}} blog](https://www.ibm.com/cloud/blog/timeout-errors-with-ibm-cloud-schematics){: external}.
 
 Documentation support to deploy resources in specific region or across multiple region

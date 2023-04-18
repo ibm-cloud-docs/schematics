@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -33,9 +33,9 @@ In the same way, {{site.data.keyword.bpshort}} Blueprints enables users to defin
 
 A blueprint template determines the infrastructure architecture, specifying the modules required for the implementation, the infrastructure topology and relationships between modules. Inputs customize the template for the target deployment. Blueprint operations build up the infrastructure by deploying the smaller modular environments defined by the template. Blueprints linking the module environments into the whole, by the sharing and passing of resource dependency data between modules.  
 
-Reuse and maintainability are key features to deploy at scale. Publicly available modules designed for {{site.data.keyword.cloud}} can be [combined with third-party and user developed modules](/docs/schematics?topic=schematics-blueprint-terraform) to create customized solutions. Separately maintained input configurations, ensure reusability as blueprint templates can be configured at deploy time to create customized dev, stage and prod pipelines, or repeatable application deployments.  
+Reuse and maintainability are key features to deploy at scale. Publicly available modules designed for {{site.data.keyword.cloud}} can be [combined with third-party and user developed modules](/docs/schematics?topic=schematics-blueprint-terraform) to create customized solutions. Separately maintained input configurations, ensure reusable blueprint templates can be configured at deploy time to create customized dev, stage and prod pipelines, or repeatable application deployments.  
 
-This modular approach to composition and configuration also eases the task of maintaining and updating large environments. Blueprint operations update environments on request through configuration of module versions, rather than by code change. IBM module libraries are regularly refreshed and versioned to maintain platform compatibility and meet current compliance requirements. Module [semantic versioning](https://semver.org/){: external} identifies the scope of any changes, allowing environments to be automatically refreshed with minor patches and revisions, while maintaining user control over major feature enhancements.  
+This modular approach to composition and configuration also eases the task of maintaining and updating large environments. Blueprint operations update environments on request through configuration of module versions, rather than by code change. IBM module libraries are regularly refresh and upgrade version to maintain platform compatibility and meet current compliance requirements. Module [semantic version](https://semver.org/){: external} identifies the scope of any changes, allowing environments to be automatically refreshed with minor patches and revisions, while maintaining user control over major feature enhancements.  
 
 ## Features
 {: #blueprint-features}
@@ -64,5 +64,5 @@ So far you have learned a little about {{site.data.keyword.bpshort}} Blueprints.
 {: shortdesc}
 
 - [Working with blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints) to understand how to use blueprints to manage the lifecycle of deploying and managing cloud environments.
-- See [understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) to dig into how to define cloud environments using versioned blueprint templates and inputs. 
+- See [understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates) to dig into how to define cloud environments using blueprint templates and inputs of latest version. 
 - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to provide your feedback and understand beta limitations.
