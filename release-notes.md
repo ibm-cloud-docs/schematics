@@ -30,6 +30,13 @@ Review the release notes for April 2023.
 {: shortdesc}
 
 
+### 18 April 2023
+{: #schematics-apr1723}
+{: release-note}
+
+{{site.data.keyword.bpshort}} documentation realigns the workspace documentation
+:   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-wksmulti-region-deployment).
+
 
 ### 13 April 2023
 {: #schematics-apr1323}
@@ -37,7 +44,6 @@ Review the release notes for April 2023.
 
 {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
 :   The {{site.data.keyword.bpshort}} announces the timeline for the [deprecation of Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#new-schedule).
-
 
 
 ### 6 April 2023
