@@ -83,20 +83,35 @@ toc:
                                   - topicgroup:
                                             label: Managing Workspaces
                                             topics:
-                                                    - create-terraform-config.md
-                                                    - workspace-setup.md
-                                                    - special-env-vars.md
-                                                    - sc-drift.md
-                                                    - wks-download-module-files.md
-                                                    - manage-resource-lifecycle.md
-                                                    - cross_region_deployment.md
-                                                    - deprecation-tf.md
-                                                    - migrate-tfversion.md
-                                                    - remotestate.md
-                                                    - solutions.md
-                                                    - compact-download.md
+                                                    - topicgroup:
+                                                              label: Creating workspace
+                                                              topics:
+                                                                      - workspaces/sc-workspaces-create.md
+                                                                      - create-terraform-config.md
+                                                                      - special-env-vars.md
+                                                    - workspaces/sc-workspaces-plan.md
+                                                    - workspaces/sc-workspaces-deploy.md
+                                                    - workspaces/sc-workspaces-update.md
+                                                    - workspaces/sc-workspaces-display.md
+                                                    - workspaces/sc-workspaces-delete.md
                                                     - job-download-file.md
                                                     - job-force-stop.md
+                                                    - workspaces/sc-workspaces-states.md
+                                                    - workspaces/sc-workspaces-prepare.md
+                                                    - topicgroup:
+                                                              label: Managing workspace resources
+                                                              topics:
+                                                                      - cross_region_deployment.md
+                                                                      - wks-download-module-files.md
+                                                                      - manage-resource-lifecycle.md
+                                                                      - sc-drift.md
+                                                                      - remotestate.md
+                                                                      - deprecation-tf.md
+                                                                      - migrate-tfversion.md
+                                                                      - solutions.md
+                                                                      - compact-download.md
+                                                                      - shared-data-set.md
+                                                    - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
                                             label: Managing Actions
                                             topics:

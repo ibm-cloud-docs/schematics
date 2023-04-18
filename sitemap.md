@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-14"
+lastupdated: "2023-04-18"
 
 keywords: schematics
 subcollection: schematics
@@ -344,6 +344,10 @@ subcollection: schematics
 * [April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr23)
 
     * Review the release notes for April 2023.
+
+    * [13 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1323)
+
+        * {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
 
     * [6 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr623)
 
@@ -1112,6 +1116,29 @@ subcollection: schematics
 {: #sitemap_managing_workspaces}
 
 
+
+### Creating workspace
+{: #sitemap_creating_workspace}
+
+
+[Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-sch-create-wks#sch-create-wks)
+
+* [Before you begin](/docs/schematics?topic=schematics-sch-create-wks#prerequisites-create)
+
+* [Creating a workspace using the UI](/docs/schematics?topic=schematics-sch-create-wks#create-wks-ui)
+
+    * [Importing your Terraform template](/docs/schematics?topic=schematics-sch-create-wks#import-template)
+
+    * [Using Terraform templates in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sch-create-wks#run-template)
+
+* [Creating a workspace using the CLI](/docs/schematics?topic=schematics-sch-create-wks#create-wks-cli)
+
+* [Creating a workspace using the API](/docs/schematics?topic=schematics-sch-create-wks#create-wks-api)
+
+* [Creating a workspace using a Terraform template](/docs/schematics?topic=schematics-sch-create-wks#create-wks-terraform)
+
+* [Next steps](/docs/schematics?topic=schematics-sch-create-wks#sch-create-wks-nextsteps)
+
 [Creating Terraform templates](/docs/schematics?topic=schematics-create-tf-config#create-tf-config)
 
 * [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider)
@@ -1134,54 +1161,6 @@ subcollection: schematics
 
 * [Storing your Terraform templates](/docs/schematics?topic=schematics-create-tf-config#store-template)
 
-[Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup#workspace-setup)
-
-* [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#create-workspace)
-
-    * [Before you begin](/docs/schematics?topic=schematics-workspace-setup#prerequisites)
-
-    * [Creating the workspace from the console](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui)
-
-    * [Creating the workspace through CLI](/docs/schematics?topic=schematics-workspace-setup#create-workspace-cli)
-
-    * [Creating the workspace through API](/docs/schematics?topic=schematics-workspace-setup#create-workspace-api)
-
-    * [Creating the workspace with Terraform](/docs/schematics?topic=schematics-workspace-setup#create-workspace-terraform)
-
-    * [Importing your Terraform template](/docs/schematics?topic=schematics-workspace-setup#import-template)
-
-    * [Running your Terraform template in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-workspace-setup#run-template)
-
-* [Freezing and unfreezing workspaces](/docs/schematics?topic=schematics-workspace-setup#lock-workspace)
-
-* [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
-
-* [Planning your workspace](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan)
-
-    * [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace)
-
-    * [How many workspaces do I need?](/docs/schematics?topic=schematics-workspace-setup#plan-number-of-workspaces)
-
-    * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-github-structure)
-
-    * [How can I reuse configuration files across environments and workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-reuse)
-
-    * [How do I control access to my workspaces?](/docs/schematics?topic=schematics-workspace-setup#plan-workspace-access)
-
-    * [What do I need to be aware of when I have a repository that I managed with native Terraform?](/docs/schematics?topic=schematics-workspace-setup#plan-terraform-migration)
-
-* [Setting up a continuous delivery toolchain for your workspace](/docs/schematics?topic=schematics-workspace-setup#continuous-delivery)
-
-* [Workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state)
-
-    * [Workspace state overview](/docs/schematics?topic=schematics-workspace-setup#states-overview)
-
-    * [Workspace state diagram and manipulative job](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram)
-
-* [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics)
-
-* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs)
-
 [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism#set-parallelism)
 
 * [Usage](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage)
@@ -1192,75 +1171,105 @@ subcollection: schematics
 
 * [List of Terraform environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars)
 
-[Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
+[Running workspace plan](/docs/schematics?topic=schematics-sch-plan-wks#sch-plan-wks)
 
-* [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
+* [Before you begin](/docs/schematics?topic=schematics-sch-plan-wks#display-prerequisites)
 
-* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
+* [Generate a workspace plan using the UI](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-ui)
 
-* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
+    * [Verifying workspace plan](/docs/schematics?topic=schematics-sch-plan-wks#verify-wks-plan-ui)
 
-    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
+* [Generate a workspace plan using the CLI](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-cli)
 
-* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
+    * [Verifying workspace plan execution](/docs/schematics?topic=schematics-sch-plan-wks#verify-wks-plan-cli)
 
-    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
+* [Generate a workspace plan using the API](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-api)
 
-* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
+    * [Verifying workspace plan execution](/docs/schematics?topic=schematics-sch-plan-wks#verify-wks-plan-api)
 
-[Using private repos for modules](/docs/schematics?topic=schematics-download-modules-pvt-git#download-modules-pvt-git)
+* [Generating a workspace plan using Terraform](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-terraform)
 
-* [Usage of private module template](/docs/schematics?topic=schematics-download-modules-pvt-git#netrc-example)
+* [Next steps](/docs/schematics?topic=schematics-sch-plan-wks#sch-plan-wks-nextsteps)
 
-[Managing {{site.data.keyword.cloud_notm}} resources with workspaces](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
+[Running a workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#sch-deploy-wks)
 
-* [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources)
+* [Before you begin](/docs/schematics?topic=schematics-sch-deploy-wks#display-prerequisites)
 
-* [Updating your resources](/docs/schematics?topic=schematics-manage-lifecycle#update-resources)
+* [Perform a workspace apply using the UI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-ui)
 
-* [Managing drift between your cloud environment and your Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle#drift-report)
+    * [Verifying workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-list-ui)
 
-* [Reviewing resource and deployment details](/docs/schematics?topic=schematics-manage-lifecycle#review-logs)
+* [Perform a workspace apply using the CLI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-cli)
 
-* [Removing your resources](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources)
+    * [Verifying workspace deploy](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-deploy-cli)
 
-[Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions](/docs/schematics?topic=schematics-multi-region-deployment#multi-region-deployment)
+* [Perform the workspace deploy using the API](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-api)
 
-* [Deploying services in a specific region](/docs/schematics?topic=schematics-multi-region-deployment#single-region)
+    * [Verifying workspace deploy](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-deploy-api)
 
-* [Deploying services across regions](/docs/schematics?topic=schematics-multi-region-deployment#across-regions)
+* [Perform the workspace deploy with Terraform](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-terraform)
 
-[Deprecating Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
+* [Next steps](/docs/schematics?topic=schematics-sch-deploy-wks#sch-deploy-wks-nextsteps)
 
-* [Phases](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
+[Updating workspaces](/docs/schematics?topic=schematics-sch-update-wks#sch-update-wks)
 
-* [Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline)
+* [Before you begin](/docs/schematics?topic=schematics-sch-update-wks#update-prerequisites)
 
-* [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
+* [Updating a workspace using the UI](/docs/schematics?topic=schematics-sch-update-wks#update-wks-ui)
 
-[Updating Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
+    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks#verify-wks-update-ui)
 
-* [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
+* [Updating a workspace using the CLI](/docs/schematics?topic=schematics-sch-update-wks#update-wks-cli)
 
-    * [Updating the Workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
+    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks#verify-wks-update-cli)
 
-* [Upgrading the Terraform template version 0.x to 1.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
+* [Updating a workspace using the API](/docs/schematics?topic=schematics-sch-update-wks#update-wks-api)
 
-* [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
+    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks#verify-wks-update-api)
 
-* [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
+* [Updating a workspace with Terraform](/docs/schematics?topic=schematics-sch-update-wks#update-wks-terraform)
 
-[Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
+* [Next steps](/docs/schematics?topic=schematics-sch-update-wks#sch-update-wks-nextsteps)
 
-* [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
+[Displaying workspaces](/docs/schematics?topic=schematics-sch-display-wks#sch-display-wks)
 
-[Sample Terraform solutions](/docs/schematics?topic=schematics-sol-overview#sol-overview)
+* [Before you begin](/docs/schematics?topic=schematics-sch-display-wks#display-prerequisites)
 
-[Compact config repo download](/docs/schematics?topic=schematics-compact-download#compact-download)
+* [Displaying the workspace through UI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-ui)
 
-* [Using compact download](/docs/schematics?topic=schematics-compact-download#compact-active)
+    * [Verifying workspace display](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-ui)
 
-* [Note](/docs/schematics?topic=schematics-compact-download#compact-note)
+* [Displaying the workspace through CLI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-cli)
+
+    * [Verifying workspace list](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-cli)
+
+* [Displaying the workspace list through API](/docs/schematics?topic=schematics-sch-display-wks#list-wks-api)
+
+    * [verifying workspace update:](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-api)
+
+* [Displaying the workspace list with Terraform](/docs/schematics?topic=schematics-sch-display-wks#list-wks-terraform)
+
+* [Next steps](/docs/schematics?topic=schematics-sch-display-wks#sch-list-wks-nextsteps)
+
+[Deleting workspace](/docs/schematics?topic=schematics-sch-delete-wks#sch-delete-wks)
+
+* [Before you begin](/docs/schematics?topic=schematics-sch-delete-wks#prerequisites-delete)
+
+* [Deleting the workspace through UI](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-ui)
+
+    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks#verify-wks-delete-ui)
+
+* [Deleting the workspace through CLI](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-cli)
+
+    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks#verify-wks-delete-cli)
+
+* [Deleting the workspace through API](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-api)
+
+    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks#verify-wks-delete-api)
+
+* [Deleting the workspace with Terraform](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-terraform)
+
+* [Next steps](/docs/schematics?topic=schematics-sch-delete-wks#sch-delete-wks-nextsteps)
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 
@@ -1281,6 +1290,125 @@ subcollection: schematics
 * [Stopping a running job through API](/docs/schematics?topic=schematics-interrupt-job#stop-job-api)
 
     * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job#stop-jobs-api)
+
+[Workspace operational states](/docs/schematics?topic=schematics-wks-state#wks-state)
+
+* [Workspace state overview](/docs/schematics?topic=schematics-wks-state#states-overview)
+
+* [Workspace state diagram and manipulative job](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram)
+
+* [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-wks-state#create-deploy-to-schematics)
+
+* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-logs)
+
+[Planning your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#workspaces-plan)
+
+* [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace)
+
+    * [How many workspaces do I need?](/docs/schematics?topic=schematics-workspaces-plan#plan-number-of-workspaces)
+
+    * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=schematics-workspaces-plan#plan-github-structure)
+
+    * [How can I reuse configuration files across environments and workspaces?](/docs/schematics?topic=schematics-workspaces-plan#plan-reuse)
+
+    * [How do I control access to my workspaces?](/docs/schematics?topic=schematics-workspaces-plan#plan-workspace-access)
+
+    * [What do I need to be aware of when I have a repository that I managed with native Terraform?](/docs/schematics?topic=schematics-workspaces-plan#plan-terraform-migration)
+
+* [Setting up a continuous delivery toolchain for your workspace](/docs/schematics?topic=schematics-workspaces-plan#continuous-delivery)
+
+
+### Managing workspace resources
+{: #sitemap_managing_workspace_resources}
+
+
+[Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions](/docs/schematics?topic=schematics-multi-region-deployment#multi-region-deployment)
+
+* [Deploying services in a specific region](/docs/schematics?topic=schematics-multi-region-deployment#single-region)
+
+* [Deploying services across regions](/docs/schematics?topic=schematics-multi-region-deployment#across-regions)
+
+[Using modules in private repos](/docs/schematics?topic=schematics-download-modules-pvt-git#download-modules-pvt-git)
+
+* [Using private modules with templates](/docs/schematics?topic=schematics-download-modules-pvt-git#netrc-example)
+
+[Managing {{site.data.keyword.cloud_notm}} resources with workspaces](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
+
+* [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources)
+
+* [Updating your resources](/docs/schematics?topic=schematics-manage-lifecycle#update-resources)
+
+* [Managing drift between your cloud environment and your Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle#drift-report)
+
+* [Removing your resources](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources)
+
+[Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
+
+* [Example drift scenario](/docs/schematics?topic=schematics-drift-note#drift-scenario)
+
+* [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
+
+* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
+
+    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
+
+* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
+
+    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
+
+* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
+
+[Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
+
+* [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
+
+[Terraform version deprecation](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
+
+* [Phases](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
+
+* [Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline)
+
+* [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
+
+[Updating to a new Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
+
+* [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
+
+    * [Updating the Workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
+
+* [Upgrading the Terraform template version 0.x to 1.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
+
+* [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
+
+* [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
+
+[Sample Terraform solutions](/docs/schematics?topic=schematics-sol-overview#sol-overview)
+
+[Compact config repo download](/docs/schematics?topic=schematics-compact-download#compact-download)
+
+* [Using compact download](/docs/schematics?topic=schematics-compact-download#compact-active)
+
+* [Note](/docs/schematics?topic=schematics-compact-download#compact-note)
+
+[Destroying workspace resources](/docs/schematics?topic=schematics-sch-destroy-wks#sch-destroy-wks)
+
+* [Before you begin](/docs/schematics?topic=schematics-sch-destroy-wks#prerequisites-destroy)
+
+* [Destroying workspace resources using the UI](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-ui)
+
+    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks#verify-wks-destroy-ui)
+
+* [Destroying workspace resources using the CLI](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-cli)
+
+    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks#verify-workspace-destroy-cli)
+
+* [Destroying workspace resources using the  API](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-api)
+
+    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks#verify-workspace-destroy-api)
+
+* [destroying workspace resources with Terraform](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-terraform)
+
+* [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks#sch-destroy-wks-nextsteps)
 
 
 ## Managing Actions

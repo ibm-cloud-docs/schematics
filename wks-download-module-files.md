@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-03"
+lastupdated: "2023-04-18"
 
 keywords: schematics remote host files, modules, private repository, netrc, terraform runtime process
 
@@ -12,15 +12,15 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using private repos for modules
+# Using modules in private repos
 {: #download-modules-pvt-git}
 
-You can use the Terraform template to provision the resource by using the modules which are hosted on the private Git repository. At runtime when {{site.data.keyword.bpshort}} clones the private Git repository of your module templates, only the high level files are cloned. Also you need to pass Git token if your repository is private. Generally, if the template is referring to the module, the modules gets downloaded during `terraform init` command. The `terraform init` parses the high level template files and then downloads the individual modules referred in the high level template files. If your modules are in private Git repository, in {{site.data.keyword.cloud_notm}} catalog, or any other repository. The download fails to clone the files from all level as you do not have a way to pass the credentials to these module in the private repository.
+You can use Terraform templates to provision resources using modules which are hosted in private Git repositories. At workspace create time {{site.data.keyword.bpshort}} will only clone the Git repository containing your template and any embedded modules in sub-folders. Any modules referenced in additional Git repos or Catalogs are not downloaded. Referenced modules are downloaded during the `terraform init` phase of a plan or apply operation. The `terraform init` parses the template files and downloads any modules referenced by the template files. To download modules from a private Git repository, an {{site.data.keyword.cloud_notm}} catalog, or any other repository, the credentials for the repository must be passed. 
 
-The `__netrc__` configuration can be used with private and public Git repositories such a `GitHub`, `GitLab`, and `Bitbucket`.
+To provide the credentials a `__netrc__` configuration can be used with private and public Git repositories such a `GitHub`, `GitLab`, and `Bitbucket`.
 {: note}
 
-To overcome the download failure, {{site.data.keyword.bpshort}} supports environment variables `__netrc__`. The `__netrc__` accepts the list of `hostname`, `username` and the `password` argument. This feature is supported only in {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace). The syntax is provided as an `env_values` in the JSON payload file.
+{{site.data.keyword.bpshort}} supports using the environment variable `__netrc__` to pass crredentails. The `__netrc__` variable accepts the list of `hostname`, `username` and the `password` argument. This feature is supported only in {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace). The syntax is provided using the `env_values` parameter in the JSON payload file.
 
 The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax. 
 {: important}
@@ -37,7 +37,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
 {: codeblock}
 
 
-## Usage of private module template
+## Using private modules with templates
 {: #netrc-example}
 
 {{site.data.keyword.bpshort}} internally creates the `.netrc` file based on the `env_values` configured in the JSON file. Here is a syntax and sample `testexample.json` example file to clone all the files to create and apply the {{site.data.keyword.bpshort}} Workspaces through command-line and API.
