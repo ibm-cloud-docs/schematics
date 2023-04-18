@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -47,7 +47,7 @@ The two-step process to update a blueprint environment is illustrated in the dia
 ![blueprint update flow](/images/new/bp-update.svg){: caption="blueprint update flow" caption-side="bottom"}
 
 1. Edit the blueprint template, and the input YAML files to implement the proposed changes to the environment. 
-    - You can use any text editor. [VSCode with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints) is recommended, as it provides blueprint template syntax validation and autocomplete.    
+    - You can use any text editor. [`VSCode` with the YAML language extension](/docs/schematics?topic=schematics-edit-blueprints) is recommended, as it provides blueprint template syntax validation and autocomplete.    
     - Push the updated blueprint template and input files to your Git repositories. If needed, create a new Git version release tag for version management. 
 2. Update the blueprint configuration for the environment in {{site.data.keyword.bpshort}}. 
     - When using versioning, the new Git release tag or branch must be specified for the modified blueprint template and input value YAML files.

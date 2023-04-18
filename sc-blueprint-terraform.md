@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: blueprint,  modules, terraform modules, root, child, injection 
 
@@ -55,20 +55,20 @@ Examples of {{site.data.keyword.IBM_notm}} authored (child) modules designed for
 ## Blueprints provider injection
 {: #bp-provider-injection}  
 
-To enable a reusable child module to be executed as a root module, {{site.data.keyword.bpshort}} Blueprints injects the {{site.data.keyword.IBM_notm}} Cloud provider config and version information as `.tf` files into the Terraform working directory at run time. The same approach is used by [Terragrunt](https://terragrunt.gruntwork.io/docs/reference/config-blocks-and-attributes/#a-note-about-using-modules-from-the-registry){: external} to allow shared (child) modules to be executed directly as root modules.
+To enable a reusable child module to be executed as a root module, {{site.data.keyword.bpshort}} Blueprints injects the {{site.data.keyword.IBM_notm}} Cloud provider config and version information as `.tf` files into the Terraform working directory at run time. The same approach is used by [`Terragrunt`](https://terragrunt.gruntwork.io/docs/reference/config-blocks-and-attributes/#a-note-about-using-modules-from-the-registry){: external} to allow shared (child) modules to be executed directly as root modules.
 
 The contents of the Terraform working directory for a blueprint module with provider injection is illustrated. 
 
 ![Blueprint provider injection](/images/new/bp-injection.svg){: caption="Blueprint provider injection" caption-side="bottom"}
  
-The `main.tf` and `variables.tf` files are loaded from the module repo. The provider config is defined by an `injectors` block in the template module definition. This block defines the templated `.tf` files that contain the additional config statements. It also defines the specification of the additional Terraform language constructs that will be injected into the Terraform working directory. 
+The `main.tf` and `variables.tf` files are loaded from the module repo. The provider config is defined by an `injectors` block in the template module definition. This block defines the `.tf` files that contain the additional config statements. It also defines the specification of the additional Terraform language constructs that will be injected into the Terraform working directory. 
 
 The two files `ibm_tft_provider_override.tf` and `ibm_tft_versions_override.tf` contain the additional injected config parameters.
 
 ### Templating Terraform language statements
 {: #blueprint-template-statement}
 
-{{site.data.keyword.bpshort}}blueprint templates use [mustache templates](https://mustache.github.io/){: external} to create Terraform language statements. These are injected as `.tf` files in the Terraform working directory at run time. The templates are retrieved from the Git repo defined in the injectors block. Provider injection examples are provided in the [Cloud-Schematics/tf-templates](https://github.com/Cloud-Schematics/tf-templates){: external} GitHub repo. 
+{{site.data.keyword.bpshort}} blueprint templates use [mustache templates](https://mustache.github.io/){: external} to create Terraform language statements. These are injected as `.tf` files in the Terraform working directory at run time. The templates are retrieved from the Git repo defined in the injectors block. Provider injection examples are provided in the [Cloud-Schematics/tf-templates](https://github.com/Cloud-Schematics/tf-templates){: external} GitHub repo. 
 
 The repo folder contains the files to be injected, which contain the mustache templates. The `ibm` folder contains the two template files for injecting and configuring the {{site.data.keyword.IBM_notm}} Cloud provider and setting the `provider_version` to be used.  
 
@@ -100,7 +100,7 @@ modules:
 
 Two injection options are supported, inject or override. Definitions can be injected as additional files if its believed there is no conflict with any existing HCL statements. Alternatively they can be injected as [HCL override files](https://developer.hashicorp.com/terraform/language/files/override){: external}. Overrides is a feature that allows Terraform to override portions of an existing configuration. It is intended for use in those rare circumstances where it is necessary to override the original authors intent. With these provider definitions, override is used to ensure that if there is an existing `required_providers` statement in the module, it can be replaced without conflict. 
 
-The inputs to the mustache templates are defined in the `[tft_parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-tft-parameters)` section. Refer to the tft files in the [Cloud-Schematics/tf-templates/ibm](https://github.com/Cloud-Schematics/tf-templates/tree/main/ibm){: external} folder to determine the supported input parameters for the Terraform language definitions. For the {{site.data.keyword.IBM}} Terraform provider the example required inputs are: 
+The inputs to the mustache templates are defined in the `[tft_parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-tft-parameters)` section. Refer to the `.tf` files in the [Cloud-Schematics/tf-templates/ibm](https://github.com/Cloud-Schematics/tf-templates/tree/main/ibm){: external} folder to determine the supported input parameters for the Terraform language definitions. For the {{site.data.keyword.IBM}} Terraform provider the example required inputs are: 
 
 ```yaml
           - name: provider_version

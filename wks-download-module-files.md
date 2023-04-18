@@ -20,7 +20,7 @@ You can use Terraform templates to provision resources using modules which are h
 To provide the credentials a `__netrc__` configuration can be used with private and public Git repositories such a `GitHub`, `GitLab`, and `Bitbucket`.
 {: note}
 
-{{site.data.keyword.bpshort}} supports using the environment variable `__netrc__` to pass crredentails. The `__netrc__` variable accepts the list of `hostname`, `username` and the `password` argument. This feature is supported only in {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace). The syntax is provided using the `env_values` parameter in the JSON payload file.
+{{site.data.keyword.bpshort}} supports using the environment variable `__netrc__` to pass credentials. The `__netrc__` variable accepts the list of `hostname`, `username` and the `password` argument. This feature is supported only in {{site.data.keyword.bpshort}} [command-line](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) and [`APIs`](/apidocs/schematics/schematics#create-workspace). The syntax is provided using the `env_values` parameter in the JSON payload file.
 
 The `__netrc__` expects `hostname`, `username`, and `password` argument in the same order that are listed in the syntax. 
 {: important}

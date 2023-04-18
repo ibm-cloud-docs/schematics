@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: schematics blueprints, delete blueprint, managed environments
 
@@ -21,7 +21,7 @@ subcollection: schematics
 When the application that is hosted in the blueprint environment is no longer needed, or has been migrated into a new environment, the original environment can be deleted. All the cloud resources that are deployed and managed by the blueprint environment are cleaned up and destroyed, which stops billing for any chargeable resources. 
 {: shortdesc}
 
-Deleting a blueprint environment is currently a two-step process, resource deletion followed by deleting the {{site.data.keyword.bpshort}}blueprint configuration. In a future release an additional plan step will be added before the resource destroy to allow verification of the proposed changes before executing the operation. 
+Deleting a blueprint environment is currently a two-step process, resource deletion followed by deleting the {{site.data.keyword.bpshort}} blueprint configuration. In a future release an additional plan step will be added before the resource destroy to allow verification of the proposed changes before executing the operation. 
 
 The first step destroys all the deployed cloud resources, leaving the blueprint configuration in place. The second step, deletes the blueprint configuration from {{site.data.keyword.bpshort}}. This flow is illustrated in the diagram. 
 

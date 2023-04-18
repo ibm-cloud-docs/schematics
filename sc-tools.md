@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2017, 2021
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-18"
 
 keywords: tools and utilities, utilities, tools, runtime tools, schematics tools, schematics utilities
 
@@ -21,7 +21,7 @@ Following are the {{site.data.keyword.bpshort}} type of workers.
 
 | Worker | Description |
 | --- | --- |
-| runtime-terraform-job | Used to run the Terrafom CLI. </br> This worker is used to run the {{site.data.keyword.bpshort}} Workspace jobs. |
+| runtime-terraform-job | Used to run the Terraform CLI. </br> This worker is used to run the {{site.data.keyword.bpshort}} Workspace jobs. |
 | runtime-ansible-job | Used to run the Ansible playbook CLI. </br> This worker is used to run the {{site.data.keyword.bpshort}} Action jobs. |
 {: caption="{{site.data.keyword.bpshort}} workers types" caption-side="top"}
 
@@ -50,9 +50,9 @@ The following table enlists the preinstalled software and tools in the {{site.da
 | `{{site.data.keyword.cloud_notm}} CLI` |	Latest	 | Latest	| Latest version of the {{site.data.keyword.cloud_notm}} CLI plug-ins are pre-installed. For your Terraform automation, it is recommended to use the Terraform provider plugi-ns for {{site.data.keyword.cloud_notm}}. |
 | `JQ` |	`v1.6` |	Yes	| As the [JSON processor](/docs/solution-tutorials?topic=solution-tutorials-tutorials#getting-started-macos_jq) in your Terraform automation. |
 | `Kubectl client` | | Yes |	For use in your Terraform automation. It is recommended to use the Terraform provider plug-ins for Kubernetes. |
-| `OpenShift client` | | Yes | {{site.data.keyword.redhat_openshift_notm}} CLI for your Terraform automation. It is recommended to use the Terraform provider plugins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
+| `OpenShift client` | | Yes | {{site.data.keyword.redhat_openshift_notm}} CLI for your Terraform automation. It is recommended to use the Terraform provider plug-ins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
 | `Python` |	`v3.6` |	No	| For use in your Terraform automation. |
-| `Python libraries` |	netaddr	| -do-	| Red Hat OpenShift CLI for your Terraform automation. It is recommended to use the Terraform provider plugins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
+| `Python libraries` |	`netaddr`	| No	| Red Hat OpenShift CLI for your Terraform automation. It is recommended to use the Terraform provider plug-ins for {{site.data.keyword.cloud_notm}} and Kubernetes. |
 {: caption="{{site.data.keyword.bpshort}} runtime terrafom job image" caption-side="top"}
 
 ## Runtime-ansible-job image

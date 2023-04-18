@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: blueprint create init failure, blueprint init error, create init fails,
 
@@ -17,7 +17,7 @@ content-type: troubleshoot
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-# blueprint create fails in the create_init step
+# blueprint create fails in the `create_init` step
 {: #bp-create-init-fails}
 
 When you create a blueprint config, it fails during initialization of the blueprint modules. 

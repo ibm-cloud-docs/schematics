@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -566,7 +566,7 @@ ibmcloud schematics agent list
 ### `ibmcloud schematics agent plan`
 {: #schematics-agent-plan}
 
-Checks for the pre-requisites of the pre-created agent before install. Generates an agent plan by using {{site.data.keyword.bpshort}}. For more information about the steps to use plan command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+Checks for the prerequisite of the pre-created agent before install. Generates an agent plan by using {{site.data.keyword.bpshort}}. For more information about the steps to use plan command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 {: shortdesc}
 
 Syntax
@@ -3310,7 +3310,7 @@ Command options
 | `--id` or `-i` | Required |  The unique identifier of the workspace for which you want to re-create the instance or resource. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--options` or `-o` | Optional | Enter the option flag that you want to show. |
 | `--address` or `-adr` | Optional | Enter the address of the resource to mark as untaint.|
-{: caption="{{site.data.keyword.bpshort}} Workspaces untaint flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Workspaces `untaint` flags" caption-side="top"}
 
 Example
 

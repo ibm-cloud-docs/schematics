@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-04-18"
 
 keywords: schematics, automation, terraform
 
@@ -39,7 +39,7 @@ No. If you are assigned an {{site.data.keyword.bplong_notm}} service access role
 ## {{site.data.keyword.bpshort}} Platform roles and service roles
 {: #iam-platform-svc-roles}
 
-The user roles exist at both the platform (account) and service level. If you are unsure about what a platfor or a service role allows a user to do remember that plaform roles interact mainly with {{site.data.keyword.cloud_notm}} services like the [resource controller](/docs/account?topic=account-overview) or {{site.data.keyword.iamshort}}. Roles inside of a service, on the other hand, interact mainly with the relevant API, which in this case is the {{site.data.keyword.bpshort}} API. 
+The user roles exist at both the platform (account) and service level. If you are unsure about what a platform or a service role allows a user to do remember that platform roles interact mainly with {{site.data.keyword.cloud_notm}} services like the [resource controller](/docs/account?topic=account-overview) or {{site.data.keyword.iamshort}}. Roles inside of a service, on the other hand, interact mainly with the relevant API, which in this case is the {{site.data.keyword.bpshort}} API. 
 
 ### Platform roles
 {: #iam-platform-roles}
@@ -61,7 +61,7 @@ Service roles can be assigned per-instance or for all instances in an account.
 
 * **Reader**: You can perform read-only actions within a service such as viewing service-specific resources. For example, read the action definition, KMS settings, workspace details, agent configuration settings, and so on.
 * **Writer**: You can perform create, edit, and read service specific resources operation. For example, create and update workspace, action, agent, blueprint, and so on.
-* **Manager**: In addition to writer acess, you have complete privilege as defined by the service. A _Manager_, for example, has all of the permissions that a _Reader_ has and more.
+* **Manager**: In addition to writer access, you have complete privilege as defined by the service. A _Manager_, for example, has all of the permissions that a _Reader_ has and more.
 
 ## Roles and permissions about {{site.data.keyword.bpshort}} offerings 
 {: #iam-roles-permission-schematics}
@@ -125,7 +125,7 @@ The following are the different permissions that you an user need to create and 
 #### Permission to deploy an agent
 {: #agent-deploy-permission}
 
-Agent recommends to use a service ID and API key to provision the pre-requisite the {{site.data.keyword.cloud_notm}} resources such as {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and {{site.data.keyword.cos_full_notm}} bucket.
+Agent recommends to use a service ID and API key to provision the prerequisite the {{site.data.keyword.cloud_notm}} resources such as {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_notm}}, {{site.data.keyword.cos_full_notm}}, and {{site.data.keyword.cos_full_notm}} bucket.
 
 Following are the maximum permission and roles that services should have to deploy an agent.
 

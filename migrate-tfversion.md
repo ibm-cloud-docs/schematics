@@ -105,7 +105,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
 2. Download or clone the Git repository that is used by your `Terraform v0.12` {{site.data.keyword.bpshort}} workspace to your local machine.
 3. Install Terraform 0.13 on your local machine. 
 4. Change directory to your cloned repository and upgrade your config files to `Terraform v0.13` by running the `Terraform v0.13upgrade` command. For more information, see [Upgrading to `Terraform v0.13` documentation](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/0-13){: external}. The upgrade command generates a `versions.tf` file with a `terraform` configuration block. 
-5. Edit the `versions.tf` file to set the source paramater to `source = "IBM-Cloud/ibm"` as shown in the code block.
+5. Edit the `versions.tf` file to set the source parameter to `source = "IBM-Cloud/ibm"` as shown in the code block.
 
     `versions.tf` file
 

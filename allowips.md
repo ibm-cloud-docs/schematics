@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-04-18"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -27,9 +27,8 @@ Typically post-configuration is performed via SSH as illustrated with [{{site.da
 
 The following tables document the public IP addresses used by Schematics that must be allowed access to private network resources to perform post-configuration.  
 
-At run time {{site.data.keyword.bpshort}} dynamically selects a worker node and region to execute the job. The job may run on any of the defined IP addresses within a geography. For instance in the US using any of the us-south and us-east IP addresses, or for Europe using any of the eu-gb or eu-de addresses. {: note}
-
-
+At run time {{site.data.keyword.bpshort}} dynamically selects a worker node and region to execute the job. The job may run on any of the defined IP addresses within a geography. For instance in the US using any of the us-south and us-east IP addresses, or for Europe using any of the `eu-gb` or `eu-de` addresses. 
+{: note}
 
 | Region | Zone | Public IP addresses | Private IP addresses |
 | --- | --- | --- | --- |

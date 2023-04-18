@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-04-18"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -101,11 +101,11 @@ Resource Group   Default
 ```
 {: screen}
 
-## Verifying pre-requisites for agent deployment using the CLI
+## Verifying prerequisites for agent deployment using the CLI
 {: #verify-agent-cli}
 {: cli}
 
-You can verify the agent definition and cluster availability using the agent plan command. This performs a pre-requisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+You can verify the agent definition and cluster availability using the agent plan command. This performs a prerequisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
@@ -318,7 +318,7 @@ Output
 ```
 {: screen}
 
-Now, call the _agent deploy_ API with the `agent ID` to create the {{site.data.keyword.bpshort}} workspace that will deploy the agent. The _agent deploy_ operation, inturn invokes both the _agent plan_, and _agent apply_ operations to setup the agent.
+Now, call the _agent deploy_ API with the `agent ID` to create the {{site.data.keyword.bpshort}} workspace that will deploy the agent. The _agent deploy_ operation, invokes both the _agent plan_, and _agent apply_ operations to setup the agent.
 
 Syntax
 

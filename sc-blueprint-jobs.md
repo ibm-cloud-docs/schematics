@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-04-18"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -97,7 +97,7 @@ OK
 ## Viewing blueprint job results using the CLI
 {: #view-blueprint-job-get-cli}
 
-To view the summary details of a blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and prompts the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when create, apply, update, destroy, and delete operations are run. The job_id can also be retrieved using the `blueprint job list` command. 
+To view the summary details of a blueprint job with the CLI, use the `ibmcloud schematics blueprint job get` command. The command is interactive and prompts the user to drill down deeper into the job results. The command takes as input the `job_id`. The `job_id` is displayed when create, apply, update, destroy, and delete operations are run. The `job_id` can also be retrieved using the `blueprint job list` command. 
 {: shortdesc}
 
 ### Blueprint job get
@@ -133,7 +133,7 @@ OK
 ```
 {: screen}
 
-The first section of the job output shows the overall execution status of the blueprint operation (job), such as, create, apply, update, destroy, or delete. The second section has a detailed breakdown of the job execution results for all the 'child' jobs executed by {{site.data.keyword.bpshort}}as part of this operation.   
+The first section of the job output shows the overall execution status of the blueprint operation (job), such as, create, apply, update, destroy, or delete. The second section has a detailed breakdown of the job execution results for all the 'child' jobs executed by {{site.data.keyword.bpshort}} as part of this operation.   
 
 Blueprint operations run under the control of a blueprint orchestration job. This is listed first in the job results list. Update, Apply and Destroy operations on modules are performed under the control of this blueprint orchestration job. Each module job listed contains the results of the Terraform operation performed against that module to deploy and configure cloud resources. 
 

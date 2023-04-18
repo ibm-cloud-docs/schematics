@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-21"
+  years: 2017, 2023
+lastupdated: "2023-04-18"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -21,9 +21,6 @@ In simple terms, Infrastructure as Code (IaC) is using code to manage and provis
 With IaC, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad hoc configuration changes.
 
 {{site.data.keyword.bpshort}} utilizes open-source Ansible and Terraform to provide a powerful set of IaC tools as a service to program your cloud infrastructure. With {{site.data.keyword.bpshort}} you can use this rich set of IaC automation capabilities to build stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
-
-
-
 
 ## Benefits of Infrastructure as Code
 {: #iac-benefits}
@@ -68,7 +65,7 @@ With this practice, you can easily track, manage, and revert any potential chang
 One of the practices that IaC borrows from software development is testing. Rigorous testing of infrastructure configuration plays a role in reducing post deployment issues. When combined with version control systems, testing can be automatically triggered every time there is a modification in the code.
 {: shortdesc}
 
-With Continuous Integration (CI) in place, the templated infrastructure configuration can be implemented in multiple environments such as the `development`, `UAT`, `QA`, or `production` environment with minimal changes applied effectively.
+With Continuous Integration (CI) in place, the template infrastructure configuration can be implemented in multiple environments such as the `development`, `UAT`, `QA`, or `production` environment with minimal changes applied effectively.
 
 ### Modular Infrastructure
 {: #iac-bp-modularity}
@@ -85,7 +82,8 @@ Breaking down infrastructure into [modules](https://github.com/terraform-ibm-mod
 ### Declarative versus imperative approaches to IaC
 {: #iac-declarative}
 
-With adopting IaC, an aspect to consider is what approach your tooling takes. There are two different styles, declarative or imperative, also sometimes described as procedural. 
+With adopting IaC, an aspect to consider is what approach your tooling takes. There are two different styles, declarative or imperative, also sometimes described as procedural.
+{: shortdesc}
 
 A declarative approach defines the desired state of the system, including the resources you need and any properties they should have, and the tool will configure it for you. The tool itself will determine the operations to get to the desired state from any starting point. 
 
@@ -96,12 +94,14 @@ Chef is thought of as an imperative tool. Terraform is classed as declarative. A
 ### Declarative Terraform and lifecycle management
 {: #iac-declarative-lifecycle}
 
-{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention. 
+{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention.
+{: shortdesc}
 
-### Idempotence
+### `Idempotence`
 {: #iac-idempotence}
 
-A benefit of the declarative approached used by Terraform and Ansible is idempotence. Idempotent tasks can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 
+A benefit of the declarative approached used by Terraform and Ansible is `idempotence`. Idempotent tasks can be executed multiple times with the same end result. Irrespective of the previous state or starting place when restarting after failures, the provisioned infrastructure and configuration are always the same. This aspect is key to ensuring consistency and repeatability of environments deployed using {{site.data.keyword.bpshort}}. 
+{: shortdesc}
 
 How you use a tool and the modules used both have an impact on idempotency. Generally, Terraform and Ansible modules are written to be idempotent. With both tools, code can we written that does not yield an idempotent result. In which case, the configuration may drift from the desired target state. With Terraform this form of drift is most likely when `null-resources` are used to extend provider functionality with custom scripts which are not idempotent.
 
@@ -110,7 +110,8 @@ Immutability is an IaC practice that minimizes the risk of drift from the target
 ### Immutablity
 {: #iac-immutability}
 
-Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed (using scripts). The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of automated operations. Changes that make it harder to debug and resolve issues, and increase support costs. 
+Immutable infrastructure refers to managing services and software deployments where resources like containers or virtual machines are replaced rather than changed (using scripts). The main desire here for immutability is avoiding configuration drift. Inconsistencies that arise due to local or manual changes, or differences in the sequence of automated operations. Changes that make it harder to debug and resolve issues, and increase support costs.
+{: shortdesc}
 
 To ensure immutability and eliminate drift, all changes should be made through the {{site.data.keyword.bpshort}} IaC configuration, and resources like VSIs should be redeployed when they need updating. 
 

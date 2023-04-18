@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-09"
+lastupdated: "2023-04-18"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -574,7 +574,7 @@ provider "ibm" {
 {: faq}
 {: support}
 
-No, currently Terraform do not support this feature due to its default behaviour. As a result you cannot encrypt the sensitive value in state file using schematics. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in state file.
+No, currently Terraform do not support this feature due to its default behavior. As a result you cannot encrypt the sensitive value in state file using schematics. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in state file.
 
 Example to download the terraform state file:
 
@@ -595,7 +595,7 @@ The {{site.data.keyword.bpshort}} workspace list variables store value should al
 {: faq}
 {: support}
 
- Currently, the workaround is to pass the `TF_VERSION` while updating the variable store. Then the {{site.data.keyword.bpshort}} will auto detect what is specified in the Terraform version block in the `TF` files. This is the default behaviour. The fact is that `v1.3.0` selects and suggests the version is not defined or has no upper limit. For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
+ Currently, the workaround is to pass the `TF_VERSION` while updating the variable store. Then the {{site.data.keyword.bpshort}} will auto detect what is specified in the Terraform version block in the `TF` files. This is the default behavior. The fact is that `v1.3.0` selects and suggests the version is not defined or has no upper limit. For more information, see [setting and changing the version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x).
 
 ## In each workspace job trigger the previously created resources gets force replaced with the new values. Can I reset or start with the new Terraform state file with each trigger?
 {: #wks-job-trigger}
