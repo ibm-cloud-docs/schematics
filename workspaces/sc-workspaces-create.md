@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Creating workspaces and importing your Terraform template
 {: #sch-create-wks}
 
-Create a workspace for your Terraform template by using the {{site.data.keyword.bplong_notm}} console. The workspace settings can be configured to use the Terraform template that is hosted and managed in a Git repository. Your workspace is used to manage the state of the cloud resources, which are provisioned by using the Terraform template.
+Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_notm}} resources using Terraform. Workspace settings define the Terraform template hosted in a Git repository to be used, along with any input variables to customize the template. 
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -30,7 +30,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
 
-## Creating the workspace through UI
+## Creating a workspace using the UI
 {: #create-wks-ui}
 {: ui}
 
@@ -97,13 +97,13 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     | `list(list(string))` | :[{internal = 8300 external = 8300 protocol = `"tcp"`},{internal = 8301 external = 8301 protocol = `"ldp"` } ] : list(object({internal = number external = number protocol = string})) : [{internal = 8300 external = 8300 protocol = `"tcp"`} {internal = 8301 external = 8301 protocol = `"ldp"`}]|
     {: caption="Input variables and its sample values" caption-side="bottom"}
 
-### Running your Terraform template in {{site.data.keyword.cloud_notm}}
+### Using Terraform templates in {{site.data.keyword.cloud_notm}}
 {: #run-template}
 {: ui}
 
 You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-## Creating the workspace through CLI
+## Creating a workspace using the CLI
 {: #create-wks-cli}
 {: cli}
 
@@ -174,7 +174,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 
 4. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start creating, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-## Creating the workspace through API
+## Creating a workspace using the API
 {: #create-wks-api}
 {: api}
 
@@ -207,7 +207,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 
 4. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-## Creating the workspace with Terraform
+## Creating a workspace using a Terraform template 
 {: #create-wks-terraform}
 {: terraform}
 
@@ -218,4 +218,4 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 ## Next steps
 {: #sch-create-wks-nextsteps}
 
-The next stage of working with workspace is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks). 
+The next stage of working with workspaces is [deploying workspaces](/docs/schematics?topic=schematics-sch-deploy-wks). 

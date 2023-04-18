@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-04-18"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -13,7 +13,7 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Updating Terraform version  
+# Updating to a new Terraform version  
 {: #migrating-terraform-version}
 
 The open source IaC tools that are used by {{site.data.keyword.bpshort}} evolve, with new versions of Terraform and Helm, and the supporting Terraform providers. Over time it is necessary for long lived workspace environments to be upgraded to utilize the latest version of Terraform as older versions are depreciated and go out of support.    

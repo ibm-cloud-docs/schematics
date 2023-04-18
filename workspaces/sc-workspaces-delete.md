@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Deleting workspace
 {: #sch-delete-wks}
 
-Deletes a workspace from the {{site.data.keyword.bplong_notm}}. Deleting a workspace does not automatically remove the {{site.data.keyword.cloud_notm}} resources that the workspace manages. To remove all resources that are associated with the workspace.
+Deletes a workspace from the {{site.data.keyword.bplong_notm}}. Deleting a workspace does not automatically remove the {{site.data.keyword.cloud_notm}} resources that the workspace manages. Use workspace destroy to remove all resources that are associated with the workspace.
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-04-18"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Working with Teraform state file
+# Working with a Terraform state file
 {: #wksremote-state}
 
 {{site.data.keyword.cloud}} provides built in [remote-state](https://developer.hashicorp.com/terraform/language/state/remote){: external} management for Terraform. Terraform state files are automatically preserved between runs and are accessible by {{site.data.keyword.cloud}} commands and operations. {{site.data.keyword.cloud}} remote-state management enables team work and workspace shared operations, with built in state locking preventing concurrent operations against the same state file.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces, workspaces, schematics, destroy workspace
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Destroying workspace resources
 {: #sch-destroy-wks}
 
-Remove the {{site.data.keyword.cloud}} resources that you provisioned with your {{site.data.keyword.bpshort}} Workspace, even if these resources are active. {{site.data.keyword.bplong}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region.
+Remove the {{site.data.keyword.cloud}} resources that you provisioned with your {{site.data.keyword.bpshort}} Workspace, even if these resources are active. 
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -30,7 +30,7 @@ Remove the {{site.data.keyword.cloud}} resources that you provisioned with your 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
 
-## Destroying the workspace through UI
+## Destroying workspace resources using the UI
 {: #destroy-wks-ui}
 {: ui}
 
@@ -42,14 +42,14 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     - In **Workspace list** section. Click workspace name and click actions dropdown icon. Click `Destroy resources` and enter workspace name for confirmation before delete. Enter the name while creation and click destroy.
     - Click `Destroy`. Your resource of workspace are destroyed.
 
-### Verifying blueprint environment destroy 
+### Verifying a workspace destroy operation 
 {: #verify-wks-destroy-ui}
 
 1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the destroy operation. 
 2. Click **Jobs** tab to see the workspace logs. 
 3. Click **Jobs history** tab view the result of the destroy job and operations that were run by the automation modules. 
 
-## Destroying the workspace through CLI
+## Destroying workspace resources using the CLI
 {: #destroy-wks-cli}
 {: cli}
 
@@ -73,7 +73,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
 3. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-### Verifying workspace destroy 
+### Verifying a workspace destroy operation
 {: #verify-workspace-destroy-cli} 
 
 Verify that the workspace was created successfully. When you destroy the resource by using the CLI, the command removes the resources of the workspace.
@@ -92,7 +92,7 @@ On successful destroying, it returns the unique Activity ID of the workspace.
 
 For more information, see [workspace FAQs](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq).
 
-## Destroying the workspace through API
+## Destroying workspace resources using the  API
 {: #destroy-wks-api}
 {: api}
 
@@ -150,7 +150,7 @@ For more information, see [workspace FAQs](/docs/schematics?topic=schematics-wor
 
 3. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to start Deleting, updating, or deleting {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-### Verifying workspace destroy 
+### Verifying a workspace destroy operation
 {: #verify-workspace-destroy-api} 
 
 Verify that the resource is destroyed successfully.
@@ -171,7 +171,7 @@ On successful, destroy the unique activity ID of the workspace is returned.
 
 For more information, see [workspace FAQs](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq).
 
-## destroying the workspace with Terraform
+## destroying workspace resources with Terraform
 {: #destroy-wks-terraform}
 {: terraform}
 

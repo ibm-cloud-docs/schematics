@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -12,12 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Displaying workspace
+# Displaying workspaces
 {: #sch-display-wks}
 
 List the workspaces in your {{site.data.keyword.cloud}} account and optionally, show the details for your workspace.
-
-{{site.data.keyword.bplong}} supports 50 API requests per minute, per host, and per customer. The region can be us-east, us-south, eu-gb, or eu-de region. You need to wait before calling the command again. Ensure the location and the url endpoint are pointing to the same region when you list workspaces.
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -26,10 +24,7 @@ List the workspaces in your {{site.data.keyword.cloud}} account and optionally, 
 ## Before you begin
 {: #display-prerequisites}
 
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
-- Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
-
-Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
 
 ## Displaying the workspace through UI

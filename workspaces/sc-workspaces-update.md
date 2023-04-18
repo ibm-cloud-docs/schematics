@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -12,12 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Updating workspace
+# Updating workspaces
 {: #sch-update-wks}
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify IBM Cloud, see the ibmcloud schematics plan command.
-
-{{site.data.keyword.bplong}} supports 50 API requests per minute, per host, and per customer. The region can be us-east, us-south, eu-gb, or eu-de region. You need to wait before calling the command again. Ensure the location and the url endpoint are pointing to the same region when you create or update workspaces and actions.
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -26,13 +24,10 @@ Update the details for an existing workspace, such as the workspace name, variab
 ## Before you begin
 {: #update-prerequisites}
 
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
-- Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
-
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
 
-## Updating the workspace through UI
+## Updating a workspace using the UI
 {: #update-wks-ui}
 {: ui}
 
@@ -74,7 +69,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 4. Click **Settings** tab to view the summary of the new blueprint configuration.
 
 
-## Updating the workspace through CLI
+## Updating a workspace using the CLI
 {: #update-wks-cli}
 {: cli}
 
@@ -163,7 +158,7 @@ On successful update, it returns the updated details of an existing workspace.
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api&interface=cli).
 
-## Updating the workspace through API
+## Updating a workspace using the API
 {: #update-wks-api}
 {: api}
 
@@ -344,7 +339,7 @@ On successful workspace update, it returns the details for an updated configurat
 
 For more information, see [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api&interface=cli).
 
-## Updating the workspace with Terraform
+## Updating a workspace with Terraform
 {: #update-wks-terraform}
 {: terraform}
 

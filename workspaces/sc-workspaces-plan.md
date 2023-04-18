@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -12,10 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Planning workspace
+# Running workspace plan
 {: #sch-plan-wks}
 
-The workspace plan creates a summary of {{site.data.keyword.cloud}} resources. Run the {{site.data.keyword.bpshort}} plan job against your workspace. The plan achieves the state that is described in the Terraform or {{site.data.keyword.cloud_notm}} catalog template that your workspace points to. When workspace plan executes you cannot edit your workspace. You can use the summary to verify your changes before you apply the template in {{site.data.keyword.cloud_notm}}.
+A workspace plan, performs a Terraform plan to determine the {{site.data.keyword.cloud}} resources that will be created, modified or deleted o on a workspace apply operation. Run the {{site.data.keyword.bpshort}} plan job against your workspace. You can use the plan summary logs to verify any resource changes before the template is applied. 
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -24,7 +24,7 @@ The workspace plan creates a summary of {{site.data.keyword.cloud}} resources. R
 ## Before you begin
 {: #display-prerequisites}
 
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a copy of the repo as a `tar` (tape archive file) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
@@ -34,7 +34,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 During workspace plan execution, you cannot edit your workspace. After all updates are applied, the states of the files persist to determine what resources exist in your {{site.data.keyword.cloud_notm}} account.
 {: note}
 
-## Generate the workspace plan through UI 
+## Generate a workspace plan using the UI 
 {: #plan-wks-ui}
 {: ui}
 
@@ -49,7 +49,7 @@ During workspace plan execution, you cannot edit your workspace. After all updat
 
 1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the workspace details.
 
-## Generate the workspace plan through CLI
+## Generate a workspace plan using the CLI
 {: #plan-wks-cli}
 {: cli}
 
@@ -113,7 +113,7 @@ During workspace plan execution, you cannot edit your workspace. After all updat
 
 3. Refer to, [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to view job logs.
 
-### Verifying workspace plan
+### Verifying workspace plan execution
 {: #verify-wks-plan-cli}
 
 Execute CLI command to check the status of the workspace plan is success.
@@ -137,7 +137,7 @@ On successful plan returns the update details of an existing workspace.
 For more information about FAQ, see [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api&interface=cli).
 
 
-## Generate the workspace plan through API
+## Generate a workspace plan using the API
 {: #plan-wks-api}
 {: api}
 
@@ -196,7 +196,7 @@ For more information about FAQ, see [troubleshooting section](/docs/schematics?t
 
 3. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
 
-### Verifying workspace plan:
+### Verifying workspace plan execution
 {: #verify-wks-plan-api} 
 
 Verify that the workspace plan is successfully listed with the list of workspace jobs that were created.
@@ -220,7 +220,7 @@ On successful, returns the list of the workspace.
 
 For more information, see [FAQ](/docs/schematics?topic=schematics-workspaces-faq), and [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api).
 
-## Generate the workspace plan with Terraform
+## Generating a workspace plan using Terraform
 {: #plan-wks-terraform}
 {: terraform}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -12,15 +12,15 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying workspace
+# Running a workspace apply
 {: #sch-deploy-wks}
 
-The {{site.data.keyword.bpshort}} workspace helps deploying resources in {{site.data.keyword.cloud}} account.
+{{site.data.keyword.bpshort}} uses workspaces to deploy and manage resources in {{site.data.keyword.cloud}} accounts.
 
-{{site.data.keyword.bplong_notm}} enable you to deploy resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you save and run your {{site.data.keyword.bpshort}} workspaces and actions is independent of the region where your {{site.data.keyword.cloud_notm}} resources are deployed or configured.
+{{site.data.keyword.bplong_notm}} enables you to deploy and manage resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you create and work with your {{site.data.keyword.bpshort}} workspaces and actions is independent of the region where your {{site.data.keyword.cloud_notm}} resources are deployed or configured.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} runs your jobs from the selected {{site.data.keyword.bpshort}} region and remotely access the services to provision resources in the target regions determined by your Terraform templates. It is unaffected by network latency between regions.
+{{site.data.keyword.bplong_notm}} runs your jobs from the {{site.data.keyword.bpshort}} region hosting the workspace and remotely accesses services to provision resources in the target regions determined by your Terraform templates. Workspace operations in remote regions are unaffected by network latency between the management and target regions.
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
 {: deprecated}
@@ -36,7 +36,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 - Run a {{site.data.keyword.bpshort}} apply job against your workspace. An apply job provisions, modifies, or removes the {{site.data.keyword.cloud_notm}} resources that you describe in the Terraform template that your workspace points. Depending on the type and number of resources that you want to provision or modify, this process might take a few minutes, or hours to complete. During this time, you cannot edit your workspace. After all updates are applied, the state of the files persists to determine what resources exist in your {{site.data.keyword.cloud_notm}} account.
 {: note}
 
-## Generate the workspace deployment through UI 
+## Perform a workspace apply using the UI 
 {: #deploy-wks-ui}
 {: ui}
 
@@ -46,16 +46,16 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 4. Click **Workspaces** > [**workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
 5. Click **Apply plan** to provision the configured resources.
 
-### Verifying workspace deployment 
+### Verifying workspace apply 
 {: #verify-wks-list-ui}
 
-1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the workspace details.
+1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the workspace apply job.
 
-## Generate the workspace deployment through CLI
+## Perform a workspace apply using the CLI
 {: #deploy-wks-cli}
 {: cli}
 
-1. Create a JSON file on your system and plan your workspace configuration. For more information about configuration options, see [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
+1. Create a JSON file on your system to pass the parameters to {{site.data.keyword.bpshort}} to run the workspace apply. For more information about configuration options, see [`ibmcloud schematics workspace new`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
 
    Example
 
@@ -104,14 +104,14 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 	```
 	{: pre}
 
-2. Apply the workspace. For more information about apply argument flag, see [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) command.
+2. Apply the workspace. For more information about the apply argument flag, see [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply) command.
 
     ```sh
     ibmcloud schematics apply --id <workspace_id>
     ```
     {: pre}
 
-3. Verify that your workspace deployment is applied. Make sure that your workspace is in an **Inactive** state.
+3. Verify that your workspace apply has been executed successfully. Make sure that your workspace is in an **Inactive** state.
 
 	```sh
     ibmcloud schematics workspace list
@@ -139,13 +139,13 @@ On successful plan it returns the update details of an existing workspace.
 
 For more information about FAQ, see [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api&interface=cli).
 
-## Generate the workspace deploy through API
+## Perform the workspace deploy using the API
 {: #deploy-wks-api}
 {: api}
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
 
-2. Generate deploy for the existing workspace. 
+2. Perform deploy for the existing workspace. 
 
 	Example
 
@@ -211,9 +211,9 @@ Verify that the workspace are deployed successfully as shown in the output.
 	```
 	{: screen}
 
-On successful workspace deployment, it returns the job activity id performed on the workspace. For more information, see [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api&interface=cli).
+On successful workspace apply, it returns the job activity id performed on the workspace. For more information, see [troubleshooting section](/docs/schematics?topic=schematics-wks-create-api&interface=cli).
 
-## Generate the workspace deploy with Terraform
+## Perform the workspace deploy with Terraform
 {: #deploy-wks-terraform}
 {: terraform}
 

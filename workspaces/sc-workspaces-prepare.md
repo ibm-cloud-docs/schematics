@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-16"
+lastupdated: "2023-04-18"
 
 keywords: schematics workspaces planning, planning workspace, planning schematics workspace, setting up schematics workspace
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Preparing workspace
+# Planning your workspace structure
 {: #workspaces-plan}
 
 You can plan and design your workspace by following queries.
