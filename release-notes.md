@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-04-18"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -28,6 +28,15 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for April 2023.
 {: shortdesc}
+
+
+
+### 13 April 2023
+{: #schematics-apr1323}
+{: release-note}
+
+{{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
+:   The {{site.data.keyword.bpshort}} announces the timeline for the [deprecation of Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#new-schedule).
 
 
 

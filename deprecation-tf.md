@@ -33,10 +33,10 @@ If you choose not to upgrade to the latest version of Terraform beyond the **res
 ## Schedule
 {: #deprecate-timeline} 
 
-You are recommended always to migrate from your current in use version of Terraform to the latest available version and to remain on supported Terraform versions. You can see the latest in use version of Terraform in the drop down list of the [{{site.data.keyword.bpshort}} Workspaces](https://cloud.ibm.com/schematics/workspaces/create){: external} configuration page. 
+You are recommended always to migrate from your current in use version of Terraform to the latest available version and to remain on supported Terraform versions. You can see the latest in use version of Terraform in the drop down list of the [{{site.data.keyword.bpshort}} Workspaces](https://cloud.ibm.com/schematics/workspaces/create) configuration page. 
 {: shortdesc}
 
-{{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution. The depreciation timeline will be revised as new Terraform versions are released.  
+{{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date of the {{site.data.keyword.bplong_notm}} service. The Month provided in the table represents the last day of the Month to restrict workspace creation and execution. The depreciation timeline might change as new Terraform versions are released.  
 
 |Versions | Phase 1: Restrict workspace creation (End of marketing)|    Phase 2: Restrict workspace execution (End of support)|      Terraform of end maintenance and security support|
 | -- | -- | --| --|
@@ -47,8 +47,6 @@ You are recommended always to migrate from your current in use version of Terraf
 | Terraform v1.3 |  Earliest March 2024	|  Earliest	July 2024	|	Expected before end 2023 |
 | Terraform v1.4 |	Earliest Sept 2024  |  Earliest December 2023 |	Expected before end 2024 |
 {: caption="Deprecation timeline as on 12th April, 2023." caption-side="top"}
-
-
 
 ## User actions
 {: #user-action}
