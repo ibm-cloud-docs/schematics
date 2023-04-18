@@ -345,6 +345,10 @@ subcollection: schematics
 
     * Review the release notes for April 2023.
 
+    * [18 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1723)
+
+        * {{site.data.keyword.bpshort}} documentation realigns the workspace documentation
+
     * [13 April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr1323)
 
         * {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
