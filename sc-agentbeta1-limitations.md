@@ -75,4 +75,4 @@ Following steps allows you to join the {{site.data.keyword.bpshort}} Agents beta
 
 The following are the limitation of agent beta-1.
 
-1. Destroying an agent resources is not able to deploy or update an agent cluster.
+1. Do not support destroying an agent resources feature.

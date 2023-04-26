@@ -87,7 +87,7 @@ subcollection: schematics
 
     * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-learn-about-schematics#sc-blueprints)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sc-workspaces)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
     * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions)
 
@@ -1303,7 +1303,7 @@ subcollection: schematics
 
 * [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-wks-state#create-deploy-to-schematics)
 
-* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-logs)
+* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-state-logs)
 
 [Planning your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#workspaces-plan)
 

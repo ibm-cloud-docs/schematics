@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-26"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -278,7 +278,7 @@ You can plan and design your workspace by following queries.
 - How to control access and manage your workspaces?
 
 ### Designing your workspace and Git repository structure
-{: #structure-workspace}
+{: #structure-oldworkspace}
 {: help}
 {: support}
 
