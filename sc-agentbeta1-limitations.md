@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-04-26"
 
 keywords: schematics agent, agent, beta-1 release, agent beta-1 release
 
@@ -56,10 +56,10 @@ There will be multiple beta releases in short window period, this requires the u
 {: caption="Beta-1 release limitations" caption-side="bottom"}
 
 ## Joining public slack channel
-{: #sc-agent-join-public-slack}
+{: #sc-agentb1-join-public-slack}
 
 ### Steps to join public slack
-{: #sc-agent-join-slack}
+{: #sc-agentb1-join-slack}
 
 Following steps allows you to join the {{site.data.keyword.bpshort}} Agents beta public Slack channel.
 - Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
@@ -69,3 +69,10 @@ Following steps allows you to join the {{site.data.keyword.bpshort}} Agents beta
 - Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Agents beta public Slack channel**
 - Click **Next**.
 - Click **Submit case**. Wait for 10 - 15 minutes to get an access.
+
+## Agent beta-1 release limitations
+{: #sc-agentb1-limitation}
+
+The following are the limitation of agent beta-1.
+
+1. Destroying an agent resources is not able to deploy or update an agent cluster.
