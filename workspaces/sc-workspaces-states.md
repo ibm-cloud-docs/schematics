@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-26"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -55,7 +55,7 @@ The state of a workspace indicates if you have successfully created a Terraform 
 
 
 ## Reviewing the {{site.data.keyword.bpshort}} job details
-{: #job-logs}
+{: #job-state-logs}
 
 Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue).
 

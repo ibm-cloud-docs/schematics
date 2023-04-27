@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-24"
 
 keywords: schematics blueprints, blueprints, blueprints architecture
 
@@ -44,7 +44,6 @@ Blueprints is built around [IaC best practices](/docs/schematics?topic=schematic
 {: shortdesc}
 
 These features are illustrated under the four headings below. 
-
 
 ![{{site.data.keyword.bpshort}} Blueprints feature overview](/images/new/bp-features.svg){: caption="{{site.data.keyword.bpshort}} Blueprints feature overview" caption-side="bottom"}
 

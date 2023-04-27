@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-04-26"
 
 keywords: schematics
 subcollection: schematics
@@ -87,7 +87,7 @@ subcollection: schematics
 
     * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-learn-about-schematics#sc-blueprints)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sc-workspaces)
+    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
     * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions)
 
@@ -1303,7 +1303,7 @@ subcollection: schematics
 
 * [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-wks-state#create-deploy-to-schematics)
 
-* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-logs)
+* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-state-logs)
 
 [Planning your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#workspaces-plan)
 
@@ -2161,7 +2161,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
 
-    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get)
+    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-wks-get)
 
 [CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 
@@ -2269,9 +2269,11 @@ subcollection: schematics
 
 * [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta-limitation)
 
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-join-public-slack)
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-public-slack)
 
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-join-slack)
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-slack)
+
+* [Agent beta-1 release limitations](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-limitation)
 
 
 ## {{site.data.keyword.bpshort}} worker runtime
@@ -2551,6 +2553,10 @@ subcollection: schematics
 * [List the attributes that {{site.data.keyword.bpshort}} Workspaces or Actions attributes used to dynamically select an agent](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
 * [How can I enable debug mode in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-debugmode)
+
+* [Can I upgrade an agent beta-0 to agent beta-1?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
+
+* [Does an agent beta-1 supports backward compactibility?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-compactibility)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
