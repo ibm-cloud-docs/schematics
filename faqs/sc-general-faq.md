@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-16"
+lastupdated: "2023-05-08"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -301,14 +301,14 @@ If the version parameter is not declared in your `versions.tf` file, the current
 {: faq}
 {: support}
 
-Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first from the workspace, and then set delete workspace. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
+Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first from the workspace, and then set delete workspace. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks)
 
 ## Can I delete and destroy operation as one step?
 {: #faq-delete-destroy-operation}
 {: faq}
 {: support}
 
-No, you cannot delete and destroy operation in one step. It is the [process](/docs/schematics?topic=schematics-workspace-setup#del-workspace) that you need to follow to destroy first and delete.
+No, you cannot [delete](/docs/schematics?topic=schematics-sch-delete-wks) and [destroy](/docs/schematics?topic=schematics-sch-destroy-wks) operation in one step. You need to follow the [process](/docs/schematics?topic=schematics-sch-delete-wks) to destroy first and then delete.
 
 ## What is a resource group and how does it help me organize my team?
 {: #faq-rg-team}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-27"
+lastupdated: "2023-05-08"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -60,7 +60,7 @@ You can follow the topics to upgrade from one Terraform version to another versi
 {: faq}
 {: support}
 
-The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} Workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} Workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram).
 
 ## Why are jobs waiting to be run placed in a queue?
 {: #job-queue-faq}
@@ -131,9 +131,13 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 {: faq}
 {: support}
 
+<<<<<<< HEAD
+You need to delete the workspace and NOT destroying the resources as if resource is not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks).
+=======
 If a resource has already been deleted outside of {{site.data.keyword.bpshort}}, a workspace delete operation will as the resource no longer exists. 
 
 You need to delete the workspace and NOT destroying the resources as if resource is not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
+>>>>>>> dd78151f774bea5226c714fa03722f0c4e697f19
 
 ## What is the best way to deploy a Helm chart using credentials or secrets?
 {: #gherepo-warn-faq}

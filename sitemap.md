@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-27"
+lastupdated: "2023-05-08"
 
 keywords: schematics
 subcollection: schematics
@@ -1295,13 +1295,15 @@ subcollection: schematics
 
     * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job#stop-jobs-api)
 
+* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs)
+
 [Workspace operational states](/docs/schematics?topic=schematics-wks-state#wks-state)
 
 * [Workspace state overview](/docs/schematics?topic=schematics-wks-state#states-overview)
 
 * [Workspace state diagram and manipulative job](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram)
 
-* [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-wks-state#create-deploy-to-schematics)
+* [Creating an auto deployment to the {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-wks-state#sch-create-deploy-to-schematics)
 
 * [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-state-logs)
 
