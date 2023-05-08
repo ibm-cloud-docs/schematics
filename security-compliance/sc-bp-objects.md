@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-05-08"
 
 keywords: schematics best practices, best practices workspace, security best practice, best practices actions
 
@@ -58,7 +58,7 @@ Developers need to check whether the variable or output parameter as a sensitive
 Follow these practices in creating a workspace for the Terraform template.
 - Check whether you have the [right permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 - Check whether the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspace. For more information about location and endpoint, see [Where is the information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
-- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace) and destroy the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
+- Check whether you want to [delete the Workspace](/docs/schematics?topic=schematics-sch-delete-wks) and [destroy](/docs/schematics?topic=schematics-sch-destroy-wks) the associated cloud resources, or both. This job cannot be undone. If you remove the workspace and keep the cloud resources, you need to manage the resources with the resource list or CLI.
 - Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
 
 ### How can you ensure that the sensitive data used by the Terraform automation, do not leak in the logs or outputs?

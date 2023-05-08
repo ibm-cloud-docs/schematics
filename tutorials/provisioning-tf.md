@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-25"
+  years: 2017, 2023
+lastupdated: "2023-05-08"
 
 keywords: provisioning terraform template, provision terraform template using Schematics, terraform template with {{site.data.keyword.bpfull_notm}}, provisioning terraform template using CLI
 
@@ -237,7 +237,7 @@ Use the IBM-provided Terraform template to create and configure your {{site.data
 
 Create a {{site.data.keyword.bpshort}} execution plan. The execution plan shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, or removed to achieve the state that is described in your Terraform template.
 
-Your workspace must be in an `Active` state to perform a {{site.data.keyword.bpshort}} plan action. For more information about the workspace state, see [workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).
+Your workspace must be in an `Active` state to perform a {{site.data.keyword.bpshort}} plan action. For more information about the workspace state, see [workspace states](/docs/schematics?topic=schematics-wks-state#states-overview).
 {: note}
 
 During the creation of the Terraform execution plan, you are not allowed to make any changes to your workspace.
