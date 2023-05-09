@@ -35,7 +35,7 @@ Review the release notes for April 2023.
 {: release-note}
 
 {{site.data.keyword.bpshort}} documentation realigns the workspace documentation
-:   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-wksmulti-region-deployment).
+:   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
 
 
 ### 13 April 2023

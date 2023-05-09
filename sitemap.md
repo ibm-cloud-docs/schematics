@@ -131,6 +131,14 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
+[{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
+
+* [Architecture](/docs/schematics?topic=schematics-sc-workspaces#sch-wks-overview)
+
+* [Features](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-features)
+
+* [Next steps](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-nextsteps)
+
 [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
 
 * [Architecture](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
