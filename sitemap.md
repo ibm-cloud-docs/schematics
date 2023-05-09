@@ -2680,7 +2680,7 @@ subcollection: schematics
 
 * [Why are files removed from Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
-* [How do I update the Terraform version](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
+* [How do I update the Terraform version?](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 
 * [How do I address job failures caused by maintenance activities?](/docs/schematics?topic=schematics-workspaces-faq#impact-downtime-workspace)
 
@@ -2690,15 +2690,15 @@ subcollection: schematics
 
 * [What tools and utilities used in the runtime?](/docs/schematics?topic=schematics-workspaces-faq#schematics-tools)
 
-* [How can I fix Git token issues when creating workspaces using the CLI](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
+* [How can I fix Git token issues when creating workspaces using the CLI?](/docs/schematics?topic=schematics-workspaces-faq#create-workspace-cli-tokens)
 
 * [How do I fix authorization issues when creating or updating a workspace?](/docs/schematics?topic=schematics-workspaces-faq#workspace-auth)
 
 * [How can I use {{site.data.keyword.bpshort}} services with a test ID?](/docs/schematics?topic=schematics-workspaces-faq#global-catalog-faq)
 
-* [How to limit Git repo folder cloning](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
+* [How to limit Git repo folder cloning?](/docs/schematics?topic=schematics-workspaces-faq#compact-faq)
 
-* [How do I delete a workspace when the delete fails](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
+* [How do I delete a workspace when the delete fails?](/docs/schematics?topic=schematics-workspaces-faq#clusterdeletion-warn-faq)
 
 * [What is the best way to deploy a Helm chart using credentials or secrets?](/docs/schematics?topic=schematics-workspaces-faq#gherepo-warn-faq)
 
@@ -2706,7 +2706,7 @@ subcollection: schematics
 
 * [Why do I get a 403 error instead of 404 error when using an invalid workspace ID?](/docs/schematics?topic=schematics-workspaces-faq#invalidwspid-warn-faq)
 
-* [How can I enable Terraform debug logging](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
+* [How can I enable Terraform debug logging?](/docs/schematics?topic=schematics-workspaces-faq#terraform-debug-ibmcli)
 
 * [How can I import Cloud resources into a workspace?](/docs/schematics?topic=schematics-workspaces-faq#workspace-import-ibmcli)
 
@@ -2722,7 +2722,7 @@ subcollection: schematics
 
 * [Can you enable the TRACE to help DEBUG {{site.data.keyword.bpshort}} API while running workspace list command?](/docs/schematics?topic=schematics-workspaces-faq#traces-api-faq)
 
-* [How do I resolve errors listing workspaces](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
+* [How do I resolve errors listing workspaces?](/docs/schematics?topic=schematics-workspaces-faq#badstatus-workspace-faq)
 
 * [How can I use (IBM) GitLab repositories?](/docs/schematics?topic=schematics-workspaces-faq#gitlab-workspace-faq)
 
@@ -2748,7 +2748,7 @@ subcollection: schematics
 
 * [How can I initiate drift detection?](/docs/schematics?topic=schematics-workspaces-faq#drift-initiate-faq)
 
-* [Where can I see the status of a drift detection job ?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
+* [Where can I see the status of a drift detection job?](/docs/schematics?topic=schematics-workspaces-faq#drift-status-faq)
 
 * [Can I `interrupt` or `terminate` running jobs?](/docs/schematics?topic=schematics-workspaces-faq#stopping-job-faq)
 

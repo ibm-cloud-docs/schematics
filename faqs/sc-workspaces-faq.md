@@ -20,8 +20,6 @@ content-type: faq
 Answers to common questions about the {{site.data.keyword.bplong_notm}} Workspaces are classified into following section.
 {: shortdesc}
 
-
-
 ## Why are files removed from Terraform, or Ansible templates?
 {: #clone-file-extension}
 {: faq}
@@ -40,7 +38,7 @@ When creating {{site.data.keyword.bpshort}} Workspaces or action {{site.data.key
 The allowed extension list is continuously monitored and updated in every release. You can raise a [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a file extension to the list.
 {: note}
 
-## How do I update the Terraform version 
+## How do I update the Terraform version?
 {: #migrate-terraform-v11}
 {: faq}
 {: support}
@@ -90,7 +88,7 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 
 {{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisions and Ansible actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
 
-## How can I fix Git token issues when creating workspaces using the CLI 
+## How can I fix Git token issues when creating workspaces using the CLI?
 {: #create-workspace-cli-tokens}
 {: faq}
 {: support}
@@ -113,7 +111,7 @@ You see authorization issues when the roles and permission access is insufficien
 
 The test IDs are considered as a valid `IBM ID` to set the global catalog or resource controller-related API calls. If you are unable to access, do [Contact support service](/docs/schematics?topic=schematics-schematics-help).
 
-## How to limit Git repo folder cloning 
+## How to limit Git repo folder cloning?
 {: #compact-faq}
 {: faq}
 {: support}
@@ -126,7 +124,7 @@ You can get the response by starting `get workspace API` to view the compact fla
 
 Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
 
-## How do I delete a workspace when the delete fails
+## How do I delete a workspace when the delete fails?
 {: #clusterdeletion-warn-faq}
 {: faq}
 {: support}
@@ -140,7 +138,7 @@ You need to delete the workspace and NOT destroying the resources as if resource
 
 The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the Helm charts where inside the catalog you can keep the credentials and mark it as secured. For more information, see [List of catalog that is related to Helm](https://cloud.ibm.com/catalog?search=label%3Ahelm).
 
-## How do you set the Git release tag? 
+## How do you set the Git release tag?
 {: #releasetag-warn-faq}
 {: faq}
 {: support}
@@ -173,7 +171,7 @@ curl -X GET https://schematics.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Au
 
 Yes there is a change in the API that checks for the location first and if it doesn’t get proper location for the workspace it returns 403 error instead of 404 error.
 
-## How can I enable Terraform debug logging 
+## How can I enable Terraform debug logging?
 {: #terraform-debug-ibmcli}
 {: faq}
 {: support}
@@ -313,7 +311,7 @@ resource "ibm_cos_bucket" "smart-us-south" {
 
 No, currently {{site.data.keyword.bpshort}} do not support this feature while running `IBMCLOUD_TRACE=true ibmcloud schematics workspace list` command. 
 
-## How do I resolve errors listing workspaces 
+## How do I resolve errors listing workspaces?
 {: #badstatus-workspace-faq}
 {: faq}
 {: support}
@@ -361,7 +359,7 @@ Yes, {{site.data.keyword.bpshort}} supports the full {{site.data.keyword.cloud_n
 
 Yes, you can create {{site.data.keyword.bpshort}} Workspaces in {{site.data.keyword.cloud_notm}} source account. Then, run Terraform providing resources in target account to provision, through CLI, and API calls by using the target account service ID with the authentication, appropriate cross account authorization, or API key. For more information, see [Managing resources in other account](/docs/schematics?topic=schematics-create-tf-config#manage-resource-account).
 
-## What does `North America` location indicate?  
+## What does `North America` location indicate?
 {: #location-faq}
 {: faq}
 {: support}
@@ -462,7 +460,7 @@ No, the drift detection is not an automatic method of detection in the {{site.da
 
 No, you cannot initiate the drift detection. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
-## Where can I see the status of a drift detection job ? 
+## Where can I see the status of a drift detection job? 
 {: #drift-status-faq}
 {: faq}
 {: support}
@@ -628,3 +626,4 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     ```sh
     curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
+    
