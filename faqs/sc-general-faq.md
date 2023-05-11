@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-11"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -352,3 +352,11 @@ The following are the steps to create and restrict the PAT tokens.
 - [Restrict access by fine-grained personal access tokens](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-fine-grained-personal-access-tokens){: external}.
 - [Create personal access tokens (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic){: external}.
 - [Restrict access by personal access tokens (classic)](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-personal-access-tokens-classic){: external}.
+
+## Can I run the `terraform init -backend-config="KEY=VALUE"` option through CLI?
+{: #faq-tf-backend}
+{: faq}
+{: support}
+
+{{site.data.keyword.bpshort}} does not support you the ability to edit the Terraform [backend configuration](https://developer.hashicorp.com/terraform/language/settings/backends/configuration#partial-configuration). {{site.data.keyword.bpshort}} internally manages the [state-file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds), in its own COS bucket, that are encrypted by using [envelop encryption](/docs/key-protect?topic=key-protect-envelope-encryption).
+
