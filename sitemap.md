@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-09"
+lastupdated: "2023-05-11"
 
 keywords: schematics
 subcollection: schematics
@@ -2675,6 +2675,8 @@ subcollection: schematics
 * [What is the benefit by using IAM access group?](/docs/schematics?topic=schematics-general-faq#faq-iam-accessgrp-benefit)
 
 * [What are the steps to create and restrict the fine-grained and classic personal access tokens (PAT).](/docs/schematics?topic=schematics-general-faq#faq-pat)
+
+* [Can I run the `terraform init -backend-config="KEY=VALUE"` option through CLI?](/docs/schematics?topic=schematics-general-faq#faq-tf-backend)
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
