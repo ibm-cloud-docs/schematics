@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-05-16"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -71,7 +71,7 @@ The following technical data is encrypted and stored when you create and use a {
 ## Where is my information stored?
 {: #pi-location}
 
-By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To make your data highly available, all data is stored in one location and replicated to another location in the same geography. Before you start, make sure that your data can be stored in these locations. 
+By default, all information that is stored in {{site.data.keyword.bpshort}} is encrypted in transit and at rest. To ensure resiliency and high availability, all data stored in the US and EU geographies is replicated across multiple locations in the same geography. When choosing a {{site.data.keyword.bpshort}} location to work with, verify that your data can be stored in these geographic locations. 
 {: shortdesc} 
 
 |Geography/ location| API endpoint|Data stored|Data replicated|
