@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-05-16"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -21,10 +21,10 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} Agents
 {: #agentb1-about-intro}
 
-Agents for {{site.data.keyword.bplong}} extends {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private cloud network or in any isolated network zone. Agents running your Terraform and Ansible automation scripts, are deployed on Kubernetes clusters in your private network, where user network policies control access to your private cloud resources.
+{{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to connect to your private Cloud infrastructure and on premise infrastructure. Deploy a dedicated agent on your private network, to enable {{site.data.keyword.bpshort}} to provision, configure, and securely access your private or on-premises resources, including converged-infrastructure, Git or Vault instances. 
 {: shortdesc}
 
-In this execution model, it is important to note that the {{site.data.keyword.bplong_notm}} service does not have direct access your network, to an agent or any private cloud resources. An agent always initiates the communication with the {{site.data.keyword.bpshort}} service, and polls for jobs that must be run on an agent. You are in control of the agent resources, its network policies, and of the underlying Kubernetes cluster. Agents are designed not to require inbound access from {{site.data.keyword.bpshort}} and the opening of inbound firewall or network access ports. All communication between the agent and Schematics is outbound from the agent and under user control.    
+When using agents the {{site.data.keyword.bpshort}} service does not have direct access your network, to an agent or any private cloud resources. An agent uses a pull model and polls for jobs that must be run on an agent. You are in control of the agent resources, its network policies and its connection to {{site.data.keyword.bpshort}}. Agents are designed not to require inbound access from {{site.data.keyword.bpshort}} and the opening of inbound firewall or network access ports. All communication between the agent and Schematics is outbound from the agent and under your control.    
 {: note}
 
 ## {{site.data.keyword.bpshort}} Agent architecture
@@ -58,7 +58,9 @@ With agents you are in control of the network security policies of the Kubernete
 ## Benefits of using Agents
 {: #agentb1-usage}
 
-The following are some of the benefits of using agents with the {{site.data.keyword.bplong_notm}}.
+{{site.data.keyword.bplong}} is a multi-tenant service supporting concurrent usage by a large number of users. The multi-tenant model imposes a number of restrictions to maintain fair usage across all users and maintain network isolation between users.  
+
+The following are some of the benefits of using agents with the {{site.data.keyword.bplong}} service:
 
 - **Agent extends the benefits of using [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics) in conjunction with [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started):** To provision and configure hybrid cloud resources, including private cloud resources, private data-center resources, and other public cloud resources.
 - **Agent extends the benefits of {{site.data.keyword.bpshort}} to securely manage hybrid cloud infrastructure by using [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about), [Ansible](/docs/schematics?topic=schematics-getting-started-ansible), and other automation tools:** To perform deployment, configuration, and day-2 operations in a consistent manner – using a single pane of glass.
