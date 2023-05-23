@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-07"
+  years: 2017, 2023
+lastupdated: "2023-05-23"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -26,8 +26,8 @@ The {{site.data.keyword.bplong_notm}} template is a set of files that define the
 Before you can use this template, you must complete the following tasks. 
 {: shortdesc}
 
-- Make sure that you have the permissions to [create a {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-access#access-roles){: external}. 
-- Make sure that you have the permissions to [create an {{site.data.keyword.cos_full_notm}} instance](/docs/cloud-object-storage?topic=cloud-object-storage-iam){: external}. 
+- Make sure that you have the permissions to [create a {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-access#access-roles). 
+- Make sure that you have the permissions to [create an {{site.data.keyword.cos_full_notm}} instance](/docs/cloud-object-storage?topic=cloud-object-storage-iam). 
 
 ## Creating an {{site.data.keyword.cos_full_notm}} instance with {{site.data.keyword.bpshort}}
 {: #create-cos}

@@ -1380,11 +1380,11 @@ subcollection: schematics
 
 * [{{site.data.keyword.bpshort}} Terraform depreciation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
 
-    * [Terraform maintenance and fixes](/docs/schematics?topic=schematics-deprecate-tf-version#terraform-maintenance-and-fixes)
+    * [Terraform maintenance and fixes](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-maintenance)
 
-    * [Restrict workspace creation](/docs/schematics?topic=schematics-deprecate-tf-version#restrict-workspace-creation)
+    * [Restrict workspace creation](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-wks-create)
 
-    * [Restrict workspace execution](/docs/schematics?topic=schematics-deprecate-tf-version#restrict-workspace-execution)
+    * [Restrict workspace execution](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-wks-execute)
 
 * [Depreciation Schedule](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline)
 

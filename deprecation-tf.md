@@ -25,16 +25,18 @@ For more information about updating the in use Terraform release, see [Upgrading
 
 The table outlines the timetable of support provided by {{site.data.keyword.bpshort}} for Terraform releases. Refer to the sections below for more details.   
 
-
-|Timescale | {{site.data.keyword.bpshort}} <br> operations | Terraform Maintenance <br> and security fixes | Upgrade | 
+|Timescale | {{site.data.keyword.bpshort}} </br> operations | Terraform Maintenance </br> and security fixes | Upgrade | 
 | -- | -- | --| --| 
 | 0-6 months  | Full operations | Yes | Recommended |
 | 6-12 months | Full operations | No  | Recommended. Upgrade if Terraform fix required  |
 | 12 - 24 months |	Workspace creation restricted | No  | Recommended. Upgrade if Terraform fix required | 	
-| 24 months | Workspace execution restricted | No | Required | 
+| 24 months | Workspace execution restricted | No | Required |
+{: caption="Depreciation lifecycle" caption-side="top"}
 
-### Terraform maintenance and fixes 
-{{site.data.keyword.bpshort}} supports Terraform releases in line with [Terraform support and end-of-life policy ](https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy){: external}. {{site.data.keyword.bpshort}} always supports at least one Terraform release with maintenance and security fix support. 
+### Terraform maintenance and fixes
+{: #deprecate-maintenance}
+
+{{site.data.keyword.bpshort}} supports Terraform releases in line with [Terraform support and end-of-life policy](https://support.hashicorp.com/hc/en-us/articles/360021185113-Support-Period-and-End-of-Life-EOL-Policy){: external}. {{site.data.keyword.bpshort}} always supports at least one Terraform release with maintenance and security fix support. 
 
 After the end of Terraform maintenance and security fixes, {{site.data.keyword.bpshort}} maintains full operational support for 24 months from release GA. If an issue is identified in Terraform that requires a fix, the user is required to update to a release with current maintenance and security fixes. 
 
@@ -42,12 +44,16 @@ After end of Terraform maintenance {{site.data.keyword.bpshort}} will move to on
 
 The deprecation of use of each Terraform version in {{site.data.keyword.bpshort}} follows the phases below. 
 
-### Restrict workspace creation 
+### Restrict workspace creation
+{: #deprecate-wks-create}
+
 After 12 months from GA, users cannot create new {{site.data.keyword.bpshort}} workspaces with this release. Existing workspaces and resources using the release can continue to be managed using the release. It is recommended to update to the latest supported Terraform release.  
 
 During this time {{site.data.keyword.bpshort}} will only support operations with the final point (patch) Terraform release.   
 
 ### Restrict workspace execution
+{: #deprecate-wks-execute}
+
 After 24 months from GA, users will no longer be able to manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bplong_notm}} workspaces using this release. The workspace must first be updated to use a release of Terraform with Hashicorp provided maintenance and security fixes. The content of these workspaces remains accessible and the Terraform release can be updated in {{site.data.keyword.bpshort}} to re-enable operations.     
 
 If you choose not to upgrade to the latest version of Terraform beyond the **restrict workspace execution** date:
@@ -62,7 +68,7 @@ You are recommended always to migrate from your in use version of Terraform to t
 
 {{site.data.keyword.bpshort}} announces the timeline for the deprecation of Terraform versions, the related end of marketing date, and end of support date when using the {{site.data.keyword.bplong_notm}} service. The month provided in the table represents the last day of the Month to restrict workspace creation and execution. The depreciation timeline will change as new Terraform versions are released.  
 
-|Versions | Terraform of end maintenance and security support | Phase 1: Restrict workspace creation <br> (End of marketing)|    Phase 2: Restrict workspace execution <br> (End of support)|      
+|Versions | Terraform of end maintenance and security support | Phase 1: Restrict workspace creation </br> (End of marketing)|    Phase 2: Restrict workspace execution </br> (End of support)|      
 | -- | -- | --| --|
 | Terraform v0.x  | 2021 and earlier | May 2022 |  July 2022 |     
 | Terraform v0.15 | July 2021 | September 2023  |	September 2024	|	
@@ -85,4 +91,3 @@ Follow these steps to upgrade to continue working with the latest versions of Te
 3. **Verification**: You can verify that the workspaces are properly migrated by accessing the list of Terraform version that the target version you want to access in {{site.data.keyword.bpshort}} Workspace. Then run the [`ibmcloud schematics refresh`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-refresh) and [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) commands, to verify the migrated Terraform version works properly.
 
 Now you are at a latest version of Terraform, and can continue using the {{site.data.keyword.bplong_notm}} Workspaces.
-
