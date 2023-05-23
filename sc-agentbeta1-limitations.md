@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-26"
+lastupdated: "2023-05-23"
 
 keywords: schematics agent, agent, beta-1 release, agent beta-1 release
 
@@ -45,14 +45,15 @@ There will be multiple beta releases in short window period, this requires the u
 
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
+| The cluster and COS bucket must be in the same resource group | | | 
 | UI capabilities are not final and will be updated throughout the beta process.| | |
 | Support to [store or persist user-defined](/docs/schematics?topic=schematics-general-faq#persist-file) files is not available in Agents.| | |
 | Agents supports only `Terraform v1.0` or higher Terraform version. | | |
 | Agent customization is not finalized, will be communicated. | | |
 | Support to monitor agent health is limited in this release.| | |
-| Supports only `one Agent in one cluster`. | | |
-| Agents can be installed in a fresh provisioned infrastructure, not in any other existing cluster.
-| Update agent settings is not propagated to the Agent service. It requires a redeployment of Agent service using **Kubernetes Dashboard**. |  | |
+| Supports for only `one Agent per cluster`. | | |
+| Agents must be installed in a fresh provisioned infrastructure, not in any other existing cluster.
+| On update agent settings are not propagated to a running agent. The agent pods must be redeployed using the **Kubernetes Dashboard**. |  | |
 {: caption="Beta-1 release limitations" caption-side="bottom"}
 
 ## Joining public slack channel

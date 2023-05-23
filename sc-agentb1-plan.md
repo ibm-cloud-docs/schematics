@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-10"
+lastupdated: "2023-05-23"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -35,6 +35,7 @@ Review and complete the tasks below to prepare your {{site.data.keyword.cloud_no
    - Record information about the cluster such as `cluster ID`, `cluster resource group`,  and `region` for the later use.
 - **{{site.data.keyword.cos_full_notm}}:** The {{site.data.keyword.bpshort}} Agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The COS instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 
     - To deploy an agent, you must have the necessary privileges to create the `HMAC credentials` for the {{site.data.keyword.objectstorageshort}} bucket and store the credential as Kubernetes secret.
+    - The COS instance and bucket must be created for the deploy to be successful. 
     - Record information about the COS resources such as `COS instance name`, `COS bucket name` for the later use.
 - **IAM access permission:** At a minimum you must have access permissions for the Kubernetes service, Resource Group, {{site.data.keyword.objectstorageshort}}, and the {{site.data.keyword.bpshort}} service to [deploy an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
     - When deploying an agent in another account, or when using a `ServiceID` or `APIKey`, you must ensure that the account administrator has granted the required permission for all the services enlisted in [permission to deploy an agent](/docs/schematics?topic=schematics-access#agent-permissions).

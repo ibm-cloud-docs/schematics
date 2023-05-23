@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-05-23"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -33,7 +33,7 @@ Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} a
 ## Before you begin
 {: #deploy-prereq}
 
-Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview), and gather the following information as an input to deploy your agent to your target location. 
+Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview). After creation of the cluster, COS instance and bucket gather the following information as an input to deploy your agent to your target location. 
 {: shortdesc}
 
 - A short description of the network zones and infrastructure accessible to the agent. 
@@ -47,8 +47,11 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with the configuration that will be used to deploy the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
 {: shortdesc}
 
-To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be greater than the `1.12.9`.
+To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be `1.12.9` or higher. 
 {: important}
+
+Before starting the deployment the cluster, COS instance and bucket must have been created. 
+{: note}
 
 Select the {{site.data.keyword.cloud_notm}} region where you wish to define and manage your agent from. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. This must be the same region as the `location` specified on the `agent create` command. 
 
@@ -153,6 +156,8 @@ PRS          .ACTIVITY.600cadf9   Triggered pre-requisite scanning   0001-01-01T
 {: cli}
 
 You use the agent definition to deploy the agent with the `agent apply` command. The `agent apply` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the force deploy option.
+
+The agent deployment will take several minutes to complete. 
 {: shortdesc}
 
 ```sh
