@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-26"
+lastupdated: "2023-05-24"
 
 keywords: schematics capabilities, schematics overview, benefits
 
@@ -49,7 +49,7 @@ It enables users to define and deploy cloud environments using modules of reusab
 {: shortdesc}
 
 ### {{site.data.keyword.bpshort}} Workspaces
-{: #sch-workspaces}
+{: #sc-workspaces}
 
 With {{site.data.keyword.bpshort}} Workspaces, use Terraform to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. For more information, see [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-workspaces).
 {: shortdesc}

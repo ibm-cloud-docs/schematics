@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-24"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -49,13 +49,13 @@ The state of a workspace indicates if you have successfully created a Terraform 
 {: caption="Workspace state diagram" caption-side="bottom"}
 
 ## Creating an auto deployment to the {{site.data.keyword.bplong_notm}}
-{: #sch-create-deploy-to-schematics}
+{: #create-deploy-to-schematics}
 
 {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository in a cloned copy of the code in a new Git repository to deploy to {{site.data.keyword.cloud_notm}} without affecting your original code. For more information about deploy to {{site.data.keyword.cloud_notm}}, see [automating the deployment to the {{site.data.keyword.bpshort}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics).
 
 
 ## Reviewing the {{site.data.keyword.bpshort}} job details
-{: #job-state-logs}
+{: #job-logs}
 
 Use the {{site.data.keyword.bpshort}} job page in the console to find the history of all {{site.data.keyword.bpshort}} activities, such as downloading your `template`, `plan`, `apply`, and to see the logs of the jobs. The jobs are created when you run your templates. You can also see the count of the resources that are in `plan`, or `apply` jobs that are in **added**, **modified**, or **destroyed** status. For more information about job queue process, see [Execution process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue).
 

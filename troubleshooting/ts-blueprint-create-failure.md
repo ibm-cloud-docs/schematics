@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-05-24"
 
 keywords: blueprint create failure, blueprint download error, create fails,
 
@@ -154,7 +154,7 @@ Rerun the blueprint create operation with the corrected syntax.
 You didn't provide the correct GitHub token, or you didn't provide a GitHub token altogether.
 {: tsCauses}
 
-Provide a [GitHub token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external} and check to see whether the correct GitHub token has been provided in the `github_token` parameter in the create workspace or create blueprint API.
+Provide a [GitHub token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external} and check to see whether the correct GitHub token has been provided in the `github_token` parameter in the create workspace or create blueprint API.
 {: tsResolve}
 
 ## Why is {{site.data.keyword.bpshort}} not able to clone the public GitHub repository?

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-24"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Setting up workspaces
 {: #workspace-setup}
 
-With {{site.data.keyword.bplong}} Workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
+With {{site.data.keyword.bplong}} Workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspace-setup#workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
 If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested Git repository structure. 
@@ -119,7 +119,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 
     | Parameter | Description |
     | --- |  --- |
-    | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
+    | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template. |
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
@@ -157,7 +157,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     | Parameter | Description |
     | -- | -- |
     | `iam_access_token` | Enter the IAM access token that you retrieved in step 1. |
-    | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
+    | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template.|
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
@@ -199,7 +199,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 4. Click the checkbox `I understand the changes that could happen if I edit this URL and I agree to these happening` option.
 5. Click **Save**. {{site.data.keyword.bplong_notm}} automatically downloads the Terraform configuration files from your repository, scans them for syntax errors, and retrieves all input variables that you declared in your configuration files. When all configuration files are downloaded successfully and no syntax errors are found, the workspace state changes to **Inactive**.
 
-    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
+    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
     {: tip}
 
 6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
@@ -278,7 +278,7 @@ You can plan and design your workspace by following queries.
 - How to control access and manage your workspaces?
 
 ### Designing your workspace and Git repository structure
-{: #structure-oldworkspace}
+{: #structure-workspace}
 {: help}
 {: support}
 
@@ -375,10 +375,10 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
     2. Enter an {{site.data.keyword.cloud_notm}} API key. If you do not have an API key, click **New +** to create one. 
 7. Click **Create** to finish the setup of your toolchain. You see an overview of tools that were configured for your toolchain. 
 8. Open the **Delivery Pipeline**. The Delivery Pipeline includes stages to retrieve updates from your source repository, create a Terraform execution plan, apply this plan, and to run a health check against your workspace.
-9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. For more information about viewing logs and history, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
+9. Update the Terraform file in your source repository and review how this change is processed in your Delivery Pipeline. If one of the stages fails, click **View logs and history** to start troubleshooting errors. For more information about viewing logs and history, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
 
 ## Workspace states
-{: #sch-wks-state}
+{: #wks-state}
 
 ### Workspace state overview
 {: #states-overview}

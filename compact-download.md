@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-24"
+lastupdated: "2023-05-24"
 
 keywords: compact, subdirectory, schematics, download, directory
 
@@ -25,7 +25,6 @@ However, sometimes, the user may be aware that the Terraform templates are isola
 You can activate **compact download** feature through `console` by unchecking the `Download entire repo` checkbox on the [Create a {{site.data.keyword.bpshort}} Workspace page](https://cloud.ibm.com/schematics/workspaces/create). By default, the checkbox is selected to download the full Git repository.
 
 You can also activate **compact download** through the `API or CLI` by using `compact` field in the workspace [create](/apidocs/schematics/schematics#create-workspace), or [update](/apidocs/schematics/schematics#replace-workspace) payload, as illustrated in the code block.
-
 ```json
 {
         "name": "Testmyservice",

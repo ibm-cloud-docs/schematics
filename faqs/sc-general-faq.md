@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-23"
+lastupdated: "2023-05-24"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -301,14 +301,14 @@ If the version parameter is not declared in your `versions.tf` file, the current
 {: faq}
 {: support}
 
-Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first from the workspace, and then set delete workspace. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks)
+Destroy delete the associated cloud resource from the workspace. Delete workspace is to used to delete the workspace. The recommendation is to destroy the resource first from the workspace, and then set delete workspace. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace)
 
 ## Can I delete and destroy operation as one step?
 {: #faq-delete-destroy-operation}
 {: faq}
 {: support}
 
-No, you cannot [delete](/docs/schematics?topic=schematics-sch-delete-wks) and [destroy](/docs/schematics?topic=schematics-sch-destroy-wks) operation in one step. You need to follow the [process](/docs/schematics?topic=schematics-sch-delete-wks) to destroy first and then delete.
+No, you cannot delete and destroy operation in one step. It is the [process](/docs/schematics?topic=schematics-workspace-setup#del-workspace) that you need to follow to destroy first and delete.
 
 ## What is a resource group and how does it help me organize my team?
 {: #faq-rg-team}
@@ -352,10 +352,3 @@ The following are the steps to create and restrict the PAT tokens.
 - [Restrict access by fine-grained personal access tokens](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-fine-grained-personal-access-tokens){: external}.
 - [Create personal access tokens (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic){: external}.
 - [Restrict access by personal access tokens (classic)](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-personal-access-tokens-classic){: external}.
-
-## Can I run the `terraform init -backend-config="KEY=VALUE"` option through CLI?
-{: #faq-tf-backend}
-{: faq}
-{: support}
-
-{{site.data.keyword.bpshort}} does not support you the ability to edit the Terraform [backend configuration](https://developer.hashicorp.com/terraform/language/settings/backends/configuration#partial-configuration). {{site.data.keyword.bpshort}} internally manages the [state-file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds), in its own COS bucket, that are encrypted by using [envelop encryption](/docs/key-protect?topic=key-protect-envelope-encryption).

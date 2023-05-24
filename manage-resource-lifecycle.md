@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-24"
 
 keywords: manage resources with schematics, schematics resource lifecycle, deploy resources with schematics, update resources with schematics, create terraform execution plan, apply terraform template
 
@@ -38,7 +38,7 @@ Run your infrastructure code to provision, or modify your {{site.data.keyword.cl
 {: shortdesc}
 
 **Before you begin**: 
-- [Create a workspace from your GitHub repository or upload a tape archive file (`.tar`)](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui) that hosts your Terraform template. 
+- [Create a workspace from your GitHub repository or upload a tape archive file (`.tar`)](/docs/schematics?topic=schematics-workspace-setup#create-workspace) that hosts your Terraform template. 
 - Make sure that you have the required [permissions](/docs/schematics?topic=schematics-access) to deploy the resources in {{site.data.keyword.cloud_notm}}. 
 
 **To deploy your resources**: 

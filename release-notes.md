@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-09"
+lastupdated: "2023-05-24"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -35,7 +35,7 @@ Review the release notes for April 2023.
 {: release-note}
 
 {{site.data.keyword.bpshort}} documentation realigns the workspace documentation
-:   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
+:   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-wksmulti-region-deployment).
 
 
 ### 13 April 2023
@@ -43,7 +43,7 @@ Review the release notes for April 2023.
 {: release-note}
 
 {{site.data.keyword.bpshort}} updates the deprecation of Terraform versions 
-:   The {{site.data.keyword.bpshort}} announces the timeline for the [deprecation of Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+:   The {{site.data.keyword.bpshort}} announces the timeline for the [deprecation of Terraform versions](/docs/schematics?topic=schematics-deprecate-tf-version#new-schedule).
 
 
 ### 6 April 2023
@@ -469,7 +469,7 @@ Support `__netrc__` environment values in private Git repository
 {: release-note}
 
 Support `Terraform v1.1` in {{site.data.keyword.bpshort}} 
-:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui), [command-line, and [`APIs`](/apidocs/schematics/schematics#create-workspace).
+:   The {{site.data.keyword.bpshort}} supports the latest `Terraform version 1.1` in [UI](/docs/schematics?topic=schematics-workspace-setup#create-workspace_ui), [command-line, and [`APIs`](/apidocs/schematics/schematics#create-workspace).
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.7.3](/docs/schematics?topic=schematics-cli_version-releases) released on 4 March 2022.
@@ -625,7 +625,7 @@ Terraform v1.0 support
 :   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0).
 
 {{site.data.keyword.bplong_notm}} support job queue logs enhancement
-:   For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
+:   For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
 
 ### 11 August 2021
 {: #schematics-aug112021}
@@ -678,7 +678,7 @@ Documentation support to create workspace by using {{site.data.keyword.bplong_no
 :   For more information, see [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup).
 
 One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
-:   For more information about {{site.data.keyword.bplong_notm}} Workspaces, creation, see [Setting up workspaces](/docs/schematics?topic=schematics-sch-create-wks&interface=ui).
+:   For more information about {{site.data.keyword.bplong_notm}} Workspaces, creation, see [Setting up workspaces](/docs/schematics?topic=schematics-workspace-setup).
 
 Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
 :   For more information, see [Stop an apply job](/apidocs/schematics/schematics#delete-workspace-activity) API.
@@ -833,7 +833,7 @@ Files and resources for your workspace actions
 :   {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository.
 
 Creating a deploy to {{site.data.keyword.bplong_notm}} link
-:   {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository so that other people can experiment to create workspace by using {{site.data.keyword.bpshort}} without affecting your original code. For more information about deploy to {{site.data.keyword.cloud_notm}}, see [create deploy to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-wks-state&interface=ui#sch-create-deploy-to-schematics).
+:   {{site.data.keyword.bplong_notm}} now supports an efficient way to share your Git repository so that other people can experiment to create workspace by using {{site.data.keyword.bpshort}} without affecting your original code. For more information about deploy to {{site.data.keyword.cloud_notm}}, see [create deploy to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-workspace-setup#create-deploy-to-schematics).
 
 ## September 2020
 {: #sept-2020}
@@ -940,5 +940,5 @@ Terraform v0.12 support
 :   You can now choose to run your infrastructure code with Terraform version 0.11 or 0.12. With Terraform version 0.12, the syntax for configuration files changed. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. To migrate your Terraform configuration files from version 0.11 to version 0.12, see [Migrating your Terraform configuration files from version 0.11 to version 0.12](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol).
 
 New workspace creation flow
-:   The workspace creation flow is now [a two-step process](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui). First, you create the workspace without connecting it to a GitHub or GitLab repository. Then, you add the details of your GitHub or GitLab repository, retrieve input variables, and let {{site.data.keyword.bpshort}} scan your Terraform configuration files for syntax errors. With the change of the workspace creation flow, [new workspace states](/docs/schematics?topic=schematics-wks-state#states-overview) are introduced as well.
+:   The workspace creation flow is now [a two-step process](/docs/schematics?topic=schematics-workspace-setup#create-workspace). First, you create the workspace without connecting it to a GitHub or GitLab repository. Then, you add the details of your GitHub or GitLab repository, retrieve input variables, and let {{site.data.keyword.bpshort}} scan your Terraform configuration files for syntax errors. With the change of the workspace creation flow, [new workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state) are introduced as well.
 

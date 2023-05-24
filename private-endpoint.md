@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-08"
+lastupdated: "2023-05-24"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -128,7 +128,7 @@ You cannot create multiple Virtual Private Endpoint Gateways for the same {{site
 
 The steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
 
-1. Create a {{site.data.keyword.bpshort}} Workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui).
+1. Create a {{site.data.keyword.bpshort}} Workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-workspace-setup#create-workspace).
 2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} Workspace. For more information, see [deploying your resource](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
 3. Create a Virtual Private Endpoint Gateways. For more information, see [creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-creating-ui). And you can assign the listed {{site.data.keyword.bpshort}} services endpoint into Virtual Private Endpoint Gateways.
 4. View the created Virtual Private Endpoint Gateways associated with the {{site.data.keyword.bpshort}} services. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 
