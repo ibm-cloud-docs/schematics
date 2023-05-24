@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-23"
+lastupdated: "2023-05-24"
 
 keywords: schematics
 subcollection: schematics
@@ -1376,7 +1376,7 @@ subcollection: schematics
 
 * [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
 
-[Terraform release deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
+[Deprecation lifecycle of Terraform releases](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
 
 * [{{site.data.keyword.bpshort}} Terraform depreciation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
 
