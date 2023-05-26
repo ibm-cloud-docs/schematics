@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-05-26"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -218,7 +218,7 @@ In the four `.cer` extension filenames ensure you modify to replace the space wi
 2. Mount config map file as a volume in a directory `/etc/ssl/certs/` as file `agent-runtime-deployment-certs.yaml` in a shared `bnpp_agent_deployment_files` directory.
 
 Shared directory `bnpp_agent_deployment_files` has two yaml files named 
-    - `agent-runtime-deployment-certs.yaml` and 
+    - `agent-runtime-deployment-certs.yaml` and
     - `agent-runtime-deployment.yaml`.
 
 The `agent-runtime-deployment-certs.yaml` file updates the certificates and appends the `agent-runtime-deployment.yaml` file which provides you the desired deployment details to inject the certificates without any additional changes.
@@ -258,3 +258,17 @@ You can follow these steps to enable or disable the debug mode of an agent.
         - Click **Edit** to view the **Edit a resource** page with the **YAML**, and **JSON** tabs.
         - You can now edit the `JR_LOGGERLEVEL` parameter for job-runner microservice logging. By default the value is `-1` that indicated disable debug, to enable you need to edit `JR_LOGGERLEVEL` as `0`.
         - Click **Update** to apply your edits.
+
+## Can I upgrade an agent beta-0 to agent beta-1?
+{: #faqs-agent-upgrade}
+{: faq}
+{: support}
+
+No, you cannot upgrade agent beta-0 setup to agent beta-1.
+
+## Does an agent beta-1 supports backward compactibility?
+{: #faqs-agent-compactibility}
+{: faq}
+{: support}
+
+Agent beta-1 do not support backward compactibility. You need to create an agent by using the [agent beta-1](/docs/schematics?topic=schematics-agentb1-about-intro) setup.

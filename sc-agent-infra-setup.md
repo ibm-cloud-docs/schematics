@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-05-26"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -185,6 +185,7 @@ Here are the list of commands used to provision the Agent infrastructure.
 
 - Record your workspace ID, and template ID to [upload the tar files](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) provided for installing the Agent infrastructure. Follow the `Readme` file to extract the `.tar` file from the [Cloud-Schematics Git repository](https://github.com/Cloud-Schematics/schematics-agents/tree/main/tarfiles){: external}.
 - Run [workspace upload](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command to upload the tar file.
+
    ```sh
    ibmcloud schematics workspace upload  --id <provide yourworkspace ID> --file </provide-path-where-tar-fileresides>/schematics-agents/tarfiles/agent-infrastructure-templates.tar --template <provide your template_id>`
    ```

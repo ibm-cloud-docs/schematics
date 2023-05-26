@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-05-26"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -79,7 +79,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
 4. Click the checkbox `I understand the changes that could happen if I edit this URL and I agree to these happening` option.
 5. Click **Save**. {{site.data.keyword.bplong_notm}} automatically downloads the Terraform configuration files from your repository, scans them for syntax errors, and retrieves all input variables that you declared in your configuration files. When all configuration files are downloaded successfully and no syntax errors are found, the workspace state changes to **Inactive**.
 
-    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-workspace-setup#job-logs).
+    After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
     {: tip}
 
 6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
@@ -151,7 +151,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 
     | Parameter | Description |
     | --- |  --- |
-    | `workspace_name` | Enter a name for your workspace. The maximum length of character limit is set to 1 MB. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
+    | `workspace_name` | Enter a name for your workspace. The maximum length of character limit is set to 1 MB. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. To use Terraform `version 0.12`, enter `terraform_v0.12`, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. If the Terraform variable version is not specified. by default, {{site.data.keyword.bpshort}} selects the version from your template. |
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
@@ -189,7 +189,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
     | Parameter | Description |
     | ----- | ----- |
     | `iam_access_token` | Enter the IAM access token that you retrieved in step 1. |
-    | `workspace_name` | Enter a name for your workspace. The maximum length of character limit is set to 1 MB. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspace-setup#structure-workspace). |
+    | `workspace_name` | Enter a name for your workspace. The maximum length of character limit is set to 1 MB. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform `version 0.12`, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. If the Terraform variable version is not specified, by default, {{site.data.keyword.bpshort}} selects the version from your template.|
     | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-24"
+lastupdated: "2023-05-26"
 
 keywords: schematics agents trusted profile id, agent trusted id, trusted profile,
 
@@ -18,10 +18,11 @@ subcollection: schematics
 # Create `profile_id` for Agents
 {: #agent-trusted-profile}
 
-Enable and configure your Agent service to establish trust with computed resources for Kubernetes cluster by using [trusted profile](/docs/account?topic=account-create-trusted-profile#create-profile-compute) as listed in the steps.
+Enable and configure your Agent service to establish trust with computed resources for Kubernetes cluster by using [trusted profiles](/docs/account?topic=account-create-trusted-profile#create-profile-compute) as listed in the steps.
 
 1. Describe your profile.
-   - Go to **Manage** > **Access (IAM)** in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com) and select **Trusted profiles**.
+   - Open the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com){: external}.
+   - Click **Manage** > **Access (IAM)** > **Trusted profiles**. For more information about trusted profiles, see [Trusted profiles](/docs/account?topic=account-create-trusted-profile&interface=ui).
    - Click **Create +**.
    - Name the profile **myagent-profile**.
    - Click **Continue**.
