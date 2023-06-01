@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-23"
+lastupdated: "2023-05-26"
 
 keywords: schematics agent, agent, beta-1 release, agent beta-1 release
 
