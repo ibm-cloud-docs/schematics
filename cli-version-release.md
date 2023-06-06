@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-06-05"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,6 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.12.10 | 22 May 2023 | {{site.data.keyword.bpshort}} [Agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) and [agent list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list) command bug fixes to set the runtime errors. |
 | 1.12.9 | 6 April 2023 | {{site.data.keyword.bpshort}} agent beta-1 and policy CLI commands are enhanced to include the -`-target-file`, and the `output` of [agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan), [agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply), and [agent health](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health).  |
 | 1.12.8 | 22 Mar 2023 | [{{site.data.keyword.bpshort}} agent beta-1](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd) and [policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#policy-cmd) CLI commands are available in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.7 | 07 Feb 2023 | Bug fix to disable `API_AGENT_ATTACHMENT` in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-06-05"
 
 keywords: schematics
 subcollection: schematics
@@ -348,6 +348,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [May 2023](/docs/schematics?topic=schematics-schematics-relnotes#may-2023)
+
+    * Review the release notes for May 2023.
+
+    * [22 May 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-may222023)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
 * [April 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-apr23)
 
