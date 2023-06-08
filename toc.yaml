@@ -256,6 +256,7 @@ toc:
                                                               topics:
                                                                       - troubleshooting/wks_creation_api.md
                                                                       - troubleshooting/ts-workspace-failure.md
+                                                                      - troubleshooting/ts-workspace-generateplan.md
                                                                       - troubleshooting/apply_nullresource.md
                                                                       - troubleshooting/apply_timeout-taint.md
                                                                       - troubleshooting/apply_resource_group.md
