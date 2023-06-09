@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-08"
+lastupdated: "2023-06-09"
 
 keywords: schematics, generate plan, schematics workspace generate plan
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Why do get namespace fails with connection refused while running the Terraform script that contains Kubernetes cluster?
+# Why the Terraform script that contains Kubernetes cluster with connection refused?
 {: #wks-connection-refuse}
 
 When you `Generate Plan` for the Terraform script that contains cluster, used to work properly three months ago, but now the same Terraform script gets the following error:
@@ -26,10 +26,13 @@ dial tcp [::1]:80: connect: connection refused".
 ```
 {: screen}
 
-Compared the logs between successful and failed `Generate Plan` execution. Observed some new versions picked up of Providers, forced them back to the same version just to ensure a version change did not cause the error.
+When compared the logs between successful and failed `Generate Plan` execution. Observed `new versions picked up of providers`, forced the script to the same version just to ensure a version change did not cause the error. Still the error persists.
 
 This issue is from Kubernetes provider, there are many discussion around this error by different Cloud providers, but there is no definite solution.
 {: tsCauses}
+
+Check the following references and solutions provided to fix the issue
+{: tsResolve}
 
 References
 :   - Terraform [don’t use Kubernetes provider with your cluster resource](https://itnext.io/terraform-dont-use-kubernetes-provider-with-your-cluster-resource-d8ec5319d14a){: external}

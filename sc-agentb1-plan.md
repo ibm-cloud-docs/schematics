@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-06-09"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -69,7 +69,7 @@ With agents you are responsible for the network security policies for the Kubern
 ## Agent capacity planning 
 {: #agentb1-capacity-planning}
 
-You are advised to monitor the resource usage for the {{site.data.keyword.bpshort}} Agent pods to scale the worker nodes in the Kubernetes cluster if required based on the number of concurrent jobs being executed. In the Beta-1 release, you can use the **Kubernetes dashboard** or [kubectl](/docs/containers?topic=containers-cs_cli_install#kubectl) commands to make changes to:   
+You are advised to monitor the resource usage for the {{site.data.keyword.bpshort}} Agent pods to scale the worker nodes in the Kubernetes cluster if required based on the number of concurrent jobs being executed. In the Beta-1 release, you can use the **Kubernetes dashboard** or [kubectl](/docs/containers?topic=containers-install-ibmcloud-cli) commands to make changes to:   
     - the number of concurrent Terraform, and Ansible jobs.
     - the number of Terraform, and Ansible pods.
     - the resource limits for the agent deployment.

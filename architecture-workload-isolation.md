@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-06-09"
 
 keywords: schematics architecture, schematics compliance, schematics workload isolation, schematics dependencies
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} architecture
 {: #compute-isolation}
 
-Learn about the {{site.data.keyword.bplong}} service architecture, service dependencies, and how customer workloads are isolated from each other in {{site.data.keyword.bplong_notm}}?
+Learn about the {{site.data.keyword.bplong}} service architecture, service dependencies, and how client workloads are isolated from each other in {{site.data.keyword.bplong_notm}}?
 {: shortdesc}
 
 ## Architectural flow

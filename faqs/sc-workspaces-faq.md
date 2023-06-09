@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-06-09"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -136,7 +136,7 @@ Compact usage in the payload is `.template_data[0].compact = true/false`. For mo
 
 If a resource has already been deleted outside of {{site.data.keyword.bpshort}}, a workspace delete operation will as the resource no longer exists. 
 
-You need to delete the workspace and NOT destroying the resources as if resource is not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-workspace-setup#del-workspace).
+You need to delete the workspace and NOT destroying the resources as if resource is not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks).
 
 ## What is the best way to deploy a Helm chart using credentials or secrets?
 {: #gherepo-warn-faq}
@@ -150,7 +150,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
 {: faq}
 {: support}
 
-The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} Workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-workspace-setup#workspace-state-diagram).
+The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} Workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state&interface=ui#workspace-state-diagram).
 
 ## How do you set the Git release tag? 
 {: #releasetag-warn-faq}

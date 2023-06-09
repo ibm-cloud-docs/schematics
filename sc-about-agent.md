@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-06-09"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -57,7 +57,7 @@ The table describes how the {{site.data.keyword.bpshort}} are augmented with {{s
 | `Compute time` | Null resources or [local-exec](/docs/schematics?topic=schematics-schematics-limitations#local-remote-exec) executes for a maximum of 30 minutes. | There is no compute time restrictions. |
 | `Latency` | Runs in {{site.data.keyword.bpshort}} clusters provisioned in `us` or `eu` region only. | Can be configured to run on edge cluster or {{site.data.keyword.satelliteshort}} cluster for faster response time. |
 | `Network configuration` | `Ingress/egress` policies are controlled by {{site.data.keyword.bpshort}}. Cannot reach out to any external PORT that are not in allowed list.| Can decide on `ingress/egress` policies, and can allow PORTS accordingly.|
-| `Software` | Can use only pre-installed software such as `Python / Jquery / {{site.data.keyword.cloud_notm}} command line` cannot install additional software. | Customer is free to install additional software on need basis. |
+| `Software` | Can use only pre-installed software such as `Python / Jquery / {{site.data.keyword.cloud_notm}} command line` cannot install additional software. | Client is free to install additional software on need basis. |
 | `Tenancy` | Multi tenant. | Single tenant. |
 {: caption="Usage of {{site.data.keyword.bpshort}} Agents" caption-side="bottom"}
 
