@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-05"
+lastupdated: "2023-06-09"
 
 keywords: schematics
 subcollection: schematics
@@ -2801,6 +2801,8 @@ subcollection: schematics
 [Workspace failures](/docs/schematics?topic=schematics-wks-failure#wks-failure)
 
 * [Workspace create fails with message `Request Entity Too Large`](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1)
+
+[The Terraform script that contains Kubernetes cluster namespaces fails as connection refused?](/docs/schematics?topic=schematics-wks-connection-refuse#wks-connection-refuse)
 
 [How can you find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
 

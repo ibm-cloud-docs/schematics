@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-06-09"
 
 keywords: terraform version deprecation, deprecation, terraform support schematics
 
@@ -84,7 +84,7 @@ You are suggested always to migrate from your in use version of Terraform to the
 
 Follow these steps to upgrade to continue working with the latest versions of Terraform in {{site.data.keyword.bplong_notm}}.
 
-1. **Identification:** Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} Workspaces. The {{site.data.keyword.bpshort}} Workspaces list indicates the version Terraform in use. Also, individual {{site.data.keyword.bpshort}} workspace [settings pages](/docs/schematics?topic=schematics-workspace-setup#import-template) in the console indicate the in use Terraform version. If you are using the command-line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
+1. **Identification:** Identify the version of Terraform in your {{site.data.keyword.bplong_notm}} Workspaces. The {{site.data.keyword.bpshort}} Workspaces list indicates the version Terraform in use. Also, individual {{site.data.keyword.bpshort}} workspace [settings pages](/docs/schematics?topic=schematics-migrating-terraform-version) in the console indicate the use of Terraform version. If you are using the command-line run [`ibmcloud schematics workspace list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command to list the Terraform version.
 
 2. **Migration:** Migrate older Terraform versions to the current supported version. For more information about migrating Terraform version, see [Upgrading the Terraform workspace version](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12).
 
