@@ -2802,7 +2802,7 @@ subcollection: schematics
 
 * [Workspace create fails with message `Request Entity Too Large`](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1)
 
-[Why the Terraform script that contains Kubernetes cluster with connection refused?](/docs/schematics?topic=schematics-wks-connection-refuse#wks-connection-refuse)
+[The Terraform script that contains Kubernetes cluster namespaces fails as connection refused?](/docs/schematics?topic=schematics-wks-connection-refuse#wks-connection-refuse)
 
 [How can you find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
 
