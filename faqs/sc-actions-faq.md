@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-06-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -20,7 +20,23 @@ content-type: faq
 Answers to common questions about the {{site.data.keyword.bplong_notm}} Actions are classified into following section.
 {: shortdesc}
 
-## Why is my success action job execution displays DEPRECATION WARNING message?
+## Are Classic VSIs supported for use with Actions? 
+{: #Classic-vsi-faq}
+{: faq}
+{: support}
+
+Classic VSI environments have not been tested with Actions.  Only {{site.data.keyword.cloud_notm}} VPC VSIs have been tested and are supported with Actions. 
+
+## What network configuration is suggested for use with Actions? 
+{: #network-faq}
+{: faq}
+{: support}
+
+It is your responsibility as a user to ensure that suitable network policies and a bastion host configuration is in place for the cloud environment to allow {{site.data.keyword.bpshort}} to connect via SSH to your environment. See [{{site.data.keyword.bpshort}} firewall, allowed IPs](/docs/schematics?topic=schematics-allowed-ipaddresses) for details of the IP addresses {{site.data.keyword.bpshort}} uses and must be allowed access. When using a bastion host, SSH forwarding is used to connect to the target VSIs. To validate access the command `ssh -J bastion-ip vsi-ip`. 
+
+Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts are available in the [Cloud-Schematics repo](https://github.com/orgs/Cloud-Schematics/repositories?q=bastion&type=all&language=&sort=){: external}. Follow the tutorial [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/) for guidance on creating a suitable network configuration. 
+
+## Why does my action job display a DEPRECATION WARNING message?
 {: #deprecation-warn-faq}
 {: faq}
 {: support}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-22"
+  years: 2017, 2023
+lastupdated: "2023-06-13"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -15,9 +15,9 @@ subcollection: schematics
 # Detecting drift in workspaces
 {: #drift-note}
 
-{{site.data.keyword.bplong}} is the {{site.data.keyword.cloud_notm}} automation tool that enables users to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces by using known `declarative` Infrastructure as Code (IaC) concepts. However, when a Terraform config is deployed and resources that are created, it does not mean that the resources stay as declared by the config. Any change in the infrastructure state is called `drift`. It occurs when the configuration of your deployed infrastructure differs from the wanted state that is defined in your template configuration. 
+{{site.data.keyword.bplong}} enables users to deploy, manage, and manipulate infrastructure resources with Terraform based workspaces using `declarative` Infrastructure as Code (IaC) concepts. However, when a Terraform config is deployed and resources are created, it does not mean that the resources stay as declared by the config. Any change in the infrastructure state is called `drift`. It occurs when your deployed infrastructure differs from the wanted (declarative) state defined by your template configuration. 
 
-Drift can occur for many reasons. The most frequent cause is changes that are applied manually outside of Terraform automation. The Terraform state file of your deployed workspace is no longer synchronized with your deployed infrastructure resources, and the workspace is said to be in drift.
+Drift can occur for many reasons. The most frequent cause is changes made to your infrastructure manually outside of Terraform automation. The Terraform state file of your deployed workspace is then no longer synchronized with your deployed infrastructure resources, and the workspace is said to be in drift.
 {: shortdesc}
 
 Drift can happen for many reasons within the context of your configuration:
@@ -40,13 +40,13 @@ Terraform cannot detect drift in resources and attributes that are not managed o
 
 Drift detection for your Terraform automation workspaces is possible in {{site.data.keyword.bplong_notm}}. You can use following three methods to check the drift detection.
 
-## Drift detection through {{site.data.keyword.bpshort}} UI
+## Drift detection using the UI
 {: #drift-ui}
 {: ui}
 
 You can initiate drift detection for workspaces from the {{site.data.keyword.bpshort}} Workspaces job page. It initiates a job to detect drift for the workspace and its deployed resources. During execution, the drift detection job is `in progress`, on completion it has a `failure` or `success`. To review the details of the drift job, you need to check the drift job log for the drift status.
 
-### Viewing detect drift through UI
+### Viewing detect drift logs using the UI
 {: #drift-view-ui}
 
 Use the following steps to view the drift job log.
@@ -83,14 +83,14 @@ Use the following steps to view the drift job log.
     ```
     {: screen}
 
-## Drift detection through {{site.data.keyword.bpshort}} CLI
+## Drift detection using the CLI
 {: #drift-cli}
 {: cli}
 
 You can initiate detecting drift from the create workspaces command. The drift detection initiates a job to detect drift for the workspace and its specific resources. The drift detection job is `in progress` or `completed` with the appropriate status such as `failure` or `success`. Instead, to know the details of the drift job, you need to check the drift job log for the drift status. Use the following commands to view the detect drift.
 {: shortdesc}
 
-### Creating and viewing the detect drift through CLI
+### Creating and viewing the detect drift logs using the CLI
 {: #drift-view-cli}
 {: cli}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-06-13"
 
 keywords: schematics
 subcollection: schematics
@@ -1183,9 +1183,9 @@ subcollection: schematics
 
 [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism#set-parallelism)
 
-* [Usage](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage)
+* [Usage](/docs/schematics?topic=schematics-set-parallelism#env-var-usage)
 
-    * [Passing TF_CLI_ARGS](/docs/schematics?topic=schematics-set-parallelism#passing-cli-args)
+    * [Passing TF_CLI_ARGS as env-vars](/docs/schematics?topic=schematics-set-parallelism#passing-cli-args)
 
     * [Example setting parallelism or TF_LOGS](/docs/schematics?topic=schematics-set-parallelism#parallelism-example)
 
@@ -1370,13 +1370,13 @@ subcollection: schematics
 
 * [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
 
-* [Drift detection through {{site.data.keyword.bpshort}} UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
+* [Drift detection using the UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
 
-    * [Viewing detect drift through UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
+    * [Viewing detect drift logs using the UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
 
-* [Drift detection through {{site.data.keyword.bpshort}} CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
+* [Drift detection using the CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
 
-    * [Creating and viewing the detect drift through CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
+    * [Creating and viewing the detect drift logs using the CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
 
 * [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
 
@@ -2528,7 +2528,11 @@ subcollection: schematics
 
 [Actions](/docs/schematics?topic=schematics-actions-faq#actions-faq)
 
-* [Why is my success action job execution displays DEPRECATION WARNING message?](/docs/schematics?topic=schematics-actions-faq#deprecation-warn-faq)
+* [Are Classic VSIs supported for use with Actions?](/docs/schematics?topic=schematics-actions-faq#Classic-vsi-faq)
+
+* [What network configuration is suggested for use with Actions?](/docs/schematics?topic=schematics-actions-faq#network-faq)
+
+* [Why does my action job display a DEPRECATION WARNING message?](/docs/schematics?topic=schematics-actions-faq#deprecation-warn-faq)
 
 * [How can I resolve that might not run action error while provisioning `WinRM` by using {{site.data.keyword.bpshort}} action?](/docs/schematics?topic=schematics-actions-faq#winrm-faq)
 
@@ -2754,7 +2758,7 @@ subcollection: schematics
 
 * [Are resources removed on delete workspace?](/docs/schematics?topic=schematics-workspaces-faq#delete-resource-wks-faq)
 
-* [Can I update a workspace with an invalid payload issue?](/docs/schematics?topic=schematics-workspaces-faq#invalid-paylaod-cli)
+* [Can I set environment variables for workspaces?](/docs/schematics?topic=schematics-workspaces-faq#workspace-env-vars)
 
 * [Does drift detection run automatically?](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq)
 

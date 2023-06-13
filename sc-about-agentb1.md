@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-06-13"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -33,7 +33,7 @@ When using agents the {{site.data.keyword.bpshort}} service does not have direct
 Agents enable Terraform and Ansible jobs to run on your private cloud network or in any isolated network zone and directly work with your cloud infrastructure. The diagram illustrates the {{site.data.keyword.bpshort}} Agent architecture, and the location of Terraform and Ansible job execution within a user's private cloud network. 
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} Agents architecture running Terraform and Ansible](images/new/sc-agents-architecture.svg){: caption="{{site.data.keyword.bpshort}} Agents architecture running Terraform and Ansible" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Agents architecture running Terraform and Ansible](images/sc-agents-architecture1.svg){: caption="{{site.data.keyword.bpshort}} Agents architecture running Terraform and Ansible" caption-side="bottom"}
 
 The difference in the location of job execution in the shared multi-tenant {{site.data.keyword.bpshort}} service and using Agents can be seen by comparing this diagram with the deployment architectures for [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sc-workspaces) and [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions). With agents, jobs are executed on your private network, the shared service executes jobs on the {{site.data.keyword.bpshort}} network. To access the users private network, the shared service requires bastion host access via the public internet. 
 
@@ -51,7 +51,7 @@ Use agents located on your private network to provision, configure, and access y
 
 The following diagram illustrates a possible agent deployment model on a cluster in an environment with multiple VPCs connected via a transit gateway. Here an agent running Terraform and Ansible jobs has direct to cloud resources over the private cloud network. In this deployment model, your Terraform or Ansible automations' can directly configure your cloud resources using SSH, without the need for bastion hosts to gain access via the public network.  
 
-![{{site.data.keyword.bpshort}} Agents connectivity](images/new/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} Agents connectivity" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Agents connectivity](images/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} Agents connectivity" caption-side="bottom"}
 
 With agents you are in control of the network security policies of the Kubernetes cluster and any VPC Security Group or Access Control List policies for the running agent and therefore the ability of the Terraform and Ansible automations’ to access to your private cloud resources.
 
