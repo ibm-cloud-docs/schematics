@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-06-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -414,17 +414,17 @@ After you successfully provisioned {{site.data.keyword.cloud_notm}} resources by
 {: faq}
 {: support}
 
-Removing the workspace from {{site.data.keyword.bplong_notm}} does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you remove the workspace before you removed your resources, you must manually remove all your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard.
+Deleting a workspace from {{site.data.keyword.bplong_notm}} does not remove any of your {{site.data.keyword.cloud_notm}} resources. If you delete the workspace before you remove your resources, you must manually remove all your {{site.data.keyword.cloud_notm}} resources from the individual resource dashboard.
 
-Removing an {{site.data.keyword.cloud_notm}} resource cannot be undone. Make sure that you backed up your data before you remove a resource. If you choose to remove the infrastructure code, or comment out the resource in your Terraform configuration file. Make sure to review the log file of your execution plan to verify that all your resources are included in the removal.
+Removing {{site.data.keyword.cloud_notm}} resources cannot be undone. Make sure that you have backed up any data before you remove a resource. Resources will also be removed(deleted) if you remove the resource definition or comment out the resource in your Terraform configuration file. Review the Plan log file to verify that all your resources are included in the removal.
 {: important}
 
-## Can I update a workspace with an invalid payload issue?
-{: #invalid-paylaod-cli}
+## Can I set environment variables for workspaces?
+{: #workspace-env-vars}
 {: faq}
 {: support}
 
-You can use `env values` as shown in the sample payload to update the workspace in the CLI. For more information, see [usage of `env_values`](/docs/schematics?topic=schematics-set-parallelism#parelleism-usage).
+You can set `env values` for a workspace using the CLI and API. For more information, see [usage of `env_values`](/docs/schematics?topic=schematics-set-parallelism).
 
 **Sample payload:**
 
@@ -472,14 +472,14 @@ No, the drift detection is not an automatic method of detection in the {{site.da
 {: faq}
 {: support}
 
-No, you cannot initiate the drift detection. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+You can initiate drift detection using the UI and CLI. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note).
 
 ## Where can I see the status of a drift detection job ? 
 {: #drift-status-faq}
 {: faq}
 {: support}
 
-To know the details of the drift detection job, you need to check the drift detection job log. The job log provides the details of the drift detection as `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
+To verify the results of a drift detection job, you need to check the drift detection job log. The job log provides the details of the drift detection as `in progress` or `completed` with the appropriate status such as `failure` or `success`. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note&interface=api#drift-in-ibm).
 
 ## Can I `interrupt` or `terminate` running jobs?
 {: #stopping-job-faq}

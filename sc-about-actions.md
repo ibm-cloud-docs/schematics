@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-06-13"
 
 keywords: schematics actions, actions, schematics
 
@@ -18,7 +18,7 @@ subcollection: schematics
 {{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure. 
 {: shortdesc}
 
-To get started with [Configuration Management]({: /docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm}) in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 
+To get started with [Configuration Management](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm) with Ansible in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 
 {: tip}
 
 ## Architecture
@@ -35,7 +35,7 @@ Ansible does not use agents or a custom security infrastructure that must be pre
 
 Using your supplied playbooks, {{site.data.keyword.bpshort}} runs the Ansible engine to execute your playbook. Ansible, tasks, roles and playbooks can perform provisioning tasks via the {{site.data.keyword.cloud_notm}} APIs via HTTPS, or configuration of compute instances (virtual servers) using SSH. Server configuration is performed via SSH over the public network. To maintain security for your environment, use of a bastion host to provide a secure gateway to your compute infrastructure is strongly encouraged.     
 
-It is your responsibility as a user to ensure suitable network policies are in place for their cloud environment to allow {{site.data.keyword.bpshort}} to connect via SSH to your environment. See [{{site.data.keyword.bpshort}} firewall, allowed IPs](/docs/schematics?topic=schematics-allowed-ipaddresses) for details of the IP addresses {{site.data.keyword.bpshort}} uses and must be allowed access. 
+It is your responsibility as a user to ensure suitable network policies and bastion host configuration are in place for their cloud environment to allow {{site.data.keyword.bpshort}} to connect via SSH to your environment. See [{{site.data.keyword.bpshort}} firewall, allowed IPs](/docs/schematics?topic=schematics-allowed-ipaddresses) for details of the IP addresses {{site.data.keyword.bpshort}} uses and must be allowed access. When using a bastion host, SSH forwarding is used to connect to the target VSIs. To validate access the command `ssh -J bastion-ip vsi-ip`. Actions has only been tested with {{site.data.keyword.cloud_notm}} VPC VSIs.  
 {: note}
 
 Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts are available in the [Cloud-Schematics repo](https://github.com/orgs/Cloud-Schematics/repositories?q=bastion&type=all&language=&sort=){: external}. Follow the tutorial [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/) for guidance on creating a suitable network configuration. 
