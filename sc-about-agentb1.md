@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-06-14"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -27,29 +27,29 @@ subcollection: schematics
 When using agents the {{site.data.keyword.bpshort}} service does not have direct access your network, to an agent or any private cloud resources. An agent uses a pull model and polls for jobs that must be run on an agent. You are in control of the agent resources, its network policies and its connection to {{site.data.keyword.bpshort}}. Agents are designed not to require inbound access from {{site.data.keyword.bpshort}} and the opening of inbound firewall or network access ports. All communication between the agent and Schematics is outbound from the agent and under your control.    
 {: note}
 
-## {{site.data.keyword.bpshort}} Agent architecture
+## {{site.data.keyword.bpshort}} Agent overview
 {: #about-agentb1-architecture}
 
-Agents enable Terraform and Ansible jobs to run on your private cloud network or in any isolated network zone and directly work with your cloud infrastructure. The diagram illustrates the {{site.data.keyword.bpshort}} Agent architecture, and the location of Terraform and Ansible job execution within a user's private cloud network. 
+Agents enable your Terraform and Ansible jobs to run on your private cloud network or in any isolated network zone and directly work with your cloud infrastructure. Agents extends the existing {{site.data.keyword.bpshort}} shared multi-tenant service, with private dedicated workers (agents) running Terraform and Ansible jobs on your private network. The diagram illustrates agent based job execution alongside the existing shared multi-tenant service. 
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} Agents architecture running Terraform and Ansible](images/sc-agents-architecture1.svg){: caption="{{site.data.keyword.bpshort}} Agents architecture running Terraform and Ansible" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Terraform and Ansible operations with agents](images/sc-agents-architecture2.svg){: caption="{{site.data.keyword.bpshort}} Agents architecture running Terraform and Ansible" caption-side="bottom"}
 
-The difference in the location of job execution in the shared multi-tenant {{site.data.keyword.bpshort}} service and using Agents can be seen by comparing this diagram with the deployment architectures for [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sc-workspaces) and [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions). With agents, jobs are executed on your private network, the shared service executes jobs on the {{site.data.keyword.bpshort}} network. To access the users private network, the shared service requires bastion host access via the public internet. 
+Agent assignment policies dynamically route Terraform (workspace) and Ansible (actions) jobs to execute on an agent determined by the defined policies. The default, without policies defined, is for all jobs to execute on the {{site.data.keyword.bpshort}} shared infrastructure. [Assignment policies](/docs/schematics?topic=schematics-policy-manage) can be selectively defined to route jobs for workspaces and actions that meet the policy criteria to target agents and locations. Policies are defined using workspace and actions attributes, including workspace Resource Group, Schematics region and user assigned tags.    
 
-In this diagram jobs are shown as being logically passed to the agent for execution. Refer to the following diagram for the details agent of network access.  
+Without policy definitions, job execution is performed via the shared multi-tenant {{site.data.keyword.bpshort}} service.  This is described more fully in the diagrams for the deployment architectures for [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sc-workspaces) and [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions). The shared service executes jobs on the {{site.data.keyword.bpshort}} network. To access the users private network, the shared service will require bastion host access via the public internet.  
+
+Where policies are defined, selecting workspaces and attributes by policy, jobs are executed on the target agent on your private network. These can configure, and access your cloud or on-premises services and cluster resources, managed by your own network access policies. When using agents on your private network, bastion host access via the public internet is not required. This simplifies the infrastructure requirements when using Ansible or Terraform via SSH and eliminates a number of security considerations. 
 
 {{site.data.keyword.bpshort}} identifies and authenticates your agent using a trusted profile identity provided by the Kubernetes cluster that it runs on. This identity is dynamically created when an agent is created and deployed. The trusted profile identity guarantees that no one can spoof your agent’s identity, and steal data from {{site.data.keyword.bpshort}}. You are in control of the access permissions defined for the trusted profile identity by using IAM access policies.
 {: note}
 
 The agent runtime includes `Terraform`, `Ansible`, and additional micro-services. For more information about the software utilities included in the agent runtime, see [{{site.data.keyword.bpshort}} agent runtime](/docs/schematics?topic=schematics-sch-utilities).
 
-Use agents located on your private network to provision, configure, and access your cloud or on-premises services and cluster resources, managed by your own network access policies. Agents runs your Terraform and Ansible automation to access and work with the private network resources, and in future can use software utilities of your own choice.
-
-## {{site.data.keyword.bpshort}} Agent networking
+## Private network configuration when using agents
 {: #about-agentb1-networking}
 
-The following diagram illustrates a possible agent deployment model on a cluster in an environment with multiple VPCs connected via a transit gateway. Here an agent running Terraform and Ansible jobs has direct to cloud resources over the private cloud network. In this deployment model, your Terraform or Ansible automations' can directly configure your cloud resources using SSH, without the need for bastion hosts to gain access via the public network.  
+The following diagram illustrates a possible agent deployment model on a cluster in an environment with multiple VPCs connected via a transit gateway. Here an agent, running Terraform and Ansible jobs, has direct access to cloud resources over the private cloud network. In this deployment model, your Terraform or Ansible automations' can directly configure your cloud resources using SSH, without the need for bastion hosts to gain access via the public network.  
 
 ![{{site.data.keyword.bpshort}} Agents connectivity](images/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} Agents connectivity" caption-side="bottom"}
 

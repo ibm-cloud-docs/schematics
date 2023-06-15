@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-06-14"
 
 keywords: schematics
 subcollection: schematics
@@ -149,9 +149,9 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
 
-* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
+* [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
 
-* [{{site.data.keyword.bpshort}} Agent networking](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-networking)
+* [Private network configuration when using agents](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-networking)
 
 * [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
 
