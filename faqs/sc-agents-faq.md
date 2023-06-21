@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-06-21"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics agents faq, agents faq,
 
@@ -56,7 +56,7 @@ Agent beta-1 service
 {: faq}
 {: support}
 
-You can install only one agent on a Kubernetes cluster on {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_full}} on {{site.data.keyword.cloud_notm}}. You can agent on to different clusters.
+You can install only one agent on a Kubernetes cluster on {{site.data.keyword.containerlong_notm}}. You can install additional agents on different clusters.
 
 You cannot install more than one agent in a single Kubernetes cluster. You get a failure with namespace conflict error.
 
@@ -87,7 +87,7 @@ In future, you can customize an agent to increase the number of job Pods, to inc
 {: faq}
 {: support}
 
-The agent needs {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.redhat_openshift_full}}  Service with minimum three worker nodes, with a flavor of `b4x16` or higher.
+The agent needs {{site.data.keyword.containerlong_notm}} Service with minimum three worker nodes, with a flavor of `b4x16` or higher.
 
 ## How many workspaces can be assigned to an agent?
 {: #faqs-agent-min-wks}

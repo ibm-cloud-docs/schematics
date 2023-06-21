@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-06-21"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -30,7 +30,7 @@ Review and complete the tasks below to prepare your {{site.data.keyword.cloud_no
 
 - **Account and networks:** An agent provides {{site.data.keyword.bpshort}} Schematics the ability to run Terraform and Ansible jobs within a target account and the accounts private network. Network policies must be configured to allow the cluster the agent is deployed on to communicate back to Schematics, also to {{site.data.keyword.cloud}} APIs, services and for instance to a users private Git or Vault instances. Refer to the section on [Planning agent network access and configuration](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-network-config) for more details. 
    - Record information about the allowed network zones and access.    
-- **Kubernetes cluster:** A {{site.data.keyword.bpshort}} agent can be deployed on any existing private or public infrastructure such as [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters), [{{site.data.keyword.vpc_full}}](/docs/openshift?topic=openshift-cluster-create-vpc-gen2&interface=ui), or [{{site.data.keyword.redhat_openshift_full}}](/docs/openshift?topic=openshift-clusters) clusters. You can use an existing cluster or provision a new cluster with the following minimum configuration.
+- **Kubernetes cluster:** A {{site.data.keyword.bpshort}} agent can be deployed on existing private or public [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters) clusters. You can use an existing cluster or provision a new cluster with the following minimum configuration.
    - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four Terraform or Ansible automation jobs in parallel.
    - Record information about the cluster such as `cluster ID`, `cluster resource group`,  and `region` for the later use.
 - **{{site.data.keyword.cos_full_notm}}:** The {{site.data.keyword.bpshort}} Agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The COS instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 

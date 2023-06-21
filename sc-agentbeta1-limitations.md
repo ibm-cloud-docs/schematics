@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-06-21"
 
 keywords: schematics agent, agent, beta-1 release, agent beta-1 release
 
@@ -46,6 +46,7 @@ There will be multiple beta releases in short window period, this requires the u
 |  Limitation | Resolved | Date |
 | --- |--- | --- | 
 | The cluster and COS bucket must be in the same resource group | | | 
+| Only IKS clusters are supported at this time. ROKS support is planned for the future |||
 | UI capabilities are not final and will be updated throughout the beta process.| | |
 | Support to [store or persist user-defined](/docs/schematics?topic=schematics-general-faq#persist-file) files is not available in Agents.| | |
 | Agents supports only `Terraform v1.0` or higher Terraform version. | | |
