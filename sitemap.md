@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-06-21"
 
 keywords: schematics
 subcollection: schematics
@@ -79,7 +79,7 @@ subcollection: schematics
 {: #sitemap_about}
 
 
-[{{site.data.keyword.bpshort}} overview](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
+[Learning about {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics#learn-about-schematics)
 
 * [IaC automation as-a-service](/docs/schematics?topic=schematics-learn-about-schematics#sc-IaCaas)
 
