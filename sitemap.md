@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-21"
+lastupdated: "2023-07-03"
 
 keywords: schematics
 subcollection: schematics
@@ -1350,7 +1350,7 @@ subcollection: schematics
 
 * [Deploying services across regions](/docs/schematics?topic=schematics-multi-region-deployment#across-regions)
 
-[Using modules in private repos](/docs/schematics?topic=schematics-download-modules-pvt-git#download-modules-pvt-git)
+[Using modules in public and private repos](/docs/schematics?topic=schematics-download-modules-pvt-git#download-modules-pvt-git)
 
 * [Using private modules with templates](/docs/schematics?topic=schematics-download-modules-pvt-git#netrc-example)
 
@@ -2542,11 +2542,11 @@ subcollection: schematics
 
 [Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
-* [What are the new updates in the agent beta-1 release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
+* [What are the updates in the agent beta-1 release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
 
-* [What is the cost of installing the {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
+* [What are the costs of installing and using Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
-* [Can I install more than one {{site.data.keyword.bpshort}} Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+* [Can I install more than one Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
 * [What type of Schematics jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
@@ -2560,31 +2560,45 @@ subcollection: schematics
 
 * [How many jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-job)
 
-* [What is the default polling interval for an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
+* [What is the default polling interval for Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
 
 * [What is the difference between agent-location and location input variable flag in Agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
 
-* [Can an agent run {{site.data.keyword.bpshort}} Job from different resource group?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
+* [Can an agent run Workspace jobs belonging to different resource groups?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
 
-* [Can an agent run {{site.data.keyword.bpshort}} Job from different region?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
+* [Can an agent run Jobs from multiple {{site.data.keyword.bpshort}} regions?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
 
-* [Can I register one agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+* [Can I register an agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
 
-* [Can jobs of an existing workspace configured to run on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
+* [Can jobs for an existing workspace be configured to run on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
 
-* [What are the identity and permissions needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
+* [What IAM permissions needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
 
-* [When my agent is deployed in a private network. How can I configure mirror site for the Terraform plug-ins?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-pvt-network)
+* [Can I use Terraform custom providers or use a proxy registry to download Terraform provider plug-ins?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cust-providers)
 
-* [Can I inject the self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
+* [How do I set the credentials to access a private provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-tf-creds)
 
-* [List the attributes that {{site.data.keyword.bpshort}} Workspaces or Actions attributes used to dynamically select an agent](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
+* [Using Artifactory as a provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory)
+
+    * [Configuring a local Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-local-artifactory-provider-registry)
+
+    * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-remote-artifactory-provider-registry)
+
+    * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-virtual-artifactory-provider-registry)
+
+* [Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
+
+* [What attributes of Workspaces or Actions are used to dynamically select a target agent for execution](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
 * [How can I enable debug mode in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-debugmode)
 
 * [Can I upgrade an agent beta-0 to agent beta-1?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
 
-* [Does an agent beta-1 supports backward compactibility?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-compactibility)
+* [Does agent beta-1 support backward compatibility?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-compatibility)
+
+* [Are Schematics Agents the same as Terraform Cloud Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-agent)
+
+* [Do the agents run on IBM Cloud cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-run)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
