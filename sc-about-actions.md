@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-07-10"
 
 keywords: schematics actions, actions, schematics
 
@@ -24,10 +24,9 @@ To get started with [Configuration Management](/docs/schematics?topic=schematics
 ## Architecture
 {: #sc-actions-overview}
 
-
 [Ansible](https://www.ansible.com/){: external} is a [configuration management and provisioning tool](/docs/schematics?topic=schematics-schematics-open-projects). The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
 
- It is designed to automate the configuration, operation, and management of cloud environments, and to deploy multitiered app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
+It is designed to automate the configuration, operation, and management of cloud environments, and to deploy multitiered app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
 
 Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
 
@@ -49,13 +48,10 @@ To use Ansible capabilities in {{site.data.keyword.bpshort}}, you create an acti
 2. **Create a {{site.data.keyword.bpshort}} action**: When you create an action, you point your action to the repository that stores your Ansible playbook. Then, you select the cloud resources where you want to run the tasks that are defined in your Ansible playbook. To protect your cloud resources, you can further set up a bastion host in front of your target hosts that proxies all Ansible SSH connections to the target hosts. 
 3. **Run your action**: When you are ready to configure your cloud resources, you can run your action. {{site.data.keyword.bpshort}} uses the built-in Ansible engine to connect to your target hosts via SSH, and execute the tasks that are defined in your Ansible playbook. You can monitor the progress by reviewing the logs. 
 
-
 ## Next steps
 {: #sch-actions-nextsteps}
 
 So far you have learned about {{site.data.keyword.bpshort}} Actions. The following are some next steps to explore.
 {: shortdesc}
 
-- See [Creating Actions](/docs/schematics?topic=schematics-create-tf-config) to dig into how to create workspace using the Terraform templates. 
-
-
+- See [Creating Actions](/docs/schematics?topic=schematics-action-working#create-action) to dig into how to create an action?

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-07-03"
+lastupdated: "2023-07-10"
 
 keywords: schematics
 subcollection: schematics
@@ -174,6 +174,18 @@ subcollection: schematics
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
 * [Next steps](/docs/schematics?topic=schematics-how-it-works#usecase-nextsteps)
+
+[Your responsibilities when using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sc-responsibilities#sc-responsibilities)
+
+* [Incident and operations management](/docs/schematics?topic=schematics-sc-responsibilities#incident-ops-mgt)
+
+* [Change management](/docs/schematics?topic=schematics-sc-responsibilities#change-mgt)
+
+* [Identity and access management](/docs/schematics?topic=schematics-sc-responsibilities#iam)
+
+* [Security and regulation compliance](/docs/schematics?topic=schematics-sc-responsibilities#security-reg-compliance)
+
+* [Disaster recovery](/docs/schematics?topic=schematics-sc-responsibilities#disaster-recovery)
 
 
 ## Understanding Blueprints
