@@ -10,7 +10,6 @@ toc:
                 version: 2
                 console-page: /schematics/overview
                 product-page: http://cloud.ibm.com/schematics
-
         entries:
                 - navgroup:
                           id: learn
@@ -34,6 +33,7 @@ toc:
                                                     - sc-about-agentb1.md
                                                     - sc-about-blueprint.md
                                                     - sc-about-usecases.md
+                                                    - sc-about-responsibilities.md
                                   - topicgroup:
                                             label: Understanding Blueprints
                                             topics:
@@ -145,7 +145,6 @@ toc:
                                                                       - sc-agentb1-policy.md
                                                                       - sc-agentb1-confg-k8s-cluster.md
                                                                       - sc-agentb1-health.md
-
                                   - topicgroup:
                                             label: Logging and monitoring
                                             topics:

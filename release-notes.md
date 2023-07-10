@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-09"
+lastupdated: "2023-07-10"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -41,7 +41,6 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 
 Review the release notes for April 2023.
 {: shortdesc}
-
 
 ### 18 April 2023
 {: #schematics-apr1723}
