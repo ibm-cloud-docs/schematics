@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-08-01"
 
 keywords: schematics
 subcollection: schematics
@@ -1396,7 +1396,7 @@ subcollection: schematics
 
 * [Accessing workspace state and outputs](/docs/schematics?topic=schematics-remote-state#data-sources)
 
-[Deprecation lifecycle of Terraform releases](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
+[Terraform version support and deprecation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-tf-version)
 
 * [{{site.data.keyword.bpshort}} Terraform depreciation lifecycle](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-phase)
 
@@ -1410,7 +1410,7 @@ subcollection: schematics
 
 * [User actions](/docs/schematics?topic=schematics-deprecate-tf-version#user-action)
 
-[Updating to a new Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
+[Upgrading to a new Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version#migrating-terraform-version)
 
 * [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
 
@@ -1720,11 +1720,11 @@ subcollection: schematics
 * [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
 
 
-## Job queuing in {{site.data.keyword.bpshort}}
-{: #sitemap_job_queuing_in_}
+## Job execution and queuing
+{: #sitemap_job_execution_and_queuing}
 
 
-[Job queuing in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-job-queue-process#job-queue-process)
+[Job execution and queuing](/docs/schematics?topic=schematics-job-queue-process#job-queue-process)
 
 * [About the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process#about-job-queue)
 
@@ -1732,7 +1732,7 @@ subcollection: schematics
 
 * [When does the job enter into the pending queue?](/docs/schematics?topic=schematics-job-queue-process#pending-job-queue)
 
-* [Timeout](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
+* [Job timesouts](/docs/schematics?topic=schematics-job-queue-process#job-queue-timeout)
 
 
 ## Deleting {{site.data.keyword.bpshort}} data
@@ -2345,11 +2345,11 @@ subcollection: schematics
 * [Where are my {{site.data.keyword.cloud_notm}} resources provisioned?](/docs/schematics?topic=schematics-locations#where-are-resources-provisioned)
 
 
-## Service limitations
-{: #sitemap_service_limitations}
+## Adoption considerations
+{: #sitemap_adoption_considerations}
 
 
-[Service limitations](/docs/schematics?topic=schematics-schematics-limitations#schematics-limitations)
+[Adoption considerations](/docs/schematics?topic=schematics-schematics-limitations#schematics-limitations)
 
 * [Differences to native Terraform](/docs/schematics?topic=schematics-schematics-limitations#terraform-vs-schematics)
 
@@ -2357,11 +2357,13 @@ subcollection: schematics
 
     * [Can I use my local `terraform.tfvars` file?](/docs/schematics?topic=schematics-schematics-limitations#terraformtfvars)
 
-    * [Is Terraform remote state supported in {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-schematics-limitations#tf-remote-state)
+    * [Is Terraform remote state supported?](/docs/schematics?topic=schematics-schematics-limitations#tf-remote-state)
 
-    * [Why is my local-exec and remote-exec provisioner in {{site.data.keyword.bplong_notm}} fails?](/docs/schematics?topic=schematics-schematics-limitations#local-remote-exec)
+    * [Why do local-exec and remote-exec provisioner terminate after 30 minutes?](/docs/schematics?topic=schematics-schematics-limitations#local-remote-exec)
 
 * [What is the use of refresh token header?](/docs/schematics?topic=schematics-schematics-limitations#refresh-token)
+
+* [Git repo restrictions](/docs/schematics?topic=schematics-schematics-limitations#git-restrictions)
 
 
 ## {{site.data.keyword.bpshort}} terminology

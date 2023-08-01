@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-08-01"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -194,6 +194,10 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
     - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
+  
+  Branch names containing `/` (backslash) are not supported
+   {: note} 
+
 2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command-line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension) for cloning.
 3. Select the `Terraform version` that your Terraform configuration files are written in.
 4. Click the checkbox `I understand the changes that could happen if I edit this URL and I agree to these happening` option.
@@ -292,6 +296,10 @@ Plan out the organizational structure of your workspace to match the microservic
 |`Bitbucket`|`https://bitbucket.org/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`  \n `https://<username>@bitbucket.org/<workspace_name>/tf_cloudless_sleepy/src/master` |
 |`Azure DevOps`|`https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`  \n `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`|
 {: caption="Git repositories" caption-side="bottom"}
+
+ Branch names containing `/` (backslash) are not supported
+ {: note} 
+
 
 ### How many workspaces do I need?
 {: #plan-number-of-workspaces}
