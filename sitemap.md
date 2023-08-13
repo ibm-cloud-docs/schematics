@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-08-13"
 
 keywords: schematics
 subcollection: schematics
@@ -2717,6 +2717,8 @@ subcollection: schematics
 * [What are the steps to create and restrict the fine-grained and classic personal access tokens (PAT).](/docs/schematics?topic=schematics-general-faq#faq-pat)
 
 * [Can I run the `terraform init -backend-config="KEY=VALUE"` option through CLI?](/docs/schematics?topic=schematics-general-faq#faq-tf-backend)
+
+* [When do you specify the GitHub master or subdirectory branch?](/docs/schematics?topic=schematics-general-faq#gitbranch-faq)
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
