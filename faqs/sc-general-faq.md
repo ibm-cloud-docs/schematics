@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-13"
+lastupdated: "2023-08-16"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -367,7 +367,7 @@ The following are the steps to create and restrict the PAT tokens.
 
 Workspace creation
 
-In the workspace creation page, for the `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. 
+In the workspace creation page, for the `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. For more details about workspace create, refer to [Creating a workspace](docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui). The link can point to the `master` branch, any other branch, or a subdirectory. 
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
     - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory` 
@@ -377,7 +377,7 @@ Branch names containing `/` (backslash) are not supported.
 
 Action creation
 
-In the action creation page, the URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks. You must select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. To run multiple playbooks, you must create a separate action for each playbook. 
+In the action creation page, the URL can point to the master branch, any other branch, or a subdirectory. If your repository stores multiple playbooks. You must select the playbook that you want to run. A {{site.data.keyword.bpshort}} action can point to one playbook at a time. For more details about working with an action, refer to [Creating an action](/docs/schematics?topic=schematics-action-working&interface=ui#create-action-working).To run multiple playbooks, you must create a separate action for each playbook.
         - Example for master branch - `https://github.com/myorg/myrepo`
         - Example for other branches - `https://github.com/myorg/myrepo/tree/mybranch`
         - Example for subdirectory - `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`
