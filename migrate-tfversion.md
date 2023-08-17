@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-16"
+lastupdated: "2023-08-17"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -50,16 +50,16 @@ The in use version of Terraform for a Workspace can be updated via the {{site.da
 
 The workspace terraform version parameter is of the form `terraform_v1.1` or `terraform_v1.2`
 
-1. Select the workspace to be updated and verify that it is in `Normal` state and that a Plan operation does not generate any proposed resource changes. Save the `workspace_id` and note the region the workspace is hosted in. This is the prefix to the `workspace_id`. 
-2. Update the Workspace terraform version using the {{site.data.keyword.cloud_notm}} CLI:
+1. Select the workspace to be updated and verify that it is in `Normal` state and that a Plan operation does not generate any proposed resource changes. Save the `workspace_id` and note the region the workspace is hosted in.  
+2. Update the Workspace terraform version using the {{site.data.keyword.cloud_notm}} CLI and API. These workspace operations are region specific. Note the workspace region from the UI as this is required for the following commands:
    - Login to the {{site.data.keyword.cloud_notm}} CLI with `ibmcloud login` 
    - Set the CLI target region with `ibmcloud target -r <region>` to be the same as the workspace you are updating. 
    - Generate an IAM oauth token to use with the {{site.data.keyword.bpshort}} API, with the command `ibmcloud iam oauth-tokens`.
    - Copy the token data and insert in to the following command text, replacing the string `<token-data>`, set `<terraform_version>` to the required Terraform version and the `<workspace_id>`:  
-   - Execute the following `cURL` command:
+   - The workspace is updated by executing a `cURL` command to call the [{{site.data.keyword.bpshort}}](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace) Update API to update the Terraform version. This operation is region specific and must specify the desired [{{site.data.keyword.bpshort}} API region endpoint](https://cloud.ibm.com/apidocs/schematics/schematics#api-endpoints) for the workspace target region. Replace the text `<schematics-region-endpoint>` in the command below with the endpoint for the target workspace region. 
 
     ```sh
-    curl --request PUT --url https://schematics.cloud.ibm.com/v1/workspaces/<workspace_id> -H  "Authorization: Bearer <token-data>" -d '{"template_data":[{"type":"<terraform_version>"}]}'
+    curl --request PUT --url https://<schematics-region-endpoint>.cloud.ibm.com/v1/workspaces/<workspace_id> -H  "Authorization: Bearer <token-data>" -d '{"template_data":[{"type":"<terraform_version>"}]}'
     ```
     {: pre}
 

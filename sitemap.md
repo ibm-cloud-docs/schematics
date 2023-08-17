@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-16"
+lastupdated: "2023-08-17"
 
 keywords: schematics
 subcollection: schematics
@@ -133,7 +133,7 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
 
-* [Architecture](/docs/schematics?topic=schematics-sc-workspaces#sch-wks-overview)
+* [{{site.data.keyword.bpshort}} workspace overview](/docs/schematics?topic=schematics-sc-workspaces#sch-wks-overview)
 
 * [Features](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-features)
 
@@ -917,8 +917,8 @@ subcollection: schematics
 * [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
 
 
-## Managing Blueprints
-{: #sitemap_managing_blueprints}
+## Working with Blueprints
+{: #sitemap_working_with_blueprints}
 
 
 [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
@@ -1144,13 +1144,13 @@ subcollection: schematics
 * [Blueprints usage](/docs/schematics?topic=schematics-bp-env-vars#usage)
 
 
-## Managing Workspaces
-{: #sitemap_managing_workspaces}
+## Working with Workspaces
+{: #sitemap_working_with_workspaces}
 
 
 
-### Creating workspace
-{: #sitemap_creating_workspace}
+### Creating a workspace
+{: #sitemap_creating_a_workspace}
 
 
 [Creating workspaces and importing your Terraform template](/docs/schematics?topic=schematics-sch-create-wks#sch-create-wks)
@@ -1335,25 +1335,25 @@ subcollection: schematics
 
 * [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-wks-state#job-state-logs)
 
-[Planning your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#workspaces-plan)
+[Planning for using workspaces](/docs/schematics?topic=schematics-workspaces-plan#workspaces-plan)
 
-* [Designing your workspace and Git repository structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace)
+* [Workspaces and Git repositories](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace)
 
-    * [How many workspaces do I need?](/docs/schematics?topic=schematics-workspaces-plan#plan-number-of-workspaces)
+    * [How many workspaces does my application environment need?](/docs/schematics?topic=schematics-workspaces-plan#plan-number-of-workspaces)
 
-    * [How do I structure my Git repository to map my workspaces?](/docs/schematics?topic=schematics-workspaces-plan#plan-github-structure)
+    * [How do I structure my Git repositories to map my workspaces?](/docs/schematics?topic=schematics-workspaces-plan#plan-github-structure)
 
     * [How can I reuse configuration files across environments and workspaces?](/docs/schematics?topic=schematics-workspaces-plan#plan-reuse)
 
     * [How do I control access to my workspaces?](/docs/schematics?topic=schematics-workspaces-plan#plan-workspace-access)
 
-    * [What do I need to be aware of when I have a repository that I managed with native Terraform?](/docs/schematics?topic=schematics-workspaces-plan#plan-terraform-migration)
+    * [What do I need to be aware of when I have a repository that has been previously used with Terraform standalone?](/docs/schematics?topic=schematics-workspaces-plan#plan-terraform-migration)
 
 * [Setting up a continuous delivery toolchain for your workspace](/docs/schematics?topic=schematics-workspaces-plan#continuous-delivery)
 
 
-### Managing workspace resources
-{: #sitemap_managing_workspace_resources}
+### Working with workspace resources
+{: #sitemap_working_with_workspace_resources}
 
 
 [Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions](/docs/schematics?topic=schematics-multi-region-deployment#multi-region-deployment)
@@ -1451,8 +1451,8 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks#sch-destroy-wks-nextsteps)
 
 
-## Managing Actions
-{: #sitemap_managing_actions}
+## Working with Actions
+{: #sitemap_working_with_actions}
 
 
 [Creating Ansible roles and galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#ansible-roles-galaxy)
@@ -1510,8 +1510,8 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-auto-deploy-url#sample-actions-nextsteps)
 
 
-## Managing Inventories
-{: #sitemap_managing_inventories}
+## Working with Inventories
+{: #sitemap_working_with_inventories}
 
 
 [Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
@@ -1529,8 +1529,8 @@ subcollection: schematics
     * [Limitations](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv-limitation)
 
 
-## Managing Integrations
-{: #sitemap_managing_integrations}
+## Working with Integrations
+{: #sitemap_working_with_integrations}
 
 
 [Logging integration](/docs/schematics?topic=schematics-logging-integration#logging-integration)
@@ -1556,8 +1556,8 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
-## Managing Agent Beta-1
-{: #sitemap_managing_agent_beta-1}
+## Working with Agent Beta-1
+{: #sitemap_working_with_agent_beta-1}
 
 
 [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
