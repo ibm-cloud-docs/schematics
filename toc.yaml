@@ -64,7 +64,7 @@ toc:
                                                     - setup-cli.md
                                                     - setup-api.md
                                   - topicgroup:
-                                            label: Managing Blueprints
+                                            label: Working with Blueprints
                                             topics:
                                                     - sc-blueprint-template.md
                                                     - sc-blueprint-terraform.md
@@ -81,10 +81,10 @@ toc:
                                                     - sc-blueprint-create-file.md
                                                     - sc-blueprint-env-vars.md
                                   - topicgroup:
-                                            label: Managing Workspaces
+                                            label: Working with Workspaces
                                             topics:
                                                     - topicgroup:
-                                                              label: Creating workspace
+                                                              label: Creating a workspace
                                                               topics:
                                                                       - workspaces/sc-workspaces-create.md
                                                                       - create-terraform-config.md
@@ -99,7 +99,7 @@ toc:
                                                     - workspaces/sc-workspaces-states.md
                                                     - workspaces/sc-workspaces-prepare.md
                                                     - topicgroup:
-                                                              label: Managing workspace resources
+                                                              label: Working with workspace resources
                                                               topics:
                                                                       - cross_region_deployment.md
                                                                       - wks-download-module-files.md
@@ -113,7 +113,7 @@ toc:
                                                                       - shared-data-set.md
                                                     - workspaces/sc-workspaces-destroy.md
                                   - topicgroup:
-                                            label: Managing Actions
+                                            label: Working with Actions
                                             topics:
                                                     - action-working.md
                                                     - ansible-roles.md
@@ -122,18 +122,18 @@ toc:
                                                     - autodeploy_actionsamples.md
                                                     - autodeploy_template.md
                                   - topicgroup:
-                                            label: Managing Inventories
+                                            label: Working with Inventories
                                             topics:
                                                     - inventories.md
                                   - topicgroup:
-                                            label: Managing Integrations
+                                            label: Working with Integrations
                                             topics:
                                                     - integration-logging.md
                                                     - integration-monitor.md
                                                     - integration-at.md
                                                     - integration-kms.md
                                   - topicgroup:
-                                            label: Managing Agent Beta-1
+                                            label: Working with Agent Beta-1
                                             topics:
                                                    - sc-agentb1-plan.md
                                                    - sc-agentb1-deploy.md

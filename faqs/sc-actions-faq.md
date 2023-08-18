@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-08-16"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -87,3 +87,11 @@ After new Terraform and Ansible versions are released by the community, the IBM 
 
 Yes, you can run Ansible playbooks against your {{site.data.keyword.cloud_notm}} by using the {{site.data.keyword.bpshort}} Actions or Ansible provisioner in your Terraform configuration file. For example, use the Ansible provisioner to deploy software on {{site.data.keyword.cloud_notm}} resources or set actions against your resources, such as shutting down a virtual server instance. For more information, see [sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates).
 
+
+## 
+
+```text
+
+
+```
+{: screen}

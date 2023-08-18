@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-08-17"
 
 keywords: schematics workspaces planning, planning workspace, planning schematics workspace, setting up schematics workspace
 
@@ -12,21 +12,21 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Planning your workspace structure
+# Planning for using workspaces
 {: #workspaces-plan}
 
-You can plan and design your workspace by following queries.
-- How to map workspace resource with the Git repository structure?
-- How many number of workspaces that you need?
-- How to reuse the configuration files across environments and workspaces?
-- How to control access and manage your workspaces?
+Plan and design your workspaces using the following questions as prompts: 
+- How do I relate workspaces to Git repositories?
+- How many workspaces does my application environment need?
+- How do I reuse Terraform configuration files across environments and workspaces?
+- How do I control access to and manage my workspaces?
 
-## Designing your workspace and Git repository structure
+## Workspaces and Git repositories
 {: #structure-workspace}
 {: help}
 {: support}
 
-Plan out the organizational structure of your workspace to match the microservice and permission structure of your organization. These workspaces uses Terraform templates from private or public Git repositories such as `GitHub`, `GitLab`, `Bitbucket`, and Azure DevOps. The table provides the format of the repositories source.
+Workspaces use Terraform templates from private or public Git repositories such as `GitHub`, `GitLab`, `Bitbucket`, and Azure DevOps. The table provides the format of the repositories source.
 {: shortdesc} 
 
 |Git repositories| URL|
@@ -37,25 +37,25 @@ Plan out the organizational structure of your workspace to match the microservic
 |`Azure DevOps`|`https://azure.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`  \n `https://visualstudio.com/<your_user_name>/<repo_name>/src/<branch_name>/<folder_name>`|
 {: caption="Git repositories" caption-side="bottom"}
 
-### How many workspaces do I need?
+### How many workspaces does my application environment need?
 {: #plan-number-of-workspaces}
 
-To find out how many workspaces you need in {{site.data.keyword.bplong_notm}}, look at the microservices that build your app and the environments that you need to develop, test, and publish your microservice. 
+The number of workspaces you need in {{site.data.keyword.bplong_notm}} will be determined by the structure of your application and the environments that you need to develop, test, and publish your application or micro-service. 
 {: shortdesc}
 
-As a rule of thumb, consider creating separate workspaces for each of your microservices and the environment that you use. For example, if you have a product app that consists of a search, payment, and review microservice component, consider creating a separate workspace for each microservice component and development, staging, and production environment. With separate workspaces for each microservice component and environment, you can develop, deploy, and manage the Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting the resources of other microservices.
+As a rule of thumb, consider separate workspaces for each microservice and the environments that you use. For example, if you have a product app that consists of a search, payment, and review microservice components, consider creating separate workspaces for each microservice component and their development, staging, and production environments. With separate workspaces for each component and environment, you can develop, deploy, and update your Terraform configuration files and associated {{site.data.keyword.cloud_notm}} resources without affecting other components. 
 
-Review the following image to see the number of workspaces in {{site.data.keyword.bplong_notm}} for an app that consists of three microservices.
+Review the following image, observing the workspace structure {{site.data.keyword.bplong_notm}} for an app that consists of three microservices.
 
 ![Workspace structure for {{site.data.keyword.bplong_notm}}](../images/workspace-structure.png){: caption="Figure 1. workspace structure for {{site.data.keyword.bplong_notm}}" caption-side="bottom"}
 
-Do not use one workspace to manage an entire staging or production environment. When you deploy all your {{site.data.keyword.cloud_notm}} resources into a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources.
+In organisations where infrastructure responsibilities are spread across multiple teams, it is not recommended to use one workspace to manage entire staging or production environments. When you deploy all your {{site.data.keyword.cloud_notm}} resources using a single workspace, it can become difficult for various teams to coordinate updates and manage access for these resources. Separate workspaces, sharing infrastructure definitions using remote-state data sources provides a mechanism to create separate out areas of responsibility.  
 {: important}
 
-### How do I structure my Git repository to map my workspaces?
+### How do I structure my Git repositories to map my workspaces?
 {: #plan-github-structure}
 
-Structure your Git repository so that you have one repository for all your Terraform configuration files that build your microservice, and use input variables in {{site.data.keyword.bpshort}}, or GitHub branches or directories to differentiate between your development, staging, and production environment. 
+Structure your Git repository so that you have one repository for all your Terraform configuration files that build your microservice, and use input variables in {{site.data.keyword.bpshort}}, or GitHub branches or directories to differentiate between your development, staging, and production environments. 
 {: shortdesc}
 
 Review the following table to find a list of options for how to structure your Git repository to map the different workspace environments. 
@@ -72,7 +72,7 @@ Review the following table to find a list of options for how to structure your G
 ### How can I reuse configuration files across environments and workspaces?
 {: #plan-reuse}
 
-Try to minimize the number of Terraform configuration files that you need to manage by creating standardized Terraform templates and by using variables to customize the template to your needs. 
+Try to minimize the number of Terraform configuration files that you need to manage by creating standardized Terraform templates and by using variables to customize the use of a template to your needs. 
 {: shortdesc}
 
 Now, you can use Terraform modules from the Terraform module registry for IBM Cloud.
@@ -85,10 +85,10 @@ With standardized Terraform templates or Terraform modules, you can ensure that 
 
 {{site.data.keyword.bplong_notm}} is fully integrated with {{site.data.keyword.iamlong}}. To control access to a workspace, and who can execute your infrastructure code with {{site.data.keyword.bplong_notm}}, see [Managing user access](/docs/schematics?topic=schematics-access). 
 
-### What do I need to be aware of when I have a repository that I managed with native Terraform?
+### What do I need to be aware of when I have a repository that has been previously used with Terraform standalone?
 {: #plan-terraform-migration}
 
-Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can import your existing Terraform templates into {{site.data.keyword.bpshort}} Workspaces. Depending on how your Terraform templates and Git repositories are structured, you might need to make changes so that you can successfully use {{site.data.keyword.bplong_notm}}. 
+Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can reuse your existing Terraform templates with {{site.data.keyword.bpshort}} Workspaces. Depending on how your Terraform templates are written and Git repositories structured, you might need to make changes to successfully use {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
 - **Provider block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.iamlong}}, your {{site.data.keyword.cloud_notm}} API key is automatically retrieved for all IAM-enabled resources and you don't have to provide this information in the `provider` block. However, the API key is not retrieved for classic infrastructure and {{site.data.keyword.ibmcf_notm}} resources. For more information, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
