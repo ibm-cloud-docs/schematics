@@ -361,6 +361,18 @@ subcollection: schematics
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
 
+* [August 2023](/docs/schematics?topic=schematics-schematics-relnotes#August-2023)
+
+    * Review the release notes for August 2023.
+
+    * [28 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2823)
+
+        * Release {{site.data.keyword.bpshort}} agent migration page 
+
+    * [25 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug252023)
+
+        * [Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform v0.x](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
+
 * [May 2023](/docs/schematics?topic=schematics-schematics-relnotes#may-2023)
 
     * Review the release notes for May 2023.
@@ -1595,6 +1607,10 @@ subcollection: schematics
 * [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview#agent-delete-nextsteps)
+
+[Migrating agent version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-agent-version)
+
+* [Next steps](/docs/schematics?topic=schematics-migrate-agent-version#agent-migrate-nextsteps)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 

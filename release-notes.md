@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-07-10"
+lastupdated: "2023-08-28"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,25 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
+
+## August 2023
+{: #August-2023}
+
+Review the release notes for August 2023.
+{: shortdesc}
+
+### 28 August 2023
+{: #schematics-aug2823}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} agent migration page 
+:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating agent version](/docs/schematics?topic=schematics-migrate-agent-version).
+
+### 25 August 2023
+{: #schematics-aug252023}
+{: release-note}
+
+[Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform v0.x](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
 ## May 2023
 {: #may-2023}
