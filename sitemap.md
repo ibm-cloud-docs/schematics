@@ -369,7 +369,9 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} agent migration page 
 
-    * [25 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug252023)
+        * [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
+
+    * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug252023)
 
         * [Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform v0.x](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
