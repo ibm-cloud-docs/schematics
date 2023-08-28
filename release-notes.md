@@ -36,13 +36,13 @@ Review the release notes for August 2023.
 Release {{site.data.keyword.bpshort}} agent migration page 
 :   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating agent version](/docs/schematics?topic=schematics-migrate-agent-version).
 
-[Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
+:   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
 ### 23 August 2023
 {: #schematics-aug252023}
 {: release-note}
 
-[Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform v0.x](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
+:   [Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform v0.x](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
 ## May 2023
 {: #may-2023}
