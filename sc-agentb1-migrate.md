@@ -1,0 +1,46 @@
+---
+
+copyright:
+  years: 2017, 2023
+lastupdated: "2023-08-28"
+
+keywords: schematics agent version migrate, migrate agent version, agent migrate, cli, api, ui
+
+subcollection: schematics
+
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
+# Migrating agent version
+{: #migrate-agent-version}
+
+If you have already setup an agent on a {{site.data.keyword.cloud_notm}} cluster and you want to migrate the existing agent version to other supported version. For example, migrate to `1.0.0-beta1` version, use the following steps. 
+
+Currently, The {{site.data.keyword.bpshort}} Agent does not support agent version upgrade through CLI or API interface.
+{: note}
+
+1. Browser to the target [{{site.data.keyword.cloud_notm}} cluster](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
+2. Click **Kubernetes Clusters** page.
+3. Click your cluster hyper link.
+4. Click **Kubernetes dashboard**.
+5. Select namespace - `schematics-job-runtime` and in `jobrunner` deployment, update the `jobrunner` container image with the tag `icr.io/schematics-remote/schematics-job-runner:3000de68-234`. Wait for the pods to be in a running state.
+6. Select namespace - `schematics-runtime` and in `runtime-job` deployment, update the `runtime-job` container image with the tag `icr.io/schematics-remote/schematics-agent-ws-job:1c063cb7-453`. Wait for the pods to be in a running state.
+7. Select namespace - `schematics-runtime` and in `runtime-ansible-job` deployment, update the `runtime-ansible-job` container image with the tag `icr.io/schematics-remote/schematics-ansible-job:d90d08fb-238`. Wait for the pods to be in a running state.
+8. Select namespace - `schematics-sandbox` and in `sandbox deployment`, update the `sandbox` container image with the tag `icr.io/schematics-remote/schematics-sandbox:9db50fac-388`. Wait for the pods to be in a running state.
+9. Select namespace - `schematics-agents-observe` and in `schematics-agents-controller-manager` deployment, update the manager container image with the tag `icr.io/schematics-remote/schematics-agent-operator:cc33f3a3-21`. Wait for the pods to be in a running state.
+10. Select namespace - `schematics-agents-observe` and in `schematics-agents-log-collector` daemon set, update the `log-collector` container image with the tag `icr.io/schematics-remote/schematics-agents-log-collector:425167c7-28`. Wait for the pods to be in a running state.
+
+Now, you are ready with the migrated version of the agent setup.
+
+## Next steps
+{: #agent-migrate-nextsteps}
+
+- You can explore to [display an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions that are related to agent migration.
