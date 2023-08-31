@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-08-31"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -16,8 +16,12 @@ subcollection: schematics
 # {{site.data.keyword.bplong_notm}} CLI
 {: #schematics-cli-reference}
 
-Run these commands when you want to automate your {{site.data.keyword.bplong_notm}} Workspaces, Actions, Jobs, resources.
+Run these commands to work with {{site.data.keyword.bplong_notm}} Workspaces, Actions, provisioned resources and configure {{site.data.keyword.bpshort}}.
 {: shortdesc}	
+
+{{site.data.keyword.bpshort}} CLI commands are region specific. They operate only in the region/location that the {{site.data.keyword.cloud_notm}} CLI is configured to work in. Ensure the CLI `location` and the `url` endpoint are pointing to the region where you want to create or update your workspaces and actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location). {: note}
+
+To run {{site.data.keyword.bpshort}} commands, use `ibmcloud schematics` or `ibmcloud sch`. {: tip}
 
 ## Prerequisites
 {: #cli-prerequisites}
@@ -31,50 +35,10 @@ Be sure to keep your CLI up-to-date so that you can use the current released com
 ## Actions commands
 {: #schematics-action-commands}
 
-Review the commands that you want to create, update, list, delete, and work with your {{site.data.keyword.bpshort}} Actions.
+Review the commands to create, update, list, delete, and work with your {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
 
-### Inventory host groups
-{: #inventory-host-grps}
 
-{{site.data.keyword.bplong_notm}} supports inventory host groups to group the applications hostname such as web server, database server, Operating System, region, or network. 
-
-A host group is a collection of hosts that you can run your Ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `development` workspace, or against all hosts with a `webserver` tag in your `development` workspace. The host groups can be defined by using **Static inventory** or **Dynamic inventory** method. 
-
-**Static inventory** allows to create the collection of hosts that you can run your Ansible playbook against. A condition defines either a workspace or a query within a workspace. For instance, you can run your inventory against all the hosts in your `dev` workspace, or against all hosts with a `webserver` tag in your `dev` workspace. You can also add multiple conditional target resources for your workspaces to run. 
-
-**Dynamic inventory** allows to create the collection of hosts in a inventory file that defines the hosts and group of hosts upon which your playbook operates. The hostnames and IP addresses must be provided in an `hosts.ini` file. Follow the syntax and example for the `INI` file format that can be used in the `create` and `update` actions commands as `--TARGET-FILE <ABSOLUTE_PATH with FILE_NAME>` argument.
-
-Syntax
-
-```text
-[hostgroupname1]
-<IPaddress1> 
-<IPaddress2> 
-[hostgroupname2]
-<IPaddress1>
-```
-{: codeblock}
-
-Example 
-
-```text
-[webserverhost]
-178.54.68.78
-187.54.68.78
-[dbhost]
-174.45.86.87
-```
-{: codeblock}
-
-| Target | Description| 
-|------|  ------|
-|`hostgroupname1`| The application hostname. For example, Web Server host application name as `[webserverhost]`, database hostname as `[dbhost]`, in a single word. Note the system validates and throws an error if a space is provided in the host group name.|
-|`IPaddress`|The IP addresses of the hostname.|
-{: caption="Inventory host group parameters" caption-side="top"}
-
-You can set the proxy between an SSH client and the {{site.data.keyword.cloud_notm}} inventory resources where you want to run an Ansible playbook in the **{{site.data.keyword.cloud_notm}} resource inventory SSH key** field. This set up adds a layer of security to your {{site.data.keyword.cloud_notm}} resources, and minimize the surface of potential vulnerabilities. Note now the Actions support only `one SSH key` for all virtual server instances. The SSH key must contain `\n` at the end of the key details in case of command-line or API calls.
-{: note}
 
 ### `ibmcloud schematics action create`
 {: #schematics-create-action}
@@ -201,7 +165,7 @@ Instead of entering the command options or using a payload file, you can use the
 ### `ibmcloud schematics action update`
 {: #schematics-update-action}
 
-Update the information of an existing action by using an action ID. Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the workspaces and actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+Update the information of an existing action the using the `action_id`. Ensure the CLI `location` and the `url` endpoint are pointing to the region where you want to create or update your workspaces and actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: shortdesc}
 
 Syntax
@@ -251,7 +215,7 @@ ibmcloud schematics action update --id us-south.workspace.101010101 --descriptio
 ### `ibmcloud schematics action get`
 {: #schematics-get-action}
 
-Retrieve the detailed information of an existing {{site.data.keyword.bpshort}} Actions by using an action ID. 
+Retrieve the detailed information of an existing {{site.data.keyword.bpshort}} Action using an `action_id`. 
 {: shortdesc}
 
 Syntax
@@ -282,7 +246,7 @@ ibmcloud schematics action get --id us-south.workspace.101010101 -p summary
 ### `ibmcloud schematics action list`
 {: #schematics-list-action}
 
-Retrieve a list of all actions in your {{site.data.keyword.cloud_notm}} account. 
+Retrieve a list of all actions defined in the current {{site.data.keyword.cloud_notm}} region for your account. 
 {: shortdesc}
 
 Syntax
@@ -297,7 +261,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--limit` or `-l` | Optional | The maximum number of actions that you want to list. The number must be a positive integer between 1 and 200. The default value is `-1`. |
-| `--offset` or `-m` | Optional | The position of the action in the list of actions from where you want to start listing your actions. For example, if you have three actions in your account, the command returns these actions as a list with three elements. To retrieve all actions, you must enter position number 0. To retrieve actions number 2 and 3 and leave out action number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of actions. Negative numbers are not supported and are ignored. |
+| `--offset` or `-m` | Optional | The position of the action in the list of actions from where you want to start listing your actions. For example, if you have three actions in your account and region, the command returns these actions as a list with three elements. To retrieve all actions, you must enter position number 0. To retrieve actions number 2 and 3 and leave out action number 1 in this list, you must enter position number 1. Position number 1 represents the second position in the list of actions. Negative numbers are not supported and are ignored. |
 | `--profile` or `-p` | Optional |The depth of information that is returned. Supported values are `ids`, and `summary`. The default value is `summary`. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -412,7 +376,7 @@ ibmcloud schematics agent apply --id <provide your agent id>
 ### `ibmcloud schematics agent create`
 {: #schematics-agent-create}
 
-Create an agent by using {{site.data.keyword.bpshort}}. Agents help you run your Terraform or Ansible jobs on your infrastructure. For more information about the steps to use create command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+Create an agent registration in the currently selected {{site.data.keyword.bpshort}} region. Agents help you run your Terraform or Ansible jobs on your infrastructure. For more information about the steps to use the create command, see [deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 {: shortdesc}
 
 Syntax
@@ -454,7 +418,7 @@ ibmcloud schematics agent create --name agenttestcli --location us-south --agent
 ### `ibmcloud schematics agent delete`
 {: #schematics-agent-delete}
 
-Uninstall an agent. For more information about the steps to use delete command, see [deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli).
+Uninstall an agent. For more information about the steps to use the delete command, see [deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli).
 
 Syntax
 
@@ -482,7 +446,7 @@ ibmcloud schematics agent delete --id <AGENT_ID>
 ### `ibmcloud schematics agent get`
 {: #schematics-agent-get}
 
-Retrieves the details of an agent. Agents help you to fetch your workspace jobs on your infrastructure. For more information about the steps to use get command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
+Retrieves the details of an agent. For more information about the steps to use get command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
 
 Syntax
 
@@ -509,7 +473,7 @@ ibmcloud schematics agent get --id <Provide your agent ID>
 ### `ibmcloud schematics agent health`
 {: #schematics-agent-health}
 
-Performs the post deployment validation of an agent. For more information about the steps to use health command, see [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
+Performs the post deployment validation of an agent. For more information about the steps to use the agent health command, see [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
 {: shortdesc}
 
 Syntax
@@ -537,7 +501,7 @@ ibmcloud schematics agent health --id <AGENT_ID>
 ### `ibmcloud schematics agent list`
 {: #schematics-agent-list}
 
-Lists the agents. Defaults to show the registered agents. For more information about the steps to use list command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
+Lists the agents defined in the current {{site.data.keyword.bpshort}} region. For more information about the steps to use list command, see [displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli).
 
 Syntax
 
@@ -566,7 +530,7 @@ ibmcloud schematics agent list
 ### `ibmcloud schematics agent plan`
 {: #schematics-agent-plan}
 
-Checks for the prerequisite of the pre-created agent before install. Generates an agent plan by using {{site.data.keyword.bpshort}}. For more information about the steps to use plan command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+Checks the prerequisites of an agent before install. For more information about the steps to use plan command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 {: shortdesc}
 
 Syntax
@@ -594,7 +558,7 @@ ibmcloud schematics agent plan
 ### `ibmcloud schematics agent update`
 {: #schematics-agent-update}
 
-Update an agent. For more information about the steps to use apply command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
+Update an agent. For more information about the steps to use the agent update command, see [deploying agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
 
 Syntax
 
@@ -628,7 +592,7 @@ ibmcloud schematics agent update --id <AGENT_ID>
 ## Blueprint commands
 {: #blueprints-cmd}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
+{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that is available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
 ### `ibmcloud schematics blueprint create`
@@ -1188,10 +1152,12 @@ OK
 {{site.data.keyword.bpshort}} Policy is a beta feature that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
+{{site.data.keyword.bpshort}} (assignment) policies tell Schematics which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. See [assignment polices](/docs/schematics?topic=schematics-policy-manage&interface=cli).
+
 ### `ibmcloud schematics policy create`
 {: #schematics-policy-create}
 
-Create a policy using {{site.data.keyword.bpshort}} to select one or more {{site.data.keyword.bpshort}} objects (such as, Workspaces, Action, Blueprint) to deliver targeted {{site.data.keyword.bpshort}} feature. 
+Create a policy using {{site.data.keyword.bpshort}} to select one or more {{site.data.keyword.bpshort}} objects, such as a workspace or  action, to be executed on the target agent.  
 {: shortdesc}
 
 Syntax
@@ -1297,7 +1263,7 @@ ibmcloud schematics policy create --name policy-101 --kind agent_assignment_poli
 ### `ibmcloud schematics policy get`
 {: #schematics-policy-get}
 
-Retrieve the detailed information of an existing {{site.data.keyword.bpshort}} policy by using policy ID.
+Retrieve the details of an existing {{site.data.keyword.bpshort}} policy using policy ID.
 {: shortdesc}
 
 Syntax
@@ -1326,7 +1292,7 @@ ibmcloud schematics policy get --id policy-101.soP.282e
 ### `ibmcloud schematics policy list`
 {: #schematics-policy-list}
 
-Retrieve a list of all policies in your {{site.data.keyword.cloud_notm}} account.
+Retrieve a list of all policies in the {{site.data.keyword.cloud_notm}} region for your account.
 {: shortdesc}
 
 Syntax
@@ -1354,7 +1320,7 @@ ibmcloud schematics policy list
 ### `ibmcloud schematics policy update`
 {: #schematics-policy-update}
 
-Update the information of an existing policy by using policy ID. Changes are applied to the description by running the `ibmcloud schematics policy update` command.
+Update an existing policy using policy ID. 
 {: shortdesc}
 
 Syntax
@@ -1415,10 +1381,10 @@ ibmcloud schematics policy delete --id policy-101.soP.282e
 ```
 {: pre}
 
-## Enable BYOK or KYOK commands
+## Configure BYOK or KYOK commands
 {: #kms-commands}
 
-You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
+You can use your encryption keys from the {{site.data.keyword.cloud_notm}} key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure your data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).
 {: shortdesc}
 
 ### Prerequisites
@@ -1431,7 +1397,7 @@ The key management system lists the instance that are created from your specific
 - You need to configure [service to service authorization](/docs/account?topic=account-serviceauth#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
 
-KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
+KMS setting is a one time settings. You need to open a [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
 {: note}
 
 ### `ibmcloud schematics kms instance ls`
@@ -1598,16 +1564,16 @@ ibmcloud schematics version --output json > "<filename.json>"
 {: pre}
 
 
-## Inventories commands
+## Inventory commands
 {: #inv-commands}
 
-Review the command that you want to create, update, list, delete and to work with your {{site.data.keyword.bplong_notm}} inventory.
+Review the commands to create, update, list, delete and work with your {{site.data.keyword.bplong_notm}} inventories used with {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
 
 ### `ibmcloud schematics inventory create`
 {: #schematics-create-inv}
 
-Create a resource inventory in {{site.data.keyword.bplong_notm}} that you can reference in a {{site.data.keyword.bpshort}} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
+Create a [resource inventory](https://cloud.ibm.com/docs/schematics?topic=schematics-inventories-setup) in {{site.data.keyword.bplong_notm}} that you can use with a {{site.data.keyword.bpshort}} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
 {: shortdesc}
 
 Syntax
@@ -1703,7 +1669,7 @@ Instead of entering your inventory details by using the command options or a pay
 ### `ibmcloud schematics inventory delete`
 {: #schematics-delete-inventory}
 
-Delete the resource inventory definition by using the inventory ID from the {{site.data.keyword.bplong_notm}} service. Note you can delete the location and region, resource group from where your inventory was created. Also, make sure your IP addresses are in the [allowlist](/docs/schematics?topic=schematics-allowed-ipaddresses). 
+Delete the resource inventory definition using the inventory ID. 
 {: shortdesc}
 
 Syntax
@@ -1733,7 +1699,7 @@ ibmcloud schematics inventory delete --id us-east.INVENTORY.inventoryid12342
 ### `ibmcloud schematics inventory get`
 {: #schematics-get-inv}
 
-Retrieve detailed information of an existing {{site.data.keyword.bplong_notm}} inventory by using the inventory ID.
+Retrieve detailed information of an existing {{site.data.keyword.bplong_notm}} inventory using the inventory ID.
 {: shortdesc}
 
 Syntax
@@ -1763,7 +1729,7 @@ ibmcloud schematics inventory get --id us-east.INVENTORY.inventoryid12342 --outp
 ### `ibmcloud schematics inventory list`
 {: #schematics-list-inv}
 
-Retrieve a list of all {{site.data.keyword.bpshort}} inventories in your account.
+Retrieve a list of all {{site.data.keyword.bpshort}} inventories in the current region for your account.
 {: shortdesc}
 
 Syntax
@@ -1793,7 +1759,7 @@ ibmcloud schematics inventory list --output json
 ### `ibmcloud schematics inventory update`
 {: #schematics-update-inv}
 
-Update or replace an existing resource inventory. 
+Update an existing resource inventory. 
 {: shortdesc}
 
 Syntax
@@ -1827,16 +1793,16 @@ ibmcloud schematics inventory update  --id us-east.INVENTORY.inventory12312 --na
 {: pre}
 
 
-## Job commands
+## Actions Job commands
 {: #schematics-job-commands}
 
-Review the commands to create, update, list, and delete {{site.data.keyword.bplong_notm}} jobs.
+Review the commands to create, update, list, and delete {{site.data.keyword.bpshort}} jobs when working with {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
 
 ### `ibmcloud schematics job run`
 {: #schematics-run-job}
 
-Create a job in {{site.data.keyword.bplong_notm}} to run the Ansible playbook in your {{site.data.keyword.bpshort}} action. You can create a job by using a payload file or the command's interactive mode. 
+Create a job in {{site.data.keyword.bplong_notm}} to execute the Ansible playbook specified by your {{site.data.keyword.bpshort}} action. You can create a job by using a payload file or the command's interactive mode. 
 {: shortdesc}
 
 Syntax
@@ -1959,7 +1925,7 @@ ibmcloud schematics job update --id  us-east.JOB.yourjob_ID_1231
 ### `ibmcloud schematics job get`
 {: #schematics-get-job}
 
-Retrieve the information of an existing {{site.data.keyword.bplong_notm}} job by using a job ID.
+Retrieve the details of an Actions job using a job ID.
 {: shortdesc}
 
 Syntax
@@ -1990,7 +1956,7 @@ ibmcloud schematics job get --id us-east.JOB.yourjob_ID_1231 --profile detailed
 ### `ibmcloud schematics job list`
 {: #schematics-list-job}
 
-Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran against a target hosts through {{site.data.keyword.bpshort}} action. The job displays a list of jobs with the status as `in_progress`, `success`, or `failed`.
+Retrieve a list of all {{site.data.keyword.bpshort}} jobs that ran for a {{site.data.keyword.bpshort}} Action. The command displays a list of jobs with the status as `in_progress`, `success`, or `failed`.
 {: shortdesc}
 
 Syntax
@@ -2026,7 +1992,7 @@ ibmcloud schematics job list --resource-type action --id us-south.ACTION.interac
 ### `ibmcloud schematics job logs`
 {: #schematics-logs-job}
 
-Retrieve the detailed logs of a job that ran for your {{site.data.keyword.bpshort}} action. For more information about viewing job queue logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
+Retrieve the logs for a {{site.data.keyword.bpshort}} action job. For more information about viewing job logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
 {: shortdesc}
 
 Syntax
@@ -2085,22 +2051,21 @@ ibmcloud schematics job delete --id us-east.JOB.yourjob_ID_1231
 ```
 {: pre}
 
-## Resource management commands
+## Workspace job commands
 {: #schematics-resource-commands}
 
-Deploy, modify, and remove {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bplong_notm}}.
+Run {{site.data.keyword.bpshort}} operations, to create, update, and delete {{site.data.keyword.cloud_notm}} resources. Using familiar Terraform semantics, plan, apply and destroy Terraform workspaces to manage the lifecycle of cloud resources. 
 
 ### `ibmcloud schematics apply`
 {: #schematics-apply}
 
-Scan and run the infrastructure code of your Terraform template that your workspace points to. When you apply a Terraform template, your resources are provisioned, modified, [stored](/docs/schematics?topic=schematics-general-faq#persist-file), or removed in {{site.data.keyword.cloud_notm}}.
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
+When you apply a workspace Terraform template, your resources are provisioned, modified, or removed from {{site.data.keyword.cloud_notm}}. Temporary files created during the apply operation can be [persisted](/docs/schematics?topic=schematics-general-faq#persist-file) (saved) for future operations.  
 {: shortdesc}
 
-Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} apply action. For more information about workspace state, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state&interface=ui#workspace-state-diagram).
+Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} apply operation. For more information about workspace states, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state&interface=ui#workspace-state-diagram).
 {: note}
 
-While your infrastructure code runs in {{site.data.keyword.bplong_notm}}, you cannot make any changes to your workspace.
+While your Terraform jobs are running, the workspace is locked and changes cannot be made to your workspace until execution is complete.
 {: important}
 
 Syntax
@@ -2117,7 +2082,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file is not created or updated. To target the creation of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
-| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
+| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. Variables must be defined in single line format e.g. as `availability_zone_names = ["us-east-1a","us-west-1c"]`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -2134,11 +2099,10 @@ ibmcloud schematics apply --id myworkspace-a1aa1a1a-a11a-11 --json --target ibm_
 ### `ibmcloud schematics destroy`
 {: #schematics-destroy}
 
-Remove the {{site.data.keyword.cloud_notm}} resources that you provisioned with your {{site.data.keyword.bpshort}} Workspace, even if these resources are active.
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
+Remove {{site.data.keyword.cloud_notm}} resources that you provisioned using your {{site.data.keyword.bpshort}} Workspace, even if these resources are active.
 {: shortdesc}	
 
-Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you use permanent storage, ensure that you create a backup for your data.
+Use this command with caution. After you run the command, you cannot reverse the removal of your {{site.data.keyword.cloud_notm}} resources. If you have written data to provisioned storage or databases, ensure that you create a backup to persist your data
 {: important} 	
 
 Your workspace must be in an **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} destroy action. 
@@ -2173,7 +2137,7 @@ ibmcloud schematics destroy --id myworkspace-a1aa1a1a-a11a-11 --json --target ib
 ### `ibmcloud schematics logs`
 {: #schematics-logs}
 
-Retrieve the Terraform log files for a {{site.data.keyword.bpshort}} Workspaces or a specific action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
+Retrieve the Terraform log files for {{site.data.keyword.bpshort}} workspace or a specific workspace action ID. Use the log files to troubleshoot Terraform template issues or issues that occur during the resource provisioning, modification, or deletion process. 
 {: shortdesc}
 
 Syntax
@@ -2202,7 +2166,7 @@ ibmcloud schematics logs --id myworkspace-a1aa1a1a-a11a-11 --act-id 9876543121ab
 ### `ibmcloud schematics output`
 {: #schematics-output2}
 
-Retrieve a list of Terraform output values. You define output values in your Terraform template to include information that you want to make accessible for other Terraform templates.
+Retrieve the Terraform output values for the workspace. You can define output values in your Terraform template to include data that you want to make accessible to other workspaces. 
 {: shortdesc}
 
 Syntax
@@ -2232,7 +2196,6 @@ ibmcloud schematics output --id myworkspace3_2-31cf7130-d0c4-4d
 {: #schematics-plan}
 
 Scan the Terraform template in your source repository and compare this template against the {{site.data.keyword.cloud_notm}} resources that are already deployed. The command-line output shows the {{site.data.keyword.cloud_notm}} resources that must be added, modified, [persisted](/docs/schematics?topic=schematics-general-faq#persist-file), or removed to achieve the state that is described in your configuration file.
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again.
 {: shortdesc}
 
 Your workspace must be in an **Inactive**, **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} plan action. 
@@ -2244,7 +2207,7 @@ During the creation of the Terraform execution plan, you cannot make any changes
 Syntax
 
 ```sh
-ibmcloud schematics plan --id WORKSPACE_ID [--output OUTPUT] [--json]
+ibmcloud schematics plan --id WORKSPACE_ID [--var-file PATH_TO_VARIABLES_FILE] [--output OUTPUT] [--json]
 ```
 {: pre}
 
@@ -2254,7 +2217,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that you want to scan. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
-| `--var-file` or `-vf`| Optional |  Path to variables definition file that are ending with `.tfvars` or `.json`. This flag can be used multiple times. |
+| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. Variables must be defined in single line format e.g. as `availability_zone_names = ["us-east-1a","us-west-1c"]`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. Use `--output` JSON instead.|
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="{{site.data.keyword.bpshort}} output flags" caption-side="top"}
@@ -2267,10 +2230,10 @@ ibmcloud schematics plan --id myworkspace-a1aa1a1a-a11a-11 --json
 {: pre}
 
 
-## Resource query commands
+## Inventory resource query commands
 {: #rq-commands}
 
-Dynamically build resource inventories by using resource queries. Resource queries help you to retrieve your target hosts from existing {{site.data.keyword.bplong_notm}} Workspaces. For more information about resource queries and conditions, see [Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup).
+Dynamically build Actions resource inventories using resource queries. Resource queries enable you to gather target host information from {{site.data.keyword.bpshort}} Workspaces. For more information about resource queries and conditions, see [Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup).
 {: shortdesc}
 
 ### `ibmcloud schematics resource query create`
@@ -2435,7 +2398,7 @@ ibmcloud schematics resource-query get --id us-east.INVENTORY.inventoryid12342
 ### `ibmcloud schematics resource query list`
 {: #schematics-list-rq}
 
-Retrieve a list of all {{site.data.keyword.bpshort}} resource queries in your account.
+Retrieve a list of all {{site.data.keyword.bpshort}} resource queries in the current region for your account.
 {: shortdesc}
 
 Syntax
@@ -2496,10 +2459,10 @@ ibmcloud schematics resource-query  update  --id us-east.INVENTORY.inventory1231
 {: pre}
 
 
-## Stop commands
+## Workspace stop commands
 {: #stop-cmds}
 
-After invoking a Workspaces job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
+After invoking a Workspace job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
 
 {{site.data.keyword.bpshort}} provides a number of options to allows users to `(gracefully) stop`, `force-stop`, or `terminate` the running job in order of immediacy and impact of the stop operation. 
 {: shortdesc}
@@ -2509,7 +2472,7 @@ Review the commands to `(gracefully) stop`, `force-stop` or `terminate` jobs.
 ### `ibmcloud schematics workspace job stop`
 {: #schematics-stop-job}
 
-Stops a running action or a job in {{site.data.keyword.bplong_notm}} Workspaces by sending and interrupt signal to Terraform to 
+Stops a running workspaces job by sending an interrupt signal to Terraform to terminate execution.  
 {: shortdesc}
 
 Syntax
@@ -2547,16 +2510,16 @@ ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --terminate --job-id 
 ```
 {: pre}
 
-## Terraform commands
+## Workspace Terraform commands
 {: #tf-cmds}
 
-You can run a bunch of Terraform commands and manipulate the {{site.data.keyword.cloud_notm}} resources by using {{site.data.keyword.bplong_notm}} API or CLI. The {{site.data.keyword.bpshort}} provides one generic API `commands` for each sub-command.
+You can run Terraform commands to manipulate {{site.data.keyword.cloud_notm}} resources and modify {{site.data.keyword.bpshort}} state.
 {: shortdesc}
 
-You can see the `Commands` UI support only to display the state of the workspace. The complete commands support to be released shortly.
+Workspace Terraform commands are not supported in the UI. 
 {: important}
 
-The table provides the summary of supported commands by the `commands` API.
+The table provides the summary of supported Terraform workspace commands.
 
 |Command | Description| 
 |------|  ------|
@@ -2568,10 +2531,10 @@ The table provides the summary of supported commands by the `commands` API.
 |`state`|	An advanced state management command to write sub commands to remove or move `rm && mv`.|
 {: caption="Terraform commands summary" caption-side="bottom"}
 
-### Commands
+### Terraform commands
 {: #cmds}
 
-The `Commands` API executes one or group of Terraform commands by using the JSON file for your workspace command requirements. The access control such as `plan`, `apply`, `destroy`, or `refresh` are applicable for `Commands API`. Select your region where the workspace is created, and use the following syntax to run the commands API.
+Terraform commands are executed using a JSON file to specify inputs. 
 
 Syntax
 
@@ -2656,7 +2619,7 @@ ibmcloud schematics workspace commands --id cli-sleepy-0bedc51f-c344-50 --file /
 ```
 {: pre}
 
-## Terraform state file commands
+## Workspace state file commands
 {: #state-file-cmds}
 
 Review the commands that you can use to work with the Terraform state file (`terraform.tfstate`) for a workspace.
@@ -2785,16 +2748,16 @@ ibmcloud schematics workspace state rm --id myworkspace-a1aa1a1a-a11a-11 --addre
 {: pre}
 
 
-## Workspaces commands
+## Workspace commands
 {: #schematics-workspace-commands}
 
-Review the commands that you can use to set up and work with your {{site.data.keyword.bplong_notm}} Workspace. 
+Review the commands that you can use to create and work with your {{site.data.keyword.bplong_notm}} Workspace. 
 {: shortdesc}
 
 ### `ibmcloud schematics workspace action`
 {: #schematics-workspace-action}
 
-Retrieve all activities for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
+Retrieve all activities (jobs) for a workspace, including the user ID of the person who initiated the action, the status, and a timestamp. 
 {: shortdesc}
 
 When you create a Terraform execution plan, or apply your Terraform template with {{site.data.keyword.bpshort}}, a {{site.data.keyword.bpshort}} Actions is automatically created and assigned an action ID. You can use the action ID to retrieve the logs of this action by using the [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs) command.
@@ -2826,9 +2789,7 @@ ibmcloud schematics workspace action --id myworkspace-a1aa1a1a-a11a-11
 ### `ibmcloud schematics workspace delete`
 {: #schematics-workspace-delete}
 
-Delete a workspace from your {{site.data.keyword.cloud_notm}} account. The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. 
-
-{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per host, and per customer. The host can be `us-east`, `us-south`, `eu-gb`, or `eu-de` region. You need to wait before calling the command again. The table describes the delete workspace and destroy resources with the action.
+Delete a workspace from the current region for your account. The deletion of your workspace does not remove any {{site.data.keyword.cloud_notm}} resources that you provisioned with this workspace. You can access and work with your resources from the {{site.data.keyword.cloud_notm}} dashboard directly, but you cannot use {{site.data.keyword.bplong_notm}} to manage your resources after you delete the workspace. 
 {: shortdesc}
 
 Decide if you want to delete the workspace, any associated resources, or both. This action cannot be undone. If you remove the workspace and keep the resources, you need to manage the resources with the resource list or CLI.
@@ -2934,7 +2895,7 @@ ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.acc
 ### `ibmcloud schematics workspace list`	
 {: #schematics-workspace-list}
 
-List the workspaces in your {{site.data.keyword.cloud_notm}} account and optionally, show the details for your workspace.	
+List the workspaces for the current region of your {{site.data.keyword.cloud_notm}} account and optionally, show the details for your workspace.	
 
 Syntax
 
@@ -3607,7 +3568,7 @@ ibmcloud schematics agents list
 ### `ibmcloud schematics agents register`
 {: #schematics-agent-register}
 
-Register the Agent with {{site.data.keyword.bpshort}} to run your workspace jobs on your Agent infrastructure. For more information about Agent infrastructure, see [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
+Register an Agent with {{site.data.keyword.bpshort}} to run workspace operations in a private network region. For more information about Agent infrastructure, see [Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-intro).
 
 Syntax
 

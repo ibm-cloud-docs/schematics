@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-13"
+lastupdated: "2023-08-31"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -46,7 +46,14 @@ The allowed extension list is continuously monitored and updated in every releas
 {: support}
 
 
-it keeps whatever files you write to this path /tmp/.schematics and restores to the same path when you run your next activity.
+{{site.data.keyword.bpshort}} persists files that are written to the path /tmp/.schematics, during workspace operations. The files are restored to the same path when running the next operation on the workspace. 
+
+## Is there a rate limit?
+{: #rate-limit}
+{: faq}
+{: support}
+{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per region, and per user. The regions are `us-east`, `us-south`, `eu-gb`, or `eu-de`. Wait before calling the command again.
+
 
 ## How do I update the Terraform version 
 {: #migrate-terraform-v11}
