@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-08-31"
 
 keywords: schematics
 subcollection: schematics
@@ -141,7 +141,7 @@ subcollection: schematics
 
 [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
 
-* [Architecture](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
+* [{{site.data.keyword.bpshort}} Actions overview](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
 
 * [Using Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-use)
 
@@ -1528,6 +1528,10 @@ subcollection: schematics
 
 * [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
 
+    * [Defining static hosts](/docs/schematics?topic=schematics-inventories-setup#static-host-defs)
+
+    * [Creating the host file](/docs/schematics?topic=schematics-inventories-setup#static-inv-create)
+
     * [File format](/docs/schematics?topic=schematics-inventories-setup#inv-file-format)
 
     * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
@@ -2019,8 +2023,6 @@ subcollection: schematics
 
 * [Actions commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-action-commands)
 
-    * [Inventory host groups](/docs/schematics?topic=schematics-schematics-cli-reference#inventory-host-grps)
-
     * [`ibmcloud schematics action create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action)
 
     * [`ibmcloud schematics action update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action)
@@ -2085,7 +2087,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
 
-* [Enable BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
+* [Configure BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
     * [Prerequisites](/docs/schematics?topic=schematics-schematics-cli-reference#key-prerequisites)
 
@@ -2101,7 +2103,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics version`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-version)
 
-* [Inventories commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
+* [Inventory commands](/docs/schematics?topic=schematics-schematics-cli-reference#inv-commands)
 
     * [`ibmcloud schematics inventory create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-inv)
 
@@ -2113,7 +2115,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics inventory update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-inv)
 
-* [Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
+* [Actions Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
 
     * [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job)
 
@@ -2127,7 +2129,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
 
-* [Resource management commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
+* [Workspace job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
 
     * [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply)
 
@@ -2139,7 +2141,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan)
 
-* [Resource query commands](/docs/schematics?topic=schematics-schematics-cli-reference#rq-commands)
+* [Inventory resource query commands](/docs/schematics?topic=schematics-schematics-cli-reference#rq-commands)
 
     * [`ibmcloud schematics resource query create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq)
 
@@ -2151,15 +2153,15 @@ subcollection: schematics
 
     * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
 
-* [Stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
+* [Workspace stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
 
     * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
 
-* [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
+* [Workspace Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
 
-    * [Commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
+    * [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
 
-* [Terraform state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
+* [Workspace state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
 
     * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
 
@@ -2169,7 +2171,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
 
-* [Workspaces commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
+* [Workspace commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
 
     * [`ibmcloud schematics workspace action`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-action)
 
@@ -2560,6 +2562,8 @@ subcollection: schematics
 
 * [What network configuration is suggested for use with Actions?](/docs/schematics?topic=schematics-actions-faq#network-faq)
 
+* [Why does the SSH connection fail with static inventory files?](/docs/schematics?topic=schematics-actions-faq#ssh-faq)
+
 * [Why does my action job display a DEPRECATION WARNING message?](/docs/schematics?topic=schematics-actions-faq#deprecation-warn-faq)
 
 * [How can I resolve that might not run action error while provisioning `WinRM` by using {{site.data.keyword.bpshort}} action?](/docs/schematics?topic=schematics-actions-faq#winrm-faq)
@@ -2741,6 +2745,8 @@ subcollection: schematics
 * [Why are files removed from Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
 
 * [How do I save files between operations?](/docs/schematics?topic=schematics-workspaces-faq#saving-files)
+
+* [Is there a rate limit?](/docs/schematics?topic=schematics-workspaces-faq#rate-limit)
 
 * [How do I update the Terraform version](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
 

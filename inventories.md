@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-07"
+  years: 2017, 2023
+lastupdated: "2023-08-31"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -23,8 +23,23 @@ You can specify your resource inventory by using a [static inventory file](#stat
 ## Creating static inventory files
 {: #static-inv}
 
-{{site.data.keyword.bpshort}} supports the definition of `hosts.ini` files where you specify a single target host or a group of target hosts by using their hostname or IP address. You can assign names to a group of target hosts, such as `[webserver]`, and use this name in your Ansible playbook to instruct {{site.data.keyword.bpshort}} where to run the playbook tasks.
+{{site.data.keyword.bpshort}} supports the definition of `hosts.ini` files where you specify a single target host or a group of target hosts by using their IP address. You can assign names to a group of target hosts, such as `[webserver]`, and use this name in your Ansible playbook to instruct {{site.data.keyword.bpshort}} where to run the playbook tasks.
 {: shortdesc}
+
+### Defining static hosts
+{: #static-host-defs}
+
+To connect to a host via SSH, Ansible requires either a DNS resolvable hostname or an IP address.  
+
+Typical usage of Schematics Actions to configure VSI's on IBM Cloud is via a bastion host. See [Actions documentation](https://cloud.ibm.com/docs/schematics?topic=schematics-sc-actions). Access to the private network interface of a VSI via a bastion host. This implies using the hosts private IP address to connect to the target host, as private host names are not advertised on the public internet. For private hosts, inventory must be configured with an IP address and the IP address of a bastion host.
+
+VSI's with public IP addresses and publicly registered DNS host names can be referenced by fully qualified DNS host names.
+
+Short form hostnames can not be used. These are only allowable on a local network where Ansible is installed in the same IP subnet as the target server.
+
+
+### Creating the host file
+{: #static-inv-create}
 
 1. From the [{{site.data.keyword.bpshort}} inventories dashboard](https://cloud.ibm.com/schematics/inventories){: external}. Click **Create Inventory**.
 2. Enter a name for your inventory, verify your location, and select your `Resource group` where you want to create an inventory.
@@ -38,6 +53,8 @@ You can specify your resource inventory by using a [static inventory file](#stat
 {: #inv-file-format}
 
 Review the following sample `hosts.ini` file to see the structure of the static host inventory list. For more information about `hosts.ini` file structures, see [Ansible documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#how-to-build-your-inventory){: external}.
+
+This example references both publicly accessible hosts via host name and private hosts via IP address.  
 
     ```text
     mail.example.com
@@ -65,6 +82,8 @@ Review the following limitations of static inventory files in {{site.data.keywor
 - Variables are not supported in `hosts.ini` files.
 - Specifying host groups by using key-value pairs in `hosts.ini` files is not supported.
 - You must manually update the `hosts.ini` file if hostname or IP address of target hosts change.
+- Where hosts are secured by a bastion host and only accessible via private IP address, the IP address of the host must be specified.
+- Where hosts are accessible via a publicly accessible IP address and have a registered DNS name, the host can be referenced by its fully qualified host name.   
 - All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
 
 
@@ -103,5 +122,5 @@ Dynamic resource inventories references {{site.data.keyword.cloud_notm}} resourc
 Review the following limitations of dynamic inventories in {{site.data.keyword.bpshort}}: 
 
 - You can choose among the [supported queries](#supported-queries) to select the target virtual server instances to include in your resource inventory.
-- {{site.data.keyword.bpshort}} retrieves the IP address of a target {{site.data.keyword.vsi_is_short}}s and adds the IP address to the resource inventory. Hostname cannot be added, if a public IP address is assigned to the target {{site.data.keyword.vsi_is_short}}, the public IP address is added to the resource inventory. If public IP address do not exists, the private IP address is added to the resource inventory.
+- {{site.data.keyword.bpshort}} retrieves the IP address of a target {{site.data.keyword.vsi_is_short}}s and adds the IP address to the resource inventory. If the target {{site.data.keyword.vsi_is_short}} has a public IP address, the public IP address is used for the resource inventory. If there is no public IP address, the private IP address is used for the resource inventory.
 - All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
