@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-21"
+lastupdated: "2023-09-01"
 
 keywords: schematics capabilities, schematics overview, benefits
 
@@ -36,7 +36,6 @@ Review the section on [IaC best practices](/docs/schematics?topic=schematics-inf
 {: shortdesc}
 
 The four core {{site.data.keyword.bpshort}} offerings are:  
-
 
 
 ### {{site.data.keyword.bpshort}} Blueprints

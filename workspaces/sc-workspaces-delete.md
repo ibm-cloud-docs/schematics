@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-09-01"
 
 keywords: schematics workspaces, workspaces, schematics, delete workspace
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deleting workspace
+# Deleting a workspace
 {: #sch-delete-wks}
 
 Deletes a workspace from the {{site.data.keyword.bplong_notm}}. Deleting a workspace does not automatically remove the {{site.data.keyword.cloud_notm}} resources that the workspace manages. Use workspace destroy to remove all resources that are associated with the workspace.

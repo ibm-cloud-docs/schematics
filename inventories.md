@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-01"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -18,24 +18,24 @@ subcollection: schematics
 A resource inventory defines a single {{site.data.keyword.cloud_notm}} resource or a group of resources where you want to run Ansible playbooks, modules, or roles by using {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
 
-You can specify your resource inventory by using a [static inventory file](#static-inv), or [dynamically retrieve](#dynamic-inv) to your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} Workspaces that you created.
+You can specify your resource inventory by using a [static inventory file](#static-inv), or [dynamically retrieve](#dynamic-inv) target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} Workspaces.
 
 ## Creating static inventory files
 {: #static-inv}
 
-{{site.data.keyword.bpshort}} supports the definition of `hosts.ini` files where you specify a single target host or a group of target hosts by using their IP address. You can assign names to a group of target hosts, such as `[webserver]`, and use this name in your Ansible playbook to instruct {{site.data.keyword.bpshort}} where to run the playbook tasks.
+{{site.data.keyword.bpshort}} supports the definition of `hosts.ini` files where you specify a single target host or a group of target hosts using their IP address. You can assign names to a group of target hosts, such as `[webserver]`, and use this name in your Ansible playbook to instruct {{site.data.keyword.bpshort}} where to run the playbook tasks.
 {: shortdesc}
 
 ### Defining static hosts
 {: #static-host-defs}
 
-To connect to a host via SSH, Ansible requires either a DNS resolvable hostname or an IP address.  
+To connect to a target host via SSH, Ansible requires either a DNS resolvable hostname or an IP address.  
 
-Typical usage of Schematics Actions to configure VSI's on IBM Cloud is via a bastion host. See [Actions documentation](https://cloud.ibm.com/docs/schematics?topic=schematics-sc-actions). Access to the private network interface of a VSI via a bastion host. This implies using the hosts private IP address to connect to the target host, as private host names are not advertised on the public internet. For private hosts, inventory must be configured with an IP address and the IP address of a bastion host.
+Typical usage of Schematics Actions to configure VSI's on IBM Cloud is via a bastion host. See [Actions documentation](https://cloud.ibm.com/docs/schematics?topic=schematics-sc-actions). Access to the private network interface of a VSI is via a bastion host. This means using the hosts private IP address to connect to the target host, as private host names are not advertised by DNS to {{site.data.keyword.bpshort}}. For private hosts, inventory must be configured with an IP address and the IP address of a bastion host.
 
 VSI's with public IP addresses and publicly registered DNS host names can be referenced by fully qualified DNS host names.
 
-Short form hostnames can not be used. These are only allowable on a local network where Ansible is installed in the same IP subnet as the target server.
+The use of (short form) hostnames is not supported. 
 
 
 ### Creating the host file

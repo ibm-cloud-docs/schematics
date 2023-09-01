@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-09-01"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Running workspace plan
+# Running a workspace plan
 {: #sch-plan-wks}
 
 A workspace plan, performs a Terraform plan to determine the {{site.data.keyword.cloud}} resources that will be created, modified or deleted o on a workspace apply operation. Run the {{site.data.keyword.bpshort}} plan job against your workspace. You can use the plan summary logs to verify any resource changes before the template is applied. 
