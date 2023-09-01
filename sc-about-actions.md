@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-01"
 
 keywords: schematics actions, actions, schematics
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} Actions
 {: #sc-actions}
 
-{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitiered apps to your cloud infrastructure. 
+{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitier apps to your cloud infrastructure. 
 {: shortdesc}
 
 To get started with [Configuration Management](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm) with Ansible in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 

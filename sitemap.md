@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-31"
+lastupdated: "2023-09-01"
 
 keywords: schematics
 subcollection: schematics
@@ -188,53 +188,11 @@ subcollection: schematics
 * [Disaster recovery](/docs/schematics?topic=schematics-sc-responsibilities#disaster-recovery)
 
 
-## Understanding Blueprints
-{: #sitemap_understanding_blueprints}
+## Internal adopters
+{: #sitemap_internal_adopters}
 
 
-[Understanding blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
-
-* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infra-lifecycle)
-
-* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#bp-working-env)
-
-    * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-define)
-
-    * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-deploy)
-
-    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-maintain)
-
-    * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-delete)
-
-* [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
-
-[Scaling environments](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling)
-
-* [Remote state data sources](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-remotestate)
-
-* [Orchestration and modules](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-orchestration)
-
-[Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
-
-* [Creating templates, inputs and configuration](/docs/schematics?topic=schematics-define-blueprints#define-templates-input)
-
-* [Steps to define a blueprint](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps)
-
-* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
-
-[Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
-
-* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
-
-[Maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints#update-op-blueprints)
-
-* [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
-
-* [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
-
-[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
-
-* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
+[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics</staging>){: external}
 
 
 ## Security and compliance
@@ -931,6 +889,51 @@ subcollection: schematics
 {: #sitemap_working_with_blueprints}
 
 
+
+### Understanding Blueprints
+{: #sitemap_understanding_blueprints}
+
+
+[Understanding blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
+
+* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infra-lifecycle)
+
+* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#bp-working-env)
+
+    * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-define)
+
+    * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-deploy)
+
+    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-maintain)
+
+    * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-delete)
+
+* [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
+
+[Scaling environments](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling)
+
+* [Remote state data sources](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-remotestate)
+
+* [Orchestration and modules](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-orchestration)
+
+[Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
+
+* [Creating templates, inputs and configuration](/docs/schematics?topic=schematics-define-blueprints#define-templates-input)
+
+* [Steps to define a blueprint](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps)
+
+* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
+
+[Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
+
+[Maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints#update-op-blueprints)
+
+* [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
+
+* [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
+
 [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
 
 * [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-temp-config)
@@ -1213,7 +1216,7 @@ subcollection: schematics
 
 * [List of Terraform environment variables](/docs/schematics?topic=schematics-set-parallelism#list-special-env-vars)
 
-[Running workspace plan](/docs/schematics?topic=schematics-sch-plan-wks#sch-plan-wks)
+[Running a workspace plan](/docs/schematics?topic=schematics-sch-plan-wks#sch-plan-wks)
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-plan-wks#display-prerequisites)
 
@@ -1293,7 +1296,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-sch-display-wks#sch-list-wks-nextsteps)
 
-[Deleting workspace](/docs/schematics?topic=schematics-sch-delete-wks#sch-delete-wks)
+[Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks#sch-delete-wks)
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-delete-wks#prerequisites-delete)
 
@@ -1362,11 +1365,11 @@ subcollection: schematics
 * [Setting up a continuous delivery toolchain for your workspace](/docs/schematics?topic=schematics-workspaces-plan#continuous-delivery)
 
 
-### Working with workspace resources
-{: #sitemap_working_with_workspace_resources}
+### Managing workspaces and resources
+{: #sitemap_managing_workspaces_and_resources}
 
 
-[Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions](/docs/schematics?topic=schematics-multi-region-deployment#multi-region-deployment)
+[Deploying resources in a specific region or across multiple regions](/docs/schematics?topic=schematics-multi-region-deployment#multi-region-deployment)
 
 * [Deploying services in a specific region](/docs/schematics?topic=schematics-multi-region-deployment#single-region)
 
@@ -2035,7 +2038,21 @@ subcollection: schematics
 
     * [`ibmcloud schematics action upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-upload-action)
 
-* [Agent beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
+* [Actions Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
+
+    * [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job)
+
+    * [`ibmcloud schematics job update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-job)
+
+    * [`ibmcloud schematics job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-job)
+
+    * [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job)
+
+    * [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
+
+    * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
+
+* [Agents beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
     * [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
@@ -2052,6 +2069,36 @@ subcollection: schematics
     * [`ibmcloud schematics agent plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan)
 
     * [`ibmcloud schematics agent update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update)
+
+* [Agents policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#policy-cmd)
+
+    * [`ibmcloud schematics policy create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create)
+
+    * [`ibmcloud schematics policy get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-get)
+
+    * [`ibmcloud schematics policy list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-list)
+
+    * [`ibmcloud schematics policy update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-update)
+
+    * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
+
+* [Agents beta-0 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd)
+
+    * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
+
+    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
+
+    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-list)
+
+    * [`ibmcloud schematics agents register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
+
+    * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
+
+    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update)
+
+    * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
+
+    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-wks-get)
 
 * [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
 
@@ -2074,18 +2121,6 @@ subcollection: schematics
     * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-list)
 
     * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
-
-* [Policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#policy-cmd)
-
-    * [`ibmcloud schematics policy create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create)
-
-    * [`ibmcloud schematics policy get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-get)
-
-    * [`ibmcloud schematics policy list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-list)
-
-    * [`ibmcloud schematics policy update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-update)
-
-    * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
 
 * [Configure BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
@@ -2115,32 +2150,6 @@ subcollection: schematics
 
     * [`ibmcloud schematics inventory update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-inv)
 
-* [Actions Job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-job-commands)
-
-    * [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job)
-
-    * [`ibmcloud schematics job update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-job)
-
-    * [`ibmcloud schematics job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-get-job)
-
-    * [`ibmcloud schematics job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-job)
-
-    * [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job)
-
-    * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
-
-* [Workspace job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
-
-    * [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply)
-
-    * [`ibmcloud schematics destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy)
-
-    * [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs)
-
-    * [`ibmcloud schematics output`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-output2)
-
-    * [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan)
-
 * [Inventory resource query commands](/docs/schematics?topic=schematics-schematics-cli-reference#rq-commands)
 
     * [`ibmcloud schematics resource query create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-rq)
@@ -2152,24 +2161,6 @@ subcollection: schematics
     * [`ibmcloud schematics resource query list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-rq)
 
     * [`ibmcloud schematics resource query update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-rq)
-
-* [Workspace stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
-
-    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
-
-* [Workspace Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
-
-    * [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
-
-* [Workspace state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
-
-    * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
-
-    * [`ibmcloud schematics workspace state show`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show)
-
-    * [`ibmcloud schematics workspace state mv`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv)
-
-    * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
 
 * [Workspace commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-commands)
 
@@ -2197,23 +2188,35 @@ subcollection: schematics
 
     * [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload)
 
-* [Agents beta-0 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd)
+* [Workspace job commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-resource-commands)
 
-    * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
+    * [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply)
 
-    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
+    * [`ibmcloud schematics destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-destroy)
 
-    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-list)
+    * [`ibmcloud schematics logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs)
 
-    * [`ibmcloud schematics agents register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
+    * [`ibmcloud schematics output`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-output2)
 
-    * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
+    * [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan)
 
-    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update)
+* [Workspace stop commands](/docs/schematics?topic=schematics-schematics-cli-reference#stop-cmds)
 
-    * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
+    * [`ibmcloud schematics workspace job stop`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-stop-job)
 
-    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-wks-get)
+* [Workspace state file commands](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds)
+
+    * [`ibmcloud schematics state pull`](/docs/schematics?topic=schematics-schematics-cli-reference#state-pull)
+
+    * [`ibmcloud schematics workspace state show`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-show)
+
+    * [`ibmcloud schematics workspace state mv`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_statemv)
+
+    * [`ibmcloud schematics workspace state rm`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-wks_staterm)
+
+* [Workspace Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#tf-cmds)
+
+    * [Terraform commands](/docs/schematics?topic=schematics-schematics-cli-reference#cmds)
 
 [CLI version history](/docs/schematics?topic=schematics-cli_version-releases#cli_version-releases)
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-05"
+  years: 2017, 2023
+lastupdated: "2023-09-01"
 
 keywords: schematics multi region, deploy across regions schematics, multi location deployment, multi region deployment
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions
+# Deploying resources in a specific region or across multiple regions
 {: #multi-region-deployment}
 
 {{site.data.keyword.bplong}} enables you to deploy resources in any {{site.data.keyword.cloud_notm}} location or region globally. The region where you save and execute your {{site.data.keyword.bpshort}} `workspaces` and `actions` is independent of the region where your {{site.data.keyword.cloud_notm}} resources are deployed or configured.
