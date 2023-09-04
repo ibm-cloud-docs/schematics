@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-01"
+lastupdated: "2023-09-04"
 
 keywords: schematics
 subcollection: schematics
@@ -1369,6 +1369,8 @@ subcollection: schematics
 {: #sitemap_managing_workspaces_and_resources}
 
 
+[Displaying managed resources](/docs/schematics?topic=schematics-resource-features#resource-features)
+
 [Deploying resources in a specific region or across multiple regions](/docs/schematics?topic=schematics-multi-region-deployment#multi-region-deployment)
 
 * [Deploying services in a specific region](/docs/schematics?topic=schematics-multi-region-deployment#single-region)
@@ -1379,15 +1381,27 @@ subcollection: schematics
 
 * [Using private modules with templates](/docs/schematics?topic=schematics-download-modules-pvt-git#netrc-example)
 
-[Managing {{site.data.keyword.cloud_notm}} resources with workspaces](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
+[Managing resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
 
 * [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources)
 
 * [Updating your resources](/docs/schematics?topic=schematics-manage-lifecycle#update-resources)
 
-* [Managing drift between your cloud environment and your Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle#drift-report)
+* [Managing drift between your cloud environment and Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle#drift-report)
+
+* [Reviewing resource and deployment details](/docs/schematics?topic=schematics-manage-lifecycle#review-logs)
 
 * [Removing your resources](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources)
+
+* [Deploying your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources-cli)
+
+* [Updating your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle#update-resources-cli)
+
+* [Managing drift between your cloud environment and Terraform configuration through CLI](/docs/schematics?topic=schematics-manage-lifecycle#drift-report-cli)
+
+* [Reviewing resource and deployment details through CLI](/docs/schematics?topic=schematics-manage-lifecycle#review-logs-cli)
+
+* [Removing your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources-cli)
 
 [Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
 
