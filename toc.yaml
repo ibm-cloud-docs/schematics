@@ -110,6 +110,7 @@ toc:
                                                     - topicgroup:
                                                               label: Managing workspaces and resources
                                                               topics:
+                                                                      - display-resources.md
                                                                       - cross_region_deployment.md
                                                                       - wks-download-module-files.md
                                                                       - manage-resource-lifecycle.md
