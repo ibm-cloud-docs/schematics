@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-16"
+lastupdated: "2023-09-12"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -339,7 +339,7 @@ The following image shows how you can leverage IAM access groups and resource gr
 {: faq}
 {: support}
 
-To invoke the GitHub API and establish Git connections over HTTPs, and for creating quick scripts and testing integrations PAT are used. For more information, see [about PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#about-personal-access-tokens){: external}.
+To invoke the GitHub API and establish Git connections over HTTPs, and for creating quick scripts and testing integrations PAT are used. For more information, see [about PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#about-personal-access-tokens){: external}.
 {: shortdesc}
 
 GitHub currently supports two types of personal access tokens, organization owners can set a policy to restrict the access of personal access tokens to their organization.: 
@@ -348,9 +348,9 @@ GitHub currently supports two types of personal access tokens, organization owne
 
 The following are the steps to create and restrict the PAT tokens.
 
-- [Create fine-grained personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token){: external}.
+- [Create fine-grained personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token){: external}.
 - [Restrict access by fine-grained personal access tokens](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-fine-grained-personal-access-tokens){: external}.
-- [Create personal access tokens (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic){: external}.
+- [Create personal access tokens (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic){: external}.
 - [Restrict access by personal access tokens (classic)](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization#restricting-access-by-personal-access-tokens-classic){: external}.
 
 ## Can I run the `terraform init -backend-config="KEY=VALUE"` option through CLI?
@@ -367,7 +367,7 @@ The following are the steps to create and restrict the PAT tokens.
 
 Workspace creation
 
-In the workspace creation page, for the `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. For more details about workspace create, refer to [Creating a workspace](docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui). The link can point to the `master` branch, any other branch, or a subdirectory. 
+In the workspace creation page, for the `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. For more details about workspace create, refer to [Creating a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui). The link can point to the `master` branch, any other branch, or a subdirectory. 
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
     - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory` 
@@ -389,3 +389,10 @@ On the workspace **Settings** page, enter the edit icon to edit your `Repository
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
     - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory` 
+
+## Can you configure the activeness of the {{site.data.keyword.bpshort}} API call?
+{: #http-api-call}
+{: faq}
+{: support}
+
+Yes, the [{{site.data.keyword.bpshort}} plugin](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) allows you to configure the timeout to `30 seconds` for the {{site.data.keyword.bpshort}} API calls through [ibmcloud config --http-timeout](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_config) flag. For example, `ibmcloud config --http-timeout=30`. The default value of the HTTP requests is `60 seconds`.

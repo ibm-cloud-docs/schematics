@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-09-12"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -43,7 +43,7 @@ Config management usually happens repeatedly.
 ## How to choose your IaC tool
 {: #sc-iac-choosing}
 
-Some tools are a better fit for the task in hand for provisioning or configuration management. The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
+Some tools are a better fit for the task in hand for provisioning or configuration management. The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} leverages Terraform and Ansible, and other open-source tools including {{site.data.keyword.openshiftshort}}, Operators and Helm to deliver IaC as a managed service. Rather than limiting you to a single tool, {{site.data.keyword.bpshort}} allows you to use the tool and approach best suited to the task. You declare the tasks that you want to run and {{site.data.keyword.bpshort}} will run the tasks for you.

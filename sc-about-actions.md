@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-01"
+lastupdated: "2023-09-12"
 
 keywords: schematics actions, actions, schematics
 
@@ -24,7 +24,7 @@ To get started with [Configuration Management](/docs/schematics?topic=schematics
 ## {{site.data.keyword.bpshort}} Actions overview
 {: #sc-actions-overview}
 
-[Ansible](https://www.ansible.com/){: external} is a [configuration management and provisioning tool](/docs/schematics?topic=schematics-schematics-open-projects). The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
+[Ansible](https://www.ansible.com/){: external} is a [configuration management and provisioning tool](/docs/schematics?topic=schematics-schematics-open-projects). The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
 
 It is designed to automate the configuration, operation, and management of cloud environments, and to deploy multitiered app workloads in the cloud. Ansible uses YAML syntax to describe the tasks that must be run against a single host or a group of hosts, and stores these tasks in an Ansible playbook. 
 

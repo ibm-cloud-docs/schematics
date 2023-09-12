@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-09-12"
 
 keywords: schematics blueprints, operate blueprint, managed environments
 
@@ -64,5 +64,5 @@ The two-step process to update a blueprint environment is illustrated in the dia
 ## Next steps
 {: #operate-nextsteps}
 
-When the environment is no longer required, the final stage is [deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints).
+When the environment is no longer required, the final stage is [deleting blueprints](https://cloud.ibm.com/docs/schematics?topic=schematics-delete-blueprint).
 

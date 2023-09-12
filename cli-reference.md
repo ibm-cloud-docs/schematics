@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-04"
+lastupdated: "2023-09-12"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -620,7 +620,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of an agent. |
 | `--force-redeploy` or `-f` | Optional | Force redeploys an Agent. |
-| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
 {: caption="{{site.data.keyword.bpshort}} agent apply flags" caption-side="top"}
 
 Example
@@ -639,7 +639,7 @@ Create an agent registration in the currently selected {{site.data.keyword.bpsho
 Syntax
 
 ```sh
-ibmcloud schematics agent create --name AGENT_NAME --location LOCATION --agent-location AGENT_LOCATION --version VERSION --infra-type INFRA_TYPE --cluster-id CLUSTER_ID --cluster-resource-group CLUSTER_RESOURCE_GROUP --cos-instance-name COS_INSTANCE_NAME --cos-bucket COS_BUCKET --cos-location COS_LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--plan-only] [--plan-apply] [--tags TAGS] [--file FILE] [--output OUTPUT]
+ibmcloud schematics agent create --name AGENT_NAME --location LOCATION --agent-location AGENT_LOCATION --version VERSION --infra-type INFRA_TYPE --cluster-id CLUSTER_ID --cluster-resource-group CLUSTER_RESOURCE_GROUP --cos-instance-name COS_INSTANCE_NAME --cos-bucket COS_BUCKET --cos-location COS_LOCATION --resource-group RESOURCE_GROUP [--description DESCRIPTION] [--plan-only] [--plan-apply] [--tags TAGS] [--metadata AGENT_METADATA] [--file FILE] [--output OUTPUT]
 ```
 {: pre}
 
@@ -660,9 +660,10 @@ Command options
 | `--description` or `-d` | Optional | A description that identifies the agent usage, and the network zones and resources the agent is able to access. |
 | `--plan-only` | Optional | Run plan command, after creating the agent.|
 | `--plan-apply` | Optional | Run plan and apply command, after creating the agent.|
-| `--tags` or `-t`| Optional | Agent tags. This flag can be repeated multiple times. Tags allow for faster and easier search for agent related resources. |
+| `--tags` or `-t`| Optional | Agent tags. You can repeat the flag multiple times. Tags allow for faster and easier search for agent related resources. |
+|  `--metadata` | Optional | Metadata of the agent. You can use the flag multiple times. For example, `git:private-git.github.com` or `git:gitlab.com`. If not set, defaults to `git:github.com`.|
 | `--file` or `f` | Optional | Path to a JSON file containing the definition of an agent. |
-| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
 {: caption="{{site.data.keyword.bpshort}} agent create flags" caption-side="top"}
 
 Example
@@ -802,7 +803,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i`| Required | The ID of the agent. |
-| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
 {: caption="{{site.data.keyword.bpshort}} agent plan flags" caption-side="top"}
 
 Example
@@ -820,7 +821,7 @@ Update an agent. For more information about the steps to use the agent update co
 Syntax
 
 ```sh
-ibmcloud schematics agent update --id AGENT_ID [--description DESCRIPTION] [--user-state USER_STATE] [--tags TAGS] [--file FILE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics agent update --id AGENT_ID [--description DESCRIPTION] [--user-state USER_STATE] [--tags TAGS] [--metadata AGENT_METADATA] [--file FILE] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -833,7 +834,8 @@ Command options
 | `--description` or `-d` | Optional | Short description of an agent.|
 | `--user-state` or `-s` | Optional | User defined status of an agent. Valid values are `enable`, `disable`. |
 | `--file` or `-f` | Optional | Path to the `JSON` file that contains the definition of the agent.|
-| `--output` or `-o` | Optional | Specify output format, only 'JSON' is supported. |
+|  `--metadata` | Optional | Metadata of the agent. You can use the flag multiple times. For example, `git:private-git.github.com` or `git:gitlab.com`. If not set, defaults to `git:github.com`.|
+| `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
 {: caption="{{site.data.keyword.bpshort}} agent update flags" caption-side="top"}
 

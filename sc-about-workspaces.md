@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-17"
+lastupdated: "2023-09-12"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -22,7 +22,7 @@ subcollection: schematics
 
 With Terraform, configuration files define your infrastructure, which also makes it easier to edit, share, and reuse configurations. By codifying your infrastructure, you provision the same environment every time avoiding undocumented, ad hoc configuration changes.
 
-The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/cloud/blog/chef-ansible-puppet-terraform){: external} provides an overview of several of the most popular open-source IaC tools and summarizes their capabilities and relative strengths.
+The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/blog/chef-ansible-puppet-terraform){: external} provides an overview of several of the most popular open-source IaC tools and summarizes their capabilities and relative strengths.
 
 ## {{site.data.keyword.bpshort}} workspace overview
 {: #sch-wks-overview}

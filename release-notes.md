@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-09-12"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -23,6 +23,22 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
+## September 2023
+{: #September-2023}
+
+Review the release notes for September 2023.
+{: shortdesc}
+
+### 12 September 2023
+{: #schematics-sept1723}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.12](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+Release {{site.data.keyword.bpshort}} agent migration page 
+:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta2` version](https://cloud.ibm.com/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta2).
+
 ## August 2023
 {: #August-2023}
 
@@ -34,7 +50,7 @@ Review the release notes for August 2023.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} agent migration page 
-:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating agent version](/docs/schematics?topic=schematics-migrate-agent-version).
+:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta1` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta1).
 
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
@@ -702,7 +718,7 @@ Review the release notes for June 2021.
 {: release-note}
 
 Support `taint` and `untaint` feature enhancement in {{site.data.keyword.bplong_notm}}
-:   You can run `ibmcloud schematics state list` command to view the tainted status of your resources. For more information, see [about taint and `untaint` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) and see [Time out errors with {{site.data.keyword.bplong_notm}} blog](https://www.ibm.com/cloud/blog/timeout-errors-with-ibm-cloud-schematics){: external}.
+:   You can run `ibmcloud schematics state list` command to view the tainted status of your resources. For more information, see [about taint and `untaint` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-taint) and see [Time out errors with {{site.data.keyword.bplong_notm}} blog](https://www.ibm.com/blog/timeout-errors-with-ibm-cloud-schematics/){: external}.
 
 Documentation support to deploy resources in specific region or across multiple region
 :   For more information, see [Deploying {{site.data.keyword.cloud_notm}} resources in a specific region or across multiple regions {{site.data.keyword.cloud_notm}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
@@ -785,7 +801,7 @@ Allowed file extensions in {{site.data.keyword.bpshort}}
 {: release-note}
 
 Ansible open beta release
-:   {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and clients. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/cloud/blog/announcements/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics) blog.
+:   {{site.data.keyword.bplong_notm}} supports and releases Ansible open beta version for the IBMers and clients. For more information, see [about Ansible](/docs/schematics?topic=schematics-getting-started-ansible), watch [video about Ansible](https://www.youtube.com/watch?v=fHO1X93e4WA), and see [{{site.data.keyword.cloud_notm}} Terraform provider updates and Ansible actions in {{site.data.keyword.bpshort}}](https://www.ibm.com/blog/announcement/ibm-cloud-terraform-provider-updates-and-closed-beta-of-ansible-actions-in-schematics/) blog.
 
 ## January 2021
 {: #jan-2021}
