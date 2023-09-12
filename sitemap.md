@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-04"
+lastupdated: "2023-09-12"
 
 keywords: schematics
 subcollection: schematics
@@ -192,7 +192,7 @@ subcollection: schematics
 {: #sitemap_internal_adopters}
 
 
-[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics</staging>){: external}
+[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics/schematics_internal_v1</staging>){: external}
 
 
 ## Security and compliance
@@ -318,6 +318,16 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [September 2023](/docs/schematics?topic=schematics-schematics-relnotes#September-2023)
+
+    * Review the release notes for September 2023.
+
+    * [12 September 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept1723)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
+        * Release {{site.data.keyword.bpshort}} agent migration page 
 
 * [August 2023](/docs/schematics?topic=schematics-schematics-relnotes#August-2023)
 
@@ -1629,6 +1639,10 @@ subcollection: schematics
 
 [Migrating agent version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-agent-version)
 
+* [Migrating to `1.0.0-beta1` version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-v1beta1)
+
+* [Migrating to `1.0.0-beta2` version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-v1beta2)
+
 * [Next steps](/docs/schematics?topic=schematics-migrate-agent-version#agent-migrate-nextsteps)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
@@ -2756,6 +2770,8 @@ subcollection: schematics
 * [Can I run the `terraform init -backend-config="KEY=VALUE"` option through CLI?](/docs/schematics?topic=schematics-general-faq#faq-tf-backend)
 
 * [When do you specify the GitHub master or subdirectory branch?](/docs/schematics?topic=schematics-general-faq#gitbranch-faq)
+
+* [Can you configure the activeness of the {{site.data.keyword.bpshort}} API call?](/docs/schematics?topic=schematics-general-faq#http-api-call)
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 

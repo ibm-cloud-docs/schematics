@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-13"
+lastupdated: "2023-09-12"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -117,7 +117,7 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
         - Click **Next**.
     - In **Blueprint URL** section:
         - **Repository URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-blueprint.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
-        - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}.
+        - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}.
         - Click **Next and save as draft**. Observe that a blueprint is created with a Blueprint ID and is in `Draft` Status.
            Validation takes a few seconds to fetch the template details from the Git repo. 
            {: note}
@@ -127,7 +127,7 @@ You can follow these steps to create a blueprint config using {{site.data.keywor
             - In **Import input file (Optional)** section:
                -  **Input file GIT URL** - `<Provide your valid GitHub, GitLab or Bitbucket repository URL that hosts your blueprint configuration file>`. For example, `https://github.com/Cloud-Schematics/blueprint-basic-example/blob/main/basic-input.yaml`. Review the [blueprint URL FAQ](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url) for details of the URL format. 
                - **Source name** - Used to set the source name the input file values are identified by in the UI. 
-               - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token){: external}.
+               - **Personal access token** - `<Provide your Git personal access token, only for private Git repos>`. For more information about how to create an access token, see [creating a personal access token for the command line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens){: external}.
                - Click **Import values**.
         - Observe that the input variables from the `inputs.yaml` file are imported. Optionally, you can edit the variables.
            Enter variable values into the table by typing them in or by importing them. For the default values, if any, were pulled from the blueprint template, but can be changed. If there is a dropdown, select a value from the dropdown.

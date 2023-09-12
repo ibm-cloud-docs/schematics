@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-09-12"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -130,7 +130,7 @@ Blueprint operations (commands) are run as jobs by {{site.data.keyword.bpshort}}
 ### Blueprint lifecycle
 {: #bpl1}
 
-Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. The tasks of working with a blueprint over its lifecycle can be grouped under four headings, [defining blueprints](/docs/schematics?topic=schematics-define-blueprints), [deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints), [maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints), and [deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints). See the section [working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for more details. 
+Blueprints follow a lifecycle approach to deploying and managing {{site.data.keyword.cloud_notm}} environments. The tasks of working with a blueprint over its lifecycle can be grouped under four headings, [defining blueprints](/docs/schematics?topic=schematics-define-blueprints), [deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints), [maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints), and [deleting blueprints](https://cloud.ibm.com/docs/schematics?topic=schematics-delete-blueprint). See the section [working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for more details. 
 {: shortdesc}
 
 ## Catalog
