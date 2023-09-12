@@ -27,14 +27,14 @@ or `1.0.0-beta2`.
 Currently, The {{site.data.keyword.bpshort}} Agent does not support agent version upgrade through CLI or API interface.
 {: note}
 
-## Migrating to `1.0.0-beta1` version 
+## Migrating to `1.0.0-beta1` version
 {: #migrate-v1beta1}
 
 You can follow the steps to migrate to `1.0.0-beta1` version.
 
 1. Browser to the target [{{site.data.keyword.cloud_notm}} cluster](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
 2. Click **Kubernetes Clusters** page.
-3. Click your cluster hyper link.
+3. Click your cluster hyper-link.
 4. Click **Kubernetes dashboard**.
 5. Select namespace - `schematics-job-runtime` and in `jobrunner` deployment, update the `jobrunner` container image with the tag `icr.io/schematics-remote/schematics-job-runner:3000de68-234`. Wait for the pods to be in a running state.
 6. Select namespace - `schematics-runtime` and in `runtime-job` deployment, update the `runtime-job` container image with the tag `icr.io/schematics-remote/schematics-agent-ws-job:1c063cb7-453`. Wait for the pods to be in a running state.
@@ -43,7 +43,6 @@ You can follow the steps to migrate to `1.0.0-beta1` version.
 9. Select namespace - `schematics-agents-observe` and in `schematics-agents-controller-manager` deployment, update the manager container image with the tag `icr.io/schematics-remote/schematics-agent-operator:cc33f3a3-21`. Wait for the pods to be in a running state.
 10. Select namespace - `schematics-agents-observe` and in `schematics-agents-log-collector` daemon set, update the `log-collector` container image with the tag `icr.io/schematics-remote/schematics-agents-log-collector:425167c7-28`. Wait for the pods to be in a running state.
 
-
 ## Migrating to `1.0.0-beta2` version 
 {: #migrate-v1beta2}
 
@@ -51,7 +50,7 @@ You can follow the steps to migrate to `1.0.0-beta2` version.
 
 1. Browser to the target [{{site.data.keyword.cloud_notm}} cluster](https://cloud.ibm.com/kubernetes/clusters/){: external} page. Enter your `<target_iks_cluster_ID>` as part of the URL.
 2. Click **Kubernetes Clusters** page.
-3. Click your cluster hyper link.
+3. Click your cluster hyper-link.
 4. Click **Kubernetes dashboard**.
 5. Select namespace - `schematics-job-runtime` and in `jobrunner` deployment, update the `jobrunner` container image with the tag `icr.io/schematics-remote/schematics-job-runner:4be5ed21-270`. Wait for the pods to be in a running state.
 6. Select namespace - `schematics-runtime` and in `runtime-job` deployment, update the `runtime-job` container image with the tag `icr.io/schematics-remote/schematics-agent-ws-job:47a850a7-481`. Wait for the pods to be in a running state.
