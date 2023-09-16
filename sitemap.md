@@ -192,7 +192,7 @@ subcollection: schematics
 {: #sitemap_internal_adopters}
 
 
-[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics/schematics_internal_v1</staging>){: external}
+[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics/schematics_internal_v1){: external}
 
 
 ## Security and compliance
@@ -943,6 +943,10 @@ subcollection: schematics
 * [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
 
 * [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
+
+[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
+
+* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
 
 [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
 
