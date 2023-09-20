@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-16"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -102,7 +102,7 @@ You can follow these steps to generate a plan and apply a blueprint using the {{
 
 You have now deployed a blueprint and created a multi-module environment. Optionally, you can clean up the deployed blueprint by using [destroy](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui) to remove the cloud resources and [delete](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui) to remove the blueprint config.
 
-For more information about the difference between destroy and config delete, see [Deleting a blueprint](https://cloud.ibm.com/docs/schematics?topic=schematics-delete-blueprint).
+For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint).
 {: note}
 
 - Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
@@ -243,7 +243,7 @@ ibmcloud schematics blueprint destroy -id <blueprint_ID>
 ```
 {: pre}
 
-You need to run the `blueprint destroy` command and then run the  `blueprint delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](https://cloud.ibm.com/docs/schematics?topic=schematics-delete-blueprint).
+You need to run the `blueprint destroy` command and then run the  `blueprint delete` command. For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint).
 {: note}
 
 ```sh
