@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-10"
+lastupdated: "2023-09-21"
 
 keywords: schematics use cases, how does schematics work, why use schematics, use cases
 
@@ -24,7 +24,7 @@ Choose among the following use cases to learn how {{site.data.keyword.bpshort}} 
 - [Infrastructure deployments with {{site.data.keyword.bpshort}} Workspaces](#how-to-workspaces)
 - [Configuration management with {{site.data.keyword.bpshort}} Actions](#how-to-actions)
 - [Software deployments with IBM-provided templates](#how-to-software)
-- [large-scale environments with blueprints](/docs/schematics?topic=schematics-get-started-blueprints)
+
 
 ## Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces
 {: #how-to-workspaces}
@@ -86,8 +86,3 @@ To get started with software deployment in {{site.data.keyword.bpshort}}, see th
 2. **Configure your workspace and target**: When you choose one of the provided templates, you must select the target where you want to install the template. Depending on the template that you choose, the target can be an {{site.data.keyword.containerlong_notm}} cluster, a {{site.data.keyword.openshiftlong_notm}} cluster, or a classic or {{site.data.keyword.vsi_is_short}}. Because {{site.data.keyword.bpshort}} is used to install the software, you must configure the workspace that is automatically created for you. 
 3. **Run the template**: When you run the template, {{site.data.keyword.bpshort}} uses the built-in Terraform, Ansible, Helm, OpenShift Operator, or Cloud Pak capabilities to install your software or spin up infrastructure resources. You can use your workspace to monitor the progress of your template execution. 
 
-## Next steps
-{: #usecase-nextsteps}
-
-- Explore blueprint samples by using {{site.data.keyword.bpshort}} [tutorials](/docs/schematics?topic=schematics-provisioning-terraform-template).
-- Click [here](/docs/schematics?topic=schematics-how-it-works) to revisit the {{site.data.keyword.bpshort}} use cases.

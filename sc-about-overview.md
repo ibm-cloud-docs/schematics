@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-01"
+lastupdated: "2023-09-21"
 
-keywords: schematics capabilities, schematics overview, benefits
+keywords: schematics capabilities, schematics overview,
 
 subcollection: schematics
 
@@ -35,17 +35,9 @@ Review the section on [IaC best practices](/docs/schematics?topic=schematics-inf
 {{site.data.keyword.bpshort}} builds on open-source Ansible and Terraform to provide a powerful set of IaC tools as a service to program your cloud infrastructure. With {{site.data.keyword.bpshort}} you can use this rich set of IaC automation capabilities to build stacks of cloud resources, manage their lifecycle, manage changes in their configurations, deploy your app workloads, and perform day-2 operations.
 {: shortdesc}
 
-The four core {{site.data.keyword.bpshort}} offerings are:  
+The three core {{site.data.keyword.bpshort}} offerings are:  
 
 
-### {{site.data.keyword.bpshort}} Blueprints
-{: #sc-blueprints}
-
-{{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. Blueprints takes large environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
-{: shortdesc} 
-
-It enables users to define and deploy cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. For more information about Blueprints and its features, see [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
-{: shortdesc}
 
 ### {{site.data.keyword.bpshort}} Workspaces
 {: #sch-workspaces}

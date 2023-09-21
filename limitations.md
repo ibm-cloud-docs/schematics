@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-01"
+lastupdated: "2023-09-21"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate, adoption, considerations
 
@@ -73,6 +73,12 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 
 Branch names containing `/` (backslash) are not supported
 
+
+
+## Cost estimate
+{: #cost-restrictions}
+
+Cost estimation is available for templates. This estimated amount is subject to change as the architecture is customized within a project, and it does not include all resources, usage, licenses, fees, discounts, or taxes. In the future, aggregate costs across projects that can be grouped by various criteria will be available. For more information, see [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation).
 
 
 
