@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-01"
+lastupdated: "2023-09-21"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -31,7 +31,7 @@ You can specify your resource inventory by using a [static inventory file](#stat
 
 To connect to a target host via SSH, Ansible requires either a DNS resolvable hostname or an IP address.  
 
-Typical usage of Schematics Actions to configure VSI's on IBM Cloud is via a bastion host. See [Actions documentation](https://cloud.ibm.com/docs/schematics?topic=schematics-sc-actions). Access to the private network interface of a VSI is via a bastion host. This means using the hosts private IP address to connect to the target host, as private host names are not advertised by DNS to {{site.data.keyword.bpshort}}. For private hosts, inventory must be configured with an IP address and the IP address of a bastion host.
+Typical usage of Schematics Actions to configure VSI's on IBM Cloud is via a bastion host. See [Actions documentation](/docs/schematics?topic=schematics-sc-actions). Access to the private network interface of a VSI is via a bastion host. This means using the hosts private IP address to connect to the target host, as private host names are not advertised by DNS to {{site.data.keyword.bpshort}}. For private hosts, inventory must be configured with an IP address and the IP address of a bastion host.
 
 VSI's with public IP addresses and publicly registered DNS host names can be referenced by fully qualified DNS host names.
 

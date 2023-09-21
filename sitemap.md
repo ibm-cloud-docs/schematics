@@ -301,7 +301,7 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} agent migration page 
 
-    * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug252023)
+    * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug232023)
 
 * [May 2023](/docs/schematics?topic=schematics-schematics-relnotes#may-2023)
 
@@ -1123,7 +1123,7 @@ subcollection: schematics
 
 [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-estimation)
 
-* [Viewing the cost for your infrastructure](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
+* [Viewing the costs for your infrastructure](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
 
 * [Accepting the estimated cost](/docs/schematics?topic=schematics-cost-estimation#cost-accept)
 

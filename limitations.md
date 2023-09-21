@@ -15,7 +15,7 @@ subcollection: schematics
 # Adoption considerations 
 {: #schematics-limitations}
 
-Review the following considerations when adopting {{site.data.keyword.bplong_notm}}. Additionally review the section on [workspace setup](/docs/schematics?topic=schematics-workspace-setup#configure-provider) for details of how to work with your Terraform configs stored in Git repositories.  
+Review the following considerations when adopting {{site.data.keyword.bplong_notm}}. Additionally review the section on [workspace setup](/docs/schematics?topic=schematics-create-tf-config&interface=ui#configure-provider) for details of how to work with your Terraform configs stored in Git repositories.  
 {: shortdesc}
 
 ## Differences to native Terraform

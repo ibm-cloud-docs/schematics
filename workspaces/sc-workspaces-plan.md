@@ -42,14 +42,14 @@ During workspace plan execution, you cannot edit your workspace.
 2. Access **Schematics** > **Workspaces** > [**workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
 3. Search your workspace in specific location.
 4. Click **Workspaces** > [**workspace**](https://cloud.ibm.com/schematics/workspaces){: external}.
-5. Click **Generate Plan** to create a plan for the .
+5. Click **Generate Plan** to create a plan for the workspace.
 
 ### Verifying workspace plan 
 {: #verify-wks-plan-ui}
 
 1. Click on your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} 
 2. Click **Jobs** to see the job execution results. It will be listed under the heading `Generate Plan`
-3. On a successful plan, the cost for the proposed changes can be reviewed by clicking on the `Cost Estimate` button. See [Infrastructure Cost Estimation](/docs/schematics?topic=schematics-schematics-cost-estimation)
+3. On a successful plan, the cost for the proposed changes is reviewed by clicking on the `Cost Estimate` button. For more information, see [Infrastructure cost estimation](/docs/schematics?topic=schematics-schematics-cost-estimation).
 
 ## Generate a workspace plan using the CLI
 {: #plan-wks-cli}
