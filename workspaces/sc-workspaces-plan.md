@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-09-22"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -22,7 +22,7 @@ A workspace plan, performs a Terraform plan to determine the {{site.data.keyword
 {: deprecated}
 
 ## Before you begin
-{: #display-prerequisites}
+{: #plan-prerequisites}
 
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a copy of the repo as a `tar` (tape archive file) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-09-22"
 
 keywords: schematics capabilities, schematics overview,
 
@@ -42,11 +42,11 @@ The three core {{site.data.keyword.bpshort}} offerings are:
 ### {{site.data.keyword.bpshort}} Workspaces
 {: #sch-workspaces}
 
-With {{site.data.keyword.bpshort}} Workspaces, use Terraform to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. For more information, see [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-workspaces).
+With {{site.data.keyword.bpshort}} Workspaces, use Terraform to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments. For more information, see [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces).
 {: shortdesc}
 
 ### {{site.data.keyword.bpshort}} Actions
-{: #sc-actions}
+{: #sc-actions-overview}
 
 With {{site.data.keyword.bpshort}} Actions, use Ansible playbooks to perform complex day-2 operations on your cloud resources, cloud environment, and app workloads. Whether you want to deploy multitiered apps, start or stop virtual servers or clusters, rotate keys, backup and restore app data, perform security scans, manage database schemas, or manage users, simply specify the tasks that you want to run in your playbook, and let {{site.data.keyword.bpshort}} securely connect and complete the tasks.For more information about managing {{site.data.keyword.bpshort}} Actions and its features, see [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions).
 {: shortdesc}

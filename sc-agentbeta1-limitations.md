@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-09-22"
 
 keywords: schematics agent, agent, beta-1 release, agent beta-1 release
 
@@ -38,7 +38,7 @@ You can come back any time to your created thread to add information, ask questi
 {: important}
 
 ## Beta-1 release limitations for Agent
-{: #sc-agent-beta-limitation}
+{: #sc-agent-beta1-limitation}
 
 There will be multiple beta releases in short window period, this requires the users to update the Agent infrastructure and Agent services in your environment.
 {: note}

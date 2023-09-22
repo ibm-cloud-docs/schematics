@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-09-22"
 
 keywords: schematics, automation, terraform
 
@@ -75,17 +75,17 @@ Review the following table to see what permissions you need to work with {{site.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| `View workspace` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `View workspace activities` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `View workspace logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Create workspace` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Update workspace` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Delete workspace` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Freeze and unfreeze workspace` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `View the readme of a template` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|
-| `Create Terraform execution plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Apply a Terraform template` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Destroy workspace resources` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View workspace` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `View workspace activities` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `View workspace logs` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Create workspace` | | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Update workspace` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Delete workspace` | | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Freeze and unfreeze workspace` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `View the readme of a template` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg)|![Check mark](images/checkmark.svg)|![Check mark](images/checkmark.svg)|
+| `Create Terraform execution plan` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Apply a Terraform template` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Destroy workspace resources` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} Workspaces" caption-side="top"}
@@ -98,14 +98,14 @@ Review the following table to see what permissions you need to work with {{site.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| `View action` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
-| `View action jobs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
-| `View job logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
-| `Create action` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
-| `Update action` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
-| `Delete action` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
-| `Run check action job` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | 
-| `Run an action` | | ![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)|![Check mark icon.](images/checkmark.svg)| 
+| `View action` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | 
+| `View action jobs` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | 
+| `View job logs` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | 
+| `Create action` | | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | 
+| `Update action` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | 
+| `Delete action` | | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | 
+| `Run check action job` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | 
+| `Run an action` | | ![Check mark](images/checkmark.svg)|![Check mark](images/checkmark.svg)|![Check mark](images/checkmark.svg)| 
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} Actions" caption-side="top"}
@@ -157,14 +157,14 @@ In addition to the listed agent activities and permission, you must ensure you h
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| `View agents` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `View agent logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Agent apply` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Agent create` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Agent delete`| | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Agent destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Agent plan` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `Agent update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View agents` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `View agent logs` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Agent apply` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Agent create` | | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Agent delete`| | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Agent destroy` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Agent plan` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `Agent update` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
 {: caption="User permissions for {{site.data.keyword.bpshort}} Agent" caption-side="top"}
 
 {{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
@@ -180,13 +180,13 @@ In addition to the listed blueprints activities and permission, you must check w
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| `View blueprint` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `View blueprint logs` | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint create` | | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint update` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint delete`| | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint apply` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
-| `blueprint destroy` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) |
+| `View blueprint` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `View blueprint logs` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `blueprint create` | | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `blueprint update` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `blueprint delete`| | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `blueprint apply` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
+| `blueprint destroy` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} Blueprint" caption-side="top"}
@@ -199,9 +199,9 @@ Review the following table to see what permissions you need to work with {{site.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
-| `View KMS instances` | ![Check mark icon.](images/checkmark.svg)| ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|
-| `Read KMS settings` | ![Check mark icon.](images/checkmark.svg)| ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|
-| `Update the KMS settings` | | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg) | ![Check mark icon.](images/checkmark.svg)|
+| `View KMS instances` | ![Check mark](images/checkmark.svg)| ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg)|
+| `Read KMS settings` | ![Check mark](images/checkmark.svg)| ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg)|
+| `Update the KMS settings` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg)|
 {: row-headers}
 {: class="comparison-table"}
 {: caption="User permissions for {{site.data.keyword.bpshort}} KMS" caption-side="top"}

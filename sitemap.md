@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-09-22"
 
 keywords: schematics
 subcollection: schematics
@@ -63,7 +63,7 @@ subcollection: schematics
 
     * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
-    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions)
+    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
 
     * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
@@ -920,7 +920,7 @@ subcollection: schematics
 
 [Running a workspace plan](/docs/schematics?topic=schematics-sch-plan-wks#sch-plan-wks)
 
-* [Before you begin](/docs/schematics?topic=schematics-sch-plan-wks#display-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-sch-plan-wks#plan-prerequisites)
 
 * [Generate a workspace plan using the UI](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-ui)
 
@@ -940,11 +940,11 @@ subcollection: schematics
 
 [Running a workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#sch-deploy-wks)
 
-* [Before you begin](/docs/schematics?topic=schematics-sch-deploy-wks#display-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-prerequisites)
 
 * [Perform a workspace apply using the UI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-ui)
 
-    * [Verifying workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-list-ui)
+    * [Verifying workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-deploy-ui)
 
 * [Perform a workspace apply using the CLI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-cli)
 
@@ -1123,7 +1123,7 @@ subcollection: schematics
 
 [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-estimation)
 
-* [Viewing the costs for your infrastructure](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
+* [Viewing the infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
 
 * [Accepting the estimated cost](/docs/schematics?topic=schematics-cost-estimation#cost-accept)
 
@@ -1921,7 +1921,7 @@ subcollection: schematics
 
 [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#agent-beta1-limitations)
 
-* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta-limitation)
+* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta1-limitation)
 
 * [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-public-slack)
 
