@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-09-26"
 
 keywords: schematics
 subcollection: schematics
@@ -1464,7 +1464,7 @@ subcollection: schematics
 
 [Location based access](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
 
-* [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
+* [Manage location settings in the catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
 
 
 ## Job execution and queuing

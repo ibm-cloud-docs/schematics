@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-09-26"
 
 keywords: blueprint get, blueprint list, blueprint, get, list,
 
@@ -262,7 +262,7 @@ OK
 {: #display-blueprint-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about configuration of the blueprint and its outputs, refer to, [Display blueprint](/apidocs/schematics/schematics#get-blueprint) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information about configuration of the blueprint and its outputs, refer to, [Display blueprint](/apidocs/schematics/schematics#get-blueprint) by using API.
 
 Blueprint display API `blueprint_list` runs the configuration of the blueprint and detailed output.
 {: important}
@@ -568,7 +568,7 @@ Output
 ```
 {: screen}
 
-For more information, about how to diagnose and resolve issues if the list job fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
+For more information about how to diagnose and resolve issues if the list job fails, refer to the [Troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails&interface=cli).
 
 ## Next steps
 {: #bp-display-nextsteps}
