@@ -77,9 +77,9 @@ You are suggested always to migrate from your in use version of Terraform to the
 | Terraform v1.0 |	May 2022 | September 2023 | September 2024	|	
 | Terraform v1.1 |  September 2022 | September 2023 | September 2024	|	
 | Terraform v1.2 |  March 2023 | March 2024	|	March 2025	|	
-| Terraform v1.3 |  December 2023 | Earliest July 2024	|  Earliest	July 2025	|	
-| Terraform v1.4 |	December 2023 | Earliest September 2024  |  Earliest September 2025 |	
-| Terraform v1.5 |	Expected end of December 2023 | Earliest September 2024  |  Earliest September 2025 |
+| Terraform v1.3 |  End of December 2023 | Earliest July 2024	|  Earliest	July 2025	|	
+| Terraform v1.4 |	End of December 2023 | Earliest September 2024  |  Earliest September 2025 |	
+| Terraform v1.5 |	End of December 2023 | Earliest September 2024  |  Earliest September 2025 |
 {: caption="Deprecation timeline as on 26th September, 2023." caption-side="top"}
 
 ## User actions
