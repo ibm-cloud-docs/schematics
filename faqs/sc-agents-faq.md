@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-09-26"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -136,7 +136,7 @@ Yes, an agent can run {{site.data.keyword.bpshort}} Jobs related to workspace or
 {: faq}
 {: support}
 
-Agents are associated with {{site.data.keyword.bpshort}} regions and geographies and can only execute jobs for the parent {{site.data.keyword.bpshort}} geography, e.g. North America or Europe.  
+Agents are associated with {{site.data.keyword.bpshort}} regions and geographies and can only execute jobs for the parent {{site.data.keyword.bpshort}} geography, for example, North America or Europe.  
 
 The Agent periodically polls the regional endpoint of the {{site.data.keyword.bpshort}} service instance, to fetch and run jobs. It can connect to only one regional endpoint (home). For example, if an agent is deployed on a cluster in Sydney and has been configured to use the {{site.data.keyword.bpshort}} `eu-de` regional endpoint as it’s home location. The agent polls for jobs in `eu-de` region. Hence, the workspace or action to deploy resources using the Sydney agent must be created in the `eu-de` region. 
 

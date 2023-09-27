@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-21"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -29,6 +29,8 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for September 2023.
 {: shortdesc}
 
+
+
 ### 12 September 2023
 {: #schematics-sept1723}
 {: release-note}
@@ -37,7 +39,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.12](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 Release {{site.data.keyword.bpshort}} agent migration page 
-:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta2` version](https://cloud.ibm.com/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta2).
+:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta2` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta2).
 
 ## August 2023
 {: #August-2023}
@@ -55,7 +57,7 @@ Release {{site.data.keyword.bpshort}} agent migration page
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
 ### 23 August 2023
-{: #schematics-aug252023}
+{: #schematics-aug232023}
 {: release-note}
 
 :   [Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform v0.x](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.

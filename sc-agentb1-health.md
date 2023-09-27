@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-09-26"
 
 keywords: schematics agent health, agent health, health
 
@@ -96,7 +96,7 @@ The following table describes the list of agent and Kubernetes health properties
 {: #health-agentb1-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about agent health API, see [get an agent health check](/apidocs/schematics/schematics_internal_v1#get-health-check-agent-job) job status. The agent health API displays the health status of your deployed agent.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information about agent health API, see [get an agent health check](/apidocs/schematics/schematics_internal_v1#get-health-check-agent-job) job status. The agent health API displays the health status of your deployed agent.
 {: shortdesc}
 
 Example

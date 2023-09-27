@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-21"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -65,7 +65,7 @@ Explore the following sections to get into the details of working with blueprint
 ### Deleting blueprints
 {: #bp-delete}
 
-[Deleting blueprints](https://cloud.ibm.com/docs/schematics?topic=schematics-delete-blueprint): Finally the application or service that is hosted in the environment gets retired or rehost into a new environment. The environment is removed by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. 
+[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprint): Finally the application or service that is hosted in the environment gets retired or rehost into a new environment. The environment is removed by destroying the deployed resources, stopping billing for any chargeable resources and deleting the blueprint configuration from {{site.data.keyword.bpshort}}. 
   
 ## Next steps
 {: #working-bp-nextsteps}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-16"
+lastupdated: "2023-09-26"
 
 keywords: schematics
 subcollection: schematics
@@ -34,7 +34,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
-[Using Agents to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
+[Using Actions to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
 * [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
 
@@ -50,30 +50,6 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-software#whats-next)
 
-[Using Blueprints to deploy large-scale cloud environments](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints)
-
-* [Deploy blueprint through UI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-ui)
-
-    * [Creating a blueprint in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create-ui)
-
-    * [Applying the blueprint configuration to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-apply-ui)
-
-    * [Displaying the blueprint](/docs/schematics?topic=schematics-get-started-blueprints#get-started-bp-list-ui)
-
-    * [Next steps](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-nextsteps-ui)
-
-* [Deploy a blueprint using the CLI](/docs/schematics?topic=schematics-get-started-blueprints#deploy-bp-cli)
-
-    * [Before you begin](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-prereq)
-
-    * [Select a blueprint template](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-select)
-
-    * [Creating a blueprint in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-create)
-
-    * [Applying the blueprint to create cloud resources](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-install)
-
-    * [Next steps](/docs/schematics?topic=schematics-get-started-blueprints#get-started-blueprints-nextsteps)
-
 
 ## About
 {: #sitemap_about}
@@ -85,11 +61,9 @@ subcollection: schematics
 
 * [{{site.data.keyword.bpshort}} IaC offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings)
 
-    * [{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-learn-about-schematics#sc-blueprints)
-
     * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
-    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions)
+    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
 
     * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
@@ -157,14 +131,6 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-agentb1-about-intro#nextsteps-agentb1-arch)
 
-[{{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro#blueprint-intro)
-
-* [Overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview)
-
-* [Features](/docs/schematics?topic=schematics-blueprint-intro#blueprint-features)
-
-* [Next steps](/docs/schematics?topic=schematics-blueprint-intro#nextsteps-bp-arch)
-
 [Understanding {{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
 
 * [Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
@@ -172,8 +138,6 @@ subcollection: schematics
 * [Configuration management with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
 
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
-
-* [Next steps](/docs/schematics?topic=schematics-how-it-works#usecase-nextsteps)
 
 [Your responsibilities when using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-sc-responsibilities#sc-responsibilities)
 
@@ -337,7 +301,7 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} agent migration page 
 
-    * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug252023)
+    * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug232023)
 
 * [May 2023](/docs/schematics?topic=schematics-schematics-relnotes#may-2023)
 
@@ -895,282 +859,6 @@ subcollection: schematics
 * [Refreshing {{site.data.keyword.cloud_notm}} IAM access tokens and obtaining new tokens with the API](/docs/schematics?topic=schematics-setup-api#api_refresh)
 
 
-## Working with Blueprints
-{: #sitemap_working_with_blueprints}
-
-
-
-### Understanding Blueprints
-{: #sitemap_understanding_blueprints}
-
-
-[Understanding blueprints and environments](/docs/schematics?topic=schematics-work-with-blueprints#work-with-blueprints)
-
-* [Cloud infrastructure lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#cloud-infra-lifecycle)
-
-* [Working with environments and the blueprint lifecycle](/docs/schematics?topic=schematics-work-with-blueprints#bp-working-env)
-
-    * [Defining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-define)
-
-    * [Deploying blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-deploy)
-
-    * [Maintaining blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-maintain)
-
-    * [Deleting blueprints](/docs/schematics?topic=schematics-work-with-blueprints#bp-delete)
-
-* [Next steps](/docs/schematics?topic=schematics-work-with-blueprints#working-bp-nextsteps)
-
-[Scaling environments](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling)
-
-* [Remote state data sources](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-remotestate)
-
-* [Orchestration and modules](/docs/schematics?topic=schematics-blueprint-scaling#blueprint-scaling-orchestration)
-
-[Defining blueprints](/docs/schematics?topic=schematics-define-blueprints#define-blueprints)
-
-* [Creating templates, inputs and configuration](/docs/schematics?topic=schematics-define-blueprints#define-templates-input)
-
-* [Steps to define a blueprint](/docs/schematics?topic=schematics-define-blueprints#define-blueprint-steps)
-
-* [Next steps](/docs/schematics?topic=schematics-define-blueprints#define-nextsteps)
-
-[Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints#deploy-blueprints)
-
-* [Next steps](/docs/schematics?topic=schematics-deploy-blueprints#deploy-nextsteps)
-
-[Maintaining blueprints](/docs/schematics?topic=schematics-update-op-blueprints#update-op-blueprints)
-
-* [Updating blueprint environments](/docs/schematics?topic=schematics-update-op-blueprints#update-multistep)
-
-* [Next steps](/docs/schematics?topic=schematics-update-op-blueprints#operate-nextsteps)
-
-[Deleting blueprints](/docs/schematics?topic=schematics-delete-blueprints#delete-blueprints)
-
-* [Next steps](/docs/schematics?topic=schematics-delete-blueprints#delete-nextsteps)
-
-[Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-templates)
-
-* [Blueprint configuration](/docs/schematics?topic=schematics-blueprint-templates#blueprint-temp-config)
-
-* [Blueprint template overview](/docs/schematics?topic=schematics-blueprint-templates#template-overview)
-
-    * [Blueprint template YAML file](/docs/schematics?topic=schematics-blueprint-templates#blueprint-yaml-file)
-
-    * [Template inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-statements)
-
-    * [Template outputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-output)
-
-    * [Module definitions](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module)
-
-* [Input files](/docs/schematics?topic=schematics-blueprint-templates#blueprint-input-file)
-
-* [Dynamic inputs](/docs/schematics?topic=schematics-blueprint-templates#blueprint-dynamic-input)
-
-* [What's next?](/docs/schematics?topic=schematics-blueprint-templates#bp-def-whatsnext)
-
-[Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-terraform)
-
-* [Root modules and Terraform configurations](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-root-module-config)
-
-* [Child and reusable shared modules](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-reusable-module)
-
-* [Blueprints provider injection](/docs/schematics?topic=schematics-blueprint-terraform#bp-provider-injection)
-
-    * [Templating Terraform language statements](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-template-statement)
-
-    * [Configuring provider injection](/docs/schematics?topic=schematics-blueprint-terraform#blueprint-provider-injection)
-
-* [Next steps](/docs/schematics?topic=schematics-blueprint-terraform#bp-terraform-nextsteps)
-
-[Reuse and customization](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-reuse)
-
-* [Reuse across environments](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-reuse-env)
-
-    * [Deployment pipelines](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-pipelines)
-
-* [Customization best practice](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-customization-bp)
-
-    * [Blueprint customization](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-customization)
-
-* [Customizing environments with inputs](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-customization-layers)
-
-* [Using versioned inputs](/docs/schematics?topic=schematics-blueprint-reuse#bp-version-input)
-
-* [Blueprint input value precedence](/docs/schematics?topic=schematics-blueprint-reuse#blueprint-input-precedence)
-
-    * [No value](/docs/schematics?topic=schematics-blueprint-reuse#bp-precedence-novalue)
-
-    * [Default value](/docs/schematics?topic=schematics-blueprint-reuse#bp-precedence-defaultvalue)
-
-    * [Specified value](/docs/schematics?topic=schematics-blueprint-reuse#bp-precedence-specifiedvalue)
-
-[Versioning blueprint environments](/docs/schematics?topic=schematics-blueprint-versioning#blueprint-versioning)
-
-* [Relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-relaxed)
-
-    * [Creating environments using relaxed versioning](/docs/schematics?topic=schematics-blueprint-versioning#bp-relaxed-version)
-
-    * [Updating an un-versioned environment](/docs/schematics?topic=schematics-blueprint-versioning#bp-un-versioned-env)
-
-    * [Migrating to a versioned configuration](/docs/schematics?topic=schematics-blueprint-versioning#bp-versioned-env)
-
-* [Explicit versioning](/docs/schematics?topic=schematics-blueprint-versioning#update-blueprint-strict)
-
-    * [Specifying versioning at create time](/docs/schematics?topic=schematics-blueprint-versioning#bp-version-create-time)
-
-    * [Specifying versions at update time](/docs/schematics?topic=schematics-blueprint-versioning#bp-version-update-time)
-
-[Editing blueprint templates](/docs/schematics?topic=schematics-edit-blueprints#edit-blueprints)
-
-* [Configure your `VSCode` environment](/docs/schematics?topic=schematics-edit-blueprints#bp-config-vscode)
-
-* [Sourcing a blueprint template](/docs/schematics?topic=schematics-edit-blueprints#bp-select-template)
-
-* [Clone source template repo in Git](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo)
-
-* [Clone repo to local machine](/docs/schematics?topic=schematics-edit-blueprints#bp-clone-repo-local)
-
-* [Editing in `VSCode`](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-vscode)
-
-    * [Blueprint usage and configuration documentation](/docs/schematics?topic=schematics-edit-blueprints#bp-usage-config-doc)
-
-    * [Push edited template](/docs/schematics?topic=schematics-edit-blueprints#bp-push-template)
-
-* [Next steps](/docs/schematics?topic=schematics-edit-blueprints#bp-edit-nextsteps)
-
-[Create a blueprint configuration](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-config)
-
-* [Creating a blueprint configuration through the CLI](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-cli)
-
-    * [Verifying blueprint config creation](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-cli)
-
-* [Creating a blueprint configuration using the UI](/docs/schematics?topic=schematics-create-blueprint-config#bp-ui-create)
-
-    * [Verifying blueprint config creation using the UI](/docs/schematics?topic=schematics-create-blueprint-config#verify-blueprint-create-ui)
-
-* [Creating a blueprint configuration using the API](/docs/schematics?topic=schematics-create-blueprint-config#create-blueprint-api)
-
-    * [Verifying blueprint create using the API](/docs/schematics?topic=schematics-create-blueprint-config#verify-bp-create-api)
-
-* [Next steps](/docs/schematics?topic=schematics-create-blueprint-config#bp-create-nextsteps)
-
-[Update a blueprint configuration](/docs/schematics?topic=schematics-update-blueprint#update-blueprint)
-
-* [Update process](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-process)
-
-* [Updating a blueprint through CLI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-cli)
-
-    * [Verifying blueprint update](/docs/schematics?topic=schematics-update-blueprint#verify-update)
-
-* [Updating a blueprint environment using the UI](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-ui)
-
-    * [Verify blueprint update using the UI](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-ui)
-
-* [Updating a blueprint using the API](/docs/schematics?topic=schematics-update-blueprint#update-blueprint-api)
-
-    * [Verify blueprint create using the API](/docs/schematics?topic=schematics-update-blueprint#verify-bp-update-api)
-
-* [Next steps](/docs/schematics?topic=schematics-update-blueprint#bp-update-nextsteps)
-
-[Apply blueprint config changes to an environment](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint)
-
-* [Running a blueprint apply through CLI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-cli)
-
-    * [Verify blueprint run apply success](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-cli)
-
-* [Generate and apply blueprint environment through UI](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-ui)
-
-    * [Verify blueprint apply operation through UI](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-ui)
-
-* [Applying a blueprint using the API](/docs/schematics?topic=schematics-apply-blueprint#apply-blueprint-api)
-
-    * [Verify Blueprint apply job through API](/docs/schematics?topic=schematics-apply-blueprint#bp-verify-apply-api)
-
-* [Next steps](/docs/schematics?topic=schematics-apply-blueprint#bp-apply-nextsteps)
-
-[Displaying blueprints](/docs/schematics?topic=schematics-list-blueprint#list-blueprint)
-
-* [Displaying blueprints using the UI](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-ui)
-
-* [Displaying blueprints using the CLI](/docs/schematics?topic=schematics-list-blueprint#listing-bp-cli)
-
-    * [Displaying blueprint details](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-cli)
-
-    * [Get blueprint summary](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-summary)
-
-    * [Get blueprint outputs](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-outputs-cli)
-
-    * [Get blueprint module details](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-summary-cli)
-
-* [Displaying blueprint using the API](/docs/schematics?topic=schematics-list-blueprint#display-blueprint-api)
-
-* [Next steps](/docs/schematics?topic=schematics-list-blueprint#bp-display-nextsteps)
-
-[Displaying blueprint jobs](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs)
-
-* [Viewing blueprint job results using the UI](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-ui)
-
-* [Listing blueprint jobs using the CLI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-cli)
-
-* [Viewing blueprint job results using the CLI](/docs/schematics?topic=schematics-list-blueprint-jobs#view-blueprint-job-get-cli)
-
-    * [Blueprint job get](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-cli)
-
-    * [Blueprint job get summary log](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-get-drilldown-cli)
-
-    * [Viewing blueprint job logs](/docs/schematics?topic=schematics-list-blueprint-jobs#blueprint-job-log-cli)
-
-* [List blueprint jobs using the UI](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-jobs-ui)
-
-* [Listing blueprints using the API](/docs/schematics?topic=schematics-list-blueprint-jobs#list-blueprint-api)
-
-    * [Verifying blueprint job results using the API](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-verify-jobs-api)
-
-* [Next steps](/docs/schematics?topic=schematics-list-blueprint-jobs#bp-job-nextsteps)
-
-[Destroy a blueprint environment](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint)
-
-* [Destroying a blueprint environment using the UI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-ui)
-
-    * [Verifying blueprint environment destroy](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destroy-ui)
-
-* [Destroying a blueprint environment using the CLI](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-cli)
-
-    * [Verifying blueprint destroy success](/docs/schematics?topic=schematics-destroy-blueprint#verify-bp-destroy-cli)
-
-* [Destroying blueprint environment using the API](/docs/schematics?topic=schematics-destroy-blueprint#destroy-blueprint-api)
-
-    * [Verifying blueprint destroy using the API](/docs/schematics?topic=schematics-destroy-blueprint#bp-verify-display-api)
-
-* [Next steps](/docs/schematics?topic=schematics-destroy-blueprint#bp-destroy-nextsteps)
-
-[Delete a blueprint configuration](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint)
-
-* [Deleting a blueprint config using the CLI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-cli)
-
-    * [Verifying blueprint config deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-cli)
-
-* [Deleting a blueprint config using the UI](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-ui)
-
-    * [Verifying blueprint config deletion](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-deletion-ui)
-
-* [Deleting a blueprint config using the API](/docs/schematics?topic=schematics-delete-blueprint#delete-blueprint-api)
-
-    * [Verifying blueprint delete using the API](/docs/schematics?topic=schematics-delete-blueprint#verify-bp-delete-api)
-
-* [Next steps](/docs/schematics?topic=schematics-delete-blueprint#bp-delete-nextsteps)
-
-[Creating blueprints via the CLI using a config file](/docs/schematics?topic=schematics-create-blueprint-file#create-blueprint-file)
-
-* [Using a config file](/docs/schematics?topic=schematics-create-blueprint-file#bp-create-config)
-
-* [Defining a JSON config file](/docs/schematics?topic=schematics-create-blueprint-file#bp-create-configJSON)
-
-[Using environment variables with blueprints](/docs/schematics?topic=schematics-bp-env-vars#bp-env-vars)
-
-* [Blueprints usage](/docs/schematics?topic=schematics-bp-env-vars#usage)
-
-
 ## Working with Workspaces
 {: #sitemap_working_with_workspaces}
 
@@ -1232,7 +920,7 @@ subcollection: schematics
 
 [Running a workspace plan](/docs/schematics?topic=schematics-sch-plan-wks#sch-plan-wks)
 
-* [Before you begin](/docs/schematics?topic=schematics-sch-plan-wks#display-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-sch-plan-wks#plan-prerequisites)
 
 * [Generate a workspace plan using the UI](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-ui)
 
@@ -1252,11 +940,11 @@ subcollection: schematics
 
 [Running a workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#sch-deploy-wks)
 
-* [Before you begin](/docs/schematics?topic=schematics-sch-deploy-wks#display-prerequisites)
+* [Before you begin](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-prerequisites)
 
 * [Perform a workspace apply using the UI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-ui)
 
-    * [Verifying workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-list-ui)
+    * [Verifying workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-deploy-ui)
 
 * [Perform a workspace apply using the CLI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-cli)
 
@@ -1432,6 +1120,12 @@ subcollection: schematics
     * [Creating and viewing the detect drift logs using the CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
 
 * [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
+
+[Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-estimation)
+
+* [Viewing the infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-deploy)
+
+* [Accepting the estimated cost](/docs/schematics?topic=schematics-cost-estimation#cost-accept)
 
 [Remote state and cross-workspace access](/docs/schematics?topic=schematics-remote-state#remote-state)
 
@@ -1770,7 +1464,7 @@ subcollection: schematics
 
 [Location based access](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#access-ibm-cloud-catalog)
 
-* [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
+* [Manage location settings in the catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog#configure-location)
 
 
 ## Job execution and queuing
@@ -1997,45 +1691,6 @@ subcollection: schematics
 * [What's next?](/docs/schematics?topic=schematics-private-catalog#private_what's_next)
 
 
-## Deploying a {{site.data.keyword.bpshort}} blueprint using the command line
-{: #sitemap_deploying_a_blueprint_using_the_command_line}
-
-
-[Deploying a {{site.data.keyword.bpshort}} blueprint using the command line](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#deploy-schematics-blueprint-cli)
-
-* [Select a blueprint template](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#select-schematics-blueprint-cli)
-
-* [Create the blueprint configuration](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#create-schematics-blueprint-cli)
-
-    * [Syntax](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-syntax)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step1-output)
-
-* [Apply blueprint to deploy environment](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#install-schematics-blueprint-cli)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step3-output)
-
-* [View blueprint job logs](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#view-schematics-blueprint-cli)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#viewing-output)
-
-* [Access and test the blueprint environment resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint)
-
-    * [Using the cloud UI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-ui)
-
-    * [Using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#review-schematics-blueprint-cli)
-
-* [Destroy blueprint cloud resources](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#destroy-schematics-blueprint-cli)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step5-output)
-
-* [Delete the blueprint](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#delete-schematics-blueprint-cli)
-
-    * [Output](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#step6-output)
-
-* [Next steps](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli#nextsteps-schematics-blueprint-cli)
-
-
 ## Deploying a VPC environment with bastion host on IBM Cloud
 {: #sitemap_deploying-a-vpc-environment-with-bastion-host-on-ibm-cloud}
 
@@ -2260,101 +1915,13 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## Blueprint template reference
-{: #sitemap_blueprint_template_reference}
-
-
-[Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-template-schema-yaml)
-
-* [Global preface](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-parameters)
-
-    * [name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-name)
-
-    * [type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-type)
-
-    * [`schema_version`](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-schema-version)
-
-    * [description](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-description)
-
-    * [tags](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-tags)
-
-    * [inputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-inputs)
-
-    * [outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-outputs)
-
-    * [settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-settings)
-
-* [Module parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-schema)
-
-    * [modules.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-name)
-
-    * [modules.module_type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-moduletype)
-
-    * [modules.source options](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-sourceoptions)
-
-    * [modules.source.source_type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-source-type)
-
-    * [modules.source.git.git_repo_url](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-repo-url)
-
-    * [modules.source.git.git_branch](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-branch)
-
-    * [modules.source.git.git_release](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-release)
-
-    * [modules.source.git.git_token](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-git-token)
-
-    * [modules.settings](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-settings)
-
-    * [modules.inputs options](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-options)
-
-    * [modules.inputs.name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-name)
-
-    * [modules.inputs.type](/docs/schematics?topic=schematics-bp-template-schema-yaml#module-inputs-type)
-
-    * [modules.inputs.value](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-inputs-value)
-
-    * [module.outputs](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-module-outputs)
-
-    * [module.injectors options](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-injector)
-
-    * [module.injectors.tft_git_url](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-module-tft-git-url)
-
-    * [module.injectors.tft_name](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-module-tft-name)
-
-    * [module.injectors.injection_type](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-module-injection-type)
-
-    * [module.injectors.tft_parameters](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-modules-tft-parameters)
-
-[Blueprints input file YAML Schema](/docs/schematics?topic=schematics-bp-input-schema-yaml#bp-input-schema-yaml)
-
-* [Defining input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#define-input-value)
-
-* [Complex input values](/docs/schematics?topic=schematics-bp-input-schema-yaml#complex-input-value)
-
-
-## Beta code for {{site.data.keyword.bpshort}} Blueprints
-{: #sitemap_beta_code_for_blueprints}
-
-
-[Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-limitations)
-
-* [Beta changes October 2022](/docs/schematics?topic=schematics-bp-beta-limitations#bp-beta-changes-oct)
-
-* [Beta release limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation)
-
-* [Beta release known issues](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-knownissues)
-
-* [Joining public slack channel](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-public-slack)
-
-    * [Steps to join public slack](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-join-slack)
-
-
 ## Beta-1 code for {{site.data.keyword.bpshort}} Agent
 {: #sitemap_beta-1_code_for_agent}
 
 
 [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#agent-beta1-limitations)
 
-* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta-limitation)
+* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta1-limitation)
 
 * [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-public-slack)
 
@@ -2415,6 +1982,8 @@ subcollection: schematics
 * [What is the use of refresh token header?](/docs/schematics?topic=schematics-schematics-limitations#refresh-token)
 
 * [Git repo restrictions](/docs/schematics?topic=schematics-schematics-limitations#git-restrictions)
+
+* [Cost estimate](/docs/schematics?topic=schematics-schematics-limitations#cost-restrictions)
 
 
 ## {{site.data.keyword.bpshort}} terminology
@@ -2902,41 +2471,6 @@ subcollection: schematics
 [Why can't {{site.data.keyword.bpshort}} find your resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
 
 [Why are you getting 5xx HTTP errors?](/docs/schematics?topic=schematics-server-errors#server-errors)
-
-
-### Troubleshooting blueprints
-{: #sitemap_troubleshooting_blueprints}
-
-
-[Blueprint create fails](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails)
-
-* [Blueprint create fails with an invalid blueprint template: failed to clone Git repository error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails1)
-
-* [Blueprint create fails with an invalid blueprint template: unable to find file error](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails2)
-
-* [Blueprint create fails with the requested resource group as invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails3)
-
-* [Blueprint create fails with the error blueprint JSON validation failed: field missing or invalid in config](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails4)
-
-* [Blueprint create fails with the error blueprint JSON validation failed - field missing or invalid](/docs/schematics?topic=schematics-bp-create-fails#bp-create-fails5)
-
-* [Why is {{site.data.keyword.bpshort}} not able to clone the private GitHub repository?](/docs/schematics?topic=schematics-bp-create-fails#tsg-privategithub)
-
-* [Why is {{site.data.keyword.bpshort}} not able to clone the public GitHub repository?](/docs/schematics?topic=schematics-bp-create-fails#tsg-publicgithub)
-
-[blueprint create fails in the `create_init` step](/docs/schematics?topic=schematics-bp-create-init-fails#bp-create-init-fails)
-
-[Blueprint apply fails](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails)
-
-* [Blueprint apply fails with message "Install of module Failed"](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails1)
-
-* [Blueprint apply failure due to Terraform config coding error](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails2)
-
-* [Blueprint apply failure due to Terraform timeouts or transient failures](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails3)
-
-* [Blueprint apply failures that require changes to values in input files](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails4)
-
-* [Blueprint apply failures that require changes to dynamic inputs](/docs/schematics?topic=schematics-bp-apply-fails#bp-apply-fails5)
 
 
 ### Troubleshooting Agents

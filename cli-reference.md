@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-09-26"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -855,7 +855,7 @@ ibmcloud schematics agent update --id <AGENT_ID>
 {{site.data.keyword.bpshort}} Policy is a beta feature that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
 {: beta}
 
-{{site.data.keyword.bpshort}} (assignment) policies tell Schematics which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. See [assignment polices](/docs/schematics?topic=schematics-policy-manage&interface=cli).
+{{site.data.keyword.bpshort}} (assignment) policies tell Schematics which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. See [assignment policies](/docs/schematics?topic=schematics-policy-manage&interface=cli).
 
 ### `ibmcloud schematics policy create`
 {: #schematics-policy-create}
@@ -2055,7 +2055,7 @@ Review the commands to create, update, list, delete and work with your {{site.da
 ### `ibmcloud schematics inventory create`
 {: #schematics-create-inv}
 
-Create a [resource inventory](https://cloud.ibm.com/docs/schematics?topic=schematics-inventories-setup) in {{site.data.keyword.bplong_notm}} that you can use with a {{site.data.keyword.bpshort}} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
+Create a [resource inventory](/docs/schematics?topic=schematics-inventories-setup) in {{site.data.keyword.bplong_notm}} that you can use with a {{site.data.keyword.bpshort}} action. A resource inventory includes all the target hosts where you want to run an Ansible playbook. You can create an inventory by using a payload file or the interactive mode.
 {: shortdesc}
 
 Syntax
@@ -3260,7 +3260,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source control repository that you want to apply in {{site.data.keyword.cloud_notm}}. To find the ID of your workspace, run `ibmcloud schematics workspace list` command.|
 | `--target` or `-t` | Optional | Target the creation of a specific resource of your Terraform configuration file by entering the Terraform resource address, such as `ibm_is_instance.vm1`. All other resources that are defined in your configuration file is not created or updated. To target the creation of multiple resources, use the following syntax: `--target <resource1> --target <resource2>`. If the targeted resource specifies the `count` attribute and no index is specified in the resource address, such as `ibm_is_instance.vm1[1]`, all instances that share the same resource name are targeted for creation.|
-| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. Variables must be defined in single line format e.g. as `availability_zone_names = ["us-east-1a","us-west-1c"]`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
+| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. Variables must be defined in single line format for example, as `availability_zone_names = ["us-east-1a","us-west-1c"]`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--force` or `-f` | Optional | Force the execution of this command without user prompts. |
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. |
@@ -3395,7 +3395,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--id` or `-i` | Required |  The unique identifier of the workspace that points to the Terraform template in your source repository that you want to scan. To find the ID of a workspace, run `ibmcloud schematics workspace list` command.|
-| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. Variables must be defined in single line format e.g. as `availability_zone_names = ["us-east-1a","us-west-1c"]`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
+| `--var-file` or `--vf` | Optional |  The file path to the `terraform.tfvars` file that you created on your local machine. Use this file to store sensitive information, such as the {{site.data.keyword.cloud_notm}} API key or credentials to connect to {{site.data.keyword.cloud_notm}} classic infrastructure in the format `<key>=<value>`. Variables must be defined in single line format for example, as `availability_zone_names = ["us-east-1a","us-west-1c"]`. All key value pairs that are defined in this file are automatically loaded into Terraform when you initialize the Terraform CLI. To specify multiple `tfvars` files, specify `--var-file TFVARS_FILE_PATH1 --var-file TFVARS_FILE_PATH2`.|
 | `--json` or `-j` | Deprecated | Prints the output in the JSON format. Use `--output` JSON instead.|
 | `--output` or `-o` | Optional | Returns the command-line output in JSON format. Currently only `JSON` file format is supported. |
 {: caption="{{site.data.keyword.bpshort}} output flags" caption-side="top"}
@@ -3692,7 +3692,7 @@ The table provides the list of key parameters of the JSON file for the `Commands
 | ------ | -------- | ---------- |
 |`command`| Required |Provide the command. Supported commands are `show`,`taint`, `untaint`, `state`, `import`, `output`.|
 |`command_params`| Required | The address parameters for the command name for `CLI`, such as resource name, absolute path of the file name. For API, you have to send option flag and address parameter in `command_params`.|
-|`command_name`| Optional | The name for the command block.|
+|`command_name`| Required | The name for the command block.|
 |`command_desc`| Optional | The text to describe the command block.|
 |`command_onError`| Optional |  Instruction to continue or break in case of error in the command. |
 |`command_dependsOn`|Optional| Dependency on the previous commands.|

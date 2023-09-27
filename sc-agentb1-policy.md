@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-09-26"
 
 keywords: schematics agent, agent policy, policies
 
@@ -294,7 +294,7 @@ Initiating policy delete...
 {: #agentb1-policydm-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information, about agent policy API, see [agent policy APIs](/apidocs/schematics/schematics) job status.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API. For more information about agent policy API, see [agent policy APIs](/apidocs/schematics/schematics) job status.
 {: shortdesc}
 
 ### Example to create a policy using the API

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-09-21"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -26,7 +26,7 @@ Agents for {{site.data.keyword.bplong}} extend its ability to work directly with
 
 Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} agent. 
 
-1. [Create an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#deploy-agent-cli) to manage the agent deployment.
+1. [Create an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli) to manage the agent deployment.
     This step initializes {{site.data.keyword.bpshort}} with the agent configuration that will subsequently be used to deploy your agent to its target location. 
 2. [Deploy the agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) using the [ibmcloud schematics agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [ibmcloud schematics agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) CLI commands or the corresponding APIs.
 
