@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-26"
+lastupdated: "2023-09-28"
 
 keywords: schematics
 subcollection: schematics
@@ -150,13 +150,6 @@ subcollection: schematics
 * [Security and regulation compliance](/docs/schematics?topic=schematics-sc-responsibilities#security-reg-compliance)
 
 * [Disaster recovery](/docs/schematics?topic=schematics-sc-responsibilities#disaster-recovery)
-
-
-## Internal adopters
-{: #sitemap_internal_adopters}
-
-
-[IBM Cloud Schematics internal_v1.0 API](https://test.cloud.ibm.com/apidocs/schematics/schematics_internal_v1){: external}
 
 
 ## Security and compliance
