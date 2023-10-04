@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-10-04"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -22,6 +22,19 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 {{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
+
+## October 2023
+{: #October-2023}
+
+Review the release notes for October 2023.
+{: shortdesc}
+
+### 04 October 2023
+{: #schematics-oct0423}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} infrastructure cost estimator 
+:   The {{site.data.keyword.bpshort}} [infrastructure cost estimator](/docs/schematics?topic=schematics-cost-estimation) is released. You can now [verify your workspace plan](/docs/schematics?topic=schematics-sch-deploy-wks&interface=ui#verify-wks-list-ui) to view the results of the workspace apply job.
 
 ## September 2023
 {: #September-2023}

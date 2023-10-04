@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-07"
+  years: 2017, 2023
+lastupdated: "2023-10-04"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -43,9 +43,9 @@ The parameter error represents that all the required or optional {{site.data.key
 {: #param-msg}
 
 - Action name cannot be empty.
-- Action name should contain maximum of 65 character. {{.Count}} character found.
-- Action name should be unique. {{.Name}} already exists.
-- Bad Request. Error occurred while processing the {{.Method}} request.
+- Action name should contain maximum of 65 character. Count character found.
+- Action name should be unique. Name already exists.
+- Bad Request. Error occurred while processing the Method request.
 - Action ID is correct.
 - The requested action cannot be located. Check that the action ID is correct and try your request again.
 
@@ -62,7 +62,7 @@ The {{site.data.keyword.bpshort}} Actions instance and resources are overloaded 
 #### Message
 {: #svc-msg}
 
-- Internal Service Error occurred during {{.Method}} request, wait a minute and try again. If you still encounter this problem contact the [{{site.data.keyword.cloud}} support](/docs/get-support?topic=get-support-using-avatar).
+- Internal Service Error occurred during Method request, wait a minute and try again. If you still encounter this problem contact the [{{site.data.keyword.cloud}} support](/docs/get-support?topic=get-support-using-avatar).
 
 #### Resolve
 {: #svc-resolve}
@@ -90,10 +90,10 @@ While processing the create, delete, update action, the {{site.data.keyword.bpsh
 - Action is ready for execution. The configuration and settings cannot be edited.
 - Action is in draft. Please add a Git repository.
 - Action is ready, Job cannot be executed. Check the Job status.
-- Action state is {{.State}} and could not process the request
+- Action state could not process the request
 - The requested object cannot be located. Check that the ID is correct and try your request again.
 - Playbook not selected to create a Job. Please select a playbook name.
-- Unable to delete the action. Action current status: {{.Status}}.
+- Unable to delete the action. Action current status.
 
 #### Resolve
 {: #state-resolve}
@@ -110,8 +110,8 @@ The {{site.data.keyword.bpshort}} jobs displays a list of jobs and their state a
 {: #state-jobmsg}
 
 - Job processing error.
-- Unable to delete the job. Job current status: {{.Status}}
-- The Job was temporarily locked by {{.User}} at {{.Time}}. Please wait until any current Job execution have completed.
+- Unable to delete the job. Job current status.
+- The Job was temporarily locked by User at Time. Please wait until any current Job execution have completed.
 - Playbook not selected to create a Job. Please select a playbook name.
 
 #### Resolve
