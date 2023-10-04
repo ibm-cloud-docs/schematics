@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-10-04"
 
 keywords: schematics agent, agent, beta-1 release, agent beta-1 release
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
 # Beta-1 code for {{site.data.keyword.bpshort}} Agent
@@ -79,4 +79,5 @@ The following are the limitation of agent beta-1.
 
 1. Do not support destroying an agent resources feature.
 2. Agent migration is done only through {{site.data.keyword.containerlong_notm}} dashboard namespace configuration.
+
 
