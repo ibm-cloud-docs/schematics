@@ -280,6 +280,10 @@ subcollection: schematics
 
     * Review the release notes for October 2023.
 
+    * [05 October 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct0523)
+
+        * The {{site.data.keyword.bpshort}} Agent supports private catalog
+
     * [04 October 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct0423)
 
         * Release {{site.data.keyword.bpshort}} infrastructure cost estimator 
@@ -302,7 +306,7 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} agent migration page 
 
-    * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug232023)
+    * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2323)
 
 * [May 2023](/docs/schematics?topic=schematics-schematics-relnotes#may-2023)
 
@@ -1740,7 +1744,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
 
-* [Agents beta-1 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
+* [Agents beta-2 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
     * [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
@@ -2238,6 +2242,8 @@ subcollection: schematics
 * [Are Schematics Agents the same as Terraform Cloud Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-agent)
 
 * [Do the agents run on IBM Cloud cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-run)
+
+* [What are the minimum cluster configuration needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 

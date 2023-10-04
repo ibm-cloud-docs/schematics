@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-26"
+lastupdated: "2023-10-04"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
 {{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
@@ -390,4 +390,18 @@ Agents beta-1 does not support backward compatibility. You need to create a new 
 {: support}
 
 Schematics Agents can run only Terraform and Ansible workloads. For the Beta, the agents are deployed in IBM Cloud IKS Clusters in the user account.
+
+## What are the minimum cluster configuration needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?
+{: #faqs-agent-min-cluster-conf}
+{: faq}
+{: support}
+
+For the {{site.data.keyword.vsi_is_full}} or {{site.data.keyword.containerlong}} cluster. You need `9` minimum number of nodes, with a `bx2.4x16` flavor, and edit the following agent microservices deployments to have the prescribed replica count.
+
+| Microservice | Number of replicas |
+| -- | -- |
+| jobrunner | 4 |
+| sandbox | 8 |
+| runtime-ws | 16 |
+{: caption="agent microservice deployments" caption-side="bottom"}
 

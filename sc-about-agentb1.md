@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-28"
+lastupdated: "2023-10-04"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -12,7 +12,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
 {{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
@@ -49,7 +49,7 @@ The agent runtime includes `Terraform`, `Ansible`, and additional micro-services
 ## Private network configuration when using agents
 {: #about-agentb1-networking}
 
-The following diagram illustrates a possible agent deployment model on a cluster in an environment with multiple VPCs connected via a transit gateway. Here an agent, running Terraform and Ansible jobs, has direct access to cloud resources over the private cloud network. In this deployment model, your Terraform or Ansible automations' can directly configure your cloud resources using SSH, without the need for bastion hosts to gain access via the public network.  
+The following diagram illustrates a possible agent deployment model on a cluster in an environment with multiple VPCs connected via a transit gateway. Here an agent, running Terraform and Ansible jobs, has direct access to cloud resources over the private cloud network. In this deployment model, your Terraform or Ansible automations' can directly configure your cloud resources by using SSH, without the need for bastion hosts to gain access via the public network.  
 
 ![{{site.data.keyword.bpshort}} Agents connectivity](images/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} Agents connectivity" caption-side="bottom"}
 
@@ -67,6 +67,7 @@ The following are some of the benefits of using agents with the {{site.data.keyw
 - **While your {{site.data.keyword.bpshort}} jobs are waiting in a shared queue for multiple tenants:** the corresponding jobs that run on the agents will not wait in any queue, and starts sooner. In other words, the workload from other tenants do not affect your performance and response time.
 - **If your automation needs special software or versions, and require more capacity (CPU, memory) to run:** The multi-tenanted {{site.data.keyword.bpshort}} service will not be able to handle it. Agents can be deployed and configured to use dedicated infrastructure to run your automation that can be scaled up or down depending on the capacity needs. In addition, Agent images can be extended to include or use your own automation software and versions in conjunction with automation engine provided by the {{site.data.keyword.bpshort}} runtime.
 - **The multi-tenanted {{site.data.keyword.bpshort}} service uses network access policies:** that cater to all its tenants, hence cannot be tuned to a single tenant requirements. Agents enables you to implement fine gained control over your network access policies to access your private network resources. You can configure the [ingress or egress](/docs/containers?topic=containers-vpc-kube-policies) rules and [VPC security policies](/docs/vpc?topic=vpc-security-in-your-vpc&interface=ui) that are used by Agents to connect to your hybrid cloud infrastructure.
+- **Agent supports [private catalogs](/docs/account?topic=account-restrict-by-user&interface=ui):** In the {{site.data.keyword.bpshort}} Agent `1.0.0-beta2` version you can onboard a Terraform template from private repository in [IBM GitLab (public network)](https://www.ibm.com/garage/method/practices/code/tool_gitlab/?_gl=1*pyjb9z*_ga*MTYzOTIwMTM2MC4xNjk2NDExMTgy*_ga_FYECCCS21D*MTY5NjQ0Mjg1Ni42LjEuMTY5NjQ0NzE0Ni4wLjAuMA..){: external}, and deploy the Terraform template from `User private catalog`. Run the [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-create) command to create a private catalog. Private catalogs provide a way for you to manage access to products for users in your account.
 
 ## Next steps
 {: #nextsteps-agentb1-arch}

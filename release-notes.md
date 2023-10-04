@@ -20,7 +20,7 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
 {: attention}
 
 ## October 2023
@@ -28,6 +28,14 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for October 2023.
 {: shortdesc}
+
+### 05 October 2023
+{: #schematics-oct0523}
+{: release-note}
+
+The {{site.data.keyword.bpshort}} Agent supports private catalog
+:   The {{site.data.keyword.bpshort}} Agent `1.0.0-beta2` version supports for [private catalog](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage).
+    - [Agent FAQ](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf) about the minimum cluster configuration to run 30 jobs on {{site.data.keyword.bpshort}} agent.
 
 ### 04 October 2023
 {: #schematics-oct0423}
@@ -70,7 +78,7 @@ Release {{site.data.keyword.bpshort}} agent migration page
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
 ### 23 August 2023
-{: #schematics-aug232023}
+{: #schematics-aug2323}
 {: release-note}
 
 :   [Announcement of {{site.data.keyword.bpshort}} deprecation of Terraform v0.x](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
@@ -100,7 +108,6 @@ Review the release notes for April 2023.
 
 {{site.data.keyword.bpshort}} documentation realigns the workspace documentation
 :   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
-
 
 ### 13 April 2023
 {: #schematics-apr1323}
