@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-28"
+lastupdated: "2023-10-04"
 
 keywords: schematics
 subcollection: schematics
@@ -275,6 +275,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [October 2023](/docs/schematics?topic=schematics-schematics-relnotes#October-2023)
+
+    * Review the release notes for October 2023.
+
+    * [04 October 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-oct0423)
+
+        * Release {{site.data.keyword.bpshort}} infrastructure cost estimator 
 
 * [September 2023](/docs/schematics?topic=schematics-schematics-relnotes#September-2023)
 
