@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-10-06"
 
 keywords: getting started with schematics, schematics tutorial, get started with terraform
 

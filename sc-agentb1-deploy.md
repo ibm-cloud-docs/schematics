@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-11-20"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -12,11 +12,6 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
-
-{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
-{: beta}
 
 # Deploying agents
 {: #deploy-agent-overview}
@@ -278,8 +273,8 @@ Example
         "infra_type": "ibm_kubernetes",
         "cluster_id": "cg3fgvad0dak571op4g0",
         "cluster_resource_group": "Default",
-        "cos_instance_name": "agent-beta-1-cos-instance",
-        "cos_bucket_name": "agent-beta-1-cos-bucket"
+        "cos_instance_name": "agent-cos-instance",
+        "cos_bucket_name": "agent-cos-bucket"
     },
     "user_state": {
         "state": "enable"
