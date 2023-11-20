@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-11-20"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,9 +20,6 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
-
 ## October 2023
 {: #October-2023}
 
@@ -34,7 +31,7 @@ Review the release notes for October 2023.
 {: release-note}
 
 The {{site.data.keyword.bpshort}} Agent supports private catalog
-:   The {{site.data.keyword.bpshort}} Agent `1.0.0-beta2` version supports for [private catalog](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage).
+:   The {{site.data.keyword.bpshort}} Agent `1.0.0-beta2` version supports for [private catalog](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage).
     - [Agent FAQ](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf) about the minimum cluster configuration to run 30 jobs on {{site.data.keyword.bpshort}} agent.
 
 ### 04 October 2023
@@ -154,7 +151,7 @@ The `terraform.tfstate` state file size maximum limit is less than 2 MB.
 {{site.data.keyword.bpshort}} Agent beta-1 release.
 :   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta1-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
-    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro).
+    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro).
     - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
     - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 
       - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
