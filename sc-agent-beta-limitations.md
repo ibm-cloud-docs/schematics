@@ -19,6 +19,8 @@ The Agent level of code is considered beta code as there will be changes in func
 
 Although Agent usage has no cost involved during beta, it will have a cost eventually in the GA timeframe. You will be updated in the documentation with the usage and the charges.
 
+
+
 Join our beta program, post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team. If you do not have access to this Slack, [request an invitation to this Slack](https://cloud.ibm.com/schematics/slack){: external}.
 
 Join the `#schematics-users` slack channel and post a message include the following information.
