@@ -12,8 +12,14 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
 # {{site.data.keyword.bpshort}} Agents
-{: #agent-about-intro}
+{: #agentb1-about-intro}
 
 {{site.data.keyword.bplong}} Agents extends {{site.data.keyword.bpshort}} ability to connect to your private Cloud infrastructure and on premise infrastructure. Deploy a dedicated agent on your private network, to enable {{site.data.keyword.bpshort}} to provision, configure, and securely access your private or on-premises resources, including converged-infrastructure, Git or Vault instances. 
 {: shortdesc}

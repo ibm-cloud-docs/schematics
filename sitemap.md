@@ -121,15 +121,15 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
 
-[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-about-intro#agent-about-intro)
+[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
 
-* [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-architecture)
+* [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
 
-* [Private network configuration when using agents](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-networking)
+* [Private network configuration when using agents](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-networking)
 
-* [Benefits of using Agents](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage)
+* [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
 
-* [Next steps](/docs/schematics?topic=schematics-agent-about-intro#nextsteps-agentb1-arch)
+* [Next steps](/docs/schematics?topic=schematics-agentb1-about-intro#nextsteps-agentb1-arch)
 
 [Understanding {{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
 
@@ -1300,15 +1300,15 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
-## Working with Agent
-{: #sitemap_working_with_agent}
+## Working with Agent Beta-1
+{: #sitemap_working_with_agent_beta-1}
 
 
 [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
 
 * [Planning agent network access and configuration](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-network-config)
 
-* [Agent capacity planning](/docs/schematics?topic=schematics-plan-agent-overview#agent-capacity-planning)
+* [Agent capacity planning](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-capacity-planning)
 
 * [Next steps](/docs/schematics?topic=schematics-plan-agent-overview#agent-plan-nextsteps)
 
@@ -1744,7 +1744,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
 
-* [Agents commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
+* [Agents beta-2 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
     * [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
@@ -1773,6 +1773,46 @@ subcollection: schematics
     * [`ibmcloud schematics policy update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-update)
 
     * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
+
+* [Agents beta-0 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd)
+
+    * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
+
+    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
+
+    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-list)
+
+    * [`ibmcloud schematics agents register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
+
+    * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
+
+    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update)
+
+    * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
+
+    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-wks-get)
+
+* [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
+
+    * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
+
+    * [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply)
+
+    * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
+
+    * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get)
+
+    * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
+
+    * [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
+
+    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
+
+    * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
+
+    * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-list)
+
+    * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
 
 * [Configure BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
@@ -2033,6 +2073,79 @@ subcollection: schematics
 * [Creative Commons Attribution Share Alike 4.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-4.0)
 
 
+## Agent beta-0
+{: #sitemap_agent_beta-0}
+
+
+[About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
+
+* [Usage of an Agent](/docs/schematics?topic=schematics-agents-intro#agent-usage)
+
+* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#about-agents-architecture)
+
+* [Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-augmenting)
+
+* [Setting up an Agent](/docs/schematics?topic=schematics-agents-intro#setting-agent)
+
+* [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
+
+[Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
+
+* [Prerequisites](/docs/schematics?topic=schematics-agents-setup#agents-setup-prereq)
+
+* [Provision the Agent infrastructure through UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui)
+
+    * [Expected outcome](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output)
+
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc)
+
+* [Provision the Agent infrastructure through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-cli)
+
+    * [Deploying the Agent services through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-cli)
+
+* [Provision the Agent infrastructure through API](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-api)
+
+    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-api)
+
+* [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
+
+[Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent#register-agent)
+
+* [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
+
+* [Connecting Agent through API](/docs/schematics?topic=schematics-register-agent#register-api)
+
+* [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
+
+[Create `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile#agent-trusted-profile)
+
+* [Next Step](/docs/schematics?topic=schematics-agent-trusted-profile#agent-profile-id-nextstep)
+
+[Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-uninstall-agent#uninstall-agent)
+
+* [Clean up Agent infrastructure](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-infra)
+
+* [Clean up Agent service](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-service)
+
+[Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
+
+* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
+
+* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
+
+* [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
+
+* [Next steps](/docs/schematics?topic=schematics-using-agent#agent-using-nextsteps)
+
+[Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
+
+* [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
+
+
 ## Related links
 {: #sitemap_related_links}
 
@@ -2072,7 +2185,7 @@ subcollection: schematics
 
 [Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
-* [What are the updates in the agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
+* [What are the updates in the agent beta-1 release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
 
 * [What are the costs of installing and using Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
@@ -2122,7 +2235,9 @@ subcollection: schematics
 
 * [How can I enable debug mode in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-debugmode)
 
-* [Can I upgrade an agent beta version to agent General Availability (GA) version?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
+* [Can I upgrade an agent beta-0 to agent beta-1?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
+
+* [Does agent beta-1 support backward compatibility?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-compatibility)
 
 * [Are Schematics Agents the same as Terraform Cloud Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-agent)
 

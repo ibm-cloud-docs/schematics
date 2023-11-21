@@ -1,6 +1,6 @@
 {
   "title": "IBM Cloud Schematics docs",
-  "lastupdated": "2023-09-21",
+  "lastupdated": "2023-11-20",
   "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics Actions. Learn more about how Schematics works and the benefits of using the service. ",
   "section_devtools": {
     "api": "/apidocs/schematics",

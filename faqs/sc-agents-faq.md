@@ -14,18 +14,24 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
+{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
+{: attention}
+
+{{site.data.keyword.bpshort}} Agent are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
+{: beta}
+
 # Agent
 {: #faqs-agent}
 
 Answers to common questions about the Agent for {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
 
-## What are the updates in the agent release?
+## What are the updates in the agent beta-1 release?
 {: #faqs-agent-update}
 {: faq}
 {: support}
 
-The following are the features in Agent release.
+The following are the features in Agent beta-1 release.
 - Improvements to the agent deployment experience through CLI.
 - Support to run Ansible playbooks on the agent.
 - Dynamic assignment of workspace or action jobs to the agent.
@@ -42,7 +48,7 @@ Pre-requisite: Agent infrastructure
 - Cost of IBM Kubernetes Service (cluster) on VPC, with three-node worker pool.
 - Cost of IBM Cloud Object Storage
 
-Agent service
+Agent beta-1 service
 - There is no cost involved in running the agent service. 
 - Post beta, the agent feature may be a priced service.
 
@@ -355,14 +361,19 @@ You can follow these steps to enable or disable the debug mode of an agent.
         - You can now edit the `JR_LOGGERLEVEL` parameter for job-runner microservice logging. By default the value is `-1` that indicated disable debug, to enable you need to edit `JR_LOGGERLEVEL` as `0`.
         - Click **Update** to apply your edits.
 
-## Can I upgrade an agent beta version to agent General Availability (GA) version?
+## Can I upgrade an agent beta-0 to agent beta-1?
 {: #faqs-agent-upgrade}
 {: faq}
 {: support}
 
-No, you cannot upgrade agent beta setup to agent GA version.
+No, you cannot upgrade agent beta-0 setup to agent beta-1.
 
+## Does agent beta-1 support backward compatibility?
+{: #faqs-agent-compatibility}
+{: faq}
+{: support}
 
+Agents beta-1 does not support backward compatibility. You need to create a new agent by using the [agent beta-1](/docs/schematics?topic=schematics-agentb1-about-intro) setup.
 
 
 ## Are Schematics Agents the same as Terraform Cloud Agents?
