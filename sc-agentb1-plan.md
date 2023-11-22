@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-11-22"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -12,11 +12,6 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
-
-{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
-{: beta}
 
 # Preparing for agent deployment
 {: #plan-agent-overview}
@@ -44,7 +39,7 @@ Review and complete the tasks below to prepare your {{site.data.keyword.cloud_no
 You can deploy only one agent instance in a Kubernetes cluster. To deploy multiple agents in a single {{site.data.keyword.cloud_notm}} account, they must be on different Kubernetes clusters. Each agent and cluster can cater to different network isolation zones in your Cloud environment.
 {: note}
 
-In this Beta release, an agent can only be associated with and run jobs for one {{site.data.keyword.cloud_notm}} account. Agents cannot be shared with other accounts or run jobs for multiple accounts. The diagram represents association of agents with a {{site.data.keyword.bpshort}} instance. Here multiple agents for a single account are associated with a single {{site.data.keyword.bpshort}} instance.
+An agent can only be associated with and run jobs for one {{site.data.keyword.cloud_notm}} account. Agents cannot be shared with other accounts or run jobs for multiple accounts. The diagram represents association of agents with a {{site.data.keyword.bpshort}} instance. Here multiple agents for a single account are associated with a single {{site.data.keyword.bpshort}} instance.
 
 ![Agent association with {{site.data.keyword.bpshort}} instances](images/new/sc-agents-world.svg){: caption="Agent association with {{site.data.keyword.bpshort}} instances" caption-side="bottom"}
 
@@ -67,13 +62,12 @@ Access to data center resources can be configured through the use of [Direct Lin
 With agents you are responsible for the network security policies for the Kubernetes cluster and any VPC Security Group or Access Control List policies for the running agent and therefore the ability of the Terraform and Ansible automations’ to access to your private cloud resources.
 
 ## Agent capacity planning 
-{: #agentb1-capacity-planning}
+{: #agent-capacity-planning}
 
-You are advised to monitor the resource usage for the {{site.data.keyword.bpshort}} Agent pods to scale the worker nodes in the Kubernetes cluster if required based on the number of concurrent jobs being executed. In the Beta-1 release, you can use the **Kubernetes dashboard** or [kubectl](/docs/containers?topic=containers-cli-install) commands to make changes to:   
-    - the number of concurrent Terraform, and Ansible jobs.
-    - the number of Terraform, and Ansible pods.
-    - the resource limits for the agent deployment.
-
+You are advised to monitor the resource usage for the {{site.data.keyword.bpshort}} Agent pods to scale the worker nodes in the Kubernetes cluster if required based on the number of concurrent jobs being executed. You can use the **Kubernetes dashboard** or [kubectl](/docs/containers?topic=containers-cli-install) commands to make changes to:   
+- the number of concurrent Terraform, and Ansible jobs.
+- the number of Terraform, and Ansible pods.
+- the resource limits for the agent deployment.
 
 ## Next steps
 {: #agent-plan-nextsteps}
