@@ -424,7 +424,7 @@ No, If a agent creates workspace you must see a reference in the workspace job l
 Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the private Git instance. However, you need to own an SSL certificate and follow these steps in agent micro-services.
 
 1. Establish a connection by configuring SSL certificate in `Jobrunner`, `Sandbox`, and `Runtime-ws` agent micro-services.
-2. Configuration should be by using {{site.data.keyword.containershort_notm}} configmap mounting.
+2. Configuration should be done by using {{site.data.keyword.containershort_notm}} configmap mounting.
    - create a configmap with the required SSL certificate, for example,
 
      ```bash
@@ -486,14 +486,12 @@ Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the priva
      ```
      {: screen}
 
-Update the agent with the metadata to perform catalog onboarding with the private Git instance..... is required only for catalog onboarding with private Git instance. It can be another FAQ and using private Git instance certs FAQ will be a prerequisite
-
 ## Can {{site.data.keyword.bpshort}} Agent update a connection with the private Git instance?
 {: #faqs-git-instance-update}
 {: faq}
 {: support}
 
-Yes, you can Update the agent with the metadata to perform catalog on boarding with the private Git instance. Use the sample update API request for reference.
+Yes, you can update the agent with the metadata to perform catalog on boarding with the private Git instance. Use the sample update API request for reference.
 
    Perform this step only if an agent does not have metadata.
    {: important}

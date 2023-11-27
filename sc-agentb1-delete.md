@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-27"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -108,5 +108,6 @@ Output
 ## Next steps
 {: #agent-delete-nextstep}
 
+After deleting an agent,
 - You can view the [list of agents](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli), and the [agent assignment policy](/docs/schematics?topic=schematics-policy-manage&interface=cli).
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.

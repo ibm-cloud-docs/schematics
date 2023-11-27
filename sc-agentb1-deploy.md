@@ -34,10 +34,31 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 - A short description of the network zones and infrastructure accessible to the agent. 
 - The `cluster ID`, `cluster resource group` and `region` of the {{site.data.keyword.containershort}} cluster the agent deploys.
 - The `{{site.data.keyword.cos_full}} instance name`, `{{site.data.keyword.cos_full_notm}} bucket name` of the {{site.data.keyword.objectstorageshort}} bucket used for agent temporary data storage. The resource group and region of the COS instance and bucket must be the same as the cluster. 
+- If you are using a private Git instance, you need to establish the connection with an agent through certificate. For more information, see [steps to associate an agent with private Git instance](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
    
    Make sure that the `Cluster`, and the `{{site.data.keyword.cos_full_notm}} instance` are in the same resource group.
    {: important}
  
+## Creating an agent definition
+{: #create-agent-ui}
+{: ui}
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
+2. Access **Schematics** > **Agents** > [**Create Agent**](https://cloud.ibm.com/schematics/agents/create){: external}.
+    - In **Define agent details** section:
+        - Enter unique **Agent name**.
+        - Select **Location**, and **Resource group** from the drop down option.
+        - Enter **Tags**, and **Description** for the agent.
+    - In **Assign to cluster** section:
+        - Select the `{{site.data.keyword.containerlong_notm}}` or the `{{site.data.keyword.openshiftlong}}` service.
+        - Select your cluster name.
+        - In the **Define COS Instance** 
+            - Enter the **COS instance name**
+            - Enter the **COS bucket name**
+            - Enter the **COS bucket region**
+3. Click **Define**.
+4. Click **Validate** to validate the cluster and COS configuration.
+5. Click **Deploy** to deploy an agent.
 
 ## Creating an agent definition using the CLI 
 {: #create-agent-cli}
@@ -263,7 +284,7 @@ Example
   Authorization: Bearer 
 
   {
-    "name": "agentb1-gsmforvpc-mar17",
+    "name": "agentb1-gsmforvpc",
     "description": "Create Agent",
     "resource_group": "Default",
     "tags": [
@@ -287,14 +308,14 @@ Example
 ```
 {: codeblock}
 
-Verify that the agent definition is created successfully as shown in the output. Record the agent ID for use in subsequent commands. For example, `agentb1-gsmforvpc-mar17.soA.115c`.
+Verify that the agent definition is created successfully as shown in the output. Record the agent ID for use in subsequent commands. For example, `agentb1-gsmforvpc.soA.115c`.
 {: shortdesc}
 
 Output
 
 ```text
   {
-      "name": "agentb1-gsmforvpc-mar17",
+      "name": "agentb1-gsmforvpc",
       "description": "Create Agent",
       "resource_group": "aac37f57b20142dba1a435c70aeb12df",
       "tags": [
@@ -306,13 +327,13 @@ Output
       "agent_location": "Frankfurt MZR",
       "user_state": {
           "state": "enable",
-          "set_by": "geetha_sathyamurthy@in.ibm.com",
+          "set_by": "xxxx@in.ibm.com",
           "set_at": "2023-03-16T18:08:18.399224788Z"
       },
-      "agent_crn": "crn:v1:bluemix:public:schematics:eu-de:a/1f7277194bb748cdb1d35fd8fb85a7cb:9ae7be42-0d59-415c-a6ce-0b662f520a4d:agent:agentb1-gsmforvpc-mar17.soA.115c",
-      "id": "agentb1-gsmforvpc-mar17.soA.115c",
+      "agent_crn": "crn:v1:bluemix:public:schematics:eu-de:a/1f7277194bb748cdxxxxxxxxxxx42-0d59-415c-a6ce-0b662f520a4d:agent:agentb1-gsmforvpc.soA.115c",
+      "id": "agentb1-gsmforvpc.soA.115c",
       "created_at": "2023-03-16T18:08:18.39924616Z",
-      "creation_by": "geetha_sathyamurthy@in.ibm.com",
+      "creation_by": "xxxxx@in.ibm.com",
       "updated_at": "0001-01-01T00:00:00Z",
       "system_state": {
           "status_code": "draft"
@@ -337,7 +358,7 @@ Syntax
 Example
 
 ```json
-  PUT /v2/agents/agentb1-gsmforvpc-mar17.soA.115c/deploy HTTP/1.1
+  PUT /v2/agents/agentb1-gsmforvpc.soA.115c/deploy HTTP/1.1
   Host: schematics.cloud.ibm.com
   Content-Type: application/json
   Authorization: Bearer 
@@ -348,10 +369,10 @@ Output
 
 ```text
 {
-    "workspace_id": "eu-de.workspace.agentb1-gsmforvpc-mar17-deploy.13a324df",
+    "workspace_id": "eu-de.workspace.agentb1-gsmforvpc-deploy.1xxxxdf",
     "job_id": ".ACTIVITY.7f40fdc0",
     "updated_at": "2023-03-16T18:13:27.217864196Z",
-    "updated_by": "geetha_sathyamurthy@in.ibm.com",
+    "updated_by": "xxxx@in.ibm.com",
     "status_code": "PENDING",
     "status_message": "Triggered deployment"
 }
@@ -361,8 +382,10 @@ Output
 ## Next steps
 {: #agent-create-nextsteps}
 
-The next step is to [create an agent assignment policy](/docs/schematics?topic=schematics-policy-manage) for the newly deployed agent.  The agent assignment policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
-
-You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
-
-When the agent is no longer required, it can be removed following the steps in [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui).
+Deploying and configuration an agent are complete.
+- If you are using a private Git instance, then establish the connection with an agent through certificate. For more information, see [steps to associate an agent to connect](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
+- For configuring and provisioning your infrastructure through [agent policies](/docs/schematics?topic=schematics-policy-manage). The agent policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
+- Manage your [agent and Kubernetes cluster](/docs/schematics?topic=schematics-configure-k8s-cluster).
+- You can [configure a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview) for an agent.
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
+- When the agent is no longer required, it can be removed following the steps in [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui).

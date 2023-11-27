@@ -1316,6 +1316,8 @@ subcollection: schematics
 
 * [Before you begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
 
+* [Creating an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-ui)
+
 * [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
 
 * [Verifying prerequisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
