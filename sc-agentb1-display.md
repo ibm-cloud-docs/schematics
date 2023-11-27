@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-27"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -22,11 +22,9 @@ You can view an agent with a specific agent ID to retrieve the detailed configur
 {: #display-agentb1-get-ui}
 {: ui}
 
-Currently, you can only create an {{site.data.keyword.bpshort}} Agent via CLI or API. Follow the steps to view the list of agents that are deployed in your account through [CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli) and [API](/apidocs/schematics/schematics#create-agent-data).
-
-   1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
-   2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
-   3. Select your Agent from the list, and use the `...` dots to perform **Delete Agent** operation.
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
+3. Click your agent from the list to view the agent details.
 
 ## Displaying the list of agents using the CLI
 {: #display-agentb1-list-cli}

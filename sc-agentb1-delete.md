@@ -19,6 +19,14 @@ When an agent is no longer required, you can do one of the following to either:
 - Disable the agent 
 - Delete the agent 
 
+## Displaying the list of agents using UI
+{: #display-agentb1-ui}
+{: ui}
+
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
+3. Select your agent from the list, and use the `...` dots to perform **Delete** operation.
+
 ## Disabling an agent using the CLI
 {: #disable-agentb1-cli}
 {: cli}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-27"
 
 keywords: schematics agent, agent policy, policies
 
@@ -14,7 +14,7 @@ subcollection: schematics
 
 
 
-# Agent assignment policies
+# Agent policies
 {: #policy-manage}
 
 Assignment policies tell {{site.data.keyword.bpshort}} which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. For example agents may exist in any of the following isolated zones:

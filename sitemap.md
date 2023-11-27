@@ -1352,6 +1352,8 @@ subcollection: schematics
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
+* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-delete-agent-overview#display-agentb1-ui)
+
 * [Disabling an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#disable-agentb1-cli)
 
 * [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-cli)
@@ -1365,7 +1367,7 @@ subcollection: schematics
 {: #sitemap_using_agents}
 
 
-[Agent assignment policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
+[Agent policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
 
 * [Creating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
 
