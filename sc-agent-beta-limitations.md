@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-27"
 
 keywords: schematics agent, agent, beta release, agent beta release
 
@@ -49,6 +49,7 @@ There will be multiple beta releases in short window period, this requires the u
 | Supports only `one Agent in one cluster`. | | |
 | Agents can be installed in a freshly provisioned Agent infrastructure, not in any other cluster.
 | Update to Agent settings is not propagated to the Agent service. It requires a redeployment of Agent service using **Kubernetes Dashboard**. |  | |
+| The cluster and the {{site.data.keyword.cos_full_notm}} instance must be created in a same resource group. | | |
 {: caption="Beta release limitations" caption-side="bottom"}
 
 ## Joining public slack channel

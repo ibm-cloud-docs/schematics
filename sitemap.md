@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-27"
 
 keywords: schematics
 subcollection: schematics
@@ -2074,13 +2074,13 @@ subcollection: schematics
 
 * [What are the updates in the agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
 
-* [What are the costs of installing and using Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
+* [What are the costs of installing and by using agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
-* [Can I install more than one Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+* [Is it possible to install more than one Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
-* [What type of Schematics jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
+* [What type of {{site.data.keyword.bpshort}} jobs can run in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
-* [How can I see the {{site.data.keyword.bpshort}} job results and logs, for the workloads running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
+* [How can you see the {{site.data.keyword.bpshort}} job results and logs for the workloads running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
 
 * [How many {{site.data.keyword.bpshort}} jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
 
@@ -2090,15 +2090,15 @@ subcollection: schematics
 
 * [How many jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-job)
 
-* [What is the default polling interval for Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
+* [What is the default polling interval for agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
 
-* [What is the difference between agent-location and location input variable flag in Agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
+* [What is the difference between `agent-location` and `location` flag in agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
 
-* [Can an agent run Workspace jobs belonging to different resource groups?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
+* [Can an agent run workspace job that belongs to different resource groups?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
 
-* [Can an agent run Jobs from multiple {{site.data.keyword.bpshort}} regions?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
+* [Can an agent run Job from multiple {{site.data.keyword.bpshort}} regions?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
 
-* [Can I register an agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+* [Is it possible to register an agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
 
 * [Can jobs for an existing workspace be configured to run on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
 
@@ -2110,25 +2110,33 @@ subcollection: schematics
 
 * [Using Artifactory as a provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory)
 
-    * [Configuring a local Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-local-artifactory-provider-registry)
+    * [Configuring a local Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory_1)
 
-    * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-remote-artifactory-provider-registry)
+    * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory_2)
 
-    * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-virtual-artifactory-provider-registry)
+    * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory_3)
 
-* [Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
+* [Can I inject self-signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
 
-* [What attributes of Workspaces or Actions are used to dynamically select a target agent for execution](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
+* [What attributes of workspaces or actions are used to dynamically select a target agent for execution](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
 * [How can I enable debug mode in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-debugmode)
 
-* [Can I upgrade an agent beta version to agent General Availability (GA) version?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
+* [Can I upgrade an agent beta version to an agent General Availability (GA) version?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
 
-* [Are Schematics Agents the same as Terraform Cloud Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-agent)
+* [Are {{site.data.keyword.bpshort}} Agent the same as Terraform cloud agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-agent)
 
-* [Do the agents run on IBM Cloud cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-run)
+* [Do the agents run on {{site.data.keyword.cloud_notm}} cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-run)
 
-* [What are the minimum cluster configuration needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf)
+* [What are the minimum cluster configurations needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf)
+
+* [How can a user identify the job is created by an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
+
+* [Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
+
+* [Can {{site.data.keyword.bpshort}} Agent establish a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-cert)
+
+* [Can {{site.data.keyword.bpshort}} Agent update a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-update)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-27"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -25,116 +25,115 @@ Answers to common questions about the Agent for {{site.data.keyword.bplong_notm}
 {: faq}
 {: support}
 
-The following are the features in Agent release.
+The following are the features in the agent release.
 - Improvements to the agent deployment experience through CLI.
 - Support to run Ansible playbooks on the agent.
 - Dynamic assignment of workspace or action jobs to the agent.
 
-## What are the costs of installing and using Agents?
+## What are the costs of installing and by using agents?
 {: #faqs-agent-cost}
 {: faq}
 {: support}
 
 The following are the cost break-down for the {{site.data.keyword.bpshort}} Agent.
 
-Pre-requisite: Agent infrastructure
-- Cost of VPC infrastructure elements such as, subnet, public gateways.
+Prerequisite: Agent infrastructure
+- Cost of VPC infrastructure elements such as subnet, public gateways.
 - Cost of IBM Kubernetes Service (cluster) on VPC, with three-node worker pool.
 - Cost of IBM Cloud Object Storage
 
 Agent service
-- There is no cost involved in running the agent service. 
-- Post beta, the agent feature may be a priced service.
+- Cost is not involved in running the agent service. 
+- Post beta, the agent feature is priced service.
 
-## Can I install more than one Agent on a cluster?
+## Is it possible to install more than one Agent on a cluster?
 {: #faqs-agent-install}
 {: faq}
 {: support}
 
-You can install only one agent on a Kubernetes cluster on {{site.data.keyword.containerlong_notm}}. You can install additional agents on different clusters.
+You can install only one agent on a Kubernetes cluster on {{site.data.keyword.containerlong_notm}}. You can install another agents on different clusters.
 
-You cannot install more than one agent in a single Kubernetes cluster. You will get a failure with namespace conflict error.
+You cannot install more than one agent in a single Kubernetes cluster. You get a failure with namespace conflict error.
 
-## What type of Schematics jobs can I run in my Agent?
+## What type of {{site.data.keyword.bpshort}} jobs can run in an agent?
 {: #faqs-agent-jobs}
 {: faq}
 {: support}
 
-You can run {{site.data.keyword.bpshort}} Workspace Terraform jobs on an Agent. You can also run {{site.data.keyword.bpshort}} Action jobs, Ansible playbooks on an Agent. 
+You can run {{site.data.keyword.bpshort}} Workspace Terraform jobs on an agent. You can also run {{site.data.keyword.bpshort}} Action jobs, Ansible playbooks on an Agent. 
 
-## How can I see the {{site.data.keyword.bpshort}} job results and logs, for the workloads running on an agent?
+## How can you see the {{site.data.keyword.bpshort}} job results and logs for the workloads running on an agent?
 {: #faqs-agent-workload}
 {: faq}
 {: support}
 
-The workspace job or action job logs are available in {{site.data.keyword.bpshort}} UI console. You can also access these job logs using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
+The workspace job or action job logs are available in the {{site.data.keyword.bpshort}} UI console. You can also access the job logs by using the {{site.data.keyword.bpshort}} Workspace API, or CLI.
 
 ## How many {{site.data.keyword.bpshort}} jobs can run in parallel in the Agent?
 {: #faqs-agent-parallel}
 {: faq}
 {: support}
 
-Currently, an agent can run three {{site.data.keyword.bpshort}} jobs in parallel. Any additional jobs are queued and will execute when prior jobs complete execution. 
+Currently, an agent can run three {{site.data.keyword.bpshort}} jobs in parallel. Any additional jobs are queued and will run when prior jobs complete execution. 
 
-In future, you will be able to customize an agent to increase the number of job Pods, to increase the number of jobs that can run concurrently. 
+In future, you are able to customize an agent to increase the number of job Pods to increase the number of jobs that can run concurrently. 
 
 ## What is the minimum cluster configuration required in Agent release?
 {: #faqs-agent-min-cluster}
 {: faq}
 {: support}
 
-The agent needs {{site.data.keyword.containerlong_notm}} Service with minimum three worker nodes, with a flavor of `b4x16` or higher.
+The agent needs {{site.data.keyword.containerlong_notm}} Service with minimum three worker nodes, with a type of `b4x16` or higher.
 
 ## How many workspaces can be assigned to an agent?
 {: #faqs-agent-min-wks}
 {: faq}
 {: support}
 
-Currently, you can assign any number of workspaces to an agent. The workspace jobs are queued to run on the agent, based on the agent assignment policy.
-The agent periodically polls {{site.data.keyword.bpshort}} for jobs to run, with a polling interval of one minute. By default, the agent runs only three jobs in parallel. The remaining jobs are queued.
+Currently, you can assign any number of workspaces to an agent. The workspace jobs are queued to run on the agent, based on the agent assignment policy. The agent periodically polls {{site.data.keyword.bpshort}} for jobs to run, with a polling interval of one minute. By default, the agent runs only three jobs in parallel. The remaining jobs are queued.
 
 ## How many jobs can run in parallel on an agent?
 {: #faqs-agent-min-job}
 {: faq}
 {: support}
 
-- Schematics Agent can perform three Git download jobs in parallel.
-- Schematics Agent can run three Workspace jobs (Terraform commands), in parallel.
-- Schematics Agent can run three Action jobs (Ansible playbook), in parallel.
+- {{site.data.keyword.bpshort}} Agent can perform three Git download jobs in parallel.
+- {{site.data.keyword.bpshort}} Agent can run three Workspace jobs (Terraform commands), in parallel.
+- {{site.data.keyword.bpshort}} Agent can run three Action jobs (Ansible playbook), in parallel.
 
-## What is the default polling interval for Agents?
+## What is the default polling interval for agents?
 {: #faqs-agent-poll-interval}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} maintains a queue of jobs that will be executed on an agent. The agent will poll for {{site.data.keyword.bpshort}} Jobs, every one minute by default.
+{{site.data.keyword.bpshort}} maintains a queue of jobs that will be ran on an agent. The agent polls for {{site.data.keyword.bpshort}} Jobs, every one minute by default.
 
-## What is the difference between agent-location and location input variable flag in Agent service?
+## What is the difference between `agent-location` and `location` flag in agent service?
 {: #faqs-agent-diff-location}
 {: faq}
 {: support}
 
 The `--agent-location` parameter is a variable that specifies the region of the cluster where an agent service is deployed. For example, `us-south`. This must match the cluster region. 
 
-The `--location` parameter is a variable that specifies the region supported by {{site.data.keyword.bpshort}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. The agent polls {{site.data.keyword.bpshort}} service instance from this location, for workspace or action jobs for processing.
+The `--location` parameter is a variable that specifies the region that is supported by the {{site.data.keyword.bpshort}} service such as `us-south`, `us-east`, `eu-de`, `eu-gb`. The agent polls {{site.data.keyword.bpshort}} service instance from this location, for workspace or action jobs for processing.
 
-## Can an agent run Workspace jobs belonging to different resource groups?
+## Can an agent run workspace job that belongs to different resource groups?
 {: #faqs-agent-diff-rg}
 {: faq}
 {: support}
 
-Yes, an agent can run {{site.data.keyword.bpshort}} Jobs related to workspace or actions, from all or any resource group, in an account. Agent (assignment) policies are used to assign the execution of jobs, based on resource group, region and user tags to a specific agent. 
+Yes, an agent can run {{site.data.keyword.bpshort}} Jobs that are related to workspace or actions, from all or any resource group, in an account. Agent (assignment) policies are used to assign the execution of jobs, based on resource group, region, and user tags to a specific agent. 
 
-## Can an agent run Jobs from multiple {{site.data.keyword.bpshort}} regions?
+## Can an agent run Job from multiple {{site.data.keyword.bpshort}} regions?
 {: #faqs-agent-diff-region}
 {: faq}
 {: support}
 
-Agents are associated with {{site.data.keyword.bpshort}} regions and geographies and can only execute jobs for the parent {{site.data.keyword.bpshort}} geography, for example, North America or Europe.  
+Agents are associated with {{site.data.keyword.bpshort}} regions and can run jobs for the parent {{site.data.keyword.bpshort}} regions such as, North America, or Europe.
 
-The Agent periodically polls the regional endpoint of the {{site.data.keyword.bpshort}} service instance, to fetch and run jobs. It can connect to only one regional endpoint (home). For example, if an agent is deployed on a cluster in Sydney and has been configured to use the {{site.data.keyword.bpshort}} `eu-de` regional endpoint as it’s home location. The agent polls for jobs in `eu-de` region. Hence, the workspace or action to deploy resources using the Sydney agent must be created in the `eu-de` region. 
+The Agent periodically polls the regional endpoint of the {{site.data.keyword.bpshort}} service instance to fetch and run jobs. It can connect to only one regional endpoint (home). For example, if an agent is deployed on a cluster in Sydney and is configured to use the {{site.data.keyword.bpshort}} `eu-de` regional endpoint as it’s home location. The agent polls for jobs in `eu-de` region. Hence, the workspace or action to deploy resources by using the Sydney agent must be created in the `eu-de` region. 
 
-## Can I register an agent with multiple accounts?
+## Is it possible to register an agent with multiple accounts?
 {: #faqs-agent-register}
 {: faq}
 {: support}
@@ -148,7 +147,7 @@ No, you cannot register an agent with multiple accounts in the beta release.
 
 Yes, if your workspace has the right values with the tags, resource-group, location. {{site.data.keyword.bpshort}} uses an `agent-selection-policy` to automatically assign the jobs to run on the target agent.
 
-For example, If you have an existing workspace: `wks-0120` with `tag=dev`, and you want the workspace to run on `Agent-1`. Create an `agent-selection-policy` with the rule to pick `Agent-1` when the `tag == dev`.  Subsequently, the workspace job such as plan, apply, update, and so on will be dynamically routed to `Agent-1`.
+For example, if you have an existing workspace: `wks-0120` with `tag=dev`, and you want the workspace to run on `Agent-1`. Create an `agent-selection-policy` with the rules to pick `Agent-1` when the `tag == dev`. Later, the workspace job such as plan, apply, update are dynamically routed to `Agent-1`.
 
 ## What IAM permissions needed to deploy an agent?
 {: #faqs-agent-permission}
@@ -162,20 +161,20 @@ For information about identity and permissions, see [agent permission](/docs/sch
 {: faq}
 {: support}
 
-Agents supports the use of custom Terraform providers sourced from a private Terraform registry with {{site.data.keyword.bpshort}} Terraform jobs. The support to use custom providers is not available in the shared multi-tenant {{site.data.keyword.bpshort}} service. It is only available with Agents. Agents does not include a local or private provider registry. The registry must be provided and configured by the user on the users private network accessible to the agents.  
+Agents support the use of custom Terraform providers that are sourced from a private Terraform registry with {{site.data.keyword.bpshort}} Terraform jobs. The support to use custom providers is not available in the shared multi-tenant {{site.data.keyword.bpshort}} service. It is only available with agents. Agents do not include a local or private provider registry. User can configure the registry on the users private network accessible to the agents.  
 {: shortdesc}
 
-By default, {{site.data.keyword.bpshort}} jobs running the Terraform CLI will download Terraform provider plug-ins or Terraform modules from the public Terraform registry via the Internet or public network. When an Agent is deployed on a private network, security policies may dictate that a proxy or mirror site must be used for downloading and caching provider plug-ins. Additionally it may be desired to use custom developed Terraform providers to configure environment specific resources using Terraform.  
+By default, {{site.data.keyword.bpshort}} jobs run the Terraform CLI downloads Terraform provider plug-ins or Terraform modules from the public Terraform registry through the internet or public network. When an Agent is deployed on a private network, security policies dictate that a proxy, or mirror site must be used for downloading and caching provider plug-ins. It uses a custom-developed Terraform providers to configure environment-specific resources.
 
-For these usecases, Terraform allows configuration of provider download from alternate provider registries via the use of a `provider_installation` block in the Terraform CLI configuration. This allows customization of the Terraform default installation behavior. Review the Terraform documentation for [provider installation](https://developer.hashicorp.com/terraform/cli/config/config-file#provider-installation){: external} for more detail on configuring provider download. 
+For these use cases, Terraform allows configuration of provider download from alternative provider registries by using a `provider_installation` block in the Terraform CLI configuration. It allows customization of the Terraform default installation behavior. Review the Terraform documentation for [provider installation](https://developer.hashicorp.com/terraform/cli/config/config-file#provider-installation){: external} for more detail on configuring provider download. 
 
-When using Agents, the following two workspace environment variables, can be used to configure the Terraform CLI to refer to an alternate repository and select providers by name and namespace from this registry.  
+In agents, the following two workspace environment variables can be used to configure the Terraform CLI to refer to an alternative repository and select providers by name and namespace from this registry.  
 
 
-- The `TF_NETWORK_MIRROR_URL` Terraform private repository, website or Artifactory instance where custom Terraform providers are hosted.
-- The `TF_NETWORK_MIRROR_PROVIDER_NAME` name and namespace of provider that is to be downloaded from the custom location. Refer to the Terraform documentation for [provider naming and namespaces](https://developer.hashicorp.com/terraform/language/providers/requirements#names-and-addresses){: external}. This is an optional variable. If not specified it is defaulted to all providers in all namespaces `"*/*"`.  
+- The `TF_NETWORK_MIRROR_URL` Terraform private repository, website, or Artifactory are instances where custom Terraform providers are hosted.
+- The `TF_NETWORK_MIRROR_PROVIDER_NAME` name and namespace of the provider that is to be downloaded from the custom location. Refer to the Terraform documentation for [provider naming and namespaces](https://developer.hashicorp.com/terraform/language/providers/requirements#names-and-addresses){: external}. If not specified it is defaulted to all providers in all namespaces `"*/*"`.  
 
-{{site.data.keyword.bpshort}} auto generates the following Terraform CLI configuration file parameters which tell Terraform during job execution to use an alternate registry for some or all of the providers you intend to use.
+The {{site.data.keyword.bpshort}} auto generates the following Terraform CLI configuration file parameters. During the job execution, Terraform uses an alternative registry for few or all the providers that you intend to use.
 
 ```json
 provider_installation {
@@ -195,25 +194,28 @@ provider_installation {
 {: faq}
 {: support}
 
-When interacting with private registries, Terraform must be configured with the access tokens for the target registry. With Agents these are defined at a workspace level using the `TF_TOKEN_` environment variable. See the Terraform [Environment Variable Credentials](https://developer.hashicorp.com/terraform/cli/config/config-file#environment-variable-credentials){: external} documentation for more detail on configuring this variable. 
+In private registries, Terraform must be configured with the access tokens for the target registry. In agents these are defined at a workspace level by using the `TF_TOKEN_` environment variable. See the Terraform [Environment Variable Credentials](https://developer.hashicorp.com/terraform/cli/config/config-file#environment-variable-credentials){: external} documentation for more detail on configuring this variable. 
 
 ## Using Artifactory as a provider registry
 {: #faqs-agent-artifactory}
 {: faq}
 {: support}
 
-[Artifactory](https://jfrog.com/artifactory/){: external} provides a number of different options for sourcing of Terraform providers and fully supports the [Terraform provider registry protocol](https://developer.hashicorp.com/terraform/internals/provider-registry-protocol){: external}. It supports, remote, local and virtual repositories which aggregate the first two types with a defined search order.   
+[Artifactory](https://jfrog.com/artifactory/){: external} provides a different option for sourcing of Terraform providers and fully supports the [Terraform provider registry protocol](https://developer.hashicorp.com/terraform/internals/provider-registry-protocol){: external}. It supports, remote, local, and virtual repositories that aggregate the first two types with a defined search order.   
 
-Local repositories are physical, user managed local repositories acting as a Terraform private registry where you can host custom developed providers and manually upload and save public providers to eliminate the need for public network access. Or limit the public providers made available to Terraform users. 
+Local repositories are physical, user managed local repositories. The repositories act as a Terraform private registry where you can host custom-developed providers and manually upload and save public providers to eliminate the need for public network access. Or limit the public providers made available to Terraform users. 
 
-Remote repositories can serve as a caching proxy for both private Terraform registries and the public Terraform registry. Implementing a remote repository still requires public internet access. Here public network access is via Artifactory and not Terraform. Typically many organizations have existing Artifactory installations, with network monitoring and network access rules in place to allow secure public access from Artifactory.    
+Remote repositories can serve as a caching proxy for both private Terraform registries and the public Terraform registry. Implementing a remote repository still requires public internet access. Here public network access is through Artifactory and not Terraform. Typically many organizations have existing Artifactory installations, with network monitoring and network access rules in place to allow secure public access from Artifactory.    
 
 A virtual Terraform repository, combining a local repo with a remote proxy repo, allows for hosting of custom providers locally along with secure access to any additional public Terraform providers. 
 
 
 ### Configuring a local Artifactory provider registry  
+{: #faqs-agent-artifactory_1}
+{: faq}
+{: support}
 
-A local Artifactory registry can be used to host custom developed providers for use with agents in a users private network. Artifactory access is configured using the following workspace environment variables, to configure the Terraform CLI to refer to the the local repository and select providers by name and namespace from this registry.  
+A local Artifactory registry can be used to host custom-developed providers for use with agents in a users private network. Artifactory access is configured by using the following workspace environment variables to configure the Terraform CLI to refer to the local repository and select providers by name and namespace from this registry.  
 
 `TF_TOKEN_name.artifactory.user.com:<artifactory_local_registry_token>`
 `TF_NETWORK_MIRROR_PROVIDER_NAME:"user_namespace/provider_name"`
@@ -221,7 +223,7 @@ A local Artifactory registry can be used to host custom developed providers for 
 
 Refer to the Artifactory documentation and UI to source the values for the bearer token and URL of the local registry.  
 
-{{site.data.keyword.bpshort}} will generate a Terraform CLI configuration of the form below. 
+The following example shows that the {{site.data.keyword.bpshort}} generates a Terraform CLI configuration. 
 
 ```json
 provider_installation {
@@ -237,15 +239,18 @@ provider_installation {
 {: pre}
 
 ### Configuring a remote Artifactory provider registry 
+{: #faqs-agent-artifactory_2}
+{: faq}
+{: support}
 
-A remote Artifactory registry can be used to cache public providers for use by Terraform, without giving Terraform public network access. Artifactory access is configured using the following workspace environment variables, to configure the Terraform CLI to refer to the the remote repository and retrieve all providers using this proxy registry.  
+A remote Artifactory registry can be used to cache public providers for use by Terraform, without giving Terraform public network access. Artifactory access is configured by using the following workspace environment variables to configure the Terraform CLI to refer to the remote repository and retrieve all providers by using this proxy registry.  
 
 `TF_TOKEN_name.artifactory.user.com:<artifactory_remote_registry_token>`
 `TF_NETWORK_MIRROR_URL=https://name.artifactory.user.com/artifactory/api/terraform/user-terraform-remote/providers/`
 
 Refer to the Artifactory documentation and UI to source the values for the bearer token and URL of the remote registry.  
 
-{{site.data.keyword.bpshort}} will generate a Terraform CLI configuration of the form below. 
+The following example shows that the {{site.data.keyword.bpshort}} generates a Terraform CLI configuration.
 
 ```json
 provider_installation {
@@ -261,15 +266,18 @@ provider_installation {
 {: pre}
 
 ### Configuring a virtual Artifactory provider registry
+{: #faqs-agent-artifactory_3}
+{: faq}
+{: support}
 
-A virtual Artifactory registry can be used to combine the hosting of custom provides with the caching of public providers for use by Terraform. Artifactory access is configured using the following workspace environment variables, to configure the Terraform CLI to refer to the the virtual repository and retrieve all providers using this proxy registry.  
+A virtual Artifactory registry can be used to combine the hosting of custom providers with the caching of public providers for use by Terraform. Artifactory access is configured by using the following workspace environment variables to configure the Terraform CLI to refer to the virtual repository and retrieve all providers by using this proxy registry.  
 
 `TF_TOKEN_name.artifactory.user.com:<artifactory_virtual_registry_token>`
 `TF_NETWORK_MIRROR_URL=https://name.artifactory.user.com>/artifactory/api/terraform/<user-terraform-virtual/providers/`
 
 Refer to the Artifactory documentation and UI to source the values for the bearer token and URL of the virtual registry. The virtual repository must be configured as an aggregate of a local and remote registry as discussed in the previous sections.    
 
-{{site.data.keyword.bpshort}} will generate a Terraform CLI configuration of the form below. 
+The following example shows that the {{site.data.keyword.bpshort}} generates a Terraform CLI configuration.
 
 ```json
 provider_installation {
@@ -284,17 +292,17 @@ provider_installation {
 ```
 {: pre}
 
-## Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?
+## Can I inject self-signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?
 {: #faqs-agent-certificate}
 {: faq}
 {: support}
 
 Yes, follow these steps to inject the certificates into an agent runtime.
 
-In the four `.cer` extension filenames ensure you modify to replace the space with underscore.
+In the four `.cer` extension file names ensure that you modify to replace the space with underscore.
 {: note}
 
-1. Create config map by using `.cer` file as shown in the `kubectrl` command.
+1. Create a config map by using `.cer` file as shown in the `kubectrl` command.
 
     ```sh
     kubectl -n schematics-runtime create configmap bnpp-root —-from-file 2014-2044_BNPP_Root.cer
@@ -313,13 +321,13 @@ In the four `.cer` extension filenames ensure you modify to replace the space wi
 
 2. Mount config map file as a volume in a directory `/etc/ssl/certs/` as file `agent-runtime-deployment-certs.yaml` in a shared `bnpp_agent_deployment_files` directory.
 
-Shared directory `bnpp_agent_deployment_files` has two yaml files named 
+The Shared directory `bnpp_agent_deployment_files` has two yaml files named 
     - `agent-runtime-deployment-certs.yaml` and
     - `agent-runtime-deployment.yaml`.
 
-The `agent-runtime-deployment-certs.yaml` file updates the certificates and appends the `agent-runtime-deployment.yaml` file which provides you the desired deployment details to inject the certificates without any additional changes.
+The `agent-runtime-deployment-certs.yaml` file updates the certificates and appends the `agent-runtime-deployment.yaml` file that provides you with the desired deployment details to inject the certificates without any additional changes.
 
-## What attributes of Workspaces or Actions are used to dynamically select a target agent for execution
+## What attributes of workspaces or actions are used to dynamically select a target agent for execution
 {: #agent-dynamic-attribute}
 {: faq}
 {: support}
@@ -331,11 +339,11 @@ The following attributes of the {{site.data.keyword.bpshort}} Workspace or {{sit
 - Location (region)
 - Tags
 
-The [Agent assignment policy](/docs/schematics?topic=schematics-policy-manage) for an agent instance describes how an Agent is selected to run a Workspace job or Action job.
+The [Agent assignment policy](/docs/schematics?topic=schematics-policy-manage) for an agent instance describes how an Agent is selected to run a workspace job or action job.
 
-Example:
+Here is a sample scenario for the usage of tags.
 
-If your organization has three different network isolation zones (such as `Dev`, `HR-Stage`, and `HR-Prod`) and you have installed three agents (one each, for the three network isolation zones). You have defined an `agent-assignment-policy` for the agent running in `Dev`, with the selector as `tags=dev`. All workspaces that have `tags=dev` automatically are bound to the `Dev` agent. In other words, the `Dev` agent is used to download Terraform templates (from the Git repository) and run Terraform jobs. Similarly, the `agent-assignment-policy` can include other attributes of the workspaces, to define the agent for job execution.
+If your organization has three different network isolation zones (such as `Dev`, `HR-Stage`, and `HR-Prod`) and you have installed three agents (one each, for the three network isolation zones). You have defined an `agent-assignment-policy` for the agent running in `Dev`, with the selector as `tags=dev`. All workspaces that have `tags=dev` automatically are bound to the `Dev` agent. In other words, the `Dev` agent is used to download Terraform templates (from the Git repository) and run Terraform jobs. Similarly, the `agent-assignment-policy` can include other attributes of the workspaces to define the agent for job execution.
 
 ## How can I enable debug mode in an agent?
 {: #faqs-agent-debugmode}
@@ -345,17 +353,17 @@ If your organization has three different network isolation zones (such as `Dev`,
 You can follow these steps to enable or disable the debug mode of an agent.
 
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
-2. Click **Kubernetes** from the left hand navigator pane, then click **Clusters** 
+2. Click **Kubernetes** from the left navigator window, then click **Clusters** 
 3. On the **Kubernetes Clusters** page, click your **cluster** > **Kubernetes dashboard**.
     - Click the **default** drop down to view the list of **Namespaces**:
-        - In the drop down, type the **{{site.data.keyword.bpshort}}-job-runtime** Namespaces.
+        - In the drop down, type the **{{site.data.keyword.bpshort}}-job-runtime** namespaces.
         - Click **Config Map** from the **Config and Storage**.
         - From the **Config Maps** page. Click the three dots against **schematics-jobrunner-config**.
         - Click **Edit** to view the **Edit a resource** page with the **YAML**, and **JSON** tabs.
-        - You can now edit the `JR_LOGGERLEVEL` parameter for job-runner microservice logging. By default the value is `-1` that indicated disable debug, to enable you need to edit `JR_LOGGERLEVEL` as `0`.
+        - You can now edit the `JR_LOGGERLEVEL` parameter for job-runner microservice logging. By default the value is `-1` that indicated disable debug to enable you need to edit `JR_LOGGERLEVEL` as `0`.
         - Click **Update** to apply your edits.
 
-## Can I upgrade an agent beta version to agent General Availability (GA) version?
+## Can I upgrade an agent beta version to an agent General Availability (GA) version?
 {: #faqs-agent-upgrade}
 {: faq}
 {: support}
@@ -365,22 +373,22 @@ No, you cannot upgrade agent beta setup to agent GA version.
 
 
 
-## Are Schematics Agents the same as Terraform Cloud Agents?
+## Are {{site.data.keyword.bpshort}} Agent the same as Terraform cloud agents?
 {: #faqs-agent-terraform-agent}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} Agents perform a similar role to [Terraform Cloud agents](https://developer.hashicorp.com/terraform/cloud-docs/agents){: external}.
+{{site.data.keyword.bpshort}} Agent performs a similar role to [Terraform Cloud agents](https://developer.hashicorp.com/terraform/cloud-docs/agents){: external}.
 
 
-## Do the agents run on IBM Cloud cloud resources?
+## Do the agents run on {{site.data.keyword.cloud_notm}} cloud resources?
 {: #faqs-agent-run}
 {: faq}
 {: support}
 
-Schematics Agents can run only Terraform and Ansible workloads. For the Beta, the agents are deployed in IBM Cloud IKS Clusters in the user account.
+{{site.data.keyword.bpshort}} Agent can run only Terraform and Ansible workloads. For the Beta, the agents are deployed in IBM Cloud {{site.data.keyword.containerlong_notm}} clusters in the user account.
 
-## What are the minimum cluster configuration needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?
+## What are the minimum cluster configurations needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?
 {: #faqs-agent-min-cluster-conf}
 {: faq}
 {: support}
@@ -394,3 +402,118 @@ For the {{site.data.keyword.vsi_is_full}} or {{site.data.keyword.containerlong}}
 | runtime-ws | 16 |
 {: caption="agent microservice deployments" caption-side="bottom"}
 
+## How can a user identify the job is created by an agent?
+{: #faqs-agent-job}
+{: faq}
+{: support}
+
+You can identify that the workspace is created by an Agent through the workspace job logs.
+
+## Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?
+{: #faqs-agent-job}
+{: faq}
+{: support}
+
+No, If a agent creates workspace you must see a reference in the workspace job log. If you don't see the reference, then you must check that your policy validation is failed.
+
+## Can {{site.data.keyword.bpshort}} Agent establish a connection with the private Git instance?
+{: #faqs-git-instance-cert}
+{: faq}
+{: support}
+
+Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the private Git instance. However, you need to own an SSL certificate and follow these steps in agent micro-services.
+
+1. Establish a connection by configuring SSL certificate in `Jobrunner`, `Sandbox`, and `Runtime-ws` agent micro-services.
+2. Configuration should be by using {{site.data.keyword.containershort_notm}} configmap mounting.
+   - create a configmap with the required SSL certificate, for example,
+
+     ```bash
+     kubectl -n schematics-job-runtime create configmap mytestcert --from-file cert.pem
+     ```
+     {: pre}
+
+   - Use configmap as volume and mount as shared in the deployment file in `Jobrunner`, `Sandbox`, and `Runtime-ws` microservices.
+     ```text
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+        annotations:
+        deployment.kubernetes.io/revision: "1"
+        kubernetes.io/change-cause: job_runner_1.0
+        creationTimestamp: "2023-09-14T12:18:07Z"
+        generation: 1
+        labels:
+        app: jobrunner
+        name: jobrunner
+        namespace: schematics-job-runtime
+        resourceVersion: "23425"
+        uid: fa66583a-8bdb-40a1-9b05-df2c2bf56656
+        spec:
+        progressDeadlineSeconds: 600
+        .....
+        .....
+        volumes:
+        - hostPath:
+                path: /var/log/at
+                type: ""
+                name: at-events
+        - hostPath:
+                path: /var/log/schematics
+                type: ""
+                name: ext-logs
+        - name: mytestcert  #### added as a volume 
+                configMap:
+                name: mytestcert
+                status:
+                availableReplicas: 1
+                conditions:
+        - lastTransitionTime: "2023-09-14T12:18:42Z"
+                lastUpdateTime: "2023-09-14T12:18:42Z"
+                message: Deployment has minimum availability.
+                reason: MinimumReplicasAvailable
+                status: "True"
+                type: Available
+        - lastTransitionTime: "2023-09-14T12:18:07Z"
+                lastUpdateTime: "2023-09-14T12:18:42Z"
+                message: ReplicaSet "jobrunner-7f9ffdf959" has successfully progressed.
+                reason: NewReplicaSetAvailable
+                status: "True"
+                type: Progressing
+                observedGeneration: 1
+                readyReplicas: 1
+                replicas: 1
+                updatedReplicas: 1
+     ```
+     {: screen}
+
+Update the agent with the metadata to perform catalog onboarding with the private Git instance..... is required only for catalog onboarding with private Git instance. It can be another FAQ and using private Git instance certs FAQ will be a prerequisite
+
+## Can {{site.data.keyword.bpshort}} Agent update a connection with the private Git instance?
+{: #faqs-git-instance-update}
+{: faq}
+{: support}
+
+Yes, you can Update the agent with the metadata to perform catalog on boarding with the private Git instance. Use the sample update API request for reference.
+
+   Perform this step only if an agent does not have metadata.
+   {: important}
+
+   ```curl
+    curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id\>' \
+        -H 'Authorization: Bearer <token\>' \
+        -H 'X-Feature-Agents: true' \
+        -H 'refresh_token: <refresh_token\>' \
+        -d '{
+    "agent_metadata": [
+            {
+                "name": "purpose",
+                "value": ["git"] 
+            },
+            {
+                "name": "git_endpoints",
+                "value": ["https://myprivate-gitinstance/testrepo"] 
+            }
+          ]
+        }'
+    ```
+    {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-27"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -28,12 +28,16 @@ Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} a
 ## Before you begin
 {: #deploy-prereq}
 
-Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview). After creation of the cluster, COS instance and bucket gather the following information as an input to deploy your agent to your target location. 
+Review and complete the steps described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview). After creation of the cluster, COS instance, and bucket. Gather the following information as an input to deploy your agent to your target location. 
 {: shortdesc}
 
 - A short description of the network zones and infrastructure accessible to the agent. 
-- The `cluster ID`, `cluster resource group` and `region` of the Kubernetes cluster the agent will deployed on.
-- the `COS instance name`, `COS bucket name` of the {{site.data.keyword.objectstorageshort}} bucket used for agent temporary data storage. The resource group and region of the COS instance and bucket must be the same as the cluster. 
+- The `cluster ID`, `cluster resource group` and `region` of the {{site.data.keyword.containershort}} cluster the agent deploys.
+- The `{{site.data.keyword.cos_full}} instance name`, `{{site.data.keyword.cos_full_notm}} bucket name` of the {{site.data.keyword.objectstorageshort}} bucket used for agent temporary data storage. The resource group and region of the COS instance and bucket must be the same as the cluster. 
+   
+   Make sure that the `Cluster`, and the `{{site.data.keyword.cos_full_notm}} instance` are in the same resource group.
+   {: important}
+ 
 
 ## Creating an agent definition using the CLI 
 {: #create-agent-cli}
