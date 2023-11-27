@@ -112,7 +112,6 @@ toc:
                                                    - sc-agentb1-plan.md
                                                    - sc-agentb1-deploy.md
                                                    - sc-agentb1-display.md
-                                                   - sc-agentb1-migrate.md
                                                    - sc-agentb1-delete.md
                                                    - topicgroup:
                                                               label: Using Agents

@@ -1342,14 +1342,6 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview#agent-delete-nextsteps)
 
-[Migrating agent version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-agent-version)
-
-* [Migrating to `1.0.0-beta1` version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-v1beta1)
-
-* [Migrating to `1.0.0-beta2` version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-v1beta2)
-
-* [Next steps](/docs/schematics?topic=schematics-migrate-agent-version#agent-migrate-nextsteps)
-
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
 * [Displaying the list of agents using UI](/docs/schematics?topic=schematics-delete-agent-overview#display-agentb1-ui)
@@ -1884,19 +1876,19 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## Beta-1 code for {{site.data.keyword.bpshort}} Agent
-{: #sitemap_beta-1_code_for_agent}
+## {{site.data.keyword.bpshort}} Agent limitation
+{: #sitemap__agent_limitation}
 
 
-[Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#agent-beta1-limitations)
+[{{site.data.keyword.bpshort}} Agent limitation](/docs/schematics?topic=schematics-agent-beta1-limitations#agent-beta1-limitations)
 
-* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta1-limitation)
+* [Limitations of an Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta1-limitation)
 
 * [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-public-slack)
 
     * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-slack)
 
-* [Agent beta-1 release limitations](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-limitation)
+* [Agent release limitations](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-limitation)
 
 
 ## {{site.data.keyword.bpshort}} worker runtime
