@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-27"
+lastupdated: "2023-11-28"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -15,38 +15,9 @@ subcollection: schematics
 # Deleting an agent
 {: #delete-agent-overview}
 
-When an agent is no longer required, you can do one of the following to either:
-- Disable the agent 
-- Delete the agent 
+When an agent is no longer required, you can delete the agent. 
 
-## Displaying the list of agents using UI
-{: #display-agentb1-ui}
-{: ui}
 
-1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
-2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
-3. Select your agent from the list, and use the `...` dots to perform **Delete** operation.
-
-## Disabling an agent using the CLI
-{: #disable-agentb1-cli}
-{: cli}
-
-You can disable and stop it from executing future jobs using the [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update) command. This command requires an `AGENT_ID` as input argument, and the `USER_STATE` as **disable**. Once the agent is disabled, the workspace or action jobs are not routed to that agent, the existing jobs runs to completion. The agent assignment policy for the  agent is automatically disabled.
-
-Example
-
-```sh
-ibmcloud schematics agent update --id agent-testing-prod-cli-mar-27-5.deA.dc97 -s disable
-```
-{: pre}
-
-Output
-
-```text
-Initiating agent update...
-Job ID	.ACTIVITY.4654016
-```
-{: screen}
 
 ## Deleting an agent using the CLI
 {: #delete-agentb1-cli}

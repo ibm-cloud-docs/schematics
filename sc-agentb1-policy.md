@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-27"
+lastupdated: "2023-11-28"
 
 keywords: schematics agent, agent policy, policies
 
@@ -17,7 +17,7 @@ subcollection: schematics
 # Agent policies
 {: #policy-manage}
 
-Assignment policies tell {{site.data.keyword.bpshort}} which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. For example agents may exist in any of the following isolated zones:
+Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run on the agent. For example agents may exist and jobs can be executed in any of the following isolated zones:
 - cloud regions (region-1, region-2, region-3)
 - VPC zones for the application layer, data layer, management layer
 - cloud-vendors or on-premises
@@ -26,7 +26,7 @@ Assignment policies tell {{site.data.keyword.bpshort}} which agent it should use
 
 You can create, update, and delete an `agent assignment policy` by using the {{site.data.keyword.bpshort}} [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) CLI. 
 
-The `agent-assignment-policy` for an agent is defined by using the following attributes of a workspace or an action. The selection attributes can be a combination of the following flags:
+The `agent-assignment-policy` for an agent is defined by using the following attributes of a workspace or action. The selection attributes can be a combination of the following flags:
 - `tags` – workspaces or actions with matching user tags are selected.
 - `locations` – workspaces or actions in the matching {{site.data.keyword.bpshort}} location are selected.
 - `resource-groups` - workspaces or actions with the matching resource-group are selected.
@@ -46,18 +46,18 @@ Create your agent policy using the CLI. For the complete list of agent policy op
 
 Before you begin:
 
-- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version to be `1.12.9` or higher.
+- Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version to be `1.12.12` or higher.
 - Select the {{site.data.keyword.cloud_notm}} region where the agent is defined. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
 - Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create an agent policy.
-- Create an agent policy target file 
+- Create an agent policy file 
 
-### Defining a JSON policy target file
+### Defining a JSON policy file
 {: #agent-policy-json}
 
-A sample JSON policy target file is provided here. Replace the `<...>` placeholders with your actual values. 
+A sample JSON policy file is provided here. Replace the `<...>` placeholders with your actual values. 
 
-- The target agent jobs are to be executed on is defined using the `target` block.
-- The assignment parameters for selecting workspace jobs to execute is defined by the `parameter` block. 
+- The agent jobs are to be executed on is defined using the `target` block.
+- The attributes to select workspace or actions to execute on the agent are defined by the `parameter` block. 
 
 Policy JSON files can be edited in any editor or IDE. They must be valid JSON.  
  
@@ -156,7 +156,7 @@ Tags             [TAGS]
 {: #agentb1-listpolicy-cli}
 {: cli}
 
-You can display the list of policies in your account using the [policy list](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-list) command.
+You can display the list of policies defined in your account using the [policy list](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-list) command.
 
 Example
 
@@ -216,7 +216,7 @@ Tags             [TAGS]
 {: #agentb1-updatepolicy-cli}
 {: cli}
 
-You can update an agent policy to set tags, or description, referencing the agent with the `AGENT_ID` input argument.
+You can update an agent policy to change the selection tags, or description, by referencing the agent with the `AGENT_ID` input argument.
 
 ```sh
 ibmcloud schematics policy update --id agent-policy-testing-cli-mar-27.deP.c737 --kind agent_assignment_policy --resource-group Default --tags workspace-policy:prod --description testing-policy-cli --tags jobtag

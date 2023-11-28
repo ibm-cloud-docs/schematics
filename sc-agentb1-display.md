@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-27"
+lastupdated: "2023-11-28"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Displaying agents
 {: #display-agentb1-overview}
 
-You can view an agent with a specific agent ID to retrieve the detailed configuration information. You can also list all the agents that are created in your account by using the command _agent list_.
+You can view an agent using the agent ID to retrieve the detailed configuration information. You can also list all the agents that are created in your account by using the command _ibmcloud schematics agent list_.
 {: shortdesc}
 
 ## Displaying the list of agents using UI

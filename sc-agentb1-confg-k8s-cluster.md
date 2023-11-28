@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-11-28"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -16,10 +16,10 @@ subcollection: schematics
 # Agent and Kubernetes configuration 
 {: #configure-k8s-cluster}
 
-Agents extend {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. Customization of a deployed agent is performed through configuration options set on the Kubernetes cluster. 
+Agents extend {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. Customization of a deployed agent is performed through configuration options set on the Kubernetes cluster. If the agent is redeployed all customisation of the cluster parameters will be lost. 
 {: shortdesc}
 
-When an agent is deployed, by default the following configuration options are applied on the cluster.
+When an agent is deployed, by default the following configuration options are applied on the cluster. The applied configuration is reproduced here for reference. 
 
 ## Default network policies
 {: #k8s-cluster-network-policy}

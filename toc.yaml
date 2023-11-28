@@ -107,7 +107,7 @@ toc:
                                                     - integration-at.md
                                                     - integration-kms.md
                                   - topicgroup:
-                                            label: Working with Agent
+                                            label: Working with Agents
                                             topics:
                                                    - sc-agentb1-plan.md
                                                    - sc-agentb1-deploy.md
@@ -120,6 +120,7 @@ toc:
                                                                       - sc-agentb1-confg-k8s-cluster.md
                                                                       - sc-agentb1-health.md
                                                                       - sc-agentb1-proxy.md
+                                                                      - sc-agentb1-registry.md
                                   - topicgroup:
                                             label: Logging and monitoring
                                             topics:

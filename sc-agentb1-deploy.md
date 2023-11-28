@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-27"
+lastupdated: "2023-11-28"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Deploying agents
 {: #deploy-agent-overview}
 
-Agents for {{site.data.keyword.bplong}} extend its ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. 
+Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. 
 {: shortdesc}
 
 Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} agent. 
@@ -67,13 +67,13 @@ Review and complete the steps described in [preparing for agent deployment](/doc
 As the first step, you must create an agent definition in your {{site.data.keyword.cloud_notm}} account, with the configuration that will be used to deploy the agent. For a complete list of an `agent create` options, see [ibmcloud schematics agent create](/docs/schematics?topic=schematics-schematics-cli-reference&interface=ui#schematics-agent-create) command.
 {: shortdesc}
 
-To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be `1.12.9` or higher. 
+To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be `1.12.12` or higher. 
 {: important}
 
 Before starting the deployment the cluster, COS instance and bucket must have been created. 
 {: note}
 
-Select the {{site.data.keyword.cloud_notm}} region where you wish to define and manage your agent from. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. This must be the same region as the `location` specified on the `agent create` command. 
+Select the {{site.data.keyword.cloud_notm}} region where you wish to define and manage your agent from. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command. This must be the same region as the `location` specified on the `agent create` command. The COS bucket location must be of the form `eu-gb` or `us-south` and not a city name.   
 
 Example `agent create` syntax. The text between <> should be replaced with your values:
 
@@ -387,5 +387,5 @@ Deploying and configuration an agent are complete.
 - For configuring and provisioning your infrastructure through [agent policies](/docs/schematics?topic=schematics-policy-manage). The agent policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
 - Manage your [agent and Kubernetes cluster](/docs/schematics?topic=schematics-configure-k8s-cluster).
 - You can [configure a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview) for an agent.
-- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
+- You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to agents.
 - When the agent is no longer required, it can be removed following the steps in [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui).

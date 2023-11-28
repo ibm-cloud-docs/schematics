@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-27"
+lastupdated: "2023-11-28"
 
 keywords: schematics
 subcollection: schematics
@@ -1300,8 +1300,8 @@ subcollection: schematics
     * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
 
 
-## Working with Agent
-{: #sitemap_working_with_agent}
+## Working with Agents
+{: #sitemap_working_with_agents}
 
 
 [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
@@ -1344,10 +1344,6 @@ subcollection: schematics
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
-* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-delete-agent-overview#display-agentb1-ui)
-
-* [Disabling an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#disable-agentb1-cli)
-
 * [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-cli)
 
 * [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-api)
@@ -1363,7 +1359,7 @@ subcollection: schematics
 
 * [Creating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
 
-    * [Defining a JSON policy target file](/docs/schematics?topic=schematics-policy-manage#agent-policy-json)
+    * [Defining a JSON policy file](/docs/schematics?topic=schematics-policy-manage#agent-policy-json)
 
     * [Create agent policy](/docs/schematics?topic=schematics-policy-manage#agent-policy-CLI)
 
@@ -1416,6 +1412,18 @@ subcollection: schematics
 * [Monitoring agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-agentb1-health#agent-health-nextstep)
+
+[Configuring {{site.data.keyword.bpshort}} Agents to use a private registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-overview)
+
+* [Setting the credentials to access a private provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-tf-creds)
+
+* [Using Artifactory as a provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory)
+
+    * [Configuring a local Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_1)
+
+    * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_2)
+
+    * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_3)
 
 
 ## Logging and monitoring
@@ -2068,17 +2076,17 @@ subcollection: schematics
 
 [Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
-* [What are the updates in the agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
+* [What are the updates in the GA agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
 
-* [What are the costs of installing and by using agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
+* [What are the costs of installing and using agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
 * [Is it possible to install more than one Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
 * [What type of {{site.data.keyword.bpshort}} jobs can run in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
-* [How can you see the {{site.data.keyword.bpshort}} job results and logs for the workloads running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
+* [How can I see the {{site.data.keyword.bpshort}} job results and logs for the jobs running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
 
-* [How many {{site.data.keyword.bpshort}} jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
+* [How many {{site.data.keyword.bpshort}} jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
 
 * [What is the minimum cluster configuration required in Agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster)
 
@@ -2088,15 +2096,17 @@ subcollection: schematics
 
 * [What is the default polling interval for agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
 
+* [Are there execution timeout limits when working with agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-timeout)
+
 * [What is the difference between `agent-location` and `location` flag in agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
 
-* [Can an agent run workspace job that belongs to different resource groups?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
+* [Can an agent run workspace jobs that are associated with different resource groups?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
 
-* [Can an agent run Job from multiple {{site.data.keyword.bpshort}} regions?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
+* [Can an agent work with workspaces and actions belonging to different {{site.data.keyword.bpshort}} regions?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
 
-* [Is it possible to register an agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+* [Is it possible to use an agent to execute jobs for multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
 
-* [Can jobs for an existing workspace be configured to run on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
+* [Can an existing workspace run jobs on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
 
 * [What IAM permissions needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
 
