@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-28"
+lastupdated: "2023-12-04"
 
 keywords: schematics agent, agent policy, policies
 
@@ -17,12 +17,15 @@ subcollection: schematics
 # Agent policies
 {: #policy-manage}
 
-Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent it should use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run on the agent. For example agents may exist and jobs can be executed in any of the following isolated zones:
+Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have one or more policies associated with it, to identify the workspace and action jobs that will be run on the agent. For example agents may exist in and jobs can be executed in the following isolated zones:
 - cloud regions (region-1, region-2, region-3)
 - VPC zones for the application layer, data layer, management layer
 - cloud-vendors or on-premises
 - departmental zones, in your organization such as `HR`, `Finance`, `Manufacturing`
 {: shortdesc}
+
+Only a single policy can be associated with a workspace or action. Policy creation will fail if there is an existing policy that targets the same workspaces or actions.  
+
 
 You can create, update, and delete an `agent assignment policy` by using the {{site.data.keyword.bpshort}} [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) CLI. 
 

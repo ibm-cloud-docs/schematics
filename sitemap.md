@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-28"
+lastupdated: "2023-12-04"
 
 keywords: schematics
 subcollection: schematics
@@ -2082,6 +2082,10 @@ subcollection: schematics
 
 * [Is it possible to install more than one Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
+* [What Terraform versions are supported with agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-versions)
+
+* [Why does workspace execution fail with `terraformx.x: executable file not found in $PATH`](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-version-old)
+
 * [What type of {{site.data.keyword.bpshort}} jobs can run in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
 * [How can I see the {{site.data.keyword.bpshort}} job results and logs for the jobs running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
@@ -2109,18 +2113,6 @@ subcollection: schematics
 * [Can an existing workspace run jobs on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
 
 * [What IAM permissions needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
-
-* [Can I use Terraform custom providers or use a proxy registry to download Terraform provider plug-ins?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cust-providers)
-
-* [How do I set the credentials to access a private provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-tf-creds)
-
-* [Using Artifactory as a provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory)
-
-    * [Configuring a local Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory_1)
-
-    * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory_2)
-
-    * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory_3)
 
 * [Can I inject self-signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
 
