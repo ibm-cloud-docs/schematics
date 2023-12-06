@@ -15,15 +15,15 @@ subcollection: schematics
 # Agent policies
 {: #policy-manage}
 
-Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have one or more policies associated with it, to identify the workspace and action jobs that will be run on the agent. For example agents may exist in and jobs can be executed in the following isolated zones:
+Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to use to run Terraform and Ansible jobs in a specific network zone. Each agent has one or more policies associated with it to identify the workspace and action jobs that are run on the agent. For example agents may exist in and jobs can be executed in the following isolated zones:
 
 - cloud regions (region-1, region-2, region-3)
 - VPC zones for the application layer, data layer, management layer
 - cloud-vendors or on-premises
-- departmental zones, in your organization such as `HR`, `Finance`, `Manufacturing`
+- departmental zones in your organization such as `HR`, `Finance`, `Manufacturing`
 {: shortdesc}
 
-Only a single policy can be associated with a workspace or action. Policy creation will fail if there is an existing policy that targets the same workspaces or actions.  
+Only a single policy can be associated with a workspace or action. Policy creation fails if there is an existing policy that targets the same workspaces or actions.  
 
 You can create, update, and delete an `agent assignment policy` by using the {{site.data.keyword.bpshort}} [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) CLI. 
 
@@ -79,7 +79,7 @@ If the selection policy for `agent-1` specified tags=[`dev`] and resource-group=
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Access **Schematics** > **Policies**.
 3. Click your policy from the list to view the policy details.
-4. In the **Assigned agent** pane, click **Agent details** to view your agent configurations.
+4. In the **Assigned agent** window, click **Agent details** to view your agent configurations.
 
 ## Updating an agent policy using the UI
 {: #agentb1-updatepolicy-ui}
@@ -120,8 +120,8 @@ Before you begin:
 
 A sample JSON policy file is provided here. Replace the `<...>` placeholders with your actual values. 
 
-- The agent jobs are to be executed on is defined using the `target` block.
-- The attributes to select workspace or actions to execute on the agent are defined by the `parameter` block. 
+- The agent jobs are to be run on is defined by using the `target` block.
+- The attributes to select the workspace or actions to run on the agent are defined by the `parameter` block. 
 
 Policy JSON files can be edited in any editor or IDE. They must be valid JSON.  
  
@@ -493,16 +493,16 @@ Authorization: Bearer <auth_token>
 ## Next steps
 {: #agent-policy-nextsteps}
 
-You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansible jobs. The agent will execute any jobs for workspaces or actions that match the defined selection policy parameters:
+You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansible jobs. The agent executes any jobs for workspaces or actions that match the defined selection policy parameters:
 - resource group
 - location
 - tags
 
-Note at this time, tags must be set at workspace or action create time. Any changes to tags performed via the {{site.data.keyword.bpshort}} UI will not be detected or considered during policy evaluation. 
+Note now, tags must be set at workspace or action create time. Any changes to tags performed via the {{site.data.keyword.bpshort}} UI will not be detected or considered during policy evaluation. 
 {: attention}
 
 
-After execution the workspace or action job logs will contain a header indicating the agent the job was executed on.  
+After execution, the workspace or action job logs contain a header indicating the agent that the job was executed on.  
 
 
 ```text
@@ -512,6 +512,6 @@ After execution the workspace or action job logs will contain a header indicatin
 2023/04/08 15:22:07  --- Ready to execute the command on Agent agent-test-da.deA.e055 ---
 ```
 
-You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions related to an agent.
+You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions that are related to an agent.
 
 When the agent is no longer required, it can be removed following the steps in [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui).
