@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-28"
+lastupdated: "2023-12-06"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -18,6 +18,16 @@ subcollection: schematics
 When an agent is no longer required, you can delete the agent. 
 
 
+
+## Deleting an agent using the UI
+{: #delete-agentb1-ui}
+{: ui}
+
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
+3. Click the `...` dots > **Delete** agent.
+4. In the Delete Agent popup type `<your agent name>` to confirm. **Note** the delete agent action cannot be undone.
+5. Click **Delete**.
 
 ## Deleting an agent using the CLI
 {: #delete-agentb1-cli}
@@ -44,6 +54,7 @@ OK
 {: screen}
 
 When the agent is deleted, you can expect:
+
 - All the agent microservices are uninstalled.
 - All the agent related Kubernetes resources, such as Pods, Deployment, Configmap, and Namespaces are destroyed.
 - All the credentials that are created as part of the agent deployment, such as HMAC credentials for the {{site.data.keyword.objectstorageshort}} bucket, trusted profile to communicate with {{site.data.keyword.bpshort}} are destroyed.

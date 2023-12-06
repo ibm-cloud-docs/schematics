@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-12-04"
+lastupdated: "2023-12-06"
 
 keywords: schematics agent, agent policy, policies
 
@@ -12,12 +12,11 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # Agent policies
 {: #policy-manage}
 
 Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to use to execute Terraform and Ansible jobs in a specific network zone. Each agent will have one or more policies associated with it, to identify the workspace and action jobs that will be run on the agent. For example agents may exist in and jobs can be executed in the following isolated zones:
+
 - cloud regions (region-1, region-2, region-3)
 - VPC zones for the application layer, data layer, management layer
 - cloud-vendors or on-premises
@@ -26,10 +25,10 @@ Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to us
 
 Only a single policy can be associated with a workspace or action. Policy creation will fail if there is an existing policy that targets the same workspaces or actions.  
 
-
 You can create, update, and delete an `agent assignment policy` by using the {{site.data.keyword.bpshort}} [policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create) CLI. 
 
 The `agent-assignment-policy` for an agent is defined by using the following attributes of a workspace or action. The selection attributes can be a combination of the following flags:
+
 - `tags` – workspaces or actions with matching user tags are selected.
 - `locations` – workspaces or actions in the matching {{site.data.keyword.bpshort}} location are selected.
 - `resource-groups` - workspaces or actions with the matching resource-group are selected.
@@ -39,6 +38,68 @@ If the selection policy for `agent-1` specified tags=[`dev`] and resource-group=
 
 
 
+
+
+## Creating an agent policy using the UI
+{: #agentb1-createpolicy-ui}
+{: ui}
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
+2. Access **Schematics** > **Policies** > [**Create policy**](https://cloud.ibm.com/schematics/policies){: external}.
+    - In **Create a policy** section:
+        - Enter unique **Policy name**.
+        - Enter **Description**.
+        - Select **Policy type** as Agent assignment policy.
+        - Select **Location**, and **Resource group** from the drop down option.
+        - Enter **Tags** for the agent.
+        - Click **Next**.
+    - In **Policy parameters** section:
+        - Select your **Agent** from the drop down list.
+        - In **Define policy attributes** section.
+          - Select **Object type** as `workspace` or `action`.
+          - Select **Resource group**.
+          - Select **Object location**.
+          - Enter **Object tags**.
+          - Click **Next**.
+        - In the **Policy preview** section:
+            - Select the workspaces that needs to be part of your policy.
+3. Click **Create**.
+
+## Listing all policies using the UI
+{: #agentb1-listpolicy-ui}
+{: ui}
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
+2. Access **Schematics** > **Policies**.
+
+## Displaying a policy using the UI
+{: #agentb1-getpolicy-ui}
+{: ui}
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
+2. Access **Schematics** > **Policies**.
+3. Click your policy from the list to view the policy details.
+4. In the **Assigned agent** pane, click **Agent details** to view your agent configurations.
+
+## Updating an agent policy using the UI
+{: #agentb1-updatepolicy-ui}
+{: ui}
+
+You can update an agent policy to change the selection tags, or description, by referencing the agent with the `AGENT_ID`.
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
+2. Access **Schematics** > **Policies**.
+3. Click your policy from the list to view the policy details.
+4. Click **Actions** > **Edit policy** to update the parameters.
+
+## Deleting a policy using the UI
+{: #agentb1-deletepolicy-ui}
+{: ui}
+
+1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
+2. Access **Schematics** > **Policies**.
+3. Click your policy from the list to view the policy details.
+4. Click **Actions** > **Delete policy** to delete the parameters.
 
 ## Creating an agent policy using the CLI
 {: #agentb1-createpolicy-cli}

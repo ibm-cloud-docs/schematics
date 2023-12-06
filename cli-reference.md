@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-12-06"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -37,6 +37,7 @@ Be sure to keep your CLI up-to-date so that you can use the current released com
 
 Review the commands to create, update, list, delete, and work with your {{site.data.keyword.bpshort}} Actions.
 {: shortdesc}
+
 
 
 

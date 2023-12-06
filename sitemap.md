@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-12-04"
+lastupdated: "2023-12-06"
 
 keywords: schematics
 subcollection: schematics
@@ -1344,6 +1344,8 @@ subcollection: schematics
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
+* [Deleting an agent using the UI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-ui)
+
 * [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-cli)
 
 * [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-api)
@@ -1356,6 +1358,16 @@ subcollection: schematics
 
 
 [Agent policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
+
+* [Creating an agent policy using the UI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-ui)
+
+* [Listing all policies using the UI](/docs/schematics?topic=schematics-policy-manage#agentb1-listpolicy-ui)
+
+* [Displaying a policy using the UI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-ui)
+
+* [Updating an agent policy using the UI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-ui)
+
+* [Deleting a policy using the UI](/docs/schematics?topic=schematics-policy-manage#agentb1-deletepolicy-ui)
 
 * [Creating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
 
