@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-12-06"
+lastupdated: "2023-12-07"
 
 keywords: schematics agent, agent policy, policies
 
@@ -490,10 +490,8 @@ Authorization: Bearer <auth_token>
 {: pre}
 
 
-## Next steps
-{: #agent-policy-nextsteps}
-
 You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansible jobs. The agent executes any jobs for workspaces or actions that match the defined selection policy parameters:
+
 - resource group
 - location
 - tags
@@ -501,9 +499,7 @@ You can now use the agent to run {{site.data.keyword.bpshort}} Terraform or Ansi
 Note now, tags must be set at workspace or action create time. Any changes to tags performed via the {{site.data.keyword.bpshort}} UI will not be detected or considered during policy evaluation. 
 {: attention}
 
-
 After execution, the workspace or action job logs contain a header indicating the agent that the job was executed on.  
-
 
 ```text
 2023/04/08 15:22:07 [1m-----  New Workspace Action  -----[21m[0m
@@ -511,6 +507,10 @@ After execution, the workspace or action job logs contain a header indicating th
 2023/04/08 15:22:07 Related Workspace: name=myworkspace, agentID=agent-test-da.deA.e055 sourcerelease=(not specified), sourceurl=https://github.com/stevestrutt/multitier-vpc-bastion-host, branch=(not specified), folder=.
 2023/04/08 15:22:07  --- Ready to execute the command on Agent agent-test-da.deA.e055 ---
 ```
+{: screen}
+
+## Next steps
+{: #agent-policy-nextsteps}
 
 You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions that are related to an agent.
 
