@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-12-07"
+lastupdated: "2023-12-11"
 
 keywords: schematics
 subcollection: schematics
@@ -1311,6 +1311,16 @@ subcollection: schematics
 * [Agent capacity planning](/docs/schematics?topic=schematics-plan-agent-overview#agent-capacity-planning)
 
 * [Next steps](/docs/schematics?topic=schematics-plan-agent-overview#agent-plan-nextsteps)
+
+[Deploying agent prerequisite infrastructure](/docs/schematics?topic=schematics-agent-infrastructure-overview#agent-infrastructure-overview)
+
+* [Prerequisites](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-prereq)
+
+* [Provisioning agent infrastructure using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-infra-workspace)
+
+    * [Expected outcome](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-infra-output)
+
+* [Next steps](/docs/schematics?topic=schematics-agent-infrastructure-overview#nextsteps-agent-infra)
 
 [Deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-overview)
 

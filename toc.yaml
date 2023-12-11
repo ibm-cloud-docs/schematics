@@ -110,6 +110,7 @@ toc:
                                             label: Working with Agents
                                             topics:
                                                    - sc-agentb1-plan.md
+                                                   - sc-agent-infra-setup.md
                                                    - sc-agentb1-deploy.md
                                                    - sc-agentb1-display.md
                                                    - sc-agentb1-delete.md
