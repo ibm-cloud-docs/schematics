@@ -1,7 +1,7 @@
 {
   "title": "IBM Cloud Schematics docs",
-  "lastupdated": "2023-12-04",
-  "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics Actions. Learn more about how Schematics works and the benefits of using the service. ",
+  "lastupdated": "2023-12-13",
+  "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
   "section_devtools": {
     "api": "/apidocs/schematics",
     "cli": "/docs/schematics?topic=schematics-schematics-cli-reference",
@@ -14,12 +14,12 @@
   },
   "section_recommended": [
     {
-      "title": "Automate cloud operations with Actions",
+      "title": "Automate cloud operations with actions",
       "description": "Learn how to automatically start and stop a Virtual Servers for VPC instance with an IBM-provided Ansible playbook.",
       "href": "/docs/schematics?topic=schematics-getting-started-ansible"
     },
     {
-      "title": "Deploy cloud services with Workspaces",
+      "title": "Deploy cloud services with workspaces",
       "description": "Use an IBM-provided Terraform template to create an Object Storage service instance to store your data in IBM Cloud.",
       "href": "/docs/schematics?topic=schematics-get-started-terraform"
     },
@@ -40,7 +40,7 @@
     },
     {
       "title": "Set up the Schematics CLI",
-      "description": "Install the Schematics CLI plug-in to run Schematics Actions in your IBM Cloud account.",
+      "description": "Install the Schematics CLI plug-in to run Schematics actions in your IBM Cloud account.",
       "href": "/docs/schematics?topic=schematics-setup-cli"
     }
   ]

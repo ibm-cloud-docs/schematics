@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-12-13"
 
 keywords: schematics objects, delete schematics objects,  schematics object backup
 
@@ -47,7 +47,7 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} console.
 
-1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
+1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want to delete.
 2. Click **actions** tab and select **Delete workspace** option.
 3. Type your workspace name in **Type `workspace_name` to confirm** text box.
 4. Click **Delete** button.
@@ -57,7 +57,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} Console.
 
-1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/actions){: external}, select the actions that you want to delete.
+1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/actions){: external}, select the actions that you want to delete.
 2. Click Select the **Actions** drop down list and select **Delete** option.
 3. Type your actions name in **Type `action_name` to confirm** text box.
 4. Click **Delete** button.
@@ -67,7 +67,7 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects b
 
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects by using {{site.data.keyword.cloud_notm}} Console.
 
-1. From the [{{site.data.keyword.bpshort}} Workspaces dashboard](https://cloud.ibm.com/schematics/inventories){: external}, select the inventories that you want to delete.
+1. From the [{{site.data.keyword.bpshort}} workspaces dashboard](https://cloud.ibm.com/schematics/inventories){: external}, select the inventories that you want to delete.
 2. Click `...` dots against the inventory you want to delete and click **Delete**.
 3. Type your inventory name in **Type `Inventory_name` to confirm** text box.
 4. Click **Delete** button.
@@ -87,8 +87,8 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
-2. Run `ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} Workspaces list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command.
-3. Run `ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} Workspaces delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) command.
+2. Run `ibmcloud schematics workspace list [--limit LIMIT] [--offset OFFSET] [--output] [--region] [--json]` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} workspaces list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-list) command.
+3. Run `ibmcloud schematics workspace delete --id WORKSPACE_ID [--force]` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} workspaces delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-delete) command.
 
 ### Actions
 {: #delete-schematics-data-cliactions}
@@ -96,8 +96,8 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/schematics?topic=schematics-setup-cli#install-schematics-cli) and install the [{{site.data.keyword.bplong}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin)
-2. Run `ibmcloud schematics action list` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} Actions list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-action) command.
-3. Run `ibmcloud schematics action delete --id ACTION_ID [--force]` to delete an action. For more information about {{site.data.keyword.bpshort}} Actions delete, see [{{site.data.keyword.bpshort}} Actions delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-action) command.
+2. Run `ibmcloud schematics action list` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} actions list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-list-action) command.
+3. Run `ibmcloud schematics action delete --id ACTION_ID [--force]` to delete an action. For more information about {{site.data.keyword.bpshort}} actions delete, see [{{site.data.keyword.bpshort}} actions delete](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-action) command.
 
 
 ### Inventories
@@ -124,8 +124,8 @@ You must have [Manager role](/docs/schematics?topic=schematics-access#access-rol
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
-2. Run `curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_token>"` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} Workspaces list](/apidocs/schematics/schematics#list-workspaces) API.
-3. Run `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/{id} -H "Authorization: <iam_token>"` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} Workspaces delete](/apidocs/schematics/schematics#delete-workspace) API.
+2. Run `curl -X GET https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_token>"` to list and select the workspace ID that you want to delete. For more information about listing the workspace, see [{{site.data.keyword.bpshort}} workspaces list](/apidocs/schematics/schematics#list-workspaces) API.
+3. Run `curl -X DELETE https://schematics.cloud.ibm.com/v1/workspaces/{id} -H "Authorization: <iam_token>"` to delete the workspace. For more information about workspace delete, see [{{site.data.keyword.bpshort}} workspace delete](/apidocs/schematics/schematics#delete-workspace) API.
 
 ### Actions
 {: #delete-schematics-data-apiactions}
@@ -133,8 +133,8 @@ You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 You can follow these steps to delete the {{site.data.keyword.bpshort}} objects.
 
 1. [Set up your REST client](/docs/schematics?topic=schematics-setup-api&interface=api#cs_api) to execute {{site.data.keyword.bpshort}} API.
-2. Run `curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/actions --header "Authorization:  <access_token>"` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} Actions list](/apidocs/schematics/schematics#list-actions) API.
-3. Run `curl --location --request DELETE https://schematics.cloud.ibm.com/v2/actions/{action_id} --header "Authorization:  <access_token> "` to delete an action. For more information about {{site.data.keyword.bpshort}} Actions delete, see [{{site.data.keyword.bpshort}} Actions delete](/apidocs/schematics/schematics#delete-action) API.
+2. Run `curl --location --request GET https://schematics.cloud.ibm.com/v2/actions/actions --header "Authorization:  <access_token>"` to list and select an action ID that you want to delete. For more information about listing the actions, see [{{site.data.keyword.bpshort}} actions list](/apidocs/schematics/schematics#list-actions) API.
+3. Run `curl --location --request DELETE https://schematics.cloud.ibm.com/v2/actions/{action_id} --header "Authorization:  <access_token> "` to delete an action. For more information about {{site.data.keyword.bpshort}} actions delete, see [{{site.data.keyword.bpshort}} actions delete](/apidocs/schematics/schematics#delete-action) API.
 
 
 ### Inventories

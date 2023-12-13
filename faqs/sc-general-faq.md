@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-12-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -14,7 +14,7 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-# General
+# Common for actions and workspaces 
 {: #general-faq}
 
 Answers to common questions about the {{site.data.keyword.bplong_notm}} are classified into following section.
@@ -42,33 +42,80 @@ Infrastructure as Code (IaC) helps you codify your cloud environment so that you
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} Workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking `Apply plan` from the workspace details page or running the `ibmcloud schematics apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
+{{site.data.keyword.bplong_notm}} workspaces are provided to you at no cost. However, when you decide to apply your Terraform template in {{site.data.keyword.cloud_notm}} by clicking `Apply plan` from the workspace details page or running the `ibmcloud schematics apply` command, you are charged for the {{site.data.keyword.cloud_notm}} resources that are described in your Terraform template. Review available service plans and pricing information for each resource that you are about to create. Some services come with a limit per {{site.data.keyword.cloud_notm}} account. If you are about to reach the service limit for your account, the resource is not provisioned until you increase the service quota, or remove existing services first.
 
 The {{site.data.keyword.bpshort}} `ibmcloud terraform` command usage displays warning and deprecation message as `Alias Terraform are deprecated. Use schematics or sch` in your command.
 {: note}
 
-## Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?
-{: #provider-versions}
+## How do I save files between operations?
+{: #saving-files}
 {: faq}
 {: support}
 
-Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider run current version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported.
 
-Example for a multiple provider configuration:
+{{site.data.keyword.bpshort}} persists files that are written to the path `/tmp/.schematics`, during action and workspace operations. The files are restored to the same path when running the next operation on the workspace. The file size limit is 10MB. 
 
-```terraform
-terraform{
-    required_providers{
-    ibm = ">= 1.21.0" // Error !! version unavailable.
-    ibm = ">= 1.20.0" // Execute against latest version.
-    ibm = "== 1.20.1" // Executes version v1.20.1. 
-    }
-}
+## Job failures due to files removed or missing from workspace, or actions (Ansible) template repos
+{: #missing-files}
+{: faq}
+{: support}
 
-```
+Job failures may occur due to files missing from Git template repos after importing or cloning the repo to {{site.data.keyword.bpshort}}. 
 
-Currently, version 1.21.0 is released. For more information, see [provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+Files may be found to be missing at execution time for several reasons:
+- The files were referenced using file sytem symlinks to different files or folders in the repo, or to external file systems
+- The repo contents were uploaded as a TGZ and files referenced by Git submodules or symlinks were not included in the TGZ. 
+- The files were considered vulnerable or malicious by {{site.data.keyword.bpshort}}. 
+
+## Files removed or missing from Terraform, or Ansible template repos
+{: #clone-file-extension}
+{: faq}
+{: support}
+
+To protect our users from malicious actors, {{site.data.keyword.bpshort}} removes files from users cloned Git repositories that might impact the security or integrity of the service. The intent is to protect users from execution of unauthorised modules or executables that could impact the service. Files packaged as zip or tar files are automatically excluded from user repos. The tar file contents are not inspected. Similarly the use of large files above 500KB is not supported (allowed) in template repos, where typical IaC configuration files are KB in size. 
+
+If it is desired to work with large files, these can be imported into {{site.data.keyword.bpshort}} at run time into `/tmp` or persisted in `/tmp/.schematics`. Only files less than 10MB are persisted between job runs. 
+
+When creating {{site.data.keyword.bpshort}} workspaces or actions {{site.data.keyword.bplong_notm}} clones a copy of the Terraform, or Ansible template from your Git repository and stores in a secured location. Before the template files are saved, {{site.data.keyword.bpshort}} analyses the content and files considered malicious or vulnerable are removed. A white listing approach is used to allow only authorised file. File removal is based on the following criteria:
+
+- The allowed file extensions are `.cer, .cfg, .conf, .crt, .der, .gitignore, .html, .j2, .jacl, .js, .json, .key, .md, .netrc, .pem, .properties, .ps1, .pub, .py, .service, .sh, .tf, .tf.json, .tfvars, .tmpl, .tpl, .txt, .yaml, .yml, .zip, _rsa, license`.
+- The allowed image extensions are `.bmp, .gif, .jpeg, .jpg, .png, .so .tif, .tiff`.
+- The files explicitly removed are `.asa, .asax, .exe, .php5, .pht, .phtml, .shtml, .swf, .tfstate, .tfstate.backup, .xap, .zip, .tar`.
+- All files that are larger than 500 KB are removed. This file size limit does not apply to the allowed image file types. 
+- Where the folder name starts with a (period) `.` it treated as malicious and removed.  
+
+The allowed extension list is continuously monitored and updated in every release. You can raise a [support ticket](/docs/schematics?topic=schematics-schematics-help) with the justification to add a file extension to the list.
 {: note}
+
+## Is the use of symlinks supported in Git repos?
+{: #symlinks-ws}
+{: faq}
+{: support}
+
+The use of filesystem symlinks in Git repos at execution time is not supported. At job execution time, Schematics will not traverse symlinks in cloned Git repos. 
+
+During creation of workspaces or actions, the use of symlinks to refer to variable files or Ansible playbooks in the cloned repo is permitted. 
+
+## Is the use of Git sub-modules supported in Git repos or TGZ files?
+{: #git-submodules-ws}
+{: faq}
+{: support}
+
+The use of Git submodules is supported only for cloned Git repos. When {{site.data.keyword.bpshort}} clones the Git repo, Git submodules will be imported. When repos are uploaded as TGZ files, {{site.data.keyword.bpshort}} does not perform a clone operation and files or folders referenced by Git submodule will not be included. When using TGZ files, all required files, referenced by Git submodules or symlinks must be included in the TGZ.    
+
+
+## Is there a rate limit?
+{: #rate-limit}
+{: faq}
+{: support}
+{{site.data.keyword.bplong_notm}} supports 50 API requests per minute, per region, and per user. The regions are `us-east`, `us-south`, `eu-gb`, or `eu-de`. Wait before calling the command again.
+
+## Why are jobs waiting to be run placed in a queue?
+{: #job-queue-faq}
+{: faq}
+{: support}
+
+{{site.data.keyword.bplong_notm}} queues all the users jobs into a single queue. Depending on the workload generated by the users and the time to run the jobs, the user might experience delays. For more information, see [Job queue status](/docs/schematics?topic=schematics-job-queue-process).
 
 
 ## How do I generate IAM access token, if client ID `bx` is used?
@@ -105,7 +152,7 @@ No, the null-exec (`null_resources`) and remote-exec resources has maximum timeo
 {: faq}
 {: support}
 
-{{site.data.keyword.bplong_notm}} already stores and securely manages the state file generated by the Terraform engine in a {{site.data.keyword.bpshort}} Workspace. {{site.data.keyword.bpshort}} periodically saves the state file in the secured location. Further the state file is automatically restored before executing the {{site.data.keyword.bpshort}} job or Terraform plan, apply, destroy, refresh, or import commands.
+{{site.data.keyword.bplong_notm}} already stores and securely manages the state file generated by the Terraform engine in a {{site.data.keyword.bpshort}} workspace. {{site.data.keyword.bpshort}} periodically saves the state file in the secured location. Further the state file is automatically restored before executing the {{site.data.keyword.bpshort}} job or Terraform plan, apply, destroy, refresh, or import commands.
 
 In the same way {{site.data.keyword.bplong_notm}} supports the ability to store user-defined files that are generated by the Terraform template or modules. {{site.data.keyword.bpshort}} expects the user-defined Terraform template or modules to generate and place the files in a predefined location. {{site.data.keyword.bpshort}} will automatically save and restore them before and after running the {{site.data.keyword.bpshort}} jobs or Terraform command.
 
@@ -116,7 +163,7 @@ Your files must be placed in the `/tmp/.schematics` folder and the size limit is
 {: faq}
 {: support}
 
-Currently, the {{site.data.keyword.bplong_notm}} service does not support the ability to import or synchronize the {{site.data.keyword.cloud_notm}} resource state into the {{site.data.keyword.bpshort}} Workspace. It is planned in the future roadmap.
+Currently, the {{site.data.keyword.bplong_notm}} service does not support the ability to import or synchronize the {{site.data.keyword.cloud_notm}} resource state into the {{site.data.keyword.bpshort}} workspace. It is planned in the future roadmap.
 
 ## How do I overcome the request exceeds the Cluster resource quota of '100' for the account in any region?
 {: #clusterquota-warn-faq}
@@ -181,7 +228,7 @@ To keep your {{site.data.keyword.bplong_notm}} state file and the {{site.data.ke
 {: faq}
 {: support}
 
-You can choose to add, modify, or remove infrastructure code in your Terraform template through GitHub, or update variable values from the {{site.data.keyword.bpshort}} Workspaces dashboard. 
+You can choose to add, modify, or remove infrastructure code in your Terraform template through GitHub, or update variable values from the {{site.data.keyword.bpshort}} workspaces dashboard. 
 
 ## How can I compare the required state of my cloud resources against the actual state of my resources?
 {: #required-resource-state-faq}
@@ -196,7 +243,7 @@ To create a deviation report and view the changes between the infrastructure and
 {: support}
 
 - A Terraform execution plan is based on the [Terraform state file](/docs/schematics?topic=schematics-schematics-cli-reference#state-file-cmds) that is created when you run your first {{site.data.keyword.bpshort}} apply action. 
-- Resources that you provisioned in other {{site.data.keyword.bpshort}} Workspaces by using automation tools such as `Ansible`, or `Chef` that are added without {{site.data.keyword.bpshort}} are not considered included in the Terraform execution plan.
+- Resources that you provisioned in other {{site.data.keyword.bpshort}} workspaces by using automation tools such as `Ansible`, or `Chef` that are added without {{site.data.keyword.bpshort}} are not considered included in the Terraform execution plan.
 
 ## How must I remove resources with {{site.data.keyword.bplong_notm}}?
 {: #remove-resource-faq}
@@ -244,7 +291,7 @@ timeout - last error: Error connecting to bastion: dial tcp
 ```
 {: screen}
 
-You can access your {{site.data.keyword.bpshort}} Workspaces, and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses. For more information, see [Opening the IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
+You can access your {{site.data.keyword.bpshort}} workspaces, and connect to Bastion host IP addresses for your region or zone based on the private or public endpoint IP addresses. For more information, see [Opening the IP addresses for the {{site.data.keyword.bplong_notm}} in your firewall](/docs/schematics?topic=schematics-allowed-ipaddresses).
 
 ## How do I create a cluster by using Terraform on {{site.data.keyword.cloud_notm}} environment?
 {: #newcluster-workspace-faq}
@@ -317,7 +364,7 @@ No, you cannot [delete](/docs/schematics?topic=schematics-sch-delete-wks) and [d
 
 Assigning access to a particular {{site.data.keyword.cloud_notm}} service is a good way of allowing a user to work with a specific service in your account. However, when you build production workloads in the cloud, you most likely have multiple {{site.data.keyword.cloud_notm}} services and resources that are used by different teams. With resource groups, you can organize multiple services in your account and bundle them under one common view and billing process. To allow your team to work with these resources, you can assign IAM access policies to a resource group that allows them to view and manage the resources within a resource group. 
 
-For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} Workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B. 
+For example, you have a team A that is responsible to manage an {{site.data.keyword.containerlong_notm}} cluster, and another team B that develops serverless apps with {{site.data.keyword.openwhisk}}. Both teams use {{site.data.keyword.bplong_notm}} workspaces to manage their {{site.data.keyword.cloud_notm}} resources. To ensure workspace and resource isolation, you create a resource group for each team. Then, you assign the required permissions to each resource group. For example, the **Manager** service access role to all workspaces in resource group A, but **Reader** access to the workspaces in resource group B. 
 
 ## What is the benefit by using IAM access group?
 {: #faq-iam-accessgrp-benefit}

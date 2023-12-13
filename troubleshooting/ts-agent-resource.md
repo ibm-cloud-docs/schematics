@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-12-13"
 
 keywords: schematics resource group not found, schematics resource crn error, schematics resource crn not found
 
@@ -13,7 +13,7 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bpshort}} agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 
 # How can you provide value to `schematics_resource_crn` variable?
 {: #agent-crn-not-found}
@@ -38,7 +38,7 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action during {{
 You do not have the needed permissions to use the resource group in {{site.data.keyword.iamlong}}, and provide the value for the `schematics_resource_crn` variable.
 {: tsCauses}
 
-Check whether you have access for the `Default` or `job-runner` resource group for creating {{site.data.keyword.bpshort}} Workspace for the {{site.data.keyword.bpshort}} Agent infrastructure setup. Then, you need to provide the `schematics_resource_crn` value to create a VPE for {{site.data.keyword.bpshort}} service by using Terraform. When the VPE is created, the Agent running in your cluster, communicates to the {{site.data.keyword.bpshort}} service over {{site.data.keyword.cloud_notm}} private endpoint. To fetch the {{site.data.keyword.cloud_notm}} service instance value, run `ibmcloud resource service-instance schematics` command.
+Check whether you have access for the `Default` or `job-runner` resource group for creating {{site.data.keyword.bpshort}} workspace for the {{site.data.keyword.bpshort}} Agent infrastructure setup. Then, you need to provide the `schematics_resource_crn` value to create a VPE for {{site.data.keyword.bpshort}} service by using Terraform. When the VPE is created, the Agent running in your cluster, communicates to the {{site.data.keyword.bpshort}} service over {{site.data.keyword.cloud_notm}} private endpoint. To fetch the {{site.data.keyword.cloud_notm}} service instance value, run `ibmcloud resource service-instance schematics` command.
 {: tsResolve}
 
 Example : To retrieve the service instance in all resource groups from your account.

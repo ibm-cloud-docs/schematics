@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-22"
+lastupdated: "2023-12-13"
 
 keywords: schematics, automation, terraform
 
@@ -15,10 +15,10 @@ subcollection: schematics
 # Managing user access
 {: #access}
 
-Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} Workspaces and actions. 
+Use [{{site.data.keyword.iamlong}}](/docs/account?topic=account-iamoverview) to grant permissions to {{site.data.keyword.bpshort}} workspaces and actions. 
 {: shortdesc}
 
-As the {{site.data.keyword.cloud}} account owner, you need to ensure that you control user access to {{site.data.keyword.bpshort}} Workspaces and the Actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to the resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
+As the {{site.data.keyword.cloud}} account owner, you need to ensure that you control user access to {{site.data.keyword.bpshort}} workspaces and the actions in your account. {{site.data.keyword.bplong_notm}} integrate with {{site.data.keyword.iamlong}} (IAM) to securely authenticate users for platform services and control access to the resources. IAM uses the concept of resource groups, access groups, roles, and access policies to manage the access to {{site.data.keyword.cloud}} resources. For more information about how IAM works and how you can use resource groups, access groups, and access policies to organize {{site.data.keyword.bpshort}} access for a team, see [What is {{site.data.keyword.iamlong}}?](/docs/account?topic=account-iamoverview)
 
 ## Overview of {{site.data.keyword.bpshort}} service access roles and required permissions
 {: #access-roles}
@@ -71,7 +71,7 @@ The list provides the details about the roles and permission needed for the [{{s
 ### Workspace permissions
 {: #workspace-permissions}
 
-Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Workspaces.
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} workspaces.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
@@ -88,13 +88,13 @@ Review the following table to see what permissions you need to work with {{site.
 | `Destroy workspace resources` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
 {: row-headers}
 {: class="comparison-table"}
-{: caption="User permissions for {{site.data.keyword.bpshort}} Workspaces" caption-side="top"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} workspaces" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### Action permissions
 {: #action-permissions}
 
-Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Actions.
+Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} actions.
 
 | Activities | Reader | Writer | Manager | Account owner |
 |-----|-----|-----|-----|--------|
@@ -108,7 +108,7 @@ Review the following table to see what permissions you need to work with {{site.
 | `Run an action` | | ![Check mark](images/checkmark.svg)|![Check mark](images/checkmark.svg)|![Check mark](images/checkmark.svg)| 
 {: row-headers}
 {: class="comparison-table"}
-{: caption="User permissions for {{site.data.keyword.bpshort}} Actions" caption-side="top"}
+{: caption="User permissions for {{site.data.keyword.bpshort}} actions" caption-side="top"}
 {: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### Agent permissions
@@ -215,20 +215,20 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups#create_ag) for each team. 
 
-3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} Workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
+3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
 
 4. [Assign access to your IAM access group](/docs/account?topic=account-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
     - Make sure to scope access of your group to the resource group that you created for this team. 
     - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies. 
-    - The resource group of the {{site.data.keyword.bpshort}} Workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
+    - The resource group of the {{site.data.keyword.bpshort}} workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
     - For a team to use {{site.data.keyword.bpshort}}, you must assign the appropriate [service access role for {{site.data.keyword.bpshort}}](#access-roles), and the permissions that are required for the {{site.data.keyword.cloud_notm}} resources that this team manages with {{site.data.keyword.bpshort}}. You can review the [documentation](/docs/home/alldocs) for each of the {{site.data.keyword.cloud_notm}} services to find the appropriate IAM access policy. 
 
 ## Manage access tag in your account 
 {: #access-tag}
 
-You can now centrally manage access tags to the {{site.data.keyword.bpshort}} Workspaces in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account.
+You can now centrally manage access tags to the {{site.data.keyword.bpshort}} workspaces in your account at scale. Tags contains the metadata values in the form of key and value to help you organize your cloud data. Tags are essential, as it helps to efficiently optimize your workspace within your account. Following steps helps to create and associate access tags for {{site.data.keyword.bpshort}} workspaces in your account.
 
 - To create an access tag, see [Create an access management tag](/docs/account?topic=account-access-tags-tutorial#tagging-resources-create). 
-- To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} Workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
+- To associate access tags, see [Attach your access management tag to a {{site.data.keyword.bpshort}} workspaces](/docs/account?topic=account-access-tags-tutorial#tagging-resources-add)
 
 For more information about managing access tags, see [Controlling access to resources by using tags](/docs/account?topic=account-access-tags-tutorial).

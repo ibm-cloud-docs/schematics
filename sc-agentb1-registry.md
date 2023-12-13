@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-28"
+lastupdated: "2023-12-13"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -12,10 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring {{site.data.keyword.bpshort}} Agents to use a private registry
+# Configuring {{site.data.keyword.bpshort}} agents to use a private registry
 {: #agent-registry-overview}
 
-Agents support the use of custom Terraform providers that are sourced from a private Terraform registry with {{site.data.keyword.bpshort}} Terraform jobs. The support to use custom providers is not available in the shared multi-tenant {{site.data.keyword.bpshort}} service. It is only available with agents. Agents do not include a local or private provider registry. Additionally users can configure the registry on the users private network accessible to the agents.  
+Agents support the use of custom Terraform providers that are sourced from a private Terraform registry with {{site.data.keyword.bpshort}} Terraform jobs. The support to use custom providers is not available in the shared multi-tenant {{site.data.keyword.bpshort}} service. It is only available with agents. agents do not include a local or private provider registry. Additionally users can configure the registry on the users private network accessible to the agents.  
 {: shortdesc}
 
 By default, when {{site.data.keyword.bpshort}} jobs run, the Terraform CLI downloads the required Terraform provider plug-ins or Terraform modules from the public Terraform registry through the internet or public network. When an Agent is deployed on a private network, security policies dictate that a proxy, or mirror site must be used for downloading and caching provider plug-ins. Additionally it may be desired to host custom-developed Terraform providers in a private registry to configure environment-specific resources.

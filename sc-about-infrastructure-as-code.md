@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-12-13"
 
 keywords: iac, infrastructure, infrastructure as code, terraform, ansible
 
@@ -34,7 +34,7 @@ Adopting an IaC approach to infrastructure deployment solves many common problem
 
 - **Tracking and accountability**: Changes to existing infrastructure are made in code, and the changes are tracked. Like any source code file, you have full traceability of the changes made to a configuration.
 
-- **Detect and correct environment drift**: If a part of the infrastructure is modified manually outside of the code, it can be brought back in line with the desired state on the next run. [Drift detection](/docs/schematics?topic=schematics-drift-note) is a feature of {{site.data.keyword.bpshort}} Workspaces. 
+- **Detect and correct environment drift**: If a part of the infrastructure is modified manually outside of the code, it can be brought back in line with the desired state on the next run. [Drift detection](/docs/schematics?topic=schematics-drift-note) is a feature of {{site.data.keyword.bpshort}} workspaces. 
 
 ## Best Practices 
 {: #iac-best-practices}
@@ -94,7 +94,7 @@ Chef is thought of as an imperative tool. Terraform is classed as declarative. A
 ### Declarative Terraform and lifecycle management
 {: #iac-declarative-lifecycle}
 
-{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} Workspaces and Actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} Workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention.
+{{site.data.keyword.bpshort}} supports both Terraform and Ansible as IaC tools with {{site.data.keyword.bpshort}} workspaces and actions. When lifecycle management is important with environments being regularly stood up and torn down, using Terraform with {{site.data.keyword.bpshort}} workspaces is recommended. Terraform keeps a record of the current state of your deployed cloud infrastructure and {{site.data.keyword.bpshort}} is able to remove your infrastructure in reverse dependency order without manual intervention.
 {: shortdesc}
 
 ### `Idempotence`

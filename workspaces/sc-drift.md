@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-12"
+lastupdated: "2023-12-13"
 
 keywords: schematics drifting, drift, infrastructure as code, schematics workspace drift
 
@@ -44,7 +44,7 @@ Drift detection for your Terraform automation workspaces is possible in {{site.d
 {: #wksdrift-ui}
 {: ui}
 
-You can initiate drift detection for workspaces from the {{site.data.keyword.bpshort}} Workspaces job page. It initiates a job to detect drift for the workspace and its deployed resources. During execution, the drift detection job is `in progress`, on completion it has a `failure` or `success`. To review the details of the drift job, you need to check the drift job log for the drift status.
+You can initiate drift detection for workspaces from the {{site.data.keyword.bpshort}} workspaces job page. It initiates a job to detect drift for the workspace and its deployed resources. During execution, the drift detection job is `in progress`, on completion it has a `failure` or `success`. To review the details of the drift job, you need to check the drift job log for the drift status.
 
 ### Viewing detect drift through UI
 {: #wksdrift-view-ui}
@@ -53,7 +53,7 @@ Use the following steps to view the drift job log.
 
 1. From the [workspace dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace that you want check for drift. 
 2. Select and open your workspace.
-3. Select the **Actions** drop down list.
+3. Select the **Workspace Actions** drop down list.
 4. Select **Detect drift** option to initiate the detect drift job. 
 5. During execution, the status shows `in progress` moving to a `success` or a job `failure` status on completion. 
 6. The drift status can be determined by reviewing the output of the job logon when the job is in a `success` state. A sample success job execution with detected drift is shown in the screen capture.
@@ -94,15 +94,15 @@ You can initiate detecting drift from the create workspaces command. The drift d
 {: #wksdrift-view-cli}
 {: cli}
 
-You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} Workspaces through CLI.
+You can follow these steps to detect the drift in {{site.data.keyword.bpshort}} workspaces through CLI.
 {: shortdesc}
 
-1. [Create the {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
+1. [Create the {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 2. [Get your workspace ID](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-get).
 3. Run the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan).
 4. Fetch the [`ibmcloud schematics job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-logs-job).
 5. Run the [`ibmcloud schematics apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-apply).
-6. Run the [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job) to create a job in {{site.data.keyword.bpshort}} Workspace.
+6. Run the [`ibmcloud schematics job run`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-run-job) to create a job in {{site.data.keyword.bpshort}} workspace.
 
     ```sh
     ibmcloud schematics job run --command-object workspace --command-object-id <workspace_id> --command-name drift
@@ -152,6 +152,6 @@ Review the CURL commands to create and view the drift through API.
 4. Run the [{{site.data.keyword.bpshort}} job plan](/apidocs/schematics/schematics#plan-workspace-command).
 5. Fetch the [`ibmcloud schematics job logs`](/apidocs/schematics/schematics#get-template-activity-log).
 6. Run the [`ibmcloud schematics apply`](/apidocs/schematics/schematics#apply-workspace-command).
-7. Run the [`ibmcloud schematics job run`](/apidocs/schematics/schematics#run-workspace-commands) to create a job in {{site.data.keyword.bpshort}} Workspace.
+7. Run the [`ibmcloud schematics job run`](/apidocs/schematics/schematics#run-workspace-commands) to create a job in {{site.data.keyword.bpshort}} workspace.
 8. Run the [`ibmcloud schematics workspace action`](/apidocs/schematics/schematics#create-job) to retrieve all activities of your workspace.
 9. Fetch the [`ibmcloud schematics job logs`](/apidocs/schematics/schematics#get-template-activity-log).

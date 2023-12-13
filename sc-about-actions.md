@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-12-13"
 
 keywords: schematics actions, actions, schematics
 
@@ -12,16 +12,16 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.bpshort}} Actions
+# {{site.data.keyword.bpshort}} actions
 {: #sc-actions}
 
-{{site.data.keyword.bpshort}} Actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitier apps to your cloud infrastructure. 
+{{site.data.keyword.bpshort}} actions delivers Ansible-as-a-Service capabilities for you to automate configuration and management of your {{site.data.keyword.cloud_notm}} environment, and deploy complex multitier apps to your cloud infrastructure. 
 {: shortdesc}
 
 To get started with [Configuration Management](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-cm) with Ansible in {{site.data.keyword.bpshort}}, see [Getting started tutorial](/docs/schematics?topic=schematics-getting-started-ansible). 
 {: tip}
 
-## {{site.data.keyword.bpshort}} Actions overview
+## {{site.data.keyword.bpshort}} actions overview
 {: #sc-actions-overview}
 
 [Ansible](https://www.ansible.com/){: external} is a [configuration management and provisioning tool](/docs/schematics?topic=schematics-schematics-open-projects). The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://www.ibm.com/blog/chef-ansible-puppet-terraform) provides an overview of several popular open-source IaC tools and summarizes their capabilities and relative strengths. 
@@ -30,7 +30,7 @@ It is designed to automate the configuration, operation, and management of cloud
 
 Ansible does not use agents or a custom security infrastructure that must be present on a target machine to work properly. Instead, Ansible securely connects to compute hosts over the public network by using SSH keys. To bring a resource to the required state, Ansible pushes modules to the managed host that run the tasks in your Ansible playbook. After the tasks are executed, the result is returned to the Ansible server and the module is removed from the managed host. Ansible modules are idempotent such that executing the same playbook or operation multiple times returns the same result as resources are changed only if required. For more information about Ansible, check out this [video](https://www.youtube.com/watch?v=fHO1X93e4WA){: external}. 
 
-![Configuration Management with Actions and Ansible](/images/new/sc-actions.svg){: caption="Configuration Management with Actions and Ansible" caption-side="bottom"}
+![Configuration Management with actions and Ansible](/images/new/sc-actions.svg){: caption="Configuration Management with actions and Ansible" caption-side="bottom"}
 
 Using your supplied playbooks, {{site.data.keyword.bpshort}} runs the Ansible engine to execute your playbook. Ansible, tasks, roles and playbooks can perform provisioning tasks via the {{site.data.keyword.cloud_notm}} APIs via HTTPS, or configuration of compute instances (virtual servers) using SSH. Server configuration is performed via SSH over the public network. To maintain security for your environment, use of a bastion host to provide a secure gateway to your compute infrastructure is strongly encouraged.     
 
@@ -53,7 +53,7 @@ Then, you select the cloud resources where you want to run the tasks that are de
 ## Next steps
 {: #sch-actions-nextsteps}
 
-So far you have learned about {{site.data.keyword.bpshort}} Actions. The following are some next steps to explore.
+So far you have learned about {{site.data.keyword.bpshort}} actions. The following are some next steps to explore.
 {: shortdesc}
 
-- See [Creating Actions](/docs/schematics?topic=schematics-action-working#create-action) to dig into how to create an action?
+- See [Creating actions](/docs/schematics?topic=schematics-action-working#create-action) to dig into how to create an action?

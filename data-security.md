@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-12-13"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -60,7 +60,7 @@ When you can [enable or restore a root key](/docs/schematics?topic=schematics-km
 ## What technical information is stored in {{site.data.keyword.bpshort}}?
 {: #ti-data}
 
-The following technical data is encrypted and stored when you create and use a {{site.data.keyword.bpshort}} Workspace: 
+The following technical data is encrypted and stored when you create and use a {{site.data.keyword.bpshort}} workspace: 
 - Workspace details
 - Workspace variables
 - Terraform configuration files that your workspace points to

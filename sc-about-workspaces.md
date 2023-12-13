@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -12,10 +12,10 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.bpshort}} Workspaces
+# {{site.data.keyword.bpshort}} workspaces
 {: #sc-workspaces}
 
-{{site.data.keyword.bpshort}} Workspaces delivers Terraform as a service capabilities to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments.
+{{site.data.keyword.bpshort}} workspaces delivers Terraform as a service capabilities to automate the [provisioning and configuration management](/docs/schematics?topic=schematics-schematics-open-projects) of your {{site.data.keyword.cloud_notm}} resources, and rapidly build, duplicate, and scale complex, multitiered cloud environments.
 
 [Terraform](https://www.terraform.io){: external} is an open source project that allows you to specify your cloud infrastructure resources and services as code. It applies the concept of [Infrastructure as Code (IaC)](/docs/schematics?topic=schematics-infrastructure-as-code), using code to manage and provision infrastructure (networks, virtual machines, load-balancers, clusters, services and connection topology) in a descriptive model instead of manual processes.
 {: shortdesc} 
@@ -30,7 +30,7 @@ The blog [Infrastructure as Code: Chef, Ansible, Puppet, or Terraform?](https://
 {{site.data.keyword.bplong_notm}} is a multi-tenant service delivering Terraform as a service. {{site.data.keyword.bpshort}} provides a shared environment, where each user can securely execute Terraform configs to deploy services and resources on {{site.data.keyword.cloud}}. 
 
 
-![Deploying infrastructure and services with Workspaces](/images/new/sc-workspaces.svg){: caption="Deploying infrastructure and services with Workspaces" caption-side="bottom"}
+![Deploying infrastructure and services with workspaces](/images/new/sc-workspaces.svg){: caption="Deploying infrastructure and services with workspaces" caption-side="bottom"}
 
 Using your supplied Terraform template (config), {{site.data.keyword.bpshort}} executes the Terraform CLI engine to provision the resources defined in the config. {{site.data.keyword.bpshort}} provides a secure container environment to execute the Terraform engine, using the {{site.data.keyword.cloud_notm}} Terraform provider to provision and manage resources using the {{site.data.keyword.cloud_notm}}service APIs. 
 
@@ -46,9 +46,9 @@ Workspaces support [drift detection](/docs/schematics?topic=schematics-drift-not
 ## Next steps
 {: #sc-wks-nextsteps}
 
-So far you have learned about {{site.data.keyword.bpshort}} Workspaces. The following are some next steps to explore.
+So far you have learned about {{site.data.keyword.bpshort}} workspaces. The following are some next steps to explore.
 {: shortdesc}
 
 - [Getting started usecase](/docs/schematics?topic=schematics-get-started-terraform) to understand how to use workspaces to deploy and manage your Infrastructure as Code (IaC), in the cloud, environments.
 - [Sample Terraform templates](/docs/schematics?topic=schematics-create-tf-config) to provide you how to create well-structured, and reusable Terraform templates.
-- See [Creating Workspaces](/docs/schematics?topic=schematics-sch-create-wks) to dig into how to create workspace using the Terraform templates. 
+- See [Creating workspaces](/docs/schematics?topic=schematics-sch-create-wks) to dig into how to create workspace using the Terraform templates. 

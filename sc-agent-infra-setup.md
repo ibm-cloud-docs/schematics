@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-12-11"
+lastupdated: "2023-12-13"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -69,7 +69,7 @@ Before you begin deploying the agent infrastructure, ensure the following prereq
     | `resource_group_name` | String | Required | Name for the resource group used the agent infrastructure and agent will be associated to. For example, **`test_agent`**. For more information, see [Creating a resource group](/docs/account?topic=account-rgs). Ensure you have right access permission for the resource group. |
     | `ibmcloud_api_key` | String | Optional | The {{site.data.keyword.cloud_notm}} API key used to provision the {{site.data.keyword.bpshort}} Agent infrastructure resources. If not provided, resources provisions in currently logged in user credentials.|
     | `tags` | List(String) | Optional | A list of user tags to be applied to the deployed, VPC and cluster. For example, `myproject:agent`, `test:agentinfra`. You can find the provisioned resources of an Agent faster by using Tag name. |
-    {: caption="{{site.data.keyword.bpshort}} Agents infrastructure inputs" caption-side="bottom"}
+    {: caption="{{site.data.keyword.bpshort}} agents infrastructure inputs" caption-side="bottom"}
 
 4. Click **Apply plan** on the `schematics-agent-infrastructure` workspace to provision the agent infrastructure. This can take up to 45 - 90 minutes to provision all the resources.  
 5. View the **Jobs** logs and **Resources** page to monitor the resources are provisioned successfully and verify the workspace status is now `ACTIVE`.

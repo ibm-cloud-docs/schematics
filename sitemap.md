@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-12-11"
+lastupdated: "2023-12-13"
 
 keywords: schematics
 subcollection: schematics
@@ -24,7 +24,7 @@ subcollection: schematics
 
 [Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
 
-[Using Workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
+[Using workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-terraform#prereq)
 
@@ -34,7 +34,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
-[Using Actions to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
+[Using actions to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
 * [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
 
@@ -61,11 +61,11 @@ subcollection: schematics
 
 * [{{site.data.keyword.bpshort}} IaC offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
+    * [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
-    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
+    * [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
 
-    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
+    * [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
 * [Benefits of using Schematics](/docs/schematics?topic=schematics-learn-about-schematics#sc-benefits)
 
@@ -105,7 +105,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
-[{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
+[{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
 
 * [{{site.data.keyword.bpshort}} workspace overview](/docs/schematics?topic=schematics-sc-workspaces#sch-wks-overview)
 
@@ -113,29 +113,29 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-nextsteps)
 
-[{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
+[{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
 
-* [{{site.data.keyword.bpshort}} Actions overview](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
+* [{{site.data.keyword.bpshort}} actions overview](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
 
 * [Using Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-use)
 
 * [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
 
-[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-about-intro#agent-about-intro)
+[{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro#agent-about-intro)
 
 * [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-architecture)
 
 * [Private network configuration when using agents](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-networking)
 
-* [Benefits of using Agents](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage)
+* [Benefits of using agents](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage)
 
 * [Next steps](/docs/schematics?topic=schematics-agent-about-intro#nextsteps-agentb1-arch)
 
 [Understanding {{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
 
-* [Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
+* [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
 
-* [Configuration management with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
+* [Configuration management with {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
 
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
@@ -224,7 +224,7 @@ subcollection: schematics
 
     * [How can the Terraform developers ensure that the sensitive data is not leaked in the log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak)
 
-* [Best practices of managing {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
+* [Best practices of managing {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
 
     * [What are the best practices that you must follow in creating a workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
 
@@ -234,7 +234,7 @@ subcollection: schematics
 
     * [How does {{site.data.keyword.bpshort}} protect the workspace data through Terraform state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
-* [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
+* [Best practices of managing {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
 
     * [What are the best practices that you must follow in creating an action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
 
@@ -382,7 +382,7 @@ subcollection: schematics
 
     * [13 December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1322)
 
-        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+        * Release {{site.data.keyword.bpshort}} agents GitHub repository.
 
         * Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
 
@@ -402,7 +402,7 @@ subcollection: schematics
 
     * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
 
-        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+        * Release {{site.data.keyword.bpshort}} agents GitHub repository.
 
     * [14 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1422)
 
@@ -452,7 +452,7 @@ subcollection: schematics
 
     * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 
-        * {{site.data.keyword.bpshort}} Agents beta release in production.
+        * {{site.data.keyword.bpshort}} agents beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -536,7 +536,7 @@ subcollection: schematics
 
         * Support deleting {{site.data.keyword.bpshort}} data objects 
 
-        * Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
+        * Fixes related to {{site.data.keyword.bpshort}} actions and workspace
 
         * Get job files API supports `plan_json` file type
 
@@ -588,11 +588,11 @@ subcollection: schematics
 
     * [30 November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov302021)
 
-        * Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in your account
+        * Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
 
         * Support `WinRM` in user interface
 
-        * Global catalog settings for {{site.data.keyword.bpshort}} Workspaces location
+        * Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
 
         * About `compact` download
 
@@ -620,15 +620,15 @@ subcollection: schematics
 
     * [30 September 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept302021)
 
-        * Inventory target feature support in {{site.data.keyword.bpshort}} Actions API
+        * Inventory target feature support in {{site.data.keyword.bpshort}} actions API
 
-        * Bastion host enhancement in {{site.data.keyword.bpshort}} Actions API
+        * Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
 
-        * {{site.data.keyword.bpshort}} Actions API enhancement to support bastion host connection with non-root user
+        * {{site.data.keyword.bpshort}} actions API enhancement to support bastion host connection with non-root user
 
         * {{site.data.keyword.bplong_notm}} job queue process
 
-        * {{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
+        * {{site.data.keyword.bpshort}} actions `APIs` enhances the credentials parameter
 
         * {{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
 
@@ -680,7 +680,7 @@ subcollection: schematics
 
         * One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
 
-        * Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
+        * Temporarily {{site.data.keyword.bplong_notm}} workspaces stop activity API is deactivated
 
 * [May 2021](/docs/schematics?topic=schematics-schematics-relnotes#may-2021)
 
@@ -1154,11 +1154,11 @@ subcollection: schematics
 
 * [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
 
-    * [Updating the Workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
+    * [Updating the workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
 
 * [Upgrading the Terraform template version 0.x to 1.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
 
-* [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
+* [Upgrading a Terraform v0.12 workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
 
 * [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
 
@@ -1201,7 +1201,7 @@ subcollection: schematics
 
 * [Installing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file)
 
-[Working with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-working#action-working)
+[Working with {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-action-working#action-working)
 
 * [Creating and running a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working#create-action)
 
@@ -1209,7 +1209,7 @@ subcollection: schematics
 
     * [To create an action](/docs/schematics?topic=schematics-action-working#create-action-working)
 
-* [Editing the {{site.data.keyword.bpshort}} Actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
+* [Editing the {{site.data.keyword.bpshort}} actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
 
 * [Deleting an action](/docs/schematics?topic=schematics-action-working#delete-ansible-actions)
 
@@ -1217,7 +1217,7 @@ subcollection: schematics
 
     * [State diagram flow](/docs/schematics?topic=schematics-action-working#state-diagram-flow)
 
-* [Reviewing Actions job details](/docs/schematics?topic=schematics-action-working#action-jobs)
+* [Reviewing actions job details](/docs/schematics?topic=schematics-action-working#action-jobs)
 
 [Creating an Ansible playbook](/docs/schematics?topic=schematics-create-playbook#create-playbook)
 
@@ -1225,7 +1225,7 @@ subcollection: schematics
 
 * [Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-create-playbook#plan-ansible-playbook)
 
-[Sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
+[Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
 
 * [Running cloud operations on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-vpc)
 
@@ -1237,7 +1237,7 @@ subcollection: schematics
 
 * [Installing `kubectl` on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-kubectl)
 
-[Creating an auto deploy button for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-auto-deploy-url#auto-deploy-url)
+[Creating an auto deploy button for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-auto-deploy-url#auto-deploy-url)
 
 * [Creating the deployment URL](/docs/schematics?topic=schematics-auto-deploy-url#create-url)
 
@@ -1254,7 +1254,7 @@ subcollection: schematics
 {: #sitemap_working_with_inventories}
 
 
-[Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
+[Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
 
 * [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
 
@@ -1266,7 +1266,7 @@ subcollection: schematics
 
     * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
 
-* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
+* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
 
     * [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries)
 
@@ -1363,7 +1363,7 @@ subcollection: schematics
 * [Next steps](/docs/schematics?topic=schematics-delete-agent-overview#agent-delete-nextstep)
 
 
-### Using Agents
+### Using agents
 {: #sitemap_using_agents}
 
 
@@ -1409,7 +1409,7 @@ subcollection: schematics
 
 * [Default network policies](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-network-policy)
 
-* [Default Terraform and Ansible runtime-job](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-runtime-job)
+* [Default workspace and action runtime-job](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-runtime-job)
 
 * [Agent job-runner configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-job-runner-config)
 
@@ -1435,7 +1435,7 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-agentb1-health#agent-health-nextstep)
 
-[Configuring {{site.data.keyword.bpshort}} Agents to use a private registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-overview)
+[Configuring {{site.data.keyword.bpshort}} agents to use a private registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-overview)
 
 * [Setting the credentials to access a private provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-tf-creds)
 
@@ -1569,7 +1569,7 @@ subcollection: schematics
 
 [Using Terraform to configure {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup#terraform-setup)
 
-* [Example: Creating the {{site.data.keyword.bpshort}} Workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
+* [Example: Creating the {{site.data.keyword.bpshort}} workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
 
 * [What's next?](/docs/schematics?topic=schematics-terraform-setup#terraform-setup-next)
 
@@ -1659,9 +1659,9 @@ subcollection: schematics
 
 * [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
 
-* [Creating your {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
+* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
 
-* [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
 
 * [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
 
@@ -1686,7 +1686,7 @@ subcollection: schematics
 
 * [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
 
-* [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
 
 * [Configuring variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-the-variables)
 
@@ -1694,7 +1694,7 @@ subcollection: schematics
 
 * [Analyzing the pipeline execution process](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-deployment)
 
-* [Analyzing the {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
+* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
 
 * [What's next?](/docs/schematics?topic=schematics-workspace-continuous-deployment#automate-what-next)
 
@@ -1945,9 +1945,9 @@ subcollection: schematics
 
 [Service locations and endpoints](/docs/schematics?topic=schematics-locations#locations)
 
-* [Where can I create and run {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
+* [Where can I create and run {{site.data.keyword.bpshort}} workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
 
-* [Where do my {{site.data.keyword.bpshort}} Actions run?](/docs/schematics?topic=schematics-locations#where-do-locations-run)
+* [Where do my {{site.data.keyword.bpshort}} actions run?](/docs/schematics?topic=schematics-locations#where-do-locations-run)
 
 * [Where is my {{site.data.keyword.bpshort}} and template data stored?](/docs/schematics?topic=schematics-locations#where-is-data-stored)
 
@@ -2025,7 +2025,7 @@ subcollection: schematics
 
 * [Workspaces](/docs/schematics?topic=schematics-sch-terms#sch-terms-workspace)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-terms#wkss1)
+    * [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sch-terms#wkss1)
 
     * [Jobs](/docs/schematics?topic=schematics-sch-terms#wksj1)
 
@@ -2080,9 +2080,9 @@ subcollection: schematics
 
 [Actions](/docs/schematics?topic=schematics-actions-faq#actions-faq)
 
-* [Are Classic VSIs supported for use with Actions?](/docs/schematics?topic=schematics-actions-faq#Classic-vsi-faq)
+* [Are Classic VSIs supported for use with actions?](/docs/schematics?topic=schematics-actions-faq#Classic-vsi-faq)
 
-* [What network configuration is suggested for use with Actions?](/docs/schematics?topic=schematics-actions-faq#network-faq)
+* [What network configuration is suggested for use with actions?](/docs/schematics?topic=schematics-actions-faq#network-faq)
 
 * [Why does the SSH connection fail with static inventory files?](/docs/schematics?topic=schematics-actions-faq#ssh-faq)
 
@@ -2090,7 +2090,7 @@ subcollection: schematics
 
 * [How can I resolve that might not run action error while provisioning `WinRM` by using {{site.data.keyword.bpshort}} action?](/docs/schematics?topic=schematics-actions-faq#winrm-faq)
 
-* [When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions)
+* [When are new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions)
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
@@ -2192,7 +2192,7 @@ subcollection: schematics
 
 * [Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-schematics-instance)
 
-[General](/docs/schematics?topic=schematics-general-faq#general-faq)
+[Common for actions and workspaces](/docs/schematics?topic=schematics-general-faq#general-faq)
 
 * [What is {{site.data.keyword.bplong_notm}} and how does it work?](/docs/schematics?topic=schematics-general-faq#what-is-schematics)
 
@@ -2200,7 +2200,19 @@ subcollection: schematics
 
 * [What am I charged for when I use {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#charges)
 
-* [Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?](/docs/schematics?topic=schematics-general-faq#provider-versions)
+* [How do I save files between operations?](/docs/schematics?topic=schematics-general-faq#saving-files)
+
+* [Job failures due to files removed or missing from workspace, or actions (Ansible) template repos](/docs/schematics?topic=schematics-general-faq#missing-files)
+
+* [Files removed or missing from Terraform, or Ansible template repos](/docs/schematics?topic=schematics-general-faq#clone-file-extension)
+
+* [Is the use of symlinks supported in Git repos?](/docs/schematics?topic=schematics-general-faq#symlinks-ws)
+
+* [Is the use of Git sub-modules supported in Git repos or TGZ files?](/docs/schematics?topic=schematics-general-faq#git-submodules-ws)
+
+* [Is there a rate limit?](/docs/schematics?topic=schematics-general-faq#rate-limit)
+
+* [Why are jobs waiting to be run placed in a queue?](/docs/schematics?topic=schematics-general-faq#job-queue-faq)
 
 * [How do I generate IAM access token, if client ID `bx` is used?](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens)
 
@@ -2268,15 +2280,9 @@ subcollection: schematics
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
-* [Why are files removed from Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
-
-* [How do I save files between operations?](/docs/schematics?topic=schematics-workspaces-faq#saving-files)
-
-* [Is there a rate limit?](/docs/schematics?topic=schematics-workspaces-faq#rate-limit)
+* [Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?](/docs/schematics?topic=schematics-workspaces-faq#provider-versions)
 
 * [How do I update the Terraform version](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
-
-* [Why are jobs waiting to be run placed in a queue?](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq)
 
 * [How do I `pull latest` code from a Git repo using the command line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
 
@@ -2308,7 +2314,7 @@ subcollection: schematics
 
 * [How do I set the TF_CLI_ARGS environment variable?](/docs/schematics?topic=schematics-workspaces-faq#terraformcli-arguments-faq)
 
-* [Can I use private Git repositories?](/docs/schematics?topic=schematics-workspaces-faq#download-module-netrc-faq)
+* [Can I use private Git repositories for modules?](/docs/schematics?topic=schematics-workspaces-faq#download-module-netrc-faq)
 
 * [Can I edit all the variables in a workspace?](/docs/schematics?topic=schematics-workspaces-faq#edit-variables-faq)
 
@@ -2378,7 +2384,7 @@ subcollection: schematics
 {: #sitemap_troubleshooting_schematics_workspace_errors}
 
 
-[Why do {{site.data.keyword.bpshort}} Workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
+[Why do {{site.data.keyword.bpshort}} workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
 
 [Workspace failures](/docs/schematics?topic=schematics-wks-failure#wks-failure)
 

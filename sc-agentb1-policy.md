@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-12-07"
+lastupdated: "2023-12-13"
 
 keywords: schematics agent, agent policy, policies
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Agent policies
 {: #policy-manage}
 
-Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to use to run Terraform and Ansible jobs in a specific network zone. Each agent has one or more policies associated with it to identify the workspace and action jobs that are run on the agent. For example agents may exist in and jobs can be executed in the following isolated zones:
+Agent (assignment) policies tell {{site.data.keyword.bpshort}} which agent to use to run workspace and action jobs in a specific network zone. Each agent has one or more policies associated with it to identify the workspace and action jobs that are run on the agent. For example agents may exist in and jobs can be executed in the following isolated zones:
 
 - cloud regions (region-1, region-2, region-3)
 - VPC zones for the application layer, data layer, management layer

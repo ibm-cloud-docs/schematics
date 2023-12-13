@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-12-13"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Stopping or terminating running jobs
 {: #interrupt-job}
 
-After invoking a Workspaces job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
+After invoking a workspace job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
 
 {{site.data.keyword.bpshort}} provides a number of options to allows users to `(gracefully) stop`, `force-stop`, or `terminate` the running job in order of immediacy and impact of the stop operation. 
 {: shortdesc}
@@ -44,7 +44,7 @@ If the job is in a `pending` state, any type of stop request causes the job to c
 {: #stop-job-ui}
 {: ui}
 
-You can follow these steps to stop Workspaces running job by using the console.
+You can follow these steps to stop a running workspace job by using the console.
 
 1. From the [Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace related to the running job.
    
@@ -68,7 +68,7 @@ You can follow these steps to stop Workspaces running job by using the console.
 {: #stop-job-cli}
 {: cli}
 
-Stops a running job for {{site.data.keyword.bplong_notm}} Workspaces.
+Stops a running {{site.data.keyword.bplong_notm}} workspace job.
 {: shortdesc}
 
 Syntax
@@ -112,7 +112,7 @@ ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --terminate --job-id 
 {: #stop-job-api}
 {: api}
 
-You can use following cURL commands to stop a running job for {{site.data.keyword.bplong_notm}} Workspace. 
+You can use following cURL commands to stop a running job for {{site.data.keyword.bplong_notm}} workspace. 
 {: shortdesc}
 
 ### Syntax to stop running jobs

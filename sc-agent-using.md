@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-12-13"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -12,18 +12,18 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bpshort}} agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 {: beta}
 
 # Using {{site.data.keyword.bpshort}} Agent
 {: #using-agent}
 
-You have successfully connected the Agent to {{site.data.keyword.bpshort}} service instance. The next step is to bind your {{site.data.keyword.bpshort}} Workspaces to the Agent.
+You have successfully connected the Agent to {{site.data.keyword.bpshort}} service instance. The next step is to bind your {{site.data.keyword.bpshort}} workspaces to the Agent.
 {: shortdesc}
 
 Once you bind the workspace to the Agent, then the corresponding workspace Jobs such as `terraform plan`, `terraform apply`, or `terraform destroy` is automated to route to the Agent. 
 
-In other words, the Terraform automation runs in your provisioned Agent infrastructure (cluster). Then the {{site.data.keyword.bpshort}} Workspace bounds to the Agent in the following ways:
+In other words, the Terraform automation runs in your provisioned Agent infrastructure (cluster). Then the {{site.data.keyword.bpshort}} workspace bounds to the Agent in the following ways:
 - Bind an new workspace to the Agent
    When you bind the new workspace to the Agent, the Terraform templates are downloaded from the Git repositories by using Sandbox jobs that run in your Agent infrastructure (cluster). Further, the Terraform jobs are also run in your cluster.
 
@@ -80,12 +80,12 @@ Related workspace: name=<prefix>-003-cos-module, sourcerelease=(not specified), 
 {: screen}
 
 - Now, you are ready to use the provisioned COS service to store your objects or files. 
-- You can also deploy your {{site.data.keyword.bpshort}} Workspaces template, and bind your Agent to provision, install the software, or a tool in your private network to the {{site.data.keyword.bplong_notm}} service.
+- You can also deploy your {{site.data.keyword.bpshort}} workspaces template, and bind your Agent to provision, install the software, or a tool in your private network to the {{site.data.keyword.bplong_notm}} service.
 - You can also configure, and operate on your cloud cluster resources without any time, network, or software restrictions.
 
 ## Next steps
 {: #agent-using-nextsteps}
 
 You have completed the entire {{site.data.keyword.bpshort}} Agent set up and working flow.
-- Looking for Agents samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics?q=Agent&type=all&language=&sort=){: external}.
-- For any challenges in Agents set up, see [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
+- Looking for agents samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/Cloud-Schematics?q=Agent&type=all&language=&sort=){: external}.
+- For any challenges in agents set up, see [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).

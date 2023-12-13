@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-12-13"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -12,15 +12,15 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bpshort}} agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 
 # Connecting {{site.data.keyword.bpshort}} Agent
 {: #register-agent}
 
-You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastructure and Agents services, the next step is to connect or register your Agent. So that, the {{site.data.keyword.bpshort}} knows about Agent and connect the service instance to it. The diagram depicts the complete {{site.data.keyword.bpshort}} Agents set up flow.
+You have successfully set up the {{site.data.keyword.bpshort}} agents infrastructure and agents services, the next step is to connect or register your Agent. So that, the {{site.data.keyword.bpshort}} knows about Agent and connect the service instance to it. The diagram depicts the complete {{site.data.keyword.bpshort}} agents set up flow.
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} Agents set up](images/agents-setup-latest.svg "{{site.data.keyword.bpshort}} Agents set up"){: caption="{{site.data.keyword.bpshort}} Agents set up" caption-side="center"}
+![{{site.data.keyword.bpshort}} agents set up](images/agents-setup-latest.svg "{{site.data.keyword.bpshort}} agents set up"){: caption="{{site.data.keyword.bpshort}} agents set up" caption-side="center"}
 
 ## Connecting Agent through UI
 {: #register-ui}
@@ -41,7 +41,7 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
 
 7. Optional: From your Agent instance you can click the `...` dots to perform the following operations.
     - **Edit Agent** to edit the Agent configuration.
-    - **Bind Agent** to the {{site.data.keyword.bpshort}} Workspaces.
+    - **Bind Agent** to the {{site.data.keyword.bpshort}} workspaces.
     - **Pause Agent** to pause the Agent execution.
     - **Delete Agent** to delete an Agent.
 
@@ -58,7 +58,7 @@ You have successfully set up the {{site.data.keyword.bpshort}} Agents infrastruc
     - [LogDNA](/docs/log-analysis?topic=log-analysis-iam).
     - [Activity tracker](/docs/activity-tracker?topic=activity-tracker-iam) services.
 
-Here are the list of CURL commands use to register and unregister the Agent. For more information about the Agents related `APIs`, see [Agents `APIs`](/apidocs/schematics/schematics#list-agent). 
+Here are the list of CURL commands use to register and unregister the Agent. For more information about the agents related `APIs`, see [agents `APIs`](/apidocs/schematics/schematics#list-agent). 
 
 1. Run post API to [register an Agent](/apidocs/schematics/schematics#register-agent) with the {{site.data.keyword.bpshort}}.
    ```sh
@@ -85,7 +85,7 @@ Here are the list of CURL commands use to register and unregister the Agent. For
     ```
     {: pre}
 
-2. Run get all API to [fetch all the registered or unregistered](/apidocs/schematics/schematics#list-agent) Agents from the Account.
+2. Run get all API to [fetch all the registered or unregistered](/apidocs/schematics/schematics#list-agent) agents from the Account.
 
    ```sh
     curl -X GET \
@@ -151,4 +151,4 @@ Here are the list of CURL commands use to register and unregister the Agent. For
 
 You have completed the Agent connection to your {{site.data.keyword.bpshort}} service instance.
 - Now, you need to [Use an Agent](/docs/schematics?topic=schematics-using-agent) to bind the Agent to your workspace.
-- For any challenges in Agents installation or configuration, see [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent&interface=cli) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=cli).
+- For any challenges in agents installation or configuration, see [FAQ about Agent](/docs/schematics?topic=schematics-faqs-agent&interface=cli) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found&interface=cli).

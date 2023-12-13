@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-12-13"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -206,7 +206,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 
 The CLI uses geographic specific API endpoints which direct job requests to the first available region within a geography. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
 
-This behavior is similar in the UI. For example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.
+This behavior is similar in the UI. For example, in the {{site.data.keyword.bpshort}} workspace creation page, you select `North America` region from the list.
 
 ## Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?
 {: #faqs-bp-schematics-instance}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-12-13"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -301,7 +301,7 @@ Default: []
 
 Optional
 
-Environment variables are used to modify the behavior and execution of Terraform and Ansible without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
+Environment variables are used to modify the behavior and execution of workspace and action without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
 
 A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. 
 {: pre}
@@ -518,7 +518,7 @@ Default: []
 
 Optional
 
-Environment variables are used to modify the behavior and execution of Terraform and Ansible without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
+Environment variables are used to modify the behavior and execution of workspace and action without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
 
 A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. 
 {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-12-13"
 
 keywords: schematics, automation, terraform
 
@@ -50,7 +50,7 @@ This tutorial is intended for developers and system administrators who want to l
 
 Before you begin, make sure that you are assigned the following permissions: 
 - [To create a private catalog](/docs/account?topic=account-create-private-catalog#prereq-create) in {{site.data.keyword.cloud_notm}}.
-- [To create a {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-access#workspace-permissions).
+- [To create a {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-access#workspace-permissions).
 - [To create an {{site.data.keyword.loganalysislong_notm}} instance](/docs/log-analysis?topic=log-analysis-iam#platform).
 - [To create an {{site.data.keyword.monitoringlong_notm}} instance](/docs/monitoring?topic=monitoring-iam#iam_platform).
 - [To create an {{site.data.keyword.cloudaccesstraillong_notm}} instance](/docs/activity-tracker?topic=activity-tracker-iam#platform).
@@ -157,9 +157,9 @@ Create a release in your source code repository to deliver and manage versions o
     6. Change to the **Add license agreement** tab, and add any license that the user needs to agree to. 
     7. Change to the **Edit readme** tab, and add or edit the readme for your product. 
     8. Change to the **Validate product** tab. 
-       - Enter a name for the {{site.data.keyword.bpshort}} Workspaces that you want to create for the product validation. 
+       - Enter a name for the {{site.data.keyword.bpshort}} workspaces that you want to create for the product validation. 
        - In the **Deployment values** section, verify that the default values are displayed. If you want to use different values to validate your product, change the deployment values as necessary. 
-       - Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} Workspaces is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
+       - Click **Validate** to start the validation. During the validation, a {{site.data.keyword.bpshort}} workspaces is created and the {{site.data.keyword.cloud_notm}} services that you defined in your Terraform templates are created. To monitor the progress of the validation in your workspace, you can click **View logs**. If the validation is successful, the status of your product changes to `Not published: Validated`. 
     9. From the **actions** menu, click **Share** to make your product available to other users in your private catalog. To provide access group and assign your catalog to users, see [Setting up the access groups](/docs/account?topic=account-groups).
     10. Optional: From the [{{site.data.keyword.cloud_notm}} **Resource list**](https://cloud.ibm.com/resources){: external}, remove the {{site.data.keyword.loganalysislong_notm}}, {{site.data.keyword.monitoringlong_notm}}, and {{site.data.keyword.cloudaccesstraillong_notm}} service instances that you created when you validated the product.
 

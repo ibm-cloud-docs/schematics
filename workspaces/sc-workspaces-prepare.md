@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-17"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces planning, planning workspace, planning schematics workspace, setting up schematics workspace
 
@@ -88,7 +88,7 @@ With standardized Terraform templates or Terraform modules, you can ensure that 
 ### What do I need to be aware of when I have a repository that has been previously used with Terraform standalone?
 {: #plan-terraform-migration}
 
-Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can reuse your existing Terraform templates with {{site.data.keyword.bpshort}} Workspaces. Depending on how your Terraform templates are written and Git repositories structured, you might need to make changes to successfully use {{site.data.keyword.bplong_notm}}. 
+Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can reuse your existing Terraform templates with workspaces. Depending on how your Terraform templates are written and Git repositories structured, you might need to make changes to successfully use {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
 - **Provider block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.iamlong}}, your {{site.data.keyword.cloud_notm}} API key is automatically retrieved for all IAM-enabled resources and you don't have to provide this information in the `provider` block. However, the API key is not retrieved for classic infrastructure and {{site.data.keyword.ibmcf_notm}} resources. For more information, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
@@ -110,7 +110,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 3. Select the **Settings** tab. 
 4. In the **Summary** section, click **Enable continuous delivery**. 
 5. Configure your toolchain. 
-    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} Workspace.
+    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
     2. Select the type of source repository where your Terraform configuration files are stored. For Example GitHub. 
     3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are pre-populated based on your workspace configuration.
     4. Optional: Choose if you want to enable Git issues and code change tracking for your toolchain. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-12-13"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -13,10 +13,10 @@ subcollection: schematics
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Creating an auto deploy button for {{site.data.keyword.bpshort}} Actions
+# Creating an auto deploy button for {{site.data.keyword.bpshort}} actions
 {: #auto-deploy-url}
 
-Use the instructions to create a button that opens the {{site.data.keyword.bpshort}} Actions create page and pre-populates an action name and the GitHub repository URL that stores your Ansible playbook. You can use the button to create {{site.data.keyword.bpshort}} Actions more quickly.
+Use the instructions to create a button that opens the {{site.data.keyword.bpshort}} actions create page and pre-populates an action name and the GitHub repository URL that stores your Ansible playbook. You can use the button to create {{site.data.keyword.bpshort}} actions more quickly.
 {: shortdesc}
 
 For a sample button, see the `Deploy to {{site.data.keyword.cloud}}` button on the [Sample Ansible playbook for {{site.data.keyword.cloud}}](/docs/schematics?topic=schematics-sample_actiontemplates) page.
@@ -27,7 +27,7 @@ For a sample button, see the `Deploy to {{site.data.keyword.cloud}}` button on t
 
 1. Create an Ansible playbook and publish the playbook in a GitHub repository. If you do not have a playbook, you can use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics/?q=Ansible&type=&language=&sort=){: external}.
 2. Copy the Git repository URL, such as `https://github.com/Cloud-Schematics/ansible-app-deploy`.
-3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} Actions create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
+3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} actions create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
 
     Syntax
     
@@ -44,7 +44,7 @@ For a sample button, see the `Deploy to {{site.data.keyword.cloud}}` button on t
     {: codeblock}
 
 4. Open your web browser and enter the URL.
-5. Verify that the {{site.data.keyword.bpshort}} Actions create page opens and that the **Action name** and **Repository URL** are pre-populated.
+5. Verify that the {{site.data.keyword.bpshort}} actions create page opens and that the **Action name** and **Repository URL** are pre-populated.
 
 ## Adding the button to a website or page
 {: #add_an_image}

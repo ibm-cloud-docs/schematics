@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-12-13"
 
 keywords: endpoint gateway failed, schematics endpoint gateway error, wrong number of segments in crn
 
@@ -13,12 +13,12 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} Agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
+{{site.data.keyword.bpshort}} agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 
 # Why are you getting create endpoint gateway failure with wrong number of segments in CRN?
 {: #agent-endpoint-error}
 
-When you run an {{site.data.keyword.bplong_notm}} plan or apply action, {{site.data.keyword.bpshort}} Workspaces produces the endpoint gateway that is failed with wrong number of segments in CRN. Following error message is received.
+When you run an {{site.data.keyword.bplong_notm}} plan or apply action, {{site.data.keyword.bpshort}} workspaces produces the endpoint gateway that is failed with wrong number of segments in CRN. Following error message is received.
 {: tsSymptoms}
 
 ```text
@@ -78,10 +78,10 @@ When you run an {{site.data.keyword.bplong_notm}} plan or apply action, {{site.d
 When {{site.data.keyword.bpshort}} runs your script or template on the target resource during the execution, the {{site.data.keyword.bpshort}} cannot resolve errors that occur in user-provided scripts, the apply action is marked as failed.
 {: tsCauses}
 
-Follow the steps to troubleshoot the error in your {{site.data.keyword.bpshort}} Workspaces:
+Follow the steps to troubleshoot the error in your {{site.data.keyword.bpshort}} workspaces:
 {: tsResolve}
 
-- From the **`{{site.data.keyword.bpshort}} Workspaces settings`**, select the {{site.data.keyword.bpshort}} apply action that failed.
+- From the **`{{site.data.keyword.bpshort}} workspaces settings`**, select the {{site.data.keyword.bpshort}} apply action that failed.
 - Click **`Jobs`** to see the detailed log output.
 - In the log file, find the last action that {{site.data.keyword.bpshort}} started before the error occurs. 
-- From the {{site.data.keyword.bpshort}} Workspaces settings page, and edit the `create_endpoint_gateway` default value from `true` to `false`. By setting, `true` you create a VPE endpoint gateway for {{site.data.keyword.bpshort}} and set `false` if no endpoint gateway is needed.
+- From the {{site.data.keyword.bpshort}} workspaces settings page, and edit the `create_endpoint_gateway` default value from `true` to `false`. By setting, `true` you create a VPE endpoint gateway for {{site.data.keyword.bpshort}} and set `false` if no endpoint gateway is needed.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-05"
+  years: 2017, 2023
+lastupdated: "2023-12-13"
 
 keywords: monitoring schematics services, schematics monitoring, monitoring
 
@@ -175,4 +175,4 @@ For the {{site.data.keyword.bpshort}} instance, following time series counts and
 | Status | Query |
 | ------ | -------- |
 | Number of workspaces currently managed  | `avg(avg(ibm_schematics_vulnerability_count))` |
-{: caption="Vulnerability count of {{site.data.keyword.bpshort}} Workspace" caption-side="bottom"}
+{: caption="Vulnerability count of {{site.data.keyword.bpshort}} workspace" caption-side="bottom"}

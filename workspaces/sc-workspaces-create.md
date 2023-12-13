@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -27,7 +27,7 @@ Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_no
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
 
 ## Creating a workspace using the UI
@@ -52,7 +52,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
           ```
           {: pre}
 
-        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the Agents list, check you [connected the Agents](/docs/schematics?topic=schematics-register-agent)?
+        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the agents list, check you [connected the agents](/docs/schematics?topic=schematics-register-agent)?
         - Click `Next`.
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
@@ -82,7 +82,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     After your Terraform configuration files are scanned, you can view the results on the workspace **Activity** page. The total number of files that were scanned in the source repository is displayed as `scanned`. The total number of files that are vulnerable, such as unsupported file extensions, is displayed as `discarded`. Click **Jobs** to find the details of the files that were scanned and discarded. For more information about viewing logs, see [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs).
     {: tip}
 
-6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
+6. Review the default input variable values for your Terraform template. To change an input variable value, click **Edit** from the Workspace actions menu. Depending on the data type that your variable uses, you must enter the value in a specific format. see the following table to find example values for each supported data type. 
 
     | Type | Example |
     | --- | -- |
@@ -153,7 +153,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
     | --- |  --- |
     | `workspace_name` | Enter a name for your workspace. The maximum length of character limit is set to 1 MB. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. To use Terraform `version 0.12`, enter `terraform_v0.12`, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. If the Terraform variable version is not specified. by default, {{site.data.keyword.bpshort}} selects the version from your template. |
-    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
+    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. |
     | `variable_name` | Optional, enter the name for the input variable that you declared in your Terraform configuration files. |
@@ -191,7 +191,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
     | `iam_access_token` | Enter the IAM access token that you retrieved in step 1. |
     | `workspace_name` | Enter a name for your workspace. The maximum length of character limit is set to 1 MB. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform `version 0.12`, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. If the Terraform variable version is not specified, by default, {{site.data.keyword.bpshort}} selects the version from your template.|
-    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
+    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are store |
     | `variable_name` | Optional, enter the name for the input variable that you declared in your Terraform configuration files. |

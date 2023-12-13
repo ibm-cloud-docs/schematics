@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-28"
+lastupdated: "2023-12-13"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Deploying agents
 {: #deploy-agent-overview}
 
-Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. 
+Agents for {{site.data.keyword.bplong}} extends {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. 
 {: shortdesc}
 
 Follow the steps below to deploy and configure a {{site.data.keyword.bpshort}} agent. 

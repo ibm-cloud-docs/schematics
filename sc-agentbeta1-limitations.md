@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-27"
+lastupdated: "2023-12-13"
 
 keywords: schematics agent, agent, release, agent release
 
@@ -44,7 +44,7 @@ There will be multiple beta releases in short window period, this requires the u
 | The cluster and COS bucket must be in the same resource group | | |
 | Only IKS clusters are supported at this time. ROKS support is planned for the future |||
 | UI capabilities are not final and will be updated throughout the beta process.| | |
-| Support to [store or persist user-defined](/docs/schematics?topic=schematics-general-faq#persist-file) files is not available in Agents.| | |
+| Support to [store or persist user-defined](/docs/schematics?topic=schematics-general-faq#persist-file) files is not available in agents.| | |
 | Agents supports only `Terraform v1.0` or higher Terraform version. | | |
 | Agent customization is not finalized, will be communicated. | | |
 | Support to monitor agent health is limited in this release.| | |
@@ -59,12 +59,12 @@ There will be multiple beta releases in short window period, this requires the u
 ### Steps to join public slack
 {: #sc-agentb1-join-slack}
 
-Following steps allows you to join the {{site.data.keyword.bpshort}} Agents beta public Slack channel.
+Following steps allows you to join the {{site.data.keyword.bpshort}} agents beta public Slack channel.
 - Click [{{site.data.keyword.bplong_notm}} Slack](https://cloud.ibm.com/schematics/slack).
 - Select **Request to join Slack** > **Request Invite**.
 - A support case page is opened.
-- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} Agents beta**.
-- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} Agents beta public Slack channel**
+- Support Case Subject : **Request invitation to public slack channel for {{site.data.keyword.bpshort}} agents beta**.
+- Support Case Description: **Invite my email address to the {{site.data.keyword.bpshort}} agents beta public Slack channel**
 - Click **Next**.
 - Click **Submit case**. Wait for 10 - 15 minutes to get an access.
 

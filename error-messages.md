@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-10-04"
+lastupdated: "2023-12-13"
 
 keywords: error message, message id, ansible error code, schematics error code
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Troubleshooting errors
 {: #handling-error}
 
-When {{site.data.keyword.bpshort}} Actions or workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. {{site.data.keyword.bpshort}} provides resolution to handle such errors and help you get the expected behavior, output.
+When {{site.data.keyword.bpshort}} actions or workspace receives a non-zero return code from a command, API, UI or failed during setting up the infrastructure, by default the setup halts executing. {{site.data.keyword.bpshort}} provides resolution to handle such errors and help you get the expected behavior, output.
 {: shortdesc}
 
 This is not the complete list of error messages. Some messages are created by other systems, such as IAM authentication errors messages to the {{site.data.keyword.bpshort}} action.
@@ -36,7 +36,7 @@ The error messages are categorized based on the error type, error code, and erro
 ### Parameter error
 {: #param-error}
 
-The parameter error represents that all the required or optional {{site.data.keyword.bpshort}} Actions parameters has configured with the right input.
+The parameter error represents that all the required or optional {{site.data.keyword.bpshort}} actions parameters has configured with the right input.
 {: shortdesc}
 
 #### Message
@@ -57,7 +57,7 @@ You should read the error message carefully to rectify. You can check out the re
 ### Service error
 {: #svc-error}
 
-The {{site.data.keyword.bpshort}} Actions instance and resources are overloaded or down for maintenance. 
+The {{site.data.keyword.bpshort}} actions instance and resources are overloaded or down for maintenance. 
 
 #### Message
 {: #svc-msg}
