@@ -20,6 +20,11 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
 
+## January 2024
+{: #January-2024}
+
+Review the release notes for January 2024.
+{: shortdesc}
 
 ### 5 January 2024
 {: #schematics-jan0524}
