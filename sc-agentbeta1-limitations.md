@@ -70,7 +70,6 @@ Following steps allows you to join the {{site.data.keyword.bpshort}} agents beta
 ## Agent release limitations
 {: #sc-agentb1-limitation}
 
-The following are the limitation of an agent.
+The following are the planned future enhancement of an agent.
 
-1. Do not support destroying an agent resources feature.
-2. Agent migration is done only through {{site.data.keyword.containerlong_notm}} dashboard namespace configuration.
+1. Deploying an agent on OpenShift Cluster.
