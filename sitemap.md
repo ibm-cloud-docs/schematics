@@ -280,6 +280,10 @@ subcollection: schematics
 
         * {{site.data.keyword.bpshort}} support for Agent is generally available (GA) with full production support.
 
+    * [4 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan0424)
+
+        * {{site.data.keyword.bpshort}} service announces the general availability of Agent features with full production support.
+
 * [October 2023](/docs/schematics?topic=schematics-schematics-relnotes#October-2023)
 
     * Review the release notes for October 2023.

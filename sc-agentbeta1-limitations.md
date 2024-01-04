@@ -73,3 +73,4 @@ Following steps allows you to join the {{site.data.keyword.bpshort}} agents beta
 The following are the planned future enhancement of an agent.
 
 1. Deploying an agent on OpenShift Cluster.
+

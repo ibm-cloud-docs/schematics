@@ -40,6 +40,12 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
     - For any challenges or questions, see {{site.data.keyword.bpshort}} Agents [FAQs](/docs/schematics?topic=schematics-faqs-agent), and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
     - [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agent level code and provide feedback.
 
+### 4 January 2024
+{: #schematics-jan0424}
+{: release-note}
+
+{{site.data.keyword.bpshort}} service announces the general availability of Agent features with full production support.
+:   [General availability of {{site.data.keyword.bpshort}} Agent](https://test.cloud.ibm.com/status/announcement?component=schematics){: external}.
 
 ## October 2023
 {: #October-2023}
