@@ -43,7 +43,7 @@ Review the release notes for January 2024.
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview) an agent
     - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure Schematics agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and private registry](/docs/schematics?topic=schematics-agent-registry-overview).
     - For any challenges or questions, see {{site.data.keyword.bpshort}} Agents [FAQs](/docs/schematics?topic=schematics-faqs-agent), and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
-    - [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agent level code and provide feedback.
+    - [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-limitation) to engage with the agent level code and provide feedback.
 
 ### 4 January 2024
 {: #schematics-jan0424}
@@ -191,7 +191,7 @@ The `terraform.tfstate` state file size maximum limit is less than 2 MB.
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
     - You can also [use an agent assignment policy](/docs/schematics?topic=schematics-policy-manage), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agent.
-    - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta-1 level code and provide feedback.
+    - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-limitation) to engage with the agents beta-1 level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in.
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.8](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -377,7 +377,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: release-note}
 
 {{site.data.keyword.bpshort}} agents beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} agents beta releases.
+:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-agent-limitation) of {{site.data.keyword.bpshort}} agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} agents beta releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} agents engagement.
     - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agents-intro).
     - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
@@ -386,7 +386,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} workspaces to the Agent.
     - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent) to clean up the Agent infrastructure and Agent services.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agents.
-    - [Beta code for {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta level code and provide feedback.
+    - [Beta code for {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-limitation) to engage with the agents beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.

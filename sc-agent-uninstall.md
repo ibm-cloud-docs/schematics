@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-04"
 
 keywords: schematics agents, agents, set up an agent
 
@@ -12,8 +12,6 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} agents is a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for agents](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
-{: beta}
 
 # Uninstalling {{site.data.keyword.bpshort}} agents
 {: #uninstall-agent}
