@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-04"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -994,7 +994,7 @@ Retrieve a list of all policies in the {{site.data.keyword.cloud_notm}} region f
 Syntax
 
 ```sh
-ibmcloud schematics policy list [--profile PROFILE] [--output OUTPUT] [--limit LIMIT] [--offset OFFSET]
+ibmcloud schematics policy list [--profile PROFILE] [--limit LIMIT] [--offset OFFSET] [--output OUTPUT]
 ```
 {: pre}
 

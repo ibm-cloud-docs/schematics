@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-04"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -19,6 +19,27 @@ content-type: release-note
 
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
+
+
+### 5 January 2024
+{: #schematics-jan0524}
+{: release-note}
+
+{{site.data.keyword.bpshort}} support for Agent is generally available (GA) with full production support.
+:   {{site.data.keyword.bpshort}} announces its [Agent - GA release](/docs/schematics?topic=schematics-agent-about-intro) to extend {{site.data.keyword.bpshort}} availability to reach your private cloud and or on-premises infrastructures. Check the following content to learn about {{site.data.keyword.bpshort}} agents releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
+    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro) and its usage.
+    - {{site.data.keyword.bpshort}} Agent are supported through [UI](/docs/schematics?topic=schematics-deploy-agent-overview), [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), and [API](/apidocs/schematics/schematics#create-agent-data).
+    - You can manage {{site.data.keyword.bpshort}} Agent by
+      - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [deploying agent prerequisite infrastructure](/docs/schematics?topic=schematics-agent-infrastructure-overview)
+      - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview) an agent
+      - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview) an agent
+      - [deleting](/docs/schematics?topic=schematics-delete-agent-overview) an agent
+    - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure Schematics agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and private registry](/docs/schematics?topic=schematics-agent-registry-overview).
+    - For any challenges or questions, see {{site.data.keyword.bpshort}} Agents [FAQs](/docs/schematics?topic=schematics-faqs-agent), and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
+    - [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agent level code and provide feedback.
+
 
 ## October 2023
 {: #October-2023}
@@ -126,7 +147,6 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 
 Review the release notes for March 2023.
 {: shortdesc}
-
 
 ### 30 March 2023
 {: #schematics-mar3023}
@@ -640,7 +660,7 @@ Sample templates to deploy into {{site.data.keyword.cloud_notm}}
 :   Install [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services by using {{site.data.keyword.bpshort}} workspaces.
 
 Support `WinRM` in command line
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
 
 Documentation lists the Command-line version change log history
 :   The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).
@@ -656,7 +676,7 @@ Review the release notes for September 2021.
 {: release-note}
 
 Inventory target feature support in {{site.data.keyword.bpshort}} actions API
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
 Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
 :   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `winrm`.

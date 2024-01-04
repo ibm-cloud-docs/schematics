@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-04"
 
 keywords: endpoint gateway failed, schematics endpoint gateway error, wrong number of segments in crn
 
@@ -13,7 +13,6 @@ content-type: troubleshoot
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bpshort}} agents are a [beta feature](/docs/schematics?topic=schematics-agent-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations) in the beta release.
 
 # Why are you getting create endpoint gateway failure with wrong number of segments in CRN?
 {: #agent-endpoint-error}

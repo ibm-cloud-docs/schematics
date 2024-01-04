@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-04"
 
 keywords: schematics agent, agent, release, agent release
 
@@ -14,13 +14,12 @@ subcollection: schematics
 
 
 # {{site.data.keyword.bpshort}} Agent limitation
-{: #agent-beta1-limitations}
+{: #agent-limitation}
 
-The agent level of code is considered code as there will be changes in function and capabilities between now and the General Availability (GA) date.
 
-Although agent usage has no cost involved during beta, it will have a cost eventually in the GA timeframe. You will be updated in the documentation with the usage and the charges.
+Currently the {{site.data.keyword.bpshort}} Agent usage has no cost involved, it will have a cost eventually in the General Availability (GA) timeframe. You will be updated in the documentation with the usage and the charges.
 
-Join our beta program, post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team. If you do not have access to this Slack, [request an invitation to this Slack](https://cloud.ibm.com/schematics/slack){: external}.
+Join our GA program, post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team. If you do not have access to this Slack, [request an invitation to this Slack](https://cloud.ibm.com/schematics/slack){: external}.
 
 Join the `#schematics-users` slack channel and post a message include the following information.
 
@@ -75,5 +74,3 @@ The following are the limitation of an agent.
 
 1. Do not support destroying an agent resources feature.
 2. Agent migration is done only through {{site.data.keyword.containerlong_notm}} dashboard namespace configuration.
-
-
