@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-22"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -48,7 +48,7 @@ Some tools are a better fit for the task in hand for provisioning or configurati
 
 {{site.data.keyword.cloud_notm}} uses Terraform and Ansible, and other open-source tools includes {{site.data.keyword.openshiftshort}}, Operators, and Helm to deliver IaC as a managed service. Rather than limiting you to a single tool, {{site.data.keyword.bpshort}} allow you to use the tool and approach that is best suited to the task. You declare the tasks that you want to run and {{site.data.keyword.bpshort}} run the tasks for you.
 
-### Understanding Schematics features and IaC tools
+### Understanding {{site.data.keyword.bpshort}} features and IaC tools
 {: #sc-iac-mapping}
 
  Review the tool descriptions to identify the {{site.data.keyword.bpshort}} feature that maps to the IaC capability you would like to use. 

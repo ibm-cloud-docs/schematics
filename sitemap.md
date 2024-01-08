@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-01-08"
 
 keywords: schematics
 subcollection: schematics
@@ -101,7 +101,7 @@ subcollection: schematics
 
 * [How to choose your IaC tool](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-choosing)
 
-    * [Understanding Schematics features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping)
+    * [Understanding {{site.data.keyword.bpshort}} features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 

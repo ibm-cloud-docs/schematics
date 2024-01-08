@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-01-08"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -41,7 +41,7 @@ Review the release notes for January 2024.
       - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview) an agent
       - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview) an agent
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview) an agent
-    - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure Schematics agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and private registry](/docs/schematics?topic=schematics-agent-registry-overview).
+    - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure {{site.data.keyword.bpshort}} agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and private registry](/docs/schematics?topic=schematics-agent-registry-overview).
     - For any challenges or questions, see {{site.data.keyword.bpshort}} Agents [FAQs](/docs/schematics?topic=schematics-faqs-agent), and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
     - [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-limitation) to engage with the agent level code and provide feedback.
 

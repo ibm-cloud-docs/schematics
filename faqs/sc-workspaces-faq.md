@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -324,7 +324,7 @@ When listing or retrieving workspaces the following error may be received.  `Err
 
 ```text
 Error:
-Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving Schematics Instance for the given account.","statuscode":400}
+Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account.","statuscode":400}
 ```
 
 You might have insufficient access for the workspaces in specified location to fetch the instance. Do check the permission that is provided for your account and the locations where your instance need to be created. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
@@ -598,7 +598,7 @@ The maximum length of characters that {{site.data.keyword.bpshort}} workspace va
 {: faq}
 {: support}
 
-The `terraform.tfstate` file size must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 16 MB. Greater than 16 MB state file size is not supported in the {{site.data.keyword.bpshort}}. You will see an error message with `413 Request Entity Too Large error when creating a new Schematics workspace`.
+The `terraform.tfstate` file size must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 16 MB. Greater than 16 MB state file size is not supported in the {{site.data.keyword.bpshort}}. You will see an error message with `413 Request Entity Too Large error when creating a new {{site.data.keyword.bpshort}} workspace`.
 
 ## How do I fix authentication errors when using the API?
 {: #createworkspace-authentication-error}

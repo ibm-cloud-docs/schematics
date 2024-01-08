@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-16"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -91,7 +91,7 @@ You can follow these steps to generate a plan and apply a blueprint using the {{
     - Optional: From **Variables summary** card, Click **View details** to navigate to the variable summary page.
 3. Click **Modules** tab to see the list of blueprint modules and their current status. 
     - Optional: Click **Show details** to view more details about the blueprint module definition. 
-    - Optional: Click **Name** that will take you to the modules related Schematics `Workspace` page. 
+    - Optional: Click **Name** that will take you to the modules related {{site.data.keyword.bpshort}} `Workspace` page. 
 4. Click **Resources** tab to view the list of resources provisioned by the blueprint.
 5. Click **Variables** tab to view the blueprint **Inputs** and **Outputs** variables and values. Optional: on this page you can edit the input variable values and save. 
 6. Click **Jobs history** tab view the job logs of the blueprint and module jobs.

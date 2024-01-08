@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-01-08"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -847,7 +847,7 @@ ibmcloud schematics agent update --id <AGENT_ID>
 ## Agents policy commands
 {: #policy-cmd}
 
-{{site.data.keyword.bpshort}} (assignment) policies tell Schematics which agent it should use to execute workspace and action jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. See [assignment policies](/docs/schematics?topic=schematics-policy-manage&interface=cli).
+{{site.data.keyword.bpshort}} (assignment) policies tell {{site.data.keyword.bpshort}} which agent it should use to execute workspace and action jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. See [assignment policies](/docs/schematics?topic=schematics-policy-manage&interface=cli).
 {; shortdesc}
 
 ### `ibmcloud schematics policy create`

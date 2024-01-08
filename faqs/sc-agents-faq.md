@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -58,14 +58,14 @@ You can install only one agent on a Kubernetes cluster on {{site.data.keyword.co
 {: faq}
 {: support}
 
-Only the two most recent versions of Terraform supported by Schematics are supported with agents. At this time these are version 1.4 and version 1.5. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) for how to upgrade before using agents. 
+Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are supported with agents. At this time these are version 1.4 and version 1.5. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) for how to upgrade before using agents. 
 
 ## Why does workspace execution fail with `terraformx.x: executable file not found in $PATH`
 {: #faqs-agent-terraform-version-old}
 {: faq}
 {: support}
 
-The version of Terraform used by the workspace is not supported with agents. Only the two most recent versions of Terraform supported by Schematics are with agents. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) for how to upgrade before using agents. 
+The version of Terraform used by the workspace is not supported with agents. Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are with agents. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) for how to upgrade before using agents. 
 
 
 ## What type of {{site.data.keyword.bpshort}} jobs can run in an agent?

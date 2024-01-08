@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -40,7 +40,7 @@ The examples shown here can be used to set any environment variable to be passed
 #### Setting parallelism at create time
 {: #parallelism-example-create}
 
-The code block is the sample payload for creating workspace with the Schematics [Create API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace){: external} with parallelism passed as an environment variable.
+The code block is the sample payload for creating workspace with the {{site.data.keyword.bpshort}} [Create API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace){: external} with parallelism passed as an environment variable.
 
 ```json
 {
@@ -83,7 +83,7 @@ The code block is the sample payload for creating workspace with the Schematics 
 #### Setting parallelism after create
 {: #parallelism-example-update}
 
-A sample `env_values` block in the payload to update environment variables using the Schematics Workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}. For a more detailed example, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs){: external} API.
+A sample `env_values` block in the payload to update environment variables using the {{site.data.keyword.bpshort}} Workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}. For a more detailed example, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs){: external} API.
 
 ```json
 "env_values": [

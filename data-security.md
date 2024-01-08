@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: byok and kyok, schematics byok, schematics kyok, key management service 
 
@@ -93,7 +93,7 @@ The following image shows the main {{site.data.keyword.bplong_notm}} components 
 
 ![{{site.data.keyword.bplong_notm}} architecture and data encryption process](images/schematics_architecture.png){: caption="{{site.data.keyword.bplong_notm}} architecture and data encryption process" caption-side="bottom"}
 
-1. A user sends a request to create a {{site.data.keyword.bpshort}} workspace to the {{site.data.keyword.bpshort}} API server. An IAM request is made to check if the user is authorized to perform Schematics operations for the workspace. 
+1. A user sends a request to create a {{site.data.keyword.bpshort}} workspace to the {{site.data.keyword.bpshort}} API server. An IAM request is made to check if the user is authorized to perform {{site.data.keyword.bpshort}} operations for the workspace. 
 2. The API server retrieves the Terraform template and input variables from your GitHub or GitLab source repository, or a tape archive file (`.tar`) that you uploaded from your local machine. User data in transit is protected with TLS.  
 3. All user-initiated actions, creating a workspace, generating a Terraform execution plan, or applying a plan are sent to RabbitMQ and added to the internal queue. The {{site.data.keyword.bpshort}} engine retrieves requests from RabbitMQ and executes the actions. User data in transit is protected with TLS.  
 4. The {{site.data.keyword.bpshort}} engine runs the tasks to provision, modify, or delete {{site.data.keyword.cloud_notm}} resources.

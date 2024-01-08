@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics faq, 
 
@@ -92,7 +92,7 @@ The allowed extension list is continuously monitored and updated in every releas
 {: faq}
 {: support}
 
-The use of filesystem symlinks in Git repos at execution time is not supported. At job execution time, Schematics will not traverse symlinks in cloned Git repos. 
+The use of filesystem symlinks in Git repos at execution time is not supported. At job execution time, {{site.data.keyword.bpshort}} will not traverse symlinks in cloned Git repos. 
 
 During creation of workspaces or actions, the use of symlinks to refer to variable files or Ansible playbooks in the cloned repo is permitted. 
 
