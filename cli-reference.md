@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -840,8 +840,6 @@ Example
 ibmcloud schematics agent update --id <AGENT_ID>
 ```
 {: pre}
-
-
 
 
 ## Agents policy commands

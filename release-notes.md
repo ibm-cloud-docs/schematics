@@ -26,12 +26,15 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 Review the release notes for January 2024.
 {: shortdesc}
 
-### 5 January 2024
-{: #schematics-jan0524}
+
+
+
+### 10 January 2024
+{: #schematics-jan1024}
 {: release-note}
 
 {{site.data.keyword.bpshort}} support for Agent is generally available (GA) with full production support.
-:   {{site.data.keyword.bpshort}} announces its [Agent - GA release](/docs/schematics?topic=schematics-agent-about-intro) to extend {{site.data.keyword.bpshort}} availability to reach your private cloud and or on-premises infrastructures. Check the following content to learn about {{site.data.keyword.bpshort}} agents releases.
+:   {{site.data.keyword.bpshort}} announces its Agent GA release to extend {{site.data.keyword.bpshort}} availability to reach your private cloud and or on-premises infrastructures. Check the following content to learn about {{site.data.keyword.bpshort}} agents releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro) and its usage.
     - {{site.data.keyword.bpshort}} Agent are supported through [UI](/docs/schematics?topic=schematics-deploy-agent-overview), [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), and [API](/apidocs/schematics/schematics#create-agent-data).
@@ -41,16 +44,12 @@ Review the release notes for January 2024.
       - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview) an agent
       - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview) an agent
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview) an agent
-    - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure {{site.data.keyword.bpshort}} agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and private registry](/docs/schematics?topic=schematics-agent-registry-overview).
+    - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure {{site.data.keyword.bpshort}} agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and [private registry](/docs/schematics?topic=schematics-agent-registry-overview).
     - For any challenges or questions, see {{site.data.keyword.bpshort}} Agents [FAQs](/docs/schematics?topic=schematics-faqs-agent), and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
-    - [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-limitation) to engage with the agent level code and provide feedback.
 
-### 4 January 2024
-{: #schematics-jan0424}
-{: release-note}
 
-{{site.data.keyword.bpshort}} service announces the general availability of Agent features with full production support.
-:   [General availability of {{site.data.keyword.bpshort}} Agent](https://test.cloud.ibm.com/status/announcement?component=schematics){: external}.
+
+
 
 ## October 2023
 {: #October-2023}
