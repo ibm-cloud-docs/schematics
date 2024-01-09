@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -402,3 +402,10 @@ Yes, you can update the agent with the metadata to perform catalog on boarding w
         }'
     ```
     {: pre}
+
+## Is cost involved in using {{site.data.keyword.bpshort}} Agent? 
+{: #faqs-agents-cost}
+{: faq}
+{: support}
+
+Currently the {{site.data.keyword.bpshort}} Agent usage has no cost involved, it will have a cost eventually in the General Availability (GA) timeframe. You are notified in the documentation with the usage and the charges.

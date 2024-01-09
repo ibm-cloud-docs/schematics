@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -28,7 +28,7 @@ Review and complete the listed tasks to prepare your {{site.data.keyword.cloud}}
 - **Kubernetes cluster:** A {{site.data.keyword.bpshort}} agent can be deployed on existing private or public [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters) clusters. You can use an existing cluster or provision a new cluster with the following minimum configuration.
    - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four workspace or action jobs in parallel.
    - Record information about the cluster such as `cluster ID`, `cluster resource group`, and `region` for the later use.
-- **{{site.data.keyword.cos_full}}:** The {{site.data.keyword.bpshort}} agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 
+- **{{site.data.keyword.cos}}:** The {{site.data.keyword.bpshort}} agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 
     - To deploy an agent, you must have the necessary privileges to create the `HMAC credentials` for the {{site.data.keyword.objectstorageshort}} bucket and store the credential as a Kubernetes secret.
     - The {{site.data.keyword.cos_full_notm}} instance and bucket must be created for the successful deploy. 
     - Record information about the {{site.data.keyword.cos_full_notm}} resources such as `COS instance name`, `COS bucket name`, and `bucket region` for the later use.

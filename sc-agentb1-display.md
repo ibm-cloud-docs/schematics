@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-28"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Displaying agents
 {: #display-agentb1-overview}
 
-You can view an agent using the agent ID to retrieve the detailed configuration information. You can also list all the agents that are created in your account by using the command _ibmcloud schematics agent list_.
+You can view an agent using the agent ID to retrieve the detailed configuration information. You can also list all the agents that are created in your account.
 {: shortdesc}
 
 ## Displaying the list of agents using UI
@@ -42,18 +42,19 @@ ibmcloud schematics agent list
 
 Output
 
-```text
+```textevruevgerrttrkjkednkjudtkhvdehdghl
+
 Retrieving agents...
 OK
 Name                              ID                                         Version   Description                                   Resource Group   Agent Location   Schematics location   Status   Tags               Agent health   
 Agent-UI-Final-Testing            Agent-UI-Final-Testing.deA.3dfb                                                                    cli-testing      eu-de                                  Active                         
 Vishwa-CLI-Testing                Vishwa-CLI-Testing.deA.ef99                                                                        cli-testing      eu-de                                  Active                         
 agent-5-multipod                  agent-5-multipod.deA.3d58                            Srikar testing multiple pods in agent-5 ...   job-runner       eu-de                                  Active   agent_register        
-agent-prod-testing-api-mar-24-2   agent-prod-testing-api-mar-24-2.deA.ca07   1.6.0     Create Agent                                  Default          us-south         eu-de                 Active   env:prod, mytest      
-agent-testing-prod-cli-mar-27-2   agent-testing-prod-cli-mar-27-2.deA.727f   v1.0.0                                                  Default          us-south         eu-de                 Active                         
-agent-testing-prod-cli-mar-27-3   agent-testing-prod-cli-mar-27-3.deA.fd13                                                           Default          us-south         eu-de                 Active                         
-agent-testing-prod-cli-mar-27-4   agent-testing-prod-cli-mar-27-4.deA.acd4                                                           Default          us-south         eu-de                 Active                         
-agent-testing-prod-cli-mar-27     agent-testing-prod-cli-mar-27.deA.3f7e                                                             Default          jp-tok         eu-de                 Active                         
+agent-prod-testing-api-dec-24-2   agent-prod-testing-api-dec-24-2.deA.ca07   1.6.0     Create Agent                                  Default          us-south         eu-de                 Active   env:prod, mytest      
+agent-testing-prod-cli-dec-27-2   agent-testing-prod-cli-dec-27-2.deA.727f   v1.0.0                                                  Default          us-south         eu-de                 Active                         
+agent-testing-prod-cli-dec-27-3   agent-testing-prod-cli-dec-27-3.deA.fd13                                                           Default          us-south         eu-de                 Active                         
+agent-testing-prod-cli-dec-27-4   agent-testing-prod-cli-dec-27-4.deA.acd4                                                           Default          us-south         eu-de                 Active                         
+agent-testing-prod-cli-dec-27     agent-testing-prod-cli-dec-27.deA.3f7e                                                             Default          jp-tok         eu-de                 Active                         
 gsmmar27v1cli-agent-test          gsmmar27v1cli-agent-test.deA.6288                                                                  Default          eu-de            eu-de                 Active                         
 gsmmar27v2cli-agent-test          gsmmar27v2cli-agent-test.deA.afcc                                                                  Default          eu-de            eu-de                 Active                         
 gsmmar27v3cli-agent-test          gsmmar27v3cli-agent-test.deA.4b56                                                                  Default          eu-de            eu-de                 Active                         
@@ -75,7 +76,7 @@ To view the agent get commands, syntax, and option flag details, see [ibmcloud s
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97 
+ibmcloud schematics agent get --id agent-testing-prod-cli-dec-27-5.deA.dc97 
 ```
 {: pre}
 
@@ -85,8 +86,8 @@ Output
 Retrieving agent...
 OK
                     
-ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
-Name             agent-testing-prod-cli-mar-27-5   
+ID               agent-testing-prod-cli-dec-27-5.deA.dc97   
+Name             agent-testing-prod-cli-dec-27-5   
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   
@@ -201,5 +202,5 @@ Output
 ## Next steps
 {: #agent-delete-nextsteps}
 
-- You can see [update an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update), and [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
+- You can see [update an agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update), and [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.

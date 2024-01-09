@@ -2155,6 +2155,8 @@ subcollection: schematics
 
 * [Can {{site.data.keyword.bpshort}} Agent update a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-update)
 
+* [Is cost involved in using {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agents-cost)
+
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
 * [What are the Git repositories that are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
@@ -2417,20 +2419,13 @@ subcollection: schematics
     * [Job error](/docs/schematics?topic=schematics-handling-error#job-error)
 
 
-## {{site.data.keyword.bpshort}} Agent limitation
-{: #sitemap__agent_limitation}
-
-
-[{{site.data.keyword.bpshort}} Agent limitation](/docs/schematics?topic=schematics-agent-limitation#agent-limitation)
-
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-limitation#sc-agentb1-join-public-slack)
-
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-limitation#sc-agentb1-join-slack)
-
-
 ## Getting help and support
 {: #sitemap_getting_help_and_support}
 
 
 [Getting help and support](/docs/schematics?topic=schematics-schematics-help#schematics-help)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-schematics-help#sc-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-schematics-help#sc-join-slack)
 
