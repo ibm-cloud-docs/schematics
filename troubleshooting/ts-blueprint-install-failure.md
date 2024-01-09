@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-12-13"
 
 keywords: blueprint apply failure, terraform error, terraform fails, install fails,
 
@@ -73,7 +73,7 @@ Attention! Job ID: eu-gb.JOB.Blueprint-Basic-Example.0cebdb53 FULFILMENT_FAILED
 ```
 {: screen}
 
-Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a blueprint apply failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} Workspace or stand-alone Terraform usage. 
+Install failures are related to Terraform execution and the specific Terraform config being ran. Debugging a blueprint apply failure follows the same approach as is followed for debugging a Terraform command failure for a {{site.data.keyword.bpshort}} workspace or stand-alone Terraform usage. 
 {: tsResolve} 
 
 The blueprint apply command indicates which module fails. Then, prompt to show a summary of the log for the failed workspace. 

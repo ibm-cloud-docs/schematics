@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-23"
+  years: 2017, 2023
+lastupdated: "2023-12-13"
 
 keywords: schematics, schematics workspace create, schematics workspace create
 
@@ -14,7 +14,7 @@ content-type: troubleshoot
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Why do {{site.data.keyword.bpshort}} Workspaces create using the API/UI/CLI fails?
+# Why do {{site.data.keyword.bpshort}} workspaces create using the API/UI/CLI fails?
 {: #wks-create-api}
 
 The {{site.data.keyword.bpshort}} create workspace fails when you attempt to create using the API by using following CURL command.

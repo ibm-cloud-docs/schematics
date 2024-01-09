@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-21"
+lastupdated: "2023-12-13"
 
 keywords: get started with schematics, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, terraform provider
 subcollection: schematics
@@ -11,7 +11,7 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using Actions to perform configuration management 
+# Using actions to perform configuration management 
 {: #getting-started-ansible}
 
 Use one of the {{site.data.keyword.IBM}} provided Ansible playbooks to start and stop {{site.data.keyword.vsi_is_full}}. 
@@ -24,7 +24,7 @@ An [Ansible playbook](https://www.redhat.com/en/topics/automation/what-is-an-ans
 
 Before you can use this Ansible playbook, you must complete the following tasks:
 
-- Make sure that you have the permissions to [Create a {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-access#access-roles). 
+- Make sure that you have the permissions to [Create a {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-access#access-roles). 
 - Create an {{site.data.keyword.vpc_full}} and a {{site.data.keyword.vsi_is_short}}. For more information, see [Getting started with Virtual Private Cloud (VPC)](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console){: external}. 
 
     Note your **Private** or **Floating IP** address of your {{site.data.keyword.vsi_is_short}}. 
@@ -33,7 +33,7 @@ Before you can use this Ansible playbook, you must complete the following tasks:
 ## Starting and stopping {{site.data.keyword.vsi_is_short}}
 {: #ansible-vsi}
 
-1. From the [{{site.data.keyword.bpshort}} Actions](https://cloud.ibm.com/schematics/actions){: external} page. Click **Create action**. 
+1. From the [{{site.data.keyword.bpshort}} actions](https://cloud.ibm.com/schematics/actions){: external} page. Click **Create action**. 
 2. Enter a name for your action, for example, `Stop_VSIaction`, resource group, and the region where you want to create the action. Then, click **Create** to view the **Details** section.
 3. In the **Ansible playbook** section, click **Edit icon** and enter `https://github.com/Cloud-Schematics/ansible-is-instance-actions` in the **GitHub or GitLab repository URL** field.
 4. Click **Retrieve playbooks**.

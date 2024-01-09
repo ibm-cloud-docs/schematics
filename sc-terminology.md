@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2023
-lastupdated: "2023-09-21"
+  years: 2016, 2024
+lastupdated: "2024-01-09"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -38,7 +38,7 @@ Extends {{site.data.keyword.bpshort}} ability to reach user infrastructure.
 ### Agent
 {: #agentsa1}
 
-Method or service to bind {{site.data.keyword.bpshort}} Agents with {{site.data.keyword.bpshort}} Workspaces.
+Method or service to bind {{site.data.keyword.bpshort}} agents with {{site.data.keyword.bpshort}} workspaces.
 {: shortdesc}
 
 ### Agent service
@@ -64,7 +64,7 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 
 {{site.data.keyword.bplong}} Blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac){: external} (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A builder builds the house from well-defined components using the blueprint for guidance. 
 
-It builds on the {{site.data.keyword.bpshort}} Workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2).  
+It builds on the {{site.data.keyword.bpshort}} workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2).  
 {: shortdesc}
 
 ### Blueprint
@@ -111,7 +111,7 @@ Each module in a template is deployed as an independent environment, managed by 
 A blueprint template, optionally declares a set of input variables that can be used to customize the blueprint template, while deploying or managing a blueprint environment.  The template metadata for the input variables include the following: variable name, variable type, default value, variable description, sensitive, read only, hidden. 
 
 Blueprint inputs can be provided as:
-- User-defined input, provided via the {{site.data.keyword.bpshort}} API, CLI or UI at config create time. They can be used to pass input values that would be a security exposure if written to a Git repository.
+- User-defined input, provided through the {{site.data.keyword.bpshort}} API, CLI or UI at config create time. They can be used to pass input values that would be a security exposure if written to a Git repository.
 - Version-controlled [blueprint input file](/docs/schematics?topic=schematics-sch-terms#bpi2) (from a Git repository)
 {: shortdesc}
 
@@ -138,7 +138,7 @@ Blueprints follow a lifecycle approach to deploying and managing {{site.data.key
 
 A collection of automation templates that can be ordered from {{site.data.keyword.cloud_notm}}. You can onboard your Terraform automation to the {{site.data.keyword.cloud_notm}} catalog, and share the catalog of templates in a controlled manner with your team by using IAM permissions and policies. 
 
-{{site.data.keyword.cloud_notm}} catalog already supports a collection of {{site.data.keyword.IBM_notm}} owned and Third party developed automation in the catalog. The automation is used to provision infrastructure and softwares by using Helm charts, Kubernetes Operators, OVA images, `Cloudpak` automation. {{site.data.keyword.bpshort}} Workspaces are used to run these automation.|
+{{site.data.keyword.cloud_notm}} catalog already supports a collection of {{site.data.keyword.IBM_notm}} owned and Third party developed automation in the catalog. The automation is used to provision infrastructure and softwares by using Helm charts, Kubernetes Operators, OVA images, `Cloudpak` automation. {{site.data.keyword.bpshort}} workspaces are used to run these automations.|
 {: shortdesc}
 
 ## Inventories
@@ -150,7 +150,7 @@ A collection of cloud resources that are used as target for running the Ansible 
 ### Resource inventory
 {: #rir1}
 
-A resource inventory can be defined by using a static inventory file, or dynamically retrieve to your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} Workspaces in your {{site.data.keyword.cloud_notm}} account.
+A resource inventory can be defined by using a static inventory file, or dynamically retrieve to your target {{site.data.keyword.cloud_notm}} resources from {{site.data.keyword.bpshort}} workspaces in your {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 ## Jobs
@@ -173,7 +173,7 @@ Modules are reusable IaC automation code that can be used to assemble an automat
 A platform to build the infrastructure, provision resources, and deploy applications with the support to multiple environments. It has feasibility, or privilege to access by using Git private or public repositories with a secured access token.
 {: shortdesc}
 
-### {{site.data.keyword.bpshort}} Workspaces
+### {{site.data.keyword.bpshort}} workspaces
 {: #wkss1}
 
 A platform to build the infrastructure, provision resources and deploy applications with support to multiple environments. It has feasibility, or privilege to access by using Git private or public repositories with a secured access token.

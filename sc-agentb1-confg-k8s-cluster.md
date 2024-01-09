@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-12-13"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -12,19 +12,14 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
-
-{{site.data.keyword.bpshort}} Agents are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
-{: beta}
 
 # Agent and Kubernetes configuration 
 {: #configure-k8s-cluster}
 
-Agents extend {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. Customization of a deployed agent is performed through configuration options set on the Kubernetes cluster. 
+Agents extend {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. Customization of a deployed agent is performed through configuration options set on the Kubernetes cluster. If the agent is redeployed all customisation of the cluster parameters will be lost. 
 {: shortdesc}
 
-When an agent is deployed, by default the following configuration options are applied on the cluster.
+When an agent is deployed, by default the following configuration options are applied on the cluster. The applied configuration is reproduced here for reference. 
 
 ## Default network policies
 {: #k8s-cluster-network-policy}
@@ -45,16 +40,16 @@ The following network policies are configured to control network traffic on the 
 You can customize the network policies by following the steps [editing the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}
 
-## Default Terraform and Ansible runtime-job
+## Default workspace and action runtime-job
 {: #k8s-cluster-runtime-job}
 
-Following resource limits and replicas are the default configuration applied to the Terraform and Ansible runtime-job namespace.
+Following resource limits and replicas are the default configuration applied to the workspace and action runtime-job namespace.
 
 | Parameter	| Description |
 | --- | --- |
-| `resource-limits` |	Resource limit setting for the Terraform and Ansible jobs are `cpu = 500m`, and `memory = 1Gi`. |
-| `replicas` | Number of Terraform and Ansible job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
-{: caption="Terraform and Ansible runtime-job" caption-side="top"} 
+| `resource-limits` |	Resource limit setting for the workspace and action jobs are `cpu = 500m`, and `memory = 1Gi`. |
+| `replicas` | Number of workspace and action job pods. `replica = 3`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
+{: caption="workspace and action runtime-job" caption-side="top"} 
 
 You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}
@@ -94,7 +89,7 @@ The following resource limits and replicas are the default configuration applied
 
 | Parameter	| Description |
 | --- | --- |
-| `resource-limits` |	Resource limit setting for the Terraform and Ansible jobs are `cpu = 500m`, and `memory = 25Mi`. |
+| `resource-limits` |	Resource limit setting for the workspace and action jobs are `cpu = 500m`, and `memory = 25Mi`. |
 | `replicas` | Number of job pods. `replica = 1`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
 {: caption="{{site.data.keyword.bpshort}} agent controller manager deployments" caption-side="top"}
 

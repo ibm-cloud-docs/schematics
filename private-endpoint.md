@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-26"
+lastupdated: "2023-12-13"
 
 keywords: schematics private se, schematics private endpoint, private network schematics
 
@@ -16,7 +16,7 @@ subcollection: schematics
 # Using private endpoints
 {: #private-endpoints}  
 
-Create and manage {{site.data.keyword.bplong_notm}} Workspaces on the private network by targeting the {{site.data.keyword.bpshort}} private service endpoint.
+Create and manage {{site.data.keyword.bplong_notm}} workspaces on the private network by targeting the {{site.data.keyword.bpshort}} private service endpoint.
 {: shortdesc} 
 
 To get started, enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint){: external} for your {{site.data.keyword.cloud}} account. After you enable VRF for your account, you can connect to {{site.data.keyword.bplong_notm}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} Private network. To learn more about private connections on {{site.data.keyword.cloud_notm}}, see [Service endpoints for private connections](/docs/schematics?topic=schematics-secure-data#pi-location).
@@ -49,7 +49,7 @@ Enable your {{site.data.keyword.cloud_notm}} account to work with private servic
 
 2. Enable your {{site.data.keyword.cloud_notm}} account for [service endpoints](/docs/account?topic=account-vrf-service-endpoint#service-endpoint){: external}.
 
-    After you enable VRF and service endpoints for your account, all existing and future {{site.data.keyword.bpshort}} Workspaces become available from both the public and private service endpoints.
+    After you enable VRF and service endpoints for your account, all existing and future {{site.data.keyword.bpshort}} workspaces become available from both the public and private service endpoints.
     {: note}
 
 3. Verify that your account is enabled for VRF and service endpoints.
@@ -128,7 +128,7 @@ You cannot create multiple Virtual Private Endpoint Gateways for the same {{site
 
 The steps to add the private network endpoints for {{site.data.keyword.bpshort}}:
 
-1. Create a {{site.data.keyword.bpshort}} Workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui).
-2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} Workspace. For more information, see [deploying your resource](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
+1. Create a {{site.data.keyword.bpshort}} workspace. For more information, see [creating a workspace](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui).
+2. Optionally, you can deploy a resource instance into {{site.data.keyword.bpshort}} workspace. For more information, see [deploying your resource](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources).
 3. Create a Virtual Private Endpoint Gateways. For more information, see [creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway#vpe-creating-ui). And you can assign the listed {{site.data.keyword.bpshort}} services endpoint into Virtual Private Endpoint Gateways.
 4. View the created Virtual Private Endpoint Gateways associated with the {{site.data.keyword.bpshort}} services. For more information, see [Viewing details of an endpoint gateway](/docs/vpc?topic=vpc-vpe-viewing-details-of-an-endpoint-gateway). 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-12-13"
 
 keywords: monitoring schematics services, schematics monitoring by using monitoring, auditing, key management, logging, integration services
 
@@ -15,13 +15,13 @@ subcollection: schematics
 # Monitoring integration resources
 {: #monitoring-integration}
 
-{{site.data.keyword.bplong}} integrates to fully manage enterprise-grade activity tracker service instance for logging, activity tracking, monitoring, and key management. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} Workspaces by connecting, configuring, and view through observability dashboards.
+{{site.data.keyword.bplong}} integrates to fully manage enterprise-grade activity tracker service instance for logging, activity tracking, monitoring, and key management. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} workspaces by connecting, configuring, and view through observability dashboards.
 {: shortdesc}
 
 ## Launching logging
 {: #logging-ui}
 
-You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} Workspace. Complete these steps to launch and analyze the log.
+You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} workspace. Complete these steps to launch and analyze the log.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
@@ -46,7 +46,7 @@ You can manage your logging instances through the {{site.data.keyword.bpshort}} 
 ## Launching activity tracking
 {: #audit-ui}
 
-Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} Workspaces instance events, access, events, and access audit log. Use the audit log to reveal usage instance that would identify workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cloud_notm}} Object Storage to retain your logs. Complete these steps to launch activity tracker.
+Use the add audit UI to generate and maintain an audit trail for a {{site.data.keyword.bpshort}} workspaces instance events, access, events, and access audit log. Use the audit log to reveal usage instance that would identify workspace misuse, and you can act to eliminate such misuse. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to {{site.data.keyword.cloud_notm}} Object Storage to retain your logs. Complete these steps to launch activity tracker.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
@@ -68,7 +68,7 @@ Use the add audit UI to generate and maintain an audit trail for a {{site.data.k
 ## Launching monitoring
 {: #monitoring-ui}
 
-Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_notm}} Workspace. To set up monitoring, create a Monitoring instance in a public cloud region and plan associated to the resource. The region defines where your metrics are centralized. The plan specifies the features and retention period for your metrics. Complete these steps to launch monitoring.
+Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_notm}} workspace. To set up monitoring, create a Monitoring instance in a public cloud region and plan associated to the resource. The region defines where your metrics are centralized. The plan specifies the features and retention period for your metrics. Complete these steps to launch monitoring.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 
@@ -89,7 +89,7 @@ Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_
 ## Launching key management
 {: #key-mgt-ui}
 
-The data that you store in {{site.data.keyword.bpshort}} Workspaces by using the Enterprise plan is encrypted by default by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources. 
+The data that you store in {{site.data.keyword.bpshort}} workspaces by using the Enterprise plan is encrypted by default by using randomly generated keys. If you need to control the encryption keys, you can use the {{site.data.keyword.keymanagementservicelong_notm}} to create, import, and manage encryption root keys and standard keys. Then, you can associate those keys with your {{site.data.keyword.bpshort}} resource deployment to encrypt your resources. 
 {: shortdesc}
 
 You can use your encryption keys from key management services (KMS), {{site.data.keyword.keymanagementservicelong_notm}}(BYOK), and {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} (KYOK) to encrypt and secure data stored in {{site.data.keyword.bpshort}}. For more information about how to protect sensitive data in {{site.data.keyword.bpshort}}, see [protecting your sensitive data in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-secure-data#data-storage).

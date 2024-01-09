@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-05-26"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Stopping or terminating running jobs
 {: #interrupt-job}
 
-After invoking a Workspaces job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
+After invoking a workspace job, like a `plan`, an `apply`, or a `destroy`, you may want to stop the running job, or to stop the provisioning of resources. When stopping, or canceling a long running job, it is advisable to first check the job logs to determine whether the job is actually stuck and needs stopping, or if it is performing long running operations that are taking time to complete. 
 
 {{site.data.keyword.bpshort}} provides a number of options to allows users to `(gracefully) stop`, `force-stop`, or `terminate` the running job in order of immediacy and impact of the stop operation. 
 {: shortdesc}
@@ -27,8 +27,8 @@ The table provides the list of stop job types:
 
 | Types | Description |
 | --- | --- |
-| `stop` | Sends an interrupt signal to the running Terraform command. This performs the same function as when running Terraform standalone, where an `interrupt` is sent using `cntl-C` or similar to Terraform. Interrupt signals can be sent multiple times to notify Terraform to stop. Terraform will attempt to gracefully stop the running command (plan, apply, delete) after any executing resource operations have been completed and clean up. {{site.data.keyword.bpshort}} waits for the command to finish and exit. After the command is stopped or finished, state and log files are collected and saved.|
-| `force-stop`| Sends a kill signal to the Terraform command running. Use this in the case where you want to kill the Terraform command after seeing that the stop command (interrupts) are not stopping the command. A `force-stop` can be sent as many times as wanted until the command exits and job stops. If it is able to respond to the kill signal, Terraform will stop the running command and resource operations immediately and clean up. After the command is stopped or finished, state file and log files are collected and saved. |
+| `stop` | Sends an interrupt signal to the running Terraform command. This performs the same function as when running Terraform standalone, where an `interrupt` is sent using `cntl-C` or similar to Terraform. Interrupt signals can be sent multiple times to notify Terraform to stop. Terraform will attempt to gracefully stop the running command (plan, apply, delete) after any executing resource operations have been completed and clean up. {{site.data.keyword.bpshort}} waits for the command to complete. After the command is stopped or finished, state and log files are collected and saved.|
+| `force-stop`| Sends a kill signal to the Terraform command running. Use this in the case where you want to kill the Terraform command after seeing that the stop command (interrupts) are not stopping the command. A `force-stop` can be sent as many times as wanted until the command completes and job stops. If it is able to respond to the kill signal, Terraform will stop the running command and resource operations immediately and clean up. After the command is stopped or finished, state file and log files are collected and saved. |
 | `terminate` | If the previous operations fail, terminate immediately stops the {{site.data.keyword.bpshort}} job.  The job is marked as `STOPPED` and the workspace unlocked. Any previously saved copies of the logs and `statefile` are preserved. When a job is terminated, the job is killed without collecting any files separately at the end. This option may result in data loss of log file and latest `statefile` updates and should be used carefully.|
 {: caption="Types of job stop" caption-side="bottom"}
 
@@ -44,7 +44,7 @@ If the job is in a `pending` state, any type of stop request causes the job to c
 {: #stop-job-ui}
 {: ui}
 
-You can follow these steps to stop Workspaces running job by using the console.
+You can follow these steps to stop a running workspace job by using the console.
 
 1. From the [Workspaces dashboard](https://cloud.ibm.com/schematics/workspaces){: external}, select the workspace related to the running job.
    
@@ -68,7 +68,7 @@ You can follow these steps to stop Workspaces running job by using the console.
 {: #stop-job-cli}
 {: cli}
 
-Stops a running job for {{site.data.keyword.bplong_notm}} Workspaces.
+Stops a running {{site.data.keyword.bplong_notm}} workspace job.
 {: shortdesc}
 
 Syntax
@@ -112,7 +112,7 @@ ibmcloud schematics workspace job stop --id <WORKSPACE_ID> --terminate --job-id 
 {: #stop-job-api}
 {: api}
 
-You can use following cURL commands to stop a running job for {{site.data.keyword.bplong_notm}} Workspace. 
+You can use following cURL commands to stop a running job for {{site.data.keyword.bplong_notm}} workspace. 
 {: shortdesc}
 
 ### Syntax to stop running jobs

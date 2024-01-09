@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces, workspaces, schematics, destroy workspace
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Destroying workspace resources
 {: #sch-destroy-wks}
 
-Remove the {{site.data.keyword.cloud}} resources that you provisioned with your {{site.data.keyword.bpshort}} Workspace, even if these resources are active. 
+Remove the {{site.data.keyword.cloud}} resources that you provisioned with your {{site.data.keyword.bpshort}} workspace, even if these resources are active. 
 {: shortdesc} 
 
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
@@ -27,7 +27,7 @@ Remove the {{site.data.keyword.cloud}} resources that you provisioned with your 
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace or action. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
 
 ## Destroying workspace resources using the UI

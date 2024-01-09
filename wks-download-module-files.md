@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-12-13"
 
 keywords: module, modules, private, private repository, private repo, private git repo, netrc, terraform, git token  
 
@@ -54,7 +54,7 @@ The `__netrc__` expects `hostname`, `username`, and `password` argument in the s
 ## Using private modules with templates
 {: #netrc-example}
 
-{{site.data.keyword.bpshort}} internally creates the `.netrc` file based on the `env_values` configured in the JSON file. Here is a syntax and sample `testexample.json` example file to clone all the files to create and apply the {{site.data.keyword.bpshort}} Workspaces through command-line and API.
+{{site.data.keyword.bpshort}} internally creates the `.netrc` file based on the `env_values` configured in the JSON file. Here is a syntax and sample `testexample.json` example file to clone all the files to create and apply the {{site.data.keyword.bpshort}} workspaces through command-line and API.
 
 **Syntax with the description:**
 

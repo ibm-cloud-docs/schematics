@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-04"
+lastupdated: "2023-12-13"
 
 keywords: display resources with schematics, show resources, show schematics resources
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Displaying managed resources 
 {: #resource-features}
 
-The following features are supported in the {{site.data.keyword.bpshort}} Workspaces resource view page.
+The following features are supported in the {{site.data.keyword.bpshort}} workspaces resource view page.
 
 - The resources related data are displayed in a tabular format.
 - You can search for resources by using a table search.
@@ -41,7 +41,7 @@ The state information shown in the list depends on workspace status. Following a
 | State | Description |
 | -- | -- |
 | `Not applied` | When your workspace state is in `Draft`, `Connecting`, or `Inactive`. In this state, your resources are yet to provision. You need to **Generate plan** and run **Apply plan** to provision the resources. |
-| `Inprogress` | When your workspaces state is in `Inprogress` means your job is in progress, and you need to check after sometime. |
+| `Inprogress` | When your workspace state is in `Inprogress` means your job is in progress, and you need to check after sometime. |
 | `Active`| When your workspace state is in `Active` means your apply job is successful. Also you can view the resource related data, else you would see `Your plan did not generate any resource` message. |
-{: caption="{{site.data.keyword.bpshort}} Workspaces status versus resource state" caption-side="bottom"}
+{: caption="{{site.data.keyword.bpshort}} workspace status versus resource state" caption-side="bottom"}
 

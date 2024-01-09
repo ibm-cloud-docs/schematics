@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -24,7 +24,7 @@ Update the details for an existing workspace, such as the workspace name, variab
 ## Before you begin
 {: #update-prerequisites}
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace or action. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 {: note}
 
 ## Updating a workspace using the UI
@@ -49,7 +49,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
           ```
           {: pre}
 
-        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the Agents list, check you [connected the Agents](/docs/schematics?topic=schematics-register-agent)?
+        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the agents list, check you [connected the agents](/docs/schematics?topic=schematics-register-agent)?
         - Click `Next`.
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.

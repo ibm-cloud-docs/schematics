@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -27,7 +27,7 @@ A workspace plan, performs a Terraform plan to determine the {{site.data.keyword
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a copy of the repo as a `tar` (tape archive file) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 
 - Run a {{site.data.keyword.bpshort}} plan job against your workspace. An plan job calculates which resources will be provisioned, modified, or removed. This process might take a few minutes. 
 

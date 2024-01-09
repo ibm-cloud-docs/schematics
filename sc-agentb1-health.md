@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-12-13"
 
 keywords: schematics agent health, agent health, health
 
@@ -11,12 +11,6 @@ subcollection: schematics
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
-
-{{site.data.keyword.bpshort}} Agents  are a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that are available for evaluation and testing purposes. It is not intended for production usage.
-{: beta}
 
 # Monitoring agent health
 {: #agentb1-health}
@@ -86,7 +80,7 @@ The following table describes the list of agent and Kubernetes health properties
 
 | Property name | Description |
 | --- | --- |
-| runtime | Health of the Terraform and Ansible job pods in an agent. |
+| runtime | Health of the workspace and action job pods in an agent. |
 | sandbox | Health of the Sandbox job pods in an agent, that are used to download Git repositories. |
 | job-runner | Health of the job orchestrator pods in an agent. |
 | log-collector | Health of the log collector pods in an agent. |

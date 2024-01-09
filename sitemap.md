@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-20"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics
 subcollection: schematics
@@ -24,7 +24,7 @@ subcollection: schematics
 
 [Getting started: {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started#getting-started)
 
-[Using Workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
+[Using workspaces to deploy infrastructure and cloud services](/docs/schematics?topic=schematics-get-started-terraform#get-started-terraform)
 
 * [Before you begin](/docs/schematics?topic=schematics-get-started-terraform#prereq)
 
@@ -34,7 +34,7 @@ subcollection: schematics
 
 * [What's next?](/docs/schematics?topic=schematics-get-started-terraform#whats-next-gs)
 
-[Using Actions to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
+[Using actions to perform configuration management](/docs/schematics?topic=schematics-getting-started-ansible#getting-started-ansible)
 
 * [Before you begin](/docs/schematics?topic=schematics-getting-started-ansible#ansible-prereq)
 
@@ -61,11 +61,11 @@ subcollection: schematics
 
 * [{{site.data.keyword.bpshort}} IaC offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
+    * [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-learn-about-schematics#sch-workspaces)
 
-    * [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
+    * [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-learn-about-schematics#sc-actions-overview)
 
-    * [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
+    * [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-learn-about-schematics#sc-agents)
 
 * [Benefits of using Schematics](/docs/schematics?topic=schematics-learn-about-schematics#sc-benefits)
 
@@ -101,11 +101,11 @@ subcollection: schematics
 
 * [How to choose your IaC tool](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-choosing)
 
-    * [Understanding Schematics features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping)
+    * [Understanding {{site.data.keyword.bpshort}} features and IaC tools](/docs/schematics?topic=schematics-schematics-open-projects#sc-iac-mapping)
 
 * [Next steps](/docs/schematics?topic=schematics-schematics-open-projects#nextsteps-technologies)
 
-[{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
+[{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sc-workspaces#sc-workspaces)
 
 * [{{site.data.keyword.bpshort}} workspace overview](/docs/schematics?topic=schematics-sc-workspaces#sch-wks-overview)
 
@@ -113,29 +113,29 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-sc-workspaces#sc-wks-nextsteps)
 
-[{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
+[{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions#sc-actions)
 
-* [{{site.data.keyword.bpshort}} Actions overview](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
+* [{{site.data.keyword.bpshort}} actions overview](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview)
 
 * [Using Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-use)
 
 * [Next steps](/docs/schematics?topic=schematics-sc-actions#sch-actions-nextsteps)
 
-[{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-about-intro)
+[{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro#agent-about-intro)
 
-* [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-architecture)
+* [{{site.data.keyword.bpshort}} Agent overview](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-architecture)
 
-* [Private network configuration when using agents](/docs/schematics?topic=schematics-agentb1-about-intro#about-agentb1-networking)
+* [Private network configuration when using agents](/docs/schematics?topic=schematics-agent-about-intro#about-agentb1-networking)
 
-* [Benefits of using Agents](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage)
+* [Benefits of using agents](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage)
 
-* [Next steps](/docs/schematics?topic=schematics-agentb1-about-intro#nextsteps-agentb1-arch)
+* [Next steps](/docs/schematics?topic=schematics-agent-about-intro#nextsteps-agentb1-arch)
 
 [Understanding {{site.data.keyword.bpshort}} use cases](/docs/schematics?topic=schematics-how-it-works#how-it-works)
 
-* [Infrastructure deployment with {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
+* [Infrastructure deployment with {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-how-it-works#how-to-workspaces)
 
-* [Configuration management with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
+* [Configuration management with {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-how-it-works#how-to-actions)
 
 * [Software deployments with IBM-provided templates](/docs/schematics?topic=schematics-how-it-works#how-to-software)
 
@@ -184,17 +184,17 @@ subcollection: schematics
 
 * [Understanding network zones](/docs/schematics?topic=schematics-access-control-cbr#cbr-network-zones)
 
-    * [Creating network zones by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-zones-api)
+    * [Creating network zones by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr&interface=api#cbr-create-zones-api)
 
-    * [Creating network zones by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-zone-ui)
+    * [Creating network zones by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-create-zone-ui)
 
-* [Understanding network rules](/docs/schematics?topic=schematics-access-control-cbr#cbr-network-rules)
+* [Understanding network rules](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-network-rules)
 
-    * [Create network rules by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-rules-api)
+    * [Create network rules by using the CBR API](/docs/schematics?topic=schematics-access-control-cbr&interface=api#cbr-create-rules-api)
 
-    * [Creating network rules by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr#cbr-create-rules-ui)
+    * [Creating network rules by using the CBR UI](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-create-rules-ui)
 
-* [Next steps](/docs/schematics?topic=schematics-access-control-cbr#cbr-next-steps)
+* [Next steps](/docs/schematics?topic=schematics-access-control-cbr&interface=ui#cbr-next-steps)
 
 [Data privacy and governance](/docs/schematics?topic=schematics-data-privacy-and-governance#data-privacy-and-governance)
 
@@ -224,7 +224,7 @@ subcollection: schematics
 
     * [How can the Terraform developers ensure that the sensitive data is not leaked in the log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-leak)
 
-* [Best practices of managing {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
+* [Best practices of managing {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-bp-secure-objects#bp-workspaces)
 
     * [What are the best practices that you must follow in creating a workspace for the Terraform template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-wks)
 
@@ -234,7 +234,7 @@ subcollection: schematics
 
     * [How does {{site.data.keyword.bpshort}} protect the workspace data through Terraform state file, or log files?](/docs/schematics?topic=schematics-bp-secure-objects#bp-protect-data)
 
-* [Best practices of managing {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
+* [Best practices of managing {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-bp-secure-objects#bp-actions)
 
     * [What are the best practices that you must follow in creating an action for the Ansible template?](/docs/schematics?topic=schematics-bp-secure-objects#bp-security-ansible)
 
@@ -275,6 +275,14 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [January 2024](/docs/schematics?topic=schematics-schematics-relnotes#January-2024)
+
+    * Review the release notes for January 2024.
+
+    * [10 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1024)
+
+        * {{site.data.keyword.bpshort}} support for Agent is generally available (GA) with full production support.
 
 * [October 2023](/docs/schematics?topic=schematics-schematics-relnotes#October-2023)
 
@@ -382,7 +390,7 @@ subcollection: schematics
 
     * [13 December 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-dec1322)
 
-        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+        * Release {{site.data.keyword.bpshort}} agents GitHub repository.
 
         * Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
 
@@ -402,7 +410,7 @@ subcollection: schematics
 
     * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
 
-        * Release {{site.data.keyword.bpshort}} Agents GitHub repository.
+        * Release {{site.data.keyword.bpshort}} agents GitHub repository.
 
     * [14 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1422)
 
@@ -452,7 +460,7 @@ subcollection: schematics
 
     * [11 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july1122)
 
-        * {{site.data.keyword.bpshort}} Agents beta release in production.
+        * {{site.data.keyword.bpshort}} agents beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -536,7 +544,7 @@ subcollection: schematics
 
         * Support deleting {{site.data.keyword.bpshort}} data objects 
 
-        * Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
+        * Fixes related to {{site.data.keyword.bpshort}} actions and workspace
 
         * Get job files API supports `plan_json` file type
 
@@ -588,11 +596,11 @@ subcollection: schematics
 
     * [30 November 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov302021)
 
-        * Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in your account
+        * Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
 
         * Support `WinRM` in user interface
 
-        * Global catalog settings for {{site.data.keyword.bpshort}} Workspaces location
+        * Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
 
         * About `compact` download
 
@@ -620,15 +628,15 @@ subcollection: schematics
 
     * [30 September 2021](/docs/schematics?topic=schematics-schematics-relnotes#schematics-sept302021)
 
-        * Inventory target feature support in {{site.data.keyword.bpshort}} Actions API
+        * Inventory target feature support in {{site.data.keyword.bpshort}} actions API
 
-        * Bastion host enhancement in {{site.data.keyword.bpshort}} Actions API
+        * Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
 
-        * {{site.data.keyword.bpshort}} Actions API enhancement to support bastion host connection with non-root user
+        * {{site.data.keyword.bpshort}} actions API enhancement to support bastion host connection with non-root user
 
         * {{site.data.keyword.bplong_notm}} job queue process
 
-        * {{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
+        * {{site.data.keyword.bpshort}} actions `APIs` enhances the credentials parameter
 
         * {{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
 
@@ -680,7 +688,7 @@ subcollection: schematics
 
         * One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
 
-        * Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
+        * Temporarily {{site.data.keyword.bplong_notm}} workspaces stop activity API is deactivated
 
 * [May 2021](/docs/schematics?topic=schematics-schematics-relnotes#may-2021)
 
@@ -877,19 +885,19 @@ subcollection: schematics
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-create-wks#prerequisites-create)
 
-* [Creating a workspace using the UI](/docs/schematics?topic=schematics-sch-create-wks#create-wks-ui)
+* [Creating a workspace using the UI](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#create-wks-ui)
 
-    * [Importing your Terraform template](/docs/schematics?topic=schematics-sch-create-wks#import-template)
+    * [Importing your Terraform template](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#import-template)
 
-    * [Using Terraform templates in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sch-create-wks#run-template)
+    * [Using Terraform templates in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-sch-create-wks&interface=ui#run-template)
 
-* [Creating a workspace using the CLI](/docs/schematics?topic=schematics-sch-create-wks#create-wks-cli)
+* [Creating a workspace using the CLI](/docs/schematics?topic=schematics-sch-create-wks&interface=cli#create-wks-cli)
 
-* [Creating a workspace using the API](/docs/schematics?topic=schematics-sch-create-wks#create-wks-api)
+* [Creating a workspace using the API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-api)
 
-* [Creating a workspace using a Terraform template](/docs/schematics?topic=schematics-sch-create-wks#create-wks-terraform)
+* [Creating a workspace using a Terraform template](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#create-wks-terraform)
 
-* [Next steps](/docs/schematics?topic=schematics-sch-create-wks#sch-create-wks-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-sch-create-wks&interface=terraform#sch-create-wks-nextsteps)
 
 [Creating Terraform templates](/docs/schematics?topic=schematics-create-tf-config#create-tf-config)
 
@@ -927,101 +935,101 @@ subcollection: schematics
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-plan-wks#plan-prerequisites)
 
-* [Generate a workspace plan using the UI](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-ui)
+* [Generate a workspace plan using the UI](/docs/schematics?topic=schematics-sch-plan-wks&interface=ui#plan-wks-ui)
 
-    * [Verifying workspace plan](/docs/schematics?topic=schematics-sch-plan-wks#verify-wks-plan-ui)
+    * [Verifying workspace plan](/docs/schematics?topic=schematics-sch-plan-wks&interface=ui#verify-wks-plan-ui)
 
-* [Generate a workspace plan using the CLI](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-cli)
+* [Generate a workspace plan using the CLI](/docs/schematics?topic=schematics-sch-plan-wks&interface=cli#plan-wks-cli)
 
-    * [Verifying workspace plan execution](/docs/schematics?topic=schematics-sch-plan-wks#verify-wks-plan-cli)
+    * [Verifying workspace plan execution](/docs/schematics?topic=schematics-sch-plan-wks&interface=cli#verify-wks-plan-cli)
 
-* [Generate a workspace plan using the API](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-api)
+* [Generate a workspace plan using the API](/docs/schematics?topic=schematics-sch-plan-wks&interface=api#plan-wks-api)
 
-    * [Verifying workspace plan execution](/docs/schematics?topic=schematics-sch-plan-wks#verify-wks-plan-api)
+    * [Verifying workspace plan execution](/docs/schematics?topic=schematics-sch-plan-wks&interface=api#verify-wks-plan-api)
 
-* [Generating a workspace plan using Terraform](/docs/schematics?topic=schematics-sch-plan-wks#plan-wks-terraform)
+* [Generating a workspace plan using Terraform](/docs/schematics?topic=schematics-sch-plan-wks&interface=terraform#plan-wks-terraform)
 
-* [Next steps](/docs/schematics?topic=schematics-sch-plan-wks#sch-plan-wks-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-sch-plan-wks&interface=terraform#sch-plan-wks-nextsteps)
 
 [Running a workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#sch-deploy-wks)
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-prerequisites)
 
-* [Perform a workspace apply using the UI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-ui)
+* [Perform a workspace apply using the UI](/docs/schematics?topic=schematics-sch-deploy-wks&interface=ui#deploy-wks-ui)
 
-    * [Verifying workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-deploy-ui)
+    * [Verifying workspace apply](/docs/schematics?topic=schematics-sch-deploy-wks&interface=ui#verify-wks-deploy-ui)
 
-* [Perform a workspace apply using the CLI](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-cli)
+* [Perform a workspace apply using the CLI](/docs/schematics?topic=schematics-sch-deploy-wks&interface=cli#deploy-wks-cli)
 
-    * [Verifying workspace deploy](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-deploy-cli)
+    * [Verifying workspace deploy](/docs/schematics?topic=schematics-sch-deploy-wks&interface=cli#verify-wks-deploy-cli)
 
-* [Perform the workspace deploy using the API](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-api)
+* [Perform the workspace deploy using the API](/docs/schematics?topic=schematics-sch-deploy-wks&interface=api#deploy-wks-api)
 
-    * [Verifying workspace deploy](/docs/schematics?topic=schematics-sch-deploy-wks#verify-wks-deploy-api)
+    * [Verifying workspace deploy](/docs/schematics?topic=schematics-sch-deploy-wks&interface=api#verify-wks-deploy-api)
 
-* [Perform the workspace deploy with Terraform](/docs/schematics?topic=schematics-sch-deploy-wks#deploy-wks-terraform)
+* [Perform the workspace deploy with Terraform](/docs/schematics?topic=schematics-sch-deploy-wks&interface=terraform#deploy-wks-terraform)
 
-* [Next steps](/docs/schematics?topic=schematics-sch-deploy-wks#sch-deploy-wks-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-sch-deploy-wks&interface=terraform#sch-deploy-wks-nextsteps)
 
 [Updating workspaces](/docs/schematics?topic=schematics-sch-update-wks#sch-update-wks)
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-update-wks#update-prerequisites)
 
-* [Updating a workspace using the UI](/docs/schematics?topic=schematics-sch-update-wks#update-wks-ui)
+* [Updating a workspace using the UI](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#update-wks-ui)
 
-    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks#verify-wks-update-ui)
+    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks&interface=ui#verify-wks-update-ui)
 
-* [Updating a workspace using the CLI](/docs/schematics?topic=schematics-sch-update-wks#update-wks-cli)
+* [Updating a workspace using the CLI](/docs/schematics?topic=schematics-sch-update-wks&interface=cli#update-wks-cli)
 
-    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks#verify-wks-update-cli)
+    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks&interface=cli#verify-wks-update-cli)
 
-* [Updating a workspace using the API](/docs/schematics?topic=schematics-sch-update-wks#update-wks-api)
+* [Updating a workspace using the API](/docs/schematics?topic=schematics-sch-update-wks&interface=api#update-wks-api)
 
-    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks#verify-wks-update-api)
+    * [Verifying workspace update](/docs/schematics?topic=schematics-sch-update-wks&interface=api#verify-wks-update-api)
 
-* [Updating a workspace with Terraform](/docs/schematics?topic=schematics-sch-update-wks#update-wks-terraform)
+* [Updating a workspace with Terraform](/docs/schematics?topic=schematics-sch-update-wks&interface=terraform#update-wks-terraform)
 
-* [Next steps](/docs/schematics?topic=schematics-sch-update-wks#sch-update-wks-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-sch-update-wks&interface=terraform#sch-update-wks-nextsteps)
 
 [Displaying workspaces](/docs/schematics?topic=schematics-sch-display-wks#sch-display-wks)
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-display-wks#display-prerequisites)
 
-* [Displaying the workspace through UI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-ui)
+* [Displaying the workspace through UI](/docs/schematics?topic=schematics-sch-display-wks&interface=ui#list-wks-ui)
 
-    * [Verifying workspace display](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-ui)
+    * [Verifying workspace display](/docs/schematics?topic=schematics-sch-display-wks&interface=ui#verify-wks-list-ui)
 
-* [Displaying the workspace through CLI](/docs/schematics?topic=schematics-sch-display-wks#list-wks-cli)
+* [Displaying the workspace through CLI](/docs/schematics?topic=schematics-sch-display-wks&interface=cli#list-wks-cli)
 
-    * [Verifying workspace list](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-cli)
+    * [Verifying workspace list](/docs/schematics?topic=schematics-sch-display-wks&interface=cli#verify-wks-list-cli)
 
-* [Displaying the workspace list through API](/docs/schematics?topic=schematics-sch-display-wks#list-wks-api)
+* [Displaying the workspace list through API](/docs/schematics?topic=schematics-sch-display-wks&interface=api#list-wks-api)
 
-    * [verifying workspace update:](/docs/schematics?topic=schematics-sch-display-wks#verify-wks-list-api)
+    * [verifying workspace update:](/docs/schematics?topic=schematics-sch-display-wks&interface=api#verify-wks-list-api)
 
-* [Displaying the workspace list with Terraform](/docs/schematics?topic=schematics-sch-display-wks#list-wks-terraform)
+* [Displaying the workspace list with Terraform](/docs/schematics?topic=schematics-sch-display-wks&interface=terraform#list-wks-terraform)
 
-* [Next steps](/docs/schematics?topic=schematics-sch-display-wks#sch-list-wks-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-sch-display-wks&interface=terraform#sch-list-wks-nextsteps)
 
 [Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks#sch-delete-wks)
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-delete-wks#prerequisites-delete)
 
-* [Deleting the workspace through UI](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-ui)
+* [Deleting the workspace through UI](/docs/schematics?topic=schematics-sch-delete-wks&interface=ui#delete-wks-ui)
 
-    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks#verify-wks-delete-ui)
+    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks&interface=ui#verify-wks-delete-ui)
 
-* [Deleting the workspace through CLI](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-cli)
+* [Deleting the workspace through CLI](/docs/schematics?topic=schematics-sch-delete-wks&interface=cli#delete-wks-cli)
 
-    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks#verify-wks-delete-cli)
+    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks&interface=cli#verify-wks-delete-cli)
 
-* [Deleting the workspace through API](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-api)
+* [Deleting the workspace through API](/docs/schematics?topic=schematics-sch-delete-wks&interface=api#delete-wks-api)
 
-    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks#verify-wks-delete-api)
+    * [Verifying workspace delete](/docs/schematics?topic=schematics-sch-delete-wks&interface=api#verify-wks-delete-api)
 
-* [Deleting the workspace with Terraform](/docs/schematics?topic=schematics-sch-delete-wks#delete-wks-terraform)
+* [Deleting the workspace with Terraform](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#delete-wks-terraform)
 
-* [Next steps](/docs/schematics?topic=schematics-sch-delete-wks#sch-delete-wks-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-sch-delete-wks&interface=terraform#sch-delete-wks-nextsteps)
 
 [Downloading workspace job files](/docs/schematics?topic=schematics-job-download#job-download)
 
@@ -1035,15 +1043,15 @@ subcollection: schematics
 
 * [Canceling a job](/docs/schematics?topic=schematics-interrupt-job#cancelling)
 
-* [Stopping a running job using the UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui)
+* [Stopping a running job using the UI](/docs/schematics?topic=schematics-interrupt-job&interface=ui#stop-job-ui)
 
-* [Stopping a running job using the CLI](/docs/schematics?topic=schematics-interrupt-job#stop-job-cli)
+* [Stopping a running job using the CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli)
 
-* [Stopping a running job through API](/docs/schematics?topic=schematics-interrupt-job#stop-job-api)
+* [Stopping a running job through API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api)
 
-    * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job#stop-jobs-api)
+    * [Syntax to stop running jobs](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-jobs-api)
 
-* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job#sch-job-logs)
+* [Reviewing the {{site.data.keyword.bpshort}} job details](/docs/schematics?topic=schematics-interrupt-job&interface=api#sch-job-logs)
 
 [Workspace operational states](/docs/schematics?topic=schematics-wks-state#wks-state)
 
@@ -1090,25 +1098,25 @@ subcollection: schematics
 
 [Managing resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle#manage-lifecycle)
 
-* [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources)
+* [Deploying your resources](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#deploy-resources)
 
-* [Updating your resources](/docs/schematics?topic=schematics-manage-lifecycle#update-resources)
+* [Updating your resources](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#update-resources)
 
-* [Managing drift between your cloud environment and Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle#drift-report)
+* [Managing drift between your cloud environment and Terraform configuration](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#drift-report)
 
-* [Reviewing resource and deployment details](/docs/schematics?topic=schematics-manage-lifecycle#review-logs)
+* [Reviewing resource and deployment details](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#review-logs)
 
-* [Removing your resources](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources)
+* [Removing your resources](/docs/schematics?topic=schematics-manage-lifecycle&interface=ui#destroy-resources)
 
-* [Deploying your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle#deploy-resources-cli)
+* [Deploying your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle&interface=cli#deploy-resources-cli)
 
-* [Updating your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle#update-resources-cli)
+* [Updating your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle&interface=cli#update-resources-cli)
 
-* [Managing drift between your cloud environment and Terraform configuration through CLI](/docs/schematics?topic=schematics-manage-lifecycle#drift-report-cli)
+* [Managing drift between your cloud environment and Terraform configuration through CLI](/docs/schematics?topic=schematics-manage-lifecycle&interface=cli#drift-report-cli)
 
-* [Reviewing resource and deployment details through CLI](/docs/schematics?topic=schematics-manage-lifecycle#review-logs-cli)
+* [Reviewing resource and deployment details through CLI](/docs/schematics?topic=schematics-manage-lifecycle&interface=cli#review-logs-cli)
 
-* [Removing your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle#destroy-resources-cli)
+* [Removing your resources through CLI](/docs/schematics?topic=schematics-manage-lifecycle&interface=cli#destroy-resources-cli)
 
 [Detecting drift in workspaces](/docs/schematics?topic=schematics-drift-note#drift-note)
 
@@ -1116,15 +1124,15 @@ subcollection: schematics
 
 * [Drift detection in {{site.data.keyword.cloud_notm}}](/docs/schematics?topic=schematics-drift-note#drift-in-ibm)
 
-* [Drift detection using the UI](/docs/schematics?topic=schematics-drift-note#drift-ui)
+* [Drift detection using the UI](/docs/schematics?topic=schematics-drift-note&interface=ui#drift-ui)
 
-    * [Viewing detect drift logs using the UI](/docs/schematics?topic=schematics-drift-note#drift-view-ui)
+    * [Viewing detect drift logs using the UI](/docs/schematics?topic=schematics-drift-note&interface=ui#drift-view-ui)
 
-* [Drift detection using the CLI](/docs/schematics?topic=schematics-drift-note#drift-cli)
+* [Drift detection using the CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-cli)
 
-    * [Creating and viewing the detect drift logs using the CLI](/docs/schematics?topic=schematics-drift-note#drift-view-cli)
+    * [Creating and viewing the detect drift logs using the CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-view-cli)
 
-* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note#drift-api)
+* [Creating and viewing the detect drift through API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-api)
 
 [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation#cost-estimation)
 
@@ -1154,11 +1162,11 @@ subcollection: schematics
 
 * [Upgrading the Terraform template version 1.x and above](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x)
 
-    * [Updating the Workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
+    * [Updating the workspace Terraform 1.x version](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade1x-process)
 
 * [Upgrading the Terraform template version 0.x to 1.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
 
-* [Upgrading a Terraform v0.12 Workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
+* [Upgrading a Terraform v0.12 workspace to v0.13](/docs/schematics?topic=schematics-migrating-terraform-version#migrate-steps12)
 
 * [Upgrade Terraform template from `v0.13` and higher to `v1.0`](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10)
 
@@ -1174,21 +1182,21 @@ subcollection: schematics
 
 * [Before you begin](/docs/schematics?topic=schematics-sch-destroy-wks#prerequisites-destroy)
 
-* [Destroying workspace resources using the UI](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-ui)
+* [Destroying workspace resources using the UI](/docs/schematics?topic=schematics-sch-destroy-wks&interface=ui#destroy-wks-ui)
 
-    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks#verify-wks-destroy-ui)
+    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks&interface=ui#verify-wks-destroy-ui)
 
-* [Destroying workspace resources using the CLI](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-cli)
+* [Destroying workspace resources using the CLI](/docs/schematics?topic=schematics-sch-destroy-wks&interface=cli#destroy-wks-cli)
 
-    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks#verify-workspace-destroy-cli)
+    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks&interface=cli#verify-workspace-destroy-cli)
 
-* [Destroying workspace resources using the  API](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-api)
+* [Destroying workspace resources using the  API](/docs/schematics?topic=schematics-sch-destroy-wks&interface=api#destroy-wks-api)
 
-    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks#verify-workspace-destroy-api)
+    * [Verifying a workspace destroy operation](/docs/schematics?topic=schematics-sch-destroy-wks&interface=api#verify-workspace-destroy-api)
 
-* [destroying workspace resources with Terraform](/docs/schematics?topic=schematics-sch-destroy-wks#destroy-wks-terraform)
+* [destroying workspace resources with Terraform](/docs/schematics?topic=schematics-sch-destroy-wks&interface=terraform#destroy-wks-terraform)
 
-* [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks#sch-destroy-wks-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-sch-destroy-wks&interface=terraform#sch-destroy-wks-nextsteps)
 
 
 ## Working with Actions
@@ -1201,7 +1209,7 @@ subcollection: schematics
 
 * [Installing roles from Ansible Galaxy](/docs/schematics?topic=schematics-ansible-roles-galaxy#requirements-file)
 
-[Working with {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-action-working#action-working)
+[Working with {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-action-working#action-working)
 
 * [Creating and running a {{site.data.keyword.bpshort}} action](/docs/schematics?topic=schematics-action-working#create-action)
 
@@ -1209,7 +1217,7 @@ subcollection: schematics
 
     * [To create an action](/docs/schematics?topic=schematics-action-working#create-action-working)
 
-* [Editing the {{site.data.keyword.bpshort}} Actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
+* [Editing the {{site.data.keyword.bpshort}} actions settings](/docs/schematics?topic=schematics-action-working#action-settings)
 
 * [Deleting an action](/docs/schematics?topic=schematics-action-working#delete-ansible-actions)
 
@@ -1217,7 +1225,7 @@ subcollection: schematics
 
     * [State diagram flow](/docs/schematics?topic=schematics-action-working#state-diagram-flow)
 
-* [Reviewing Actions job details](/docs/schematics?topic=schematics-action-working#action-jobs)
+* [Reviewing actions job details](/docs/schematics?topic=schematics-action-working#action-jobs)
 
 [Creating an Ansible playbook](/docs/schematics?topic=schematics-create-playbook#create-playbook)
 
@@ -1225,7 +1233,7 @@ subcollection: schematics
 
 * [Preparing your Ansible playbook to run in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-create-playbook#plan-ansible-playbook)
 
-[Sample Ansible playbook templates for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
+[Sample Ansible playbook templates for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sample_actiontemplates#sample_actiontemplates)
 
 * [Running cloud operations on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-vpc)
 
@@ -1237,7 +1245,7 @@ subcollection: schematics
 
 * [Installing `kubectl` on {{site.data.keyword.vsi_is_short}}](/docs/schematics?topic=schematics-sample_actiontemplates#ansible-kubectl)
 
-[Creating an auto deploy button for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-auto-deploy-url#auto-deploy-url)
+[Creating an auto deploy button for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-auto-deploy-url#auto-deploy-url)
 
 * [Creating the deployment URL](/docs/schematics?topic=schematics-auto-deploy-url#create-url)
 
@@ -1254,7 +1262,7 @@ subcollection: schematics
 {: #sitemap_working_with_inventories}
 
 
-[Creating resource inventories for {{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
+[Creating resource inventories for {{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-inventories-setup#inventories-setup)
 
 * [Creating static inventory files](/docs/schematics?topic=schematics-inventories-setup#static-inv)
 
@@ -1266,7 +1274,7 @@ subcollection: schematics
 
     * [Limitations](/docs/schematics?topic=schematics-inventories-setup#inv-file-limitation)
 
-* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
+* [Dynamically building resource inventories from {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv)
 
     * [Supported resource queries](/docs/schematics?topic=schematics-inventories-setup#supported-queries)
 
@@ -1295,107 +1303,121 @@ subcollection: schematics
 
     * [Prerequisites](/docs/schematics?topic=schematics-kms-integration#kms-key-prerequisites)
 
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-ui)
+    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through UI](/docs/schematics?topic=schematics-kms-integration&interface=ui#integrate-byok-ui)
 
-    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration#integrate-byok-cli)
+    * [Enabling {{site.data.keyword.keymanagementservicelong_notm}} through CLI](/docs/schematics?topic=schematics-kms-integration&interface=cli#integrate-byok-cli)
 
 
-## Working with Agent Beta-1
-{: #sitemap_working_with_agent_beta-1}
+## Working with Agents
+{: #sitemap_working_with_agents}
 
 
 [Preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview#plan-agent-overview)
 
 * [Planning agent network access and configuration](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-network-config)
 
-* [Agent capacity planning](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-capacity-planning)
+* [Agent capacity planning](/docs/schematics?topic=schematics-plan-agent-overview#agent-capacity-planning)
 
 * [Next steps](/docs/schematics?topic=schematics-plan-agent-overview#agent-plan-nextsteps)
+
+[Deploying agent prerequisite infrastructure](/docs/schematics?topic=schematics-agent-infrastructure-overview#agent-infrastructure-overview)
+
+* [Prerequisites](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-prereq)
+
+* [Provisioning agent infrastructure using {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-infra-workspace)
+
+    * [Expected outcome](/docs/schematics?topic=schematics-agent-infrastructure-overview#agents-setup-infra-output)
+
+* [Next steps](/docs/schematics?topic=schematics-agent-infrastructure-overview#nextsteps-agent-infra)
 
 [Deploying agents](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-agent-overview)
 
 * [Before you begin](/docs/schematics?topic=schematics-deploy-agent-overview#deploy-prereq)
 
-* [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-cli)
+* [Creating an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui#create-agent-ui)
 
-* [Verifying prerequisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#verify-agent-cli)
+* [Creating an agent definition using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli)
 
-* [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#apply-agent-cli)
+* [Verifying prerequisites for agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#verify-agent-cli)
 
-* [Verifying the agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview#d-agent-cli)
+* [Deploying an agent using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli)
 
-* [Creating an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview#create-agent-api)
+* [Verifying the agent deployment using the CLI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#d-agent-cli)
 
-* [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview#agent-create-nextsteps)
+* [Creating an agent using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#create-agent-api)
+
+* [Next steps](/docs/schematics?topic=schematics-deploy-agent-overview&interface=api#agent-create-nextsteps)
 
 [Displaying agents](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-overview)
 
-* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-ui)
+* [Displaying the list of agents using UI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=ui#display-agentb1-get-ui)
 
-* [Displaying the list of agents using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-list-cli)
+* [Displaying the list of agents using the CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-list-cli)
 
-* [Displaying agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-get-cli)
+* [Displaying agent configuration using CLI](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli#display-agentb1-get-cli)
 
-* [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview#display-agentb1-api)
+* [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#display-agentb1-api)
 
-* [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview#agent-delete-nextsteps)
-
-[Migrating agent version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-agent-version)
-
-* [Migrating to `1.0.0-beta1` version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-v1beta1)
-
-* [Migrating to `1.0.0-beta2` version](/docs/schematics?topic=schematics-migrate-agent-version#migrate-v1beta2)
-
-* [Next steps](/docs/schematics?topic=schematics-migrate-agent-version#agent-migrate-nextsteps)
+* [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#agent-delete-nextsteps)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
-* [Disabling an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#disable-agentb1-cli)
+* [Deleting an agent using the UI](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui#delete-agentb1-ui)
 
-* [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-cli)
+* [Deleting an agent using the CLI](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli#delete-agentb1-cli)
 
-* [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview#delete-agentb1-api)
+* [Deleting an agent using the API](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#delete-agentb1-api)
 
-* [Next steps](/docs/schematics?topic=schematics-delete-agent-overview#agent-delete-nextstep)
+* [Next steps](/docs/schematics?topic=schematics-delete-agent-overview&interface=api#agent-delete-nextstep)
 
 
-### Using Agents
+### Using agents
 {: #sitemap_using_agents}
 
 
-[Agent assignment policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
+[Agent policies](/docs/schematics?topic=schematics-policy-manage#policy-manage)
 
-* [Creating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-cli)
+* [Creating an agent policy using the UI](/docs/schematics?topic=schematics-policy-manage&interface=ui#agentb1-createpolicy-ui)
 
-    * [Defining a JSON policy target file](/docs/schematics?topic=schematics-policy-manage#agent-policy-json)
+* [Listing all policies using the UI](/docs/schematics?topic=schematics-policy-manage&interface=ui#agentb1-listpolicy-ui)
 
-    * [Create agent policy](/docs/schematics?topic=schematics-policy-manage#agent-policy-CLI)
+* [Displaying a policy using the UI](/docs/schematics?topic=schematics-policy-manage&interface=ui#agentb1-getpolicy-ui)
 
-* [Listing all policies using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-listpolicy-cli)
+* [Updating an agent policy using the UI](/docs/schematics?topic=schematics-policy-manage&interface=ui#agentb1-updatepolicy-ui)
 
-* [Displaying a policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-cli)
+* [Deleting a policy using the UI](/docs/schematics?topic=schematics-policy-manage&interface=ui#agentb1-deletepolicy-ui)
 
-* [Updating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-cli)
+* [Creating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage&interface=cli#agentb1-createpolicy-cli)
 
-* [Deleting a policy using the CLI](/docs/schematics?topic=schematics-policy-manage#agentb1-deletepolicy-cli)
+    * [Defining a JSON policy file](/docs/schematics?topic=schematics-policy-manage&interface=cli#agent-policy-json)
 
-* [Agent policy creation using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-policydm-api)
+    * [Create agent policy](/docs/schematics?topic=schematics-policy-manage&interface=cli#agent-policy-CLI)
 
-    * [Example to create a policy using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-createpolicy-api)
+* [Listing all policies using the CLI](/docs/schematics?topic=schematics-policy-manage&interface=cli#agentb1-listpolicy-cli)
 
-    * [Example to get a policy using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-getpolicy-api)
+* [Displaying a policy using the CLI](/docs/schematics?topic=schematics-policy-manage&interface=cli#agentb1-getpolicy-cli)
 
-    * [Example to update a policy using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-updatepolicy-api)
+* [Updating an agent policy using the CLI](/docs/schematics?topic=schematics-policy-manage&interface=cli#agentb1-updatepolicy-cli)
 
-    * [Example to find policies using the API](/docs/schematics?topic=schematics-policy-manage#agentb1-searchpolicy-api)
+* [Deleting a policy using the CLI](/docs/schematics?topic=schematics-policy-manage&interface=cli#agentb1-deletepolicy-cli)
 
-* [Next steps](/docs/schematics?topic=schematics-policy-manage#agent-policy-nextsteps)
+* [Agent policy creation using the API](/docs/schematics?topic=schematics-policy-manage&interface=api#agentb1-policydm-api)
+
+    * [Example to create a policy using the API](/docs/schematics?topic=schematics-policy-manage&interface=api#agentb1-createpolicy-api)
+
+    * [Example to get a policy using the API](/docs/schematics?topic=schematics-policy-manage&interface=api#agentb1-getpolicy-api)
+
+    * [Example to update a policy using the API](/docs/schematics?topic=schematics-policy-manage&interface=api#agentb1-updatepolicy-api)
+
+    * [Example to find policies using the API](/docs/schematics?topic=schematics-policy-manage&interface=api#agentb1-searchpolicy-api)
+
+* [Next steps](/docs/schematics?topic=schematics-policy-manage&interface=api#agent-policy-nextsteps)
 
 [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#configure-k8s-cluster)
 
 * [Default network policies](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-network-policy)
 
-* [Default Terraform and Ansible runtime-job](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-runtime-job)
+* [Default workspace and action runtime-job](/docs/schematics?topic=schematics-configure-k8s-cluster#k8s-cluster-runtime-job)
 
 * [Agent job-runner configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#agent-job-runner-config)
 
@@ -1413,13 +1435,25 @@ subcollection: schematics
 
 [Monitoring agent health](/docs/schematics?topic=schematics-agentb1-health#agentb1-health)
 
-* [Monitoring agent health using the CLI](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-cli)
+* [Monitoring agent health using the CLI](/docs/schematics?topic=schematics-agentb1-health&interface=cli#health-agentb1-cli)
 
-* [Health properties](/docs/schematics?topic=schematics-agentb1-health#agent-health-property)
+* [Health properties](/docs/schematics?topic=schematics-agentb1-health&interface=cli#agent-health-property)
 
-* [Monitoring agent health using API](/docs/schematics?topic=schematics-agentb1-health#health-agentb1-api)
+* [Monitoring agent health using API](/docs/schematics?topic=schematics-agentb1-health&interface=api#health-agentb1-api)
 
-* [Next steps](/docs/schematics?topic=schematics-agentb1-health#agent-health-nextstep)
+* [Next steps](/docs/schematics?topic=schematics-agentb1-health&interface=api#agent-health-nextstep)
+
+[Configuring {{site.data.keyword.bpshort}} agents to use a private registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-overview)
+
+* [Setting the credentials to access a private provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-tf-creds)
+
+* [Using Artifactory as a provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory)
+
+    * [Configuring a local Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_1)
+
+    * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_2)
+
+    * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-agent-registry-overview#agent-registry-artifactory_3)
 
 
 ## Logging and monitoring
@@ -1495,29 +1529,29 @@ subcollection: schematics
 
 * [Scope](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-scope)
 
-* [Deleting {{site.data.keyword.bpshort}} objects from UI](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-ui)
+* [Deleting {{site.data.keyword.bpshort}} objects from UI](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui#delete-schematics-data-ui)
 
-    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-wkscategory)
+    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui#delete-schematics-data-wkscategory)
 
-    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-actionscategory)
+    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui#delete-schematics-data-actionscategory)
 
-    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-invcategory)
+    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=ui#delete-schematics-data-invcategory)
 
-* [Deleting {{site.data.keyword.bpshort}} objects from CLI](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cli)
+* [Deleting {{site.data.keyword.bpshort}} objects from CLI](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=cli#delete-schematics-data-cli)
 
-    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cliwks)
+    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=cli#delete-schematics-data-cliwks)
 
-    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cliactions)
+    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=cli#delete-schematics-data-cliactions)
 
-    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-cliinvcategory)
+    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=cli#delete-schematics-data-cliinvcategory)
 
-* [Deleting {{site.data.keyword.bpshort}} objects from API](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-api)
+* [Deleting {{site.data.keyword.bpshort}} objects from API](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=api#delete-schematics-data-api)
 
-    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-apiwks)
+    * [Workspaces](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=api#delete-schematics-data-apiwks)
 
-    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-apiactions)
+    * [Actions](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=api#delete-schematics-data-apiactions)
 
-    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro#delete-schematics-data-apicategory)
+    * [Inventories](/docs/schematics?topic=schematics-delete-schematics-data-intro&interface=api#delete-schematics-data-apicategory)
 
 
 ## Specifying version constraints
@@ -1543,7 +1577,7 @@ subcollection: schematics
 
 [Using Terraform to configure {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup#terraform-setup)
 
-* [Example: Creating the {{site.data.keyword.bpshort}} Workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
+* [Example: Creating the {{site.data.keyword.bpshort}} workspaces by using Terraform](/docs/schematics?topic=schematics-terraform-setup#workspace-resource)
 
 * [What's next?](/docs/schematics?topic=schematics-terraform-setup#terraform-setup-next)
 
@@ -1633,9 +1667,9 @@ subcollection: schematics
 
 * [Prerequisites](/docs/schematics?topic=schematics-provisioning-terraform-template#provisioning-tut-prereq)
 
-* [Creating your {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
+* [Creating your {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-wkspace-for-cluster)
 
-* [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-provisioning-terraform-template#create-tut-wks)
 
 * [Planning and applying the Terraform template](/docs/schematics?topic=schematics-provisioning-terraform-template#tut-plan-wks)
 
@@ -1660,7 +1694,7 @@ subcollection: schematics
 
 * [Accessing the {{site.data.keyword.cloud_notm}} and GitHub](/docs/schematics?topic=schematics-workspace-continuous-deployment#access-automate-template)
 
-* [Creating your {{site.data.keyword.bplong_notm}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
+* [Creating your {{site.data.keyword.bplong_notm}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#create-wkspace)
 
 * [Configuring variables](/docs/schematics?topic=schematics-workspace-continuous-deployment#configure-the-variables)
 
@@ -1668,7 +1702,7 @@ subcollection: schematics
 
 * [Analyzing the pipeline execution process](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-deployment)
 
-* [Analyzing the {{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
+* [Analyzing the {{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-workspace-continuous-deployment#analyze-workspace-process)
 
 * [What's next?](/docs/schematics?topic=schematics-workspace-continuous-deployment#automate-what-next)
 
@@ -1744,7 +1778,7 @@ subcollection: schematics
 
     * [`ibmcloud schematics job delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-delete-job)
 
-* [Agents beta-2 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
+* [Agents commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
     * [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
@@ -1773,46 +1807,6 @@ subcollection: schematics
     * [`ibmcloud schematics policy update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-update)
 
     * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
-
-* [Agents beta-0 commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd)
-
-    * [`ibmcloud schematics agents bind-workspaces`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-bind-wks)
-
-    * [`ibmcloud schematics agents get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-get)
-
-    * [`ibmcloud schematics agents list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-list)
-
-    * [`ibmcloud schematics agents register`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-register)
-
-    * [`ibmcloud schematics agents unregister`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-unregister)
-
-    * [`ibmcloud schematics agents update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update)
-
-    * [`ibmcloud schematics workspace new with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new)
-
-    * [`ibmcloud schematics workspace get with Agent`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-wks-get)
-
-* [Blueprint commands](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd)
-
-    * [`ibmcloud schematics blueprint create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create)
-
-    * [`ibmcloud schematics blueprint apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-apply)
-
-    * [`ibmcloud schematics blueprint update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-update)
-
-    * [`ibmcloud schematics blueprint get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-get)
-
-    * [`ibmcloud schematics blueprint list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-list)
-
-    * [`ibmcloud schematics blueprint destroy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-destroy)
-
-    * [`ibmcloud schematics blueprint delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-delete)
-
-    * [`ibmcloud schematics blueprint job get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-get)
-
-    * [`ibmcloud schematics blueprint job list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-list)
-
-    * [`ibmcloud schematics blueprint job logs`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-job-logs)
 
 * [Configure BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
@@ -1920,21 +1914,6 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## Beta-1 code for {{site.data.keyword.bpshort}} Agent
-{: #sitemap_beta-1_code_for_agent}
-
-
-[Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#agent-beta1-limitations)
-
-* [Beta-1 release limitations for Agent](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agent-beta1-limitation)
-
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-public-slack)
-
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-join-slack)
-
-* [Agent beta-1 release limitations](/docs/schematics?topic=schematics-agent-beta1-limitations#sc-agentb1-limitation)
-
-
 ## {{site.data.keyword.bpshort}} worker runtime
 {: #sitemap__worker_runtime}
 
@@ -1959,9 +1938,9 @@ subcollection: schematics
 
 [Service locations and endpoints](/docs/schematics?topic=schematics-locations#locations)
 
-* [Where can I create and run {{site.data.keyword.bpshort}} Workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
+* [Where can I create and run {{site.data.keyword.bpshort}} workspaces?](/docs/schematics?topic=schematics-locations#where-wks-created)
 
-* [Where do my {{site.data.keyword.bpshort}} Actions run?](/docs/schematics?topic=schematics-locations#where-do-locations-run)
+* [Where do my {{site.data.keyword.bpshort}} actions run?](/docs/schematics?topic=schematics-locations#where-do-locations-run)
 
 * [Where is my {{site.data.keyword.bpshort}} and template data stored?](/docs/schematics?topic=schematics-locations#where-is-data-stored)
 
@@ -2039,7 +2018,7 @@ subcollection: schematics
 
 * [Workspaces](/docs/schematics?topic=schematics-sch-terms#sch-terms-workspace)
 
-    * [{{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-sch-terms#wkss1)
+    * [{{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-sch-terms#wkss1)
 
     * [Jobs](/docs/schematics?topic=schematics-sch-terms#wksj1)
 
@@ -2073,79 +2052,6 @@ subcollection: schematics
 * [Creative Commons Attribution Share Alike 4.0 Generic](/docs/schematics?topic=schematics-schematics-notices#CC-BY-SA-4.0)
 
 
-## Agent beta-0
-{: #sitemap_agent_beta-0}
-
-
-[About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-intro)
-
-* [Usage of an Agent](/docs/schematics?topic=schematics-agents-intro#agent-usage)
-
-* [{{site.data.keyword.bpshort}} Agent architecture](/docs/schematics?topic=schematics-agents-intro#about-agents-architecture)
-
-* [Augmenting {{site.data.keyword.bpshort}} with {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro#agents-augmenting)
-
-* [Setting up an Agent](/docs/schematics?topic=schematics-agents-intro#setting-agent)
-
-* [Next steps](/docs/schematics?topic=schematics-agents-intro#nextsteps-agent-arch)
-
-[Installing {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agents-setup#agents-setup)
-
-* [Prerequisites](/docs/schematics?topic=schematics-agents-setup#agents-setup-prereq)
-
-* [Provision the Agent infrastructure through UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui)
-
-    * [Expected outcome](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-output)
-
-    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc)
-
-* [Provision the Agent infrastructure through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-cli)
-
-    * [Deploying the Agent services through CLI](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-cli)
-
-* [Provision the Agent infrastructure through API](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-api)
-
-    * [Deploying the Agent services](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc-api)
-
-* [Next steps](/docs/schematics?topic=schematics-agents-setup#nextsteps-agentsetup)
-
-[Connecting {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent#register-agent)
-
-* [Connecting Agent through UI](/docs/schematics?topic=schematics-register-agent#register-ui)
-
-* [Connecting Agent through API](/docs/schematics?topic=schematics-register-agent#register-api)
-
-* [Next steps](/docs/schematics?topic=schematics-register-agent#connect-nextsteps)
-
-[Create `profile_id` for Agents](/docs/schematics?topic=schematics-agent-trusted-profile#agent-trusted-profile)
-
-* [Next Step](/docs/schematics?topic=schematics-agent-trusted-profile#agent-profile-id-nextstep)
-
-[Uninstalling {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-uninstall-agent#uninstall-agent)
-
-* [Clean up Agent infrastructure](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-infra)
-
-* [Clean up Agent service](/docs/schematics?topic=schematics-uninstall-agent#cleanup-agent-service)
-
-[Using {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent#using-agent)
-
-* [Steps to Bind an existing workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-exist-wks)
-
-* [Steps to Bind a new workspace to the Agent](/docs/schematics?topic=schematics-using-agent#steps-bind-new-wks)
-
-* [Validate the Job execution by the Agent](/docs/schematics?topic=schematics-using-agent#validate-agent-job)
-
-* [Next steps](/docs/schematics?topic=schematics-using-agent#agent-using-nextsteps)
-
-[Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations#agent-beta-limitations)
-
-* [Beta release limitations for Agent](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-beta-limitation)
-
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-public-slack)
-
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-beta-limitations#sc-agent-join-slack)
-
-
 ## Related links
 {: #sitemap_related_links}
 
@@ -2167,9 +2073,9 @@ subcollection: schematics
 
 [Actions](/docs/schematics?topic=schematics-actions-faq#actions-faq)
 
-* [Are Classic VSIs supported for use with Actions?](/docs/schematics?topic=schematics-actions-faq#Classic-vsi-faq)
+* [Are Classic VSIs supported for use with actions?](/docs/schematics?topic=schematics-actions-faq#Classic-vsi-faq)
 
-* [What network configuration is suggested for use with Actions?](/docs/schematics?topic=schematics-actions-faq#network-faq)
+* [What network configuration is suggested for use with actions?](/docs/schematics?topic=schematics-actions-faq#network-faq)
 
 * [Why does the SSH connection fail with static inventory files?](/docs/schematics?topic=schematics-actions-faq#ssh-faq)
 
@@ -2177,7 +2083,7 @@ subcollection: schematics
 
 * [How can I resolve that might not run action error while provisioning `WinRM` by using {{site.data.keyword.bpshort}} action?](/docs/schematics?topic=schematics-actions-faq#winrm-faq)
 
-* [When are the new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions)
+* [When are new Terraform and Ansible versions added to {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#new-versions)
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
@@ -2185,17 +2091,21 @@ subcollection: schematics
 
 [Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
-* [What are the updates in the agent beta-1 release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
+* [What are the updates in the GA agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
 
-* [What are the costs of installing and using Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
+* [What are the costs of installing and using agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cost)
 
-* [Can I install more than one Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
+* [Is it possible to install more than one Agent on a cluster?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-install)
 
-* [What type of Schematics jobs can I run in my Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
+* [What Terraform versions are supported with agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-versions)
 
-* [How can I see the {{site.data.keyword.bpshort}} job results and logs, for the workloads running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
+* [Why does workspace execution fail with `terraformx.x: executable file not found in $PATH`](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-version-old)
 
-* [How many {{site.data.keyword.bpshort}} jobs can run in parallel in the Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
+* [What type of {{site.data.keyword.bpshort}} jobs can run in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
+
+* [How can I see the {{site.data.keyword.bpshort}} job results and logs for the jobs running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
+
+* [How many {{site.data.keyword.bpshort}} jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
 
 * [What is the minimum cluster configuration required in Agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster)
 
@@ -2203,47 +2113,45 @@ subcollection: schematics
 
 * [How many jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-job)
 
-* [What is the default polling interval for Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
+* [What is the default polling interval for agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-poll-interval)
 
-* [What is the difference between agent-location and location input variable flag in Agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
+* [Are there execution timeout limits when working with agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-timeout)
 
-* [Can an agent run Workspace jobs belonging to different resource groups?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
+* [What is the difference between `agent-location` and `location` flag in agent service?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-location)
 
-* [Can an agent run Jobs from multiple {{site.data.keyword.bpshort}} regions?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
+* [Can an agent run workspace jobs that are associated with different resource groups?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-rg)
 
-* [Can I register an agent with multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+* [Can an agent work with workspaces and actions belonging to different {{site.data.keyword.bpshort}} regions?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-diff-region)
 
-* [Can jobs for an existing workspace be configured to run on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
+* [Is it possible to use an agent to execute jobs for multiple accounts?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-register)
+
+* [Can an existing workspace run jobs on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-conf)
 
 * [What IAM permissions needed to deploy an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-permission)
 
-* [Can I use Terraform custom providers or use a proxy registry to download Terraform provider plug-ins?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-cust-providers)
+* [Can I inject self-signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
 
-* [How do I set the credentials to access a private provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-tf-creds)
-
-* [Using Artifactory as a provider registry](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-artifactory)
-
-    * [Configuring a local Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-local-artifactory-provider-registry)
-
-    * [Configuring a remote Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-remote-artifactory-provider-registry)
-
-    * [Configuring a virtual Artifactory provider registry](/docs/schematics?topic=schematics-faqs-agent#configuring-a-virtual-artifactory-provider-registry)
-
-* [Can I inject self signed or TLS certificates in {{site.data.keyword.containerlong_notm}} pod or container's trusted CA root certificate store during agent runtime?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-certificate)
-
-* [What attributes of Workspaces or Actions are used to dynamically select a target agent for execution](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
+* [What attributes of workspaces or actions are used to dynamically select a target agent for execution](/docs/schematics?topic=schematics-faqs-agent#agent-dynamic-attribute)
 
 * [How can I enable debug mode in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-debugmode)
 
-* [Can I upgrade an agent beta-0 to agent beta-1?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
+* [Can I upgrade an agent beta version to an agent General Availability (GA) version?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-upgrade)
 
-* [Does agent beta-1 support backward compatibility?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-compatibility)
+* [Are {{site.data.keyword.bpshort}} Agent the same as Terraform cloud agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-agent)
 
-* [Are Schematics Agents the same as Terraform Cloud Agents?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-agent)
+* [Do the agents run on {{site.data.keyword.cloud_notm}} cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-run)
 
-* [Do the agents run on IBM Cloud cloud resources?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-run)
+* [What are the minimum cluster configurations needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf)
 
-* [What are the minimum cluster configuration needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf)
+* [How can a user identify the job is created by an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
+
+* [Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
+
+* [Can {{site.data.keyword.bpshort}} Agent establish a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-cert)
+
+* [Can {{site.data.keyword.bpshort}} Agent update a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-update)
+
+* [Is cost involved in using {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agents-cost)
 
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
@@ -2279,7 +2187,7 @@ subcollection: schematics
 
 * [Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-schematics-instance)
 
-[General](/docs/schematics?topic=schematics-general-faq#general-faq)
+[Common for actions and workspaces](/docs/schematics?topic=schematics-general-faq#general-faq)
 
 * [What is {{site.data.keyword.bplong_notm}} and how does it work?](/docs/schematics?topic=schematics-general-faq#what-is-schematics)
 
@@ -2287,7 +2195,19 @@ subcollection: schematics
 
 * [What am I charged for when I use {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-general-faq#charges)
 
-* [Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?](/docs/schematics?topic=schematics-general-faq#provider-versions)
+* [How do I save files between operations?](/docs/schematics?topic=schematics-general-faq#saving-files)
+
+* [Job failures due to files removed or missing from workspace, or actions (Ansible) template repos](/docs/schematics?topic=schematics-general-faq#missing-files)
+
+* [Files removed or missing from Terraform, or Ansible template repos](/docs/schematics?topic=schematics-general-faq#clone-file-extension)
+
+* [Is the use of symlinks supported in Git repos?](/docs/schematics?topic=schematics-general-faq#symlinks-ws)
+
+* [Is the use of Git sub-modules supported in Git repos or TGZ files?](/docs/schematics?topic=schematics-general-faq#git-submodules-ws)
+
+* [Is there a rate limit?](/docs/schematics?topic=schematics-general-faq#rate-limit)
+
+* [Why are jobs waiting to be run placed in a queue?](/docs/schematics?topic=schematics-general-faq#job-queue-faq)
 
 * [How do I generate IAM access token, if client ID `bx` is used?](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens)
 
@@ -2355,15 +2275,9 @@ subcollection: schematics
 
 [Workspaces](/docs/schematics?topic=schematics-workspaces-faq#workspaces-faq)
 
-* [Why are files removed from Terraform, or Ansible templates?](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension)
-
-* [How do I save files between operations?](/docs/schematics?topic=schematics-workspaces-faq#saving-files)
-
-* [Is there a rate limit?](/docs/schematics?topic=schematics-workspaces-faq#rate-limit)
+* [Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?](/docs/schematics?topic=schematics-workspaces-faq#provider-versions)
 
 * [How do I update the Terraform version](/docs/schematics?topic=schematics-workspaces-faq#migrate-terraform-v11)
-
-* [Why are jobs waiting to be run placed in a queue?](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq)
 
 * [How do I `pull latest` code from a Git repo using the command line?](/docs/schematics?topic=schematics-workspaces-faq#latestcode-workspace-commandline)
 
@@ -2395,7 +2309,7 @@ subcollection: schematics
 
 * [How do I set the TF_CLI_ARGS environment variable?](/docs/schematics?topic=schematics-workspaces-faq#terraformcli-arguments-faq)
 
-* [Can I use private Git repositories?](/docs/schematics?topic=schematics-workspaces-faq#download-module-netrc-faq)
+* [Can I use private Git repositories for modules?](/docs/schematics?topic=schematics-workspaces-faq#download-module-netrc-faq)
 
 * [Can I edit all the variables in a workspace?](/docs/schematics?topic=schematics-workspaces-faq#edit-variables-faq)
 
@@ -2465,7 +2379,7 @@ subcollection: schematics
 {: #sitemap_troubleshooting_schematics_workspace_errors}
 
 
-[Why do {{site.data.keyword.bpshort}} Workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
+[Why do {{site.data.keyword.bpshort}} workspaces create using the API/UI/CLI fails?](/docs/schematics?topic=schematics-wks-create-api#wks-create-api)
 
 [Workspace failures](/docs/schematics?topic=schematics-wks-failure#wks-failure)
 
@@ -2506,4 +2420,8 @@ subcollection: schematics
 
 
 [Getting help and support](/docs/schematics?topic=schematics-schematics-help#schematics-help)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-schematics-help#sc-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-schematics-help#sc-join-slack)
 

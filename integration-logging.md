@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-02"
+  years: 2017, 2023
+lastupdated: "2023-12-13"
 
 keywords: logging schematics services, logging, integration services
 
@@ -15,13 +15,13 @@ subcollection: schematics
 # Logging integration
 {: #logging-integration}
 
-{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.loganalysislong}} that can store, search, analyze, monitor, and alert on your {{site.data.keyword.cloud_notm}} logging data and events. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} Workspaces by connecting, configuring, and view through observability dashboards.
+{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.loganalysislong}} that can store, search, analyze, monitor, and alert on your {{site.data.keyword.cloud_notm}} logging data and events. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} workspaces by connecting, configuring, and view through observability dashboards.
 {: shortdesc}
 
 ## Launching logging
 {: #logging-ui}
 
-You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} Workspace. Complete these steps to launch and analyze the log.
+You can manage your logging instances through the {{site.data.keyword.bpshort}} dashboard. Use {{site.data.keyword.la_full_notm}} to gain insights into your workspace logs. You can choose the log retention log day as `7`,`14`,or `30` days and have the ability to archive to an {{site.data.keyword.cos_full_notm}} to retain your logs. {{site.data.keyword.la_full}} integrates with IBM access control to quickly integrate into your {{site.data.keyword.bpshort}} workspace. Complete these steps to launch and analyze the log.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 

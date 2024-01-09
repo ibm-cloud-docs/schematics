@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-20"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -20,8 +20,36 @@ content-type: release-note
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
+## January 2024
+{: #January-2024}
+
+Review the release notes for January 2024.
+{: shortdesc}
+
+
+
+
+### 10 January 2024
+{: #schematics-jan1024}
+{: release-note}
+
+{{site.data.keyword.bpshort}} support for Agent is generally available (GA) with full production support.
+:   {{site.data.keyword.bpshort}} announces its Agent GA release to extend {{site.data.keyword.bpshort}} availability to reach your private cloud and or on-premises infrastructures. Check the following content to learn about {{site.data.keyword.bpshort}} agents releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
+    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro) and its usage.
+    - {{site.data.keyword.bpshort}} Agent are supported through [UI](/docs/schematics?topic=schematics-deploy-agent-overview), [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), and [API](/apidocs/schematics/schematics#create-agent-data).
+    - You can manage {{site.data.keyword.bpshort}} Agent by
+      - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [deploying agent prerequisite infrastructure](/docs/schematics?topic=schematics-agent-infrastructure-overview)
+      - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview) an agent
+      - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview) an agent
+      - [deleting](/docs/schematics?topic=schematics-delete-agent-overview) an agent
+    - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure {{site.data.keyword.bpshort}} agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and [private registry](/docs/schematics?topic=schematics-agent-registry-overview).
+    - For any challenges or questions, see {{site.data.keyword.bpshort}} Agents [FAQs](/docs/schematics?topic=schematics-faqs-agent), and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
+
+
+
+
 
 ## October 2023
 {: #October-2023}
@@ -34,7 +62,7 @@ Review the release notes for October 2023.
 {: release-note}
 
 The {{site.data.keyword.bpshort}} Agent supports private catalog
-:   The {{site.data.keyword.bpshort}} Agent `1.0.0-beta2` version supports for [private catalog](/docs/schematics?topic=schematics-agentb1-about-intro#agentb1-usage).
+:   The {{site.data.keyword.bpshort}} Agent `1.0.0-beta2` version supports for [private catalog](/docs/schematics?topic=schematics-agent-about-intro#agentb1-usage).
     - [Agent FAQ](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf) about the minimum cluster configuration to run 30 jobs on {{site.data.keyword.bpshort}} agent.
 
 ### 04 October 2023
@@ -107,7 +135,7 @@ Review the release notes for April 2023.
 {: release-note}
 
 {{site.data.keyword.bpshort}} documentation realigns the workspace documentation
-:   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} Workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
+:   The {{site.data.keyword.bpshort}} documentation realigns and upgrades the workspace documentation pages such as [{{site.data.keyword.bpshort}} workspace](/docs/schematics?topic=schematics-sch-create-wks), and [Managing {{site.data.keyword.bpshort}} resources](/docs/schematics?topic=schematics-multi-region-deployment).
 
 ### 13 April 2023
 {: #schematics-apr1323}
@@ -130,13 +158,12 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 Review the release notes for March 2023.
 {: shortdesc}
 
-
 ### 30 March 2023
 {: #schematics-mar3023}
 {: release-note}
 
 Release configuring Kubernetes cluster for an agent.
-:   The {{site.data.keyword.bpshort}} releases documentation on [configuring Kubernetes cluster for an agent](/docs/schematics?topic=schematics-configure-k8s-cluster) related to network policies, Terraform and Ansible runtime-job, agent sandbox allowlist, agent job-runner configuration, agent runtime configuration for Ansible, and agent runtime configuration for Terraform.
+:   The {{site.data.keyword.bpshort}} releases documentation on [configuring Kubernetes cluster for an agent](/docs/schematics?topic=schematics-configure-k8s-cluster) related to network policies, workspace and action runtime-job, agent sandbox allowlist, agent job-runner configuration, agent runtime configuration for Ansible, and agent runtime configuration for Terraform.
 
 Enhancement of {{site.data.keyword.bpshort}} worker runtime.
 :   The {{site.data.keyword.bpshort}} releases documentation on [{{site.data.keyword.bpshort}} worker runtime](/docs/schematics?topic=schematics-sch-utilities) for `runtime-terraform-job`, and `runtime-ansible-job` images.
@@ -145,16 +172,16 @@ IAM allowed IP addresses replaced with context based restrictions.
 :   Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr).
 
 The `terraform.tfstate` state file size maximum limit is less than 2 MB.
-:   The {{site.data.keyword.bpshort}} Workspace creation by using `terraform.tfstate` file fails due to the limitation in state file size. Documentation includes [FAQ](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit), [troubleshooting guide](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1), and a note in [schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) --state argument.
+:   The {{site.data.keyword.bpshort}} workspace creation by using `terraform.tfstate` file fails due to the limitation in state file size. Documentation includes [FAQ](/docs/schematics?topic=schematics-workspaces-faq#wks-statefile-limit), [troubleshooting guide](/docs/schematics?topic=schematics-wks-failure#wks-new-fails1), and a note in [schematics workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) --state argument.
 
 ### 22 March 2023
 {: #schematics-mar2223}
 {: release-note}
 
 {{site.data.keyword.bpshort}} Agent beta-1 release.
-:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta1-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta-1 releases.
+:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta1-limitations) of {{site.data.keyword.bpshort}} agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} agents beta-1 releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
-    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agentb1-about-intro).
+    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro).
     - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
     - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 
       - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
@@ -163,7 +190,7 @@ The `terraform.tfstate` state file size maximum limit is less than 2 MB.
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
     - You can also [use an agent assignment policy](/docs/schematics?topic=schematics-policy-manage), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agent.
-    - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta-1 level code and provide feedback.
+    - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-limitation) to engage with the agents beta-1 level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in.
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.8](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -224,8 +251,8 @@ Review the release notes for December 2022.
 {: #schematics-dec1322}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} Agents GitHub repository.
-:   The agent beta releases [{{site.data.keyword.bpshort}} Agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository.
+Release {{site.data.keyword.bpshort}} agents GitHub repository.
+:   The agent beta releases [{{site.data.keyword.bpshort}} agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository.
 
 Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
 
@@ -261,8 +288,8 @@ Release {{site.data.keyword.bpshort}} command-line plug-in.
 {: #schematics-nov1522}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} Agents GitHub repository.
-:   The agent beta releases [{{site.data.keyword.bpshort}} Agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with the following fixes:
+Release {{site.data.keyword.bpshort}} agents GitHub repository.
+:   The agent beta releases [{{site.data.keyword.bpshort}} agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository with the following fixes:
     - Unknown certificate issues during repository cloning.
     - Display the complete log information, log enhancements.
     - Job status, and other minor bug fixes.
@@ -348,17 +375,17 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july1122}
 {: release-note}
 
-{{site.data.keyword.bpshort}} Agents beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-agent-beta-limitations) of {{site.data.keyword.bpshort}} Agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} Agents beta releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agents engagement.
-    - [About {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-intro).
-    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [Agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
-    - Install [{{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agents-setup) through UI.
+{{site.data.keyword.bpshort}} agents beta release in production.
+:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-agent-limitation) of {{site.data.keyword.bpshort}} agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} agents beta releases.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} agents engagement.
+    - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agents-intro).
+    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Install [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agents-setup) through UI.
     - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
-    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} Workspaces to the Agent.
+    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} workspaces to the Agent.
     - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent) to clean up the Agent infrastructure and Agent services.
-    - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on Agents.
-    - [Beta code for {{site.data.keyword.bpshort}} Agents](/docs/schematics?topic=schematics-agent-beta-limitations) to engage with the agents beta level code and provide feedback.
+    - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agents.
+    - [Beta code for {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-limitation) to engage with the agents beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -375,10 +402,10 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding blueprint templates](/docs/schematics?topic=schematics-blueprint-templates) to configure the right schemas and use blueprint commands to deploy blueprints.
     - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprints.
-    - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Blueprint operations are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
     - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
-    - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the Agents beta level code and provide feedback.
+    - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the agents beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.3](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -449,10 +476,10 @@ Review the release notes for April 2022.
 {: release-note}
 
 Support detecting drift
-:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note) for {{site.data.keyword.bpshort}} Workspace. For more information, see viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
+:   The {{site.data.keyword.bpshort}} supports [drift capabilities](/docs/schematics?topic=schematics-drift-note) for {{site.data.keyword.bpshort}} workspace. For more information, see viewing detecting drift through {{site.data.keyword.bpshort}} [UI](/docs/schematics?topic=schematics-drift-note#drift-ui), [CLI](/docs/schematics?topic=schematics-drift-note&interface=cli#drift-ui), or [API](/docs/schematics?topic=schematics-drift-note&interface=api#drift-ui).
 
 Support stopping or terminating the running job
-:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} Workspace. For more information, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
+:   The {{site.data.keyword.bpshort}} supports [stopping or terminating the running job](/docs/schematics?topic=schematics-interrupt-job) for {{site.data.keyword.bpshort}} workspace. For more information, see stopping a running job through [UI](/docs/schematics?topic=schematics-interrupt-job#stop-job-ui), [CLI](/docs/schematics?topic=schematics-interrupt-job&interface=cli#stop-job-cli), or [API](/docs/schematics?topic=schematics-interrupt-job&interface=api#stop-job-api).
 
 Support more frequently asked questions (FAQs) 
 :  The {{site.data.keyword.bpshort}} supports FAQs related to [`drift detection`](/docs/schematics?topic=schematics-workspaces-faq#drift-automatic-faq).
@@ -517,7 +544,7 @@ Review the release notes for March 2022.
 Support deleting {{site.data.keyword.bpshort}} data objects 
 :   The {{site.data.keyword.bpshort}} supports [deleting {{site.data.keyword.bpshort}} data from UI, CLI, and API](/docs/schematics?topic=schematics-delete-schematics-data-intro) for workspace, action, and inventories objects.
 
-Fixes related to {{site.data.keyword.bpshort}} Actions and workspace
+Fixes related to {{site.data.keyword.bpshort}} actions and workspace
 :   - Now you can create actions with an [empty resource group](/apidocs/schematics/schematics#create-action). The empty resource group automatically points to the `Default` resource group.
 :   - [List workspace API](/apidocs/schematics/schematics#list-workspaces) supports `summary` profile type.
 :   - [Get inventory definition](/apidocs/schematics/schematics#get-inventory) supports `detailed` profile type.
@@ -608,17 +635,17 @@ Review the release notes for November 2021.
 {: #schematics-nov302021}
 {: release-note}
 
-Centrally manage access tags for {{site.data.keyword.bpshort}} Workspaces in your account
-:   To create and associate access tags for {{site.data.keyword.bpshort}} Workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
+Centrally manage access tags for {{site.data.keyword.bpshort}} workspaces in your account
+:   To create and associate access tags for the {{site.data.keyword.bpshort}} workspaces in your account, see [Manage access tag in your account](/docs/schematics?topic=schematics-access#access-tag).
 
 Support `WinRM` in user interface
-:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-working#create-action-working) for {{site.data.keyword.bpshort}} Actions.
+:   {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](/docs/schematics?topic=schematics-action-working#create-action-working) for {{site.data.keyword.bpshort}} actions.
 
-Global catalog settings for {{site.data.keyword.bpshort}} Workspaces location
+Global catalog settings for {{site.data.keyword.bpshort}} workspaces location
 : You can now, manage the catalog settings for {{site.data.keyword.bpshort}} resources based on the location. For more information, see [Manage location settings in catalog](/docs/schematics?topic=schematics-access-ibm-cloud-catalog).
 
 About `compact` download
-:   You can download the relevant files from the Git repository for your workspaces. For more information, see [Compact download for {{site.data.keyword.bpshort}} Workspaces](/docs/schematics?topic=schematics-compact-download).
+:   You can download the relevant files from the Git repository for your workspaces. For more information, see [Compact download for {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-compact-download).
 
 About {{site.data.keyword.bpshort}} Job files
 :   You can now download the state-file at every job level along with the current state-file of a workspace by using the existing [Get Job API](/apidocs/schematics/schematics#get-job-files). For more information, see [Download {{site.data.keyword.bpshort}} Job files](/docs/schematics?topic=schematics-job-download).
@@ -640,10 +667,10 @@ Onboarding Terraform templates to private catalog
 :   For onboarding multiple Terraform templates into {{site.data.keyword.cloud_notm}} private catalog, see [Onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).
 
 Sample templates to deploy into {{site.data.keyword.cloud_notm}}
-:   Install [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services by using {{site.data.keyword.bpshort}} Workspaces.
+:   Install [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different {{site.data.keyword.cloud_notm}} services by using {{site.data.keyword.bpshort}} workspaces.
 
 Support `WinRM` in command line
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) for {{site.data.keyword.bpshort}} Actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool) for {{site.data.keyword.bpshort}} actions. Added the `--inventory-connection-type`, `--bastion-credential-json`, and `--credential-json` option value to the [**create**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-create-action), and [**update**](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-update-action) commands.
 
 Documentation lists the Command-line version change log history
 :   The {{site.data.keyword.bpshort}} documentation supports the list of [command-line features, enhancements, and fixes note](/docs/schematics?topic=schematics-cli_version-releases).
@@ -658,26 +685,26 @@ Review the release notes for September 2021.
 {: #schematics-sept302021}
 {: release-note}
 
-Inventory target feature support in {{site.data.keyword.bpshort}} Actions API
-:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool?topic=v-configuring-winrm-hyper-hosts) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+Inventory target feature support in {{site.data.keyword.bpshort}} actions API
+:   The {{site.data.keyword.bpshort}} supports [Windows Remote Management (`WinRM`)](https://www.ibm.com/docs/en/license-metric-tool) port as `inventory_connection_type` parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
-Bastion host enhancement in {{site.data.keyword.bpshort}} Actions API
+Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
 :   The {{site.data.keyword.bpshort}} enhances the bastion host configuration as an optional parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs` if the `inventory connection type` is set to `winrm`.
 
-{{site.data.keyword.bpshort}} Actions API enhancement to support bastion host connection with non-root user
-:   The {{site.data.keyword.bpshort}} Actions API now supports bastion host connection with non-root user and the `ssh` in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
+{{site.data.keyword.bpshort}} actions API enhancement to support bastion host connection with non-root user
+:   The {{site.data.keyword.bpshort}} actions API now supports bastion host connection with non-root user and the `ssh` in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
 {{site.data.keyword.bplong_notm}} job queue process
 :   For more information about job queue process, see [Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process) and [FAQ](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq).
 
-{{site.data.keyword.bpshort}} Actions `APIs` enhances the credentials parameter
+{{site.data.keyword.bpshort}} actions `APIs` enhances the credentials parameter
 :   You can now access the inventory username through the credentials parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
 {{site.data.keyword.bpshort}} introduces compact flag in the workspace create and update API
 :   You can now download the `sub directory` from the GIT repositories through {{site.data.keyword.bpshort}}. For more information, see [How can I download `sub directory` from the GIT repositories through {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-workspaces-faq#compact-faq).
 
 Importance of location and URL endpoint in workspace creation
-:   [Why do {{site.data.keyword.bpshort}} Workspaces create through API fails?](/docs/schematics?topic=schematics-wks-create-api).
+:   [Why do {{site.data.keyword.bpshort}} workspaces create through API fails?](/docs/schematics?topic=schematics-wks-create-api).
 
 ## August 2021
 {: #aug-2021}
@@ -690,7 +717,7 @@ Review the release notes for August 2021.
 {: release-note}
 
 Workspace update command enhancement
-:   The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bpshort}} Workspaces update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
+:   The {{site.data.keyword.bplong_notm}} supports pull request flag in the [{{site.data.keyword.bpshort}} workspaces update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-update) command.
 
 Terraform v1.0 support
 :   {{site.data.keyword.bplong_notm}} now supports Terraform v1.0 now. You can now select to run your infrastructure code with Terraform version `0.12` or `0.13` or `0.14`, `0.15` or `1.0`. Make sure that you use the syntax that is compatible with the Terraform version that you want to use. Note you can experience a unified console experience across all support platforms, and provides a provider based sensitivity and sensitive functions. For more information about Terraform v1.0 availability from HashiCorp Language, see [Terraform v1.0 general availability](https://developer.hashicorp.com/terraform/language/v1.1.x/upgrade-guides/1-0).
@@ -749,9 +776,9 @@ Documentation support to create workspace by using {{site.data.keyword.bplong_no
 :   For more information, see [Setting up Terraform for {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-terraform-setup).
 
 One page view to create workspace by using `UI`, `CLI`, `API`, and `Terraform` switcher documentation
-:   For more information about {{site.data.keyword.bplong_notm}} Workspaces, creation, see [Setting up workspaces](/docs/schematics?topic=schematics-sch-create-wks&interface=ui).
+:   For more information about {{site.data.keyword.bplong_notm}} workspaces, creation, see [Setting up workspaces](/docs/schematics?topic=schematics-sch-create-wks&interface=ui).
 
-Temporarily {{site.data.keyword.bplong_notm}} Workspaces stop activity API is deactivated
+Temporarily {{site.data.keyword.bplong_notm}} workspaces stop activity API is deactivated
 :   For more information, see [Stop an apply job](/apidocs/schematics/schematics#delete-workspace-activity) API.
 
 ## May 2021
@@ -784,7 +811,7 @@ Review the release notes for April 2021.
 {: release-note}
 
 Ansible support in {{site.data.keyword.bplong_notm}} is now generally available
-:   Use {{site.data.keyword.bpshort}} Actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multitiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
+:   Use {{site.data.keyword.bpshort}} actions to run your `Ansible playbooks` in {{site.data.keyword.cloud_notm}}, and automate the configuration, operation, and management of cloud resources, or deploy multitiered app workloads. To get started, see [{{site.data.keyword.bpshort}} landing page](/docs/schematics?topic=schematics-getting-started), try out one of the [IBM-provided `Ansible playbooks`](/docs/schematics?topic=schematics-sample_actiontemplates) or learn more about how {{site.data.keyword.bpshort}} integrates Ansible in [About {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-how-it-works#how-to-actions).
 
 ## March 2021
 {: #march-2021}
@@ -898,7 +925,7 @@ Review the release notes for October 2020.
 {: release-note}
 
 Monitoring
-:   {{site.data.keyword.bplong_notm}} now supports monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.cloud_notm}} Monitoring. For more information about the monitoring {{site.data.keyword.bpshort}} Workspaces, see [Monitoring {{site.data.keyword.bpshort}} instances](/docs/schematics?topic=schematics-monitoring-instances).
+:   {{site.data.keyword.bplong_notm}} now supports monitoring {{site.data.keyword.bpshort}} services by using {{site.data.keyword.cloud_notm}} Monitoring. For more information about the monitoring {{site.data.keyword.bpshort}} workspaces, see [Monitoring {{site.data.keyword.bpshort}} instances](/docs/schematics?topic=schematics-monitoring-instances).
 
 Files and resources for your workspace actions
 :   {{site.data.keyword.bplong_notm}} now performs the vulnerability check of the files and resources that are added for the first time to your repository.
@@ -939,7 +966,7 @@ Time out set for local-exec and remote-exec users
 :   If you run local-exec or remote-exec users, make sure the execution completes within 30 minutes. Otherwise execution times out automatically.
 
 `Bitbucket` is used as a template repository source
-:   {{site.data.keyword.bplong_notm}} supports public bit bucket repository as a template repository source. Private bit bucket repository needs a workaround. Download the files from the repository, then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} Workspace.
+:   {{site.data.keyword.bplong_notm}} supports public bit bucket repository as a template repository source. Private bit bucket repository needs a workaround. Download the files from the repository, then, you need to `tar` the files and upload in the {{site.data.keyword.bplong_notm}} workspace.
 
 ## July 2020
 {: #jul-2020}
@@ -955,7 +982,7 @@ Stop apply support
 :   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource life cycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apidocs/schematics/schematics#stop-a-schematics-apply-action) API.
 
 New {{site.data.keyword.bpshort}} locations
-:   You can now create {{site.data.keyword.bpshort}} Workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region through CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+:   You can now create {{site.data.keyword.bpshort}} workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region through CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
 ## June 2020
 {: #jun-2020}
@@ -995,7 +1022,7 @@ Review the release notes for May 2020.
 {: release-note}
 
 New EU API endpoint
-:   You can now choose to create your {{site.data.keyword.bpshort}} Workspaces in the US or Europe. Depending on the location that you choose, your {{site.data.keyword.bpshort}} Actions run in either the US (`us-south` or `us-east`) or in Europe (`eu-de` or `eu-gb`). The location that you choose for your workspace is independent from the location where you want to provision your resources. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
+:   You can now choose to create your {{site.data.keyword.bpshort}} workspaces in the US or Europe. Depending on the location that you choose, your {{site.data.keyword.bpshort}} actions run in either the US (`us-south` or `us-east`) or in Europe (`eu-de` or `eu-gb`). The location that you choose for your workspace is independent from the location where you want to provision your resources. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations).
 
 ## April 2020
 {: #april-2020}

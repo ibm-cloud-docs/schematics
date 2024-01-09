@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-06-13"
+  years: 2017, 2024
+lastupdated: "2024-01-08"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -28,7 +28,7 @@ Environment variables can only be set using the workspace update API and the CLI
 ### Passing TF_CLI_ARGS as env-vars
 {: #passing-cli-args}
 
-You can pass Terraform command-line arguments `TF_CLI_ARGS` as environment variables, like `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} Workspaces to customize operations. 
+You can pass Terraform command-line arguments `TF_CLI_ARGS` as environment variables, like `TF_CLI_ARGS_plan`, and `TF_CLI_ARGS_apply` in the {{site.data.keyword.bpshort}} workspace to customize operations. 
 
 Terraform reads these environment variables and applies them runtime. For more information about Terraform command-line arguments, see [`TF_CLI_ARGS and TF_CLI_ARGS_name`](https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name){: external}. 
 
@@ -40,7 +40,7 @@ The examples shown here can be used to set any environment variable to be passed
 #### Setting parallelism at create time
 {: #parallelism-example-create}
 
-The code block is the sample payload for creating workspace with the Schematics [Create API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace){: external} with parallelism passed as an environment variable.
+The code block is the sample payload for creating workspace with the {{site.data.keyword.bpshort}} [Create API](https://cloud.ibm.com/apidocs/schematics/schematics#create-workspace){: external} with parallelism passed as an environment variable.
 
 ```json
 {
@@ -83,7 +83,7 @@ The code block is the sample payload for creating workspace with the Schematics 
 #### Setting parallelism after create
 {: #parallelism-example-update}
 
-A sample `env_values` block in the payload to update environment variables using the Schematics Workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}. For a more detailed example, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs){: external} API.
+A sample `env_values` block in the payload to update environment variables using the {{site.data.keyword.bpshort}} Workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}. For a more detailed example, see [Update workspace input variables](/apidocs/schematics/schematics#replace-workspace-inputs){: external} API.
 
 ```json
 "env_values": [
@@ -122,7 +122,7 @@ Environment variables can only be set at content onboarding time. Refer to the C
 | `TF_REGISTRY_DISCOVERY_RETRY` | Set the maximum number of request retries the remote registry client can attempt for client connection errors.| `"TF_REGISTRY_DISCOVERY_RETRY": "10"`|
 | `TF_REGISTRY_CLIENT_TIMEOUT` | Set to increase the extraneous circumstances. The default value for the remote registry is `10 seconds`.| `"TF_REGISTRY_CLIENT_TIMEOUT": "15"`|
 | `TF_IGNORE` | Output the debug messages to display ignored files and folders. This is useful when you debug large repositories with `.terraformignore` files. The default value is **trace**.| `"TF_IGNORE": "trace"`|
-| `TF_PARALLELISM` | Read parallelism environment variable in runtime action and reset the parallelism value on all the {{site.data.keyword.bpshort}} Actions only for content catalog. `TF_PARALLELISM` is only for content catalog. |`"TF_PARALLELISM": "20"`|
+| `TF_PARALLELISM` | Read parallelism environment variable in runtime action and reset the parallelism value on all the {{site.data.keyword.bpshort}} actions only for content catalog. `TF_PARALLELISM` is only for content catalog. |`"TF_PARALLELISM": "20"`|
 {: caption="Supported environment variables" caption-side="top"}
 
 Additional environment variables are supported for debugging Terraform provider issues, see [Managing Log Output](https://developer.hashicorp.com/terraform/plugin/log/managing){: external}. 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics blueprints template, blueprints yaml, schema definitions, definitions, yaml,
 
@@ -227,7 +227,7 @@ Type: Boolean
 
 Default: false
 
-Flag specifying whether the value is a sensitive variable and must be masked in any displayed output via the UI or CLI. The sensitive attribute for an input can only be set via the template. It cannot optionally be set at create time.  
+Flag specifying whether the value is a sensitive variable and must be masked in any displayed output through the UI or CLI. The sensitive attribute for an input can only be set through the template. It cannot optionally be set at create time.  
 {: pre}
 
 Example
@@ -301,7 +301,7 @@ Default: []
 
 Optional
 
-Environment variables are used to modify the behavior and execution of Terraform and Ansible without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
+Environment variables are used to modify the behavior and execution of workspace and action without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
 
 A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. 
 {: pre}
@@ -475,7 +475,7 @@ Type: string
 
 Default: main
 
-If content is in Git, the branch containing the revision of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. It can be omitted if the branch is specified via the `git_repo_url`. 
+If content is in Git, the branch containing the revision of the Terraform config or module to be used. This option is mutually exclusive with the `git_release` option. It can be omitted if the branch is specified through the `git_repo_url`. 
 {: pre}
 
 ### modules.source.git.git_release
@@ -518,7 +518,7 @@ Default: []
 
 Optional
 
-Environment variables are used to modify the behavior and execution of Terraform and Ansible without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
+Environment variables are used to modify the behavior and execution of workspace and action without modifying the IaC code itself. Refer to the section [Using environment variables with workspaces](/docs/schematics?topic=schematics-set-parallelism) for more information about the environment variables that can be passed to configure Terraform runtime behavior in Schematics. 
 
 A list of the global environment variables (env-vars) to be made available in the module execution environment at run time. They are defined as key-value pairs. Two common env-vars are listed here. 
 {: pre}

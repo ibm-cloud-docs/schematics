@@ -107,20 +107,21 @@ toc:
                                                     - integration-at.md
                                                     - integration-kms.md
                                   - topicgroup:
-                                            label: Working with Agent Beta-1
+                                            label: Working with Agents
                                             topics:
                                                    - sc-agentb1-plan.md
+                                                   - sc-agent-infra-setup.md
                                                    - sc-agentb1-deploy.md
                                                    - sc-agentb1-display.md
-                                                   - sc-agentb1-migrate.md
                                                    - sc-agentb1-delete.md
                                                    - topicgroup:
-                                                              label: Using Agents
+                                                              label: Using agents
                                                               topics:
                                                                       - sc-agentb1-policy.md
                                                                       - sc-agentb1-confg-k8s-cluster.md
                                                                       - sc-agentb1-health.md
                                                                       - sc-agentb1-proxy.md
+                                                                      - sc-agentb1-registry.md
                                   - topicgroup:
                                             label: Logging and monitoring
                                             topics:
@@ -166,24 +167,12 @@ toc:
                                                     - link:
                                                               label: IBM Cloud Schematics API
                                                               href: https://cloud.ibm.com/apidocs/schematics
-                                  - sc-agentbeta1-limitations.md
                                   - sc-tools.md
                                   - schematics-sdk.md
                                   - locations.md
                                   - limitations.md
                                   - sc-terminology.md
                                   - license-notices.md
-                                  - topicgroup:
-                                            label: Agent beta-0
-                                            topics:
-                                                    - sc-about-agent.md
-                                                    - sc-agent-architecture.md
-                                                    - sc-agent-infra-setup.md
-                                                    - sc-agent-connect.md
-                                                    - sc-agent-trustedprofile.md
-                                                    - sc-agent-uninstall.md
-                                                    - sc-agent-using.md
-                                                    - sc-agent-beta-limitations.md
                                   - topicgroup:
                                             label: Related links
                                             topics:

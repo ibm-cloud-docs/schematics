@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-26"
+lastupdated: "2023-12-13"
 
 keywords: blueprint job, jobs get, jobs list, jobs logs, blueprint jobs
 
@@ -30,7 +30,7 @@ You can follow these steps to view your blueprints by using {{site.data.keyword.
 
     The detailed view of the blueprint job result can be seen, which contains a number of child jobs. The color coding of the child jobs indicate which job log must be reviewed for further information about job failures. 
 
-    Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job. For Terraform based modules, these are {{site.data.keyword.bpshort}} Workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
+    Blueprint operations are performed by child `module` jobs operating against each module (workspace), under the control of a `blueprint` orchestration job. For Terraform based modules, these are {{site.data.keyword.bpshort}} workspace jobs. Module (workspace) jobs contain the detail of the IaC operations performed to deploy and configure cloud resources. A blueprint job failure will be typically caused by a Module job failure and the failing module log should be reviewed to identify the cause of the job failure. 
 
 4. Click on the name of a child job to review the job log. 
     - Optional: Click **Show more** to view the full job log. 
@@ -194,12 +194,12 @@ The CLI command to view the **full** job log for a child job, is printed at the 
 ### Viewing blueprint job logs
 {: #blueprint-job-log-cli}
 
-Blueprint job logs provide detail about the execution of blueprint operations and the full execution logs for Terraform and Ansible operations on modules. Blueprints has two classes of child jobs, a `blueprint` orchestration job and a number of `module` jobs running the Terraform or Ansible automation tasks. 
+Blueprint job logs provide detail about the execution of blueprint operations and the full execution logs for workspace and action operations on modules. Blueprints has two classes of child jobs, a `blueprint` orchestration job and a number of `module` jobs running the Terraform or Ansible automation tasks. 
 
 #### Module job logs
 {: #blueprint-mod-job-log}
 
-Module job logs provide the detailed output of Terraform and Ansible operations and the primary source for identifying provisioning failures. The full `module` job log containing the Terraform and Ansible execution logs can be reviewed with the `schematics logs` command 
+Module job logs provide the detailed output of workspace and action operations and the primary source for identifying provisioning failures. The full `module` job log containing the workspace and action execution logs can be reviewed with the `schematics logs` command 
 
 ```ssh
 ibmcloud schematics logs --id us-east.workspace.basic-resource-group.99503dea --act-id de32dba8d99cbfc10bd41e619032237e

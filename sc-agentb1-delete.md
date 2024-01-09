@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-12-06"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -12,39 +12,22 @@ subcollection: schematics
 
 {{site.data.keyword.attribute-definition-list}}
 
-{{site.data.keyword.bplong_notm}} Agent beta-1 and beta-2 delivers a simplified agent installation process and policy for agent assignment. You can review the [beta-1 release](/docs/schematics?topic=schematics-schematics-relnotes&interface=cli#schematics-mar2223) documentation and explore. 
-{: attention}
-
-{{site.data.keyword.bpshort}} Agents is a [beta-1 feature](/docs/schematics?topic=schematics-agent-beta1-limitations) that is available for evaluation and testing purposes. It is not intended for production usage.
-{: beta}
-
 # Deleting an agent
 {: #delete-agent-overview}
 
-When an agent is no longer required, you can do one of the following to either:
-- Disable the agent 
-- Delete the agent 
+When an agent is no longer required, you can delete the agent. 
 
-## Disabling an agent using the CLI
-{: #disable-agentb1-cli}
-{: cli}
 
-You can disable and stop it from executing future jobs using the [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agents-update) command. This command requires an `AGENT_ID` as input argument, and the `USER_STATE` as **disable**. Once the agent is disabled, the workspace or action jobs are not routed to that agent, the existing jobs runs to completion. The agent assignment policy for the  agent is automatically disabled.
 
-Example
+## Deleting an agent using the UI
+{: #delete-agentb1-ui}
+{: ui}
 
-```sh
-ibmcloud schematics agent update --id agent-testing-prod-cli-mar-27-5.deA.dc97 -s disable
-```
-{: pre}
-
-Output
-
-```text
-Initiating agent update...
-Job ID	.ACTIVITY.4654016
-```
-{: screen}
+1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials.
+2. Navigate to **{{site.data.keyword.bpshort}}** > **Agents**.
+3. Click the `...` dots > **Delete** agent.
+4. In the Delete Agent popup type `<your agent name>` to confirm. **Note** the delete agent action cannot be undone.
+5. Click **Delete**.
 
 ## Deleting an agent using the CLI
 {: #delete-agentb1-cli}
@@ -71,6 +54,7 @@ OK
 {: screen}
 
 When the agent is deleted, you can expect:
+
 - All the agent microservices are uninstalled.
 - All the agent related Kubernetes resources, such as Pods, Deployment, Configmap, and Namespaces are destroyed.
 - All the credentials that are created as part of the agent deployment, such as HMAC credentials for the {{site.data.keyword.objectstorageshort}} bucket, trusted profile to communicate with {{site.data.keyword.bpshort}} are destroyed.
@@ -114,5 +98,6 @@ Output
 ## Next steps
 {: #agent-delete-nextstep}
 
+After deleting an agent,
 - You can view the [list of agents](/docs/schematics?topic=schematics-display-agentb1-overview&interface=cli), and the [agent assignment policy](/docs/schematics?topic=schematics-policy-manage&interface=cli).
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent) for any common questions related to deleting an agent.

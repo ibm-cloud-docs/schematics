@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-05"
+  years: 2017, 2023
+lastupdated: "2023-12-13"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -15,13 +15,13 @@ subcollection: schematics
 # {{site.data.keyword.monitoringshort_notm}} integration
 {: #monitoring-integration}
 
-{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.monitoringfull}} that provides visibility of the performance and health of your {{site.data.keyword.cloud_notm}} powered resources application. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} Workspaces by connecting, configuring, and view through observability dashboards.
+{{site.data.keyword.bpfull}} integrates to fully manage enterprise-grade {{site.data.keyword.monitoringfull}} that provides visibility of the performance and health of your {{site.data.keyword.cloud_notm}} powered resources application. This feature includes live logs, custom views, and alert of the {{site.data.keyword.bpshort}} workspaces by connecting, configuring, and view through observability dashboards.
 {: shortdesc}
 
 ## Launching monitoring
 {: #monitoring-ui}
 
-Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_notm}} Workspace. To set up {{site.data.keyword.monitoringshort_notm}}, create a {{site.data.keyword.monitoringshort_notm}} instance in a public cloud region and plan associated to the resource. The region defines where your metrics are centralized. The plan specifies the features and retention period for your metrics. Complete these steps to launch {{site.data.keyword.monitoringshort_notm}}.
+Use monitoring instance to monitor the health of the {{site.data.keyword.bplong_notm}} workspace. To set up {{site.data.keyword.monitoringshort_notm}}, create a {{site.data.keyword.monitoringshort_notm}} instance in a public cloud region and plan associated to the resource. The region defines where your metrics are centralized. The plan specifies the features and retention period for your metrics. Complete these steps to launch {{site.data.keyword.monitoringshort_notm}}.
 {: shortdesc}
 
 1. Log in to your [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external} account by using your credentials. 

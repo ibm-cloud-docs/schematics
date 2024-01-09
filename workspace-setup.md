@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-12"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces, schematics workspace vs github repo, schematics workspace access, schematics freeze workspace
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # Setting up workspaces
 {: #workspace-setup}
 
-With {{site.data.keyword.bplong}} Workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
+With {{site.data.keyword.bplong}} workspaces, you can organize your Terraform templates and control the access to run infrastructure code in your {{site.data.keyword.cloud}} account. Before you create a workspace, make sure that you [design the organizational structure of your Git repository and workspaces](/docs/schematics?topic=schematics-workspaces-plan) so that you can replicate and manage your configurations across multiple environments. 
 {: shortdesc} 
 
 If you plan to store your Terraform templates on your local machine and upload them as a tape archive file (`.tar`) to {{site.data.keyword.bplong_notm}}, make sure that the file structure on your local machine matches the suggested Git repository structure. 
@@ -36,7 +36,7 @@ Create a workspace for your Terraform template by using the {{site.data.keyword.
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local machine to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [required permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
+Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspace and actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
 ### Creating the workspace from the console
@@ -60,7 +60,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
           ```
           {: pre}
 
-        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the Agents list, check have you [connected the Agents](/docs/schematics?topic=schematics-register-agent)?
+        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the agents list, check have you [connected the agents](/docs/schematics?topic=schematics-register-agent)?
         - Click `Next`.
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
@@ -121,7 +121,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     | --- |  --- |
     | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template. |
-    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
+    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are stored. If you choose to create your workspace without a GitHub repository, your workspace is created with a **draft** state. To connect your workspace to a GitHub repository later, you must use the `ibmcloud schematics workspace update` command. |
     | `variable_name` | Optional: Enter the name for the input variable that you declared in your Terraform configuration files. |
@@ -159,7 +159,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
     | `iam_access_token` | Enter the IAM access token that you retrieved in step 1. |
     | `workspace_name` | Enter a name for your workspace. For more information, see [Designing your workspace structure](/docs/schematics?topic=schematics-workspaces-plan#structure-workspace). |
     | `terraform_version` | The Terraform version that you want to use to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and similarly `terraform_v0.13`, and `terraform_v0.14`. Make sure that your Terraform config files are compatible with the Terraform version that you specify. This is a required variable. If the Terraform version is not specified, By default, {{site.data.keyword.bpshort}} selects the version from your template.|
-    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} Actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
+    | `location` | Enter the location where you want to create your workspace. The location determines where your {{site.data.keyword.bpshort}} actions run and where your workspace data is stored. The location is independent from the region where you want to create your {{site.data.keyword.cloud_notm}} services. |
     | `description` | Enter a description for your workspace. |
     | `github_source_repo_url` | Enter the URL to the GitHub or GitLab repository where your Terraform configuration files are store |
     | `variable_name` | Optional: Enter the name for the input variable that you declared in your Terraform configuration files. |
@@ -352,7 +352,7 @@ With standardized Terraform templates or Terraform modules, you can ensure that 
 ### What do I need to be aware of when I have a repository that I managed with native Terraform?
 {: #plan-terraform-migration}
 
-Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can import your existing Terraform templates into {{site.data.keyword.bpshort}} Workspaces. Depending on how your Terraform templates and Git repositories are structured, you might need to make changes so that you can successfully use {{site.data.keyword.bplong_notm}}. 
+Because {{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service, you can import your existing Terraform templates into {{site.data.keyword.bpshort}} workspaces. Depending on how your Terraform templates and Git repositories are structured, you might need to make changes so that you can successfully use {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
 - **Provider block declaration**: Because {{site.data.keyword.bplong_notm}} is integrated with {{site.data.keyword.iamlong}}, your {{site.data.keyword.cloud_notm}} API key is automatically retrieved for all IAM-enabled resources and you don't have to provide this information in the `provider` block. However, the API key is not retrieved for classic infrastructure and {{site.data.keyword.ibmcf_notm}} resources. For more information, see [Configuring the `provider` block](/docs/schematics?topic=schematics-create-tf-config#configure-provider). 
@@ -374,7 +374,7 @@ Connect your source repository to a continuous delivery pipeline in {{site.data.
 3. Select the **Settings** tab. 
 4. In the **Summary** section, click **Enable continuous delivery**. 
 5. Configure your toolchain. 
-    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} Workspace.
+    1. Enter a name for your toolchain, and select the region and resource group where you want to deploy this toolchain. The region and resource group can be different from the region and resource group that you used for your {{site.data.keyword.bpshort}} workspace.
     2. Select the type of source repository where your Terraform configuration files are stored. For Example GitHub. 
     3. Review the information for your source repository. For example, if your Terraform files are stored in GitHub, review the GitHub server and the repository for which you want to create a continuous delivery toolchain. These fields are pre-populated based on your workspace configuration.
     4. Optional: Choose if you want to enable Git issues and code change tracking for your toolchain. 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-21"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate, adoption, considerations
 
@@ -21,7 +21,7 @@ Review the following considerations when adopting {{site.data.keyword.bplong_not
 ## Differences to native Terraform
 {: #terraform-vs-schematics}
 
-If you used native Terraform before and plan to migrate your Terraform templates to {{site.data.keyword.bplong_notm}}, make sure that you understand the differences between standalone Terraform usage and use via {{site.data.keyword.bpshort}} to modify your templates. 
+If you used native Terraform before and plan to migrate your Terraform templates to {{site.data.keyword.bplong_notm}}, make sure that you understand the differences between standalone Terraform usage and use through {{site.data.keyword.bpshort}} to modify your templates. 
 {: shortdesc}
 
 ### Do I need to provide an {{site.data.keyword.cloud_notm}} API key in the `provider` block?
@@ -63,7 +63,7 @@ The Terraform `local exec` and `remote exec` operations have a time limit of `30
 ## What is the use of refresh token header?
 {: #refresh-token}
 
-If the `destroyresource` flag is set to `true`, refresh token header configuration is required to delete all the {{site.data.keyword.cloud_notm}} resources, and the {{site.data.keyword.bpshort}} Workspace. Following are the uses of refresh token header:
+If the `destroyresource` flag is set to `true`, refresh token header configuration is required to delete all the {{site.data.keyword.cloud_notm}} resources, and the {{site.data.keyword.bpshort}} workspace. Following are the uses of refresh token header:
 - If the token is expired, you can use `refresh token` to get a new IAM access token, see [IAM access token](/docs/schematics?topic=schematics-general-faq#createworkspace-generate-tokens). 
 - The `refresh_token` parameter cannot be used to retrieve a new IAM access token. 
 - When the IAM access token is about to expire, use the [API key](/apidocs/iam-identity-token-api#create-api-key){: external} to create a new access token.
@@ -73,12 +73,7 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 
 Branch names containing `/` (backslash) are not supported
 
-
-
 ## Cost estimate
 {: #cost-restrictions}
 
 Cost estimation is available for templates. This estimated amount is subject to change as the architecture is customized within a project, and it does not include all resources, usage, licenses, fees, discounts, or taxes. In the future, aggregate costs across projects that can be grouped by various criteria will be available. For more information, see [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation).
-
-
-

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics locations, schematics regions, schematics zones, schematics endpoints, schematics service endpoints
 
@@ -18,14 +18,14 @@ subcollection: schematics
 
 Access to {{site.data.keyword.bpshort}} using IAM allowed IP addresses has been replaced with [context based restrictions](/docs/schematics?topic=schematics-access-control-cbr). {: note}
 
-Performing post-configuration of deployed resources using Terraform and Ansible requires IP network access to the resources private cloud network zones. Typically these private networks will be protected using a firewall or VPC access control policies. To allow the {{site.data.keyword.bpshort}} hosted instances of Terraform and Ansible to access these zones, firewall or VPC access policies must be configured to permit access to the {{site.data.keyword.bpshort}} originating IP addresses. 
+Performing post-configuration of deployed resources using workspace and action jobs requires IP network access to the resources private cloud network zones. Typically these private networks will be protected using a firewall or VPC access control policies. To allow the {{site.data.keyword.bpshort}} hosted instances of Terraform and Ansible to access these zones, firewall or VPC access policies must be configured to permit access to the {{site.data.keyword.bpshort}} originating IP addresses. 
 
-Typically post-configuration is performed via SSH as illustrated with [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions) performing configuration operations over SSH using Ansible. With Ansible a bastion host must be configured to enable secure SSH access. Refer to the [{{site.data.keyword.bpshort}} Actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview) documentation for details of the required VPC network configuration and bastion host setup. 
+Typically post-configuration is performed through SSH as illustrated with [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions) performing configuration operations over SSH using Ansible. With Ansible a bastion host must be configured to enable secure SSH access. Refer to the [{{site.data.keyword.bpshort}} actions](/docs/schematics?topic=schematics-sc-actions#sc-actions-overview) documentation for details of the required VPC network configuration and bastion host setup. 
 
 ## {{site.data.keyword.bpshort}} IP addresses 
 {: #ipaddresses}
 
-The following tables document the public IP addresses used by Schematics that must be allowed access to private network resources to perform post-configuration.  
+The following tables document the public IP addresses used by {{site.data.keyword.bpshort}} that must be allowed access to private network resources to perform post-configuration.  
 
 At run time {{site.data.keyword.bpshort}} dynamically selects a worker node and region to execute the job. The job may run on any of the defined IP addresses within a geography. For instance in the US using any of the us-south and us-east IP addresses, or for Europe using any of the `eu-gb` or `eu-de` addresses. 
 {: note}

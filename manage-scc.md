@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-12-13"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics,
 
@@ -42,7 +42,7 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 * Check whether {{site.data.keyword.bpshort}} is enabled with IBM Log Analysis
 * Check whether {{site.data.keyword.bpshort}} has role-based access control (RBAC) for users
 * Check whether {{site.data.keyword.bpshort}} is enabled with {{site.data.keyword.monitoringlong}}
-* Check whether {{site.data.keyword.bpshort}} Workspaces is configured with a specific Terraform version
+* Check whether {{site.data.keyword.bpshort}} workspaces is configured with a specific Terraform version
 
 
 

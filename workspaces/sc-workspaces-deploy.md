@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-09-22"
+lastupdated: "2023-12-13"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -31,7 +31,7 @@ subcollection: schematics
 - [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
 - Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
-Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} Workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
+Ensure the `location` and the `url` endpoint are pointing to the same region when you list the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
 
 - Run a {{site.data.keyword.bpshort}} apply job against your workspace. An apply job provisions, modifies, or removes the {{site.data.keyword.cloud_notm}} resources that you describe in the Terraform template that your workspace points. Depending on the type and number of resources that you want to provision or modify, this process might take a few minutes, or hours to complete. During this time, you cannot edit your workspace. After all updates are applied, the state of the files persists to determine what resources exist in your {{site.data.keyword.cloud_notm}} account.
 {: note}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics blueprints faq, blueprints faq, 
 
@@ -123,7 +123,7 @@ Sensitive input variables like API Keys or SSH Keys should not be saved in bluep
 
 - Through the CLI passed as environment variables
    
-   Dynamic inputs can be specified via the CLI using `--inputs` flag to pass string values. Sensitive values can be exported as environment variables and shell variable substitution is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command by using `--inputs sshkey=$user_ssh_key`
+   Dynamic inputs can be specified through the CLI using `--inputs` flag to pass string values. Sensitive values can be exported as environment variables and shell variable substitution is used to insert the variable. The example here shows the env-var `user_ssh_key` is exported with the value `ssh xxx`. Shell substitution is used to insert this value into the `blueprint create` command by using `--inputs sshkey=$user_ssh_key`
 
     ```sh
     export user_ssh_key="ssh xxx"
@@ -133,7 +133,7 @@ Sensitive input variables like API Keys or SSH Keys should not be saved in bluep
 
 - Through the CLI using an input file
 
-   Dynamic inputs can be passed via the CLI using `-input-file` flag to pass values stored in a local YAML file. Refer to the [create CLI documentation](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for more details.  
+   Dynamic inputs can be passed through the CLI using `-input-file` flag to pass values stored in a local YAML file. Refer to the [create CLI documentation](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-blueprint-create) for more details.  
 
 ## Why does the blueprint template, basic example, fail in the apply step?
 {: #faqs-bp-basic-example}
@@ -206,7 +206,7 @@ For {{site.data.keyword.bpshort}} Blueprints, the [{{site.data.keyword.bpshort}}
 
 The CLI uses geographic specific API endpoints which direct job requests to the first available region within a geography. `us.schematics.cloud.ibm.com` is called irrespective of the target `us-south` or `us-east` region and similarly, `eu.schematics.cloud.ibm.com` is called irrespective of the target `eu-gb` or `eu-de` region. {{site.data.keyword.bpshort}} dynamically determines which region to send the request based on region availability. Config targeted to `us-south` during creation, will be automatically run on `us-east` if `us-south` is not available. 
 
-This behavior is similar in the UI. For example, in the {{site.data.keyword.bpshort}} Workspace creation page, you select `North America` region from the list.
+This behavior is similar in the UI. For example, in the {{site.data.keyword.bpshort}} workspace creation page, you select `North America` region from the list.
 
 ## Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?
 {: #faqs-bp-schematics-instance}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-11-20"
+lastupdated: "2023-11-22"
 
 keywords: schematics blueprint, blueprint, beta release, blueprint beta release
 
@@ -17,8 +17,6 @@ subcollection: schematics
 
 The {{site.data.keyword.bpshort}} Blueprints level of code is considered beta code as and when the changes in function and capabilities between now, and the General Availability (GA) date.
 {: shortdesc}
-
-
 
 Join the beta program, post a question in the [{{site.data.keyword.bplong_notm}} users Slack](https://ibm-argonauts.slack.com/archives/CLKR4FE90){: external}, and engage with the {{site.data.keyword.bpshort}} team. If you do not have access to this Slack, [request an invitation to this Slack](https://cloud.ibm.com/schematics/slack){: external}.
 
