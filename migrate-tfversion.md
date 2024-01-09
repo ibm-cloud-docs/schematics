@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -30,7 +30,7 @@ To upgrade to the 1.x releases requires no specific {{site.data.keyword.bpshort}
 ## Upgrading the Terraform template version 1.x and above
 {: #terraform-version-upgrade1x}
 
-Since Terraform 1.0, {{site.data.keyword.bpshort}} workspaces can be updated to more recent 1.x releases, via a simple change to the workspace version. To update from 0.x releases refer to section [Upgrading the Terraform template version 0.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
+Since Terraform 1.0, {{site.data.keyword.bpshort}} workspaces can be updated to more recent 1.x releases, through a simple change to the workspace version. To update from 0.x releases refer to section [Upgrading the Terraform template version 0.x](/docs/schematics?topic=schematics-migrating-terraform-version#terraform-version-upgrade0x)
 
 
 {{site.data.keyword.bpshort}} supports `Terraform_v1.x` and plans to make releases available `45-60 days` after general availability. It is recommended that Terraform templates use a version range constraint, such as, `>`, `>=`, or `~>` for the `required_version` parameter in the `versions.tf` of Terraform template, that allows upgrade for minor and patch releases. This allows {{site.data.keyword.bpshort}} to automatically adopt the latest patch or minor release of Terraform version as set by the workspace version.   
@@ -45,7 +45,7 @@ required_version = "~> 1.1"
 ### Updating the workspace Terraform 1.x version
 {: #terraform-version-upgrade1x-process}
 
-The in use version of Terraform for a workspace can be updated via the {{site.data.keyword.bpshort}} workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}.
+The in use version of Terraform for a workspace can be updated through the {{site.data.keyword.bpshort}} workspace [Update API](https://cloud.ibm.com/apidocs/schematics/schematics#replace-workspace){: external}.
 
 
 The workspace terraform version parameter is of the form `terraform_v1.1` or `terraform_v1.2`

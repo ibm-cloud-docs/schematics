@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics agent proxy server, proxy server, agent proxy, command-line, api, ui
 
@@ -56,7 +56,7 @@ For private registries, Terraform must be configured with the access tokens for 
 
 Local repositories are physical, user managed local repositories. The repositories act as a Terraform private registry where you can host custom-developed providers and manually upload and save public providers to eliminate the need for public network access. Or limit the public providers made available to Terraform users. 
 
-Remote repositories can serve as a caching proxy for both private Terraform registries and the public Terraform registry. Implementing a remote repository still requires public internet access. Here public network access is through Artifactory and not Terraform. Typically many organizations have existing Artifactory installations, with network monitoring and network access rules in place to allow secure public access via Artifactory.    
+Remote repositories can serve as a caching proxy for both private Terraform registries and the public Terraform registry. Implementing a remote repository still requires public internet access. Here public network access is through Artifactory and not Terraform. Typically many organizations have existing Artifactory installations, with network monitoring and network access rules in place to allow secure public access through Artifactory.    
 
 A virtual Terraform repository, combining a local repo with a remote proxy repo, allows for hosting of custom providers locally along with secure access to any additional public Terraform providers. 
 

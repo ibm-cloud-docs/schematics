@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: job stop, schematics interrupt force stop, terminate, force stop
 
@@ -27,8 +27,8 @@ The table provides the list of stop job types:
 
 | Types | Description |
 | --- | --- |
-| `stop` | Sends an interrupt signal to the running Terraform command. This performs the same function as when running Terraform standalone, where an `interrupt` is sent using `cntl-C` or similar to Terraform. Interrupt signals can be sent multiple times to notify Terraform to stop. Terraform will attempt to gracefully stop the running command (plan, apply, delete) after any executing resource operations have been completed and clean up. {{site.data.keyword.bpshort}} waits for the command to finish and exit. After the command is stopped or finished, state and log files are collected and saved.|
-| `force-stop`| Sends a kill signal to the Terraform command running. Use this in the case where you want to kill the Terraform command after seeing that the stop command (interrupts) are not stopping the command. A `force-stop` can be sent as many times as wanted until the command exits and job stops. If it is able to respond to the kill signal, Terraform will stop the running command and resource operations immediately and clean up. After the command is stopped or finished, state file and log files are collected and saved. |
+| `stop` | Sends an interrupt signal to the running Terraform command. This performs the same function as when running Terraform standalone, where an `interrupt` is sent using `cntl-C` or similar to Terraform. Interrupt signals can be sent multiple times to notify Terraform to stop. Terraform will attempt to gracefully stop the running command (plan, apply, delete) after any executing resource operations have been completed and clean up. {{site.data.keyword.bpshort}} waits for the command to complete. After the command is stopped or finished, state and log files are collected and saved.|
+| `force-stop`| Sends a kill signal to the Terraform command running. Use this in the case where you want to kill the Terraform command after seeing that the stop command (interrupts) are not stopping the command. A `force-stop` can be sent as many times as wanted until the command completes and job stops. If it is able to respond to the kill signal, Terraform will stop the running command and resource operations immediately and clean up. After the command is stopped or finished, state file and log files are collected and saved. |
 | `terminate` | If the previous operations fail, terminate immediately stops the {{site.data.keyword.bpshort}} job.  The job is marked as `STOPPED` and the workspace unlocked. Any previously saved copies of the logs and `statefile` are preserved. When a job is terminated, the job is killed without collecting any files separately at the end. This option may result in data loss of log file and latest `statefile` updates and should be used carefully.|
 {: caption="Types of job stop" caption-side="bottom"}
 

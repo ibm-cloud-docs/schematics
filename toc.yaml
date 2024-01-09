@@ -167,7 +167,6 @@ toc:
                                                     - link:
                                                               label: IBM Cloud Schematics API
                                                               href: https://cloud.ibm.com/apidocs/schematics
-                                  - sc-agentbeta1-limitations.md
                                   - sc-tools.md
                                   - schematics-sdk.md
                                   - locations.md
@@ -225,5 +224,6 @@ toc:
                                                                       - troubleshooting/ts-agent-resource.md
                                                                       - troubleshooting/ts-agent-endpoint-gwy.md
                                                     - error-messages.md
+                                  - sc-agentbeta1-limitations.md
                                   - ts_index.md
                                   - sitemap.md

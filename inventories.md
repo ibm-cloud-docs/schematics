@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics inventory, ansible inventory, inventories, ibm cloud schematics inventories
 
@@ -29,9 +29,9 @@ You can specify your resource inventory by using a [static inventory file](#stat
 ### Defining static hosts
 {: #static-host-defs}
 
-To connect to a target host via SSH, Ansible requires either a DNS resolvable hostname or an IP address.  
+To connect to a target host through SSH, Ansible requires either a DNS resolvable hostname or an IP address.  
 
-Typical usage of {{site.data.keyword.bpshort}} actions to configure VSI's on IBM Cloud is via a bastion host. See [actions documentation](/docs/schematics?topic=schematics-sc-actions). Access to the private network interface of a VSI is via a bastion host. This means using the hosts private IP address to connect to the target host, as private host names are not advertised by DNS to {{site.data.keyword.bpshort}}. For private hosts, inventory must be configured with an IP address and the IP address of a bastion host.
+Typical usage of {{site.data.keyword.bpshort}} actions to configure VSI's on IBM Cloud is through a bastion host. See [actions documentation](/docs/schematics?topic=schematics-sc-actions). Access to the private network interface of a VSI is through a bastion host. This means using the hosts private IP address to connect to the target host, as private host names are not advertised by DNS to {{site.data.keyword.bpshort}}. For private hosts, inventory must be configured with an IP address and the IP address of a bastion host.
 
 VSI's with public IP addresses and publicly registered DNS host names can be referenced by fully qualified DNS host names.
 
@@ -54,7 +54,7 @@ The use of (short form) hostnames is not supported.
 
 Review the following sample `hosts.ini` file to see the structure of the static host inventory list. For more information about `hosts.ini` file structures, see [Ansible documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#how-to-build-your-inventory){: external}.
 
-This example references both publicly accessible hosts via host name and private hosts via IP address.  
+This example references both publicly accessible hosts through host name and private hosts through IP address.  
 
     ```text
     mail.example.com
@@ -82,8 +82,8 @@ Review the following limitations of static inventory files in {{site.data.keywor
 - Variables are not supported in `hosts.ini` files.
 - Specifying host groups by using key-value pairs in `hosts.ini` files is not supported.
 - You must manually update the `hosts.ini` file if hostname or IP address of target hosts change.
-- Where hosts are secured by a bastion host and only accessible via private IP address, the IP address of the host must be specified.
-- Where hosts are accessible via a publicly accessible IP address and have a registered DNS name, the host can be referenced by its fully qualified host name.   
+- Where hosts are secured by a bastion host and only accessible through private IP address, the IP address of the host must be specified.
+- Where hosts are accessible through a publicly accessible IP address and have a registered DNS name, the host can be referenced by its fully qualified host name.   
 - All target hosts must be configured with the same public SSH key. When you use the static inventory file in your {{site.data.keyword.bpshort}} action, you can specify one SSH key to authenticate with all target hosts that are included in your resource inventory. The SSH key should contain `\n` at the end of the key details in case of command-line or API calls. For more information about SSH keys, see [Adding an SSH key](/docs/ssh-keys?topic=ssh-keys-adding-an-ssh-key).
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics
 subcollection: schematics
@@ -1918,21 +1918,6 @@ subcollection: schematics
 [IBM Cloud Schematics API](https://cloud.ibm.com/apidocs/schematics){: external}
 
 
-## {{site.data.keyword.bpshort}} Agent limitation
-{: #sitemap__agent_limitation}
-
-
-[{{site.data.keyword.bpshort}} Agent limitation](/docs/schematics?topic=schematics-agent-limitation#agent-limitation)
-
-* [Limitations of an Agent](/docs/schematics?topic=schematics-agent-limitation#sc-agent-beta1-limitation)
-
-* [Joining public slack channel](/docs/schematics?topic=schematics-agent-limitation#sc-agentb1-join-public-slack)
-
-    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-limitation#sc-agentb1-join-slack)
-
-* [Agent release limitations](/docs/schematics?topic=schematics-agent-limitation#sc-agentb1-limitation)
-
-
 ## {{site.data.keyword.bpshort}} worker runtime
 {: #sitemap__worker_runtime}
 
@@ -2430,6 +2415,17 @@ subcollection: schematics
     * [State error](/docs/schematics?topic=schematics-handling-error#state-error)
 
     * [Job error](/docs/schematics?topic=schematics-handling-error#job-error)
+
+
+## {{site.data.keyword.bpshort}} Agent limitation
+{: #sitemap__agent_limitation}
+
+
+[{{site.data.keyword.bpshort}} Agent limitation](/docs/schematics?topic=schematics-agent-limitation#agent-limitation)
+
+* [Joining public slack channel](/docs/schematics?topic=schematics-agent-limitation#sc-agentb1-join-public-slack)
+
+    * [Steps to join public slack](/docs/schematics?topic=schematics-agent-limitation#sc-agentb1-join-slack)
 
 
 ## Getting help and support

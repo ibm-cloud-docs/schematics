@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics actions faq, action faq,
 
@@ -32,7 +32,7 @@ Classic VSI environments are not supported with actions.  Only {{site.data.keywo
 {: faq}
 {: support}
 
-It is your responsibility as a user to ensure that suitable network policies and a bastion host configuration is in place for the cloud environment to allow {{site.data.keyword.bpshort}} to connect via SSH to your environment. See [{{site.data.keyword.bpshort}} firewall, allowed IPs](/docs/schematics?topic=schematics-allowed-ipaddresses) for details of the IP addresses {{site.data.keyword.bpshort}} uses and must be allowed access. When using a bastion host, SSH forwarding is used to connect to the target VSIs. To validate access the command `ssh -J bastion-ip vsi-ip`. 
+It is your responsibility as a user to ensure that suitable network policies and a bastion host configuration is in place for the cloud environment to allow {{site.data.keyword.bpshort}} to connect through SSH to your environment. See [{{site.data.keyword.bpshort}} firewall, allowed IPs](/docs/schematics?topic=schematics-allowed-ipaddresses) for details of the IP addresses {{site.data.keyword.bpshort}} uses and must be allowed access. When using a bastion host, SSH forwarding is used to connect to the target VSIs. To validate access the command `ssh -J bastion-ip vsi-ip`. 
 
 Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts are available in the [Cloud-Schematics repo](https://github.com/orgs/Cloud-Schematics/repositories?q=bastion&type=all&language=&sort=){: external}. Follow the tutorial [Discover best-practice VPC configuration for application deployment](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/) for guidance on creating a suitable network configuration. 
 
@@ -44,8 +44,8 @@ Example as-is {{site.data.keyword.cloud}} VPC configurations with bastion hosts 
 Defining target hosts using short form host names is not supported for VSIs on a private network without public IP addresses. The connection will fail with the message `Could not resolve hostname`. Review the [actions docs](/docs/schematics?topic=schematics-inventories-setup#static-host-defs) for supported configurations. 
 
  ```text
-ansible-playbook run | fatal: [worker-0]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname toraz3-worker-0001: Name or service not known", "unreachable": true}
-2023/08/24 12:15:47 ansible-playbook run | fatal: [grid-man-0]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname toraz3-grid-man-01: Name or service not known", "unreachable": true}
+ansible-playbook run | fatal: [worker-0]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host through ssh: ssh: Could not resolve hostname toraz3-worker-0001: Name or service not known", "unreachable": true}
+2023/08/24 12:15:47 ansible-playbook run | fatal: [grid-man-0]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host through ssh: ssh: Could not resolve hostname toraz3-grid-man-01: Name or service not known", "unreachable": true}
 ```
 
 ## Why does my action job display a DEPRECATION WARNING message?

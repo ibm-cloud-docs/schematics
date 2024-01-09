@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -52,9 +52,9 @@ With agents you are in control of the network security policies of the Kubernete
 ## Benefits of using agents
 {: #agentb1-usage}
 
-{{site.data.keyword.bplong}} is a multi-tenant service that supports concurrent usage by many users. The multi-tenant model imposes some restrictions to maintain fair usage across all users and maintain network isolation between users.  
+{{site.data.keyword.bpshort}} is a multi-tenant service that supports concurrent usage by many users. The multi-tenant model imposes some restrictions to maintain fair usage across all users and maintain network isolation between users.  
 
-The following are some of the benefits of using agents with {{site.data.keyword.bplong}}:
+The following are some of the benefits of using agents with {{site.data.keyword.bpshort}}:
 
 - **Agents extend the benefits of using the [{{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-learn-about-schematics) along with [{{site.data.keyword.satellitelong}}](/docs/satellite?topic=satellite-getting-started):** to provision and configure hybrid cloud resources across multiple cloud providers.
 - **Agents give users their own execution queues.** With the multi-tenant shared {{site.data.keyword.bpshort}} service, jobs are placed in a shared queue for all users. Jobs that run on the agents waits in the shared queue and starts sooner. In other words, other tenants workloads do not affect your job performance and response time.

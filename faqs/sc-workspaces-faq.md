@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -110,7 +110,7 @@ The test IDs are considered as a valid `IBM ID` to set the global catalog or res
 {: faq}
 {: support}
 
-By default when creating a workspace via the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all subfolders. De-select the 'Use full repository' flag to limit the folders cloned and improve download performace. 
+By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all subfolders. De-select the 'Use full repository' flag to limit the folders cloned and improve download performace. 
 
 {{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `subfolders` in Git repositories. If the compact flag is set to **true** it will download and save `subfolders` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
 

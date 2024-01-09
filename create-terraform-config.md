@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -164,7 +164,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
 You can use workspaces in a {{site.data.keyword.cloud_notm}} source account to run Terraform jobs to create resources in a target account. To provision resources in a target account, the identity and access permissions of the target account must be provided. This may be by using the identity of a user with permissions for the target account. Or a service ID with authentication and appropriate cross account authorization for the target account using an API key. 
 
-When running jobs via the UI without passing API keys, the identity of the logged in user is assumed for executing operations. 
+When running jobs through the UI without passing API keys, the identity of the logged in user is assumed for executing operations. 
 {: important}
 
 ## Using `variable` blocks to customize resources

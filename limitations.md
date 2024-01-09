@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics limitations, schematics variables.tf, schematics local variables file, schematics local variable, schematics output.tf, schematics terraform.tfstate, adoption, considerations
 
@@ -21,7 +21,7 @@ Review the following considerations when adopting {{site.data.keyword.bplong_not
 ## Differences to native Terraform
 {: #terraform-vs-schematics}
 
-If you used native Terraform before and plan to migrate your Terraform templates to {{site.data.keyword.bplong_notm}}, make sure that you understand the differences between standalone Terraform usage and use via {{site.data.keyword.bpshort}} to modify your templates. 
+If you used native Terraform before and plan to migrate your Terraform templates to {{site.data.keyword.bplong_notm}}, make sure that you understand the differences between standalone Terraform usage and use through {{site.data.keyword.bpshort}} to modify your templates. 
 {: shortdesc}
 
 ### Do I need to provide an {{site.data.keyword.cloud_notm}} API key in the `provider` block?
@@ -73,12 +73,7 @@ If the `destroyresource` flag is set to `true`, refresh token header configurati
 
 Branch names containing `/` (backslash) are not supported
 
-
-
 ## Cost estimate
 {: #cost-restrictions}
 
 Cost estimation is available for templates. This estimated amount is subject to change as the architecture is customized within a project, and it does not include all resources, usage, licenses, fees, discounts, or taxes. In the future, aggregate costs across projects that can be grouped by various criteria will be available. For more information, see [Estimating infrastructure costs](/docs/schematics?topic=schematics-cost-estimation).
-
-
-

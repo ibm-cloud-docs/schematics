@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -26,7 +26,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.12.8 | 22 Mar 2023 | [{{site.data.keyword.bpshort}} agent beta-1](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd) and [policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#policy-cmd) CLI commands are available in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.7 | 07 Feb 2023 | Bug fix to disable `API_AGENT_ATTACHMENT` in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.6 | 30 Jan 2023 | Enhanced complex input support through blueprint `yaml` file. Fixes related to blueprint status output in the blueprint list table, index out of range for workspace action output, refresh token issue for long running `blueprint jobs`, and spinner panic fixes in `get blueprint`. |
-| 1.12.5 | 18 Dec 2022 | Blueprint subcommand usage, revert to original usage of `blueprint create`, `blueprint apply` and so on. Support for specifying complex inputs via a local YAML file using `-input-file` option.  
+| 1.12.5 | 18 Dec 2022 | Blueprint subcommand usage, revert to original usage of `blueprint create`, `blueprint apply` and so on. Support for specifying complex inputs through a local YAML file using `-input-file` option.  
 | 1.12.3 | 18 Nov 2022 |  Fixed blueprint subcommand usage, support `source type` in the blueprint list table. |
 | 1.12.3 | 3 Nov 2022 |  Enhanced blueprint commands, CLI with the latest SDK update, and the workspace action command update. |
 | 1.12.2 | 11 Aug 2022 | Included `--output` flag and bug fixes for all blueprint commands in  and released  {{site.data.keyword.bpshort}} v1.12.2 plug-in.|

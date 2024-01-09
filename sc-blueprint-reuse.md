@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-05-26"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics blueprints, reuse, reusable
 
@@ -53,7 +53,7 @@ The prior figure illustrates the reuse of a template across the stages of a deli
 ## Customization best practice
 {: #blueprint-customization-bp} 
 
-Blueprints best practice is to for templates to be reusable across the instances of an application environment, from dev to stage and production. This is an outcome of [IaC modular architecture best practice](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity), where the reliability of reusable components increases through testing and hardening via reuse.  External configuration of templates customizes a deployment for a blueprint environment. customization is performed by separately define, and updated version blueprint input configurations, with hardcoding of specific configurations avoided within the template itself. The template itself being maintained and versioned separately to the environment specific customization.  
+Blueprints best practice is to for templates to be reusable across the instances of an application environment, from dev to stage and production. This is an outcome of [IaC modular architecture best practice](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity), where the reliability of reusable components increases through testing and hardening through reuse.  External configuration of templates customizes a deployment for a blueprint environment. customization is performed by separately define, and updated version blueprint input configurations, with hardcoding of specific configurations avoided within the template itself. The template itself being maintained and versioned separately to the environment specific customization.  
 
 
 ### Blueprint customization
@@ -94,7 +94,7 @@ The selection of inputs is determined in the following precedence order, lower t
    - Usage: Environment scaling, region, network and security configuration. 
 
 - Dynamic (override) inputs
-   - User provided via CLI or UI, un-versioned
+   - User provided through CLI or UI, un-versioned
    - Value **optionally** specified
    - Usage: SSH and API keys
 

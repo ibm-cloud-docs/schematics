@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -273,7 +273,7 @@ In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard fo
 {: #create-agent-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} via the API. For more information, see [Create a agent](/apidocs/schematics/schematics_internal_v1#create-agent-data) using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Create a agent](/apidocs/schematics/schematics_internal_v1#create-agent-data) using API.
 
 Example
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-09"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -403,7 +403,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
     - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
     - [Understanding blueprint templates](/docs/schematics?topic=schematics-blueprint-templates) to configure the right schemas and use blueprint commands to deploy blueprints.
     - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprints.
-    - Blueprint operations are supported via [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
+    - Blueprint operations are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
     - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
     - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
     - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the agents beta level code and provide feedback.

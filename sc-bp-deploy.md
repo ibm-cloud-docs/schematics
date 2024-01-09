@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-01-09"
 
 keywords: schematics blueprints, deploy blueprint, managed environments
 
@@ -29,13 +29,13 @@ The deployment steps are illustrated in the diagram.
 ![blueprint deployment](/images/new/sc-bp-deploy.svg){: caption="blueprint deployment" caption-side="bottom"}
 
 1. Prepare the configuration for the blueprint. The configuration specifies the source of the blueprint template in Git, the input files to customize the environment instance and version information.  
-    - Create and save the blueprint configuration in {{site.data.keyword.bpshort}}. Refer to the section [Creating a blueprint config](/docs/schematics?topic=schematics-create-blueprint-config) for guidance on creating the config via the CLI or UI.  
+    - Create and save the blueprint configuration in {{site.data.keyword.bpshort}}. Refer to the section [Creating a blueprint config](/docs/schematics?topic=schematics-create-blueprint-config) for guidance on creating the config through the CLI or UI.  
     - This step retrieves the YAML template and input file from Git. 
 2. After the config is successful created and validated, the blueprint will be in an `Incomplete` state.  
 3. {{site.data.keyword.bpshort}} automatically initializes its dependencies. The set of blueprint automation modules defined by the template is initialized to manage the cloud resources of the environment. Each module shown in the UI or CLI represents an automation module in the blueprint template.  
    - The saved blueprint configuration can be reviewed before environment and resource deployment. 
    - This step is performed internally. In a future release the resulting plan results will be presented for review.    
-4. Deploy the blueprint with the `blueprint apply` command or UI apply operation. Refer to the section [Apply changed to a blueprint environment](/docs/schematics?topic=schematics-apply-blueprint) for guidance applying the config via the CLI or UI.  . 
+4. Deploy the blueprint with the `blueprint apply` command or UI apply operation. Refer to the section [Apply changed to a blueprint environment](/docs/schematics?topic=schematics-apply-blueprint) for guidance applying the config through the CLI or UI.  . 
     - Based on your blueprint configuration, {{site.data.keyword.bpshort}} creates an internal deployment plan and runs the IaC module code in dependency order to create the environment and resources. In a future release the deployment plan will be presented for review in a separate step before it can be applied. 
 5. For each module, {{site.data.keyword.bpshort}} runs a Terraform Apply to create cloud resources. 
 6. After all the modules are applied, {{site.data.keyword.bpshort}} returns the blueprint outputs. 

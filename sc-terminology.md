@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2023
-lastupdated: "2023-12-13"
+  years: 2016, 2024
+lastupdated: "2024-01-09"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -111,7 +111,7 @@ Each module in a template is deployed as an independent environment, managed by 
 A blueprint template, optionally declares a set of input variables that can be used to customize the blueprint template, while deploying or managing a blueprint environment.  The template metadata for the input variables include the following: variable name, variable type, default value, variable description, sensitive, read only, hidden. 
 
 Blueprint inputs can be provided as:
-- User-defined input, provided via the {{site.data.keyword.bpshort}} API, CLI or UI at config create time. They can be used to pass input values that would be a security exposure if written to a Git repository.
+- User-defined input, provided through the {{site.data.keyword.bpshort}} API, CLI or UI at config create time. They can be used to pass input values that would be a security exposure if written to a Git repository.
 - Version-controlled [blueprint input file](/docs/schematics?topic=schematics-sch-terms#bpi2) (from a Git repository)
 {: shortdesc}
 
