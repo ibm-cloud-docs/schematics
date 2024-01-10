@@ -836,7 +836,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id`| Required | The ID of the agent. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent plan flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} agent validate flags" caption-side="top"}
 
 Example
 
@@ -849,7 +849,7 @@ ibmcloud schematics agent validate --id AGENT_ID
 {: #policy-cmd}
 
 {{site.data.keyword.bpshort}} (assignment) policies tell {{site.data.keyword.bpshort}} which agent it should use to execute workspace and action jobs in a specific network zone. Each agent will have at least one policy associated with it to identify the jobs to run in the agents' location. See [assignment policies](/docs/schematics?topic=schematics-policy-manage&interface=cli).
-{; shortdesc}
+{: shortdesc}
 
 ### `ibmcloud schematics policy create`
 {: #schematics-policy-create}
@@ -869,7 +869,7 @@ Command options
 | Flag | Required / Optional |Description |
 | ----- | -------- | ------ |
 | `--name` or `-n` | Required | The unique name of the policy. |
-| `--kind` or `-K` | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
+| `--kind` or `-K` | Required | Policy kind for managing and deriving policy decision. Supported is `agent_assignment_policy`. |
 | `--location` or `-l` | Optional | Geographic location of {{site.data.keyword.bpshort}} service where the agent is defined. For example, `us-south`, `us-east`, `eu-de`, `eu-gb`. Jobs are picked up from this location for processing. |
 | `--resource-group` or `-r` | Required | Resource group name or ID for the policy. |
 | `--target-file` or `tf` | Optional | Path to the JSON file containing the definition of the policy. |
