@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-10"
 
 keywords: schematics
 subcollection: schematics
@@ -1780,9 +1780,9 @@ subcollection: schematics
 
 * [Agents commands](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd)
 
-    * [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
-
     * [`ibmcloud schematics agent create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-create)
+
+    * [`ibmcloud schematics agent deploy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply)
 
     * [`ibmcloud schematics agent delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-delete)
 
@@ -1792,21 +1792,21 @@ subcollection: schematics
 
     * [`ibmcloud schematics agent list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list)
 
-    * [`ibmcloud schematics agent plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan)
-
     * [`ibmcloud schematics agent update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update)
+
+    * [`ibmcloud schematics agent validate`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan)
 
 * [Agents policy commands](/docs/schematics?topic=schematics-schematics-cli-reference#policy-cmd)
 
     * [`ibmcloud schematics policy create`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-create)
+
+    * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
 
     * [`ibmcloud schematics policy get`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-get)
 
     * [`ibmcloud schematics policy list`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-list)
 
     * [`ibmcloud schematics policy update`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-update)
-
-    * [`ibmcloud schematics policy delete`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-policy-delete)
 
 * [Configure BYOK or KYOK commands](/docs/schematics?topic=schematics-schematics-cli-reference#kms-commands)
 
