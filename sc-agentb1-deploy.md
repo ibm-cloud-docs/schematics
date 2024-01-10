@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-10"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -16,29 +16,27 @@ subcollection: schematics
 # Deploying agents
 {: #deploy-agent-overview}
 
-Agents for {{site.data.keyword.bplong}} extend {{site.data.keyword.bpshort}} ability to work directly in your cloud infrastructure on private network or in any isolated network zones.
+Create an agent registration in the currently selected {{site.data.keyword.bplong}} region to work directly in your cloud infrastructure on private network or in any isolated network zones.
 {: shortdesc}
 
-Follow the steps to deploy and configure a {{site.data.keyword.bpshort}} agent.
+Follow the steps to create and deploy an agent.
 
 1. [Create an agent definition](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#apply-agent-cli) to manage the agent deployment.
-    This step initializes {{site.data.keyword.bpshort}} with the agent configuration that is used to deploy your agent to its target location. 
-2. [Deploy the agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) by using the [`ibmcloud schematics agent plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [`ibmcloud schematics agent apply`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) CLI commands or the corresponding APIs.
+    This step initializes {{site.data.keyword.bpshort}} with the agent configuration that is used to deploy your agent to its target location.
+2. [Deploy the agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli#create-agent-cli) by using the [`ibmcloud schematics agent validate`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan) and [`ibmcloud schematics agent deploy`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply) CLI commands or the corresponding APIs.
 
 ## Before you begin
 {: #deploy-prereq}
 
-Review and complete the steps that are described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview). After creation of the cluster, {{site.data.keyword.cos_full_notm}} instance, and bucket. Gather the following information as an input to deploy your agent to its target location. 
+Review and complete the steps that are described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview). After creation of the cluster, {{site.data.keyword.cos_full_notm}} instance, and bucket. Gather the following information as an input to deploy your agent to its target location.
 {: shortdesc}
 
-- To deploy a {{site.data.keyword.bpshort}} agent, the {{site.data.keyword.cloud_notm}} CLI [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version must be `1.12.12` or higher.
-- A short description of the network zones and infrastructure accessible to the agent.
 - The cluster, {{site.data.keyword.cos_full_notm}} instance, and {{site.data.keyword.cos_full_notm}} bucket are created in the same resource group.
 - Record the `cluster ID`, `cluster resource group`, and `region` of the {{site.data.keyword.containershort}} cluster the agent deploys.
 - The `{{site.data.keyword.cos_full}} instance name`, `{{site.data.keyword.cos_full_notm}} bucket name` of the {{site.data.keyword.objectstorageshort}} bucket is used for agent temporary data storage. The resource group and region of the {{site.data.keyword.cos_full_notm}} instance and bucket must be the same as the cluster.
 - If you are by using a private Git instance, you need to establish the connection with an agent through certificate. For more information, see [steps to associate an agent with private Git instance](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
    
-   Make sure that the `Cluster`, and the `{{site.data.keyword.cos_full_notm}} instance` are in the same resource group.
+   You need to see that the `Cluster`, and the `{{site.data.keyword.cos_full_notm}} instance` are in the same resource group.
    {: important}
  
 ## Creating an agent definition
@@ -54,7 +52,7 @@ Review and complete the steps that are described in [preparing for agent deploym
     - In **Assign to cluster** section:
         - Select the `{{site.data.keyword.containerlong_notm}}` or the `{{site.data.keyword.openshiftlong}}` service.
         - Select your cluster name.
-        - In the **Define COS Instance** 
+        - In the **Define COS Instance**
             - Enter the **COS instance name**
             - Enter the **COS bucket name**
             - Enter the **COS bucket region**
@@ -74,10 +72,9 @@ Select the {{site.data.keyword.cloud_notm}} region where you wish to define and 
 Example `agent create` syntax. The text between `< >` must add with your values:
 
 ```sh
-ibmcloud schematics agent create --name <agent-testing-prod-cli-dec-27-5> --location <eu-de> --agent-location <Frankfurt MZR> --version <1.0.0> --infra-type <ibm_kubernetes> --cluster-id <cb1c2dus01uf9mc0hkbg> --cluster-resource-group  <job-runner> --cos-instance-name <COSForAgentLogging> --cos-bucket <agentlogs> --cos-location <eu-de> --resource-group <Default>
+ibmcloud schematics agent create --name <agent-ga-prod-cli-jan-10> --location <us-south> --agent-location <us-south> --version <1.0.0> --infra-type <ibm_kubernetes> --cluster-id <cg3fgvad0dak571xxx> --cluster-resource-group <Default> --cos-instance-name <agent-cos-instance> --cos-bucket <agent-cos-bucket> --cos-location <us-east> --resource-group <Default>
 ```
 {: pre}
-
 
 Output
 
@@ -85,14 +82,16 @@ Output
 Creating agent...
 OK
                     
-ID               agent-testing-prod-cli-dec-27-5.deA.dc97   
-Name             agent-testing-prod-cli-dec-27-5   
-Status           ACTIVE   
-Description      Create Agent from CLI  
-Version          1.0.0   
-Location         eu-de   
-Agent Location   Frankfurt MZR  
-Resource Group   aac37f57b20142dba1a435c70aeb12df 
+ID               agent-ga-prod-cli-jan-10.soA.cd1c
+Name             agent-ga-prod-cli-jan-10
+Status           Defined
+Version          1.0.0
+Location         us-south
+Agent Location   us-south
+Resource Group   aac37f57b20142dba1a435c70aeb12df
+Metadata         [Metadata]
+                 - [git]
+                 - [github.com] 
 ```
 {: screen}
 
@@ -101,7 +100,7 @@ Record the `Agent ID` for use in subsequent commands. To display the agent detai
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-dec-27-5.deA.dc97 
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
@@ -111,13 +110,16 @@ Output
 Retrieving agent...
 OK
                     
-ID               agent-testing-prod-cli-dec-27-5.deA.dc97   
-Name             agent-testing-prod-cli-dec-27-5   
+ID               agent-ga-prod-cli-jan-10.soA.cd1c  
+Name             agent-ga-prod-cli-jan-10   
 Status           ACTIVE   
-Version          1.0.0   
-Location         eu-de   
-Agent Location   Frankfurt MZR  
-Resource Group   Default 
+Version          1.0.0
+Location         us-south
+Agent Location   us-south
+Resource Group   Default
+Metadata         [Metadata]
+                 - [git]
+                 - [github.com]
 ```
 {: screen}
 
@@ -125,27 +127,34 @@ Resource Group   Default
 {: #verify-agent-cli}
 {: cli}
 
-You can verify the agent definition and cluster availability by using the agent plan command. The plan performs a prerequisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent plan command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
+You can verify the agent definition and cluster availability by using the agent validate command. The validate performs a prerequisite check of the target agent infrastructure. The command takes the `Agent ID` as input returned by the `agent create` command. The output of the agent validate command displays the list of relevant Kubernetes and agent property names, the expected value, actual value, and the result as `PASS` or `FAIL`.
 
 Example
 
 ```sh
-ibmcloud schematics agent plan --id agent-testing-prod-cli-dec-27-5.deA.dc97  
+ibmcloud schematics agent validate --id agent-ga-prod-cli-jan-10.soA.cd1c  
 ```
 {: pre}
 
 Output
 
 ```text
-Initiating agent plan...
+Initiating agent validate...
 Job ID	.ACTIVITY.600cadf9
+
+Polling status...
+Status	job_pending
+Status	job_in_progress
+Status	job_in_progress
+Status	job_in_progress
+Status	job_finished
 ```
 {: screen}
 
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-dec-27-5.deA.dc97   
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c   
 ```
 {: pre}
 
@@ -155,16 +164,17 @@ Output
 Retrieving agent...
 OK
                     
-ID               agent-testing-prod-cli-dec-27-5.deA.dc97    
-Name             agent-testing-prod-cli-dec-27-5   
+ID               agent-ga-prod-cli-jan-10.soA.cd1c    
+Name             agent-ga-prod-cli-jan-10   
 Status           ACTIVE   
 Version             
-Location         eu-de   
-Agent Location   Frankfurt MZR  
+Location         us-south   
+Agent Location   us-south  
 Resource Group   Default   
-                 
-Recent Job   Job ID               Status                             Last modified   
-PRS          .ACTIVITY.600cadf9   Triggered pre-requisite scanning   0001-01-01T00:00:00.000Z 
+
+Recent Job   Job ID                             Status                  Last modified
+DEPLOY       -                                  Deploy in progress      2024-01-10T09:54:32.607Z
+VALIDATE     8b168c1e0e4b35708e95c2af9a99d9d4   Successful validation   2024-01-10T09:53:48.435Z
 ```
 {: screen}
 
@@ -172,20 +182,20 @@ PRS          .ACTIVITY.600cadf9   Triggered pre-requisite scanning   0001-01-01T
 {: #apply-agent-cli}
 {: cli}
 
-You use the agent definition to deploy the agent with the `agent apply` command. The `agent apply` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the force deploy option.
+You use the agent definition to deploy the agent with the `agent deploy` command. The `agent deploy` command takes the `Agent ID` as input. You can upgrade an existing deployment by using the force deploy option.
 
 The agent deployment takes several minutes to complete. 
 {: shortdesc}
 
 ```sh
-ibmcloud schematics agent apply --id agent-testing-prod-cli-dec-27-5.deA.dc97  
+ibmcloud schematics agent deploy --id agent-ga-prod-cli-jan-10.soA.cd1c  
 ```
 {: pre}
 
 Output
 
 ```text
-Initiating agent apply...
+Initiating agent deploy...
 Job ID	.ACTIVITY.465e9716
 ```
 {: screen}
@@ -193,7 +203,7 @@ Job ID	.ACTIVITY.465e9716
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-dec-27-5.deA.dc97 
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c 
 ```
 {: pre}
 
@@ -203,16 +213,17 @@ Output
 Retrieving agent...
 OK
                     
-ID               agent-testing-prod-cli-dec-27-5.deA.dc97   
-Name             agent-testing-prod-cli-dec-27-5   
+ID               agent-ga-prod-cli-jan-10.soA.cd1c   
+Name             agent-ga-prod-cli-jan-10  
 Status           ACTIVE   
 Version          1.0.0   
-Location         eu-de   
-Agent Location   Frankfurt MZR  
+Location         us-south  
+Agent Location   us-south  
 Resource Group   Default   
                  
 Recent Job   Job ID               Status                 Last modified   
-DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2023-03-27T12:25:01.239Z 
+DEPLOY       .ACTIVITY.465e9716   Triggered deployment   2024-01-10T10:20:48.435Z
+VALIDATE     8b168c1e0e4b35708e   Successful validation   2024-01-10T09:53:48.435Z
 ```
 {: screen}
 
@@ -225,7 +236,7 @@ You can verify the health of the recently deployed agent by using the `agent hea
 Example
 
 ```sh
-ibmcloud schematics agent health --id agent-testing-prod-cli-dec-27-5.deA.dc97  
+ibmcloud schematics agent health --id agent-ga-prod-cli-jan-10.soA.cd1c  
 ```
 {: pre}
 
@@ -240,7 +251,7 @@ Job ID	.ACTIVITY.f6f77588
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-dec-27-5.deA.dc97  
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c  
 ```
 {: pre}
 
@@ -250,12 +261,12 @@ Output
 Retrieving agent...
 OK
                     
-ID               agent-testing-prod-cli-dec-27-5.deA.dc97   
-Name             agent-testing-prod-cli-dec-27-5   
+ID               agent-ga-prod-cli-jan-10.soA.cd1c   
+Name             agent-ga-prod-cli-jan-10   
 Status           ACTIVE   
 Version             
-Location         eu-de   
-Agent Location   Frankfurt MZR  
+Location         us-south  
+Agent Location   us-south  
 Resource Group   Default   
                  
 Recent Job   Job ID                             Status                   Last modified   
@@ -340,7 +351,7 @@ Output
 ```
 {: screen}
 
-Now, run the `agent deploy` API with the `agent ID` to create the {{site.data.keyword.bpshort}} workspace that deploys the agent. The `agent deploy` operation starts both the `agent plan`, and `agent apply` operations to setup the agent.
+Now, run the `agent deploy` API with the `agent ID` to create the {{site.data.keyword.bpshort}} workspace that deploys the agent. The `agent deploy` operation starts both the `agent validate`, and `agent deploy` operations to setup the agent.
 
 Syntax
 

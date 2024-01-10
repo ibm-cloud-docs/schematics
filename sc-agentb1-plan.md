@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-10"
 
 keywords: schematics agent planning, planning agent, agent planning, command-line, api, ui
 
@@ -24,17 +24,18 @@ Agents for {{site.data.keyword.bplong}} extend {{site.data.keyword.bpshort}}'s a
 Review and complete the listed tasks to prepare your {{site.data.keyword.cloud}} environment to deploy a new agent.
 
 - **Account and networks:** An agent provides {{site.data.keyword.bpshort}} the ability to run workspace and action jobs within a target account and the accounts private network. Network policies must be configured to allow the cluster that the agent is deployed on to communicate back to Schematics, also to the {{site.data.keyword.cloud_notm}} APIs, services and, for instance,  to a user private Git or Vault instances. For more information, see the section on [Planning agent network access and configuration](/docs/schematics?topic=schematics-plan-agent-overview#agentb1-network-config).
-   - Record information about the allowed network zones and access.
+   - Record information about the allowed network zones and infrastructure accessible to the agent.
 - **Kubernetes cluster:** A {{site.data.keyword.bpshort}} agent can be deployed on existing private or public [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-clusters) clusters. You can use an existing cluster or provision a new cluster with the following minimum configuration.
    - Minimum configuration: Three worker nodes with `b4x16` flavor. This configuration can be used to run four workspace or action jobs in parallel.
    - Record information about the cluster such as `cluster ID`, `cluster resource group`, and `region` for the later use.
-- **{{site.data.keyword.cos}}:** The {{site.data.keyword.bpshort}} agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 
+- **{{site.data.keyword.cos_full_notm}}:** The {{site.data.keyword.bpshort}} agent uses a {{site.data.keyword.objectstorageshort}} bucket to store temporary data. The {{site.data.keyword.cos_full_notm}} instance must be in the same resource group as the cluster. Also the new bucket must be in the same region as the cluster. 
     - To deploy an agent, you must have the necessary privileges to create the `HMAC credentials` for the {{site.data.keyword.objectstorageshort}} bucket and store the credential as a Kubernetes secret.
     - The {{site.data.keyword.cos_full_notm}} instance and bucket must be created for the successful deploy. 
     - Record information about the {{site.data.keyword.cos_full_notm}} resources such as `COS instance name`, `COS bucket name`, and `bucket region` for the later use.
 - **IAM access permission:** At a minimum you must have access permissions for the Kubernetes service, Resource Group, {{site.data.keyword.objectstorageshort}}, and the {{site.data.keyword.bpshort}} service to [deploy an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
     - When deploying an agent in another account, or when using a `ServiceID` or `APIKey`, you must see that the account administrator gives permission for all the services enlisted in [permission to deploy an agent](/docs/schematics?topic=schematics-access#agent-permissions).
 - **{{site.data.keyword.cloud_notm}} CLI:** Use the recent version of {{site.data.keyword.cloud_notm}} CLI and the [{{site.data.keyword.bpshort}} CLI v1.12.12](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) or higher plug-in to install an agent. For more information about plug-in installation, see [installing {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
+- **Terraform version support:** Agent supports the workspace using Terraform `v1.14` or higher version. If you use an existing workspace using Terraform lower than `1.14` version, you need to [upgrade your workspace](/docs/schematics?topic=schematics-migrating-terraform-version#upgrade-13-to10) to support Terraform `v1.14` or higher before mapping to your agent.
 
 You can deploy only one agent instance on a Kubernetes cluster. To deploy multiple agents in a single {{site.data.keyword.cloud_notm}} account, they must be deployed to different Kubernetes clusters. Each agent and cluster can cater to different network isolation zones in your Cloud environment.
 {: note}
