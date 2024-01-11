@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: schematics agent, agent policy, policies
 
@@ -195,7 +195,7 @@ Example
 Example
 
 ```sh
-ibmcloud schematics policy create --name agent-policy-testing-cli-mar-27 --kind agent_assignment_policy --location eu-de --resource-group Default --target-file policy.json
+ibmcloud schematics policy create --name agent-policy-testing-cli-jan-10 --kind agent_assignment_policy --location eu-de --resource-group Default --target-file policy.json
 ```
 {: pre}
 
@@ -204,8 +204,8 @@ Output
 ```text
 Creating policy...
                     
-ID               agent-policy-testing-cli-mar-27.deP.c737   
-Name             agent-policy-testing-cli-mar-27   
+ID               agent-policy-testing-cli-jan-10.deP.c737   
+Name             agent-policy-testing-cli-jan-10-27   
 Description         
 Kind             agent_assignment_policy   
 Location         eu-de   
@@ -235,7 +235,7 @@ Output
 Retrieving policies...
 OK
 Name                                          ID                                                     Description                                   Kind   Tags   
-agent-policy-testing-cli-mar-27               agent-policy-testing-cli-mar-27.deP.c737                                                                    workspace-policy:prod   
+agent-policy-testing-cli-jan-10               agent-policy-testing-cli-jan-10.deP.c737                                                                    workspace-policy:prod   
 policy-023e7204-c33d-49b8-a9f3-695ff085290d   policy-023e7204-c33d-49b8-a9f3-695ff085290d.gbP.8b3c   Created agent-assignment-policy for the ...             
 policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb   policy-067dfb28-928b-4e90-ad2b-9d26343a1ceb.deP.796d   Created agent-assignment-policy for 
 
@@ -248,23 +248,22 @@ Showing 1-3 of 3 items
 {: #agentb1-getpolicy-cli}
 {: cli}
 
-You can view the configuration of a single agent policy with the [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
+You can view the configuration of an agent policy with the [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
 
 Example
 
 ```sh
-ibmcloud schematics policy get agent-policy-testing-cli-mar-27.deP.c737
+ibmcloud schematics policy get agent-policy-testing-cli-jan-10.deP.c737
 ```
 {: pre}
 
 Output
 
 ```text
-Enter id> agent-policy-testing-cli-mar-27.deP.c737
 Retrieving policy...
                     
-ID               agent-policy-testing-cli-mar-27.deP.c737   
-Name             agent-policy-testing-cli-mar-27   
+ID               agent-policy-testing-cli-jan-10.deP.c737   
+Name             agent-policy-testing-cli-jan-10  
 Description         
 Kind             agent_assignment_policy   
 Location         eu-de   
@@ -283,15 +282,15 @@ Tags             [TAGS]
 You can update an agent policy to change the selection tags, or description, by referencing the agent with the `AGENT_ID` input argument.
 
 ```sh
-ibmcloud schematics policy update --id agent-policy-testing-cli-mar-27.deP.c737 --kind agent_assignment_policy --resource-group Default --tags workspace-policy:prod --description testing-policy-cli --tags jobtag
+ibmcloud schematics policy update --id agent-policy-testing-cli-jan-10.deP.c737 --kind agent_assignment_policy --resource-group Default --tags workspace-policy:prod --description testing-policy-cli --tags jobtag
 ```
 {: pre}
 
 ```sh
 Updating policy...
                     
-ID               agent-policy-testing-cli-mar-27.deP.c737   
-Name             agent-policy-testing-cli-mar-27   
+ID               agent-policy-testing-cli-jan-10.deP.c737   
+Name             agent-policy-testing-cli-jan-10   
 Description      testing-policy-cli   
 Kind             agent_assignment_policy   
 Location         eu-de   
@@ -308,7 +307,7 @@ After updating, retrieve the policy to confirm the changes.
 Example
 
 ```sh
-ibmcloud schematics policy get --id agent-policy-testing-cli-mar-27.deP.c737
+ibmcloud schematics policy get --id agent-policy-testing-cli-jan-10.deP.c737
 ```
 {: pre}
 
@@ -317,8 +316,8 @@ Output
 ```text
 Retrieving policy...
                     
-ID               agent-policy-testing-cli-mar-27.deP.c737   
-Name             agent-policy-testing-cli-mar-27   
+ID               agent-policy-testing-cli-jan-10.deP.c737   
+Name             agent-policy-testing-cli-jan-10   
 Description      testing-policy-cli   
 Kind             agent_assignment_policy   
 Location         eu-de   
@@ -338,7 +337,7 @@ Tags             [TAGS]
 You can [delete a policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-delete), passing the `AGENT_ID` input argument.
 
 ```sh
-ibmcloud schematics policy delete --id agent-policy-testing-cli-mar-27.deP.c737 
+ibmcloud schematics policy delete --id agent-policy-testing-cli-jan-10.deP.c737 
 ```
 {: pre}
 

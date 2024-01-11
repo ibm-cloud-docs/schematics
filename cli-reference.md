@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-10"
+lastupdated: "2024-01-11"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -632,7 +632,7 @@ Command options
 | `--deploy` | Optional | Run deploy without validating, after creating the agent.|
 | `--file` or `f` | Optional | Path to a `JSON` file containing the definition of an agent. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent create flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent create flags" caption-side="top"}
 
 Example
 
@@ -662,7 +662,7 @@ Command options
 | `--id` | Required | The ID of an agent. |
 | `--force-redeploy` or `-fd` | Optional | Force redeploys an Agent. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent deploy flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent deploy flags" caption-side="top"}
 
 Example
 
@@ -689,7 +689,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` | Required | The ID of an agent. |
 | `--force` or `-f` | Optional | The force action without confirmation. |
-{: caption="{{site.data.keyword.bpshort}} agent delete flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent delete flags" caption-side="top"}
 
 Example
 
@@ -717,7 +717,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id` | Required | The ID of an agent. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent get flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent get flags" caption-side="top"}
 
 Example
 
@@ -745,7 +745,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id`| Required | The ID of an agent. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent health flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent health flags" caption-side="top"}
 
 Example
 
@@ -774,7 +774,7 @@ Command options
 | `--limit` or `-lm` | Optional | Maximum number of agents to list. Ignored if a negative number is set. Maximum limit is 200, (default is -1). |
 | `--offset` or `-m`| Optional | Offset in list. Ignored if a negative number is set (default: -1). |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent list flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent list flags" caption-side="top"}
 
 Example
 
@@ -807,7 +807,7 @@ Command options
 | `--file` or `-f` | Optional | Path to the `JSON` file that contains the definition of the agent.|
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
 | `--no-prompt` | Optional | Set this flag to update an inventory without an interactive command-line session.|
-{: caption="{{site.data.keyword.bpshort}} agent update flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent update flags" caption-side="top"}
 
 Example
 
@@ -836,7 +836,7 @@ Command options
 | ----- | -------- | ------ |
 | `--id`| Required | The ID of the agent. |
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |
-{: caption="{{site.data.keyword.bpshort}} agent validate flags" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent validate flags" caption-side="top"}
 
 Example
 

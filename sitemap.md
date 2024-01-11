@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-10"
+lastupdated: "2024-01-11"
 
 keywords: schematics
 subcollection: schematics
@@ -282,7 +282,7 @@ subcollection: schematics
 
     * [10 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1024)
 
-        * {{site.data.keyword.bpshort}} support for Agent is generally available (GA) with full production support.
+        * {{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support.
 
 * [October 2023](/docs/schematics?topic=schematics-schematics-relnotes#October-2023)
 
@@ -304,7 +304,7 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
-        * Release {{site.data.keyword.bpshort}} agent migration page 
+        * Release {{site.data.keyword.bpshort}} Agent migration page 
 
 * [August 2023](/docs/schematics?topic=schematics-schematics-relnotes#August-2023)
 
@@ -312,7 +312,7 @@ subcollection: schematics
 
     * [28 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2823)
 
-        * Release {{site.data.keyword.bpshort}} agent migration page 
+        * Release {{site.data.keyword.bpshort}} Agent migration page 
 
     * [23 August 2023](/docs/schematics?topic=schematics-schematics-relnotes#schematics-aug2323)
 
@@ -2101,11 +2101,9 @@ subcollection: schematics
 
 * [Why does workspace execution fail with `terraformx.x: executable file not found in $PATH`](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-terraform-version-old)
 
-* [What type of {{site.data.keyword.bpshort}} jobs can run in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
+* [What type of jobs can be run in an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-jobs)
 
 * [How can I see the {{site.data.keyword.bpshort}} job results and logs for the jobs running on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-workload)
-
-* [How many {{site.data.keyword.bpshort}} jobs can run in parallel on an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-parallel)
 
 * [What is the minimum cluster configuration required in Agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster)
 

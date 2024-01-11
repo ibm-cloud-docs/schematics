@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-11"
 
 keywords: schematics agent health, agent health, health
 
@@ -15,12 +15,8 @@ subcollection: schematics
 # Monitoring agent health
 {: #agentb1-health}
 
-Agents for {{site.data.keyword.bplong}} extends its ability to work directly with your cloud infrastructure on your private network or in any network isolation zones. Typically, the agent is remotely deployed in the Kubernetes cluster in your {{site.data.keyword.cloud_notm}} account.   
+{{site.data.keyword.bplong}} Agent performs a health check on the post deployment validation and in-use status of an agent.
 {: shortdesc}
-
-You would be interested in knowing about the health of an agent: 
-- immediately after the agent deployment 
-- while the agent is in-use. 
 
 ## Monitoring agent health using the CLI
 {: #health-agentb1-cli}
@@ -34,7 +30,7 @@ The output of an agent health command displays the list of relevant Kubernetes a
 Example
 
 ```sh
-ibmcloud schematics agent health --id agent-testing-prod-cli-mar-27-5.deA.dc97  
+ibmcloud schematics agent health --id agent-ga-prod-cli-jan-10.soA.cd1c  
 ```
 {: pre}
 
@@ -49,7 +45,7 @@ Job ID	.ACTIVITY.f6f77588
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97  
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c  
 ```
 {: pre}
 
@@ -59,17 +55,17 @@ Output
 Retrieving agent...
 OK
                     
-ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
-Name             agent-testing-prod-cli-mar-27-5   
+ID               agent-ga-prod-cli-jan-10.soA.cd1c   
+Name             agent-ga-prod-cli-jan-10   
 Status           ACTIVE   
 Version             
-Location         eu-de   
-Agent Location   jp-tok   
+Location         us-south  
+Agent Location   us-south   
 Resource Group   Default   
                  
 Recent Job   Job ID                             Status                   Last modified   
-DEPLOY       f5c6987ce53032547b6d5d5f870dfe5f   Job Success               0001-01-01T00:00:00.000Z   
-HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2023-03-27T12:31:15.326Z 
+DEPLOY       f5c6987ce53032547b6d5d5f870dfe5f   Job Success               2024-01-10T10:00:00.000Z   
+HEALTH       .ACTIVITY.f6f77588                 Triggered health check   2024-01-10T12:31:15.326Z 
 ```
 {: screen}
 

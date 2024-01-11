@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -52,13 +52,9 @@ Agent-UI-Final-Testing            Agent-UI-Final-Testing.deA.3dfb               
 Vishwa-CLI-Testing                Vishwa-CLI-Testing.deA.ef99                                                                        cli-testing      eu-de                                  Active                         
 agent-5-multipod                  agent-5-multipod.deA.3d58                            Srikar testing multiple pods in agent-5 ...   job-runner       eu-de                                  Active   agent_register        
 agent-prod-testing-api-mar-24-2   agent-prod-testing-api-mar-24-2.deA.ca07   1.6.0     Create Agent                                  Default          us-south         eu-de                 Active   env:prod, mytest      
-agent-testing-prod-cli-mar-27-2   agent-testing-prod-cli-mar-27-2.deA.727f   v1.0.0                                                  Default          us-south         eu-de                 Active                         
-agent-testing-prod-cli-mar-27-3   agent-testing-prod-cli-mar-27-3.deA.fd13                                                           Default          us-south         eu-de                 Active                         
-agent-testing-prod-cli-mar-27-4   agent-testing-prod-cli-mar-27-4.deA.acd4                                                           Default          us-south         eu-de                 Active                         
-agent-testing-prod-cli-mar-27     agent-testing-prod-cli-mar-27.deA.3f7e                                                             Default          jp-tok         eu-de                 Active                         
-gsmmar27v1cli-agent-test          gsmmar27v1cli-agent-test.deA.6288                                                                  Default          eu-de            eu-de                 Active                         
-gsmmar27v2cli-agent-test          gsmmar27v2cli-agent-test.deA.afcc                                                                  Default          eu-de            eu-de                 Active                         
-gsmmar27v3cli-agent-test          gsmmar27v3cli-agent-test.deA.4b56                                                                  Default          eu-de            eu-de                 Active                         
+...
+...
+...                        
                                   
 Showing 1-11 of 11 items
 ```
@@ -68,7 +64,7 @@ Showing 1-11 of 11 items
 {: #display-agentb1-get-cli}
 {: cli}
 
-You can view the configuration of a single agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) command. This command requires `agent_id` as an input argument.
+You can view the configuration of an agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) command. This command requires `agent_id` as an input argument.
 {: shortdesc}
 
 To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-get).
@@ -77,7 +73,7 @@ To view the agent get commands, syntax, and option flag details, see [ibmcloud s
 Example
 
 ```sh
-ibmcloud schematics agent get --id agent-testing-prod-cli-mar-27-5.deA.dc97 
+ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c 
 ```
 {: pre}
 
@@ -87,8 +83,8 @@ Output
 Retrieving agent...
 OK
                     
-ID               agent-testing-prod-cli-mar-27-5.deA.dc97   
-Name             agent-testing-prod-cli-mar-27-5   
+ID               agent-ga-prod-cli-jan-10.soA.cd1c   
+Name             agent-ga-prod-cli-jan-10   
 Status           ACTIVE   
 Version          1.0.0   
 Location         eu-de   

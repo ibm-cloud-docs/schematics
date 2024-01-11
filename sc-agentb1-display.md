@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: schematics agent displaying, displaying agent, agent displaying, command-line, api, ui
 
@@ -67,7 +67,7 @@ Showing 1-11 of 11 items
 {: #display-agentb1-get-cli}
 {: cli}
 
-You can view the configuration of a single agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) command. This command requires `agent_id` as an input argument.
+You can view the configuration of an agent by using the [agent get](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-get) command. This command requires `agent_id` as an input argument.
 {: shortdesc}
 
 To view the agent get commands, syntax, and option flag details, see [ibmcloud schematics agent get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-get).
