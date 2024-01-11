@@ -38,7 +38,7 @@ Review the release notes for January 2024.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro) and its usage
     - To plan, and manage an agent:
-      - [Planning for an agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [Planning for an agent](/docs/schematics?topic=schematics-plan-agent-overview)
       - [Prerequisites for an agent deployment](/docs/schematics?topic=schematics-agent-infrastructure-overview)
       - [Deploying an agent](/docs/schematics?topic=schematics-deploy-agent-overview)
       - [Displaying and agent](/docs/schematics?topic=schematics-display-agentb1-overview)
