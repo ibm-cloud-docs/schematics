@@ -39,7 +39,7 @@ The following is the cost break-down for deploying and using a {{site.data.keywo
 
 The prerequisite infrastructure required to deploy and run an agent is chargeable: 
 - Cost of VPC infrastructure elements such as subnet, public gateways.
-- Cost of IBM Kubernetes Service (cluster) on VPC, with three-node worker pool.
+- Cost of {{site.data.keyword.containerlong_notm}} (cluster) on VPC, with three-node worker pool.
 - Cost of IBM Cloud Object Storage
 
 Agent service execution:
@@ -51,7 +51,7 @@ Agent service execution:
 {: faq}
 {: support}
 
-You can install only one agent on a Kubernetes cluster on {{site.data.keyword.containerlong_notm}}. Additional clusters are required to deploy additional agents. If you attempt to install more than one agent on a cluster, the deploy job will fail with a namespace conflict error.
+You can install only one agent on the {{site.data.keyword.containerlong_notm}} cluster. Additional clusters are required to deploy additional agents. If you attempt to install more than one agent on a cluster, the deploy job will fail with a namespace conflict error.
 
 ## What Terraform versions are supported with agents? 
 {: #faqs-agent-terraform-versions}
@@ -370,32 +370,25 @@ Yes, {{site.data.keyword.bpshort}} Agent establishes a connection with the priva
 
 Yes, you can update the agent with the metadata to perform catalog on boarding with the private Git instance. Use the sample update API request for reference.
 
-   Perform this step only if an agent does not have metadata.
-   {: important}
+Perform this step only if an agent does not have metadata.
+{: important}
 
-   ```curl
-    curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id\>' \
-        -H 'Authorization: Bearer <token\>' \
-        -H 'X-Feature-Agents: true' \
-        -H 'refresh_token: <refresh_token\>' \
-        -d '{
-    "agent_metadata": [
-            {
-                "name": "purpose",
-                "value": ["git"] 
-            },
-            {
-                "name": "git_endpoints",
-                "value": ["https://myprivate-gitinstance/testrepo"] 
-            }
-          ]
-        }'
-    ```
-    {: pre}
-
-## Is cost involved in using {{site.data.keyword.bpshort}} Agent? 
-{: #faqs-agents-cost}
-{: faq}
-{: support}
-
-Currently the {{site.data.keyword.bpshort}} Agent usage has no cost involved, it will have a cost eventually in the General Availability (GA) timeframe. You are notified in the documentation with the usage and the charges.
+```curl
+curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id\>' \
+    -H 'Authorization: Bearer <token\>' \
+    -H 'X-Feature-Agents: true' \
+    -H 'refresh_token: <refresh_token\>' \
+    -d '{
+"agent_metadata": [
+        {
+            "name": "purpose",
+            "value": ["git"] 
+        },
+        {
+            "name": "git_endpoints",
+            "value": ["https://myprivate-gitinstance/testrepo"] 
+        }
+      ]
+    }'
+```
+{: pre}
