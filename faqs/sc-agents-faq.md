@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -58,22 +58,22 @@ You can install only one agent on a Kubernetes cluster on {{site.data.keyword.co
 {: faq}
 {: support}
 
-Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are supported with agents. At this time these are version 1.4 and version 1.5. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) for how to upgrade before using agents. 
+Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are supported with agents. At this time these are version 1.4 and version 1.5. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) to upgrade before using agents.
 
 ## Why does workspace execution fail with `terraformx.x: executable file not found in $PATH`
 {: #faqs-agent-terraform-version-old}
 {: faq}
 {: support}
 
-The version of Terraform used by the workspace is not supported with agents. Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are with agents. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) for how to upgrade before using agents. 
+The version of Terraform used by the workspace is not supported with agents. Agent supports the workspace using Terraform `v1.4`, and `v1.5` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [depreciation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 
-## What type of {{site.data.keyword.bpshort}} jobs can run in an agent?
+## What type of jobs can be run in an agent?
 {: #faqs-agent-jobs}
 {: faq}
 {: support}
 
-You can run {{site.data.keyword.bpshort}} workspace Terraform jobs on an agent. You can also run {{site.data.keyword.bpshort}} action jobs, Ansible playbooks on an agent. 
+You can run {{site.data.keyword.bpshort}} workspace Terraform and Actions jobs on an agent.
 
 ## How can I see the {{site.data.keyword.bpshort}} job results and logs for the jobs running on an agent?
 {: #faqs-agent-workload}
@@ -82,14 +82,6 @@ You can run {{site.data.keyword.bpshort}} workspace Terraform jobs on an agent. 
 
 The workspace job or action job logs are available in the {{site.data.keyword.bpshort}} UI console. You can also access the job logs by using the {{site.data.keyword.bpshort}} workspace API, or CLI.
 
-## How many {{site.data.keyword.bpshort}} jobs can run in parallel on an agent?
-{: #faqs-agent-parallel}
-{: faq}
-{: support}
-
-Currently, an agent can run three {{site.data.keyword.bpshort}} jobs in parallel. Any additional jobs are queued and will run when prior jobs complete execution. 
-
-In future, you will be able to customize an agent to increase the number of job pods to increase the number of jobs that can run concurrently. 
 
 ## What is the minimum cluster configuration required in Agent release?
 {: #faqs-agent-min-cluster}
@@ -110,25 +102,23 @@ Currently, you can assign any number of workspaces to an agent. The workspace jo
 {: faq}
 {: support}
 
-- {{site.data.keyword.bpshort}} Agent can perform three Git download jobs in parallel.
-- {{site.data.keyword.bpshort}} Agent can run three workspace jobs (Terraform commands), in parallel.
-- {{site.data.keyword.bpshort}} Agent can run three action jobs (Ansible playbooks), in parallel.
+{{site.data.keyword.bpshort}} Agent can perform three Git downloads, workspace jobs (Terraform commands), and action jobs (Ansible playbooks) in parallel. Any additional jobs are queued and will run when prior jobs completes execution.
 
 ## What is the default polling interval for agents?
 {: #faqs-agent-poll-interval}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} maintains a queue of jobs that will be ran on an agent. The agent polls for {{site.data.keyword.bpshort}} Jobs, every one minute by default.
+{{site.data.keyword.bpshort}} maintains a queue of jobs for an agent. By default every one minute the agent polls the jobs.
 
 ## Are there execution timeout limits when working with agents?
 {: #faqs-agent-timeout}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} agents relax the timeout limitation for local-exec, remote-exec and Ansible playbook execution. These are limited to 60 minutes in the multi-tenant service to ensure fair service utilisation by all users. No duration is applied for jobs executed on agents. Long job execution times will require additional user cluster capacity and worker nodes to ensure timely execution of all jobs on the cluster.    
+{{site.data.keyword.bpshort}} Agent relax the timeout limitation for `local-exec`, `remote-exec` and Ansible playbook execution. These are limited to 60 minutes in the multi-tenant service to ensure fair service utilisation by all users. No duration is applied for jobs executed on agents. Long job execution times needs more user cluster capacity and worker nodes to ensure timely execution of all cluster jobs.
 
-It is recommended to use a service like [Continous Delivery](docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) for long running jobs performing software installation tasks. 
+It is recommended to use a service such as [Continous Delivery](docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) for long running jobs performing software installation tasks.
 
 ## What is the difference between `agent-location` and `location` flag in agent service?
 {: #faqs-agent-diff-location}

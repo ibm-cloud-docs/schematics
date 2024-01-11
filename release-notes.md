@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -33,19 +33,23 @@ Review the release notes for January 2024.
 {: #schematics-jan1024}
 {: release-note}
 
-{{site.data.keyword.bpshort}} support for Agent is generally available (GA) with full production support.
-:   {{site.data.keyword.bpshort}} announces its Agent GA release to extend {{site.data.keyword.bpshort}} availability to reach your private cloud and or on-premises infrastructures. Check the following content to learn about {{site.data.keyword.bpshort}} agents releases.
+{{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support.
+:   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro) and its usage.
-    - {{site.data.keyword.bpshort}} Agent are supported through [UI](/docs/schematics?topic=schematics-deploy-agent-overview), [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), and [API](/apidocs/schematics/schematics#create-agent-data).
-    - You can manage {{site.data.keyword.bpshort}} Agent by
-      - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
-      - [deploying agent prerequisite infrastructure](/docs/schematics?topic=schematics-agent-infrastructure-overview)
-      - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview) an agent
-      - [displaying](/docs/schematics?topic=schematics-display-agentb1-overview) an agent
-      - [deleting](/docs/schematics?topic=schematics-delete-agent-overview) an agent
-    - You can also use an [agent policies](/docs/schematics?topic=schematics-policy-manage), [monitor an agent health](/docs/schematics?topic=schematics-agentb1-health), [Agent and Kubernetes configuration](/docs/schematics?topic=schematics-configure-k8s-cluster), configure {{site.data.keyword.bpshort}} agents to use a [proxy server](/docs/schematics?topic=schematics-proxy-agent-overview), and [private registry](/docs/schematics?topic=schematics-agent-registry-overview).
-    - For any challenges or questions, see {{site.data.keyword.bpshort}} Agents [FAQs](/docs/schematics?topic=schematics-faqs-agent), and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
+    - To plan, and manage an agent:
+      - [Planning](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [Prerequisites for deployment](/docs/schematics?topic=schematics-agent-infrastructure-overview)
+      - [Deploying](/docs/schematics?topic=schematics-deploy-agent-overview)
+      - [Displaying](/docs/schematics?topic=schematics-display-agentb1-overview)
+      - [Deleting](/docs/schematics?topic=schematics-delete-agent-overview)
+    - To use an agent:
+      - [Creating policies](/docs/schematics?topic=schematics-policy-manage) 
+      - [Monitoring health](/docs/schematics?topic=schematics-agentb1-health)
+      - [Configuring private registry](/docs/schematics?topic=schematics-agent-registry-overview).
+    - For any challenges or questions, see {{site.data.keyword.bpshort}} Agent:
+      - [FAQs](/docs/schematics?topic=schematics-faqs-agent)
+      - [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
 
 
 
@@ -87,8 +91,8 @@ Review the release notes for September 2023.
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.12](/docs/schematics?topic=schematics-cli_version-releases) released.
 
-Release {{site.data.keyword.bpshort}} agent migration page 
-:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta2` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta2).
+Release {{site.data.keyword.bpshort}} Agent migration page 
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta2` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta2).
 
 ## August 2023
 {: #August-2023}
@@ -100,8 +104,8 @@ Review the release notes for August 2023.
 {: #schematics-aug2823}
 {: release-note}
 
-Release {{site.data.keyword.bpshort}} agent migration page 
-:   The {{site.data.keyword.bpshort}} agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta1` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta1).
+Release {{site.data.keyword.bpshort}} Agent migration page 
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta1` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta1).
 
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
@@ -179,7 +183,7 @@ The `terraform.tfstate` state file size maximum limit is less than 2 MB.
 {: release-note}
 
 {{site.data.keyword.bpshort}} Agent beta-1 release.
-:   {{site.data.keyword.bpshort}} announces its [beta-1 release](/docs/schematics?topic=schematics-agent-beta1-limitations) of {{site.data.keyword.bpshort}} agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} agents beta-1 releases.
+:   {{{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent  beta-1 releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro).
     - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
@@ -376,7 +380,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: release-note}
 
 {{site.data.keyword.bpshort}} agents beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-agent-limitation) of {{site.data.keyword.bpshort}} agents to extend {{site.data.keyword.bpshort}} availability to reach your private, or on-premises infrastructure. Check the following content to learn about {{site.data.keyword.bpshort}} agents beta releases.
+:   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} agents engagement.
     - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agents-intro).
     - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).

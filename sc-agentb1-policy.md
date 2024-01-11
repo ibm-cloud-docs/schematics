@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: schematics agent, agent policy, policies
 
@@ -248,7 +248,7 @@ Showing 1-3 of 3 items
 {: #agentb1-getpolicy-cli}
 {: cli}
 
-You can view the configuration of a single agent policy with the [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
+You can view the configuration of an agent policy with the [policy get](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-policy-get) command.
 
 Example
 

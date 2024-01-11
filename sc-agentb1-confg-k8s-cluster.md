@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-11"
 
 keywords: configuring kubernetes cluster for agent, configure kubernetes cluster, kubernetes cluster
 
@@ -16,10 +16,10 @@ subcollection: schematics
 # Agent and Kubernetes configuration 
 {: #configure-k8s-cluster}
 
-Agents extend {{site.data.keyword.bpshort}} ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. Customization of a deployed agent is performed through configuration options set on the Kubernetes cluster. If the agent is redeployed all customisation of the cluster parameters will be lost. 
+{{site.data.keyword.bplong}} Agent extends the ability to work directly with your cloud infrastructure on your private network or in any isolated network zones. Customization of a deployed agent is performed through configuration options set on the Kubernetes cluster. If the agent is redeployed all customisation of the cluster parameters is lost.
 {: shortdesc}
 
-When an agent is deployed, by default the following configuration options are applied on the cluster. The applied configuration is reproduced here for reference. 
+When an agent is deployed, by default the following configuration options are applied on the cluster. The applied configuration is reproduced here for reference.
 
 ## Default network policies
 {: #k8s-cluster-network-policy}
@@ -91,7 +91,7 @@ The following resource limits and replicas are the default configuration applied
 | --- | --- |
 | `resource-limits` |	Resource limit setting for the workspace and action jobs are `cpu = 500m`, and `memory = 25Mi`. |
 | `replicas` | Number of job pods. `replica = 1`. **Note** when the number of replica is changed, then the `JR_MAXJOBS` settings must also be updated.| 
-{: caption="{{site.data.keyword.bpshort}} agent controller manager deployments" caption-side="top"}
+{: caption="{{site.data.keyword.bpshort}} Agent controller manager deployments" caption-side="top"}
 
 You can customize by following the steps to [edit the default configuration](/docs/schematics?topic=schematics-configure-k8s-cluster#edit-agent-namespace-confg).
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-01-11"
 
 keywords: schematics agents connect, connect agent, register agent
 
@@ -16,10 +16,10 @@ subcollection: schematics
 # Connecting {{site.data.keyword.bpshort}} Agent
 {: #register-agent}
 
-You have successfully set up the {{site.data.keyword.bpshort}} agents infrastructure and agents services, the next step is to connect or register your Agent. So that, the {{site.data.keyword.bpshort}} knows about Agent and connect the service instance to it. The diagram depicts the complete {{site.data.keyword.bpshort}} agents set up flow.
+You have successfully set up the {{site.data.keyword.bpshort}} Agent infrastructure and services, the next step is to connect or register your agent. So that, the {{site.data.keyword.bpshort}} knows about agent and connect the service instance. The diagram depicts the complete {{site.data.keyword.bpshort}} Agent set up flow.
 {: shortdesc}
 
-![{{site.data.keyword.bpshort}} agents set up](images/agents-setup-latest.svg "{{site.data.keyword.bpshort}} agents set up"){: caption="{{site.data.keyword.bpshort}} agents set up" caption-side="center"}
+![{{site.data.keyword.bpshort}} Agent set up](images/agents-setup-latest.svg "{{site.data.keyword.bpshort}} Agent set up"){: caption="{{site.data.keyword.bpshort}} Agent set up" caption-side="center"}
 
 ## Connecting Agent through UI
 {: #register-ui}

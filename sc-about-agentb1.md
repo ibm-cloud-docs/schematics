@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: schematics agents, agents, terraform template to set up agents
 
@@ -15,7 +15,7 @@ subcollection: schematics
 # {{site.data.keyword.bpshort}} agents
 {: #agent-about-intro}
 
-{{site.data.keyword.bplong}} agents extend {{site.data.keyword.bpshort}} ability to use workspace and action jobs to provision and configure your private Cloud infrastructure and on-premises infrastructure. Dedicated agents on your private network, enable {{site.data.keyword.bpshort}} to provision, configure, and securely access private or on-premises resources. Also dedicated agents include [converged-infrastructure](https://en.wikipedia.org/wiki/Converged_infrastructure){: external}, hypervisors, private Git repositories, configuration, and {{site.data.keyword.secrets-manager_short}} services.
+{{site.data.keyword.bplong}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your private cloud and on-premises infrastructure. Dedicated agents on your private network, enable {{site.data.keyword.bpshort}} to provision, configure, and securely access private or on-premises resources. Also dedicated agents include [converged-infrastructure](https://en.wikipedia.org/wiki/Converged_infrastructure){: external}, hypervisors, private Git repositories, configuration, and {{site.data.keyword.secrets-manager_short}} services.
 {: shortdesc}
 
 {{site.data.keyword.bpshort}} does not have direct access to your network, to an agent or your private cloud resources. An agent uses a pull model and polls for the workspace or actions jobs that run on an agent. You are in control of the agent resources, its network policies, its connection to {{site.data.keyword.bpshort}} and the jobs that are ran on the agent. Agents are designed not to require inbound access from {{site.data.keyword.bpshort}} or the opening of inbound firewall or network access ports. All communication between the agent and {{site.data.keyword.bpshort}} is outbound from the agent and under your control.
@@ -38,7 +38,7 @@ With agents, policies determine the workspaces and actions that you want to run 
 {{site.data.keyword.bpshort}} identifies and authenticates your agent by using an {{site.data.keyword.cloud_notm}} trusted profile identity that is provided by the Kubernetes cluster that runs the agent. This identity is dynamically created when an agent is created and deployed. The trusted profile identities confirm that no one can spoof your agent’s identity, and steal data from {{site.data.keyword.bpshort}} or your account. You are in control of the access permissions that are defined for the trusted profile identity by using IAM access policies.
 {: note}
 
-The agent runtime includes `Terraform`, `Ansible`, and more micro-services. For more information about the software utilities included in the agent runtime, see [{{site.data.keyword.bpshort}} agent runtime](/docs/schematics?topic=schematics-sch-utilities).
+The agent runtime includes `Terraform`, `Ansible`, and more micro-services. For more information about the software utilities included in the agent runtime, see [{{site.data.keyword.bpshort}} Agent runtime](/docs/schematics?topic=schematics-sch-utilities).
 
 ## Private network configuration when using agents
 {: #about-agentb1-networking}
@@ -65,5 +65,4 @@ The following are some of the benefits of using agents with {{site.data.keyword.
 ## Next steps
 {: #nextsteps-agentb1-arch}
 
-You learned a about {{site.data.keyword.bpshort}} Agents and its usage. Now, you can explore the {{site.data.keyword.bpshort}} agents:
-- Explore the steps to [prepare {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-plan-agent-overview&interface=cli) setup in your {{site.data.keyword.cloud_notm}} account.
+You learned about {{site.data.keyword.bpshort}} Agent and its usage. Explore the steps to [prepare an agent](/docs/schematics?topic=schematics-plan-agent-overview) setup to deploy an agent in your {{site.data.keyword.cloud_notm}} account.

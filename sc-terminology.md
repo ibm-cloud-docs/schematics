@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-11"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -38,7 +38,7 @@ Extends {{site.data.keyword.bpshort}} ability to reach user infrastructure.
 ### Agent
 {: #agentsa1}
 
-Method or service to bind {{site.data.keyword.bpshort}} agents with {{site.data.keyword.bpshort}} workspaces.
+Method or service to bind {{site.data.keyword.bpshort}} Agent with {{site.data.keyword.bpshort}} workspaces.
 {: shortdesc}
 
 ### Agent service
