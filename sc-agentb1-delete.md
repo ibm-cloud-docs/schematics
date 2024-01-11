@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-06"
+  years: 2017, 2024
+lastupdated: "2024-01-11"
 
 keywords: schematics agent deleting, deleting agent, agent deleting, command-line, api, ui
 
@@ -39,16 +39,16 @@ You can delete an agent or uninstall an agent from the Kubernetes cluster by usi
 Example
 
 ```sh
-ibmcloud schematics agent delete --id agent-testing-prod-cli-mar-27-5.deA.dc97
+ibmcloud schematics agent delete --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
 Output
 
 ```text
-Do you really want to delete the agent agent-testing-prod-cli-mar-27-5.deA.dc97? [y/N]> y
+Do you really want to delete the agent agent-ga-prod-cli-jan-10.soA.cd1c? [y/N]> y
 Deleting Agent...
-Agent agent-testing-prod-cli-mar-27-5.deA.dc97 deleted successfully
+Agent agent-ga-prod-cli-jan-10.soA.cd1c deleted successfully
 OK
 ```
 {: screen}
