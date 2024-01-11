@@ -41,8 +41,8 @@ Review the release notes for January 2024.
       - [Planning for an agent](/docs/schematics?topic=schematics-plan-agent-overview)
       - [Prerequisites for an agent deployment](/docs/schematics?topic=schematics-agent-infrastructure-overview)
       - [Deploying an agent](/docs/schematics?topic=schematics-deploy-agent-overview)
-      - [Displaying and agent](/docs/schematics?topic=schematics-display-agentb1-overview)
-      - [Deleting and agent](/docs/schematics?topic=schematics-delete-agent-overview)
+      - [Displaying an agent](/docs/schematics?topic=schematics-display-agentb1-overview)
+      - [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview)
     - To use an agent by:
       - [Creating policies](/docs/schematics?topic=schematics-policy-manage) 
       - [Monitoring health](/docs/schematics?topic=schematics-agentb1-health)

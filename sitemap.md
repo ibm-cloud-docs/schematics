@@ -2149,8 +2149,6 @@ subcollection: schematics
 
 * [Can {{site.data.keyword.bpshort}} Agent update a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-update)
 
-* [Is cost involved in using {{site.data.keyword.bpshort}} Agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agents-cost)
-
 [Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
 
 * [What are the Git repositories that are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
