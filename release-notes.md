@@ -35,21 +35,22 @@ Review the release notes for January 2024.
 
 {{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support.
 :   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
-    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro) and its usage.
+    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement
+    - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro) and its usage
     - To plan, and manage an agent:
-      - [Planning](/docs/schematics?topic=schematics-plan-agent-overview)
-      - [Prerequisites for deployment](/docs/schematics?topic=schematics-agent-infrastructure-overview)
-      - [Deploying](/docs/schematics?topic=schematics-deploy-agent-overview)
-      - [Displaying](/docs/schematics?topic=schematics-display-agentb1-overview)
-      - [Deleting](/docs/schematics?topic=schematics-delete-agent-overview)
-    - To use an agent:
+      - [Planning for an agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
+      - [Prerequisites for an agent deployment](/docs/schematics?topic=schematics-agent-infrastructure-overview)
+      - [Deploying an agent](/docs/schematics?topic=schematics-deploy-agent-overview)
+      - [Displaying and agent](/docs/schematics?topic=schematics-display-agentb1-overview)
+      - [Deleting and agent](/docs/schematics?topic=schematics-delete-agent-overview)
+    - To use an agent by:
       - [Creating policies](/docs/schematics?topic=schematics-policy-manage) 
       - [Monitoring health](/docs/schematics?topic=schematics-agentb1-health)
-      - [Configuring private registry](/docs/schematics?topic=schematics-agent-registry-overview).
+      - [Configuration in Kubernetes](/docs/schematics?topic=schematics-configure-k8s-cluster)
+      - [Private registry configuraiton](/docs/schematics?topic=schematics-agent-registry-overview)
     - For any challenges or questions, see {{site.data.keyword.bpshort}} Agent:
       - [FAQs](/docs/schematics?topic=schematics-faqs-agent)
-      - [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found).
+      - [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found)
 
 
 
