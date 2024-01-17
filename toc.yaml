@@ -113,6 +113,7 @@ toc:
                                                    - sc-agent-infra-setup.md
                                                    - sc-agentb1-deploy.md
                                                    - sc-agentb1-display.md
+                                                   - sc-agent-update.md
                                                    - sc-agentb1-delete.md
                                                    - topicgroup:
                                                               label: Using agents

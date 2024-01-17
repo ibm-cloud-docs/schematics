@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-17"
 
 keywords: schematics
 subcollection: schematics
@@ -279,6 +279,10 @@ subcollection: schematics
 * [January 2024](/docs/schematics?topic=schematics-schematics-relnotes#January-2024)
 
     * Review the release notes for January 2024.
+
+    * [18 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1824)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [10 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1024)
 
@@ -1359,6 +1363,20 @@ subcollection: schematics
 * [Displaying agents using the API](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#display-agentb1-api)
 
 * [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#agent-delete-nextsteps)
+
+[Updating agents](/docs/schematics?topic=schematics-update-agent-overview#update-agent-overview)
+
+* [Before you begin](/docs/schematics?topic=schematics-update-agent-overview#update-prereq)
+
+* [Updating an agent definition](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui)
+
+* [Creating an agent definition by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#update-agent-cli)
+
+* [Verifying and validate to update agent by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#verify-agent-update-cli)
+
+* [Redeploy agent by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#redeploy-agent-update-cli)
+
+* [Updating an agent by using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api)
 
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 

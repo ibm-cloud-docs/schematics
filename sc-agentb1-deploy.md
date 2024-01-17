@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-17"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -28,7 +28,7 @@ Follow the steps to create and deploy an agent.
 ## Before you begin
 {: #deploy-prereq}
 
-Review and complete the steps that are described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview). After creation of the cluster, the {{site.data.keyword.cos_full}} instance, and the {{site.data.keyword.cos_full_notm}} bucket, gather the following information as an input to deploy your agent to its target location.
+Review and complete the steps that are described in [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview). After creation of the cluster, the {{site.data.keyword.cos_full_notm}} instance, and the {{site.data.keyword.cos_full_notm}} bucket, gather the following information as an input to deploy your agent to its target location.
 {: shortdesc}
 
 - The cluster, {{site.data.keyword.cos_full_notm}} instance, and {{site.data.keyword.cos_full_notm}} bucket are created in the same resource group.
