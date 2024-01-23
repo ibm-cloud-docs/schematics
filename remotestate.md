@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-23"
 
 keywords: about schematics, schematics overview, infrastructure as code, iac, differences schematics and terraform, schematics vs terraform, how does schematics work, schematics benefits, why use schematics, terraform template, schematics workspace
 
@@ -19,8 +19,7 @@ subcollection: schematics
 
 The built in workspace remote-state management supports a number of {{site.data.keyword.bpshort}} use cases: 
 - The sharing of resource information between workspaces. This allows your infrastructure to be broken down into smaller components, with read-only resource information passed between environments using {{site.data.keyword.bpshort}} remote-state data sources. Discrete environments linked by data sources allows responsibility for different elements of infrastructure to be delegated to different teams with information shared between workspaces as read-only resources. 
-- Integration of workspace and action operations with [Actions](/docs/schematics?topic=schematics-action-working). Workspace resource information can be directly passed as an Ansible [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv) without the need for manual host inventory creation or use of inventory scripts.    
-- Management of large-scale IaC environments. [Blueprints](/docs/schematics?topic=schematics-blueprint-intro) enables large environments to be composed from modular Terraform environments by the [direct passing of values](/docs/schematics?topic=schematics-blueprint-templates#blueprint-module-outputs) and state information between deployed modules. 
+- Integration of workspace and action operations with [Actions](/docs/schematics?topic=schematics-action-working). Workspace resource information can be directly passed as an Ansible [dynamic inventory](/docs/schematics?topic=schematics-inventories-setup#dynamic-inv) without the need for manual host inventory creation or use of inventory scripts.
 {: shortdesc}
 
 ## Accessing workspace state and outputs

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-23"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -66,7 +66,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 1. Click your workspace that is listed in the [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com/schematics/workspaces){: external} to view the results of the workspace details. 
 2. Click **Jobs** tab to see the workspace logs. 
 3. Click **Jobs history** tab view the result of the update job operation that were run by the automation modules.
-4. Click **Settings** tab to view the summary of the new blueprint configuration.
+4. Click **Settings** tab to view the summary of the configuration.
 
 
 ## Updating a workspace using the CLI

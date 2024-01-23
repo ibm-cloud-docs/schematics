@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-22"
+  years: 2017, 2024
+lastupdated: "2024-01-23"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -95,7 +95,6 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     agent, ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.
     agents, ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.
     apply                Apply a plan to an workspace to deploy the latest version of your configuration.
-    blueprint, bp        Deploy and manage large scale environments using reusable blueprint templates.
     destroy              Destroy resources in an existing workspace. This action cannot be reversed.
     inventory, iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
     job, j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.
@@ -162,7 +161,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     ```
     {: pre}
 
-   Example output for blueprints support: 
+   Example output
 
     ```text
     schematics                      1.12.12        true
@@ -200,8 +199,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     schematics,sch kms                 listing and enabling IBM Cloud Schematics kms instances and root keys .   
     schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's   
     schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions   
-    schematics,sch agents,ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.   
-    schematics,sch blueprint,bp        Deploy and manage large scale environments using reusable blueprint templates.   
+    schematics,sch agents,ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.      
     schematics,sch agent,ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.   
     schematics,sch policy,plcy         [Beta] Create and manage policies.
     ```

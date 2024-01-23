@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-23"
 
 keywords: schematics, automation, terraform
 
@@ -60,7 +60,7 @@ Service roles can be assigned per-instance or for all instances in an account.
 {: note}
 
 * **Reader**: You can perform read-only actions within a service such as viewing service-specific resources. For example, read the action definition, KMS settings, workspace details, agent configuration settings, and so on.
-* **Writer**: You can perform create, edit, and read service specific resources operation. For example, create and update workspace, action, agent, blueprint, and so on.
+* **Writer**: You can perform create, edit, and read service specific resources operation. For example, create and update workspace, action, agent, and so on.
 * **Manager**: In addition to writer access, you have complete privilege as defined by the service. A _Manager_, for example, has all of the permissions that a _Reader_ has and more.
 
 ## Roles and permissions about {{site.data.keyword.bpshort}} offerings 
@@ -164,30 +164,7 @@ In addition to the listed agent activities and permission, you must ensure you h
 | `Agent update` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
 {: caption="User permissions for {{site.data.keyword.bpshort}} Agent" caption-side="top"}
 
-{{site.data.keyword.bpshort}} Blueprints is a [beta feature](/docs/schematics?topic=schematics-bp-beta-limitations) that are available for evaluation and testing purposes. It is not intended for production usage. Refer to the list of [limitations](/docs/schematics?topic=schematics-bp-beta-limitations#sc-bp-beta-limitation) for the beta release.
-{: beta}
 
-### Blueprint permissions
-{: #blueprint-permissions}
-
-Review the following table to see what permissions you need to work with {{site.data.keyword.bpshort}} Blueprint.
-
-In addition to the listed blueprints activities and permission, you must check whether you have related [workspace permissions](#workspace-permissions) for `blueprint create`, `blueprint apply`, `blueprint delete`, and `blueprint destroy` activities to execute successfully.
-{: important} 
-
-| Activities | Reader | Writer | Manager | Account owner |
-|-----|-----|-----|-----|--------|
-| `View blueprint` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
-| `View blueprint logs` | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
-| `blueprint create` | | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
-| `blueprint update` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
-| `blueprint delete`| | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
-| `blueprint apply` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
-| `blueprint destroy` | | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) | ![Check mark](images/checkmark.svg) |
-{: row-headers}
-{: class="comparison-table"}
-{: caption="User permissions for {{site.data.keyword.bpshort}} Blueprint" caption-side="top"}
-{: summary="The table shows user permissions by access role. Rows are to be read from the left to right, with the access role in column one, and the permission descriptions in column two."}
 
 ### KMS permissions
 {: #kms-permissions}

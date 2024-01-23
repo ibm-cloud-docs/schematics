@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-01-23"
 
 keywords: schematics utilities, commands and utilities, utilities, jobs
 
@@ -16,12 +16,12 @@ subcollection: schematics
 # Specifying version constraints 
 {: #version-constraints}
 
-Use version constraints to declare the Terraform, Terraform provider, or Ansible version that you want to use for your Terraform template, Ansible playbook or blueprint templates.
+Use version constraints to declare the Terraform, Terraform provider, or Ansible version that you want to use for your Terraform template, or Ansible playbook.
 {: shortdesc}
 
 {{site.data.keyword.bpshort}} concurrently supports multiple images that each package a specific version of the {{site.data.keyword.cloud_notm}} Provider plug-in, other Terraform providers, such as the REST API provider, and the Ansible executable. Each image is built, tested, and verified by {{site.data.keyword.cloud_notm}}. Included Terraform provider versions are tested and packaged for a specific Terraform CLI version.
 
-It is good practice to declare the version that your Terraform template, Ansible playbook or blueprint template requires by using version constraints. This way, you can ensure that your templates and playbooks continue to work, even if Terraform, Terraform providers, or Ansible publish new versions that might introduce breaking changes.
+It is good practice to declare the version that your Terraform template, or Ansible playbook requires by using version constraints. This way, you can ensure that your templates and playbooks continue to work, even if Terraform, Terraform providers, or Ansible publish new versions that might introduce breaking changes.
 
 ## Overview of {{site.data.keyword.bpshort}} images and packaged Terraform providers
 {: #schematics-image-ov}

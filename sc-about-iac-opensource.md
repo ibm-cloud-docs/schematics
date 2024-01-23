@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-01-23"
 
 keywords: about schematics open source projects, open source projects, why use schematics, terraform template, schematics workspace
 
@@ -54,12 +54,12 @@ Some tools are a better fit for the task in hand for provisioning or configurati
  Review the tool descriptions to identify the {{site.data.keyword.bpshort}} feature that maps to the IaC capability you would like to use. 
 {: shortdesc}
 
-|Logo|Open-source project &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Actions|  Agents| Workspaces| Blueprints | IBM&nbsp;Catalog|
-|---|---|:--:|:--:|:--:|:--:|:--:|
-|<img src="images/ansible.png" alt="Ansible" width="10" style="width: 50px; border-style: none"/>|[Ansible](https://www.ansible.com/){: external} is a configuration management and provisioning tool, similar to Chef and Puppet. It is designed to automate the configuration and management of environments, and deploy app workloads in the cloud. |<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>| | | |<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|<img src="images/helm.svg" alt="Helm" width="10" style="width: 50px; border-style: none"/>|[Helm](https://helm.sh/){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in an {{site.data.keyword.containerlong_notm}} cluster.|| | ||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|<img src="images/operator.png" alt="Operators" width="10" style="width: 50px; border-style: none"/>|[{{site.data.keyword.openshiftlong_notm}}](https://www.redhat.com/en/technologies/cloud-computing/openshift/what-are-openshift-operators){: external} are a convenient way to add and run community, Third party, and other services in a {{site.data.keyword.openshiftlong_notm}} cluster. ||| ||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|<img src="images/terraform.png" alt="Terraform" width="10" style="width: 50px; border-style: none"/>|[Terraform](https://www.terraform.io/){: external} is an open source project that specifies your cloud infrastructure resources and services by using a high-level scripting language.||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Logo|Open-source project &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  | Actions|  Agents| Workspaces| IBM&nbsp;Catalog|
+|---|---|:--:|:--:|:--:|:--:|
+|<img src="images/ansible.png" alt="Ansible" width="10" style="width: 50px; border-style: none"/>|[Ansible](https://www.ansible.com/){: external} is a configuration management and provisioning tool, similar to Chef and Puppet. It is designed to automate the configuration and management of environments, and deploy app workloads in the cloud. |<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>| | |<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|<img src="images/helm.svg" alt="Helm" width="10" style="width: 50px; border-style: none"/>|[Helm](https://helm.sh/){: external} is a Kubernetes package manager that uses Helm charts to define, install, and upgrade complex Kubernetes apps in an {{site.data.keyword.containerlong_notm}} cluster.|| ||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|<img src="images/operator.png" alt="Operators" width="10" style="width: 50px; border-style: none"/>|[{{site.data.keyword.openshiftlong_notm}}](https://www.redhat.com/en/technologies/cloud-computing/openshift/what-are-openshift-operators){: external} are a convenient way to add and run community, Third party, and other services in a {{site.data.keyword.openshiftlong_notm}} cluster. ||||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|<img src="images/terraform.png" alt="Terraform" width="10" style="width: 50px; border-style: none"/>|[Terraform](https://www.terraform.io/){: external} is an open source project that specifies your cloud infrastructure resources and services by using a high-level scripting language.||<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 {: caption="Open Source Projects" caption-side="bottom"}
 
 ## Next steps
