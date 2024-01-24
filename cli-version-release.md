@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line, change log, command-line releases
 
@@ -20,19 +20,21 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
+| 1.12.15 | 24 January 2024 | Support for `refresh_token` in [agent update API](/docs/schematics?topic=schematics-update-agent-overview&interface=api) request, enhanced the version support for [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) command.|
+| 1.12.14 | 10 January 2024 | Added new commands and translations to support the agent, and policy. The system workspaces from the workspace list command output is hidden. Enhanced the agent job display on command output. Usage of `/v1/versions` API for the agent versions.|
 | 1.12.12 | 17 September 2023 | {{site.data.keyword.bpshort}} Agent create and update added with a [new flag --metadata](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-create) and a bug fix to configure an [HTTP timeout for request](/docs/schematics?topic=schematics-general-faq&interface=cli#http-api-call). |
 | 1.12.10 | 22 May 2023 | {{site.data.keyword.bpshort}} [Agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) and [agent list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list) command bug fixes to set the runtime errors. |
 | 1.12.9 | 6 April 2023 | {{site.data.keyword.bpshort}} Agent beta-1 and policy CLI commands are enhanced to include the -`-target-file`, and the `output` of [agent plan](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-plan), [agent apply](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-apply), and [agent health](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-health).  |
 | 1.12.8 | 22 Mar 2023 | [{{site.data.keyword.bpshort}} Agent beta-1](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd) and [policy](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#policy-cmd) CLI commands are available in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
 | 1.12.7 | 07 Feb 2023 | Bug fix to disable `API_AGENT_ATTACHMENT` in `us-south`, `us-east`, `eu-de`, `eu-gb` region.  |
-| 1.12.6 | 30 Jan 2023 | Enhanced complex input support through blueprint `yaml` file. Fixes related to blueprint status output in the blueprint list table, index out of range for workspace action output, refresh token issue for long running `blueprint jobs`, and spinner panic fixes in `get blueprint`. |
-| 1.12.5 | 18 Dec 2022 | Blueprint subcommand usage, revert to original usage of `blueprint create`, `blueprint apply` and so on. Support for specifying complex inputs through a local YAML file using `-input-file` option.  
-| 1.12.3 | 18 Nov 2022 |  Fixed blueprint subcommand usage, support `source type` in the blueprint list table. |
-| 1.12.3 | 3 Nov 2022 |  Enhanced blueprint commands, CLI with the latest SDK update, and the workspace action command update. |
-| 1.12.2 | 11 Aug 2022 | Included `--output` flag and bug fixes for all blueprint commands in  and released  {{site.data.keyword.bpshort}} v1.12.2 plug-in.|
-| 1.12.1 | 26 July 2022 | Incorporated the bugs and fixes related to blueprint commands in {{site.data.keyword.bpshort}} and released v1.12.1 plug-in.|
+| 1.12.6 | 30 Jan 2023 | Enhanced complex input support through `yaml` file. Fixes related to the status output, index out of range for workspace action output, refresh token issue for long running and spinner panic fixes. |
+| 1.12.5 | 18 Dec 2022 | The subcommand usage, and support for specifying complex inputs through a local YAML file using `-input-file` option.  
+| 1.12.3 | 18 Nov 2022 |  Fixed subcommand usage, support `source type`. |
+| 1.12.3 | 3 Nov 2022 |  Enhanced CLI commands, with the latest SDK update, and the workspace action command update. |
+| 1.12.2 | 11 Aug 2022 | Included `--output` flag and bug fixes for the commands in and released  {{site.data.keyword.bpshort}} v1.12.2 plug-in.|
+| 1.12.1 | 26 July 2022 | Incorporated the bugs and fixes commands in {{site.data.keyword.bpshort}}.|
 | 1.12.0 | 11 July 2022 | Support for `agents` commands in {{site.data.keyword.bpshort}} from command-line.|
-| 1.11.1 | 8 July 2022 | Support for `blueprint` commands, and fix the translation issue in {{site.data.keyword.bpshort}} from command-line.|
+| 1.11.1 | 8 July 2022 | Support to fix the translation issue in {{site.data.keyword.bpshort}} from command-line.|
 | 1.10.0 | 5 May 2022 | Support for `stop`, `force-stop`, and `terminate` in {{site.data.keyword.bpshort}} from command-line.|
 | 1.9.0 | 25 April 2022 | Support for `Drift` detection in {{site.data.keyword.bpshort}} from command-line.|
 | 1.8.1 | 17 April 2022 | Fixes alias deprecation display message for the {{site.data.keyword.bpshort}} JSON output.|
@@ -52,3 +54,5 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 | 1.5.7 | 04 June 2021 | Enhanced `ibmcloud schematics state list` command to display as tabular data with a new column `taint` status. Fixed `ibmcloud schematics job run` command with `--input` flag description. Fixed `ibmcloud schematics job run` command with `--output json` flag description. Fixed `ibmcloud schematics action update` command with `--credentials` flag and the locale translations.|
 | 1.5.6 | 03 June 2021 | Updated `ibmcloud schematics workspace new` command to support `Terraform v0.14` and the locale translations.|
 {: caption="Command line version history" caption-side="bottom"}
+
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-24"
 
 keywords: migrating terraform version, terraform version migration for schematics 
 
@@ -144,9 +144,9 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
 9.	Push the upgraded TF config files and `version.tf` back to your Git repository.
 10. Copy the content of modified `terraform.tfstate` file to `state.json` file.
 11. Create or update a `workspace.json` file as shown in the code block.
-
-        ```json
-        {
+    
+    ```json
+    {
         "name": "gb",
         "type": [
             "terraform_v0.13"
@@ -162,9 +162,8 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
             "folder": ".",
             "type": "terraform_v0.13"
         }]
-        }
-        ```
-        {: codeblock}
+    }
+    {: codeblock}
 
 12. Run these commands through command-line to create a new Terraform `v0.13` workspace 
     -  `ibmcloud schematics workspace new --file workspace.json --state state.json`.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-24"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -25,6 +25,20 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 Review the release notes for January 2024.
 {: shortdesc}
+
+### 24 January 2024
+{: #schematics-jan2424}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.15](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+### 18 January 2024
+{: #schematics-jan1824}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.14](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 
 
@@ -259,7 +273,6 @@ Review the release notes for December 2022.
 Release {{site.data.keyword.bpshort}} agents GitHub repository.
 :   The agent beta releases [{{site.data.keyword.bpshort}} agents](https://github.com/Cloud-Schematics/schematics-agents/releases){: external} Cloud {{site.data.keyword.bpshort}} GitHub repository.
 
-Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
 
 Release {{site.data.keyword.bpshort}} command-line plug-in.
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.5](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -278,7 +291,7 @@ Enhance {{site.data.keyword.bpshort}} documentation
 :   {{site.data.keyword.bpshort}} enhances its documentation with 
     - [What is Infrastructure as Code (IaC) with respect to {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-infrastructure-as-code)?.
     - [Relationship between {{site.data.keyword.bpshort}} offerings](/docs/schematics?topic=schematics-learn-about-schematics#sc-offerings).
-    - [Reusing blueprints and pipelines](/docs/schematics?topic=schematics-blueprint-reuse).
+    
 
 ### 18 November 2022
 {: #schematics-nov1822}
@@ -298,13 +311,6 @@ Release {{site.data.keyword.bpshort}} agents GitHub repository.
     - Unknown certificate issues during repository cloning.
     - Display the complete log information, log enhancements.
     - Job status, and other minor bug fixes.
-
-### 14 November 2022
-{: #schematics-nov1422}
-{: release-note}
-
-{{site.data.keyword.bpshort}} Blueprints template schema changes.
-:   {{site.data.keyword.bpshort}} Blueprints templates now support metadata attributes for template variable inputs. This includes `type`, `sensitive`, `max_length`, `min_length`, and `default`. Metadata attributes of template inputs take precedence over any attributes specified on module inputs. Module metadata attributes gets depreciated in a future release. 
 
 ### 03 November 2022
 {: #schematics-nov0322}
@@ -399,18 +405,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {: #schematics-july0822}
 {: release-note}
 
-{{site.data.keyword.bpshort}} Blueprints beta release in production.
-:   {{site.data.keyword.bpshort}} announces its [beta release](/docs/schematics?topic=schematics-bp-beta-limitations) of {{site.data.keyword.bpshort}} Blueprints to deploy large-scale and complex application environments from a reusable building blocks. Check the following content to learn about {{site.data.keyword.bpshort}} Blueprints beta releases.
-    - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Blueprints engagement.
-    - [Getting started](/docs/schematics?topic=schematics-getting-started).
-    - [Use case](/docs/schematics?topic=schematics-get-started-blueprints).
-    - [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro)
-    - [Understanding blueprint templates](/docs/schematics?topic=schematics-blueprint-templates) to configure the right schemas and use blueprint commands to deploy blueprints.
-    - See [blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to get access permissions to deploy blueprints.
-    - Blueprint operations are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#blueprints-cmd), [UI](/docs/schematics?topic=schematics-create-blueprint-config), and [API](/apidocs/schematics/schematics#create-blueprint).
-    - Deploy [{{site.data.keyword.bpshort}} Blueprints using the CLI](/docs/schematics?topic=schematics-deploy-schematics-blueprint-cli) tutorial to create cloud resources with a blueprint.
-    - [FAQs](/docs/schematics?topic=schematics-blueprints-faq) and [Troubleshooting guide](/docs/schematics?topic=schematics-bp-create-fails) for any challenges and questions on blueprints.
-    - [Beta code for {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-bp-beta-limitations) to engage with the agents beta level code and provide feedback.
+
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.3](/docs/schematics?topic=schematics-cli_version-releases) released.

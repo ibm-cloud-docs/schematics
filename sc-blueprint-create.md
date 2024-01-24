@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-12"
+  years: 2017, 2024
+lastupdated: "2024-01-23"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -147,7 +147,7 @@ Here are the steps to verify your blueprint config creation was successful.
 2. Click **Overview** tab to see the blueprint summary, including `Modules`, `Variables`, `Details`. The `Recent Job runs` will show the summary details of the blueprint create job. 
 3. Click **Modules** tab to see the status of the resource modules. These will be in an `Initialised` state, indicating that the module workspaces have been created, but no resources created. 
 4. Click **Jobs history** tab view the result of the blueprint create job and the operations that are performed against the resource modules. 
-5. Click **Settings** tab to view the summary of the new blueprint configuration.
+5. Click **Settings** tab to view the summary of the configuration.
 
 For more information, see the [troubleshooting section](/docs/schematics?topic=schematics-bp-create-fails).
 

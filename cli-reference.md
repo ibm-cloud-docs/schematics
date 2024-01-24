@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-24"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -792,7 +792,7 @@ Update an agent configuration. Updating an agent does not re-validate or re-depl
 Syntax
 
 ```sh
-ibmcloud schematics agent update --id AGENT_ID [--description DESCRIPTION] [--tags TAGS] [--metadata AGENT_METADATA] [--file FILE] [--output OUTPUT] [--no-prompt]
+ibmcloud schematics agent update --id AGENT_ID [--description DESCRIPTION] [--tags TAGS] [--version VERSION] [--metadata AGENT_METADATA] [--file FILE] [--output OUTPUT] [--no-prompt]
 ```
 {: pre}
 
@@ -803,6 +803,7 @@ Command options
 | `--id`| Required | The ID of an agent. |
 | `--tags` or `-t` | Optional | Agent tags. This flag can be used multiple times, and search the agent related resources faster.|
 | `--description` or `-d` | Optional | Short description of an agent.|
+| `--version value` or `-v` | Optional | Specify the version of an agent. Defaults to available latest version.|
 |  `--metadata` | Optional | Metadata of the agent. You can use the flag multiple times. For example, `git:private-git.github.com` or `git:gitlab.com`. If not set, defaults to `git:github.com`.|
 | `--file` or `-f` | Optional | Path to the `JSON` file that contains the definition of the agent.|
 | `--output` or `-o` | Optional | Specify output format, only `JSON` is supported. |

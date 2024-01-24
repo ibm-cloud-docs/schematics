@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-24"
 
 keywords: schematics
 subcollection: schematics
@@ -280,6 +280,14 @@ subcollection: schematics
 
     * Review the release notes for January 2024.
 
+    * [24 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2424)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
+    * [18 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1824)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
     * [10 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1024)
 
         * {{site.data.keyword.bpshort}} support for agent is generally available (GA) with full production support.
@@ -392,8 +400,6 @@ subcollection: schematics
 
         * Release {{site.data.keyword.bpshort}} agents GitHub repository.
 
-        * Release {{site.data.keyword.bpshort}} Blueprints bug fixes. Support for input values larger than 15,000 bytes.  
-
         * Release {{site.data.keyword.bpshort}} command-line plug-in.
 
 * [November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov22)
@@ -411,10 +417,6 @@ subcollection: schematics
     * [15 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1522)
 
         * Release {{site.data.keyword.bpshort}} agents GitHub repository.
-
-    * [14 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov1422)
-
-        * {{site.data.keyword.bpshort}} Blueprints template schema changes.
 
     * [03 November 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-nov0322)
 
@@ -465,8 +467,6 @@ subcollection: schematics
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
     * [8 July 2022](/docs/schematics?topic=schematics-schematics-relnotes#schematics-july0822)
-
-        * {{site.data.keyword.bpshort}} Blueprints beta release in production.
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
@@ -1360,6 +1360,18 @@ subcollection: schematics
 
 * [Next steps](/docs/schematics?topic=schematics-display-agentb1-overview&interface=api#agent-delete-nextsteps)
 
+[Updating agents](/docs/schematics?topic=schematics-update-agent-overview#update-agent-overview)
+
+* [Before you begin](/docs/schematics?topic=schematics-update-agent-overview#update-prereq)
+
+* [Updating an agent definition](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui)
+
+* [Creating an agent definition by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#update-agent-cli)
+
+* [Verifying agent update](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#verify-agent-update-cli)
+
+* [Updating an agent by using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api)
+
 [Deleting an agent](/docs/schematics?topic=schematics-delete-agent-overview#delete-agent-overview)
 
 * [Deleting an agent using the UI](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui#delete-agentb1-ui)
@@ -1603,8 +1615,6 @@ subcollection: schematics
     * [Action permissions](/docs/schematics?topic=schematics-access#action-permissions)
 
     * [Agent permissions](/docs/schematics?topic=schematics-access#agent-permissions)
-
-    * [Blueprint permissions](/docs/schematics?topic=schematics-access#blueprint-permissions)
 
     * [KMS permissions](/docs/schematics?topic=schematics-access#kms-permissions)
 
@@ -1986,26 +1996,6 @@ subcollection: schematics
 
     * [Agent Infrastructure](/docs/schematics?topic=schematics-sch-terms#agentsa3)
 
-* [Blueprints](/docs/schematics?topic=schematics-sch-terms#sch-terms-blueprint)
-
-    * [Blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1)
-
-    * [Blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2)
-
-    * [Blueprint configuration](/docs/schematics?topic=schematics-sch-terms#bpb3)
-
-    * [Blueprint environment](/docs/schematics?topic=schematics-sch-terms#bpb4)
-
-    * [Blueprint modules](/docs/schematics?topic=schematics-sch-terms#bpb5)
-
-    * [Blueprint inputs](/docs/schematics?topic=schematics-sch-terms#bpi1)
-
-    * [Blueprint input files](/docs/schematics?topic=schematics-sch-terms#bpi2)
-
-    * [Blueprint jobs](/docs/schematics?topic=schematics-sch-terms#bpj1)
-
-    * [Blueprint lifecycle](/docs/schematics?topic=schematics-sch-terms#bpl1)
-
 * [Catalog](/docs/schematics?topic=schematics-sch-terms#sch-terms-catalog)
 
 * [Inventories](/docs/schematics?topic=schematics-sch-terms#sch-terms-inventory)
@@ -2148,40 +2138,6 @@ subcollection: schematics
 * [Can {{site.data.keyword.bpshort}} Agent establish a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-cert)
 
 * [Can {{site.data.keyword.bpshort}} Agent update a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-update)
-
-[Blueprints](/docs/schematics?topic=schematics-blueprints-faq#blueprints-faq)
-
-* [What are the Git repositories that are supported by Blueprints?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-repos)
-
-* [Are variable operators and functions supported in blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-values)
-
-* [How are blueprint module dependencies and execution order determined?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-dependencies)
-
-* [How do I edit and validate blueprint templates?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-editing)
-
-* [Why do blueprints get the error 'Length for variable `variable name` greater than the given length'?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-length)
-
-* [Why do blueprint operations require a `blueprint ID`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-install)
-
-* [What URL format is used for referencing blueprint templates and input files?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-url)
-
-* [How is resource provisioning performed?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-resource)
-
-* [How do you view the blueprint provisioned resources in your cloud account?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-results)
-
-* [How do you securely pass input variables?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-secure-inputs)
-
-* [Why does the blueprint template, basic example, fail in the apply step?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-basic-example)
-
-* [What is the time taken to create an IBM Kubernetes Service cluster and other resources?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-time)
-
-* [How do you configure the version of Terraform to used?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-tf-version)
-
-* [Is it possible to specify the CLI parameters as a file?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-cli-file)
-
-* [When you create a blueprint config in the `us-south` target region, why is the blueprint job ID indicating `us-east`?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-target-region)
-
-* [Is it possible to delete the {{site.data.keyword.bpshort}} service instance by using the Resource Controller API or CLI?](/docs/schematics?topic=schematics-blueprints-faq#faqs-bp-schematics-instance)
 
 [Common for actions and workspaces](/docs/schematics?topic=schematics-general-faq#general-faq)
 
