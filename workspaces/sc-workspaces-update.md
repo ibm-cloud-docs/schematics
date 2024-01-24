@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-01-24"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -48,8 +48,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
           }
           ```
           {: pre}
-
-        - Optional: Click **Bind Agent** to bind a new workspace to the Agent. If you do not see the agents list, check you [connected the agents](/docs/schematics?topic=schematics-register-agent)?
+          
         - Click `Next`.
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
