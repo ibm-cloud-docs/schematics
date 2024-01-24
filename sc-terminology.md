@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-01-24"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -66,16 +66,6 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 
 It builds on the {{site.data.keyword.bpshort}} workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2).  
 {: shortdesc}
-
-### Blueprint
-{: #bpb1}
-
-A blueprint is the resource in {{site.data.keyword.bpshort}} a user works with to manage the group of modular environments and cloud resources created from a [blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2) and config. The blueprint resource in {{site.data.keyword.bpshort}} records the details of the template and the specific [configuration](/docs/schematics?topic=schematics-sch-terms#bpb3) details. All operations against the deployed cloud resources and modules are performed using the blueprint resource or ID. 
-
-The blueprint (resource) maintains the record of operations run, job status, the cloud resources deployed, and the [blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2). It defines the infrastructure architecture and the unique input values that are used to configure the environment.
-
-A blueprint is created with a [blueprint configuration](/docs/schematics?topic=schematics-sch-terms#bpb3). The set of cloud resources deployed by a blueprint is referred to as a [blueprint environment](/docs/schematics?topic=schematics-sch-terms#bpb4).
-{: shortdesc} 
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-01-24"
 
 keywords: schematics
 subcollection: schematics
@@ -1995,8 +1995,6 @@ subcollection: schematics
     * [Agent Infrastructure](/docs/schematics?topic=schematics-sch-terms#agentsa3)
 
 * [Blueprints](/docs/schematics?topic=schematics-sch-terms#sch-terms-blueprint)
-
-    * [Blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1)
 
 * [Catalog](/docs/schematics?topic=schematics-sch-terms#sch-terms-catalog)
 
