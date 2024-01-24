@@ -20,7 +20,7 @@ Find a summary of changes for each version of {{site.data.keyword.bpshort}} CLI 
 
 | Version | Release date | Changes |
 | ----- | ------- | -------------- |
-| 1.12.15 | 24 January 2024 | Support for `refresh_token` in [agent update API](/docs/schematics?topic=schematics-update-agent-overview&interface=api) request, enhanced the version support for [agent update](cloud.ibm.com/docs/schematics?topic=schematics-update-agent-overview) command.|
+| 1.12.15 | 24 January 2024 | Support for `refresh_token` in [agent update API](/docs/schematics?topic=schematics-update-agent-overview&interface=api) request, enhanced the version support for [agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) command.|
 | 1.12.14 | 10 January 2024 | Added new commands and translations to support the agent, and policy. The system workspaces from the workspace list command output is hidden. Enhanced the agent job display on command output. Usage of `/v1/versions` API for the agent versions.|
 | 1.12.12 | 17 September 2023 | {{site.data.keyword.bpshort}} Agent create and update added with a [new flag --metadata](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-create) and a bug fix to configure an [HTTP timeout for request](/docs/schematics?topic=schematics-general-faq&interface=cli#http-api-call). |
 | 1.12.10 | 22 May 2023 | {{site.data.keyword.bpshort}} [Agent update](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-update) and [agent list](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-list) command bug fixes to set the runtime errors. |
