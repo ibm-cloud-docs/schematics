@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-01-24"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -43,7 +43,7 @@ Update your agent configuration by choosing the cluster and {{site.data.keyword.
         - Select **Actions** > **Edit Agent**
         - You can edit the **Description**, **Cluster**, **COS instance name**, **COS bucket name**, or **COS bucket region** as in the requirement.
 3. Click ***Update and validate** to validate the cluster and {{site.data.keyword.cos_full_notm}} configuration.
-4. Click **Deploy** to deploy an agent.
+4. Click **Deploy** to redeploy an agent.
 
 ## Creating an agent definition by using the CLI 
 {: #update-agent-cli}
@@ -51,7 +51,7 @@ Update your agent configuration by choosing the cluster and {{site.data.keyword.
 
 Select the {{site.data.keyword.cloud_notm}} region where you want to update and manage your agent from. Set the [CLI region command](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) by running `ibmcloud target -r <region>`. Select the same region as the `location` specified on the `agent create` command. The {{site.data.keyword.cos_full_notm}} bucket location must be of the form `eu-gb` or `us-south` and not a city name.
 
-Example `agent update` syntax. The text between `< >` must add with your values:
+Example
 
 ```sh
 ibmcloud schematics agent update --id AGENT_ID --location <us-south> --agent-location <us-south> --version <1.0.0> --infra-type <ibm_kubernetes> --cluster-id <cg3fgvad0dak571xxx> --cluster-resource-group <Default> --cos-instance-name <agent-cos-instance> --cos-bucket <agent-cos-bucket> --cos-location <us-east> --resource-group <Default>
@@ -59,7 +59,7 @@ ibmcloud schematics agent update --id AGENT_ID --location <us-south> --agent-loc
 {: pre}
 
 
-## Verifying and validate to update agent by using the CLI
+## Verifying agent update
 {: #verify-agent-update-cli}
 {: cli}
 
@@ -68,25 +68,15 @@ ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 ```
 {: pre}
 
-```sh
-ibmcloud schematics agent validate --id AGENT_ID [--output OUTPUT]
-```
-{: pre}
-
-## Redeploy agent by using the CLI
-{: #redeploy-agent-update-cli}
-{: cli}
-
-```sh
-ibmcloud schematics agent deploy --id AGENT_ID [--force-redploy] [--output OUTPUT]
-```
-{: pre}
 
 ## Updating an agent by using the {{site.data.keyword.bpshort}} API
 {: #update-agent-api}
 {: api}
 
 Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to update an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Update an agent](/apidocs/schematics/schematics#update-agent-data) by using API.
+
+You can use the refresh_token to get a new IAM access token if you IAM token is expired.
+{: important}
 
 Example
 

@@ -280,6 +280,10 @@ subcollection: schematics
 
     * Review the release notes for January 2024.
 
+    * [24 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan2424)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
     * [18 January 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-jan1824)
 
         * Release {{site.data.keyword.bpshort}} command-line plug-in 
@@ -1364,9 +1368,7 @@ subcollection: schematics
 
 * [Creating an agent definition by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#update-agent-cli)
 
-* [Verifying and validate to update agent by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#verify-agent-update-cli)
-
-* [Redeploy agent by using the CLI](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#redeploy-agent-update-cli)
+* [Verifying agent update](/docs/schematics?topic=schematics-update-agent-overview&interface=cli#verify-agent-update-cli)
 
 * [Updating an agent by using the {{site.data.keyword.bpshort}} API](/docs/schematics?topic=schematics-update-agent-overview&interface=api#update-agent-api)
 
@@ -1993,8 +1995,6 @@ subcollection: schematics
     * [Agent service](/docs/schematics?topic=schematics-sch-terms#agentsa2)
 
     * [Agent Infrastructure](/docs/schematics?topic=schematics-sch-terms#agentsa3)
-
-* [Blueprints](/docs/schematics?topic=schematics-sch-terms#sch-terms-blueprint)
 
 * [Catalog](/docs/schematics?topic=schematics-sch-terms#sch-terms-catalog)
 

@@ -59,14 +59,6 @@ A Kubernetes cluster used to deploy and run the Agent services. It is composed o
 - IBM LogDNA instance 
 {: shortdesc}
 
-## Blueprints
-{: #sch-terms-blueprint}
-
-{{site.data.keyword.bplong}} Blueprints is an [Infrastructure as Code](https://www.redhat.com/en/topics/automation/what-is-infrastructure-as-code-iac){: external} (IaC) deployment and lifecycle management service for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout and the major building blocks. A builder builds the house from well-defined components using the blueprint for guidance. 
-
-It builds on the {{site.data.keyword.bpshort}} workspace support for Infrastructure as Code (IaC) and Hashicorp Terraform. See [Working with blueprints](/docs/schematics?topic=schematics-work-with-blueprints) for details of how to use blueprints and Terraform to create large-scale environments. When using the service, {{site.data.keyword.bpshort}} users create a [blueprint](/docs/schematics?topic=schematics-sch-terms#bpb1) to deploy and manage the cloud resources that are specified by a [blueprint template](/docs/schematics?topic=schematics-sch-terms#bpb2).  
-{: shortdesc}
-
 
 
 ## Catalog
