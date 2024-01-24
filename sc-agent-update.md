@@ -49,7 +49,7 @@ Update your agent configuration by choosing the cluster and {{site.data.keyword.
 {: #update-agent-cli}
 {: cli}
 
-Select the {{site.data.keyword.cloud_notm}} region where you want to update and manage your agent from. Set the [CLI region command](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) by running `ibmcloud target -r <region>`. Select the same region as the `location` specified on the `agent create` command. The {{site.data.keyword.cos_full_notm}} bucket location must be of the form `eu-gb` or `us-south` and not a city name.
+Select the {{site.data.keyword.cloud_notm}} region where you want to update and manage your agent. Set the [CLI region command](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) by running `ibmcloud target -r <region>`. Select the same region as the `location` specified on the `agent create` command. The {{site.data.keyword.cos_full_notm}} bucket location must be of the form `eu-gb` or `us-south` and not a city name. For more information, see [agent update](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#schematics-agent-update) command.
 
 Example
 
@@ -73,7 +73,7 @@ ibmcloud schematics agent get --id agent-ga-prod-cli-jan-10.soA.cd1c
 {: #update-agent-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to update an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Update an agent](/apidocs/schematics/schematics#update-agent-data) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to update an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Update an agent](/apidocs/schematics/schematics#update-agent-data).
 
 You can use the refresh_token to get a new IAM access token if you IAM token is expired.
 {: important}

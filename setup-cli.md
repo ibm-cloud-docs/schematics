@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-01-24"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -72,7 +72,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     Listing installed plug-ins...
 
     Plugin Name                             Version   Status             Private endpoints supported   
-    schematics                              1.12.12                        true  
+    schematics                              1.12.15                        true  
     ```
     {: screen}
 
@@ -85,15 +85,14 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     Example output: 
     ```text
     NAME:
-    ibmcloud schematics - 
+    ibmcloud schematics - Automate the deployment and management of IBM Cloud resources using Infrastructure as Code
 
     USAGE:
     ibmcloud schematics command [arguments...] [command options]
 
     COMMANDS:
     action, ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
-    agent, ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.
-    agents, ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.
+    agent, ag            Create and manage agents. Visit 'https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro' to know more about agents.
     apply                Apply a plan to an workspace to deploy the latest version of your configuration.
     destroy              Destroy resources in an existing workspace. This action cannot be reversed.
     inventory, iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
@@ -102,7 +101,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     logs                 Show details about actions that ran against an workspace.
     output               Get all the output values from your workspace; (ex. result of terraform output command
     plan                 Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
-    policy, plcy         [Beta] Create and manage policies.
+    policy, plcy         Create and manage policies. Policies tell Schematics which agent it should use to execute Terraform and Ansible jobs in a specific network zone.
     refresh              Refresh the workspace with latest version of your workspace configuration.
     resource-query, rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
     state                Advanced state management
@@ -110,9 +109,8 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
     workspace, ws        Create and manage workspaces. Workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
     help, h              Show help
 
-    Enter 'ibmcloud schematics help [command]' for more information about a command.
-
-    ```
+    Enter 'ibmcloud schematics help [command]' for more information about a command
+        ```
     {: screen}
 
 ## Updating the CLI
@@ -142,7 +140,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output: 
 
     ```text
-    schematics                      1.12.12        Update Available           false
+    schematics                      1.12.15        Update Available           false
     ```
     {: screen}
 
@@ -164,7 +162,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
    Example output
 
     ```text
-    schematics                      1.12.12        true
+    schematics[sch]                      1.12.15        true
     ```
     {: screen}
 
@@ -177,31 +175,30 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     Example output:
 
     ```text
-    Plugin Name                              schematics[sch]   
-    Plugin Version                           1.12.12   
-    Plugin SDK Version                       0.8.0   
-    Minimal IBM Cloud CLI version required   0.15.1   
-    Private endpoints supported              true   
+    Plugin Name                              schematics[sch]
+    Plugin Version                           1.12.15
+    Plugin SDK Version                       1.2.0
+    Minimal IBM Cloud CLI version required   0.15.1
+    Private endpoints supported              true
 
     Commands:
-    schematics,sch                     Automate the deployment and management of IBM Cloud resources using Infrastructure as Code   
-    schematics,sch workspace,ws        Create and manage workspaces. Workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.   
-    schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.   
-    schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.   
-    schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.   
-    schematics,sch apply               Apply a plan to an workspace to deploy the latest version of your configuration.   
-    schematics,sch refresh             Refresh the workspace with latest version of your workspace configuration.   
-    schematics,sch destroy             Destroy resources in an existing workspace. This action cannot be reversed.   
-    schematics,sch output              Get all the output values from your workspace; (ex. result of terraform output command   
-    schematics,sch version             Report version information about the IBM Cloud Schematics CLI.   
-    schematics,sch logs                Show details about actions that ran against an workspace.   
-    schematics,sch state               Advanced state management   
-    schematics,sch kms                 listing and enabling IBM Cloud Schematics kms instances and root keys .   
-    schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's   
-    schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions   
-    schematics,sch agents,ags          [Deprecated] Agents extends Schematics ability to reach your private, or on-premises, infrastructure.      
-    schematics,sch agent,ag            [Beta] Agents extends Schematics ability to reach your private, or on-premises infrastructure. Integrate Schematics Agent running in your private network to the IBM Cloud Schematics service to provision, configure, and operate your private or on-premise cloud resources. Visit `https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro` to learn more.   
-    schematics,sch policy,plcy         [Beta] Create and manage policies.
+    schematics,sch                     Automate the deployment and management of IBM Cloud resources using Infrastructure as Code
+    schematics,sch workspace,ws        Create and manage workspaces. Workspaces let you define the source control repository that contains your Terraform configuration and pass workspace-specific variables.
+    schematics,sch action,ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
+    schematics,sch job,j               Create and manage Schematics jobs. Job let you manage all the jobs like creating/deleting/updating/retrieving.
+    schematics,sch plan                Create a plan for an workspace. Plans show how resources would change if you applied the latest version of your workspace configuration.
+    schematics,sch apply               Apply a plan to an workspace to deploy the latest version of your configuration.
+    schematics,sch refresh             Refresh the workspace with latest version of your workspace configuration.
+    schematics,sch destroy             Destroy resources in an existing workspace. This action cannot be reversed.
+    schematics,sch output              Get all the output values from your workspace; (ex. result of terraform output command
+    schematics,sch version             Report version information about the IBM Cloud Schematics CLI.
+    schematics,sch logs                Show details about actions that ran against an workspace.
+    schematics,sch state               Advanced state management
+    schematics,sch kms                 listing and enabling IBM Cloud Schematics kms instances and root keys .
+    schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
+    schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
+    schematics,sch agent,ag            Create and manage agents. Visit 'https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro' to know more about agents.
+    schematics,sch policy,plcy         Create and manage policies. Policies tell Schematics which agent it should use to execute Terraform and Ansible jobs in a specific network zone.
     ```
     {: screen}
 
