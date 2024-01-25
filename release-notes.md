@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-01-25"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -107,7 +107,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.12](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 Release {{site.data.keyword.bpshort}} Agent migration page 
-:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta2` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta2).
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Updating agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui).
 
 ## August 2023
 {: #August-2023}
@@ -120,7 +120,7 @@ Review the release notes for August 2023.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} Agent migration page 
-:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Migrating to `1.0.0-beta1` version](/docs/schematics?topic=schematics-migrate-agent-version&interface=cli#migrate-v1beta1).
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Upgrading agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui).
 
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
@@ -201,7 +201,7 @@ The `terraform.tfstate` state file size maximum limit is less than 2 MB.
 :   {{{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent  beta-1 releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} Agent engagement.
     - [About {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-about-intro).
-    - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics_internal_v1#create-agent-data).
+    - {{site.data.keyword.bpshort}} Agent beta-1 are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference&interface=cli#agents-cmd), and [API](/apidocs/schematics/schematics#create-agent-data).
     - You can manage {{site.data.keyword.bpshort}} Agent beta-1 by 
       - [preparing for agent deployment](/docs/schematics?topic=schematics-plan-agent-overview)
       - [deploying](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli)
@@ -209,7 +209,6 @@ The `terraform.tfstate` state file size maximum limit is less than 2 MB.
       - [deleting](/docs/schematics?topic=schematics-delete-agent-overview&interface=cli)
     - You can also [use an agent assignment policy](/docs/schematics?topic=schematics-policy-manage), and [manage an agent health](/docs/schematics?topic=schematics-agentb1-health&interface=cli).
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agent.
-    - [Beta-1 code for {{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-agent-limitation) to engage with the agents beta-1 level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in.
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.8](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -390,13 +389,9 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} agents engagement.
     - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agents-intro).
-    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-beta0-cmd), [UI](/docs/schematics?topic=schematics-agents-setup#agents-setup-infra-ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
-    - Install [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agents-setup) through UI.
-    - Connect the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-register-agent) through UI to register the Agent to the {{site.data.keyword.bpshort}} service instance.
-    - Use the [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-using-agent) through UI to bind the {{site.data.keyword.bpshort}} workspaces to the Agent.
-    - Uninstall [{{site.data.keyword.bpshort}} Agent](/docs/schematics?topic=schematics-uninstall-agent) to clean up the Agent infrastructure and Agent services.
+    - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
+    - Install [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-plan-agent-overview) through UI.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agents.
-    - [Beta code for {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-limitation) to engage with the agents beta level code and provide feedback.
 
 Release {{site.data.keyword.bpshort}} command-line plug-in 
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.0](/docs/schematics?topic=schematics-cli_version-releases) released.
@@ -843,7 +838,7 @@ Allowed file extensions in {{site.data.keyword.bpshort}}
 :   Allowed and blocked file extensions support during cloning. For more information, see [allowed and blocked file extensions](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension).
 
 {{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation
-:   {{site.data.keyword.bplong_notm}} [command-line plug-in to install](/docs/cli?topic=schematics-cli-plugin-schematics-cli-reference), and [view command-line commands](/docs/cli?topic=schematics-cli-plugin-schematics-cli-reference) in the CLI documentation.
+:   {{site.data.keyword.bplong_notm}} [command-line plug-in to install](/docs/cli?topic=cli-schematics-cli-reference), and [view command-line commands](/docs/cli?topic=cli-schematics-cli-reference) in the CLI documentation.
 
 ### 12 February 2021
 {: #schematics-feb122021}
@@ -979,7 +974,7 @@ Review the release notes for July 2020.
 {: release-note}
 
 Stop apply support
-:   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource life cycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apidocs/schematics/schematics#stop-a-schematics-apply-action) API.
+:   {{site.data.keyword.bplong_notm}} now supports stopping a {{site.data.keyword.bpshort}} apply action that currently runs against your workspace from the console and the API. For more information, see [Managing resource life cycles](/docs/schematics?topic=schematics-manage-lifecycle) or use the [DELETE /v1/workspaces/{id}/actions/{action_id}](/apidocs/schematics/schematics#delete-action) API.
 
 New {{site.data.keyword.bpshort}} locations
 :   You can now create {{site.data.keyword.bpshort}} workspaces in the Frankfurt or London location by using the location selector from the {{site.data.keyword.bpshort}} console or targeting the matching {{site.data.keyword.cloud_notm}} region through CLI. For more information, see [Locations and service endpoints](/docs/schematics?topic=schematics-locations) and [Where is my data stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
@@ -1009,7 +1004,7 @@ Version 1.8.0 of the {{site.data.keyword.cloud_notm}} Provider plug-in available
 {: release-note}
 
 Upload Terraform templates as TAR files
-:   You can now provide your Terraform template by uploading a tap archive file from your local machine. This feature is supported from the command-line or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command or [`PUT /v1/workspaces/{id}/templates/{template_id}/template_repo_upload`](/apidocs/schematics/schematics#upload-a-tar-file-to-your-workspace) API.
+:   You can now provide your Terraform template by uploading a tap archive file from your local machine. This feature is supported from the command-line or API. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command or [`PUT /v1/workspaces/{id}/templates/{template_id}/template_repo_upload`](/apidocs/schematics/schematics#template-repo-upload) API.
 
 ## May 2020
 {: #may-2020}

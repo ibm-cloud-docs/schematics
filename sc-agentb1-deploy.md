@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-17"
+lastupdated: "2024-01-25"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -281,7 +281,7 @@ In addition, you can use the Kubernetes CLI (kubectl) or Kubernetes dashboard of
 {: #create-agent-api}
 {: api}
 
-Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Create an agent](/apidocs/schematics/schematics_internal_v1#create-agent-data) by using API.
+Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to create an IAM access token and authenticate with {{site.data.keyword.bpshort}} through the API. For more information, see [Create an agent](/apidocs/schematics/schematics#create-agent-data) by using API.
 
 Example
 
@@ -395,6 +395,5 @@ Deploying and configuration of an agent are complete.
 - If you are by using a private Git instance, then establish the connection with an agent through certificate. For more information, see [steps to associate an agent to connect](/docs/schematics?topic=schematics-faqs-agent&interface=cli#faqs-git-instance-cert).
 - For configuring and provisioning your infrastructure through [agent policies](/docs/schematics?topic=schematics-policy-manage). The agent policy is used by {{site.data.keyword.bpshort}} to dynamically route the Git repo download jobs, Workspace or Terraform jobs, and Action or Ansible jobs to an agent.
 - Manage your [agent and Kubernetes cluster](/docs/schematics?topic=schematics-configure-k8s-cluster).
-- You can [configure a proxy server](/docs/schematics?topic=schematics-proxy-agent-overview) for an agent.
 - You can check out the [agent FAQ](/docs/schematics?topic=schematics-faqs-agent&interface=ui) for any common questions that are related to agents.
 - When the agent is no longer in need, it can be removed following the steps in [delete an agent](/docs/schematics?topic=schematics-delete-agent-overview&interface=ui).

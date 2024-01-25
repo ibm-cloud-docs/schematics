@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-01-25"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1090,8 +1090,8 @@ You can use your encryption keys from the {{site.data.keyword.cloud_notm}} key m
 The key management system lists the instance that are created from your specific location and region. Following prerequisites are followed to perform the KMS activity.
 
 - You should have your `KYOK`, or `BYOK`. To create the {{site.data.keyword.keymanagementservicelong_notm}} keys, see [create KYOK root key by using UI](/docs/key-protect?topic=key-protect-create-root-keys). To create an {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} keys, see [create BYOK root key by using UI](/docs/hs-crypto?topic=hs-crypto-create-root-keys).
-- You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
-- You need to configure [service to service authorization](/docs/account?topic=account-serviceauth#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
+- You need to [add root key](/docs/key-protect?topic=key-protect-import-root-keys&interface=ui#import-root-key-gui) to {{site.data.keyword.bpshort}} services.
+- You need to configure [service to service authorization](/docs/account?topic=account-serviceauth&interface=ui#create-auth) to integrate `BYOK`, and `KYOK` in {{site.data.keyword.bpshort}} service.
 
 
 KMS setting is a one time settings. You need to open a [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.
@@ -2455,7 +2455,7 @@ Run {{site.data.keyword.bpshort}} operations, to create, update, and delete {{si
 When you apply a workspace Terraform template, your resources are provisioned, modified, or removed from {{site.data.keyword.cloud_notm}}. Temporary files created during the apply operation can be [persisted](/docs/schematics?topic=schematics-general-faq#persist-file) (saved) for future operations.  
 {: shortdesc}
 
-Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} apply operation. For more information about workspace states, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state&interface=ui#workspace-state-diagram).
+Your workspace must be in an **Inactive**,  **Active**, **Failed**, or **Stopped** state to perform a {{site.data.keyword.bpshort}} apply operation. For more information about workspace states, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram).
 {: note}
 
 While your Terraform jobs are running, the workspace is locked and changes cannot be made to your workspace until execution is complete.

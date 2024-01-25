@@ -188,7 +188,7 @@ toc:
                                                                                 href: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
                                                                       - link:
                                                                                 label: Terraform documentation
-                                                                                href: https://www.terraform.io/docs/index.html
+                                                                                href: https://developer.hashicorp.com/terraform/docs
                                                     - topicgroup:
                                                               label: Ansible
                                                               links:

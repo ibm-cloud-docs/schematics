@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-09"
+lastupdated: "2024-01-25"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -139,7 +139,7 @@ The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the He
 {: faq}
 {: support}
 
-The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state&interface=ui#workspace-state-diagram).
+The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram).
 
 ## How do you set the Git release tag? 
 {: #releasetag-warn-faq}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-04"
+lastupdated: "2024-01-25"
 
 keywords: schematics agents trusted profile id, agent trusted id, trusted profile,
 
@@ -69,4 +69,4 @@ Enable and configure your Agent service to establish trust with computed resourc
 ## Next Step
 {: #agent-profile-id-nextstep}
 
-Refer to [Deploying the Agent services settings](/docs/schematics?topic=schematics-agents-setup#agents-setup-svc) to override the `profile_id` input variable.
+Refer to [Deploying the Agent services settings](/docs/schematics?topic=schematics-plan-agent-overview#agents-setup-svc) to override the `profile_id` input variable.

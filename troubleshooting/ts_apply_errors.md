@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-05"
+  years: 2017, 2024
+lastupdated: "2024-01-25"
 
 keywords: schematics, schematics action, create schematics actions, run ansible playbooks, delete schematics action, 
 
@@ -84,7 +84,7 @@ Error retrieving resource group <resource-group>: ResourceGroupDoesnotExist: Giv
 You do not have the wanted permissions in {{site.data.keyword.iamshort}} to view the resource group. If you specified an API key in your Terraform template or in {{site.data.keyword.bpshort}}, this API key does not have the wanted permissions in IAM to view the resource group.
 {: tsCauses}
 
-Make sure that the `Viewer` permission on the resource group is assigned to you or the API key that you use. For more information, see [Adding resources to a resource group](/docs/account?topic=account-rgs#add_to_rgs).
+Make sure that the `Viewer` permission on the resource group is assigned to you or the API key that you use. For more information, see [Adding resources to a resource group](/docs/account?topic=account-rgs&interface=ui#add_to_rgs).
 {: tsResolve}
 
 </br>

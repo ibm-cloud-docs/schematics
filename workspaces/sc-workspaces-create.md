@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-01-25"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -24,7 +24,7 @@ Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_no
 ## Before you begin
 {: #prerequisites-create}
 
-- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
+- [Create a Terraform configuration](/docs/schematics?topic=schematics-create-tf-config), and store the configuration in a `GitHub`, `GitLab`, or `Bitbucket` repository. You can also upload a tape archive file (`.tar`) from your local workstation to provide your template to {{site.data.keyword.bplong_notm}}. For more information, see the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a `tar` file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API. 
 - Make sure that you have the [permissions](/docs/schematics?topic=schematics-access) to create a workspace. 
 
 Ensure the `location` and the `url` endpoint are pointing to the same region when you create or update the {{site.data.keyword.bpshort}} workspaces and actions. For more information about location and endpoint, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)?
@@ -57,7 +57,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
         - **Workspace name** as `schematics-agent-service`.
         - **Tags** as `my-tags`. Optional: Enter tags for your workspace. You can use the tags later to find your workspace faster.
         - **Resource group** as `default` or other resource group for this workspace. 
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. Decide where you want to create your workspace? The location determines where your {{site.data.keyword.bpshort}} jobs run?, and where your workspace data is stored? You can choose between a location, such as North America, or a metro city, such as Frankfurt or London. If you select a location, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)? The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. The console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. Decide where you want to create your workspace? The location determines where your {{site.data.keyword.bpshort}} jobs run?, and where your workspace data is stored? You can choose between a location, such as North America, or a metro city, such as Frankfurt or London. If you select a location, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)? The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. The console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-workspace) instead.
         - Optional, enter a descriptive name for your workspace.
         - Click `Next`.
     - Click `Create`. Your workspace is created with a **Draft** state and the workspace **Settings** page opens.
@@ -66,7 +66,7 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
 {: #import-template}
 {: ui}
 
-If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#upload-template-tar) API. 
+If you want to upload a tape archive file (`.tar`) instead of importing your workspace to a Git repository, you must use the [`ibmcloud schematics workspace upload`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) command and see the [upload a tar file to your workspace](/apidocs/schematics/schematics#template-repo-upload) API. 
 {: tip}
 
 1. On the workspace **Settings** page, enter the edit icon to edit your `Repository URL`. The link can point to the `master` branch, any other branch, or a subdirectory. 

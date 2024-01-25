@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-01-25"
 
 keywords: schematics, automation, terraform
 
@@ -190,11 +190,11 @@ As the {{site.data.keyword.cloud_notm}} account owner or authorized account admi
 
 1. [Invite users to your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-iamuserinv).
 
-2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups#create_ag) for each team. 
+2. Define your teams and [create an IAM access group](/docs/account?topic=account-groups&interface=ui#create_ag) for each team. 
 
-3. [Create a resource group](/docs/account?topic=account-rgs#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
+3. [Create a resource group](/docs/account?topic=account-rgs&interface=ui#create_rgs) for each teams. So that you can organize access to their {{site.data.keyword.cloud_notm}} services and workspaces in your account, and bundle them under one common view and billing process. If you want to keep your {{site.data.keyword.bpshort}} workspaces and actions separate from the {{site.data.keyword.cloud_notm}} resources, you must create multiple resource groups. 
 
-4. [Assign access to your IAM access group](/docs/account?topic=account-groups#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
+4. [Assign access to your IAM access group](/docs/account?topic=account-groups&interface=ui#access_ag). Consider the following guidelines when you assign access to an IAM access group: 
     - Make sure to scope access of your group to the resource group that you created for this team. 
     - If you want your team to have access to multiple resource groups, such as the **Administrator** and **Manager** permissions on all resources in resource group A, but **Viewer** access for the resources in resource group B, you must create multiple access policies. 
     - The resource group of the {{site.data.keyword.bpshort}} workspaces or action can be different from the resource group of the {{site.data.keyword.cloud_notm}} resources that you want to work with.
