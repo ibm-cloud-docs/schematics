@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-01-25"
 
 keywords: schematics agent deploying, deploying agent, agent deploy, command-line, api, ui
 
@@ -24,6 +24,9 @@ Following are the scenarios you must use agent upgrade.
 - To incorporate the issues, features, or vulnerable images that are released by {{site.data.keyword.bpshort}}. For example, you are using agent version is `1.0.0`. If {{site.data.keyword.bpshort}} releases `1.0.x` version, you can use agent update to upgrade `v1.0.0` - `v1.1.1`.
 - To update an agent metadata such as `name`, `description`, `tags`, `resource group`, `version`, and `agent_metadata` attributes.
 - You can use `agent update` to revoke the updated version to its existing version.
+
+Agent update cannot be done on a deployed agent when performing `terraform init`, `terraform plan` and `terrafom apply` on the workspace that are used with the deployed agent.
+{: important}
 
 ## Before you begin
 {: #update-prereq}

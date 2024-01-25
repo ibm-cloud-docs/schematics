@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-25"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -58,7 +58,7 @@ You can install only one agent on the {{site.data.keyword.containerlong_notm}} c
 {: faq}
 {: support}
 
-Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are supported with agents. At this time these are version 1.4 and version 1.5. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](docs/schematics?topic=schematics-migrating-terraform-version) to upgrade before using agents.
+Only the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}} are supported with agents. At this time these are version 1.4 and version 1.5. Older versions of Terraform are not supported. Workspaces using older versions of Terraform must be updated to one of the supported versions prior to use with agents. See the instructions [Upgrading to a new Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version) to upgrade before using agents.
 
 ## Why does workspace execution fail with `terraformx.x: executable file not found in $PATH`
 {: #faqs-agent-terraform-version-old}
@@ -118,7 +118,7 @@ Currently, you can assign any number of workspaces to an agent. The workspace jo
 
 {{site.data.keyword.bpshort}} Agent relax the timeout limitation for `local-exec`, `remote-exec` and Ansible playbook execution. These are limited to 60 minutes in the multi-tenant service to ensure fair service utilisation by all users. No duration is applied for jobs executed on agents. Long job execution times needs more user cluster capacity and worker nodes to ensure timely execution of all cluster jobs.
 
-It is recommended to use a service such as [Continous Delivery](docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) for long running jobs performing software installation tasks.
+It is recommended to use a service such as [Continous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) for long running jobs performing software installation tasks.
 
 ## What is the difference between `agent-location` and `location` flag in agent service?
 {: #faqs-agent-diff-location}

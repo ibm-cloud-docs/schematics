@@ -1,6 +1,6 @@
 {
   "title": "IBM Cloud Schematics docs",
-  "lastupdated": "2023-12-13",
+  "lastupdated": "2024-01-25",
   "introduction": "Explore the capabilities of IBM Cloud Schematics. You can get started with deploying platform services by using Schematics Workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
   "section_devtools": {
     "api": "/apidocs/schematics",
@@ -9,7 +9,7 @@
   },
   "section_learn": {
     "developer": "https://developer.ibm.com/?q=schematics",
-    "architecture": "https://www.ibm.com/cloud/schematics",
+    "architecture": "https://www.ibm.com/products/schematics",
     "training": "https://www.ibm.com/training/cloud"
   },
   "section_recommended": [
@@ -22,11 +22,6 @@
       "title": "Extend provisioning through agents",
       "description": "Learn how to provision, configure, and operate your private or on-premises cloud cluster resources without any time, network, or software restrictions.",
       "href": "/docs/schematics?topic=schematics-agent-about-intro"
-    },
-    {
-      "title": "Deploy complex application environments using Blueprints",
-      "description": "Learn how to deploy large-scale and complex application environments from reusable building blocks and used across multiple environments.",
-      "href": "/docs/schematics?topic=schematics-blueprint-intro"
     },
     {
       "title": "Deploy cloud services with workspaces",

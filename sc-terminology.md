@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-01-25"
 
 keywords: terminology, IBM Cloud schematics terminology, terms, definitions, schematics terminology
 
@@ -84,7 +84,7 @@ A resource inventory can be defined by using a static inventory file, or dynamic
 ## Jobs
 {: #sch-terms-job}
 
-A job maintains a record of the execution of tasks or operations for {{site.data.keyword.bpshort}} `Workspaces`, `Actions`, `Blueprints`, `Agents` and resources. You can see these job records appearing in the context of `action`, `Blueprint`, and `workspace`. The job record describes the status of the Job, inputs used to run the job, outputs produced by the job and the console logs.
+A job maintains a record of the execution of tasks or operations for {{site.data.keyword.bpshort}} `Workspaces`, `Actions`, `Agents` and resources. You can see these job records appearing in the context of `action`, and `workspace`. The job record describes the status of the Job, inputs used to run the job, outputs produced by the job and the console logs.
 {: shortdesc}
 
 ## Templates or Modules

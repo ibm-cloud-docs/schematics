@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-10-04"
+  years: 2017, 2024
+lastupdated: "2024-01-25"
 
 keywords: schematics cost, schematics cost estimation, cost estimation, cost, cost-estimation
 
@@ -30,7 +30,7 @@ After you add the template to your workspace, you can configure the input values
 1. Log in to [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/){: external}.
 2. Access **Schematics** > **Workspaces** and select your workspace.
 3. Go to the workspace **Settings** page.
-4. Enter the input values and save to configure the template. For more information, see [running a workspace plan](/docs/schematics?topic=schematics-sch-plan-wk).
+4. Enter the input values and save to configure the template. For more information, see [running a workspace plan](/docs/schematics?topic=schematics-sch-plan-wks&interface=ui).
 5. Click `Generate Plan` to run the planned operation and a new cost estimate is computed. Generation might take `1` or `2` minutes, based on your template infrastructure. 
 6. You can view the estimated cost for the template on the **Jobs** page by using the **Cost estimate**.
 7. Review the cost, if acceptable, proceed to run `Apply Plan`.

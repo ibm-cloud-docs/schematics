@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-01-25"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -48,13 +48,13 @@ Ensure the `location` and the `url` endpoint are pointing to the same region whe
           }
           ```
           {: pre}
-          
+
         - Click `Next`.
     - In **Workspace details** section. Enter a name for your `workspace name`. The name can be up to 128 characters long and can include alphanumeric characters, spaces, dashes, and underscores.
         - **Workspace name** as `schematics-agent-service`.
         - **Tags** as `my-tags`. Optional: Enter tags for your workspace. You can use the tags later to find your workspace faster.
         - **Resource group** as `default` or other resource group for this workspace. 
-        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. Decide where you want to create your workspace? The location determines where your {{site.data.keyword.bpshort}} jobs run?, and where your workspace data is stored? You can choose between a location, such as North America, or a metro city, such as Frankfurt or London. If you select a location, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)? The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. The console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-a-workspace) instead.
+        - **Location** as `North America` or other [region](/docs/schematics?topic=schematics-multi-region-deployment) for this workspace. Decide where you want to create your workspace? The location determines where your {{site.data.keyword.bpshort}} jobs run?, and where your workspace data is stored? You can choose between a location, such as North America, or a metro city, such as Frankfurt or London. If you select a location, {{site.data.keyword.bpshort}} determines the location based on availability. If you select a metro city, your workspace is created in this location. For more information about where your data is stored, see [Where is your information stored](/docs/schematics?topic=schematics-secure-data#pi-location)? The location that you choose is independent from the region or regions where you want to provision your {{site.data.keyword.cloud_notm}} resources. The console does not support all available locations. To create the workspace in a different location, use the [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) or [API](/apidocs/schematics/schematics#create-workspace) instead.
         - Optional, enter a descriptive name for your workspace.
         - Click `Next`.
     - Click `Update`. Your workspace is Updated with a **Draft** state and the workspace **Settings** page opens.

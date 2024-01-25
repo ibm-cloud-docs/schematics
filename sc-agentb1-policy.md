@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-11"
+lastupdated: "2024-01-25"
 
 keywords: schematics agent, agent policy, policies
 
@@ -112,7 +112,6 @@ Before you begin:
 
 - Install or update the [{{site.data.keyword.bpshort}} plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) version to be `1.12.12` or higher.
 - Select the {{site.data.keyword.cloud_notm}} region where the agent is defined. Set the CLI region by running [`ibmcloud target -r <region>`](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) command.
-- Check that you have the [IAM permissions](/docs/schematics?topic=schematics-access#blueprint-permissions) to create an agent policy.
 - Create an agent policy file 
 
 ### Defining a JSON policy file
