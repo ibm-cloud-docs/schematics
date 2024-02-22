@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-02-22"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -73,7 +73,7 @@ If you want to upload a tape archive file (`.tar`) instead of importing your wor
     - Example for `master` branch: `https://github.com/myorg/myrepo`
     - Example for other branches: `https://github.com/myorg/myrepo/tree/mybranch`
     - Example for subdirectory: `https://github.com/mnorg/myrepo/tree/mybranch/mysubdirectory`      
-2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command-line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension) for cloning.
+2. If you want to use a private Git repository, enter your personal access token. The personal access token is used to authenticate with your Git repository to access your Terraform template. For more information, see [Creating a personal access token for the command-line](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens). If you want to clone from the Git repository see the [allowed and blocked file extensions](/docs/schematics?topic=schematics-general-faq#clone-file-extension) for cloning.
 3. Select the `Terraform version` that your Terraform configuration files are written in.
 4. Click the checkbox `I understand the changes that could happen if I edit this URL and I agree to these happening` option.
 5. Click **Save**. {{site.data.keyword.bplong_notm}} automatically downloads the Terraform configuration files from your repository, scans them for syntax errors, and retrieves all input variables that you declared in your configuration files. When all configuration files are downloaded successfully and no syntax errors are found, the workspace state changes to **Inactive**.
@@ -108,7 +108,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 
 1. Create a JSON file on your local workstation and add your workspace configuration. For more configuration options when creating the workspace, see the [`ibmcloud schematics workspace new` command](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
 
-    To create a workspace with Agent, refer to [ibmcloud schematics workspace new with Agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-agent-new) command.
+    To create a workspace with Agent, refer to [ibmcloud schematics workspace new with Agent](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) command.
     {: note}
 
     ```json

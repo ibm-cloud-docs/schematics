@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-06"
+lastupdated: "2024-02-22"
 
 keywords: schematics
 subcollection: schematics
@@ -2131,9 +2131,9 @@ subcollection: schematics
 
 * [What are the minimum cluster configurations needed to support 30 jobs on the {{site.data.keyword.bpshort}} agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-min-cluster-conf)
 
-* [How can a user identify the job is created by an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
+* [How can a user identify the job is created by an agent?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job-id)
 
-* [Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-job)
+* [Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-wks-job)
 
 * [Can {{site.data.keyword.bpshort}} Agent establish a connection with the private Git instance?](/docs/schematics?topic=schematics-faqs-agent#faqs-git-instance-cert)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-24"
+lastupdated: "2024-02-22"
 
 keywords: schematics CLI, schematics command-line, schematics commands, terraform commands, terraform CLI, setting up schematics CLI, cli
 
@@ -92,7 +92,7 @@ Install the {{site.data.keyword.bplong_notm}} plug-in to automate cloud operatio
 
     COMMANDS:
     action, ac           Create and manage Schematics actions. Action let you define the source control repository that contains your playbook yamls etc. and pass environment-specific variables.
-    agent, ag            Create and manage agents. Visit 'https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro' to know more about agents.
+    agent, ag            Create and manage agents. Visit 'https://cloud.ibm.com/docs/schematics?topic=schematics-agent-about-intro' to know more about agents.
     apply                Apply a plan to an workspace to deploy the latest version of your configuration.
     destroy              Destroy resources in an existing workspace. This action cannot be reversed.
     inventory, iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
@@ -197,7 +197,7 @@ Update the {{site.data.keyword.cloud_notm}} command-line and the {{site.data.key
     schematics,sch kms                 listing and enabling IBM Cloud Schematics kms instances and root keys .
     schematics,sch inventory,iv        Create and manage Schematics Inventories. Inventory let you define host group that can contain INI or Resource Query id's
     schematics,sch resource-query,rq   Create and manage Schematics Resource Query. Resource query let you define conditions to fetch host group that can be used to perform actions
-    schematics,sch agent,ag            Create and manage agents. Visit 'https://cloud.ibm.com/docs/schematics?topic=schematics-agents-intro' to know more about agents.
+    schematics,sch agent,ag            Create and manage agents. Visit 'https://cloud.ibm.com/docs/schematics?topic=schematics-agent-about-intro' to know more about agents.
     schematics,sch policy,plcy         Create and manage policies. Policies tell Schematics which agent it should use to execute Terraform and Ansible jobs in a specific network zone.
     ```
     {: screen}

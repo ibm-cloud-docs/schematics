@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-02-22"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -280,14 +280,14 @@ For the {{site.data.keyword.vsi_is_full}} or {{site.data.keyword.containerlong}}
 {: caption="agent microservice deployments" caption-side="bottom"}
 
 ## How can a user identify the job is created by an agent?
-{: #faqs-agent-job}
+{: #faqs-agent-job-id}
 {: faq}
 {: support}
 
 You can identify that the workspace is created by an Agent through the workspace job logs.
 
 ## Is it possible that a workspace is created by an agent, still do not have a reference in the workspace job log?
-{: #faqs-agent-job}
+{: #faqs-agent-wks-job}
 {: faq}
 {: support}
 

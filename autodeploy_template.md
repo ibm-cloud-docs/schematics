@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-02-22"
 
 keywords: schematics action deployment, automation, schematics workspace,  schematics workspace creation, auto deploy
 
@@ -27,7 +27,7 @@ For a sample button, see the `Deploy to {{site.data.keyword.cloud}}` button on t
 
 1. Create an Ansible playbook and publish the playbook in a GitHub repository. If you do not have a playbook, you can use one of the [IBM-provided Ansible playbooks](https://github.com/Cloud-Schematics/?q=Ansible&type=&language=&sort=){: external}.
 2. Copy the Git repository URL, such as `https://github.com/Cloud-Schematics/ansible-app-deploy`.
-3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} actions create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
+3. Use the following syntax to create the URL to automatically pre-populate an action name and the Git repository URL on the {{site.data.keyword.bpshort}} actions create page. If you do not provide the name and Git repository URL, the `Deploy to {{site.data.keyword.cloud}}` link defaults to the **Create an action** page without pre-populating an action name or the Git repository URL.
 
     Syntax
     

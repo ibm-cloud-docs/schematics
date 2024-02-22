@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-02-22"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -89,7 +89,7 @@ The {{site.data.keyword.bpshort}} Agent supports private catalog
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} infrastructure cost estimator 
-:   The {{site.data.keyword.bpshort}} [infrastructure cost estimator](/docs/schematics?topic=schematics-cost-estimation) is released. You can now [verify your workspace plan](/docs/schematics?topic=schematics-sch-deploy-wks&interface=ui#verify-wks-list-ui) to view the results of the workspace apply job.
+:   The {{site.data.keyword.bpshort}} [infrastructure cost estimator](/docs/schematics?topic=schematics-cost-estimation) is released. You can now [verify your workspace plan](/docs/schematics?topic=schematics-sch-plan-wks&interface=ui) to view the results of the workspace apply job.
 
 ## September 2023
 {: #September-2023}
@@ -107,7 +107,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 :   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.12](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 Release {{site.data.keyword.bpshort}} Agent migration page 
-:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Updating agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui).
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Updating agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui).
 
 ## August 2023
 {: #August-2023}
@@ -120,7 +120,7 @@ Review the release notes for August 2023.
 {: release-note}
 
 Release {{site.data.keyword.bpshort}} Agent migration page 
-:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Upgrading agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui).
+:   The {{site.data.keyword.bpshort}} Agent supports agent version migration through tagging mechanism. For more information, see [Upgrading agent](/docs/schematics?topic=schematics-update-agent-overview&interface=ui#update-agent-ui).
 
 :   [Announcement of {{site.data.keyword.bpshort}} supporting of Terraform v1.5](https://cloud.ibm.com/status/announcement?component=schematics){: external} from the end of September 2023.
 
@@ -388,7 +388,7 @@ Release {{site.data.keyword.bpshort}} command-line plug-in
 {{site.data.keyword.bpshort}} agents beta release in production.
 :   {{site.data.keyword.bpshort}} Agent extends the ability to use {{site.data.keyword.bpshort}} workspace and action jobs to provision, configure, and securely access your infrastructure. See the following content to learn about {{site.data.keyword.bpshort}} Agent releases.
     - [Landing page](/docs/schematics) to start your {{site.data.keyword.bpshort}} agents engagement.
-    - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agents-intro).
+    - [About {{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-agent-about-intro).
     - Agents are supported through [CLI](/docs/schematics?topic=schematics-schematics-cli-reference#agents-cmd), [UI](/docs/schematics?topic=schematics-deploy-agent-overview&interface=ui), `APIs` related to [agents](/apidocs/schematics/schematics#list-agent), and [Policy](/apidocs/schematics/schematics#list-policy).
     - Install [{{site.data.keyword.bpshort}} agents](/docs/schematics?topic=schematics-plan-agent-overview) through UI.
     - [FAQs](/docs/schematics?topic=schematics-faqs-agent) and [Troubleshooting guide](/docs/schematics?topic=schematics-agent-crn-not-found) for any challenges and questions on agents.
@@ -690,7 +690,7 @@ Bastion host enhancement in {{site.data.keyword.bpshort}} actions API
 :   The {{site.data.keyword.bpshort}} actions API now supports bastion host connection with non-root user and the `ssh` in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
 
 {{site.data.keyword.bplong_notm}} job queue process
-:   For more information about job queue process, see [Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process) and [FAQ](/docs/schematics?topic=schematics-workspaces-faq#job-queue-faq).
+:   For more information about job queue process, see [Executing process of the {{site.data.keyword.bpshort}} job queue](/docs/schematics?topic=schematics-job-queue-process) and [FAQ](/docs/schematics?topic=schematics-general-faq#job-queue-faq).
 
 {{site.data.keyword.bpshort}} actions `APIs` enhances the credentials parameter
 :   You can now access the inventory username through the credentials parameter in the [create](/apidocs/schematics/schematics#create-action) and [update](/apidocs/schematics/schematics#update-action) action `APIs`.
@@ -835,7 +835,7 @@ Review the release notes for February 2021.
 :   {{site.data.keyword.bplong_notm}} supports the ability to store the user-defined file for running the subsequent Terraform commands. For more information, see [store user-defined files in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-general-faq#persist-file).
 
 Allowed file extensions in {{site.data.keyword.bpshort}}
-:   Allowed and blocked file extensions support during cloning. For more information, see [allowed and blocked file extensions](/docs/schematics?topic=schematics-workspaces-faq#clone-file-extension).
+:   Allowed and blocked file extensions support during cloning. For more information, see [allowed and blocked file extensions](/docs/schematics?topic=schematics-general-faq#clone-file-extension).
 
 {{site.data.keyword.bpshort}} CLI plug-in and commands support in CLI documentation
 :   {{site.data.keyword.bplong_notm}} [command-line plug-in to install](/docs/cli?topic=cli-schematics-cli-reference), and [view command-line commands](/docs/cli?topic=cli-schematics-cli-reference) in the CLI documentation.
@@ -955,7 +955,7 @@ Review the release notes for August 2020.
 {: release-note}
 
 Support for multiple Terraform provider
-:   {{site.data.keyword.bplong_notm}} now supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported. For more information about the provider configuration, see [Multiple Terraform Provider](/docs/schematics?topic=schematics-general-faq#provider-versions).
+:   {{site.data.keyword.bplong_notm}} now supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider executes latest version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported. For more information about the provider configuration, see [Multiple Terraform Provider](/docs/schematics?topic=schematics-workspaces-faq#provider-versions).
 
 Time out set for local-exec and remote-exec users
 :   If you run local-exec or remote-exec users, make sure the execution completes within 30 minutes. Otherwise execution times out automatically.
