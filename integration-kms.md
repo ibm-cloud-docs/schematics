@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-02-22"
 
 keywords: monitoring schematics services, monitoring, integration services
 
@@ -40,7 +40,7 @@ The key management system will list the instance that are created from your spec
     * Select the **Role** as **Reader**.
     * Click **Authorize**.
 
-      For more information, see IAM authorization to create by using [CLI](/docs/account?topic=account-serviceauth&interface=ui#auth-cli), and [API](/docs/account?topic=account-serviceauth&interface=ui#create-auth).
+      For more information, see IAM authorization to create by using [CLI](/docs/account?topic=account-serviceauth&interface=cli#create-auth), and [API](/docs/account?topic=account-serviceauth&interface=ui#create-auth).
       {: note}
 
 KMS setting is a one time settings. You need to open the [support ticket](/docs/get-support?topic=get-support-using-avatar) to update KMS settings.

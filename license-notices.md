@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-02"
+  years: 2017, 2024
+lastupdated: "2024-02-22"
 
 keywords: schematics license, schematics notices, schematics license notices
 
-subcollection: satellite
+subcollection: schematics
 
 ---
 

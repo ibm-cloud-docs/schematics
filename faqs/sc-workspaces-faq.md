@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-02-22"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -283,7 +283,7 @@ You can edit only one variable at a time from {{site.data.keyword.bpshort}} cons
 {: faq}
 {: support}
 
-Yes, you can set or manage the keys by using `ibm_kms_key` as shown in the sample code block. For more information, see [ibm_kms_key](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key#import). 
+Yes, you can set or manage the keys by using `ibm_kms_key` as shown in the sample code block. For more information, see [ibm_kms_key](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key#import){: external}.
 
 ```terraform
 resource "ibm_resource_instance" "kms_instance" {
