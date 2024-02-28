@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-02-28"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -18,8 +18,11 @@ subcollection: schematics
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify IBM Cloud, see the ibmcloud schematics plan command.
 {: shortdesc} 
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
+
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the Terraform v1.2, v1.3, v1.4 template from 2nd week of April 2024, as HashiCorp Configuration Language has deprecates these versions in the Terraform providers.
+{: important}
 
 ## Before you begin
 {: #update-prerequisites}

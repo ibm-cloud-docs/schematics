@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-02-28"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -18,8 +18,11 @@ subcollection: schematics
 List the workspaces in your {{site.data.keyword.cloud}} account and optionally, show the details for your workspace.
 {: shortdesc} 
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
+
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the Terraform v1.2, v1.3, v1.4 template from 2nd week of April 2024, as HashiCorp Configuration Language has deprecates these versions in the Terraform providers.
+{: important}
 
 ## Before you begin
 {: #display-prerequisites}

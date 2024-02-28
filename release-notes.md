@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-02-28"
 
 keywords: schematics whats new?, schematics features and enhancements, schematics releases
 
@@ -19,6 +19,28 @@ content-type: release-note
 
 Use the release notes to learn about the current changes to the {{site.data.keyword.bplong}} documentation that are grouped by month.
 {: shortdesc}
+
+## February 2024
+{: #February-2024}
+
+Review the release notes for February 2024.
+{: shortdesc}
+
+
+
+### 14 February 2024
+{: #schematics-feb1424}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.17](/docs/schematics?topic=schematics-cli_version-releases) released.
+
+### 07 February 2024
+{: #schematics-feb0724}
+{: release-note}
+
+Release {{site.data.keyword.bpshort}} command-line plug-in 
+:   The {{site.data.keyword.bpshort}} [command-line plug-in v1.12.16](/docs/schematics?topic=schematics-cli_version-releases) released.
 
 ## January 2024
 {: #January-2024}
