@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-02-28"
 
 keywords: schematics faqs, schematics agents faq, agents faq, agents, artifactory, provider 
 
@@ -118,7 +118,7 @@ Currently, you can assign any number of workspaces to an agent. The workspace jo
 
 {{site.data.keyword.bpshort}} Agent relax the timeout limitation for `local-exec`, `remote-exec` and Ansible playbook execution. These are limited to 60 minutes in the multi-tenant service to ensure fair service utilisation by all users. No duration is applied for jobs executed on agents. Long job execution times needs more user cluster capacity and worker nodes to ensure timely execution of all cluster jobs.
 
-It is recommended to use a service such as [Continous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) for long running jobs performing software installation tasks.
+It is recommended to use a service such as [Continous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started#terraform-version-upgrade1x-process) for long running jobs performing software installation tasks.
 
 ## What is the difference between `agent-location` and `location` flag in agent service?
 {: #faqs-agent-diff-location}
@@ -374,10 +374,10 @@ Perform this step only if an agent does not have metadata.
 {: important}
 
 ```curl
-curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id\>' \
-    -H 'Authorization: Bearer <token\>' \
-    -H 'X-Feature-Agents: true' \
-    -H 'refresh_token: <refresh_token\>' \
+curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id\>'
+    -H 'Authorization: Bearer <token\>'
+    -H 'X-Feature-Agents: true'
+    -H 'refresh_token: <refresh_token\>'
     -d '{
 "agent_metadata": [
         {

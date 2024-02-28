@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-21"
+  years: 2017, 2024
+lastupdated: "2024-02-28"
 
 keywords: schematics blueprints, work with blueprint, schematics
 
@@ -20,7 +20,7 @@ subcollection: schematics
 
 {{site.data.keyword.bpshort}} Blueprints brings [infrastructure as code (IaC) practices](/docs/schematics?topic=schematics-infrastructure-as-code) to the creation and lifecycle management of large-scale cloud environments. It uses the analogy of a blueprint used in construction, to define and deploy cloud environments from reusable modules of Terraform code. Blueprint operations take cloud environments from their initial creation, through maintenance and ops to final decommissioning and clean up of all allocated resources. 
 
-Review the section [About {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro) for more background. A key feature of Blueprints is support to take cloud environments through their life, from creation to final removal. 
+Review the section About {{site.data.keyword.bpshort}} Blueprints for more background. A key feature of Blueprints is support to take cloud environments through their life, from creation to final removal. 
 
 Blueprints enables users to define and deploy cloud environments using modules of reusable and well-defined [Terraform](https://www.terraform.io) automation code. This builds on the IaC best practice of [modular architectures](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity), where reusable modules implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code.
 
@@ -70,7 +70,7 @@ Explore the following sections to get into the details of working with blueprint
 ## Next steps
 {: #working-bp-nextsteps}
 
-Start your journey of working with blueprints with an [overview of blueprints](/docs/schematics?topic=schematics-blueprint-intro) and onto the first lifecycle stage of [defining blueprints](/docs/schematics?topic=schematics-define-blueprints). 
+Start your journey of working with blueprints with an overview of blueprints and onto the first lifecycle stage of [defining blueprints](/docs/schematics?topic=schematics-define-blueprints). 
 
 Follow this up with:
 - [Deploying blueprints](/docs/schematics?topic=schematics-deploy-blueprints) and environments. 

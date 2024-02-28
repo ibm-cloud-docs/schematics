@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-09-12"
+  years: 2017, 2024
+lastupdated: "2024-02-28"
 
 keywords: blueprint update, update blueprint, blueprint
 
@@ -26,7 +26,7 @@ After the [deploy](/docs/schematics?topic=schematics-deploy-blueprints) lifecycl
 ## Update process
 {: #update-blueprint-process} 
 
-Updating a deployed blueprint environment and cloud resources is a two-step process, Update, and Apply. The first step updates the blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the blueprint template, IaC module code, and inputs. The second [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step runs the automation module code to deploy the changes in the blueprint configuration. 
+Updating a deployed blueprint environment and cloud resources is a two-step process, Update, and Apply. The first step updates the blueprint configuration in {{site.data.keyword.bpshort}} with the intended changes to the blueprint template, IaC module code, and inputs. The second blueprint apply step runs the automation module code to deploy the changes in the blueprint configuration. 
 {: shortdesc} 
 
 Updating a blueprint environment uses the capabilities of Terraform to update deployed cloud resources. The Terraform config and inputs for a module are updated by the `blueprint update` operation. From the updated configuration, Terraform determines the changes that must be run against the existing deployed resources and runs the needed resource updates, deletions, or creates. 
@@ -388,6 +388,6 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-update-nextsteps}
 
-After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is to [apply](/docs/schematics?topic=schematics-apply-blueprint) the changes.
+After updating the blueprint configuration in {{site.data.keyword.bpshort}}, the next step is to apply the changes.
 
 

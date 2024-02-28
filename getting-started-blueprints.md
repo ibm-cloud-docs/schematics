@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-08"
+lastupdated: "2024-02-28"
 
 keywords: get started with blueprints, infrastructure management, infrastructure as code, iac, schematics cloud environment, schematics infrastructure, schematics terraform, 
 
@@ -105,7 +105,7 @@ You have now deployed a blueprint and created a multi-module environment. Option
 For more information about the difference between destroy and config delete, see [Deleting a blueprint](/docs/schematics?topic=schematics-delete-blueprint).
 {: note}
 
-- Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
+- Learn about {{site.data.keyword.bpshort}} Blueprints.
 - Looking for template samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint&type=all&language=&sort=){: external}. 
 
 ## Deploy a blueprint using the CLI
@@ -251,5 +251,5 @@ ibmcloud schematics blueprint delete -id <blueprint_ID>
 ```
 {: pre}
 
-- Learn [about {{site.data.keyword.bpshort}} Blueprints](/docs/schematics?topic=schematics-blueprint-intro).
+- Learn about {{site.data.keyword.bpshort}} Blueprints.
 - Looking for template samples? Check out the [{{site.data.keyword.bplong_notm}} GitHub repository](https://github.com/orgs/Cloud-Schematics/repositories?q=blueprint&type=all&language=&sort=){: external}. 

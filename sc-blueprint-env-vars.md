@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-02-28"
 
 keywords: parallelism, schematics parallelism, environment variables, command-line configuration, env vars
 
@@ -23,4 +23,4 @@ Refer to the section [Using environment variables with workspaces](/docs/schemat
 ## Blueprints usage
 {: #usage}
 
-When using Blueprints, environment variables to modify workspace and action execution are configured using the `settings` parameters in the blueprint YAML template. Refer to the [Blueprint template YAML schema](/docs/schematics?topic=schematics-bp-template-schema-yaml#bp-settings) specification for details on setting env-vars at the global blueprint level or the module level. 
+When using Blueprints, environment variables to modify workspace and action execution are configured using the `settings` parameters in the blueprint YAML template. Refer to the Blueprint template YAML schema specification for details on setting env-vars at the global blueprint level or the module level. 

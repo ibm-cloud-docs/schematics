@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-02-28"
 
 keywords: blueprint create init failure, blueprint init error, create init fails,
 
@@ -103,6 +103,6 @@ OK
 ```
 {: screen}
 
-On successful completion the config update returns **`update_success`**. All modules must be initialized to `Inactive` state and deployment of the environment can continue with [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint). 
+On successful completion the config update returns **`update_success`**. All modules must be initialized to `Inactive` state and deployment of the environment can continue with blueprint apply. 
 
 If the update job fails, repeat problem diagnosis, and resolution until update completes successfully and all modules are in an `Inactive` state.
