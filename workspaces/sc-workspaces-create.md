@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-02-29"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -21,7 +21,7 @@ Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_no
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
 
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the Terraform v1.2, v1.3, v1.4 template from 2nd week of April 2024.
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3, v1.4 template from 2nd week of April 2024.
 {: important}
 
 ## Before you begin
@@ -188,10 +188,6 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
     ```
     {: pre}
 
-    or
-
-    Create the workspace by using Tofu v1.6 support.
-
     | Parameter | Description |
     | ----- | ----- |
     | `iam_access_token` | Enter the IAM access token that you retrieved in step 1. |
@@ -212,6 +208,8 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
     {: pre}
 
 4. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
+
+
 
 ## Creating a workspace using a Terraform template 
 {: #create-wks-terraform}

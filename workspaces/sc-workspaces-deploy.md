@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-02-29"
 
 keywords: schematics workspaces, workspaces, schematics, deploy workspace
 
@@ -25,7 +25,7 @@ subcollection: schematics
 {{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
 
-{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the Terraform v1.2, v1.3, v1.4 template from 2nd week of April 2024.
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3, v1.4 template from 2nd week of April 2024.
 {: important}
 
 ## Before you begin
