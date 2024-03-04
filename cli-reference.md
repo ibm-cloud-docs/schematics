@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-02-29"
 
 keywords: schematics command-line reference, schematics commands, schematics command-line, schematics reference, command-line
 
@@ -1864,7 +1864,7 @@ ibmcloud schematics workspace import --id WID --address ibm_iam_access_group.acc
 ### `ibmcloud schematics workspace list`	
 {: #schematics-workspace-list}
 
-List the workspaces for the current region of your {{site.data.keyword.cloud_notm}} account and optionally, show the details for your workspace.	
+List the workspaces for the current region of your {{site.data.keyword.cloud_notm}} account and shows the details for your workspace. List workspace checks for the depreciation in a loop by invoking `versions` API every time for all the workspace through file cache.
 
 Syntax
 
@@ -1905,8 +1905,11 @@ Create a {{site.data.keyword.bpshort}} workspace that points to your Terraform t
 To create a workspace, you can specify your workspace settings in a JSON file. Make sure that the JSON file follows the structure as outlined in this command. Also ensure the `location` and the `url` endpoint are pointing to the same region when you create or update workspaces and actions. For more information about location and endpoint, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location).
 {: note}
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
+
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3, v1.4 template from 2nd week of April 2024.
+{: important}
 
 Syntax
 
@@ -2252,7 +2255,7 @@ ibmcloud schematics workspace untaint --id myworkspace-asdff1a1a-42145-11 --addr
 ### `ibmcloud schematics workspace update`
 {: #schematics-workspace-update}
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
 
 Update the details for an existing workspace, such as the workspace name, variables, or source control URL. To provision or modify {{site.data.keyword.cloud_notm}}, see the [`ibmcloud schematics plan`](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-plan) command.
@@ -2392,7 +2395,7 @@ ibmcloud schematics workspace update --id myworkspace-a1aa1a1a-a11a-11 --file my
 ### `ibmcloud schematics workspace upload`
 {: #schematics-workspace-upload}
 
-Provide your Terraform template by uploading a tape archive file (`.tar`) to your {{site.data.keyword.bpshort}} workspace.
+Provide your Terraform template by uploading a tape archive file (`.tar`) to your {{site.data.keyword.bpshort}} workspace. The `.tar` supports the Cloud Shell commands.
 {: shortdesc}
 
 Before you begin, make sure that you [created your workspace](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new) without a link to a GitHub or GitLab repository.
@@ -2404,7 +2407,6 @@ Syntax
 ibmcloud schematics workspace upload  --id WORKSPACE_ID --file FILE_NAME --template TEMPLATE_ID [--output OUTPUT][--json]
 ```
 {: pre}
-
 
 
 Command options

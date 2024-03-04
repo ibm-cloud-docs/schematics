@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-23"
+lastupdated: "2024-02-28"
 
 keywords: blueprint create, create blueprint, blueprint
 
@@ -27,7 +27,7 @@ The first step in deploying cloud resources is [creating a blueprint configurati
 
 Blueprints creates a blueprint module resource in {{site.data.keyword.bpshort}} for each module definition in the template. Blueprint module resources are initialized with the Terraform module source from the Git repository specified in the module definition, and module inputs.
 
-The second [blueprint apply](/docs/schematics?topic=schematics-apply-blueprint&interface=cli) step executes the automation modules in dependency order and runs the module Terraform code to deploy cloud resources. 
+The second blueprint apply step executes the automation modules in dependency order and runs the module Terraform code to deploy cloud resources. 
 
 
 ## Creating a blueprint configuration through the CLI 
@@ -396,4 +396,4 @@ For more information, see [troubleshooting section](/docs/schematics?topic=schem
 ## Next steps
 {: #bp-create-nextsteps}
 
-The next step in deploying the cloud resources that are defined by the blueprint configuration is to [apply](/docs/schematics?topic=schematics-apply-blueprint) the blueprint config. 
+The next step in deploying the cloud resources that are defined by the blueprint configuration is to apply the blueprint config. 

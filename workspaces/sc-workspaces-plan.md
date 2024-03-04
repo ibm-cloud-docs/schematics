@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-25"
+lastupdated: "2024-02-29"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -18,8 +18,11 @@ subcollection: schematics
 A workspace plan, performs a Terraform plan to determine the {{site.data.keyword.cloud}} resources that will be created, modified or deleted on any subsequent workspace apply operation. Run the {{site.data.keyword.bpshort}} plan job against your workspace. You can use the plan summary logs to verify any resource changes before the template is applied. 
 {: shortdesc} 
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
+
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3, v1.4 template from 2nd week of April 2024.
+{: important}
 
 ## Before you begin
 {: #plan-prerequisites}

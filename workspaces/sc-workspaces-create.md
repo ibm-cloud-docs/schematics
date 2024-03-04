@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-02-29"
 
 keywords: schematics workspaces, workspaces, schematics
 
@@ -18,8 +18,11 @@ subcollection: schematics
 Use a {{site.data.keyword.bpshort}} to manage your {{site.data.keyword.bplong_notm}} resources using Terraform. Workspace settings define the Terraform template hosted in a Git repository to be used, along with any input variables to customize the template. 
 {: shortdesc} 
 
-{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version).
+{{site.data.keyword.bplong_notm}} deprecates older version of Terraform. For more information, see [Deprecating older version of Terraform process in {{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 {: deprecated}
+
+{{site.data.keyword.bplong_notm}} deprecates creation of workspace using the {{site.data.keyword.terraform-provider_full_notm}} v1.2, v1.3, v1.4 template from 2nd week of April 2024.
+{: important}
 
 ## Before you begin
 {: #prerequisites-create}
@@ -179,7 +182,7 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
 
 1. Follow the [steps](/docs/schematics?topic=schematics-setup-api#cs_api) to retrieve your IAM access token and authenticate with {{site.data.keyword.bplong_notm}} by using the API.
 
-2. Create the workspace. 
+2. Create the workspace by using Terraform template.
     ```sh
     curl --request POST --url https://schematics.cloud.ibm.com/v1/workspaces -H "Authorization: <iam_access_token>" -d '{"name": "<workspace_name>","type": ["<terraform_version>"],"location": "<location>","description": "<description>","template_repo": {"url": "<github_source_repo_url>"},"template_data": [{"folder": ".","type": "<terraform_version>","variablestore": [{"value": "<variable_value>","name": "<variable_name>","type": "<variable_type>","secure": true}]}]}'
     ```
@@ -205,6 +208,8 @@ You can [Manage {{site.data.keyword.cloud_notm}} resources with {{site.data.keyw
     {: pre}
 
 4. See [Managing {{site.data.keyword.cloud_notm}} resources with {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-manage-lifecycle) to create, update, or delete {{site.data.keyword.cloud_notm}} resources with Terraform.
+
+
 
 ## Creating a workspace using a Terraform template 
 {: #create-wks-terraform}

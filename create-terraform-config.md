@@ -162,7 +162,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 ## Managing resources in other account
 {: #manage-resource-account}
 
-You can use workspaces in a {{site.data.keyword.cloud_notm}} source account to run Terraform jobs to create resources in a target account. To provision resources in a target account, the identity and access permissions of the target account must be provided. This may be by using the identity of a user with permissions for the target account. Or a service ID with authentication and appropriate cross account authorization for the target account using an API key.
+You can use workspaces in the {{site.data.keyword.cloud_notm}} source account to run Terraform jobs to create resources in a target account. To provision resources in a target account, the identity and access permissions of the target account must be provided. This may be by using the identity of a user with permissions for the target account. Or a service ID with authentication and appropriate cross account authorization for the target account using an API key.
 
 When running jobs through the UI without passing API keys, the identity of the logged in user is assumed for executing operations.
 {: important}

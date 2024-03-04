@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-02-28"
 
 keywords: schematics blueprints, define blueprint, managed environments
 
@@ -18,7 +18,7 @@ subcollection: schematics
 # Defining blueprints
 {: #define-blueprints}
 
-{{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) automation solution for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied. Return to the [overview](/docs/schematics?topic=schematics-blueprint-intro#blueprint-overview) section for an introduction to Blueprints. 
+{{site.data.keyword.bplong}} Blueprints is an Infrastructure as Code (IaC) automation solution for large-scale cloud environments. It utilizes the analogy of building a house from a blueprint drawing. Where a blueprint defines the architecture, layout, major building blocks and customizations to be applied. Return to the overview section for an introduction to Blueprints. 
 
 A blueprint [template](/docs/schematics?topic=schematics-sch-terms#bpb2) determines the architecture and infrastructure topology to be deployed.  Reusable Terraform [modules](/docs/schematics?topic=schematics-sch-terms#bpb5) implement the layers and components of an infrastructure architecture from well designed, tested and compliant Terraform code. The definition of an architecture using modules and deployment as linked environments is illustrated. 
 {: shortdesc} 

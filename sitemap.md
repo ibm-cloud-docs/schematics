@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-22"
+lastupdated: "2024-02-29"
 
 keywords: schematics
 subcollection: schematics
@@ -275,6 +275,18 @@ subcollection: schematics
 
 
 [Release notes](/docs/schematics?topic=schematics-schematics-relnotes#schematics-relnotes)
+
+* [February 2024](/docs/schematics?topic=schematics-schematics-relnotes#February-2024)
+
+    * Review the release notes for February 2024.
+
+    * [14 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb1424)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
+
+    * [07 February 2024](/docs/schematics?topic=schematics-schematics-relnotes#schematics-feb0724)
+
+        * Release {{site.data.keyword.bpshort}} command-line plug-in 
 
 * [January 2024](/docs/schematics?topic=schematics-schematics-relnotes#January-2024)
 
