@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-02-29"
+lastupdated: "2024-03-04"
 
 keywords: schematics faqs, infrastructure as code, iac, schematics workspaces faq, workspaces faq
 
@@ -17,7 +17,7 @@ content-type: faq
 # Workspaces
 {: #workspaces-faq}
 
-Answers to common questions about the {{site.data.keyword.bplong_notm}} workspaces are classified into following section.
+Answers to common questions about the {{site.data.keyword.bplong_notm}} workspaces are classified into the following section.
 {: shortdesc}
 
 ## Does {{site.data.keyword.bpfull_notm}} support multiple Terraform provider versions?
@@ -25,7 +25,7 @@ Answers to common questions about the {{site.data.keyword.bplong_notm}} workspac
 {: faq}
 {: support}
 
-Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add Terraform provider block with the right provider version. By default the provider run current version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported.
+Yes, {{site.data.keyword.bpfull_notm}} supports multiple Terraform provider versions. You need to add the Terraform provider block with the right provider version. By default the provider run current version `1.21.0`, and previous four versions such as `1.20.1`, `1.20.0`, `1.19.0`, `1.18.0` are supported.
 
 Example for a multiple provider configuration:
 
@@ -64,7 +64,7 @@ You can follow the topics to upgrade from one Terraform version to another versi
 
 
 
-## How do I `pull latest` code from a Git repo using the command line? 
+## How do I `pull latest` code from a Git repo by using the command line? 
 {: #latestcode-workspace-commandline}
 {: faq}
 {: support}
@@ -78,14 +78,14 @@ You need to run `ibmcloud schematics workspace update --id <workspace-id>  --fil
 }
 ```
 
-## What tools and utilities used in the runtime?
+## What tools and utilities are used in the runtime?
 {: #schematics-tools}
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime utilities/softwares that come with the UBI-8 are available for Terraform provisions and Ansible actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) used in {{site.data.keyword.bpshort}} runtime.
+{{site.data.keyword.bpshort}} runtime is built by using Universal Base Image (UBI-8) and the runtime `utilities/softwares` that come with the UBI-8 are available for Terraform provisions and Ansible actions. For more information, see the list of [tools and utilities](/docs/schematics?topic=schematics-sch-utilities) that are used in {{site.data.keyword.bpshort}} runtime.
 
-## How can I fix Git token issues when creating workspaces using the CLI 
+## How can I fix Git token issues when creating workspaces by using the CLI 
 {: #create-workspace-cli-tokens}
 {: faq}
 {: support}
@@ -99,9 +99,9 @@ You need to check your [authentication](/docs/schematics?topic=schematics-setup-
 {: faq}
 {: support}
 
-You see authorization issues when the roles and permission access is insufficient while updating workspace. For more information, see [Managing user access](/docs/schematics?topic=schematics-access).
+You see authorization issues when the role and permission access is insufficient while updating the workspace. For more information, see [Managing user access](/docs/schematics?topic=schematics-access).
 
-## How can I use {{site.data.keyword.bpshort}} services with a test ID?
+## How to use {{site.data.keyword.bpshort}} services with a test ID?
 {: #global-catalog-faq}
 {: faq}
 {: support}
@@ -113,36 +113,36 @@ The test IDs are considered as a valid `IBM ID` to set the global catalog or res
 {: faq}
 {: support}
 
-By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all subfolders. De-select the 'Use full repository' flag to limit the folders cloned and improve download performace. 
+By default when creating a workspace through the UI, {{site.data.keyword.bpshort}} default to cloning the full Git repository and all subfolders. De-select the 'Use full repository' flag to limit the folders that are cloned and improve download performance. 
 
 {{site.data.keyword.bpshort}} introduced a `compact` flag in the [create workspace](/apidocs/schematics/schematics#create-workspace) and [update workspace](/apidocs/schematics/schematics#replace-workspace) API to download the `subfolders` in Git repositories. If the compact flag is set to **true** it will download and save `subfolders` recursively, otherwise, you can continue to download and save the full repository on workspace creation.
 
-You can get the response by starting `get workspace API` to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but URL is passed, the download is compact.
+You can get the response by starting `get workspace API` to view the compact flag value. The compact flag can be given only if the `template_repo.url` field is passed. On update, if this field is not passed, but the URL is passed, the download is compact.
 
 Compact usage in the payload is `.template_data[0].compact = true/false`. For more information, see [Compact download for {{site.data.keyword.bpshort}} workspaces](/docs/schematics?topic=schematics-compact-download).
 
-## How do I delete a workspace when the delete fails
+## How to delete a workspace when the delete fails?
 {: #clusterdeletion-warn-faq}
 {: faq}
 {: support}
 
-If a resource has already been deleted outside of {{site.data.keyword.bpshort}}, a workspace delete operation will as the resource no longer exists. 
+If a resource is deleted outside the {{site.data.keyword.bpshort}}, a workspace delete operation displays that as `resource no longer exists`. 
 
 You need to delete the workspace and NOT destroying the resources as if resource is not available. For more information, see [Deleting a workspace](/docs/schematics?topic=schematics-sch-delete-wks).
 
-## What is the best way to deploy a Helm chart using credentials or secrets?
+## What is the best way to deploy a Helm chart by using credentials or secrets?
 {: #gherepo-warn-faq}
 {: faq}
 {: support}
 
 The best way is to use {{site.data.keyword.cloud_notm}} catalog to manage the Helm charts where inside the catalog you can keep the credentials and mark it as secured. For more information, see [List of catalog that is related to Helm](https://cloud.ibm.com/catalog?search=label%3Ahelm).
 
-## How do I address job failures caused by maintenance activities? 
+## How to address job failures that are caused by maintenance activities? 
 {: #impact-downtime-workspace}
 {: faq}
 {: support}
 
-The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-execute the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram).
+The unexpected impact due to maintenance results in the failure of the running activities in {{site.data.keyword.bpshort}} workspace. Such workspace and the ongoing activity are marked as `Failed`. The user can then re-run the activity. For more information, see [workspace state diagram](/docs/schematics?topic=schematics-wks-state#workspace-state-diagram).
 
 ## How do you set the Git release tag? 
 {: #releasetag-warn-faq}
@@ -164,7 +164,7 @@ If the `Release` parameter is empty and the `Branch` was set with release tag.
 
 {{site.data.keyword.bpshort}} does not support `release` tag, as it's difficult to identify if it’s a release tag or a branch from the Git repository URL. You need to set the `release` tag through the [{{site.data.keyword.bpshort}} API](/apidocs/schematics/schematics#create-workspace).
 
-## Why do I get a 403 error instead of 404 error when using an invalid workspace ID?
+## Why do I get a 403 error instead of a 404 error when using an invalid workspace ID?
 {: #invalidwspid-warn-faq}
 {: faq}
 {: support}
@@ -175,7 +175,7 @@ curl -X GET https://schematics.cloud.ibm.com/v1/workspaces/badWOrkspaceId -H "Au
 ```
 {: pre}
 
-Yes there is a change in the API that checks for the location first and if it doesn’t get proper location for the workspace it returns 403 error instead of 404 error.
+Yes there is a change in the API that checks for the location first and if it doesn’t get the proper location for the workspace it returns a 403 error instead of 404 error.
 
 ## How can I enable Terraform debug logging 
 {: #terraform-debug-ibmcli}
@@ -317,7 +317,7 @@ resource "ibm_cos_bucket" "smart-us-south" {
 
 No, currently {{site.data.keyword.bpshort}} do not support this feature while running `IBMCLOUD_TRACE=true ibmcloud schematics workspace list` command. 
 
-## How do I resolve errors listing workspaces 
+## How do I resolve errors in listing workspaces?
 {: #badstatus-workspace-faq}
 {: faq}
 {: support}
@@ -330,7 +330,7 @@ Error:
 Bad status code [400] returned when getting workspace from Schematics: {"requestid":"fe5f0d6d-1d43-4643-a689-35d090463ce8","timestamp":"2022-01-25T20:23:54.727208017Z","messageid":"M1070","message":"Error while retrieving {{site.data.keyword.bpshort}} Instance for the given account.","statuscode":400}
 ```
 
-You might have insufficient access for the workspaces in specified location to fetch the instance. Do check the permission that is provided for your account and the locations where your instance need to be created. For more information, see [Where is my information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
+You might have insufficient access for the workspaces in the specified location to fetch the instance. Do check the permission that is provided for your account and the locations where your instance need to be created. For more information, see [Where is an information stored?](/docs/schematics?topic=schematics-secure-data#pi-location)
 
 ## How can I use (IBM) GitLab repositories?
 {: #gitlab-workspace-faq}
@@ -385,7 +385,7 @@ North America always indicates both `us-south`, and `us-east` location during th
 {: faq}
 {: support}
 
-With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}. You can use the VPC console, API, or command-line to stop, reboot, and power on your virtual server instance. However, to remove the virtual server instance, you can use {{site.data.keyword.bplong_notm}}.
+With {{site.data.keyword.bplong_notm}}, you can run your infrastructure code in {{site.data.keyword.cloud_notm}} to manage the lifecycle of {{site.data.keyword.cloud_notm}} resources. After you provision a resource, you use the dashboard of the individual resource to work and interact with your resource. For example, if you provision a virtual server instance in a Virtual Private Cloud (VPC) with {{site.data.keyword.bplong_notm}}. You can use the VPC console, API, or command-line to `stop`, `reboot`, and `power on` your virtual server instance. However, to remove the virtual server instance, you can use {{site.data.keyword.bplong_notm}}.
 
 ## Are changes to Git repos refreshed in {{site.data.keyword.bpshort}}?
 {: #edit-resource-confg-faq}
@@ -416,9 +416,9 @@ Removing {{site.data.keyword.cloud_notm}} resources cannot be undone. Make sure 
 {: faq}
 {: support}
 
-You can set `env values` for a workspace using the CLI and API. For more information, see [usage of `env_values`](/docs/schematics?topic=schematics-set-parallelism).
+You can set `env values` for a workspace by using the CLI and API. For more information, see [usage of `env_values`](/docs/schematics?topic=schematics-set-parallelism).
 
-**Sample payload:**
+Sample payload
 
 ```json
 {
@@ -464,9 +464,9 @@ No, the drift detection is not an automatic method of detection in the {{site.da
 {: faq}
 {: support}
 
-You can initiate drift detection using the UI and CLI. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note).
+You can initiate drift detection by using the UI and CLI. For more information, see [detecting drift in {{site.data.keyword.bpshort}}](/docs/schematics?topic=schematics-drift-note).
 
-## Where can I see the status of a drift detection job ? 
+## Where can I see the status of a drift detection job? 
 {: #drift-status-faq}
 {: faq}
 {: support}
@@ -556,17 +556,17 @@ provider "ibm" {
 {: faq}
 {: support}
 
-{{site.data.keyword.bpshort}} encrypts the Terraform state file when stored and also in transit using TLS. Terraform does not separately encrypt senstive values. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in state file.
+{{site.data.keyword.bpshort}} encrypts the Terraform state file when stored and also in transit by using TLS. Terraform does not separately encrypt sensitive values. For more information, see [sensitive-data](https://developer.hashicorp.com/terraform/language/state/sensitive-data) in state file.
 
 
-## Why do workspace variables defined by using CLI throw 400 errors?
+## Why do workspace variables that are defined by using CLI throw 400 errors?
 {: #wks-list-var}
 {: faq}
 {: support}
 
-The {{site.data.keyword.bpshort}} workspace list variables store value should always be a HCL string. The `value` field must contain escaped string for the variable store for the list, map, or complex variable. For more information, see [Providing values to {{site.data.keyword.bpshort}} for the declared variables](/docs/schematics?topic=schematics-create-tf-config#declare-variable).
+The {{site.data.keyword.bpshort}} workspace list variables store value should always be an HCL string. The `value` field must contain an escaped string for the variable store for the list, map, or complex variable. For more information, see [Providing values to {{site.data.keyword.bpshort}} for the declared variables](/docs/schematics?topic=schematics-create-tf-config#declare-variable).
 
-## Can I update the Terraform version (`TF_VERSION`) using a `JSON` file? 
+## Can you update the Terraform version (`TF_VERSION`) using a `JSON` file? 
 {: #tf-version-update}
 {: faq}
 {: support}
@@ -580,7 +580,7 @@ The {{site.data.keyword.bpshort}} workspace list variables store value should al
 {: faq}
 {: support}
 
-No, you need to only create new workspace. For more information, see [Workspace job execution](/docs/schematics?topic=schematics-job-download#wks-job-execution).
+No, you need to create new workspace. For more information, see [Workspace job execution](/docs/schematics?topic=schematics-job-download#wks-job-execution).
 
 ## Can I import an existing Terraform state file?
 {: #tf-state-argument}
@@ -601,7 +601,7 @@ The maximum length of characters that {{site.data.keyword.bpshort}} workspace va
 {: faq}
 {: support}
 
-The `terraform.tfstate` file size must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 16 MB. Greater than 16 MB state file size is not supported in the {{site.data.keyword.bpshort}}. You will see an error message with `413 Request Entity Too Large error when creating a new {{site.data.keyword.bpshort}} workspace`.
+The `terraform.tfstate` file size must be less than 16 MB. When you create workspace from an existing Terraform state file, the `terraform.tfstate` file size must be less than 16 MB. Greater than 16 MB state file size is not supported in the {{site.data.keyword.bpshort}}. You see an error message with `413 Request Entity Too Large error when creating a new {{site.data.keyword.bpshort}} workspace`.
 
 ## How do I fix authentication errors when using the API?
 {: #createworkspace-authentication-error}
@@ -609,9 +609,11 @@ The `terraform.tfstate` file size must be less than 16 MB. When you create works
 {: support}
 
 You need to create the IAM access token for your {{site.data.keyword.cloud_notm}} Account. For more information, see [Get token password](/apidocs/iam-identity-token-api#gettoken-password){: external}. You can see the following sample error message and the solution for the authentication error.
+
 ```text
 Error: Request fails with status code: 400, BXNIMO137E: For the original authentication, client id 'default' was passed, refresh the token, client id 'bx' is used.
 ```
+{: screen}
 
 The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} documentation shows how to create a `default token`. You can use the `refresh token` to get a new IAM access token if that token is expired. When the default client (no basic authorization header) as described in this documentation. The `refresh_token` cannot be used to retrieve a new IAM access token. When the IAM access token is about to be expired, use the API key to create a new access token as listed.
 
@@ -621,14 +623,41 @@ The [IAM API](/apidocs/iam-identity-token-api#gettoken-apikey){: external} docum
     export IBMCLOUD_API_KEY=<ibmcloud-api_key>
     curl -X POST "https://iam.cloud.ibm.com/identity/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$IBMCLOUD_API_KEY" -u bx:bx
     ```
+    {: pre}
+
 2. Export the `access_token` and `refresh_token` obtained in step 1 as environment variables for `ACCESS_TOKEN` and `REFRESH_TOKEN`.
 
     ```sh
     export ACCESS_TOKEN=<access_token>
     export REFRESH_TOKEN=<refresh_token>
     ```
+    {: pre}
+
 3. Create workspace
 
     ```sh
     curl --request POST --url https://cloud.ibm.com/schematics/overview/v1/workspaces -H "Authorization: Bearer <access_token>" -d '{"name":"","type": ["terraform_v0.12"],"description": "","resource_group": "","tags": [],"template_repo": {"url": ""},"template_data": [{"folder": ".","type": "terraform_v0.12","variablestore": [{"name": "variable_name1","value": "variable_value1"},{"name": "variable_name2","value": "variable_value2"}]}]}'
     ```
+    {: pre}
+
+## How to use Tofu in {{site.data.keyword.bpshort}}?
+{: #tofu-usage-faq}
+{: faq}
+{: support}
+
+Refer to the {{site.data.keyword.bpshort}} examples to test by using [API](/docs/schematics?topic=schematics-sch-create-wks&interface=api#create-wks-tofu-api) and CLI.
+
+## What is the difference between Tofu and Terraform?
+{: #tofu-vs-terraform-faq}
+{: faq}
+{: support}
+
+Terraform and Tofu are declarative languages used to build and manage the resources by using across providers. HashiCorp Configuration Language (HCL) has switched [Terraform version 1.6.x](https://www.hashicorp.com/license-faq){: external} onwards as a Business Source license (BUSL) tool, and introduced [Tofu version 1.6.x](https://opentofu.org/){: external} as an open source to the users.
+
+
+## Does Schematics supporting both Terraform and Tofu?
+{: #tofu-and-terraform-support-faq}
+{: faq}
+{: support}
+		
+Yes, Schematics supports both Terraform version 1.5 and Tofu version 1.6.
