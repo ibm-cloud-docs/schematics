@@ -118,7 +118,7 @@ Currently, you can assign any number of workspaces to an agent. The workspace jo
 
 {{site.data.keyword.bpshort}} Agent relax the timeout limitation for `local-exec`, `remote-exec` and Ansible playbook execution. These are limited to 60 minutes in the multi-tenant service to ensure fair service utilization by all users. No duration is applied for jobs executed on agents. Long job execution times needs more user cluster capacity and worker nodes to ensure timely execution of all cluster jobs.
 
-It is recommended to use a service such as [Continous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started#terraform-version-upgrade1x-process) for long running jobs performing software installation tasks.
+It is recommended to use a service such as [Continous Delivery](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started#terraform-version) for long running jobs performing software installation tasks.
 
 ## What is the difference between `agent-location` and `location` flag in agent service?
 {: #faqs-agent-diff-location}
