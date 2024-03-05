@@ -2094,8 +2094,6 @@ subcollection: schematics
 
 * [Can I run Ansible playbooks with {{site.data.keyword.bpshort}}?](/docs/schematics?topic=schematics-actions-faq#ansible-playbooks)
 
-* [](/docs/schematics?topic=schematics-actions-faq#)
-
 [Agent](/docs/schematics?topic=schematics-faqs-agent#faqs-agent)
 
 * [What are the updates in the GA agent release?](/docs/schematics?topic=schematics-faqs-agent#faqs-agent-update)
@@ -2357,6 +2355,8 @@ subcollection: schematics
 [The Terraform script that contains Kubernetes cluster namespaces fails as connection refused?](/docs/schematics?topic=schematics-wks-connection-refuse#wks-connection-refuse)
 
 [How can you find the root cause of why {{site.data.keyword.bpshort}} apply is failing?](/docs/schematics?topic=schematics-nullresource-errors#nullresource-errors)
+
+[Why do timeout failures result in tainted {{site.data.keyword.cloud_notm}} resources?](/docs/schematics?topic=schematics-tainted-resources#tainted-resources)
 
 [Why can't {{site.data.keyword.bpshort}} find your resource group?](/docs/schematics?topic=schematics-rg-not-found#rg-not-found)
 
