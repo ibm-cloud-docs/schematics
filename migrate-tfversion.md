@@ -163,6 +163,7 @@ The following are the detailed steps to upgrade from 0.12 to 0.13:
             "type": "terraform_v0.13"
         }]
     }
+    ```
     {: codeblock}
 
 12. Run these commands through command-line to create a new Terraform `v0.13` workspace 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-18"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: schematics blueprints, reusable, scaling, large, large-scale, reuse, modules
 
@@ -66,4 +66,4 @@ The blueprint approach to module composition by {{site.data.keyword.bpshort}} Bl
 The use of blueprint templates to compose and deploy large-scale environments from modules is discussed in more detail in these sections:
 - [Understanding blueprint templates and configuration](/docs/schematics?topic=schematics-blueprint-templates)
 - [Using Terraform modules with blueprint templates](/docs/schematics?topic=schematics-blueprint-terraform) 
-- [Infrastructure as code modular architectures](/docs/schematics?topic=schematics-iac-bp-modularity)
+- [Infrastructure as code modular architectures](/docs/schematics?topic=schematics-infrastructure-as-code#iac-bp-modularity)

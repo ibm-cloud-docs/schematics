@@ -374,10 +374,10 @@ Perform this step only if an agent does not have metadata.
 {: important}
 
 ```curl
-curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id\>'
-    -H 'Authorization: Bearer <token\>'
+curl -X PUT 'https://schematics.cloud.ibm.com/v2/agents/<agent_id>'
+    -H 'Authorization: Bearer <token>'
     -H 'X-Feature-Agents: true'
-    -H 'refresh_token: <refresh_token\>'
+    -H 'refresh_token: <refresh_token>'
     -d '{
 "agent_metadata": [
         {

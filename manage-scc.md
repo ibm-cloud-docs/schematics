@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-12-13"
+  years: 2017, 2024
+lastupdated: "2024-03-05"
 
 keywords: security and compliance for schematics, security for schematics, compliance for schematics,
 
@@ -27,7 +27,7 @@ With the {{site.data.keyword.compliance_short}}, you can:
 ## Monitoring security and compliance posture with {{site.data.keyword.bpshort}}
 {: #monitor-schematics}
 
-As a security or compliance focal, you can use the {{site.data.keyword.bplong_notm}} [goals](#x2117978){: term} to help ensure that your organization is adhering to the external and internal standards for your industry. By using the {{site.data.keyword.compliance_short}} to validate the resource configurations in your account against a [profile](#x2034950){: term}, you can identify potential issues as they arise.
+As a security or compliance focal, you can use the {{site.data.keyword.bplong_notm}} goals to help ensure that your organization is adhering to the external and internal standards for your industry. By using the {{site.data.keyword.compliance_short}} to validate the resource configurations in your account against a [profile](#x2034950){: term}, you can identify potential issues as they arise.
 
 all the goals for {{site.data.keyword.bplong_notm}} are added to the {{site.data.keyword.cloud}} Control Library but can also be mapped to other profiles.
 {: note}

@@ -35,7 +35,7 @@ Review and complete the listed tasks to prepare your {{site.data.keyword.cloud}}
 - **IAM access permission:** At a minimum you must have access permissions for the Kubernetes service, Resource Group, {{site.data.keyword.objectstorageshort}}, and the {{site.data.keyword.bpshort}} service to [deploy an agent](/docs/schematics?topic=schematics-deploy-agent-overview&interface=cli).
     - When deploying an agent in another account, or when using a `ServiceID` or `APIKey`, you must see that the account administrator gives permission for all the services enlisted in [permission to deploy an agent](/docs/schematics?topic=schematics-access#agent-permissions).
 - **{{site.data.keyword.cloud_notm}} CLI:** Use the recent version of {{site.data.keyword.cloud_notm}} CLI and the [{{site.data.keyword.bpshort}} CLI v1.12.12](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin) or higher plug-in to install an agent. For more information about plug-in installation, see [installing {{site.data.keyword.bpshort}} CLI plug-in](/docs/schematics?topic=schematics-setup-cli#install-schematics-plugin).
-- **Terraform version support:** Agent supports the workspace using Terraform `v1.4`, and `v1.5` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [depreciation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
+- **Terraform version support:** Agent supports the workspace using Terraform `v1.4`, and `v1.5` or the two most recent versions of Terraform supported by {{site.data.keyword.bpshort}}. Workspaces with older versions of Terraform must be updated to one of the supported versions to support by an agent. For more information, see the [deprecation schedule and user actions to upgrade](/docs/schematics?topic=schematics-deprecate-tf-version#deprecate-timeline).
 
 You can deploy only one agent instance on a Kubernetes cluster. To deploy multiple agents in a single {{site.data.keyword.cloud_notm}} account, they must be deployed to different Kubernetes clusters. Each agent and cluster can cater to different network isolation zones in your Cloud environment.
 {: note}
@@ -51,7 +51,7 @@ This image is an artistic representation and does not reflect actual political o
 
 {{site.data.keyword.bpshort}} Agent enable workspace and action jobs to be ran on your private network with direct access to work with resources on your private network and data centers. The following diagram illustrates a possible agent deployment model on a cluster environment with multiple VPCs connected through a transit gateway.
 
-![{{site.data.keyword.bpshort}} Agent connectivity](images/new/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} Agent connectivity" caption-side="bottom"}
+![{{site.data.keyword.bpshort}} Agent connectivity](images/sc-agents-network.svg){: caption="{{site.data.keyword.bpshort}} Agent connectivity" caption-side="bottom"}
 
 To work with private resources, your private cloud environment must be configured to allow the cluster to run on your agent. And has access to the APIs, services and resources to enable workspace and actions jobs to run. Typically Terraform uses HTTPS to configure service over port 443. Whereas Ansible uses SSH through port 22 to perform post-provisioning VSI configuration. These HTTPS and SSH network paths are illustrated in the diagram.
 
